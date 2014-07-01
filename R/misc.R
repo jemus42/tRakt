@@ -65,3 +65,27 @@ getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
   return(ret)
   # Most of this is pointless.
 }
+
+#' Initialize an empty episode dataset
+#'
+#' \code{initializeEpisodes} uses the show season info provided by \link{trakt.getSeasons}
+#' to initialize a \code{data.frame} with a row for each episode of the show.
+#' @param show.seasons Show seasons dataset, normally provided by \link{trakt.getSeasons}
+#' @return A \code{data.frame} containing detailed episode data.
+#' @export
+#' @note This is not a regular trakt-function, hence the "trakt."-prefix is omitted.
+#' @examples
+#' \dontrun{
+#' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+#' breakingbad.seasons <- trakt.getSeasons("breaking-bad")
+#' breakingbad.episodes <- initializeEpisodes(breakingbad.seasons)
+#' } 
+initializeEpisodes <- function(show.seasons){ 
+show.episodes       <- ddply(show.seasons, .(season), summarize, episode = 1:episodes)
+show.episodes$epnum <- 1:nrow(show.episodes)
+
+# Add epid in sXXeYY format, requires pad() from helpers.R
+show.episodes      <- transform(show.episodes, epid = paste0("s", pad(season), "e", pad(episode)))
+show.episodes$epid <- factor(show.episodes$epid, ordered = TRUE)
+return(show.episodes)
+}

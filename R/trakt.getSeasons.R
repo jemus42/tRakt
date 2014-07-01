@@ -9,7 +9,7 @@
 #' @return A \code{data.frame} containing season details
 #' @export
 #' @import plyr
-#' @note See \href{http://trakt.tv/api-docs/shows-seasons}{the trakt API docs for further info}
+#' @note See \href{http://trakt.tv/api-docs/show-season}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
 #' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)

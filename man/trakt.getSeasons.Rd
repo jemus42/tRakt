@@ -22,7 +22,7 @@ Get details for a show's seasons, e.g. how many seasons there are, how many epsi
 each season has, and seaosn posters. Unfortunately, trakt does not offer per-season ratings.
 }
 \note{
-See \href{http://trakt.tv/api-docs/shows-seasons}{the trakt API docs for further info}
+See \href{http://trakt.tv/api-docs/show-season}{the trakt API docs for further info}
 }
 \examples{
 \dontrun{
