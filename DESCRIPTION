@@ -11,6 +11,7 @@ Depends:
     jsonlite (>= 0.9.7),
     httr
 Imports:
+    plyr
 License: MIT
 LazyData: true
 Roxygen: list(wrap = FALSE)

@@ -1,13 +1,13 @@
 #' Get a show's summary info
 #'
-#' \code{trakt.show.stats pulls show stats and returns it compactly.
+#' \code{trakt.show.stats} pulls show stats and returns it compactly.
 #' 
 #' The data includes show ratings, scrobbles, checkins, plays, comments…
 #' @param target The \code{slug} or \code{tvdbid} of the show requested
 #' @param apikey API-key used for the call. Defaults to \code{getOption("trakt.apikey")}
 #' @return A \code{list} containing show stats
 #' @export
-#' @note See \href{http://trakt.tv/api-docs/show-summaries}{the trakt API docs for further info}
+#' @note See \href{http://trakt.tv/api-docs/show-stats}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
 #' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
