@@ -39,6 +39,7 @@ pad <- function(x, width = 2){
 #' @param getslug Whether the \code{slug} should be extracted. Defaults to \code{FALSE}.
 #' @return A \code{list} containing at least the show name.
 #' @export
+#' @importFrom stringr str_split
 #' @note This is pointless.
 #' @examples
 #' \dontrun{
@@ -80,12 +81,15 @@ getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
 #' breakingbad.seasons <- trakt.getSeasons("breaking-bad")
 #' breakingbad.episodes <- initializeEpisodes(breakingbad.seasons)
 #' } 
-initializeEpisodes <- function(show.seasons){ 
-show.episodes       <- ddply(show.seasons, .(season), summarize, episode = 1:episodes)
-show.episodes$epnum <- 1:nrow(show.episodes)
-
-# Add epid in sXXeYY format, requires pad() from helpers.R
-show.episodes      <- transform(show.episodes, epid = paste0("s", pad(season), "e", pad(episode)))
-show.episodes$epid <- factor(show.episodes$epid, ordered = TRUE)
-return(show.episodes)
+initializeEpisodes <- function(show.seasons = NULL){
+  if (is.null(show.seasons)){
+    stop("Wat")
+  }
+  show.episodes       <- plyr::ddply(show.seasons, .(season), plyr::summarize, episode = 1:episodes)
+  show.episodes$epnum <- 1:nrow(show.episodes)
+  
+  # Add epid in sXXeYY format, requires pad() from helpers.R
+  show.episodes      <- transform(show.episodes, epid = paste0("s", pad(season), "e", pad(episode)))
+  show.episodes$epid <- factor(show.episodes$epid, ordered = TRUE)
+  return(show.episodes)
 }

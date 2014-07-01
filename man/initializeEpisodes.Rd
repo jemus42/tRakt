@@ -3,7 +3,7 @@
 \alias{initializeEpisodes}
 \title{Initialize an empty episode dataset}
 \usage{
-initializeEpisodes(show.seasons)
+initializeEpisodes(show.seasons = NULL)
 }
 \arguments{
 \item{show.seasons}{Show seasons dataset, normally provided by \link{trakt.getSeasons}}
