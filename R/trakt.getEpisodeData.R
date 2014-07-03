@@ -41,9 +41,11 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
     show.episodes$hated[epnum]          <- response$episode$ratings$hated
     show.episodes$overview[epnum]       <- response$episode$overview
   }
-  show.episodes$firstaired.posix <- as.POSIXct(show.episodes$firstaired.utc, 
-                                               origin = lubridate::origin, tz = "UTC")
-  show.episodes$year             <- lubridate::year(show.episodes$firstaired.posix)
+  show.episodes$firstaired.posix  <- as.POSIXct(show.episodes$firstaired.utc, 
+                                                origin = lubridate::origin, tz = "UTC")
+  show.episodes$firstaired.string <- paste(as.character(show.episodes$firstaired.posix),
+                                          lubridate::tz(show.episodes$firstaired.posix))  
+  show.episodes$year              <- lubridate::year(show.episodes$firstaired.posix)
   
   # Convert seasons to factors because ordering
   show.episodes$season           <- factor(show.episodes$season, 
