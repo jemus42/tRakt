@@ -10,6 +10,7 @@
 #' @param dropunaired If \code{TRUE}, episodes which have not aired yet are dropped.
 #' @return A \code{data.frame} containing episode details
 #' @export
+#' @import plyr
 #' @note See \href{http://trakt.tv/api-docs/show-episode-summary}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
@@ -29,7 +30,15 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
     season     <- show.episodes$season[epnum]
     episode    <- show.episodes$episode[epnum]
     target.url <- paste0(baseURL, apikey, "/", target, "/", season, "/", episode)
-    response   <- jsonlite::fromJSON(target.url)
+    response   <- tryCatch(jsonlite::fromJSON(target.url), error = function(e){
+                            warning(e, "in episode", episode, " of season", season)
+                            return(NULL)
+                          })
+    # If the episode couldn't be found, skip and delete row
+    if (is.null(response)){
+      show.episodes[show.episodes$epnum != epnum, ]
+      next
+    }
     
     show.episodes$title[epnum]          <- response$episode$title
     show.episodes$url.trakt[epnum]      <- response$episode$url
@@ -43,8 +52,7 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
   }
   show.episodes$firstaired.posix  <- as.POSIXct(show.episodes$firstaired.utc, 
                                                 origin = lubridate::origin, tz = "UTC")
-  show.episodes$firstaired.string <- paste(as.character(show.episodes$firstaired.posix),
-                                          lubridate::tz(show.episodes$firstaired.posix))  
+  show.episodes$firstaired.string <- format(show.episodes$firstaired.posix, "%F")  
   show.episodes$year              <- lubridate::year(show.episodes$firstaired.posix)
   
   # Convert seasons to factors because ordering
