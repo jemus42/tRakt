@@ -54,6 +54,7 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
   # Add z-scaled episode ratings, scale per season
   show.episodes$zrating.season <- plyr::ddply(show.episodes, .(season), 
                                         plyr::summarize, zrating.season = scale(rating))$zrating.season
+  show.episodes$zrating.season <- as.numeric(show.episodes$zrating.season)
   # Drop episodes with a timestamp of 0, probably faulty data or unaired
   show.episodes <- show.episodes[show.episodes$firstaired.posix != 0, ]
   

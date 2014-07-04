@@ -1,7 +1,7 @@
 Package: tRakt
 Type: Package
 Title: Pull data from trakt.tv
-Version: 0.1.1
+Version: 0.1.2
 Date: 2014-07-01
 Authors@R: person("Jemus42", email = "jemus42@quantenbrot.de", role = c("aut",
     "cre"))
