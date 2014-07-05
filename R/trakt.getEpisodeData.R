@@ -30,18 +30,16 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
     season     <- show.episodes$season[epnum]
     episode    <- show.episodes$episode[epnum]
     target.url <- paste0(baseURL, apikey, "/", target, "/", season, "/", episode)
-    response   <- tryCatch(GET(target.url), error = function(e){
-                            warning(e, "in episode", episode, " of season", season)
-                            return(NULL)
-                          })
+    response   <- httr::GET(target.url)
     
     # If the episode couldn't be found, skip and delete row
-    if (is.null(response)){
-      show.episodes[show.episodes$epnum != epnum, ]
+    if (response$status == 400){
+      warning(paste(content(response)$error, "in episode number", epnum))
+      show.episodes <- show.episodes[show.episodes$epnum != epnum, ]
       next
     }
     
-    apiout_text <- content(response, as = "text", encoding = "UTF-8")
+    apiout_text <- httr::content(response, as = "text", encoding = "UTF-8")
     response    <- rjson::fromJSON(apiout_text)
     
     show.episodes$title[epnum]          <- response$episode$title
