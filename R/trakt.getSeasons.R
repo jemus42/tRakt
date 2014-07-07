@@ -22,7 +22,8 @@ trakt.getSeasons <- function(target, dropspecials = TRUE, apikey = getOption("tr
   baseURL            <- "http://api.trakt.tv/show/seasons.json/"
   url                <- paste0(baseURL, apikey, "/", target)
   response           <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
-  show.seasons       <- rjson::fromJSON(response)
+  # TODO: Somehow manage to do this with rjson
+  show.seasons       <- jsonlite::fromJSON(response)
   if (dropspecials){
     show.seasons     <- show.seasons[show.seasons$season != 0, ] 
   }

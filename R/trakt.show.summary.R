@@ -25,5 +25,6 @@ trakt.show.summary <- function(target, apikey = getOption("trakt.apikey"), exten
   }
   response <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
   response <- rjson::fromJSON(response)
+  response <- response[[1]]
   return(response)
 }

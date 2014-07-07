@@ -26,5 +26,6 @@ trakt.search <- function(query, apikey = getOption("trakt.apikey"), limit = 1){
   query    <- paste0(url, query, "&limit=", limit)
   response <- httr::content(httr::GET(query), as = "text", encoding = "UTF-8")
   response <- rjson::fromJSON(response)
+  response <- response[[1]]
   return(response)
 }
