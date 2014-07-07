@@ -24,6 +24,7 @@ trakt.search <- function(query, apikey = getOption("trakt.apikey"), limit = 1){
   query    <- gsub(" ", "+", query) # _Not_ perfect URL normalization
   url      <- paste0("http://api.trakt.tv/search/shows.json/", apikey, "?query=")
   query    <- paste0(url, query, "&limit=", limit)
-  response <- jsonlite::fromJSON(query)
+  response <- httr::content(httr::GET(query), as = "text", encoding = "UTF-8")
+  response <- rjson::fromJSON(response)
   return(response)
 }

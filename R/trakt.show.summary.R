@@ -23,6 +23,7 @@ trakt.show.summary <- function(target, apikey = getOption("trakt.apikey"), exten
   if (!is.null(extended)){
     url   <- paste0(url, "/", extended)
   }
-  response <- jsonlite::fromJSON(url)
+  response <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
+  response <- rjson::fromJSON(response)
   return(response)
 }

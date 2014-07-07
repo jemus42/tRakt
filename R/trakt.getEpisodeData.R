@@ -11,6 +11,8 @@
 #' @return A \code{data.frame} containing episode details
 #' @export
 #' @import plyr
+#' @import httr
+#' @import rjson
 #' @note See \href{http://trakt.tv/api-docs/show-episode-summary}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{

@@ -19,6 +19,7 @@ trakt.show.stats <- function(target, apikey = getOption("trakt.apikey")){
   }
   baseURL  <- "http://api.trakt.tv/show/stats.json/"
   url      <- paste0(baseURL, apikey, "/", target)
-  response <- jsonlite::fromJSON(url)
+  response <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
+  response <- rjson::fromJSON(response)
   return(response)
 }
