@@ -23,9 +23,13 @@ trakt.search <- function(query, apikey = getOption("trakt.apikey"), limit = 1){
   query    <- as.character(query) # Just to make sure…
   query    <- gsub(" ", "+", query) # _Not_ perfect URL normalization
   url      <- paste0("http://api.trakt.tv/search/shows.json/", apikey, "?query=")
-  query    <- paste0(url, query, "&limit=", limit)
-  response <- httr::content(httr::GET(query), as = "text", encoding = "UTF-8")
+  url      <- paste0(url, query, "&limit=", limit)
+  response <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
   response <- rjson::fromJSON(response)
+  if (identical(response, list())){
+    msg <- list(error = "Show not found")
+    return(msg)
+  }
   response <- response[[1]]
   return(response)
 }
