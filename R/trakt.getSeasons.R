@@ -9,6 +9,7 @@
 #' @return A \code{data.frame} containing season details
 #' @export
 #' @import plyr
+#' @import jsonlite
 #' @note See \href{http://trakt.tv/api-docs/show-season}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
