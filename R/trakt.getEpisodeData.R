@@ -54,6 +54,11 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
     show.episodes$hated[epnum]          <- response$episode$ratings$hated
     show.episodes$overview[epnum]       <- response$episode$overview
   }
+  
+  if (is.null(show.episodes$id.tvdb)){
+    warning("No episodes! Wut?")
+    return(NULL)
+  }
   show.episodes$firstaired.posix  <- as.POSIXct(show.episodes$firstaired.utc, 
                                                 origin = lubridate::origin, tz = "UTC")
   show.episodes$firstaired.string <- format(show.episodes$firstaired.posix, "%F")  
@@ -68,7 +73,11 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
                                         plyr::summarize, zrating.season = scale(rating))$zrating.season
   show.episodes$zrating.season <- as.numeric(show.episodes$zrating.season)
   # Drop episodes with a timestamp of 0, probably faulty data or unaired
-  show.episodes <- show.episodes[show.episodes$firstaired.posix != 0, ]
+  if (nrow(show.episodes[show.episodes$firstaired.posix != 0, ]) > 0){
+    show.episodes <- show.episodes[show.episodes$firstaired.posix != 0, ]
+  } else {
+    warning("Data is probably faulty.")
+  }
   
   show.episodes$src  <- "Trakt.tv"
   
