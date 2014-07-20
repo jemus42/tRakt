@@ -10,6 +10,7 @@
 #' @param limit The number of results to be returned. Defaults to 1.
 #' @return A \code{data.frame} containing search results
 #' @export
+#' @importFrom jsonlite fromJSON
 #' @note See \href{http://trakt.tv/api-docs/search-shows}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
@@ -25,11 +26,16 @@ trakt.search <- function(query, apikey = getOption("trakt.apikey"), limit = 1){
   url      <- paste0("http://api.trakt.tv/search/shows.json/", apikey, "?query=")
   url      <- paste0(url, query, "&limit=", limit)
   response <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
-  response <- rjson::fromJSON(response)
+  response <- jsonlite::fromJSON(response)
+  
   if (identical(response, list())){
     msg <- list(error = "Show not found")
     return(msg)
   }
-  response <- response[[1]]
+  
+  # UTF-8 fix
+  response$title    <- iconv(response$title,    "latin1", "UTF-8")
+  response$overview <- iconv(response$overview, "latin1", "UTF-8")
+  
   return(response)
 }
