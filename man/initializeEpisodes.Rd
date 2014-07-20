@@ -9,7 +9,7 @@ initializeEpisodes(show.seasons = NULL)
 \item{show.seasons}{Show seasons dataset, normally provided by \link{trakt.getSeasons}}
 }
 \value{
-A \code{data.frame} containing detailed episode data.
+A \code{data.frame} containing episode placeholders.
 }
 \description{
 \code{initializeEpisodes} uses the show season info provided by \link{trakt.getSeasons}

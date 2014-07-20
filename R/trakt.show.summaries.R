@@ -14,7 +14,7 @@
 #' @examples
 #' \dontrun{
 #' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
-#' breakingbad.summary <- trakt.show.summary("breaking-bad")
+#' breakingbad.summary_small <- trakt.show.summaries("breaking-bad")
 #' }
 trakt.show.summaries <- function(target, apikey = getOption("trakt.apikey"), extended = NULL){
   if (is.null(apikey)){

@@ -72,7 +72,7 @@ getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
 #' \code{initializeEpisodes} uses the show season info provided by \link{trakt.getSeasons}
 #' to initialize a \code{data.frame} with a row for each episode of the show.
 #' @param show.seasons Show seasons dataset, normally provided by \link{trakt.getSeasons}
-#' @return A \code{data.frame} containing detailed episode data.
+#' @return A \code{data.frame} containing episode placeholders.
 #' @export
 #' @note This is not a regular trakt-function, hence the "trakt."-prefix is omitted.
 #' @examples
@@ -92,4 +92,24 @@ initializeEpisodes <- function(show.seasons = NULL){
   show.episodes      <- transform(show.episodes, epid = paste0("s", pad(season), "e", pad(episode)))
   show.episodes$epid <- factor(show.episodes$epid, ordered = TRUE)
   return(show.episodes)
+}
+
+#' Easy string pasting
+#' 
+#' \code{\%+\%} is an infix version of \code{paste0} or \code{paste(…, sep="")}
+#' 
+#' @param a, b Character strings to paste together
+#' @return A \code{character} string.
+#' @export
+#' @note Blatantly copied from \href{http://adv-r.had.co.nz/Functions.html#infix-functions}{Hadley Wickham}
+#' @examples
+#' \dontrun{
+#' "string one" %+% " string two"
+#' }
+`%+%` <- function(a, b){
+  if (is.null(a) && is.null(b)) return(NULL)
+  if (is.null(a)) return(b)
+  if (is.null(b)) return(a)
+  ret <- paste(a, b, sep = "")
+  return(ret)
 }
