@@ -9,7 +9,6 @@
 #' @return A \code{data.frame} containing season details
 #' @export
 #' @import plyr
-#' @import jsonlite
 #' @note See \href{http://trakt.tv/api-docs/show-season}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
@@ -23,7 +22,6 @@ trakt.getSeasons <- function(target, dropspecials = TRUE, apikey = getOption("tr
   baseURL            <- "http://api.trakt.tv/show/seasons.json/"
   url                <- paste0(baseURL, apikey, "/", target)
   response           <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
-  # TODO: Somehow manage to do this with rjson
   show.seasons       <- jsonlite::fromJSON(response)
   if (dropspecials){
     show.seasons     <- show.seasons[show.seasons$season != 0, ] 

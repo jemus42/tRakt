@@ -12,7 +12,6 @@
 #' @export
 #' @import plyr
 #' @import httr
-#' @import rjson
 #' @note See \href{http://trakt.tv/api-docs/show-episode-summary}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
@@ -42,9 +41,9 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
     }
     
     apiout_text <- httr::content(response, as = "text", encoding = "UTF-8")
-    response    <- rjson::fromJSON(apiout_text)
+    response    <- jsonlite::fromJSON(apiout_text)
     
-    show.episodes$title[epnum]          <- response$episode$title
+    show.episodes$title[epnum]          <- iconv(response$episode$title, "latin1", "UTF-8")
     show.episodes$url.trakt[epnum]      <- response$episode$url
     show.episodes$firstaired.utc[epnum] <- response$episode$first_aired_utc
     show.episodes$id.tvdb[epnum]        <- response$episode$tvdb_id
@@ -52,7 +51,7 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
     show.episodes$votes[epnum]          <- response$episode$ratings$votes
     show.episodes$loved[epnum]          <- response$episode$ratings$loved
     show.episodes$hated[epnum]          <- response$episode$ratings$hated
-    show.episodes$overview[epnum]       <- response$episode$overview
+    show.episodes$overview[epnum]       <- iconv(response$episode$overview, "latin1", "UTF-8")
   }
   
   if (is.null(show.episodes$id.tvdb)){
