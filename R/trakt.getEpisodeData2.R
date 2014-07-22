@@ -36,8 +36,9 @@ trakt.getEpisodeData2 <- function(target, season_nums = NULL, apikey = getOption
   }
   
   # Arrange appropriately
-  episodes <- plyr::arrange(episodes, season, episode)
-  show.episodes <- transform(episodes, epnum = paste0("s", pad(season), "e", pad(episode)))
+  episodes            <- plyr::arrange(episodes, season, episode)
+  show.episodes       <- transform(episodes, epid = paste0("s", pad(season), "e", pad(episode)))
+  show.episodes$epnum <- 1:(nrow(show.episodes))
   
   # Convert seasons to factors because ordering
   show.episodes$season           <- factor(show.episodes$season, 
