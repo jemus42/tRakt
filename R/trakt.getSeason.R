@@ -33,7 +33,7 @@ trakt.getSeason <- function(target, apikey = getOption("trakt.apikey"), season =
   show.season$votes                 <- show.season$ratings$votes
   show.season$loved                 <- show.season$ratings$loved
   show.season$hated                 <- show.season$ratings$hated
-  show.season                       <- show.season[!(names(show.season) %in% c("images", "ratings"))]
+  show.season                       <- show.season[!(names(show.season) %in% c("images", "screen", "ratings"))]
   show.season$firstaired.posix      <- as.POSIXct(show.season$first_aired_utc, 
                                                 origin = lubridate::origin, tz = "UTC")
   show.season$firstaired.string     <- format(show.season$firstaired.posix, "%F")  

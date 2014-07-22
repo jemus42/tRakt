@@ -4,7 +4,7 @@
 #' Get details for a show's episodes, e.g. ratings, number of votes, 
 #' airdates, urls, plot overviews…
 #' @param target The \code{slug} or \code{tvdbid} of the show requested
-#' @param show.seasons Only used for the number of seasons.
+#' @param season_nums Vector of season numbers.
 #' @param apikey API-key used for the call. 
 #' Defaults to \code{getOption("trakt.apikey")}
 #' @param dropunaired If \code{TRUE}, episodes which have not aired yet are dropped.
@@ -20,12 +20,12 @@
 #' breakingbad.episodes <- trakt.getEpisodeData2("breaking-bad", breakingbad.seasons)
 #' }
 
-trakt.getEpisodeData2 <- function(target, show.seasons = NULL, apikey = getOption("trakt.apikey"), dropunaired = TRUE){
-  if (is.null(show.seasons)){
+trakt.getEpisodeData2 <- function(target, season_nums = NULL, apikey = getOption("trakt.apikey"), dropunaired = TRUE){
+  if (is.null(season_nums)){
     stop("No season dataset provided, see ?trakt.getEpisodeData2")
   }
  
-  for (season in show.seasons$season){
+  for (season in season_nums){
     temp <- trakt.getSeason(target, season = season)
     
     if (!exists("episodes")){

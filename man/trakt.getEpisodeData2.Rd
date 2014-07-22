@@ -3,13 +3,13 @@
 \alias{trakt.getEpisodeData2}
 \title{Get a show's episode information}
 \usage{
-trakt.getEpisodeData2(target, show.seasons = NULL,
+trakt.getEpisodeData2(target, season_nums = NULL,
   apikey = getOption("trakt.apikey"), dropunaired = TRUE)
 }
 \arguments{
 \item{target}{The \code{slug} or \code{tvdbid} of the show requested}
 
-\item{show.seasons}{Only used for the number of seasons.}
+\item{season_nums}{Vector of season numbers.}
 
 \item{apikey}{API-key used for the call.
 Defaults to \code{getOption("trakt.apikey")}}
