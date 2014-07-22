@@ -27,6 +27,17 @@ trakt.getSeason <- function(target, apikey = getOption("trakt.apikey"), season =
   # UTF-8 fix
   show.season$title    <- iconv(show.season$title,    "latin1", "UTF-8")
   show.season$overview <- iconv(show.season$overview, "latin1", "UTF-8")
+  
+  # Reorganization
+  show.season$rating                <- show.season$ratings$percentage
+  show.season$votes                 <- show.season$ratings$votes
+  show.season$loved                 <- show.season$ratings$loved
+  show.season$hated                 <- show.season$ratings$hated
+  show.season                       <- show.season[!(names(show.season) %in% c("images", "ratings"))]
+  show.season$firstaired.posix      <- as.POSIXct(show.season$first_aired_utc, 
+                                                origin = lubridate::origin, tz = "UTC")
+  show.season$firstaired.string     <- format(show.season$firstaired.posix, "%F")  
+  show.season$year                  <- lubridate::year(show.season$firstaired.posix)
 
   return(show.season)
 }
