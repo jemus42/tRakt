@@ -1,6 +1,6 @@
 #' Get a season of a show
 #'
-#' \code{trakt.getSeason} pulls a full season's data.
+#' \code{trakt.show.season} pulls a full season's data.
 #' Similar to \link{trakt.getSeasons}, but this function returns full data for
 #' a single season, i.e. all the episodes of the season.
 #' @param target The \code{slug} or \code{tvdbid} of the show requested
@@ -13,9 +13,9 @@
 #' @examples
 #' \dontrun{
 #' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
-#' breakingbad.seasons <- trakt.getSeason("breaking-bad", 1)
+#' breakingbad.seasons <- trakt.show.season("breaking-bad", 1)
 #' }
-trakt.getSeason <- function(target, apikey = getOption("trakt.apikey"), season = 1){
+trakt.show.season <- function(target, apikey = getOption("trakt.apikey"), season = 1){
   if (is.null(apikey)){
     stop("No API key set")
   }

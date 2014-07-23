@@ -26,7 +26,7 @@ trakt.getEpisodeData2 <- function(target, season_nums = NULL, apikey = getOption
   }
  
   for (season in season_nums){
-    temp <- trakt.getSeason(target, season = season)
+    temp <- trakt.show.season(target, season = season)
     
     if (!exists("episodes")){
       episodes <- temp
