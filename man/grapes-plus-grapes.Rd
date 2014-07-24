@@ -6,7 +6,7 @@
 a \%+\% b
 }
 \arguments{
-\item{a,}{b Character strings to paste together}
+\item{a,b}{Character strings to paste together}
 }
 \value{
 A \code{character} string.

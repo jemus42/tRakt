@@ -98,7 +98,7 @@ initializeEpisodes <- function(show.seasons = NULL){
 #' 
 #' \code{\%+\%} is an infix version of \code{paste0} or \code{paste(…, sep="")}
 #' 
-#' @param a, b Character strings to paste together
+#' @param a,b Character strings to paste together
 #' @return A \code{character} string.
 #' @export
 #' @note Blatantly copied from \href{http://adv-r.had.co.nz/Functions.html#infix-functions}{Hadley Wickham}

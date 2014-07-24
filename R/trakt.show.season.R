@@ -9,6 +9,8 @@
 #' @return A \code{data.frame} containing all of a season's episodes
 #' @export
 #' @import plyr
+#' @importFrom lubridate origin
+#' @importFrom lubridate year
 #' @note See \href{http://trakt.tv/api-docs/show-season}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
