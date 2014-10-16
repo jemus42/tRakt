@@ -40,8 +40,8 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
       next
     }
     
-    apiout_text <- httr::content(response, as = "text", encoding = "UTF-8")
-    response    <- jsonlite::fromJSON(apiout_text)
+    #apiout_text <- httr::content(response, as = "text", encoding = "UTF-8")
+    #response    <- jsonlite::fromJSON(apiout_text)
     
     show.episodes$title[epnum]          <- iconv(response$episode$title, "latin1", "UTF-8")
     show.episodes$url.trakt[epnum]      <- response$episode$url
@@ -51,7 +51,7 @@ trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOptio
     show.episodes$votes[epnum]          <- response$episode$ratings$votes
     show.episodes$loved[epnum]          <- response$episode$ratings$loved
     show.episodes$hated[epnum]          <- response$episode$ratings$hated
-    show.episodes$overview[epnum]       <- iconv(response$episode$overview, "latin1", "UTF-8")
+    #show.episodes$overview[epnum]       <- iconv(response$episode$overview, "latin1", "UTF-8")
   }
   
   if (is.null(show.episodes$id.tvdb)){
