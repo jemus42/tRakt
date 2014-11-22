@@ -25,17 +25,12 @@ trakt.search <- function(query, apikey = getOption("trakt.apikey"), limit = 1){
   query    <- gsub(" ", "+", query) # _Not_ perfect URL normalization
   url      <- paste0("http://api.trakt.tv/search/shows.json/", apikey, "?query=")
   url      <- paste0(url, query, "&limit=", limit)
-  response <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
-  response <- jsonlite::fromJSON(response)
+  response <- jsonlite::fromJSON(url)
   
   if (identical(response, list())){
     msg <- list(error = "Show not found")
     return(msg)
   }
-  
-  # UTF-8 fix
-  response$title    <- iconv(response$title,    "latin1", "UTF-8")
-  response$overview <- iconv(response$overview, "latin1", "UTF-8")
   
   return(response)
 }

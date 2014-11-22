@@ -27,15 +27,6 @@ trakt.show.summary <- function(target, apikey = getOption("trakt.apikey"), exten
   if (!is.null(extended)){
     url   <- paste0(url, "/", extended)
   }
-
-  response <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
-  response <- jsonlite::fromJSON(response)
-  
-  # Fix UTF-8
-  #response$title                   <- iconv(response$title, "latin1", "UTF-8")
-  #response$top_episodes$title      <- iconv(response$top_episodes$title, "latin1", "UTF-8")
-  #response$overview                <- iconv(response$overview, "latin1", "UTF-8")
-  #response$people$actors$name      <- iconv(response$people$actors$name, "latin1", "UTF-8")
-  #response$people$actors$character <- iconv(response$people$actors$character, "latin1", "UTF-8")
+  response <- jsonlite::fromJSON(url)
   return(response)
 }
