@@ -1,33 +1,38 @@
 #' Easy episode id padding
-#'
-#' \code{pad} pulls show stats and returns it compactly.
 #' 
 #' Simple function to ease the creation of \code{sXXeYY} episode ids.
-#' @param x Input episode/season number, coerced to \code{character}.
+#' @param s Input season number, coerced to \code{character}.
+#' @param e Input episode number, coerced to \code{character}.
 #' @param width The length of the padding. Defaults to 2.
 #' @return A \code{character} in standard \code{sXXeYY} format
 #' @export
 #' @note See \href{http://trakt.tv/api-docs/show-stats}{the trakt API docs for further info}
 #' @examples
-#' \dontrun{
-#' season  <- 5
-#' episode <- 1
-#' paste0("s", pad(season), "e", pad(episode))
-#' 
-#' pad(c(1,2,3))
-#' }
-pad <- function(x, width = 2){
+#' pad(2, 4)
+pad <- function(s = "0", e = "0", width = 2){
   # Simple function to ease sXXeXX epid format creation
-  x <- as.character(x)
-  sapply(x, function(x){
-    if (nchar(x, "width") < width){
-      missing <- width - nchar(x, "width")
-      x.pad   <- paste0(rep("0", missing), x)
-      return(x.pad)
-    } else {
-      return(x)
-    }
-  })
+  s <- as.character(s)
+  e <- as.character(e)
+  season <- sapply(s, function(x){
+              if (nchar(x, "width") < width){
+                missing <- width - nchar(x, "width")
+                x.pad   <- paste0(rep("0", missing), x)
+                return(x.pad)
+              } else {
+                return(x)
+              }
+            })
+  episode <- sapply(e, function(x){
+                if (nchar(x, "width") < width){
+                  missing <- width - nchar(x, "width")
+                  x.pad   <- paste0(rep("0", missing), x)
+                  return(x.pad)
+                } else {
+                  return(x)
+                }
+              })
+  epstring <- paste0("s", season, "e", episode)
+  return(epstring)
 }
 
 #' Get info from a show URL
@@ -55,7 +60,7 @@ getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
     if(is.na(season) | is.na(episode)){
       ret$epid <- NA
     } else{
-      epid     <- paste0("s", pad(season), "e", pad(episode))
+      epid     <- pad(season, episode)
       ret$epid <- epid 
     }
   }
@@ -89,7 +94,7 @@ initializeEpisodes <- function(show.seasons = NULL){
   show.episodes$epnum <- 1:nrow(show.episodes)
   
   # Add epid in sXXeYY format, requires pad() from helpers.R
-  show.episodes      <- transform(show.episodes, epid = paste0("s", pad(season), "e", pad(episode)))
+  show.episodes      <- transform(show.episodes, epid = pad(season, episode))
   show.episodes$epid <- factor(show.episodes$epid, ordered = TRUE)
   return(show.episodes)
 }

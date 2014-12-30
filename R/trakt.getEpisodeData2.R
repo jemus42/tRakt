@@ -20,7 +20,8 @@
 #' breakingbad.episodes <- trakt.getEpisodeData2("breaking-bad", breakingbad.seasons)
 #' }
 
-trakt.getEpisodeData2 <- function(target, season_nums = NULL, apikey = getOption("trakt.apikey"), dropunaired = TRUE){
+trakt.getEpisodeData2 <- function(target, season_nums = NULL, 
+                                  apikey = getOption("trakt.apikey"), dropunaired = TRUE){
   if (is.null(season_nums)){
     stop("No season dataset provided, see ?trakt.getEpisodeData2")
   }
@@ -37,7 +38,7 @@ trakt.getEpisodeData2 <- function(target, season_nums = NULL, apikey = getOption
   
   # Arrange appropriately
   episodes            <- plyr::arrange(episodes, season, episode)
-  show.episodes       <- transform(episodes, epid = paste0("s", pad(season), "e", pad(episode)))
+  show.episodes       <- transform(episodes, epid = pad(season, episode))
   show.episodes$epnum <- 1:(nrow(show.episodes))
   
   # Convert seasons to factors because ordering
