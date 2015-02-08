@@ -9,3 +9,4 @@
 .RData
 tests.R
 key.json
+.httr-oauth

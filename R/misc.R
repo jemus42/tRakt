@@ -118,3 +118,44 @@ initializeEpisodes <- function(show.seasons = NULL){
   ret <- paste(a, b, sep = "")
   return(ret)
 }
+
+#' Get the trakt.tv credentials
+#' 
+#' \code{get_trakt_credentials} searches for your credentials and stores them 
+#' in the appropriate \code{option} variables
+#' 
+#' @param apikey Optional. Directly set your API key
+#' @param username Optional. Also set your trakt.tv username (Not used yet)
+#' @return Nothing
+#' @export
+#' @note Not yet implemented for the APIv2
+#' @examples
+#' \dontrun{
+#' get_trakt_credentials()
+#' }
+get_trakt_credentials <- function(apikey = NULL, username = NULL){
+  if (!is.null(apikey)){
+    message("Setting trakt apikey to ", apikey)
+    options(trakt.apikey = apikey)
+  }
+  if (!is.null(username)){
+    message("Setting trakt username to ", username)
+    options(trakt.username = username)
+  } 
+  if (file.exists("~/.config/trakt/key.txt")){
+    message("Reading from ~/.config/trakt/key.txt")
+    options(trakt.apikey = read.table("~/config/trakt/key.txt", stringsAsFactors = F)[1,1])
+  } else if (file.exists("~/.config/trakt/key.json")){
+    message("Reading from ~/.config/trakt/key.json")
+    options(trakt.apikey = jsonlite::fromJSON("~/.config/trakt/key.json")$apikey)
+  } else if (file.exists("key.json")){
+    message("Reading API key from key.json")
+    options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+  } else if (file.exists("key.txt")){
+    message("Reading API key from key.txt")
+    options(trakt.apikey = read.table("key.txt", stringsAsFactors = F)[1,1])
+  } 
+  if (is.null(getOption("trakt.apikey"))){
+    stop("You need to set an API key but I don't know where to get it :(")
+  }
+}

@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 key.json
 tests.R
+^\.httr-oauth$

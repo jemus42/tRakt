@@ -33,9 +33,8 @@ trakt.getFullShowData <- function(searchquery = NULL, tvdb_id = NULL, dropunaire
   }
   show$summary         <- trakt.show.summary(tvdb_id)
   show$seasons         <- trakt.getSeasons(tvdb_id)
-  show$episodes        <- initializeEpisodes(show$seasons)
-  show$episodes        <- trakt.getEpisodeData(tvdb_id, show$episodes, dropunaired = dropunaired)
-  show$seasons         <- plyr::join(show$seasons , plyr::ddply(show$episodes, .(season), plyr::summarize, 
+  show$episodes        <- trakt.getEpisodeData2(tvdb_id, show$seasons$season, dropunaired = dropunaired)
+  show$seasons         <- plyr::join(show$seasons , plyr::ddply(show$episodes, plyr::as.quoted("season"), plyr::summarize, 
                                                     avg.rating.season     = round(mean(rating), 1),
                                                     rating.sd             = sd(rating),
                                                     top.rating.episode    = max(rating),

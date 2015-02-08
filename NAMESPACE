@@ -2,6 +2,7 @@
 
 export("%+%")
 export(getNameFromURL)
+export(get_trakt_credentials)
 export(initializeEpisodes)
 export(pad)
 export(trakt.getEpisodeData)
