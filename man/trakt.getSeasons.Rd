@@ -30,7 +30,8 @@ See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API d
 }
 \examples{
 \dontrun{
-breakingbad.seasons <- trakt.getSeasons("breaking-bad")
+get_trakt_credentials() # Set required API data/headers
+breakingbad.seasons <- trakt.getSeasons("breaking-bad", extended = "min")
 }
 }
 
