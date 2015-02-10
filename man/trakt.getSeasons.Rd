@@ -4,30 +4,32 @@
 \alias{trakt.getSeasons}
 \title{Get a show's season information}
 \usage{
-trakt.getSeasons(target, dropspecials = TRUE,
-  apikey = getOption("trakt.apikey"))
+trakt.getSeasons(target, extended = "full,images", dropspecials = TRUE)
 }
 \arguments{
-\item{target}{The \code{slug} or \code{tvdbid} of the show requested}
+\item{target}{The \code{slug} of the show requested}
 
-\item{dropspecials}{If \code{TRUE}, special episodes (listed as 'season 0') are ignored. This is the default.}
+\item{extended}{Defaults to \code{full,images} to get season posters. Can be
+\code{min}, \code{images}, \code{full}, \code{full,images}}
 
-\item{apikey}{API-key used for the call. Defaults to \code{getOption("trakt.apikey")}}
+\item{dropspecials}{If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped
+This is the default.}
 }
 \value{
-A \code{data.frame} containing season details
+A \code{data.frame} containing season details (nested in \code{list} objects)
 }
 \description{
 \code{trakt.getSeasons} pulls season data.
 Get details for a show's seasons, e.g. how many seasons there are, how many epsiodes
-each season has, and seaosn posters. Unfortunately, trakt does not offer per-season ratings.
+each season has, and season posters.
+See \hred{http://docs.trakt.apiary.io/#introduction/extended-info} for possible values of
+\code{extended} to customize output amount.
 }
 \note{
-See \href{http://trakt.tv/api-docs/show-seasons}{the trakt API docs for further info}
+See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs for further info}
 }
 \examples{
 \dontrun{
-options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
 breakingbad.seasons <- trakt.getSeasons("breaking-bad")
 }
 }

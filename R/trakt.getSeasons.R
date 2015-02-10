@@ -2,31 +2,40 @@
 #'
 #' \code{trakt.getSeasons} pulls season data.
 #' Get details for a show's seasons, e.g. how many seasons there are, how many epsiodes
-#' each season has, and seaosn posters. Unfortunately, trakt does not offer per-season ratings.
-#' @param target The \code{slug} or \code{tvdbid} of the show requested
-#' @param apikey API-key used for the call. Defaults to \code{getOption("trakt.apikey")}
-#' @param dropspecials If \code{TRUE}, special episodes (listed as 'season 0') are ignored. This is the default.
-#' @return A \code{data.frame} containing season details
+#' each season has, and season posters.
+#' See \hred{http://docs.trakt.apiary.io/#introduction/extended-info} for possible values of
+#' \code{extended} to customize output amount.
+#' @param target The \code{slug} of the show requested
+#' @param extended Defaults to \code{full,images} to get season posters. Can be
+#' \code{min}, \code{images}, \code{full}, \code{full,images}
+#' @param dropspecials If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped 
+#' This is the default.
+#' @return A \code{data.frame} containing season details (nested in \code{list} objects)
 #' @export
-#' @import plyr
-#' @note See \href{http://trakt.tv/api-docs/show-seasons}{the trakt API docs for further info}
+#' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
-#' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
 #' breakingbad.seasons <- trakt.getSeasons("breaking-bad")
 #' }
-trakt.getSeasons <- function(target, dropspecials = TRUE, apikey = getOption("trakt.apikey")){
-  if (is.null(apikey)){
-    stop("No API key set")
+trakt.getSeasons <- function(target, extended = "full,images", dropspecials = TRUE){
+  if (is.null(getOption("trakt.headers"))){
+    stop("HTTP headers not set, see ?get_trakt_credentials")
   }
-  baseURL            <- "http://api.trakt.tv/show/seasons.json/"
-  url                <- paste0(baseURL, apikey, "/", target)
-  response           <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
-  show.seasons       <- jsonlite::fromJSON(response)
+  
+  # Constructing URL
+  baseURL <- "https://api-v2launch.trakt.tv/shows/"
+  url     <- paste0(baseURL, target, "/", "seasons", "?extended=", extended)
+  
+  # Actual API call
+  headers     <- getOption("trakt.headers")
+  response    <- httr::GET(url, headers)
+  httr::stop_for_status(response) # In case trakt fails
+  response    <- httr::content(response, as = "text")
+  seasons     <- jsonlite::fromJSON(response)
+  
+  # Data cleanup
   if (dropspecials){
-    show.seasons     <- show.seasons[show.seasons$season != 0, ] 
+    seasons     <- seasons[seasons$number != 0, ]
   }
-  show.seasons       <- show.seasons[!(names(show.seasons) %in% c("url", "images"))]
-  show.seasons       <- plyr::arrange(show.seasons, season)
-  return(show.seasons)
+  return(seasons)
 }
