@@ -4,29 +4,32 @@
 #' 
 #' Not to be confused with the show/summaries endpoint, this function
 #' has the potential to return much more data.
-#' @param target The \code{slug} or \code{tvdbid} of the show requested
-#' @param apikey API-key used for the call. 
-#' Defaults to \code{getOption("trakt.apikey")}
+#' @param target The \code{slug} of the show requested, e.g. \code{game-of-thrones}
 #' @param extended Whether extended info should be provided. 
-#' Defaults to \code{NULL}, can be \code{"normal"} or \code{"full"}
-#' @return A \code{data.frame} containing summary info
+#' Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}
+#' @return A \code{list} containing summary info
 #' @export
-#' @note See \href{http://trakt.tv/api-docs/show-summary}{the trakt API docs for further info}
-#' Not to be confused with \href{http://trakt.tv/api-docs/show-summaries}{show/summaries}
+#' @note See \href{http://docs.trakt.apiary.io/reference/shows/summary}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
-#' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+#' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.summary_full <- trakt.show.summary("breaking-bad")
 #' }
-trakt.show.summary <- function(target, apikey = getOption("trakt.apikey"), extended = NULL){
-  if (is.null(apikey)){
-    stop("No API key set")
+trakt.show.summary <- function(target, extended = "full"){
+  if (is.null(getOption("trakt.headers"))){
+    stop("HTTP headers not set, see ?get_trakt_credentials")
   }
-  baseURL <- "http://api.trakt.tv/show/summary.json/"
-  url     <- paste0(baseURL, apikey, "/", target)
-  if (!is.null(extended)){
-    url   <- paste0(url, "/", extended)
-  }
-  response <- jsonlite::fromJSON(url)
+  
+  # Constructing URL
+  baseURL <- "https://api-v2launch.trakt.tv/shows"
+  url     <- paste0(baseURL, "/", target)
+  url     <- paste0(url, "?extended=", extended)
+  
+  # Actual API call
+  headers     <- getOption("trakt.headers")
+  response    <- httr::GET(url, headers)
+  httr::stop_for_status(response) # In case trakt fails
+  response    <- httr::content(response, as = "text")
+  response    <- jsonlite::fromJSON(response)
   return(response)
 }

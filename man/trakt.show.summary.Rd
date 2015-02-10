@@ -4,20 +4,16 @@
 \alias{trakt.show.summary}
 \title{Get show summary info}
 \usage{
-trakt.show.summary(target, apikey = getOption("trakt.apikey"),
-  extended = NULL)
+trakt.show.summary(target, extended = "full")
 }
 \arguments{
-\item{target}{The \code{slug} or \code{tvdbid} of the show requested}
-
-\item{apikey}{API-key used for the call.
-Defaults to \code{getOption("trakt.apikey")}}
+\item{target}{The \code{slug} of the show requested, e.g. \code{game-of-thrones}}
 
 \item{extended}{Whether extended info should be provided.
-Defaults to \code{NULL}, can be \code{"normal"} or \code{"full"}}
+Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
-A \code{data.frame} containing summary info
+A \code{list} containing summary info
 }
 \description{
 \code{trakt.show.summary} pulls show summary data and returns it compactly.
@@ -27,12 +23,11 @@ Not to be confused with the show/summaries endpoint, this function
 has the potential to return much more data.
 }
 \note{
-See \href{http://trakt.tv/api-docs/show-summary}{the trakt API docs for further info}
-Not to be confused with \href{http://trakt.tv/api-docs/show-summaries}{show/summaries}
+See \href{http://docs.trakt.apiary.io/reference/shows/summary}{the trakt API docs for further info}
 }
 \examples{
 \dontrun{
-options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+get_trakt_credentials() # Set required API data/headers
 breakingbad.summary_full <- trakt.show.summary("breaking-bad")
 }
 }
