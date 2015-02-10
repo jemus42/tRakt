@@ -21,11 +21,12 @@ A \code{data.frame} containing season details (nested in \code{list} objects)
 \code{trakt.getSeasons} pulls season data.
 Get details for a show's seasons, e.g. how many seasons there are, how many epsiodes
 each season has, and season posters.
-See \href{http://docs.trakt.apiary.io/#introduction/extended-info} for possible values of
+See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
 \code{extended} to customize output amount.
 }
 \note{
-See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs for further info}
+See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
+for further info
 }
 \examples{
 \dontrun{
