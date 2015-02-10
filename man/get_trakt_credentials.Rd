@@ -4,16 +4,23 @@
 \alias{get_trakt_credentials}
 \title{Set the required trakt.tv API credentials}
 \usage{
-get_trakt_credentials(apikey = NULL, username = NULL, set.headers = TRUE,
-  client.id = NULL, client.secret = NULL)
+get_trakt_credentials(apikey = NULL, username = NULL, client.id = NULL,
+  client.secret = NULL, set.headers = TRUE)
 }
 \arguments{
-\item{apikey}{Explicitly set your API key}
+\item{apikey}{Explicitly set your APIv1 key}
 
 \item{username}{Explicitly set your trakt.tv username (Not used yet)}
+
+\item{client.id}{Explicitly set your APIv2 client id}
+
+\item{client.secret}{Explicitly set your APIv2 client secret}
+
+\item{set.headers}{\code{TRUE} by default. Sets the \code{httr} headers for \code{GET} requests
+for the APIv2}
 }
 \value{
-Nothing
+Nothing. Only messages.
 }
 \description{
 \code{get_trakt_credentials} searches for your credentials and stores them

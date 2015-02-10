@@ -2,10 +2,7 @@
 #'
 #' \code{trakt.show.summary} pulls show summary data and returns it compactly.
 #' 
-#' Not to be confused with the show/summaries endpoint, this function
-#' has the potential to return much more data. 
-#' 
-#' Also note that setting \code{extended} to \code{min} makes this function
+#' Note that setting \code{extended} to \code{min} makes this function
 #' return about as much informations as \link[tRakt]{trakt.search}
 #' @param target The \code{slug} of the show requested, e.g. \code{game-of-thrones}
 #' @param extended Whether extended info should be provided. 

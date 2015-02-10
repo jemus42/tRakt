@@ -130,9 +130,13 @@ initializeEpisodes <- function(show.seasons = NULL){
 #' or in \code{~/.config/trakt/key.json}.
 #' Arguments to this function take precedence over any key file.
 #' 
-#' @param apikey Explicitly set your API key
+#' @param apikey Explicitly set your APIv1 key
 #' @param username Explicitly set your trakt.tv username (Not used yet)
-#' @return Nothing
+#' @param client.id Explicitly set your APIv2 client id
+#' @param client.secret Explicitly set your APIv2 client secret
+#' @param set.headers \code{TRUE} by default. Sets the \code{httr} headers for \code{GET} requests
+#' for the APIv2
+#' @return Nothing. Only messages.
 #' @export
 #' @importFrom jsonlite fromJSON
 #' @note This function includes both the old v1 API key as well
@@ -143,8 +147,8 @@ initializeEpisodes <- function(show.seasons = NULL){
 #' \dontrun{
 #' get_trakt_credentials()
 #' }
-get_trakt_credentials <- function(apikey = NULL, username = NULL, set.headers = TRUE,
-                                  client.id = NULL, client.secret = NULL){
+get_trakt_credentials <- function(apikey = NULL, username = NULL, client.id = NULL, 
+                                  client.secret = NULL, set.headers = TRUE){
   # Finding/setting key file
   if (file.exists("~/.config/trakt/key.json")){
     keyfile <- "~/.config/trakt/key.json"
