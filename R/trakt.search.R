@@ -11,26 +11,38 @@
 #' @return A \code{data.frame} containing search results
 #' @export
 #' @importFrom jsonlite fromJSON
-#' @note See \href{http://trakt.tv/api-docs/search-shows}{the trakt API docs for further info}
+#' @import httr
+#' @note See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
-#' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+#' get_trakt_credentials() # Set required API data/headers
 #' breakingbad <- trakt.search("Breaking Bad")
 #' }
-trakt.search <- function(query, apikey = getOption("trakt.apikey"), limit = 1){
-  if (is.null(apikey)){
-    stop("No API key set")
+trakt.search <- function(query){
+  if (is.null(getOption("trakt.headers"))){
+    stop("HTTP headers not set, see ?get_trakt_credentials")
   }
+  # Setting values required for API call
+  headers  <- getOption("trakt.headers")
   query    <- as.character(query) # Just to make sure…
-  query    <- gsub(" ", "+", query) # _Not_ perfect URL normalization
-  url      <- paste0("http://api.trakt.tv/search/shows.json/", apikey, "?query=")
-  url      <- paste0(url, query, "&limit=", limit)
-  response <- jsonlite::fromJSON(url)
+  query    <- URLencode(query)    # URL normalization
+  url      <- paste0("https://api-v2launch.trakt.tv/search?query=", query, "&type=show")
   
-  if (identical(response, list())){
-    msg <- list(error = "Show not found")
-    return(msg)
+  # Actual API call
+  response    <- httr::GET(url, headers)
+  httr::stop_for_status(response) # In case trakt fails
+  response    <- httr::content(response, as = "text")
+  response    <- jsonlite::fromJSON(response)
+  # Try to find the closest match via basic string comparison (Could use improvement)
+  stringmatch <- match(tolower(URLdecode(query)), tolower(response$show$title))
+  
+  # Cleanup received data, using only matched line
+  if (is.na(stringmatch)){
+    warning("No exact match found, using the best guess")
+    show <- response[1, ]$show
+  } else {
+    show <- response[stringmatch, ]$show
   }
   
-  return(response)
+  return(show)
 }
