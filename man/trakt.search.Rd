@@ -13,6 +13,7 @@ trakt.search(query, type = "show")
 }
 \value{
 A \code{data.frame} containing a single search result. Hopefully the one you wanted.
+If no result is foun, the return value is \code{list(error = "Nothing found")} and a \code{warning}
 }
 \description{
 \code{trakt.search} pulls show stats and returns it compactly.

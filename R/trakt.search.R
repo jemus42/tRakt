@@ -8,6 +8,7 @@
 #' @param query The keyword used for the search. Should be as URL-compatible as possible.
 #' @param type The type of data you're looking for. Defaults to \code{show}
 #' @return A \code{data.frame} containing a single search result. Hopefully the one you wanted.
+#' If no result is foun, the return value is \code{list(error = "Nothing found")} and a \code{warning}
 #' @export
 #' @importFrom jsonlite fromJSON
 #' @import httr
@@ -32,6 +33,13 @@ trakt.search <- function(query, type = "show"){
   httr::stop_for_status(response) # In case trakt fails
   response    <- httr::content(response, as = "text")
   response    <- jsonlite::fromJSON(response)
+  
+  # Check if response is empty (nothing found)
+  if (identical(response, list())){
+    warning("No result, sorry.")
+    return(list(error = "Nothing found"))
+  }
+  
   # Try to find the closest match via basic string comparison (Could use improvement)
   stringmatch <- match(tolower(URLdecode(query)), tolower(response$show$title))
   
