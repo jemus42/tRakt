@@ -21,6 +21,9 @@ A \code{list} containing summary info
 \details{
 Not to be confused with the show/summaries endpoint, this function
 has the potential to return much more data.
+
+Also note that setting \code{extended} to \code{min} makes this function
+return about as much informations as \link[tRakt]{trakt.search}
 }
 \note{
 See \href{http://docs.trakt.apiary.io/reference/shows/summary}{the trakt API docs for further info}

@@ -6,9 +6,7 @@
 #' first search result. It's main use is to retrieve the tvdbid or proper show title for further use,
 #' as well as receiving a quick overview of a show.
 #' @param query The keyword used for the search. Should be as URL-compatible as possible.
-#' @param apikey API-key used for the call. Defaults to \code{getOption("trakt.apikey")}
-#' @param limit The number of results to be returned. Defaults to 1.
-#' @return A \code{data.frame} containing search results
+#' @return A \code{data.frame} containing a single search result. Hopefully the one you wanted.
 #' @export
 #' @importFrom jsonlite fromJSON
 #' @import httr

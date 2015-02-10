@@ -8,13 +8,9 @@ trakt.search(query)
 }
 \arguments{
 \item{query}{The keyword used for the search. Should be as URL-compatible as possible.}
-
-\item{apikey}{API-key used for the call. Defaults to \code{getOption("trakt.apikey")}}
-
-\item{limit}{The number of results to be returned. Defaults to 1.}
 }
 \value{
-A \code{data.frame} containing search results
+A \code{data.frame} containing a single search result. Hopefully the one you wanted.
 }
 \description{
 \code{trakt.search} pulls show stats and returns it compactly.
