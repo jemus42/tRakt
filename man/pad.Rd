@@ -20,9 +20,9 @@ A \code{character} in standard \code{sXXeYY} format
 Simple function to ease the creation of \code{sXXeYY} episode ids.
 }
 \note{
-See \href{http://trakt.tv/api-docs/show-stats}{the trakt API docs for further info}
+I like my sXXeYY format, okay?
 }
 \examples{
-pad(2, 4)
+pad(2, 4) # Returns "s02e04"
 }
 

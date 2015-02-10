@@ -12,8 +12,7 @@ trakt.getSeasons(target, extended = "full,images", dropspecials = TRUE)
 \item{extended}{Defaults to \code{full,images} to get season posters. Can be
 \code{min}, \code{images}, \code{full}, \code{full,images}}
 
-\item{dropspecials}{If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped
-This is the default.}
+\item{dropspecials}{If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped}
 }
 \value{
 A \code{data.frame} containing season details (nested in \code{list} objects)
@@ -22,7 +21,7 @@ A \code{data.frame} containing season details (nested in \code{list} objects)
 \code{trakt.getSeasons} pulls season data.
 Get details for a show's seasons, e.g. how many seasons there are, how many epsiodes
 each season has, and season posters.
-See \hred{http://docs.trakt.apiary.io/#introduction/extended-info} for possible values of
+See \href{http://docs.trakt.apiary.io/#introduction/extended-info} for possible values of
 \code{extended} to customize output amount.
 }
 \note{

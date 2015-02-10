@@ -6,11 +6,10 @@
 #' @param width The length of the padding. Defaults to 2.
 #' @return A \code{character} in standard \code{sXXeYY} format
 #' @export
-#' @note See \href{http://trakt.tv/api-docs/show-stats}{the trakt API docs for further info}
+#' @note I like my sXXeYY format, okay?
 #' @examples
-#' pad(2, 4)
+#' pad(2, 4) # Returns "s02e04"
 pad <- function(s = "0", e = "0", width = 2){
-  # Simple function to ease sXXeXX epid format creation
   s <- as.character(s)
   e <- as.character(e)
   season <- sapply(s, function(x){
@@ -95,7 +94,7 @@ initializeEpisodes <- function(show.seasons = NULL){
   show.episodes       <- plyr::ddply(show.seasons, .(season), plyr::summarize, episode = 1:episodes)
   show.episodes$epnum <- 1:nrow(show.episodes)
   
-  # Add epid in sXXeYY format, requires pad() from helpers.R
+  # Add epid in sXXeYY format
   show.episodes      <- transform(show.episodes, epid = pad(season, episode))
   show.episodes$epid <- factor(show.episodes$epid, ordered = TRUE)
   return(show.episodes)
