@@ -134,7 +134,6 @@ initializeEpisodes <- function(show.seasons = NULL){
 #' @param username Explicitly set your trakt.tv username (Not used yet)
 #' @return Nothing
 #' @export
-#' @importFrom httr add_headers
 #' @importFrom jsonlite fromJSON
 #' @note This function includes both the old v1 API key as well
 #' as the v2 API keys (client id and client secret).
