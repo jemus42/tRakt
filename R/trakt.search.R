@@ -6,6 +6,7 @@
 #' first search result. It's main use is to retrieve the tvdbid or proper show title for further use,
 #' as well as receiving a quick overview of a show.
 #' @param query The keyword used for the search. Should be as URL-compatible as possible.
+#' @param type The type of data you're looking for. Defaults to \code{show}
 #' @return A \code{data.frame} containing a single search result. Hopefully the one you wanted.
 #' @export
 #' @importFrom jsonlite fromJSON
@@ -16,7 +17,7 @@
 #' get_trakt_credentials() # Set required API data/headers
 #' breakingbad <- trakt.search("Breaking Bad")
 #' }
-trakt.search <- function(query){
+trakt.search <- function(query, type = "show"){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
@@ -24,7 +25,7 @@ trakt.search <- function(query){
   headers  <- getOption("trakt.headers")
   query    <- as.character(query) # Just to make sure…
   query    <- URLencode(query)    # URL normalization
-  url      <- paste0("https://api-v2launch.trakt.tv/search?query=", query, "&type=show")
+  url      <- paste0("https://api-v2launch.trakt.tv/search?query=", query, "&type=", type)
   
   # Actual API call
   response    <- httr::GET(url, headers)
@@ -36,7 +37,7 @@ trakt.search <- function(query){
   
   # Cleanup received data, using only matched line
   if (is.na(stringmatch)){
-    warning("No exact match found, using the best guess")
+    warning("No exact match found, using trakt.tv's best guess")
     show <- response[1, ]$show
   } else {
     show <- response[stringmatch, ]$show

@@ -4,10 +4,12 @@
 \alias{trakt.search}
 \title{Search for a show}
 \usage{
-trakt.search(query)
+trakt.search(query, type = "show")
 }
 \arguments{
 \item{query}{The keyword used for the search. Should be as URL-compatible as possible.}
+
+\item{type}{The type of data you're looking for. Defaults to \code{show}}
 }
 \value{
 A \code{data.frame} containing a single search result. Hopefully the one you wanted.
