@@ -2,7 +2,7 @@
 % Please edit documentation in R/misc.R
 \name{initializeEpisodes}
 \alias{initializeEpisodes}
-\title{Initialize an empty episode dataset}
+\title{[Deprecated] Initialize an empty episode dataset}
 \usage{
 initializeEpisodes(show.seasons = NULL)
 }
@@ -15,6 +15,9 @@ A \code{data.frame} containing episode placeholders.
 \description{
 \code{initializeEpisodes} uses the show season info provided by \link{trakt.getSeasons}
 to initialize a \code{data.frame} with a row for each episode of the show.
+}
+\details{
+This function will be removed in tRakt v1.0.0
 }
 \note{
 This is not a regular trakt-function, hence the "trakt."-prefix is omitted.

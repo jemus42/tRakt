@@ -4,7 +4,7 @@
 \alias{trakt.search}
 \title{Search for a show}
 \usage{
-trakt.search(query, apikey = getOption("trakt.apikey"), limit = 1)
+trakt.search(query)
 }
 \arguments{
 \item{query}{The keyword used for the search. Should be as URL-compatible as possible.}
@@ -25,11 +25,11 @@ first search result. It's main use is to retrieve the tvdbid or proper show titl
 as well as receiving a quick overview of a show.
 }
 \note{
-See \href{http://trakt.tv/api-docs/search-shows}{the trakt API docs for further info}
+See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for further info}
 }
 \examples{
 \dontrun{
-options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+get_trakt_credentials() # Set required API data/headers
 breakingbad <- trakt.search("Breaking Bad")
 }
 }

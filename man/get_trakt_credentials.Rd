@@ -2,24 +2,32 @@
 % Please edit documentation in R/misc.R
 \name{get_trakt_credentials}
 \alias{get_trakt_credentials}
-\title{Get the trakt.tv credentials}
+\title{Set the required trakt.tv API credentials}
 \usage{
-get_trakt_credentials(apikey = NULL, username = NULL)
+get_trakt_credentials(apikey = NULL, username = NULL, set.headers = TRUE,
+  client.id = NULL, client.secret = NULL)
 }
 \arguments{
-\item{apikey}{Optional. Directly set your API key}
+\item{apikey}{Explicitly set your API key}
 
-\item{username}{Optional. Also set your trakt.tv username (Not used yet)}
+\item{username}{Explicitly set your trakt.tv username (Not used yet)}
 }
 \value{
 Nothing
 }
 \description{
 \code{get_trakt_credentials} searches for your credentials and stores them
-in the appropriate \code{option} variables
+in the appropriate \code{option} variables.
+It also sets the HTTP header required for v2 API calls.
+To make this work, place a \code{key.json} file either in the working directory
+or in \code{~/.config/trakt/key.json}.
+Arguments to this function take precedence over any key file.
 }
 \note{
-Not yet implemented for the APIv2
+This function includes both the old v1 API key as well
+as the v2 API keys (client id and client secret).
+Please note that no oauth2 methods are supported yet,
+only client id really matters.
 }
 \examples{
 \dontrun{
