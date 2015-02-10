@@ -72,10 +72,12 @@ getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
   # Most of this is pointless.
 }
 
-#' Initialize an empty episode dataset
+#' [Deprecated] Initialize an empty episode dataset
 #'
 #' \code{initializeEpisodes} uses the show season info provided by \link{trakt.getSeasons}
 #' to initialize a \code{data.frame} with a row for each episode of the show.
+#' 
+#' This function will be removed in tRakt v1.0.0
 #' @param show.seasons Show seasons dataset, normally provided by \link{trakt.getSeasons}
 #' @return A \code{data.frame} containing episode placeholders.
 #' @export
@@ -119,43 +121,95 @@ initializeEpisodes <- function(show.seasons = NULL){
   return(ret)
 }
 
-#' Get the trakt.tv credentials
+#' Set the required trakt.tv API credentials
 #' 
 #' \code{get_trakt_credentials} searches for your credentials and stores them 
-#' in the appropriate \code{option} variables
+#' in the appropriate \code{option} variables. 
+#' It also sets the HTTP header required for v2 API calls.
+#' To make this work, place a \code{key.json} file either in the working directory
+#' or in \code{~/.config/trakt/key.json}.
+#' Arguments to this function take precedence over any key file.
 #' 
-#' @param apikey Optional. Directly set your API key
-#' @param username Optional. Also set your trakt.tv username (Not used yet)
+#' @param apikey Explicitly set your API key
+#' @param username Explicitly set your trakt.tv username (Not used yet)
 #' @return Nothing
 #' @export
-#' @note Not yet implemented for the APIv2
+#' @importFrom httr add_headers
+#' @importFrom jsonlite fromJSON
+#' @note This function includes both the old v1 API key as well
+#' as the v2 API keys (client id and client secret).
+#' Please note that no oauth2 methods are supported yet, 
+#' only client id really matters.
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials()
 #' }
-get_trakt_credentials <- function(apikey = NULL, username = NULL){
-  if (!is.null(apikey)){
-    message("Setting trakt apikey to ", apikey)
-    options(trakt.apikey = apikey)
+get_trakt_credentials <- function(apikey = NULL, username = NULL, set.headers = TRUE,
+                                  client.id = NULL, client.secret = NULL){
+  # Finding/setting key file
+  if (file.exists("~/.config/trakt/key.json")){
+    keyfile <- "~/.config/trakt/key.json"
+  } else if (file.exists("key.json")){
+    keyfile <- "./key.json"
+  } else {
+    keyfile <- NULL
   }
+  if (!(is.null(keyfile))){
+    message(paste("Reading credentials from", keyfile))
+  } else {
+    message("No keyfile set/found")
+  }
+
+  # Setting v1 API key
+  if (!is.null(apikey)){
+    options(trakt.apikey = apikey)
+  } else if (!(is.null(keyfile))){
+    options(trakt.apikey = jsonlite::fromJSON(keyfile)[["apikey"]])
+  } else {
+    warning("Couldn't find your APIv1 key")
+  }
+
+  # Setting username (just in case)
   if (!is.null(username)){
     message("Setting trakt username to ", username)
     options(trakt.username = username)
-  } 
-  if (file.exists("~/.config/trakt/key.txt")){
-    message("Reading from ~/.config/trakt/key.txt")
-    options(trakt.apikey = read.table("~/config/trakt/key.txt", stringsAsFactors = F)[1,1])
-  } else if (file.exists("~/.config/trakt/key.json")){
-    message("Reading from ~/.config/trakt/key.json")
-    options(trakt.apikey = jsonlite::fromJSON("~/.config/trakt/key.json")$apikey)
-  } else if (file.exists("key.json")){
-    message("Reading API key from key.json")
-    options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
-  } else if (file.exists("key.txt")){
-    message("Reading API key from key.txt")
-    options(trakt.apikey = read.table("key.txt", stringsAsFactors = F)[1,1])
-  } 
-  if (is.null(getOption("trakt.apikey"))){
-    stop("You need to set an API key but I don't know where to get it :(")
+  } else if (!(is.null(keyfile))){
+    options(trakt.username = jsonlite::fromJSON(keyfile)[["username"]])
+  } else {
+    warning("Couldn't find your username")
+  }
+
+  # Setting v2 client id
+  if (!(is.null(client.id))){
+    options(trakt.client.id = client.id)
+  } else if (!(is.null(keyfile))){
+    options(trakt.client.id = jsonlite::fromJSON(keyfile)[["client.id"]])
+  } else {
+    warning("Couldn't find your client id")
+  }
+
+  # Setting v2 client secret (not used yet)
+  if (!(is.null(client.secret))){
+    options(trakt.client.secret = client.id)
+  } else if (!(is.null(keyfile))){
+    options(trakt.client.secret = jsonlite::fromJSON(keyfile)[["client.secret"]])
+  } else {
+    warning("Couldn't find your client secret")
+  }
+
+  # Communicate the above
+  message("Please check if everything seems right:")
+  message(paste("Your trakt.tv username is set to",   getOption('trakt.username')))
+  message(paste("Your APIv1 key is set to",           getOption('trakt.apikey')))
+  message(paste("Your APIv2 client id is set to",     getOption('trakt.client.id')))
+  message("Your APIv2 client secret is set (not displayed for privacy reasons)")
+
+  # Set the appropriate header for httr::GET
+  if (set.headers){
+    headers <- httr::add_headers(.headers = c("trakt-api-key"     = getOption("trakt.client.id"),
+                                              "Content-Type"      = "application/json",
+                                              "trakt-api-version" = 2))
+    options(trakt.headers = headers)
+    message("HTTP headers set, retrieve via getOption('trakt.headers')")
   }
 }
