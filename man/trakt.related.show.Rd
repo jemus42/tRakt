@@ -4,12 +4,10 @@
 \alias{trakt.related.show}
 \title{Search for related shows}
 \usage{
-trakt.related.show(target, apikey = getOption("trakt.apikey"))
+trakt.related.show(target)
 }
 \arguments{
-\item{target}{The show's tvdb id to be used.}
-
-\item{apikey}{API-key used for the call. Defaults to \code{getOption("trakt.apikey")}}
+\item{target}{The show's \code{slug} to be used.}
 }
 \value{
 A \code{data.frame} containing search results
@@ -21,11 +19,11 @@ A \code{data.frame} containing search results
 Search for related shows to the show you specified.
 }
 \note{
-See \href{http://trakt.tv/api-docs/show-related}{the trakt API docs for further info}
+See \href{http://docs.trakt.apiary.io/#reference/shows/related/get-related-shows}{the trakt API docs for further info}
 }
 \examples{
 \dontrun{
-options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+get_trakt_credentials() # Set required API data/headers
 related <- trakt.related.show(78874)
 }
 }
