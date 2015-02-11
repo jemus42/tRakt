@@ -22,6 +22,10 @@ trakt.getFullShowData <- function(query, slug = NULL, dropunaired = TRUE){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
+  # Bind variables later used to please R CMD CHECK
+  rating  <- NULL
+  
+  # Construct show object
   show               <- list()
   if (!is.null(query)){
     show$info        <- trakt.search(query)

@@ -10,28 +10,31 @@
 #' is recommended.
 #' @param target The \code{slug} of the show requested
 #' @param season_nums Vector of season numbers, e.g. \code{c(1, 2)}
+#' @param extended Defaults to \code{full,images} to get season posters. Can be 
+#' \code{min}, \code{images}, \code{full}, \code{full,images}
 #' @param dropunaired If \code{TRUE}, episodes which have not aired yet are dropped.
 #' @return A \code{data.frame} containing episode details
 #' @export
 #' @import plyr
 #' @import httr
-#' @note This function uses much less API calls than \link{trakt.getEpisodeData}.
+#' @note This function is mainly for convenience.
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' breakingbad.episodes <- trakt.getEpisodeData2("breaking-bad", c(1, 2, 3, 4, 5))
+#' breakingbad.episodes <- trakt.getEpisodeData("breaking-bad", c(1, 2, 3, 4, 5))
 #' }
 
-trakt.getEpisodeData <- function(target, season_nums = NULL, extended = "full", dropunaired = TRUE){
-  if (is.null(season_nums)){
-    stop("No seasons provided, see ?trakt.getEpisodeData2")
-  }
+trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropunaired = TRUE){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
+  # Bind variables later used to please R CMD CHECK
+  episode <- NULL
+  season  <- NULL
+  rating  <- NULL
  
-  for (season in season_nums){
-    temp <- trakt.show.season(target, season = season, extended = extended)
+  for (s in season_nums){
+    temp <- trakt.show.season(target, s, extended)
     
     if (!exists("episodes")){
       episodes <- temp
@@ -39,7 +42,7 @@ trakt.getEpisodeData <- function(target, season_nums = NULL, extended = "full", 
       episodes <- rbind(temp, episodes)
     }
   }
-  
+
   # Arrange appropriately
   episodes            <- plyr::arrange(episodes, season, episode)
   show.episodes       <- transform(episodes, epid = tRakt::pad(season, episode))

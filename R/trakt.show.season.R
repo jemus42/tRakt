@@ -23,6 +23,10 @@ trakt.show.season <- function(target, seasons = 1, extended = "min"){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
+  # Please R CMD CHECK
+  ids <- NULL
+  
+  # Construct URL
   baseURL            <- "https://api-v2launch.trakt.tv/shows/"
   url                <- paste0(baseURL, "/", target, "/seasons/", seasons, "?extended=", extended)
   
@@ -51,8 +55,6 @@ trakt.show.season <- function(target, seasons = 1, extended = "min"){
                                                origin = lubridate::origin, tz = "UTC")
     season$firstaired.string     <- format(season$firstaired.posix, "%F")  
     season$year                  <- lubridate::year(season$firstaired.posix)
-    # Just in case, sub ' with ’
-    season$overview              <- gsub("'", "’", season$overview)
   }
   return(season)
 }

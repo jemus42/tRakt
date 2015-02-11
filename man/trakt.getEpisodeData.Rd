@@ -4,13 +4,16 @@
 \alias{trakt.getEpisodeData}
 \title{Get a show's episode information}
 \usage{
-trakt.getEpisodeData(target, season_nums = NULL, extended = "full",
+trakt.getEpisodeData(target, season_nums, extended = "full",
   dropunaired = TRUE)
 }
 \arguments{
 \item{target}{The \code{slug} of the show requested}
 
 \item{season_nums}{Vector of season numbers, e.g. \code{c(1, 2)}}
+
+\item{extended}{Defaults to \code{full,images} to get season posters. Can be
+\code{min}, \code{images}, \code{full}, \code{full,images}}
 
 \item{dropunaired}{If \code{TRUE}, episodes which have not aired yet are dropped.}
 }
@@ -29,12 +32,12 @@ If you only want the episode data for a single season anyway, \code{trakt.show.s
 is recommended.
 }
 \note{
-This function uses much less API calls than \link{trakt.getEpisodeData}.
+This function is mainly for convenience.
 }
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-breakingbad.episodes <- trakt.getEpisodeData2("breaking-bad", c(1, 2, 3, 4, 5))
+breakingbad.episodes <- trakt.getEpisodeData("breaking-bad", c(1, 2, 3, 4, 5))
 }
 }
 
