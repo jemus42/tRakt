@@ -4,13 +4,12 @@
 \alias{trakt.getFullShowData}
 \title{Get all the show data}
 \usage{
-trakt.getFullShowData(searchquery = NULL, tvdb_id = NULL,
-  dropunaired = TRUE)
+trakt.getFullShowData(query, slug = NULL, dropunaired = TRUE)
 }
 \arguments{
-\item{searchquery}{Keyword used for \link{trakt.search}. Optional.}
+\item{query}{Keyword used for \link{trakt.search}. Optional.}
 
-\item{tvdb_id}{Used if \code{searchquery} is not specified. Optional.}
+\item{slug}{Used if \code{query} is not specified. Optional, but gives exact results.}
 
 \item{dropunaired}{If \code{TRUE}, episodes which have not aired yet are dropped.}
 }
@@ -22,10 +21,6 @@ A \code{list} containing multiple \code{lists} and \code{data.frames} with show 
 functions in this package. The idea is to easily execute all major functions
 required to get a full show dataset.
 }
-\details{
-It's assumed that \code{getOption("trakt.apikey")} is already set, otherwise
-the function will stop and tell you to.
-}
 \note{
 This is primarily intended to be a convenience function for the case where you
 really want all that data. If you're just derping around, maybe you should consider interactively
@@ -33,7 +28,7 @@ calling the other functions.
 }
 \examples{
 \dontrun{
-options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+get_trakt_credentials() # Set required API data/headers
 breakingbad.seasons  <- trakt.getFullShowData("Breaking Bad")
 }
 }

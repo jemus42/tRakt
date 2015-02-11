@@ -4,29 +4,32 @@
 \alias{trakt.show.season}
 \title{Get a season of a show}
 \usage{
-trakt.show.season(target, apikey = getOption("trakt.apikey"), season = 1)
+trakt.show.season(target, seasons = 1, extended = "min")
 }
 \arguments{
-\item{target}{The \code{slug} or \code{tvdbid} of the show requested}
+\item{target}{The \code{slug} of the show requested}
 
-\item{apikey}{API-key used for the call. Defaults to \code{getOption("trakt.apikey")}}
+\item{seasons}{The season to get. Defaults to 1. Use 0 for special episodes.}
 
-\item{season}{The season to get. Defaults to 1. Use 0 for special episodes.}
+\item{extended}{Defaults to \code{full,images} to get season posters. Can be
+\code{min}, \code{images}, \code{full}, \code{full,images}}
 }
 \value{
 A \code{data.frame} containing all of a season's episodes
 }
 \description{
-\code{trakt.show.season} pulls a full season's data.
+\code{trakt.show.season} pulls a season's full data.
 Similar to \link{trakt.getSeasons}, but this function returns full data for
 a single season, i.e. all the episodes of the season.
+See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
+\code{extended} to customize output amount.
 }
 \note{
-See \href{http://trakt.tv/api-docs/show-season}{the trakt API docs for further info}
+See \href{http://docs.trakt.apiary.io/reference/seasons/season/get-single-season-for-a-show}{the trakt API docs for further info}
 }
 \examples{
 \dontrun{
-options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+get_trakt_credentials() # Set required API data/headers
 breakingbad.seasons <- trakt.show.season("breaking-bad", 1)
 }
 }

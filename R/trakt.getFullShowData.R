@@ -4,10 +4,8 @@
 #' functions in this package. The idea is to easily execute all major functions
 #' required to get a full show dataset.
 #' 
-#' It's assumed that \code{getOption("trakt.apikey")} is already set, otherwise
-#' the function will stop and tell you to.
-#' @param searchquery Keyword used for \link{trakt.search}. Optional.
-#' @param tvdb_id Used if \code{searchquery} is not specified. Optional.
+#' @param query Keyword used for \link{trakt.search}. Optional.
+#' @param slug Used if \code{query} is not specified. Optional, but gives exact results.
 #' @param dropunaired If \code{TRUE}, episodes which have not aired yet are dropped.
 #' @return A \code{list} containing multiple \code{lists} and \code{data.frames} with show info.
 #' @export
@@ -16,25 +14,25 @@
 #' calling the other functions.
 #' @examples
 #' \dontrun{
-#' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+#' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.seasons  <- trakt.getFullShowData("Breaking Bad")
 #' }
 #' 
-trakt.getFullShowData <- function(searchquery = NULL, tvdb_id = NULL, dropunaired = TRUE){
-  if (is.null(getOption("trakt.apikey"))){
-    stop("No API key set! Use options(trakt.apikey = <you key>) to set it.")
+trakt.getFullShowData <- function(query, slug = NULL, dropunaired = TRUE){
+  if (is.null(getOption("trakt.headers"))){
+    stop("HTTP headers not set, see ?get_trakt_credentials")
   }
   show               <- list()
-  if (!is.null(searchquery)){
-    show$info        <- trakt.search(searchquery)
-    tvdb_id          <- show$info$tvdb_id
-  } else if (is.null(searchquery) & is.null(tvdb_id)){
-    stop("You must provide either a search query or a TVDB ID")
+  if (!is.null(query)){
+    show$info        <- trakt.search(query)
+    slug             <- show$info$ids$slug
+  } else if (is.null(query) & is.null(slug)){
+    stop("You must provide either a search query or a trakt.tv slug")
   }
-  show$summary         <- trakt.show.summary(tvdb_id)
-  show$seasons         <- trakt.getSeasons(tvdb_id)
-  show$episodes        <- trakt.getEpisodeData2(tvdb_id, show$seasons$season, dropunaired = dropunaired)
-  show$seasons         <- plyr::join(show$seasons , plyr::ddply(show$episodes, plyr::as.quoted("season"), plyr::summarize, 
+  show$summary         <- trakt.show.summary(slug, extended = "full")
+  show$seasons         <- trakt.getSeasons(slug,extended = "full")
+  show$episodes        <- trakt.getEpisodeData(slug, show$seasons$season, dropunaired = dropunaired, extended = "full")
+  show$seasons         <- plyr::join(show$seasons , plyr::ddply(show$episodes, "season", plyr::summarize, 
                                                     avg.rating.season     = round(mean(rating), 1),
                                                     rating.sd             = sd(rating),
                                                     top.rating.episode    = max(rating),
