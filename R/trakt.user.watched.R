@@ -4,8 +4,11 @@
 #' It does not use OAuth2, so you can only get data for a user with a 
 #' public profile.
 #' @param user Target user. Defaults to \code{getOption("trakt.username")}
-#' @param type Either \code{shows} (default), or \code{movies}
+#' @param type Either \code{shows} (default), \code{shows.extended} or \code{movies}
 #' @return A \code{data.frame} containing stats.
+#' if \code{type} is set to \code{shows.extended}, the resulting \code{data.frame}
+#' contains play stats for _every_ watched episode of _every_ show. Otherwise, 
+#' the returned \code{data.frame} only contains play stats per show or movie respectively.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the trakt API docs for further info}
 #' @examples
@@ -42,8 +45,37 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
     shows$id.tvdb   <- response$show$ids$tvdb
     shows$id.tvrage <- response$show$ids$tvrage
     
+    # Try to get some stuff out of response$seasons
+    shows$seasons  <- sapply(response$seasons, function(x){max(x[[1]])})
+    shows$episodes <- length(sapply(response$seasons, function(x){x[[2]]}))
+    
     watched <- cbind(response[c("plays", "last_watched_at")], shows)
+    
+  } else if (type == "shows.extended"){
+    epstats <- NULL
+    for (show in 1:nrow(response)){
+      title <- response[show, ]$show$title
+      # Debug: print(paste(show, title))
+      x     <- response$seasons[[show]]
+      
+      if (length(x[[1]]) > 1){
+        for (s in x[[1]]){
+          if (s == 0){next}
+          x[[2]][[s]][["season"]] <- x[[1]][[s]]
+        }
+        temp <- plyr::ldply(x[[2]], as.data.frame)
+      } else {
+        temp <- as.data.frame(x[[2]])
+        temp[["season"]] <- x[[1]]
+      }
+      
+      temp$title  <- title
+      names(temp) <- sub("number", "episode", names(temp))
+      epstats <- rbind(temp, epstats)
+    }
+    watched <- epstats[c("title", "season", "episode", "plays", "last_watched_at")]
   } else if (type == "movies"){
+    # Flatten out ids
     movies           <- response$movie[c("title", "year")]
     movies$slug      <- response$movie$ids$slug
     movies$id.trakt  <- response$movie$ids$trakt
@@ -52,7 +84,7 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
     
     watched <- cbind(response[c("plays", "last_watched_at")], movies)
   } else {
-    stop("Unknown type, must be 'shows' or 'movies'")
+    stop("Unknown type, must be 'shows', 'shows.extended', or 'movies'")
   }
   
   watched$lastwatched.posix  <- as.POSIXct(watched$last_watched_at, 

@@ -9,10 +9,13 @@ trakt.user.watched(user = getOption("trakt.username"), type = "shows")
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
 
-\item{type}{Either \code{shows} (default), or \code{movies}}
+\item{type}{Either \code{shows} (default), \code{shows.extended} or \code{movies}}
 }
 \value{
 A \code{data.frame} containing stats.
+if \code{type} is set to \code{shows.extended}, the resulting \code{data.frame}
+contains play stats for _every_ watched episode of _every_ show. Otherwise,
+the returned \code{data.frame} only contains play stats per show or movie respectively.
 }
 \description{
 \code{trakt.user.watched} pulls a user's watched shows or movies.
