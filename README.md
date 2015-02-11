@@ -1,7 +1,7 @@
 tRakt-package
 =============
 
-This is `tRakt` version `0.4.0`.  
+This is `tRakt` version `0.5.0`.  
 It contains functions to pull data from [trakt.tv](http://trakt.tv/), focusing on tv shows.
 
 It's an [R package](http://r-project.org) primarily used by (i.e. build for) [this webapp](http://trakt.jemu.name), but you can fiddle around with it if you like.
@@ -16,6 +16,13 @@ It's an [R package](http://r-project.org) primarily used by (i.e. build for) [th
 	
 
 ## Status
+
+### 2015-02-11
+
+As of today, all the functions are updated to use the new APIv2, except for `trakt.show.stats`,
+which is currently not yet implemented at trakt.tv, see [their docs](http://docs.trakt.apiary.io/reference/shows/stats/get-show-stats)
+
+Now the package is usable again, and I can continue to work on bug fixes and enhancements. Yay.
 
 ### 2015-02-10
 
