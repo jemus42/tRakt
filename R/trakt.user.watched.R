@@ -89,7 +89,6 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
   
   watched$lastwatched.posix  <- as.POSIXct(watched$last_watched_at, 
                                              origin = lubridate::origin, tz = "UTC")
-  watched$lastwatched.string <- format(watched$lastwatched.posix, "%F")  
   watched$lastwatched.year   <- lubridate::year(watched$lastwatched.posix)
   
   return(watched)
