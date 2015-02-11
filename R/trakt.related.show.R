@@ -3,26 +3,28 @@
 #' \code{trakt.related.show} returns related shows to the search query.
 #' 
 #' Search for related shows to the show you specified.
-#' @param target The show's tvdb id to be used.
-#' @param apikey API-key used for the call. Defaults to \code{getOption("trakt.apikey")}
+#' @param target The show's \code{slug} to be used.
 #' @return A \code{data.frame} containing search results
 #' @export
-#' @note See \href{http://trakt.tv/api-docs/show-related}{the trakt API docs for further info}
+#' @note See \href{http://docs.trakt.apiary.io/#reference/shows/related/get-related-shows}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
-#' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+#' get_trakt_credentials() # Set required API data/headers
 #' related <- trakt.related.show(78874)
 #' }
-trakt.related.show <- function(target, apikey = getOption("trakt.apikey")){
-  if (is.null(apikey)){
-    stop("No API key set")
+trakt.related.show <- function(target){
+  if (is.null(getOption("trakt.headers"))){
+    stop("HTTP headers not set, see ?get_trakt_credentials")
   }
-  baseURL  <- "http://api.trakt.tv/show/related.json/"
-  url      <- paste0(baseURL, "/", apikey, "/", target)
-  response <- httr::content(httr::GET(url), as = "text", encoding = "UTF-8")
-  response <- jsonlite::fromJSON(response)
+  baseURL  <- "https://api-v2launch.trakt.tv/shows"
+  url      <- paste0(baseURL, "/", target, "/related")
+  
+  # Actual API call
+  headers     <- getOption("trakt.headers")
+  response    <- httr::GET(url, headers)
+  httr::stop_for_status(response) # In case trakt fails
+  response    <- httr::content(response, as = "text")
+  response    <- jsonlite::fromJSON(response)
 
-  response$title    <- iconv(response$title,    "latin1", "UTF-8") 
-  response$overview <- iconv(response$overview, "latin1", "UTF-8") 
   return(response)
 }
