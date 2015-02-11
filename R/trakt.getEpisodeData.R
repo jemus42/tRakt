@@ -3,85 +3,73 @@
 #' \code{trakt.getEpisodeData} pulls detailed episode data.
 #' Get details for a show's episodes, e.g. ratings, number of votes, 
 #' airdates, urls, plot overviews…
-#' @param target The \code{slug} or \code{tvdbid} of the show requested
-#' @param show.episodes Show episodes dataset, normally provided by \link{initializeEpisodes}
-#' @param apikey API-key used for the call. 
-#' Defaults to \code{getOption("trakt.apikey")}
+#' 
+#' This is basically just an extension of \link[tRakt]{trakt.show.season}, which is used in 
+#' this function to collect all the episode data.
+#' If you only want the episode data for a single season anyway, \code{trakt.show.season}
+#' is recommended.
+#' @param target The \code{slug} of the show requested
+#' @param season_nums Vector of season numbers, e.g. \code{c(1, 2)}
 #' @param dropunaired If \code{TRUE}, episodes which have not aired yet are dropped.
 #' @return A \code{data.frame} containing episode details
 #' @export
 #' @import plyr
 #' @import httr
-#' @note See \href{http://trakt.tv/api-docs/show-episode-summary}{the trakt API docs for further info}
+#' @note This function uses much less API calls than \link{trakt.getEpisodeData}.
 #' @examples
 #' \dontrun{
-#' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
-#' breakingbad.seasons  <- trakt.getSeasons("breaking-bad")
-#' breakingbad.episodes <- initializeEpisodes(breakingbad.seasons)
-#' breakingbad.episodes <- trakt.getEpisodeData("breaking-bad", breakingbad.episodes)
+#' get_trakt_credentials() # Set required API data/headers
+#' breakingbad.episodes <- trakt.getEpisodeData2("breaking-bad", c(1, 2, 3, 4, 5))
 #' }
 
-trakt.getEpisodeData <- function(target, show.episodes = NULL, apikey = getOption("trakt.apikey"), dropunaired = TRUE){
-  if (is.null(show.episodes)){
-    stop("No episode dataset provided, see ?trakt.getEpisodeData")
+trakt.getEpisodeData <- function(target, season_nums = NULL, extended = "full", dropunaired = TRUE){
+  if (is.null(season_nums)){
+    stop("No seasons provided, see ?trakt.getEpisodeData2")
   }
-  baseURL <- "http://api.trakt.tv/show/episode/summary.json/"
-  # Making the API calls and storing the responses as parts of the episode set
-  for (epnum in show.episodes$epnum){
-    season     <- show.episodes$season[epnum]
-    episode    <- show.episodes$episode[epnum]
-    target.url <- paste0(baseURL, apikey, "/", target, "/", season, "/", episode)
-    response   <- httr::GET(target.url)
+  if (is.null(getOption("trakt.headers"))){
+    stop("HTTP headers not set, see ?get_trakt_credentials")
+  }
+ 
+  for (season in season_nums){
+    temp <- trakt.show.season(target, season = season, extended = extended)
     
-    # If the episode couldn't be found, skip and delete row
-    if (response$status == 400){
-      warning(paste(content(response)$error, "in episode number", epnum))
-      show.episodes <- show.episodes[show.episodes$epnum != epnum, ]
-      next
+    if (!exists("episodes")){
+      episodes <- temp
+    } else {
+      episodes <- rbind(temp, episodes)
     }
-    
-    #apiout_text <- httr::content(response, as = "text", encoding = "UTF-8")
-    #response    <- jsonlite::fromJSON(apiout_text)
-    
-    show.episodes$title[epnum]          <- iconv(response$episode$title, "latin1", "UTF-8")
-    show.episodes$url.trakt[epnum]      <- response$episode$url
-    show.episodes$firstaired.utc[epnum] <- response$episode$first_aired_utc
-    show.episodes$id.tvdb[epnum]        <- response$episode$tvdb_id
-    show.episodes$rating[epnum]         <- response$episode$ratings$percentage
-    show.episodes$votes[epnum]          <- response$episode$ratings$votes
-    show.episodes$loved[epnum]          <- response$episode$ratings$loved
-    show.episodes$hated[epnum]          <- response$episode$ratings$hated
-    #show.episodes$overview[epnum]       <- iconv(response$episode$overview, "latin1", "UTF-8")
   }
   
-  if (is.null(show.episodes$id.tvdb)){
-    warning("No episodes! Wut?")
-    return(NULL)
-  }
-  show.episodes$firstaired.posix  <- as.POSIXct(show.episodes$firstaired.utc, 
-                                                origin = lubridate::origin, tz = "UTC")
-  show.episodes$firstaired.string <- format(show.episodes$firstaired.posix, "%F")  
-  show.episodes$year              <- lubridate::year(show.episodes$firstaired.posix)
+  # Arrange appropriately
+  episodes            <- plyr::arrange(episodes, season, episode)
+  show.episodes       <- transform(episodes, epid = tRakt::pad(season, episode))
+  show.episodes$epnum <- 1:(nrow(show.episodes))
   
   # Convert seasons to factors because ordering
   show.episodes$season           <- factor(show.episodes$season, 
                                            levels = as.character(1:max(show.episodes$season)), 
                                            ordered = T)
+  
   # Add z-scaled episode ratings, scale per season
-  show.episodes$zrating.season <- plyr::ddply(show.episodes, .(season), 
-                                        plyr::summarize, zrating.season = scale(rating))$zrating.season
-  show.episodes$zrating.season <- as.numeric(show.episodes$zrating.season)
-  # Drop episodes with a timestamp of 0, probably faulty data or unaired
-  if (nrow(show.episodes[show.episodes$firstaired.posix != 0, ]) > 0){
-    show.episodes <- show.episodes[show.episodes$firstaired.posix != 0, ]
-  } else {
-    warning("Data is probably faulty.")
+  if (extended != "min"){
+    show.episodes$zrating.season <- plyr::ddply(show.episodes, "season", 
+                                                plyr::summarize, zrating.season = scale(rating))$zrating.season
+    show.episodes$zrating.season <- as.numeric(show.episodes$zrating.season)
+    
+    # Drop episodes with a timestamp of 0, probably faulty data or unaired
+    if (nrow(show.episodes[show.episodes$firstaired.posix != 0, ]) > 0){
+      show.episodes <- show.episodes[show.episodes$firstaired.posix != 0, ]
+    } else {
+      warning("Data is probably faulty.")
+    }
+    
+    if (dropunaired){
+      show.episodes <- show.episodes[show.episodes$firstaired.posix <= lubridate::now(tzone = "UTC"), ]
+    }
   }
+
   
   show.episodes$src  <- "Trakt.tv"
   
-  if (dropunaired){
-    show.episodes <- show.episodes[show.episodes$firstaired.posix <= lubridate::now(tzone = "UTC"), ]
-  }
   return(show.episodes)
 }

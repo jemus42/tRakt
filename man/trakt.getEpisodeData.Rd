@@ -4,16 +4,13 @@
 \alias{trakt.getEpisodeData}
 \title{Get a show's episode information}
 \usage{
-trakt.getEpisodeData(target, show.episodes = NULL,
-  apikey = getOption("trakt.apikey"), dropunaired = TRUE)
+trakt.getEpisodeData(target, season_nums = NULL, extended = "full",
+  dropunaired = TRUE)
 }
 \arguments{
-\item{target}{The \code{slug} or \code{tvdbid} of the show requested}
+\item{target}{The \code{slug} of the show requested}
 
-\item{show.episodes}{Show episodes dataset, normally provided by \link{initializeEpisodes}}
-
-\item{apikey}{API-key used for the call.
-Defaults to \code{getOption("trakt.apikey")}}
+\item{season_nums}{Vector of season numbers, e.g. \code{c(1, 2)}}
 
 \item{dropunaired}{If \code{TRUE}, episodes which have not aired yet are dropped.}
 }
@@ -25,15 +22,19 @@ A \code{data.frame} containing episode details
 Get details for a show's episodes, e.g. ratings, number of votes,
 airdates, urls, plot overviews…
 }
+\details{
+This is basically just an extension of \link[tRakt]{trakt.show.season}, which is used in
+this function to collect all the episode data.
+If you only want the episode data for a single season anyway, \code{trakt.show.season}
+is recommended.
+}
 \note{
-See \href{http://trakt.tv/api-docs/show-episode-summary}{the trakt API docs for further info}
+This function uses much less API calls than \link{trakt.getEpisodeData}.
 }
 \examples{
 \dontrun{
-options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
-breakingbad.seasons  <- trakt.getSeasons("breaking-bad")
-breakingbad.episodes <- initializeEpisodes(breakingbad.seasons)
-breakingbad.episodes <- trakt.getEpisodeData("breaking-bad", breakingbad.episodes)
+get_trakt_credentials() # Set required API data/headers
+breakingbad.episodes <- trakt.getEpisodeData2("breaking-bad", c(1, 2, 3, 4, 5))
 }
 }
 
