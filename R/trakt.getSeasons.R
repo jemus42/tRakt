@@ -38,5 +38,7 @@ trakt.getSeasons <- function(target, extended = "full,images", dropspecials = TR
   if (dropspecials){
     seasons     <- seasons[seasons$number != 0, ]
   }
+  # Reorganization
+  names(seasons) <- sub("number", "season", names(seasons))
   return(seasons)
 }
