@@ -31,11 +31,7 @@ trakt.show.season <- function(target, seasons = 1, extended = "min"){
   url                <- paste0(baseURL, "/", target, "/seasons/", seasons, "?extended=", extended)
   
   # Actual API call
-  headers     <- getOption("trakt.headers")
-  response    <- httr::GET(url, headers)
-  httr::stop_for_status(response) # In case trakt fails
-  season      <- httr::content(response, as = "text")
-  season      <- jsonlite::fromJSON(season)
+  season  <- trakt.api.call(url = url)
   
   # Catch unknown season error
   if (identical(season, list())){

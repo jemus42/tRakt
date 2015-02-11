@@ -29,11 +29,7 @@ trakt.search <- function(query, type = "show"){
   url      <- paste0(baseURL, "?query=", query, "&type=", type)
   
   # Actual API call
-  headers     <- getOption("trakt.headers")
-  response    <- httr::GET(url, headers)
-  httr::stop_for_status(response) # In case trakt fails
-  response    <- httr::content(response, as = "text")
-  response    <- jsonlite::fromJSON(response)
+  response <- trakt.api.call(url = url)
   
   # Check if response is empty (nothing found)
   if (identical(response, list())){

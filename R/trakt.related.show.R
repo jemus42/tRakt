@@ -20,11 +20,7 @@ trakt.related.show <- function(target){
   url      <- paste0(baseURL, "/", target, "/related")
   
   # Actual API call
-  headers     <- getOption("trakt.headers")
-  response    <- httr::GET(url, headers)
-  httr::stop_for_status(response) # In case trakt fails
-  response    <- httr::content(response, as = "text")
-  response    <- jsonlite::fromJSON(response)
+  response <- trakt.api.call(url = url)
 
   return(response)
 }

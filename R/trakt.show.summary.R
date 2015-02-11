@@ -26,10 +26,6 @@ trakt.show.summary <- function(target, extended = "full"){
   url     <- paste0(url, "?extended=", extended)
   
   # Actual API call
-  headers     <- getOption("trakt.headers")
-  response    <- httr::GET(url, headers)
-  httr::stop_for_status(response) # In case trakt fails
-  response    <- httr::content(response, as = "text")
-  response    <- jsonlite::fromJSON(response)
+  response    <- trakt.api.call(url = url)
   return(response)
 }

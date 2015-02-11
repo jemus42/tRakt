@@ -28,15 +28,11 @@ trakt.getSeasons <- function(target, extended = "full,images", dropspecials = TR
   url     <- paste0(baseURL, target, "/", "seasons", "?extended=", extended)
   
   # Actual API call
-  headers     <- getOption("trakt.headers")
-  response    <- httr::GET(url, headers)
-  httr::stop_for_status(response) # In case trakt fails
-  response    <- httr::content(response, as = "text")
-  seasons     <- jsonlite::fromJSON(response)
+  seasons <- trakt.api.call(url = url)
   
   # Data cleanup
   if (dropspecials){
-    seasons     <- seasons[seasons$number != 0, ]
+    seasons <- seasons[seasons$number != 0, ]
   }
   # Reorganization
   names(seasons) <- sub("number", "season", names(seasons))

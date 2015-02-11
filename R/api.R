@@ -93,3 +93,29 @@ get_trakt_credentials <- function(apikey = NULL, username = NULL, client.id = NU
     message("HTTP headers set, retrieve via getOption('trakt.headers')")
   }
 }
+
+#' Make an APIv2 call to any URL
+#' 
+#' \code{trakt.api.call} makes an APIv2 call to a specified URL 
+#' and returns the output \code{jsonlite::fromJSON}'d.
+#' 
+#' @param url APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.
+#' @param headers HTTP headers to set. Must be result of \code{httr::add_headers}.
+#' Default value is \code{getOption("trakt.headers")} set by \link[tRakt]{get_trakt_credentials}.
+#' @return The \code{jsonlite::fromJSON}'d content of the API response.
+#' @export
+#' @import httr
+#' @importFrom jsonlite fromJSON
+#' @note This function is heavily used internally, so why not expose it.
+#' @examples
+#' \dontrun{
+#' get_trakt_credentials() # Set required API data/headers
+#' trakt.api.call("https://api-v2launch.trakt.tv/shows/breaking-bad?extended=min")
+#' }
+trakt.api.call <- function(url, headers = getOption("trakt.headers")){
+  response    <- httr::GET(url, headers)
+  httr::stop_for_status(response) # In case trakt fails
+  response    <- httr::content(response, as = "text")
+  response    <- jsonlite::fromJSON(response)
+  return(response)
+}
