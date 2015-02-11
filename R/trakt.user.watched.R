@@ -1,12 +1,13 @@
 #' Get a user's watched shows or movies
 #'
-#' \code{trakt.user.watched} pulls a user's stats.
-
+#' \code{trakt.user.watched} pulls a user's watched shows or movies.
+#' It does not use OAuth2, so you can only get data for a user with a 
+#' public profile.
 #' @param user Target user. Defaults to \code{getOption("trakt.username")}
 #' @param type Either \code{shows} (default), or \code{movies}
 #' @return A \code{data.frame} containing stats.
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/reference/users/stats/get-stats}{the trakt API docs for further info}
+#' @note See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
