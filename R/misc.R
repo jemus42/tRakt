@@ -71,35 +71,6 @@ getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
   # Most of this is pointless.
 }
 
-#' [Deprecated] Initialize an empty episode dataset
-#'
-#' \code{initializeEpisodes} uses the show season info provided by \link{trakt.getSeasons}
-#' to initialize a \code{data.frame} with a row for each episode of the show.
-#' 
-#' This function will be removed in tRakt v1.0.0
-#' @param show.seasons Show seasons dataset, normally provided by \link{trakt.getSeasons}
-#' @return A \code{data.frame} containing episode placeholders.
-#' @export
-#' @note This is not a regular trakt-function, hence the "trakt."-prefix is omitted.
-#' @examples
-#' \dontrun{
-#' options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
-#' breakingbad.seasons <- trakt.getSeasons("breaking-bad")
-#' breakingbad.episodes <- initializeEpisodes(breakingbad.seasons)
-#' } 
-initializeEpisodes <- function(show.seasons = NULL){
-  if (is.null(show.seasons)){
-    stop("Wat")
-  }
-  show.episodes       <- plyr::ddply(show.seasons, .(season), plyr::summarize, episode = 1:episodes)
-  show.episodes$epnum <- 1:nrow(show.episodes)
-  
-  # Add epid in sXXeYY format
-  show.episodes      <- transform(show.episodes, epid = pad(season, episode))
-  show.episodes$epid <- factor(show.episodes$epid, ordered = TRUE)
-  return(show.episodes)
-}
-
 #' Easy string pasting
 #' 
 #' \code{\%+\%} is an infix version of \code{paste0} or \code{paste(…, sep="")}
