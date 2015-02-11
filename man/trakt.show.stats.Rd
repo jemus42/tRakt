@@ -2,7 +2,7 @@
 % Please edit documentation in R/trakt.show.stats.R
 \name{trakt.show.stats}
 \alias{trakt.show.stats}
-\title{Get a show's summary info}
+\title{[Defunct] Get a show's summary info}
 \usage{
 trakt.show.stats(target, apikey = getOption("trakt.apikey"))
 }
@@ -15,9 +15,11 @@ trakt.show.stats(target, apikey = getOption("trakt.apikey"))
 A \code{list} containing show stats
 }
 \description{
-\code{trakt.show.stats} pulls show stats and returns it compactly.
+DEFUNCT as of 2015-02-11,
+see \href{http://docs.trakt.apiary.io/reference/shows/stats/get-show-stats}{their API docs}
 }
 \details{
+\code{trakt.show.stats} pulls show stats and returns it compactly.
 The data includes show ratings, scrobbles, checkins, plays, comments…
 }
 \note{

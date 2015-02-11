@@ -1,7 +1,9 @@
-#' Get a show's summary info
+#' [Defunct] Get a show's summary info
 #'
-#' \code{trakt.show.stats} pulls show stats and returns it compactly.
+#' DEFUNCT as of 2015-02-11, 
+#' see \href{http://docs.trakt.apiary.io/reference/shows/stats/get-show-stats}{their API docs} 
 #' 
+#' \code{trakt.show.stats} pulls show stats and returns it compactly.
 #' The data includes show ratings, scrobbles, checkins, plays, comments…
 #' @param target The \code{slug} or \code{tvdbid} of the show requested
 #' @param apikey API-key used for the call. Defaults to \code{getOption("trakt.apikey")}
