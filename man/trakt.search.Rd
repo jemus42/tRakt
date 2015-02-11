@@ -2,7 +2,7 @@
 % Please edit documentation in R/trakt.search.R
 \name{trakt.search}
 \alias{trakt.search}
-\title{Search for a show}
+\title{Search for a show via text query}
 \usage{
 trakt.search(query, type = "show")
 }

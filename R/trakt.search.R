@@ -1,4 +1,4 @@
-#' Search for a show
+#' Search for a show via text query
 #'
 #' \code{trakt.search} pulls show stats and returns it compactly.
 #' 
@@ -26,7 +26,8 @@ trakt.search <- function(query, type = "show"){
   headers  <- getOption("trakt.headers")
   query    <- as.character(query) # Just to make sure…
   query    <- URLencode(query)    # URL normalization
-  url      <- paste0("https://api-v2launch.trakt.tv/search?query=", query, "&type=", type)
+  baseURL  <- "https://api-v2launch.trakt.tv/search"
+  url      <- paste0(baseURL, "?query=", query, "&type=", type)
   
   # Actual API call
   response    <- httr::GET(url, headers)
