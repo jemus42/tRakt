@@ -16,6 +16,8 @@ trakt.shows.popular <- function(limit = 10){
   if (limit < 1){
     stop("Limit must be greater than zero")
   }
+  ids <- NULL
+  
   baseURL  <- "https://api-v2launch.trakt.tv/shows/popular"
   url      <- paste0(baseURL, "?page=1&limit=", limit)
   response <- trakt.api.call(url)
