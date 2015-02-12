@@ -13,6 +13,8 @@
 #' @param client.secret Explicitly set your APIv2 client secret
 #' @param set.headers \code{TRUE} by default. Sets the \code{httr} headers for \code{GET} requests
 #' for the APIv2
+#' @param silent If TRUE (default), messages are printed showing you the API information.
+#' Mostly for debug purposes.
 #' @return Nothing. Only messages.
 #' @export
 #' @importFrom jsonlite fromJSON
@@ -25,7 +27,7 @@
 #' get_trakt_credentials()
 #' }
 get_trakt_credentials <- function(apikey = NULL, username = NULL, client.id = NULL, 
-                                  client.secret = NULL, set.headers = TRUE){
+                                  client.secret = NULL, set.headers = TRUE, silent = TRUE){
   # Finding/setting key file
   if (file.exists("~/.config/trakt/key.json")){
     keyfile <- "~/.config/trakt/key.json"
@@ -77,12 +79,15 @@ get_trakt_credentials <- function(apikey = NULL, username = NULL, client.id = NU
     warning("Couldn't find your client secret")
   }
 
-  # Communicate the above
-  message("Please check if everything seems right:")
-  message(paste("Your trakt.tv username is set to",   getOption('trakt.username')))
-  message(paste("Your APIv1 key is set to",           getOption('trakt.apikey')))
-  message(paste("Your APIv2 client id is set to",     getOption('trakt.client.id')))
-  message("Your APIv2 client secret is set (not displayed for privacy reasons)")
+  if (!silent){
+    # Communicate the above
+    message("Please check if everything seems right:")
+    message(paste("Your trakt.tv username is set to",   getOption('trakt.username')))
+    message(paste("Your APIv1 key is set to",           getOption('trakt.apikey')))
+    message(paste("Your APIv2 client id is set to",     getOption('trakt.client.id')))
+    message("Your APIv2 client secret is set (not displayed for privacy reasons)")
+    
+  }
 
   # Set the appropriate header for httr::GET
   if (set.headers){
@@ -90,7 +95,9 @@ get_trakt_credentials <- function(apikey = NULL, username = NULL, client.id = NU
                                               "Content-Type"      = "application/json",
                                               "trakt-api-version" = 2))
     options(trakt.headers = headers)
-    message("HTTP headers set, retrieve via getOption('trakt.headers')")
+    if (!silent){
+      message("HTTP headers set, retrieve via getOption('trakt.headers')")
+    }
   }
 }
 

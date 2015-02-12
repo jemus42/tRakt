@@ -5,7 +5,7 @@
 \title{Set the required trakt.tv API credentials}
 \usage{
 get_trakt_credentials(apikey = NULL, username = NULL, client.id = NULL,
-  client.secret = NULL, set.headers = TRUE)
+  client.secret = NULL, set.headers = TRUE, silent = TRUE)
 }
 \arguments{
 \item{apikey}{Explicitly set your APIv1 key}
@@ -18,6 +18,9 @@ get_trakt_credentials(apikey = NULL, username = NULL, client.id = NULL,
 
 \item{set.headers}{\code{TRUE} by default. Sets the \code{httr} headers for \code{GET} requests
 for the APIv2}
+
+\item{silent}{If TRUE (default), messages are printed showing you the API information.
+Mostly for debug purposes.}
 }
 \value{
 Nothing. Only messages.
