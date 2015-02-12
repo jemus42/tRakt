@@ -10,3 +10,4 @@
 tests.R
 key.json
 .httr-oauth
+.Rprofile
