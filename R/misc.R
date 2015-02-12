@@ -70,23 +70,3 @@ getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
   return(ret)
   # Most of this is pointless.
 }
-
-#' Easy string pasting
-#' 
-#' \code{\%+\%} is an infix version of \code{paste0} or \code{paste(…, sep="")}
-#' 
-#' @param a,b Character strings to paste together
-#' @return A \code{character} string.
-#' @export
-#' @note Blatantly copied from \href{http://adv-r.had.co.nz/Functions.html#infix-functions}{Hadley Wickham}
-#' @examples
-#' \dontrun{
-#' "string one" %+% " string two"
-#' }
-`%+%` <- function(a, b){
-  if (is.null(a) && is.null(b)) return(NULL)
-  if (is.null(a)) return(b)
-  if (is.null(b)) return(a)
-  ret <- paste(a, b, sep = "")
-  return(ret)
-}
