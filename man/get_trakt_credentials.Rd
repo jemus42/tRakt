@@ -4,12 +4,10 @@
 \alias{get_trakt_credentials}
 \title{Set the required trakt.tv API credentials}
 \usage{
-get_trakt_credentials(apikey = NULL, username = NULL, client.id = NULL,
+get_trakt_credentials(username = NULL, client.id = NULL,
   client.secret = NULL, set.headers = TRUE, silent = TRUE)
 }
 \arguments{
-\item{apikey}{Explicitly set your APIv1 key}
-
 \item{username}{Explicitly set your trakt.tv username (Not used yet)}
 
 \item{client.id}{Explicitly set your APIv2 client id}

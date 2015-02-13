@@ -39,16 +39,14 @@ manually plug your values in (see `?get_trakt_credentials()`), or have a `key.js
 It should look like this:
 
     {
-      "apikey": "<APIv1 key (Deprecated)>",
       "username": "yourusernamelol",
       "client.id": "<APIv2 client id>",
       "client.secret": "<APIv2 client secret>"
     }
 
-* `apikey` was required for the APIv1, and until every function is rewritten to only use the APIv2, that'll have to stay there.
-* `username` might be used in the future, I intend to make it easy to retrieve all the shows in your library and show you some stats for them. Or something.
-* `client.id` is the only really necessary one. It's used in the HTTP headers for the API calls, which is kind of a biggie. 
-* `client.secret` is only required for `OAuth2` methods, and I don't really intend on using those unless I *really really* have to.  
+* `username` Optional. For functions that pull a user's watched shows or stats.
+* `client.id` Required. It's used in the HTTP headers for the API calls, which is kind of a biggie. 
+* `client.secret` NYI. Is only required for `OAuth2` methods, and I don't really intend on using those unless I *really really* have to.  
 
 To get your credentials, [you have to have an (approved) app over at trakt.tv](http://trakt.tv/oauth/applications).  
 Don't worry, it's really easy to set up. Even I did it.
