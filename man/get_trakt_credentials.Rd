@@ -39,7 +39,11 @@ only client id really matters.
 }
 \examples{
 \dontrun{
+# Use a key.json
 get_trakt_credentials()
+
+# Explicitly set values
+get_trakt_credentials(username = "sean", client.id = "7264bf927rbfus7t3v47zfb38trz")
 }
 }
 

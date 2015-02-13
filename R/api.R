@@ -23,10 +23,15 @@
 #' only client id really matters.
 #' @examples
 #' \dontrun{
+#' # Use a key.json
 #' get_trakt_credentials()
+#' 
+#' # Explicitly set values
+#' get_trakt_credentials(username = "sean", client.id = "7264bf927rbfus7t3v47zfb38trz")
 #' }
 get_trakt_credentials <- function(username = NULL, client.id = NULL, 
-                                  client.secret = NULL, set.headers = TRUE, silent = TRUE){
+                                  client.secret = NULL, set.headers = TRUE, 
+                                  silent = TRUE){
   # Finding/setting key file
   if (file.exists("~/.config/trakt/key.json")){
     keyfile <- "~/.config/trakt/key.json"
