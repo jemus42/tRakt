@@ -1,4 +1,4 @@
-tRakt-package
+tRakt
 =============
 
 This is `tRakt` version `0.5.3`.  
