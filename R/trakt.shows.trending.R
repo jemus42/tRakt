@@ -17,15 +17,16 @@ trakt.shows.trending <- function(limit = 10){
   if (limit < 1){
     stop("Limit must be greater than zero")
   }
-  ids <- NULL
+  ids <- NULL; show <- NULL
   
   baseURL  <- "https://api-v2launch.trakt.tv/shows/trending"
   url      <- paste0(baseURL, "?page=1&limit=", limit)
   response <- trakt.api.call(url)
   
   # Spreading out ids to get a flat data.frame
-  names(response$ids) <- paste0("id.", names(response$ids))
-  response            <- cbind(subset(response, select = -ids), response$ids)
+  names(response$show$ids) <- paste0("id.", names(response$show$ids))
+  response$show            <- cbind(subset(response$show, select = -ids), response$show$ids)
+  response                 <- cbind(subset(response, select = -show), response$show)
   
   return(response)
 }
