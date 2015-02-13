@@ -4,12 +4,13 @@
 \alias{trakt.show.stats}
 \title{[Defunct] Get a show's summary info}
 \usage{
-trakt.show.stats(target, apikey = getOption("trakt.apikey"))
+trakt.show.stats(target)
 }
 \arguments{
-\item{target}{The \code{slug} or \code{tvdbid} of the show requested}
+\item{target}{The \code{slug} of the show requested}
 
-\item{apikey}{API-key used for the call. Defaults to \code{getOption("trakt.apikey")}}
+\item{extended}{Whether extended info should be provided.
+Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
 A \code{list} containing show stats
@@ -23,11 +24,11 @@ see \href{http://docs.trakt.apiary.io/reference/shows/stats/get-show-stats}{thei
 The data includes show ratings, scrobbles, checkins, plays, comments…
 }
 \note{
-See \href{http://trakt.tv/api-docs/show-stats}{the trakt API docs for further info}
+See \href{http://docs.trakt.apiary.io/#reference/shows/stats}{the trakt API docs for further info}
 }
 \examples{
 \dontrun{
-options(trakt.apikey = jsonlite::fromJSON("key.json")$apikey)
+get_trakt_credentials() # Set required API data/headers
 breakingbad.stats <- trakt.show.stats("breaking-bad")
 }
 }
