@@ -7,9 +7,11 @@
 trakt.search(query, type = "show")
 }
 \arguments{
-\item{query}{The keyword used for the search. Should be as URL-compatible as possible.}
+\item{query}{The keyword used for the search. Well be coerced to \code{character} and
+\code{URLencode}d.}
 
-\item{type}{The type of data you're looking for. Defaults to \code{show}}
+\item{type}{The type of data you're looking for. Defaults to \code{show}, can also
+be \code{movie}, \code{episode}, \code{person} or \code{list}.}
 }
 \value{
 A \code{data.frame} containing a single search result. Hopefully the one you wanted.

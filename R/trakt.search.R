@@ -5,8 +5,10 @@
 #' Search for a show with a keyword (e.g. \code{"Breaking Bad"}) and receive basic info of the 
 #' first search result. It's main use is to retrieve the tvdbid or proper show title for further use,
 #' as well as receiving a quick overview of a show.
-#' @param query The keyword used for the search. Should be as URL-compatible as possible.
-#' @param type The type of data you're looking for. Defaults to \code{show}
+#' @param query The keyword used for the search. Well be coerced to \code{character} and
+#'  \code{URLencode}d.
+#' @param type The type of data you're looking for. Defaults to \code{show}, can also
+#'  be \code{movie}, \code{episode}, \code{person} or \code{list}.
 #' @return A \code{data.frame} containing a single search result. Hopefully the one you wanted.
 #' If no result is foun, the return value is \code{list(error = "Nothing found")} and a \code{warning}
 #' @export
