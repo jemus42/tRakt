@@ -4,7 +4,7 @@
 \alias{trakt.show.season}
 \title{Get a season of a show}
 \usage{
-trakt.show.season(target, seasons = 1, extended = "min")
+trakt.show.season(target, seasons = 1, extended = "full,images")
 }
 \arguments{
 \item{target}{The \code{slug} of the show requested}
