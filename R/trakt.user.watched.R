@@ -48,21 +48,29 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
     watched <- cbind(response[c("plays", "last_watched_at")], shows)
     
   } else if (type == "shows.extended"){
+    
+    # Drop specials (s00)
+    for (i in nrow(response$show)){
+      response$seasons[[i]]$episodes <- response$seasons[[i]]$episodes[response$seasons[[i]]$number != 0]
+    }
+    
     epstats <- NULL
     for (show in 1:nrow(response)){
       title <- response[show, ]$show$title
-      # Debug: print(paste(show, title))
-      x     <- response$seasons[[show]]
-      
+      #print(paste(show, title))
+      x      <- response$seasons[[show]]
+      season_nums <- x[[1]]
+      # Create per-season datasets, append season number
       if (length(x[[1]]) > 1){
-        for (s in x[[1]]){
-          if (s == 0){next}
-          x[[2]][[s]][["season"]] <- x[[1]][[s]]
+        for (s in 1:length(season_nums)){
+          x[[2]][[s]][["season"]] <- season_nums[[s]]
         }
+        # Bind it all together
         temp <- plyr::ldply(x[[2]], as.data.frame)
+        temp <- temp[temp$season != 0, ]
       } else {
         temp <- as.data.frame(x[[2]])
-        temp[["season"]] <- x[[1]]
+        temp[["season"]] <- season_nums
       }
       
       temp$title  <- title
