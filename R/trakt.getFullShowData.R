@@ -15,10 +15,12 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' breakingbad.seasons  <- trakt.getFullShowData("Breaking Bad")
+#' # Use the search within the function
+#' breakingbad <- trakt.getFullShowData("Breaking Bad")
+#' # Alternatively, us a slug for explicit results
+#' breakingbad <- trakt.getFullShowData(slug = "breaking-bad")
 #' }
-#' 
-trakt.getFullShowData <- function(query, slug = NULL, dropunaired = TRUE){
+trakt.getFullShowData <- function(query = NULL, slug = NULL, dropunaired = TRUE){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }

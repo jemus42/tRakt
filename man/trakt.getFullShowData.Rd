@@ -4,7 +4,7 @@
 \alias{trakt.getFullShowData}
 \title{Get all the show data}
 \usage{
-trakt.getFullShowData(query, slug = NULL, dropunaired = TRUE)
+trakt.getFullShowData(query = NULL, slug = NULL, dropunaired = TRUE)
 }
 \arguments{
 \item{query}{Keyword used for \link{trakt.search}. Optional.}
@@ -29,7 +29,10 @@ calling the other functions.
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-breakingbad.seasons  <- trakt.getFullShowData("Breaking Bad")
+# Use the search within the function
+breakingbad <- trakt.getFullShowData("Breaking Bad")
+# Alternatively, us a slug for explicit results
+breakingbad <- trakt.getFullShowData(slug = "breaking-bad")
 }
 }
 
