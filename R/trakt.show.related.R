@@ -1,6 +1,6 @@
 #' Search for related shows
 #'
-#' \code{trakt.related.show} returns related shows to the search query.
+#' \code{trakt.show.related} returns related shows to the search query.
 #' 
 #' Search for related shows to the show you specified.
 #' @param target The show's \code{slug} to be used.
@@ -10,9 +10,9 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' related <- trakt.related.show(78874)
+#' related <- trakt.show.related("game-of-thrones")
 #' }
-trakt.related.show <- function(target){
+trakt.show.related <- function(target){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
