@@ -49,9 +49,9 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
   show.episodes$epnum <- 1:(nrow(show.episodes))
   
   # Convert seasons to factors because ordering
-  show.episodes$season           <- factor(show.episodes$season, 
-                                           levels = as.character(1:max(show.episodes$season)), 
-                                           ordered = T)
+  show.episodes$season <- factor(show.episodes$season, 
+                                 levels = as.character(1:max(show.episodes$season)), 
+                                 ordered = T)
   
   # Add z-scaled episode ratings, scale per season
   if (extended != "min"){

@@ -3,9 +3,9 @@ Type: Package
 Title: Pull data from trakt.tv
 Version: 0.7.0
 Date: 2015-02-15
-Authors@R: person("Lukas Burk", email = "lukas@quantenbrot.de", role = c("aut",
-    "cre"))
-Description: Functions to easily pull tv show data from trakt.tv
+Authors@R: person("Lukas Burk", email = "lukas@quantenbrot.de", 
+                  role = c("aut", "cre"))
+Description: Functions to easily pull data from trakt.tv using their API(v2)
 Depends:
     R (>= 3.0.2)
 Imports:
