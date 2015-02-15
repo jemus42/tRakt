@@ -7,7 +7,7 @@
 #' The data includes show ratings, scrobbles, checkins, plays, comments…
 #' @param target The \code{slug} of the show requested
 #' @param extended Whether extended info should be provided. 
-#' Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}
+#' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}
 #' @return A \code{list} containing show stats
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/stats}{the trakt API docs for further info}
@@ -16,7 +16,7 @@
 #' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.stats <- trakt.show.stats("breaking-bad")
 #' }
-trakt.show.stats <- function(target){
+trakt.show.stats <- function(target, extended = "min"){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }

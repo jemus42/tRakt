@@ -4,13 +4,13 @@
 \alias{trakt.show.stats}
 \title{[Defunct] Get a show's summary info}
 \usage{
-trakt.show.stats(target)
+trakt.show.stats(target, extended = "min")
 }
 \arguments{
 \item{target}{The \code{slug} of the show requested}
 
 \item{extended}{Whether extended info should be provided.
-Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}}
+Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
 A \code{list} containing show stats
