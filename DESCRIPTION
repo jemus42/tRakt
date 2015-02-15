@@ -1,7 +1,7 @@
 Package: tRakt
 Type: Package
 Title: Pull data from trakt.tv
-Version: 0.6.2
+Version: 0.7.0
 Date: 2015-02-13
 Authors@R: person("Jemus42", email = "jemus42@quantenbrot.de", role = c("aut",
     "cre"))
@@ -14,6 +14,8 @@ Imports:
     lubridate,
     plyr,
     stringr
+Suggests: knitr
+VignetteBuilder: knitr
 License: MIT + file LICENSE
 LazyData: true
 Roxygen: list(wrap = FALSE)

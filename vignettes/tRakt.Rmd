@@ -20,5 +20,5 @@ library(tRakt)
 ````{r getting data}
 show <- trakt.getFullShowData("game of thrones")
 
-knitr::kable(head(show$episodes)[c("epnum", "title", "rating", "votes")])
+knitr::kable(head(show$episodes)[c("season", "episode", "title", "rating", "votes")])
 ````
