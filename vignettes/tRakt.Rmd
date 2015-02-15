@@ -1,0 +1,24 @@
+---
+title: "Using tRakt"
+author: "Jemus42"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using tRakt}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+## Startup
+
+```{r startup}
+library(tRakt)
+# Set your credentials via get_trakt_credentials() if not done by package loading
+```
+
+## Getting some data
+
+````{r getting data}
+show <- trakt.getFullShowData("game of thrones")
+
+knitr::kable(head(show$episodes)[c("epnum", "title", "rating", "votes")])
+````
