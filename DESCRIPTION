@@ -2,8 +2,8 @@ Package: tRakt
 Type: Package
 Title: Pull data from trakt.tv
 Version: 0.7.0
-Date: 2015-02-13
-Authors@R: person("Jemus42", email = "jemus42@quantenbrot.de", role = c("aut",
+Date: 2015-02-15
+Authors@R: person("Lukas Burk", email = "lukas@quantenbrot.de", role = c("aut",
     "cre"))
 Description: Functions to easily pull tv show data from trakt.tv
 Depends:
