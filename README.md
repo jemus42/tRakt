@@ -15,7 +15,17 @@ It's an [R package](http://r-project.org) primarily used by (i.e. build for) [th
 	library("tRakt")
 	
 
-## Status
+## News
+
+### 2015-02-16
+
+I've been working on some user-specific methods, so you can now use the `trakt.user.*` family of functions to get a user's…
+
+* Collection: `trakt.user.collection()`
+* Watched items: `trakt.user.watched()`
+* Stats: `trakt.user.stats()`
+
+All of them default to the username set in `getOption("trakt.username")`, but any publicly viewable user should work. Note that OAuth2 is not implemented, so private users can't be accessed.
 
 ### 2015-02-11
 
@@ -44,12 +54,14 @@ It should look like this:
       "client.secret": "<APIv2 client secret>"
     }
 
-* `username` Optional. For functions that pull a user's watched shows or stats.
+* `username` Optional. For functions that pull a user's watched shows or stats (`trakt.user.*`)
 * `client.id` Required. It's used in the HTTP headers for the API calls, which is kind of a biggie. 
 * `client.secret` NYI. Is only required for `OAuth2` methods, and I don't really intend on using those unless I *really really* have to.  
 
 To get your credentials, [you have to have an (approved) app over at trakt.tv](http://trakt.tv/oauth/applications).  
 Don't worry, it's really easy to set up. Even I did it.
+
+### Use my apps client.id
 
 If you don't want to create an app, I've been told it's okay to supply my app's client.id, 
 so you can run the following:
