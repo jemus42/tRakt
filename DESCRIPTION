@@ -3,7 +3,7 @@ Type: Package
 Title: Pull data from trakt.tv
 Version: 0.7.2
 Date: 2015-02-15
-Authors@R: person("Lukas Burk", email = "lukas@quantenbrot.de", 
+Authors@R: person("Lukas Burk", email = "lukas@quantenbrot.de",
                   role = c("aut", "cre"))
 Description: Functions to easily pull data from trakt.tv using their API(v2)
 Depends:
@@ -14,7 +14,7 @@ Imports:
     lubridate,
     plyr,
     stringr
-Suggests: 
+Suggests:
     knitr,
     dplyr,
     ggplot2
@@ -23,3 +23,5 @@ License: MIT + file LICENSE
 LazyData: true
 Roxygen: list(wrap = FALSE)
 Encoding: UTF-8
+URL: http://github.com/jemus42/tRakt
+BugReports: http://github.com/jemus42/tRakt/issues
