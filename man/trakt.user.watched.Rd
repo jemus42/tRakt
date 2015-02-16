@@ -28,8 +28,8 @@ See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the t
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-mystats   <- trakt.user.watched() # Defaults to your username if set
-seanstats <- trakt.user.watched(user = "sean")
+myshows     <- trakt.user.watched() # Defaults to your username if set
+seans.shows <- trakt.user.watched(user = "sean")
 }
 }
 
