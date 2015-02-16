@@ -1,7 +1,7 @@
 tRakt
 =============
 
-This is `tRakt` version `0.7.1`.  
+This is `tRakt` version `0.7.2`.  
 It contains functions to pull data from [trakt.tv](http://trakt.tv/), focusing on tv shows.
 
 It's an [R package](http://r-project.org) primarily used by (i.e. build for) [this webapp](http://trakt.jemu.name), but you can fiddle around with it if you like.
