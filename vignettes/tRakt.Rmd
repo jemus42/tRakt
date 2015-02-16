@@ -22,3 +22,18 @@ show <- trakt.getFullShowData("game of thrones")
 
 knitr::kable(head(show$episodes)[c("season", "episode", "title", "rating", "votes")])
 ````
+
+## Looking at my shows
+
+```{r myshows}
+myshows.ex <- trakt.user.watched(type = "shows.extended")
+
+library(dplyr)
+# Tell me how long I've been watching each show, then tail() it
+myshows.ex %>% 
+  group_by(title) %>% 
+  summarize(days = max(lastwatched.posix) - min(lastwatched.posix)) %>%
+  arrange(days) %>% 
+  tail(5) %>% knitr::kable(.)
+```
+
