@@ -51,6 +51,12 @@ It should look like this:
 To get your credentials, [you have to have an (approved) app over at trakt.tv](http://trakt.tv/oauth/applications).  
 Don't worry, it's really easy to set up. Even I did it.
 
+If you don't want to create an app, I've been told it's okay to supply my app's client.id, 
+so you can run the following:
+
+`get_trakt_credentials(client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")`
+
+
 
 
 
