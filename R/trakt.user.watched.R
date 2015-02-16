@@ -91,8 +91,7 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
     stop("Unknown type, must be 'shows', 'shows.extended', or 'movies'")
   }
   
-  watched$lastwatched.posix  <- as.POSIXct(watched$last_watched_at, 
-                                             origin = lubridate::origin, tz = "UTC")
+  watched$lastwatched.posix  <- lubridate::parse_date_time(watched$last_watched_at, "%y-%m-%dT%H-%M-%S", truncated = 3)
   watched$lastwatched.year   <- lubridate::year(watched$lastwatched.posix)
   
   return(watched)
