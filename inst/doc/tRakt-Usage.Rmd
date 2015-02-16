@@ -1,0 +1,138 @@
+---
+title: "Using tRakt"
+author: "Jemus42"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using tRakt}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+## First step: Loading packages and trakt.tv credentials
+
+```{r Startup}
+suppressPackageStartupMessages(library(tRakt)) 
+suppressPackageStartupMessages(library(dplyr)) # For convenience
+library(ggplot2) # For plotting (duh)
+library(knitr)   # for knitr::kable, used to render simple tables
+
+# If you don't have a client.id defined in a key.json, use mine
+if (is.null(getOption("trakt.client.id"))){
+  get_trakt_credentials(client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
+}
+```
+
+## Let's pull some data
+
+### Search
+
+There are two ways to search on trakt.tv. The first is via text query (i.e. `Game of Thrones`),
+the second is via ID (various types supported).  
+
+At the time of this writing (2015-02-16), the trakt.tv search is a little derpy, so search by ID is recommended.
+
+```{r Search}
+# Search via text query
+show1  <- trakt.search("Game of Thrones")
+
+# Search via ID (trakt id is used by default)
+show2 <- trakt.search.byid(1390) # trakt id of Game of Thrones
+
+# The returned data is identical
+identical(show1, show2)
+```
+
+### Getting more data
+
+```{r Data_pulls}
+# Search a show and receive basic info
+show          <- trakt.search("Breaking Bad")
+# Save the slug of the show, that's needed for other functions as an ID
+slug          <- show$ids$slug
+slug
+
+# Get the season & episode data
+show.seasons  <- trakt.getSeasons(slug) # How many seasons are there?
+show.episodes <- trakt.getEpisodeData(slug, show.seasons$season, extended = "full")
+
+# Glimpse at data (only some columns each)
+rownames(show.seasons) <- NULL # This shouldn't be necessary
+show.seasons[c(1, 3, 4)] %>% kable
+
+show.episodes[c(1:3, 6, 7, 17)] %>% head(10) %>% kable
+```
+
+## Some example graphs
+
+Plotting the data is pretty straight forward since I try to return regular `data.frames` without 
+unnecessary ambiguitiy.
+
+```{r Graphing_1, fig.align = 'center', fig.width = 9}
+show.episodes$episode_abs <- 1:nrow(show.episodes) # I should probably do that for you.
+show.episodes %>%
+  ggplot(aes(x = episode_abs, y = rating, colour = season)) +
+    geom_point(size = 3.5, colour = "black") +
+    geom_point(size = 3) + 
+    geom_smooth(method = lm, se = F) +
+    labs(title = "Trakt.tv Ratings of Breaking Bad", 
+         y = "Rating", x = "Episode (absolute)", colour = "Season")
+
+show.episodes %>%
+  ggplot(aes(x = episode_abs, y = votes, colour = season)) +
+    geom_point(size = 3.5, colour = "black") +
+    geom_point(size = 3) + 
+    labs(title = "Trakt.tv User Votes of Breaking Bad Episodes", 
+         y = "Votes", x = "Episode (absolute)", colour = "Season")
+
+show.episodes %>%
+  ggplot(aes(x = episode_abs, y = scale(rating), fill = season)) +
+    geom_bar(stat = "identity", colour = "black", position = "dodge") +
+    labs(title = "Trakt.tv User Ratings of Breaking Bad Episodes\n(Scaled using mean and standard deviation)", 
+         y = "z-Rating", x = "Episode (absolute)", fill = "Season")
+```
+
+## Now some user-specific data
+
+User-specific functions (`trakt.user.*`) default to `user = getOption("trakt.username")`, which
+should have been set by `get_trakt_credentials()`, so you get your own data per default.  
+However, you can specifiy any publicly available user. Note that OAuth2 is not supported, so 
+by "publicly available user", I really mean only non-private users.
+
+```{r get_user_data}
+# Get a detailed list of shows/episodes I watched
+myeps    <- trakt.user.watched(user = "jemus42", type = "shows.extended")
+
+# Get a feel for the data
+myeps[c(1:4, 6:7)] %>% 
+  arrange(desc(lastwatched.posix)) %>% 
+  head(5) %>% 
+  kable
+
+# …and the movies in my trakt.tv collection
+mymovies <- trakt.user.collection(user = "jemus42", type = "movies")
+
+mymovies %>%
+  select(title, year, collected.posix) %>%
+  arrange(collected.posix) %>%
+  head(5) %>%
+  kable
+```
+
+I tried my best to make the returned data as flat and usable as possible.  
+I *tried*.
+
+So, well, let's see: Take watched shows, diff the oldest and youngest `lastwatched` values
+to get something like a "watch duration" going and aggregate using it:
+
+```{r}
+myeps %>% 
+  group_by(title) %>% 
+  summarize(days = round(max(lastwatched.posix) - min(lastwatched.posix))) %>%
+  arrange(desc(days)) %>%
+  head(10) %>%
+  kable
+```
+
+It's data like this that makes me wish I had been using trakt.tv forever. The potential for interesting data is great, but the limit is, as usual, the source of the data.
+
+
