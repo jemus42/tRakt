@@ -32,8 +32,6 @@ or in \code{~/.config/trakt/key.json}.
 Arguments to this function take precedence over any key file.
 }
 \note{
-This function includes both the old v1 API key as well
-as the v2 API keys (client id and client secret).
 Please note that no oauth2 methods are supported yet,
 only client id really matters.
 }
@@ -43,7 +41,7 @@ only client id really matters.
 get_trakt_credentials()
 
 # Explicitly set values
-get_trakt_credentials(username = "sean", client.id = "7264bf927rbfus7t3v47zfb38trz")
+get_trakt_credentials(username = "sean", client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
 }
 }
 

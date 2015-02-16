@@ -1,12 +1,12 @@
 #' Set the required trakt.tv API credentials
-#' 
-#' \code{get_trakt_credentials} searches for your credentials and stores them 
-#' in the appropriate \code{option} variables. 
+#'
+#' \code{get_trakt_credentials} searches for your credentials and stores them
+#' in the appropriate \code{option} variables.
 #' It also sets the HTTP header required for v2 API calls.
 #' To make this work, place a \code{key.json} file either in the working directory
 #' or in \code{~/.config/trakt/key.json}.
 #' Arguments to this function take precedence over any key file.
-#' 
+#'
 #' @param username Explicitly set your trakt.tv username (Not used yet)
 #' @param client.id Explicitly set your APIv2 client id
 #' @param client.secret Explicitly set your APIv2 client secret
@@ -17,20 +17,18 @@
 #' @return Nothing. Only messages.
 #' @export
 #' @importFrom jsonlite fromJSON
-#' @note This function includes both the old v1 API key as well
-#' as the v2 API keys (client id and client secret).
-#' Please note that no oauth2 methods are supported yet, 
+#' @note Please note that no oauth2 methods are supported yet,
 #' only client id really matters.
 #' @examples
 #' \dontrun{
 #' # Use a key.json
 #' get_trakt_credentials()
-#' 
+#'
 #' # Explicitly set values
-#' get_trakt_credentials(username = "sean", client.id = "7264bf927rbfus7t3v47zfb38trz")
+#' get_trakt_credentials(username = "sean", client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
 #' }
-get_trakt_credentials <- function(username = NULL, client.id = NULL, 
-                                  client.secret = NULL, set.headers = TRUE, 
+get_trakt_credentials <- function(username = NULL, client.id = NULL,
+                                  client.secret = NULL, set.headers = TRUE,
                                   silent = TRUE){
   # Finding/setting key file
   if (file.exists("~/.config/trakt/key.json")){
@@ -80,7 +78,7 @@ get_trakt_credentials <- function(username = NULL, client.id = NULL,
     message(paste("Your trakt.tv username is set to",   getOption('trakt.username')))
     message(paste("Your APIv2 client id is set to",     getOption('trakt.client.id')))
     message("Your APIv2 client secret is set (not displayed for privacy reasons)")
-    
+
   }
 
   # Set the appropriate header for httr::GET
@@ -96,10 +94,10 @@ get_trakt_credentials <- function(username = NULL, client.id = NULL,
 }
 
 #' Make an APIv2 call to any URL
-#' 
-#' \code{trakt.api.call} makes an APIv2 call to a specified URL 
+#'
+#' \code{trakt.api.call} makes an APIv2 call to a specified URL
 #' and returns the output \code{jsonlite::fromJSON}'d.
-#' 
+#'
 #' @param url APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.
 #' @param headers HTTP headers to set. Must be result of \code{httr::add_headers}.
 #' Default value is \code{getOption("trakt.headers")} set by \link[tRakt]{get_trakt_credentials}.
