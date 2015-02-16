@@ -70,7 +70,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
     
     watched <- cbind(response["collected_at"], movies)
   } else {
-    stop("Unknown type, must be 'shows', 'shows.extended', or 'movies'")
+    stop("Unknown type, must be 'shows' or 'movies'")
   }
   
   watched$collected.posix  <- lubridate::parse_date_time(watched$collected_at, "%y-%m-%dT%H-%M-%S", truncated = 3)
