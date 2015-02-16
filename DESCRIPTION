@@ -14,7 +14,10 @@ Imports:
     lubridate,
     plyr,
     stringr
-Suggests: knitr
+Suggests: 
+    knitr,
+    dplyr,
+    ggplot2
 VignetteBuilder: knitr
 License: MIT + file LICENSE
 LazyData: true
