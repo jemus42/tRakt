@@ -45,11 +45,11 @@ that is tested/built with the new API in mind. Others to come.
 
 The APIv2 requires at least a `client id` for the API calls.  
 Calling `get_trakt_credentials()` will set everything up for you, but you either have to 
-manually plug your values in (see `?get_trakt_credentials()`), or have a `key.json` sitting either in the working directory or in `~/.config/trakt.key.json`.  
+manually plug your values in (see `?get_trakt_credentials()`), or have a `key.json` sitting either in the working directory or in `~/.config/trakt/key.json`.  
 It should look like this:
 
     {
-      "username": "yourusernamelol",
+      "username": "yourusername",
       "client.id": "<APIv2 client id>",
       "client.secret": "<APIv2 client secret>"
     }
