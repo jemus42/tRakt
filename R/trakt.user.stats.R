@@ -17,15 +17,15 @@ trakt.user.stats <- function(user = getOption("trakt.username")){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
   if (is.null(getOption("trakt.username"))){
-    stop("No username is not set.")
+    stop("No username is set.")
   }
-  
+
   # Construct URL
   baseURL   <- "https://api-v2launch.trakt.tv/users"
   url       <- paste0(baseURL, "/", user, "/stats")
-  
+
   # Actual API call
   response  <- trakt.api.call(url = url)
-  
+
   return(response)
 }

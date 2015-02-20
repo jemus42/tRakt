@@ -4,13 +4,17 @@
 \alias{trakt.api.call}
 \title{Make an APIv2 call to any URL}
 \usage{
-trakt.api.call(url, headers = getOption("trakt.headers"))
+trakt.api.call(url, headers = getOption("trakt.headers"),
+  fromJSONify = TRUE)
 }
 \arguments{
 \item{url}{APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.}
 
 \item{headers}{HTTP headers to set. Must be result of \code{httr::add_headers}.
 Default value is \code{getOption("trakt.headers")} set by \link[tRakt]{get_trakt_credentials}.}
+
+\item{fromJSONify}{If \code{TRUE} (default), the API response will be converted to an object via
+\code{jsonlite::fromJSON}}
 }
 \value{
 The \code{jsonlite::fromJSON}'d content of the API response.
