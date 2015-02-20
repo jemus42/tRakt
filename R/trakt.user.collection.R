@@ -1,7 +1,7 @@
 #' Get a user's collected shows or movies
 #'
 #' \code{trakt.user.collection} pulls a user's watched shows or movies.
-#' It does not use OAuth2, so you can only get data for a user with a 
+#' It does not use OAuth2, so you can only get data for a user with a
 #' public profile.
 #' @param user Target user. Defaults to \code{getOption("trakt.username")}
 #' @param type Either \code{shows} (default) or \code{movies}
@@ -18,24 +18,24 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
-  if (is.null(getOption("trakt.username"))){
+  if (is.null(user) && is.null(getOption("trakt.username"))){
     stop("No username is set.")
   }
-  
+
   # Construct URL
   baseURL   <- "https://api-v2launch.trakt.tv/users"
   url       <- paste0(baseURL, "/", user, "/collection/", type)
-  
+
   # Actual API call
   response  <- trakt.api.call(url = url)
-  
+
   if (type == "shows"){
-    
+
     # Drop specials (s00)
     for (i in nrow(response$show)){
       response$seasons[[i]]$episodes <- response$seasons[[i]]$episodes[response$seasons[[i]]$number != 0]
     }
-    
+
     epstats <- NULL
     for (show in 1:nrow(response)){
       title <- response[show, ]$show$title
@@ -54,7 +54,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
         temp <- as.data.frame(x[[2]])
         temp[["season"]] <- season_nums
       }
-      
+
       temp$title  <- title
       names(temp) <- sub("number", "episode", names(temp))
       epstats <- rbind(temp, epstats)
@@ -67,14 +67,14 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
     movies$id.trakt  <- response$movie$ids$trakt
     movies$id.imdb   <- response$movie$ids$imdb
     movies$id.tmdb   <- response$movie$ids$tmdb
-    
+
     watched <- cbind(response["collected_at"], movies)
   } else {
     stop("Unknown type, must be 'shows' or 'movies'")
   }
-  
+
   watched$collected.posix  <- lubridate::parse_date_time(watched$collected_at, "%y-%m-%dT%H-%M-%S", truncated = 3)
   watched$collected.year   <- lubridate::year(watched$collected.posix)
-  
+
   return(watched)
 }
