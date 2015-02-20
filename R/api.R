@@ -103,11 +103,11 @@ get_trakt_credentials <- function(username = NULL, client.id = NULL,
 #' Default value is \code{getOption("trakt.headers")} set by \link[tRakt]{get_trakt_credentials}.
 #' @param fromJSONify If \code{TRUE} (default), the API response will be converted to an object via
 #' \code{jsonlite::fromJSON}
-#' @return The \code{jsonlite::fromJSON}'d content of the API response.
+#' @return The content of the API response, \code{jsonlite::fromJSON}'d if requested.
 #' @export
 #' @import httr
 #' @importFrom jsonlite fromJSON
-#' @note This function is heavily used internally, so why not expose it.
+#' @note This function is heavily used internally, so why not expose it to the user.
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -118,7 +118,7 @@ trakt.api.call <- function(url, headers = getOption("trakt.headers"), fromJSONif
   httr::stop_for_status(response) # In case trakt fails
   response    <- httr::content(response, as = "text")
   if (fromJSONify){
-    response    <- jsonlite::fromJSON(response)
+    response  <- jsonlite::fromJSON(response)
   }
   return(response)
 }

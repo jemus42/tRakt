@@ -17,14 +17,14 @@ Default value is \code{getOption("trakt.headers")} set by \link[tRakt]{get_trakt
 \code{jsonlite::fromJSON}}
 }
 \value{
-The \code{jsonlite::fromJSON}'d content of the API response.
+The content of the API response, \code{jsonlite::fromJSON}'d if requested.
 }
 \description{
 \code{trakt.api.call} makes an APIv2 call to a specified URL
 and returns the output \code{jsonlite::fromJSON}'d.
 }
 \note{
-This function is heavily used internally, so why not expose it.
+This function is heavily used internally, so why not expose it to the user.
 }
 \examples{
 \dontrun{
