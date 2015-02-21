@@ -3,7 +3,7 @@
 #' \code{trakt.user.watchlist} pulls a user's watchlist.
 
 #' @param user Target user. Defaults to \code{getOption("trakt.username")}
-#' @param type Either \code{shows} (default), \code{seasons} or \code{movies}
+#' @param type Either \code{shows} (default) or \code{movies}
 #' @return A \code{data.frame} containing stats.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{the trakt API docs for further info}

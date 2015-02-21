@@ -9,7 +9,7 @@ trakt.user.watchlist(user = getOption("trakt.username"), type = "shows")
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
 
-\item{type}{Either \code{shows} (default), \code{seasons} or \code{movies}}
+\item{type}{Either \code{shows} (default) or \code{movies}}
 }
 \value{
 A \code{data.frame} containing stats.

@@ -8,12 +8,9 @@ It's an [R package](http://r-project.org) primarily used by (i.e. build for) [th
 
 ## Installation
 
-	if (!require("devtools")){
-	  install.packages("devtools")
-	} 
+	if (!require("devtools")) install.packages("devtools")
 	devtools::install_github("jemus42/tRakt-package")
 	library("tRakt")
-	
 
 ## News
 
@@ -67,8 +64,3 @@ If you don't want to create an app, I've been told it's okay to supply my app's 
 so you can run the following:
 
 `get_trakt_credentials(client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")`
-
-
-
-
-
