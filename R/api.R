@@ -10,8 +10,8 @@
 #' @param username Explicitly set your trakt.tv username (Not used yet)
 #' @param client.id Explicitly set your APIv2 client id
 #' @param client.secret Explicitly set your APIv2 client secret
-#' @param set.headers \code{TRUE} by default. Sets the \code{httr} headers for \code{GET} requests
-#' for the APIv2
+#' @param set.headers \code{TRUE} by default. Sets the \code{httr} headers
+#' for \code{GET} requests for the APIv2
 #' @param silent If TRUE (default), messages are printed showing you the API information.
 #' Mostly for debug purposes.
 #' @return Nothing. Only messages.
@@ -25,7 +25,8 @@
 #' get_trakt_credentials()
 #'
 #' # Explicitly set values
-#' get_trakt_credentials(username = "sean", client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
+#' get_trakt_credentials(username = "sean",
+#' client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
 #' }
 get_trakt_credentials <- function(username = NULL, client.id = NULL,
                                   client.secret = NULL, set.headers = TRUE,
