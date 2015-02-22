@@ -4,9 +4,16 @@ tRakt
 This is `tRakt` version `0.8.0`.  
 It contains functions to pull data from [trakt.tv](http://trakt.tv/), focusing on tv shows.
 
-It's an [R package](http://r-project.org) primarily used by (i.e. build for) [this webapp](http://trakt.jemu.name), but you can fiddle around with it if you like.
+It's an [R package](http://r-project.org) primarily used by (i.e. build for) [this webapp](http://trakt.jemu.name), but you can fiddle around with it if you like.  
+There might be some interesting things to play around with, and I've tried some of them [here](http://dump.jemu.name/tRakt-Usage.html) (Also included as a package vignette).
 
 ## Installation
+
+If the package finally makes it to [CRAN](http://cran.r-project.org), you can install it via
+
+    install.packages("tRakt")
+
+Until then, or just to get the latest dev version from GitHub, run the following:
 
 	if (!require("devtools")) install.packages("devtools")
 	devtools::install_github("jemus42/tRakt-package")
