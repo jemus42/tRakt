@@ -25,4 +25,12 @@ get_trakt_credentials() # Set required API data/headers
 trakt.user.followers("jemus42")
 }
 }
+\seealso{
+Other user: \code{\link{trakt.user.collection}};
+  \code{\link{trakt.user.following}};
+  \code{\link{trakt.user.friends}};
+  \code{\link{trakt.user.stats}};
+  \code{\link{trakt.user.watched}};
+  \code{\link{trakt.user.watchlist}}
+}
 

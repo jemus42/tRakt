@@ -9,6 +9,7 @@
 #' @return A \code{list} containing people info
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/people/get-all-people-for-a-show}{the trakt API docs for further info}
+#' @family show
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

@@ -34,4 +34,7 @@ get_trakt_credentials() # Set required API data/headers
 breakingbad <- trakt.search("Breaking Bad")
 }
 }
+\seealso{
+Other API, search: \code{\link{trakt.search.byid}}
+}
 

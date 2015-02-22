@@ -7,6 +7,7 @@
 #' @return A \code{data.frame} containing search results
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/related/get-related-shows}{the trakt API docs for further info}
+#' @family show
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

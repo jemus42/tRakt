@@ -32,4 +32,7 @@ get_trakt_credentials() # Set required API data/headers
 trakt.api.call("https://api-v2launch.trakt.tv/shows/breaking-bad?extended=min")
 }
 }
+\seealso{
+Other API: \code{\link{get_trakt_credentials}}
+}
 

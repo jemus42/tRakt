@@ -28,4 +28,12 @@ mystats   <- trakt.user.stats() # Defaults to your username if set
 seanstats <- trakt.user.stats(user = "sean")
 }
 }
+\seealso{
+Other user: \code{\link{trakt.user.collection}};
+  \code{\link{trakt.user.followers}};
+  \code{\link{trakt.user.following}};
+  \code{\link{trakt.user.friends}};
+  \code{\link{trakt.user.watched}};
+  \code{\link{trakt.user.watchlist}}
+}
 

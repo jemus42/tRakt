@@ -34,4 +34,15 @@ get_trakt_credentials() # Set required API data/headers
 breakingbad.seasons <- trakt.getSeasons("breaking-bad", extended = "min")
 }
 }
+\seealso{
+Other show: \code{\link{trakt.getEpisodeData}};
+  \code{\link{trakt.getFullShowData}};
+  \code{\link{trakt.show.people}};
+  \code{\link{trakt.show.related}};
+  \code{\link{trakt.show.season}};
+  \code{\link{trakt.show.stats}};
+  \code{\link{trakt.show.summary}};
+  \code{\link{trakt.shows.popular}};
+  \code{\link{trakt.shows.trending}}
+}
 

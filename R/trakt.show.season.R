@@ -14,6 +14,7 @@
 #' @importFrom lubridate origin
 #' @importFrom lubridate year
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/season/get-single-season-for-a-show}{the trakt API docs for further info}
+#' @family show
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

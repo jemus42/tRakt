@@ -35,4 +35,15 @@ breakingbad <- trakt.getFullShowData("Breaking Bad")
 breakingbad <- trakt.getFullShowData(slug = "breaking-bad")
 }
 }
+\seealso{
+Other show: \code{\link{trakt.getEpisodeData}};
+  \code{\link{trakt.getSeasons}};
+  \code{\link{trakt.show.people}};
+  \code{\link{trakt.show.related}};
+  \code{\link{trakt.show.season}};
+  \code{\link{trakt.show.stats}};
+  \code{\link{trakt.show.summary}};
+  \code{\link{trakt.shows.popular}};
+  \code{\link{trakt.shows.trending}}
+}
 

@@ -6,6 +6,7 @@
 #' @return A \code{data.frame} containing user information.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/following/get-following}{the trakt API docs for further info}
+#' @family user
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

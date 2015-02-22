@@ -6,13 +6,14 @@
 #' See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
 #' \code{extended} to customize output amount.
 #' @param target The \code{slug} of the show requested
-#' @param extended Defaults to \code{full,images} to get season posters. Can be 
+#' @param extended Defaults to \code{full,images} to get season posters. Can be
 #' \code{min}, \code{images}, \code{full}, \code{full,images}
 #' @param dropspecials If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped
 #' @return A \code{data.frame} containing season details (nested in \code{list} objects)
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs} 
+#' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
 #' for further info
+#' @family show
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -22,14 +23,14 @@ trakt.getSeasons <- function(target, extended = "full,images", dropspecials = TR
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
-  
+
   # Constructing URL
   baseURL <- "https://api-v2launch.trakt.tv/shows/"
   url     <- paste0(baseURL, target, "/", "seasons", "?extended=", extended)
-  
+
   # Actual API call
   seasons <- trakt.api.call(url = url)
-  
+
   # Data cleanup
   if (dropspecials){
     seasons <- seasons[seasons$number != 0, ]

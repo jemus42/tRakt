@@ -1,8 +1,8 @@
 #' Search for a show via text query
 #'
 #' \code{trakt.search} pulls show stats and returns it compactly.
-#' 
-#' Search for a show with a keyword (e.g. \code{"Breaking Bad"}) and receive basic info of the 
+#'
+#' Search for a show with a keyword (e.g. \code{"Breaking Bad"}) and receive basic info of the
 #' first search result. It's main use is to retrieve the tvdbid or proper show title for further use,
 #' as well as receiving a quick overview of a show.
 #' @param query The keyword used for the search. Well be coerced to \code{character} and
@@ -15,6 +15,7 @@
 #' @importFrom jsonlite fromJSON
 #' @import httr
 #' @note See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for further info}
+#' @family API, search
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -29,19 +30,19 @@ trakt.search <- function(query, type = "show"){
   query    <- URLencode(query)    # URL normalization
   baseURL  <- "https://api-v2launch.trakt.tv/search"
   url      <- paste0(baseURL, "?query=", query, "&type=", type)
-  
+
   # Actual API call
   response <- trakt.api.call(url = url)
-  
+
   # Check if response is empty (nothing found)
   if (identical(response, list())){
     warning("No result, sorry.")
     return(list(error = "Nothing found"))
   }
-  
+
   # Try to find the closest match via basic string comparison (Could use improvement)
   stringmatch <- match(tolower(URLdecode(query)), tolower(response$show$title))
-  
+
   # Cleanup received data, using only matched line
   if (is.na(stringmatch)){
     warning("No exact match found, using trakt.tv's best guess")
@@ -49,6 +50,6 @@ trakt.search <- function(query, type = "show"){
   } else {
     show <- response[stringmatch, ]$show
   }
-  
+
   return(show)
 }

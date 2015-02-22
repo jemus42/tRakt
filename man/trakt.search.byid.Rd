@@ -29,4 +29,7 @@ get_trakt_credentials() # Set required API data/headers
 breakingbad <- trakt.search.byid(1388, "trakt-show")
 }
 }
+\seealso{
+Other API, search: \code{\link{trakt.search}}
+}
 

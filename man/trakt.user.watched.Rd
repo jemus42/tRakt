@@ -32,4 +32,12 @@ myshows     <- trakt.user.watched() # Defaults to your username if set
 seans.shows <- trakt.user.watched(user = "sean")
 }
 }
+\seealso{
+Other user: \code{\link{trakt.user.collection}};
+  \code{\link{trakt.user.followers}};
+  \code{\link{trakt.user.following}};
+  \code{\link{trakt.user.friends}};
+  \code{\link{trakt.user.stats}};
+  \code{\link{trakt.user.watchlist}}
+}
 

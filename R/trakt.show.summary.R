@@ -10,6 +10,7 @@
 #' @return A \code{list} containing summary info
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/summary}{the trakt API docs for further info}
+#' @family show
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

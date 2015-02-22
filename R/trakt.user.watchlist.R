@@ -7,6 +7,7 @@
 #' @return A \code{data.frame} containing stats.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{the trakt API docs for further info}
+#' @family user
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

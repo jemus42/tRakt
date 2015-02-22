@@ -6,6 +6,7 @@
 #' @return A \code{data.frame} containing popular shows with their name and ids
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/get-popular-shows}{the trakt API docs for further info}
+#' @family show
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
