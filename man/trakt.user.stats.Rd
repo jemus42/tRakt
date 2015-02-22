@@ -4,13 +4,16 @@
 \alias{trakt.user.stats}
 \title{Get a user's stats}
 \usage{
-trakt.user.stats(user = getOption("trakt.username"))
+trakt.user.stats(user = getOption("trakt.username"), to.data.frame = FALSE)
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
+
+\item{to.data.frame}{if \code{TRUE}, coereces the output to \code{data.frame}
+using \pkg{plyr}'s \code{rbind.fill}. Defaults to \code{FALSE}.}
 }
 \value{
-A \code{data.frame} containing stats.
+A \code{list} or \code{data.frame} containing stats.
 }
 \description{
 \code{trakt.user.stats} pulls a user's stats.
