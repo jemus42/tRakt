@@ -1,11 +1,11 @@
 Package: tRakt
 Type: Package
-Title: Pull data from trakt.tv
-Version: 0.7.3
+Title: Pull Data From Trakt.tv
+Version: 0.7.4
 Date: 2015-02-15
 Authors@R: person("Lukas Burk", email = "lukas@quantenbrot.de",
                   role = c("aut", "cre"))
-Description: Functions to easily pull data from trakt.tv using their API(v2)
+Description: A wrapper for the trakt.tv APIv2 which uses httr and jsonlite to send non-OAuth2 requests and receive tidied data.
 Depends:
     R (>= 3.0.2)
 Imports:
