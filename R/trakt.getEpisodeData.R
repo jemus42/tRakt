@@ -1,18 +1,18 @@
-#' Get a show's episode information
+#' Get a show's episodes. All of them.
 #'
 #' \code{trakt.getEpisodeData} pulls detailed episode data.
 #' Get details for a show's episodes, e.g. ratings, number of votes,
-#' airdates, urls, plot overviews…
+#' airdates, images, plot overviews…
 #'
 #' This is basically just an extension of \link[tRakt]{trakt.show.season}, which is used in
 #' this function to collect all the episode data.
 #' If you only want the episode data for a single season anyway, \code{trakt.show.season}
-#' is recommended.
+#' is recommended, yet this function makes some additions.
 #' @param target The \code{slug} of the show requested
 #' @param season_nums Vector of season numbers, e.g. \code{c(1, 2)}
 #' @param extended Defaults to \code{full,images} to get season posters. Can be
 #' \code{min}, \code{images}, \code{full}, \code{full,images}
-#' @param dropunaired If \code{TRUE}, episodes which have not aired yet are dropped.
+#' @param dropunaired If \code{TRUE} (default), episodes which have not aired yet are dropped.
 #' @return A \code{data.frame} containing episode details
 #' @export
 #' @import plyr
@@ -34,18 +34,11 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
   season  <- NULL
   rating  <- NULL
 
-  for (s in season_nums){
-    temp <- trakt.show.season(target, s, extended)
-
-    if (!exists("episodes")){
-      episodes <- temp
-    } else {
-      episodes <- rbind(temp, episodes)
-    }
-  }
+  episodes <- plyr::ldply(season_nums, function(s){
+                                          trakt.show.season(target, s, extended)
+                                       })
 
   # Arrange appropriately
-  episodes            <- plyr::arrange(episodes, season, episode)
   show.episodes       <- transform(episodes, epid = tRakt::pad(season, episode))
   show.episodes$epnum <- 1:(nrow(show.episodes))
 
@@ -56,9 +49,8 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
 
   # Add z-scaled episode ratings, scale per season
   if (extended != "min"){
-    show.episodes$zrating.season <- plyr::ddply(show.episodes, "season",
-                                                plyr::summarize, zrating.season = scale(rating))$zrating.season
-    show.episodes$zrating.season <- as.numeric(show.episodes$zrating.season)
+    show.episodes <- plyr::ddply(show.episodes, "season",
+                                 transform, zrating.season = as.numeric(scale(rating)))
 
     # Drop episodes with a timestamp of 0, probably faulty data or unaired
     if (nrow(show.episodes[show.episodes$firstaired.posix != 0, ]) > 0){

@@ -29,21 +29,22 @@ trakt.getFullShowData <- function(query = NULL, slug = NULL, dropunaired = TRUE)
   rating  <- NULL
 
   # Construct show object
-  show               <- list()
+  show        <- list()
   if (!is.null(query)){
-    show$info        <- trakt.search(query)
-    slug             <- show$info$ids$slug
+    show$info <- trakt.search(query)
+    slug      <- show$info$ids$slug
   } else if (is.null(query) & is.null(slug)){
     stop("You must provide either a search query or a trakt.tv slug")
   }
-  show$summary         <- trakt.show.summary(slug, extended = "full")
-  show$seasons         <- trakt.getSeasons(slug,extended = "full")
-  show$episodes        <- trakt.getEpisodeData(slug, show$seasons$season, dropunaired = dropunaired, extended = "full")
-  show$seasons         <- plyr::join(show$seasons , plyr::ddply(show$episodes, "season", plyr::summarize,
-                                                    avg.rating.season     = round(mean(rating), 1),
-                                                    rating.sd             = sd(rating),
-                                                    top.rating.episode    = max(rating),
-                                                    lowest.rating.episode = min(rating)))
+  show$summary  <- trakt.show.summary(slug, extended = "full")
+  show$seasons  <- trakt.getSeasons(slug, extended = "full", dropspecials = T)
+  show$episodes <- trakt.getEpisodeData(slug, show$seasons$season,
+                                        dropunaired = dropunaired, extended = "full")
+  show$seasons  <- plyr::join(show$seasons , plyr::ddply(show$episodes, "season", plyr::summarize,
+                                                        avg.rating.season     = round(mean(rating), 1),
+                                                        rating.sd             = sd(rating),
+                                                        top.rating.episode    = max(rating),
+                                                        lowest.rating.episode = min(rating)))
   show$seasons$season  <- factor(show$seasons$season,
                                  levels = as.character(1:nrow(show$seasons)), ordered = T)
   show$episodes$series <- show$summary$title
