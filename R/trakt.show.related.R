@@ -1,7 +1,7 @@
 #' Search for related shows
 #'
 #' \code{trakt.show.related} returns related shows to the search query.
-#' 
+#'
 #' Search for related shows to the show you specified.
 #' @param target The show's \code{slug} to be used.
 #' @return A \code{data.frame} containing search results
@@ -16,11 +16,16 @@ trakt.show.related <- function(target){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
-  baseURL  <- "https://api-v2launch.trakt.tv/shows"
-  url      <- paste0(baseURL, "/", target, "/related")
-  
+  ids <- NULL
+
+  baseURL <- "https://api-v2launch.trakt.tv/shows"
+  url     <- paste0(baseURL, "/", target, "/related")
+
   # Actual API call
   response <- trakt.api.call(url = url)
+
+  # Flattening
+  response <- cbind(subset(response, select = -ids), response$ids)
 
   return(response)
 }

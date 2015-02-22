@@ -75,24 +75,25 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
 
       temp$title  <- title
       names(temp) <- sub("number", "episode", names(temp))
-      epstats <- rbind(temp, epstats)
+      epstats     <- rbind(temp, epstats)
     }
     watched <- epstats[c("title", "season", "episode", "plays", "last_watched_at")]
   } else if (type == "movies"){
     # Flatten out ids
-    movies           <- response$movie[c("title", "year")]
-    movies$slug      <- response$movie$ids$slug
-    movies$id.trakt  <- response$movie$ids$trakt
-    movies$id.imdb   <- response$movie$ids$imdb
-    movies$id.tmdb   <- response$movie$ids$tmdb
+    movies          <- response$movie[c("title", "year")]
+    movies$slug     <- response$movie$ids$slug
+    movies$id.trakt <- response$movie$ids$trakt
+    movies$id.imdb  <- response$movie$ids$imdb
+    movies$id.tmdb  <- response$movie$ids$tmdb
 
     watched <- cbind(response[c("plays", "last_watched_at")], movies)
   } else {
     stop("Unknown type, must be 'shows', 'shows.extended', or 'movies'")
   }
 
-  watched$lastwatched.posix  <- lubridate::parse_date_time(watched$last_watched_at, "%y-%m-%dT%H-%M-%S", truncated = 3)
-  watched$lastwatched.year   <- lubridate::year(watched$lastwatched.posix)
+  watched$last_watched_at  <- lubridate::parse_date_time(watched$last_watched_at,
+                                                           "%y-%m-%dT%H-%M-%S", truncated = 3)
+  watched$last_watched.year <- lubridate::year(watched$lastwatched.posix)
 
   return(watched)
 }

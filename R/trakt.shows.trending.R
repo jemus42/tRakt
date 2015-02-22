@@ -1,7 +1,7 @@
 #' Get trending shows
 #'
 #' \code{trakt.shows.trending} returns a list of trending shows on trakt.tv.
-#' According to the API docs, it returns all shows being watched right now, where 
+#' According to the API docs, it returns all shows being watched right now, where
 #' shows with the most users are returned first.
 #' @param limit Number of shows to return. Is coerced to \code{integer} and must be greater than 0.
 #' @return A \code{data.frame} containing trending shows with their name and ids
@@ -18,15 +18,14 @@ trakt.shows.trending <- function(limit = 10){
     stop("Limit must be greater than zero")
   }
   ids <- NULL; show <- NULL
-  
+
   baseURL  <- "https://api-v2launch.trakt.tv/shows/trending"
   url      <- paste0(baseURL, "?page=1&limit=", limit)
   response <- trakt.api.call(url)
-  
+
   # Spreading out ids to get a flat data.frame
-  names(response$show$ids) <- paste0("id.", names(response$show$ids))
-  response$show            <- cbind(subset(response$show, select = -ids), response$show$ids)
-  response                 <- cbind(subset(response, select = -show), response$show)
-  
+  response$show <- cbind(subset(response$show, select = -ids), response$show$ids)
+  response      <- cbind(subset(response, select = -show), response$show)
+
   return(response)
 }

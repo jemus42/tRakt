@@ -10,7 +10,7 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' trakt.user.followers("jemus42")
+#' trakt.user.friends("jemus42")
 #' }
 trakt.user.friends <- function(user = getOption("trakt.username")){
   if (is.null(getOption("trakt.headers"))){

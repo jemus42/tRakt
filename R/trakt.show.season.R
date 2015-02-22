@@ -7,7 +7,7 @@
 #' \code{extended} to customize output amount.
 #' @param target The \code{slug} of the show requested
 #' @param seasons The season to get. Defaults to 1. Use 0 for special episodes.
-#' @param extended Defaults to \code{full,images} to get season posters. Can be 
+#' @param extended Defaults to \code{full,images} to get season posters. Can be
 #' \code{min}, \code{images}, \code{full}, \code{full,images}
 #' @return A \code{data.frame} containing all of a season's episodes
 #' @export
@@ -25,14 +25,14 @@ trakt.show.season <- function(target, seasons = 1, extended = "full,images"){
   }
   # Please R CMD CHECK
   ids <- NULL
-  
+
   # Construct URL
-  baseURL            <- "https://api-v2launch.trakt.tv/shows/"
-  url                <- paste0(baseURL, "/", target, "/seasons/", seasons, "?extended=", extended)
-  
+  baseURL <- "https://api-v2launch.trakt.tv/shows/"
+  url     <- paste0(baseURL, "/", target, "/seasons/", seasons, "?extended=", extended)
+
   # Actual API call
   season  <- trakt.api.call(url = url)
-  
+
   # Catch unknown season error
   if (identical(season, list())){
     warning(paste("Season", seasons, "does not appear to exist"))
@@ -40,17 +40,16 @@ trakt.show.season <- function(target, seasons = 1, extended = "full,images"){
   }
   # Reorganization
   names(season) <- sub("number", "episode", names(season))
-  
+
   # Spreading out ids to get a flat data.frame
-  names(season$ids) <- paste0("id.", names(season$ids))
-  season            <- cbind(subset(season, select = -ids), season$ids)
-  
+  season        <- cbind(subset(season, select = -ids), season$ids)
+
   # If full data is pulled, ehance the dataset a little
   if (extended %in% c("full", "full,images", "images,full")){
-    season$firstaired.posix      <- as.POSIXct(season$first_aired, 
-                                               origin = lubridate::origin, tz = "UTC")
-    season$firstaired.string     <- format(season$firstaired.posix, "%F")  
-    season$year                  <- lubridate::year(season$firstaired.posix)
+    season$first_aired        <-lubridate::parse_date_time(season$first_aired,
+                                                           "%y-%m-%dT%H-%M-%S", truncated = 3)
+    season$first_aired.string <- format(season$firstaired.posix, "%F")
+    season$year               <- lubridate::year(season$first_aired)
   }
   return(season)
 }

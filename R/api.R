@@ -115,11 +115,11 @@ get_trakt_credentials <- function(username = NULL, client.id = NULL,
 #' trakt.api.call("https://api-v2launch.trakt.tv/shows/breaking-bad?extended=min")
 #' }
 trakt.api.call <- function(url, headers = getOption("trakt.headers"), fromJSONify = TRUE){
-  response    <- httr::GET(url, headers)
+  response   <- httr::GET(url, headers)
   httr::stop_for_status(response) # In case trakt fails
-  response    <- httr::content(response, as = "text")
+  response   <- httr::content(response, as = "text")
   if (fromJSONify){
-    response  <- jsonlite::fromJSON(response)
+    response <- jsonlite::fromJSON(response)
   }
   return(response)
 }

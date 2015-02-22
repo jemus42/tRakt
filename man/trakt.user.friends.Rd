@@ -23,7 +23,7 @@ See \href{http://docs.trakt.apiary.io/reference/users/friends/get-friends}{the t
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-trakt.user.followers("jemus42")
+trakt.user.friends("jemus42")
 }
 }
 
