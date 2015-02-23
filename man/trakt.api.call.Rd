@@ -21,7 +21,7 @@ The content of the API response, \code{jsonlite::fromJSON}'d if requested.
 }
 \description{
 \code{trakt.api.call} makes an APIv2 call to a specified URL
-and returns the output \code{jsonlite::fromJSON}'d.
+and returns the output \code{jsonlite::fromJSON}'d if requested.
 }
 \note{
 This function is heavily used internally, so why not expose it to the user.

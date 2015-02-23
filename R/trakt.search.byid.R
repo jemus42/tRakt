@@ -2,7 +2,7 @@
 #'
 #' \code{trakt.search.byid} pulls show stats and returns it compactly.
 #'
-#' @param id The keyword used for the search. Should be as URL-compatible as possible.
+#' @param id The id used for the search. Will be \code{URLencode}'d.
 #' @param id_type The type of \code{id}. Defaults to \code{trakt-show}, can be
 #' \code{trakt-movie}, \code{trakt-show}, \code{trakt-episode}, \code{imdb},
 #' \code{tmdb}, \code{tvdb}, \code{tvrage}
