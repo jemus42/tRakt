@@ -53,14 +53,14 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
                                  transform, zrating.season = as.numeric(scale(rating)))
 
     # Drop episodes with a timestamp of 0, probably faulty data or unaired
-    if (nrow(show.episodes[show.episodes$firstaired.posix != 0, ]) > 0){
-      show.episodes <- show.episodes[show.episodes$firstaired.posix != 0, ]
+    if (nrow(show.episodes[show.episodes$first_aired != 0, ]) > 0){
+      show.episodes <- show.episodes[show.episodes$first_aired != 0, ]
     } else {
       warning("Data is probably faulty.")
     }
 
     if (dropunaired){
-      show.episodes <- show.episodes[show.episodes$firstaired.posix <= lubridate::now(tzone = "UTC"), ]
+      show.episodes <- show.episodes[show.episodes$first_aired <= lubridate::now(tzone = "UTC"), ]
     }
   }
 
