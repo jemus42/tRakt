@@ -4,10 +4,13 @@
 \alias{trakt.shows.trending}
 \title{Get trending shows}
 \usage{
-trakt.shows.trending(limit = 10)
+trakt.shows.trending(limit = 10, extended = "min")
 }
 \arguments{
 \item{limit}{Number of shows to return. Is coerced to \code{integer} and must be greater than 0.}
+
+\item{extended}{Whether extended info should be provided.
+Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
 A \code{data.frame} containing trending shows with their name and ids

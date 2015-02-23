@@ -4,10 +4,13 @@
 \alias{trakt.shows.popular}
 \title{Get popular shows}
 \usage{
-trakt.shows.popular(limit = 10)
+trakt.shows.popular(limit = 10, extended = "min")
 }
 \arguments{
 \item{limit}{Number of shows to return. Is coerced to \code{integer} and must be greater than 0.}
+
+\item{extended}{Whether extended info should be provided.
+Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
 A \code{data.frame} containing popular shows with their name and ids
