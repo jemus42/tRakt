@@ -1,5 +1,10 @@
 ## tRakt News
 
+### v0.8.1
+
+* Fix a whole bunch of typos I only found *after* the CRAN release, naturally
+* Improve consistency across functions
+
 ### v0.8.0
 
 * Added more user-facing functions (`trakt.user.following` / `.followers` / `.friends`) because maybe I want to throw [networkD3](https://github.com/christophergandrud/networkD3) at my people

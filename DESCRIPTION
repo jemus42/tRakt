@@ -1,8 +1,8 @@
 Package: tRakt
 Type: Package
 Title: Pull Data from 'trakt.tv'
-Version: 0.8.0
-Date: 2015-02-15
+Version: 0.8.1
+Date: 2015-02-23
 Authors@R: person("Lukas Burk", email = "jemus42@gmail.com",
                   role = c("aut", "cre"))
 Description: A wrapper for the trakt.tv APIv2 which uses httr and jsonlite to send non-OAuth2 requests and receive tidied data.
