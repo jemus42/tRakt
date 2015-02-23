@@ -103,8 +103,8 @@ by "publicly available user", I really mean only non-private users.
 myeps    <- trakt.user.watched(user = "jemus42", type = "shows.extended")
 
 # Get a feel for the data
-myeps[c(1:4, 6:7)] %>% 
-  arrange(desc(lastwatched.posix)) %>% 
+myeps %>% 
+  arrange(desc(last_watched_at)) %>% 
   head(5) %>% 
   kable
 
@@ -112,8 +112,8 @@ myeps[c(1:4, 6:7)] %>%
 mymovies <- trakt.user.collection(user = "jemus42", type = "movies")
 
 mymovies %>%
-  select(title, year, collected.posix) %>%
-  arrange(collected.posix) %>%
+  select(title, year, collected_at) %>%
+  arrange(collected_at) %>%
   head(5) %>%
   kable
 ```
@@ -127,7 +127,7 @@ to get something like a "watch duration" going and aggregate using it:
 ```{r}
 myeps %>% 
   group_by(title) %>% 
-  summarize(days = round(max(lastwatched.posix) - min(lastwatched.posix))) %>%
+  summarize(days = round(max(last_watched_at) - min(last_watched_at))) %>%
   arrange(desc(days)) %>%
   head(10) %>%
   kable
