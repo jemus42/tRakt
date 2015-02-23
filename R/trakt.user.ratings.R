@@ -11,8 +11,8 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' mystats   <- trakt.user.stats() # Defaults to your username if set
-#' seanstats <- trakt.user.stats(user = "sean")
+#' ratedshows   <- trakt.user.ratings()
+#' ratedmovies <- trakt.user.ratings(type = "movies")
 #' }
 trakt.user.ratings <- function(user = getOption("trakt.username"), type = "shows", rating = NULL){
   if (is.null(getOption("trakt.headers"))){

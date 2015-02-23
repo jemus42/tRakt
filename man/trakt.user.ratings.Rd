@@ -24,8 +24,8 @@ See \href{http://docs.trakt.apiary.io/reference/users/ratings/get-ratings}{the t
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-mystats   <- trakt.user.stats() # Defaults to your username if set
-seanstats <- trakt.user.stats(user = "sean")
+ratedshows   <- trakt.user.ratings()
+ratedmovies <- trakt.user.ratings(type = "movies")
 }
 }
 \seealso{
