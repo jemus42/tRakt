@@ -49,7 +49,7 @@ trakt.show.season <- function(target, seasons = 1, extended = "full,images"){
   if (extended %in% c("full", "full,images", "images,full")){
     season$first_aired        <-lubridate::parse_date_time(season$first_aired,
                                                            "%y-%m-%dT%H-%M-%S", truncated = 3)
-    season$first_aired.string <- format(season$firstaired.posix, "%F")
+    season$first_aired.string <- format(season$first_aired, "%F")
     season$year               <- lubridate::year(season$first_aired)
   }
   return(season)
