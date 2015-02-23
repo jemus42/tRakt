@@ -75,7 +75,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
   }
 
   watched$collected_at   <- lubridate::parse_date_time(watched$collected_at, "%y-%m-%dT%H-%M-%S", truncated = 3)
-  watched$collected.year <- lubridate::year(watched$collected.posix)
+  watched$collected.year <- lubridate::year(watched$collected_at)
 
   return(watched)
 }
