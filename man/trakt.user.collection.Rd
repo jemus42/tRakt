@@ -33,6 +33,7 @@ seans.movies <- trakt.user.collection(user = "sean", type = "movies)
 Other user: \code{\link{trakt.user.followers}};
   \code{\link{trakt.user.following}};
   \code{\link{trakt.user.friends}};
+  \code{\link{trakt.user.ratings}};
   \code{\link{trakt.user.stats}};
   \code{\link{trakt.user.watched}};
   \code{\link{trakt.user.watchlist}}

@@ -1,5 +1,11 @@
 ## tRakt News
 
+### v0.9.0
+
+* Add `trakt.user.ratings`
+    * Currently supported types: `shows`, `movies`, `episodes
+
+`
 ### v0.8.1
 
 * Fix a whole bunch of typos I only found *after* the CRAN release, naturally
