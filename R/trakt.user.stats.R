@@ -3,7 +3,7 @@
 #' \code{trakt.user.stats} pulls a user's stats.
 
 #' @param user Target user. Defaults to \code{getOption("trakt.username")}
-#' @param to.data.frame if \code{TRUE}, coereces the output to \code{data.frame}
+#' @param to.data.frame if \code{TRUE}, coerces the output to \code{data.frame}
 #' using \pkg{plyr}'s \code{rbind.fill}. Defaults to \code{FALSE}.
 #' @return A \code{list} or \code{data.frame} containing stats.
 #' @export
