@@ -1,8 +1,8 @@
 #' Search for related shows
 #'
-#' \code{trakt.show.related} returns related shows to the search query.
+#' \code{trakt.show.related} returns shows related to the input show.
 #'
-#' Search for related shows to the show you specified.
+#' Receive a set of shows that are related to a specific show.
 #' @param target The show's \code{slug} to be used.
 #' @return A \code{data.frame} containing search results
 #' @export

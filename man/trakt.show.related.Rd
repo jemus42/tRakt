@@ -13,10 +13,10 @@ trakt.show.related(target)
 A \code{data.frame} containing search results
 }
 \description{
-\code{trakt.show.related} returns related shows to the search query.
+\code{trakt.show.related} returns shows related to the input show.
 }
 \details{
-Search for related shows to the show you specified.
+Receive a set of shows that are related to a specific show.
 }
 \note{
 See \href{http://docs.trakt.apiary.io/#reference/shows/related/get-related-shows}{the trakt API docs for further info}

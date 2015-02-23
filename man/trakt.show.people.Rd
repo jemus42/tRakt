@@ -13,13 +13,13 @@ trakt.show.people(target, extended = "min")
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
-A \code{list} containing people info
+A \code{list} containing \code{data.frame}s for cast and crew.
 }
 \description{
 \code{trakt.show.people} pulls show people data.
 }
 \details{
-Returns all cast and crew for a show.
+Returns all cast and crew for a show, depending on how much data is available.
 }
 \note{
 See \href{http://docs.trakt.apiary.io/#reference/shows/people/get-all-people-for-a-show}{the trakt API docs for further info}

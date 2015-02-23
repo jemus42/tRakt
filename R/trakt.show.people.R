@@ -2,11 +2,11 @@
 #'
 #' \code{trakt.show.people} pulls show people data.
 #'
-#' Returns all cast and crew for a show.
+#' Returns all cast and crew for a show, depending on how much data is available.
 #' @param target The \code{slug} of the show requested, e.g. \code{game-of-thrones}
 #' @param extended Whether extended info should be provided.
 #' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}
-#' @return A \code{list} containing people info
+#' @return A \code{list} containing \code{data.frame}s for cast and crew.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/people/get-all-people-for-a-show}{the trakt API docs for further info}
 #' @family show

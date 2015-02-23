@@ -7,7 +7,7 @@
 #' \code{trakt-movie}, \code{trakt-show}, \code{trakt-episode}, \code{imdb},
 #' \code{tmdb}, \code{tvdb}, \code{tvrage}
 #' @return A \code{data.frame} containing a single search result. Hopefully the one you wanted.
-#' If no result is foun, the return value is \code{list(error = "Nothing found")} and a \code{warning}
+#' If no result is found, the return value is \code{list(error = "Nothing found")} and a \code{warning}
 #' @export
 #' @importFrom jsonlite fromJSON
 #' @import httr
