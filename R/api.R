@@ -41,19 +41,18 @@ get_trakt_credentials <- function(username = NULL, client.id = NULL,
     keyfile <- NULL
   }
   if (!(is.null(keyfile))){
-    message(paste("Reading credentials from", keyfile))
+    if (!silent) message(paste("Reading credentials from", keyfile))
   } else {
-    message("No keyfile set/found")
+    if (!silent) message("No keyfile set/found")
   }
 
   # Setting username (just in case)
   if (!is.null(username)){
-    message("Setting trakt username to ", username)
     options(trakt.username = username)
   } else if (!(is.null(keyfile))){
     options(trakt.username = jsonlite::fromJSON(keyfile)[["username"]])
   } else {
-    warning("Couldn't find your username")
+    if (!silent) warning("Couldn't find your username")
   }
 
   # Setting v2 client id
@@ -62,7 +61,7 @@ get_trakt_credentials <- function(username = NULL, client.id = NULL,
   } else if (!(is.null(keyfile))){
     options(trakt.client.id = jsonlite::fromJSON(keyfile)[["client.id"]])
   } else {
-    warning("Couldn't find your client id")
+    if (!silent) warning("Couldn't find your client id")
   }
 
   # Setting v2 client secret (not used yet)
@@ -71,7 +70,7 @@ get_trakt_credentials <- function(username = NULL, client.id = NULL,
   } else if (!(is.null(keyfile))){
     options(trakt.client.secret = jsonlite::fromJSON(keyfile)[["client.secret"]])
   } else {
-    warning("Couldn't find your client secret")
+    if (!silent) warning("Couldn't find your client secret")
   }
 
   if (!silent){
