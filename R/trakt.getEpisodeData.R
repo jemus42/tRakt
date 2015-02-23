@@ -56,7 +56,7 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
     if (nrow(show.episodes[show.episodes$first_aired != 0, ]) > 0){
       show.episodes <- show.episodes[show.episodes$first_aired != 0, ]
     } else {
-      warning("Data is probably faulty.")
+      warning("Data is probably faulty: Some first_aired values are 0")
     }
 
     if (dropunaired){
@@ -64,8 +64,8 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
     }
   }
 
-
-  show.episodes$src  <- "Trakt.tv"
+  # Append source
+  show.episodes$src  <- "trakt.tv"
 
   return(show.episodes)
 }
