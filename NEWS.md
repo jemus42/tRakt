@@ -4,6 +4,9 @@
 
 * Fix a whole bunch of typos I only found *after* the CRAN release, naturally
 * Improve consistency across functions
+    * The date fields ending in `.posix` have been removed and the existing date fiels are now converted to `POSIXct` to remove cluttering
+    * `firstaired.posix` -> `first_aired` etc
+* Update vignette for the above change
 
 ### v0.8.0
 
