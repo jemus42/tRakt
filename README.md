@@ -9,11 +9,11 @@ There might be some interesting things to play around with, and I've tried some 
 
 ## Installation
 
-If the package finally makes it to [CRAN](http://cran.r-project.org), you can install it via
+Get it from [CRAN](http://cran.r-project.org):
 
     install.packages("tRakt")
 
-Until then, or just to get the latest dev version from GitHub, run the following:
+Or just to get the latest dev version from GitHub:
 
 	if (!require("devtools")) install.packages("devtools")
 	devtools::install_github("jemus42/tRakt-package")
