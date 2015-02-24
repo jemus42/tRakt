@@ -12,7 +12,7 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' related <- trakt.movies.related("game-of-thrones")
+#' related <- trakt.movies.related(""tron-legacy-2010"")
 #' }
 trakt.movies.related <- function(target){
   if (is.null(getOption("trakt.headers"))){

@@ -11,9 +11,9 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' related <- trakt.show.related("game-of-thrones")
+#' related <- trakt.shows.related("game-of-thrones")
 #' }
-trakt.show.related <- function(target){
+trakt.shows.related <- function(target){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }

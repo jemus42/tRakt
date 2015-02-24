@@ -25,11 +25,12 @@ See \href{http://docs.trakt.apiary.io/reference/movies/related/get-related-movie
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-related <- trakt.movies.related("game-of-thrones")
+related <- trakt.movies.related(""tron-legacy-2010"")
 }
 }
 \seealso{
-Other movie: \code{\link{trakt.movie.ratings}};
+Other movie: \code{\link{trakt.movie.people}};
+  \code{\link{trakt.movie.ratings}};
   \code{\link{trakt.movie.summary}};
   \code{\link{trakt.movies.popular}};
   \code{\link{trakt.movies.trending}}
