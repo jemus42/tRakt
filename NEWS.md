@@ -2,10 +2,11 @@
 
 ### v0.9.0
 
-* Add `trakt.user.ratings`
-    * Currently supported types: `shows`, `movies`, `episodes
+* Specified more exclusive package version requirements to avoid unforseen errors
+* Add `trakt.user.ratings`: Currently supported types: `shows`, `movies`, `episodes`
+* Add `extended` option to `trakt.shows.popular` and `.trending`
+* Make code in vignette a little more robust
 
-`
 ### v0.8.1
 
 * Fix a whole bunch of typos I only found *after* the CRAN release, naturally
