@@ -81,7 +81,7 @@ mymovies %>%
 ## ------------------------------------------------------------------------
 myeps %>% 
   group_by(title) %>% 
-  summarize(days = round(max(last_watched_at) - min(last_watched_at))) %>%
+  summarize(days = as.numeric(round(max(last_watched_at) - min(last_watched_at)))) %>%
   arrange(desc(days)) %>%
   head(10) %>%
   kable
