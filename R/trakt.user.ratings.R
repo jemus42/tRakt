@@ -4,6 +4,7 @@
 
 #' @param user Target user. Defaults to \code{getOption("trakt.username")}
 #' @param type Either \code{shows} (default) or \code{movies}
+#' @param rating A rating to filter by. Can be \code{1} through \code{10}, default is \code{NULL}
 #' @return A \code{list} or \code{data.frame} containing stats.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/ratings/get-ratings}{the trakt API docs for further info}
@@ -11,7 +12,7 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' ratedshows   <- trakt.user.ratings()
+#' ratedshows  <- trakt.user.ratings()
 #' ratedmovies <- trakt.user.ratings(type = "movies")
 #' }
 trakt.user.ratings <- function(user = getOption("trakt.username"), type = "shows", rating = NULL){
@@ -24,8 +25,11 @@ trakt.user.ratings <- function(user = getOption("trakt.username"), type = "shows
   if (type == "seasons"){
     stop("Season ratings are not supported (yet), use episodes or shows.")
   }
+  if (!(rating %in% 1:10)){
+    stop("rating must be between 1 and 10")
+  }
   # Please R CMD check
-  ids <- NULL; episode <- NULL; show <- NULL
+  ids <- NULL; episode <- NULL; show <- NULL; movie <- NULL
 
   # Construct URL
   baseURL   <- "https://api-v2launch.trakt.tv/users"

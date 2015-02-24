@@ -11,6 +11,8 @@ trakt.user.ratings(user = getOption("trakt.username"), type = "shows",
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
 
 \item{type}{Either \code{shows} (default) or \code{movies}}
+
+\item{rating}{A rating to filter by. Can be \code{1} through \code{10}, default is \code{NULL}}
 }
 \value{
 A \code{list} or \code{data.frame} containing stats.
@@ -24,7 +26,7 @@ See \href{http://docs.trakt.apiary.io/reference/users/ratings/get-ratings}{the t
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-ratedshows   <- trakt.user.ratings()
+ratedshows  <- trakt.user.ratings()
 ratedmovies <- trakt.user.ratings(type = "movies")
 }
 }
