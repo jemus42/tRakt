@@ -16,7 +16,7 @@ Get it from [CRAN](http://cran.r-project.org):
 Or just to get the latest dev version from GitHub:
 
 	if (!require("devtools")) install.packages("devtools")
-	devtools::install_github("jemus42/tRakt-package")
+	devtools::install_github("jemus42/tRakt")
 	library("tRakt")
 
 ## Setting credentials
@@ -41,7 +41,7 @@ Don't worry, it's really easy to set up. Even I did it.
 
 ### Use my apps client.id
 
-If you don't want to create an app, I've been told it's okay to supply my app's client.id, 
+If you don't want to create an app, I've been told it's okay to supply my app's `client.id`, 
 so you can run the following:
 
 `get_trakt_credentials(client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")`
