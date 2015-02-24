@@ -4,7 +4,8 @@
 #'
 #' Note that setting \code{extended} to \code{min} makes this function
 #' return about as much informations as \link[tRakt]{trakt.search}
-#' @param target The \code{slug} of the show requested, e.g. \code{game-of-thrones}
+#' @param target The \code{id} of the show requested. Either the \code{slug}
+#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
 #' @param extended Whether extended info should be provided.
 #' Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}
 #' @return A \code{list} containing summary info

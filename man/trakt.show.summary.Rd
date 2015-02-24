@@ -7,7 +7,8 @@
 trakt.show.summary(target, extended = "full")
 }
 \arguments{
-\item{target}{The \code{slug} of the show requested, e.g. \code{game-of-thrones}}
+\item{target}{The \code{id} of the show requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
 \item{extended}{Whether extended info should be provided.
 Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}}

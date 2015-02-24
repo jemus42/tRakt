@@ -7,7 +7,8 @@
 trakt.show.season(target, seasons = 1, extended = "full,images")
 }
 \arguments{
-\item{target}{The \code{slug} of the show requested}
+\item{target}{The \code{id} of the show requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
 \item{seasons}{The season to get. Defaults to 1. Use 0 for special episodes.}
 

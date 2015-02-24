@@ -3,7 +3,8 @@
 #' \code{trakt.show.people} pulls show people data.
 #'
 #' Returns all cast and crew for a show, depending on how much data is available.
-#' @param target The \code{slug} of the show requested, e.g. \code{game-of-thrones}
+#' @param target The \code{id} of the show requested. Either the \code{slug}
+#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
 #' @param extended Whether extended info should be provided.
 #' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}
 #' @return A \code{list} containing \code{data.frame}s for cast and crew.

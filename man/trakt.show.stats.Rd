@@ -7,7 +7,8 @@
 trakt.show.stats(target, extended = "min")
 }
 \arguments{
-\item{target}{The \code{slug} of the show requested}
+\item{target}{The \code{id} of the show requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
 \item{extended}{Whether extended info should be provided.
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}

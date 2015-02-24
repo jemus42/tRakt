@@ -3,7 +3,8 @@
 #' \code{trakt.shows.related} returns shows related to the input show.
 #'
 #' Receive a set of shows that are related to a specific show.
-#' @param target The show's \code{slug} to be used.
+#' @param target The \code{id} of the show requested. Either the \code{slug}
+#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
 #' @return A \code{data.frame} containing search results
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/related/get-related-shows}{the trakt API docs for further info}

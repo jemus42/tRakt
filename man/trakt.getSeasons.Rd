@@ -7,7 +7,8 @@
 trakt.getSeasons(target, extended = "full,images", dropspecials = TRUE)
 }
 \arguments{
-\item{target}{The \code{slug} of the show requested}
+\item{target}{The \code{id} of the show requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
 \item{extended}{Defaults to \code{full,images} to get season posters. Can be
 \code{min}, \code{images}, \code{full}, \code{full,images}}

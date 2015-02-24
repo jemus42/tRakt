@@ -8,7 +8,8 @@ trakt.getEpisodeData(target, season_nums, extended = "full",
   dropunaired = TRUE)
 }
 \arguments{
-\item{target}{The \code{slug} of the show requested}
+\item{target}{The \code{id} of the show requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
 \item{season_nums}{Vector of season numbers, e.g. \code{c(1, 2)}}
 

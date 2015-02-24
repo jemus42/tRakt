@@ -8,7 +8,8 @@
 #' this function to collect all the episode data.
 #' If you only want the episode data for a single season anyway, \code{trakt.show.season}
 #' is recommended, yet this function makes some additions.
-#' @param target The \code{slug} of the show requested
+#' @param target The \code{id} of the show requested. Either the \code{slug}
+#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
 #' @param season_nums Vector of season numbers, e.g. \code{c(1, 2)}
 #' @param extended Defaults to \code{full,images} to get season posters. Can be
 #' \code{min}, \code{images}, \code{full}, \code{full,images}

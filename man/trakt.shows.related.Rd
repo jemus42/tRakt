@@ -7,7 +7,8 @@
 trakt.shows.related(target)
 }
 \arguments{
-\item{target}{The show's \code{slug} to be used.}
+\item{target}{The \code{id} of the show requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 }
 \value{
 A \code{data.frame} containing search results
