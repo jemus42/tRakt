@@ -28,7 +28,7 @@ See \href{http://docs.trakt.apiary.io/#reference/movies/people/get-all-people-fo
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-tron.people <- trakt.movie.people(""tron-legacy-2010"")
+tron.people <- trakt.movie.people("tron-legacy-2010")
 }
 }
 \seealso{

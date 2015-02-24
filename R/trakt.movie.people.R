@@ -14,7 +14,7 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' tron.people <- trakt.movie.people(""tron-legacy-2010"")
+#' tron.people <- trakt.movie.people("tron-legacy-2010")
 #' }
 trakt.movie.people <- function(target, extended = "min"){
   if (is.null(getOption("trakt.headers"))){
