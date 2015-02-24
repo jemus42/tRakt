@@ -34,6 +34,7 @@ breakingbad.people <- trakt.show.people("breaking-bad")
 Other show: \code{\link{trakt.getEpisodeData}};
   \code{\link{trakt.getFullShowData}};
   \code{\link{trakt.getSeasons}};
+  \code{\link{trakt.show.ratings}};
   \code{\link{trakt.show.related}};
   \code{\link{trakt.show.season}};
   \code{\link{trakt.show.stats}};
