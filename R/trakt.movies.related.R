@@ -14,7 +14,7 @@
 #' get_trakt_credentials() # Set required API data/headers
 #' related <- trakt.movies.related("game-of-thrones")
 #' }
-trakt.movie.related <- function(target){
+trakt.movies.related <- function(target){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }

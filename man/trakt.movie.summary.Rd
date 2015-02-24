@@ -30,8 +30,8 @@ trakt.movie.summary("tron-legacy-2010")
 }
 \seealso{
 Other movie: \code{\link{trakt.movie.ratings}};
-  \code{\link{trakt.movie.related}};
   \code{\link{trakt.movies.popular}};
+  \code{\link{trakt.movies.related}};
   \code{\link{trakt.movies.trending}}
 }
 

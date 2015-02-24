@@ -31,8 +31,8 @@ trakt.movies.trending(5)
 }
 \seealso{
 Other movie: \code{\link{trakt.movie.ratings}};
-  \code{\link{trakt.movie.related}};
   \code{\link{trakt.movie.summary}};
-  \code{\link{trakt.movies.popular}}
+  \code{\link{trakt.movies.popular}};
+  \code{\link{trakt.movies.related}}
 }
 
