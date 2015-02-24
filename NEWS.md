@@ -8,7 +8,7 @@
     * `trakt.movie.summary`: Get a single movie's details, analogous to `trakt.show.summary`
     * `trakt.movies.related`: Get related movies
     * `trakt.movie.people`: Analogous to `trakt.show.people`
-* Add both `trakt.show.ratings` and `trakt.movie.ratings` ratings to receive just the ratings and distribution for a single show or movie
+* Add both `trakt.show.ratings` and `trakt.movie.ratings` to receive just the ratings and distribution for a single show or movie
 * Rename `trakt.show.related` -> `trakt.shows.related` for consistency with `.trending` and `.popular`
 
 ### v0.9.0
