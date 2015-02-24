@@ -11,6 +11,7 @@
 * **Add** both `trakt.show.ratings` and `trakt.movie.ratings` to receive just the ratings and distribution for a single show or movie
 * **Rename** `trakt.show.related` -> `trakt.shows.related` for consistency with `.trending` and `.popular`
 * Expand allowed `target` params in accordance with changed trakt API docs
+* Various fixes
 
 ### v0.9.0
 
