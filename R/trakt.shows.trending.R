@@ -31,9 +31,15 @@ trakt.shows.trending <- function(limit = 10, extended = "min"){
   response      <- cbind(subset(response, select = -show), response$show)
 
   # Handling date
-  response$first_aired <- lubridate::parse_date_time(response$first_aired,
-                                                     "%y-%m-%dT%H-%M-%S", truncated = 3)
-  response$updated_at <- lubridate::parse_date_time(response$updated_at,
-                                                    "%y-%m-%dT%H-%M-%S", truncated = 3)
+  if ("first_aired" %in% names(response)){
+    response$first_aired <- lubridate::parse_date_time(response$first_aired,
+                                                       "%y-%m-%dT%H-%M-%S", truncated = 3)
+  }
+  if ("updated_at" %in% names(response)){
+    response$updated_at <- lubridate::parse_date_time(response$updated_at,
+                                                      "%y-%m-%dT%H-%M-%S", truncated = 3)
+  }
+
+
   return(response)
 }
