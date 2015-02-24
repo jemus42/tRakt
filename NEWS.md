@@ -2,14 +2,15 @@
 
 ### v0.10.0
 
-* Add movie functions:
+* **Add** movie functions:
     * `trakt.movies.popular`: Analogous to `trakt.shows.popular`
     * `trakt.movies.trending`: Analogous to `trakt.shows.trending`
     * `trakt.movie.summary`: Get a single movie's details, analogous to `trakt.show.summary`
     * `trakt.movies.related`: Get related movies
     * `trakt.movie.people`: Analogous to `trakt.show.people`
-* Add both `trakt.show.ratings` and `trakt.movie.ratings` to receive just the ratings and distribution for a single show or movie
-* Rename `trakt.show.related` -> `trakt.shows.related` for consistency with `.trending` and `.popular`
+* **Add** both `trakt.show.ratings` and `trakt.movie.ratings` to receive just the ratings and distribution for a single show or movie
+* **Rename** `trakt.show.related` -> `trakt.shows.related` for consistency with `.trending` and `.popular`
+* Expand allowed `target` params in accordance with changed trakt API docs
 
 ### v0.9.0
 
