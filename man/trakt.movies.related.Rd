@@ -14,7 +14,7 @@ trakt.movies.related(target)
 A \code{data.frame} containing search results
 }
 \description{
-\code{trakt.movie.related} returns movies related to the input movie.
+\code{trakt.movies.related} returns movies related to the input movie.
 }
 \details{
 Receive a set of movies that are related to a specific movie.

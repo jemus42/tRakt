@@ -1,6 +1,6 @@
 #' Search for related shows
 #'
-#' \code{trakt.show.related} returns shows related to the input show.
+#' \code{trakt.shows.related} returns shows related to the input show.
 #'
 #' Receive a set of shows that are related to a specific show.
 #' @param target The show's \code{slug} to be used.

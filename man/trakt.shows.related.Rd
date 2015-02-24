@@ -13,7 +13,7 @@ trakt.shows.related(target)
 A \code{data.frame} containing search results
 }
 \description{
-\code{trakt.show.related} returns shows related to the input show.
+\code{trakt.shows.related} returns shows related to the input show.
 }
 \details{
 Receive a set of shows that are related to a specific show.

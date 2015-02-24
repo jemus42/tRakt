@@ -1,6 +1,6 @@
 #' Search for related movies
 #'
-#' \code{trakt.movie.related} returns movies related to the input movie.
+#' \code{trakt.movies.related} returns movies related to the input movie.
 #'
 #' Receive a set of movies that are related to a specific movie.
 #' @param target The \code{id} of the show requested. Either the \code{slug}
