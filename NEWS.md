@@ -1,5 +1,15 @@
 ## tRakt News
 
+### v0.10.0
+
+* Add movie functions:
+    * `trakt.movies.popular`: Analogous to `trakt.shows.popular`
+    * `trakt.movies.trending`: Analogous to `trakt.shows.trending`
+    * `trakt.movie.summary`: Get a single movie's details, analogous to `trakt.show.summary`
+    * `trakt.movies.related`: Get related movies
+* Add both `trakt.show.ratings` and `trakt.movie.ratings` ratings to receive just the ratings and distribution for a single show or movie
+* Rename `trakt.show.related` -> `trakt.shows.related` for consistency with `.trending` and `.popular`
+
 ### v0.9.0
 
 * Specified more exclusive package version requirements to avoid unforseen errors
