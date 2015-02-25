@@ -25,7 +25,7 @@ trakt.user.ratings <- function(user = getOption("trakt.username"), type = "shows
   if (type == "seasons"){
     stop("Season ratings are not supported (yet), use episodes or shows.")
   }
-  if (!(rating %in% 1:10)){
+  if (!is.null(rating) && !(rating %in% 1:10)){
     stop("rating must be between 1 and 10")
   }
   # Please R CMD check
