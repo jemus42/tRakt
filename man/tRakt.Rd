@@ -4,7 +4,7 @@
 \name{tRakt}
 \alias{tRakt}
 \alias{tRakt-package}
-\title{Pull data from trakt.tv}
+\title{Pull Data from trakt.tv}
 \description{
 tRakt is a package that grew out of my initial attempt to compare Stargate SG-1 episode ratings.
 \href{http://stuff.wurstmannberg.de/tRakt}{Here are some of the resulting graphs}.
