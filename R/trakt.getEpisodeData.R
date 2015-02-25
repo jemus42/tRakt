@@ -35,9 +35,15 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
   season  <- NULL
   rating  <- NULL
 
-  episodes <- plyr::ldply(season_nums, function(s){
-                                          trakt.show.season(target, s, extended)
-                                       })
+  episodes <- plyr::ldply(season_nums,
+              function(s){
+                 temp <- trakt.show.season(target, s, extended)
+                 if ("images" %in% names(temp)){
+                   names(temp$images$screenshot) <- paste0("screenshot.", names(temp$images$screenshot))
+                   temp <- cbind(subset(temp, select = -images), temp$images$screenshot)
+                 }
+              })
+
 
   # Arrange appropriately
   show.episodes       <- transform(episodes, epid = tRakt::pad(season, episode))
