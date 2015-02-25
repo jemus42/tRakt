@@ -1,5 +1,4 @@
 context("Search functions")
-skip_on_cran()
 
 test_that("search by keyword and search by id return identical results", {
   expect_identical(trakt.search("Breaking Bad"), trakt.search.byid("tt0903747", id_type = "imdb"))

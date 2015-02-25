@@ -1,5 +1,4 @@
 context("Movie functions")
-skip_on_cran()
 
 test_that("trakt.movie.people returns a list of data.frames", {
   people <- trakt.movie.people("tron-legacy-2010")

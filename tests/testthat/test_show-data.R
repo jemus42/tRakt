@@ -1,5 +1,4 @@
 context("Show data")
-skip_on_cran()
 
 test_that("trakt.show.people returns data.frame", {
   expect_is(trakt.show.people(target = "game-of-thrones", extended = "min"), "data.frame")
