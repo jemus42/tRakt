@@ -25,7 +25,7 @@ test_that("trakt.user.watchlist returns data.frame", {
 test_that("trakt.user.ratings returns data.frame", {
   expect_is(trakt.user.ratings(user = "jemus42", type = "shows"), "data.frame")
   expect_is(trakt.user.ratings(user = "jemus42", type = "movies"), "data.frame")
-  expect_is(trakt.user.ratings(type = "shows", rating = 10), "data.frame")
+  expect_is(trakt.user.ratings(user = "jemus42", type = "shows", rating = 10), "data.frame")
   expect_is(trakt.user.ratings(user = "jemus42", type = "movies", rating = 10), "data.frame")
 })
 
