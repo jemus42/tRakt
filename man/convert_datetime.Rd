@@ -15,8 +15,5 @@ The same object with converted datetimes
 \description{
 Searches for datetime variables and converts them to \code{POSIXct} via \pkg{lubridate}.
 }
-\examples{
-convert_datetime(list(updated_at = "2015-02-25T10:45:17.000Z", foo = "bar"))
-}
 \keyword{internal}
 

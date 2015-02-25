@@ -78,9 +78,6 @@ getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
 #' @return The same object with converted datetimes
 #' @importFrom lubridate parse_date_time
 #' @keywords internal
-#' @examples
-#' convert_datetime(list(updated_at = "2015-02-25T10:45:17.000Z", foo = "bar"))
-#'
 convert_datetime <- function(object){
   if (!(class(object) %in% c("data.frame", "list"))){
     stop("Object type not supported")
