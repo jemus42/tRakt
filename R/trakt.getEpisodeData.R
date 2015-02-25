@@ -42,6 +42,7 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
                    names(temp$images$screenshot) <- paste0("screenshot.", names(temp$images$screenshot))
                    temp <- cbind(subset(temp, select = -images), temp$images$screenshot)
                  }
+                 return(temp)
               })
 
 
