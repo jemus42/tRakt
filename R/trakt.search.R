@@ -41,14 +41,14 @@ trakt.search <- function(query, type = "show"){
   }
 
   # Try to find the closest match via basic string comparison (Could use improvement)
-  stringmatch <- match(tolower(URLdecode(query)), tolower(response$show$title))
+  stringmatch <- match(tolower(URLdecode(query)), tolower(response[[type]]$title))
 
   # Cleanup received data, using only matched line
   if (is.na(stringmatch)){
     warning("No exact match found, using trakt.tv's best guess")
-    show <- response[1, ]$show
+    show <- response[1, ][[type]]
   } else {
-    show <- response[stringmatch, ]$show
+    show <- response[stringmatch, ][[type]]
   }
 
   return(show)
