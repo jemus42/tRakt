@@ -17,7 +17,8 @@ Imports:
 Suggests:
     knitr,
     dplyr (>= 0.4.1),
-    ggplot2
+    ggplot2,
+    testthat
 VignetteBuilder: knitr
 License: MIT + file LICENSE
 LazyData: true
