@@ -1,4 +1,5 @@
 context("Trending, popular and related shows/movies")
+skip_on_cran()
 
 test_that("trakt.shows.popular returns data.frame", {
   expect_is(trakt.shows.popular(extended = "min"), "data.frame")

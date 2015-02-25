@@ -1,4 +1,5 @@
 context("User-specific functions")
+skip_on_cran()
 
 #### General user data ####
 test_that("trakt.user.stats returns proper object", {
