@@ -2,9 +2,10 @@
 
 ### v0.10.1
  
-* Various bug fixes
-* Add tests
+* Add `testthat` tests
 * Internal changes to how/where datetime variables are converted (user doesn't see any of that)
+    * If `lubridate::parse_date_time` fails, `as.POSIXct` is used as a fallback 
+* Various bug fixes
 
 ### v0.10.0
 
