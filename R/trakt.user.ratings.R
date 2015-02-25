@@ -58,10 +58,5 @@ trakt.user.ratings <- function(user = getOption("trakt.username"), type = "shows
     response         <- cbind(subset(response,         select = -show),    response$show)
     names(response)  <- sub("number", "episode", names(response))
   }
-
-  # Date normalization
-  response$rated_at  <- lubridate::parse_date_time(response$rated_at,
-                                                   "%y-%m-%dT%H-%M-%S", truncated = 3)
-
   return(response)
 }

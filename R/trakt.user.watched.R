@@ -92,8 +92,6 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
     stop("Unknown type, must be 'shows', 'shows.extended', or 'movies'")
   }
 
-  watched$last_watched_at  <- lubridate::parse_date_time(watched$last_watched_at,
-                                                           "%y-%m-%dT%H-%M-%S", truncated = 3)
   watched$last_watched.year <- lubridate::year(watched$last_watched_at)
 
   return(watched)

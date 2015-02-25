@@ -23,14 +23,5 @@ trakt.movie.summary <- function(target, extended = "min"){
   url      <- paste0(baseURL, target, "?extended=", extended)
   response <- trakt.api.call(url = url)
 
-  # Handling dates
-  if ("updated_at" %in% names(response)){
-    response$updated_at <- lubridate::parse_date_time(response$updated_at,
-                                                      "%y-%m-%dT%H-%M-%S", truncated = 3)
-  }
-  if ("released" %in% names(response)){
-    response$released <- as.POSIXct(response$released, tz = "UTC")
-  }
-
   return(response)
 }

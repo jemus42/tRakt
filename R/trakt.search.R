@@ -32,7 +32,7 @@ trakt.search <- function(query, type = "show"){
   url      <- paste0(baseURL, "?query=", query, "&type=", type)
 
   # Actual API call
-  response <- trakt.api.call(url = url)
+  response <- trakt.api.call(url = url, convert.datetime = F)
 
   # Check if response is empty (nothing found)
   if (identical(response, list())){

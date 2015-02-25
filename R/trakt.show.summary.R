@@ -29,7 +29,5 @@ trakt.show.summary <- function(target, extended = "full"){
 
   # Actual API call
   response <- trakt.api.call(url = url)
-  response$first_aired <- lubridate::parse_date_time(response$first_aired,
-                                                     "%y-%m-%dT%H-%M-%S", truncated = 3)
   return(response)
 }

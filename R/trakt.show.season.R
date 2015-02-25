@@ -55,14 +55,8 @@ trakt.show.season <- function(target, seasons = 1, extended = "full,images"){
 
   # If full data is pulled, ehance the dataset a little
   if (extended %in% c("full", "full,images", "images,full")){
-    season$first_aired        <- lubridate::parse_date_time(season$first_aired,
-                                                           "%y-%m-%dT%H-%M-%S", truncated = 3)
     season$first_aired.string <- format(season$first_aired, "%F")
     season$year               <- lubridate::year(season$first_aired)
-  }
-  if ("updated_at" %in% names(season)){
-    season$updated_at <- lubridate::parse_date_time(season$updated_at,
-                                                    "%y-%m-%dT%H-%M-%S", truncated = 3)
   }
   return(season)
 }

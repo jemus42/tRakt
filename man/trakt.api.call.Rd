@@ -5,7 +5,7 @@
 \title{Make an APIv2 call to any URL}
 \usage{
 trakt.api.call(url, headers = getOption("trakt.headers"),
-  fromJSONify = TRUE)
+  fromJSONify = TRUE, convert.datetime = TRUE)
 }
 \arguments{
 \item{url}{APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.}
@@ -15,6 +15,9 @@ Default value is \code{getOption("trakt.headers")} set by \link[tRakt]{get_trakt
 
 \item{fromJSONify}{If \code{TRUE} (default), the API response will be converted to an object via
 \code{jsonlite::fromJSON}}
+
+\item{convert.datetime}{If \code{TRUE} (default), datetime variables are converted to
+\code{POSIXct}. Requires \code{fromJSONify} to be \code{TRUE} as well.}
 }
 \value{
 The content of the API response, \code{jsonlite::fromJSON}'d if requested.

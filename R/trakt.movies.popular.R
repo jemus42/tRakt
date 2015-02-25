@@ -28,11 +28,5 @@ trakt.movies.popular <- function(limit = 10, extended = "min"){
   # Spreading out ids to get a flat data.frame
   response <- cbind(subset(response, select = -ids), response$ids)
 
-  # Handling date
-  if ("updated_at" %in% names(response)){
-    response$updated_at <- lubridate::parse_date_time(response$updated_at,
-                                                      "%y-%m-%dT%H-%M-%S", truncated = 3)
-  }
-
   return(response)
 }

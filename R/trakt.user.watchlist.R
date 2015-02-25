@@ -41,8 +41,5 @@ trakt.user.watchlist <- function(user = getOption("trakt.username"), type = "sho
     response  <- cbind(subset(response, select = -movie), response$movie)
     response  <- cbind(subset(response, select = -ids), response$ids)
   }
-  response$listed_at  <- lubridate::parse_date_time(response$listed_at,
-                                                    "%y-%m-%dT%H-%M-%S", truncated = 3)
-
   return(response)
 }

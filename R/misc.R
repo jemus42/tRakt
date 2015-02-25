@@ -1,5 +1,5 @@
 #' Easy episode id padding
-#' 
+#'
 #' Simple function to ease the creation of \code{sXXeYY} episode ids.
 #' @param s Input season number, coerced to \code{character}.
 #' @param e Input episode number, coerced to \code{character}.
@@ -38,7 +38,7 @@ pad <- function(s = "0", e = "0", width = 2){
 #'
 #' \code{getNameFromURL} extracts some info from a show URL
 #' @param url Input URL. must be a \code{character}, but not a valid URL.
-#' @param epid Whether the episode ID (\code{sXXeYY} format) should be extracted. 
+#' @param epid Whether the episode ID (\code{sXXeYY} format) should be extracted.
 #' Defaults to \code{FALSE}.
 #' @param getslug Whether the \code{slug} should be extracted. Defaults to \code{FALSE}.
 #' @return A \code{list} containing at least the show name.
@@ -60,7 +60,7 @@ getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
       ret$epid <- NA
     } else{
       epid     <- pad(season, episode)
-      ret$epid <- epid 
+      ret$epid <- epid
     }
   }
   if (getslug){
@@ -69,4 +69,31 @@ getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
   }
   return(ret)
   # Most of this is pointless.
+}
+
+#' Quick datetime conversion
+#'
+#' Searches for datetime variables and converts them to \code{POSIXct} via \pkg{lubridate}.
+#' @param object The input object. Must be \code{data.frame} or \code{list}
+#' @return The same object with converted datetimes
+#' @importFrom lubridate parse_date_time
+#' @keywords internal
+#' @examples
+#' convert_datetime(list(updated_at = "2015-02-25T10:45:17.000Z", foo = "bar"))
+#'
+convert_datetime <- function(object){
+  if (!(class(object) %in% c("data.frame", "list"))){
+    stop("Object type not supported")
+  }
+  datevars <- c("first_aired", "updated_at", "listed_at", "last_watched_at",
+                "rated_at", "friends_at", "followed_at", "collected_at")
+
+  for (i in names(object)){
+    if (i %in% datevars){
+      object[[i]] <- lubridate::parse_date_time(object[[i]], "%y-%m-%dT%H-%M-%S", truncated = 3)
+    } else if (i == "released"){
+      object[[i]] <- as.POSIXct(object[[i]], tz = "UTC")
+    }
+  }
+  return(object)
 }

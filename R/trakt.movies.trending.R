@@ -30,14 +30,5 @@ trakt.movies.trending <- function(limit = 10, extended = "min"){
   response$movie <- cbind(subset(response$movie, select = -ids), response$movie$ids)
   response       <- cbind(subset(response, select = -movie), response$movie)
 
-  # Handling date
-  if ("updated_at" %in% names(response)){
-    response$updated_at <- lubridate::parse_date_time(response$updated_at,
-                                                      "%y-%m-%dT%H-%M-%S", truncated = 3)
-  }
-  if ("released" %in% names(response)){
-    response$released <- as.POSIXct(response$released, tz = "UTC")
-  }
-
   return(response)
 }

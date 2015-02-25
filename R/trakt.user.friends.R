@@ -29,7 +29,5 @@ trakt.user.friends <- function(user = getOption("trakt.username")){
   response  <- trakt.api.call(url = url)
   # Flatten the data.frame
   response  <- cbind(subset(response, select = -user), response$user)
-  response$friends_at <- lubridate::parse_date_time(response$friends_at,
-                                                    "%y-%m-%dT%H-%M-%S", truncated = 3)
   return(response)
 }

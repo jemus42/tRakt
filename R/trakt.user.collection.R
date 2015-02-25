@@ -73,8 +73,6 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
   } else {
     stop("Unknown type, must be 'shows' or 'movies'")
   }
-
-  watched$collected_at   <- lubridate::parse_date_time(watched$collected_at, "%y-%m-%dT%H-%M-%S", truncated = 3)
   watched$collected.year <- lubridate::year(watched$collected_at)
 
   return(watched)
