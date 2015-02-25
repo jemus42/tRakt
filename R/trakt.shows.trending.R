@@ -29,5 +29,6 @@ trakt.shows.trending <- function(limit = 10, extended = "min"){
   # Spreading out ids to get a flat data.frame
   response$show <- cbind(subset(response$show, select = -ids), response$show$ids)
   response      <- cbind(subset(response, select = -show), response$show)
+  response      <- convert_datetime(response)
   return(response)
 }

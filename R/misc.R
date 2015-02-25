@@ -86,8 +86,9 @@ convert_datetime <- function(object){
                 "rated_at", "friends_at", "followed_at", "collected_at")
 
   for (i in names(object)){
-    if (i %in% datevars){
-      object[[i]] <- lubridate::parse_date_time(object[[i]], "%y-%m-%dT%H-%M-%S", truncated = 3)
+    if (i %in% datevars & !("POSIXct" %in% class(object[[i]]))){
+      object[[i]] <- lubridate::parse_date_time(object[[i]], "%y-%m-%dT%H-%M-%S",
+                                                truncated = 3, tz = "UTC")
     } else if (i == "released"){
       object[[i]] <- as.POSIXct(object[[i]], tz = "UTC")
     }
