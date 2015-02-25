@@ -2,7 +2,7 @@ context("Trending, popular and related shows/movies")
 
 test_that("trakt.shows.popular returns data.frame", {
   expect_is(trakt.shows.popular(extended = "min"), "data.frame")
-  expect_is(trakt.shows.popular(extended = "full"), "data.frame")
+  #expect_is(trakt.shows.popular(extended = "full"), "data.frame")
 })
 
 test_that("trakt.movies.popular returns data.frame", {
