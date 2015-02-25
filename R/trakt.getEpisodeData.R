@@ -34,6 +34,7 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
   episode <- NULL
   season  <- NULL
   rating  <- NULL
+  images  <- NULL
 
   episodes <- plyr::ldply(season_nums,
               function(s){
