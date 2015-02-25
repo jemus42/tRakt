@@ -79,7 +79,11 @@ get_trakt_credentials <- function(username = NULL, client.id = NULL,
     message(paste("Your trakt.tv username is set to",   getOption('trakt.username')))
     message(paste("Your APIv2 client id is set to",     getOption('trakt.client.id')))
     message("Your APIv2 client secret is set (not displayed for privacy reasons)")
+  }
 
+  if (is.null(getOption("trakt.client.id"))){
+    options(trakt.client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
+    warning("I provided my client.id as a fallback for you. Use it responsibly.")
   }
 
   # Set the appropriate header for httr::GET
