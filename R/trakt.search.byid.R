@@ -22,14 +22,13 @@ trakt.search.byid <- function(id, id_type = "trakt-show"){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
-  # Setting values required for API call
+
+  # Construct URL, make API call
   id       <- as.character(id)
   id       <- URLencode(id)    # URL normalization
   baseURL  <- "https://api-v2launch.trakt.tv/search"
   url      <- paste0(baseURL, "?id_type=", id_type, "&id=", id)
-
-  # Actual API call
-  response  <- trakt.api.call(url = url)
+  response <- trakt.api.call(url = url)
 
   # Check if response is empty (nothing found)
   if (identical(response, list())){

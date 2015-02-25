@@ -17,6 +17,7 @@ trakt.show.ratings <- function(target){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
 
+  # Construct URL, make API call
   baseURL  <- "https://api-v2launch.trakt.tv/shows/"
   url      <- paste0(baseURL, target, "/ratings")
   response <- trakt.api.call(url = url)

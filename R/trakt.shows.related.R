@@ -20,10 +20,9 @@ trakt.shows.related <- function(target){
   }
   ids <- NULL
 
+  # Construct URL, make API call
   baseURL <- "https://api-v2launch.trakt.tv/shows"
   url     <- paste0(baseURL, "/", target, "/related")
-
-  # Actual API call
   response <- trakt.api.call(url = url)
 
   # Flattening

@@ -24,12 +24,10 @@ trakt.show.people <- function(target, extended = "min"){
   person <- NULL
   ids    <- NULL
 
-  # Constructing URL
-  baseURL <- "https://api-v2launch.trakt.tv/shows"
-  url     <- paste0(baseURL, "/", target, "/people")
+  # Construct URL, make API call
+  baseURL <- "https://api-v2launch.trakt.tv/shows/"
+  url     <- paste0(baseURL, target, "/people")
   url     <- paste0(url, "?extended=", extended)
-
-  # Actual API call
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame

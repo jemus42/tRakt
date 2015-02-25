@@ -22,6 +22,7 @@ trakt.shows.trending <- function(limit = 10, extended = "min"){
   }
   ids <- NULL; show <- NULL
 
+  # Construct URL, make API call
   baseURL  <- "https://api-v2launch.trakt.tv/shows/trending"
   url      <- paste0(baseURL, "?page=1&limit=", limit, "&extended=", extended)
   response <- trakt.api.call(url)

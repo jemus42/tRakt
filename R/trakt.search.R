@@ -25,13 +25,12 @@ trakt.search <- function(query, type = "show"){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
-  # Setting values required for API call
+
+  # Construct URL, make API call
   query    <- as.character(query) # Just to make sure…
   query    <- URLencode(query)    # URL normalization
   baseURL  <- "https://api-v2launch.trakt.tv/search"
   url      <- paste0(baseURL, "?query=", query, "&type=", type)
-
-  # Actual API call
   response <- trakt.api.call(url = url, convert.datetime = F)
 
   # Check if response is empty (nothing found)

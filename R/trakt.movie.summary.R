@@ -19,6 +19,7 @@ trakt.movie.summary <- function(target, extended = "min"){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
 
+  # Construct URL, make API call
   baseURL  <- "https://api-v2launch.trakt.tv/movies/"
   url      <- paste0(baseURL, target, "?extended=", extended)
   response <- trakt.api.call(url = url)

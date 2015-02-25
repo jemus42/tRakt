@@ -26,7 +26,6 @@ trakt.show.season <- function(target, seasons = 1, extended = "full,images"){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
-
   if (length(seasons) > 1){
     warning("seasons must be of length 1, only first value will be used")
     season <- season[1]
@@ -35,11 +34,9 @@ trakt.show.season <- function(target, seasons = 1, extended = "full,images"){
   # Please R CMD CHECK
   ids <- NULL
 
-  # Construct URL
+  # Construct URL, make API call
   baseURL <- "https://api-v2launch.trakt.tv/shows/"
-  url     <- paste0(baseURL, "/", target, "/seasons/", seasons, "?extended=", extended)
-
-  # Actual API call
+  url     <- paste0(baseURL, target, "/seasons/", seasons, "?extended=", extended)
   season  <- trakt.api.call(url = url)
 
   # Catch unknown season error

@@ -21,6 +21,7 @@ trakt.movies.popular <- function(limit = 10, extended = "min"){
   }
   ids <- NULL
 
+  # Construct URL, make API call
   baseURL  <- "https://api-v2launch.trakt.tv/movies/popular"
   url      <- paste0(baseURL, "?page=1&limit=", limit, "&extended=", extended)
   response <- trakt.api.call(url)

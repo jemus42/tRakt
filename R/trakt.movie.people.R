@@ -21,11 +21,9 @@ trakt.movie.people <- function(target, extended = "min"){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
 
-  # Constructing URL
-  baseURL <- "https://api-v2launch.trakt.tv/movies"
-  url     <- paste0(baseURL, "/", target, "/people")
-  url     <- paste0(url, "?extended=", extended)
-
-  # Actual API call
+  # Construct URL, make API call
+  baseURL  <- "https://api-v2launch.trakt.tv/movies"
+  url      <- paste0(baseURL, "/", target, "/people")
+  url      <- paste0(url, "?extended=", extended)
   response <- trakt.api.call(url = url)
 }

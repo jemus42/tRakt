@@ -23,11 +23,9 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
     stop("No username is set.")
   }
 
-  # Construct URL
+  # Construct URL, make API call
   baseURL   <- "https://api-v2launch.trakt.tv/users"
   url       <- paste0(baseURL, "/", user, "/collection/", type)
-
-  # Actual API call
   response  <- trakt.api.call(url = url)
 
   if (type == "shows"){

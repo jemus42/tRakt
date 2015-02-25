@@ -25,11 +25,9 @@ trakt.getSeasons <- function(target, extended = "full,images", dropspecials = TR
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
 
-  # Constructing URL
+  # Construct URL, make API call
   baseURL <- "https://api-v2launch.trakt.tv/shows/"
   url     <- paste0(baseURL, target, "/", "seasons", "?extended=", extended)
-
-  # Actual API call
   seasons <- trakt.api.call(url = url)
 
   # Data cleanup

@@ -27,12 +27,10 @@ trakt.user.watchlist <- function(user = getOption("trakt.username"), type = "sho
   ids   <- NULL
   movie <- NULL
 
-  # Construct URL
-  baseURL   <- "https://api-v2launch.trakt.tv/users"
-  url       <- paste0(baseURL, "/", user, "/watchlist/", type)
-
-  # Actual API call
-  response  <- trakt.api.call(url = url)
+  # Construct URL, make API call
+  baseURL  <- "https://api-v2launch.trakt.tv/users"
+  url      <- paste0(baseURL, "/", user, "/watchlist/", type)
+  response <- trakt.api.call(url = url)
 
   if (type == "show"){
     response  <- cbind(subset(response, select = -show), response$show)

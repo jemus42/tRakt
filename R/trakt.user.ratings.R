@@ -31,11 +31,9 @@ trakt.user.ratings <- function(user = getOption("trakt.username"), type = "shows
   # Please R CMD check
   ids <- NULL; episode <- NULL; show <- NULL; movie <- NULL
 
-  # Construct URL
+  # Construct URL, make API call
   baseURL   <- "https://api-v2launch.trakt.tv/users"
   url       <- paste0(baseURL, "/", user, "/ratings/", type, "/", rating)
-
-  # Actual API call
   response  <- trakt.api.call(url = url)
 
   # Flattening

@@ -22,12 +22,10 @@ trakt.show.summary <- function(target, extended = "full"){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
 
-  # Constructing URL
-  baseURL  <- "https://api-v2launch.trakt.tv/shows"
-  url      <- paste0(baseURL, "/", target)
-  url      <- paste0(url, "?extended=", extended)
-
-  # Actual API call
+  # Construct URL, make API call
+  baseURL  <- "https://api-v2launch.trakt.tv/shows/"
+  url      <- paste0(baseURL, target, "?extended=", extended)
   response <- trakt.api.call(url = url)
+
   return(response)
 }

@@ -21,12 +21,11 @@ trakt.user.friends <- function(user = getOption("trakt.username")){
     stop("No username is set.")
   }
 
-  # Construct URL
+  # Construct URL, make API call
   baseURL <- "https://api-v2launch.trakt.tv/users"
   url     <- paste0(baseURL, "/", user, "/friends")
-
-  # Actual API call
   response  <- trakt.api.call(url = url)
+  
   # Flatten the data.frame
   response  <- cbind(subset(response, select = -user), response$user)
   return(response)

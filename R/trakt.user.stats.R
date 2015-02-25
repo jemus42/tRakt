@@ -23,11 +23,9 @@ trakt.user.stats <- function(user = getOption("trakt.username"), to.data.frame =
     stop("No username is set.")
   }
 
-  # Construct URL
+  # Construct URL, make API call
   baseURL   <- "https://api-v2launch.trakt.tv/users"
   url       <- paste0(baseURL, "/", user, "/stats")
-
-  # Actual API call
   response  <- trakt.api.call(url = url)
 
   if (to.data.frame){
