@@ -3,6 +3,8 @@
 ### v0.10.1
  
 * Various bug fixes
+* Add tests
+* Internal changes to how/where datetime variables are converted (user doesn't see any of that)
 
 ### v0.10.0
 
