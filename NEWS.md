@@ -5,6 +5,7 @@
 * `trakt.user.stats`:
         * Tidy up rating distribution 
         * **Remove** `to.data.frame` option because the output is too messy
+* Add another `@family` tag to docs for aggregation functions (`.popular`, `.trending`, `.related`)
 
 ### v0.10.2
 

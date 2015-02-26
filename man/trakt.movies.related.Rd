@@ -29,6 +29,12 @@ related <- trakt.movies.related(""tron-legacy-2010"")
 }
 }
 \seealso{
+Other aggregate: \code{\link{trakt.movies.popular}};
+  \code{\link{trakt.movies.trending}};
+  \code{\link{trakt.shows.popular}};
+  \code{\link{trakt.shows.related}};
+  \code{\link{trakt.shows.trending}}
+
 Other movie: \code{\link{trakt.movie.people}};
   \code{\link{trakt.movie.ratings}};
   \code{\link{trakt.movie.summary}};

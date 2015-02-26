@@ -30,6 +30,12 @@ trakt.shows.trending(5)
 }
 }
 \seealso{
+Other aggregate: \code{\link{trakt.movies.popular}};
+  \code{\link{trakt.movies.related}};
+  \code{\link{trakt.movies.trending}};
+  \code{\link{trakt.shows.popular}};
+  \code{\link{trakt.shows.related}}
+
 Other show: \code{\link{trakt.getEpisodeData}};
   \code{\link{trakt.getFullShowData}};
   \code{\link{trakt.getSeasons}};

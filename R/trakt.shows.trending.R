@@ -10,6 +10,7 @@
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/get-trending-shows}{the trakt API docs for further info}
 #' @family show
+#' @family aggregate
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
