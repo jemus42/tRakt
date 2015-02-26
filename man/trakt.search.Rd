@@ -4,29 +4,34 @@
 \alias{trakt.search}
 \title{Search for a show via text query}
 \usage{
-trakt.search(query, type = "show")
+trakt.search(query, type = "show", year = NULL)
 }
 \arguments{
 \item{query}{The keyword used for the search. Will be coerced to \code{character} and
-\code{URLencode}d.}
+\code{URLencode}d. If the query ends with a 4 digit numbers, this will be used as
+\code{year} parameter.}
 
-\item{type}{The type of data you're looking for. Defaults to \code{show}, can also
-be \code{movie}, \code{episode}, \code{person} or \code{list}.}
+\item{type}{The type of data you're looking for. Defaults to \code{show}, can also be
+\code{movie}, \code{episode}, \code{person} or \code{list}.}
+
+\item{year}{Optionally filter by year.}
 }
 \value{
-A \code{data.frame} containing a single search result. Hopefully the one you wanted.
-If no result is found, the return value is \code{list(error = "Nothing found")} and a \code{warning}
+A \code{data.frame} containing a single search result. Hopefully the one you wanted. If
+  no result is found, the return value is \code{list(error = "Nothing found")} and a
+  \code{warning}
 }
 \description{
 \code{trakt.search} pulls show stats and returns it compactly.
 }
 \details{
-Search for a show with a keyword (e.g. \code{"Breaking Bad"}) and receive basic info of the
-first search result. It's main use is to retrieve the ids or proper show title for further use,
-as well as receiving a quick overview of a show.
+Search for a show with a keyword (e.g. \code{"Breaking Bad"}) and receive basic info of the first
+search result. It's main use is to retrieve the ids or proper show title for further use, as well
+as receiving a quick overview of a show.
 }
 \note{
-See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for further info}
+See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for
+  further info}
 }
 \examples{
 \dontrun{
