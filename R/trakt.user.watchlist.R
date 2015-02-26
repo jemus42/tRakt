@@ -33,11 +33,11 @@ trakt.user.watchlist <- function(user = getOption("trakt.username"), type = "sho
   response <- trakt.api.call(url = url)
 
   if (type == "show"){
-    response  <- cbind(subset(response, select = -show), response$show)
-    response  <- cbind(subset(response, select = -ids), response$ids)
+    response <- cbind(subset(response, select = -show), response$show)
+    response <- cbind(subset(response, select = -ids), response$ids)
   } else if (type == "movies"){
-    response  <- cbind(subset(response, select = -movie), response$movie)
-    response  <- cbind(subset(response, select = -ids), response$ids)
+    response <- cbind(subset(response, select = -movie), response$movie)
+    response <- cbind(subset(response, select = -ids), response$ids)
   }
   return(response)
 }

@@ -17,7 +17,6 @@
 #' @return A \code{data.frame} containing episode details
 #' @export
 #' @import plyr
-#' @import httr
 #' @note This function is mainly for convenience.
 #' @family show
 #' @examples

@@ -26,4 +26,6 @@ trakt.movie.people <- function(target, extended = "min"){
   url      <- paste0(baseURL, "/", target, "/people")
   url      <- paste0(url, "?extended=", extended)
   response <- trakt.api.call(url = url)
+  
+  return(response)
 }

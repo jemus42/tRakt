@@ -4,6 +4,7 @@
 
 * Add `year` parameter to `trakt.search`
 * If `query` in `trakt.search` ends with a 4 digit number, this will be used as `year` parameter and stripped from the original `query`
+* Minor internal fixes
 
 ### v0.10.1
  

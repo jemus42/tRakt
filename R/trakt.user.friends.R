@@ -22,11 +22,11 @@ trakt.user.friends <- function(user = getOption("trakt.username")){
   }
 
   # Construct URL, make API call
-  baseURL <- "https://api-v2launch.trakt.tv/users"
-  url     <- paste0(baseURL, "/", user, "/friends")
-  response  <- trakt.api.call(url = url)
+  baseURL  <- "https://api-v2launch.trakt.tv/users"
+  url      <- paste0(baseURL, "/", user, "/friends")
+  response <- trakt.api.call(url = url)
   
   # Flatten the data.frame
-  response  <- cbind(subset(response, select = -user), response$user)
+  response <- cbind(subset(response, select = -user), response$user)
   return(response)
 }

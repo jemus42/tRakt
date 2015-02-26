@@ -15,11 +15,9 @@
 #'   no result is found, the return value is \code{list(error = "Nothing found")} and a
 #'   \code{warning}
 #' @export
-#' @importFrom jsonlite fromJSON
 #' @importFrom stringr str_match
 #' @importFrom stringr str_replace
 #' @importFrom stringr str_trim
-#' @import httr
 #' @note See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for
 #'   further info}
 #' @family API, search
@@ -59,10 +57,10 @@ trakt.search <- function(query, type = "show", year = NULL){
   # Cleanup received data, using only matched line
   if (is.na(stringmatch)){
     warning("No exact match found, using trakt.tv's best guess")
-    show <- response[1, ][[type]]
+    result <- response[1, ][[type]]
   } else {
-    show <- response[stringmatch, ][[type]]
+    result <- response[stringmatch, ][[type]]
   }
 
-  return(show)
+  return(result)
 }
