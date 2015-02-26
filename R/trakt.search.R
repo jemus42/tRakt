@@ -16,6 +16,9 @@
 #'   \code{warning}
 #' @export
 #' @importFrom jsonlite fromJSON
+#' @importFrom stringr str_match
+#' @importFrom stringr str_replace
+#' @importFrom stringr str_trim
 #' @import httr
 #' @note See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for
 #'   further info}
