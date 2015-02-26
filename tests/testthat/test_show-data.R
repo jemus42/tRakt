@@ -1,8 +1,8 @@
 context("Show data")
 
-test_that("trakt.show.people returns data.frame", {
-  expect_is(trakt.show.people(target = "game-of-thrones", extended = "min"), "data.frame")
-  expect_is(trakt.show.people(target = "game-of-thrones", extended = "full"), "data.frame")
+test_that("trakt.show.people returns list", {
+  expect_is(trakt.show.people(target = "game-of-thrones", extended = "min"), "list")
+  expect_is(trakt.show.people(target = "game-of-thrones", extended = "full"), "list")
 })
 
 test_that("trakt.show.ratings returns data.frame", {
