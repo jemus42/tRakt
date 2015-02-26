@@ -3,9 +3,7 @@
 #' \code{trakt.user.stats} pulls a user's stats.
 
 #' @param user Target user. Defaults to \code{getOption("trakt.username")}
-#' @param to.data.frame if \code{TRUE}, coerces the output to \code{data.frame}
-#' using \pkg{plyr}'s \code{rbind.fill}. Defaults to \code{FALSE}.
-#' @return A \code{list} or \code{data.frame} containing stats.
+#' @return A \code{list} containing stats.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/stats/get-stats}{the trakt API docs for further info}
 #' @family user
@@ -15,7 +13,7 @@
 #' mystats   <- trakt.user.stats() # Defaults to your username if set
 #' seanstats <- trakt.user.stats(user = "sean")
 #' }
-trakt.user.stats <- function(user = getOption("trakt.username"), to.data.frame = FALSE){
+trakt.user.stats <- function(user = getOption("trakt.username")){
   if (is.null(getOption("trakt.headers"))){
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
@@ -28,8 +26,9 @@ trakt.user.stats <- function(user = getOption("trakt.username"), to.data.frame =
   url       <- paste0(baseURL, "/", user, "/stats")
   response  <- trakt.api.call(url = url)
 
-  if (to.data.frame){
-    response <- plyr::ldply(response, as.data.frame, .id = "type")
-  }
+  # Flattening the distribution a little
+  response$ratings$distribution        <- as.data.frame(response$ratings$distribution)
+  names(response$ratings$distribution) <- 1:ncol(response$ratings$distribution)
+
   return(response)
 }

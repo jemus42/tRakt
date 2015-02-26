@@ -1,5 +1,11 @@
 ## tRakt News
 
+### v0.10.3
+
+* `trakt.user.stats`:
+        * Tidy up rating distribution 
+        * **Remove** `to.data.frame` option because the output is too messy
+
 ### v0.10.2
 
 * Add `year` parameter to `trakt.search`

@@ -1,9 +1,8 @@
 context("User-specific functions")
 
 #### General user data ####
-test_that("trakt.user.stats returns proper object", {
-  expect_is(trakt.user.stats(user = "jemus42", to.data.frame = TRUE), "data.frame")
-  expect_is(trakt.user.stats(user = "jemus42", to.data.frame = FALSE), "list")
+test_that("trakt.user.stats returns list", {
+  expect_is(trakt.user.stats(user = "jemus42"), "list")
 })
 
 test_that("trakt.user.collection returns data.frame", {
