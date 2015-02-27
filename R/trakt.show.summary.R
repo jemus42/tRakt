@@ -18,9 +18,6 @@
 #' breakingbad.summary_full <- trakt.show.summary("breaking-bad")
 #' }
 trakt.show.summary <- function(target, extended = "full"){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
 
   # Construct URL, make API call
   baseURL  <- "https://api-v2launch.trakt.tv/shows/"

@@ -14,9 +14,6 @@
 #' trakt.user.friends("jemus42")
 #' }
 trakt.user.friends <- function(user = getOption("trakt.username")){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
   if (is.null(user) && is.null(getOption("trakt.username"))){
     stop("No username is set.")
   }

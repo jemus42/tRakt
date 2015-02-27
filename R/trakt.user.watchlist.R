@@ -15,9 +15,6 @@
 #' seanstats <- trakt.user.watchlist(user = "sean")
 #' }
 trakt.user.watchlist <- function(user = getOption("trakt.username"), type = "shows"){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
   if (is.null(user) && is.null(getOption("trakt.username"))){
     stop("No username is set.")
   }

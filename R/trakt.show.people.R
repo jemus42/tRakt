@@ -17,9 +17,7 @@
 #' breakingbad.people <- trakt.show.people("breaking-bad")
 #' }
 trakt.show.people <- function(target, extended = "min"){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
+
   # Please R CMD check
   person <- NULL
   ids    <- NULL

@@ -19,9 +19,6 @@
 #' breakingbad <- trakt.search.byid(1388, "trakt-show")
 #' }
 trakt.search.byid <- function(id, id_type = "trakt-show"){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
 
   # Construct URL, make API call
   id       <- as.character(id)

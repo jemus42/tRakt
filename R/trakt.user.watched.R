@@ -19,9 +19,6 @@
 #' seans.shows <- trakt.user.watched(user = "sean")
 #' }
 trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows"){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
   if (is.null(user) && is.null(getOption("trakt.username"))){
     stop("No username is set.")
   }

@@ -16,9 +16,6 @@
 #' ratedmovies <- trakt.user.ratings(type = "movies")
 #' }
 trakt.user.ratings <- function(user = getOption("trakt.username"), type = "shows", rating = NULL){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
   if (is.null(user) && is.null(getOption("trakt.username"))){
     stop("No username is set.")
   }

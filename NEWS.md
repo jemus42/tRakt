@@ -6,6 +6,7 @@
     * Tidy up rating distribution 
     * **Remove** `to.data.frame` option because the output is too messy
 * Add another `@family` tag to docs for aggregation functions (`.popular`, `.trending`, `.related`)
+* Individual functions don't have to warn about missing headers, that's `trakt.api.call`‘s job.
 
 ### v0.10.2
 

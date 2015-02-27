@@ -22,9 +22,7 @@
 #' breakingbad <- trakt.getFullShowData(slug = "breaking-bad")
 #' }
 trakt.getFullShowData <- function(query = NULL, slug = NULL, dropunaired = TRUE){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
+
   # Bind variables later used to please R CMD CHECK
   rating  <- NULL
 

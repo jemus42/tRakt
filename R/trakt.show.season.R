@@ -23,9 +23,6 @@
 #' breakingbad.seasons <- trakt.show.season("breaking-bad", 1)
 #' }
 trakt.show.season <- function(target, seasons = 1, extended = "full,images"){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
   if (length(seasons) > 1){
     warning("seasons must be of length 1, only first value will be used")
     season <- season[1]

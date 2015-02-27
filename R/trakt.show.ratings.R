@@ -13,9 +13,6 @@
 #' trakt.show.ratings("game-of-thrones")
 #' }
 trakt.show.ratings <- function(target){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
 
   # Construct URL, make API call
   baseURL  <- "https://api-v2launch.trakt.tv/shows/"

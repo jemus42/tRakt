@@ -19,9 +19,6 @@
 #' breakingbad.stats <- trakt.show.stats("breaking-bad")
 #' }
 trakt.show.stats <- function(target, extended = "min"){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
 
   # Construct URL, make API call
   baseURL  <- "https://api-v2launch.trakt.tv/shows"

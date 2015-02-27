@@ -123,6 +123,9 @@ get_trakt_credentials <- function(username = NULL, client.id = NULL,
 #' }
 trakt.api.call <- function(url, headers = getOption("trakt.headers"), fromJSONify = TRUE,
                            convert.datetime = TRUE){
+  if (is.null(headers) & is.null(getOption("trakt.headers"))){
+    stop("HTTP headers not set, see ?get_trakt_credentials")
+  }
   response   <- httr::GET(url, headers)
   httr::stop_for_status(response) # In case trakt fails
   response   <- httr::content(response, as = "text")

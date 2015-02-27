@@ -27,9 +27,6 @@
 #' breakingbad <- trakt.search("Breaking Bad")
 #' }
 trakt.search <- function(query, type = "show", year = NULL){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
 
   # Parse query for possible year
   if (is.null(year) & !(is.na(stringr::str_match(query, "(\\d{4})$")[1]))){

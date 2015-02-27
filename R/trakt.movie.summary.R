@@ -15,9 +15,6 @@
 #' trakt.movie.summary("tron-legacy-2010")
 #' }
 trakt.movie.summary <- function(target, extended = "min"){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
 
   # Construct URL, make API call
   baseURL  <- "https://api-v2launch.trakt.tv/movies/"

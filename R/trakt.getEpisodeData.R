@@ -26,9 +26,7 @@
 #' }
 
 trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropunaired = TRUE){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
+
   # Bind variables later used to please R CMD CHECK
   episode <- NULL
   season  <- NULL

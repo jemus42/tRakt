@@ -16,9 +16,7 @@
 #' related <- trakt.movies.related(""tron-legacy-2010"")
 #' }
 trakt.movies.related <- function(target){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
+
   ids <- NULL
 
   # Construct URL, make API call

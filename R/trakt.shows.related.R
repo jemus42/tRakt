@@ -16,9 +16,6 @@
 #' related <- trakt.shows.related("game-of-thrones")
 #' }
 trakt.shows.related <- function(target){
-  if (is.null(getOption("trakt.headers"))){
-    stop("HTTP headers not set, see ?get_trakt_credentials")
-  }
   ids <- NULL
 
   # Construct URL, make API call
