@@ -69,7 +69,7 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
       show.episodes <- show.episodes[show.episodes$first_aired <= lubridate::now(tzone = "UTC"), ]
     }
   }
-
+  show.episodes <- show.episodes[!(is.na(show.episodes$first_aired)), ]
   # Append source
   show.episodes$src  <- "trakt.tv"
 
