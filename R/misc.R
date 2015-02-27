@@ -46,10 +46,8 @@ pad <- function(s = "0", e = "0", width = 2){
 #' @importFrom stringr str_split
 #' @note This is pointless.
 #' @examples
-#' \dontrun{
 #' getNameFromURL("http://trakt.tv/show/fargo/season/1/episode/2", T, T)
 #' getNameFromURL("http://trakt.tv/show/breaking-bad", T, F)
-#' }
 getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
   showname <- stringr::str_split(url, "/")[[1]][5]
   ret <- list("show" = showname)
