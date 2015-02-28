@@ -73,10 +73,11 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
   }
 
   # A little extra cleanup
-  if (all(is.na(show.episodes$episode_abs))){
-    show.episodes$episode_abs <- show.episodes$epnum
+  if (!is.null(show.episodes$episode_abs)){
+    if (all(is.na(show.episodes$episode_abs))){
+      show.episodes$episode_abs <- show.episodes$epnum
+    }
   }
-
 
   # Append source
   show.episodes$src  <- "trakt.tv"
