@@ -7,7 +7,7 @@
 #' @param target The \code{id} of the show requested. Either the \code{slug}
 #' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
 #' @param extended Whether extended info should be provided.
-#' Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}
+#' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}
 #' @return A \code{list} containing summary info
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/summary}{the trakt API docs for further info}
@@ -15,9 +15,9 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' breakingbad.summary_full <- trakt.show.summary("breaking-bad")
+#' breakingbad.summary <- trakt.show.summary("breaking-bad")
 #' }
-trakt.show.summary <- function(target, extended = "full"){
+trakt.show.summary <- function(target, extended = "min"){
 
   # Construct URL, make API call
   baseURL  <- "https://api-v2launch.trakt.tv/shows/"

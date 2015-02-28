@@ -6,10 +6,11 @@
     * Tidy up rating distribution 
     * **Remove** `to.data.frame` option because the output is too messy
 * Add another `@family` tag to docs for aggregation functions (`.popular`, `.trending`, `.related`)
-* Individual functions don't have to warn about missing headers, that's `trakt.api.call`‘s job.
+* Individual functions don't have to warn about missing headers, that's `trakt.api.call`'s job.
 * `trakt.getEpisodeData`: 
-    * Explicitly drop episodes with NA firstaired fields
+    * Explicitly drop episodes with `NA` firstaired fields
     * The `episode_abs` field is usually `NA`, so let's dump `epnum` on it
+* Use `extended = "min"` as default across functions for consistency with the trakt API
 
 ### v0.10.2
 

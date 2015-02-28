@@ -4,14 +4,14 @@
 \alias{trakt.show.summary}
 \title{Get show summary info}
 \usage{
-trakt.show.summary(target, extended = "full")
+trakt.show.summary(target, extended = "min")
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
 \item{extended}{Whether extended info should be provided.
-Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}}
+Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
 A \code{list} containing summary info
@@ -29,7 +29,7 @@ See \href{http://docs.trakt.apiary.io/reference/shows/summary}{the trakt API doc
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-breakingbad.summary_full <- trakt.show.summary("breaking-bad")
+breakingbad.summary <- trakt.show.summary("breaking-bad")
 }
 }
 \seealso{

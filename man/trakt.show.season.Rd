@@ -4,7 +4,7 @@
 \alias{trakt.show.season}
 \title{Get a season of a show}
 \usage{
-trakt.show.season(target, seasons = 1, extended = "full,images")
+trakt.show.season(target, seasons = 1, extended = "min")
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
@@ -12,8 +12,8 @@ trakt.show.season(target, seasons = 1, extended = "full,images")
 
 \item{seasons}{The season to get. Defaults to 1. Use 0 for special episodes.}
 
-\item{extended}{Defaults to \code{full,images} to get season posters. Can be
-\code{min}, \code{images}, \code{full}, \code{full,images}}
+\item{extended}{Use \code{full,images} to get season posters. Can be
+\code{min} (default), \code{images}, \code{full}, \code{full,images}}
 }
 \value{
 A \code{data.frame} containing all of a season's episodes

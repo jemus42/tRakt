@@ -7,8 +7,8 @@
 #' \code{extended} to customize output amount.
 #' @param target The \code{id} of the show requested. Either the \code{slug}
 #' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
-#' @param extended Defaults to \code{full,images} to get season posters. Can be
-#' \code{min}, \code{images}, \code{full}, \code{full,images}
+#' @param extended Use \code{full,images} to get season posters. Can be
+#' \code{min} (default), \code{images}, \code{full}, \code{full,images}
 #' @param dropspecials If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped
 #' @return A \code{data.frame} containing season details (nested in \code{list} objects)
 #' @export
@@ -20,7 +20,7 @@
 #' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.seasons <- trakt.getSeasons("breaking-bad", extended = "min")
 #' }
-trakt.getSeasons <- function(target, extended = "full,images", dropspecials = TRUE){
+trakt.getSeasons <- function(target, extended = "min", dropspecials = TRUE){
 
   # Construct URL, make API call
   baseURL <- "https://api-v2launch.trakt.tv/shows/"

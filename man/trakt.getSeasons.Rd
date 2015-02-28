@@ -4,14 +4,14 @@
 \alias{trakt.getSeasons}
 \title{Get a show's season information}
 \usage{
-trakt.getSeasons(target, extended = "full,images", dropspecials = TRUE)
+trakt.getSeasons(target, extended = "min", dropspecials = TRUE)
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
-\item{extended}{Defaults to \code{full,images} to get season posters. Can be
-\code{min}, \code{images}, \code{full}, \code{full,images}}
+\item{extended}{Use \code{full,images} to get season posters. Can be
+\code{min} (default), \code{images}, \code{full}, \code{full,images}}
 
 \item{dropspecials}{If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped}
 }

@@ -8,8 +8,8 @@
 #' @param target The \code{id} of the show requested. Either the \code{slug}
 #' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
 #' @param seasons The season to get. Defaults to 1. Use 0 for special episodes.
-#' @param extended Defaults to \code{full,images} to get season posters. Can be
-#' \code{min}, \code{images}, \code{full}, \code{full,images}
+#' @param extended Use \code{full,images} to get season posters. Can be
+#' \code{min} (default), \code{images}, \code{full}, \code{full,images}
 #' @return A \code{data.frame} containing all of a season's episodes
 #' @export
 #' @importFrom lubridate origin
@@ -22,7 +22,7 @@
 #' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.seasons <- trakt.show.season("breaking-bad", 1)
 #' }
-trakt.show.season <- function(target, seasons = 1, extended = "full,images"){
+trakt.show.season <- function(target, seasons = 1, extended = "min"){
   if (length(seasons) > 1){
     warning("seasons must be of length 1, only first value will be used")
     season <- season[1]
