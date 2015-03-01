@@ -2,10 +2,14 @@
 
 ### v0.11
 
-* **Rename** `trakt.getSeasons`  -> `trakt.seasons.summary` for consistency with the trakt API
-* **Rename** `trakt.show.season` -> `trakt.seasons.season` for consistency with the trakt API
+* **Rename** `trakt.getSeasons`  -> `trakt.seasons.summary` for consistency with the trakt API.
+* **Rename** `trakt.show.season` -> `trakt.seasons.season` for consistency with the trakt API.
 * **Rename** `getNameFromUrl`    -> `parse_trakt_url` to be more descriptive. Also, de-camelCasezation. 
-* Update vignette to reflext the above changes
+* Update vignette to reflect the above changes
+* **Add** some `people` functions:
+    * `trakt.people.summary`
+    * `trakt.people.movies`
+    * `trakt.people.shows`
 
 ### v0.10.3
 
