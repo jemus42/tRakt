@@ -4,10 +4,13 @@
 \alias{trakt.movies.trending}
 \title{Get trending movies}
 \usage{
-trakt.movies.trending(limit = 10, extended = "min")
+trakt.movies.trending(limit = 10, page = 1, extended = "min")
 }
 \arguments{
 \item{limit}{Number of movies to return. Is coerced to \code{integer} and must be greater than 0.}
+
+\item{page}{Page to return (default is \code{1})
+for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.}
 
 \item{extended}{Whether extended info should be provided.
 Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}}

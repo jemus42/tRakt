@@ -12,6 +12,12 @@
     * `trakt.people.shows`
 * Unify output of `trakt.show.people` and `trakt.movie.people`
 * **Add** `extended` argument to `trakt.movies.related` and `trakt.shows.related` (defaults to `min`)
+* **Add** `page` param to [paginated](http://docs.trakt.apiary.io/#introduction/pagination) functions:
+    * `trakt.shows.popular`
+    * `trakt.shows.trending`
+    * `trakt.movies.popular`
+    * `trakt.movies.trending`
+
 
 ### v0.10.3
 
