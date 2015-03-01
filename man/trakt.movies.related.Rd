@@ -4,11 +4,14 @@
 \alias{trakt.movies.related}
 \title{Search for related movies}
 \usage{
-trakt.movies.related(target)
+trakt.movies.related(target, extended = "min")
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
 (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}}
+
+\item{extended}{Whether extended info should be provided.
+Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
 A \code{data.frame} containing search results
@@ -25,7 +28,7 @@ See \href{http://docs.trakt.apiary.io/reference/movies/related/get-related-movie
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-related <- trakt.movies.related(""tron-legacy-2010"")
+related <- trakt.movies.related("tron-legacy-2010")
 }
 }
 \seealso{

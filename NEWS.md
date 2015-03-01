@@ -11,6 +11,7 @@
     * `trakt.people.movies`
     * `trakt.people.shows`
 * Unify output of `trakt.show.people` and `trakt.movie.people`
+* **Add** `extended` argument to `trakt.movies.related` and `trakt.shows.related` (defaults to `min`)
 
 ### v0.10.3
 

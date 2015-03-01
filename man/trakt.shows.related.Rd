@@ -4,11 +4,14 @@
 \alias{trakt.shows.related}
 \title{Search for related shows}
 \usage{
-trakt.shows.related(target)
+trakt.shows.related(target, extended = "min")
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
+
+\item{extended}{Whether extended info should be provided.
+Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
 A \code{data.frame} containing search results

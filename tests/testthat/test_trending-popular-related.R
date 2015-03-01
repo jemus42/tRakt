@@ -21,9 +21,11 @@ test_that("trakt.movies.trending returns data.frame", {
 })
 
 test_that("trakt.shows.related returns data.frame", {
-  expect_is(trakt.shows.related(target = "game-of-thrones"), "data.frame")
+  expect_is(trakt.shows.related(target = "game-of-thrones", extended = "min"), "data.frame")
+  expect_is(trakt.shows.related(target = "game-of-thrones", extended = "full"), "data.frame")
 })
 
 test_that("trakt.movies.related returns data.frame", {
-  expect_is(trakt.movies.related(target = "tron-legacy-2010"), "data.frame")
+  expect_is(trakt.movies.related(target = "tron-legacy-2010", extended = "min"), "data.frame")
+  expect_is(trakt.movies.related(target = "tron-legacy-2010", extended = "full"), "data.frame")
 })
