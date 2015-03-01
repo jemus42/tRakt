@@ -1,6 +1,6 @@
 ## tRakt News
 
-### v0.11
+### v0.11.0
 
 * **Rename** `trakt.getSeasons`  -> `trakt.seasons.summary` for consistency with the trakt API.
 * **Rename** `trakt.show.season` -> `trakt.seasons.season` for consistency with the trakt API.
@@ -17,7 +17,7 @@
     * `trakt.shows.trending`
     * `trakt.movies.popular`
     * `trakt.movies.trending`
-
+* The usual bug fixes
 
 ### v0.10.3
 
