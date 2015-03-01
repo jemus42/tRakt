@@ -37,10 +37,10 @@ Other aggregate: \code{\link{trakt.movies.popular}};
 
 Other show: \code{\link{trakt.getEpisodeData}};
   \code{\link{trakt.getFullShowData}};
-  \code{\link{trakt.getSeasons}};
+  \code{\link{trakt.seasons.season}};
+  \code{\link{trakt.seasons.summary}};
   \code{\link{trakt.show.people}};
   \code{\link{trakt.show.ratings}};
-  \code{\link{trakt.show.season}};
   \code{\link{trakt.show.stats}};
   \code{\link{trakt.show.summary}};
   \code{\link{trakt.shows.popular}};

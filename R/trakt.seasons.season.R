@@ -1,6 +1,6 @@
 #' Get a season of a show
 #'
-#' \code{trakt.show.season} pulls a season's full data.
+#' \code{trakt.seasons.season} pulls a season's full data.
 #' Similar to \link{trakt.getSeasons}, but this function returns full data for
 #' a single season, i.e. all the episodes of the season.
 #' See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
@@ -20,9 +20,9 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' breakingbad.seasons <- trakt.show.season("breaking-bad", 1)
+#' breakingbad.seasons <- trakt.seasons.season("breaking-bad", 1)
 #' }
-trakt.show.season <- function(target, seasons = 1, extended = "min"){
+trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
   if (length(seasons) > 1){
     warning("seasons must be of length 1, only first value will be used")
     season <- season[1]

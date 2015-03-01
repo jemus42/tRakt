@@ -35,7 +35,7 @@ trakt.getFullShowData <- function(query = NULL, slug = NULL, dropunaired = TRUE)
     stop("You must provide either a search query or a trakt.tv slug")
   }
   show$summary  <- trakt.show.summary(slug, extended = "full")
-  show$seasons  <- trakt.getSeasons(slug, extended = "full", dropspecials = T)
+  show$seasons  <- trakt.seasons.summary(slug, extended = "full", dropspecials = T)
   show$episodes <- trakt.getEpisodeData(slug, show$seasons$season,
                                         dropunaired = dropunaired, extended = "full")
   show$seasons  <- plyr::join(show$seasons , plyr::ddply(show$episodes, "season", plyr::summarize,

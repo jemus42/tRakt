@@ -4,9 +4,9 @@
 #' Get details for a show's episodes, e.g. ratings, number of votes,
 #' airdates, images, plot overviews…
 #'
-#' This is basically just an extension of \link[tRakt]{trakt.show.season}, which is used in
+#' This is basically just an extension of \link[tRakt]{trakt.seasons.season}, which is used in
 #' this function to collect all the episode data.
-#' If you only want the episode data for a single season anyway, \code{trakt.show.season}
+#' If you only want the episode data for a single season anyway, \code{trakt.seasons.season}
 #' is recommended, yet this function makes some additions.
 #' @param target The \code{id} of the show requested. Either the \code{slug}
 #' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
@@ -35,7 +35,7 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
 
   episodes <- plyr::ldply(season_nums,
               function(s){
-                 temp <- trakt.show.season(target, s, extended)
+                 temp <- trakt.seasons.season(target, s, extended)
                  if ("images" %in% names(temp)){
                    names(temp$images$screenshot) <- paste0("screenshot.", names(temp$images$screenshot))
                    temp <- cbind(subset(temp, select = -images), temp$images$screenshot)

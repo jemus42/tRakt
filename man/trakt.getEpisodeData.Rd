@@ -27,9 +27,9 @@ Get details for a show's episodes, e.g. ratings, number of votes,
 airdates, images, plot overviews…
 }
 \details{
-This is basically just an extension of \link[tRakt]{trakt.show.season}, which is used in
+This is basically just an extension of \link[tRakt]{trakt.seasons.season}, which is used in
 this function to collect all the episode data.
-If you only want the episode data for a single season anyway, \code{trakt.show.season}
+If you only want the episode data for a single season anyway, \code{trakt.seasons.season}
 is recommended, yet this function makes some additions.
 }
 \note{
@@ -43,10 +43,10 @@ breakingbad.episodes <- trakt.getEpisodeData("breaking-bad", c(1, 2, 3, 4, 5))
 }
 \seealso{
 Other show: \code{\link{trakt.getFullShowData}};
-  \code{\link{trakt.getSeasons}};
+  \code{\link{trakt.seasons.season}};
+  \code{\link{trakt.seasons.summary}};
   \code{\link{trakt.show.people}};
   \code{\link{trakt.show.ratings}};
-  \code{\link{trakt.show.season}};
   \code{\link{trakt.show.stats}};
   \code{\link{trakt.show.summary}};
   \code{\link{trakt.shows.popular}};

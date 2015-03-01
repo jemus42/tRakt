@@ -1,6 +1,6 @@
 #' Get a show's season information
 #'
-#' \code{trakt.getSeasons} pulls season data.
+#' \code{trakt.seasons.summary} pulls season data.
 #' Get details for a show's seasons, e.g. how many seasons there are, how many epsiodes
 #' each season has, and season posters.
 #' See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
@@ -18,9 +18,9 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' breakingbad.seasons <- trakt.getSeasons("breaking-bad", extended = "min")
+#' breakingbad.seasons <- trakt.seasons.summary("breaking-bad", extended = "min")
 #' }
-trakt.getSeasons <- function(target, extended = "min", dropspecials = TRUE){
+trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE){
 
   # Construct URL, make API call
   baseURL <- "https://api-v2launch.trakt.tv/shows/"

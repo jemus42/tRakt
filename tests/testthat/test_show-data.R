@@ -10,9 +10,9 @@ test_that("trakt.show.ratings returns data.frame", {
   expect_is(trakt.show.ratings(target = "game-of-thrones")$distribution, "data.frame")
 })
 
-test_that("trakt.show.season returns data.frame", {
-  expect_is(trakt.show.season(target = "game-of-thrones", 1, extended = "min"), "data.frame")
-  expect_is(trakt.show.season(target = "game-of-thrones", 2, extended = "full"), "data.frame")
+test_that("trakt.seasons.season returns data.frame", {
+  expect_is(trakt.seasons.season(target = "game-of-thrones", 1, extended = "min"), "data.frame")
+  expect_is(trakt.seasons.season(target = "game-of-thrones", 2, extended = "full"), "data.frame")
 })
 
 test_that("trakt.show.summary returns list", {
@@ -23,10 +23,10 @@ test_that("trakt.show.summary returns list", {
 #### Test the summary functions ####
 context("Show summary functions")
 
-test_that("trakt.getSeasons returns data.frame", {
-  expect_is(trakt.getSeasons(target = "game-of-thrones", extended = "min"), "data.frame")
-  expect_is(trakt.getSeasons(target = "game-of-thrones", extended = "full"), "data.frame")
-  expect_is(trakt.getSeasons(target = "game-of-thrones", extended = "full,images"), "data.frame")
+test_that("trakt.seasons.summary returns data.frame", {
+  expect_is(trakt.seasons.summary(target = "game-of-thrones", extended = "min"), "data.frame")
+  expect_is(trakt.seasons.summary(target = "game-of-thrones", extended = "full"), "data.frame")
+  expect_is(trakt.seasons.summary(target = "game-of-thrones", extended = "full,images"), "data.frame")
 })
 
 test_that("trakt.getEpisodeData returns data.frame", {
