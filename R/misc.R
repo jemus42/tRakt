@@ -36,7 +36,7 @@ pad <- function(s = "0", e = "0", width = 2){
 
 #' Get info from a show URL
 #'
-#' \code{getNameFromURL} extracts some info from a show URL
+#' \code{parse_trakt_url} extracts some info from a show URL
 #' @param url Input URL. must be a \code{character}, but not a valid URL.
 #' @param epid Whether the episode ID (\code{sXXeYY} format) should be extracted.
 #' Defaults to \code{FALSE}.
@@ -48,7 +48,7 @@ pad <- function(s = "0", e = "0", width = 2){
 #' @examples
 #' getNameFromURL("http://trakt.tv/show/fargo/season/1/episode/2", TRUE, TRUE)
 #' getNameFromURL("http://trakt.tv/show/breaking-bad", TRUE, FALSE)
-getNameFromURL <- function(url, epid = FALSE, getslug = FALSE){
+parse_trakt_url <- function(url, epid = FALSE, getslug = FALSE){
   showname <- stringr::str_split(url, "/")[[1]][5]
   ret <- list("show" = showname)
   if (epid){
