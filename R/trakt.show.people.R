@@ -19,19 +19,14 @@
 #' }
 trakt.show.people <- function(target, extended = "min"){
 
-  # Please R CMD check
-  person <- NULL
-  ids    <- NULL
-
   # Construct URL, make API call
   baseURL  <- "https://api-v2launch.trakt.tv/shows/"
-  url      <- paste0(baseURL, target, "/people")
-  url      <- paste0(url, "?extended=", extended)
+  url      <- paste0(baseURL, target, "/people?extended=", extended)
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
-  response$cast  <- cbind(subset(response$cast, select = -person), response$cast$person)
-  response$cast  <- cbind(subset(response$cast, select = -ids), response$cast$ids)
+  response$cast  <- cbind(response$cast[names(response$cast) != "person"], response$cast$person)
+  response$cast  <- cbind(response$cast[names(response$cast) != "ids"],    response$cast$ids)
 
   return(response)
 }

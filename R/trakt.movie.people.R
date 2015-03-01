@@ -20,10 +20,13 @@
 trakt.movie.people <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/movies"
-  url      <- paste0(baseURL, "/", target, "/people")
-  url      <- paste0(url, "?extended=", extended)
+  baseURL  <- "https://api-v2launch.trakt.tv/movies/"
+  url      <- paste0(baseURL, target, "/people?extended=", extended)
   response <- trakt.api.call(url = url)
-  
+
+  # Flatten the data.frame
+  response$cast  <- cbind(response$cast[names(response$cast) != "person"], response$cast$person)
+  response$cast  <- cbind(response$cast[names(response$cast) != "ids"],    response$cast$ids)
+
   return(response)
 }
