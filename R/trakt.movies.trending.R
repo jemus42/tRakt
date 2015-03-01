@@ -7,7 +7,7 @@
 #' @param page Page to return (default is \code{1})
 #' for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.
 #' @param extended Whether extended info should be provided.
-#' Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}
+#' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}
 #' @return A \code{data.frame} containing trending movies with their number of watchers, name and ids
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/trending/get-trending-movies}{the trakt API docs for further info}

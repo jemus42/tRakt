@@ -13,7 +13,7 @@ trakt.movies.trending(limit = 10, page = 1, extended = "min")
 for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.}
 
 \item{extended}{Whether extended info should be provided.
-Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}}
+Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
 A \code{data.frame} containing trending movies with their number of watchers, name and ids
