@@ -33,7 +33,9 @@ person <- trakt.people.summary("bryan-cranston")
 }
 }
 \seealso{
-Other people: \code{\link{trakt.people.movies}};
-  \code{\link{trakt.people.shows}}
+Other people: \code{\link{trakt.movie.people}};
+  \code{\link{trakt.people.movies}};
+  \code{\link{trakt.people.shows}};
+  \code{\link{trakt.show.people}}
 }
 

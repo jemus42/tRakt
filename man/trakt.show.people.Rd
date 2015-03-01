@@ -32,6 +32,11 @@ breakingbad.people <- trakt.show.people("breaking-bad")
 }
 }
 \seealso{
+Other people: \code{\link{trakt.movie.people}};
+  \code{\link{trakt.people.movies}};
+  \code{\link{trakt.people.shows}};
+  \code{\link{trakt.people.summary}}
+
 Other show: \code{\link{trakt.getEpisodeData}};
   \code{\link{trakt.getFullShowData}};
   \code{\link{trakt.seasons.season}};
