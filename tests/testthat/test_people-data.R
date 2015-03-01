@@ -17,7 +17,7 @@ test_that("trakt.people.movies returns data.frame", {
 
 test_that("trakt.people.shows returns data.frame", {
   people.shows.min <- trakt.people.shows(target = "bryan-cranston", extended = "min")
-  expect_is(people.shows, "list")
+  expect_is(people.shows.min, "list")
   expect_is(people.movies.min$cast, "data.frame")
 
   people.shows.full <- trakt.people.shows(target = "bryan-cranston", extended = "full")
