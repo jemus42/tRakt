@@ -24,7 +24,7 @@ A \code{list} containing at least the show name.
 This is pointless.
 }
 \examples{
-getNameFromURL("http://trakt.tv/show/fargo/season/1/episode/2", TRUE, TRUE)
-getNameFromURL("http://trakt.tv/show/breaking-bad", TRUE, FALSE)
+parse_trakt_url("http://trakt.tv/show/fargo/season/1/episode/2", TRUE, TRUE)
+parse_trakt_url("http://trakt.tv/show/breaking-bad", TRUE, FALSE)
 }
 

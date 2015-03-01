@@ -1,7 +1,7 @@
 #' Get a season of a show
 #'
 #' \code{trakt.seasons.season} pulls a season's full data.
-#' Similar to \link{trakt.getSeasons}, but this function returns full data for
+#' Similar to \link{trakt.seasons.summary}, but this function returns full data for
 #' a single season, i.e. all the episodes of the season.
 #' See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
 #' \code{extended} to customize output amount.

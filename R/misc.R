@@ -46,8 +46,8 @@ pad <- function(s = "0", e = "0", width = 2){
 #' @importFrom stringr str_split
 #' @note This is pointless.
 #' @examples
-#' getNameFromURL("http://trakt.tv/show/fargo/season/1/episode/2", TRUE, TRUE)
-#' getNameFromURL("http://trakt.tv/show/breaking-bad", TRUE, FALSE)
+#' parse_trakt_url("http://trakt.tv/show/fargo/season/1/episode/2", TRUE, TRUE)
+#' parse_trakt_url("http://trakt.tv/show/breaking-bad", TRUE, FALSE)
 parse_trakt_url <- function(url, epid = FALSE, getslug = FALSE){
   showname <- stringr::str_split(url, "/")[[1]][5]
   ret <- list("show" = showname)
