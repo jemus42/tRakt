@@ -1,5 +1,11 @@
 ## tRakt News
 
+### v0.11
+
+* **Rename** `trakt.getSeasons`  -> `trakt.seasons.summary` for consistency with the trakt API
+* **Rename** `trakt.show.season` -> `trakt.seasons.season` for consistency with the trakt API
+* **Rename** `getNameFromUrl`    -> `parse_trakt_url` to be more descriptive. Also, de-camelCasezation. 
+
 ### v0.10.3
 
 * `trakt.user.stats`:  
