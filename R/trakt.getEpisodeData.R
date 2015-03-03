@@ -42,7 +42,7 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
 
 
   # Arrange appropriately
-  show.episodes$epid  <- tRakt::pad(episodes$season, episodes$episode)
+  show.episodes$epid  <- tRakt::pad(show.episodes$season, show.episodes$episode)
   show.episodes$epnum <- 1:(nrow(show.episodes))
 
   # Convert seasons to factors because ordering
