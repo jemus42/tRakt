@@ -4,18 +4,23 @@
 \alias{trakt.user.watchlist}
 \title{Get a user's watchlist}
 \usage{
-trakt.user.watchlist(user = getOption("trakt.username"), type = "shows")
+trakt.user.watchlist(user = getOption("trakt.username"), type = "shows",
+  extended = "min")
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
 
 \item{type}{Either \code{shows} (default) or \code{movies}}
+
+\item{extended}{Whether extended info should be provided.
+Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
 A \code{data.frame} containing stats.
 }
 \description{
 \code{trakt.user.watchlist} pulls a user's watchlist.
+Either all shows or movies currently watchlisted will be returned.
 }
 \note{
 See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{the trakt API docs for further info}

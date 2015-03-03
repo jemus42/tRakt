@@ -1,5 +1,12 @@
 ## tRakt News
 
+### v0.11.1
+
+* Internal restructuring (moving functionally similar functions together)
+    * **TODO**: Create generic functions for both movie and show functions to reduce duplicate code
+* **Add** `extended` param to `trakt.user.watchlist`
+
+
 ### v0.11.0
 
 * **Rename** `trakt.getSeasons`  -> `trakt.seasons.summary` for consistency with the trakt API.

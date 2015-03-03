@@ -1,9 +1,11 @@
 #' Get a user's watchlist
 #'
 #' \code{trakt.user.watchlist} pulls a user's watchlist.
-
+#' Either all shows or movies currently watchlisted will be returned.
 #' @param user Target user. Defaults to \code{getOption("trakt.username")}
 #' @param type Either \code{shows} (default) or \code{movies}
+#' @param extended Whether extended info should be provided.
+#' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}
 #' @return A \code{data.frame} containing stats.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{the trakt API docs for further info}
@@ -14,27 +16,22 @@
 #' mystats   <- trakt.user.watchlist() # Defaults to your username if set
 #' seanstats <- trakt.user.watchlist(user = "sean")
 #' }
-trakt.user.watchlist <- function(user = getOption("trakt.username"), type = "shows"){
+trakt.user.watchlist <- function(user = getOption("trakt.username"), type = "shows", extended = "min"){
   if (is.null(user) && is.null(getOption("trakt.username"))){
     stop("No username is set.")
   }
 
-  # Please R CMD check
-  show  <- NULL
-  ids   <- NULL
-  movie <- NULL
-
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/users"
-  url      <- paste0(baseURL, "/", user, "/watchlist/", type)
+  baseURL  <- "https://api-v2launch.trakt.tv/users/"
+  url      <- paste0(baseURL, user, "/watchlist/", type, "?extended=", extended)
   response <- trakt.api.call(url = url)
 
   if (type == "show"){
-    response <- cbind(subset(response, select = -show), response$show)
-    response <- cbind(subset(response, select = -ids), response$ids)
+    response <- cbind(response[names(response) != "show"], response$show)
   } else if (type == "movies"){
-    response <- cbind(subset(response, select = -movie), response$movie)
-    response <- cbind(subset(response, select = -ids), response$ids)
+    response <- cbind(response[names(response) != "movie"], response$movie)
   }
+  response <- cbind(response[names(response) != "ids"], response$ids)
+  response <- convert_datetime(response)
   return(response)
 }
