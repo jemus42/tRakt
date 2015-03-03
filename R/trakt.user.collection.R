@@ -59,7 +59,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
   } else if (type == "movies"){
     # Flatten out ids
     movies           <- response$movie[c("title", "year")]
-    movies$slug      <- response$movie$ids$slug
+    movies$id.slug      <- response$movie$ids$slug
     movies$id.trakt  <- response$movie$ids$trakt
     movies$id.imdb   <- response$movie$ids$imdb
     movies$id.tmdb   <- response$movie$ids$tmdb
@@ -68,6 +68,8 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
   } else {
     stop("Unknown type, must be 'shows' or 'movies'")
   }
+  # To be sure
+  watched                <- convert_datetime(watched)
   watched$collected.year <- lubridate::year(watched$collected_at)
 
   return(watched)

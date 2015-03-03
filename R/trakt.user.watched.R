@@ -31,7 +31,7 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
   if (type == "shows"){
     # Flatten out ids
     shows           <- response$show[c("title", "year")]
-    shows$slug      <- response$show$ids$slug
+    shows$id.slug      <- response$show$ids$slug
     shows$id.trakt  <- response$show$ids$trakt
     shows$id.imdb   <- response$show$ids$imdb
     shows$id.tvdb   <- response$show$ids$tvdb
@@ -77,7 +77,7 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
   } else if (type == "movies"){
     # Flatten out ids
     movies          <- response$movie[c("title", "year")]
-    movies$slug     <- response$movie$ids$slug
+    movies$id.slug     <- response$movie$ids$slug
     movies$id.trakt <- response$movie$ids$trakt
     movies$id.imdb  <- response$movie$ids$imdb
     movies$id.tmdb  <- response$movie$ids$tmdb
