@@ -26,7 +26,7 @@ trakt.user.watchlist <- function(user = getOption("trakt.username"), type = "sho
   url      <- paste0(baseURL, user, "/watchlist/", type, "?extended=", extended)
   response <- trakt.api.call(url = url)
 
-  if (type == "show"){
+  if (type == "shows"){
     response <- cbind(response[names(response) != "show"], response$show)
   } else if (type == "movies"){
     response <- cbind(response[names(response) != "movie"], response$movie)

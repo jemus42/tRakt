@@ -5,6 +5,10 @@
 * Internal restructuring (moving functionally similar functions together)
     * **TODO**: Create generic functions for both movie and show functions to reduce duplicate code
 * **Add** `extended` param to `trakt.user.watchlist`
+* Improve consistency between `trakt.user.watched` and `trakt.user.collection`
+    * Rename `slug` to `id.slug`
+    * Ensure proper datetime conversion
+* **Fix** error in `trakt.user.watchlist` when `type = shows` was ignored by accident
 
 
 ### v0.11.0
