@@ -24,8 +24,8 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
   }
 
   # Construct URL, make API call
-  baseURL   <- "https://api-v2launch.trakt.tv/users"
-  url       <- paste0(baseURL, "/", user, "/watched/", type)
+  baseURL   <- "https://api-v2launch.trakt.tv/users/"
+  url       <- paste0(baseURL, user, "/watched/", type)
   response  <- trakt.api.call(url = url)
 
   if (type == "shows"){
@@ -77,7 +77,7 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
   } else if (type == "movies"){
     # Flatten out ids
     movies          <- response$movie[c("title", "year")]
-    movies$id.slug     <- response$movie$ids$slug
+    movies$id.slug  <- response$movie$ids$slug
     movies$id.trakt <- response$movie$ids$trakt
     movies$id.imdb  <- response$movie$ids$imdb
     movies$id.tmdb  <- response$movie$ids$tmdb
