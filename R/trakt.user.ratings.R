@@ -1,7 +1,6 @@
 #' Get a user's ratings
 #'
 #' \code{trakt.user.ratings} pulls a user's ratings
-
 #' @param user Target user. Defaults to \code{getOption("trakt.username")}
 #' @param type Either \code{shows} (default) or \code{movies}
 #' @param rating A rating to filter by. Can be \code{1} through \code{10}, default is \code{NULL}
@@ -25,21 +24,19 @@ trakt.user.ratings <- function(user = getOption("trakt.username"), type = "shows
   if (!is.null(rating) && !(rating %in% 1:10)){
     stop("rating must be between 1 and 10")
   }
-  # Please R CMD check
-  ids <- NULL; episode <- NULL; show <- NULL; movie <- NULL
 
   # Construct URL, make API call
-  baseURL   <- "https://api-v2launch.trakt.tv/users"
-  url       <- paste0(baseURL, "/", user, "/ratings/", type, "/", rating)
+  baseURL   <- "https://api-v2launch.trakt.tv/users/"
+  url       <- paste0(baseURL, user, "/ratings/", type, "/", rating)
   response  <- trakt.api.call(url = url)
 
   # Flattening
   if (type == "shows"){
-    response$show <- cbind(subset(response$show, select = -ids),  response$show$ids)
-    response      <- cbind(subset(response,      select = -show), response$show)
+    response$show  <- cbind(response$show[names(response$show) != "ids"],  response$show$ids)
+    response       <- cbind(response[names(response) != "show"], response$show)
   } else if (type == "movies"){
-    response$movie <- cbind(subset(response$movie, select = -ids),   response$movie$ids)
-    response       <- cbind(subset(response,       select = -movie), response$movie)
+    response$movie <- cbind(response$movie[names(response$movie) != "ids"],   response$movie$ids)
+    response       <- cbind(response[names(response) != "movie"], response$movie)
 
   } else if (type == "episodes"){
     # Prepend ids to avoid duplicates
@@ -47,10 +44,10 @@ trakt.user.ratings <- function(user = getOption("trakt.username"), type = "shows
     names(response$show)[-3]    <- paste0("show.",    names(response$show)[-3])
     names(response$show$ids)    <- paste0("show.",    names(response$show$ids))
     # Move stuff around to flatten the DF
-    response$episode <- cbind(subset(response$episode, select = -ids),     response$episode$ids)
-    response$show    <- cbind(subset(response$show,    select = -ids),     response$show$ids)
-    response         <- cbind(subset(response,         select = -episode), response$episode)
-    response         <- cbind(subset(response,         select = -show),    response$show)
+    response$episode <- cbind(response$episode[names(response$episode) != "ids"], response$episode$ids)
+    response$show    <- cbind(response$show[names(response$show) != "ids"],       response$show$ids)
+    response         <- cbind(response[names(response) != "episode"],             response$episode)
+    response         <- cbind(response[names(response) != "show"],                response$show)
     names(response)  <- sub("number", "episode", names(response))
   }
   return(response)
