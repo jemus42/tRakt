@@ -17,8 +17,9 @@ test_that("trakt.user.watched returns data.frame", {
 })
 
 test_that("trakt.user.watchlist returns data.frame", {
-  expect_is(trakt.user.watchlist(user = "jemus42", type = "shows"), "data.frame")
-  expect_is(trakt.user.watchlist(user = "jemus42", type = "movies"), "data.frame")
+  expect_is(trakt.user.watchlist(user = "jemus42", type = "shows", extended = "min"), "data.frame")
+  expect_is(trakt.user.watchlist(user = "jemus42", type = "shows", extended = "full"), "data.frame")
+  expect_is(trakt.user.watchlist(user = "jemus42", type = "movies", extended = "min"), "data.frame")
 })
 
 test_that("trakt.user.ratings returns data.frame", {
