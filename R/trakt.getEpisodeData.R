@@ -28,24 +28,21 @@
 trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropunaired = TRUE){
 
   # Bind variables later used to please R CMD CHECK
-  episode <- NULL
-  season  <- NULL
   rating  <- NULL
-  images  <- NULL
 
-  episodes <- plyr::ldply(season_nums,
-              function(s){
-                 temp <- trakt.seasons.season(target, s, extended)
-                 if ("images" %in% names(temp)){
-                   names(temp$images$screenshot) <- paste0("screenshot.", names(temp$images$screenshot))
-                   temp <- cbind(subset(temp, select = -images), temp$images$screenshot)
-                 }
-                 return(temp)
-              })
+  show.episodes <- plyr::ldply(season_nums,
+                    function(s){
+                       temp <- trakt.seasons.season(target, s, extended)
+                       if ("images" %in% names(temp)){
+                         names(temp$images$screenshot) <- paste0("screenshot.", names(temp$images$screenshot))
+                         temp <- cbind(temp[names(temp) != "images"], temp$images$screenshot)
+                       }
+                       return(temp)
+                    })
 
 
   # Arrange appropriately
-  show.episodes       <- transform(episodes, epid = tRakt::pad(season, episode))
+  show.episodes$epid  <- tRakt::pad(episodes$season, episodes$episode)
   show.episodes$epnum <- 1:(nrow(show.episodes))
 
   # Convert seasons to factors because ordering
@@ -69,7 +66,6 @@ trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropuna
       show.episodes <- show.episodes[show.episodes$first_aired <= lubridate::now(tzone = "UTC"), ]
     }
     show.episodes <- show.episodes[!(is.na(show.episodes$first_aired)), ]
-
   }
 
   # A little extra cleanup
