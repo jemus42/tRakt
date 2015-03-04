@@ -24,3 +24,15 @@ test_that("trakt.movie.releases returns correct structure", {
   expect_is(rel$certification, "character")
   expect_is(rel$release_date, "POSIXct")
 })
+
+test_that("trakt.movie.watching returns returns correct structure", {
+  watching <- trakt.movie.watching("the-imitation-game-2014", extended = "min")
+  if (!identical(watching, list())){
+    expect_is(watching, "data.frame")
+  }
+  watching <- trakt.movie.watching("the-imitation-game-2014", extended = "full")
+  if (!identical(watching, list())){
+    expect_is(watching, "data.frame")
+    expect_is(watching$joined_at, "POSIXct")
+  }
+})
