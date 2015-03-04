@@ -91,7 +91,7 @@ convert_datetime <- function(object){
         newdates <- as.POSIXct(object[[i]], tz = "UTC")
       }
       object[[i]] <- newdates
-    } else if (i == "released"){
+    } else if (i %in% c("released", "release_date")){
       object[[i]] <- as.POSIXct(object[[i]], tz = "UTC")
     }
   }
