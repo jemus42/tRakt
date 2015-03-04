@@ -1,8 +1,9 @@
 tRakt
 =============
 
-This is `tRakt` version `0.11.1`.  
-It contains functions to pull data from [trakt.tv](http://trakt.tv/), focusing on tv shows.
+
+This is `tRakt` version `0.11.1`. [![Build Status](https://travis-ci.org/jemus42/tRakt.svg)](https://travis-ci.org/jemus42/tRakt)  
+It contains functions to pull data from [trakt.tv](http://trakt.tv/).
 
 It's an [R package](http://r-project.org) primarily used by (i.e. build for) [this webapp](http://trakt.jemu.name), but you can fiddle around with it if you like.  
 There might be some interesting things to play around with, and I've tried some of them [here](http://dump.jemu.name/tRakt-Usage.html) (Also included as a package vignette).
