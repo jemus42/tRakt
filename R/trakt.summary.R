@@ -4,7 +4,7 @@
 #' @param target The \code{id} of the movie requested. Either the \code{slug}
 #' (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}
 #' @param extended Whether extended info should be provided.
-#' Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}
+#' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}
 #' @return A \code{list} containing movie information
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/summary/get-a-movie}{the trakt API docs for further info}

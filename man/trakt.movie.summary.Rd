@@ -11,7 +11,7 @@ trakt.movie.summary(target, extended = "min")
 (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}}
 
 \item{extended}{Whether extended info should be provided.
-Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}}
+Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
 A \code{list} containing movie information
@@ -32,6 +32,7 @@ trakt.movie.summary("tron-legacy-2010")
 Other movie: \code{\link{trakt.movie.people}};
   \code{\link{trakt.movie.ratings}};
   \code{\link{trakt.movie.releases}};
+  \code{\link{trakt.movie.watching}};
   \code{\link{trakt.movies.popular}};
   \code{\link{trakt.movies.related}};
   \code{\link{trakt.movies.trending}}

@@ -34,6 +34,7 @@ trakt.movie.releases("tron-legacy-2010")
 Other movie: \code{\link{trakt.movie.people}};
   \code{\link{trakt.movie.ratings}};
   \code{\link{trakt.movie.summary}};
+  \code{\link{trakt.movie.watching}};
   \code{\link{trakt.movies.popular}};
   \code{\link{trakt.movies.related}};
   \code{\link{trakt.movies.trending}}

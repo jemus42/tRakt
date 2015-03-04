@@ -43,6 +43,7 @@ Other movie: \code{\link{trakt.movie.people}};
   \code{\link{trakt.movie.ratings}};
   \code{\link{trakt.movie.releases}};
   \code{\link{trakt.movie.summary}};
+  \code{\link{trakt.movie.watching}};
   \code{\link{trakt.movies.popular}};
   \code{\link{trakt.movies.related}}
 }

@@ -46,6 +46,7 @@ Other show: \code{\link{trakt.getEpisodeData}};
   \code{\link{trakt.show.ratings}};
   \code{\link{trakt.show.stats}};
   \code{\link{trakt.show.summary}};
+  \code{\link{trakt.show.watching}};
   \code{\link{trakt.shows.related}};
   \code{\link{trakt.shows.trending}}
 }
