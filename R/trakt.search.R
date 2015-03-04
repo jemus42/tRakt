@@ -96,7 +96,7 @@ trakt.search.byid <- function(id, id_type = "trakt-show"){
     warning("No result, sorry.")
     return(list(error = "Nothing found"))
   }
-  show <- response$show
-  return(show)
+  response <- response[[ncol(response)]]
+  return(response)
 }
 

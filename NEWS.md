@@ -1,5 +1,10 @@
 ## tRakt News
 
+### v0.11.2
+
+* **Fix** `trakt.search.byid`, used to only work on shows.
+
+
 ### v0.11.1
 
 * Internal restructuring (moving functionally similar functions together)
@@ -15,7 +20,7 @@
 
 * **Rename** `trakt.getSeasons`  -> `trakt.seasons.summary` for consistency with the trakt API.
 * **Rename** `trakt.show.season` -> `trakt.seasons.season` for consistency with the trakt API.
-* **Rename** `getNameFromUrl`    -> `parse_trakt_url` to be more descriptive. Also, de-camelCasezation. 
+* **Rename** `getNameFromUrl`    -> `parse_trakt_url` to be more descriptive. Also, de-camelCasezation.
 * Update vignette to reflect the above changes
 * **Add** some `people` functions:
     * `trakt.people.summary`
@@ -33,11 +38,11 @@
 ### v0.10.3
 
 * `trakt.user.stats`:  
-    * Tidy up rating distribution 
+    * Tidy up rating distribution
     * **Remove** `to.data.frame` option because the output is too messy
 * Add another `@family` tag to docs for aggregation functions (`.popular`, `.trending`, `.related`)
 * Individual functions don't have to warn about missing headers, that's `trakt.api.call`'s job.
-* `trakt.getEpisodeData`: 
+* `trakt.getEpisodeData`:
     * Explicitly drop episodes with `NA` firstaired fields
     * The `episode_abs` field is usually `NA`, so let's dump `epnum` on it
 * Use `extended = "min"` as default across functions for consistency with the trakt API
@@ -49,10 +54,10 @@
 * Minor internal fixes
 
 ### v0.10.1
- 
+
 * Add `testthat` tests
 * Internal changes to how/where datetime variables are converted (user doesn't see any of that)
-    * If `lubridate::parse_date_time` fails, `as.POSIXct` is used as a fallback 
+    * If `lubridate::parse_date_time` fails, `as.POSIXct` is used as a fallback
 * Various bug fixes
 
 ### v0.10.0
