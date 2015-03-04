@@ -7,7 +7,7 @@
 trakt.movies.related(target, extended = "min")
 }
 \arguments{
-\item{target}{The \code{id} of the show requested. Either the \code{slug}
+\item{target}{The \code{id} of the movie requested. Either the \code{slug}
 (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}}
 
 \item{extended}{Whether extended info should be provided.
@@ -40,6 +40,7 @@ Other aggregate: \code{\link{trakt.movies.popular}};
 
 Other movie: \code{\link{trakt.movie.people}};
   \code{\link{trakt.movie.ratings}};
+  \code{\link{trakt.movie.releases}};
   \code{\link{trakt.movie.summary}};
   \code{\link{trakt.movies.popular}};
   \code{\link{trakt.movies.trending}}

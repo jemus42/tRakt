@@ -147,7 +147,7 @@ trakt.show.people <- function(target, extended = "min"){
 #' \code{trakt.movie.people} pulls movie people data.
 #'
 #' Returns all cast and crew for a movie, depending on how much data is available.
-#' @param target The \code{id} of the show requested. Either the \code{slug}
+#' @param target The \code{id} of the movie requested. Either the \code{slug}
 #' (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}
 #' @param extended Whether extended info should be provided.
 #' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}

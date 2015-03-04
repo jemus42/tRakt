@@ -3,7 +3,7 @@
 #' \code{trakt.movies.related} returns movies related to the input movie.
 #'
 #' Receive a set of movies that are related to a specific movie.
-#' @param target The \code{id} of the show requested. Either the \code{slug}
+#' @param target The \code{id} of the movie requested. Either the \code{slug}
 #' (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}
 #' @param extended Whether extended info should be provided.
 #' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}

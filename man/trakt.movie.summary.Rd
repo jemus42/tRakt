@@ -7,7 +7,7 @@
 trakt.movie.summary(target, extended = "min")
 }
 \arguments{
-\item{target}{The \code{id} of the show requested. Either the \code{slug}
+\item{target}{The \code{id} of the movie requested. Either the \code{slug}
 (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}}
 
 \item{extended}{Whether extended info should be provided.
@@ -31,6 +31,7 @@ trakt.movie.summary("tron-legacy-2010")
 \seealso{
 Other movie: \code{\link{trakt.movie.people}};
   \code{\link{trakt.movie.ratings}};
+  \code{\link{trakt.movie.releases}};
   \code{\link{trakt.movies.popular}};
   \code{\link{trakt.movies.related}};
   \code{\link{trakt.movies.trending}}

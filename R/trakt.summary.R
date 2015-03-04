@@ -1,7 +1,7 @@
 #' Get a single movie's details
 #'
 #' \code{trakt.movie.summary} returns a single movie's summary information.
-#' @param target The \code{id} of the show requested. Either the \code{slug}
+#' @param target The \code{id} of the movie requested. Either the \code{slug}
 #' (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}
 #' @param extended Whether extended info should be provided.
 #' Defaults to \code{"full"}, can either be \code{"min"} or \code{"full"}

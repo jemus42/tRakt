@@ -1,7 +1,7 @@
 #' Get a single movie's ratings
 #'
 #' \code{trakt.movie.ratings} returns a single movie's rating and distribution.
-#' @param target The \code{id} of the show requested. Either the \code{slug}
+#' @param target The \code{id} of the movie requested. Either the \code{slug}
 #' (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}
 #' @return A \code{list} containing movie ratings and distribution
 #' @export
