@@ -1,8 +1,8 @@
-tRakt
+tRakt [![Build Status](https://travis-ci.org/jemus42/tRakt.svg)](https://travis-ci.org/jemus42/tRakt) 
 =============
 
 
-This is `tRakt` version `0.11.1`. [![Build Status](https://travis-ci.org/jemus42/tRakt.svg)](https://travis-ci.org/jemus42/tRakt)  
+This is `tRakt` version `0.11.1`.  
 It contains functions to pull data from [trakt.tv](http://trakt.tv/).
 
 It's an [R package](http://r-project.org) primarily used by (i.e. build for) [this webapp](http://trakt.jemu.name), but you can fiddle around with it if you like.  
