@@ -3,7 +3,8 @@
 ### v0.11.2
 
 * **Fix** `trakt.search.byid`, used to only work on shows.
-
+* **Add** `trakt.movie.releases`
+* Fix documentation error in `*.movie.*` functions
 
 ### v0.11.1
 
