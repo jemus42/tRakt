@@ -81,15 +81,12 @@ convert_datetime <- function(object){
     stop("Object type not supported")
   }
   datevars <- c("first_aired", "updated_at", "listed_at", "last_watched_at",
-                "rated_at", "friends_at", "followed_at", "collected_at")
+                "rated_at", "friends_at", "followed_at", "collected_at", "joined_at")
 
   for (i in names(object)){
     if (i %in% datevars & !("POSIXct" %in% class(object[[i]]))){
-      newdates <- lubridate::parse_date_time(object[[i]], "%y-%m-%d %H-%M-%S%z*!",
-                                                truncated = 3, tz = "UTC")
-      if (any(is.na(newdates))){
-        newdates <- as.POSIXct(object[[i]], tz = "UTC")
-      }
+      newdates    <- lubridate::parse_date_time(object[[i]],
+                                  "%y-%m-%d %H-%M-%S%z*!", truncated = 3, tz = "UTC")
       object[[i]] <- newdates
     } else if (i %in% c("released", "release_date")){
       object[[i]] <- as.POSIXct(object[[i]], tz = "UTC")
