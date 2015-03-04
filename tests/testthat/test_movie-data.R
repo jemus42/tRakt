@@ -16,3 +16,11 @@ test_that("trakt.movie.summary returns list", {
   expect_is(trakt.movie.summary(target = "tron-legacy-2010", extended = "min"), "list")
   expect_is(trakt.movie.summary(target = "tron-legacy-2010", extended = "full"), "list")
 })
+
+test_that("trakt.movie.releases returns correct structure", {
+  rel <- trakt.movie.releases("tron-legacy-2010")
+  expect_is(rel, "data.frame")
+  expect_is(rel$country, "character")
+  expect_is(rel$certification, "character")
+  expect_is(rel$release_date, "POSIXct")
+})
