@@ -2,7 +2,7 @@ tRakt [![Build Status](https://travis-ci.org/jemus42/tRakt.svg)](https://travis-
 =============
 
 
-This is `tRakt` version `0.11.1`.  
+This is `tRakt` version `0.11.2`.  
 It contains functions to pull data from [trakt.tv](http://trakt.tv/).
 
 It's an [R package](http://r-project.org) primarily used by (i.e. build for) [this webapp](http://trakt.jemu.name), but you can fiddle around with it if you like.  
@@ -40,9 +40,9 @@ It should look like this:
 To get your credentials, [you have to have an (approved) app over at trakt.tv](http://trakt.tv/oauth/applications).  
 Don't worry, it's really easy to set up. Even I did it.
 
-### Use my apps client.id
+### Use my app's client.id as a fallback
 
-If you don't want to create an app, I've been told it's okay to supply my app's `client.id`, 
-so you can run the following:
-
-`get_trakt_credentials(client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")`
+As a convenience for you, and also to make automated testing a little easier, 
+`get_trakt_credentials()` automatically sets my `client.id` as a fallback, so you theoretically
+never need to supply your own credentials. However, if you want to actually use this package for
+some project, I do not recommend relying on my credentials. That would make me a sad panda.
