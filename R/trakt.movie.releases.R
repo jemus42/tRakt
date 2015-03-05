@@ -19,8 +19,7 @@
 trakt.movie.releases <- function(target, country = NULL) {
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/movies/"
-  url      <- paste0(baseURL, target, "/releases/", country)
+  url      <- build_trakt_url("movies", target, "releases", country = country)
   response <- trakt.api.call(url = url)
 
   return(response)

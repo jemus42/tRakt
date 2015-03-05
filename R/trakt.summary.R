@@ -17,8 +17,7 @@
 trakt.movie.summary <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/movies/"
-  url      <- paste0(baseURL, target, "?extended=", extended)
+  url      <- build_trakt_url("movies", target, extended = extended)
   response <- trakt.api.call(url = url)
 
   return(response)
@@ -46,8 +45,7 @@ trakt.movie.summary <- function(target, extended = "min"){
 trakt.show.summary <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/shows/"
-  url      <- paste0(baseURL, target, "?extended=", extended)
+  url      <- build_trakt_url("shows", target, extended = extended)
   response <- trakt.api.call(url = url)
 
   return(response)

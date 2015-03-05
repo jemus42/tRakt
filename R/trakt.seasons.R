@@ -32,8 +32,7 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
   ids <- NULL
 
   # Construct URL, make API call
-  baseURL <- "https://api-v2launch.trakt.tv/shows/"
-  url     <- paste0(baseURL, target, "/seasons/", seasons, "?extended=", extended)
+  url     <- build_trakt_url("shows", target, "seasons", seasons, extended = extended)
   season  <- trakt.api.call(url = url)
 
   # Catch unknown season error
@@ -82,6 +81,7 @@ trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE)
   # Construct URL, make API call
   baseURL <- "https://api-v2launch.trakt.tv/shows/"
   url     <- paste0(baseURL, target, "/", "seasons", "?extended=", extended)
+  url     <- build_trakt_url("shows", target, "seasons", extended = extended)
   seasons <- trakt.api.call(url = url)
 
   # Data cleanup
@@ -92,4 +92,3 @@ trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE)
   names(seasons) <- sub("number", "season", names(seasons))
   return(seasons)
 }
-

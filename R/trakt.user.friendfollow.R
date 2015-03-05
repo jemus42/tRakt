@@ -19,10 +19,9 @@ trakt.user.friends <- function(user = getOption("trakt.username")){
   }
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/users"
-  url      <- paste0(baseURL, "/", user, "/friends")
+  url      <- build_trakt_url("users", user, "friends")
   response <- trakt.api.call(url = url)
-  
+
   # Flatten the data.frame
   response <- cbind(subset(response, select = -user), response$user)
   return(response)
@@ -48,10 +47,9 @@ trakt.user.followers <- function(user = getOption("trakt.username")){
   }
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/users"
-  url      <- paste0(baseURL, "/", user, "/followers")
+  url      <- build_trakt_url("users", user, "followers")
   response <- trakt.api.call(url = url)
-  
+
   # Flatten the data.frame
   response <- cbind(subset(response, select = -user), response$user)
   return(response)
@@ -77,10 +75,9 @@ trakt.user.following <- function(user = getOption("trakt.username")){
   }
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/users"
-  url      <- paste0(baseURL, "/", user, "/following")
+  url      <- build_trakt_url("users", user, "following")
   response <- trakt.api.call(url = url)
-  
+
   # Flatten the data.frame
   response <- cbind(subset(response, select = -user), response$user)
   return(response)

@@ -24,9 +24,8 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
   }
 
   # Construct URL, make API call
-  baseURL   <- "https://api-v2launch.trakt.tv/users/"
-  url       <- paste0(baseURL, user, "/watched/", type)
-  response  <- trakt.api.call(url = url)
+  url      <- build_trakt_url("users", user, "watched", type)
+  response <- trakt.api.call(url = url)
 
   if (type == "shows"){
     # Flatten out ids

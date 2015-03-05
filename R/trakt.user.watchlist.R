@@ -22,8 +22,7 @@ trakt.user.watchlist <- function(user = getOption("trakt.username"), type = "sho
   }
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/users/"
-  url      <- paste0(baseURL, user, "/watchlist/", type, "?extended=", extended)
+  url      <- build_trakt_url("users", user, "watchlist", type, extended = extended)
   response <- trakt.api.call(url = url)
 
   if (type == "shows"){

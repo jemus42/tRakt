@@ -20,8 +20,7 @@
 trakt.people.summary <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/people/"
-  url      <- paste0(baseURL, target, "?extended=", extended)
+  url      <- build_trakt_url("people", target, extended = extended)
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
@@ -56,8 +55,7 @@ trakt.people.summary <- function(target, extended = "min"){
 trakt.people.movies <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/people/"
-  url      <- paste0(baseURL, target, "/movies?extended=", extended)
+  url      <- build_trakt_url("people", target, "movies", extended = extended)
   response <- trakt.api.call(url = url)
 
   # Flattening cast
@@ -93,8 +91,7 @@ trakt.people.movies <- function(target, extended = "min"){
 trakt.people.shows <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/people/"
-  url      <- paste0(baseURL, target, "/shows?extended=", extended)
+  url      <- build_trakt_url("people", target, "shows", extended = extended)
   response <- trakt.api.call(url = url)
 
   # Flattening cast
@@ -131,8 +128,7 @@ trakt.people.shows <- function(target, extended = "min"){
 trakt.show.people <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/shows/"
-  url      <- paste0(baseURL, target, "/people?extended=", extended)
+  url      <- build_trakt_url("shows", target, "people", extended = extended)
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
@@ -164,8 +160,7 @@ trakt.show.people <- function(target, extended = "min"){
 trakt.movie.people <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/movies/"
-  url      <- paste0(baseURL, target, "/people?extended=", extended)
+  url      <- build_trakt_url("movies", target, "people", extended = extended)
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
@@ -174,4 +169,3 @@ trakt.movie.people <- function(target, extended = "min"){
 
   return(response)
 }
-

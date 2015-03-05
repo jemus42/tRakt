@@ -25,8 +25,7 @@ trakt.movies.popular <- function(limit = 10, page = 1, extended = "min"){
   }
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/movies/popular"
-  url      <- paste0(baseURL, "?page=", page, "&limit=", limit, "&extended=", extended)
+  url      <- build_trakt_url("movies", "popular", page = page, limit = limit, extended = extended)
   response <- trakt.api.call(url)
 
   # Spreading out ids to get a flat data.frame
@@ -62,8 +61,7 @@ trakt.shows.popular <- function(limit = 10, page = 1, extended = "min"){
   }
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/shows/popular"
-  url      <- paste0(baseURL, "?page=", page, "&limit=", limit, "&extended=", extended)
+  url      <- build_trakt_url("shows", "popular", page = page, limit = limit, extended = extended)
   response <- trakt.api.call(url)
 
   # Spreading out ids to get a flat data.frame

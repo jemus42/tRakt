@@ -1,5 +1,11 @@
 ## tRakt News
 
+### v0.11.3
+
+#### API changes, functional fixes
+
+* **Add** `build_trakt_url` to ease trakt API URL assembly and reduce duplicate code.
+
 ### v0.11.2
 
 #### API changes, functional fixes

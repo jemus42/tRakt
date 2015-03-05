@@ -15,8 +15,7 @@
 trakt.movie.ratings <- function(target){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/movies/"
-  url      <- paste0(baseURL, target, "/ratings")
+  url      <- build_trakt_url("movies", target, "ratings")
   response <- trakt.api.call(url = url)
 
   # Flattening the distribution a little
@@ -43,8 +42,7 @@ trakt.movie.ratings <- function(target){
 trakt.show.ratings <- function(target){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/shows/"
-  url      <- paste0(baseURL, target, "/ratings")
+  url      <- build_trakt_url("shows", target, "ratings")
   response <- trakt.api.call(url = url)
 
   # Flattening the distribution a little

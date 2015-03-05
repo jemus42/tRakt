@@ -21,9 +21,8 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
   }
 
   # Construct URL, make API call
-  baseURL   <- "https://api-v2launch.trakt.tv/users/"
-  url       <- paste0(baseURL, user, "/collection/", type)
-  response  <- trakt.api.call(url = url)
+  url      <- build_trakt_url("users", user, "collection", type)
+  response <- trakt.api.call(url = url)
 
   if (type == "shows"){
 

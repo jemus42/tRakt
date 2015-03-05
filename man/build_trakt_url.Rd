@@ -4,13 +4,16 @@
 \alias{build_trakt_url}
 \title{Assemble a trakt.tv API URL}
 \usage{
-build_trakt_url(section, target = NULL, extended = "min", ...)
+build_trakt_url(section, target1 = NULL, target2 = NULL, target3 = NULL,
+  target4 = NULL, extended = "min", ...)
 }
 \arguments{
 \item{section}{The section of the API methods, like \code{shows} or \code{movies}.}
 
-\item{target}{The target object, usually a show/movie \code{slug} or something
-like \code{trending} and \code{popular}.}
+\item{target1,target2,target3,target4}{The target object, usually a show or
+movie \code{slug} or something like \code{trending} and \code{popular}.
+Will be concatenated after \code{section} to produce
+a URL fragment like \code{movies/tron-legacy-2012/releases}.}
 
 \item{extended}{Whether extended info should be returned. Defaults to \code{min}.}
 

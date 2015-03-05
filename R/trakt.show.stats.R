@@ -21,10 +21,8 @@
 trakt.show.stats <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/shows"
-  url      <- paste0(baseURL, "/", target, "/stats")
-  url      <- paste0(url, "?extended=", extended)
+  url      <- build_trakt_url("shows", target, "stats", extended = extended)
   response <- trakt.api.call(url = url)
-  
+
   return(response)
 }

@@ -36,10 +36,7 @@ trakt.search <- function(query, type = "show", year = NULL){
   }
 
   # Construct URL, make API call
-  query    <- as.character(query) # Just to make sure…
-  query    <- URLencode(query)    # URL normalization
-  baseURL  <- "https://api-v2launch.trakt.tv/search"
-  url      <- paste0(baseURL, "?query=", query, "&type=", type, "&year=", year)
+  url      <- build_trakt_url("search", query = query, type = type, year = year)
   response <- trakt.api.call(url = url, convert.datetime = F)
 
   # Check if response is empty (nothing found)

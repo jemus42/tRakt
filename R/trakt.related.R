@@ -20,8 +20,7 @@
 trakt.movies.related <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/movies/"
-  url      <- paste0(baseURL, target, "/related?extended=", extended)
+  url      <- build_trakt_url("movies", target, "related", extended = extended)
   response <- trakt.api.call(url = url)
 
   # Flattening
@@ -52,8 +51,7 @@ trakt.movies.related <- function(target, extended = "min"){
 trakt.shows.related <- function(target, extended = "min"){
 
   # Construct URL, make API call
-  baseURL  <- "https://api-v2launch.trakt.tv/shows/"
-  url      <- paste0(baseURL, target, "/related?extended=", extended)
+  url      <- build_trakt_url("shows", target, "related", extended = extended)
   response <- trakt.api.call(url = url)
 
   # Flattening
