@@ -27,4 +27,8 @@ This is pointless.
 parse_trakt_url("http://trakt.tv/show/fargo/season/1/episode/2", TRUE, TRUE)
 parse_trakt_url("http://trakt.tv/show/breaking-bad", TRUE, FALSE)
 }
+\seealso{
+Other utility functions: \code{\link{build_trakt_url}};
+  \code{\link{pad}}
+}
 

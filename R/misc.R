@@ -5,6 +5,7 @@
 #' @param e Input episode number, coerced to \code{character}.
 #' @param width The length of the padding. Defaults to 2.
 #' @return A \code{character} in standard \code{sXXeYY} format
+#' @family utility functions
 #' @export
 #' @note I like my sXXeYY format, okay?
 #' @examples
@@ -42,6 +43,7 @@ pad <- function(s = "0", e = "0", width = 2){
 #' Defaults to \code{FALSE}.
 #' @param getslug Whether the \code{slug} should be extracted. Defaults to \code{FALSE}.
 #' @return A \code{list} containing at least the show name.
+#' @family utility functions
 #' @export
 #' @importFrom stringr str_split
 #' @note This is pointless.
@@ -93,4 +95,37 @@ convert_datetime <- function(object){
     }
   }
   return(object)
+}
+
+#' Assemble a trakt.tv API URL
+#'
+#' \code{build_trakt_url} assembles a trakt.tv API URL from different arguments.
+#' The result should be fine for use with \link{trakt.api.call}, since that's what this
+#' function was created for.
+#' @param section The section of the API methods, like \code{shows} or \code{movies}.
+#' @param target The target object, usually a show/movie \code{slug} or something
+#' like \code{trending} and \code{popular}.
+#' @param page Page of results to return for paginated methods. API default is 1.
+#' @param limit Limit of results if applicable. API default is 10.
+#' @param extended Whether extended info should be returned. Defaults to \code{min}.
+#' @return A \code{character} of class \code{url}.
+#' @family utility functions
+#' @export
+#' @note Please be aware that the result of this function is not verified to be a working trakt.tv
+#' API URL. See \href{http://docs.trakt.apiary.io/#introduction/pagination}{the trakt.tv API docs for
+#' more information}.
+#' @examples
+#' build_trakt_url(section = "shows", target = "breaking-bad", extended = "full")
+#' build_trakt_url("shows", "popular", 1, 5)
+build_trakt_url <- function(section, target, page = NULL, limit = NULL, extended = "min"){
+  # Set base values required for everything
+  url        <- list(scheme = "https", hostname = "api-v2launch.trakt.tv")
+  # Set other values
+  url$path   <- paste(section, target, sep = "/")
+  url$query  <- list(page = page, limit = limit, extended = extended)
+  # Append class 'url' for httr
+  class(url) <- "url"
+  # Assemble url
+  url        <- httr::build_url(url)
+  return(url)
 }
