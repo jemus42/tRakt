@@ -105,9 +105,8 @@ convert_datetime <- function(object){
 #' @param section The section of the API methods, like \code{shows} or \code{movies}.
 #' @param target The target object, usually a show/movie \code{slug} or something
 #' like \code{trending} and \code{popular}.
-#' @param page Page of results to return for paginated methods. API default is 1.
-#' @param limit Limit of results if applicable. API default is 10.
 #' @param extended Whether extended info should be returned. Defaults to \code{min}.
+#' @param ... Other params used as \code{queries}.
 #' @return A \code{character} of class \code{url}.
 #' @family utility functions
 #' @export
@@ -116,13 +115,13 @@ convert_datetime <- function(object){
 #' more information}.
 #' @examples
 #' build_trakt_url(section = "shows", target = "breaking-bad", extended = "full")
-#' build_trakt_url("shows", "popular", 1, 5)
-build_trakt_url <- function(section, target, page = NULL, limit = NULL, extended = "min"){
+#' build_trakt_url("shows", "popular", page = 3, limit = 5)
+build_trakt_url <- function(section, target, extended = "min", ...){
   # Set base values required for everything
   url        <- list(scheme = "https", hostname = "api-v2launch.trakt.tv")
   # Set other values
   url$path   <- paste(section, target, sep = "/")
-  url$query  <- list(page = page, limit = limit, extended = extended)
+  url$query  <- list(extended = extended, ...)
   # Append class 'url' for httr
   class(url) <- "url"
   # Assemble url

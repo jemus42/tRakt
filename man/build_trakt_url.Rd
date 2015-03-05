@@ -4,8 +4,7 @@
 \alias{build_trakt_url}
 \title{Assemble a trakt.tv API URL}
 \usage{
-build_trakt_url(section, target, page = NULL, limit = NULL,
-  extended = "min")
+build_trakt_url(section, target, extended = "min", ...)
 }
 \arguments{
 \item{section}{The section of the API methods, like \code{shows} or \code{movies}.}
@@ -13,11 +12,9 @@ build_trakt_url(section, target, page = NULL, limit = NULL,
 \item{target}{The target object, usually a show/movie \code{slug} or something
 like \code{trending} and \code{popular}.}
 
-\item{page}{Page of results to return for paginated methods. API default is 1.}
-
-\item{limit}{Limit of results if applicable. API default is 10.}
-
 \item{extended}{Whether extended info should be returned. Defaults to \code{min}.}
+
+\item{...}{Other params used as \code{queries}.}
 }
 \value{
 A \code{character} of class \code{url}.
@@ -34,7 +31,7 @@ more information}.
 }
 \examples{
 build_trakt_url(section = "shows", target = "breaking-bad", extended = "full")
-build_trakt_url("shows", "popular", 1, 5)
+build_trakt_url("shows", "popular", page = 3, limit = 5)
 }
 \seealso{
 Other utility functions: \code{\link{pad}};
