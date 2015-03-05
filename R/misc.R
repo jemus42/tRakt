@@ -116,7 +116,7 @@ convert_datetime <- function(object){
 #' API URL. See \href{http://docs.trakt.apiary.io/#introduction/pagination}{the trakt.tv API docs for
 #' more information}.
 #' @examples
-#' build_trakt_url(section = "shows", target = "breaking-bad", extended = "full")
+#' build_trakt_url("shows", "breaking-bad", extended = "full")
 #' build_trakt_url("shows", "popular", page = 3, limit = 5)
 build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = NULL,
                             target4 = NULL, extended = "min", ...){

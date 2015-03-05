@@ -33,7 +33,7 @@ API URL. See \href{http://docs.trakt.apiary.io/#introduction/pagination}{the tra
 more information}.
 }
 \examples{
-build_trakt_url(section = "shows", target = "breaking-bad", extended = "full")
+build_trakt_url("shows", "breaking-bad", extended = "full")
 build_trakt_url("shows", "popular", page = 3, limit = 5)
 }
 \seealso{
