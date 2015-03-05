@@ -4,7 +4,7 @@
 \alias{build_trakt_url}
 \title{Assemble a trakt.tv API URL}
 \usage{
-build_trakt_url(section, target, extended = "min", ...)
+build_trakt_url(section, target = NULL, extended = "min", ...)
 }
 \arguments{
 \item{section}{The section of the API methods, like \code{shows} or \code{movies}.}
@@ -14,7 +14,7 @@ like \code{trending} and \code{popular}.}
 
 \item{extended}{Whether extended info should be returned. Defaults to \code{min}.}
 
-\item{...}{Other params used as \code{queries}.}
+\item{...}{Other params used as \code{queries}. Must be named arguments like \code{name = value}.}
 }
 \value{
 A \code{character} of class \code{url}.

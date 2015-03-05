@@ -106,7 +106,7 @@ convert_datetime <- function(object){
 #' @param target The target object, usually a show/movie \code{slug} or something
 #' like \code{trending} and \code{popular}.
 #' @param extended Whether extended info should be returned. Defaults to \code{min}.
-#' @param ... Other params used as \code{queries}.
+#' @param ... Other params used as \code{queries}. Must be named arguments like \code{name = value}.
 #' @return A \code{character} of class \code{url}.
 #' @family utility functions
 #' @export
@@ -116,12 +116,12 @@ convert_datetime <- function(object){
 #' @examples
 #' build_trakt_url(section = "shows", target = "breaking-bad", extended = "full")
 #' build_trakt_url("shows", "popular", page = 3, limit = 5)
-build_trakt_url <- function(section, target, extended = "min", ...){
+build_trakt_url <- function(section, target = NULL, extended = "min", ...){
   # Set base values required for everything
   url        <- list(scheme = "https", hostname = "api-v2launch.trakt.tv")
   # Set other values
   url$path   <- paste(section, target, sep = "/")
-  url$query  <- list(extended = extended, ...)
+  url$query  <- list(..., extended = extended)
   # Append class 'url' for httr
   class(url) <- "url"
   # Assemble url
