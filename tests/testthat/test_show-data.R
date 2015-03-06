@@ -15,9 +15,15 @@ test_that("trakt.seasons.season returns data.frame", {
   expect_is(trakt.seasons.season(target = "game-of-thrones", 2, extended = "full"), "data.frame")
 })
 
-test_that("trakt.show.summary returns list", {
+test_that("trakt.show.summary returns correct structure", {
   expect_is(trakt.show.summary(target = "game-of-thrones", extended = "min"), "list")
   expect_is(trakt.show.summary(target = "game-of-thrones", extended = "full"), "list")
+  expect_is(trakt.show.summary(target = "game-of-thrones",
+                               extended = "min", force_data_frame = TRUE), "data.frame")
+  expect_is(trakt.show.summary(target = "game-of-thrones",
+                               extended = "full", force_data_frame = TRUE), "data.frame")
+  expect_is(trakt.show.summary(target = "game-of-thrones",
+                               extended = "full,images", force_data_frame = TRUE), "data.frame")
 })
 
 test_that("trakt.show.watching returns returns correct structure", {

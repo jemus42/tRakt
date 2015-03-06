@@ -12,9 +12,15 @@ test_that("trakt.movie.ratings returns data.frame", {
   expect_is(trakt.movie.ratings(target = "tron-legacy-2010")$distribution, "data.frame")
 })
 
-test_that("trakt.movie.summary returns list", {
+test_that("trakt.movie.summary returns correct structure", {
   expect_is(trakt.movie.summary(target = "tron-legacy-2010", extended = "min"), "list")
   expect_is(trakt.movie.summary(target = "tron-legacy-2010", extended = "full"), "list")
+  expect_is(trakt.movie.summary(target = "tron-legacy-2010",
+                               extended = "min", force_data_frame = TRUE), "data.frame")
+  expect_is(trakt.movie.summary(target = "tron-legacy-2010",
+                               extended = "full", force_data_frame = TRUE), "data.frame")
+  expect_is(trakt.movie.summary(target = "tron-legacy-2010",
+                               extended = "full,images", force_data_frame = TRUE), "data.frame")
 })
 
 test_that("trakt.movie.releases returns correct structure", {

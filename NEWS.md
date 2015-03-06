@@ -5,6 +5,7 @@
 #### API changes, functional fixes
 
 * **Add** `build_trakt_url` to ease trakt API URL assembly and reduce duplicate code.
+* **Add** `force_data_frame` option to `trakt.*.summary`: Forces unnesting.
 
 ### v0.11.2
 
@@ -33,9 +34,9 @@
 
 ### v0.11.0
 
-* **Rename** `trakt.getSeasons`  -> `trakt.seasons.summary` for consistency with the trakt API.
-* **Rename** `trakt.show.season` -> `trakt.seasons.season` for consistency with the trakt API.
-* **Rename** `getNameFromUrl`    -> `parse_trakt_url` to be more descriptive. Also, de-camelCasezation.
+* **Rename** `trakt.getSeasons  -> trakt.seasons.summary` for consistency with the trakt API.
+* **Rename** `trakt.show.season -> trakt.seasons.season` for consistency with the trakt API.
+* **Rename** `getNameFromUrl    -> parse_trakt_url` to be more descriptive. Also, de-camelCasezation.
 * Update vignette to reflect the above changes
 * **Add** some `people` functions:
     * `trakt.people.summary`
