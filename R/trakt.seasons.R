@@ -16,7 +16,7 @@
 #' @importFrom lubridate year
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/season/get-single-season-for-a-show}{the trakt API docs for further info}.
 #' If you want to quickly gather data of multiple seasons, see \link[tRakt]{trakt.getEpisodeData}
-#' @family show
+#' @family show data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -70,7 +70,7 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
 #' for further info
-#' @family show
+#' @family show data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

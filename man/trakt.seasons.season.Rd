@@ -36,7 +36,7 @@ breakingbad.seasons <- trakt.seasons.season("breaking-bad", 1)
 }
 }
 \seealso{
-Other show: \code{\link{trakt.getEpisodeData}};
+Other show data: \code{\link{trakt.getEpisodeData}};
   \code{\link{trakt.getFullShowData}};
   \code{\link{trakt.seasons.summary}};
   \code{\link{trakt.show.people}};
@@ -45,6 +45,7 @@ Other show: \code{\link{trakt.getEpisodeData}};
   \code{\link{trakt.show.watching}};
   \code{\link{trakt.shows.popular}};
   \code{\link{trakt.shows.related}};
-  \code{\link{trakt.shows.trending}}
+  \code{\link{trakt.shows.trending}};
+  \code{\link{trakt.stats}}
 }
 

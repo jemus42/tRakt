@@ -33,7 +33,7 @@ seanstats <- trakt.user.watchlist(user = "sean")
 }
 }
 \seealso{
-Other user: \code{\link{trakt.user.collection}};
+Other user data: \code{\link{trakt.user.collection}};
   \code{\link{trakt.user.followers}};
   \code{\link{trakt.user.following}};
   \code{\link{trakt.user.friends}};

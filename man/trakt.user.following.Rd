@@ -26,7 +26,7 @@ trakt.user.following("jemus42")
 }
 }
 \seealso{
-Other user: \code{\link{trakt.user.collection}};
+Other user data: \code{\link{trakt.user.collection}};
   \code{\link{trakt.user.followers}};
   \code{\link{trakt.user.friends}};
   \code{\link{trakt.user.ratings}};

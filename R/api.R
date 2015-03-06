@@ -19,7 +19,7 @@
 #' @importFrom jsonlite fromJSON
 #' @note Please note that no oauth2 methods are supported yet,
 #' only client id really matters.
-#' @family API
+#' @family API-basics
 #' @examples
 #' \dontrun{
 #' # Use a key.json
@@ -115,7 +115,7 @@ get_trakt_credentials <- function(username = NULL, client.id = NULL,
 #' @import httr
 #' @importFrom jsonlite fromJSON
 #' @note This function is heavily used internally, so why not expose it to the user.
-#' @family API
+#' @family API-basics
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

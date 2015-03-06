@@ -11,7 +11,7 @@
 #' @return A \code{data.frame}s with person details.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/summary/get-a-single-person}{the trakt API docs for further info}
-#' @family people
+#' @family people data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -46,7 +46,7 @@ trakt.people.summary <- function(target, extended = "min"){
 #' @return A \code{data.frame}s with person details.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/movies/get-movie-credits}{the trakt API docs for further info}
-#' @family people
+#' @family people data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -82,7 +82,7 @@ trakt.people.movies <- function(target, extended = "min"){
 #' @return A \code{data.frame}s with person details.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/shows/get-show-credits}{the trakt API docs for further info}
-#' @family people
+#' @family people data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -118,8 +118,8 @@ trakt.people.shows <- function(target, extended = "min"){
 #' @return A \code{list} containing \code{data.frame}s for cast and crew.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/people/get-all-people-for-a-show}{the trakt API docs for further info}
-#' @family show
-#' @family people
+#' @family show data
+#' @family people data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -150,8 +150,8 @@ trakt.show.people <- function(target, extended = "min"){
 #' @return A \code{list} containing \code{data.frame}s for cast and crew.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{the trakt API docs for further info}
-#' @family movie
-#' @family people
+#' @family movie data
+#' @family people data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

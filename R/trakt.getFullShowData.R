@@ -12,7 +12,7 @@
 #' @note This is primarily intended to be a convenience function for the case where you
 #' really want all that data. If you're just derping around, maybe you should consider interactively
 #' calling the other functions.
-#' @family show
+#' @family show data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

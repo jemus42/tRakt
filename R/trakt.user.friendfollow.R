@@ -7,7 +7,7 @@
 #' @return A \code{data.frame} containing user information.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/friends/get-friends}{the trakt API docs for further info}
-#' @family user
+#' @family user data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -35,7 +35,7 @@ trakt.user.friends <- function(user = getOption("trakt.username")){
 #' @return A \code{data.frame} containing user information.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/followers/get-followers}{the trakt API docs for further info}
-#' @family user
+#' @family user data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -63,7 +63,7 @@ trakt.user.followers <- function(user = getOption("trakt.username")){
 #' @return A \code{data.frame} containing user information.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/following/get-following}{the trakt API docs for further info}
-#' @family user
+#' @family user data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

@@ -32,18 +32,19 @@ trakt.movies.popular(5)
 }
 }
 \seealso{
-Other aggregate: \code{\link{trakt.movies.related}};
+Other aggregated data: \code{\link{trakt.movies.related}};
   \code{\link{trakt.movies.trending}};
   \code{\link{trakt.shows.popular}};
   \code{\link{trakt.shows.related}};
   \code{\link{trakt.shows.trending}}
 
-Other movie: \code{\link{trakt.movie.people}};
+Other movie data: \code{\link{trakt.movie.people}};
   \code{\link{trakt.movie.ratings}};
   \code{\link{trakt.movie.releases}};
   \code{\link{trakt.movie.summary}};
   \code{\link{trakt.movie.watching}};
   \code{\link{trakt.movies.related}};
-  \code{\link{trakt.movies.trending}}
+  \code{\link{trakt.movies.trending}};
+  \code{\link{trakt.stats}}
 }
 

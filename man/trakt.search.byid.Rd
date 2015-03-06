@@ -30,6 +30,9 @@ breakingbad <- trakt.search.byid(1388, "trakt-show")
 }
 }
 \seealso{
-Other API, search: \code{\link{trakt.search}}
+Other API-basics: \code{\link{get_trakt_credentials}};
+  \code{\link{trakt.api.call}}; \code{\link{trakt.search}}
+
+Other search functions: \code{\link{trakt.search}}
 }
 

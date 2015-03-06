@@ -10,8 +10,8 @@
 #' @return A \code{data.frame} containing search results
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/related/get-related-movies}{the trakt API docs for further info}
-#' @family movie
-#' @family aggregate
+#' @family movie data
+#' @family aggregated data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -41,8 +41,8 @@ trakt.movies.related <- function(target, extended = "min"){
 #' @return A \code{data.frame} containing search results
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/related/get-related-shows}{the trakt API docs for further info}
-#' @family show
-#' @family aggregate
+#' @family show data
+#' @family aggregated data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

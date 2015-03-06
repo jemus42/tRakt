@@ -26,7 +26,7 @@ trakt.show.ratings("game-of-thrones")
 }
 }
 \seealso{
-Other show: \code{\link{trakt.getEpisodeData}};
+Other show data: \code{\link{trakt.getEpisodeData}};
   \code{\link{trakt.getFullShowData}};
   \code{\link{trakt.seasons.season}};
   \code{\link{trakt.seasons.summary}};
@@ -35,6 +35,7 @@ Other show: \code{\link{trakt.getEpisodeData}};
   \code{\link{trakt.show.watching}};
   \code{\link{trakt.shows.popular}};
   \code{\link{trakt.shows.related}};
-  \code{\link{trakt.shows.trending}}
+  \code{\link{trakt.shows.trending}};
+  \code{\link{trakt.stats}}
 }
 

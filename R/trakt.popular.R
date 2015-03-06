@@ -10,8 +10,8 @@
 #' @return A \code{data.frame} containing popular movies with their name and ids
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/popular/get-popular-movies}{the trakt API docs for further info}
-#' @family movie
-#' @family aggregate
+#' @family movie data
+#' @family aggregated data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -46,8 +46,8 @@ trakt.movies.popular <- function(limit = 10, page = 1, extended = "min"){
 #' @return A \code{data.frame} containing popular shows with their name and ids
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/get-popular-shows}{the trakt API docs for further info}
-#' @family show
-#' @family aggregate
+#' @family show data
+#' @family aggregated data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

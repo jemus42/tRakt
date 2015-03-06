@@ -11,7 +11,7 @@
 #' the returned \code{data.frame} only contains play stats per show or movie respectively.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the trakt API docs for further info}
-#' @family user
+#' @family user data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

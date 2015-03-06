@@ -36,6 +36,8 @@ trakt.api.call("https://api-v2launch.trakt.tv/shows/breaking-bad?extended=min")
 }
 }
 \seealso{
-Other API: \code{\link{get_trakt_credentials}}
+Other API-basics: \code{\link{get_trakt_credentials}};
+  \code{\link{trakt.search.byid}};
+  \code{\link{trakt.search}}
 }
 

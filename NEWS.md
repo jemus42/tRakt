@@ -9,6 +9,10 @@
 * **Rename** `trakt.show.stats` to `trakt.stats`, will work with both movies and shows
 as soon as the API endpoint actually works.
 
+#### Minor changes
+
+* Expand `@family` tags in docs a little
+
 ### v0.11.2
 
 #### API changes, functional fixes

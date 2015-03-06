@@ -10,7 +10,7 @@
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/releases/get-all-movie-releases}{the
 #'  trakt API docs for further info}
-#' @family movie
+#' @family movie data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

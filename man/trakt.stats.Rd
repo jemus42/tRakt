@@ -35,4 +35,26 @@ get_trakt_credentials() # Set required API data/headers
 breakingbad.stats <- trakt.stats(type = "shows", "breaking-bad")
 }
 }
+\seealso{
+Other movie data: \code{\link{trakt.movie.people}};
+  \code{\link{trakt.movie.ratings}};
+  \code{\link{trakt.movie.releases}};
+  \code{\link{trakt.movie.summary}};
+  \code{\link{trakt.movie.watching}};
+  \code{\link{trakt.movies.popular}};
+  \code{\link{trakt.movies.related}};
+  \code{\link{trakt.movies.trending}}
+
+Other show data: \code{\link{trakt.getEpisodeData}};
+  \code{\link{trakt.getFullShowData}};
+  \code{\link{trakt.seasons.season}};
+  \code{\link{trakt.seasons.summary}};
+  \code{\link{trakt.show.people}};
+  \code{\link{trakt.show.ratings}};
+  \code{\link{trakt.show.summary}};
+  \code{\link{trakt.show.watching}};
+  \code{\link{trakt.shows.popular}};
+  \code{\link{trakt.shows.related}};
+  \code{\link{trakt.shows.trending}}
+}
 

@@ -10,7 +10,7 @@
 #' @return A \code{list} or \code{data.frame} containing movie information
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/summary/get-a-movie}{the trakt API docs for further info}
-#' @family movie
+#' @family movie data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -53,7 +53,7 @@ trakt.movie.summary <- function(target, extended = "min", force_data_frame = FAL
 #' @return A \code{list} or \code{data.frame} containing summary info
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/summary}{the trakt API docs for further info}
-#' @family show
+#' @family show data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

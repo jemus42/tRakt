@@ -18,7 +18,7 @@
 #' @export
 #' @import plyr
 #' @note This function is mainly for convenience.
-#' @family show
+#' @family show data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

@@ -30,7 +30,7 @@ seans.movies <- trakt.user.collection(user = "sean", type = "movies)
 }
 }
 \seealso{
-Other user: \code{\link{trakt.user.followers}};
+Other user data: \code{\link{trakt.user.followers}};
   \code{\link{trakt.user.following}};
   \code{\link{trakt.user.friends}};
   \code{\link{trakt.user.ratings}};

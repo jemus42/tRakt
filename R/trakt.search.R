@@ -20,7 +20,8 @@
 #' @importFrom stringr str_trim
 #' @note See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for
 #'   further info}
-#' @family API, search
+#' @family API-basics
+#' @family search functions
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -73,7 +74,8 @@ trakt.search <- function(query, type = "show", year = NULL){
 #' @importFrom jsonlite fromJSON
 #' @import httr
 #' @note See \href{http://docs.trakt.apiary.io/reference/search/id-lookup/get-id-lookup-results}{the trakt API docs for further info}
-#' @family API, search
+#' @family API-basics
+#' @family search functions
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

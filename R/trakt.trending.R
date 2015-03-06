@@ -11,8 +11,8 @@
 #' @return A \code{data.frame} containing trending movies with their number of watchers, name and ids
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/trending/get-trending-movies}{the trakt API docs for further info}
-#' @family movie
-#' @family aggregate
+#' @family movie data
+#' @family aggregated data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -50,8 +50,8 @@ trakt.movies.trending <- function(limit = 10, page = 1, extended = "min"){
 #' @return A \code{data.frame} containing trending shows with their name and ids
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/get-trending-shows}{the trakt API docs for further info}
-#' @family show
-#' @family aggregate
+#' @family show data
+#' @family aggregated data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

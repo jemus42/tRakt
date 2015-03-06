@@ -6,7 +6,7 @@
 #' @return A \code{list} containing movie ratings and distribution
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/ratings/get-movie-ratings}{the trakt API docs for further info}
-#' @family movie
+#' @family movie data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -33,7 +33,7 @@ trakt.movie.ratings <- function(target){
 #' @return A \code{list} containing show ratings and distribution
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/ratings/get-show-ratings}{the trakt API docs for further info}
-#' @family show
+#' @family show data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

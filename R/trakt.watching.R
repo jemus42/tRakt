@@ -9,7 +9,7 @@
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/watching/get-users-watching-right-now}{the
 #'  trakt API docs for further info}
-#' @family movie
+#' @family movie data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
@@ -35,7 +35,7 @@ trakt.movie.watching <- function(target, extended = "min"){
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/watching/get-users-watching-right-now}{the
 #'  trakt API docs for further info}
-#' @family show
+#' @family show data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers

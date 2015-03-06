@@ -8,7 +8,7 @@
 #' @return A \code{data.frame} containing stats
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/collection/get-collection}{the trakt API docs for further info}
-#' @family user
+#' @family user data
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
