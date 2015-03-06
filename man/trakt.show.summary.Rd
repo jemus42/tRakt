@@ -4,7 +4,7 @@
 \alias{trakt.show.summary}
 \title{Get show summary info}
 \usage{
-trakt.show.summary(target, extended = "min")
+trakt.show.summary(target, extended = "min", force_data_frame = FALSE)
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
@@ -12,9 +12,12 @@ trakt.show.summary(target, extended = "min")
 
 \item{extended}{Whether extended info should be provided.
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
+
+\item{force_data_frame}{If \code{TRUE}, the \code{list} is unnested as much as possible, resulting
+in a flat \code{data.frame} suitable to be \code{rbind}ed to other summary results.}
 }
 \value{
-A \code{list} containing summary info
+A \code{list} or \code{data.frame} containing summary info
 }
 \description{
 \code{trakt.show.summary} pulls show summary data and returns it compactly.
@@ -39,7 +42,6 @@ Other show: \code{\link{trakt.getEpisodeData}};
   \code{\link{trakt.seasons.summary}};
   \code{\link{trakt.show.people}};
   \code{\link{trakt.show.ratings}};
-  \code{\link{trakt.show.stats}};
   \code{\link{trakt.show.watching}};
   \code{\link{trakt.shows.popular}};
   \code{\link{trakt.shows.related}};

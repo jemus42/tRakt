@@ -4,7 +4,7 @@
 \alias{trakt.movie.summary}
 \title{Get a single movie's details}
 \usage{
-trakt.movie.summary(target, extended = "min")
+trakt.movie.summary(target, extended = "min", force_data_frame = FALSE)
 }
 \arguments{
 \item{target}{The \code{id} of the movie requested. Either the \code{slug}
@@ -12,9 +12,12 @@ trakt.movie.summary(target, extended = "min")
 
 \item{extended}{Whether extended info should be provided.
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
+
+\item{force_data_frame}{If \code{TRUE}, the \code{list} is unnested as much as possible, resulting
+in a flat \code{data.frame} suitable to be \code{rbind}ed to other summary results.}
 }
 \value{
-A \code{list} containing movie information
+A \code{list} or \code{data.frame} containing movie information
 }
 \description{
 \code{trakt.movie.summary} returns a single movie's summary information.

@@ -6,6 +6,8 @@
 
 * **Add** `build_trakt_url` to ease trakt API URL assembly and reduce duplicate code.
 * **Add** `force_data_frame` option to `trakt.*.summary`: Forces unnesting.
+* **Rename** `trakt.show.stats` to `trakt.stats`, will work with both movies and shows
+as soon as the API endpoint actually works.
 
 ### v0.11.2
 
