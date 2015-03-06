@@ -6,9 +6,10 @@
 #' \code{trakt.show.stats} pulls show stats and returns it compactly.
 #' The data includes show ratings, scrobbles, checkins, plays, comments…
 #' @param target The \code{id} of the show requested. Either the \code{slug}
-#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
+#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.
+#' @param type Either \code{shows} (default) or \code{movies}, depending the \code{target} type.
 #' @param extended Whether extended info should be provided.
-#' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}
+#' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}.
 #' @return A \code{list} containing show stats
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/stats}{the trakt API docs for further info}

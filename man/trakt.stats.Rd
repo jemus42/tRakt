@@ -8,10 +8,12 @@ trakt.stats(target, type = "shows", extended = "min")
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
+(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.}
+
+\item{type}{Either \code{shows} (default) or \code{movies}, depending the \code{target} type.}
 
 \item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
+Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}.}
 }
 \value{
 A \code{list} containing show stats
