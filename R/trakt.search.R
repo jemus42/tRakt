@@ -82,10 +82,7 @@ trakt.search <- function(query, type = "show", year = NULL){
 trakt.search.byid <- function(id, id_type = "trakt-show"){
 
   # Construct URL, make API call
-  id       <- as.character(id)
-  id       <- URLencode(id)    # URL normalization
-  baseURL  <- "https://api-v2launch.trakt.tv/search"
-  url      <- paste0(baseURL, "?id_type=", id_type, "&id=", id)
+  url      <- build_trakt_url("search", id_type = id_type, id = id)
   response <- trakt.api.call(url = url)
 
   # Check if response is empty (nothing found)
@@ -96,4 +93,3 @@ trakt.search.byid <- function(id, id_type = "trakt-show"){
   response <- response[[ncol(response)]]
   return(response)
 }
-

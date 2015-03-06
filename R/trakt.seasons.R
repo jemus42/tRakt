@@ -79,8 +79,6 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
 trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE){
 
   # Construct URL, make API call
-  baseURL <- "https://api-v2launch.trakt.tv/shows/"
-  url     <- paste0(baseURL, target, "/", "seasons", "?extended=", extended)
   url     <- build_trakt_url("shows", target, "seasons", extended = extended)
   seasons <- trakt.api.call(url = url)
 
