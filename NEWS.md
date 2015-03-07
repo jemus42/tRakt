@@ -12,10 +12,10 @@
 
 #### Vectorization improvements
 
-* **Add** multiple user input support for `trakt.user.f*` functions.
-    * Results will be `rbind`ed together and a `source_user` column is appended.
-* **Add** multiple season input support for `trakt.seasons.season`.
-* **Add** multiple target input support for `trakt.*.summary`, forcing `force_data_frame` to `TRUE`.
+* **Add** multiple target input support (vectorization) for:
+    * `trakt.user.f*` functions: Results will be `rbind`ed together and a `source_user` column is appended.
+    * `trakt.seasons.season`.
+    * `trakt.*.summary`: Forces `force_data_frame` to `TRUE`.
 
 ### v0.11.3
 
