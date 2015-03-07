@@ -67,6 +67,7 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
 #' \code{min} (default), \code{images}, \code{full}, \code{full,images}
 #' @param dropspecials If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped
 #' @param dropunaired If \code{TRUE} (default), seasons with \code{aired_episodes == 0} are dropped.
+#' Only works if \code{extended} is set to more than \code{min}.
 #' @return A \code{data.frame} containing season details (nested in \code{list} objects)
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
@@ -87,7 +88,7 @@ trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE,
   if (dropspecials){
     seasons <- seasons[seasons$number != 0, ]
   }
-  if (dropunaired){
+  if (dropunaired & "aired_episodes" %in% names(seasons)){
     seasons <- seasons[seasons$aired_episodes > 0, ]
   }
   # Reorganization

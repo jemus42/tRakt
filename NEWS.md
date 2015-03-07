@@ -5,6 +5,8 @@
 #### API changes, functional fixes
 
 * **Add** `dropunaired` param to `trakt.seasons.summary` (defaults to `TRUE`).
+    * Requires `extended` to be more than `min` since the required `aired_episodes` field
+    is only present with higher levels of detail.
 * **Add** `extended` param to `trakt.user.f*`
 * **Fix** `trakt.user.f*` now return `NULL` when the user is private instead of failing.
 
