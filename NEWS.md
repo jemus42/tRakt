@@ -1,6 +1,6 @@
 ## tRakt News
 
-### v0.11.4.9000
+### v0.12.9000
 
 #### API changes, functional fixes
 
@@ -19,7 +19,7 @@
     * `trakt.*.summary`
     * `trakt.*.ratings`
 
-#### Vectorization improvements
+##### Vectorization improvements
 
 * **Add** multiple target input support (vectorization) for:
     * `trakt.user.f*` functions: Results will be `rbind`ed together and a `source_user` column is appended.
