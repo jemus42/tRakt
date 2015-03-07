@@ -16,7 +16,8 @@ trakt.seasons.summary(target, extended = "min", dropspecials = TRUE,
 
 \item{dropspecials}{If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped}
 
-\item{dropunaired}{If \code{TRUE} (default), seasons with \code{aired_episodes == 0} are dropped.}
+\item{dropunaired}{If \code{TRUE} (default), seasons with \code{aired_episodes == 0} are dropped.
+Only works if \code{extended} is set to more than \code{min}.}
 }
 \value{
 A \code{data.frame} containing season details (nested in \code{list} objects)

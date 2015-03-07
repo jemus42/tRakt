@@ -7,7 +7,9 @@
 trakt.user.following(user = getOption("trakt.username"), extended = "min")
 }
 \arguments{
-\item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
+\item{user}{Target user. Defaults to \code{getOption("trakt.username")}. If multiple users
+are specified, the results will be \code{rbind}ed together and a \code{source_user} variable is
+appended to indicated which user belongs to wich input user.}
 
 \item{extended}{Either \code{min} for standard info, \code{full} for details or \code{full,images}
 for additional avatar URLs.}
