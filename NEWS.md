@@ -1,5 +1,11 @@
 ## tRakt News
 
+### v0.11.4
+
+#### API changes, functional fixes
+
+* **Add** `dropunaired` param to `trakt.seasons.summary` (defaults to `TRUE`)
+
 ### v0.11.3
 
 #### API changes, functional fixes

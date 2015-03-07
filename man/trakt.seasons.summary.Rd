@@ -4,7 +4,8 @@
 \alias{trakt.seasons.summary}
 \title{Get a show's season information}
 \usage{
-trakt.seasons.summary(target, extended = "min", dropspecials = TRUE)
+trakt.seasons.summary(target, extended = "min", dropspecials = TRUE,
+  dropunaired = TRUE)
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
@@ -14,6 +15,8 @@ trakt.seasons.summary(target, extended = "min", dropspecials = TRUE)
 \code{min} (default), \code{images}, \code{full}, \code{full,images}}
 
 \item{dropspecials}{If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped}
+
+\item{dropunaired}{If \code{TRUE} (default), seasons with \code{aired_episodes == 0} are dropped.}
 }
 \value{
 A \code{data.frame} containing season details (nested in \code{list} objects)

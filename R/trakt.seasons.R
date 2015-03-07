@@ -37,7 +37,7 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
 
   # Catch unknown season error
   if (identical(season, list())){
-    warning(paste("Season", seasons, "does not appear to exist"))
+    warning(paste("Season", seasons, " of ", target, "does not appear to exist"))
     return(NULL)
   }
   # Reorganization
@@ -66,6 +66,7 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
 #' @param extended Use \code{full,images} to get season posters. Can be
 #' \code{min} (default), \code{images}, \code{full}, \code{full,images}
 #' @param dropspecials If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped
+#' @param dropunaired If \code{TRUE} (default), seasons with \code{aired_episodes == 0} are dropped.
 #' @return A \code{data.frame} containing season details (nested in \code{list} objects)
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
@@ -76,7 +77,7 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
 #' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.seasons <- trakt.seasons.summary("breaking-bad", extended = "min")
 #' }
-trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE){
+trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE, dropunaired = TRUE){
 
   # Construct URL, make API call
   url     <- build_trakt_url("shows", target, "seasons", extended = extended)
@@ -85,6 +86,9 @@ trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE)
   # Data cleanup
   if (dropspecials){
     seasons <- seasons[seasons$number != 0, ]
+  }
+  if (dropunaired){
+    seasons <- seasons[seasons$aired_episodes > 0, ]
   }
   # Reorganization
   names(seasons) <- sub("number", "season", names(seasons))
