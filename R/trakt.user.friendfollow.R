@@ -30,6 +30,9 @@ trakt.user.friends <- function(user = getOption("trakt.username", extended = "mi
   }
   # Flatten the data.frame
   response <- cbind(response[names(response) != "user"], response$user)
+  # Ensure datetime conversion
+  response <- convert_datetime(response)
+
   return(response)
 }
 
@@ -64,6 +67,9 @@ trakt.user.followers <- function(user = getOption("trakt.username", extended = "
   }
   # Flatten the data.frame
   response <- cbind(response[names(response) != "user"], response$user)
+  # Ensure datetime conversion
+  response <- convert_datetime(response)
+
   return(response)
 }
 
@@ -98,5 +104,8 @@ trakt.user.following <- function(user = getOption("trakt.username", extended = "
   }
   # Flatten the data.frame
   response <- cbind(response[names(response) != "user"], response$user)
+  # Ensure datetime conversion
+  response <- convert_datetime(response)
+
   return(response)
 }
