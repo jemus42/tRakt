@@ -15,7 +15,7 @@
 * User internal, generalized functions to reduce duplicate code for the following:
     * `trakt.*.popular`
     * `trakt.*.related`
-    * `trakt.*.trending* 
+    * `trakt.*.trending`
 
 #### Vectorization improvements
 
