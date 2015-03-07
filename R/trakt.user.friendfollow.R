@@ -22,8 +22,12 @@ trakt.user.friends <- function(user = getOption("trakt.username")){
   url      <- build_trakt_url("users", user, "friends")
   response <- trakt.api.call(url = url)
 
+  if (identical(response, list())){
+    message(paste0("User ", user, " appears to be private or have no network"))
+    return(NULL)
+  }
   # Flatten the data.frame
-  response <- cbind(subset(response, select = -user), response$user)
+  response <- cbind(response[names(response) != "user"], response$user)
   return(response)
 }
 
@@ -50,8 +54,12 @@ trakt.user.followers <- function(user = getOption("trakt.username")){
   url      <- build_trakt_url("users", user, "followers")
   response <- trakt.api.call(url = url)
 
+  if (identical(response, list())){
+    message(paste0("User ", user, " appears to be private or have no network"))
+    return(NULL)
+  }
   # Flatten the data.frame
-  response <- cbind(subset(response, select = -user), response$user)
+  response <- cbind(response[names(response) != "user"], response$user)
   return(response)
 }
 
@@ -78,7 +86,11 @@ trakt.user.following <- function(user = getOption("trakt.username")){
   url      <- build_trakt_url("users", user, "following")
   response <- trakt.api.call(url = url)
 
+  if (identical(response, list())){
+    message(paste0("User ", user, " appears to be private or have no network"))
+    return(NULL)
+  }
   # Flatten the data.frame
-  response <- cbind(subset(response, select = -user), response$user)
+  response <- cbind(response[names(response) != "user"], response$user)
   return(response)
 }
