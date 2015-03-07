@@ -16,6 +16,7 @@
     * `trakt.*.popular`
     * `trakt.*.related`
     * `trakt.*.trending`
+    * `trakt.*.summary`
 
 #### Vectorization improvements
 

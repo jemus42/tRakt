@@ -20,31 +20,8 @@
 #' }
 trakt.movie.summary <- function(target, extended = "min", force_data_frame = FALSE){
 
-    if (length(target) > 1){
-    response <- plyr::ldply(target, function(t){
-      response <- trakt.movie.summary(target = t, extended = extended, force_data_frame = TRUE)
-      return(response)
-    })
-    return(response)
-    }
-
-  # Construct URL, make API call
-  url      <- build_trakt_url("movies", target, extended = extended)
-  response <- trakt.api.call(url = url)
-
-  if (force_data_frame){
-    movie <- response[sapply(response, length) == 1]
-    movie[unlist(lapply(movie, is.null))] <- NA
-    movie                                 <- as.data.frame(movie)
-    movie                                 <- cbind(movie, response$ids)
-    if ("available_translations" %in% names(response)){
-      movie[["available_translations"]]   <- I(list(response$available_translations))
-    }
-    if ("images" %in% names(response)){
-      movie[["images"]][[1]]              <- I(response$images)
-    }
-    response <- movie
-  }
+  response <- trakt.summary(type = "movies", target = target, extended = extended,
+                            force_data_frame = force_data_frame)
   return(response)
 }
 
@@ -73,34 +50,40 @@ trakt.movie.summary <- function(target, extended = "min", force_data_frame = FAL
 #' }
 trakt.show.summary <- function(target, extended = "min", force_data_frame = FALSE){
 
+  response <- trakt.summary(type = "shows", target = target, extended = extended,
+                            force_data_frame = force_data_frame)
+  return(response)
+}
+
+trakt.summary <- function(type, target, extended = "min", force_data_frame = FALSE){
   if (length(target) > 1){
     response <- plyr::ldply(target, function(t){
-      response <- trakt.show.summary(target = t, extended = extended, force_data_frame = TRUE)
+      response <- trakt.summary(type = type, target = t, extended = extended, force_data_frame = TRUE)
       return(response)
     })
     return(response)
   }
 
   # Construct URL, make API call
-  url      <- build_trakt_url("shows", target, extended = extended)
+  url      <- build_trakt_url(type, target, extended = extended)
   response <- trakt.api.call(url = url)
 
   if (force_data_frame){
-    show <- response[sapply(response, length) == 1]
-    show[unlist(lapply(show, is.null))] <- NA
-    show                                <- as.data.frame(show)
-    show                                <- cbind(show, response$ids)
+    temp <- response[sapply(response, length) == 1]
+    temp[unlist(lapply(temp, is.null))] <- NA
+    temp                                <- as.data.frame(temp)
+    temp                                <- cbind(temp, response$ids)
     if ("airs" %in% names(response)){
       names(response$airs)                <- paste0("airs.", names(response$airs))
-      show                                <- cbind(show, response$airs)
+      temp                                <- cbind(temp, response$airs)
     }
     if ("available_translations" %in% names(response)){
-      show[["available_translations"]]    <- I(list(response$available_translations))
+      temp[["available_translations"]]    <- I(list(response$available_translations))
     }
     if ("images" %in% names(response)){
-      show[["images"]][[1]]               <- I(response$images)
+      temp[["images"]][[1]]               <- I(response$images)
     }
-    response <- show
+    response <- temp
   }
   return(response)
 }
