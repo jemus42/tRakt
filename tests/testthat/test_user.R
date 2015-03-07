@@ -31,14 +31,17 @@ test_that("trakt.user.ratings returns data.frame", {
 
 #### Network related ####
 test_that("trakt.user.followers returns data.frame", {
-  expect_is(trakt.user.followers(user = "jemus42"), "data.frame")
+  expect_is(trakt.user.followers(user = "jemus42", extended = "min"), "data.frame")
+  expect_is(trakt.user.followers(user = "jemus42", extended = "full"), "data.frame")
 })
 
 test_that("trakt.user.following returns data.frame", {
-  expect_is(trakt.user.following(user = "jemus42"), "data.frame")
+  expect_is(trakt.user.following(user = "jemus42", extended = "min"), "data.frame")
+  expect_is(trakt.user.following(user = "jemus42", extended = "full"), "data.frame")
 })
 
 test_that("trakt.user.friends returns data.frame", {
-  expect_is(trakt.user.friends(user = "jemus42"), "data.frame")
+  expect_is(trakt.user.friends(user = "jemus42", extended = "min"), "data.frame")
+  expect_is(trakt.user.friends(user = "jemus42", extended = "full"), "data.frame")
 })
 
