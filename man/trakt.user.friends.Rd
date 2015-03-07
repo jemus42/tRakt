@@ -4,7 +4,7 @@
 \alias{trakt.user.friends}
 \title{Get a user's friends}
 \usage{
-trakt.user.friends(user = getOption("trakt.username", extended = "min"))
+trakt.user.friends(user = getOption("trakt.username"), extended = "min")
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}

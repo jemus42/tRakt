@@ -4,7 +4,7 @@
 \alias{trakt.user.followers}
 \title{Get a user's followers}
 \usage{
-trakt.user.followers(user = getOption("trakt.username", extended = "min"))
+trakt.user.followers(user = getOption("trakt.username"), extended = "min")
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}

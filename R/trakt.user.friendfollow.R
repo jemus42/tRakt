@@ -15,7 +15,7 @@
 #' get_trakt_credentials() # Set required API data/headers
 #' trakt.user.friends("jemus42")
 #' }
-trakt.user.friends <- function(user = getOption("trakt.username", extended = "min")){
+trakt.user.friends <- function(user = getOption("trakt.username"), extended = "min"){
   if (is.null(user) && is.null(getOption("trakt.username"))){
     stop("No username is set.")
   }
@@ -52,7 +52,7 @@ trakt.user.friends <- function(user = getOption("trakt.username", extended = "mi
 #' get_trakt_credentials() # Set required API data/headers
 #' trakt.user.followers("jemus42")
 #' }
-trakt.user.followers <- function(user = getOption("trakt.username", extended = "min")){
+trakt.user.followers <- function(user = getOption("trakt.username"), extended = "min"){
   if (is.null(user) && is.null(getOption("trakt.username"))){
     stop("No username is set.")
   }
@@ -89,7 +89,7 @@ trakt.user.followers <- function(user = getOption("trakt.username", extended = "
 #' get_trakt_credentials() # Set required API data/headers
 #' trakt.user.following("jemus42")
 #' }
-trakt.user.following <- function(user = getOption("trakt.username", extended = "min")){
+trakt.user.following <- function(user = getOption("trakt.username"), extended = "min"){
   if (is.null(user) && is.null(getOption("trakt.username"))){
     stop("No username is set.")
   }
