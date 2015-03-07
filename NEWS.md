@@ -10,6 +10,7 @@
 * **Add** `extended` param to `trakt.user.f*`
 * **Add** multiple user input support for `trakt.user.f*` functions.
     * Results will be `rbind`ed together and a `source_user` column is appended.
+* **Add** multiple season input support for `trakt.seasons.season`
 * **Fix** `trakt.user.f*` now return `NULL` when the user is private instead of failing.
 
 ### v0.11.3

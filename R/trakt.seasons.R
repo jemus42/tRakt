@@ -7,7 +7,7 @@
 #' \code{extended} to customize output amount.
 #' @param target The \code{id} of the show requested. Either the \code{slug}
 #' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
-#' @param seasons The season to get. Defaults to 1. Use 0 for special episodes.
+#' @param seasons The season(s) to get. Defaults to 1. Use 0 for special episodes.
 #' @param extended Use \code{full,images} to get season posters. Can be
 #' \code{min} (default), \code{images}, \code{full}, \code{full,images}
 #' @return A \code{data.frame} containing all of a season's episodes
@@ -24,8 +24,11 @@
 #' }
 trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
   if (length(seasons) > 1){
-    warning("seasons must be of length 1, only first value will be used")
-    season <- season[1]
+    response <- plyr::ldply(seasons, function(s){
+      response <- trakt.seasons.season(target, s, extended = extended)
+      return(response)
+    })
+    return(response)
   }
 
   # Please R CMD CHECK

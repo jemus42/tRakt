@@ -10,7 +10,7 @@ trakt.seasons.season(target, seasons = 1, extended = "min")
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
-\item{seasons}{The season to get. Defaults to 1. Use 0 for special episodes.}
+\item{seasons}{The season(s) to get. Defaults to 1. Use 0 for special episodes.}
 
 \item{extended}{Use \code{full,images} to get season posters. Can be
 \code{min} (default), \code{images}, \code{full}, \code{full,images}}
