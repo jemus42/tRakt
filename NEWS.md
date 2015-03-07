@@ -14,8 +14,9 @@
 
 * **Add** multiple target input support (vectorization) for:
     * `trakt.user.f*` functions: Results will be `rbind`ed together and a `source_user` column is appended.
-    * `trakt.seasons.season`.
-    * `trakt.*.summary`: Forces `force_data_frame` to `TRUE`.
+    * `trakt.seasons.season`: Soon to make `trakt.getEpisodeData` obsolete.
+    * `trakt.*.summary`: Forces `force_data_frame` to `TRUE` to enable `rbind`ing.
+    * `trakt.*.related`: Appends `source` column containing respective input `id`.
 
 ### v0.11.3
 

@@ -8,10 +8,12 @@ trakt.shows.related(target, extended = "min")
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
+(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.}
 
-\item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
+\item{target}{The \code{id} of the movie requested. Either the \code{slug}
+(e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}. If multiple \code{target}s are
+provided, the results will be \code{rbind}ed together and a \code{source} column as appended,
+containing the provided \code{id} of the input.}
 }
 \value{
 A \code{data.frame} containing search results

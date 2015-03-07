@@ -8,7 +8,9 @@ trakt.movie.releases(target, country = NULL)
 }
 \arguments{
 \item{target}{The \code{id} of the movie requested. Either the \code{slug}
-(e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}.}
+(e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}. If multiple targets are
+provided, an additional \code{movie} column is appended to the \code{rbind}ed results, containing
+the movie's \code{id} provided as \code{target}.}
 
 \item{country}{Optional two letter country code.}
 }
