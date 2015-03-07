@@ -5,6 +5,7 @@
 #### API changes, functional fixes
 
 * **Add** `dropunaired` param to `trakt.seasons.summary` (defaults to `TRUE`).
+* **Add** `extended` param to `trakt.user.f*`
 * **Fix** `trakt.user.f*` now return `NULL` when the user is private instead of failing.
 
 ### v0.11.3

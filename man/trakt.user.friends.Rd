@@ -4,10 +4,13 @@
 \alias{trakt.user.friends}
 \title{Get a user's friends}
 \usage{
-trakt.user.friends(user = getOption("trakt.username"))
+trakt.user.friends(user = getOption("trakt.username", extended = "min"))
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
+
+\item{extended}{Either \code{min} for standard info, \code{full} for details or \code{full,images}
+for additional avatar URLs.}
 }
 \value{
 A \code{data.frame} containing user information.
