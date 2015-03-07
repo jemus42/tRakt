@@ -2,7 +2,7 @@
 % Please edit documentation in R/trakt.related.R
 \name{trakt.related}
 \alias{trakt.related}
-\title{Search for related shows or mivues}
+\title{Search for related shows or movies}
 \usage{
 trakt.related(target, type, extended = "min")
 }
@@ -17,7 +17,7 @@ Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 A \code{data.frame} containing search results
 }
 \description{
-\code{trakt.related} returns shows or mivies related to the input show/movie.
+\code{trakt.related} returns shows or movies related to the input show/movie.
 Receive a set of shows that are related to a specific show/movie
 }
 \keyword{internal}

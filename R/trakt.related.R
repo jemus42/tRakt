@@ -54,9 +54,9 @@ trakt.shows.related <- function(target, extended = "min"){
   return(response)
 }
 
-#' Search for related shows or mivues
+#' Search for related shows or movies
 #'
-#' \code{trakt.related} returns shows or mivies related to the input show/movie.
+#' \code{trakt.related} returns shows or movies related to the input show/movie.
 #' Receive a set of shows that are related to a specific show/movie
 #' @param target The \code{id} of the show/movie requested. Either the \code{slug}
 #' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
