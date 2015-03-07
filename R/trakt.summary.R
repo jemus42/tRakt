@@ -55,6 +55,7 @@ trakt.show.summary <- function(target, extended = "min", force_data_frame = FALS
   return(response)
 }
 
+#' @keywords internal
 trakt.summary <- function(type, target, extended = "min", force_data_frame = FALSE){
   if (length(target) > 1){
     response <- plyr::ldply(target, function(t){

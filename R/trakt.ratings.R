@@ -14,13 +14,7 @@
 #' }
 trakt.movie.ratings <- function(target){
 
-  # Construct URL, make API call
-  url      <- build_trakt_url("movies", target, "ratings")
-  response <- trakt.api.call(url = url)
-
-  # Flattening the distribution a little
-  response$distribution        <- as.data.frame(response$distribution)
-  names(response$distribution) <- 1:ncol(response$distribution)
+  response <- trakt.ratings(type = "movies", target)
 
   return(response)
 }
@@ -41,8 +35,16 @@ trakt.movie.ratings <- function(target){
 #' }
 trakt.show.ratings <- function(target){
 
+  response <- trakt.ratings(type = "shows", target)
+
+  return(response)
+}
+
+#' @keywords internal
+trakt.ratings <- function(type, target){
+
   # Construct URL, make API call
-  url      <- build_trakt_url("shows", target, "ratings")
+  url      <- build_trakt_url(type, target, "ratings")
   response <- trakt.api.call(url = url)
 
   # Flattening the distribution a little
