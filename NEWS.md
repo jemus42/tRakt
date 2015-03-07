@@ -26,6 +26,8 @@
     * `trakt.seasons.season`: Soon to make `trakt.getEpisodeData` obsolete.
     * `trakt.*.summary`: Forces `force_data_frame` to `TRUE` to enable `rbind`ing.
     * `trakt.*.related`: Appends `source` column containing respective input `id`.
+    * `trakt.*.ratings`: Returns result as a `list` with each entry containing data for each
+    show or movie to accommodate the `distribution` variable (`data.frame`)
 
 ### v0.11.3
 

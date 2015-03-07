@@ -8,7 +8,7 @@ test_that("trakt.movie.people returns a list of data.frames", {
 })
 
 test_that("trakt.movie.ratings returns data.frame", {
-  expect_is(trakt.movie.ratings(target = "tron-legacy-2010"), "list")
+  expect_is(trakt.movie.ratings(target = "tron-legacy-2010"), "data.frame")
   expect_is(trakt.movie.ratings(target = "tron-legacy-2010")$distribution, "data.frame")
 })
 

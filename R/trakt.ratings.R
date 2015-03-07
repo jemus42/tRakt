@@ -43,6 +43,21 @@ trakt.show.ratings <- function(target){
 #' @keywords internal
 trakt.ratings <- function(type, target){
 
+  if (length(target) > 1){
+    response <- plyr::llply(target, function(t){
+      response       <- trakt.ratings(type = type, target = t)
+      ratings        <- response[c("rating", "votes")]
+      ratings$source <- t
+      dist           <- response$distribution
+      dist$source    <- t
+      response <- list(ratings, dist)
+      names(response) <- c("general", "distribution")
+      return(response)
+    })
+    names(response) <- target
+    return(response)
+  }
+
   # Construct URL, make API call
   url      <- build_trakt_url(type, target, "ratings")
   response <- trakt.api.call(url = url)
@@ -50,6 +65,11 @@ trakt.ratings <- function(type, target){
   # Flattening the distribution a little
   response$distribution        <- as.data.frame(response$distribution)
   names(response$distribution) <- 1:ncol(response$distribution)
+
+  # Flattening to data.frame
+  temp <- as.data.frame(response[names(response) != "distribution"])
+  temp$distribution <- I(response$distribution)
+  response <- temp
 
   return(response)
 }

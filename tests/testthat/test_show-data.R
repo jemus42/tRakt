@@ -6,7 +6,7 @@ test_that("trakt.show.people returns list", {
 })
 
 test_that("trakt.show.ratings returns data.frame", {
-  expect_is(trakt.show.ratings(target = "game-of-thrones"), "list")
+  expect_is(trakt.show.ratings(target = "game-of-thrones"), "data.frame")
   expect_is(trakt.show.ratings(target = "game-of-thrones")$distribution, "data.frame")
 })
 
