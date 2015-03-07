@@ -8,7 +8,9 @@ trakt.show.summary(target, extended = "min", force_data_frame = FALSE)
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
+(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}. If multiple targets are
+supplied, the results will be \code{rbind}ed together, automatically setting \code{force_data_frame}
+to \code{TRUE}.}
 
 \item{extended}{Whether extended info should be provided.
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}

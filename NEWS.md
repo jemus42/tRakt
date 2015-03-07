@@ -8,10 +8,14 @@
     * Requires `extended` to be more than `min` since the required `aired_episodes` field
     is only present with higher levels of detail.
 * **Add** `extended` param to `trakt.user.f*`
+* **Fix** `trakt.user.f*` now return `NULL` when the user is private instead of failing.
+
+#### Vectorization improvements
+
 * **Add** multiple user input support for `trakt.user.f*` functions.
     * Results will be `rbind`ed together and a `source_user` column is appended.
-* **Add** multiple season input support for `trakt.seasons.season`
-* **Fix** `trakt.user.f*` now return `NULL` when the user is private instead of failing.
+* **Add** multiple season input support for `trakt.seasons.season`.
+* **Add** multiple target input support for `trakt.*.summary`, forcing `force_data_frame` to `TRUE`.
 
 ### v0.11.3
 

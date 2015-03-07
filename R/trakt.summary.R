@@ -1,8 +1,10 @@
 #' Get a single movie's details
 #'
 #' \code{trakt.movie.summary} returns a single movie's summary information.
-#' @param target The \code{id} of the movie requested. Either the \code{slug}
-#' (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}
+#' @param target The \code{id} of the show requested. Either the \code{slug}
+#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}. If multiple targets are
+#' supplied, the results will be \code{rbind}ed together, automatically setting \code{force_data_frame}
+#' to \code{TRUE}.
 #' @param extended Whether extended info should be provided.
 #' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}
 #' @param force_data_frame If \code{TRUE}, the \code{list} is unnested as much as possible, resulting
@@ -17,6 +19,14 @@
 #' trakt.movie.summary("tron-legacy-2010")
 #' }
 trakt.movie.summary <- function(target, extended = "min", force_data_frame = FALSE){
+
+    if (length(target) > 1){
+    response <- plyr::ldply(target, function(t){
+      response <- trakt.movie.summary(target = t, extended = extended, force_data_frame = TRUE)
+      return(response)
+    })
+    return(response)
+    }
 
   # Construct URL, make API call
   url      <- build_trakt_url("movies", target, extended = extended)
@@ -45,7 +55,9 @@ trakt.movie.summary <- function(target, extended = "min", force_data_frame = FAL
 #' Note that setting \code{extended} to \code{min} makes this function
 #' return about as much informations as \link[tRakt]{trakt.search}
 #' @param target The \code{id} of the show requested. Either the \code{slug}
-#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
+#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}. If multiple targets are
+#' supplied, the results will be \code{rbind}ed together, automatically setting \code{force_data_frame}
+#' to \code{TRUE}.
 #' @param extended Whether extended info should be provided.
 #' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}
 #' @param force_data_frame If \code{TRUE}, the \code{list} is unnested as much as possible, resulting
@@ -60,6 +72,14 @@ trakt.movie.summary <- function(target, extended = "min", force_data_frame = FAL
 #' breakingbad.summary <- trakt.show.summary("breaking-bad")
 #' }
 trakt.show.summary <- function(target, extended = "min", force_data_frame = FALSE){
+
+  if (length(target) > 1){
+    response <- plyr::ldply(target, function(t){
+      response <- trakt.show.summary(target = t, extended = extended, force_data_frame = TRUE)
+      return(response)
+    })
+    return(response)
+  }
 
   # Construct URL, make API call
   url      <- build_trakt_url("shows", target, extended = extended)
