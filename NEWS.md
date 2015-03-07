@@ -1,10 +1,11 @@
 ## tRakt News
 
-### v0.11.4
+### v0.11.4.9000
 
 #### API changes, functional fixes
 
-* **Add** `dropunaired` param to `trakt.seasons.summary` (defaults to `TRUE`)
+* **Add** `dropunaired` param to `trakt.seasons.summary` (defaults to `TRUE`).
+* **Fix** `trakt.user.f*` now return `NULL` when the user is private instead of failing.
 
 ### v0.11.3
 
