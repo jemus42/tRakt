@@ -18,18 +18,8 @@
 #' trakt.movies.popular(5)
 #' }
 trakt.movies.popular <- function(limit = 10, page = 1, extended = "min"){
-  limit <- as.integer(limit)
-  page  <- as.integer(page)
-  if (limit < 1 | page < 1){
-    stop("Limit and page must be greater than zero")
-  }
 
-  # Construct URL, make API call
-  url      <- build_trakt_url("movies", "popular", page = page, limit = limit, extended = extended)
-  response <- trakt.api.call(url)
-
-  # Spreading out ids to get a flat data.frame
-  response <- cbind(response[names(response) != "ids"], response$ids)
+  response <- trakt.popular(type = "movies", limit = limit, page = page, extended = extended)
 
   return(response)
 }
@@ -54,6 +44,14 @@ trakt.movies.popular <- function(limit = 10, page = 1, extended = "min"){
 #' trakt.shows.popular(5)
 #' }
 trakt.shows.popular <- function(limit = 10, page = 1, extended = "min"){
+
+  response <- trakt.popular(type = "shows", limit = limit, page = page, extended = extended)
+
+  return(response)
+}
+
+#' @keywords internal
+trakt.popular <- function(type, limit = 10, page = 1, extended = "min"){
   limit <- as.integer(limit)
   page  <- as.integer(page)
   if (limit < 1 | page < 1){
@@ -61,7 +59,7 @@ trakt.shows.popular <- function(limit = 10, page = 1, extended = "min"){
   }
 
   # Construct URL, make API call
-  url      <- build_trakt_url("shows", "popular", page = page, limit = limit, extended = extended)
+  url      <- build_trakt_url(type, "popular", page = page, limit = limit, extended = extended)
   response <- trakt.api.call(url)
 
   # Spreading out ids to get a flat data.frame

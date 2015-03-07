@@ -19,20 +19,8 @@
 #' trakt.movies.trending(5)
 #' }
 trakt.movies.trending <- function(limit = 10, page = 1, extended = "min"){
-  limit <- as.integer(limit)
-  page  <- as.integer(page)
-  if (limit < 1 | page < 1){
-    stop("Limit and page must be greater than zero")
-  }
 
-  # Construct URL, make API call
-  url      <- build_trakt_url("movies", "trending", page = page, limit = limit, extended = extended)
-  response <- trakt.api.call(url)
-
-  # Spreading out ids to get a flat data.frame
-  response$movie <- cbind(response$movie[names(response$movie) != "ids"], response$movie$ids)
-  response       <- cbind(response[names(response) != "movie"], response$movie)
-  response       <- convert_datetime(response)
+  response <- trakt.trending("movies", limit = limit, page = page, extended = extended)
 
   return(response)
 }
@@ -58,6 +46,14 @@ trakt.movies.trending <- function(limit = 10, page = 1, extended = "min"){
 #' trakt.shows.trending(5)
 #' }
 trakt.shows.trending <- function(limit = 10, page = 1, extended = "min"){
+
+  response <- trakt.trending("shows", limit = limit, page = page, extended = extended)
+
+  return(response)
+}
+
+#' @keywords internal
+trakt.trending <- function(type, limit = 10, page = 1, extended = "min"){
   limit <- as.integer(limit)
   page  <- as.integer(page)
   if (limit < 1 | page < 1){
@@ -65,12 +61,17 @@ trakt.shows.trending <- function(limit = 10, page = 1, extended = "min"){
   }
 
   # Construct URL, make API call
-  url      <- build_trakt_url("shows", "trending", page = page, limit = limit, extended = extended)
+  url      <- build_trakt_url(type, "trending", page = page, limit = limit, extended = extended)
   response <- trakt.api.call(url)
 
-  # Spreading out ids to get a flat data.frame
-  response$show <- cbind(response$show[names(response$show) != "ids"], response$show$ids)
-  response      <- cbind(response[names(response) != "show"], response$show)
-  response      <- convert_datetime(response)
+  if (type == "shows"){
+    response       <- cbind(response[names(response) != "show"], response$show)
+    response$show  <- cbind(response$show[names(response$show) != "ids"], response$show$ids)
+  } else if (type == "movies"){
+    response$movie <- cbind(response$movie[names(response$movie) != "ids"], response$movie$ids)
+    response       <- cbind(response[names(response) != "movie"], response$movie)
+  }
+  response         <- convert_datetime(response)
+
   return(response)
 }

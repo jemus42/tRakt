@@ -10,6 +10,13 @@
 * **Add** `extended` param to `trakt.user.f*`
 * **Fix** `trakt.user.f*` now return `NULL` when the user is private instead of failing.
 
+#### Internal changes
+
+* User internal, generalized functions to reduce duplicate code for the following:
+    * `trakt.*.popular`
+    * `trakt.*.related`
+    * `trakt.*.trending* 
+
 #### Vectorization improvements
 
 * **Add** multiple target input support (vectorization) for:
