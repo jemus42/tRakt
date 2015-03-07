@@ -47,13 +47,18 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
   names(season) <- sub("number", "episode", names(season))
 
   # Spreading out ids to get a flat data.frame
-  season        <- cbind(subset(season, select = -ids), season$ids)
+  season        <- cbind(season[names(season) != "ids"], season$ids)
 
   # If full data is pulled, ehance the dataset a little
-  if (extended %in% c("full", "full,images", "images,full")){
+  if ("first_aired" %in% names(season)){
     season$first_aired.string <- format(season$first_aired, "%F")
     season$year               <- lubridate::year(season$first_aired)
   }
+  if ("images" %in% names(season)){
+    names(season$images$screenshot) <- paste0("screenshot.", names(season$images$screenshot))
+    season <- cbind(season[names(season) != "images"], season$images$screenshot)
+  }
+
   return(season)
 }
 
