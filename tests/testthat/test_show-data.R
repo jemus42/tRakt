@@ -28,11 +28,11 @@ test_that("trakt.show.summary returns correct structure", {
 
 test_that("trakt.show.watching returns returns correct structure", {
   watching <- trakt.show.watching("breaking-bad", extended = "min")
-  if (!identical(watching, list())){
+  if (!is.null(watching)){
     expect_is(watching, "data.frame")
   }
   watching <- trakt.show.watching("breaking-bad", extended = "full")
-  if (!identical(watching, list())){
+  if (!is.null(watching)){
     expect_is(watching, "data.frame")
     expect_is(watching$joined_at, "POSIXct")
   }
