@@ -28,6 +28,7 @@
     * `trakt.*.related`: Appends `source` column containing respective input `id`.
     * `trakt.*.ratings`: Returns result as a `list` with each entry containing data for each
     show or movie to accommodate the `distribution` variable (`data.frame`)
+    * `trakt.people.summary`: Appends `person` column with `target` id.
 
 ### v0.11.3
 

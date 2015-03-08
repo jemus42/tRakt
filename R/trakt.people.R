@@ -19,11 +19,22 @@
 #' }
 trakt.people.summary <- function(target, extended = "min"){
 
+  if (length(target) > 1){
+    response <- plyr::ldply(target, function(t){
+      response <- trakt.people.summary(target = t, extended = extended)
+      response$person <- t
+      return(response)
+    })
+    return(response)
+  }
+
   # Construct URL, make API call
   url      <- build_trakt_url("people", target, extended = extended)
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
+  # Fix NULLs (screw up data.frame conversion)
+  response$ids[unlist(lapply(response$ids, is.null))] <- NA
   ids  <- as.data.frame(response$ids)
   data <- response[names(response) != "ids"]
   # Fix NULLs (screw up data.frame conversion)
