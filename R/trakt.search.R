@@ -1,13 +1,12 @@
 #' Search for a show via text query
 #'
-#' \code{trakt.search} pulls show stats and returns it compactly.
+#' \code{trakt.search} returns search result info.
 #'
-#' Search for a show with a keyword (e.g. \code{"Breaking Bad"}) and receive basic info of the first
-#' search result. It's main use is to retrieve the ids or proper show title for further use, as well
-#' as receiving a quick overview of a show.
-#' @param query The keyword used for the search. Will be coerced to \code{character} and
-#' \code{URLencode}d. If the query ends with a 4 digit numbers, this will be used as
-#' \code{year} parameter.
+#' Search for a show or movie with a keyword (e.g. \code{"Breaking Bad"}) and receive basic info of the first
+#' search result. It's main use is to retrieve the ids or proper show/movie title for further use, as well
+#' as receiving a quick overview of a show/movie.
+#' @param query The keyword used for the search. If the query ends with a 4 digit numbers,
+#' this will be used as \code{year} parameter.
 #' @param type The type of data you're looking for. Defaults to \code{show}, can also be
 #'   \code{movie}, \code{episode}, \code{person} or \code{list}.
 #' @param year Optionally filter by year.
