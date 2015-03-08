@@ -31,9 +31,6 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
     return(response)
   }
 
-  # Please R CMD CHECK
-  ids <- NULL
-
   # Construct URL, make API call
   url     <- build_trakt_url("shows", target, "seasons", seasons, extended = extended)
   season  <- trakt.api.call(url = url)

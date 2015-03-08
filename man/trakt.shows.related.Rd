@@ -7,9 +7,6 @@
 trakt.shows.related(target, extended = "min")
 }
 \arguments{
-\item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.}
-
 \item{target}{The \code{id} of the movie requested. Either the \code{slug}
 (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}. If multiple \code{target}s are
 provided, the results will be \code{rbind}ed together and a \code{source} column as appended,
