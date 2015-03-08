@@ -29,6 +29,7 @@
     * `trakt.*.ratings`: Returns result as a `list` with each entry containing data for each
     show or movie to accommodate the `distribution` variable (`data.frame`)
     * `trakt.people.summary`: Appends `person` column with `target` id.
+    * `trakt.*.watching`: Returns `data.frame` with `source` column containing each `target`.
 
 ### v0.11.3
 

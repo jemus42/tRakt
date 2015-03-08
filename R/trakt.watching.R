@@ -17,9 +17,7 @@
 #' }
 trakt.movie.watching <- function(target, extended = "min"){
 
-  # Construct URL, make API call
-  url      <- build_trakt_url("movies", target, "watching", extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt.watching(type = "movies", target = target, extended = extended)
 
   return(response)
 }
@@ -43,9 +41,31 @@ trakt.movie.watching <- function(target, extended = "min"){
 #' }
 trakt.show.watching <- function(target, extended = "min"){
 
+  response <- trakt.watching(type = "shows", target = target, extended = extended)
+
+  return(response)
+}
+
+#' @keywords internal
+trakt.watching <- function(type, target, extended = "min"){
+
+  if (length(target) > 1){
+    response <- plyr::ldply(target, function(t){
+      response <- trakt.watching(type = type, target = t, extended = extended)
+      response$source <- t
+      return(response)
+    })
+    return(response)
+  }
+
   # Construct URL, make API call
-  url      <- build_trakt_url("shows", target, "watching", extended = extended)
+  url      <- build_trakt_url(type, target, "watching", extended = extended)
   response <- trakt.api.call(url = url)
+
+  if (identical(response), list()){
+    message(paste("Nobody watching", target))
+    return(NULL)
+  }
 
   return(response)
 }
