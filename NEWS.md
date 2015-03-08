@@ -1,6 +1,6 @@
 ## tRakt News
 
-### v0.12.9000
+### v0.12.0
 
 #### API changes, functional fixes
 
