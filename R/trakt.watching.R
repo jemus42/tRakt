@@ -62,7 +62,7 @@ trakt.watching <- function(type, target, extended = "min"){
   url      <- build_trakt_url(type, target, "watching", extended = extended)
   response <- trakt.api.call(url = url)
 
-  if (identical(response), list()){
+  if (identical(response, list())){
     message(paste("Nobody watching", target))
     return(NULL)
   }
