@@ -35,6 +35,8 @@ trakt.movies.related <- function(target, extended = "min"){
 #' (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}. If multiple \code{target}s are
 #' provided, the results will be \code{rbind}ed together and a \code{source} column as appended,
 #' containing the provided \code{id} of the input.
+#' @param extended Whether extended info should be provided.
+#' Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}.
 #' @return A \code{data.frame} containing search results
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/related/get-related-shows}{the trakt API docs for further info}
