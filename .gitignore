@@ -11,3 +11,6 @@ tests.R
 key.json
 .httr-oauth
 .Rprofile
+
+# Ignore built vignettes
+inst/doc/*
