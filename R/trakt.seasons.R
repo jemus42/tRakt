@@ -108,5 +108,16 @@ trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE,
   }
   # Reorganization
   names(seasons) <- sub("number", "season", names(seasons))
+  # Flattening
+  seasons <- cbind(seasons[names(seasons) != "ids"], seasons$ids)
+  if ("images" %in% names(seasons)){
+    names(seasons$images$poster) <- paste0("poster.", names(seasons$images$poster))
+    seasons$images <- cbind(seasons$images[names(seasons$images) != "poster"], seasons$images$poster)
+    names(seasons$images$thumb) <- paste0("thumb.", names(seasons$images$thumb))
+    seasons$images <- cbind(seasons$images[names(seasons$images) != "thumb"], seasons$images$thumb)
+    names(seasons$images) <- paste0("images.", names(seasons$images))
+    seasons <- cbind(seasons[names(seasons) != "images"], seasons$images)
+  }
+
   return(seasons)
 }
