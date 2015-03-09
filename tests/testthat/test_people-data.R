@@ -1,8 +1,12 @@
 context("People data")
 
+sample_person <- "peter-dinklage"
+multi_person  <- c("peter-dinklage", "maisie-williams")
+
 test_that("trakt.people.summary returns data.frame", {
-  expect_is(trakt.people.summary(target = "bryan-cranston", extended = "min"), "data.frame")
-  expect_is(trakt.people.summary(target = "bryan-cranston", extended = "full"), "data.frame")
+  expect_is(trakt.people.summary(target = sample_person, extended = "min"), "data.frame")
+  expect_is(trakt.people.summary(target = sample_person, extended = "full"), "data.frame")
+  expect_is(trakt.people.summary(target = multi_person, extended = "min"), "data.frame")
 })
 
 test_that("trakt.people.movies returns data.frame", {

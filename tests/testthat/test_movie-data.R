@@ -56,12 +56,12 @@ test_that("trakt.movie.watching returns returns correct structure", {
   if (!is.null(watching)){
     expect_is(watching, "data.frame")
   }
-  watching <- suppressMessagestrakt.movie.watching(sample_movie, extended = "full"))
+  watching <- suppressMessages(trakt.movie.watching(sample_movie, extended = "full"))
   if (!is.null(watching)){
     expect_is(watching, "data.frame")
     expect_is(watching$joined_at, "POSIXct")
   }
-  watching <- suppressMessagestrakt.movie.watching(multi_movie, extended = "min"))
+  watching <- suppressMessages(trakt.movie.watching(multi_movie, extended = "min"))
   if (!is.null(watching)){
     expect_is(watching, "data.frame")
   }
