@@ -1,5 +1,11 @@
 ## tRakt News
 
+### v0.12.1
+
+* Vectorize `trakt.seasons.summary`
+* Fix some bugs
+* Improve tests
+
 ### v0.12.0
 
 #### API changes, functional fixes
