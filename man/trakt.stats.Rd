@@ -2,12 +2,12 @@
 % Please edit documentation in R/trakt.stats.R
 \name{trakt.stats}
 \alias{trakt.stats}
-\title{[Defunct] Get a show or movie's summary info}
+\title{[Defunct] Get a show or movie's stats}
 \usage{
 trakt.stats(target, type = "shows", extended = "min")
 }
 \arguments{
-\item{target}{The \code{id} of the show requested. Either the \code{slug}
+\item{target}{The \code{id} of the show/movie requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.}
 
 \item{type}{Either \code{shows} (default) or \code{movies}, depending the \code{target} type.}
@@ -23,7 +23,7 @@ DEFUNCT as of 2015-03-06,
 see \href{http://docs.trakt.apiary.io/reference/shows/stats/get-show-stats}{their API docs}
 }
 \details{
-\code{trakt.show.stats} pulls show stats and returns it compactly.
+\code{trakt.stats} pulls show stats and returns it compactly.
 The data includes show ratings, scrobbles, checkins, plays, comments…
 }
 \note{

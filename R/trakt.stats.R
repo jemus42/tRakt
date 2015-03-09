@@ -1,11 +1,11 @@
-#' [Defunct] Get a show or movie's summary info
+#' [Defunct] Get a show or movie's stats
 #'
 #' DEFUNCT as of 2015-03-06,
 #' see \href{http://docs.trakt.apiary.io/reference/shows/stats/get-show-stats}{their API docs}
 #'
-#' \code{trakt.show.stats} pulls show stats and returns it compactly.
+#' \code{trakt.stats} pulls show stats and returns it compactly.
 #' The data includes show ratings, scrobbles, checkins, plays, comments…
-#' @param target The \code{id} of the show requested. Either the \code{slug}
+#' @param target The \code{id} of the show/movie requested. Either the \code{slug}
 #' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.
 #' @param type Either \code{shows} (default) or \code{movies}, depending the \code{target} type.
 #' @param extended Whether extended info should be provided.
