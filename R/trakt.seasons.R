@@ -85,6 +85,16 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
 #' }
 trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE, dropunaired = TRUE){
 
+    if (length(target) > 1){
+    response <- plyr::ldply(target, function(t){
+      response <- trakt.seasons.summary(target = t, extended = extended,
+                                        dropspecials = dropspecials, dropunaired = dropunaired)
+      response$show <- t
+      return(response)
+    })
+    return(response)
+  }
+
   # Construct URL, make API call
   url     <- build_trakt_url("shows", target, "seasons", extended = extended)
   seasons <- trakt.api.call(url = url)
