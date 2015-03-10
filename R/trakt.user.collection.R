@@ -31,8 +31,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
       response$seasons[[i]]$episodes <- response$seasons[[i]]$episodes[response$seasons[[i]]$number != 0]
     }
 
-    epstats <- NULL
-    for (show in 1:nrow(response)){
+    epstats <- plyr::ldply(1:nrow(response), function(show){
       title <- response[show, ]$show$title
       #print(paste(show, title))
       x      <- response$seasons[[show]]
@@ -52,18 +51,15 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
 
       temp$title  <- title
       names(temp) <- sub("number", "episode", names(temp))
-      epstats <- rbind(temp, epstats)
-    }
+      return(temp)
+    })
+
     watched <- epstats[c("title", "season", "episode", "collected_at")]
   } else if (type == "movies"){
     # Flatten out ids
-    movies           <- response$movie[c("title", "year")]
-    movies$id.slug   <- response$movie$ids$slug
-    movies$id.trakt  <- response$movie$ids$trakt
-    movies$id.imdb   <- response$movie$ids$imdb
-    movies$id.tmdb   <- response$movie$ids$tmdb
+    movies  <- cbind(response$movie[names(response$movie) != "ids"], response$movie$ids)
 
-    watched <- cbind(response["collected_at"], movies)
+    watched <- cbind(response[names(response) != "movie"], movies)
   } else {
     stop("Unknown type, must be 'shows' or 'movies'")
   }

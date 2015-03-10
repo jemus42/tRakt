@@ -47,8 +47,7 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
       response$seasons[[i]]$episodes <- response$seasons[[i]]$episodes[response$seasons[[i]]$number != 0]
     }
 
-    epstats <- NULL
-    for (show in 1:nrow(response)){
+    epstats <- plyr::ldply(1:nrow(response), function(show){
       title <- response[show, ]$show$title
       #print(paste(show, title))
       x      <- response$seasons[[show]]
@@ -68,8 +67,9 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
 
       temp$title  <- title
       names(temp) <- sub("number", "episode", names(temp))
-      epstats     <- rbind(temp, epstats)
-    }
+      return(temp)
+    })
+
     watched <- epstats[c("title", "season", "episode", "plays", "last_watched_at")]
   } else if (type == "movies"){
     # Flatten out ids
