@@ -29,18 +29,16 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
 
   if (type == "shows"){
     # Flatten out ids
-    shows           <- response$show[c("title", "year")]
-    shows$id.slug      <- response$show$ids$slug
-    shows$id.trakt  <- response$show$ids$trakt
-    shows$id.imdb   <- response$show$ids$imdb
-    shows$id.tvdb   <- response$show$ids$tvdb
-    shows$id.tvrage <- response$show$ids$tvrage
+    shows         <- cbind(response$show[!(names(response$show) %in% c("ids", "seasons"))],
+                           response$show$ids)
 
     # Try to get some stuff out of response$seasons
     shows$seasons  <- sapply(response$seasons, function(x){max(x[[1]])})
-    shows$episodes <- length(sapply(response$seasons, function(x){x[[2]]}))
+    shows$episodes <- sapply(response$seasons, function(show){
+                             sum(sapply(show[[2]], nrow))
+                             })
 
-    watched <- cbind(response[c("plays", "last_watched_at")], shows)
+    watched <- cbind(response[!(names(response) %in% c("show", "seasons"))], shows)
 
   } else if (type == "shows.extended"){
 
@@ -75,13 +73,9 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
     watched <- epstats[c("title", "season", "episode", "plays", "last_watched_at")]
   } else if (type == "movies"){
     # Flatten out ids
-    movies          <- response$movie[c("title", "year")]
-    movies$id.slug  <- response$movie$ids$slug
-    movies$id.trakt <- response$movie$ids$trakt
-    movies$id.imdb  <- response$movie$ids$imdb
-    movies$id.tmdb  <- response$movie$ids$tmdb
+    movies  <- cbind(response$movie[names(response$movie) != "ids"], response$movie$ids)
 
-    watched <- cbind(response[c("plays", "last_watched_at")], movies)
+    watched <- cbind(response[names(response) != "movie"], movies)
   } else {
     stop("Unknown type, must be 'shows', 'shows.extended', or 'movies'")
   }
