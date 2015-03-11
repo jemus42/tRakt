@@ -40,8 +40,8 @@ Other aggregated data: \code{\link{trakt.movies.popular}};
   \code{\link{trakt.shows.popular}};
   \code{\link{trakt.shows.trending}}
 
-Other show data: \code{\link{trakt.getEpisodeData}};
-  \code{\link{trakt.getFullShowData}};
+Other show data: \code{\link{trakt.get_all_episodes}};
+  \code{\link{trakt.get_full_showdata}};
   \code{\link{trakt.seasons.season}};
   \code{\link{trakt.seasons.summary}};
   \code{\link{trakt.show.people}};

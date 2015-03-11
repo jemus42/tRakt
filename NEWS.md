@@ -1,5 +1,11 @@
 ## tRakt News
 
+### v0.13.0
+
+* **Rename** `trakt.getEpisodeData` -> `trakt.get_all_episodes`
+    * Expand handling of `season_nums` argument to make it easier to get all episodes of a show.
+* **Rename** `trakt.getFullShowData` -> `trakt.get_full_showdata`
+
 ### v0.12.1
 
 * Vectorize `trakt.seasons.summary`

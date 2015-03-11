@@ -1,6 +1,6 @@
 #' Get a show's episodes. All of them.
 #'
-#' \code{trakt.getEpisodeData} pulls detailed episode data.
+#' \code{trakt.get_all_episodes} pulls detailed episode data.
 #' Get details for a show's episodes, e.g. ratings, number of votes,
 #' airdates, images, plot overviews…
 #'
@@ -8,11 +8,14 @@
 #' this function to collect all the episode data.
 #' If you only want the episode data for a single season anyway, \code{trakt.seasons.season}
 #' is recommended, yet this function makes some additions.
+#' The use case of this function is to quickly gather episode data of all seasons of a show.
 #' @param target The \code{id} of the show requested. Either the \code{slug}
-#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}
-#' @param season_nums Vector of season numbers, e.g. \code{c(1, 2)}
-#' @param extended Defaults to \code{full,images} to get season posters. Can be
-#' \code{min}, \code{images}, \code{full}, \code{full,images}
+#' (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.
+#' @param season_nums Vector of season numbers, e.g. \code{c(1, 2)}. If \code{NULL}, all the seasons
+#' are pulled by calling \link{trakt.seasons.summary} to determine the number of seasons. If a
+#' vector of length 1 is supplied, it is extended to 1:season_nums.
+#' @param extended Use \code{full,images} to get season posters. Can be
+#' \code{min}, \code{images}, \code{full} (default), \code{full,images}.
 #' @param dropunaired If \code{TRUE} (default), episodes which have not aired yet are dropped.
 #' @return A \code{data.frame} containing episode details
 #' @export
@@ -22,24 +25,27 @@
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
-#' breakingbad.episodes <- trakt.getEpisodeData("breaking-bad", c(1, 2, 3, 4, 5))
+#' # Manually specifiy seasons
+#' breakingbad.episodes <- trakt.get_all_episodes("breaking-bad", season_nums = c(1, 2, 3, 4, 5))
+#' # Get all the seasons
+#' breakingbad.episodes <- trakt.get_all_episodes("breaking-bad")
+#' # Get first to 3rd season
+#' breakingbad.episodes <- trakt.get_all_episodes("breaking-bad", season_nums = 3)
 #' }
+trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full", dropunaired = TRUE){
 
-trakt.getEpisodeData <- function(target, season_nums, extended = "full", dropunaired = TRUE){
+  if (is.null(season_nums)){
+    show.seasons <- trakt.seasons.summary(target = target, extended = "full",
+                                          dropspecials = TRUE, dropunaired = dropunaired)
+    season_nums <- show.seasons$season
+  } else if (length(season_nums) == 1){
+    if (season_nums > 1) season_nums <- 1:season_nums
+  }
 
   # Bind variables later used to please R CMD CHECK
   rating  <- NULL
 
-  show.episodes <- plyr::ldply(season_nums,
-                    function(s){
-                       temp <- trakt.seasons.season(target, s, extended)
-                       if ("images" %in% names(temp)){
-                         names(temp$images$screenshot) <- paste0("screenshot.", names(temp$images$screenshot))
-                         temp <- cbind(temp[names(temp) != "images"], temp$images$screenshot)
-                       }
-                       return(temp)
-                    })
-
+  show.episodes <- trakt.seasons.season(target = target, seasons = season_nums, extended = extended)
 
   # Arrange appropriately
   show.episodes$epid  <- tRakt::pad(show.episodes$season, show.episodes$episode)

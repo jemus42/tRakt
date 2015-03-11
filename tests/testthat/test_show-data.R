@@ -66,17 +66,17 @@ test_that("trakt.seasons.summary returns data.frame", {
   expect_is(trakt.seasons.summary(target = multi_show, extended = "min"), "data.frame")
 })
 
-test_that("trakt.getEpisodeData returns data.frame", {
-  expect_is(trakt.getEpisodeData(target = sample_show, c(1,2,3),
+test_that("trakt.get_all_episodes returns data.frame", {
+  expect_is(trakt.get_all_episodes(target = sample_show, c(1,2,3),
                                  extended = "min"), "data.frame")
-  expect_is(trakt.getEpisodeData(target = sample_show, c(1,2,3),
+  expect_is(trakt.get_all_episodes(target = sample_show, 3,
                                  extended = "full"), "data.frame")
-  expect_is(trakt.getEpisodeData(target = sample_show, c(1,2,3),
+  expect_is(trakt.get_all_episodes(target = sample_show,
                                  extended = "full,images"), "data.frame")
 })
 
-test_that("trakt.getFullShowData returns properly structured list", {
-  show <- trakt.getFullShowData("Breaking Bad")
+test_that("trakt.get_full_showdata returns properly structured list", {
+  show <- trakt.get_full_showdata("Breaking Bad")
   expect_is(show, "list")
   expect_is(show$info, "data.frame")
   expect_is(show$summary, "list")
