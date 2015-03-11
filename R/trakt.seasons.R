@@ -15,7 +15,7 @@
 #' @importFrom lubridate origin
 #' @importFrom lubridate year
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/season/get-single-season-for-a-show}{the trakt API docs for further info}.
-#' If you want to quickly gather data of multiple seasons, see \link[tRakt]{trakt.getEpisodeData}
+#' If you want to quickly gather data of multiple seasons, see \link[tRakt]{trakt.get_all_episodes}
 #' @family show data
 #' @examples
 #' \dontrun{
