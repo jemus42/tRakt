@@ -4,6 +4,7 @@
 
 * **Rename** `trakt.getEpisodeData` -> `trakt.get_all_episodes`
     * Expand handling of `season_nums` argument to make it easier to get all episodes of a show.
+    * Vectorize to enable multiple target input
 * **Rename** `trakt.getFullShowData` -> `trakt.get_full_showdata`
 
 ### v0.12.1

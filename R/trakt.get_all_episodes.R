@@ -34,6 +34,15 @@
 #' }
 trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full", dropunaired = TRUE){
 
+  if (length(target) > 1){
+    response <- plyr::ldply(target, function(t){
+      response <- trakt.get_all_episodes(target = t, season_nums = season_nums, extended = extended,
+                                         dropunaired = dropunaired)
+      response$show <- t
+      return(response)
+    })
+    return(response)
+  }
   if (is.null(season_nums)){
     show.seasons <- trakt.seasons.summary(target = target, extended = "full",
                                           dropspecials = TRUE, dropunaired = dropunaired)
