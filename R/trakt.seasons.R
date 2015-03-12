@@ -53,7 +53,7 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min"){
   }
   if ("images" %in% names(season)){
     names(season$images$screenshot) <- paste0("screenshot.", names(season$images$screenshot))
-    season <- cbind(season[names(season) != "images"], season$images$screenshot)
+    season                          <- cbind(season[names(season) != "images"], season$images$screenshot)
   }
 
   return(season)
@@ -112,11 +112,11 @@ trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE,
   seasons <- cbind(seasons[names(seasons) != "ids"], seasons$ids)
   if ("images" %in% names(seasons)){
     names(seasons$images$poster) <- paste0("poster.", names(seasons$images$poster))
-    seasons$images <- cbind(seasons$images[names(seasons$images) != "poster"], seasons$images$poster)
-    names(seasons$images$thumb) <- paste0("thumb.", names(seasons$images$thumb))
-    seasons$images <- cbind(seasons$images[names(seasons$images) != "thumb"], seasons$images$thumb)
-    names(seasons$images) <- paste0("images.", names(seasons$images))
-    seasons <- cbind(seasons[names(seasons) != "images"], seasons$images)
+    seasons$images               <- cbind(seasons$images[names(seasons$images) != "poster"], seasons$images$poster)
+    names(seasons$images$thumb)  <- paste0("thumb.", names(seasons$images$thumb))
+    seasons$images               <- cbind(seasons$images[names(seasons$images) != "thumb"], seasons$images$thumb)
+    names(seasons$images)        <- paste0("images.", names(seasons$images))
+    seasons                      <- cbind(seasons[names(seasons) != "images"], seasons$images)
   }
 
   return(seasons)
