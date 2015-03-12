@@ -56,30 +56,27 @@ test_that("trakt.show.watching returns returns correct structure", {
   }
 })
 
-#### Test the summary functions ####
-context("Show summary functions")
-
 test_that("trakt.seasons.summary returns data.frame", {
   expect_is(trakt.seasons.summary(target = sample_show, extended = "min"), "data.frame")
   expect_is(trakt.seasons.summary(target = sample_show, extended = "full"), "data.frame")
   expect_is(trakt.seasons.summary(target = sample_show, extended = "full,images"), "data.frame")
-  expect_is(trakt.seasons.summary(target = multi_show, extended = "min"), "data.frame")
+  expect_is(trakt.seasons.summary(target = multi_show,  extended = "min"), "data.frame")
 })
 
+#### Test the summary functions ####
+context("Show summary functions")
+
 test_that("trakt.get_all_episodes returns data.frame", {
-  expect_is(trakt.get_all_episodes(target = sample_show, c(1,2,3),
-                                 extended = "min"), "data.frame")
-  expect_is(trakt.get_all_episodes(target = sample_show, 3,
-                                 extended = "full"), "data.frame")
-  expect_is(trakt.get_all_episodes(target = sample_show,
-                                 extended = "full,images"), "data.frame")
+  expect_is(trakt.get_all_episodes(target = sample_show, c(1,2,3), extended = "min"), "data.frame")
+  expect_is(trakt.get_all_episodes(target = sample_show, 3,        extended = "full"), "data.frame")
+  expect_is(trakt.get_all_episodes(target = sample_show,           extended = "full,images"), "data.frame")
 })
 
 test_that("trakt.get_full_showdata returns properly structured list", {
   show <- trakt.get_full_showdata("Breaking Bad")
-  expect_is(show, "list")
-  expect_is(show$info, "data.frame")
-  expect_is(show$summary, "list")
-  expect_is(show$seasons, "data.frame")
+  expect_is(show,          "list")
+  expect_is(show$info,     "data.frame")
+  expect_is(show$summary,  "list")
+  expect_is(show$seasons,  "data.frame")
   expect_is(show$episodes, "data.frame")
 })
