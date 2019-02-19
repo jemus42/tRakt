@@ -5,9 +5,17 @@ sudo: true
 cache: packages
 dist: xenial
 
+addons:
+ apt:
+  packages:
+   - libgit2-dev
+
 r_binary_packages:
  - testthat
  - jsonlite
+ - git2r
+ - ps
+ - processx
  - httr
  - dplyr
  - lubridate
