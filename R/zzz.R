@@ -1,10 +1,13 @@
-.onAttach <- function(...) {
-  tRakt::get_trakt_credentials()
+# nocov start
+
+.onLoad <- function(...) {
+  get_trakt_credentials()
 }
 
-.onDetach <- function(...) {
-  options(trakt.client.secret = NULL)
+.onUnload <- function(...) {
+  # CLean up options
   options(trakt.client.id = NULL)
-  options(trakt.apikey = NULL)
   options(trakt.username = NULL)
 }
+
+# nocov end
