@@ -11,15 +11,11 @@ vignette: >
 ## First step: Loading packages and trakt.tv credentials
 
 ```{r Startup}
-suppressPackageStartupMessages(library(tRakt)) 
-suppressPackageStartupMessages(library(dplyr)) # For convenience
+library(tRakt)
+library(dplyr)   # For convenience
 library(ggplot2) # For plotting (duh)
 library(knitr)   # for knitr::kable, used to render simple tables
 
-# If you don't have a client.id defined in a key.json, use mine
-if (is.null(getOption("trakt.client.id"))){
-  get_trakt_credentials(client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
-}
 ```
 
 ## Let's pull some data
@@ -53,11 +49,10 @@ slug
 
 # Get the season & episode data
 show.seasons  <- trakt.seasons.summary(slug, extended = "full") # How many seasons are there?
-show.episodes <- trakt.get_all_episodes(slug, show.seasons$season, extended = "full")
+show.episodes <- trakt.get_all_episodes(slug, extended = "full")
 
 # Glimpse at data (only some columns each)
-rownames(show.seasons) <- NULL # This shouldn't be necessary
-show.seasons[c(1, 3, 4)] %>% kable
+show.seasons[c(1, 3, 4)] %>% kable(row.names = FALSE)
 
 show.episodes[c(1:3, 6, 7, 17)] %>% head(10) %>% kable
 ```

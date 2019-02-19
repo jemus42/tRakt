@@ -58,9 +58,6 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
     if (season_nums > 1) season_nums <- seq_len(season_nums)
   }
 
-  # Bind variables later used to please R CMD CHECK
-  utils::globalVariables("rating")
-
   show.episodes <- trakt.seasons.season(target = target, seasons = season_nums,
                                         extended = extended)
 

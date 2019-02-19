@@ -24,8 +24,6 @@
 #' }
 trakt.get_full_showdata <- function(query = NULL, slug = NULL, drop.unaired = TRUE) {
 
-  # Bind variables later used to please R CMD CHECK
-  utils::globalVariables("rating")
 
   # Construct show object
   show <- list()
