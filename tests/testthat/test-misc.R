@@ -32,3 +32,18 @@ test_that("build_trakt_url builds", {
   expect_length(y, 3)
   expect_named(y, c("title", "year", "ids"))
 })
+
+test_that("convert_datetime converts datetime", {
+  url <- "https://api.trakt.tv/shows/breaking-bad/seasons/1?extended=full"
+  response <- httr::GET(url, getOption("trakt.headers"))
+  httr::stop_for_status(response) # In case trakt fails
+  response <- httr::content(response, as = "text")
+  response <- jsonlite::fromJSON(response)
+  expect_is(response, "data.frame")
+
+  expect_is(response$updated_at, "character")
+
+  response <- tRakt:::convert_datetime(response)
+  expect_is(response$updated_at, "POSIXct")
+  expect_equal(attr(response$updated_at, "tzone"), "UTC")
+})

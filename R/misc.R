@@ -70,31 +70,44 @@ parse_trakt_url <- function(url, epid = FALSE, getslug = FALSE) {
 #' Quick datetime conversion
 #'
 #' Searches for datetime variables and converts them to `POSIXct` via \pkg{lubridate}.
-#' @param object The input object. Must be `data.frame` or `list`
+#' @param response The input object. Must be `data.frame`(ish) or `list`.
 #' @return The same object with converted datetimes
-#' @importFrom lubridate parse_date_time
+#' @importFrom lubridate ymd_hms
+#' @importFrom dplyr mutate_at
+#' @import purrr map_at
 #' @keywords internal
-convert_datetime <- function(object) {
-  if (!(class(object) %in% c("data.frame", "list"))) {
-    stop("Object type not supported")
+convert_datetime <- function(response) {
+  if (!inherits(response, c("data.frame", "list"))) {
+    stop("Object type not supported, must inherit from data.frame or list")
   }
   datevars <- c(
     "first_aired", "updated_at", "listed_at", "last_watched_at",
     "rated_at", "friends_at", "followed_at", "collected_at", "joined_at"
   )
 
-  for (i in names(object)) {
-    if (i %in% datevars & !("POSIXct" %in% class(object[[i]]))) {
-      newdates <- lubridate::parse_date_time(object[[i]],
-        "%y-%m-%d %H-%M-%S%z*!",
-        truncated = 3, tz = "UTC"
-      )
-      object[[i]] <- newdates
-    } else if (i %in% c("released", "release_date")) {
-      object[[i]] <- as.POSIXct(object[[i]], tz = "UTC")
-    }
+  datevars <- datevars[datevars %in% names(response)]
+
+  if (inherits(response, "data.frame")) {
+    response %>%
+      dplyr::mutate_at(.vars = dplyr::vars(datevars), lubridate::ymd_hms)
+  } else {
+    purrr::map_at(response, datevars, lubridate::ymd_hms)
   }
-  return(object)
+
+
+
+  # for (i in names(object)) {
+  #   if (i %in% datevars & !("POSIXct" %in% class(object[[i]]))) {
+  #     newdates <- lubridate::parse_date_time(object[[i]],
+  #       "%y-%m-%d %H-%M-%S%z*!",
+  #       truncated = 3, tz = "UTC"
+  #     )
+  #     object[[i]] <- newdates
+  #   } else if (i %in% c("released", "release_date")) {
+  #     object[[i]] <- as.POSIXct(object[[i]], tz = "UTC")
+  #   }
+  # }
+
 }
 
 #' Assemble a trakt.tv API URL

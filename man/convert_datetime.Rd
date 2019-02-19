@@ -4,10 +4,10 @@
 \alias{convert_datetime}
 \title{Quick datetime conversion}
 \usage{
-convert_datetime(object)
+convert_datetime(response)
 }
 \arguments{
-\item{object}{The input object. Must be \code{data.frame} or \code{list}}
+\item{response}{The input object. Must be \code{data.frame}(ish) or \code{list}.}
 }
 \value{
 The same object with converted datetimes
