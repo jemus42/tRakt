@@ -9,9 +9,10 @@
 #' @param dropunaired If `TRUE`, episodes which have not aired yet are dropped.
 #' @return A `list` containing multiple `lists` and `data.frames` with show info.
 #' @export
-#' @note This is primarily intended to be a convenience function for the case where you
-#' really want all that data. If you're just derping around, maybe you should consider interactively
-#' calling the other functions.
+#' @importFrom stats sd
+#' @note This is primarily intended to be a convenience function for the
+#' case where you really want all that data. If you're just derping around, maybe you
+#' should consider interactively calling the other functions.
 #' @family show data
 #' @examples
 #' \dontrun{

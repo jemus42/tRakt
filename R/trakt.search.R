@@ -17,6 +17,7 @@
 #' @importFrom stringr str_match
 #' @importFrom stringr str_replace
 #' @importFrom stringr str_trim
+#' @importFrom utils URLdecode
 #' @note See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for
 #'   further info}
 #' @family API-basics
