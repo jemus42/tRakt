@@ -2,6 +2,10 @@
 
 - Starting to clean things up with some major housekeeping
   - `usethis::use_*` all the things, basically.
+  - Add a `pkgdown` site and a `README.Rmd`
+  - Use `codecov` (and soon more tests)
+  - Apply `styler::style_pkg()`
+  - Update documentation to use markdown
 
 # tRakt 0.13.0
 

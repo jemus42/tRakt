@@ -5,14 +5,14 @@
 \title{Get all the show data}
 \usage{
 trakt.get_full_showdata(query = NULL, slug = NULL,
-  dropunaired = TRUE)
+  drop.unaired = TRUE)
 }
 \arguments{
 \item{query}{Keyword used for \link{trakt.search}. Optional.}
 
 \item{slug}{Used if \code{query} is not specified. Optional, but gives exact results.}
 
-\item{dropunaired}{If \code{TRUE}, episodes which have not aired yet are dropped.}
+\item{drop.unaired}{If \code{TRUE}, episodes which have not aired yet are dropped.}
 }
 \value{
 A \code{list} containing multiple \code{lists} and \code{data.frames} with show info.

@@ -48,7 +48,6 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min") {
 
   # If full data is pulled, ehance the dataset a little
   if ("first_aired" %in% names(season)) {
-    season$first_aired.string <- format(season$first_aired, "%F")
     season$year <- lubridate::year(season$first_aired)
   }
   if ("images" %in% names(season)) {
@@ -70,8 +69,8 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min") {
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
 #' @param extended Use `full,images` to get season posters. Can be
 #' `min` (default), `images`, `full`, `full,images`
-#' @param dropspecials If `TRUE` (default), special episodes (listed as 'season 0') are dropped
-#' @param dropunaired If `TRUE` (default), seasons with `aired_episodes == 0` are dropped.
+#' @param drop.specials If `TRUE` (default), special episodes (listed as 'season 0') are dropped
+#' @param drop.unaired If `TRUE` (default), seasons with `aired_episodes == 0` are dropped.
 #' Only works if `extended` is set to more than `min`.
 #' @return A `data.frame` containing season details (nested in `list` objects)
 #' @export
@@ -83,12 +82,12 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min") {
 #' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.seasons <- trakt.seasons.summary("breaking-bad", extended = "min")
 #' }
-trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE, dropunaired = TRUE) {
+trakt.seasons.summary <- function(target, extended = "min", drop.specials = TRUE, drop.unaired = TRUE) {
   if (length(target) > 1) {
     response <- plyr::ldply(target, function(t) {
       response <- trakt.seasons.summary(
         target = t, extended = extended,
-        dropspecials = dropspecials, dropunaired = dropunaired
+        drop.specials = drop.specials, drop.unaired = drop.unaired
       )
       response$show <- t
       return(response)
@@ -101,10 +100,10 @@ trakt.seasons.summary <- function(target, extended = "min", dropspecials = TRUE,
   seasons <- trakt.api.call(url = url)
 
   # Data cleanup
-  if (dropspecials) {
+  if (drop.specials) {
     seasons <- seasons[seasons$number != 0, ]
   }
-  if (dropunaired & "aired_episodes" %in% names(seasons)) {
+  if (drop.unaired & "aired_episodes" %in% names(seasons)) {
     seasons <- seasons[seasons$aired_episodes > 0, ]
   }
   # Reorganization

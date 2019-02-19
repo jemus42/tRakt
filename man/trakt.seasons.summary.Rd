@@ -4,8 +4,8 @@
 \alias{trakt.seasons.summary}
 \title{Get a show's season information}
 \usage{
-trakt.seasons.summary(target, extended = "min", dropspecials = TRUE,
-  dropunaired = TRUE)
+trakt.seasons.summary(target, extended = "min", drop.specials = TRUE,
+  drop.unaired = TRUE)
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
@@ -14,9 +14,9 @@ trakt.seasons.summary(target, extended = "min", dropspecials = TRUE,
 \item{extended}{Use \code{full,images} to get season posters. Can be
 \code{min} (default), \code{images}, \code{full}, \code{full,images}}
 
-\item{dropspecials}{If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped}
+\item{drop.specials}{If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped}
 
-\item{dropunaired}{If \code{TRUE} (default), seasons with \code{aired_episodes == 0} are dropped.
+\item{drop.unaired}{If \code{TRUE} (default), seasons with \code{aired_episodes == 0} are dropped.
 Only works if \code{extended} is set to more than \code{min}.}
 }
 \value{

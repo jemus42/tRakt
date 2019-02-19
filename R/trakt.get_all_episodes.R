@@ -12,14 +12,17 @@
 #' @param target The `id` of the show requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`.
 #' @param season_nums Vector of season numbers, e.g. `c(1, 2)`. If `NULL`, all the seasons
-#' are pulled by calling \link{trakt.seasons.summary} to determine the number of seasons. If a
-#' vector of length 1 is supplied, it is extended to 1:season_nums.
+#' are retrieved by calling \link{trakt.seasons.summary} to determine the number of seasons.
+#' If a vector of length 1 (e.g. `5`) is supplied, it is extended to `seq_len(season_nums)`.
 #' @param extended Use `full,images` to get season posters. Can be
 #' `min`, `images`, `full` (default), `full,images`.
-#' @param dropunaired If `TRUE` (default), episodes which have not aired yet are dropped.
+#' @param drop.unaired If `TRUE` (default), episodes which have not aired yet are dropped.
+#' @param drop.translations `logical(1) [TRUE]`: Remove list-column containing country-
+#' codes for available translation. This column is unlikely to be of interest and
+#' therefore excluded by default.
 #' @return A `data.frame` containing episode details
 #' @export
-#' @import plyr
+#' @importFrom purrr map_df
 #' @note This function is mainly for convenience.
 #' @family show data
 #' @examples
@@ -32,12 +35,13 @@
 #' # Get first to 3rd season
 #' breakingbad.episodes <- trakt.get_all_episodes("breaking-bad", season_nums = 3)
 #' }
-trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full", dropunaired = TRUE) {
+trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full",
+                                   drop.unaired = TRUE, drop.translations = TRUE) {
   if (length(target) > 1) {
-    response <- plyr::ldply(target, function(t) {
+    response <- purrr::map_df(target, function(t) {
       response <- trakt.get_all_episodes(
         target = t, season_nums = season_nums, extended = extended,
-        dropunaired = dropunaired
+        drop.unaired = drop.unaired
       )
       response$show <- t
       return(response)
@@ -46,36 +50,32 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
   }
   if (is.null(season_nums)) {
     show.seasons <- trakt.seasons.summary(
-      target = target, extended = "full",
-      dropspecials = TRUE, dropunaired = dropunaired
+      target = target, extended = extended,
+      drop.specials = TRUE, drop.unaired = drop.unaired
     )
     season_nums <- show.seasons$season
   } else if (length(season_nums) == 1) {
-    if (season_nums > 1) season_nums <- 1:season_nums
+    if (season_nums > 1) season_nums <- seq_len(season_nums)
   }
 
   # Bind variables later used to please R CMD CHECK
-  rating <- NULL
+  utils::globalVariables("rating")
 
-  show.episodes <- trakt.seasons.season(target = target, seasons = season_nums, extended = extended)
+  show.episodes <- trakt.seasons.season(target = target, seasons = season_nums,
+                                        extended = extended)
 
   # Arrange appropriately
   show.episodes$epid <- tRakt::pad(show.episodes$season, show.episodes$episode)
-  show.episodes$epnum <- 1:(nrow(show.episodes))
+  show.episodes$epnum <- seq_len(nrow(show.episodes))
 
   # Convert seasons to factors because ordering
-  show.episodes$season <- factor(show.episodes$season,
-    levels = as.character(1:max(show.episodes$season)),
-    ordered = T
-  )
+  # show.episodes$season <- factor(show.episodes$season,
+  #   levels = as.character(1:max(show.episodes$season)),
+  #   ordered = TRUE
+  # )
 
-  # Add z-scaled episode ratings, scale per season
-  if (extended != "min") {
-    show.episodes <- plyr::ddply(show.episodes, "season",
-      transform,
-      zrating.season = as.numeric(scale(rating))
-    )
-
+  # Add things
+  if (extended == "full") {
     # Drop episodes with a timestamp of 0, probably faulty data or unaired
     if (nrow(show.episodes[show.episodes$first_aired != 0, ]) > 0) {
       show.episodes <- show.episodes[show.episodes$first_aired != 0, ]
@@ -83,9 +83,14 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
       warning("Data is probably faulty: Some first_aired values are 0")
     }
 
-    if (dropunaired) {
+    if (drop.unaired) {
       show.episodes <- show.episodes[show.episodes$first_aired <= lubridate::now(tzone = "UTC"), ]
     }
+
+    if (drop.translations) {
+      show.episodes <- show.episodes[names(show.episodes) != "available_translations"]
+    }
+
     show.episodes <- show.episodes[!(is.na(show.episodes$first_aired)), ]
   }
 
@@ -97,7 +102,7 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
   }
 
   # Append source
-  show.episodes$src <- "trakt.tv"
+  # show.episodes$src <- "trakt.tv"
 
   return(show.episodes)
 }

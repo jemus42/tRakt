@@ -5,20 +5,24 @@
 \title{Get a show's episodes. All of them.}
 \usage{
 trakt.get_all_episodes(target, season_nums = NULL, extended = "full",
-  dropunaired = TRUE)
+  drop.unaired = TRUE, drop.translations = TRUE)
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.}
 
 \item{season_nums}{Vector of season numbers, e.g. \code{c(1, 2)}. If \code{NULL}, all the seasons
-are pulled by calling \link{trakt.seasons.summary} to determine the number of seasons. If a
-vector of length 1 is supplied, it is extended to 1:season_nums.}
+are retrieved by calling \link{trakt.seasons.summary} to determine the number of seasons.
+If a vector of length 1 (e.g. \code{5}) is supplied, it is extended to \code{seq_len(season_nums)}.}
 
 \item{extended}{Use \code{full,images} to get season posters. Can be
 \code{min}, \code{images}, \code{full} (default), \code{full,images}.}
 
-\item{dropunaired}{If \code{TRUE} (default), episodes which have not aired yet are dropped.}
+\item{drop.unaired}{If \code{TRUE} (default), episodes which have not aired yet are dropped.}
+
+\item{drop.translations}{\code{logical(1) [TRUE]}: Remove list-column containing country-
+codes for available translation. This column is unlikely to be of interest and
+therefore excluded by default.}
 }
 \value{
 A \code{data.frame} containing episode details
