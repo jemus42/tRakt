@@ -21,7 +21,7 @@ See \href{http://docs.trakt.apiary.io/reference/users/stats/get-stats}{the trakt
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-mystats   <- trakt.user.stats() # Defaults to your username if set
+mystats <- trakt.user.stats() # Defaults to your username if set
 seanstats <- trakt.user.stats(user = "sean")
 }
 }

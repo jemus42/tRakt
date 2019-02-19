@@ -26,7 +26,7 @@ See \href{http://docs.trakt.apiary.io/reference/users/collection/get-collection}
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-myshows      <- trakt.user.collection() # Defaults to your username if set
+myshows <- trakt.user.collection() # Defaults to your username if set
 seans.movies <- trakt.user.collection(user = "sean", type = "movies")
 }
 }

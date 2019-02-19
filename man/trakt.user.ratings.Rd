@@ -26,7 +26,7 @@ See \href{http://docs.trakt.apiary.io/reference/users/ratings/get-ratings}{the t
 \examples{
 \dontrun{
 get_trakt_credentials() # Set required API data/headers
-ratedshows  <- trakt.user.ratings()
+ratedshows <- trakt.user.ratings()
 ratedmovies <- trakt.user.ratings(type = "movies")
 }
 }
