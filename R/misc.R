@@ -121,7 +121,7 @@ convert_datetime <- function(object) {
 build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = NULL,
                             target4 = NULL, extended = "min", ...) {
   # Set base values required for everything
-  url <- list(scheme = "https", hostname = "api-v2launch.trakt.tv")
+  url <- list(scheme = "https", hostname = "api.trakt.tv")
   # Set other values
   url$path <- paste(section, target1, target2, target3, target4, sep = "/")
   url$query <- list(..., extended = extended)
