@@ -22,7 +22,8 @@ Imports:
     plyr (>= 1.8.1),
     stringr,
     magrittr,
-    purrr
+    purrr,
+    tibble
 Suggests:
     dplyr (>= 0.4.1),
     ggplot2,
