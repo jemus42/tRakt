@@ -4,9 +4,8 @@ Title: Get Data from 'trakt.tv'
 Version: 0.13.9000
 Date: 2019-02-19
 Authors@R: 
-    person(given = "Lukas Burk",
-           role = c("aut", "cre"),
-           email = "lukas@tadaa-data.de")
+    person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut', 'cre'), 
+           comment = c(ORCID = 'https://orcid.org/0000-0001-7528-3795'))
 Description: A wrapper for the trakt.tv APIv2 which uses httr
     and jsonlite to send non-OAuth2 requests and receive tidied data about tv shows
     and movies, including titles, user ratings and related metadata.
