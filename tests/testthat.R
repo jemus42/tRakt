@@ -1,4 +1,4 @@
 library(testthat)
 library(tRakt)
 
-# test_check("tRakt")
+test_check("tRakt")
