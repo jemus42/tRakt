@@ -23,9 +23,9 @@ functions in this package. The idea is to easily execute all major functions
 required to get a full show dataset.
 }
 \note{
-This is primarily intended to be a convenience function for the case where you
-really want all that data. If you're just derping around, maybe you should consider interactively
-calling the other functions.
+This is primarily intended to be a convenience function for the
+case where you really want all that data. If you're just derping around, maybe you
+should consider interactively calling the other functions.
 }
 \examples{
 \dontrun{
