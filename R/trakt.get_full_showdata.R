@@ -40,12 +40,7 @@ trakt.get_full_showdata <- function(query = NULL, slug = NULL, drop.unaired = TR
   show$episodes <- trakt.get_all_episodes(slug, show$seasons$season,
     drop.unaired = drop.unaired, extended = "full"
   )
-  show$seasons <- plyr::join(show$seasons, plyr::ddply(show$episodes, "season", plyr::summarize,
-    avg.rating.season = round(mean(rating), 1),
-    rating.sd = sd(rating),
-    top.rating.episode = max(rating),
-    lowest.rating.episode = min(rating)
-  ))
+
   # show$seasons$season <- factor(show$seasons$season,
   #   levels = as.character(1:nrow(show$seasons)), ordered = T
   # )
