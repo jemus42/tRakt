@@ -54,7 +54,7 @@ get_trakt_credentials <- function(username = "", client.id = "",
   if (client_id != "") {
     options(trakt.client.id = client_id)
   } else {
-    options(trakt.client.id = "12f[...]df2")
+    options(trakt.client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
     message("I provided my client.id as a fallback for you. Please use it responsibly.")
   }
 
