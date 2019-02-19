@@ -8,6 +8,11 @@ test_that("trakt.get_all_episodes works", {
   expect_true(nrow(result) > 120)
   expect_true(ncol(result) > 6)
   expect_equal(unique(result$show), c("futurama", "breaking-bad"))
+
+  x1 <- trakt.get_all_episodes("futurama", season_nums = 3)
+  x2 <- trakt.get_all_episodes("futurama", season_nums = 1:3)
+
+  expect_identical(x1, x2)
 })
 
 test_that("trakt.get_full_showdata works", {
@@ -18,4 +23,6 @@ test_that("trakt.get_full_showdata works", {
   expect_named(result, c("info", "summary", "seasons", "episodes"))
   expect_true(nrow(result$episodes) > 40)
   expect_true(ncol(result$episodes) > 6)
+
+  expect_error(trakt.get_full_showdata())
 })
