@@ -46,4 +46,5 @@ test_that("convert_datetime converts datetime", {
   response <- tRakt:::convert_datetime(response)
   expect_is(response$updated_at, "POSIXct")
   expect_equal(attr(response$updated_at, "tzone"), "UTC")
+  expect_error(tRakt:::convert_datetime("not_a_df_or_list"))
 })

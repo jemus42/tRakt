@@ -14,15 +14,15 @@
 #' @param season_nums Vector of season numbers, e.g. `c(1, 2)`. If `NULL`, all the seasons
 #' are retrieved by calling \link{trakt.seasons.summary} to determine the number of seasons.
 #' If a vector of length 1 (e.g. `5`) is supplied, it is extended to `seq_len(season_nums)`.
-#' @param extended Use `full,images` to get season posters. Can be
-#' `min`, `images`, `full` (default), `full,images`.
-#' @param drop.unaired If `TRUE` (default), episodes which have not aired yet are dropped.
+#' @param extended Use `full` more data. Can be `min`, `full` (default).
+#' @param drop.unaired `logical(1) [TRUE]`: Episodes which have not aired yet are dropped.
 #' @param drop.translations `logical(1) [TRUE]`: Remove list-column containing country-
 #' codes for available translation. This column is unlikely to be of interest and
 #' therefore excluded by default.
-#' @return A `data.frame` containing episode details
+#' @return A `tbl` containing episode details
 #' @export
 #' @importFrom purrr map_df
+#' @importFrom tibble as_tibble
 #' @note This function is mainly for convenience.
 #' @family show data
 #' @examples
@@ -103,5 +103,5 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
   # Append source
   # show.episodes$src <- "trakt.tv"
 
-  return(show.episodes)
+  return(tibble::as_tibble(show.episodes))
 }

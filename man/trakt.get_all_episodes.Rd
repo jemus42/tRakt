@@ -15,17 +15,16 @@ trakt.get_all_episodes(target, season_nums = NULL, extended = "full",
 are retrieved by calling \link{trakt.seasons.summary} to determine the number of seasons.
 If a vector of length 1 (e.g. \code{5}) is supplied, it is extended to \code{seq_len(season_nums)}.}
 
-\item{extended}{Use \code{full,images} to get season posters. Can be
-\code{min}, \code{images}, \code{full} (default), \code{full,images}.}
+\item{extended}{Use \code{full} more data. Can be \code{min}, \code{full} (default).}
 
-\item{drop.unaired}{If \code{TRUE} (default), episodes which have not aired yet are dropped.}
+\item{drop.unaired}{\code{logical(1) [TRUE]}: Episodes which have not aired yet are dropped.}
 
 \item{drop.translations}{\code{logical(1) [TRUE]}: Remove list-column containing country-
 codes for available translation. This column is unlikely to be of interest and
 therefore excluded by default.}
 }
 \value{
-A \code{data.frame} containing episode details
+A \code{tbl} containing episode details
 }
 \description{
 \code{trakt.get_all_episodes} pulls detailed episode data.
