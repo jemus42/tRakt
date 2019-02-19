@@ -1,3 +1,5 @@
+*.html
+*.R
 cache
 figure
 *.md

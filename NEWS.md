@@ -1,11 +1,17 @@
 # tRakt 0.13.9000
 
-- Starting to clean things up with some major housekeeping
-  - `usethis::use_*` all the things, basically.
-  - Add a `pkgdown` site and a `README.Rmd`
-  - Use `codecov` (and soon more tests)
-  - Apply `styler::style_pkg()`
-  - Update documentation to use markdown
+## Starting to clean things up with some major housekeeping
+
+- `usethis::use_*` all the things, basically.
+- Add a `pkgdown` site and a `README.Rmd`
+- Use `codecov` (and soon more tests)
+- Apply `styler::style_pkg()`
+- Update documentation to use markdown
+- Redo vignette
+
+## Less plyr, more purrr
+
+- Completely removed plyr dependency in favor of purrr
 
 # tRakt 0.13.0
 

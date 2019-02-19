@@ -16,10 +16,11 @@ pad(s = "0", e = "0", s_width = 2, e_width = 2)
 \item{e_width}{The length of the episode number padding. Defaults to 2.}
 }
 \value{
-A \code{character} in standard \code{sXXeYY} format
+A \code{character} in the common \code{sXXeYY} format
 }
 \description{
 Simple function to ease the creation of \code{sXXeYY} episode ids.
+Note that \code{s} and \code{e} ust have the same length.
 }
 \note{
 I like my sXXeYY format, okay?

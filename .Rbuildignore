@@ -1,3 +1,5 @@
+^Meta$
+^doc$
 ^meta\.R$
 ^codecov\.yml$
 ^\.travis\.yml$

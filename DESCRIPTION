@@ -4,11 +4,15 @@ Title: Get Data from 'trakt.tv'
 Version: 0.13.9000
 Date: 2019-02-19
 Authors@R: 
-    person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut', 'cre'), 
-           comment = c(ORCID = 'https://orcid.org/0000-0001-7528-3795'))
+    person(given = "Lukas",
+           family = "Burk",
+           role = c("aut", "cre"),
+           email = "lukas@quantenbrot.de",
+           comment = c(ORCID = "https://orcid.org/0000-0001-7528-3795"))
 Description: A wrapper for the trakt.tv APIv2 which uses httr
-    and jsonlite to send non-OAuth2 requests and receive tidied data about tv shows
-    and movies, including titles, user ratings and related metadata.
+    and jsonlite to send non-OAuth2 requests and receive tidied data about
+    tv shows and movies, including titles, user ratings and related
+    metadata.
 License: MIT + file LICENSE
 URL: http://github.com/jemus42/tRakt
 BugReports: http://github.com/jemus42/tRakt/issues
@@ -18,19 +22,20 @@ Imports:
     httr,
     jsonlite (>= 0.9.14),
     lubridate,
-    stringr,
     magrittr,
     purrr,
+    stringr,
     tibble
 Suggests:
+    covr,
     dplyr (>= 0.4.1),
     ggplot2,
     knitr,
-    testthat,
-    covr
+    rmarkdown,
+    testthat
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1

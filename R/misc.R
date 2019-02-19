@@ -1,11 +1,12 @@
 #' Easy episode id padding
 #'
 #' Simple function to ease the creation of `sXXeYY` episode ids.
+#' Note that `s` and `e` ust have the same length.
 #' @param s Input season number, coerced to `character`.
 #' @param e Input episode number, coerced to `character`.
 #' @param s_width The length of the season number padding. Defaults to 2.
 #' @param e_width The length of the episode number padding. Defaults to 2.
-#' @return A `character` in standard `sXXeYY` format
+#' @return A `character` in the common `sXXeYY` format
 #' @family utility functions
 #' @export
 #' @note I like my sXXeYY format, okay?
@@ -21,10 +22,11 @@ pad <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
   s <- as.numeric(s)
   e <- as.numeric(e)
 
-  fmt <- paste0("%0", width, "d")
+  s_fmt <- paste0("%0", s_width, "d")
+  e_fmt <- paste0("%0", e_width, "d")
 
-  s <- sprintf(fmt, s)
-  e <- sprintf(fmt, e)
+  s <- sprintf(s_fmt, s)
+  e <- sprintf(e_fmt, e)
 
   epstring <- paste0("s", s, "e", e)
   return(epstring)
