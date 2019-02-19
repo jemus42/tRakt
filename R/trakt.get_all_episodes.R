@@ -65,13 +65,6 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
 
   # Arrange appropriately
   show.episodes$epid <- tRakt::pad(show.episodes$season, show.episodes$episode)
-  show.episodes$epnum <- seq_len(nrow(show.episodes))
-
-  # Convert seasons to factors because ordering
-  # show.episodes$season <- factor(show.episodes$season,
-  #   levels = as.character(1:max(show.episodes$season)),
-  #   ordered = TRUE
-  # )
 
   # Add things
   if (extended == "full") {
@@ -96,12 +89,9 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
   # A little extra cleanup
   if (!is.null(show.episodes$episode_abs)) {
     if (all(is.na(show.episodes$episode_abs))) {
-      show.episodes$episode_abs <- show.episodes$epnum
+      show.episodes$episode_abs <- seq_len(nrow(show.episodes))
     }
   }
-
-  # Append source
-  # show.episodes$src <- "trakt.tv"
 
   return(tibble::as_tibble(show.episodes))
 }
