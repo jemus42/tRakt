@@ -31,7 +31,7 @@ This function is heavily used internally, so why not expose it to the user.
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
+library(tRakt)
 trakt.api.call("https://api-v2launch.trakt.tv/shows/breaking-bad?extended=min")
 }
 }

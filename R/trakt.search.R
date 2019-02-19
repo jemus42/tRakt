@@ -38,7 +38,7 @@ trakt.search <- function(query, type = "show", year = NULL) {
 
   # Construct URL, make API call
   url <- build_trakt_url("search", query = query, type = type, year = year)
-  response <- trakt.api.call(url = url, convert.datetime = F)
+  response <- trakt.api.call(url = url, convert.datetime = FALSE)
 
   # Check if response is empty (nothing found)
   if (identical(response, list())) {
@@ -69,7 +69,8 @@ trakt.search <- function(query, type = "show", year = NULL) {
 #' `trakt-movie`, `trakt-show`, `trakt-episode`, `imdb`,
 #' `tmdb`, `tvdb`, `tvrage`
 #' @return A `data.frame` containing a single search result. Hopefully the one you wanted.
-#' If no result is found, the return value is `list(error = "Nothing found")` and a `warning`
+#' If no result is found, the return value is `list(error = "Nothing found")` and
+#' a `warning` is issued.
 #' @export
 #' @importFrom jsonlite fromJSON
 #' @import httr

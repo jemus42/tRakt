@@ -46,7 +46,7 @@ trakt_client_id=12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2
 # (This is automatically executed when calling library(tRakt))
 get_trakt_credentials()
 
-# Explicitly set values in an R session, overriding .Renviron
+# Explicitly set values in an R session, overriding .Renviron values f present
 get_trakt_credentials(
   username = "sean",
   client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2"
