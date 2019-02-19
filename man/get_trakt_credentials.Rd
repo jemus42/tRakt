@@ -4,20 +4,18 @@
 \alias{get_trakt_credentials}
 \title{Set the required trakt.tv API credentials}
 \usage{
-get_trakt_credentials(username = NULL, client.id = NULL,
-  client.secret = NULL, set.headers = TRUE, silent = TRUE)
+get_trakt_credentials(username = "", client.id = "",
+  set.headers = TRUE, silent = TRUE)
 }
 \arguments{
-\item{username}{Explicitly set your trakt.tv username (Not used yet)}
+\item{username}{\code{character(1)}: Explicitly set your trakt.tv username (optional).}
 
-\item{client.id}{Explicitly set your APIv2 client id}
+\item{client.id}{\code{character(1)}: Explicitly set your APIv2 client id (required for API interaciton).}
 
-\item{client.secret}{Explicitly set your APIv2 client secret}
+\item{set.headers}{\code{logical(1) [TRUE]}: Sets the \code{httr} headers
+for \code{GET} requests to the APIv2.}
 
-\item{set.headers}{\code{TRUE} by default. Sets the \code{httr} headers
-for \code{GET} requests for the APIv2}
-
-\item{silent}{If TRUE (default), no messages are printed showing you the API information.
+\item{silent}{\code{logical(1) [TRUE]}: No messages are printed showing you the API information.
 Mostly for debug purposes.}
 }
 \value{
@@ -27,20 +25,28 @@ Nothing. Only messages.
 \code{get_trakt_credentials} searches for your credentials and stores them
 in the appropriate \code{option} variables.
 It also sets the HTTP header required for v2 API calls.
-To make this work automatically, place a \code{key.json} file either in the working directory
-or in \code{~/.config/trakt/key.json}.
+To make this work automatically, place your key as environment variables in
+\code{~/.Renviron}.
 Arguments to this function take precedence over any key file.
 }
 \note{
-Please note that no oauth2 methods are supported yet,
+Please note that no OAuth2 methods are supported yet,
 only client id really matters.
 }
 \examples{
 \dontrun{
-# Use a key.json
+# Set appropriate values in your .Renviron like this:
+(e.g. in ~/.Renviron, depending on your platform)
+
+# tRakt
+trakt_username=jemus42
+trakt_client_id=12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2
+
+# Use a values set in ~/.Renviron in an R session:
+# (This is automatically executed when calling library(tRakt))
 get_trakt_credentials()
 
-# Explicitly set values
+# Explicitly set values in an R session, overriding .Renviron
 get_trakt_credentials(
   username = "sean",
   client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2"
