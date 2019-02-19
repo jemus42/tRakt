@@ -13,7 +13,6 @@
 #' @examples
 #' pad(2, 4) # Returns "s02e04"
 pad <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
-
   if (length(s) != length(e)) {
     warning("pad() called with wrong argument sizes")
     return(rep("", max(length(s), length(e))))

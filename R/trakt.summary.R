@@ -61,8 +61,10 @@ trakt.show.summary <- function(target, extended = "min", force_data_frame = FALS
 trakt.summary <- function(type, target, extended = "min", force_data_frame = FALSE) {
   if (length(target) > 1) {
     response <- purrr::map_df(target, function(t) {
-      response <- trakt.summary(type = type, target = t, extended = extended,
-                                force_data_frame = TRUE)
+      response <- trakt.summary(
+        type = type, target = t, extended = extended,
+        force_data_frame = TRUE
+      )
       return(response)
     })
     return(response)

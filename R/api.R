@@ -7,6 +7,14 @@
 #' `~/.Renviron`.
 #' Arguments to this function take precedence over any key file.
 #'
+#' Set appropriate values in your `~/.Renviron` like this:
+#'
+#' ```sh
+#' # tRakt
+#' trakt_username=jemus42
+#' trakt_client_id=12[...]f2
+#' ```
+#'
 #' @param username `character(1)`: Explicitly set your trakt.tv username (optional).
 #' @param client.id `character(1)`: Explicitly set your APIv2 client id (required for API interaciton).
 #' @param set.headers `logical(1) [TRUE]`: Sets the `httr` headers
@@ -20,13 +28,6 @@
 #' @family API-basics
 #' @examples
 #' \dontrun{
-#' # Set appropriate values in your .Renviron like this:
-#' (e.g. in ~/.Renviron, depending on your platform)
-#'
-#' # tRakt
-#' trakt_username=jemus42
-#' trakt_client_id=12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2
-#'
 #' # Use a values set in ~/.Renviron in an R session:
 #' # (This is automatically executed when calling library(tRakt))
 #' get_trakt_credentials()
