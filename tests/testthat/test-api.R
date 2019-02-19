@@ -1,6 +1,8 @@
 context("test-test-api")
 
 test_that("Client ID is set without .Renviron", {
+  expect_message(get_trakt_credentials(silent = FALSE))
+
   Sys.setenv(trakt_client_id = "")
   expect_message(get_trakt_credentials())
   expect_equal(
@@ -10,8 +12,12 @@ test_that("Client ID is set without .Renviron", {
   expect_message(get_trakt_credentials(silent = TRUE))
   expect_is(getOption("trakt.headers"), "request")
 
-  get_trakt_credentials(username = "arbitraryusername")
+  expect_message(
+    get_trakt_credentials(username = "arbitraryusername", silent = FALSE)
+  )
   expect_equal(getOption("trakt.username"), "arbitraryusername")
+  expect_message(get_trakt_credentials(client.id = "something", silent = FALSE))
+
 })
 
 test_that("trakt.api.call can make API calls", {
