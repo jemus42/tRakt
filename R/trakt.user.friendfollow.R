@@ -22,7 +22,7 @@ trakt.user.friends <- function(user = getOption("trakt.username"), extended = "m
     stop("No username is set.")
   }
   if (length(user) > 1) {
-    response <- plyr::ldply(user, function(user) {
+    response <- purrr::map_df(user, function(user) {
       response <- trakt.user.friends(user = user, extended = extended)
       response$source_user <- user
       return(response)
@@ -68,7 +68,7 @@ trakt.user.followers <- function(user = getOption("trakt.username"), extended = 
     stop("No username is set.")
   }
   if (length(user) > 1) {
-    response <- plyr::ldply(user, function(user) {
+    response <- purrr::map_df(user, function(user) {
       response <- trakt.user.followers(user = user, extended = extended)
       response$source_user <- user
       return(response)
@@ -114,7 +114,7 @@ trakt.user.following <- function(user = getOption("trakt.username"), extended = 
     stop("No username is set.")
   }
   if (length(user) > 1) {
-    response <- plyr::ldply(user, function(user) {
+    response <- purrr::map_df(user, function(user) {
       response <- trakt.user.following(user = user, extended = extended)
       response$source_user <- user
       return(response)

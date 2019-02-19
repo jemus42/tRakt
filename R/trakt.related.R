@@ -64,7 +64,7 @@ trakt.shows.related <- function(target, extended = "min") {
 #' @keywords internal
 trakt.related <- function(target, type, extended = "min") {
   if (length(target) > 1) {
-    response <- plyr::ldply(target, function(t) {
+    response <- purrr::map_df(target, function(t) {
       response <- trakt.related(target = t, type = type, extended = extended)
       response$source <- t
       return(response)

@@ -1,6 +1,6 @@
-#' Get a single movie's release details
+#' Get a movie's release details
 #'
-#' `trakt.movie.releases` returns a single movie's release information,
+#' `trakt.movie.releases` returns one or more movie's release information,
 #' including the release date, country code (two letter, e.g. `us`), and
 #' the certification (e.g. `PG`).
 #' @param target The `id` of the movie requested. Either the `slug`
@@ -20,7 +20,7 @@
 #' }
 trakt.movie.releases <- function(target, country = NULL) {
   if (length(target) > 1) {
-    response <- plyr::ldply(target, function(t) {
+    response <- purrr::map_df(target, function(t) {
       response <- trakt.movie.releases(target = t, country = country)
       response$movie <- t
       return(response)

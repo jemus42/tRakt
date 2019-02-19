@@ -19,7 +19,7 @@
 #' }
 trakt.people.summary <- function(target, extended = "min") {
   if (length(target) > 1) {
-    response <- plyr::ldply(target, function(t) {
+    response <- purrr::map_df(target, function(t) {
       response <- trakt.people.summary(target = t, extended = extended)
       response$person <- t
       return(response)

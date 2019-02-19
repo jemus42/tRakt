@@ -2,7 +2,7 @@
 % Please edit documentation in R/trakt.movie.releases.R
 \name{trakt.movie.releases}
 \alias{trakt.movie.releases}
-\title{Get a single movie's release details}
+\title{Get a movie's release details}
 \usage{
 trakt.movie.releases(target, country = NULL)
 }
@@ -18,7 +18,7 @@ the movie's \code{id} provided as \code{target}.}
 A \code{data.frame} containing movie release dates and certification.
 }
 \description{
-\code{trakt.movie.releases} returns a single movie's release information,
+\code{trakt.movie.releases} returns one or more movie's release information,
 including the release date, country code (two letter, e.g. \code{us}), and
 the certification (e.g. \code{PG}).
 }

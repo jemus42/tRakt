@@ -47,7 +47,7 @@ trakt.show.watching <- function(target, extended = "min") {
 #' @keywords internal
 trakt.watching <- function(type, target, extended = "min") {
   if (length(target) > 1) {
-    response <- plyr::ldply(target, function(t) {
+    response <- purrr::map_df(target, function(t) {
       response <- trakt.watching(type = type, target = t, extended = extended)
       if (!is.null(response)) response$source <- t
       return(response)

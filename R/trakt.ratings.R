@@ -41,7 +41,7 @@ trakt.show.ratings <- function(target) {
 #' @keywords internal
 trakt.ratings <- function(type, target) {
   if (length(target) > 1) {
-    response <- plyr::llply(target, function(t) {
+    response <- purrr::map(target, function(t) {
       response <- trakt.ratings(type = type, target = t)
       ratings <- response[c("rating", "votes")]
       ratings$source <- t

@@ -31,7 +31,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
       response$seasons[[i]]$episodes <- response$seasons[[i]]$episodes[response$seasons[[i]]$number != 0]
     }
 
-    epstats <- plyr::ldply(1:nrow(response), function(show) {
+    epstats <- purrr::map_df(1:nrow(response), function(show) {
       title <- response[show, ]$show$title
       # print(paste(show, title))
       x <- response$seasons[[show]]
@@ -42,7 +42,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"), type = "sh
           x[[2]][[s]][["season"]] <- season_nums[[s]]
         }
         # Bind it all together
-        temp <- plyr::ldply(x[[2]], as.data.frame)
+        temp <- purrr::map_df(x[[2]], as.data.frame)
         temp <- temp[temp$season != 0, ]
       } else {
         temp <- as.data.frame(x[[2]])

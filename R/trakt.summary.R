@@ -60,8 +60,9 @@ trakt.show.summary <- function(target, extended = "min", force_data_frame = FALS
 #' @keywords internal
 trakt.summary <- function(type, target, extended = "min", force_data_frame = FALSE) {
   if (length(target) > 1) {
-    response <- plyr::ldply(target, function(t) {
-      response <- trakt.summary(type = type, target = t, extended = extended, force_data_frame = TRUE)
+    response <- purrr::map_df(target, function(t) {
+      response <- trakt.summary(type = type, target = t, extended = extended,
+                                force_data_frame = TRUE)
       return(response)
     })
     return(response)
