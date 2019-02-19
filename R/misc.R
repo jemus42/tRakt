@@ -3,35 +3,30 @@
 #' Simple function to ease the creation of `sXXeYY` episode ids.
 #' @param s Input season number, coerced to `character`.
 #' @param e Input episode number, coerced to `character`.
-#' @param width The length of the padding. Defaults to 2.
+#' @param s_width The length of the season number padding. Defaults to 2.
+#' @param e_width The length of the episode number padding. Defaults to 2.
 #' @return A `character` in standard `sXXeYY` format
 #' @family utility functions
 #' @export
 #' @note I like my sXXeYY format, okay?
 #' @examples
 #' pad(2, 4) # Returns "s02e04"
-pad <- function(s = "0", e = "0", width = 2) {
-  s <- as.character(s)
-  e <- as.character(e)
-  season <- sapply(s, function(x) {
-    if (nchar(x, "width") < width) {
-      missing <- width - nchar(x, "width")
-      x.pad <- paste0(rep("0", missing), x)
-      return(x.pad)
-    } else {
-      return(x)
-    }
-  })
-  episode <- sapply(e, function(x) {
-    if (nchar(x, "width") < width) {
-      missing <- width - nchar(x, "width")
-      x.pad <- paste0(rep("0", missing), x)
-      return(x.pad)
-    } else {
-      return(x)
-    }
-  })
-  epstring <- paste0("s", season, "e", episode)
+pad <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
+
+  if (length(s) != length(e)) {
+    warning("pad() called with wrong argument sizes")
+    return(rep("", max(length(s), length(e))))
+  }
+
+  s <- as.numeric(s)
+  e <- as.numeric(e)
+
+  fmt <- paste0("%0", width, "d")
+
+  s <- sprintf(fmt, s)
+  e <- sprintf(fmt, e)
+
+  epstring <- paste0("s", s, "e", e)
   return(epstring)
 }
 

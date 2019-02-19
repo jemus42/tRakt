@@ -4,14 +4,16 @@
 \alias{pad}
 \title{Easy episode id padding}
 \usage{
-pad(s = "0", e = "0", width = 2)
+pad(s = "0", e = "0", s_width = 2, e_width = 2)
 }
 \arguments{
 \item{s}{Input season number, coerced to \code{character}.}
 
 \item{e}{Input episode number, coerced to \code{character}.}
 
-\item{width}{The length of the padding. Defaults to 2.}
+\item{s_width}{The length of the season number padding. Defaults to 2.}
+
+\item{e_width}{The length of the episode number padding. Defaults to 2.}
 }
 \value{
 A \code{character} in standard \code{sXXeYY} format
