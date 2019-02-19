@@ -1,3 +1,10 @@
+^codecov\.yml$
+^\.travis\.yml$
+^data-raw$
+^docs$
+^_pkgdown\.yml$
+^README\.Rmd$
+^\.github$
 ^.*\.Rproj$
 ^\.Rproj\.user$
 key.json

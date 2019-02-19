@@ -1,7 +1,7 @@
 context("Movie functions")
 
 sample_movie <- "the-imitation-game-2014"
-multi_movie  <- c("tron-legacy-2010", "the-imitation-game-2014")
+multi_movie <- c("tron-legacy-2010", "the-imitation-game-2014")
 
 test_that("trakt.movie.people returns a list of data.frames", {
   people <- trakt.movie.people(sample_movie)
@@ -26,12 +26,18 @@ test_that("trakt.movie.ratings with multiple inputs returns correct structures",
 test_that("trakt.movie.summary returns correct structure", {
   expect_is(trakt.movie.summary(target = sample_movie, extended = "min"), "list")
   expect_is(trakt.movie.summary(target = sample_movie, extended = "full"), "list")
-  expect_is(trakt.movie.summary(target = sample_movie,
-                               extended = "min", force_data_frame = TRUE), "data.frame")
-  expect_is(trakt.movie.summary(target = sample_movie,
-                               extended = "full", force_data_frame = TRUE), "data.frame")
-  expect_is(trakt.movie.summary(target = sample_movie,
-                               extended = "full,images", force_data_frame = TRUE), "data.frame")
+  expect_is(trakt.movie.summary(
+    target = sample_movie,
+    extended = "min", force_data_frame = TRUE
+  ), "data.frame")
+  expect_is(trakt.movie.summary(
+    target = sample_movie,
+    extended = "full", force_data_frame = TRUE
+  ), "data.frame")
+  expect_is(trakt.movie.summary(
+    target = sample_movie,
+    extended = "full,images", force_data_frame = TRUE
+  ), "data.frame")
   expect_is(trakt.movie.summary(target = multi_movie, extended = "min"), "data.frame")
 })
 
@@ -53,16 +59,16 @@ test_that("trakt.movie.releases returns correct structure", {
 
 test_that("trakt.movie.watching returns returns correct structure", {
   watching <- suppressMessages(trakt.movie.watching(sample_movie, extended = "min"))
-  if (!is.null(watching)){
+  if (!is.null(watching)) {
     expect_is(watching, "data.frame")
   }
   watching <- suppressMessages(trakt.movie.watching(sample_movie, extended = "full"))
-  if (!is.null(watching)){
+  if (!is.null(watching)) {
     expect_is(watching, "data.frame")
     expect_is(watching$joined_at, "POSIXct")
   }
   watching <- suppressMessages(trakt.movie.watching(multi_movie, extended = "min"))
-  if (!is.null(watching)){
+  if (!is.null(watching)) {
     expect_is(watching, "data.frame")
   }
 })

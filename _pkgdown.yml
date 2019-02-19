@@ -1,0 +1,29 @@
+reference:
+  - title: Getting started
+    contents:
+      - starts_with("trakt.search")
+  - title: Getting a lot of data
+    contents:
+      - starts_with("trakt.get")
+  - title: Getting movie data
+    contents:
+      - starts_with("trakt.movie")
+  - title: Getting show data
+    contents:
+      - starts_with("trakt.show")
+      - starts_with("trakt.season")
+  - title: Getting user data
+    contents:
+      - starts_with("trakt.user")
+  - title: Getting people data
+    contents:
+    - starts_with("trakt.people")
+  - title: API & misc helpers
+    contents:
+        - parse_trakt_url
+        - build_trakt_url
+        - trakt.api.call
+        - get_trakt_credentials
+  - title: This package
+    contents:
+      - tRakt

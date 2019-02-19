@@ -1,7 +1,7 @@
 context("User-specific functions")
 
 sample_user <- "jemus42"
-multi_user  <- c("sofakissen", "Fenhl")
+multi_user <- c("sofakissen", "Fenhl")
 
 #### General user data ####
 test_that("trakt.user.stats returns list", {
@@ -50,4 +50,3 @@ test_that("trakt.user.friends returns data.frame", {
   expect_is(trakt.user.friends(user = sample_user, extended = "full"), "data.frame")
   expect_is(trakt.user.friends(user = multi_user, extended = "min"), "data.frame")
 })
-

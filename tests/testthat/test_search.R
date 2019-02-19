@@ -12,10 +12,14 @@ test_that("search can actually find Doctor Who 2005", {
 })
 
 test_that("search by keyword and search by id return identical results", {
-  expect_identical(trakt.search("House of Cards 2013"),
-                   trakt.search.byid("tt1856010", id_type = "imdb"))
-  expect_identical(trakt.search("Tron: Legacy", type = "movie"),
-                   trakt.search.byid("tt1104001", id_type = "imdb"))
+  expect_identical(
+    trakt.search("House of Cards 2013"),
+    trakt.search.byid("tt1856010", id_type = "imdb")
+  )
+  expect_identical(
+    trakt.search("Tron: Legacy", type = "movie"),
+    trakt.search.byid("tt1104001", id_type = "imdb")
+  )
 })
 
 test_that("nonsense search query returns warning (not error)", {
