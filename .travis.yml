@@ -6,9 +6,15 @@ cache: packages
 
 r_binary_packages:
  - testthat
+ - jsonlite
  - httr
  - dplyr
- - jsonlite
+ - lubridate
+ - purrr
+ - stringr
+ - ggplot2
+ - knitr
+ - rmarkdown
 
 r:
 - oldrel
