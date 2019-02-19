@@ -25,10 +25,10 @@ Imports:
     magrittr,
     purrr,
     stringr,
-    tibble
+    tibble,
+    dplyr
 Suggests:
     covr,
-    dplyr (>= 0.4.1),
     ggplot2,
     knitr,
     rmarkdown,

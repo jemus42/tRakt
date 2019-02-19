@@ -74,7 +74,7 @@ parse_trakt_url <- function(url, epid = FALSE, getslug = FALSE) {
 #' @return The same object with converted datetimes
 #' @importFrom lubridate ymd_hms
 #' @importFrom dplyr mutate_at
-#' @import purrr map_at
+#' @importFrom purrr map_at
 #' @keywords internal
 convert_datetime <- function(response) {
   if (!inherits(response, c("data.frame", "list"))) {
