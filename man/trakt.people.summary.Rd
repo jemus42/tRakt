@@ -14,7 +14,7 @@ trakt.people.summary(target, extended = "min")
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
-A \code{data.frame}s with person details.
+A \code{[tibble](tibble::tibble-package)} with person details.
 }
 \description{
 \code{trakt.people.summary} pulls show people data.

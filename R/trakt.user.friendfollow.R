@@ -18,31 +18,35 @@
 #' trakt.user.friends("jemus42")
 #' }
 trakt.user.friends <- function(user = getOption("trakt.username"), extended = "min") {
-  if (is.null(user) && is.null(getOption("trakt.username"))) {
-    stop("No username is set.")
-  }
   if (length(user) > 1) {
     response <- purrr::map_df(user, function(user) {
       response <- trakt.user.friends(user = user, extended = extended)
-      response$source_user <- user
       return(response)
     })
     return(response)
   }
+
+  if ((is.null(user) && is.null(getOption("trakt.username"))) | user == "" | is.numeric(user)) {
+    stop("No username is set.")
+  }
+
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "friends", extended = extended)
   response <- trakt.api.call(url = url)
 
-  if (identical(response, list())) {
-    message(paste0("User ", user, " appears to be private or have no network"))
-    return(NULL)
-  }
-  # Flatten the data.frame
+  response <- tibble::as_tibble(response)
+
+  # Flatten the tbl
   response <- cbind(response[names(response) != "user"], response$user)
+  response <- cbind(response[names(response) != "ids"], response$ids)
+
+  # Drop avatars because no.
+  response <- response[names(response) != "images"]
+
   # Ensure datetime conversion
   response <- convert_datetime(response)
 
-  return(response)
+  tibble::as_tibble(tibble::remove_rownames(response))
 }
 
 #' Get a user's followers
@@ -54,7 +58,7 @@ trakt.user.friends <- function(user = getOption("trakt.username"), extended = "m
 #' appended to indicated which user belongs to wich input user.
 #' @param extended Either `min` for standard info, `full` for details or `full,images`
 #' for additional avatar URLs.
-#' @return A `data.frame` containing user information.
+#' @return A `[tibble](tibble::tibble-package)` containing user information.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/followers/get-followers}{the trakt API docs for further info}
 #' @family user data
@@ -64,31 +68,35 @@ trakt.user.friends <- function(user = getOption("trakt.username"), extended = "m
 #' trakt.user.followers("jemus42")
 #' }
 trakt.user.followers <- function(user = getOption("trakt.username"), extended = "min") {
-  if (is.null(user) && is.null(getOption("trakt.username"))) {
-    stop("No username is set.")
-  }
   if (length(user) > 1) {
     response <- purrr::map_df(user, function(user) {
       response <- trakt.user.followers(user = user, extended = extended)
-      response$source_user <- user
       return(response)
     })
     return(response)
   }
+
+  if ((is.null(user) && is.null(getOption("trakt.username"))) | user == "" | is.numeric(user)) {
+    stop("No username is set.")
+  }
+
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "followers", extended = extended)
   response <- trakt.api.call(url = url)
 
-  if (identical(response, list())) {
-    message(paste0("User ", user, " appears to be private or have no network"))
-    return(NULL)
-  }
-  # Flatten the data.frame
+  response <- tibble::as_tibble(response)
+
+  # Flatten the tbl
   response <- cbind(response[names(response) != "user"], response$user)
+  response <- cbind(response[names(response) != "ids"], response$ids)
+
+  # Drop avatars because no.
+  response <- response[names(response) != "images"]
+
   # Ensure datetime conversion
   response <- convert_datetime(response)
 
-  return(response)
+  tibble::as_tibble(tibble::remove_rownames(response))
 }
 
 #' Get a user's followings
@@ -110,29 +118,33 @@ trakt.user.followers <- function(user = getOption("trakt.username"), extended = 
 #' trakt.user.following("jemus42")
 #' }
 trakt.user.following <- function(user = getOption("trakt.username"), extended = "min") {
-  if (is.null(user) && is.null(getOption("trakt.username"))) {
-    stop("No username is set.")
-  }
   if (length(user) > 1) {
     response <- purrr::map_df(user, function(user) {
       response <- trakt.user.following(user = user, extended = extended)
-      response$source_user <- user
       return(response)
     })
     return(response)
   }
+
+  if ((is.null(user) && is.null(getOption("trakt.username"))) | user == "" | is.numeric(user)) {
+    stop("No username is set.")
+  }
+
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "following", extended = extended)
   response <- trakt.api.call(url = url)
 
-  if (identical(response, list())) {
-    message(paste0("User ", user, " appears to be private or have no network"))
-    return(NULL)
-  }
-  # Flatten the data.frame
+  response <- tibble::as_tibble(response)
+
+  # Flatten the tbl
   response <- cbind(response[names(response) != "user"], response$user)
+  response <- cbind(response[names(response) != "ids"], response$ids)
+
+  # Drop avatars because no.
+  response <- response[names(response) != "images"]
+
   # Ensure datetime conversion
   response <- convert_datetime(response)
 
-  return(response)
+  tibble::as_tibble(tibble::remove_rownames(response))
 }

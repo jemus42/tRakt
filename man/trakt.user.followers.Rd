@@ -16,7 +16,7 @@ appended to indicated which user belongs to wich input user.}
 for additional avatar URLs.}
 }
 \value{
-A \code{data.frame} containing user information.
+A \code{[tibble](tibble::tibble-package)} containing user information.
 }
 \description{
 \code{trakt.user.followers} pulls a user's followers
