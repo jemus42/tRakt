@@ -8,7 +8,7 @@ trakt.movie.summary(target, extended = "min", force_data_frame = FALSE)
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}. If multiple targets are
+(e.g. \code{"inception-2010"}), \code{trakt id} or \code{IMDb id}. If multiple targets are
 supplied, the results will be \code{rbind}ed together, automatically setting \code{force_data_frame}
 to \code{TRUE}.}
 
@@ -19,7 +19,7 @@ Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 in a flat \code{data.frame} suitable to be \code{rbind}ed to other summary results.}
 }
 \value{
-A \code{list} or \code{data.frame} containing movie information
+A \code{list} or \code{\link[tibble:tibble-package]{tibble}} containing movie information
 }
 \description{
 \code{trakt.movie.summary} returns a single movie's summary information.

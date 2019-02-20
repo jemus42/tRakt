@@ -19,7 +19,7 @@ Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 in a flat \code{data.frame} suitable to be \code{rbind}ed to other summary results.}
 }
 \value{
-A \code{list} or \code{data.frame} containing summary info
+A \code{list} or \code{\link[tibble:tibble-package]{tibble}} containing summary info
 }
 \description{
 \code{trakt.show.summary} pulls show summary data and returns it compactly.

@@ -2,14 +2,14 @@
 #'
 #' `trakt.movie.summary` returns a single movie's summary information.
 #' @param target The `id` of the show requested. Either the `slug`
-#' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`. If multiple targets are
+#' (e.g. `"inception-2010"`), `trakt id` or `IMDb id`. If multiple targets are
 #' supplied, the results will be `rbind`ed together, automatically setting `force_data_frame`
 #' to `TRUE`.
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
 #' @param force_data_frame If `TRUE`, the `list` is unnested as much as possible, resulting
 #' in a flat `data.frame` suitable to be `rbind`ed to other summary results.
-#' @return A `list` or `data.frame` containing movie information
+#' @return A `list` or [`tibble`][tibble::tibble-package] containing movie information
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/summary/get-a-movie}{the trakt API docs for further info}
 #' @family movie data
@@ -40,7 +40,7 @@ trakt.movie.summary <- function(target, extended = "min", force_data_frame = FAL
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
 #' @param force_data_frame If `TRUE`, the `list` is unnested as much as possible, resulting
 #' in a flat `data.frame` suitable to be `rbind`ed to other summary results.
-#' @return A `list` or `data.frame` containing summary info
+#' @return A `list` or [`tibble`][tibble::tibble-package] containing summary info
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/summary}{the trakt API docs for further info}
 #' @family show data

@@ -4,10 +4,11 @@
 
 - `usethis::use_*` all the things, basically.
 - Add a `pkgdown` site and a `README.Rmd`
-- Use `codecov` (and soon more tests)
+- Use `codecov`
 - Apply `styler::style_pkg()`
 - Update documentation to use markdown
 - Redo vignette
+- Tests. So many tests.
 
 ## Less plyr, more purrr
 
