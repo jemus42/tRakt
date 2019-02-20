@@ -1,4 +1,3 @@
-Meta
 doc
 inst/doc
 meta.R
@@ -10,8 +9,7 @@ meta.R
 .Rdata
 .Rproj.user
 .RData
-tests.R
-key.json
+
 .httr-oauth
 .Rprofile
 
