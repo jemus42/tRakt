@@ -7,12 +7,11 @@
 #' `extended` to customize output amount.
 #' @param target The `id` of the show requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
-#' @param seasons The season(s) to get. Defaults to 1. Use 0 for special episodes.
-#' @param extended Use `full,images` to get season posters. Can be
-#' `min` (default), `images`, `full`, `full,images`
-#' @return A `data.frame` containing all of a season's episodes
+#' @param seasons `integer [1L]`: The season(s) to get. Use 0 for special episodes.
+#' @param extended Use `full` to get season posters. Can be
+#' `min` (default), `images`, `full`, `full`
+#' @return A `[tibble](tibble::tibble-package)` containing all of a season's episodes
 #' @export
-#' @importFrom lubridate origin
 #' @importFrom lubridate year
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/season/get-single-season-for-a-show}{the trakt API docs for further info}.
 #' If you want to quickly gather data of multiple seasons, see \link[tRakt]{trakt.get_all_episodes}
@@ -22,13 +21,19 @@
 #' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.seasons <- trakt.seasons.season("breaking-bad", 1)
 #' }
-trakt.seasons.season <- function(target, seasons = 1, extended = "min") {
+trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
   if (length(seasons) > 1) {
     response <- purrr::map_df(seasons, function(s) {
       response <- trakt.seasons.season(target, s, extended = extended)
       return(response)
     })
     return(response)
+  }
+
+  # Basic sanity check
+  seasons <- suppressWarnings(as.integer(seasons))
+  if (seasons < 0 | is.na(seasons) | is.null(seasons)) {
+    stop("season cannot be coerced to non-negative integer.")
   }
 
   # Construct URL, make API call
@@ -38,7 +43,7 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min") {
   # Catch unknown season error
   if (identical(season, list())) {
     warning(paste("Season", seasons, " of ", target, "does not appear to exist"))
-    return(NULL)
+    return(tibble::tibble())
   }
   # Reorganization
   names(season) <- sub("number", "episode", names(season))
@@ -50,12 +55,8 @@ trakt.seasons.season <- function(target, seasons = 1, extended = "min") {
   if ("first_aired" %in% names(season)) {
     season$year <- lubridate::year(season$first_aired)
   }
-  if ("images" %in% names(season)) {
-    names(season$images$screenshot) <- paste0("screenshot.", names(season$images$screenshot))
-    season <- cbind(season[names(season) != "images"], season$images$screenshot)
-  }
 
-  return(season)
+  return(tibble::as_tibble(season))
 }
 
 #' Get a show's season information

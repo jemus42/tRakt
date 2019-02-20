@@ -4,19 +4,19 @@
 \alias{trakt.seasons.season}
 \title{Get a season of a show}
 \usage{
-trakt.seasons.season(target, seasons = 1, extended = "min")
+trakt.seasons.season(target, seasons = 1L, extended = "min")
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
-\item{seasons}{The season(s) to get. Defaults to 1. Use 0 for special episodes.}
+\item{seasons}{\code{integer [1L]}: The season(s) to get. Use 0 for special episodes.}
 
-\item{extended}{Use \code{full,images} to get season posters. Can be
-\code{min} (default), \code{images}, \code{full}, \code{full,images}}
+\item{extended}{Use \code{full} to get season posters. Can be
+\code{min} (default), \code{images}, \code{full}, \code{full}}
 }
 \value{
-A \code{data.frame} containing all of a season's episodes
+A \code{[tibble](tibble::tibble-package)} containing all of a season's episodes
 }
 \description{
 \code{trakt.seasons.season} pulls a season's full data.
