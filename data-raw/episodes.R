@@ -6,7 +6,7 @@ library(stringr)
 library(tidyr)
 
 # Futurama ----
-futurama <- tRakt::trakt.get_all_episodes("futurama")
+futurama <- as_tibble(tRakt::trakt.get_all_episodes("futurama"))
 usethis::use_data(futurama, overwrite = TRUE)
 
 
@@ -38,10 +38,10 @@ got <- trakt.get_all_episodes("game-of-thrones") %>%
 # Cleanup, reordering
 got %<>%
   select(
-    episode_abs, episode, season, epid, runtime, title,
+    episode_abs, episode, season, runtime, title,
     year, overview, starts_with("rating"), starts_with("votes"), viewers,
     director, writer,
-    first_aired, first_aired.string,
+    first_aired,
     trakt, imdb, tvdb, tmdb
   ) %>%
   arrange(episode_abs)
