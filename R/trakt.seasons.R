@@ -73,7 +73,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
 #' @param drop.specials If `TRUE` (default), special episodes (listed as 'season 0') are dropped
 #' @param drop.unaired If `TRUE` (default), seasons with `aired_episodes == 0` are dropped.
 #' Only works if `extended` is set to more than `min`.
-#' @return A `data.frame` containing season details (nested in `list` objects)
+#' @return A `[tibble](tibble::tibble-package)` containing season details (nested in `list` objects)
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
 #' for further info
@@ -90,7 +90,6 @@ trakt.seasons.summary <- function(target, extended = "min", drop.specials = TRUE
         target = t, extended = extended,
         drop.specials = drop.specials, drop.unaired = drop.unaired
       )
-      response$show <- t
       return(response)
     })
     return(response)
@@ -111,14 +110,6 @@ trakt.seasons.summary <- function(target, extended = "min", drop.specials = TRUE
   names(seasons) <- sub("number", "season", names(seasons))
   # Flattening
   seasons <- cbind(seasons[names(seasons) != "ids"], seasons$ids)
-  if ("images" %in% names(seasons)) {
-    names(seasons$images$poster) <- paste0("poster.", names(seasons$images$poster))
-    seasons$images <- cbind(seasons$images[names(seasons$images) != "poster"], seasons$images$poster)
-    names(seasons$images$thumb) <- paste0("thumb.", names(seasons$images$thumb))
-    seasons$images <- cbind(seasons$images[names(seasons$images) != "thumb"], seasons$images$thumb)
-    names(seasons$images) <- paste0("images.", names(seasons$images))
-    seasons <- cbind(seasons[names(seasons) != "images"], seasons$images)
-  }
 
-  return(seasons)
+  return(tibble::as_tibble(seasons))
 }

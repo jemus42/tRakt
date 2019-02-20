@@ -20,7 +20,7 @@ trakt.seasons.summary(target, extended = "min", drop.specials = TRUE,
 Only works if \code{extended} is set to more than \code{min}.}
 }
 \value{
-A \code{data.frame} containing season details (nested in \code{list} objects)
+A \code{[tibble](tibble::tibble-package)} containing season details (nested in \code{list} objects)
 }
 \description{
 \code{trakt.seasons.summary} pulls season data.
