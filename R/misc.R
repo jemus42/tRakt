@@ -81,7 +81,7 @@ convert_datetime <- function(response) {
     stop("Object type not supported, must inherit from data.frame or list")
   }
   datevars <- c(
-    "first_aired", "updated_at", "listed_at", "last_watched_at",
+    "first_aired", "updated_at", "listed_at", "last_watched_at", "last_updated_at",
     "rated_at", "friends_at", "followed_at", "collected_at", "joined_at"
   )
 

@@ -86,5 +86,5 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
   watched <- convert_datetime(watched)
   watched$last_watched.year <- lubridate::year(watched$last_watched_at)
 
-  return(watched)
+  tibble::as_tibble(watched)
 }
