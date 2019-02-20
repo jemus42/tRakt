@@ -2,7 +2,7 @@ context("test-user-friendfollow")
 
 test_that("trakt.user.followers works", {
   skip_on_cran()
-  skip_on_travis()
+  #skip_on_travis()
 
   user <- "jemus42"
 
@@ -29,7 +29,7 @@ test_that("trakt.user.followers works", {
 
 test_that("trakt.user.following works", {
   skip_on_cran()
-  skip_on_travis()
+  #skip_on_travis()
 
   user <- "jemus42"
 
@@ -56,7 +56,7 @@ test_that("trakt.user.following works", {
 
 test_that("trakt.user.friends works", {
   skip_on_cran()
-  skip_on_travis()
+  #skip_on_travis()
 
   user <- "jemus42"
 
