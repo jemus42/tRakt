@@ -71,5 +71,5 @@ trakt.trending <- function(type, limit = 10, page = 1, extended = "min") {
   }
   response <- convert_datetime(response)
 
-  return(response)
+  tibble::remove_rownames(tibble::as_tibble(response))
 }

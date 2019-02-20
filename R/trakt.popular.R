@@ -63,5 +63,5 @@ trakt.popular <- function(type, limit = 10, page = 1, extended = "min") {
   # Spreading out ids to get a flat data.frame
   response <- cbind(response[names(response) != "ids"], response$ids)
 
-  return(response)
+  tibble::remove_rownames(tibble::as_tibble(response))
 }
