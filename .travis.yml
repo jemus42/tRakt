@@ -6,33 +6,33 @@ cache: packages
 dist: xenial
 
 addons:
- apt:
-  packages:
-   - libgit2-dev
+  apt:
+    packages:
+      - libgit2-dev
 
 r_binary_packages:
- - testthat
- - jsonlite
- - git2r
- - ps
- - processx
- - httr
- - dplyr
- - lubridate
- - purrr
- - stringr
- - ggplot2
- - knitr
- - rmarkdown
- - commonmark
- - highlight
- - xml2
- - roxygen2
+  - testthat
+  - jsonlite
+  - git2r
+  - ps
+  - processx
+  - httr
+  - dplyr
+  - lubridate
+  - purrr
+  - stringr
+  - ggplot2
+  - knitr
+  - rmarkdown
+  - commonmark
+  - highlight
+  - xml2
+  - roxygen2
 
 r:
-- oldrel
-- release
-- devel
+  - oldrel
+  - release
+  - devel
 
 after_success:
   - Rscript -e 'covr::codecov()'
