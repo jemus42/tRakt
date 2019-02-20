@@ -8,7 +8,7 @@
 #' (e.g. `"bryan-cranston"`), `trakt id` or `IMDb id`
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
-#' @return A `data.frame`s with person details.
+#' @return A `[tibble](tibble::tibble-package)` with person details.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/summary/get-a-single-person}{the trakt API docs for further info}
 #' @family people data
@@ -21,7 +21,6 @@ trakt.people.summary <- function(target, extended = "min") {
   if (length(target) > 1) {
     response <- purrr::map_df(target, function(t) {
       response <- trakt.people.summary(target = t, extended = extended)
-      response$person <- t
       return(response)
     })
     return(response)
@@ -41,12 +40,12 @@ trakt.people.summary <- function(target, extended = "min") {
   data <- as.data.frame(data)
   data <- cbind(data, ids)
 
-  return(data)
+  return(tibble::as_tibble(data))
 }
 
 #' Get a single person's movie credits
 #'
-#' `trakt.people.movies` pulls show people data.
+#' `trakt.people.movies` pulls movie people data.
 #'
 #' Returns all movies where this person is in the cast or crew.
 #' @param target The `id` of the person requested. Either the `slug`
@@ -150,8 +149,10 @@ trakt.show.people <- function(target, extended = "min") {
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
-  response$cast <- cbind(response$cast[names(response$cast) != "person"], response$cast$person)
-  response$cast <- cbind(response$cast[names(response$cast) != "ids"], response$cast$ids)
+  response$cast <- cbind(response$cast[names(response$cast) != "person"],
+                         response$cast$person)
+  response$cast <- cbind(response$cast[names(response$cast) != "ids"],
+                         response$cast$ids)
 
   return(response)
 }
@@ -182,8 +183,10 @@ trakt.movie.people <- function(target, extended = "min") {
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
-  response$cast <- cbind(response$cast[names(response$cast) != "person"], response$cast$person)
-  response$cast <- cbind(response$cast[names(response$cast) != "ids"], response$cast$ids)
+  response$cast <- cbind(response$cast[names(response$cast) != "person"],
+                         response$cast$person)
+  response$cast <- cbind(response$cast[names(response$cast) != "ids"],
+                         response$cast$ids)
 
   return(response)
 }

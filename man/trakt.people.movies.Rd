@@ -17,7 +17,7 @@ Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 A \code{data.frame}s with person details.
 }
 \description{
-\code{trakt.people.movies} pulls show people data.
+\code{trakt.people.movies} pulls movie people data.
 }
 \details{
 Returns all movies where this person is in the cast or crew.
