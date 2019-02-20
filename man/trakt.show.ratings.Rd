@@ -11,7 +11,7 @@ trakt.show.ratings(target)
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 }
 \value{
-A \code{list} containing show ratings and distribution
+A \code{tibble} containing show ratings and distribution
 }
 \description{
 \code{trakt.show.ratings} returns a single show's rating and distribution.

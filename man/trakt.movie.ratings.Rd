@@ -11,7 +11,7 @@ trakt.movie.ratings(target)
 (e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}}
 }
 \value{
-A \code{list} containing movie ratings and distribution
+A \code{tibble} containing movie ratings and distribution
 }
 \description{
 \code{trakt.movie.ratings} returns a single movie's rating and distribution.
