@@ -5,11 +5,6 @@ sudo: true
 cache: packages
 dist: xenial
 
-stages:
-  - name: deploy
-    # require the branch name to be master (note for PRs this is the base branch name)
-    if: r = release
-
 addons:
  apt:
   packages:
@@ -49,3 +44,4 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+    condition: "$TRAVIS_R_VERSION_STRING = release"
