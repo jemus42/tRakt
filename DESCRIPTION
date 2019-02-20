@@ -8,7 +8,7 @@ Authors@R:
            family = "Burk",
            role = c("aut", "cre"),
            email = "lukas@quantenbrot.de",
-           comment = c(ORCID = "https://orcid.org/0000-0001-7528-3795"))
+           comment = c(ORCID = "0000-0001-7528-3795"))
 Description: A wrapper for the trakt.tv APIv2 which uses httr
     and jsonlite to send non-OAuth2 requests and receive tidied data about
     tv shows and movies, including titles, user ratings and related
