@@ -86,10 +86,10 @@ trakt.summary <- function(type, target, extended = "min", force_data_frame = FAL
     if ("available_translations" %in% names(response)) {
       temp[["available_translations"]] <- I(list(response$available_translations))
     }
-    if ("images" %in% names(response)) {
-      temp[["images"]][[1]] <- I(response$images)
-    }
-    response <- temp
+    # if ("images" %in% names(response)) {
+    #   temp[["images"]][[1]] <- I(response$images)
+    # }
+    response <- tibble::as_tibble(temp)
   }
   return(response)
 }
