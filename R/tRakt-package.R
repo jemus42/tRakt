@@ -5,5 +5,6 @@
 #' This package is meant to provide the basic functions required to pull series data, which
 #' then can be used either for interactive use and standalone graphs, or for more complex applications.
 #' @name tRakt
+#' @importFrom tibble tibble
 #' @docType package
 NULL

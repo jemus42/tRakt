@@ -23,6 +23,7 @@ test_that("Client ID is set without .Renviron", {
 test_that("trakt.api.call can make API calls", {
   skip_on_cran()
 
+  get_trakt_credentials()
   url <- "https://api-v2launch.trakt.tv/shows/breaking-bad?extended=min"
   result <- trakt.api.call(url)
 
