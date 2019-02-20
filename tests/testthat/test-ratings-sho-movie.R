@@ -7,11 +7,13 @@ test_that("trakt.[show|movies].ratings works", {
   ratings_show <- trakt.show.ratings(target = target_show)
   ratings_movie <- trakt.movie.ratings(target = target_movie)
 
-  expect_equal(ncol(ratings_show), 3)
-  expect_equal(ncol(ratings_movie), 3)
+  expect_equal(ncol(ratings_show), 5)
+  expect_equal(ncol(ratings_movie), 5)
 
-  expect_named(ratings_show, c("rating", "votes", "distribution"))
-  expect_named(ratings_movie, c("rating", "votes", "distribution"))
+  expected_names <- c("id", "type", "votes", "rating", "distribution")
+
+  expect_named(ratings_show, expected_names)
+  expect_named(ratings_movie, expected_names)
 
   expect_equal(nrow(trakt.show.ratings(target = rep(target_show, 2))), 2)
 })
