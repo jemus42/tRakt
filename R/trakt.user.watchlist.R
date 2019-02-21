@@ -37,5 +37,5 @@ trakt.user.watchlist <- function(user = getOption("trakt.username"),
   }
   response <- cbind(response[names(response) != "ids"], response$ids)
   response <- convert_datetime(response)
-  return(response)
+  tibble::as_tibble(response)
 }
