@@ -19,7 +19,7 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
   check_username(user)
   match.arg(type)
 
-  if (!is.null(rating) && !(rating %in% 1:10)) {
+  if (!is.null(rating) & !(as.numeric(rating) %in% 1:10)) {
     stop("rating must be between 1 and 10")
   }
 
