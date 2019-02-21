@@ -36,8 +36,6 @@ r:
 
 after_success:
   - Rscript -e 'covr::codecov()'
-  on:
-    condition: "$TRAVIS_R_VERSION_STRING = release"
 
 before_deploy: Rscript -e 'remotes::install_cran("pkgdown")'
 deploy:
