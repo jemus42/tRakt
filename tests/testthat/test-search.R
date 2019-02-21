@@ -5,11 +5,13 @@ test_that("trakt.search works", {
 
   res <- trakt.search("russian doll", type = "show")
   res_y <- trakt.search("russian doll", type = "show", year = "2019")
+  res_y2 <- trakt.search("russian doll 2019", type = "show")
 
 
   expect_is(res, "tbl")
   expect_equal(nrow(res), 1)
   expect_identical(res, res_y)
+  expect_identical(res, res_y2)
 
   res <- trakt.search("russian doll", type = "movie")
   expect_is(res, "tbl")
