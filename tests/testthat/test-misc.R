@@ -24,7 +24,7 @@ test_that("parse_trakt_url parses", {
 })
 
 test_that("build_trakt_url builds", {
-  x <- build_trakt_url("shows", "breaking-bad", extended = "min")
+  x <- build_trakt_url("shows", "breaking-bad", extended = "min", validate = TRUE)
   expect_is(x, "character")
 
   get_trakt_credentials()
@@ -54,5 +54,5 @@ test_that("check_user is okay", {
   expect_error(tRakt:::check_username(user = NA))
   expect_error(tRakt:::check_username(user = 4))
   expect_error(tRakt:::check_username(user = ""))
-  expect_true(tRakt:::check_username(user = "jemus42"))
+  expect_true(tRakt:::check_username(user = "jemus42", validate = TRUE))
 })

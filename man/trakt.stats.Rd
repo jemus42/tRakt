@@ -2,29 +2,22 @@
 % Please edit documentation in R/trakt.stats.R
 \name{trakt.stats}
 \alias{trakt.stats}
-\title{\link{Defunct} Get a show or movie's stats}
+\title{Get a show or movie's stats}
 \usage{
-trakt.stats(target, type = "shows", extended = "min")
+trakt.stats(target, type = c("shows", "movies"))
 }
 \arguments{
 \item{target}{The \code{id} of the show/movie requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.}
 
 \item{type}{Either \code{shows} (default) or \code{movies}, depending the \code{target} type.}
-
-\item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}.}
 }
 \value{
-A \code{list} containing show stats
+A \code{tibble} containing show stats
 }
 \description{
-DEFUNCT as of 2015-03-06,
-see \href{http://docs.trakt.apiary.io/reference/shows/stats/get-show-stats}{their API docs}
-}
-\details{
 \code{trakt.stats} pulls show stats and returns it compactly.
-The data includes show ratings, scrobbles, checkins, plays, comments…
+The data includes show ratings, scrobbles, checkins, plays, comments...
 }
 \note{
 See \href{http://docs.trakt.apiary.io/#reference/shows/stats}{the trakt API docs for further info}

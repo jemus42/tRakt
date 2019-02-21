@@ -1,16 +1,11 @@
-#' [Defunct] Get a show or movie's stats
-#'
-#' DEFUNCT as of 2015-03-06,
-#' see \href{http://docs.trakt.apiary.io/reference/shows/stats/get-show-stats}{their API docs}
+#' Get a show or movie's stats
 #'
 #' `trakt.stats` pulls show stats and returns it compactly.
-#' The data includes show ratings, scrobbles, checkins, plays, comments…
+#' The data includes show ratings, scrobbles, checkins, plays, comments...
 #' @param target The `id` of the show/movie requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`.
 #' @param type Either `shows` (default) or `movies`, depending the `target` type.
-#' @param extended Whether extended info should be provided.
-#' Defaults to `"min"`, can either be `"min"` or `"full"`.
-#' @return A `list` containing show stats
+#' @return A `tibble` containing show stats
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/stats}{the trakt API docs for further info}
 #' @family show data
@@ -20,11 +15,21 @@
 #' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.stats <- trakt.stats(type = "shows", "breaking-bad")
 #' }
-trakt.stats <- function(target, type = "shows", extended = "min") {
+trakt.stats <- function(target, type = c("shows", "movies")) {
+
+  match.arg(type)
+  if (length(type) > 1) type <- type[1]
+
+  if (length(target) > 1) {
+    res <- purrr::map_df(target, ~trakt.stats(.x, type = type))
+    return(res)
+  }
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, target, "stats", extended = extended)
+  url <- build_trakt_url(type, target, "stats")
   response <- trakt.api.call(url = url)
+  response$type <- type
+  response$id <- target
 
-  return(response)
+  tibble::as_tibble(response)
 }
