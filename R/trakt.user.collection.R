@@ -1,71 +1,70 @@
 #' Get a user's collected shows or movies
 #'
-#' `trakt.user.collection` pulls a user's watched shows or movies.
+#' `trakt.user.collection` retrieves a user's watched shows or movies.
 #' It does not use OAuth2, so you can only get data for a user with a
 #' public profile.
 #' @param user Target user. Defaults to `getOption("trakt.username")`
 #' @param type Either `shows` (default) or `movies`
-#' @return A `data.frame` containing stats
+#' @param unnest_episodes `logical(1) [FALSE]`: Unnests episode data using
+#' `[tidyr](tidyr::unnest)` and returns one row per episode rather than one row per show.
+#' @return A `tibble` containing shows with either nested (list column) or
+#' unnested episodes.
 #' @export
 #' @note See [the trakt API docs for further info](http://docs.trakt.apiary.io/reference/users/collection/get-collection)
 #' @family user data
+#' @import dplyr
+#' @importFrom lubridate ymd_hms
 #' @examples
 #' \dontrun{
 #' get_trakt_credentials() # Set required API data/headers
 #' myshows <- trakt.user.collection() # Defaults to your username if set
 #' seans.movies <- trakt.user.collection(user = "sean", type = "movies")
 #' }
-trakt.user.collection <- function(user = getOption("trakt.username"), type = "shows") {
-  if (is.null(user) && is.null(getOption("trakt.username"))) {
-    stop("No username is set.")
-  }
+trakt.user.collection <- function(user = getOption("trakt.username"),
+                                  type = c("shows", "movies"),
+                                  unnest_episodes = FALSE) {
+  check_username(user)
+  match.arg(type)
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "collection", type)
   response <- trakt.api.call(url = url)
 
   if (type == "shows") {
+    # Flatten out ids
+    response$show <- cbind(response$show[names(response$show) != "ids"], response$show$ids)
+    names(response$show) <- paste0("show_", names(response$show))
+    response <- cbind(response[names(response) != "show"], response$show)
+    response <- dplyr::select(response, -seasons, dplyr::everything(), seasons)
 
-    # Drop specials (s00)
-    for (i in nrow(response$show)) {
-      response$seasons[[i]]$episodes <- response$seasons[[i]]$episodes[response$seasons[[i]]$number != 0]
-    }
+    # I think importing tidyr for this alone is worth it, because
+    # A list structure this big and deeply nested is just wrong:
+    # (response[[11]][[1]])[[2]][[1]][[2]]
 
-    epstats <- purrr::map_df(1:nrow(response), function(show) {
-      title <- response[show, ]$show$title
-      # print(paste(show, title))
-      x <- response$seasons[[show]]
-      season_nums <- x[[1]]
-      # Create per-season datasets, append season number
-      if (length(x[[1]]) > 1) {
-        for (s in 1:length(season_nums)) {
-          x[[2]][[s]][["season"]] <- season_nums[[s]]
-        }
-        # Bind it all together
-        temp <- purrr::map_df(x[[2]], as.data.frame)
-        temp <- temp[temp$season != 0, ]
-      } else {
-        temp <- as.data.frame(x[[2]])
-        temp[["season"]] <- season_nums
+    if (unnest_episodes) {
+      if (!requireNamespace("tidyr", quietly = TRUE)) {
+        stop("This functionality requires the tidyr package")
       }
 
-      temp$title <- title
-      names(temp) <- sub("number", "episode", names(temp))
-      return(temp)
-    })
+      # Please R CMD check
+      seasons <- number <- episodes <- collected_at <- NULL
 
-    watched <- epstats[c("title", "season", "episode", "collected_at")]
+      response <- tibble::as_tibble(response) %>%
+        tidyr::unnest(seasons) %>%
+        dplyr::rename(season_number = number) %>%
+        tidyr::unnest(episodes) %>%
+        dplyr::rename(episode_number = number) %>%
+        dplyr::mutate(collected_at = lubridate::ymd_hms(collected_at))
+    }
+
   } else if (type == "movies") {
     # Flatten out ids
-    movies <- cbind(response$movie[names(response$movie) != "ids"], response$movie$ids)
-
-    watched <- cbind(response[names(response) != "movie"], movies)
-  } else {
-    stop("Unknown type, must be 'shows' or 'movies'")
+    response$movie <- cbind(response$movie[names(response$movie) != "ids"],
+                             response$movie$ids)
+    response <- cbind(response[names(response) != "movie"], response$movie)
   }
   # To be sure
-  watched <- convert_datetime(watched)
-  watched$collected.year <- lubridate::year(watched$collected_at)
+  response <- convert_datetime(response)
 
-  return(watched)
+  tibble::as_tibble(response)
 }

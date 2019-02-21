@@ -5,18 +5,22 @@
 \title{Get a user's collected shows or movies}
 \usage{
 trakt.user.collection(user = getOption("trakt.username"),
-  type = "shows")
+  type = c("shows", "movies"), unnest_episodes = FALSE)
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
 
 \item{type}{Either \code{shows} (default) or \code{movies}}
+
+\item{unnest_episodes}{\code{logical(1) [FALSE]}: Unnests episode data using
+\code{[tidyr](tidyr::unnest)} and returns one row per episode rather than one row per show.}
 }
 \value{
-A \code{data.frame} containing stats
+A \code{tibble} containing shows with either nested (list column) or
+unnested episodes.
 }
 \description{
-\code{trakt.user.collection} pulls a user's watched shows or movies.
+\code{trakt.user.collection} retrieves a user's watched shows or movies.
 It does not use OAuth2, so you can only get data for a user with a
 public profile.
 }

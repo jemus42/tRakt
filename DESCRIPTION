@@ -32,7 +32,8 @@ Suggests:
     ggplot2,
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    tidyr
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
