@@ -54,5 +54,5 @@ test_that("check_user is okay", {
   expect_error(tRakt:::check_username(user = NA))
   expect_error(tRakt:::check_username(user = 4))
   expect_error(tRakt:::check_username(user = ""))
-  expect_true(tRakt:::check_username(user = "jemus42", validate = TRUE))
+  expect_is(tRakt:::check_username(user = "jemus42", validate = TRUE), "list")
 })
