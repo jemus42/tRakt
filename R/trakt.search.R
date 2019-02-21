@@ -57,7 +57,9 @@ trakt.search <- function(query, type = "show", year = NULL) {
     result <- response[stringmatch, ][[type]]
   }
 
-  return(result)
+  result <- result[names(result) != "images"]
+
+  tibble::as_tibble(result)
 }
 
 #' Lookup a show via id
@@ -94,5 +96,7 @@ trakt.search.byid <- function(id, id_type = "trakt-show") {
     return(list(error = "Nothing found"))
   }
   response <- response[[ncol(response)]]
-  return(response)
+  response <- response[names(response) != "images"]
+
+  tibble::as_tibble(response)
 }
