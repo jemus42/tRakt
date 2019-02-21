@@ -84,11 +84,11 @@ get_trakt_credentials <- function(username = "", client.id = "",
 #' @param url APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.
 #' @param headers HTTP headers to set. Must be result of `httr::add_headers`.
 #' Default value is `getOption("trakt.headers")` set by \link[tRakt]{get_trakt_credentials}.
-#' @param fromJSONify If `TRUE` (default), the API response will be converted to an object via
-#' `jsonlite::fromJSON`
-#' @param convert.datetime If `TRUE` (default), datetime variables are converted to
-#' `POSIXct`. Requires `fromJSONify` to be `TRUE` as well.
+#' @param convert.datetime If `TRUE` (default), known top-level datetime variables
+#' are converted to `POSIXct`. This might miss some variables and does not recurse
+#' into nested lists or list-columns.
 #' @return The content of the API response, `jsonlite::fromJSON`'d if requested.
+#' An empty [tibble](tibble::tibble-package) if the response is an empty array.
 #' @export
 #' @import httr
 #' @importFrom jsonlite fromJSON
@@ -99,7 +99,7 @@ get_trakt_credentials <- function(username = "", client.id = "",
 #' library(tRakt)
 #' trakt.api.call("https://api-v2launch.trakt.tv/shows/breaking-bad?extended=min")
 #' }
-trakt.api.call <- function(url, headers = getOption("trakt.headers"), fromJSONify = TRUE,
+trakt.api.call <- function(url, headers = getOption("trakt.headers"),
                            convert.datetime = TRUE) {
   if (is.null(headers) & is.null(getOption("trakt.headers"))) {
     stop("HTTP headers not set, see ?get_trakt_credentials")
@@ -107,11 +107,15 @@ trakt.api.call <- function(url, headers = getOption("trakt.headers"), fromJSONif
   response <- httr::GET(url, headers)
   httr::stop_for_status(response) # In case trakt fails
   response <- httr::content(response, as = "text")
-  if (fromJSONify) {
-    response <- jsonlite::fromJSON(response)
-    if (convert.datetime) {
-      response <- convert_datetime(response)
-    }
+  response <- jsonlite::fromJSON(response)
+
+  if (identical(response, list()) | is.null(response)) {
+    return(data.frame())
   }
+
+  if (convert.datetime & !is.null(names(response))) {
+    response <- convert_datetime(response)
+  }
+
   return(response)
 }

@@ -5,7 +5,7 @@
 \title{Get a user's watchlist}
 \usage{
 trakt.user.watchlist(user = getOption("trakt.username"),
-  type = "shows", extended = "min")
+  type = c("movies", "shows"), extended = "min")
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
@@ -16,7 +16,7 @@ trakt.user.watchlist(user = getOption("trakt.username"),
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
-A \code{data.frame} containing stats.
+A \code{tibble} containing stats.
 }
 \description{
 \code{trakt.user.watchlist} pulls a user's watchlist.
@@ -27,9 +27,9 @@ See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{th
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
-mystats <- trakt.user.watchlist() # Defaults to your username if set
-seanstats <- trakt.user.watchlist(user = "sean")
+library(tRakt)
+movie_watchlist <- trakt.user.watchlist(type = "movies") # Defaults to your username if set
+sean_movies <- trakt.user.watchlist(user = "sean") # Defaults to movie watchlist
 }
 }
 \seealso{

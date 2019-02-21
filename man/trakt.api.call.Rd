@@ -5,7 +5,7 @@
 \title{Make an APIv2 call to any URL}
 \usage{
 trakt.api.call(url, headers = getOption("trakt.headers"),
-  fromJSONify = TRUE, convert.datetime = TRUE)
+  convert.datetime = TRUE)
 }
 \arguments{
 \item{url}{APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.}
@@ -13,14 +13,13 @@ trakt.api.call(url, headers = getOption("trakt.headers"),
 \item{headers}{HTTP headers to set. Must be result of \code{httr::add_headers}.
 Default value is \code{getOption("trakt.headers")} set by \link[tRakt]{get_trakt_credentials}.}
 
-\item{fromJSONify}{If \code{TRUE} (default), the API response will be converted to an object via
-\code{jsonlite::fromJSON}}
-
-\item{convert.datetime}{If \code{TRUE} (default), datetime variables are converted to
-\code{POSIXct}. Requires \code{fromJSONify} to be \code{TRUE} as well.}
+\item{convert.datetime}{If \code{TRUE} (default), known top-level datetime variables
+are converted to \code{POSIXct}. This might miss some variables and does not recurse
+into nested lists or list-columns.}
 }
 \value{
 The content of the API response, \code{jsonlite::fromJSON}'d if requested.
+An empty \href{tibble::tibble-package}{tibble} if the response is an empty array.
 }
 \description{
 \code{trakt.api.call} makes an APIv2 call to a specified URL
