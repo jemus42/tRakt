@@ -19,9 +19,9 @@ contains play stats for \emph{every} watched episode of \emph{every} show. Other
 the returned \code{data.frame} only contains play stats per show or movie respectively.
 }
 \description{
-\code{trakt.user.watched} pulls a user's watched shows or movies.
+\code{trakt.user.watched} retrieves a user's watched shows or movies.
 It does not use OAuth2, so you can only get data for a user with a
-public profile.
+\strong{public profile}.
 }
 \note{
 See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the trakt API docs for further info}

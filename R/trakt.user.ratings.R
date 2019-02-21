@@ -18,9 +18,12 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
                                type = c("shows", "episodes", "movies"), rating = NULL) {
   check_username(user)
   match.arg(type)
+  if (length(type) > 1) type <- type[1]
 
-  if (!is.null(rating) & !(as.numeric(rating) %in% 1:10)) {
-    stop("rating must be between 1 and 10")
+  if (!is.null(rating)) {
+    if (!(as.numeric(rating) %in% 1:10)) {
+      stop("rating must be between 1 and 10")
+    }
   }
 
   # Construct URL, make API call
