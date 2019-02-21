@@ -26,4 +26,5 @@ test_that("trakt.user.ratings works", {
   # Error conditions ----
   expect_error(trakt.user.ratings(user = -1))
   expect_error(trakt.user.ratings(user = user, type = "seven"))
+  expect_error(trakt.user.ratings(user = user, type = "movies", rating = -2))
 })

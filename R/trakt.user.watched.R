@@ -5,7 +5,7 @@
 #' public profile.
 #' @param user Target user. Defaults to `getOption("trakt.username")`
 #' @param type Either `shows` (default), `shows.extended` or `movies`
-#' @return A `data.frame` containing stats.
+#' @return A `[tibble](tibble::tibble-package)`.
 #' if `type` is set to `shows.extended`, the resulting `data.frame`
 #' contains play stats for _every_ watched episode of _every_ show. Otherwise,
 #' the returned `data.frame` only contains play stats per show or movie respectively.
@@ -14,14 +14,14 @@
 #' @family user data
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
+#' library(tRakt)
 #' myshows <- trakt.user.watched() # Defaults to your username if set
 #' seans.shows <- trakt.user.watched(user = "sean")
 #' }
-trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows") {
-  if (is.null(user) && is.null(getOption("trakt.username"))) {
-    stop("No username is set.")
-  }
+trakt.user.watched <- function(user = getOption("trakt.username"),
+                               type = c("shows", "shows.extended", "movies")) {
+  check_username(user)
+  match.arg(type)
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "watched", type)
@@ -44,11 +44,6 @@ trakt.user.watched <- function(user = getOption("trakt.username"), type = "shows
 
     watched <- cbind(response[!(names(response) %in% c("show", "seasons"))], shows)
   } else if (type == "shows.extended") {
-
-    # Drop specials (s00)
-    for (i in nrow(response$show)) {
-      response$seasons[[i]]$episodes <- response$seasons[[i]]$episodes[response$seasons[[i]]$number != 0]
-    }
 
     epstats <- purrr::map_df(1:nrow(response), function(show) {
       title <- response[show, ]$show$title

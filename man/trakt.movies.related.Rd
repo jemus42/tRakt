@@ -4,7 +4,7 @@
 \alias{trakt.movies.related}
 \title{Search for related movies}
 \usage{
-trakt.movies.related(target, extended = "min")
+trakt.movies.related(target, extended = c("min", "full"))
 }
 \arguments{
 \item{target}{The \code{id} of the movie requested. Either the \code{slug}
@@ -16,7 +16,7 @@ containing the provided \code{id} of the input.}
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}.}
 }
 \value{
-A \code{data.frame} containing search results
+A \href{tibble::tibble-package}{tibble}.
 }
 \description{
 \code{trakt.movies.related} returns movies related to the input movie.
@@ -29,7 +29,7 @@ See \href{http://docs.trakt.apiary.io/reference/movies/related/get-related-movie
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
+library(tRakt)
 related <- trakt.movies.related("tron-legacy-2010")
 }
 }

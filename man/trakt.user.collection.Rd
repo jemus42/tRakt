@@ -20,7 +20,7 @@ A \code{tibble} containing shows with either nested (list column) or
 unnested episodes.
 }
 \description{
-\code{trakt.user.collection} retrieves a user's watched shows or movies.
+\code{trakt.user.collection} retrieves a user's collected shows or movies.
 It does not use OAuth2, so you can only get data for a user with a
 public profile.
 }
@@ -29,7 +29,7 @@ See \href{http://docs.trakt.apiary.io/reference/users/collection/get-collection}
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
+library(tRakt)
 myshows <- trakt.user.collection() # Defaults to your username if set
 seans.movies <- trakt.user.collection(user = "sean", type = "movies")
 }

@@ -4,18 +4,18 @@
 \alias{trakt.user.ratings}
 \title{Get a user's ratings}
 \usage{
-trakt.user.ratings(user = getOption("trakt.username"), type = "shows",
-  rating = NULL)
+trakt.user.ratings(user = getOption("trakt.username"),
+  type = c("shows", "episodes", "movies"), rating = NULL)
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
 
-\item{type}{Either \code{shows} (default) or \code{movies}}
+\item{type}{Either \code{shows} (default), \code{episodes} or \code{movies}}
 
 \item{rating}{A rating to filter by. Can be \code{1} through \code{10}, default is \code{NULL}}
 }
 \value{
-A \code{list} or \code{data.frame} containing stats.
+A \href{tibble::tibble-package}{tibble}.
 }
 \description{
 \code{trakt.user.ratings} pulls a user's ratings
@@ -25,7 +25,7 @@ See \href{http://docs.trakt.apiary.io/reference/users/ratings/get-ratings}{the t
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
+library(tRakt)
 ratedshows <- trakt.user.ratings()
 ratedmovies <- trakt.user.ratings(type = "movies")
 }

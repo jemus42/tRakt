@@ -4,7 +4,7 @@
 \alias{trakt.related}
 \title{Search for related shows or movies}
 \usage{
-trakt.related(target, type, extended = "min")
+trakt.related(target, type, extended = c("min", "full"))
 }
 \arguments{
 \item{target}{The \code{id} of the show/movie requested. Either the \code{slug}
@@ -12,9 +12,6 @@ trakt.related(target, type, extended = "min")
 
 \item{extended}{Whether extended info should be provided.
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
-}
-\value{
-A \code{data.frame} containing search results
 }
 \description{
 \code{trakt.related} returns shows or movies related to the input show/movie.

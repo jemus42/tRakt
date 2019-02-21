@@ -4,7 +4,7 @@
 \alias{trakt.shows.related}
 \title{Search for related shows}
 \usage{
-trakt.shows.related(target, extended = "min")
+trakt.shows.related(target, extended = c("min", "full"))
 }
 \arguments{
 \item{target}{The \code{id} of the movie requested. Either the \code{slug}
@@ -14,9 +14,6 @@ containing the provided \code{id} of the input.}
 
 \item{extended}{Whether extended info should be provided.
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}.}
-}
-\value{
-A \code{data.frame} containing search results
 }
 \description{
 \code{trakt.shows.related} returns shows related to the input show.
@@ -29,7 +26,7 @@ See \href{http://docs.trakt.apiary.io/#reference/shows/related/get-related-shows
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
+library(tRakt)
 related <- trakt.shows.related("game-of-thrones")
 }
 }

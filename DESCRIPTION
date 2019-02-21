@@ -2,7 +2,7 @@ Type: Package
 Package: tRakt
 Title: Get Data from 'trakt.tv'
 Version: 0.13.9000
-Date: 2019-02-20
+Date: 2019-02-21
 Authors@R: 
     person(given = "Lukas",
            family = "Burk",

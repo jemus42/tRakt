@@ -1,5 +1,8 @@
 # tRakt 0.13.9000
 
+Many functions were refactored, which in some cases changes the output.  
+Not only do most functions return a `tibble` now, but some additionally computed variables have been removed as well.
+
 ## Starting to clean things up with some major housekeeping
 
 - `usethis::use_*` all the things, basically.

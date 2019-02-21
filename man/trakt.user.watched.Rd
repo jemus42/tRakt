@@ -4,7 +4,8 @@
 \alias{trakt.user.watched}
 \title{Get a user's watched shows or movies}
 \usage{
-trakt.user.watched(user = getOption("trakt.username"), type = "shows")
+trakt.user.watched(user = getOption("trakt.username"),
+  type = c("shows", "shows.extended", "movies"))
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
@@ -12,7 +13,7 @@ trakt.user.watched(user = getOption("trakt.username"), type = "shows")
 \item{type}{Either \code{shows} (default), \code{shows.extended} or \code{movies}}
 }
 \value{
-A \code{data.frame} containing stats.
+A \code{[tibble](tibble::tibble-package)}.
 if \code{type} is set to \code{shows.extended}, the resulting \code{data.frame}
 contains play stats for \emph{every} watched episode of \emph{every} show. Otherwise,
 the returned \code{data.frame} only contains play stats per show or movie respectively.
@@ -27,7 +28,7 @@ See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the t
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
+library(tRakt)
 myshows <- trakt.user.watched() # Defaults to your username if set
 seans.shows <- trakt.user.watched(user = "sean")
 }

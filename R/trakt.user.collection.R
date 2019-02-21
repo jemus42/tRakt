@@ -1,6 +1,6 @@
 #' Get a user's collected shows or movies
 #'
-#' `trakt.user.collection` retrieves a user's watched shows or movies.
+#' `trakt.user.collection` retrieves a user's collected shows or movies.
 #' It does not use OAuth2, so you can only get data for a user with a
 #' public profile.
 #' @param user Target user. Defaults to `getOption("trakt.username")`
@@ -16,7 +16,7 @@
 #' @importFrom lubridate ymd_hms
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
+#' library(tRakt)
 #' myshows <- trakt.user.collection() # Defaults to your username if set
 #' seans.movies <- trakt.user.collection(user = "sean", type = "movies")
 #' }
