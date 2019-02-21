@@ -31,7 +31,7 @@
 #' # Use a values set in ~/.Renviron in an R session:
 #' # (This is automatically executed when calling library(tRakt))
 #' get_trakt_credentials()
-#'
+#' 
 #' # Explicitly set values in an R session, overriding .Renviron values f present
 #' get_trakt_credentials(
 #'   username = "sean",
@@ -41,8 +41,7 @@
 get_trakt_credentials <- function(username = "", client.id = "",
                                   set.headers = TRUE,
                                   silent = TRUE) {
-
-  username  <- ifelse(username == "", Sys.getenv("trakt_username"), username)
+  username <- ifelse(username == "", Sys.getenv("trakt_username"), username)
   client_id <- ifelse(client.id == "", Sys.getenv("trakt_client_id"), client.id)
 
   if (username != "") {

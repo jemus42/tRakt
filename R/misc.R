@@ -94,21 +94,6 @@ convert_datetime <- function(response) {
   } else {
     purrr::map_at(response, datevars, lubridate::ymd_hms)
   }
-
-
-
-  # for (i in names(object)) {
-  #   if (i %in% datevars & !("POSIXct" %in% class(object[[i]]))) {
-  #     newdates <- lubridate::parse_date_time(object[[i]],
-  #       "%y-%m-%d %H-%M-%S%z*!",
-  #       truncated = 3, tz = "UTC"
-  #     )
-  #     object[[i]] <- newdates
-  #   } else if (i %in% c("released", "release_date")) {
-  #     object[[i]] <- as.POSIXct(object[[i]], tz = "UTC")
-  #   }
-  # }
-
 }
 
 #' Assemble a trakt.tv API URL

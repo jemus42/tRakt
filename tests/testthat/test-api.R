@@ -17,7 +17,6 @@ test_that("Client ID is set without .Renviron", {
   )
   expect_equal(getOption("trakt.username"), "arbitraryusername")
   expect_message(get_trakt_credentials(client.id = "something", silent = FALSE))
-
 })
 
 test_that("trakt.api.call can make API calls", {

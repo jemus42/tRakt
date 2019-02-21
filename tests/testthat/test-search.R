@@ -29,7 +29,8 @@ test_that("trakt.search.byid works", {
   expect_identical(res, res2)
 
   expect_warning(trakt.search.byid(id = 1, id_type = "imdb"))
-  expect_warning(trakt.search.byid(id = "nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb",
-                                   id_type = "trakt-movie"))
-
+  expect_warning(trakt.search.byid(
+    id = "nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb",
+    id_type = "trakt-movie"
+  ))
 })

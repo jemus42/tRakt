@@ -5,8 +5,10 @@ test_that("trakt.seasons.season works", {
 
   target <- "futurama"
 
-  min_names <- c("season", "episode", "title", "trakt", "tvdb",
-                 "imdb", "tmdb", "tvrage")
+  min_names <- c(
+    "season", "episode", "title", "trakt", "tvdb",
+    "imdb", "tmdb", "tvrage"
+  )
 
   min_s1_single <- trakt.seasons.season(target = target, seasons = 1, extended = "min")
   full_s1_single <- trakt.seasons.season(target = target, seasons = 1, extended = "full")
@@ -28,11 +30,12 @@ test_that("trakt.seasons.season works", {
 
   # Multi-length input seasons
   expect_identical(
-    rbind(trakt.seasons.season(target = target, seasons = 1),
-          trakt.seasons.season(target = target, seasons = 2)),
+    rbind(
+      trakt.seasons.season(target = target, seasons = 1),
+      trakt.seasons.season(target = target, seasons = 2)
+    ),
     trakt.seasons.season(target = target, seasons = 1:2)
   )
-
 })
 
 
@@ -41,10 +44,14 @@ test_that("trakt.seasons.summary works", {
 
   target <- "futurama"
 
-  result_min <- trakt.seasons.summary(target = target, extended = "min",
-                                      drop.specials = TRUE, drop.unaired = TRUE)
-  result_max <- trakt.seasons.summary(target = target, extended = "full",
-                                      drop.specials = TRUE, drop.unaired = TRUE)
+  result_min <- trakt.seasons.summary(
+    target = target, extended = "min",
+    drop.specials = TRUE, drop.unaired = TRUE
+  )
+  result_max <- trakt.seasons.summary(
+    target = target, extended = "full",
+    drop.specials = TRUE, drop.unaired = TRUE
+  )
 
   expect_is(result_min, "tbl")
   expect_is(result_max, "tbl")

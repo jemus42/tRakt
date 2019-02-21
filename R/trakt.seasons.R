@@ -41,7 +41,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
   season <- trakt.api.call(url = url)
 
   # Catch unknown season error
-  if (identical(season, list())) {
+  if (identical(season, data.frame())) {
     warning(paste("Season", seasons, " of ", target, "does not appear to exist"))
     return(tibble::tibble())
   }
@@ -56,7 +56,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
     season$year <- lubridate::year(season$first_aired)
   }
 
-  return(tibble::as_tibble(season))
+  tibble::as_tibble(season)
 }
 
 #' Get a show's season information
@@ -64,16 +64,16 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
 #' `trakt.seasons.summary` pulls season data.
 #' Get details for a show's seasons, e.g. how many seasons there are, how many epsiodes
 #' each season has, and season posters.
-#' See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
-#' `extended` to customize output amount.
+#' See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for
+#' possible values of `extended` to customize output amount.
 #' @param target The `id` of the show requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
-#' @param extended Use `full,images` to get season posters. Can be
-#' `min` (default), `images`, `full`, `full,images`
-#' @param drop.specials If `TRUE` (default), special episodes (listed as 'season 0') are dropped
-#' @param drop.unaired If `TRUE` (default), seasons with `aired_episodes == 0` are dropped.
+#' @param extended `["min", "full"]`: Amount of variables to return.
+#' @param drop.specials `logical(1) [TRUE]`: Special episodes (season 0) are dropped
+#' @param drop.unaired `logical(1) [TRUE]`: Seasons without aired episodes are dropped.
 #' Only works if `extended` is set to more than `min`.
-#' @return A `[tibble](tibble::tibble-package)` containing season details (nested in `list` objects)
+#' @return A `[tibble](tibble::tibble-package)` containing season details
+#' (nested in `list` objects)
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
 #' for further info
@@ -83,14 +83,18 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
 #' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.seasons <- trakt.seasons.summary("breaking-bad", extended = "min")
 #' }
-trakt.seasons.summary <- function(target, extended = "min", drop.specials = TRUE, drop.unaired = TRUE) {
+trakt.seasons.summary <- function(target, extended = c("min", "full"), drop.specials = TRUE,
+                                  drop.unaired = TRUE) {
+
+  match.arg(extended)
+  if (length(extended) > 2) extended <- extended[1]
+
   if (length(target) > 1) {
     response <- purrr::map_df(target, function(t) {
-      response <- trakt.seasons.summary(
+      trakt.seasons.summary(
         target = t, extended = extended,
         drop.specials = drop.specials, drop.unaired = drop.unaired
       )
-      return(response)
     })
     return(response)
   }
@@ -111,5 +115,5 @@ trakt.seasons.summary <- function(target, extended = "min", drop.specials = TRUE
   # Flattening
   seasons <- cbind(seasons[names(seasons) != "ids"], seasons$ids)
 
-  return(tibble::as_tibble(seasons))
+  tibble::as_tibble(seasons)
 }

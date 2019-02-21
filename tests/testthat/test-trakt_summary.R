@@ -5,10 +5,14 @@ test_that("trakt.show.summary works", {
   show_min_list <- trakt.show.summary(target, force_data_frame = FALSE)
   show_min_df <- trakt.show.summary(target, force_data_frame = TRUE)
 
-  show_full_list <- trakt.show.summary(target, extended = "full",
-                                       force_data_frame = FALSE)
-  show_full_df <- trakt.show.summary(target, extended = "full",
-                                     force_data_frame = TRUE)
+  show_full_list <- trakt.show.summary(target,
+    extended = "full",
+    force_data_frame = FALSE
+  )
+  show_full_df <- trakt.show.summary(target,
+    extended = "full",
+    force_data_frame = TRUE
+  )
 
   expect_is(show_min_list, "list")
   expect_is(show_min_df, "tbl")
@@ -29,10 +33,14 @@ test_that("trakt.movie.summary works", {
   movie_min_list <- trakt.movie.summary(target, force_data_frame = FALSE)
   movie_min_df <- trakt.movie.summary(target, force_data_frame = TRUE)
 
-  movie_full_list <- trakt.movie.summary(target, extended = "full",
-                                       force_data_frame = FALSE)
-  movie_full_df <- trakt.movie.summary(target, extended = "full",
-                                     force_data_frame = TRUE)
+  movie_full_list <- trakt.movie.summary(target,
+    extended = "full",
+    force_data_frame = FALSE
+  )
+  movie_full_df <- trakt.movie.summary(target,
+    extended = "full",
+    force_data_frame = TRUE
+  )
 
   expect_is(movie_min_list, "list")
   expect_is(movie_min_df, "tbl")

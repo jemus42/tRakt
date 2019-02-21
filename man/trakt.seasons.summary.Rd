@@ -4,30 +4,30 @@
 \alias{trakt.seasons.summary}
 \title{Get a show's season information}
 \usage{
-trakt.seasons.summary(target, extended = "min", drop.specials = TRUE,
-  drop.unaired = TRUE)
+trakt.seasons.summary(target, extended = c("min", "full"),
+  drop.specials = TRUE, drop.unaired = TRUE)
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
-\item{extended}{Use \code{full,images} to get season posters. Can be
-\code{min} (default), \code{images}, \code{full}, \code{full,images}}
+\item{extended}{\code{["min", "full"]}: Amount of variables to return.}
 
-\item{drop.specials}{If \code{TRUE} (default), special episodes (listed as 'season 0') are dropped}
+\item{drop.specials}{\code{logical(1) [TRUE]}: Special episodes (season 0) are dropped}
 
-\item{drop.unaired}{If \code{TRUE} (default), seasons with \code{aired_episodes == 0} are dropped.
+\item{drop.unaired}{\code{logical(1) [TRUE]}: Seasons without aired episodes are dropped.
 Only works if \code{extended} is set to more than \code{min}.}
 }
 \value{
-A \code{[tibble](tibble::tibble-package)} containing season details (nested in \code{list} objects)
+A \code{[tibble](tibble::tibble-package)} containing season details
+(nested in \code{list} objects)
 }
 \description{
 \code{trakt.seasons.summary} pulls season data.
 Get details for a show's seasons, e.g. how many seasons there are, how many epsiodes
 each season has, and season posters.
-See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
-\code{extended} to customize output amount.
+See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for
+possible values of \code{extended} to customize output amount.
 }
 \note{
 See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}

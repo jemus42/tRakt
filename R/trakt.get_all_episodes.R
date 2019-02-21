@@ -87,11 +87,11 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
   }
 
   # A little extra cleanup
-  if (!is.null(show.episodes$episode_abs)) {
-    if (all(is.na(show.episodes$episode_abs))) {
-      show.episodes$episode_abs <- seq_len(nrow(show.episodes))
-    }
-  }
+  # if (!is.null(show.episodes$episode_abs)) {
+  #   if (all(is.na(show.episodes$episode_abs))) {
+  #     show.episodes$episode_abs <- seq_len(nrow(show.episodes))
+  #   }
+  # }
 
-  return(tibble::as_tibble(show.episodes))
+  tibble::as_tibble(show.episodes)
 }

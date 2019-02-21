@@ -13,8 +13,10 @@ test_that("trakt.user.stats works", {
   userstats <- trakt.user.stats(user = user)
 
   expect_is(userstats, "list")
-  expect_named(userstats, c("movies", "shows", "seasons", "episodes",
-                            "network", "ratings"))
+  expect_named(userstats, c(
+    "movies", "shows", "seasons", "episodes",
+    "network", "ratings"
+  ))
 })
 
 test_that("trakt.stats does things", {

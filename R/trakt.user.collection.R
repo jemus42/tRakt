@@ -56,11 +56,12 @@ trakt.user.collection <- function(user = getOption("trakt.username"),
         dplyr::rename(episode_number = number) %>%
         dplyr::mutate(collected_at = lubridate::ymd_hms(collected_at))
     }
-
   } else if (type == "movies") {
     # Flatten out ids
-    response$movie <- cbind(response$movie[names(response$movie) != "ids"],
-                             response$movie$ids)
+    response$movie <- cbind(
+      response$movie[names(response$movie) != "ids"],
+      response$movie$ids
+    )
     response <- cbind(response[names(response) != "movie"], response$movie)
   }
   # To be sure

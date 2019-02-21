@@ -2,7 +2,7 @@ context("test-people-methods")
 
 test_that("trakt.people.summary works", {
   skip_on_cran()
-  #skip_on_travis()
+  # skip_on_travis()
 
   target <- "bryan-cranston"
 
@@ -27,7 +27,7 @@ test_that("trakt.people.summary works", {
 
 test_that("trakt.people.[movies|shows] works", {
   skip_on_cran()
-  #skip_on_travis()
+  # skip_on_travis()
 
   target <- "bryan-cranston"
 
@@ -42,13 +42,12 @@ test_that("trakt.people.[movies|shows] works", {
 
   expect_is(sho_min, "list")
   expect_named(sho_min, c("cast", "crew"))
-
 })
 
 
 test_that("trakt.[show|movie].people works", {
   skip_on_cran()
-  #skip_on_travis()
+  # skip_on_travis()
 
   target_mov <- "inception-2010"
   target_sho <- "futurama"
@@ -62,5 +61,4 @@ test_that("trakt.[show|movie].people works", {
   expect_equal(names(show), names(movie))
   expect_named(show, c("cast", "crew"))
   expect_named(movie, c("cast", "crew"))
-
 })

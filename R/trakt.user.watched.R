@@ -44,7 +44,6 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
 
     watched <- cbind(response[!(names(response) %in% c("show", "seasons"))], shows)
   } else if (type == "shows.extended") {
-
     epstats <- purrr::map_df(1:nrow(response), function(show) {
       title <- response[show, ]$show$title
       # print(paste(show, title))

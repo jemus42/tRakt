@@ -149,10 +149,14 @@ trakt.show.people <- function(target, extended = "min") {
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
-  response$cast <- cbind(response$cast[names(response$cast) != "person"],
-                         response$cast$person)
-  response$cast <- cbind(response$cast[names(response$cast) != "ids"],
-                         response$cast$ids)
+  response$cast <- cbind(
+    response$cast[names(response$cast) != "person"],
+    response$cast$person
+  )
+  response$cast <- cbind(
+    response$cast[names(response$cast) != "ids"],
+    response$cast$ids
+  )
 
   return(response)
 }
@@ -183,10 +187,14 @@ trakt.movie.people <- function(target, extended = "min") {
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
-  response$cast <- cbind(response$cast[names(response$cast) != "person"],
-                         response$cast$person)
-  response$cast <- cbind(response$cast[names(response$cast) != "ids"],
-                         response$cast$ids)
+  response$cast <- cbind(
+    response$cast[names(response$cast) != "person"],
+    response$cast$person
+  )
+  response$cast <- cbind(
+    response$cast[names(response$cast) != "ids"],
+    response$cast$ids
+  )
 
   return(response)
 }
