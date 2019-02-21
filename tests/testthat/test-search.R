@@ -19,6 +19,7 @@ test_that("trakt.search works", {
 
   expect_warning(trakt.search("this is just a garbled mess", type = "movie"))
   expect_warning(trakt.search("deadpuul", type = "movie"))
+  expect_warning(trakt.search("nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb", year = 1100))
 })
 
 test_that("trakt.search.byid works", {
@@ -27,5 +28,8 @@ test_that("trakt.search.byid works", {
 
   expect_identical(res, res2)
 
-  expect_error(trakt.search.byid(id = 1, id_type = "imdb"))
+  expect_warning(trakt.search.byid(id = 1, id_type = "imdb"))
+  expect_warning(trakt.search.byid(id = "nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb",
+                                   id_type = "trakt-movie"))
+
 })

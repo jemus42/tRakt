@@ -40,10 +40,9 @@ trakt.search <- function(query, type = "show", year = NULL) {
   url <- build_trakt_url("search", query = query, type = type, year = year)
   response <- trakt.api.call(url = url, convert.datetime = FALSE)
 
-  # Check if response is empty (nothing found)
-  if (identical(response, list())) {
-    warning("No result, sorry.")
-    return(list(error = "Nothing found"))
+  if (identical(response, data.frame())) {
+    warning("No results for query '", query, "'")
+    return(tibble::tibble())
   }
 
   # Try to find the closest match via basic string comparison (Could use improvement)
@@ -91,10 +90,11 @@ trakt.search.byid <- function(id, id_type = "trakt-show") {
   response <- trakt.api.call(url = url)
 
   # Check if response is empty (nothing found)
-  if (identical(response, list())) {
-    warning("No result, sorry.")
-    return(list(error = "Nothing found"))
+  if (identical(response, data.frame())) {
+    warning("No results for id '", id, "' (", id_type, ")")
+    return(tibble::tibble())
   }
+
   response <- response[[ncol(response)]]
   response <- response[names(response) != "images"]
 

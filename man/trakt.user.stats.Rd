@@ -10,7 +10,7 @@ trakt.user.stats(user = getOption("trakt.username"))
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
 }
 \value{
-A \code{list} containing stats.
+A \code{list} of \code{tibble}s.
 }
 \description{
 \code{trakt.user.stats} pulls a user's stats.

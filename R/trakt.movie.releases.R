@@ -23,6 +23,7 @@ trakt.movie.releases <- function(target, country = NULL) {
     response <- purrr::map_df(target, function(t) {
       response <- trakt.movie.releases(target = t, country = country)
       response$movie <- t
+
       return(response)
     })
     return(response)
@@ -32,5 +33,9 @@ trakt.movie.releases <- function(target, country = NULL) {
   url <- build_trakt_url("movies", target, "releases", country = country)
   response <- trakt.api.call(url = url)
 
-  return(response)
+  if (identical(response, data.frame())) return(tibble::tibble())
+
+  response$release_date <- lubridate::as_date(response$release_date)
+
+  tibble::as_tibble(response)
 }
