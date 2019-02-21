@@ -48,5 +48,5 @@ trakt.user.ratings <- function(user = getOption("trakt.username"), type = "shows
     response <- cbind(response[names(response) != "show"], response$show)
     names(response) <- sub("number", "episode", names(response))
   }
-  return(response)
+  tibble::as_tibble(response)
 }

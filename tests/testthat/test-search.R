@@ -4,9 +4,12 @@ test_that("trakt.search works", {
   skip_on_cran()
 
   res <- trakt.search("russian doll", type = "show")
+  res_y <- trakt.search("russian doll", type = "show", year = "2019")
+
 
   expect_is(res, "tbl")
   expect_equal(nrow(res), 1)
+  expect_identical(res, res_y)
 
   res <- trakt.search("russian doll", type = "movie")
   expect_is(res, "tbl")
@@ -17,9 +20,7 @@ test_that("trakt.search works", {
 })
 
 test_that("trakt.search.byid works", {
-  id <- 614 # Futurama
-
-  res <- trakt.search.byid(id = id, id_type = "trakt-show")
+  res <- trakt.search.byid(id = 614, id_type = "trakt-show")
   res2 <- trakt.search(query = "futurama", type = "show")
 
   expect_identical(res, res2)
