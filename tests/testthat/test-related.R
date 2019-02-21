@@ -13,6 +13,14 @@ test_that("trakt.related works", {
   expect_gt(ncol(rel_show_max), ncol(rel_show))
   expect_equal(nrow(rel_show), 10)
 
+  expect_identical(
+    rbind(
+      trakt.shows.related(target = show),
+      trakt.shows.related(target = show)
+    ),
+    trakt.shows.related(target = c(show, show))
+  )
+
   rel_movie <- trakt.movies.related(target = movie)
   rel_movie_min <- trakt.movies.related(target = movie, extended = "min")
   rel_movie_max <- trakt.movies.related(target = movie, extended = "full")

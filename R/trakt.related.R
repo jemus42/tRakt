@@ -62,7 +62,6 @@ trakt.related <- function(target, type, extended = c("min", "full")) {
   if (length(target) > 1) {
     response <- purrr::map_df(target, function(t) {
       response <- trakt.related(target = t, type = type, extended = extended)
-      response$source <- t
       return(response)
     })
     return(response)
@@ -73,6 +72,7 @@ trakt.related <- function(target, type, extended = c("min", "full")) {
 
   # Flattening
   response <- cbind(response[names(response) != "ids"], response$ids)
+  response$related_to <- target
 
   tibble::as_tibble(response)
 }

@@ -4,13 +4,16 @@
 \alias{check_username}
 \title{Check username}
 \usage{
-check_username(user)
+check_username(user, validate = FALSE)
 }
 \arguments{
 \item{user}{The username input}
+
+\item{validate}{\code{logical(1) [TRUE]}: Retrieve user profile to check if it exists.}
 }
 \value{
-An error if the checks fail or else \code{TRUE} invisibly
+An error if the checks fail or else \code{TRUE} invisibly. If \code{validate}, the
+user profile is returned as a \code{list}.
 }
 \description{
 Check username

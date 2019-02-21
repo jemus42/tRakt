@@ -1,8 +1,8 @@
 #' Get a user's watched shows or movies
 #'
-#' `trakt.user.watched` pulls a user's watched shows or movies.
+#' `trakt.user.watched` retrieves a user's watched shows or movies.
 #' It does not use OAuth2, so you can only get data for a user with a
-#' public profile.
+#' **public profile**.
 #' @param user Target user. Defaults to `getOption("trakt.username")`
 #' @param type Either `shows` (default), `shows.extended` or `movies`
 #' @return A `[tibble](tibble::tibble-package)`.

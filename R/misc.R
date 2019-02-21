@@ -120,8 +120,8 @@ convert_datetime <- function(response) {
 #' movie `slug` or something like `trending` and `popular`.
 #' Will be concatenated after `section` to produce
 #' a URL fragment like `movies/tron-legacy-2012/releases`.
-#' @param extended Whether extended info should be returned. Defaults to `min`.
-#' @param ... Other params used as `queries`. Must be named arguments like `name = value`.
+#' @param ... Other params used as `queries`. Must be named arguments
+#' like `name = value`, commoly used is `extended = "min"`.
 #' @return A `character` of class `url`.
 #' @family utility functions
 #' @export
@@ -132,12 +132,12 @@ convert_datetime <- function(response) {
 #' build_trakt_url("shows", "breaking-bad", extended = "full")
 #' build_trakt_url("shows", "popular", page = 3, limit = 5)
 build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = NULL,
-                            target4 = NULL, extended = "min", ...) {
+                            target4 = NULL, ...) {
   # Set base values required for everything
   url <- list(scheme = "https", hostname = "api.trakt.tv")
   # Set other values
-  url$path <- paste(section, target1, target2, target3, target4, sep = "/")
-  url$query <- list(..., extended = extended)
+  url$path <- paste0(c(section, target1, target2, target3, target4), collapse = "/")
+  url$query <- list(...)
   # Append class 'url' for httr
   class(url) <- "url"
   # Assemble url
@@ -149,10 +149,11 @@ build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = N
 #' Check username
 #'
 #' @param user The username input
-#'
-#' @return An error if the checks fail or else `TRUE` invisibly
+#' @param validate `logical(1) [TRUE]`: Retrieve user profile to check if it exists.
+#' @return An error if the checks fail or else `TRUE` invisibly. If `validate`, the
+#' user profile is returned as a `list`.
 #' @keywords internal
-check_username <- function(user) {
+check_username <- function(user, validate = FALSE) {
   fail_option <- is.null(getOption("trakt.username"))
   fail_empty_chr <- user == ""
   fail_null <- is.null(user)
@@ -163,7 +164,10 @@ check_username <- function(user) {
 
   if (failed) {
     stop("Supplied user must be a character string, you provided <", user, ">")
-  } else (
+  } else if (validate) {
+    url <- build_trakt_url("users", user)
+    invisible(trakt.api.call(url))
+  } else {
     invisible(TRUE)
-  )
+  }
 }
