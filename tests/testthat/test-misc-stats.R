@@ -2,7 +2,12 @@ context("test-misc-stats")
 
 test_that("trakt.user.stats works", {
   skip_on_cran()
-  skip_if_not(class(getOption("trakt.headers")) == "request")
+
+  if (is.null(getOption("trakt.headers"))) {
+    message("trakt.headers are NULL. Why?")
+    get_trakt_credentials()
+  }
+
   user <- "jemus42"
 
   userstats <- trakt.user.stats(user = user)
