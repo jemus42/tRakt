@@ -121,6 +121,7 @@ convert_datetime <- function(response) {
 #' movie `slug` or something like `trending` and `popular`.
 #' Will be concatenated after `section` to produce
 #' a URL fragment like `movies/tron-legacy-2012/releases`.
+#' @param validate `logical(1) [TRUE]`: Whether to check the URl via `httr::HEAD` request.
 #' @param ... Other params used as `queries`. Must be named arguments
 #' like `name = value`, commoly used is `extended = "min"`.
 #' @return A `character` of class `url`.
@@ -133,7 +134,7 @@ convert_datetime <- function(response) {
 #' build_trakt_url("shows", "breaking-bad", extended = "full")
 #' build_trakt_url("shows", "popular", page = 3, limit = 5)
 build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = NULL,
-                            target4 = NULL, ...) {
+                            target4 = NULL, validate = FALSE, ...) {
   # Set base values required for everything
   url <- list(scheme = "https", hostname = "api.trakt.tv")
   # Set other values
@@ -143,6 +144,16 @@ build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = N
   class(url) <- "url"
   # Assemble url
   url <- httr::build_url(url)
+
+  # Validate
+  if (validate) {
+    res <- httr::HEAD(url, getOption("trakt.headers"))
+    status <- httr::status_code(res)
+    if (!identical(status, 200L)) {
+      stop("The URL returns a HTTP status '", status, "'")
+    }
+  }
+
   return(url)
 }
 
