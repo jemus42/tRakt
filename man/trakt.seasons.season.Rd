@@ -12,8 +12,7 @@ trakt.seasons.season(target, seasons = 1L, extended = "min")
 
 \item{seasons}{\code{integer [1L]}: The season(s) to get. Use 0 for special episodes.}
 
-\item{extended}{Use \code{full} to get season posters. Can be
-\code{min} (default), \code{images}, \code{full}, \code{full}}
+\item{extended}{\code{["min", "full"]}: Amount of variables to return.}
 }
 \value{
 A \code{[tibble](tibble::tibble-package)} containing all of a season's episodes

@@ -18,7 +18,7 @@ are converted to \code{POSIXct}. This might miss some variables and does not rec
 into nested lists or list-columns.}
 }
 \value{
-The content of the API response, \code{jsonlite::fromJSON}'d if requested.
+The parsed content of the API response.
 An empty \href{tibble::tibble-package}{tibble} if the response is an empty array.
 }
 \description{

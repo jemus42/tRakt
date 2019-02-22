@@ -8,8 +8,7 @@
 #' @param target The `id` of the show requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
 #' @param seasons `integer [1L]`: The season(s) to get. Use 0 for special episodes.
-#' @param extended Use `full` to get season posters. Can be
-#' `min` (default), `images`, `full`, `full`
+#' @inheritParams trakt.seasons.summary
 #' @return A `[tibble](tibble::tibble-package)` containing all of a season's episodes
 #' @export
 #' @importFrom lubridate year
@@ -71,20 +70,19 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
 #' @param drop.specials `logical(1) [TRUE]`: Special episodes (season 0) are dropped
 #' @param drop.unaired `logical(1) [TRUE]`: Seasons without aired episodes are dropped.
 #' Only works if `extended` is set to more than `min`.
-#' @return A `[tibble](tibble::tibble-package)` containing season details
-#' (nested in `list` objects)
+#' @return A `[tibble](tibble::tibble-package)` containing season information.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
 #' for further info
 #' @family show data
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
+#' library(tRakt)
 #' breakingbad.seasons <- trakt.seasons.summary("breaking-bad", extended = "min")
+#' breakingbad.seasons.more <- trakt.seasons.summary("breaking-bad", extended = "full")
 #' }
 trakt.seasons.summary <- function(target, extended = c("min", "full"), drop.specials = TRUE,
                                   drop.unaired = TRUE) {
-
   match.arg(extended)
   if (length(extended) > 1) extended <- extended[1]
 

@@ -19,8 +19,7 @@ trakt.seasons.summary(target, extended = c("min", "full"),
 Only works if \code{extended} is set to more than \code{min}.}
 }
 \value{
-A \code{[tibble](tibble::tibble-package)} containing season details
-(nested in \code{list} objects)
+A \code{[tibble](tibble::tibble-package)} containing season information.
 }
 \description{
 \code{trakt.seasons.summary} pulls season data.
@@ -35,8 +34,9 @@ for further info
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
+library(tRakt)
 breakingbad.seasons <- trakt.seasons.summary("breaking-bad", extended = "min")
+breakingbad.seasons.more <- trakt.seasons.summary("breaking-bad", extended = "full")
 }
 }
 \seealso{

@@ -36,6 +36,9 @@ test_that("trakt.trending works", {
   expect_equal(nrow(tre_mov_min), 5)
   expect_equal(nrow(tre_mov_min), nrow(tre_mov_max))
 
+  expect_error(trakt.movies.trending(limit = -4))
+  expect_error(trakt.movies.trending(page = 0))
+
   # shows
   tre_sho_min <- trakt.shows.trending(limit = 5, page = 1, extended = "min")
   tre_sho_max <- trakt.shows.trending(limit = 5, page = 1, extended = "full")

@@ -31,7 +31,7 @@
 #' # Use a values set in ~/.Renviron in an R session:
 #' # (This is automatically executed when calling library(tRakt))
 #' get_trakt_credentials()
-#' 
+#'
 #' # Explicitly set values in an R session, overriding .Renviron values f present
 #' get_trakt_credentials(
 #'   username = "sean",
@@ -86,7 +86,7 @@ get_trakt_credentials <- function(username = "", client.id = "",
 #' @param convert.datetime If `TRUE` (default), known top-level datetime variables
 #' are converted to `POSIXct`. This might miss some variables and does not recurse
 #' into nested lists or list-columns.
-#' @return The content of the API response, `jsonlite::fromJSON`'d if requested.
+#' @return The parsed content of the API response.
 #' An empty [tibble](tibble::tibble-package) if the response is an empty array.
 #' @export
 #' @import httr

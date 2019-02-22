@@ -40,10 +40,10 @@ trakt.search <- function(query, type = "show", year = NULL) {
   url <- build_trakt_url("search", query = query, type = type, year = year)
   response <- trakt.api.call(url = url, convert.datetime = FALSE)
 
-  if (identical(response, data.frame())) {
-    warning("No results for query '", query, "'")
-    return(tibble::tibble())
-  }
+  # if (identical(response, data.frame())) {
+  #   warning("No results for query '", query, "'")
+  #   return(tibble::tibble())
+  # }
 
   # Try to find the closest match via basic string comparison (Could use improvement)
   stringmatch <- match(tolower(URLdecode(query)), tolower(response[[type]]$title))
