@@ -27,8 +27,7 @@ pad <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
   s <- sprintf(s_fmt, s)
   e <- sprintf(e_fmt, e)
 
-  epstring <- paste0("s", s, "e", e)
-  return(epstring)
+  paste0("s", s, "e", e)
 }
 
 #' Get info from a show URL
@@ -63,8 +62,7 @@ parse_trakt_url <- function(url, epid = FALSE, getslug = FALSE) {
     slug <- stringr::str_split(url, "/", 5)
     ret$slug <- slug[[1]][5]
   }
-  return(ret)
-  # Most of this is pointless.
+  ret
 }
 
 #' Quick datetime conversion
@@ -139,7 +137,7 @@ build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = N
     }
   }
 
-  return(url)
+  url
 }
 
 

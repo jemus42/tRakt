@@ -116,5 +116,5 @@ trakt.api.call <- function(url, headers = getOption("trakt.headers"),
     response <- convert_datetime(response)
   }
 
-  return(response)
+  response
 }

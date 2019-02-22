@@ -24,7 +24,6 @@
 #' }
 trakt.get_full_showdata <- function(query = NULL, slug = NULL, drop.unaired = TRUE) {
 
-
   # Construct show object
   show <- list()
   if (!is.null(query)) {
@@ -39,11 +38,8 @@ trakt.get_full_showdata <- function(query = NULL, slug = NULL, drop.unaired = TR
     drop.unaired = drop.unaired, extended = "full"
   )
 
-  # show$seasons$season <- factor(show$seasons$season,
-  #   levels = as.character(1:nrow(show$seasons)), ordered = T
-  # )
-  show$episodes$series <- show$summary$title
+  show$episodes$show <- show$summary$title
   show$summary$retrieved_at <- lubridate::now(tzone = "UTC")
 
-  return(show)
+  show
 }

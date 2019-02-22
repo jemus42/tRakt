@@ -40,7 +40,7 @@ trakt.people.summary <- function(target, extended = "min") {
   data <- as.data.frame(data)
   data <- cbind(data, ids)
 
-  return(tibble::as_tibble(data))
+  tibble::as_tibble(data)
 }
 
 #' Get a single person's movie credits
@@ -80,7 +80,7 @@ trakt.people.movies <- function(target, extended = "min") {
     response$cast <- convert_datetime(response$cast)
   }
 
-  return(response)
+  response
 }
 
 #' Get a single person's show credits
@@ -120,7 +120,7 @@ trakt.people.shows <- function(target, extended = "min") {
     response$cast <- convert_datetime(response$cast)
   }
 
-  return(response)
+  response
 }
 
 #' Get the cast and crew of a show
@@ -158,7 +158,7 @@ trakt.show.people <- function(target, extended = "min") {
     response$cast$ids
   )
 
-  return(response)
+  response
 }
 
 #' Get the cast and crew of a movie
@@ -196,5 +196,5 @@ trakt.movie.people <- function(target, extended = "min") {
     response$cast$ids
   )
 
-  return(response)
+  response
 }

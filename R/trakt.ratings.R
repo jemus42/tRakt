@@ -47,7 +47,7 @@ trakt.ratings <- function(type, target) {
   url <- build_trakt_url(type, target, "ratings")
   response <- trakt.api.call(url = url)
 
-  tibble(
+  tibble::tibble(
     id = target,
     type = type,
     votes = response$votes,

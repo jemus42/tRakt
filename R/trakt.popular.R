@@ -18,9 +18,7 @@
 #' trakt.movies.popular(5)
 #' }
 trakt.movies.popular <- function(limit = 10, page = 1, extended = "min") {
-  response <- trakt.popular(type = "movies", limit = limit, page = page, extended = extended)
-
-  return(response)
+  trakt.popular(type = "movies", limit = limit, page = page, extended = extended)
 }
 
 #' Get popular shows
@@ -43,9 +41,7 @@ trakt.movies.popular <- function(limit = 10, page = 1, extended = "min") {
 #' trakt.shows.popular(5)
 #' }
 trakt.shows.popular <- function(limit = 10, page = 1, extended = "min") {
-  response <- trakt.popular(type = "shows", limit = limit, page = page, extended = extended)
-
-  return(response)
+  trakt.popular(type = "shows", limit = limit, page = page, extended = extended)
 }
 
 #' @keywords internal
