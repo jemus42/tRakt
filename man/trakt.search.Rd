@@ -16,9 +16,8 @@ this will be used as \code{year} parameter.}
 \item{year}{Optionally filter by year.}
 }
 \value{
-A \code{data.frame} containing a single search result. Hopefully the one you wanted. If
-no result is found, the return value is \code{list(error = "Nothing found")} and a
-\code{warning}
+A \link[tibble:tibble-package]{tibble} containing a single search result.
+If no results are found, the \code{tibble} has 0 rows.
 }
 \description{
 \code{trakt.search} returns search result info.
@@ -34,7 +33,6 @@ further info}
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
 breakingbad <- trakt.search("Breaking Bad")
 }
 }

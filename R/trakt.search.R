@@ -10,21 +10,18 @@
 #' @param type The type of data you're looking for. Defaults to `show`, can also be
 #'   `movie`, `episode`, `person` or `list`.
 #' @param year Optionally filter by year.
-#' @return A `data.frame` containing a single search result. Hopefully the one you wanted. If
-#'   no result is found, the return value is `list(error = "Nothing found")` and a
-#'   `warning`
+#' @return A [tibble][tibble::tibble-package] containing a single search result. 
+#'         If no results are found, the `tibble` has 0 rows.
 #' @export
 #' @importFrom stringr str_match
 #' @importFrom stringr str_replace
 #' @importFrom stringr str_trim
-#' @importFrom utils URLdecode
 #' @note See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for
 #'   further info}
 #' @family API-basics
 #' @family search functions
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
 #' breakingbad <- trakt.search("Breaking Bad")
 #' }
 trakt.search <- function(query, type = "show", year = NULL) {
@@ -61,18 +58,14 @@ trakt.search <- function(query, type = "show", year = NULL) {
 #' @param id_type The type of `id`. Defaults to `trakt-show`, can be
 #' `trakt-movie`, `trakt-show`, `trakt-episode`, `imdb`,
 #' `tmdb`, `tvdb`, `tvrage`
-#' @return A `data.frame` containing a single search result. Hopefully the one you wanted.
-#' If no result is found, the return value is `list(error = "Nothing found")` and
-#' a `warning` is issued.
+#' @return A [tibble][tibble::tibble-package] containing a single search result. 
+#'         If no results are found, the `tibble` has 0 rows.
 #' @export
-#' @importFrom jsonlite fromJSON
-#' @import httr
 #' @note See \href{http://docs.trakt.apiary.io/reference/search/id-lookup/get-id-lookup-results}{the trakt API docs for further info}
 #' @family API-basics
 #' @family search functions
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
 #' breakingbad <- trakt.search.byid(1388, "trakt-show")
 #' }
 trakt.search.byid <- function(id, id_type = "trakt-show") {

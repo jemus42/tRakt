@@ -15,7 +15,7 @@ trakt.user.ratings(user = getOption("trakt.username"),
 \item{rating}{A rating to filter by. Can be \code{1} through \code{10}, default is \code{NULL}}
 }
 \value{
-A \href{tibble::tibble-package}{tibble}.
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.user.ratings} pulls a user's ratings
@@ -25,7 +25,6 @@ See \href{http://docs.trakt.apiary.io/reference/users/ratings/get-ratings}{the t
 }
 \examples{
 \dontrun{
-library(tRakt)
 ratedshows <- trakt.user.ratings()
 ratedmovies <- trakt.user.ratings(type = "movies")
 }

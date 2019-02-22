@@ -16,7 +16,7 @@ for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.}
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}.}
 }
 \value{
-A \code{data.frame} containing popular shows with their name and ids
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.shows.popular} returns a list of the most popular shows on trakt.tv.

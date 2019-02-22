@@ -16,8 +16,7 @@ trakt.user.collection(user = getOption("trakt.username"),
 \code{[tidyr](tidyr::unnest)} and returns one row per episode rather than one row per show.}
 }
 \value{
-A \code{tibble} containing shows with either nested (list column) or
-unnested episodes.
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.user.collection} retrieves a user's collected shows or movies.
@@ -29,7 +28,6 @@ See \href{http://docs.trakt.apiary.io/reference/users/collection/get-collection}
 }
 \examples{
 \dontrun{
-library(tRakt)
 myshows <- trakt.user.collection() # Defaults to your username if set
 seans.movies <- trakt.user.collection(user = "sean", type = "movies")
 }

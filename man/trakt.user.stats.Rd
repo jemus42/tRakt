@@ -10,10 +10,10 @@ trakt.user.stats(user = getOption("trakt.username"))
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
 }
 \value{
-A \code{list} of \code{tibble}s.
+A \code{list} of \link[tibble:tibble-package]{tibbles}.
 }
 \description{
-\code{trakt.user.stats} pulls a user's stats.
+\code{trakt.user.stats} retrieves a user's stats.
 }
 \note{
 See \href{http://docs.trakt.apiary.io/reference/users/stats/get-stats}{the trakt API docs for further info}

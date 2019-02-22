@@ -1,9 +1,8 @@
 #' Get a user's stats
 #'
-#' `trakt.user.stats` pulls a user's stats.
-
+#' `trakt.user.stats` retrieves a user's stats.
 #' @param user Target user. Defaults to `getOption("trakt.username")`
-#' @return A `list` of `tibble`s.
+#' @return A `list` of [tibbles][tibble::tibble-package].
 #' @export
 #' @importFrom tibble enframe
 #' @importFrom purrr modify_at

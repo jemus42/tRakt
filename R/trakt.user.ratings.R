@@ -4,13 +4,12 @@
 #' @param user Target user. Defaults to `getOption("trakt.username")`
 #' @param type Either `shows` (default), `episodes` or `movies`
 #' @param rating A rating to filter by. Can be `1` through `10`, default is `NULL`
-#' @return A [tibble](tibble::tibble-package).
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/ratings/get-ratings}{the trakt API docs for further info}
 #' @family user data
 #' @examples
 #' \dontrun{
-#' library(tRakt)
 #' ratedshows <- trakt.user.ratings()
 #' ratedmovies <- trakt.user.ratings(type = "movies")
 #' }
@@ -18,6 +17,7 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
                                type = c("shows", "episodes", "movies"), rating = NULL) {
   check_username(user)
   match.arg(type)
+  
   if (length(type) > 1) type <- type[1]
 
   if (!is.null(rating)) {

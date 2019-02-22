@@ -13,7 +13,7 @@ trakt.stats(target, type = c("shows", "movies"))
 \item{type}{Either \code{shows} (default) or \code{movies}, depending the \code{target} type.}
 }
 \value{
-A \code{tibble} containing show stats
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.stats} pulls show stats and returns it compactly.

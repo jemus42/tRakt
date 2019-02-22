@@ -14,9 +14,8 @@ trakt.search.byid(id, id_type = "trakt-show")
 \code{tmdb}, \code{tvdb}, \code{tvrage}}
 }
 \value{
-A \code{data.frame} containing a single search result. Hopefully the one you wanted.
-If no result is found, the return value is \code{list(error = "Nothing found")} and
-a \code{warning} is issued.
+A \link[tibble:tibble-package]{tibble} containing a single search result.
+If no results are found, the \code{tibble} has 0 rows.
 }
 \description{
 \code{trakt.search.byid} pulls show stats and returns it compactly.
@@ -26,7 +25,6 @@ See \href{http://docs.trakt.apiary.io/reference/search/id-lookup/get-id-lookup-r
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
 breakingbad <- trakt.search.byid(1388, "trakt-show")
 }
 }

@@ -68,7 +68,7 @@ parse_trakt_url <- function(url, epid = FALSE, getslug = FALSE) {
 #' Quick datetime conversion
 #'
 #' Searches for datetime variables and converts them to `POSIXct` via \pkg{lubridate}.
-#' @param response The input object. Must be `data.frame`(ish) or `list`.
+#' @param response The input object. Must be `data.frame`(ish) or named `list`.
 #' @return The same object with converted datetimes
 #' @importFrom lubridate ymd_hms
 #' @importFrom dplyr mutate_at

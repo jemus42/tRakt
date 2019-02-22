@@ -3,7 +3,7 @@
 #' `trakt.movie.ratings` returns a single movie's rating and distribution.
 #' @param target The `id` of the movie requested. Either the `slug`
 #' (e.g. `"tron-legacy-2010"`), `trakt id` or `IMDb id`
-#' @return A `tibble` containing movie ratings and distribution
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/ratings/get-movie-ratings}{the trakt API docs for further info}
 #' @family movie data
@@ -21,7 +21,7 @@ trakt.movie.ratings <- function(target) {
 #' `trakt.show.ratings` returns a single show's rating and distribution.
 #' @param target The `id` of the show requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
-#' @return A `tibble` containing show ratings and distribution
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/ratings/get-show-ratings}{the trakt API docs for further info}
 #' @family show data

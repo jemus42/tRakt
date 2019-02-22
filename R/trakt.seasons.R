@@ -9,7 +9,7 @@
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
 #' @param seasons `integer [1L]`: The season(s) to get. Use 0 for special episodes.
 #' @inheritParams trakt.seasons.summary
-#' @return A `[tibble](tibble::tibble-package)` containing all of a season's episodes
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @importFrom lubridate year
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/season/get-single-season-for-a-show}{the trakt API docs for further info}.
@@ -71,7 +71,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
 #' @param drop.specials `logical(1) [TRUE]`: Special episodes (season 0) are dropped
 #' @param drop.unaired `logical(1) [TRUE]`: Seasons without aired episodes are dropped.
 #' Only works if `extended` is set to more than `min`.
-#' @return A `[tibble](tibble::tibble-package)` containing season information.
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
 #' for further info

@@ -7,7 +7,7 @@
 convert_datetime(response)
 }
 \arguments{
-\item{response}{The input object. Must be \code{data.frame}(ish) or \code{list}.}
+\item{response}{The input object. Must be \code{data.frame}(ish) or named \code{list}.}
 }
 \value{
 The same object with converted datetimes

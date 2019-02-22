@@ -19,7 +19,7 @@ into nested lists or list-columns.}
 }
 \value{
 The parsed content of the API response.
-An empty \href{tibble::tibble-package}{tibble} if the response is an empty array.
+An empty \link[tibble:tibble-package]{tibble} if the response is an empty array.
 }
 \description{
 \code{trakt.api.call} makes an APIv2 call to a specified URL

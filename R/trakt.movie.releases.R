@@ -8,7 +8,7 @@
 #' provided, an additional `movie` column is appended to the `rbind`ed results, containing
 #' the movie's `id` provided as `target`.
 #' @param country Optional two letter country code.
-#' @return A `data.frame` containing movie release dates and certification.
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/releases/get-all-movie-releases}{the
 #'  trakt API docs for further info}

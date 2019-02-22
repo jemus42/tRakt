@@ -7,7 +7,7 @@
 #' for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
-#' @return A `data.frame` containing popular movies with their name and ids
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/popular/get-popular-movies}{the trakt API docs for further info}
 #' @family movie data
@@ -30,7 +30,7 @@ trakt.movies.popular <- function(limit = 10, page = 1, extended = "min") {
 #' for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`.
-#' @return A `data.frame` containing popular shows with their name and ids
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/get-popular-shows}{the trakt API docs for further info}
 #' @family show data

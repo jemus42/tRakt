@@ -38,8 +38,8 @@ trakt.movie.summary <- function(target, extended = "min", force_data_frame = FAL
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
 #' @param force_data_frame If `TRUE`, the `list` is unnested as much as possible, resulting
-#' in a flat `data.frame` suitable to be `rbind`ed to other summary results.
-#' @return A `list` or [`tibble`][tibble::tibble-package] containing summary info
+#' in a flat [tibble][tibble::tibble-package] suitable to `rbind` with other summary results.
+#' @return A `list` or [tibble][tibble::tibble-package] containing summary info
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/summary}{the trakt API docs for further info}
 #' @family show data

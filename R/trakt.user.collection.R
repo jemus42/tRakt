@@ -7,8 +7,7 @@
 #' @param type Either `shows` (default) or `movies`
 #' @param unnest_episodes `logical(1) [FALSE]`: Unnests episode data using
 #' `[tidyr](tidyr::unnest)` and returns one row per episode rather than one row per show.
-#' @return A `tibble` containing shows with either nested (list column) or
-#' unnested episodes.
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See [the trakt API docs for further info](http://docs.trakt.apiary.io/reference/users/collection/get-collection)
 #' @family user data
@@ -16,7 +15,6 @@
 #' @importFrom lubridate ymd_hms
 #' @examples
 #' \dontrun{
-#' library(tRakt)
 #' myshows <- trakt.user.collection() # Defaults to your username if set
 #' seans.movies <- trakt.user.collection(user = "sean", type = "movies")
 #' }

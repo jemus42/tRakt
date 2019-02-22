@@ -9,7 +9,7 @@
 #' containing the provided `id` of the input.
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`.
-#' @return A [tibble](tibble::tibble-package).
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/related/get-related-movies}{the trakt API docs for further info}
 #' @family movie data

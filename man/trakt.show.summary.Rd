@@ -16,10 +16,10 @@ to \code{TRUE}.}
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 
 \item{force_data_frame}{If \code{TRUE}, the \code{list} is unnested as much as possible, resulting
-in a flat \code{data.frame} suitable to be \code{rbind}ed to other summary results.}
+in a flat \link[tibble:tibble-package]{tibble} suitable to \code{rbind} with other summary results.}
 }
 \value{
-A \code{list} or \code{\link[tibble:tibble-package]{tibble}} containing summary info
+A \code{list} or \link[tibble:tibble-package]{tibble} containing summary info
 }
 \description{
 \code{trakt.show.summary} pulls show summary data and returns it compactly.

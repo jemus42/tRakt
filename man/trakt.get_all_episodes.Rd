@@ -24,7 +24,7 @@ codes for available translation. This column is unlikely to be of interest and
 therefore excluded by default.}
 }
 \value{
-A \code{tbl} containing episode details
+A \link[tibble:tibble-package]{tibble} containing episode details.
 }
 \description{
 \code{trakt.get_all_episodes} pulls detailed episode data.

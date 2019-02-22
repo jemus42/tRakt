@@ -8,14 +8,13 @@
 #' for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
-#' @return A `data.frame` containing trending movies with their number of watchers, name and ids
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/trending/get-trending-movies}{the trakt API docs for further info}
 #' @family movie data
 #' @family aggregated data
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
 #' trakt.movies.trending(5)
 #' }
 trakt.movies.trending <- function(limit = 10, page = 1, extended = "min") {
@@ -32,7 +31,7 @@ trakt.movies.trending <- function(limit = 10, page = 1, extended = "min") {
 #' for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
-#' @return A `data.frame` containing trending shows with their name and ids
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/get-trending-shows}{the trakt API docs for further info}
 #' @family show data

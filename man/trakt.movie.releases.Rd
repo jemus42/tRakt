@@ -15,7 +15,7 @@ the movie's \code{id} provided as \code{target}.}
 \item{country}{Optional two letter country code.}
 }
 \value{
-A \code{data.frame} containing movie release dates and certification.
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.movie.releases} returns one or more movie's release information,

@@ -14,7 +14,7 @@ trakt.show.people(target, extended = "min")
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
-A \code{list} containing \code{data.frame}s for cast and crew.
+A \code{list}.
 }
 \description{
 \code{trakt.show.people} pulls show people data.

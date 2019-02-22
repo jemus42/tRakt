@@ -5,7 +5,7 @@
 #' @param target The `id` of the show/movie requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`.
 #' @param type Either `shows` (default) or `movies`, depending the `target` type.
-#' @return A `tibble` containing show stats
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/stats}{the trakt API docs for further info}
 #' @family show data

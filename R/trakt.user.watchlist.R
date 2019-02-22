@@ -6,7 +6,7 @@
 #' @param type Either `shows` (default) or `movies`
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
-#' @return A `tibble` containing stats.
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{the trakt API docs for further info}
 #' @family user data

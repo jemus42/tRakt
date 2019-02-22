@@ -15,7 +15,7 @@ trakt.seasons.season(target, seasons = 1L, extended = "min")
 \item{extended}{\code{["min", "full"]}: Amount of variables to return.}
 }
 \value{
-A \code{[tibble](tibble::tibble-package)} containing all of a season's episodes
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.seasons.season} pulls a season's full data.

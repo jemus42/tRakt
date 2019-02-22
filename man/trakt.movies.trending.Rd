@@ -16,7 +16,7 @@ for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.}
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
-A \code{data.frame} containing trending movies with their number of watchers, name and ids
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.movies.trending} returns a list of trending movies on trakt.tv.
@@ -28,7 +28,6 @@ See \href{http://docs.trakt.apiary.io/reference/movies/trending/get-trending-mov
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
 trakt.movies.trending(5)
 }
 }

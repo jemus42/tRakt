@@ -16,7 +16,7 @@ trakt.user.watchlist(user = getOption("trakt.username"),
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
 }
 \value{
-A \code{tibble} containing stats.
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.user.watchlist} pulls a user's watchlist.

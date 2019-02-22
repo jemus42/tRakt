@@ -3,7 +3,7 @@
 #' This data comes from <https://trakt.tv> and
 #'  <https://en.wikipedia.org/wiki/List_of_House_episodes>.
 #'
-#' @format A tibble with 60 rows and 21 variables:
+#' @format A [tibble][tibble::tibble-package] with 60 rows and 21 variables:
 #' \describe{
 #' \item{episode_abs}{Overall episode number}
 #' \item{episode, season}{Episode within each season and season number}
@@ -30,7 +30,7 @@
 #'
 #' This data comes from <https://trakt.tv>.
 #'
-#' @format A tibble with 60 rows and 18 variables:
+#' @format A [tibble][tibble::tibble-package] with 60 rows and 18 variables:
 #' \describe{
 #' \item{episode_abs}{Overall episode number}
 #' \item{episode, season}{Episode within each season and season number}

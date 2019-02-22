@@ -16,7 +16,7 @@ containing the provided \code{id} of the input.}
 Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}.}
 }
 \value{
-A \href{tibble::tibble-package}{tibble}.
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.movies.related} returns movies related to the input movie.

@@ -16,7 +16,7 @@ appended to indicated which user belongs to wich input user.}
 for additional avatar URLs.}
 }
 \value{
-A \code{data.frame} containing user information.
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.user.friends} pulls a user's friends, the two-way relationship
@@ -28,7 +28,6 @@ See \href{http://docs.trakt.apiary.io/reference/users/friends/get-friends}{the t
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
 trakt.user.friends("jemus42")
 }
 }

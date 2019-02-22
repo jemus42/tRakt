@@ -8,24 +8,24 @@
 #' appended to indicated which user belongs to wich input user.
 #' @param extended Either `min` for standard info, `full` for details or `full,images`
 #' for additional avatar URLs.
-#' @return A `data.frame` containing user information.
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/friends/get-friends}{the trakt API docs for further info}
 #' @family user data
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
 #' trakt.user.friends("jemus42")
 #' }
 trakt.user.friends <- function(user = getOption("trakt.username"), extended = "min") {
+
+  check_username(user)
+
   if (length(user) > 1) {
     response <- purrr::map_df(user, function(user) {
       trakt.user.friends(user = user, extended = extended)
     })
     return(response)
   }
-
-  check_username(user)
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "friends", extended = extended)
@@ -55,7 +55,7 @@ trakt.user.friends <- function(user = getOption("trakt.username"), extended = "m
 #' appended to indicated which user belongs to wich input user.
 #' @param extended Either `min` for standard info, `full` for details or `full,images`
 #' for additional avatar URLs.
-#' @return A `[tibble](tibble::tibble-package)` containing user information.
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/followers/get-followers}{the trakt API docs for further info}
 #' @family user data
@@ -65,14 +65,15 @@ trakt.user.friends <- function(user = getOption("trakt.username"), extended = "m
 #' trakt.user.followers("jemus42")
 #' }
 trakt.user.followers <- function(user = getOption("trakt.username"), extended = "min") {
+
+  check_username(user)
+
   if (length(user) > 1) {
     response <- purrr::map_df(user, function(user) {
       trakt.user.followers(user = user, extended = extended)
     })
     return(response)
   }
-
-  check_username(user)
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "followers", extended = extended)
@@ -102,7 +103,7 @@ trakt.user.followers <- function(user = getOption("trakt.username"), extended = 
 #' appended to indicated which user belongs to wich input user.
 #' @param extended Either `min` for standard info, `full` for details or `full,images`
 #' for additional avatar URLs.
-#' @return A `data.frame` containing user information.
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/following/get-following}{the trakt API docs for further info}
 #' @family user data
@@ -112,14 +113,15 @@ trakt.user.followers <- function(user = getOption("trakt.username"), extended = 
 #' trakt.user.following("jemus42")
 #' }
 trakt.user.following <- function(user = getOption("trakt.username"), extended = "min") {
+
+  check_username(user)
+
   if (length(user) > 1) {
     response <- purrr::map_df(user, function(user) {
       trakt.user.following(user = user, extended = extended)
     })
     return(response)
   }
-
-  check_username(user)
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "following", extended = extended)

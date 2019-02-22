@@ -14,21 +14,22 @@ trakt.user.watched(user = getOption("trakt.username"),
 }
 \value{
 A \code{[tibble](tibble::tibble-package)}.
-if \code{type} is set to \code{shows.extended}, the resulting \code{data.frame}
-contains play stats for \emph{every} watched episode of \emph{every} show. Otherwise,
-the returned \code{data.frame} only contains play stats per show or movie respectively.
 }
 \description{
 \code{trakt.user.watched} retrieves a user's watched shows or movies.
 It does not use OAuth2, so you can only get data for a user with a
 \strong{public profile}.
 }
+\details{
+If \code{type} is set to \code{shows.extended}, the resulting \link[tibble:tibble-package]{tibble}
+contains play stats for \emph{every} watched episode of \emph{every} show. Otherwise,
+the returned \link[tibble:tibble-package]{tibble} only contains play stats per show or movie respectively.
+}
 \note{
 See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the trakt API docs for further info}
 }
 \examples{
 \dontrun{
-library(tRakt)
 myshows <- trakt.user.watched() # Defaults to your username if set
 seans.shows <- trakt.user.watched(user = "sean")
 }

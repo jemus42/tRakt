@@ -19,7 +19,7 @@ trakt.seasons.summary(target, extended = c("min", "full"),
 Only works if \code{extended} is set to more than \code{min}.}
 }
 \value{
-A \code{[tibble](tibble::tibble-package)} containing season information.
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.seasons.summary} pulls season data.

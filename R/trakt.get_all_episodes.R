@@ -19,10 +19,9 @@
 #' @param drop.translations `logical(1) [TRUE]`: Remove list-column containing country-
 #' codes for available translation. This column is unlikely to be of interest and
 #' therefore excluded by default.
-#' @return A `tbl` containing episode details
+#' @return A [tibble][tibble::tibble-package] containing episode details.
 #' @export
 #' @importFrom purrr map_df
-#' @importFrom tibble as_tibble
 #' @note This function is mainly for convenience.
 #' @family show data
 #' @examples
@@ -83,13 +82,6 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
 
     show.episodes <- show.episodes[!(is.na(show.episodes$first_aired)), ]
   }
-
-  # A little extra cleanup
-  # if (!is.null(show.episodes$episode_abs)) {
-  #   if (all(is.na(show.episodes$episode_abs))) {
-  #     show.episodes$episode_abs <- seq_len(nrow(show.episodes))
-  #   }
-  # }
-
+  
   tibble::as_tibble(show.episodes)
 }

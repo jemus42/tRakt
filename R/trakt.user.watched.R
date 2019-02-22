@@ -3,18 +3,19 @@
 #' `trakt.user.watched` retrieves a user's watched shows or movies.
 #' It does not use OAuth2, so you can only get data for a user with a
 #' **public profile**.
+#' 
+#' If `type` is set to `shows.extended`, the resulting [tibble][tibble::tibble-package]
+#' contains play stats for _every_ watched episode of _every_ show. Otherwise,
+#' the returned [tibble][tibble::tibble-package] only contains play stats per show or movie respectively.
+#' 
 #' @param user Target user. Defaults to `getOption("trakt.username")`
 #' @param type Either `shows` (default), `shows.extended` or `movies`
 #' @return A `[tibble](tibble::tibble-package)`.
-#' if `type` is set to `shows.extended`, the resulting `data.frame`
-#' contains play stats for _every_ watched episode of _every_ show. Otherwise,
-#' the returned `data.frame` only contains play stats per show or movie respectively.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the trakt API docs for further info}
 #' @family user data
 #' @examples
 #' \dontrun{
-#' library(tRakt)
 #' myshows <- trakt.user.watched() # Defaults to your username if set
 #' seans.shows <- trakt.user.watched(user = "sean")
 #' }

@@ -54,11 +54,13 @@ get_trakt_credentials <- function(username = "", client.id = "",
     options(trakt.client.id = client_id)
   } else {
     options(trakt.client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
+    if (!silent) {
     message("I provided my client.id as a fallback for you. Please use it responsibly.")
+    }
   }
 
   if (!silent) {
-    message(paste("Your APIv2 client id is set to", getOption("trakt.client.id")))
+    message(paste("Your client id is set to", getOption("trakt.client.id")))
   }
 
   # Set the appropriate header for httr::GET
@@ -87,7 +89,7 @@ get_trakt_credentials <- function(username = "", client.id = "",
 #' are converted to `POSIXct`. This might miss some variables and does not recurse
 #' into nested lists or list-columns.
 #' @return The parsed content of the API response.
-#' An empty [tibble](tibble::tibble-package) if the response is an empty array.
+#' An empty [tibble][tibble::tibble-package] if the response is an empty array.
 #' @export
 #' @import httr
 #' @importFrom jsonlite fromJSON

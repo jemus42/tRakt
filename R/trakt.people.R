@@ -8,7 +8,7 @@
 #' (e.g. `"bryan-cranston"`), `trakt id` or `IMDb id`
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
-#' @return A `[tibble](tibble::tibble-package)` with person details.
+#' @return A [tibble][tibble::tibble-package] with person details.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/summary/get-a-single-person}{the trakt API docs for further info}
 #' @family people data
@@ -92,7 +92,7 @@ trakt.people.movies <- function(target, extended = "min") {
 #' (e.g. `"bryan-cranston"`), `trakt id` or `IMDb id`
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
-#' @return A `data.frame`s with person details.
+#' @return A `list`.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/shows/get-show-credits}{the trakt API docs for further info}
 #' @family people data
@@ -132,7 +132,7 @@ trakt.people.shows <- function(target, extended = "min") {
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
-#' @return A `list` containing `data.frame`s for cast and crew.
+#' @return A `list`.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/people/get-all-people-for-a-show}{the trakt API docs for further info}
 #' @family show data
@@ -170,7 +170,7 @@ trakt.show.people <- function(target, extended = "min") {
 #' (e.g. `"tron-legacy-2010"`), `trakt id` or `IMDb id`
 #' @param extended Whether extended info should be provided.
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
-#' @return A `list` containing `data.frame`s for cast and crew.
+#' @return A `list`.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{the trakt API docs for further info}
 #' @family movie data
