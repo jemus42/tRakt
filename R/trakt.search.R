@@ -38,25 +38,16 @@ trakt.search <- function(query, type = "show", year = NULL) {
 
   # Construct URL, make API call
   url <- build_trakt_url("search", query = query, type = type, year = year)
-  response <- trakt.api.call(url = url, convert.datetime = FALSE)
+  response <- trakt.api.call(url = url)
 
-  # if (identical(response, data.frame())) {
-  #   warning("No results for query '", query, "'")
-  #   return(tibble::tibble())
-  # }
-
-  # Try to find the closest match via basic string comparison (Could use improvement)
-  stringmatch <- match(tolower(URLdecode(query)), tolower(response[[type]]$title))
-
-  # Cleanup received data, using only matched line
-  if (is.na(stringmatch)) {
-    warning("No exact match found, using trakt.tv's best guess")
-    result <- response[1, ][[type]]
-  } else {
-    result <- response[stringmatch, ][[type]]
+  if (identical(response, data.frame())) {
+    warning("No results for query '", query, "'")
+    return(tibble::tibble())
   }
 
+  result <- response[1, ][[type]]
   result <- result[names(result) != "images"]
+  response <- cbind(response[names(response) != "ids"], response$ids)
 
   tibble::as_tibble(result)
 }
@@ -97,6 +88,7 @@ trakt.search.byid <- function(id, id_type = "trakt-show") {
 
   response <- response[[ncol(response)]]
   response <- response[names(response) != "images"]
+  response <- cbind(response[names(response) != "ids"], response$ids)
 
   tibble::as_tibble(response)
 }
