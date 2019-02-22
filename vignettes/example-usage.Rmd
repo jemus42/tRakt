@@ -52,7 +52,7 @@ identical(show1, show2)
 # Search a show and receive basic info
 show          <- trakt.search("Breaking Bad")
 # Save the slug of the show, that's needed for other functions as an ID
-slug          <- show$ids$slug
+slug          <- show$slug
 slug
 
 # Get the season & episode data
