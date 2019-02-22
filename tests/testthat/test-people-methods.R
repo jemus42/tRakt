@@ -2,7 +2,6 @@ context("test-people-methods")
 
 test_that("trakt.people.summary works", {
   skip_on_cran()
-  # skip_on_travis()
 
   target <- "bryan-cranston"
 
@@ -27,7 +26,6 @@ test_that("trakt.people.summary works", {
 
 test_that("trakt.people.[movies|shows] works", {
   skip_on_cran()
-  # skip_on_travis()
 
   target <- "bryan-cranston"
 
@@ -47,7 +45,6 @@ test_that("trakt.people.[movies|shows] works", {
 
 test_that("trakt.[show|movie].people works", {
   skip_on_cran()
-  # skip_on_travis()
 
   target_mov <- "inception-2010"
   target_sho <- "futurama"

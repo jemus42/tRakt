@@ -1,6 +1,8 @@
 context("test-popular-trending-et-al")
 
 test_that("trakt.popular works", {
+  skip_on_cran()
+  
   # movies
   pop_mov_min <- trakt.movies.popular(limit = 5, page = 1, extended = "min")
   pop_mov_max <- trakt.movies.popular(limit = 5, page = 1, extended = "full")
@@ -28,6 +30,8 @@ test_that("trakt.popular works", {
 })
 
 test_that("trakt.trending works", {
+  skip_on_cran()
+  
   # movies
   tre_mov_min <- trakt.movies.trending(limit = 5, page = 1, extended = "min")
   tre_mov_max <- trakt.movies.trending(limit = 5, page = 1, extended = "full")

@@ -23,6 +23,8 @@ test_that("trakt.search works", {
 })
 
 test_that("trakt.search.byid works", {
+  skip_on_cran()
+  
   res <- trakt.search.byid(id = 614, id_type = "trakt-show")
   res2 <- trakt.search(query = "futurama", type = "show")
 

@@ -2,6 +2,7 @@ context("test-user-collection")
 
 test_that("trakt.user.collection works", {
   skip_on_cran()
+  
   user <- "jemus42"
 
   col_sho <- trakt.user.collection(user = user, type = "shows", unnest_episodes = FALSE)

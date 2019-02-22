@@ -1,6 +1,8 @@
 context("test-ratings-show-movie")
 
 test_that("trakt.[show|movies].ratings works", {
+  skip_on_cran()
+  
   target_show <- "futurama"
   target_movie <- "inception-2010"
 

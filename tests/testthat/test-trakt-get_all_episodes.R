@@ -2,6 +2,7 @@ context("test-trakt-get_a_lot")
 
 test_that("trakt.get_all_episodes works", {
   skip_on_cran()
+
   result <- trakt.get_all_episodes(c("futurama", "breaking-bad"))
 
   expect_is(result, "tbl")
@@ -17,6 +18,7 @@ test_that("trakt.get_all_episodes works", {
 
 test_that("trakt.get_full_showdata works", {
   skip_on_cran()
+  
   result <- trakt.get_full_showdata("Breaking Bad")
 
   expect_is(result, "list")

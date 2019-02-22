@@ -30,6 +30,8 @@ test_that("parse_trakt_url parses", {
 })
 
 test_that("build_trakt_url builds", {
+  skip_on_cran()
+
   x <- build_trakt_url("shows", "breaking-bad", extended = "min", validate = TRUE)
   expect_is(x, "character")
 
@@ -42,6 +44,8 @@ test_that("build_trakt_url builds", {
 })
 
 test_that("convert_datetime converts datetime", {
+  skip_on_cran()
+
   url <- "https://api.trakt.tv/shows/breaking-bad/seasons/1?extended=full"
   response <- httr::GET(url, getOption("trakt.headers"))
   httr::stop_for_status(response) # In case trakt fails
@@ -58,6 +62,8 @@ test_that("convert_datetime converts datetime", {
 })
 
 test_that("check_user is okay", {
+  skip_on_cran()
+
   expect_error(tRakt:::check_username(user = NULL))
   expect_error(tRakt:::check_username(user = NA))
   expect_error(tRakt:::check_username(user = 4))

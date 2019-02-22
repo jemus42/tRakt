@@ -2,6 +2,7 @@ context("test-user-ratings")
 
 test_that("trakt.user.ratings works", {
   skip_on_cran()
+  
   user <- "jemus42"
 
   rat_shows <- trakt.user.ratings(user = user, type = "shows")

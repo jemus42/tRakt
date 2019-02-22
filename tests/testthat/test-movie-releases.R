@@ -1,6 +1,8 @@
 context("test-movie-releases")
 
 test_that("trakt.movie.releases works", {
+  skip_on_cran()
+  
   movie <- "deadpool-2016"
 
   mov <- trakt.movie.releases(target = movie)

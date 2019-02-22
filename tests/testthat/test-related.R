@@ -1,6 +1,8 @@
 context("test-related")
 
 test_that("trakt.related works", {
+  skip_on_cran()
+  
   show <- "futurama"
   movie <- "inception-2010"
 

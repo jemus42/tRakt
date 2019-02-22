@@ -1,6 +1,8 @@
 context("test-trakt_summary")
 
 test_that("trakt.show.summary works", {
+  skip_on_cran()
+  
   target <- "breaking-bad"
   show_min_list <- trakt.show.summary(target, force_data_frame = FALSE)
   show_min_df <- trakt.show.summary(target, force_data_frame = TRUE)
@@ -29,6 +31,8 @@ test_that("trakt.show.summary works", {
 })
 
 test_that("trakt.movie.summary works", {
+  skip_on_cran()
+  
   target <- "deadpool-2016"
   movie_min_list <- trakt.movie.summary(target, force_data_frame = FALSE)
   movie_min_df <- trakt.movie.summary(target, force_data_frame = TRUE)

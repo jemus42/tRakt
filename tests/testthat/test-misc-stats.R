@@ -20,6 +20,8 @@ test_that("trakt.user.stats works", {
 })
 
 test_that("trakt.stats does things", {
+  skip_on_cran()
+
   stats_show <- trakt.stats(target = "futurama", type = "shows")
   stats_mov <- trakt.stats(target = "deadpool-2016", type = "movies")
 

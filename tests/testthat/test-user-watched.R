@@ -2,6 +2,7 @@ context("test-user-watched")
 
 test_that("trakt.user.watched works", {
   skip_on_cran()
+  
   user <- "jemus42"
 
   # shows ----

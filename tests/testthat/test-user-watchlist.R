@@ -1,6 +1,8 @@
 context("test-user-watchlist")
 
 test_that("trakt.user.watchlist works", {
+  skip_on_cran()
+  
   user <- "sean"
 
   res_default <- trakt.user.watchlist(user = user)
