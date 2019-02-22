@@ -29,7 +29,6 @@ Imports:
     tibble
 Suggests:
     covr,
-    ggplot2,
     knitr,
     rmarkdown,
     testthat,

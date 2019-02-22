@@ -21,8 +21,6 @@ knitr::opts_chunk$set(
 
 ```{r startup}
 library(tRakt)
-library(dplyr)   # For convenience
-library(ggplot2) # For plotting (duh)
 library(knitr)   # for knitr::kable, used to render simple tables
 ```
 
