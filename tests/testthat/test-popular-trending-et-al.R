@@ -12,6 +12,9 @@ test_that("trakt.popular works", {
   expect_equal(nrow(pop_mov_min), 5)
   expect_equal(nrow(pop_mov_min), nrow(pop_mov_max))
 
+  expect_error(trakt.movies.popular(limit = -4))
+  expect_error(trakt.movies.popular(page = 0))
+
   # shows
   pop_sho_min <- trakt.shows.popular(limit = 5, page = 1, extended = "min")
   pop_sho_max <- trakt.shows.popular(limit = 5, page = 1, extended = "full")

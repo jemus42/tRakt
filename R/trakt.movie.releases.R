@@ -33,7 +33,8 @@ trakt.movie.releases <- function(target, country = NULL) {
   url <- build_trakt_url("movies", target, "releases", country = country)
   response <- trakt.api.call(url = url)
 
-  if (identical(response, data.frame())) return(tibble::tibble())
+  # Have not been able to produce, wondering if necessary
+  # if (identical(response, data.frame())) return(tibble::tibble())
 
   response$release_date <- lubridate::as_date(response$release_date)
 

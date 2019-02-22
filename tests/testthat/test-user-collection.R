@@ -6,6 +6,9 @@ test_that("trakt.user.collection works", {
 
   col_sho <- trakt.user.collection(user = user, type = "shows", unnest_episodes = FALSE)
   col_mov <- trakt.user.collection(user = user, type = "movies")
+  col_sho2 <- trakt.user.collection(user = user)
+
+  expect_identical(col_sho, col_sho2)
 
   # Error conditions ----
   expect_error(trakt.user.collection(user = -1))

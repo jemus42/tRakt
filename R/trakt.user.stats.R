@@ -22,8 +22,6 @@ trakt.user.stats <- function(user = getOption("trakt.username")) {
   url <- build_trakt_url("users", user, "stats")
   response <- trakt.api.call(url = url)
 
-  if (identical(response, data.frame())) return(NULL)
-
   # Flattening the distribution a little
   response$ratings$distribution <- tibble::enframe(unlist(response$ratings$distribution),
     name = "rating", value = "n"

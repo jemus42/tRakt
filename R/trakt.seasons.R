@@ -38,11 +38,12 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
   url <- build_trakt_url("shows", target, "seasons", seasons, extended = extended)
   season <- trakt.api.call(url = url)
 
-  # Catch unknown season error
-  if (identical(season, data.frame())) {
-    warning(paste("Season", seasons, " of ", target, "does not appear to exist"))
-    return(tibble::tibble())
-  }
+  # # Catch unknown season error
+  # # Have not been able to reproduce since refactor, might be pointless
+  # if (identical(season, data.frame())) {
+  #   warning(paste("Season", seasons, " of ", target, "does not appear to exist"))
+  #   return(tibble::tibble())
+  # }
   # Reorganization
   names(season) <- sub("number", "episode", names(season))
 
