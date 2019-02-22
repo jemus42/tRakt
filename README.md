@@ -10,7 +10,7 @@ status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](http
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
 
-This is `tRakt` version `0.13.9000`.  
+This is `tRakt` version `0.14.0`.  
 It contains functions to retrieve data from
 [trakt.tv](http://trakt.tv/), a site similiar to [IMDb](http://imdb.com)
 with a broader focus including TV shows and more social features – and,
