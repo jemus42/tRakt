@@ -20,15 +20,12 @@
 trakt.user.friends <- function(user = getOption("trakt.username"), extended = "min") {
   if (length(user) > 1) {
     response <- purrr::map_df(user, function(user) {
-      response <- trakt.user.friends(user = user, extended = extended)
-      return(response)
+      trakt.user.friends(user = user, extended = extended)
     })
     return(response)
   }
 
-  if ((is.null(user) && is.null(getOption("trakt.username"))) | user == "" | is.numeric(user)) {
-    stop("No username is set.")
-  }
+  check_username(user)
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "friends", extended = extended)
@@ -70,15 +67,12 @@ trakt.user.friends <- function(user = getOption("trakt.username"), extended = "m
 trakt.user.followers <- function(user = getOption("trakt.username"), extended = "min") {
   if (length(user) > 1) {
     response <- purrr::map_df(user, function(user) {
-      response <- trakt.user.followers(user = user, extended = extended)
-      return(response)
+      trakt.user.followers(user = user, extended = extended)
     })
     return(response)
   }
 
-  if ((is.null(user) && is.null(getOption("trakt.username"))) | user == "" | is.numeric(user)) {
-    stop("No username is set.")
-  }
+  check_username(user)
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "followers", extended = extended)
@@ -120,15 +114,12 @@ trakt.user.followers <- function(user = getOption("trakt.username"), extended = 
 trakt.user.following <- function(user = getOption("trakt.username"), extended = "min") {
   if (length(user) > 1) {
     response <- purrr::map_df(user, function(user) {
-      response <- trakt.user.following(user = user, extended = extended)
-      return(response)
+      trakt.user.following(user = user, extended = extended)
     })
     return(response)
   }
 
-  if ((is.null(user) && is.null(getOption("trakt.username"))) | user == "" | is.numeric(user)) {
-    stop("No username is set.")
-  }
+  check_username(user)
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "following", extended = extended)

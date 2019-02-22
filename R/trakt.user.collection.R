@@ -25,6 +25,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"),
                                   unnest_episodes = FALSE) {
   check_username(user)
   match.arg(type)
+  if (length(type) > 1) type <- type[1]
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "collection", type)

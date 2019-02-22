@@ -19,9 +19,7 @@
 #' trakt.movies.trending(5)
 #' }
 trakt.movies.trending <- function(limit = 10, page = 1, extended = "min") {
-  response <- trakt.trending("movies", limit = limit, page = page, extended = extended)
-
-  return(response)
+  trakt.trending("movies", limit = limit, page = page, extended = extended)
 }
 
 #' Get trending shows
@@ -45,9 +43,7 @@ trakt.movies.trending <- function(limit = 10, page = 1, extended = "min") {
 #' trakt.shows.trending(5)
 #' }
 trakt.shows.trending <- function(limit = 10, page = 1, extended = "min") {
-  response <- trakt.trending("shows", limit = limit, page = page, extended = extended)
-
-  return(response)
+  trakt.trending("shows", limit = limit, page = page, extended = extended)
 }
 
 #' @keywords internal

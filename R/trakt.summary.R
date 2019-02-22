@@ -19,11 +19,10 @@
 #' trakt.movie.summary("tron-legacy-2010")
 #' }
 trakt.movie.summary <- function(target, extended = "min", force_data_frame = FALSE) {
-  response <- trakt.summary(
+  trakt.summary(
     type = "movies", target = target, extended = extended,
     force_data_frame = force_data_frame
   )
-  return(response)
 }
 
 #' Get show summary info
@@ -50,22 +49,20 @@ trakt.movie.summary <- function(target, extended = "min", force_data_frame = FAL
 #' breakingbad.summary <- trakt.show.summary("breaking-bad")
 #' }
 trakt.show.summary <- function(target, extended = "min", force_data_frame = FALSE) {
-  response <- trakt.summary(
+  trakt.summary(
     type = "shows", target = target, extended = extended,
     force_data_frame = force_data_frame
   )
-  return(response)
 }
 
 #' @keywords internal
 trakt.summary <- function(type, target, extended = "min", force_data_frame = FALSE) {
   if (length(target) > 1) {
     response <- purrr::map_df(target, function(t) {
-      response <- trakt.summary(
+      trakt.summary(
         type = type, target = t, extended = extended,
         force_data_frame = TRUE
       )
-      return(response)
     })
     return(response)
   }
@@ -83,13 +80,11 @@ trakt.summary <- function(type, target, extended = "min", force_data_frame = FAL
       names(response$airs) <- paste0("airs.", names(response$airs))
       temp <- cbind(temp, response$airs)
     }
+    # Drop translations because no.
     if ("available_translations" %in% names(response)) {
-      temp[["available_translations"]] <- I(list(response$available_translations))
+      temp <- temp[names(temp) != "available_translations"]
     }
-    # if ("images" %in% names(response)) {
-    #   temp[["images"]][[1]] <- I(response$images)
-    # }
     response <- tibble::as_tibble(temp)
   }
-  return(response)
+  response
 }
