@@ -71,8 +71,6 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
     # Drop episodes with a timestamp of 0, probably faulty data or unaired
     if (nrow(show.episodes[show.episodes$first_aired != 0, ]) > 0) {
       show.episodes <- show.episodes[show.episodes$first_aired != 0, ]
-    } else {
-      warning("Data is probably faulty: Some first_aired values are 0")
     }
 
     if (drop.unaired) {
