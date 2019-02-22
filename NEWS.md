@@ -1,4 +1,4 @@
-# tRakt 0.13.9000
+# tRakt 0.14.0
 
 Many functions were refactored, which in some cases changes the output.  
 Not only do most functions return a `tibble` now, but some additionally computed variables have been removed as well.
