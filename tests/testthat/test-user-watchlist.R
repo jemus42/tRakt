@@ -1,7 +1,7 @@
 context("test-user-watchlist")
 
 test_that("trakt.user.watchlist works", {
-  user <- "jemus42"
+  user <- "sean"
 
   res_default <- trakt.user.watchlist(user = user)
   res_shows <- trakt.user.watchlist(user = user, type = "shows")

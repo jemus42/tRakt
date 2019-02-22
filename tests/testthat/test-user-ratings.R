@@ -8,6 +8,8 @@ test_that("trakt.user.ratings works", {
   rat_episo <- trakt.user.ratings(user = user, type = "episodes")
   rat_movie <- trakt.user.ratings(user = user, type = "movies")
 
+  expect_identical(rat_shows, trakt.user.ratings(user = user))
+
   expect_named(rat_shows, c(
     "rated_at", "rating", "type", "title", "year", "trakt", "slug",
     "tvdb", "imdb", "tmdb", "tvrage"

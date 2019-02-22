@@ -73,9 +73,8 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
     movies <- cbind(response$movie[names(response$movie) != "ids"], response$movie$ids)
 
     watched <- cbind(response[names(response) != "movie"], movies)
-  } else {
-    stop("Unknown type, must be 'shows', 'shows.extended', or 'movies'")
   }
+
   # To be sure
   watched <- convert_datetime(watched)
   watched$last_watched.year <- lubridate::year(watched$last_watched_at)

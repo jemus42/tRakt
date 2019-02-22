@@ -37,6 +37,8 @@ test_that("build_trakt_url builds", {
   y <- trakt.api.call(x)
   expect_length(y, 3)
   expect_named(y, c("title", "year", "ids"))
+
+  expect_error(build_trakt_url("3o2bkf", "qkfb23vf", validate = TRUE))
 })
 
 test_that("convert_datetime converts datetime", {
