@@ -13,8 +13,5 @@
 ^\.github$
 ^.*\.Rproj$
 ^\.Rproj\.user$
-key.json
-tests.R
 ^\.httr-oauth$
 .travis.yml
-#NEWS.md
