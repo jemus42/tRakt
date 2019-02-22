@@ -47,12 +47,13 @@ show_info <- trakt.search("Utopia", type = "show")
 glimpse(show_info)
 
 # Get season information for the show
-show_seasons <- trakt.seasons.summary(show_info$ids$trakt)
+show_seasons <- trakt.seasons.summary(show_info$trakt)
 
 knitr::kable(show_seasons)
 
 # Get episode data
-show_episodes <- trakt.seasons.season(show_info$ids$trakt, seasons = c(1, 2), extended = "full")
+show_episodes <- trakt.seasons.season(show_info$trakt, 
+                                      seasons = c(1, 2), extended = "full")
 
 show_episodes %>%
   select(season, episode, title, rating, votes, first_aired) %>%

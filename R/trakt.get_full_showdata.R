@@ -16,7 +16,7 @@
 #' @family show data
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
+#' library(tRakt)
 #' # Use the search within the function
 #' breakingbad <- trakt.get_full_showdata("Breaking Bad")
 #' # Alternatively, us a slug for explicit results
@@ -28,7 +28,7 @@ trakt.get_full_showdata <- function(query = NULL, slug = NULL, drop.unaired = TR
   show <- list()
   if (!is.null(query)) {
     show$info <- trakt.search(query)
-    slug <- show$info$ids$slug
+    slug <- show$info$slug
   } else if (is.null(query) & is.null(slug)) {
     stop("You must provide either a search query or a trakt.tv slug")
   }

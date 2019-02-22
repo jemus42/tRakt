@@ -46,29 +46,34 @@ library(tRakt)
 show_info <- trakt.search("Utopia", type = "show")
 glimpse(show_info)
 #> Observations: 1
-#> Variables: 6
+#> Variables: 10
 #> $ title    <chr> "Utopia"
 #> $ overview <chr> "The story follows a small group of people who find the…
 #> $ year     <int> 2013
 #> $ status   <chr> "ended"
-#> $ images   <data.frame> <data.frame[1 x 2]>
-#> $ ids      <data.frame> <data.frame[1 x 6]>
+#> $ trakt    <int> 46241
+#> $ slug     <chr> "utopia"
+#> $ tvdb     <int> 264991
+#> $ imdb     <chr> "tt2384811"
+#> $ tmdb     <int> 46511
+#> $ tvrage   <int> NA
 
 # Get season information for the show
-show_seasons <- trakt.seasons.summary(show_info$ids$trakt)
+show_seasons <- trakt.seasons.summary(show_info$trakt)
 
 knitr::kable(show_seasons)
 ```
 
-|   | season | trakt |   tvdb |  tmdb | tvrage |
-| - | -----: | ----: | -----: | ----: | :----- |
-| 2 |      1 | 56008 | 507598 | 54695 | NA     |
-| 3 |      2 | 56009 | 524149 | 54696 | NA     |
+| season | trakt |   tvdb |  tmdb | tvrage |
+| -----: | ----: | -----: | ----: | :----- |
+|      1 | 56008 | 507598 | 54695 | NA     |
+|      2 | 56009 | 524149 | 54696 | NA     |
 
 ``` r
 
 # Get episode data
-show_episodes <- trakt.seasons.season(show_info$ids$trakt, seasons = c(1, 2), extended = "full")
+show_episodes <- trakt.seasons.season(show_info$trakt, 
+                                      seasons = c(1, 2), extended = "full")
 
 show_episodes %>%
   select(season, episode, title, rating, votes, first_aired) %>%
@@ -77,17 +82,17 @@ show_episodes %>%
 
 | season | episode | title     |  rating | votes | first\_aired        |
 | -----: | ------: | :-------- | ------: | ----: | :------------------ |
-|      1 |       1 | Episode 1 | 8.25471 |  1009 | 2013-01-15 21:00:00 |
+|      1 |       1 | Episode 1 | 8.25247 |  1010 | 2013-01-15 21:00:00 |
 |      1 |       2 | Episode 2 | 8.13653 |   813 | 2013-01-22 21:00:00 |
 |      1 |       3 | Episode 3 | 8.15875 |   737 | 2013-01-29 21:00:00 |
 |      1 |       4 | Episode 4 | 8.11078 |   677 | 2013-02-05 21:00:00 |
 |      1 |       5 | Episode 5 | 8.32504 |   643 | 2013-02-12 21:00:00 |
 |      1 |       6 | Episode 6 | 8.71620 |   673 | 2013-02-19 21:00:00 |
-|      2 |       1 | Episode 1 | 8.57101 |   676 | 2014-07-14 20:00:00 |
+|      2 |       1 | Episode 1 | 8.57016 |   677 | 2014-07-14 20:00:00 |
 |      2 |       2 | Episode 2 | 8.35798 |   595 | 2014-07-15 20:00:00 |
 |      2 |       3 | Episode 3 | 8.28975 |   566 | 2014-07-22 20:00:00 |
 |      2 |       4 | Episode 4 | 8.26964 |   560 | 2014-07-29 20:00:00 |
-|      2 |       5 | Episode 5 | 8.29982 |   557 | 2014-08-05 20:00:00 |
+|      2 |       5 | Episode 5 | 8.30287 |   558 | 2014-08-05 20:00:00 |
 |      2 |       6 | Episode 6 | 8.28253 |   538 | 2014-08-12 20:00:00 |
 
 ## Setting credentials

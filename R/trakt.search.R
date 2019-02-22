@@ -45,11 +45,12 @@ trakt.search <- function(query, type = "show", year = NULL) {
     return(tibble::tibble())
   }
 
-  result <- response[1, ][[type]]
-  result <- result[names(result) != "images"]
+  response <- response[[type]]
+  response <- response[names(response) != "images"]
   response <- cbind(response[names(response) != "ids"], response$ids)
+  response <- response[1, ]
 
-  tibble::as_tibble(result)
+  tibble::as_tibble(response)
 }
 
 #' Lookup a show via id

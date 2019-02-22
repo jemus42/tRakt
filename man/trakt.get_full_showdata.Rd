@@ -29,7 +29,7 @@ should consider interactively calling the other functions.
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
+library(tRakt)
 # Use the search within the function
 breakingbad <- trakt.get_full_showdata("Breaking Bad")
 # Alternatively, us a slug for explicit results
