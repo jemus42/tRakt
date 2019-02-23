@@ -55,7 +55,7 @@ trakt.user.network <- function(relationship = c("friends", "followers", "followi
 trakt.user.friends <- function(user = getOption("trakt.username"),
                                extended = c("min", "full")) {
 
-  trakt_user_friendfollow(relationship = "friends", user = user, extended = extended)
+  trakt.user.network(relationship = "friends", user = user, extended = extended)
 }
 
 #' @rdname trakt.user.network
@@ -63,7 +63,7 @@ trakt.user.friends <- function(user = getOption("trakt.username"),
 trakt.user.followers <- function(user = getOption("trakt.username"),
                                  extended = c("min", "full")) {
 
-  trakt_user_friendfollow(relationship = "followers", user = user, extended = extended)
+  trakt.user.network(relationship = "followers", user = user, extended = extended)
 }
 
 #' @rdname trakt.user.network
@@ -71,5 +71,5 @@ trakt.user.followers <- function(user = getOption("trakt.username"),
 trakt.user.following <- function(user = getOption("trakt.username"),
                                  extended = c("min", "full")) {
 
-  trakt_user_friendfollow(relationship = "following", user = user, extended = extended)
+  trakt.user.network(relationship = "following", user = user, extended = extended)
 }

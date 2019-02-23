@@ -1,19 +1,19 @@
-#' Get popular and trending movies and shows
+# Documentation ----
+
+#' Get popular/trending/anticipated movies and shows
 #'
 #' According to the API docs, popularity is calculated based both ratings
 #' and number of ratings. Trending items are those being watched right now, where
-#' items with the most users watching are returned first.
+#' items with the most users watching are returned first. Anticipation is measured
+#' by the number of user-created lists an items is part of while not being released yet.
 #'
-#' @param limit Number of movies/shows to return. Is coerced to `integer` and must be
-#' greater than 0.
-#' @param page Page to return (default is `1`)
-#' for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.
+#' @param limit,page `integer(1) [10]`: Number of items and page for paginated requests.
+#' Bot values must be greater than `0` and will be coerced to `integer`.
 #' @inheritParams extended_info
 #' @inheritParams type_shows_movies
-#' @return A [tibble][tibble::tibble-package].
-#' @export
-#' @aliases trakt.trending
+#' @inherit return_tibble return
 #' @family Automated lists
+#' @name automated_lists
 #' @examples
 #' \dontrun{
 #' # Get popular movies and shows
@@ -22,10 +22,20 @@
 #'
 #' # Get trending movies and shows
 #' trakt.movies.trending(5)
-#' trakt.shows.trending(5)
+#' trakttrending(type = "movies", 5)
 #' }
-trakt.popular <- function(type = c("shows", "movies"), limit = 10, page = 1,
-                          extended = c("min", "full")) {
+#'
+#' # Get anticipated movies
+#' trakt.anticipated(type = "movies", 10)
+NULL
+
+# Worker function ----
+#' @keywords internal
+trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated"),
+                            type = c("shows", "movies"),
+                             limit = 10, page = 1,
+                             extended = c("min", "full")) {
+  list_type <- match.arg(list_type)
   type <- match.arg(type)
   extended <- match.arg(extended)
   limit <- as.integer(limit)
@@ -35,65 +45,76 @@ trakt.popular <- function(type = c("shows", "movies"), limit = 10, page = 1,
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, "popular", page = page, limit = limit, extended = extended)
+  url <- build_trakt_url(type, list_type, page = page, limit = limit, extended = extended)
   response <- trakt.api.call(url)
 
-  # Spreading out ids to get a flat data.frame
-  response <- cbind(response[names(response) != "ids"], response$ids)
-
   tibble::remove_rownames(tibble::as_tibble(response))
-}
 
-#' @rdname trakt.popular
-#' @export
-trakt.trending <- function(type = c("shows", "movies"), limit = 10, page = 1,
-                           extended = c("min", "full")) {
-  type <- match.arg(type)
-  extended <- match.arg(extended)
-  limit <- as.integer(limit)
-  page <- as.integer(page)
-  if (limit < 1 | page < 1) {
-    stop("Limit and page must be greater than zero")
-  }
-
-  # Construct URL, make API call
-  url <- build_trakt_url(type, "trending", page = page, limit = limit, extended = extended)
-  response <- trakt.api.call(url)
-
-  if (type == "shows") {
-    response <- cbind(response[names(response) != "show"], response$show)
-    response$show <- cbind(response$show[names(response$show) != "ids"], response$show$ids)
-  } else if (type == "movies") {
-    response$movie <- cbind(response$movie[names(response$movie) != "ids"], response$movie$ids)
-    response <- cbind(response[names(response) != "movie"], response$movie)
-  }
-  response <- convert_datetime(response)
-
-  tibble::remove_rownames(tibble::as_tibble(response))
 }
 
 # Aliased/derived ----
+#' @rdname automated_lists
+#' @export
+trakt.popular <- function(type = c("shows", "movies"), limit = 10, page = 1,
+                          extended = c("min", "full")) {
+  trakt_auto_lists(list_type = "popular", type = type,
+                   limit = limit, page = page, extended = extended)
+}
 
-#' @rdname trakt.popular
+#' @rdname automated_lists
+#' @export
+trakt.trending <- function(type = c("shows", "movies"), limit = 10, page = 1,
+                           extended = c("min", "full")) {
+  trakt_auto_lists(list_type = "trending", type = type,
+                   limit = limit, page = page, extended = extended)
+}
+
+#' @rdname automated_lists
+#' @export
+trakt.anticipated <- function(type = c("shows", "movies"), limit = 10, page = 1,
+                           extended = c("min", "full")) {
+  trakt_auto_lists(list_type = "anticipated", type = type,
+                   limit = limit, page = page, extended = extended)
+}
+
+#' @rdname automated_lists
 #' @export
 trakt.movies.trending <- function(limit = 10, page = 1, extended = c("min", "full")) {
-  trakt.trending("movies", limit = limit, page = page, extended = extended)
+  trakt_auto_lists(list_type = "trending", type = "movies",
+                   limit = limit, page = page, extended = extended)
 }
 
-#' @rdname trakt.popular
+#' @rdname automated_lists
 #' @export
 trakt.shows.trending <- function(limit = 10, page = 1, extended = c("min", "full")) {
-  trakt.trending("shows", limit = limit, page = page, extended = extended)
+  trakt_auto_lists(list_type = "trending", type = "shows",
+                   limit = limit, page = page, extended = extended)
 }
 
-#' @rdname trakt.popular
+#' @rdname automated_lists
 #' @export
 trakt.movies.popular <- function(limit = 10, page = 1, extended = c("min", "full")) {
-  trakt.popular(type = "movies", limit = limit, page = page, extended = extended)
+  trakt_auto_lists(list_type = "popular", type = "movies",
+                   limit = limit, page = page, extended = extended)
 }
 
-#' @rdname trakt.popular
+#' @rdname automated_lists
 #' @export
 trakt.shows.popular <- function(limit = 10, page = 1, extended = c("min", "full")) {
-  trakt.popular(type = "shows", limit = limit, page = page, extended = extended)
+  trakt_auto_lists(list_type = "popular", type = "shows",
+                   limit = limit, page = page, extended = extended)
+}
+
+#' @rdname automated_lists
+#' @export
+trakt.movies.anticipated <- function(limit = 10, page = 1, extended = c("min", "full")) {
+  trakt_auto_lists(list_type = "anticipated", type = "movies",
+                   limit = limit, page = page, extended = extended)
+}
+
+#' @rdname automated_lists
+#' @export
+trakt.shows.anticipated <- function(limit = 10, page = 1, extended = c("min", "full")) {
+  trakt_auto_lists(list_type = "anticipated", type = "shows",
+                   limit = limit, page = page, extended = extended)
 }

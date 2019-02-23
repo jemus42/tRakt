@@ -2,10 +2,10 @@
 % Please edit documentation in R/docs-common.R
 \name{type_shows_movies}
 \alias{type_shows_movies}
-\title{Type: Show or Movie}
+\title{Type: Shows or Movies}
 \arguments{
-\item{type}{\code{[character(1)]}: Either \code{"show"} or \code{"movie"}.}
+\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 }
 \description{
-Type: Show or Movie
+Type: Shows or Movies
 }

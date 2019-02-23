@@ -4,14 +4,9 @@
 #' returns more variables and should generally only be used if required.
 NULL
 
-#' Type: Show or Movie
-#' @name type_show_movie
-#' @param type `[character(1)]`: Either `"shows"` (default) or `"movies"`.
-NULL
-
-#' Type: Show or Movie
+#' Type: Shows or Movies
 #' @name type_shows_movies
-#' @param type `[character(1)]`: Either `"show"` or `"movie"`.
+#' @param type `character(1)`: Either `"shows"` or `"movies"`.
 NULL
 
 #' User parameter
