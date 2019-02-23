@@ -2,7 +2,7 @@
 % Please edit documentation in R/api.R
 \name{trakt.api.call}
 \alias{trakt.api.call}
-\title{Make an APIv2 call to any URL}
+\title{Make an API call to any URL}
 \usage{
 trakt.api.call(url, headers = getOption("trakt.headers"),
   convert.datetime = TRUE)
@@ -22,8 +22,7 @@ The parsed content of the API response.
 An empty \link[tibble:tibble-package]{tibble} if the response is an empty array.
 }
 \description{
-\code{trakt.api.call} makes an APIv2 call to a specified URL
-and returns the output \code{jsonlite::fromJSON}'d if requested.
+\code{trakt.api.call} makes an API call to a specified URL and returns the parsed output.
 }
 \note{
 This function is heavily used internally, so why not expose it to the user.
@@ -31,7 +30,7 @@ This function is heavily used internally, so why not expose it to the user.
 \examples{
 \dontrun{
 library(tRakt)
-trakt.api.call("https://api-v2launch.trakt.tv/shows/breaking-bad?extended=min")
+trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
 }
 }
 \seealso{

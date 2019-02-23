@@ -77,10 +77,9 @@ get_trakt_credentials <- function(username = "", client.id = "",
   }
 }
 
-#' Make an APIv2 call to any URL
+#' Make an API call to any URL
 #'
-#' `trakt.api.call` makes an APIv2 call to a specified URL
-#' and returns the output `jsonlite::fromJSON`'d if requested.
+#' `trakt.api.call` makes an API call to a specified URL and returns the parsed output.
 #'
 #' @param url APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.
 #' @param headers HTTP headers to set. Must be result of `httr::add_headers`.
@@ -98,14 +97,16 @@ get_trakt_credentials <- function(username = "", client.id = "",
 #' @examples
 #' \dontrun{
 #' library(tRakt)
-#' trakt.api.call("https://api-v2launch.trakt.tv/shows/breaking-bad?extended=min")
+#' trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
 #' }
 trakt.api.call <- function(url, headers = getOption("trakt.headers"),
                            convert.datetime = TRUE) {
   if (is.null(headers) & is.null(getOption("trakt.headers"))) {
     stop("HTTP headers not set, see ?get_trakt_credentials")
   }
-  response <- httr::GET(url, headers)
+  agent <- httr::user_agent("https://github.com/jemus42/tRakt")
+
+  response <- httr::GET(url, headers, agent)
   httr::stop_for_status(response) # In case trakt fails
   response <- httr::content(response, as = "text")
   response <- jsonlite::fromJSON(response)
