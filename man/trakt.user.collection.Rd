@@ -8,7 +8,11 @@ trakt.user.collection(user = getOption("trakt.username"),
   type = c("shows", "movies"), unnest_episodes = FALSE)
 }
 \arguments{
-\item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
+\item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
+Can also be of length greater than 1, in which case the function is called on all
+\code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
+
+\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 
 \item{unnest_episodes}{\code{logical(1) [FALSE]}: Unnests episode data using
 \code{[tidyr](tidyr::unnest)} and returns one row per episode rather than one row per show.}
@@ -21,12 +25,8 @@ A \link[tibble:tibble-package]{tibble}.
 It does not use OAuth2, so you can only get data for a user with a
 public profile.
 }
-\note{
-See \href{http://docs.trakt.apiary.io/reference/users/collection/get-collection}{the trakt API docs for further info}
-}
 \examples{
 \dontrun{
-myshows <- trakt.user.collection() # Defaults to your username if set
 seans.movies <- trakt.user.collection(user = "sean", type = "movies")
 }
 }

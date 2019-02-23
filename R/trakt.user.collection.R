@@ -3,19 +3,17 @@
 #' `trakt.user.collection` retrieves a user's collected shows or movies.
 #' It does not use OAuth2, so you can only get data for a user with a
 #' public profile.
-#' @param user Target user. Defaults to `getOption("trakt.username")`
-#' @inheritParams id_movie_show
+#' @inheritParams user_param
+#' @inheritParams type_shows_movies
 #' @param unnest_episodes `logical(1) [FALSE]`: Unnests episode data using
 #' `[tidyr](tidyr::unnest)` and returns one row per episode rather than one row per show.
 #' @inherit return_tibble return
 #' @export
-#' @note See [the trakt API docs for further info](http://docs.trakt.apiary.io/reference/users/collection/get-collection)
 #' @family user data
 #' @import dplyr
 #' @importFrom lubridate ymd_hms
 #' @examples
 #' \dontrun{
-#' myshows <- trakt.user.collection() # Defaults to your username if set
 #' seans.movies <- trakt.user.collection(user = "sean", type = "movies")
 #' }
 trakt.user.collection <- function(user = getOption("trakt.username"),

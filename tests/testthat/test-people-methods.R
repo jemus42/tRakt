@@ -49,8 +49,8 @@ test_that("trakt.[show|movie].people works", {
   target_mov <- "inception-2010"
   target_sho <- "futurama"
 
-  show <- trakt.show.people(target = target_sho)
-  movie <- trakt.movie.people(target = target_mov)
+  show <- trakt.shows.people(target = target_sho)
+  movie <- trakt.movies.people(target = target_mov)
 
   expect_is(show, "list")
   expect_is(movie, "list")

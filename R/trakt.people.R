@@ -1,25 +1,27 @@
 #' Get a single person's details
 #'
-#' `trakt.people.summary` pulls show people data.
-#'
-#' Get a single person's details, like their various ids. If `extended` is `"full"`,
+#' Get a single person's details, like their various IDs. If `extended` is `"full"`,
 #' there will also be biographical data if available.
-#' @inheritParams id_movie_show
+#' @inheritParams id_person
 #' @inheritParams extended_info
 #' @inherit return_tibble return
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/reference/people/summary/get-a-single-person}{the trakt API docs for further info}
+#' @importFrom purrr flatten_df
+#' @importFrom purrr modify_if
+#' @importFrom purrr map_df
 #' @family people data
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
-#' person <- trakt.people.summary("bryan-cranston")
+#' person <- trakt.people.summary("bryan-cranston", "min")
+#'
+#' more_people <- trakt.people.summary(c("kit-harington", "emilia-clarke"))
 #' }
-trakt.people.summary <- function(target, extended = "min") {
+trakt.people.summary <- function(target, extended = c("min", "full")) {
+  extended <- match.arg(extended)
+
   if (length(target) > 1) {
-    response <- purrr::map_df(target, function(t) {
-      response <- trakt.people.summary(target = t, extended = extended)
-      return(response)
+    response <- purrr::map_df(target, function(target) {
+      trakt.people.summary(target = target, extended = extended)
     })
     return(response)
   }
@@ -28,118 +30,80 @@ trakt.people.summary <- function(target, extended = "min") {
   url <- build_trakt_url("people", target, extended = extended)
   response <- trakt.api.call(url = url)
 
-  # Flatten the data.frame
-  # Fix NULLs (screw up data.frame conversion)
-  response$ids[unlist(lapply(response$ids, is.null))] <- NA
-  ids <- as.data.frame(response$ids)
-  data <- response[names(response) != "ids"]
-  # Fix NULLs (screw up data.frame conversion)
-  data[unlist(lapply(data, is.null))] <- NA
-  data <- as.data.frame(data)
-  data <- cbind(data, ids)
+  # Substitute NULLs with explicit NAs and flatten IDs
+  response$ids <- purrr::modify_if(response$ids, is.null,
+                                   function(x) return(NA_character_))
+  response <- purrr::modify_if(response, is.null,
+                               function(x) return(NA_character_))
+  response <- purrr::flatten_df(response)
 
-  tibble::as_tibble(data)
+  response
 }
 
-#' Get a single person's movie credits
+# People that have media ----
+
+#' Get a single person's movie or show credits
 #'
-#' `trakt.people.movies` pulls movie people data.
-#'
-#' Returns all movies where this person is in the cast or crew.
-#' @inheritParams id_movie_show
+#' Returns all movies or shows where this person is in the cast or crew.
+#' @inheritParams id_person
+#' @inheritParams type_shows_movies
 #' @inheritParams extended_info
 #' @return A `list`.
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/reference/people/movies/get-movie-credits}{the trakt API docs for further info}
 #' @family people data
+#' @seealso [trakt.media.people], for the other direction: Media that has people.
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
-#' person <- trakt.people.movies("bryan-cranston")
+#' trakt.people.movies("bryan-cranston")
 #' }
+trakt.people.media <- function(type = c("shows", "movies"), target,
+                               extended = c("min", "full")) {
+  extended <- match.arg(extended)
+  type <- match.arg(type)
+
+  # Construct URL, make API call
+  url <- build_trakt_url("people", target, type, extended = extended)
+  trakt.api.call(url = url)
+}
+
+#' @rdname trakt.people.media
+#' @export
 trakt.people.movies <- function(target, extended = c("min", "full")) {
-  extended <- match.arg(extended)
-
-  # Construct URL, make API call
-  url <- build_trakt_url("people", target, "movies", extended = extended)
-  response <- trakt.api.call(url = url)
-
-  # Flattening cast
-  if ("movie" %in% names(response$cast)) {
-    response$cast$movie <- cbind(
-      response$cast$movie[names(response$cast$movie) != "ids"],
-      response$cast$movie$ids
-    )
-    response$cast <- cbind(
-      response$cast[names(response$cast) != "movie"],
-      response$cast$movie
-    )
-    response$cast <- convert_datetime(response$cast)
-  }
-
-  response
+  trakt.people.media(type = "movies", target = target, extended = extended)
 }
 
-#' Get a single person's show credits
-#'
-#' `trakt.people.shows` pulls show people data.
-#'
-#' Returns all shows where this person is in the cast or crew.
-#' @inheritParams id_movie_show
-#' @inheritParams extended_info
-#' @return A `list`.
+#' @rdname trakt.people.media
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/reference/people/shows/get-show-credits}{the trakt API docs for further info}
-#' @family people data
-#' @examples
-#' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
-#' person <- trakt.people.shows("bryan-cranston")
-#' }
 trakt.people.shows <- function(target, extended = c("min", "full")) {
-  extended <- match.arg(extended)
-
-  # Construct URL, make API call
-  url <- build_trakt_url("people", target, "shows", extended = extended)
-  response <- trakt.api.call(url = url)
-
-  # Flattening cast
-  if ("show" %in% names(response$cast)) {
-    response$cast$show <- cbind(
-      response$cast$show[names(response$cast$show) != "ids"],
-      response$cast$show$ids
-    )
-    response$cast <- cbind(
-      response$cast[names(response$cast) != "show"],
-      response$cast$show
-    )
-    response$cast <- convert_datetime(response$cast)
-  }
-
-  response
+  trakt.people.media(type = "shows", target = target, extended = extended)
 }
 
-#' Get the cast and crew of a show
+# Media that has people ----
+
+#' Get the cast and crew of a show or movie
 #'
-#' `trakt.show.people` pulls show people data.
-#'
-#' Returns all cast and crew for a show, depending on how much data is available.
+#' Returns all cast and crew for a show/movie, depending on how much data is
+#' available.
 #' @inheritParams id_movie_show
 #' @inheritParams extended_info
+#' @inheritParams type_shows_movies
 #' @return A `list`.
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/#reference/shows/people/get-all-people-for-a-show}{the trakt API docs for further info}
-#' @family show data
 #' @family people data
+#' @seealso [trakt.people.media], for the other direction: People that have credits.
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.people <- trakt.show.people("breaking-bad")
 #' }
-trakt.show.people <- function(target, extended = "min") {
+#'
+trakt.media.people <- function(type = c("shows", "movies"), target,
+                               extended = c("min", "full")) {
+
+  type <- match.arg(type)
+  extended <- match.arg(extended)
 
   # Construct URL, make API call
-  url <- build_trakt_url("shows", target, "people", extended = extended)
+  url <- build_trakt_url(type, target, "people", extended = extended)
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
@@ -155,38 +119,15 @@ trakt.show.people <- function(target, extended = "min") {
   response
 }
 
-#' Get the cast and crew of a movie
-#'
-#' `trakt.movie.people` pulls movie people data.
-#'
-#' Returns all cast and crew for a movie, depending on how much data is available.
-#' @inheritParams id_movie_show
-#' @inheritParams extended_info
-#' @return A `list`.
+#' @rdname trakt.media.people
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{the trakt API docs for further info}
-#' @family movie data
-#' @family people data
-#' @examples
-#' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
-#' tron.people <- trakt.movie.people("tron-legacy-2010")
-#' }
-trakt.movie.people <- function(target, extended = "min") {
-
-  # Construct URL, make API call
-  url <- build_trakt_url("movies", target, "people", extended = extended)
-  response <- trakt.api.call(url = url)
-
-  # Flatten the data.frame
-  response$cast <- cbind(
-    response$cast[names(response$cast) != "person"],
-    response$cast$person
-  )
-  response$cast <- cbind(
-    response$cast[names(response$cast) != "ids"],
-    response$cast$ids
-  )
-
-  response
+trakt.shows.people <- function(target, extended = c("min", "full")) {
+  trakt.media.people(type = "shows", target = target, extended = extended)
 }
+
+#' @rdname trakt.media.people
+#' @export
+trakt.movies.people <- function(target, extended = c("min", "full")) {
+  trakt.media.people(type = "movies", target = target, extended = extended)
+}
+
