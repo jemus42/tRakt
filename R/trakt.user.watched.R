@@ -32,6 +32,7 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
                                type = c("shows", "movies"),
                                extended = c("min", "full"),
                                noseasons = TRUE) {
+
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)
@@ -39,6 +40,9 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
   if (noseasons) {
     extended = paste0(extended, ",noseasons")
   }
+
+  # Please R CMD check
+  show <- ids <- movie <- NULL
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "watched", type, extended = extended)
