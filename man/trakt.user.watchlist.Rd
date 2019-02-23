@@ -5,7 +5,7 @@
 \title{Get a user's watchlist}
 \usage{
 trakt.user.watchlist(user = getOption("trakt.username"),
-  type = c("movies", "shows"), extended = "min")
+  type = c("movies", "shows"), extended = c("min", "full"))
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
@@ -13,7 +13,7 @@ trakt.user.watchlist(user = getOption("trakt.username"),
 \item{type}{Either \code{shows} (default) or \code{movies}}
 
 \item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
+Defaults to \code{"min"}, can also be\code{"full"}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.

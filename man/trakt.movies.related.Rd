@@ -38,13 +38,10 @@ Other movie data: \code{\link{trakt.movie.people}},
   \code{\link{trakt.movie.ratings}},
   \code{\link{trakt.movie.releases}},
   \code{\link{trakt.movie.summary}},
-  \code{\link{trakt.movies.popular}},
   \code{\link{trakt.movies.trending}},
   \code{\link{trakt.stats}}
 
-Other aggregated data: \code{\link{trakt.movies.popular}},
-  \code{\link{trakt.movies.trending}},
-  \code{\link{trakt.shows.popular}},
+Other aggregated data: \code{\link{trakt.movies.trending}},
   \code{\link{trakt.shows.related}},
   \code{\link{trakt.shows.trending}}
 }

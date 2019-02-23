@@ -2,9 +2,13 @@
 % Please edit documentation in R/trakt.popular.R
 \name{trakt.movies.popular}
 \alias{trakt.movies.popular}
+\alias{trakt.popular}
+\alias{trakt.shows.popular}
 \title{Get popular movies}
 \usage{
 trakt.movies.popular(limit = 10, page = 1, extended = "min")
+
+trakt.shows.popular(limit = 10, page = 1, extended = "min")
 }
 \arguments{
 \item{limit}{Number of movies to return. Is coerced to \code{integer} and must be greater than 0.}
@@ -12,39 +16,25 @@ trakt.movies.popular(limit = 10, page = 1, extended = "min")
 \item{page}{Page to return (default is \code{1})
 for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.}
 
-\item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
+\item{extended}{\code{[character(1)]}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-\code{trakt.movies.popular} returns a list of the most popular movies on trakt.tv.
+\code{trakt.[movies|shows].popular} returns a list of the most popular movies on trakt.tv.
 According to the API docs, opularity is calculated based both ratings and number of ratings.
 }
-\note{
-See \href{http://docs.trakt.apiary.io/reference/movies/popular/get-popular-movies}{the trakt API docs for further info}
-}
+\section{Functions}{
+\itemize{
+\item \code{trakt.shows.popular}: Get popular shows
+}}
+
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
 trakt.movies.popular(5)
+trakt.shows.popular(5)
 }
 }
-\seealso{
-Other movie data: \code{\link{trakt.movie.people}},
-  \code{\link{trakt.movie.ratings}},
-  \code{\link{trakt.movie.releases}},
-  \code{\link{trakt.movie.summary}},
-  \code{\link{trakt.movies.related}},
-  \code{\link{trakt.movies.trending}},
-  \code{\link{trakt.stats}}
-
-Other aggregated data: \code{\link{trakt.movies.related}},
-  \code{\link{trakt.movies.trending}},
-  \code{\link{trakt.shows.popular}},
-  \code{\link{trakt.shows.related}},
-  \code{\link{trakt.shows.trending}}
-}
-\concept{aggregated data}
-\concept{movie data}
+\concept{Automated lists}

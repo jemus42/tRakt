@@ -5,7 +5,7 @@
 #' @param user Target user. Defaults to `getOption("trakt.username")`
 #' @param type Either `shows` (default) or `movies`
 #' @param extended Whether extended info should be provided.
-#' Defaults to `"min"`, can either be `"min"` or `"full"`
+#' Defaults to `"min"`, can also be`"full"`.
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{the trakt API docs for further info}
@@ -17,10 +17,10 @@
 #' sean_movies <- trakt.user.watchlist(user = "sean") # Defaults to movie watchlist
 #' }
 trakt.user.watchlist <- function(user = getOption("trakt.username"),
-                                 type = c("movies", "shows"), extended = "min") {
+                                 type = c("movies", "shows"), extended = c("min", "full")) {
   check_username(user)
-  match.arg(type)
-  if (length(type) > 1) type <- type[1]
+  type <- match.arg(type)
+  extended <- match.arg(extended)
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "watchlist", type, extended = extended)

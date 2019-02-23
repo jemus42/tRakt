@@ -84,8 +84,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
 #' }
 trakt.seasons.summary <- function(target, extended = c("min", "full"), drop.specials = TRUE,
                                   drop.unaired = TRUE) {
-  match.arg(extended)
-  if (length(extended) > 1) extended <- extended[1]
+  extended <- match.arg(extended)
 
   if (length(target) > 1) {
     response <- purrr::map_df(target, function(t) {

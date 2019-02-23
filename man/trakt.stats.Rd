@@ -36,7 +36,6 @@ Other show data: \code{\link{trakt.get_all_episodes}},
   \code{\link{trakt.show.people}},
   \code{\link{trakt.show.ratings}},
   \code{\link{trakt.show.summary}},
-  \code{\link{trakt.shows.popular}},
   \code{\link{trakt.shows.related}},
   \code{\link{trakt.shows.trending}}
 
@@ -44,7 +43,6 @@ Other movie data: \code{\link{trakt.movie.people}},
   \code{\link{trakt.movie.ratings}},
   \code{\link{trakt.movie.releases}},
   \code{\link{trakt.movie.summary}},
-  \code{\link{trakt.movies.popular}},
   \code{\link{trakt.movies.related}},
   \code{\link{trakt.movies.trending}}
 }

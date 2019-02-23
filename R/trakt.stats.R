@@ -16,9 +16,7 @@
 #' breakingbad.stats <- trakt.stats(type = "shows", "breaking-bad")
 #' }
 trakt.stats <- function(target, type = c("shows", "movies")) {
-  match.arg(type)
-
-  if (length(type) > 1) type <- type[1]
+  type <- match.arg(type)
 
   if (length(target) > 1) {
     res <- purrr::map_df(target, ~ trakt.stats(.x, type = type))

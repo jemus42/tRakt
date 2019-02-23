@@ -56,8 +56,7 @@ trakt.shows.related <- function(target, extended = c("min", "full")) {
 #' Defaults to `"min"`, can either be `"min"` or `"full"`
 #' @keywords internal
 trakt.related <- function(target, type, extended = c("min", "full")) {
-  match.arg(extended)
-  if (length(extended) > 1) extended <- extended[1]
+  extended <- match.arg(extended)
 
   if (length(target) > 1) {
     response <- purrr::map_df(target, function(t) {

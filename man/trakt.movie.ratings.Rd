@@ -29,7 +29,6 @@ trakt.movie.ratings("tron-legacy-2010")
 Other movie data: \code{\link{trakt.movie.people}},
   \code{\link{trakt.movie.releases}},
   \code{\link{trakt.movie.summary}},
-  \code{\link{trakt.movies.popular}},
   \code{\link{trakt.movies.related}},
   \code{\link{trakt.movies.trending}},
   \code{\link{trakt.stats}}
