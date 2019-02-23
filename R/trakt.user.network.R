@@ -15,8 +15,8 @@
 #' trakt.user.following("jemus42")
 #' }
 trakt.user.network <- function(relationship = c("friends", "followers", "following"),
-                                    user = getOption("trakt.username"),
-                                    extended = c("min", "full")) {
+                               user = getOption("trakt.username"),
+                               extended = c("min", "full")) {
 
   check_username(user)
   extended <- match.arg(extended)
