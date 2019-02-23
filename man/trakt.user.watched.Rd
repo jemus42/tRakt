@@ -5,12 +5,22 @@
 \title{Get a user's watched shows or movies}
 \usage{
 trakt.user.watched(user = getOption("trakt.username"),
-  type = c("shows", "shows.extended", "movies"))
+  type = c("shows", "movies"), extended = c("min", "full"),
+  noseasons = TRUE)
 }
 \arguments{
-\item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
+\item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
+Can also be of length greater than 1, in which case the function is called on all
+\code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
-\item{type}{Either \code{shows} (default), \code{shows.extended} or \code{movies}}
+\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
+
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
+
+\item{noseasons}{\code{logical(1) [TRUE]}: Only for \code{type = "show"}: Exclude detailed season
+data from output. This is advisable if you do not need per-episode data and want to
+be nice to the API.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.
@@ -31,7 +41,9 @@ See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the t
 \examples{
 \dontrun{
 myshows <- trakt.user.watched() # Defaults to your username if set
-seans.shows <- trakt.user.watched(user = "sean")
+
+# Use noseasons = TRUE to avoid receiving detailed season/episode data
+seans.shows <- trakt.user.watched(user = "sean", noseasons = TRUE)
 }
 }
 \seealso{

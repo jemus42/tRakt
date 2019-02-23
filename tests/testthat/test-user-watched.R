@@ -2,7 +2,7 @@ context("test-user-watched")
 
 test_that("trakt.user.watched works", {
   skip_on_cran()
-  
+
   user <- "jemus42"
 
   # shows ----
@@ -11,9 +11,10 @@ test_that("trakt.user.watched works", {
   expect_is(watched_shows, "tbl")
 
   # shows.extended ----
-  watched_shows.ext <- trakt.user.watched(user = user, type = "shows.extended")
+  watched_shows.ext <- trakt.user.watched(user = user, type = "shows", noseasons = FALSE)
 
   expect_is(watched_shows.ext, "tbl")
+  expect_true(tibble::has_name(watched_shows.ext, "seasons"))
 
   # movies ----
   watched_movies <- trakt.user.watched(user = user, type = "movies")
