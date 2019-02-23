@@ -40,7 +40,6 @@ Other show data: \code{\link{trakt.get_all_episodes}},
   \code{\link{trakt.get_full_showdata}},
   \code{\link{trakt.seasons.summary}},
   \code{\link{trakt.show.people}},
-  \code{\link{trakt.show.ratings}},
   \code{\link{trakt.show.summary}},
   \code{\link{trakt.stats}}
 }

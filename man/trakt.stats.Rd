@@ -34,11 +34,9 @@ Other show data: \code{\link{trakt.get_all_episodes}},
   \code{\link{trakt.seasons.season}},
   \code{\link{trakt.seasons.summary}},
   \code{\link{trakt.show.people}},
-  \code{\link{trakt.show.ratings}},
   \code{\link{trakt.show.summary}}
 
 Other movie data: \code{\link{trakt.movie.people}},
-  \code{\link{trakt.movie.ratings}},
   \code{\link{trakt.movie.releases}},
   \code{\link{trakt.movie.summary}}
 }

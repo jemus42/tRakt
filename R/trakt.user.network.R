@@ -2,7 +2,7 @@
 #'
 #' `trakt.user.friends` retrieves a user's friends, the two-way relationship
 #' of both following and being followed by a user.
-#' @param relatioship `character(1) ["friends"]`: Type of user relationship. Either
+#' @param relationship `character(1) ["friends"]`: Type of user relationship. Either
 #' `"friends"`, `"followers"`, or `"following"`.
 #' @inheritParams user_param
 #' @inheritParams extended_info
