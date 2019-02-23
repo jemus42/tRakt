@@ -4,15 +4,15 @@
 \alias{trakt.seasons.season}
 \title{Get a season of a show}
 \usage{
-trakt.seasons.season(target, seasons = 1L, extended = "min")
+trakt.seasons.season(target, seasons = 1L, extended = c("min", "full"))
 }
 \arguments{
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
-\item{seasons}{\code{integer [1L]}: The season(s) to get. Use 0 for special episodes.}
+\item{seasons}{\code{integer(1) [1L]}: The season(s) to get. Use 0 for special episodes.}
 
-\item{extended}{\code{[character(1)]}: Either \code{"min"} (API default) or \code{"full"}. The latter
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
 }
 \value{

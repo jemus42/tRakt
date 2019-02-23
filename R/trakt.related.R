@@ -1,15 +1,3 @@
-#' @rdname trakt.related
-#' @export
-trakt.movies.related <- function(target, extended = c("min", "full")) {
-  trakt.related(target, type = "movies", extended = extended)
-}
-
-#' @rdname trakt.related
-#' @export
-trakt.shows.related <- function(target, extended = c("min", "full")) {
-  trakt.related(target, type = "shows", extended = extended)
-}
-
 #' Search for related shows or movies
 #'
 #' Receive a set of shows that are related to a specific show/movie
@@ -23,7 +11,8 @@ trakt.shows.related <- function(target, extended = c("min", "full")) {
 #' \dontrun{
 #' trakt.related("breaking-bad", "shows")
 #' }
-trakt.related <- function(target, type = c("shows", "movies"), extended = c("min", "full")) {
+trakt.related <- function(target, type = c("shows", "movies"),
+                          extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
@@ -42,4 +31,18 @@ trakt.related <- function(target, type = c("shows", "movies"), extended = c("min
   response$related_to <- target
 
   tibble::as_tibble(response)
+}
+
+# Aliased/derived ----
+
+#' @rdname trakt.related
+#' @export
+trakt.movies.related <- function(target, extended = c("min", "full")) {
+  trakt.related(target, type = "movies", extended = extended)
+}
+
+#' @rdname trakt.related
+#' @export
+trakt.shows.related <- function(target, extended = c("min", "full")) {
+  trakt.related(target, type = "shows", extended = extended)
 }

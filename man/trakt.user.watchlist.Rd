@@ -12,7 +12,7 @@ trakt.user.watchlist(user = getOption("trakt.username"),
 
 \item{type}{Either \code{shows} (default) or \code{movies}}
 
-\item{extended}{\code{[character(1)]}: Either \code{"min"} (API default) or \code{"full"}. The latter
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
 }
 \value{

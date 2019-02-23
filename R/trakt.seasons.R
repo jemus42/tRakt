@@ -7,9 +7,9 @@
 #' `extended` to customize output amount.
 #' @param target The `id` of the show requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
-#' @param seasons `integer [1L]`: The season(s) to get. Use 0 for special episodes.
+#' @param seasons `integer(1) [1L]`: The season(s) to get. Use 0 for special episodes.
 #' @inheritParams trakt.seasons.summary
-#' @return A [tibble][tibble::tibble-package].
+#' @inherit return_tibble return
 #' @export
 #' @importFrom lubridate year
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/season/get-single-season-for-a-show}{the trakt API docs for further info}.
@@ -20,7 +20,9 @@
 #' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.seasons <- trakt.seasons.season("breaking-bad", 1)
 #' }
-trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
+trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full")) {
+  extended <- match.arg(extended)
+
   if (length(seasons) > 1) {
     response <- purrr::map_df(seasons, function(s) {
       trakt.seasons.season(target, s, extended = extended)
@@ -31,7 +33,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
   # Basic sanity check
   seasons <- suppressWarnings(as.integer(seasons))
   if (seasons < 0 | is.na(seasons) | is.null(seasons)) {
-    stop("season cannot be coerced to non-negative integer.")
+    stop("'seasons' cannot be coerced to non-negative integer: '", seasons, "'")
   }
 
   # Construct URL, make API call
@@ -44,6 +46,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
   #   warning(paste("Season", seasons, " of ", target, "does not appear to exist"))
   #   return(tibble::tibble())
   # }
+
   # Reorganization
   names(season) <- sub("number", "episode", names(season))
 
@@ -70,8 +73,8 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
 #' @inheritParams extended_info
 #' @param drop.specials `logical(1) [TRUE]`: Special episodes (season 0) are dropped
 #' @param drop.unaired `logical(1) [TRUE]`: Seasons without aired episodes are dropped.
-#' Only works if `extended` is`"full"`.
-#' @return A [tibble][tibble::tibble-package].
+#' Only works if `extended` is `"full"`.
+#' @inherit return_tibble return
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
 #' for further info

@@ -17,7 +17,7 @@ trakt.related(target, type = c("shows", "movies"), extended = c("min",
 \item{target}{The \code{id} of the show/movie requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
-\item{extended}{\code{[character(1)]}: Either \code{"min"} (API default) or \code{"full"}. The latter
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
 
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}

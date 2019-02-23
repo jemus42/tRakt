@@ -45,7 +45,7 @@ only client id really matters.
 # (This is automatically executed when calling library(tRakt))
 get_trakt_credentials()
 
-# Explicitly set values in an R session, overriding .Renviron values f present
+# Explicitly set values in an R session, overriding .Renviron values if present
 get_trakt_credentials(
   username = "sean",
   client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2"

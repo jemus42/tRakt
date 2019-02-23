@@ -7,7 +7,7 @@
 #' items with the most users watching are returned first. Anticipation is measured
 #' by the number of user-created lists an items is part of while not being released yet.
 #'
-#' @param limit,page `integer(1) [10]`: Number of items and page for paginated requests.
+#' @param limit,page `integer(1) [10L] [1L]`: Number of items and page for paginated requests.
 #' Bot values must be greater than `0` and will be coerced to `integer`.
 #' @inheritParams extended_info
 #' @inheritParams type_shows_movies
@@ -33,7 +33,7 @@ NULL
 #' @keywords internal
 trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated"),
                             type = c("shows", "movies"),
-                             limit = 10, page = 1,
+                             limit = 10L, page = 1L,
                              extended = c("min", "full")) {
   list_type <- match.arg(list_type)
   type <- match.arg(type)
