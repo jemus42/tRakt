@@ -24,7 +24,7 @@ trakt.user.network <- function(relationship = c("friends", "followers", "followi
 
   if (length(user) > 1) {
     response <- purrr::map_df(user, function(user) {
-      trakt_user_friendfollow(relationship = relationship, user = user, extended = extended)
+      trakt.user.network(relationship = relationship, user = user, extended = extended)
     })
     return(response)
   }
