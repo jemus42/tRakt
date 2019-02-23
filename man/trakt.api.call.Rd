@@ -4,21 +4,20 @@
 \alias{trakt.api.call}
 \title{Make an API call to any URL}
 \usage{
-trakt.api.call(url, headers = getOption("trakt.headers"),
+trakt.api.call(url, client.id = getOption("trakt.client.id"),
   convert.datetime = TRUE)
 }
 \arguments{
 \item{url}{APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.}
 
-\item{headers}{HTTP headers to set. Must be result of \code{httr::add_headers}.
-Default value is \code{getOption("trakt.headers")} set by \link[tRakt]{get_trakt_credentials}.}
+\item{client.id}{API client id. see \link{get_trakt_credentials} for further information.}
 
 \item{convert.datetime}{If \code{TRUE} (default), known top-level datetime variables
 are converted to \code{POSIXct}. This might miss some variables and does not recurse
 into nested lists or list-columns.}
 }
 \value{
-The parsed content of the API response.
+The \link[jsonlite:fromJSON]{parsed} content of the API response.
 An empty \link[tibble:tibble-package]{tibble} if the response is an empty array.
 }
 \description{

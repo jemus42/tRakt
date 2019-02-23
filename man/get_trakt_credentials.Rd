@@ -4,16 +4,12 @@
 \alias{get_trakt_credentials}
 \title{Set the required trakt.tv API credentials}
 \usage{
-get_trakt_credentials(username = "", client.id = "",
-  set.headers = TRUE, silent = TRUE)
+get_trakt_credentials(username, client.id, silent = TRUE)
 }
 \arguments{
 \item{username}{\code{character(1)}: Explicitly set your trakt.tv username (optional).}
 
 \item{client.id}{\code{character(1)}: Explicitly set your APIv2 client id (required for API interaciton).}
-
-\item{set.headers}{\code{logical(1) [TRUE]}: Sets the \code{httr} headers
-for \code{GET} requests to the APIv2.}
 
 \item{silent}{\code{logical(1) [TRUE]}: No messages are printed showing you the API information.
 Mostly for debug purposes.}

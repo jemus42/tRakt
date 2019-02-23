@@ -17,8 +17,6 @@
 #'
 #' @param username `character(1)`: Explicitly set your trakt.tv username (optional).
 #' @param client.id `character(1)`: Explicitly set your APIv2 client id (required for API interaciton).
-#' @param set.headers `logical(1) [TRUE]`: Sets the `httr` headers
-#' for `GET` requests to the APIv2.
 #' @param silent `logical(1) [TRUE]`: No messages are printed showing you the API information.
 #' Mostly for debug purposes.
 #' @return Nothing. Only messages.
@@ -38,11 +36,10 @@
 #'   client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2"
 #' )
 #' }
-get_trakt_credentials <- function(username = "", client.id = "",
-                                  set.headers = TRUE,
+get_trakt_credentials <- function(username, client.id,
                                   silent = TRUE) {
-  username <- ifelse(username == "", Sys.getenv("trakt_username"), username)
-  client_id <- ifelse(client.id == "", Sys.getenv("trakt_client_id"), client.id)
+  username <- ifelse(missing(username), Sys.getenv("trakt_username"), username)
+  client_id <- ifelse(missing(client.id), Sys.getenv("trakt_client_id"), client.id)
 
   if (username != "") {
     options(trakt.username = username)
@@ -62,19 +59,6 @@ get_trakt_credentials <- function(username = "", client.id = "",
   if (!silent) {
     message(paste("Your client id is set to", getOption("trakt.client.id")))
   }
-
-  # Set the appropriate header for httr::GET
-  if (set.headers) {
-    headers <- httr::add_headers(.headers = c(
-      "trakt-api-key" = getOption("trakt.client.id"),
-      "Content-Type" = "application/json",
-      "trakt-api-version" = 2
-    ))
-    options(trakt.headers = headers)
-    if (!silent) {
-      message("HTTP headers set, retrieve via getOption('trakt.headers')")
-    }
-  }
 }
 
 #' Make an API call to any URL
@@ -82,12 +66,11 @@ get_trakt_credentials <- function(username = "", client.id = "",
 #' `trakt.api.call` makes an API call to a specified URL and returns the parsed output.
 #'
 #' @param url APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.
-#' @param headers HTTP headers to set. Must be result of `httr::add_headers`.
-#' Default value is `getOption("trakt.headers")` set by \link[tRakt]{get_trakt_credentials}.
+#' @param client.id API client id. see [get_trakt_credentials] for further information.
 #' @param convert.datetime If `TRUE` (default), known top-level datetime variables
 #' are converted to `POSIXct`. This might miss some variables and does not recurse
 #' into nested lists or list-columns.
-#' @return The parsed content of the API response.
+#' @return The [parsed][jsonlite::fromJSON] content of the API response.
 #' An empty [tibble][tibble::tibble-package] if the response is an empty array.
 #' @export
 #' @import httr
@@ -99,12 +82,26 @@ get_trakt_credentials <- function(username = "", client.id = "",
 #' library(tRakt)
 #' trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
 #' }
-trakt.api.call <- function(url, headers = getOption("trakt.headers"),
+trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
                            convert.datetime = TRUE) {
-  if (is.null(headers) & is.null(getOption("trakt.headers"))) {
-    stop("HTTP headers not set, see ?get_trakt_credentials")
+
+  if (is.null(client.id)) {
+    if (is.null(getOption("trakt.client.id"))) {
+      options(trakt.client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
+    }
+    client.id <- getOption("trakt.client.id")
   }
+
+  # Headers and metadata
   agent <- httr::user_agent("https://github.com/jemus42/tRakt")
+
+  headers <- httr::add_headers(.headers = c(
+    "trakt-api-key" = client.id,
+    "Content-Type" = "application/json",
+    "trakt-api-version" = 2
+  ))
+
+  # Make the call
 
   response <- httr::GET(url, headers, agent)
   httr::stop_for_status(response) # In case trakt fails
