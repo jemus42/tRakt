@@ -11,11 +11,7 @@ usethis::use_data(futurama, overwrite = TRUE)
 
 
 # Game of Thrones ----
-got <- trakt.get_all_episodes("game-of-thrones") %>%
-  rename(
-    rating_trakt = rating,
-    votes_trakt = votes
-  )
+got <- trakt.get_all_episodes("game-of-thrones")
 
 # Wiki
 "https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes" %>%
@@ -39,7 +35,7 @@ got <- trakt.get_all_episodes("game-of-thrones") %>%
 got %<>%
   select(
     episode_abs, episode, season, runtime, title,
-    year, overview, starts_with("rating"), starts_with("votes"), viewers,
+    year, overview, rating, votes, viewers,
     director, writer,
     first_aired,
     trakt, imdb, tvdb, tmdb
