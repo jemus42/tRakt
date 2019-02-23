@@ -3,12 +3,9 @@
 #' `trakt.movie.releases` returns one or more movie's release information,
 #' including the release date, country code (two letter, e.g. `us`), and
 #' the certification (e.g. `PG`).
-#' @param target The `id` of the movie requested. Either the `slug`
-#' (e.g. `"tron-legacy-2010"`), `trakt id` or `IMDb id`. If multiple targets are
-#' provided, an additional `movie` column is appended to the `rbind`ed results, containing
-#' the movie's `id` provided as `target`.
-#' @param country Optional two letter country code.
-#' @return A [tibble][tibble::tibble-package].
+#' @inheritParams id_movie_show
+#' @param country Optional two letter country code to filter by.
+#' @inherit return_tibble return
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/releases/get-all-movie-releases}{the
 #'  trakt API docs for further info}

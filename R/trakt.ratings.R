@@ -1,8 +1,7 @@
-#' Get a single show's ratings
+#' Get show or movie user ratings
 #'
-#' Returns a single show's or movie's rating and ratings distribution.
-#' @param target The `id` of the show requested. Either the `slug`
-#' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
+#' Returns a show's or movie's rating and ratings distribution.
+#' @inheritParams id_movie_show
 #' @inheritParams type_shows_movies
 #' @inherit return_tibble return
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/ratings/get-show-ratings}{the trakt API docs for further info}

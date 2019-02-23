@@ -4,17 +4,19 @@
 \alias{trakt.people.movies}
 \title{Get a single person's movie credits}
 \usage{
-trakt.people.movies(target, extended = "min")
+trakt.people.movies(target, extended = c("min", "full"))
 }
 \arguments{
-\item{target}{The \code{id} of the person requested. Either the \code{slug}
-(e.g. \code{"bryan-cranston"}), \code{trakt id} or \code{IMDb id}}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
 }
 \value{
-A \code{data.frame}s with person details.
+A \code{list}.
 }
 \description{
 \code{trakt.people.movies} pulls movie people data.

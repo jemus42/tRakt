@@ -8,8 +8,10 @@ trakt.get_all_episodes(target, season_nums = NULL, extended = "full",
   drop.unaired = TRUE, drop.translations = TRUE)
 }
 \arguments{
-\item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
 \item{season_nums}{Vector of season numbers, e.g. \code{c(1, 2)}. If \code{NULL}, all the seasons
 are retrieved by calling \link{trakt.seasons.summary} to determine the number of seasons.
@@ -25,7 +27,7 @@ codes for available translation. This column is unlikely to be of interest and
 therefore excluded by default.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble} containing episode details.
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.get_all_episodes} pulls detailed episode data.

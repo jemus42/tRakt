@@ -7,14 +7,16 @@
 trakt.people.summary(target, extended = "min")
 }
 \arguments{
-\item{target}{The \code{id} of the person requested. Either the \code{slug}
-(e.g. \code{"bryan-cranston"}), \code{trakt id} or \code{IMDb id}}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble} with person details.
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.people.summary} pulls show people data.

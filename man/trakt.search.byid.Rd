@@ -7,7 +7,7 @@
 trakt.search.byid(id, id_type = "trakt-show")
 }
 \arguments{
-\item{id}{The id used for the search. Will be \code{URLencode}'d.}
+\item{id}{The id used for the search.}
 
 \item{id_type}{The type of \code{id}. Defaults to \code{trakt-show}, can be
 \code{trakt-movie}, \code{trakt-show}, \code{trakt-episode}, \code{imdb},
@@ -18,7 +18,7 @@ A \link[tibble:tibble-package]{tibble} containing a single search result.
 If no results are found, the \code{tibble} has 0 rows.
 }
 \description{
-\code{trakt.search.byid} pulls show stats and returns it compactly.
+\code{trakt.search.byid} retrieves show stats and returns it compactly.
 }
 \note{
 See \href{http://docs.trakt.apiary.io/reference/search/id-lookup/get-id-lookup-results}{the trakt API docs for further info}

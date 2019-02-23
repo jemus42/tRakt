@@ -4,22 +4,23 @@
 \alias{trakt.movie.summary}
 \title{Get a single movie's details}
 \usage{
-trakt.movie.summary(target, extended = "min", force_data_frame = FALSE)
+trakt.movie.summary(target, extended = c("min", "full"),
+  force_data_frame = FALSE)
 }
 \arguments{
-\item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"inception-2010"}), \code{trakt id} or \code{IMDb id}. If multiple targets are
-supplied, the results will be \code{rbind}ed together, automatically setting \code{force_data_frame}
-to \code{TRUE}.}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
-\item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 
 \item{force_data_frame}{If \code{TRUE}, the \code{list} is unnested as much as possible, resulting
-in a flat \code{data.frame} suitable to be \code{rbind}ed to other summary results.}
+in a flat \code{tibble} suitable to be \code{rbind}ed to other summary results.}
 }
 \value{
-A \code{list} or \code{\link[tibble:tibble-package]{tibble}} containing movie information
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.movie.summary} returns a single movie's summary information.

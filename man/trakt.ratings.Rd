@@ -4,7 +4,7 @@
 \alias{trakt.ratings}
 \alias{trakt.shows.ratings}
 \alias{trakt.movies.ratings}
-\title{Get a single show's ratings}
+\title{Get show or movie user ratings}
 \usage{
 trakt.ratings(type = c("shows", "movies"), target)
 
@@ -15,14 +15,16 @@ trakt.movies.ratings(target)
 \arguments{
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 
-\item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-Returns a single show's or movie's rating and ratings distribution.
+Returns a show's or movie's rating and ratings distribution.
 }
 \note{
 See \href{http://docs.trakt.apiary.io/reference/shows/ratings/get-show-ratings}{the trakt API docs for further info}

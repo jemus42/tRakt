@@ -3,9 +3,9 @@
 #' `trakt.user.watchlist` pulls a user's watchlist.
 #' Either all shows or movies currently watchlisted will be returned.
 #' @param user Target user. Defaults to `getOption("trakt.username")`
-#' @param type Either `shows` (default) or `movies`
+#' @inheritParams type_shows_movies
 #' @inheritParams extended_info
-#' @return A [tibble][tibble::tibble-package].
+#' @inherit return_tibble return
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{the trakt API docs for further info}
 #' @family user data

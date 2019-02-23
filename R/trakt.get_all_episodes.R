@@ -9,8 +9,7 @@
 #' If you only want the episode data for a single season anyway, `trakt.seasons.season`
 #' is recommended, yet this function makes some additions.
 #' The use case of this function is to quickly gather episode data of all seasons of a show.
-#' @param target The `id` of the show requested. Either the `slug`
-#' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`.
+#' @inheritParams id_movie_show
 #' @param season_nums Vector of season numbers, e.g. `c(1, 2)`. If `NULL`, all the seasons
 #' are retrieved by calling \link{trakt.seasons.summary} to determine the number of seasons.
 #' If a vector of length 1 (e.g. `5`) is supplied, it is extended to `seq_len(season_nums)`.
@@ -19,7 +18,7 @@
 #' @param drop.translations `logical(1) [TRUE]`: Remove list-column containing country-
 #' codes for available translation. This column is unlikely to be of interest and
 #' therefore excluded by default.
-#' @return A [tibble][tibble::tibble-package] containing episode details.
+#' @inherit return_tibble return
 #' @export
 #' @importFrom purrr map_df
 #' @note This function is mainly for convenience.

@@ -24,8 +24,8 @@ required to get a full show dataset.
 }
 \note{
 This is primarily intended to be a convenience function for the
-case where you really want all that data. If you're just derping around, maybe you
-should consider interactively calling the other functions.
+case where you really want all that data. Usually it is advisable to only
+call the specific functions for the data you really need.
 }
 \examples{
 \dontrun{

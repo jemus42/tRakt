@@ -10,7 +10,7 @@
 #' 
 #' @param user Target user. Defaults to `getOption("trakt.username")`
 #' @param type Either `shows` (default), `shows.extended` or `movies`
-#' @return A `[tibble](tibble::tibble-package)`.
+#' @inherit return_tibble return
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the trakt API docs for further info}
 #' @family user data

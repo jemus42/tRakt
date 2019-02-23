@@ -7,11 +7,13 @@
 trakt.movie.people(target, extended = "min")
 }
 \arguments{
-\item{target}{The \code{id} of the movie requested. Either the \code{slug}
-(e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
-\item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 }
 \value{
 A \code{list}.

@@ -10,8 +10,6 @@ trakt.user.collection(user = getOption("trakt.username"),
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
 
-\item{type}{Either \code{shows} (default) or \code{movies}}
-
 \item{unnest_episodes}{\code{logical(1) [FALSE]}: Unnests episode data using
 \code{[tidyr](tidyr::unnest)} and returns one row per episode rather than one row per show.}
 }

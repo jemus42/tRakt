@@ -4,14 +4,16 @@
 \alias{trakt.people.shows}
 \title{Get a single person's show credits}
 \usage{
-trakt.people.shows(target, extended = "min")
+trakt.people.shows(target, extended = c("min", "full"))
 }
 \arguments{
-\item{target}{The \code{id} of the person requested. Either the \code{slug}
-(e.g. \code{"bryan-cranston"}), \code{trakt id} or \code{IMDb id}}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
-\item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 }
 \value{
 A \code{list}.

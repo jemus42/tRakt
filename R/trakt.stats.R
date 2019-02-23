@@ -2,10 +2,9 @@
 #'
 #' `trakt.stats` pulls show stats and returns it compactly.
 #' The data includes show ratings, scrobbles, checkins, plays, comments...
-#' @param target The `id` of the show/movie requested. Either the `slug`
-#' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`.
-#' @param type Either `shows` (default) or `movies`, depending the `target` type.
-#' @return A [tibble][tibble::tibble-package].
+#' @inheritParams id_movie_show
+#' @inheritParams type_shows_movies
+#' @inherit return_tibble return
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/stats}{the trakt API docs for further info}
 #' @family show data

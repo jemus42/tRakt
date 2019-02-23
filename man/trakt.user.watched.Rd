@@ -13,7 +13,7 @@ trakt.user.watched(user = getOption("trakt.username"),
 \item{type}{Either \code{shows} (default), \code{shows.extended} or \code{movies}}
 }
 \value{
-A \code{[tibble](tibble::tibble-package)}.
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.user.watched} retrieves a user's watched shows or movies.

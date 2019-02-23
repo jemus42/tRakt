@@ -1,8 +1,7 @@
 #' Search for related shows or movies
 #'
 #' Receive a set of shows that are related to a specific show/movie
-#' @param target The `id` of the show/movie requested. Either the `slug`
-#' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
+#' @inheritParams id_movie_show
 #' @inheritParams extended_info
 #' @inheritParams type_shows_movies
 #' @inherit return_tibble return

@@ -4,22 +4,23 @@
 \alias{trakt.show.summary}
 \title{Get show summary info}
 \usage{
-trakt.show.summary(target, extended = "min", force_data_frame = FALSE)
+trakt.show.summary(target, extended = c("min", "full"),
+  force_data_frame = FALSE)
 }
 \arguments{
-\item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}. If multiple targets are
-supplied, the results will be \code{rbind}ed together, automatically setting \code{force_data_frame}
-to \code{TRUE}.}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
-\item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}}
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 
 \item{force_data_frame}{If \code{TRUE}, the \code{list} is unnested as much as possible, resulting
 in a flat \link[tibble:tibble-package]{tibble} suitable to \code{rbind} with other summary results.}
 }
 \value{
-A \code{list} or \link[tibble:tibble-package]{tibble} containing summary info
+A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 \code{trakt.show.summary} pulls show summary data and returns it compactly.

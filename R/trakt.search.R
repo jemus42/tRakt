@@ -52,9 +52,9 @@ trakt.search <- function(query, type = "show", year = NULL) {
 
 #' Lookup a show via id
 #'
-#' `trakt.search.byid` pulls show stats and returns it compactly.
+#' `trakt.search.byid` retrieves show stats and returns it compactly.
 #'
-#' @param id The id used for the search. Will be `URLencode`'d.
+#' @param id The id used for the search.
 #' @param id_type The type of `id`. Defaults to `trakt-show`, can be
 #' `trakt-movie`, `trakt-show`, `trakt-episode`, `imdb`,
 #' `tmdb`, `tvdb`, `tvrage`

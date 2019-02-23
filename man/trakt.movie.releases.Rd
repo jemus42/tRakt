@@ -7,12 +7,12 @@
 trakt.movie.releases(target, country = NULL)
 }
 \arguments{
-\item{target}{The \code{id} of the movie requested. Either the \code{slug}
-(e.g. \code{"tron-legacy-2010"}), \code{trakt id} or \code{IMDb id}. If multiple targets are
-provided, an additional \code{movie} column is appended to the \code{rbind}ed results, containing
-the movie's \code{id} provided as \code{target}.}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
-\item{country}{Optional two letter country code.}
+\item{country}{Optional two letter country code to filter by.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.

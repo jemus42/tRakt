@@ -4,10 +4,10 @@
 #' It does not use OAuth2, so you can only get data for a user with a
 #' public profile.
 #' @param user Target user. Defaults to `getOption("trakt.username")`
-#' @param type Either `shows` (default) or `movies`
+#' @inheritParams id_movie_show
 #' @param unnest_episodes `logical(1) [FALSE]`: Unnests episode data using
 #' `[tidyr](tidyr::unnest)` and returns one row per episode rather than one row per show.
-#' @return A [tibble][tibble::tibble-package].
+#' @inherit return_tibble return
 #' @export
 #' @note See [the trakt API docs for further info](http://docs.trakt.apiary.io/reference/users/collection/get-collection)
 #' @family user data

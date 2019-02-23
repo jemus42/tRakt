@@ -4,10 +4,9 @@
 #'
 #' Get a single person's details, like their various ids. If `extended` is `"full"`,
 #' there will also be biographical data if available.
-#' @param target The `id` of the person requested. Either the `slug`
-#' (e.g. `"bryan-cranston"`), `trakt id` or `IMDb id`
+#' @inheritParams id_movie_show
 #' @inheritParams extended_info
-#' @return A [tibble][tibble::tibble-package] with person details.
+#' @inherit return_tibble return
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/summary/get-a-single-person}{the trakt API docs for further info}
 #' @family people data
@@ -47,10 +46,9 @@ trakt.people.summary <- function(target, extended = "min") {
 #' `trakt.people.movies` pulls movie people data.
 #'
 #' Returns all movies where this person is in the cast or crew.
-#' @param target The `id` of the person requested. Either the `slug`
-#' (e.g. `"bryan-cranston"`), `trakt id` or `IMDb id`
+#' @inheritParams id_movie_show
 #' @inheritParams extended_info
-#' @return A `data.frame`s with person details.
+#' @return A `list`.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/movies/get-movie-credits}{the trakt API docs for further info}
 #' @family people data
@@ -59,7 +57,8 @@ trakt.people.summary <- function(target, extended = "min") {
 #' get_trakt_credentials() # Set required API data/headers
 #' person <- trakt.people.movies("bryan-cranston")
 #' }
-trakt.people.movies <- function(target, extended = "min") {
+trakt.people.movies <- function(target, extended = c("min", "full")) {
+  extended <- match.arg(extended)
 
   # Construct URL, make API call
   url <- build_trakt_url("people", target, "movies", extended = extended)
@@ -86,10 +85,8 @@ trakt.people.movies <- function(target, extended = "min") {
 #' `trakt.people.shows` pulls show people data.
 #'
 #' Returns all shows where this person is in the cast or crew.
-#' @param target The `id` of the person requested. Either the `slug`
-#' (e.g. `"bryan-cranston"`), `trakt id` or `IMDb id`
-#' @param extended Whether extended info should be provided.
-#' Defaults to `"min"`, can either be `"min"` or `"full"`
+#' @inheritParams id_movie_show
+#' @inheritParams extended_info
 #' @return A `list`.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/shows/get-show-credits}{the trakt API docs for further info}
@@ -99,7 +96,8 @@ trakt.people.movies <- function(target, extended = "min") {
 #' get_trakt_credentials() # Set required API data/headers
 #' person <- trakt.people.shows("bryan-cranston")
 #' }
-trakt.people.shows <- function(target, extended = "min") {
+trakt.people.shows <- function(target, extended = c("min", "full")) {
+  extended <- match.arg(extended)
 
   # Construct URL, make API call
   url <- build_trakt_url("people", target, "shows", extended = extended)
@@ -126,10 +124,8 @@ trakt.people.shows <- function(target, extended = "min") {
 #' `trakt.show.people` pulls show people data.
 #'
 #' Returns all cast and crew for a show, depending on how much data is available.
-#' @param target The `id` of the show requested. Either the `slug`
-#' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
-#' @param extended Whether extended info should be provided.
-#' Defaults to `"min"`, can either be `"min"` or `"full"`
+#' @inheritParams id_movie_show
+#' @inheritParams extended_info
 #' @return A `list`.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/people/get-all-people-for-a-show}{the trakt API docs for further info}
@@ -164,10 +160,8 @@ trakt.show.people <- function(target, extended = "min") {
 #' `trakt.movie.people` pulls movie people data.
 #'
 #' Returns all cast and crew for a movie, depending on how much data is available.
-#' @param target The `id` of the movie requested. Either the `slug`
-#' (e.g. `"tron-legacy-2010"`), `trakt id` or `IMDb id`
-#' @param extended Whether extended info should be provided.
-#' Defaults to `"min"`, can either be `"min"` or `"full"`
+#' @inheritParams id_movie_show
+#' @inheritParams extended_info
 #' @return A `list`.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{the trakt API docs for further info}

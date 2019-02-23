@@ -4,8 +4,9 @@
 \alias{user_param}
 \title{User parameter}
 \arguments{
-\item{user}{Target user. Defaults to \code{getOption("trakt.username")}. If multiple users
-are specified, the results will be combined with \link{rbind}.}
+\item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
+Can also be of length greater than 1, in which case the function is called on all
+\code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 }
 \description{
 User parameter

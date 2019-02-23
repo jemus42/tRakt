@@ -7,10 +7,12 @@
 trakt.stats(target, type = c("shows", "movies"))
 }
 \arguments{
-\item{target}{The \code{id} of the show/movie requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}.}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
-\item{type}{Either \code{shows} (default) or \code{movies}, depending the \code{target} type.}
+\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.
