@@ -24,12 +24,15 @@ trakt.ratings <- function(type = c("shows", "movies"), target) {
   url <- build_trakt_url(type, target, "ratings")
   response <- trakt.api.call(url = url)
 
+  response$distribution <- tibble::enframe(unlist(response$distribution),
+                                           name = "rating", value = "n")
+
   tibble::tibble(
     id = target,
     type = type,
     votes = response$votes,
     rating = response$rating,
-    distribution = list(unlist(response$distribution))
+    distribution = list(response$distribution)
   )
 }
 

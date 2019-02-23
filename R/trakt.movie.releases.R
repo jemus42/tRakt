@@ -1,6 +1,6 @@
 #' Get a movie's release details
 #'
-#' `trakt.movie.releases` returns one or more movie's release information,
+#' Retrieve one or more movie's release information,
 #' including the release date, country code (two letter, e.g. `us`), and
 #' the certification (e.g. `PG`).
 #' @inheritParams id_movie_show
@@ -12,13 +12,12 @@
 #' @family movie data
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
-#' trakt.movie.releases("tron-legacy-2010")
+#' trakt.movies.releases("tron-legacy-2010")
 #' }
-trakt.movie.releases <- function(target, country = NULL) {
+trakt.movies.releases <- function(target, country = NULL) {
   if (length(target) > 1) {
     response <- purrr::map_df(target, function(t) {
-      response <- trakt.movie.releases(target = t, country = country)
+      response <- trakt.movies.releases(target = t, country = country)
       response$movie <- t
 
       return(response)

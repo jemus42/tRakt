@@ -37,8 +37,8 @@ Other show data: \code{\link{trakt.get_all_episodes}},
   \code{\link{trakt.seasons.summary}},
   \code{\link{trakt.show.summary}}
 
-Other movie data: \code{\link{trakt.movie.releases}},
-  \code{\link{trakt.movie.summary}}
+Other movie data: \code{\link{trakt.movie.summary}},
+  \code{\link{trakt.movies.releases}}
 }
 \concept{movie data}
 \concept{show data}

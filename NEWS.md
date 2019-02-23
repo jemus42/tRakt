@@ -1,3 +1,13 @@
+# tRakt 0.14.90000
+
+## Consolidation for the people
+
+- Major refactor of the docs. Sadly, the user will only notice a little more consistency.
+- Consolidate related functions into the same Rd page
+- Centrally document common parameters and reuse them where needed
+- Also consolidate many similar functions by factoring out the relevant bits into more flexible helper functions. In some cases those are exported as well.
+- In the process, some functions where partially renamed (`.show.` -> `.shows.`, `.movie.` -> `.movies.`) for consistency.
+
 # tRakt 0.14.0
 
 Many functions were refactored, which in some cases changes the output.  

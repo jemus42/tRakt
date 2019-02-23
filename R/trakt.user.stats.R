@@ -23,8 +23,7 @@ trakt.user.stats <- function(user = getOption("trakt.username")) {
 
   # Flattening the distribution a little
   response$ratings$distribution <- tibble::enframe(unlist(response$ratings$distribution),
-    name = "rating", value = "n"
-  )
+                                                   name = "rating", value = "n")
 
   # Exclude the last element (ratings) from tibbleization
   # to avoid duplication of "total" value across rows
