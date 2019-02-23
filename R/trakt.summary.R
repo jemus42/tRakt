@@ -42,7 +42,7 @@ trakt.movie.summary <- function(target, extended = c("min", "full"), force_data_
 #' }
 trakt.show.summary <- function(target, extended = c("min", "full"), force_data_frame = FALSE) {
   extended <- match.arg(extended)
-  
+
   trakt.summary(
     type = "shows", target = target, extended = extended,
     force_data_frame = force_data_frame
@@ -73,7 +73,7 @@ trakt.summary <- function(type, target, extended = c("min", "full"), force_data_
     temp <- as.data.frame(temp)
     temp <- cbind(temp, response$ids)
     if ("airs" %in% names(response)) {
-      names(response$airs) <- paste0("airs.", names(response$airs))
+      names(response$airs) <- paste0("airs_", names(response$airs))
       temp <- cbind(temp, response$airs)
     }
     # Drop translations because no.
