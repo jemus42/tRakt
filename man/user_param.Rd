@@ -2,12 +2,12 @@
 % Please edit documentation in R/docs-common.R
 \name{user_param}
 \alias{user_param}
-\title{User parameter}
+\title{A user}
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 }
 \description{
-User parameter
+A user
 }

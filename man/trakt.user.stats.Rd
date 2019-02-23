@@ -7,20 +7,18 @@
 trakt.user.stats(user = getOption("trakt.username"))
 }
 \arguments{
-\item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
+\item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
+Can also be of length greater than 1, in which case the function is called on all
+\code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 }
 \value{
-A \code{list} of \link[tibble:tibble-package]{tibbles}.
+A list of \link[tibble:tibble-package]{tibbles}.
 }
 \description{
 \code{trakt.user.stats} retrieves a user's stats.
 }
-\note{
-See \href{http://docs.trakt.apiary.io/reference/users/stats/get-stats}{the trakt API docs for further info}
-}
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
 mystats <- trakt.user.stats() # Defaults to your username if set
 seanstats <- trakt.user.stats(user = "sean")
 }

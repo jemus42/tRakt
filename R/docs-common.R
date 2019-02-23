@@ -1,4 +1,4 @@
-#' Movie or show id
+#' Movie or show ID
 #' @name id_movie_show
 #' @param target `character(1)`: The `id` of the item requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `Trakt ID` (e.g. `1390`) or `IMDB ID` (e.g. `"tt0944947"`).
@@ -6,7 +6,7 @@
 #' `target` values separately and combined using [purrr::map_df].
 NULL
 
-#' Movie or show id
+#' A person
 #' @name id_person
 #' @param target `character(1)`: The `id` of the person requested. Either the `slug`
 #' (e.g. `"bryan-cranston"`), `Trakt ID` (e.g. `297737`) or `IMDB ID` (e.g. `"nm0186505"`).
@@ -21,9 +21,10 @@ NULL
 #' Type: Shows or Movies
 #' @name type_shows_movies
 #' @param type `character(1)`: Either `"shows"` or `"movies"`.
+#' @keywords internal
 NULL
 
-#' User parameter
+#' A user
 #' @name user_param
 #' @param user Target user. Defaults to `getOption("trakt.username")`.
 #' Can also be of length greater than 1, in which case the function is called on all
@@ -33,4 +34,5 @@ NULL
 #' Return a tibble without further info
 #' @name return_tibble
 #' @return A [tibble][tibble::tibble-package].
+#' @keywords internal
 NULL

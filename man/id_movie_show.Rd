@@ -2,7 +2,7 @@
 % Please edit documentation in R/docs-common.R
 \name{id_movie_show}
 \alias{id_movie_show}
-\title{Movie or show id}
+\title{Movie or show ID}
 \arguments{
 \item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
@@ -10,5 +10,5 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 }
 \description{
-Movie or show id
+Movie or show ID
 }

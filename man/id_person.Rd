@@ -2,11 +2,11 @@
 % Please edit documentation in R/docs-common.R
 \name{id_person}
 \alias{id_person}
-\title{Movie or show id}
+\title{A person}
 \arguments{
 \item{target}{\code{character(1)}: The \code{id} of the person requested. Either the \code{slug}
 (e.g. \code{"bryan-cranston"}), \code{Trakt ID} (e.g. \code{297737}) or \code{IMDB ID} (e.g. \code{"nm0186505"}).}
 }
 \description{
-Movie or show id
+A person
 }

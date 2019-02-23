@@ -9,3 +9,4 @@ A \link[tibble:tibble-package]{tibble}.
 \description{
 Return a tibble without further info
 }
+\keyword{internal}
