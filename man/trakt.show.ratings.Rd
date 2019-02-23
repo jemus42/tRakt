@@ -33,7 +33,6 @@ Other show data: \code{\link{trakt.get_all_episodes}},
   \code{\link{trakt.show.people}},
   \code{\link{trakt.show.summary}},
   \code{\link{trakt.shows.related}},
-  \code{\link{trakt.shows.trending}},
   \code{\link{trakt.stats}}
 }
 \concept{show data}
