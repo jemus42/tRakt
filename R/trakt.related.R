@@ -7,8 +7,7 @@
 #' (e.g. `"tron-legacy-2010"`), `trakt id` or `IMDb id`. If multiple `target`s are
 #' provided, the results will be `rbind`ed together and a `source` column as appended,
 #' containing the provided `id` of the input.
-#' @param extended Whether extended info should be provided.
-#' Defaults to `"min"`, can either be `"min"` or `"full"`.
+#' @inheritParams extended_info
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/related/get-related-movies}{the trakt API docs for further info}
@@ -52,8 +51,7 @@ trakt.shows.related <- function(target, extended = c("min", "full")) {
 #' Receive a set of shows that are related to a specific show/movie
 #' @param target The `id` of the show/movie requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
-#' @param extended Whether extended info should be provided.
-#' Defaults to `"min"`, can either be `"min"` or `"full"`
+#' @inheritParams extended_info
 #' @keywords internal
 trakt.related <- function(target, type, extended = c("min", "full")) {
   extended <- match.arg(extended)

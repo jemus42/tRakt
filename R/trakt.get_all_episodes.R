@@ -14,7 +14,7 @@
 #' @param season_nums Vector of season numbers, e.g. `c(1, 2)`. If `NULL`, all the seasons
 #' are retrieved by calling \link{trakt.seasons.summary} to determine the number of seasons.
 #' If a vector of length 1 (e.g. `5`) is supplied, it is extended to `seq_len(season_nums)`.
-#' @param extended Use `full` more data. Can be `min`, `full` (default).
+#' @inheritParams extended_info
 #' @param drop.unaired `logical(1) [TRUE]`: Episodes which have not aired yet are dropped.
 #' @param drop.translations `logical(1) [TRUE]`: Remove list-column containing country-
 #' codes for available translation. This column is unlikely to be of interest and

@@ -67,10 +67,10 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = "min") {
 #' possible values of `extended` to customize output amount.
 #' @param target The `id` of the show requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
-#' @param extended `["min", "full"]`: Amount of variables to return.
+#' @inheritParams extended_info
 #' @param drop.specials `logical(1) [TRUE]`: Special episodes (season 0) are dropped
 #' @param drop.unaired `logical(1) [TRUE]`: Seasons without aired episodes are dropped.
-#' Only works if `extended` is set to more than `min`.
+#' Only works if `extended` is`"full"`.
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}

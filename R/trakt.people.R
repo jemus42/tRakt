@@ -6,8 +6,7 @@
 #' there will also be biographical data if available.
 #' @param target The `id` of the person requested. Either the `slug`
 #' (e.g. `"bryan-cranston"`), `trakt id` or `IMDb id`
-#' @param extended Whether extended info should be provided.
-#' Defaults to `"min"`, can either be `"min"` or `"full"`
+#' @inheritParams extended_info
 #' @return A [tibble][tibble::tibble-package] with person details.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/summary/get-a-single-person}{the trakt API docs for further info}
@@ -50,8 +49,7 @@ trakt.people.summary <- function(target, extended = "min") {
 #' Returns all movies where this person is in the cast or crew.
 #' @param target The `id` of the person requested. Either the `slug`
 #' (e.g. `"bryan-cranston"`), `trakt id` or `IMDb id`
-#' @param extended Whether extended info should be provided.
-#' Defaults to `"min"`, can either be `"min"` or `"full"`
+#' @inheritParams extended_info
 #' @return A `data.frame`s with person details.
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/people/movies/get-movie-credits}{the trakt API docs for further info}
