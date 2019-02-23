@@ -36,8 +36,6 @@ seans.shows <- trakt.user.watched(user = "sean")
 }
 \seealso{
 Other user data: \code{\link{trakt.user.collection}},
-  \code{\link{trakt.user.followers}},
-  \code{\link{trakt.user.following}},
   \code{\link{trakt.user.friends}},
   \code{\link{trakt.user.ratings}},
   \code{\link{trakt.user.stats}},

@@ -12,8 +12,8 @@ trakt.movies.related(target, extended = c("min", "full"))
 provided, the results will be \code{rbind}ed together and a \code{source} column as appended,
 containing the provided \code{id} of the input.}
 
-\item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can either be \code{"min"} or \code{"full"}.}
+\item{extended}{\code{[character(1)]}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.

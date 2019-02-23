@@ -12,8 +12,8 @@ trakt.user.watchlist(user = getOption("trakt.username"),
 
 \item{type}{Either \code{shows} (default) or \code{movies}}
 
-\item{extended}{Whether extended info should be provided.
-Defaults to \code{"min"}, can also be\code{"full"}.}
+\item{extended}{\code{[character(1)]}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.
@@ -34,8 +34,6 @@ sean_movies <- trakt.user.watchlist(user = "sean") # Defaults to movie watchlist
 }
 \seealso{
 Other user data: \code{\link{trakt.user.collection}},
-  \code{\link{trakt.user.followers}},
-  \code{\link{trakt.user.following}},
   \code{\link{trakt.user.friends}},
   \code{\link{trakt.user.ratings}},
   \code{\link{trakt.user.stats}},

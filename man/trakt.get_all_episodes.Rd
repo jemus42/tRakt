@@ -15,7 +15,8 @@ trakt.get_all_episodes(target, season_nums = NULL, extended = "full",
 are retrieved by calling \link{trakt.seasons.summary} to determine the number of seasons.
 If a vector of length 1 (e.g. \code{5}) is supplied, it is extended to \code{seq_len(season_nums)}.}
 
-\item{extended}{Use \code{full} more data. Can be \code{min}, \code{full} (default).}
+\item{extended}{\code{[character(1)]}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 
 \item{drop.unaired}{\code{logical(1) [TRUE]}: Episodes which have not aired yet are dropped.}
 

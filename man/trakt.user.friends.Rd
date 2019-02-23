@@ -2,39 +2,45 @@
 % Please edit documentation in R/trakt.user.friendfollow.R
 \name{trakt.user.friends}
 \alias{trakt.user.friends}
-\title{Get a user's friends}
+\alias{trakt.user.followers}
+\alias{trakt.user.following}
+\title{Get a user's friends, followers or followings}
 \usage{
 trakt.user.friends(user = getOption("trakt.username"),
-  extended = "min")
+  extended = c("min", "full"))
+
+trakt.user.followers(user = getOption("trakt.username"),
+  extended = c("min", "full"))
+
+trakt.user.following(user = getOption("trakt.username"),
+  extended = c("min", "full"))
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}. If multiple users
-are specified, the results will be \code{rbind}ed together and a \code{source_user} variable is
-appended to indicated which user belongs to wich input user.}
+are specified, the results will be combined with \link{rbind}.}
 
-\item{extended}{Either \code{min} for standard info, \code{full} for details or \code{full,images}
-for additional avatar URLs.}
+\item{extended}{\code{[character(1)]}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-\code{trakt.user.friends} pulls a user's friends, the two-way relationship
+\code{trakt.user.friends} retrieves a user's friends, the two-way relationship
 of both following and being followed by a user.
-Since no OAuth2 methods are supported yet, the specified user mustn't be private.
 }
 \note{
-See \href{http://docs.trakt.apiary.io/reference/users/friends/get-friends}{the trakt API docs for further info}
+Since no OAuth2 methods are supported yet, the specified user must not be private.
 }
 \examples{
 \dontrun{
 trakt.user.friends("jemus42")
+trakt.user.followers("jemus42")
+trakt.user.following("jemus42")
 }
 }
 \seealso{
 Other user data: \code{\link{trakt.user.collection}},
-  \code{\link{trakt.user.followers}},
-  \code{\link{trakt.user.following}},
   \code{\link{trakt.user.ratings}},
   \code{\link{trakt.user.stats}},
   \code{\link{trakt.user.watched}},

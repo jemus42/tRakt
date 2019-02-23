@@ -43,6 +43,7 @@ trakt.popular <- function(type, limit = 10, page = 1, extended = c("min", "full"
 }
 
 #' @rdname trakt.popular
+#' @export
 trakt.trending <- function(type, limit = 10, page = 1, extended = c("min", "full")) {
   extended <- match.arg(extended)
   limit <- as.integer(limit)
@@ -68,21 +69,25 @@ trakt.trending <- function(type, limit = 10, page = 1, extended = c("min", "full
 }
 
 #' @rdname trakt.popular
+#' @export
 trakt.movies.trending <- function(limit = 10, page = 1, extended = c("min", "full")) {
   trakt.trending("movies", limit = limit, page = page, extended = extended)
 }
 
 #' @rdname trakt.popular
+#' @export
 trakt.shows.trending <- function(limit = 10, page = 1, extended = c("min", "full")) {
   trakt.trending("shows", limit = limit, page = page, extended = extended)
 }
 
 #' @rdname trakt.popular
+#' @export
 trakt.movies.popular <- function(limit = 10, page = 1, extended = c("min", "full")) {
   trakt.popular(type = "movies", limit = limit, page = page, extended = extended)
 }
 
 #' @rdname trakt.popular
+#' @export
 trakt.shows.popular <- function(limit = 10, page = 1, extended = c("min", "full")) {
   trakt.popular(type = "shows", limit = limit, page = page, extended = extended)
 }

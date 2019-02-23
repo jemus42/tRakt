@@ -12,7 +12,8 @@ trakt.seasons.season(target, seasons = 1L, extended = "min")
 
 \item{seasons}{\code{integer [1L]}: The season(s) to get. Use 0 for special episodes.}
 
-\item{extended}{\code{["min", "full"]}: Amount of variables to return.}
+\item{extended}{\code{[character(1)]}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.

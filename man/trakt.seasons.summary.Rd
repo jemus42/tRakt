@@ -11,12 +11,13 @@ trakt.seasons.summary(target, extended = c("min", "full"),
 \item{target}{The \code{id} of the show requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
 
-\item{extended}{\code{["min", "full"]}: Amount of variables to return.}
+\item{extended}{\code{[character(1)]}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 
 \item{drop.specials}{\code{logical(1) [TRUE]}: Special episodes (season 0) are dropped}
 
 \item{drop.unaired}{\code{logical(1) [TRUE]}: Seasons without aired episodes are dropped.
-Only works if \code{extended} is set to more than \code{min}.}
+Only works if \code{extended} is\code{"full"}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.
