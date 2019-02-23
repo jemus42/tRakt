@@ -9,7 +9,7 @@
 #' @param page Page to return (default is `1`)
 #' for \href{http://docs.trakt.apiary.io/#introduction/pagination}{pagination}.
 #' @inheritParams extended_info
-#' @inheritParams type_show_movie
+#' @inheritParams type_shows_movies
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @aliases trakt.trending
@@ -24,7 +24,9 @@
 #' trakt.movies.trending(5)
 #' trakt.shows.trending(5)
 #' }
-trakt.popular <- function(type, limit = 10, page = 1, extended = c("min", "full")) {
+trakt.popular <- function(type = c("shows", "movies"), limit = 10, page = 1,
+                          extended = c("min", "full")) {
+  type <- match.arg(type)
   extended <- match.arg(extended)
   limit <- as.integer(limit)
   page <- as.integer(page)
@@ -44,7 +46,9 @@ trakt.popular <- function(type, limit = 10, page = 1, extended = c("min", "full"
 
 #' @rdname trakt.popular
 #' @export
-trakt.trending <- function(type, limit = 10, page = 1, extended = c("min", "full")) {
+trakt.trending <- function(type = c("shows", "movies"), limit = 10, page = 1,
+                           extended = c("min", "full")) {
+  type <- match.arg(type)
   extended <- match.arg(extended)
   limit <- as.integer(limit)
   page <- as.integer(page)
@@ -67,6 +71,8 @@ trakt.trending <- function(type, limit = 10, page = 1, extended = c("min", "full
 
   tibble::remove_rownames(tibble::as_tibble(response))
 }
+
+# Aliased/derived ----
 
 #' @rdname trakt.popular
 #' @export

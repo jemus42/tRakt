@@ -6,6 +6,11 @@ NULL
 
 #' Type: Show or Movie
 #' @name type_show_movie
+#' @param type `[character(1)]`: Either `"shows"` (default) or `"movies"`.
+NULL
+
+#' Type: Show or Movie
+#' @name type_shows_movies
 #' @param type `[character(1)]`: Either `"show"` or `"movie"`.
 NULL
 

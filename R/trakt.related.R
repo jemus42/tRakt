@@ -1,65 +1,35 @@
-#' Search for related movies
-#'
-#' `trakt.movies.related` returns movies related to the input movie.
-#'
-#' Receive a set of movies that are related to a specific movie.
-#' @param target The `id` of the movie requested. Either the `slug`
-#' (e.g. `"tron-legacy-2010"`), `trakt id` or `IMDb id`. If multiple `target`s are
-#' provided, the results will be `rbind`ed together and a `source` column as appended,
-#' containing the provided `id` of the input.
-#' @inheritParams extended_info
-#' @return A [tibble][tibble::tibble-package].
+#' @rdname trakt.related
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/reference/movies/related/get-related-movies}{the trakt API docs for further info}
-#' @family movie data
-#' @family aggregated data
-#' @examples
-#' \dontrun{
-#' library(tRakt)
-#' related <- trakt.movies.related("tron-legacy-2010")
-#' }
 trakt.movies.related <- function(target, extended = c("min", "full")) {
   trakt.related(target, type = "movies", extended = extended)
 }
 
-#' Search for related shows
-#'
-#' `trakt.shows.related` returns shows related to the input show.
-#'
-#' Receive a set of shows that are related to a specific show.
-#' @param target The `id` of the movie requested. Either the `slug`
-#' (e.g. `"tron-legacy-2010"`), `trakt id` or `IMDb id`. If multiple `target`s are
-#' provided, the results will be `rbind`ed together and a `source` column as appended,
-#' containing the provided `id` of the input.
-#' @inheritParams trakt.movies.related
+#' @rdname trakt.related
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/#reference/shows/related/get-related-shows}{the trakt API docs for further info}
-#' @family show data
-#' @family aggregated data
-#' @examples
-#' \dontrun{
-#' library(tRakt)
-#' related <- trakt.shows.related("game-of-thrones")
-#' }
 trakt.shows.related <- function(target, extended = c("min", "full")) {
   trakt.related(target, type = "shows", extended = extended)
 }
 
 #' Search for related shows or movies
 #'
-#' `trakt.related` returns shows or movies related to the input show/movie.
 #' Receive a set of shows that are related to a specific show/movie
 #' @param target The `id` of the show/movie requested. Either the `slug`
 #' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
 #' @inheritParams extended_info
-#' @keywords internal
-trakt.related <- function(target, type, extended = c("min", "full")) {
+#' @inheritParams type_shows_movies
+#' @inherit return_tibble return
+#' @export
+#' @examples
+#' \dontrun{
+#' trakt.related("breaking-bad", "shows")
+#' }
+trakt.related <- function(target, type = c("shows", "movies"), extended = c("min", "full")) {
+  type <- match.arg(type)
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
     response <- purrr::map_df(target, function(t) {
-      response <- trakt.related(target = t, type = type, extended = extended)
-      return(response)
+      trakt.related(target = t, type = type, extended = extended)
     })
     return(response)
   }

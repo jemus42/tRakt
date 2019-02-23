@@ -9,11 +9,11 @@
 \alias{trakt.shows.popular}
 \title{Get popular and trending movies and shows}
 \usage{
-trakt.popular(type, limit = 10, page = 1, extended = c("min",
-  "full"))
+trakt.popular(type = c("shows", "movies"), limit = 10, page = 1,
+  extended = c("min", "full"))
 
-trakt.trending(type, limit = 10, page = 1, extended = c("min",
-  "full"))
+trakt.trending(type = c("shows", "movies"), limit = 10, page = 1,
+  extended = c("min", "full"))
 
 trakt.movies.trending(limit = 10, page = 1, extended = c("min",
   "full"))

@@ -27,7 +27,7 @@ seanstats <- trakt.user.stats(user = "sean")
 }
 \seealso{
 Other user data: \code{\link{trakt.user.collection}},
-  \code{\link{trakt.user.friends}},
+  \code{\link{trakt.user.network}},
   \code{\link{trakt.user.ratings}},
   \code{\link{trakt.user.watched}},
   \code{\link{trakt.user.watchlist}}

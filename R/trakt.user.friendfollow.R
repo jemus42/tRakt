@@ -14,30 +14,7 @@
 #' trakt.user.followers("jemus42")
 #' trakt.user.following("jemus42")
 #' }
-trakt.user.friends <- function(user = getOption("trakt.username"),
-                               extended = c("min", "full")) {
-
-  trakt_user_friendfollow(relationship = "friends", user = user, extended = extended)
-}
-
-#' @rdname trakt.user.friends
-#' @export
-trakt.user.followers <- function(user = getOption("trakt.username"),
-                                 extended = c("min", "full")) {
-
-  trakt_user_friendfollow(relationship = "followers", user = user, extended = extended)
-}
-
-#' @rdname trakt.user.friends
-#' @export
-trakt.user.following <- function(user = getOption("trakt.username"),
-                                 extended = c("min", "full")) {
-
-  trakt_user_friendfollow(relationship = "following", user = user, extended = extended)
-}
-
-#' @keywords internal
-trakt_user_friendfollow <- function(relationship = c("friends", "followers", "following"),
+trakt.user.network <- function(relationship = c("friends", "followers", "following"),
                                     user = getOption("trakt.username"),
                                     extended = c("min", "full")) {
 
@@ -69,4 +46,30 @@ trakt_user_friendfollow <- function(relationship = c("friends", "followers", "fo
   response <- convert_datetime(response)
 
   tibble::as_tibble(tibble::remove_rownames(response))
+}
+
+# Aliased/derived ----
+
+#' @rdname trakt.user.network
+#' @export
+trakt.user.friends <- function(user = getOption("trakt.username"),
+                               extended = c("min", "full")) {
+
+  trakt_user_friendfollow(relationship = "friends", user = user, extended = extended)
+}
+
+#' @rdname trakt.user.network
+#' @export
+trakt.user.followers <- function(user = getOption("trakt.username"),
+                                 extended = c("min", "full")) {
+
+  trakt_user_friendfollow(relationship = "followers", user = user, extended = extended)
+}
+
+#' @rdname trakt.user.network
+#' @export
+trakt.user.following <- function(user = getOption("trakt.username"),
+                                 extended = c("min", "full")) {
+
+  trakt_user_friendfollow(relationship = "following", user = user, extended = extended)
 }
