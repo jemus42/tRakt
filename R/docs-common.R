@@ -6,6 +6,12 @@
 #' `target` values separately and combined using [purrr::map_df].
 NULL
 
+#' Movie or show id
+#' @name id_person
+#' @param target `character(1)`: The `id` of the person requested. Either the `slug`
+#' (e.g. `"bryan-cranston"`), `Trakt ID` (e.g. `297737`) or `IMDB ID` (e.g. `"nm0186505"`).
+NULL
+
 #' Extended information
 #' @name extended_info
 #' @param extended `character(1)`: Either `"min"` (API default) or `"full"`. The latter

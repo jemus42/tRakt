@@ -4,13 +4,11 @@
 \alias{trakt.people.summary}
 \title{Get a single person's details}
 \usage{
-trakt.people.summary(target, extended = "min")
+trakt.people.summary(target, extended = c("min", "full"))
 }
 \arguments{
-\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
-Can also be of length greater than 1, in which case the function is called on all
-\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
+\item{target}{\code{character(1)}: The \code{id} of the person requested. Either the \code{slug}
+(e.g. \code{"bryan-cranston"}), \code{Trakt ID} (e.g. \code{297737}) or \code{IMDB ID} (e.g. \code{"nm0186505"}).}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
@@ -19,25 +17,16 @@ returns more variables and should generally only be used if required.}
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-\code{trakt.people.summary} pulls show people data.
-}
-\details{
-Get a single person's details, like their various ids. If \code{extended} is \code{"full"},
+Get a single person's details, like their various IDs. If \code{extended} is \code{"full"},
 there will also be biographical data if available.
-}
-\note{
-See \href{http://docs.trakt.apiary.io/reference/people/summary/get-a-single-person}{the trakt API docs for further info}
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
-person <- trakt.people.summary("bryan-cranston")
+person <- trakt.people.summary("bryan-cranston", "full")
 }
 }
 \seealso{
-Other people data: \code{\link{trakt.movie.people}},
-  \code{\link{trakt.people.movies}},
-  \code{\link{trakt.people.shows}},
-  \code{\link{trakt.show.people}}
+Other people data: \code{\link{trakt.media.people}},
+  \code{\link{trakt.people.media}}
 }
 \concept{people data}

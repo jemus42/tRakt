@@ -35,8 +35,7 @@ trakt.movie.summary("tron-legacy-2010")
 }
 }
 \seealso{
-Other movie data: \code{\link{trakt.movie.people}},
-  \code{\link{trakt.movie.releases}},
+Other movie data: \code{\link{trakt.movie.releases}},
   \code{\link{trakt.stats}}
 }
 \concept{movie data}
