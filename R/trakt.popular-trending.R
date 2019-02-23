@@ -33,8 +33,8 @@ NULL
 #' @keywords internal
 trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated"),
                             type = c("shows", "movies"),
-                             limit = 10L, page = 1L,
-                             extended = c("min", "full")) {
+                            limit = 10L, page = 1L,
+                            extended = c("min", "full")) {
   list_type <- match.arg(list_type)
   type <- match.arg(type)
   extended <- match.arg(extended)
