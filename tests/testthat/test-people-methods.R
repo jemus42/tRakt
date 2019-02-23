@@ -30,13 +30,13 @@ test_that("trakt.people.[movies|shows] works", {
   target <- "bryan-cranston"
 
   mov_min <- trakt.people.movies(target = target, extended = "min")
-  mov_max <- trakt.people.movies(target = target, extended = "max")
+  mov_max <- trakt.people.movies(target = target, extended = "full")
 
   expect_is(mov_min, "list")
   expect_named(mov_min, c("cast", "crew"))
 
   sho_min <- trakt.people.shows(target = target, extended = "min")
-  sho_max <- trakt.people.shows(target = target, extended = "max")
+  sho_max <- trakt.people.shows(target = target, extended = "full")
 
   expect_is(sho_min, "list")
   expect_named(sho_min, c("cast", "crew"))
