@@ -63,10 +63,10 @@ trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated",
     )
   }
 
-  if (has_name(response, "movie")) {
-    response <- bind_cols(
-      response %>% select(-movie),
-      response$movie %>% select(-ids),
+  if (tibble::has_name(response, "movie")) {
+    response <- dplyr::bind_cols(
+      response %>% dplyr::select(-movie),
+      response$movie %>% dplyr::select(-ids),
       response$movie$ids
     )
   }
@@ -74,7 +74,7 @@ trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated",
   # Unpack ids – required for extended = "min"
   # This is done last because at this point we can be
   # reasonably certain there's no other problematic list/df columns
-  if (has_name(response, "ids")) {
+  if (tibble::has_name(response, "ids")) {
     response <- dplyr::bind_cols(
       response %>% dplyr::select(-ids),
       response$ids
