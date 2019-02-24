@@ -8,7 +8,9 @@ trakt.user.watchlist(user = getOption("trakt.username"),
   type = c("movies", "shows"), extended = c("min", "full"))
 }
 \arguments{
-\item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
+\item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
+Can also be of length greater than 1, in which case the function is called on all
+\code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 

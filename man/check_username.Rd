@@ -7,7 +7,7 @@
 check_username(user, validate = FALSE)
 }
 \arguments{
-\item{user}{The username input}
+\item{user}{The username input.}
 
 \item{validate}{\code{logical(1) [TRUE]}: Retrieve user profile to check if it exists.}
 }

@@ -1,7 +1,7 @@
 #' Get a user's stats
 #'
 #' `trakt.user.stats` retrieves a user's stats.
-#' @inheritParams user_param
+#' @inheritParams trakt_api_common_parameters
 #' @return A list of [tibbles][tibble::tibble-package].
 #' @export
 #' @importFrom tibble enframe

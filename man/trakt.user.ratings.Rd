@@ -8,9 +8,11 @@ trakt.user.ratings(user = getOption("trakt.username"),
   type = c("shows", "episodes", "movies"), rating = NULL)
 }
 \arguments{
-\item{user}{Target user. Defaults to \code{getOption("trakt.username")}}
+\item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
+Can also be of length greater than 1, in which case the function is called on all
+\code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
-\item{type}{Either \code{shows} (default), \code{episodes} or \code{movies}}
+\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 
 \item{rating}{A rating to filter by. Can be \code{1} through \code{10}, default is \code{NULL}}
 }
@@ -18,7 +20,7 @@ trakt.user.ratings(user = getOption("trakt.username"),
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-\code{trakt.user.ratings} pulls a user's ratings
+\code{trakt.user.ratings} retrieves a user's ratings
 }
 \note{
 See \href{http://docs.trakt.apiary.io/reference/users/ratings/get-ratings}{the trakt API docs for further info}

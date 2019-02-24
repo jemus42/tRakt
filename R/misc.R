@@ -143,7 +143,7 @@ build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = N
 
 #' Check username
 #'
-#' @param user The username input
+#' @param user The username input.
 #' @param validate `logical(1) [TRUE]`: Retrieve user profile to check if it exists.
 #' @return An error if the checks fail or else `TRUE` invisibly. If `validate`, the
 #' user profile is returned as a `list`.

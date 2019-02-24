@@ -8,9 +8,7 @@
 #' contains play stats for _every_ watched episode of _every_ show. Otherwise,
 #' the returned [tibble][tibble::tibble-package] only contains play stats per show or movie respectively.
 #'
-#' @inheritParams user_param
-#' @inheritParams type_shows_movies
-#' @inheritParams extended_info
+#' @inheritParams trakt_api_common_parameters
 #' @param noseasons `logical(1) [TRUE]`: Only for `type = "show"`: Exclude detailed season
 #' data from output. This is advisable if you do not need per-episode data and want to
 #' be nice to the API.

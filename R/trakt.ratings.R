@@ -1,8 +1,7 @@
 #' Get show or movie user ratings
 #'
 #' Returns a show's or movie's rating and ratings distribution.
-#' @inheritParams id_movie_show
-#' @inheritParams type_shows_movies
+#' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/ratings/get-show-ratings}{the trakt API docs for further info}
 #' @examples

@@ -5,7 +5,7 @@
 #' a single season, i.e. all the episodes of the season.
 #' See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
 #' `extended` to customize output amount.
-#' @inheritParams id_movie_show
+#' @inheritParams trakt_api_common_parameters
 #' @param seasons `integer(1) [1L]`: The season(s) to get. Use 0 for special episodes.
 #' @inheritParams trakt.seasons.summary
 #' @return A [tibble][tibble::tibble-package].
@@ -58,8 +58,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 #'
 #' Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes
 #' each season has.
-#' @inheritParams id_movie_show
-#' @inheritParams extended_info
+#' @inheritParams trakt_api_common_parameters
 #' @param drop.specials `logical(1) [TRUE]`: Special episodes (season 0) are dropped
 #' @param drop.unaired `logical(1) [TRUE]`: Seasons without aired episodes are dropped.
 #' Only works if `extended` is `"full"`.

@@ -2,9 +2,7 @@
 #'
 #' Note that setting `extended` to `min` makes this function
 #' return about as much informations as \link[tRakt]{trakt.search}
-#' @inheritParams id_movie_show
-#' @inheritParams extended_info
-#' @inheritParams type_shows_movies
+#' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @family summary data
 #' @export

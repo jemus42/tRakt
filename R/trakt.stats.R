@@ -2,8 +2,7 @@
 #'
 #' `trakt.stats` pulls show stats and returns it compactly.
 #' The data includes show ratings, scrobbles, checkins, plays, comments...
-#' @inheritParams id_movie_show
-#' @inheritParams type_shows_movies
+#' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/stats}{the trakt API docs for further info}

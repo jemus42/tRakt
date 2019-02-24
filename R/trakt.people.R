@@ -2,8 +2,7 @@
 #'
 #' Get a single person's details, like their various IDs. If `extended` is `"full"`,
 #' there will also be biographical data if available.
-#' @inheritParams id_person
-#' @inheritParams extended_info
+#' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @importFrom purrr flatten_df
@@ -45,9 +44,7 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
 #' Get a single person's movie or show credits
 #'
 #' Returns all movies or shows where this person is in the cast or crew.
-#' @inheritParams id_person
-#' @inheritParams type_shows_movies
-#' @inheritParams extended_info
+#' @inheritParams trakt_api_common_parameters
 #' @return A `list`.
 #' @export
 #' @family people data
@@ -84,9 +81,7 @@ trakt.people.shows <- function(target, extended = c("min", "full")) {
 #'
 #' Returns all cast and crew for a show/movie, depending on how much data is
 #' available.
-#' @inheritParams id_movie_show
-#' @inheritParams extended_info
-#' @inheritParams type_shows_movies
+#' @inheritParams trakt_api_common_parameters
 #' @return A `list`.
 #' @export
 #' @family people data

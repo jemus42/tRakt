@@ -1,8 +1,7 @@
 #' Get a user's ratings
 #'
-#' `trakt.user.ratings` pulls a user's ratings
-#' @param user Target user. Defaults to `getOption("trakt.username")`
-#' @param type Either `shows` (default), `episodes` or `movies`
+#' `trakt.user.ratings` retrieves a user's ratings
+#' @inheritParams trakt_api_common_parameters
 #' @param rating A rating to filter by. Can be `1` through `10`, default is `NULL`
 #' @return A [tibble][tibble::tibble-package].
 #' @export

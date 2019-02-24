@@ -4,8 +4,7 @@
 #' of both following and being followed by a user.
 #' @param relationship `character(1) ["friends"]`: Type of user relationship. Either
 #' `"friends"`, `"followers"`, or `"following"`.
-#' @inheritParams user_param
-#' @inheritParams extended_info
+#' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note Since no OAuth2 methods are supported yet, the specified user must not be private.

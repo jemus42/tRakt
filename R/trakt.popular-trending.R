@@ -9,8 +9,7 @@
 #'
 #' @param limit,page `integer(1) [10L] [1L]`: Number of items and page for paginated requests.
 #' Bot values must be greater than `0` and will be coerced to `integer`.
-#' @inheritParams extended_info
-#' @inheritParams type_shows_movies
+#' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @name automated_lists
 #' @examples

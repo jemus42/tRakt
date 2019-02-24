@@ -9,9 +9,10 @@ trakt.get_all_episodes(target, season_nums = NULL, extended = "full",
 }
 \arguments{
 \item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+(e.g. \code{"game-of-thrones"} for a show, or \code{"bryan-cranston"} for a person),
+\code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"} or \code{"nm0186505"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df} if possible.}
 
 \item{season_nums}{Vector of season numbers, e.g. \code{c(1, 2)}. If \code{NULL}, all the seasons
 are retrieved by calling \link{trakt.seasons.summary} to determine the number of seasons.

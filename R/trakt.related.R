@@ -1,9 +1,7 @@
 #' Search for related shows or movies
 #'
 #' Receive a set of shows that are related to a specific show/movie
-#' @inheritParams id_movie_show
-#' @inheritParams extended_info
-#' @inheritParams type_shows_movies
+#' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @examples
