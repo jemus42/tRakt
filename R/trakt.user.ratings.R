@@ -4,7 +4,7 @@
 #' @param user Target user. Defaults to `getOption("trakt.username")`
 #' @param type Either `shows` (default), `episodes` or `movies`
 #' @param rating A rating to filter by. Can be `1` through `10`, default is `NULL`
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/users/ratings/get-ratings}{the trakt API docs for further info}
 #' @family user data

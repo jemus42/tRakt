@@ -8,7 +8,7 @@
 #' @inheritParams id_movie_show
 #' @param seasons `integer(1) [1L]`: The season(s) to get. Use 0 for special episodes.
 #' @inheritParams trakt.seasons.summary
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @importFrom lubridate year
 #' @note See \href{http://docs.trakt.apiary.io/reference/seasons/season/get-single-season-for-a-show}{the trakt API docs for further info}.
@@ -63,7 +63,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 #' @param drop.specials `logical(1) [TRUE]`: Special episodes (season 0) are dropped
 #' @param drop.unaired `logical(1) [TRUE]`: Seasons without aired episodes are dropped.
 #' Only works if `extended` is `"full"`.
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @family show data
 #' @examples

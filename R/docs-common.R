@@ -30,9 +30,3 @@ NULL
 #' Can also be of length greater than 1, in which case the function is called on all
 #' `user` values separately and combined using [purrr::map_df].
 NULL
-
-#' Return a tibble without further info
-#' @name return_tibble
-#' @return A [tibble][tibble::tibble-package].
-#' @keywords internal
-NULL

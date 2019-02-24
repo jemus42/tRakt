@@ -5,7 +5,7 @@
 #' @param user Target user. Defaults to `getOption("trakt.username")`
 #' @inheritParams type_shows_movies
 #' @inheritParams extended_info
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{the trakt API docs for further info}
 #' @family user data

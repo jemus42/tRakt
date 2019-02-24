@@ -14,7 +14,7 @@
 #' @param drop.translations `logical(1) [TRUE]`: Remove list-column containing country-
 #' codes for available translation. This column is unlikely to be of interest and
 #' therefore excluded by default.
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @importFrom purrr map_df
 #' @note This function is mainly for convenience.

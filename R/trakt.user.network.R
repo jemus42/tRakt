@@ -6,7 +6,7 @@
 #' `"friends"`, `"followers"`, or `"following"`.
 #' @inheritParams user_param
 #' @inheritParams extended_info
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note Since no OAuth2 methods are supported yet, the specified user must not be private.
 #' @family user data

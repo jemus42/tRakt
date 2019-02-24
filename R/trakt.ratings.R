@@ -3,7 +3,7 @@
 #' Returns a show's or movie's rating and ratings distribution.
 #' @inheritParams id_movie_show
 #' @inheritParams type_shows_movies
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @note See \href{http://docs.trakt.apiary.io/reference/shows/ratings/get-show-ratings}{the trakt API docs for further info}
 #' @examples
 #' \dontrun{

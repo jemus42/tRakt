@@ -7,7 +7,7 @@
 #' @inheritParams type_shows_movies
 #' @param unnest_episodes `logical(1) [FALSE]`: Unnests episode data using
 #' `[tidyr](tidyr::unnest)` and returns one row per episode rather than one row per show.
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @family user data
 #' @import dplyr

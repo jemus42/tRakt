@@ -11,7 +11,7 @@
 #' Bot values must be greater than `0` and will be coerced to `integer`.
 #' @inheritParams extended_info
 #' @inheritParams type_shows_movies
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @name automated_lists
 #' @examples
 #' \dontrun{

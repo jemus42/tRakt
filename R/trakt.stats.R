@@ -4,7 +4,7 @@
 #' The data includes show ratings, scrobbles, checkins, plays, comments...
 #' @inheritParams id_movie_show
 #' @inheritParams type_shows_movies
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/#reference/shows/stats}{the trakt API docs for further info}
 #' @family show data

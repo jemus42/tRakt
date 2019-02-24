@@ -5,7 +5,7 @@
 #' the certification (e.g. `PG`).
 #' @inheritParams id_movie_show
 #' @param country Optional two letter country code to filter by.
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/releases/get-all-movie-releases}{the
 #'  trakt API docs for further info}

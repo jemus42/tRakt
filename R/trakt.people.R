@@ -4,7 +4,7 @@
 #' there will also be biographical data if available.
 #' @inheritParams id_person
 #' @inheritParams extended_info
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @importFrom purrr flatten_df
 #' @importFrom purrr modify_if

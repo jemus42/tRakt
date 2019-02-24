@@ -4,7 +4,7 @@
 #' @inheritParams id_movie_show
 #' @inheritParams extended_info
 #' @inheritParams type_shows_movies
-#' @inherit return_tibble return
+#' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @examples
 #' \dontrun{
