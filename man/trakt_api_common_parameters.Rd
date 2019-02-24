@@ -18,6 +18,9 @@ returns more variables and should generally only be used if required.}
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
+
+\item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
+are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
 }
 \description{
 These parameters are used \emph{a lot} throughout this package, and they tend to be

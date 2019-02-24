@@ -40,7 +40,6 @@ breakingbad <- trakt.get_full_showdata(slug = "breaking-bad")
 \seealso{
 Other show data: \code{\link{trakt.get_all_episodes}},
   \code{\link{trakt.seasons.season}},
-  \code{\link{trakt.seasons.summary}},
-  \code{\link{trakt.stats}}
+  \code{\link{trakt.seasons.summary}}
 }
 \concept{show data}

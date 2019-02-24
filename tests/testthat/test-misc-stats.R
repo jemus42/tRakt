@@ -1,12 +1,7 @@
-context("test-misc-stats")
+context("test-media-user-stats")
 
 test_that("trakt.user.stats works", {
   skip_on_cran()
-
-  if (is.null(getOption("trakt.headers"))) {
-    message("trakt.headers are NULL. Why?")
-    get_trakt_credentials()
-  }
 
   user <- "jemus42"
 
@@ -19,11 +14,11 @@ test_that("trakt.user.stats works", {
   ))
 })
 
-test_that("trakt.stats does things", {
+test_that("trakt.media.stats does things", {
   skip_on_cran()
 
-  stats_show <- trakt.stats(target = "futurama", type = "shows")
-  stats_mov <- trakt.stats(target = "deadpool-2016", type = "movies")
+  stats_show <- trakt.shows.stats(target = "futurama")
+  stats_mov <- trakt.movies.stats(target = "deadpool-2016")
 
   expect_is(stats_show, "tbl")
   expect_is(stats_mov, "tbl")
@@ -32,9 +27,9 @@ test_that("trakt.stats does things", {
 
   expect_identical(
     stats_show,
-    trakt.stats(target = "futurama")
+    trakt.shows.stats(target = "futurama")
   )
 
-  stats_multi <- trakt.stats(target = c("futurama", "breaking-bad"), type = "shows")
+  stats_multi <- trakt.shows.stats(target = c("futurama", "breaking-bad"))
   expect_equal(nrow(stats_multi), 2)
 })

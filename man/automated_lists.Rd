@@ -5,12 +5,15 @@
 \alias{trakt.popular}
 \alias{trakt.trending}
 \alias{trakt.anticipated}
+\alias{trakt.played}
 \alias{trakt.movies.trending}
 \alias{trakt.shows.trending}
 \alias{trakt.movies.popular}
 \alias{trakt.shows.popular}
 \alias{trakt.movies.anticipated}
 \alias{trakt.shows.anticipated}
+\alias{trakt.shows.played}
+\alias{trakt.movies.played}
 \title{Get popular/trending/anticipated movies and shows}
 \usage{
 trakt.popular(type = c("shows", "movies"), limit = 10, page = 1,
@@ -21,6 +24,10 @@ trakt.trending(type = c("shows", "movies"), limit = 10, page = 1,
 
 trakt.anticipated(type = c("shows", "movies"), limit = 10, page = 1,
   extended = c("min", "full"))
+
+trakt.played(type = c("shows", "movies"), limit = 10, page = 1,
+  extended = c("min", "full"), period = c("weekly", "monthly",
+  "yearly", "all"))
 
 trakt.movies.trending(limit = 10, page = 1, extended = c("min",
   "full"))
@@ -39,6 +46,12 @@ trakt.movies.anticipated(limit = 10, page = 1, extended = c("min",
 
 trakt.shows.anticipated(limit = 10, page = 1, extended = c("min",
   "full"))
+
+trakt.shows.played(limit = 10, page = 1, extended = c("min", "full"),
+  period = c("weekly", "monthly", "yearly", "all"))
+
+trakt.movies.played(limit = 10, page = 1, extended = c("min",
+  "full"), period = c("weekly", "monthly", "yearly", "all"))
 }
 \arguments{
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
@@ -48,6 +61,9 @@ Bot values must be greater than \code{0} and will be coerced to \code{integer}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
+
+\item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
+are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.

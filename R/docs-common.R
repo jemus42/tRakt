@@ -16,4 +16,6 @@
 #' @param user Target user. Defaults to `getOption("trakt.username")`.
 #' Can also be of length greater than 1, in which case the function is called on all
 #' `user` values separately and combined using [purrr::map_df].
+#' @param period `character(1) ["weekly"]`: Which period to filter by. Possible values
+#' are `"weekly"`, `"monthly"`, `"yearly"`, `"all"`.
 NULL

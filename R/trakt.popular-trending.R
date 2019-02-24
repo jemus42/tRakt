@@ -32,7 +32,8 @@ NULL
 trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated"),
                             type = c("shows", "movies"),
                             limit = 10L, page = 1L,
-                            extended = c("min", "full")) {
+                            extended = c("min", "full"),
+                            period = NULL) {
   list_type <- match.arg(list_type)
   type <- match.arg(type)
   extended <- match.arg(extended)
@@ -43,7 +44,8 @@ trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated")
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, list_type, page = page, limit = limit, extended = extended)
+  url <- build_trakt_url(type, list_type, period, page = page,
+                         limit = limit, extended = extended)
   response <- trakt.api.call(url)
 
   tibble::remove_rownames(tibble::as_tibble(response))
@@ -74,6 +76,20 @@ trakt.anticipated <- function(type = c("shows", "movies"), limit = 10, page = 1,
   trakt_auto_lists(list_type = "anticipated", type = type,
                    limit = limit, page = page, extended = extended)
 }
+
+#' @rdname automated_lists
+#' @export
+trakt.played <- function(type = c("shows", "movies"),
+                         limit = 10, page = 1, extended = c("min", "full"),
+                         period = c("weekly" , "monthly" , "yearly" , "all")) {
+  period <- match.arg(period)
+
+  trakt_auto_lists(list_type = "played", type = "shows",
+                   limit = limit, page = page,
+                   extended = extended, period = period)
+}
+
+# media/list ----
 
 #' @rdname automated_lists
 #' @export
@@ -114,5 +130,27 @@ trakt.movies.anticipated <- function(limit = 10, page = 1, extended = c("min", "
 #' @export
 trakt.shows.anticipated <- function(limit = 10, page = 1, extended = c("min", "full")) {
   trakt_auto_lists(list_type = "anticipated", type = "shows",
+                   limit = limit, page = page, extended = extended)
+}
+
+# media/list with period ----
+
+#' @rdname automated_lists
+#' @export
+trakt.shows.played <- function(limit = 10, page = 1, extended = c("min", "full"),
+                               period = c("weekly" , "monthly" , "yearly" , "all")) {
+  period <- match.arg(period)
+
+  trakt_auto_lists(list_type = "played", type = "shows", period = period,
+                   limit = limit, page = page, extended = extended)
+}
+
+#' @rdname automated_lists
+#' @export
+trakt.movies.played <- function(limit = 10, page = 1, extended = c("min", "full"),
+                               period = c("weekly" , "monthly" , "yearly" , "all")) {
+  period <- match.arg(period)
+
+  trakt_auto_lists(list_type = "played", type = "movies", period = period,
                    limit = limit, page = page, extended = extended)
 }
