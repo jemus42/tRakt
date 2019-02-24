@@ -50,6 +50,11 @@ trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated",
   response <- trakt.api.call(url)
   response <- tibble::as_tibble(response)
 
+  # For this case we *only* get show objects, so we handle that first
+  if (type == "shows" & list_type == "popular") {
+    response <- unpack_show(response)
+  }
+
   # Unnest show or movie object present only in some methods
   if (tibble::has_name(response, "show")) {
     response <- dplyr::bind_cols(
@@ -67,6 +72,8 @@ trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated",
   }
 
   # Unpack ids – required for extended = "min"
+  # This is done last because at this point we can be
+  # reasonably certain there's no other problematic list/df columns
   if (has_name(response, "ids")) {
     response <- dplyr::bind_cols(
       response %>% dplyr::select(-ids),
