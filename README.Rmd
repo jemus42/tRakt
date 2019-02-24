@@ -56,7 +56,7 @@ show_episodes <- trakt.seasons.season(show_info$trakt,
                                       seasons = c(1, 2), extended = "full")
 
 show_episodes %>%
-  select(season, episode, title, rating, votes, first_aired) %>%
+  select(season, episode_number, title, rating, votes, first_aired) %>%
   knitr::kable()
 ```
 
