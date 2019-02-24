@@ -30,12 +30,16 @@ function was created for.
 }
 \note{
 Please be aware that the result of this function is not verified to be a working trakt.tv
-API URL. See \href{http://docs.trakt.apiary.io/#introduction/pagination}{the trakt.tv API docs for
-more information}.
+API URL, unless \code{validate = TRUE}, in which case a \code{HEAD} request is performed that
+does not actually receive any data, but from its returned status code the validity
+of the URL can be inferred.
 }
 \examples{
 build_trakt_url("shows", "breaking-bad", extended = "full")
 build_trakt_url("shows", "popular", page = 3, limit = 5)
+
+# Validate a URL works
+build_trakt_url("shows", "popular", page = 3, limit = 5, validate = TRUE)
 }
 \seealso{
 Other utility functions: \code{\link{pad}},

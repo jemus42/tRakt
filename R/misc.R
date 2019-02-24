@@ -107,33 +107,49 @@ convert_datetime <- function(response) {
 #' @param validate `logical(1) [TRUE]`: Whether to check the URl via `httr::HEAD` request.
 #' @param ... Other params used as `queries`. Must be named arguments
 #' like `name = value`, commoly used is `extended = "min"`.
-#' @return A `character` of class `url`.
+#' @return A `character` of length 1. If `validate = TRUE`, also a message including
+#' the HTTP status code return by a `HEAD` request.
 #' @family utility functions
 #' @export
 #' @note Please be aware that the result of this function is not verified to be a working trakt.tv
-#' API URL. See \href{http://docs.trakt.apiary.io/#introduction/pagination}{the trakt.tv API docs for
-#' more information}.
+#' API URL, unless `validate = TRUE`, in which case a `HEAD` request is performed that
+#' does not actually receive any data, but from its returned status code the validity
+#' of the URL can be inferred.
 #' @examples
 #' build_trakt_url("shows", "breaking-bad", extended = "full")
 #' build_trakt_url("shows", "popular", page = 3, limit = 5)
+#'
+#' # Validate a URL works
+#' build_trakt_url("shows", "popular", page = 3, limit = 5, validate = TRUE)
 build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = NULL,
                             target4 = NULL, validate = FALSE, ...) {
-  # Set base values required for everything
-  url <- list(scheme = "https", hostname = "api.trakt.tv")
-  # Set other values
-  url$path <- paste0(c(section, target1, target2, target3, target4), collapse = "/")
-  url$query <- list(...)
-  # Append class 'url' for httr
-  class(url) <- "url"
-  # Assemble url
-  url <- httr::build_url(url)
+
+  url <- modify_url("https://api.trakt.tv",
+                    path = paste0(c(section, target1, target2, target3, target4), collapse = "/"),
+                    query = list(...))
 
   # Validate
   if (validate) {
-    res <- httr::HEAD(url, getOption("trakt.headers"))
+    if (is.null(getOption("trakt.client.id"))) {
+      options(trakt.client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
+    }
+    client.id <- getOption("trakt.client.id")
+
+    # Headers and metadata
+    agent <- httr::user_agent("https://github.com/jemus42/tRakt")
+
+    headers <- httr::add_headers(.headers = c(
+      "trakt-api-key" = client.id,
+      "Content-Type" = "application/json",
+      "trakt-api-version" = 2
+    ))
+
+    res <- httr::HEAD(url, agent, headers)
     status <- httr::status_code(res)
     if (!identical(status, 200L)) {
       stop("The URL returns a HTTP status '", status, "'")
+    } else {
+      message("The URL returns a HTTP status '", status, "'")
     }
   }
 
