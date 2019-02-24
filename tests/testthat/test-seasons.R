@@ -6,7 +6,7 @@ test_that("trakt.seasons.season works", {
   target <- "futurama"
 
   min_names <- c(
-    "season_number", "episode", "title", "trakt", "tvdb",
+    "season", "episode_number", "title", "trakt", "tvdb",
     "imdb", "tmdb", "tvrage"
   )
 
