@@ -8,8 +8,10 @@ trakt.seasons.summary(target, extended = c("min", "full"),
   drop.specials = TRUE, drop.unaired = TRUE)
 }
 \arguments{
-\item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
@@ -23,19 +25,11 @@ Only works if \code{extended} is \code{"full"}.}
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-\code{trakt.seasons.summary} pulls season data.
-Get details for a show's seasons, e.g. how many seasons there are, how many epsiodes
-each season has, and season posters.
-See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for
-possible values of \code{extended} to customize output amount.
-}
-\note{
-See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
-for further info
+Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes
+each season has.
 }
 \examples{
 \dontrun{
-library(tRakt)
 breakingbad.seasons <- trakt.seasons.summary("breaking-bad", extended = "min")
 breakingbad.seasons.more <- trakt.seasons.summary("breaking-bad", extended = "full")
 }
@@ -44,7 +38,6 @@ breakingbad.seasons.more <- trakt.seasons.summary("breaking-bad", extended = "fu
 Other show data: \code{\link{trakt.get_all_episodes}},
   \code{\link{trakt.get_full_showdata}},
   \code{\link{trakt.seasons.season}},
-  \code{\link{trakt.show.summary}},
   \code{\link{trakt.stats}}
 }
 \concept{show data}

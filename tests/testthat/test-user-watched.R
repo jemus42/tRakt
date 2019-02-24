@@ -7,8 +7,10 @@ test_that("trakt.user.watched works", {
 
   # shows ----
   watched_shows <- trakt.user.watched(user = user, type = "shows")
+  watched_shows_full <- trakt.user.watched(user = user, type = "shows", extended = "full")
 
   expect_is(watched_shows, "tbl")
+  expect_is(watched_shows_full, "tbl")
 
   # shows.extended ----
   watched_shows.ext <- trakt.user.watched(user = user, type = "shows", noseasons = FALSE)

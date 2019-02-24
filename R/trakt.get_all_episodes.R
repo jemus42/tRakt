@@ -1,10 +1,6 @@
 #' Get a show's episodes. All of them.
 #'
-#' `trakt.get_all_episodes` pulls detailed episode data.
-#' Get details for a show's episodes, e.g. ratings, number of votes,
-#' airdates, images, plot overviews…
-#'
-#' This is basically just an extension of \link[tRakt]{trakt.seasons.season}, which is used in
+#' This is basically just an extension of [trakt.seasons.season], which is used in
 #' this function to collect all the episode data.
 #' If you only want the episode data for a single season anyway, `trakt.seasons.season`
 #' is recommended, yet this function makes some additions.
@@ -25,7 +21,6 @@
 #' @family show data
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
 #' # Manually specifiy seasons
 #' breakingbad.episodes <- trakt.get_all_episodes("breaking-bad", season_nums = c(1, 2, 3, 4, 5))
 #' # Get all the seasons
@@ -51,7 +46,7 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
       target = target, extended = extended,
       drop.specials = TRUE, drop.unaired = drop.unaired
     )
-    season_nums <- show.seasons$season
+    season_nums <- show.seasons$season_number
   } else if (length(season_nums) == 1) {
     if (season_nums > 1) season_nums <- seq_len(season_nums)
   }
@@ -62,7 +57,7 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
   )
 
   # Arrange appropriately
-  show.episodes$epid <- tRakt::pad(show.episodes$season, show.episodes$episode)
+  show.episodes$epid <- tRakt::pad(show.episodes$season, show.episodes$episode_number)
 
   # Add things
   if (extended == "full") {
@@ -81,6 +76,6 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
 
     show.episodes <- show.episodes[!(is.na(show.episodes$first_aired)), ]
   }
-  
+
   tibble::as_tibble(show.episodes)
 }

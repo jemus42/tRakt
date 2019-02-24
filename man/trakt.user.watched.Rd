@@ -35,9 +35,6 @@ If \code{type} is set to \code{shows.extended}, the resulting \link[tibble:tibbl
 contains play stats for \emph{every} watched episode of \emph{every} show. Otherwise,
 the returned \link[tibble:tibble-package]{tibble} only contains play stats per show or movie respectively.
 }
-\note{
-See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the trakt API docs for further info}
-}
 \examples{
 \dontrun{
 myshows <- trakt.user.watched() # Defaults to your username if set

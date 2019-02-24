@@ -9,9 +9,6 @@ unpack_show <- function(show) {
     stop("show should inherit from data.frame, but is class ", class(show))
   }
 
-  # Please R CMD check
-  ids <- airs <- movie <- show <- NULL
-
   # Convert, just in case
   show <- tibble::as_tibble(show)
 
@@ -38,3 +35,6 @@ unpack_show <- function(show) {
 
   show
 }
+
+# Please R CMD check
+globalVariables(c("ids", "airs", "movie", "shows", "show"))

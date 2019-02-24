@@ -34,11 +34,9 @@ breakingbad.stats <- trakt.stats(type = "shows", "breaking-bad")
 Other show data: \code{\link{trakt.get_all_episodes}},
   \code{\link{trakt.get_full_showdata}},
   \code{\link{trakt.seasons.season}},
-  \code{\link{trakt.seasons.summary}},
-  \code{\link{trakt.show.summary}}
+  \code{\link{trakt.seasons.summary}}
 
-Other movie data: \code{\link{trakt.movie.summary}},
-  \code{\link{trakt.movies.releases}}
+Other movie data: \code{\link{trakt.movies.releases}}
 }
 \concept{movie data}
 \concept{show data}

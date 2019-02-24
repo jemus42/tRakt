@@ -72,4 +72,3 @@ trakttrending(type = "movies", 5)
 # Get anticipated movies
 trakt.anticipated(type = "movies", 10)
 }
-\concept{Automated lists}

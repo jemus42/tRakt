@@ -12,7 +12,6 @@
 #' @inheritParams extended_info
 #' @inheritParams type_shows_movies
 #' @inherit return_tibble return
-#' @family Automated lists
 #' @name automated_lists
 #' @examples
 #' \dontrun{

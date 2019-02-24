@@ -16,11 +16,10 @@
 #' be nice to the API.
 #' @inherit return_tibble return
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/reference/users/watched/get-watched}{the trakt API docs for further info}
 #' @family user data
-#' @importFrom purrr is_atomic
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select_if
+#' @importFrom dplyr pull
 #' @examples
 #' \dontrun{
 #' myshows <- trakt.user.watched() # Defaults to your username if set
@@ -41,52 +40,35 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
     extended = paste0(extended, ",noseasons")
   }
 
-  # Please R CMD check
-  show <- ids <- movie <- NULL
-
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "watched", type, extended = extended)
   response <- trakt.api.call(url = url)
-  response <- as_tibble(response)
+  response <- tibble::as_tibble(response)
 
-  if (identical(response, tibble())) return(tibble())
+  if (identical(response, tibble::tibble())) return(tibble::tibble())
 
   if (type == "shows") {
     # Unpack the show media object and bind it to the base tbl
-    response <- bind_cols(
-      response %>% select(-show),
+    response <- dplyr::bind_cols(
+      response %>% dplyr::select(-show),
       unpack_show(response$show)
     ) %>%
-      select(-contains("seasons"), everything(), contains("seasons"))
+      dplyr::select(-dplyr::contains("seasons"),
+                    dplyr::everything(),
+                    dplyr::contains("seasons"))
+    # This uses contains() because the seasons column might not exist
+    # and this way I don't have to use an extra if statement to check "noseasons"
   }
   if (type == "movies") {
-    response$movie$ids <- map_df(response$movie$ids, as.character)
-    response$movie <- bind_cols(response$movie %>% select(-ids),
-                                response$movie %>% dplyr::select(ids) %>% dplyr::pull(ids))
+    response$movie$ids <- purrr::map_df(response$movie$ids, as.character)
+    response$movie <- dplyr::bind_cols(response$movie %>% dplyr::select(-ids),
+                                       response$movie %>% dplyr::select(ids) %>% dplyr::pull(ids))
 
-    response <- bind_cols(response %>% select(-movie),
-                          response %>% select(movie) %>% pull(movie))
+    response <- dplyr::bind_cols(response %>% dplyr::select(-movie),
+                                 response %>% dplyr::select(movie) %>% dplyr::pull(movie))
   }
 
   # To be sure
   response <- convert_datetime(response)
   tibble::as_tibble(response)
 }
-
-# url <- build_trakt_url("users", user, "watched", "shows")
-# res_shows <- trakt.api.call(url = url)
-#
-# url <- build_trakt_url("users", user, "watched", "shows", extended = "full")
-# res_shows_full <- trakt.api.call(url = url)
-#
-# url <- build_trakt_url("users", user, "watched", "shows", extended = "full,noseasons")
-# res_shows_full_noseasons <- trakt.api.call(url = url)
-#
-# url <- build_trakt_url("users", user, "watched", "shows", extended = "noseasons")
-# res_shows_noseasons <- trakt.api.call(url = url)
-#
-# url <- build_trakt_url("users", user, "watched", "movies")
-# res_movies <- trakt.api.call(url = url)
-#
-
-

@@ -7,8 +7,10 @@
 trakt.seasons.season(target, seasons = 1L, extended = c("min", "full"))
 }
 \arguments{
-\item{target}{The \code{id} of the show requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"}), \code{trakt id} or \code{IMDb id}}
+\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
+(e.g. \code{"game-of-thrones"}), \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"}).
+Can also be of length greater than 1, in which case the function is called on all
+\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
 \item{seasons}{\code{integer(1) [1L]}: The season(s) to get. Use 0 for special episodes.}
 
@@ -31,7 +33,6 @@ If you want to quickly gather data of multiple seasons, see \link[tRakt]{trakt.g
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
 breakingbad.seasons <- trakt.seasons.season("breaking-bad", 1)
 }
 }
@@ -39,7 +40,6 @@ breakingbad.seasons <- trakt.seasons.season("breaking-bad", 1)
 Other show data: \code{\link{trakt.get_all_episodes}},
   \code{\link{trakt.get_full_showdata}},
   \code{\link{trakt.seasons.summary}},
-  \code{\link{trakt.show.summary}},
   \code{\link{trakt.stats}}
 }
 \concept{show data}

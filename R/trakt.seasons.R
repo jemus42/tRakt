@@ -5,8 +5,7 @@
 #' a single season, i.e. all the episodes of the season.
 #' See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
 #' `extended` to customize output amount.
-#' @param target The `id` of the show requested. Either the `slug`
-#' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
+#' @inheritParams id_movie_show
 #' @param seasons `integer(1) [1L]`: The season(s) to get. Use 0 for special episodes.
 #' @inheritParams trakt.seasons.summary
 #' @inherit return_tibble return
@@ -17,12 +16,12 @@
 #' @family show data
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
 #' breakingbad.seasons <- trakt.seasons.season("breaking-bad", 1)
 #' }
 trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
+  # Vectorize
   if (length(seasons) > 1) {
     response <- purrr::map_df(seasons, function(s) {
       trakt.seasons.season(target, s, extended = extended)
@@ -31,6 +30,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
   }
 
   # Basic sanity check
+  # Do this after vectorization due to scalar ifs
   seasons <- suppressWarnings(as.integer(seasons))
   if (seasons < 0 | is.na(seasons) | is.null(seasons)) {
     stop("'seasons' cannot be coerced to non-negative integer: '", seasons, "'")
@@ -40,15 +40,8 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
   url <- build_trakt_url("shows", target, "seasons", seasons, extended = extended)
   season <- trakt.api.call(url = url)
 
-  # # Catch unknown season error
-  # # Have not been able to reproduce since refactor, might be pointless
-  # if (identical(season, data.frame())) {
-  #   warning(paste("Season", seasons, " of ", target, "does not appear to exist"))
-  #   return(tibble::tibble())
-  # }
-
   # Reorganization
-  names(season) <- sub("number", "episode", names(season))
+  names(season) <- sub("number", "episode_number", names(season))
 
   # Spreading out ids to get a flat data.frame
   season <- cbind(season[names(season) != "ids"], season$ids)
@@ -63,30 +56,23 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 
 #' Get a show's season information
 #'
-#' `trakt.seasons.summary` pulls season data.
-#' Get details for a show's seasons, e.g. how many seasons there are, how many epsiodes
-#' each season has, and season posters.
-#' See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for
-#' possible values of `extended` to customize output amount.
-#' @param target The `id` of the show requested. Either the `slug`
-#' (e.g. `"game-of-thrones"`), `trakt id` or `IMDb id`
+#' Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes
+#' each season has.
+#' @inheritParams id_movie_show
 #' @inheritParams extended_info
 #' @param drop.specials `logical(1) [TRUE]`: Special episodes (season 0) are dropped
 #' @param drop.unaired `logical(1) [TRUE]`: Seasons without aired episodes are dropped.
 #' Only works if `extended` is `"full"`.
 #' @inherit return_tibble return
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/reference/seasons/summary}{the trakt API docs}
-#' for further info
 #' @family show data
 #' @examples
 #' \dontrun{
-#' library(tRakt)
 #' breakingbad.seasons <- trakt.seasons.summary("breaking-bad", extended = "min")
 #' breakingbad.seasons.more <- trakt.seasons.summary("breaking-bad", extended = "full")
 #' }
-trakt.seasons.summary <- function(target, extended = c("min", "full"), drop.specials = TRUE,
-                                  drop.unaired = TRUE) {
+trakt.seasons.summary <- function(target, extended = c("min", "full"),
+                                  drop.specials = TRUE, drop.unaired = TRUE) {
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
@@ -111,7 +97,7 @@ trakt.seasons.summary <- function(target, extended = c("min", "full"), drop.spec
     seasons <- seasons[seasons$aired_episodes > 0, ]
   }
   # Reorganization
-  names(seasons) <- sub("number", "season", names(seasons))
+  names(seasons) <- sub("number", "season_number", names(seasons))
   # Flattening
   seasons <- cbind(seasons[names(seasons) != "ids"], seasons$ids)
 

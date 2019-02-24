@@ -1,64 +1,33 @@
-#' Get a single movie's details
-#'
-#' `trakt.movie.summary` returns a single movie's summary information.
-#' @inheritParams id_movie_show
-#' @inheritParams extended_info
-#' @param force_data_frame If `TRUE`, the `list` is unnested as much as possible, resulting
-#' in a flat `tibble` suitable to be `rbind`ed to other summary results.
-#' @inherit return_tibble return
-#' @export
-#' @note See \href{http://docs.trakt.apiary.io/reference/movies/summary/get-a-movie}{the trakt API docs for further info}
-#' @family movie data
-#' @examples
-#' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
-#' trakt.movie.summary("tron-legacy-2010")
-#' }
-trakt.movie.summary <- function(target, extended = c("min", "full"), force_data_frame = FALSE) {
-  trakt.summary(
-    type = "movies", target = target, extended = extended,
-    force_data_frame = force_data_frame
-  )
-}
-
-#' Get show summary info
-#'
-#' `trakt.show.summary` pulls show summary data and returns it compactly.
+#' Get show or movie summary info
 #'
 #' Note that setting `extended` to `min` makes this function
 #' return about as much informations as \link[tRakt]{trakt.search}
 #' @inheritParams id_movie_show
 #' @inheritParams extended_info
-#' @param force_data_frame If `TRUE`, the `list` is unnested as much as possible, resulting
-#' in a flat [tibble][tibble::tibble-package] suitable to `rbind` with other summary results.
+#' @inheritParams type_shows_movies
 #' @inherit return_tibble return
+#' @family summary data
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/reference/shows/summary}{the trakt API docs for further info}
-#' @family show data
+#' @importFrom purrr map_df
+#' @importFrom purrr flatten_df
+#' @importFrom tibble has_name
 #' @examples
 #' \dontrun{
-#' get_trakt_credentials() # Set required API data/headers
-#' breakingbad.summary <- trakt.show.summary("breaking-bad")
+#' # Minimal info by default
+#' trakt.shows.summary("breaking-bad")
+#'
+#' # More information
+#' trakt.shows.summary("breaking-bad", extended = "full")
+#'
+#' # Info for multiple movies
+#' trakt.movies.summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
 #' }
-trakt.show.summary <- function(target, extended = c("min", "full"), force_data_frame = FALSE) {
-  extended <- match.arg(extended)
-
-  trakt.summary(
-    type = "shows", target = target, extended = extended,
-    force_data_frame = force_data_frame
-  )
-}
-
-#' @keywords internal
-trakt.summary <- function(type, target, extended = c("min", "full"), force_data_frame = FALSE) {
+trakt.media.summary <- function(type, target, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
     response <- purrr::map_df(target, function(t) {
-      trakt.summary(
-        type = type, target = t, extended = extended,
-        force_data_frame = TRUE
-      )
+      trakt.media.summary(type = type, target = t, extended = extended)
     })
     return(response)
   }
@@ -67,20 +36,38 @@ trakt.summary <- function(type, target, extended = c("min", "full"), force_data_
   url <- build_trakt_url(type, target, extended = extended)
   response <- trakt.api.call(url = url)
 
-  if (force_data_frame) {
-    temp <- response[sapply(response, length) == 1]
-    temp[unlist(lapply(temp, is.null))] <- NA
-    temp <- as.data.frame(temp)
-    temp <- cbind(temp, response$ids)
-    if ("airs" %in% names(response)) {
-      names(response$airs) <- paste0("airs_", names(response$airs))
-      temp <- cbind(temp, response$airs)
-    }
-    # Drop translations because no.
-    if ("available_translations" %in% names(response)) {
-      temp <- temp[names(temp) != "available_translations"]
-    }
-    response <- tibble::as_tibble(temp)
+  if (tibble::has_name(response, "airs")) {
+    names(response$airs) <- paste0("airs_", names(response$airs))
   }
+
+  if (extended == "full") {
+    genres <- list(response$genres)
+    transl <- list(response$available_translations)
+
+    response$genres <- NULL
+    response$available_translations <- NULL
+
+    response <- flatten_df(response)
+
+    response$genres <- genres
+    response$available_translations <- transl
+  } else {
+    response <- flatten_df(response)
+  }
+
   response
+}
+
+# Derived ----
+
+#' @rdname trakt.media.summary
+#' @export
+trakt.movies.summary <- function(target, extended = c("min", "full")) {
+  trakt.media.summary(type = "movies", target = target, extended = extended)
+}
+
+#' @rdname trakt.media.summary
+#' @export
+trakt.shows.summary <- function(target, extended = c("min", "full")) {
+  trakt.media.summary(type = "shows", target = target, extended = extended)
 }

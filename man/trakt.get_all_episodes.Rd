@@ -30,12 +30,7 @@ therefore excluded by default.}
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-\code{trakt.get_all_episodes} pulls detailed episode data.
-Get details for a show's episodes, e.g. ratings, number of votes,
-airdates, images, plot overviews…
-}
-\details{
-This is basically just an extension of \link[tRakt]{trakt.seasons.season}, which is used in
+This is basically just an extension of \link{trakt.seasons.season}, which is used in
 this function to collect all the episode data.
 If you only want the episode data for a single season anyway, \code{trakt.seasons.season}
 is recommended, yet this function makes some additions.
@@ -46,7 +41,6 @@ This function is mainly for convenience.
 }
 \examples{
 \dontrun{
-get_trakt_credentials() # Set required API data/headers
 # Manually specifiy seasons
 breakingbad.episodes <- trakt.get_all_episodes("breaking-bad", season_nums = c(1, 2, 3, 4, 5))
 # Get all the seasons
@@ -59,7 +53,6 @@ breakingbad.episodes <- trakt.get_all_episodes("breaking-bad", season_nums = 3)
 Other show data: \code{\link{trakt.get_full_showdata}},
   \code{\link{trakt.seasons.season}},
   \code{\link{trakt.seasons.summary}},
-  \code{\link{trakt.show.summary}},
   \code{\link{trakt.stats}}
 }
 \concept{show data}

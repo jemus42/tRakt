@@ -15,12 +15,13 @@ trakt.get_full_showdata(query = NULL, slug = NULL,
 \item{drop.unaired}{If \code{TRUE}, episodes which have not aired yet are dropped.}
 }
 \value{
-A \code{list} containing multiple \code{lists} and \code{data.frames} with show info.
+A \code{list} containing multiple \code{lists} and \code{tibble}s with show info.
 }
 \description{
 \code{trakt.get_full_showdata} is a combination function of multiple
 functions in this package. The idea is to easily execute all major functions
-required to get a full show dataset.
+required to get a full show dataset. This also uses \code{extended = "full"}, so
+beware that this is going to retrieve \emph{a lot} of data. Please be nice to the API.
 }
 \note{
 This is primarily intended to be a convenience function for the
@@ -40,7 +41,6 @@ breakingbad <- trakt.get_full_showdata(slug = "breaking-bad")
 Other show data: \code{\link{trakt.get_all_episodes}},
   \code{\link{trakt.seasons.season}},
   \code{\link{trakt.seasons.summary}},
-  \code{\link{trakt.show.summary}},
   \code{\link{trakt.stats}}
 }
 \concept{show data}
