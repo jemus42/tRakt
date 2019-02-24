@@ -6,6 +6,7 @@
 \alias{trakt.trending}
 \alias{trakt.anticipated}
 \alias{trakt.played}
+\alias{trakt.watched}
 \alias{trakt.movies.trending}
 \alias{trakt.shows.trending}
 \alias{trakt.movies.popular}
@@ -14,7 +15,9 @@
 \alias{trakt.shows.anticipated}
 \alias{trakt.shows.played}
 \alias{trakt.movies.played}
-\title{Get popular/trending/anticipated movies and shows}
+\alias{trakt.shows.watched}
+\alias{trakt.movies.watched}
+\title{See which movies / shows are popular}
 \usage{
 trakt.popular(type = c("shows", "movies"), limit = 10, page = 1,
   extended = c("min", "full"))
@@ -26,6 +29,10 @@ trakt.anticipated(type = c("shows", "movies"), limit = 10, page = 1,
   extended = c("min", "full"))
 
 trakt.played(type = c("shows", "movies"), limit = 10, page = 1,
+  extended = c("min", "full"), period = c("weekly", "monthly",
+  "yearly", "all"))
+
+trakt.watched(type = c("shows", "movies"), limit = 10, page = 1,
   extended = c("min", "full"), period = c("weekly", "monthly",
   "yearly", "all"))
 
@@ -52,11 +59,17 @@ trakt.shows.played(limit = 10, page = 1, extended = c("min", "full"),
 
 trakt.movies.played(limit = 10, page = 1, extended = c("min",
   "full"), period = c("weekly", "monthly", "yearly", "all"))
+
+trakt.shows.watched(limit = 10, page = 1, extended = c("min",
+  "full"), period = c("weekly", "monthly", "yearly", "all"))
+
+trakt.movies.watched(limit = 10, page = 1, extended = c("min",
+  "full"), period = c("weekly", "monthly", "yearly", "all"))
 }
 \arguments{
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 
-\item{limit, page}{\code{integer(1) [10L] [1L]}: Number of items and page for paginated requests.
+\item{limit, page}{\code{integer(1) [10L], [1L]}: Number of items and page for paginated requests.
 Bot values must be greater than \code{0} and will be coerced to \code{integer}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
@@ -82,7 +95,7 @@ trakt.shows.popular(5)
 
 # Get trending movies and shows
 trakt.movies.trending(5)
-trakttrending(type = "movies", 5)
+trakt.trending(type = "movies", 5, extended = "full")
 }
 
 # Get anticipated movies
