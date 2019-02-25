@@ -18,7 +18,7 @@ test_that("trakt.get_all_episodes works", {
 
 test_that("trakt.get_full_showdata works", {
   skip_on_cran()
-  
+
   result <- trakt.get_full_showdata("Breaking Bad")
 
   expect_is(result, "list")

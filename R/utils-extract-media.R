@@ -29,12 +29,9 @@ unpack_show <- function(show) {
     names(show$airs) <- paste0("airs_", names(show$airs))
 
     show <- cbind(show %>% dplyr::select(-airs),
-                  show %>% dplyr::select(airs) %>% dplyr::pull(airs))
+                  show$airs)
     show <- tibble::as_tibble(show)
   }
 
   show
 }
-
-# Please R CMD check
-globalVariables(c("ids", "airs", "movie", "shows", "show"))

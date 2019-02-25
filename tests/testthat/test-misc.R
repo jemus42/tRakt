@@ -45,19 +45,14 @@ test_that("build_trakt_url builds", {
 
 test_that("convert_datetime converts datetime", {
   skip_on_cran()
+  skip_if_not_installed("lubridate")
+  skip_if_not_installed("tibble")
 
-  url <- "https://api.trakt.tv/shows/breaking-bad/seasons/1?extended=full"
-  response <- httr::GET(url, getOption("trakt.headers"))
-  httr::stop_for_status(response) # In case trakt fails
-  response <- httr::content(response, as = "text")
-  response <- jsonlite::fromJSON(response)
-  expect_is(response, "data.frame")
+  res <- tibble::tibble(updated_at = as.character(lubridate::now()))
 
-  expect_is(response$updated_at, "character")
-
-  response <- tRakt:::convert_datetime(response)
-  expect_is(response$updated_at, "POSIXct")
-  expect_equal(attr(response$updated_at, "tzone"), "UTC")
+  res <- tRakt:::convert_datetime(res)
+  expect_is(res$updated_at, "POSIXct")
+  expect_equal(attr(res$updated_at, "tzone"), "UTC")
   expect_error(tRakt:::convert_datetime("not_a_df_or_list"))
 })
 

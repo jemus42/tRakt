@@ -41,7 +41,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
   season <- trakt.api.call(url = url)
 
   # Reorganization
-  names(season) <- sub("number", "episode_number", names(season))
+  names(season) <- sub("number", "episode", names(season))
 
   # Spreading out ids to get a flat data.frame
   season <- cbind(season[names(season) != "ids"], season$ids)
@@ -96,7 +96,7 @@ trakt.seasons.summary <- function(target, extended = c("min", "full"),
     seasons <- seasons[seasons$aired_episodes > 0, ]
   }
   # Reorganization
-  names(seasons) <- sub("number", "season_number", names(seasons))
+  names(seasons) <- sub("number", "season", names(seasons))
   # Flattening
   seasons <- cbind(seasons[names(seasons) != "ids"], seasons$ids)
 

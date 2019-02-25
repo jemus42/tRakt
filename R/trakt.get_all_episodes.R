@@ -45,7 +45,7 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
       target = target, extended = extended,
       drop.specials = TRUE, drop.unaired = drop.unaired
     )
-    season_nums <- show.seasons$season_number
+    season_nums <- show.seasons$season
   } else if (length(season_nums) == 1) {
     if (season_nums > 1) season_nums <- seq_len(season_nums)
   }
@@ -56,7 +56,7 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
   )
 
   # Arrange appropriately
-  show.episodes$epid <- tRakt::pad(show.episodes$season, show.episodes$episode_number)
+  show.episodes$epid <- tRakt::pad(show.episodes$season, show.episodes$episode)
 
   # Add things
   if (extended == "full") {

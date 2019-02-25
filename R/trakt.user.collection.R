@@ -41,14 +41,11 @@ trakt.user.collection <- function(user = getOption("trakt.username"),
         stop("This functionality requires the tidyr package")
       }
 
-      # Please R CMD check
-      seasons <- number <- episodes <- collected_at <- NULL
-
       response <- tibble::as_tibble(response) %>%
         tidyr::unnest(seasons) %>%
-        dplyr::rename(season_number = number) %>%
+        dplyr::rename(season = number) %>%
         tidyr::unnest(episodes) %>%
-        dplyr::rename(episode_number = number) %>%
+        dplyr::rename(episode = number) %>%
         dplyr::mutate(collected_at = lubridate::ymd_hms(collected_at))
     }
   } else if (type == "movies") {
