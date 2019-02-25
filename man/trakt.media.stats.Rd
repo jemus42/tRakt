@@ -6,20 +6,20 @@
 \alias{trakt.movies.stats}
 \title{Get a show or movie's stats}
 \usage{
-trakt.media.stats(target, type = c("shows", "movies"))
+trakt.media.stats(type = c("shows", "movies"), target)
 
 trakt.shows.stats(target)
 
 trakt.movies.stats(target)
 }
 \arguments{
+\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
+
 \item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"} for a show, or \code{"bryan-cranston"} for a person),
 \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"} or \code{"nm0186505"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df} if possible.}
-
-\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.

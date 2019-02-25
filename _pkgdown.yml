@@ -1,8 +1,15 @@
 reference:
-  - title: Getting started
+  - title: Finding media
+    desc: >
+      Searching for items is often required to retrieve some kind of ID, like the `slug`,
+      which is required for use of item-specific functions.
     contents:
       - starts_with("trakt.search")
-  - title: Getting a lot of data
+  - title: Getting a lot of data about a show
+    desc: >
+      These are convenience functions for the cases where you are *sure* you want all the
+      available data. These are the highest-level functions and internally use the more
+      specific functions.
     contents:
       - starts_with("trakt.get")
   - title: Getting movie data
@@ -18,12 +25,25 @@ reference:
   - title: Getting people data
     contents:
     - starts_with("trakt.people")
+    - ends_with(".people")
   - title: API & misc helpers
     contents:
         - parse_trakt_url
         - build_trakt_url
         - trakt.api.call
         - trakt_credentials
+        - pad
+  - title: Episode datasets
+    contents:
+        - futurama
+        - gameofthrones
+  - title: Internal datasets
+    desc: These are unlikely to be useful to users, but there are there, just in case.
+    contens:
+        - countries
+        - genres
+        - languages
+        - networks
   - title: This package
     contents:
       - tRakt

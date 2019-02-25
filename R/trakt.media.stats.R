@@ -8,11 +8,11 @@
 #' \dontrun{
 #' trakt.shows.stats("breaking-bad")
 #' }
-trakt.media.stats <- function(target, type = c("shows", "movies")) {
+trakt.media.stats <- function(type = c("shows", "movies"), target) {
   type <- match.arg(type)
 
   if (length(target) > 1) {
-    res <- purrr::map_df(target, ~ trakt.media.stats(.x, type = type))
+    res <- purrr::map_df(target, ~ trakt.media.stats(type = type, .x))
     return(res)
   }
 
@@ -30,11 +30,11 @@ trakt.media.stats <- function(target, type = c("shows", "movies")) {
 #' @rdname trakt.media.stats
 #' @export
 trakt.shows.stats <- function(target) {
-  trakt.media.stats(target, type = "shows")
+  trakt.media.stats(type = "shows", target)
 }
 
 #' @rdname trakt.media.stats
 #' @export
 trakt.movies.stats <- function(target) {
-  trakt.media.stats(target, type = "movies")
+  trakt.media.stats(type = "movies", target)
 }

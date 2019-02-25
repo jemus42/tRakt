@@ -139,6 +139,3 @@ trakt.episodes.ratings <- function(target, season = 1, episode = 1) {
     distribution = list(response$distribution)
   )
 }
-
-multi_ratings <- trakt.episodes.ratings(target = c("futurama", "the-simpsons"),
-                                        season = 1:2, episode = 1:2)
