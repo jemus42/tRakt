@@ -43,7 +43,7 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
   response <- trakt.api.call(url = url)
   response <- tibble::as_tibble(response)
 
-  if (identical(response, tibble::tibble())) return(tibble::tibble())
+  if (identical(response, tibble::tibble())) return(response)
 
   if (type == "shows") {
     # Unpack the show media object and bind it to the base tbl

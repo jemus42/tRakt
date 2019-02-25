@@ -37,9 +37,9 @@ trakt.search <- function(query, type = "show", year = NULL) {
   url <- build_trakt_url("search", query = query, type = type, year = year)
   response <- trakt.api.call(url = url)
 
-  if (identical(response, data.frame())) {
+  if (identical(response, tibble::tibble())) {
     warning("No results for query '", query, "'")
-    return(tibble::tibble())
+    return(response)
   }
 
   response <- response[[type]]
@@ -75,7 +75,7 @@ trakt.search.byid <- function(id, id_type = "trakt-show") {
   response <- trakt.api.call(url = url)
 
   # Check if response is empty (nothing found)
-  if (identical(response, data.frame())) {
+  if (identical(response, data.tibble::tibble())) {
     warning("No results for id '", id, "' (", id_type, ")")
     return(tibble::tibble())
   }

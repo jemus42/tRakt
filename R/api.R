@@ -109,7 +109,7 @@ trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
   response <- jsonlite::fromJSON(response)
 
   if (identical(response, list()) | is.null(response)) {
-    return(data.frame())
+    return(tibble::tibble())
   }
 
   if (convert.datetime & !is.null(names(response))) {
