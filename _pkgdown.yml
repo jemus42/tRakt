@@ -23,7 +23,7 @@ reference:
         - parse_trakt_url
         - build_trakt_url
         - trakt.api.call
-        - get_trakt_credentials
+        - trakt_credentials
   - title: This package
     contents:
       - tRakt

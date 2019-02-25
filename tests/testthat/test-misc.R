@@ -35,7 +35,7 @@ test_that("build_trakt_url builds", {
   x <- build_trakt_url("shows", "breaking-bad", extended = "min", validate = TRUE)
   expect_is(x, "character")
 
-  get_trakt_credentials()
+  trakt_credentials()
   y <- trakt.api.call(x)
   expect_length(y, 3)
   expect_named(y, c("title", "year", "ids"))

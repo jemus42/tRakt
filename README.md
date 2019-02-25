@@ -98,9 +98,9 @@ show_episodes %>%
 ## Setting credentials
 
 The APIv2 requires at least a `client id` for the API calls.  
-Calling `get_trakt_credentials()` will set everything up for you, but
+Calling `trakt_credentials()` will set everything up for you, but
 you either have to manually plug your values in (see
-`?get_trakt_credentials()`), or have the values supplied via enviroment
+`?trakt_credentials()`), or have the values supplied via enviroment
 variables in your `.Renviron` like this:
 
 ``` sh
@@ -121,7 +121,7 @@ Don’t worry, it’s really easy to set up. Even I did it.
 ### Use my app’s client.id as a fallback
 
 As a convenience for you, and also to make automated testing a little
-easier, `get_trakt_credentials()` automatically sets my `client.id` as a
+easier, `trakt_credentials()` automatically sets my `client.id` as a
 fallback, so you theoretically never need to supply your own
 credentials. However, if you want to actually use this package for some
 project, I do not recommend relying on my credentials. That would make

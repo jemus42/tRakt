@@ -10,7 +10,7 @@ trakt.api.call(url, client.id = getOption("trakt.client.id"),
 \arguments{
 \item{url}{APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.}
 
-\item{client.id}{API client id. see \link{get_trakt_credentials} for further information.}
+\item{client.id}{API client id. see \link{trakt_credentials} for further information.}
 
 \item{convert.datetime}{If \code{TRUE} (default), known top-level datetime variables
 are converted to \code{POSIXct}. This might miss some variables and does not recurse
@@ -33,8 +33,8 @@ trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
 }
 }
 \seealso{
-Other API-basics: \code{\link{get_trakt_credentials}},
-  \code{\link{trakt.search.byid}},
-  \code{\link{trakt.search}}
+Other API-basics: \code{\link{trakt.search.byid}},
+  \code{\link{trakt.search}},
+  \code{\link{trakt_credentials}}
 }
 \concept{API-basics}

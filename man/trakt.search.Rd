@@ -37,9 +37,9 @@ breakingbad <- trakt.search("Breaking Bad")
 }
 }
 \seealso{
-Other API-basics: \code{\link{get_trakt_credentials}},
-  \code{\link{trakt.api.call}},
-  \code{\link{trakt.search.byid}}
+Other API-basics: \code{\link{trakt.api.call}},
+  \code{\link{trakt.search.byid}},
+  \code{\link{trakt_credentials}}
 
 Other search functions: \code{\link{trakt.search.byid}}
 }
