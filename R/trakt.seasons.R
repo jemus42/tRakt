@@ -51,6 +51,10 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
     season$year <- lubridate::year(season$first_aired)
   }
 
+  # If there are no votes, there technically is no rating either
+  # This is to distinguish "people hated it" from "nobody saw/voted on it"
+  season$rating <- ifelse(season$votes == 0, NA, season$rating)
+
   tibble::as_tibble(season)
 }
 
@@ -99,6 +103,10 @@ trakt.seasons.summary <- function(target, extended = c("min", "full"),
   names(seasons) <- sub("number", "season", names(seasons))
   # Flattening
   seasons <- cbind(seasons[names(seasons) != "ids"], seasons$ids)
+
+  # If there are no votes, there technically is no rating either
+  # This is to distinguish "people hated it" from "nobody saw/voted on it"
+  seasons$rating <- ifelse(seasons$votes == 0, NA, seasons$rat)
 
   tibble::as_tibble(seasons)
 }
