@@ -70,6 +70,9 @@ trakt_credentials <- function(username, client.id,
 #' @param convert.datetime If `TRUE` (default), known top-level datetime variables
 #' are converted to `POSIXct`. This might miss some variables and does not recurse
 #' into nested lists or list-columns.
+#' @param HEAD `logical(1) [FALSE]`: If `TRUE`, only a HTTP `HEAD` request is performed
+#' and its content returned. This is useful if you are only interested in status codes
+#' or other headers, and don't want to waste resources on additional bandwidth.
 #' @return The [parsed][jsonlite::fromJSON] content of the API response.
 #' An empty [tibble][tibble::tibble-package] if the response is an empty array.
 #' @export
@@ -79,11 +82,12 @@ trakt_credentials <- function(username, client.id,
 #' @family API-basics
 #' @examples
 #' \dontrun{
-#' library(tRakt)
 #' trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
+#'
+#' trakt.api.call("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
 #' }
 trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
-                           convert.datetime = TRUE) {
+                           convert.datetime = TRUE, HEAD = FALSE) {
 
   if (is.null(client.id)) {
     if (is.null(getOption("trakt.client.id"))) {
@@ -102,6 +106,12 @@ trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
   ))
 
   # Make the call
+  if (HEAD) {
+    response <- httr::HEAD(url, headers, agent)
+    response <- purrr::flatten(response$all_headers)
+    return(response)
+  }
+
   response <- httr::GET(url, headers, agent)
   httr::stop_for_status(response) # In case trakt fails
 

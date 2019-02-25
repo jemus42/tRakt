@@ -110,6 +110,7 @@ convert_datetime <- function(response) {
 #' @return A `character` of length 1. If `validate = TRUE`, also a message including
 #' the HTTP status code return by a `HEAD` request.
 #' @family utility functions
+#' @importFrom httr stop_for_status
 #' @export
 #' @note Please be aware that the result of this function is not verified to be a working trakt.tv
 #' API URL, unless `validate = TRUE`, in which case a `HEAD` request is performed that
@@ -134,32 +135,14 @@ build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = N
 
   # Validate
   if (validate) {
-    if (is.null(getOption("trakt.client.id"))) {
-      options(trakt.client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
-    }
-    client.id <- getOption("trakt.client.id")
-
-    # Headers and metadata
-    agent <- httr::user_agent("https://github.com/jemus42/tRakt")
-
-    headers <- httr::add_headers(.headers = c(
-      "trakt-api-key" = client.id,
-      "Content-Type" = "application/json",
-      "trakt-api-version" = 2
-    ))
-
-    res <- httr::HEAD(url, agent, headers)
-    status <- httr::status_code(res)
-    if (!identical(status, 200L)) {
-      stop("The URL returns a HTTP status '", status, "'")
-    } else {
-      message("The URL returns a HTTP status '", status, "'")
+    response <- trakt.api.call(url, HEAD = TRUE)
+    if (!identical(response$status, 200L)) {
+      httr::stop_for_status(response$status)
     }
   }
 
   url
 }
-
 
 #' Check username
 #'
@@ -168,6 +151,7 @@ build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = N
 #' @return An error if the checks fail or else `TRUE` invisibly. If `validate`, the
 #' user profile is returned as a `list`.
 #' @keywords internal
+#' @importFrom httr stop_for_status
 check_username <- function(user, validate = FALSE) {
   fail_option <- is.null(getOption("trakt.username"))
   fail_empty_chr <- user == ""
@@ -179,10 +163,15 @@ check_username <- function(user, validate = FALSE) {
 
   if (failed) {
     stop("Supplied user must be a character string, you provided <", user, ">")
-  } else if (validate) {
-    url <- build_trakt_url("users", user)
-    invisible(trakt.api.call(url))
-  } else {
-    invisible(TRUE)
   }
+
+  if (validate) {
+    url <- build_trakt_url("users", user)
+    response <- trakt.api.call(url, HEAD = TRUE)
+    if (!identical(response$status, 200L)) {
+      httr::stop_for_status(response$status)
+    }
+  }
+  # Return TRUE if and only if everything else did not fail
+  invisible(TRUE)
 }

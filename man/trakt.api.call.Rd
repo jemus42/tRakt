@@ -5,7 +5,7 @@
 \title{Make an API call to any URL}
 \usage{
 trakt.api.call(url, client.id = getOption("trakt.client.id"),
-  convert.datetime = TRUE)
+  convert.datetime = TRUE, HEAD = FALSE)
 }
 \arguments{
 \item{url}{APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.}
@@ -15,6 +15,10 @@ trakt.api.call(url, client.id = getOption("trakt.client.id"),
 \item{convert.datetime}{If \code{TRUE} (default), known top-level datetime variables
 are converted to \code{POSIXct}. This might miss some variables and does not recurse
 into nested lists or list-columns.}
+
+\item{HEAD}{\code{logical(1) [FALSE]}: If \code{TRUE}, only a HTTP \code{HEAD} request is performed
+and its content returned. This is useful if you are only interested in status codes
+or other headers, and don't want to waste resources on additional bandwidth.}
 }
 \value{
 The \link[jsonlite:fromJSON]{parsed} content of the API response.
@@ -30,6 +34,8 @@ This function is heavily used internally, so why not expose it to the user.
 \dontrun{
 library(tRakt)
 trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
+
+trakt.api.call("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
 }
 }
 \seealso{
