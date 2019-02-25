@@ -35,10 +35,10 @@ got <- trakt.get_all_episodes("game-of-thrones")
 got %<>%
   select(
     episode_abs, episode, season, runtime, title,
-    year, overview, rating, votes, viewers,
+    overview, rating, votes, viewers,
     director, writer,
-    first_aired,
-    trakt, imdb, tvdb, tmdb
+    first_aired, year, comment_count,
+    trakt, imdb, tvdb, tmdb, tvrage, updated_at
   ) %>%
   arrange(episode_abs)
 
