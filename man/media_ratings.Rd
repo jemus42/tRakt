@@ -6,7 +6,7 @@
 \alias{trakt.movies.ratings}
 \alias{trakt.seasons.ratings}
 \alias{trakt.episodes.ratings}
-\title{Get show or movie user ratings}
+\title{Show or movie user ratings}
 \usage{
 trakt.shows.ratings(target)
 
@@ -33,7 +33,7 @@ is vectorized and the output will be combined via \link[purrr:map_df]{purrr::map
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-Returns a show's or movie's rating and ratings distribution.
+Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
 If you \emph{do not} want the full ratings distribution, it is highly advised to
 just use \code{*.summary} functions or \code{trakt.seasons.season} for episode ratings.
 }
@@ -47,7 +47,10 @@ of one API call \emph{per element in each argument}. Please be kind to the API.
 trakt.movies.ratings("tron-legacy-2010")
 trakt.shows.ratings("game-of-thrones")
 
+# Ratings for seasons 1 through 5
 trakt.seasons.ratings("futurama", season = 1:5)
+
+# Ratings for episodes 1 through 7 of season 1
 trakt.episodes.ratings("futurama", season = 1, episode = 1:7)
 }
 }

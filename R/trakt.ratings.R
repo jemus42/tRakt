@@ -1,6 +1,6 @@
-#' Get show or movie user ratings
+#' Show or movie user ratings
 #'
-#' Returns a show's or movie's rating and ratings distribution.
+#' Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
 #' If you *do not* want the full ratings distribution, it is highly advised to
 #' just use `*.summary` functions or `trakt.seasons.season` for episode ratings.
 #' @inheritParams trakt_api_common_parameters
@@ -14,13 +14,16 @@
 #' trakt.movies.ratings("tron-legacy-2010")
 #' trakt.shows.ratings("game-of-thrones")
 #'
+#' # Ratings for seasons 1 through 5
 #' trakt.seasons.ratings("futurama", season = 1:5)
+#'
+#' # Ratings for episodes 1 through 7 of season 1
 #' trakt.episodes.ratings("futurama", season = 1, episode = 1:7)
 #' }
 NULL
 
 #' @keywords internal
-trakt.ratings <- function(type = c("shows", "movies"), target) {
+trakt.media.ratings <- function(type = c("shows", "movies"), target) {
   type <- match.arg(type)
 
   if (length(target) > 1) {
@@ -36,6 +39,7 @@ trakt.ratings <- function(type = c("shows", "movies"), target) {
 
   response$distribution <- tibble::enframe(unlist(response$distribution),
                                            name = "rating", value = "n")
+  response$distribution$rating <- as.integer(response$distribution$rating)
 
   tibble::tibble(
     id = target,
@@ -51,13 +55,13 @@ trakt.ratings <- function(type = c("shows", "movies"), target) {
 #' @rdname media_ratings
 #' @export
 trakt.shows.ratings <- function(target) {
-  trakt.ratings(type = "shows", target)
+  trakt.media.ratings(type = "shows", target)
 }
 
 #' @rdname media_ratings
 #' @export
 trakt.movies.ratings <- function(target) {
-  trakt.ratings(type = "movies", target)
+  trakt.media.ratings(type = "movies", target)
 }
 
 # Seasons and episodes ratings ----
@@ -87,6 +91,7 @@ trakt.seasons.ratings <- function(target, season = 1) {
 
   response$distribution <- tibble::enframe(unlist(response$distribution),
                                            name = "rating", value = "n")
+  response$distribution$rating <- as.integer(response$distribution$rating)
 
   tibble::tibble(
     id = target,
@@ -129,6 +134,7 @@ trakt.episodes.ratings <- function(target, season = 1, episode = 1) {
 
   response$distribution <- tibble::enframe(unlist(response$distribution),
                                            name = "rating", value = "n")
+  response$distribution$rating <- as.integer(response$distribution$rating)
 
   tibble::tibble(
     id = target,
