@@ -8,4 +8,7 @@
 globalVariables(c("ids", "airs", "movie", "shows", "show",
                   "number", "seasons", "episodes", "collected_at"))
 
+# The tRakt client id for this particular app
+tRakt_client_id <- "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2"
+
 # nocov end

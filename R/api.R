@@ -50,7 +50,7 @@ trakt_credentials <- function(username, client.id,
   if (client_id != "") {
     options(trakt.client.id = client_id)
   } else {
-    options(trakt.client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
+    options(trakt.client.id = tRakt_client_id)
     if (!silent) {
     message("I provided my client.id as a fallback for you. Please use it responsibly.")
     }
@@ -91,7 +91,7 @@ trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
 
   if (is.null(client.id)) {
     if (is.null(getOption("trakt.client.id"))) {
-      options(trakt.client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2")
+      options(trakt.client.id = tRakt_client_id)
     }
     client.id <- getOption("trakt.client.id")
   }
@@ -113,7 +113,8 @@ trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
   }
 
   response <- httr::GET(url, headers, agent)
-  httr::stop_for_status(response) # In case trakt fails
+  # Fail on HTTP error, i.e. 404 or 5xx.
+  httr::stop_for_status(response, paste0("retrieve data from ", url))
 
   # Parse output
   response <- httr::content(response, as = "text")
