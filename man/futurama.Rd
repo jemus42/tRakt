@@ -4,26 +4,26 @@
 \name{futurama}
 \alias{futurama}
 \title{Futurama episodes}
-\format{A \link[tibble:tibble-package]{tibble} with 60 rows and 18 variables:
+\format{A \link[tibble:tibble-package]{tibble} with 124 rows and 18 variables:
 \describe{
-\item{episode_abs}{Overall episode number}
 \item{episode, season}{Episode within each season and season number}
-\item{epid}{Episode ID in \code{s00e00} format}
-\item{runtime}{Runtime in minutes}
 \item{title}{Episode title}
-\item{year}{Year of first airing}
+\item{episode_abs}{Overall episode number}
 \item{overview}{Episode summary}
 \item{rating}{Rating (1-10) on  trakt.tv}
 \item{votes}{Number of votes ontrakt.tv}
-\item{first_aired, first_aired.string}{Original airdate in UTC as
-\code{POSIXct} and \code{character}}
-\item{trakt, tvdb, tmdb}{Episode IDs for trakt.tv, TVDb, and TMDb}
+\item{comment_count}{Number of comments on episode page}
+\item{first_aired, updated_at}{Original air date and last update in UTC as \code{POSIXct}}
+\item{runtime}{Runtime in minutes}
+\item{trakt, tvdb, tmdb, tvrage}{Episode IDs for trakt.tv, TVDb, and TMDb}
+\item{year}{Year of first airing}
+\item{epid}{Episode ID in \code{s00e00} format}
 }}
 \usage{
 futurama
 }
 \description{
-This data comes from \url{https://trakt.tv}.
+This data comes from \url{https://trakt.tv} and serves as an example of episode data output.
 }
 \examples{
 futurama
