@@ -1,5 +1,7 @@
 # tRakt 0.14.90000
 
+This is a big one, like v1.0.0 big one.
+
 ## Consolidation for the people
 
 - Major refactor of the docs. Sadly, the user will only notice a little more consistency.
@@ -7,6 +9,7 @@
 - Centrally document common parameters and reuse them where needed
 - Also consolidate many similar functions by factoring out the relevant bits into more flexible helper functions. In some cases those are exported as well.
 - In the process, some functions where partially renamed (`.show.` -> `.shows.`, `.movie.` -> `.movies.`) for consistency.
+- Functions that have movie and show counterparts but are identical in terms of arguments usually gain a "main" function, e.g. `trakt.media.summary` that's the general version of `trakt.shows.summary` and `trakt.movies.summary`. Note that `trakt.people.summary` and `trakt.seasons.summary` are still their own thing. Because organization is hard.
 
 # tRakt 0.14.0
 

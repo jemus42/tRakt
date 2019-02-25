@@ -11,8 +11,8 @@ build_trakt_url(section, target1 = NULL, target2 = NULL,
 \arguments{
 \item{section}{The section of the API methods, like \code{shows} or \code{movies}.}
 
-\item{target1, target2, target3, target4}{The target object, usually a show or
-movie \code{slug} or something like \code{trending} and \code{popular}.
+\item{target1, target2, target3, target4, target5, target6}{The target object, usually
+a show or movie \code{slug} or something like \code{trending} and \code{popular}.
 Will be concatenated after \code{section} to produce
 a URL fragment like \code{movies/tron-legacy-2012/releases}.}
 

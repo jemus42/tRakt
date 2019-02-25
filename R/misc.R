@@ -97,11 +97,11 @@ convert_datetime <- function(response) {
 #' Assemble a trakt.tv API URL
 #'
 #' `build_trakt_url` assembles a trakt.tv API URL from different arguments.
-#' The result should be fine for use with \link{trakt.api.call}, since that's what this
+#' The result should be fine for use with [trakt.api.call], since that's what this
 #' function was created for.
 #' @param section The section of the API methods, like `shows` or `movies`.
-#' @param target1,target2,target3,target4 The target object, usually a show or
-#' movie `slug` or something like `trending` and `popular`.
+#' @param target1,target2,target3,target4,target5,target6 The target object, usually
+#' a show or movie `slug` or something like `trending` and `popular`.
 #' Will be concatenated after `section` to produce
 #' a URL fragment like `movies/tron-legacy-2012/releases`.
 #' @param validate `logical(1) [TRUE]`: Whether to check the URl via `httr::HEAD` request.
