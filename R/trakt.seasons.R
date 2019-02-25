@@ -38,24 +38,28 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", target, "seasons", seasons, extended = extended)
-  season <- trakt.api.call(url = url)
+  response <- trakt.api.call(url = url)
 
   # Reorganization
-  names(season) <- sub("number", "episode", names(season))
+  names(response) <- sub("number", "episode", names(response))
 
   # Spreading out ids to get a flat data.frame
-  season <- cbind(season[names(season) != "ids"], season$ids)
+  response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
 
   # If full data is pulled, ehance the dataset a little
-  if ("first_aired" %in% names(season)) {
-    season$year <- lubridate::year(season$first_aired)
+  if ("first_aired" %in% names(response)) {
+    response$year <- lubridate::year(response$first_aired)
   }
 
   # If there are no votes, there technically is no rating either
   # This is to distinguish "people hated it" from "nobody saw/voted on it"
-  season$rating <- ifelse(season$votes == 0, NA, season$rating)
+  if (tibble::has_name(response, "rating")) {
+    # Only available if extended > "min"
+    response$rating <- dplyr::if_else(response$votes == 0, NA_real_, response$rat)
+  }
 
-  tibble::as_tibble(season)
+
+  tibble::as_tibble(response)
 }
 
 #' Get a show's season information
@@ -90,23 +94,26 @@ trakt.seasons.summary <- function(target, extended = c("min", "full"),
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", target, "seasons", extended = extended)
-  seasons <- trakt.api.call(url = url)
+  response <- trakt.api.call(url = url)
 
   # Data cleanup
   if (drop.specials) {
-    seasons <- seasons[seasons$number != 0, ]
+    response <- response[response$number != 0, ]
   }
-  if (drop.unaired & "aired_episodes" %in% names(seasons)) {
-    seasons <- seasons[seasons$aired_episodes > 0, ]
+  if (drop.unaired & tibble::has_name(response, "aired_episodes")) {
+    response <- response[response$aired_episodes > 0, ]
   }
   # Reorganization
-  names(seasons) <- sub("number", "season", names(seasons))
+  names(response) <- sub("number", "season", names(response))
   # Flattening
-  seasons <- cbind(seasons[names(seasons) != "ids"], seasons$ids)
+  response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
 
   # If there are no votes, there technically is no rating either
   # This is to distinguish "people hated it" from "nobody saw/voted on it"
-  seasons$rating <- ifelse(seasons$votes == 0, NA, seasons$rat)
+  if (tibble::has_name(response, "rating")) {
+    # Only available if extended > "min"
+    response$rating <- dplyr::if_else(response$votes == 0, NA_real_, response$rating)
+  }
 
-  tibble::as_tibble(seasons)
+  tibble::as_tibble(response)
 }

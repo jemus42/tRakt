@@ -175,3 +175,14 @@ check_username <- function(user, validate = FALSE) {
   # Return TRUE if and only if everything else did not fail
   invisible(TRUE)
 }
+
+#' Fix IDs object
+#' @keywords internal
+#' Always return characters, replace NULL with explicit NA
+fix_ids <- function(ids) {
+  if (!inherits(ids, c("data.frame", "list"))) {
+    stop("ids must be list or data.frame")
+  }
+  purrr::modify_if(ids, is.null, ~return(NA_character_),
+                   .else = as.character)
+}
