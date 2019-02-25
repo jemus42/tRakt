@@ -122,10 +122,14 @@ convert_datetime <- function(response) {
 #' # Validate a URL works
 #' build_trakt_url("shows", "popular", page = 3, limit = 5, validate = TRUE)
 build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = NULL,
-                            target4 = NULL, validate = FALSE, ...) {
+                            target4 = NULL, target5 = NULL, target6 = NULL,
+                            validate = FALSE, ...) {
+
+  path <- paste0(c(section, target1, target2, target3, target4, target5, target6),
+                 collapse = "/")
 
   url <- modify_url("https://api.trakt.tv",
-                    path = paste0(c(section, target1, target2, target3, target4), collapse = "/"),
+                    path = path,
                     query = list(...))
 
   # Validate

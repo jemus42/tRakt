@@ -5,7 +5,8 @@
 \title{Assemble a trakt.tv API URL}
 \usage{
 build_trakt_url(section, target1 = NULL, target2 = NULL,
-  target3 = NULL, target4 = NULL, validate = FALSE, ...)
+  target3 = NULL, target4 = NULL, target5 = NULL, target6 = NULL,
+  validate = FALSE, ...)
 }
 \arguments{
 \item{section}{The section of the API methods, like \code{shows} or \code{movies}.}
@@ -21,7 +22,8 @@ a URL fragment like \code{movies/tron-legacy-2012/releases}.}
 like \code{name = value}, commoly used is \code{extended = "min"}.}
 }
 \value{
-A \code{character} of class \code{url}.
+A \code{character} of length 1. If \code{validate = TRUE}, also a message including
+the HTTP status code return by a \code{HEAD} request.
 }
 \description{
 \code{build_trakt_url} assembles a trakt.tv API URL from different arguments.

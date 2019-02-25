@@ -1,4 +1,4 @@
-context("test-ratings-shows-movies")
+context("test-media-ratings")
 
 test_that("trakt.[shows|movies].ratings works", {
   skip_on_cran()
@@ -18,4 +18,22 @@ test_that("trakt.[shows|movies].ratings works", {
   expect_named(ratings_movie, expected_names)
 
   expect_equal(nrow(trakt.shows.ratings(target = rep(target_show, 2))), 2)
+})
+
+test_that("season and episode ratings work", {
+  target <- c("futurama", "the-simpsons")
+  season <- 1:2
+  episode <- 1:2
+
+  ratings_season_names <- c("id", "season", "votes", "rating", "distribution")
+  ratings_episode_names <- c("id", "season", "episode", "votes", "rating", "distribution")
+
+  trakt.seasons.ratings(target, season) %>%
+    expect_is("tbl") %>%
+    expect_named(ratings_season_names)
+
+
+  trakt.episodes.ratings(target, season, episode) %>%
+    expect_is("tbl") %>%
+    expect_named(ratings_episode_names)
 })
