@@ -28,7 +28,7 @@ trakt.media.ratings <- function(type = c("shows", "movies"), target) {
 
   if (length(target) > 1) {
     ret <- purrr::map_df(target, function(t) {
-      trakt.ratings(type = type, target = t)
+      trakt.media.ratings(type = type, target = t)
     })
     return(ret)
   }
