@@ -75,7 +75,7 @@ trakt.search.byid <- function(id, id_type = "trakt-show") {
   response <- trakt.api.call(url = url)
 
   # Check if response is empty (nothing found)
-  if (identical(response, data.tibble::tibble())) {
+  if (identical(response, tibble::tibble())) {
     warning("No results for id '", id, "' (", id_type, ")")
     return(tibble::tibble())
   }

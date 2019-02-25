@@ -102,16 +102,19 @@ trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
   ))
 
   # Make the call
-
   response <- httr::GET(url, headers, agent)
   httr::stop_for_status(response) # In case trakt fails
+
+  # Parse output
   response <- httr::content(response, as = "text")
   response <- jsonlite::fromJSON(response)
 
+  # To make empty response handling easier
   if (identical(response, list()) | is.null(response)) {
     return(tibble::tibble())
   }
 
+  # Do it in every other function or do it here once
   if (convert.datetime & !is.null(names(response))) {
     response <- convert_datetime(response)
   }
