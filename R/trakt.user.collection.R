@@ -27,7 +27,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"),
 
   if (type == "shows") {
     # Flatten out ids
-    response$show <- cbind(response$show[names(response$show) != "ids"], response$show$ids)
+    response$show <- cbind(response$show[names(response$show) != "ids"], fix_ids(response$show$ids))
     names(response$show) <- paste0("show_", names(response$show))
     response <- cbind(response[names(response) != "show"], response$show)
     response <- dplyr::select(response, -seasons, dplyr::everything(), seasons)
@@ -52,7 +52,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"),
     # Flatten out ids
     response$movie <- cbind(
       response$movie[names(response$movie) != "ids"],
-      response$movie$ids
+      fix_ids(response$movie$ids)
     )
     response <- cbind(response[names(response) != "movie"], response$movie)
   }

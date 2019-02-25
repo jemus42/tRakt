@@ -16,7 +16,7 @@ unpack_show <- function(show) {
   # Do not prefix IDs with "show" - that is only for finer-grained items like episodes
   show$ids <- purrr::map_df(show$ids, as.character)
   show <- cbind(show %>% dplyr::select(-ids),
-                show %>% dplyr::select(ids) %>% dplyr::pull(ids))
+                fix_ids(show$ids))
   show <- tibble::as_tibble(show)
 
 

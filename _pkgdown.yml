@@ -12,38 +12,54 @@ reference:
       specific functions.
     contents:
       - starts_with("trakt.get")
-  - title: Getting movie data
+  - title: Shows & movies that are popular, trending, anticipated, ...
     contents:
-      - starts_with("trakt.movie")
-  - title: Getting show data
+      - matches("trakt.(popular|trending|anticipated|watched|played)")
+  - title: Simple summary data
     contents:
-      - starts_with("trakt.show")
+      - ends_with("summary")
+  - title: Season and episode data
+    contents:
       - starts_with("trakt.season")
-  - title: Getting user data
+  - title: Movie-specific data
+    contents:
+      - contains("movies")
+  - title: Media ratings
+    contents:
+      - ends_with(".ratings")
+  - title: Media stats
+    contents:
+      - ends_with(".stats")
+  - title: Related media
+    contents:
+      - contains("related")
+  - title: User-specific data
     contents:
       - starts_with("trakt.user")
-  - title: Getting people data
+  - title: Data relating to people
     contents:
-    - starts_with("trakt.people")
-    - ends_with(".people")
+      - starts_with("trakt.people")
+      - ends_with(".people")
   - title: API & misc helpers
     contents:
-        - parse_trakt_url
-        - build_trakt_url
-        - trakt.api.call
-        - trakt_credentials
-        - pad
+      - parse_trakt_url
+      - build_trakt_url
+      - trakt.api.call
+      - trakt_credentials
+      - pad
+      - trakt_api_common_parameters
   - title: Episode datasets
     contents:
-        - futurama
-        - gameofthrones
+      - futurama
+      - gameofthrones
   - title: Internal datasets
     desc: These are unlikely to be useful to users, but there are there, just in case.
-    contens:
-        - countries
-        - genres
-        - languages
-        - networks
+    contents:
+      - countries
+      - genres
+      - languages
+      - networks
+      - certifications
   - title: This package
     contents:
       - tRakt
