@@ -34,6 +34,10 @@ trakt.media.summary <- function(type, target, extended = c("min", "full")) {
   url <- build_trakt_url(type, target, extended = extended)
   response <- trakt.api.call(url = url)
 
+  # Sometimes IDs are NULL which is bad. See target = "67188"
+  response$ids <- purrr::modify_if(response$ids, is.null, ~return(NA_character_),
+                            .else = as.character
+
   if (tibble::has_name(response, "airs")) {
     names(response$airs) <- paste0("airs_", names(response$airs))
   }
@@ -52,6 +56,11 @@ trakt.media.summary <- function(type, target, extended = c("min", "full")) {
   } else {
     response <- flatten_df(response)
   }
+
+  # flatten_df breaks POSIXct classes because I don't know
+  # need to find better solution :(
+  response$first_aired <- lubridate::as_datetime(response$first_aired, tz = "UTC")
+  response$updated_at <- lubridate::as_datetime(response$updated_at, tz = "UTC")
 
   response
 }
