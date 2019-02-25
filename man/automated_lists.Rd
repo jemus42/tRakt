@@ -69,8 +69,9 @@ trakt.movies.watched(limit = 10, page = 1, extended = c("min",
 \arguments{
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 
-\item{limit, page}{\code{integer(1) [10L], [1L]}: Number of items and page for paginated requests.
-Bot values must be greater than \code{0} and will be coerced to \code{integer}.}
+\item{limit, page}{\code{integer(1) [10L], [1L]}: Number of items and page
+for paginated requests. Both values must be greater than \code{0} and will
+be coerced to \code{integer}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}

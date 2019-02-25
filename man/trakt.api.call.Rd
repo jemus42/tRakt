@@ -32,7 +32,6 @@ This function is heavily used internally, so why not expose it to the user.
 }
 \examples{
 \dontrun{
-library(tRakt)
 trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
 
 trakt.api.call("https://api.trakt.tv/users/jemus42", HEAD = TRUE)

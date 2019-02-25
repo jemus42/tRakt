@@ -7,8 +7,9 @@
 #' items with the most users watching are returned first. Anticipation is measured
 #' by the number of user-created lists an items is part of while not being released yet.
 #'
-#' @param limit,page `integer(1) [10L], [1L]`: Number of items and page for paginated requests.
-#' Bot values must be greater than `0` and will be coerced to `integer`.
+#' @param limit,page `integer(1) [10L], [1L]`: Number of items and page
+#' for paginated requests. Both values must be greater than `0` and will
+#' be coerced to `integer`.
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @name automated_lists
