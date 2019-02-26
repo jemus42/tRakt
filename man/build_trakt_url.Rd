@@ -4,22 +4,16 @@
 \alias{build_trakt_url}
 \title{Assemble a trakt.tv API URL}
 \usage{
-build_trakt_url(section, target1 = NULL, target2 = NULL,
-  target3 = NULL, target4 = NULL, target5 = NULL, target6 = NULL,
-  validate = FALSE, ...)
+build_trakt_url(..., validate = FALSE)
 }
 \arguments{
-\item{section}{The section of the API methods, like \code{shows} or \code{movies}.}
-
-\item{target1, target2, target3, target4, target5, target6}{The target object, usually
-a show or movie \code{slug} or something like \code{trending} and \code{popular}.
-Will be concatenated after \code{section} to produce
-a URL fragment like \code{movies/tron-legacy-2012/releases}.}
+\item{...}{Unnamed arguments will be concatenated with \code{/} as separators to
+form the path of the API url, e.g. the arguments \code{movies}, \code{tron-legacy-2012} and
+\code{releases} will be concatenated to \code{movies/tron-legacy-2012/releases}. Additional
+\strong{named} arguments will be used as query parameters, usually \code{extended = "full"} or
+others.}
 
 \item{validate}{\code{logical(1) [TRUE]}: Whether to check the URl via \code{httr::HEAD} request.}
-
-\item{...}{Other params used as \code{queries}. Must be named arguments
-like \code{name = value}, commoly used is \code{extended = "min"}.}
 }
 \value{
 A \code{character} of length 1. If \code{validate = TRUE}, also a message including
@@ -32,7 +26,7 @@ function was created for.
 }
 \note{
 Please be aware that the result of this function is not verified to be a working trakt.tv
-API URL, unless \code{validate = TRUE}, in which case a \code{HEAD} request is performed that
+API URL unless \code{validate = TRUE}, in which case a \code{HEAD} request is performed that
 does not actually receive any data, but from its returned status code the validity
 of the URL can be inferred.
 }
@@ -40,8 +34,11 @@ of the URL can be inferred.
 build_trakt_url("shows", "breaking-bad", extended = "full")
 build_trakt_url("shows", "popular", page = 3, limit = 5)
 
+# Path can also be partially assembled already
+build_trakt_url("users/jemus42", "ratings")
+
 # Validate a URL works
-build_trakt_url("shows", "popular", page = 3, limit = 5, validate = TRUE)
+build_trakt_url("shows", "popular", page = 1, limit = 5, validate = TRUE)
 }
 \seealso{
 Other utility functions: \code{\link{pad}}

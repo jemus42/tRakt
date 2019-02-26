@@ -9,7 +9,7 @@ test_that("pad() pads", {
     )
   )
   expect_warning({
-    x <- pad(1, 1:10)
+    pad(1, 1:10)
   })
   expect_equal(x, character(10))
 })
@@ -20,7 +20,6 @@ test_that("build_trakt_url builds a url", {
   x <- build_trakt_url("shows", "breaking-bad", extended = "min", validate = TRUE)
   expect_is(x, "character")
 
-  trakt_credentials()
   y <- trakt.api.call(x)
   expect_length(y, 3)
   expect_named(y, c("title", "year", "ids"))

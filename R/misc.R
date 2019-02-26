@@ -64,39 +64,47 @@ convert_datetime <- function(response) {
 #' `build_trakt_url` assembles a trakt.tv API URL from different arguments.
 #' The result should be fine for use with [trakt.api.call], since that's what this
 #' function was created for.
-#' @param section The section of the API methods, like `shows` or `movies`.
-#' @param target1,target2,target3,target4,target5,target6 The target object, usually
-#' a show or movie `slug` or something like `trending` and `popular`.
-#' Will be concatenated after `section` to produce
-#' a URL fragment like `movies/tron-legacy-2012/releases`.
+#' @param ... Unnamed arguments will be concatenated with `/` as separators to
+#' form the path of the API url, e.g. the arguments `movies`, `tron-legacy-2012` and
+#' `releases` will be concatenated to `movies/tron-legacy-2012/releases`. Additional
+#' **named** arguments will be used as query parameters, usually `extended = "full"` or
+#' others.
 #' @param validate `logical(1) [TRUE]`: Whether to check the URl via `httr::HEAD` request.
-#' @param ... Other params used as `queries`. Must be named arguments
-#' like `name = value`, commoly used is `extended = "min"`.
-#' @return A `character` of length 1. If `validate = TRUE`, also a message including
+#' @return A url: `character` of length 1. If `validate = TRUE`, also a message including
 #' the HTTP status code return by a `HEAD` request.
 #' @family utility functions
 #' @importFrom httr stop_for_status
 #' @export
 #' @note Please be aware that the result of this function is not verified to be a working trakt.tv
-#' API URL, unless `validate = TRUE`, in which case a `HEAD` request is performed that
+#' API URL unless `validate = TRUE`, in which case a `HEAD` request is performed that
 #' does not actually receive any data, but from its returned status code the validity
 #' of the URL can be inferred.
 #' @examples
 #' build_trakt_url("shows", "breaking-bad", extended = "full")
 #' build_trakt_url("shows", "popular", page = 3, limit = 5)
 #'
+#' # Path can also be partially assembled already
+#' build_trakt_url("users/jemus42", "ratings")
+#'
 #' # Validate a URL works
-#' build_trakt_url("shows", "popular", page = 3, limit = 5, validate = TRUE)
-build_trakt_url <- function(section, target1 = NULL, target2 = NULL, target3 = NULL,
-                            target4 = NULL, target5 = NULL, target6 = NULL,
-                            validate = FALSE, ...) {
+#' build_trakt_url("shows", "popular", page = 1, limit = 5, validate = TRUE)
+build_trakt_url <- function(..., validate = FALSE) {
 
-  path <- paste0(c(section, target1, target2, target3, target4, target5, target6),
-                 collapse = "/")
+  dots <- list(...)
 
-  url <- modify_url("https://api.trakt.tv",
-                    path = path,
-                    query = list(...))
+  # Nuke NULL elements
+  dots <- dots[purrr::map_lgl(dots, ~!is.null(.x))]
+
+  # If there are no named elements, names() will return NULL
+  if (!is.null(names(dots))) {
+    path <- paste0(dots[names(dots) == ""], collapse = "/")
+    queries <- dots[names(dots) != ""]
+  } else {
+    path <- paste0(dots, collapse = "/")
+    queries <- NULL
+  }
+
+  url <- httr::modify_url(url = "https://api.trakt.tv", path = path, query = queries)
 
   # Validate
   if (validate) {
