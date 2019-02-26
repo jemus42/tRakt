@@ -38,8 +38,7 @@ trakt.api.call("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
 }
 }
 \seealso{
-Other API-basics: \code{\link{trakt.search.byid}},
-  \code{\link{trakt.search}},
+Other API-basics: \code{\link{trakt.search}},
   \code{\link{trakt_credentials}}
 }
 \concept{API-basics}

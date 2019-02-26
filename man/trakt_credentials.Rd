@@ -50,7 +50,6 @@ trakt_credentials(
 }
 \seealso{
 Other API-basics: \code{\link{trakt.api.call}},
-  \code{\link{trakt.search.byid}},
   \code{\link{trakt.search}}
 }
 \concept{API-basics}

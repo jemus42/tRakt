@@ -2,13 +2,18 @@
 % Please edit documentation in R/trakt.search.R
 \name{trakt.search}
 \alias{trakt.search}
-\title{Search for a show via text query}
+\alias{trakt.search.byid}
+\title{Search for a show via text query or id}
 \source{
 \href{https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results}{The trakt.tv API docs}
 }
 \usage{
 trakt.search(query, type = c("movie", "show", "episode", "person",
   "list"), years = NULL, n_results = 1L, extended = c("min", "full"))
+
+trakt.search.byid(id, id_type = "trakt", type = c("movie", "show",
+  "episode", "person", "list"), n_results = 1L, extended = c("min",
+  "full"))
 }
 \arguments{
 \item{query}{The keyword used for the search.}
@@ -23,40 +28,47 @@ trakt.search(query, type = c("movie", "show", "episode", "person",
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
+
+\item{id}{The id used for the search.}
+
+\item{id_type}{The type of \code{id}. One of \code{trakt} (default), \code{imdb}, \code{tmdb}, \code{tvdb}.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble} containing a single search result.
+A \link[tibble:tibble-package]{tibble} containing a \code{n_result} result.
 If no results are found, the \code{tibble} has 0 rows.
 }
 \description{
-\code{trakt.search} returns search result info.
-}
-\details{
-Search for a show or movie with a keyword (e.g. \code{"Breaking Bad"}) and receive basic info of the first
-search result. It's main use is to retrieve the ids or proper show/movie title for further use, as well
-as receiving a quick overview of a show/movie.
+Search for a show or movie with a keyword (e.g. \code{"Breaking Bad"}) and receive
+basic info of the first search result. It's main use is to retrieve
+the ids or proper show/movie title for further use, as well
+as receiving a quick overview of a show/movie. The amount of
+information returned is equal to \code{.summary} API methods and also depends on
+the value of \code{extended}.
 }
 \note{
-The API technically allows concatenated types,
+The API technically allows concatenated types for text query searches,
 e.g. \code{movie,show,episode} to search all three types of items, but this is not supported
 in this package. If you really want this functionality, open an issue on GitHub.
 }
 \examples{
 \dontrun{
+# A show
 trakt.search("Breaking Bad", type = "show", n_results = 3)
 
+# A show by its trakt id
+trakt.search.byid(1388, "trakt", type = "show")
+
+# A person
 trakt.search("J. K. Simmons", type = "person", extended = "full")
 
+# A movie or a show
 trakt.search("Tron", "movie", n_results = 2)
 trakt.search("Tron", "show", n_results = 2)
 }
 }
 \seealso{
 Other API-basics: \code{\link{trakt.api.call}},
-  \code{\link{trakt.search.byid}},
   \code{\link{trakt_credentials}}
-
-Other search functions: \code{\link{trakt.search.byid}}
 }
 \concept{API-basics}
 \concept{search functions}
