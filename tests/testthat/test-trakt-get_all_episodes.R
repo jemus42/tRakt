@@ -22,7 +22,7 @@ test_that("trakt.get_full_showdata works", {
   result <- trakt.get_full_showdata("Breaking Bad")
 
   expect_is(result, "list")
-  expect_named(result, c("info", "summary", "seasons", "episodes"))
+  expect_named(result, c("summary", "seasons", "episodes"))
   expect_true(nrow(result$episodes) > 40)
   expect_true(ncol(result$episodes) > 6)
 
