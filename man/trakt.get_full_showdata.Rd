@@ -30,9 +30,9 @@ call the specific functions for the data you really need.
 }
 \examples{
 \dontrun{
-library(tRakt)
 # Use the search within the function
 breakingbad <- trakt.get_full_showdata("Breaking Bad")
+
 # Alternatively, us a slug for explicit results
 breakingbad <- trakt.get_full_showdata(slug = "breaking-bad")
 }

@@ -8,10 +8,8 @@ test_that("pad() pads", {
       "s01e07", "s01e08", "s01e09", "s01e10"
     )
   )
-  expect_warning({
-    pad(1, 1:10)
-  })
-  expect_equal(x, character(10))
+  expect_warning(pad(1, 1:10)) %>%
+  expect_equal(character(10))
 })
 
 test_that("build_trakt_url builds a url", {

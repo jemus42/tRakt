@@ -3,17 +3,26 @@
 \name{trakt.search}
 \alias{trakt.search}
 \title{Search for a show via text query}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results}{The trakt.tv API docs}
+}
 \usage{
-trakt.search(query, type = "show", year = NULL)
+trakt.search(query, type = c("movie", "show", "episode", "person",
+  "list"), years = NULL, n_results = 1L, extended = c("min", "full"))
 }
 \arguments{
-\item{query}{The keyword used for the search. If the query ends with a 4 digit numbers,
-this will be used as \code{year} parameter.}
+\item{query}{The keyword used for the search.}
 
-\item{type}{The type of data you're looking for. Defaults to \code{show}, can also be
-\code{movie}, \code{episode}, \code{person} or \code{list}.}
+\item{type}{\code{character(1) ["movie"]}: The type of data you're looking for. One of \code{show},
+\code{movie}, \code{episode}, \code{person} or \code{list} or a character vector with those elements, e.g.
+\code{c("show", "movie")}.}
 
-\item{year}{Optionally filter by year.}
+\item{years}{Optionally filter by years.}
+
+\item{n_results}{\code{integer(1) [1]}: How many results to return.}
+
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble} containing a single search result.
@@ -28,12 +37,18 @@ search result. It's main use is to retrieve the ids or proper show/movie title f
 as receiving a quick overview of a show/movie.
 }
 \note{
-See \href{http://docs.trakt.apiary.io/reference/search/text-query}{the trakt API docs for
-further info}
+The API technically allows concatenated types,
+e.g. \code{movie,show,episode} to search all three types of items, but this is not supported
+in this package. If you really want this functionality, open an issue on GitHub.
 }
 \examples{
 \dontrun{
-breakingbad <- trakt.search("Breaking Bad")
+trakt.search("Breaking Bad", type = "show", n_results = 3)
+
+trakt.search("J. K. Simmons", type = "person", extended = "full")
+
+trakt.search("Tron", "movie", n_results = 2)
+trakt.search("Tron", "show", n_results = 2)
 }
 }
 \seealso{

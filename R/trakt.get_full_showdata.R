@@ -16,9 +16,9 @@
 #' @family show data
 #' @examples
 #' \dontrun{
-#' library(tRakt)
 #' # Use the search within the function
 #' breakingbad <- trakt.get_full_showdata("Breaking Bad")
+#'
 #' # Alternatively, us a slug for explicit results
 #' breakingbad <- trakt.get_full_showdata(slug = "breaking-bad")
 #' }
@@ -27,8 +27,8 @@ trakt.get_full_showdata <- function(query = NULL, slug = NULL, drop.unaired = TR
   # Construct show object
   show <- list()
   if (!is.null(query)) {
-    show$info <- trakt.search(query)
-    slug <- show$info$slug
+    info <- trakt.search(query, type = "show", n_results = 1, extended = "min")
+    slug <- info$slug
   } else if (is.null(query) & is.null(slug)) {
     stop("You must provide either a search query or a trakt.tv slug")
   }
