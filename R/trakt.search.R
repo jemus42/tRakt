@@ -30,8 +30,8 @@
 #' # A show
 #' trakt.search("Breaking Bad", type = "show", n_results = 3)
 #'
-#' # A show by its trakt id
-#' trakt.search.byid(1388, "trakt", type = "show")
+#' # A show by its trakt id, and now with more information
+#' trakt.search.byid(1388, "trakt", type = "show", extended = "full")
 #'
 #' # A person
 #' trakt.search("J. K. Simmons", type = "person", extended = "full")
@@ -63,6 +63,9 @@ trakt.search <- function(query, type = c("movie", "show", "episode", "person", "
     return(response)
   }
 
+  # Just to be really safe it's always a numeric
+  response$score <- as.numeric(response$score)
+
   if (type == "show" & extended == "full") {
     response$show <- unpack_show(response$show)
   }
@@ -86,12 +89,16 @@ trakt.search <- function(query, type = c("movie", "show", "episode", "person", "
 
 #' @rdname trakt.search
 #' @export
-trakt.search.byid <- function(id, id_type = "trakt",
+trakt.search.byid <- function(id, id_type = c("trakt" , "imdb" , "tmdb" , "tvdb"),
                               type = c("movie", "show", "episode", "person", "list"),
                               n_results = 1L, extended = c("min", "full")) {
 
+  id_type <- match.arg(id_type)
+  type <- match.arg(type)
+  extended <- match.arg(extended)
+
   # Construct URL, make API call
-  url <- build_trakt_url("search", id_type, id, type = type)
+  url <- build_trakt_url("search", id_type, id, type = type, extended = extended)
   response <- trakt.api.call(url = url)
 
   # Check if response is empty (nothing found)
@@ -99,6 +106,9 @@ trakt.search.byid <- function(id, id_type = "trakt",
     warning("No results for id '", id, "' (", id_type, ")")
     return(tibble::tibble())
   }
+
+  # Just to be really safe it's always a numeric
+  response$score <- as.numeric(response$score)
 
   if (type == "show" & extended == "full") {
     response$show <- unpack_show(response$show)

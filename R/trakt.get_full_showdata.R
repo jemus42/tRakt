@@ -28,15 +28,17 @@ trakt.get_full_showdata <- function(query = NULL, slug = NULL, drop.unaired = TR
   show <- list()
   if (!is.null(query)) {
     info <- trakt.search(query, type = "show", n_results = 1, extended = "min")
-    slug <- info$slug
+    trakt_id <- info$trakt
+  } else if (!is.null(slug)) {
+    # This saddens me, but good enough
+    trakt_id <- slug
   } else if (is.null(query) & is.null(slug)) {
     stop("You must provide either a search query or a trakt.tv slug")
   }
-  show$summary <- trakt.shows.summary(slug, extended = "full")
-  show$seasons <- trakt.seasons.summary(slug, extended = "full", drop.specials = TRUE)
-  show$episodes <- trakt.get_all_episodes(slug, show$seasons$season,
-    drop.unaired = drop.unaired, extended = "full"
-  )
+  show$summary <- trakt.shows.summary(trakt_id, extended = "full")
+  show$seasons <- trakt.seasons.summary(trakt_id, extended = "full", drop.specials = TRUE)
+  show$episodes <- trakt.get_all_episodes(trakt_id, show$seasons$season,
+                                          drop.unaired = drop.unaired, extended = "full")
 
   show$episodes$show <- show$summary$title
   show$summary$retrieved_at <- lubridate::now(tzone = "UTC")

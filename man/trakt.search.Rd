@@ -11,9 +11,9 @@
 trakt.search(query, type = c("movie", "show", "episode", "person",
   "list"), years = NULL, n_results = 1L, extended = c("min", "full"))
 
-trakt.search.byid(id, id_type = "trakt", type = c("movie", "show",
-  "episode", "person", "list"), n_results = 1L, extended = c("min",
-  "full"))
+trakt.search.byid(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
+  type = c("movie", "show", "episode", "person", "list"),
+  n_results = 1L, extended = c("min", "full"))
 }
 \arguments{
 \item{query}{The keyword used for the search.}
@@ -55,8 +55,8 @@ in this package. If you really want this functionality, open an issue on GitHub.
 # A show
 trakt.search("Breaking Bad", type = "show", n_results = 3)
 
-# A show by its trakt id
-trakt.search.byid(1388, "trakt", type = "show")
+# A show by its trakt id, and now with more information
+trakt.search.byid(1388, "trakt", type = "show", extended = "full")
 
 # A person
 trakt.search("J. K. Simmons", type = "person", extended = "full")

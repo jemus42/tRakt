@@ -23,7 +23,8 @@ test_that("trakt.search works", {
 test_that("trakt.search.byid works", {
   skip_on_cran()
 
-  res <- trakt.search.byid(id = 614, id_type = "trakt-show")
+  # Oddly enough, 614 matches Home Alone oO
+  res <- trakt.search.byid(id = 614, id_type = "trakt", type = "show")
   res2 <- trakt.search(query = "futurama", type = "show")
 
   expect_identical(res$title, res2$title)
@@ -31,6 +32,6 @@ test_that("trakt.search.byid works", {
   expect_warning(trakt.search.byid(id = 1, id_type = "imdb"))
   expect_warning(trakt.search.byid(
     id = "nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb",
-    id_type = "trakt-movie"
+    id_type = "trakt"
   ))
 })
