@@ -11,4 +11,7 @@ genres
 \description{
 Genres
 }
+\examples{
+genres
+}
 \keyword{datasets}

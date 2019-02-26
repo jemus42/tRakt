@@ -11,4 +11,7 @@ countries
 \description{
 Country codes
 }
+\examples{
+countries
+}
 \keyword{datasets}

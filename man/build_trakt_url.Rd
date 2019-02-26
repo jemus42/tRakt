@@ -16,7 +16,7 @@ others.}
 \item{validate}{\code{logical(1) [TRUE]}: Whether to check the URl via \code{httr::HEAD} request.}
 }
 \value{
-A \code{character} of length 1. If \code{validate = TRUE}, also a message including
+A url: \code{character} of length 1. If \code{validate = TRUE}, also a message including
 the HTTP status code return by a \code{HEAD} request.
 }
 \description{

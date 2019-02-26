@@ -11,4 +11,7 @@ languages
 \description{
 Language codes
 }
+\examples{
+languages
+}
 \keyword{datasets}

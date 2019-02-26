@@ -11,4 +11,7 @@ networks
 \description{
 Available networks
 }
+\examples{
+networks
+}
 \keyword{datasets}
