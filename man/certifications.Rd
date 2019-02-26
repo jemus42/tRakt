@@ -12,6 +12,6 @@ certifications
 Currently only US certification are available.
 }
 \examples{
-certiciations
+certifications
 }
 \keyword{datasets}
