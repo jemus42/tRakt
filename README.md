@@ -47,16 +47,16 @@ show_info <- trakt.search("Utopia", type = "show")
 glimpse(show_info)
 #> Observations: 1
 #> Variables: 10
-#> $ title    <chr> "Utopia"
-#> $ overview <chr> "The story follows a small group of people who find the…
-#> $ year     <int> 2013
-#> $ status   <chr> "ended"
-#> $ trakt    <int> 46241
-#> $ slug     <chr> "utopia"
-#> $ tvdb     <int> 264991
-#> $ imdb     <chr> "tt2384811"
-#> $ tmdb     <int> 46511
-#> $ tvrage   <int> NA
+#> $ type   <chr> "show"
+#> $ score  <dbl> 1000
+#> $ title  <chr> "Utopia"
+#> $ year   <int> 2013
+#> $ trakt  <chr> "46241"
+#> $ slug   <chr> "utopia"
+#> $ tvdb   <chr> "264991"
+#> $ imdb   <chr> "tt2384811"
+#> $ tmdb   <chr> "46511"
+#> $ tvrage <chr> NA
 
 # Get season information for the show
 show_seasons <- trakt.seasons.summary(show_info$trakt)
@@ -64,8 +64,8 @@ show_seasons <- trakt.seasons.summary(show_info$trakt)
 knitr::kable(show_seasons)
 ```
 
-| season | trakt |   tvdb |  tmdb | tvrage |
-| -----: | ----: | -----: | ----: | :----- |
+| season | trakt | tvdb   | tmdb  | tvrage |
+| -----: | :---- | :----- | :---- | :----- |
 |      1 | 56008 | 507598 | 54695 | NA     |
 |      2 | 56009 | 524149 | 54696 | NA     |
 
@@ -98,8 +98,8 @@ show_episodes %>%
 ## Setting credentials
 
 The APIv2 requires at least a `client id` for the API calls.  
-Calling `trakt_credentials()` will set everything up for you, but
-you either have to manually plug your values in (see
+Calling `trakt_credentials()` will set everything up for you, but you
+either have to manually plug your values in (see
 `?trakt_credentials()`), or have the values supplied via enviroment
 variables in your `.Renviron` like this:
 
