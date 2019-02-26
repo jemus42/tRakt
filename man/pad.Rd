@@ -29,7 +29,6 @@ I like my sXXeYY format, okay?
 pad(2, 4) # Returns "s02e04"
 }
 \seealso{
-Other utility functions: \code{\link{build_trakt_url}},
-  \code{\link{parse_trakt_url}}
+Other utility functions: \code{\link{build_trakt_url}}
 }
 \concept{utility functions}

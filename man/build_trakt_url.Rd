@@ -44,7 +44,6 @@ build_trakt_url("shows", "popular", page = 3, limit = 5)
 build_trakt_url("shows", "popular", page = 3, limit = 5, validate = TRUE)
 }
 \seealso{
-Other utility functions: \code{\link{pad}},
-  \code{\link{parse_trakt_url}}
+Other utility functions: \code{\link{pad}}
 }
 \concept{utility functions}

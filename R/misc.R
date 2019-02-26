@@ -30,41 +30,6 @@ pad <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
   paste0("s", s, "e", e)
 }
 
-#' Get info from a show URL
-#'
-#' `parse_trakt_url` extracts some info from a show URL
-#' @param url Input URL. must be a `character`, but not a valid URL.
-#' @param epid Whether the episode ID (`sXXeYY` format) should be extracted.
-#' Defaults to `FALSE`.
-#' @param getslug Whether the `slug` should be extracted. Defaults to `FALSE`.
-#' @return A `list` containing at least the show name.
-#' @family utility functions
-#' @export
-#' @importFrom stringr str_split
-#' @note This is pointless.
-#' @examples
-#' parse_trakt_url("http://trakt.tv/show/fargo/season/1/episode/2", TRUE, TRUE)
-#' parse_trakt_url("http://trakt.tv/show/breaking-bad", TRUE, FALSE)
-parse_trakt_url <- function(url, epid = FALSE, getslug = FALSE) {
-  showname <- stringr::str_split(url, "/")[[1]][5]
-  ret <- list("show" = showname)
-  if (epid) {
-    season <- stringr::str_split(url, "/")[[1]][7]
-    episode <- stringr::str_split(url, "/")[[1]][9]
-    if (is.na(season) | is.na(episode)) {
-      ret$epid <- NA
-    } else {
-      epid <- pad(season, episode)
-      ret$epid <- epid
-    }
-  }
-  if (getslug) {
-    slug <- stringr::str_split(url, "/", 5)
-    ret$slug <- slug[[1]][5]
-  }
-  ret
-}
-
 #' Quick datetime conversion
 #'
 #' Searches for datetime variables and converts them to `POSIXct` via \pkg{lubridate}.

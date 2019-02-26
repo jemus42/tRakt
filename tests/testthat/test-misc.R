@@ -14,22 +14,7 @@ test_that("pad() pads", {
   expect_equal(x, character(10))
 })
 
-test_that("parse_trakt_url parses", {
-  x <- parse_trakt_url("http://trakt.tv/show/fargo/season/1/episode/2",
-    epid = TRUE, getslug = TRUE
-  )
-  expect_is(x, "list")
-  expect_length(x, 3)
-
-  x <- parse_trakt_url("http://trakt.tv/show/breaking-bad",
-    epid = TRUE, getslug = FALSE
-  )
-  expect_named(x, c("show", "epid"))
-  expect_equal(x$show, "breaking-bad")
-  expect_equal(x$epid, NA)
-})
-
-test_that("build_trakt_url builds", {
+test_that("build_trakt_url builds a url", {
   skip_on_cran()
 
   x <- build_trakt_url("shows", "breaking-bad", extended = "min", validate = TRUE)
