@@ -50,15 +50,13 @@ by the number of user-created lists an items is part of while not being released
 }
 \examples{
 \dontrun{
-# Get popular movies and shows
-trakt.movies.popular(5)
-trakt.shows.popular(5)
+# Get popular shows with only ids
+trakt.popular(type = "shows")
 
-# Get trending movies and shows
-trakt.movies.trending(5)
+# Get trending movies with extended information
 trakt.trending(type = "movies", 5, extended = "full")
-}
 
-# Get anticipated movies
-trakt.anticipated(type = "movies", 10)
+# Get top 5 anticipated movies
+trakt.anticipated(type = "movies", 5)
+}
 }

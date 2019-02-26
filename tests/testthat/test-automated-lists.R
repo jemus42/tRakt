@@ -80,3 +80,23 @@ test_that("trakt.anticipated works", {
   expect_equal(nrow(tre_sho_min), 5)
   expect_equal(nrow(tre_sho_min), nrow(tre_sho_max))
 })
+
+test_that("trakt.played and trakt.watched also do things", {
+
+  nm <- c("watcher_count", "play_count", "collected_count", "collector_count",
+          "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb", "tvrage")
+
+  trakt.watched("shows", extended = "min", period = "weekly") %>%
+    expect_is("tbl") %>%
+    expect_length(12) %>%
+    expect_named(nm) %>%
+    nrow() %>%
+    expect_equal(10)
+
+  trakt.played("shows", extended = "min", period = "weekly") %>%
+    expect_is("tbl") %>%
+    expect_length(12) %>%
+    expect_named(nm) %>%
+    nrow() %>%
+    expect_equal(10)
+})

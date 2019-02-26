@@ -28,7 +28,8 @@ NULL
 
 # Worker function ----
 #' @keywords internal
-trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated", "played"),
+trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated",
+                                           "played", "watched"),
                             type = c("shows", "movies"),
                             limit = 10L, page = 1L,
                             extended = c("min", "full"),
