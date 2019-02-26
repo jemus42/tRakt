@@ -21,6 +21,7 @@
 #' @source [The trakt.tv API docs](https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results)
 #' @family API-basics
 #' @family search functions
+#' @importFrom utils head
 #' @examples
 #' \dontrun{
 #' trakt.search("Breaking Bad", type = "show", n_results = 3)
@@ -54,7 +55,7 @@ trakt.search <- function(query, type = c("movie", "show", "episode", "person", "
   }
 
   if (type == "show" & extended == "full") {
-    response$show <- tRakt:::unpack_show(response$show)
+    response$show <- unpack_show(response$show)
   }
 
   response <- cbind(response[names(response) != type], response[[type]])
@@ -70,7 +71,7 @@ trakt.search <- function(query, type = c("movie", "show", "episode", "person", "
   if (tibble::has_name(response, "year")) {
     response <- response[!(is.na(response$year) & response$score == 1000), ]
   }
-  response <- head(response, n_results)
+  response <- utils::head(response, n_results)
   response
 }
 
