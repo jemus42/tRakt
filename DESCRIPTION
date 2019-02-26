@@ -9,10 +9,11 @@ Authors@R:
            role = c("aut", "cre"),
            email = "lukas@quantenbrot.de",
            comment = c(ORCID = "0000-0001-7528-3795"))
-Description: A wrapper for the 'trakt.tv' API to retrieve data
-    about shows and movies, including titles, user ratings and related
+Description: A wrapper for the <https://trakt.tv> API to retrieve data
+    about shows and movies, including user ratings, credits and related
     metadata. Additional functions retrieve user-related information
-    including collections.
+    including collections and history of watched items. A full
+    API reference is available at <https://trakt.docs.apiary.io>.
 License: MIT + file LICENSE
 URL: http://github.com/jemus42/tRakt
 BugReports: http://github.com/jemus42/tRakt/issues
