@@ -1,8 +1,8 @@
 #' Get a user's ratings
 #'
-#' `trakt.user.ratings` retrieves a user's ratings
+#' `trakt.user.ratings` retrieves a user's media ratings
 #' @inheritParams trakt_api_common_parameters
-#' @param rating A rating to filter by. Can be `1` through `10`, default is `NULL`
+#' @param rating `integer(1L)`: Rating to filter by. Can be `1` through `10`, default is `NULL`
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @family user data

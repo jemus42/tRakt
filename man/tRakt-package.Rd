@@ -8,7 +8,7 @@
 \description{
 A wrapper for the <https://trakt.tv> API to retrieve data
     about shows and movies, including user ratings, credits and related
-    metadata. Additional functions retrieve user-related information
+    metadata. Additional functions retrieve user-specific information
     including collections and history of watched items. A full
     API reference is available at <https://trakt.docs.apiary.io>.
 }
@@ -16,6 +16,7 @@ A wrapper for the <https://trakt.tv> API to retrieve data
 Useful links:
 \itemize{
   \item \url{http://github.com/jemus42/tRakt}
+  \item \url{https://jemus42.github.io/tRakt}
   \item Report bugs at \url{http://github.com/jemus42/tRakt/issues}
 }
 

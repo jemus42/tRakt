@@ -6,7 +6,8 @@
 \alias{trakt.shows.summary}
 \title{Get show or movie summary info}
 \usage{
-trakt.media.summary(type, target, extended = c("min", "full"))
+trakt.media.summary(type = c("movies", "shows"), target,
+  extended = c("min", "full"))
 
 trakt.movies.summary(target, extended = c("min", "full"))
 
@@ -28,14 +29,12 @@ returns more variables and should generally only be used if required.}
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-Note that setting \code{extended} to \code{min} makes this function
-return about as much informations as \link[tRakt]{trakt.search}
+Note that this function returns the same amount of informations as \link{trakt.search}.
 }
 \examples{
-\dontrun{
 # Minimal info by default
 trakt.shows.summary("breaking-bad")
-
+\dontrun{
 # More information
 trakt.shows.summary("breaking-bad", extended = "full")
 

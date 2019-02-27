@@ -51,15 +51,9 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
     response$year <- lubridate::year(response$first_aired)
   }
 
-  # If there are no votes, there technically is no rating either
-  # This is to distinguish "people hated it" from "nobody saw/voted on it"
-  if (tibble::has_name(response, "rating")) {
-    # Only available if extended > "min"
-    response$rating <- dplyr::if_else(response$votes == 0, NA_real_, response$rat)
-  }
-
-
-  tibble::as_tibble(response)
+  response %>%
+    fix_ratings() %>%
+    tibble::as_tibble()
 }
 
 #' Get a show's season information
@@ -108,12 +102,7 @@ trakt.seasons.summary <- function(target, extended = c("min", "full"),
   # Flattening
   response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
 
-  # If there are no votes, there technically is no rating either
-  # This is to distinguish "people hated it" from "nobody saw/voted on it"
-  if (tibble::has_name(response, "rating")) {
-    # Only available if extended > "min"
-    response$rating <- dplyr::if_else(response$votes == 0, NA_real_, response$rating)
-  }
-
-  tibble::as_tibble(response)
+  response %>%
+    fix_ratings() %>%
+    tibble::as_tibble()
 }

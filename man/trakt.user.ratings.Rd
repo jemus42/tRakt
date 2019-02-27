@@ -14,13 +14,13 @@ Can also be of length greater than 1, in which case the function is called on al
 
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 
-\item{rating}{A rating to filter by. Can be \code{1} through \code{10}, default is \code{NULL}}
+\item{rating}{\code{integer(1L)}: Rating to filter by. Can be \code{1} through \code{10}, default is \code{NULL}}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-\code{trakt.user.ratings} retrieves a user's ratings
+\code{trakt.user.ratings} retrieves a user's media ratings
 }
 \examples{
 \dontrun{

@@ -1,7 +1,6 @@
 #' Get show or movie summary info
 #'
-#' Note that setting `extended` to `min` makes this function
-#' return about as much informations as \link[tRakt]{trakt.search}
+#' Note that this function returns the same amount of informations as [trakt.search].
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @family summary data
@@ -10,17 +9,17 @@
 #' @importFrom purrr flatten_df
 #' @importFrom tibble has_name
 #' @examples
-#' \dontrun{
 #' # Minimal info by default
 #' trakt.shows.summary("breaking-bad")
-#'
+#' \dontrun{
 #' # More information
 #' trakt.shows.summary("breaking-bad", extended = "full")
 #'
 #' # Info for multiple movies
 #' trakt.movies.summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
 #' }
-trakt.media.summary <- function(type, target, extended = c("min", "full")) {
+trakt.media.summary <- function(type = c("movies", "shows"), target, extended = c("min", "full")) {
+  type <- match.arg(type)
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
