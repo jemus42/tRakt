@@ -10,7 +10,7 @@
 #' trakt.related("breaking-bad", "shows", limit = 5)
 #' }
 trakt.related <- function(target, type = c("shows", "movies"),
-                          limit = 10L, page = 1L,
+                          limit = 10L,
                           extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
@@ -21,7 +21,7 @@ trakt.related <- function(target, type = c("shows", "movies"),
 
   # Construct URL, make API call
   url <- build_trakt_url(type, target, "related", extended = extended,
-                         limit = limit, page = page)
+                         limit = limit)
   response <- trakt.api.call(url = url)
 
   # Flattening
@@ -36,7 +36,7 @@ trakt.related <- function(target, type = c("shows", "movies"),
 #' @rdname trakt.related
 #' @export
 trakt.movies.related <- function(target,
-                                 limit = 10L, page = 1L,
+                                 limit = 10L,
                                  extended = c("min", "full")) {
   trakt.related(target, type = "movies", extended = extended)
 }
@@ -44,7 +44,7 @@ trakt.movies.related <- function(target,
 #' @rdname trakt.related
 #' @export
 trakt.shows.related <- function(target,
-                                limit = 10L, page = 1L,
+                                limit = 10L,
                                 extended = c("min", "full")) {
   trakt.related(target, type = "shows", extended = extended)
 }

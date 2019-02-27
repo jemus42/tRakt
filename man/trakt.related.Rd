@@ -7,13 +7,11 @@
 \title{Search for related shows or movies}
 \usage{
 trakt.related(target, type = c("shows", "movies"), limit = 10L,
-  page = 1L, extended = c("min", "full"))
-
-trakt.movies.related(target, limit = 10L, page = 1L,
   extended = c("min", "full"))
 
-trakt.shows.related(target, limit = 10L, page = 1L,
-  extended = c("min", "full"))
+trakt.movies.related(target, limit = 10L, extended = c("min", "full"))
+
+trakt.shows.related(target, limit = 10L, extended = c("min", "full"))
 }
 \arguments{
 \item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
