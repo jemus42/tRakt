@@ -2,22 +2,10 @@
 % Please edit documentation in R/trakt.user.network.R
 \name{trakt.user.network}
 \alias{trakt.user.network}
-\alias{trakt.user.friends}
-\alias{trakt.user.followers}
-\alias{trakt.user.following}
-\title{Get a user's friends, followers or followings}
+\title{Get a user's social connections}
 \usage{
 trakt.user.network(relationship = c("friends", "followers", "following"),
   user = getOption("trakt.username"), extended = c("min", "full"))
-
-trakt.user.friends(user = getOption("trakt.username"),
-  extended = c("min", "full"))
-
-trakt.user.followers(user = getOption("trakt.username"),
-  extended = c("min", "full"))
-
-trakt.user.following(user = getOption("trakt.username"),
-  extended = c("min", "full"))
 }
 \arguments{
 \item{relationship}{\code{character(1) ["friends"]}: Type of user relationship. Either
@@ -34,17 +22,15 @@ returns more variables and should generally only be used if required.}
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-\code{trakt.user.friends} retrieves a user's friends, the two-way relationship
-of both following and being followed by a user.
+Retrieve a user's followers, followings or friends (the two-way relationship).
 }
 \note{
 Since no OAuth2 methods are supported yet, the specified user must not be private.
 }
 \examples{
 \dontrun{
-trakt.user.friends("jemus42")
-trakt.user.followers("jemus42")
-trakt.user.following("jemus42")
+trakt.user.network("friends", "jemus42")
+trakt.user.network("following", "jemus42")
 }
 }
 \seealso{

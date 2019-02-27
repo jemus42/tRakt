@@ -1,7 +1,6 @@
-#' Get a user's friends, followers or followings
+#' Get a user's social connections
 #'
-#' `trakt.user.friends` retrieves a user's friends, the two-way relationship
-#' of both following and being followed by a user.
+#' Retrieve a user's followers, followings or friends (the two-way relationship).
 #' @param relationship `character(1) ["friends"]`: Type of user relationship. Either
 #' `"friends"`, `"followers"`, or `"following"`.
 #' @inheritParams trakt_api_common_parameters
@@ -11,9 +10,8 @@
 #' @family user data
 #' @examples
 #' \dontrun{
-#' trakt.user.friends("jemus42")
-#' trakt.user.followers("jemus42")
-#' trakt.user.following("jemus42")
+#' trakt.user.network("friends", "jemus42")
+#' trakt.user.network("following", "jemus42")
 #' }
 trakt.user.network <- function(relationship = c("friends", "followers", "following"),
                                user = getOption("trakt.username"),
@@ -24,10 +22,7 @@ trakt.user.network <- function(relationship = c("friends", "followers", "followi
   relationship <- match.arg(relationship)
 
   if (length(user) > 1) {
-    response <- purrr::map_df(user, function(user) {
-      trakt.user.network(relationship = relationship, user = user, extended = extended)
-    })
-    return(response)
+    return(purrr::map_df(user, ~trakt.user.network(relationship, user = .x, extended)))
   }
 
   # Construct URL, make API call
@@ -47,30 +42,4 @@ trakt.user.network <- function(relationship = c("friends", "followers", "followi
   response <- convert_datetime(response)
 
   tibble::as_tibble(tibble::remove_rownames(response))
-}
-
-# Aliased/derived ----
-
-#' @rdname trakt.user.network
-#' @export
-trakt.user.friends <- function(user = getOption("trakt.username"),
-                               extended = c("min", "full")) {
-
-  trakt.user.network(relationship = "friends", user = user, extended = extended)
-}
-
-#' @rdname trakt.user.network
-#' @export
-trakt.user.followers <- function(user = getOption("trakt.username"),
-                                 extended = c("min", "full")) {
-
-  trakt.user.network(relationship = "followers", user = user, extended = extended)
-}
-
-#' @rdname trakt.user.network
-#' @export
-trakt.user.following <- function(user = getOption("trakt.username"),
-                                 extended = c("min", "full")) {
-
-  trakt.user.network(relationship = "following", user = user, extended = extended)
 }
