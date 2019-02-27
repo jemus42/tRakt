@@ -24,7 +24,6 @@
 #' @source [The trakt.tv API docs](https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results)
 #' @family API-basics
 #' @family search functions
-#' @importFrom utils head
 #' @examples
 #' \dontrun{
 #' # A show
@@ -46,14 +45,6 @@ trakt.search <- function(query, type = c("movie", "show", "episode", "person", "
   type <- match.arg(type)
   extended <- match.arg(extended)
 
-  # Down the line I'd like to support multi-type search, but it's hard
-  # accepted_types <- c("movie", "show", "episode", "person", "list")
-  #
-  # if (!all(type %in% accepted_types)) {
-  #   stop("Supplied search types must be in '", paste0(accepted_types, collapse = ", "), "'")
-  # }
-  # type_concat <- paste0(type, collapse = ",")
-
   # Construct URL, make API call
   url <- build_trakt_url("search", type, query = query, years = years, extended = extended)
   response <- trakt.api.call(url = url)
@@ -63,28 +54,7 @@ trakt.search <- function(query, type = c("movie", "show", "episode", "person", "
     return(response)
   }
 
-  # Just to be really safe it's always a numeric
-  response$score <- as.numeric(response$score)
-
-  if (type == "show" & extended == "full") {
-    response$show <- unpack_show(response$show)
-  }
-
-  response <- cbind(response[names(response) != type], response[[type]])
-
-  # Already handled by unpack_show so it would fail here
-  if (tibble::has_name(response, "ids")) {
-    response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
-  }
-
-  # Sanity filter: Remove items with a year of NA, like "show" + "tron"
-  # Happens for exact title matches (bumps "score") but e.g. false type in this case
-  response <- tibble::as_tibble(response)
-  if (tibble::has_name(response, "year")) {
-    response <- response[!(is.na(response$year) & response$score == 1000), ]
-  }
-  response <- utils::head(response, n_results)
-  response
+  search_result_cleanup(response, type, n_results, extended)
 }
 
 #' @rdname trakt.search
@@ -107,6 +77,15 @@ trakt.search.byid <- function(id, id_type = c("trakt" , "imdb" , "tmdb" , "tvdb"
     return(tibble::tibble())
   }
 
+  search_result_cleanup(response, type, n_results, extended)
+}
+
+#' Search helper function
+#' @keywords internal
+#' @importFrom utils head
+#' @noRd
+search_result_cleanup <- function(response, type, n_results, extended) {
+
   # Just to be really safe it's always a numeric
   response$score <- as.numeric(response$score)
 
@@ -127,6 +106,6 @@ trakt.search.byid <- function(id, id_type = c("trakt" , "imdb" , "tmdb" , "tvdb"
   if (tibble::has_name(response, "year")) {
     response <- response[!(is.na(response$year) & response$score == 1000), ]
   }
-  response <- utils::head(response, n_results)
-  response
+
+  utils::head(response, n_results)
 }

@@ -20,7 +20,7 @@ A \code{character} in the common \code{sXXeYY} format
 }
 \description{
 Simple function to ease the creation of \code{sXXeYY} episode ids.
-Note that \code{s} and \code{e} ust have the same length.
+Note that \code{s} and \code{e} must have the same length.
 }
 \note{
 I like my sXXeYY format, okay?

@@ -74,20 +74,32 @@ trakt_credentials <- function(username, client.id,
 #' and its content returned. This is useful if you are only interested in status codes
 #' or other headers, and don't want to waste resources on additional bandwidth.
 #' @return The [parsed][jsonlite::fromJSON] content of the API response.
-#' An empty [tibble][tibble::tibble-package] if the response is an empty array.
+#' An empty [tibble][tibble::tibble-package] if the response is an empty `JSON` array.
 #' @export
-#' @import httr
+#' @importFrom httr user_agent
+#' @importFrom httr add_headers
+#' @importFrom httr HEAD
+#' @importFrom httr GET
+#' @importFrom httr stop_for_status
+#' @importFrom httr content
 #' @importFrom jsonlite fromJSON
-#' @note This function is heavily used internally, so why not expose it to the user.
+#' @importFrom purrr flatten
 #' @family API-basics
 #' @examples
-#' \dontrun{
+#' # A simple request to a direct URL
 #' trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
 #'
+#' # A HEAD-only request useful for validating a URL exists
 #' trakt.api.call("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
-#' }
+#'
+#' # Optionally be lazy about URL specification (not encouraged):
+#' trakt.api.call("shows/game-of-thrones")
 trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
                            convert.datetime = TRUE, HEAD = FALSE) {
+
+  if (!grepl(pattern = "^https://api.trakt.tv", url)) {
+    url <- build_trakt_url(url)
+  }
 
   if (is.null(client.id)) {
     if (is.null(getOption("trakt.client.id"))) {

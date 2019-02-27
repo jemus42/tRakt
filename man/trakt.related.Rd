@@ -6,12 +6,14 @@
 \alias{trakt.shows.related}
 \title{Search for related shows or movies}
 \usage{
-trakt.related(target, type = c("shows", "movies"), extended = c("min",
-  "full"))
+trakt.related(target, type = c("shows", "movies"), limit = 10L,
+  page = 1L, extended = c("min", "full"))
 
-trakt.movies.related(target, extended = c("min", "full"))
+trakt.movies.related(target, limit = 10L, page = 1L,
+  extended = c("min", "full"))
 
-trakt.shows.related(target, extended = c("min", "full"))
+trakt.shows.related(target, limit = 10L, page = 1L,
+  extended = c("min", "full"))
 }
 \arguments{
 \item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
@@ -22,6 +24,9 @@ Can also be of length greater than 1, in which case the function is called on al
 
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 
+\item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
+than \code{0} and will be coerced to \code{integer}.}
+
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
 }
@@ -29,10 +34,10 @@ returns more variables and should generally only be used if required.}
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-Receive a set of shows that are related to a specific show/movie
+Receive a set of media items that are related to a specific show or movie.
 }
 \examples{
 \dontrun{
-trakt.related("breaking-bad", "shows")
+trakt.related("breaking-bad", "shows", limit = 5)
 }
 }

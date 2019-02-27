@@ -49,6 +49,7 @@ trakt.user.following("jemus42")
 }
 \seealso{
 Other user data: \code{\link{trakt.user.collection}},
+  \code{\link{trakt.user.history}},
   \code{\link{trakt.user.ratings}},
   \code{\link{trakt.user.stats}},
   \code{\link{trakt.user.watched}},

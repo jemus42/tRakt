@@ -22,20 +22,20 @@ or other headers, and don't want to waste resources on additional bandwidth.}
 }
 \value{
 The \link[jsonlite:fromJSON]{parsed} content of the API response.
-An empty \link[tibble:tibble-package]{tibble} if the response is an empty array.
+An empty \link[tibble:tibble-package]{tibble} if the response is an empty \code{JSON} array.
 }
 \description{
 \code{trakt.api.call} makes an API call to a specified URL and returns the parsed output.
 }
-\note{
-This function is heavily used internally, so why not expose it to the user.
-}
 \examples{
-\dontrun{
+# A simple request to a direct URL
 trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
 
+# A HEAD-only request useful for validating a URL exists
 trakt.api.call("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
-}
+
+# Optionally be lazy about URL specification (not encouraged):
+trakt.api.call("shows/game-of-thrones")
 }
 \seealso{
 Other API-basics: \code{\link{trakt.search}},

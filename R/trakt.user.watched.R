@@ -58,12 +58,12 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
     # and this way I don't have to use an extra if statement to check "noseasons"
   }
   if (type == "movies") {
-    response$movie$ids <- purrr::map_df(response$movie$ids, as.character)
+    response$movie$ids <- fix_ids(response$movie$ids)
     response$movie <- dplyr::bind_cols(response$movie %>% dplyr::select(-ids),
-                                       response$movie %>% dplyr::select(ids) %>% dplyr::pull(ids))
+                                       response$movie$ids)
 
     response <- dplyr::bind_cols(response %>% dplyr::select(-movie),
-                                 response %>% dplyr::select(movie) %>% dplyr::pull(movie))
+                                 response$movie)
   }
 
   # To be sure

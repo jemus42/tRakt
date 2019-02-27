@@ -36,6 +36,7 @@ sean_movies <- trakt.user.watchlist(user = "sean") # Defaults to movie watchlist
 }
 \seealso{
 Other user data: \code{\link{trakt.user.collection}},
+  \code{\link{trakt.user.history}},
   \code{\link{trakt.user.network}},
   \code{\link{trakt.user.ratings}},
   \code{\link{trakt.user.stats}},

@@ -21,6 +21,9 @@ Can also be of length greater than 1, in which case the function is called on al
 
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
+
+\item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
+than \code{0} and will be coerced to \code{integer}.}
 }
 \description{
 These parameters are used \emph{a lot} throughout this package, and they tend to be

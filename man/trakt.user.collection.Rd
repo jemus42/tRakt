@@ -31,7 +31,8 @@ seans.movies <- trakt.user.collection(user = "sean", type = "movies")
 }
 }
 \seealso{
-Other user data: \code{\link{trakt.user.network}},
+Other user data: \code{\link{trakt.user.history}},
+  \code{\link{trakt.user.network}},
   \code{\link{trakt.user.ratings}},
   \code{\link{trakt.user.stats}},
   \code{\link{trakt.user.watched}},

@@ -9,29 +9,28 @@
 \alias{trakt.watched}
 \title{See which movies / shows are popular}
 \usage{
-trakt.popular(type = c("shows", "movies"), limit = 10, page = 1,
+trakt.popular(type = c("shows", "movies"), limit = 10,
   extended = c("min", "full"))
 
-trakt.trending(type = c("shows", "movies"), limit = 10, page = 1,
+trakt.trending(type = c("shows", "movies"), limit = 10,
   extended = c("min", "full"))
 
-trakt.anticipated(type = c("shows", "movies"), limit = 10, page = 1,
+trakt.anticipated(type = c("shows", "movies"), limit = 10,
   extended = c("min", "full"))
 
-trakt.played(type = c("shows", "movies"), limit = 10, page = 1,
+trakt.played(type = c("shows", "movies"), limit = 10,
   extended = c("min", "full"), period = c("weekly", "monthly",
   "yearly", "all"))
 
-trakt.watched(type = c("shows", "movies"), limit = 10, page = 1,
+trakt.watched(type = c("shows", "movies"), limit = 10,
   extended = c("min", "full"), period = c("weekly", "monthly",
   "yearly", "all"))
 }
 \arguments{
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 
-\item{limit, page}{\code{integer(1) [10L], [1L]}: Number of items and page
-for paginated requests. Both values must be greater than \code{0} and will
-be coerced to \code{integer}.}
+\item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
+than \code{0} and will be coerced to \code{integer}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}

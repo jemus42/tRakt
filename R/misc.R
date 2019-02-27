@@ -1,7 +1,7 @@
 #' Easy episode id padding
 #'
 #' Simple function to ease the creation of `sXXeYY` episode ids.
-#' Note that `s` and `e` ust have the same length.
+#' Note that `s` and `e` must have the same length.
 #' @param s Input season number, coerced to `character`.
 #' @param e Input episode number, coerced to `character`.
 #' @param s_width The length of the season number padding. Defaults to 2.
@@ -46,7 +46,7 @@ convert_datetime <- function(response) {
   datevars <- c(
     "first_aired", "updated_at", "listed_at", "last_watched_at", "last_updated_at",
     "last_collected_at", "rated_at", "friends_at", "followed_at", "collected_at",
-    "joined_at"
+    "joined_at", "watched_at"
   )
 
   datevars <- datevars[datevars %in% names(response)]
@@ -147,15 +147,4 @@ check_username <- function(user, validate = FALSE) {
   }
   # Return TRUE if and only if everything else did not fail
   invisible(TRUE)
-}
-
-#' Fix IDs object
-#' @keywords internal
-#' Always return characters, replace NULL with explicit NA
-fix_ids <- function(ids) {
-  if (!inherits(ids, c("data.frame", "list"))) {
-    stop("ids must be list or data.frame")
-  }
-  purrr::modify_if(ids, is.null, ~return(NA_character_),
-                   .else = as.character)
 }

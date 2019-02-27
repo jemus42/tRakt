@@ -18,4 +18,6 @@
 #' `user` values separately and combined using [purrr::map_df].
 #' @param period `character(1) ["weekly"]`: Which period to filter by. Possible values
 #' are `"weekly"`, `"monthly"`, `"yearly"`, `"all"`.
+#' @param limit `integer(1) [10L]`: Number of items to return. Must be greater
+#' than `0` and will be coerced to `integer`.
 NULL
