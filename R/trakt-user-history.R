@@ -16,8 +16,10 @@
 #' duplicate variable names, the preferref handling of which is left to the user.
 #' @export
 #' @examples
+#' \dontrun{
 #' # The last 5 movies that user "jemus42" has watched
-#' trakt.user.history(user = "jemus42", type = "movies", limit = 5, extended = "min")
+#' trakt.user.history(user = "jemus42", type = "movies", limit = 5)
+#' }
 trakt.user.history <- function(user = getOption("trakt.username"),
                                type = c("shows", "movies"),
                                limit = 10L, start_at = NULL, end_at = NULL,

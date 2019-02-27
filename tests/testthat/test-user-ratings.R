@@ -5,25 +5,13 @@ test_that("trakt.user.ratings works", {
 
   user <- "jemus42"
 
-  rat_shows <- trakt.user.ratings(user = user, type = "shows")
-  rat_episo <- trakt.user.ratings(user = user, type = "episodes")
-  rat_movie <- trakt.user.ratings(user = user, type = "movies")
+  trakt.user.ratings(user = user, type = "shows") %>%
+    expect_is("tbl")
+  trakt.user.ratings(user = user, type = "episodes") %>%
+    expect_is("tbl")
+  trakt.user.ratings(user = user, type = "movies") %>%
+    expect_is("tbl")
 
-  expect_identical(rat_shows, trakt.user.ratings(user = user))
-
-  expect_named(rat_shows, c(
-    "rated_at", "rating", "type", "title", "year", "trakt", "slug",
-    "tvdb", "imdb", "tmdb"
-  ))
-
-  expect_named(rat_movie, c(
-    "rated_at", "rating", "type", "title", "year", "trakt", "slug",
-    "imdb", "tmdb"
-  ))
-
-  expect_is(rat_shows, "tbl")
-  expect_is(rat_episo, "tbl")
-  expect_is(rat_movie, "tbl")
 
   # Error conditions ----
   expect_error(trakt.user.ratings(user = -1))
