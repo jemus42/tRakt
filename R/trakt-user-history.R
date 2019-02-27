@@ -5,7 +5,6 @@
 #' @inheritParams trakt_api_common_parameters
 #' @param start_at,end_at `character(1)`: A time-window to filter by. Must be coercible
 #' to a datetime object of class `POSIXct`. See [ISOdate] for further information.
-#' @export
 #' @family user data
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select

@@ -34,8 +34,10 @@ Retrieve a the last \code{limit} items a user has watched, including the method 
 which it was logged (e.g. \emph{scrobble} or \emph{checkin}).
 }
 \examples{
+\dontrun{
 # The last 5 movies that user "jemus42" has watched
-trakt.user.history(user = "jemus42", type = "movies", limit = 5, extended = "min")
+trakt.user.history(user = "jemus42", type = "movies", limit = 5)
+}
 }
 \seealso{
 Other user data: \code{\link{trakt.user.collection}},
