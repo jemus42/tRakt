@@ -36,8 +36,8 @@ trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated",
   extended  <- match.arg(extended)
   limit     <- as.integer(limit)
 
-  if (limit < 1 | page < 1) {
-    stop("Limit and page must be greater than zero")
+  if (limit < 1) {
+    stop("'limit' must be greater than zero, supplied <", limit, ">")
   }
 
   # Construct URL, make API call
