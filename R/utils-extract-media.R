@@ -45,7 +45,8 @@ unpack_show <- function(show) {
 #' @noRd
 fix_ratings <- function(response) {
   if (!(tibble::has_name(response, "rating") & tibble::has_name(response, "votes"))) {
-    stop("response must include both 'rating' and 'votes' variables")
+    # Robustness towards usage in extended = "min" context, means less if'ing
+    return(response)
   }
   response$rating <- dplyr::if_else(response$votes == 0, NA_real_, response$rating)
   response
