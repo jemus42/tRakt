@@ -7,7 +7,7 @@ test_that("trakt.seasons.season works", {
 
   min_names <- c(
     "season", "episode", "title", "trakt", "tvdb",
-    "imdb", "tmdb", "tvrage"
+    "imdb", "tmdb"
   )
 
   min_s1_single <- trakt.seasons.season(target = target, seasons = 1, extended = "min")
@@ -55,8 +55,8 @@ test_that("trakt.seasons.summary works", {
 
   expect_is(result_min, "tbl")
   expect_is(result_max, "tbl")
-  expect_equal(ncol(result_min), 5)
-  expect_equal(ncol(result_max), 13)
+  expect_equal(ncol(result_min), 4)
+  expect_equal(ncol(result_max), 12)
 
   expect_lt(length(result_min), length(result_max))
   expect_equal(nrow(result_min), nrow(result_max))

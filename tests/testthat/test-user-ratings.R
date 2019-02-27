@@ -2,7 +2,7 @@ context("test-user-ratings")
 
 test_that("trakt.user.ratings works", {
   skip_on_cran()
-  
+
   user <- "jemus42"
 
   rat_shows <- trakt.user.ratings(user = user, type = "shows")
@@ -13,14 +13,14 @@ test_that("trakt.user.ratings works", {
 
   expect_named(rat_shows, c(
     "rated_at", "rating", "type", "title", "year", "trakt", "slug",
-    "tvdb", "imdb", "tmdb", "tvrage"
+    "tvdb", "imdb", "tmdb"
   ))
 
   expect_named(rat_episo, c(
     "rated_at", "rating", "type", "season", "episode", "title",
     "episode.trakt", "episode.tvdb", "episode.imdb", "episode.tmdb",
-    "episode.tvrage", "show.title", "show.year", "show.trakt", "show.slug",
-    "show.tvdb", "show.imdb", "show.tmdb", "show.tvrage"
+    "show.title", "show.year", "show.trakt", "show.slug",
+    "show.tvdb", "show.imdb", "show.tmdb"
   ))
 
   expect_named(rat_movie, c(
