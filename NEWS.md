@@ -18,6 +18,7 @@ This is a big one, like v1.0.0 big one.
 - Improved search function (`trakt.search`). 
   - If the result has a `year` that is `NA` but a search `score == 1000`, that's probably bad and dropped.
 - Added more of the automated list methods, like most anticipated, most played and most watched items.
+- Added `trakt.user.history` for user/:id/history methods
 
 # tRakt 0.14.0
 
