@@ -17,7 +17,7 @@
 \item{comment_count}{Number of comments on episode page}
 \item{first_aired, updated_at}{Original air date and last update in UTC as \code{POSIXct}}
 \item{runtime}{Runtime in minutes}
-\item{trakt, tvdb, tmdb, tvrage}{Episode IDs for trakt.tv, TVDb, and TMDb}
+\item{trakt, tvdb, tmdb}{Episode IDs for trakt.tv, TVDb, and TMDb}
 \item{year}{Year of first airing}
 \item{epid}{Episode ID in \code{s00e00} format}
 }}

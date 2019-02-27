@@ -5,7 +5,7 @@
 \title{Get a user's ratings}
 \usage{
 trakt.user.ratings(user = getOption("trakt.username"),
-  type = c("shows", "episodes", "movies"), rating = NULL)
+  type = c("movies", "seasons", "shows", "episodes"), rating = NULL)
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
@@ -22,13 +22,10 @@ A \link[tibble:tibble-package]{tibble}.
 \description{
 \code{trakt.user.ratings} retrieves a user's ratings
 }
-\note{
-See \href{http://docs.trakt.apiary.io/reference/users/ratings/get-ratings}{the trakt API docs for further info}
-}
 \examples{
 \dontrun{
-ratedshows <- trakt.user.ratings()
-ratedmovies <- trakt.user.ratings(type = "movies")
+trakt.user.ratings(user = "jemus42")
+trakt.user.ratings(user = "jemus42", type = "movies")
 }
 }
 \seealso{

@@ -16,13 +16,6 @@ test_that("trakt.user.ratings works", {
     "tvdb", "imdb", "tmdb"
   ))
 
-  expect_named(rat_episo, c(
-    "rated_at", "rating", "type", "season", "episode", "title",
-    "episode.trakt", "episode.tvdb", "episode.imdb", "episode.tmdb",
-    "show.title", "show.year", "show.trakt", "show.slug",
-    "show.tvdb", "show.imdb", "show.tmdb"
-  ))
-
   expect_named(rat_movie, c(
     "rated_at", "rating", "type", "title", "year", "trakt", "slug",
     "imdb", "tmdb"
