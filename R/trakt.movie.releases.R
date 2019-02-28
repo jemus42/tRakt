@@ -16,20 +16,15 @@
 #' }
 trakt.movies.releases <- function(target, country = NULL) {
   if (length(target) > 1) {
-    response <- purrr::map_df(target, function(t) {
-      response <- trakt.movies.releases(target = t, country = country)
-      response$movie <- t
-
-      return(response)
-    })
-    return(response)
+    return(purrr::map_df(target, ~trakt.movies.releases(target = .x, country = country)))
   }
 
   # Construct URL, make API call
   url <- build_trakt_url("movies", target, "releases", country = country)
   response <- trakt.api.call(url = url)
 
-  response$release_date <- lubridate::as_date(response$release_date)
-
-  tibble::as_tibble(response)
+  response %>%
+    fix_datetime() %>%
+    mutate(movie = target) %>%
+    as_tibble()
 }
