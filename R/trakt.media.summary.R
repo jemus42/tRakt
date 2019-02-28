@@ -4,10 +4,7 @@
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @family summary data
-#' @export
-#' @importFrom purrr map_df
-#' @importFrom purrr flatten_df
-#' @importFrom tibble has_name
+#' @name media_summary
 #' @examples
 #' # Minimal info by default
 #' trakt.shows.summary("breaking-bad")
@@ -18,12 +15,20 @@
 #' # Info for multiple movies
 #' trakt.movies.summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
 #' }
+NULL
+
+#' @keywords internal
+#' @noRd
+#' @importFrom purrr map_df
+#' @importFrom purrr flatten_df
+#' @importFrom tibble has_name
+#' @importFrom lubridate as_datetime
 trakt.media.summary <- function(type = c("movies", "shows"), target, extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
-    response <- purrr::map_df(target, function(t) {
+    response <- map_df(target, function(t) {
       trakt.media.summary(type = type, target = t, extended = extended)
     })
     return(response)
@@ -36,7 +41,7 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
   # Sometimes IDs are NULL which is bad. See target = "67188"
   response$ids <- fix_ids(response$ids)
 
-  if (tibble::has_name(response, "airs")) {
+  if (has_name(response, "airs")) {
     names(response$airs) <- paste0("airs_", names(response$airs))
   }
 
@@ -52,16 +57,16 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
     response$genres <- genres
     response$available_translations <- transl
 
-    if (tibble::has_name(response, "released")) {
-      response$released <- lubridate::as_datetime(response$released, tz = "UTC")
+    if (has_name(response, "released")) {
+      response$released <- as_datetime(response$released, tz = "UTC")
     }
 
     # flatten_df breaks POSIXct classes – not intended behavior
     # https://github.com/tidyverse/purrr/issues/648
-    if (tibble::has_name(response, "first_aired")) {
-      response$first_aired <- lubridate::as_datetime(response$first_aired, tz = "UTC")
+    if (has_name(response, "first_aired")) {
+      response$first_aired <- as_datetime(response$first_aired, tz = "UTC")
     }
-    response$updated_at <- lubridate::as_datetime(response$updated_at, tz = "UTC")
+    response$updated_at <- as_datetime(response$updated_at, tz = "UTC")
   } else {
     response <- flatten_df(response)
   }
@@ -71,13 +76,13 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
 
 # Derived ----
 
-#' @rdname trakt.media.summary
+#' @rdname media_summary
 #' @export
 trakt.movies.summary <- function(target, extended = c("min", "full")) {
   trakt.media.summary(type = "movies", target = target, extended = extended)
 }
 
-#' @rdname trakt.media.summary
+#' @rdname media_summary
 #' @export
 trakt.shows.summary <- function(target, extended = c("min", "full")) {
   trakt.media.summary(type = "shows", target = target, extended = extended)

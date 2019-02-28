@@ -12,5 +12,5 @@ test_that("trakt.movies.releases works", {
   expect_is(mov, "tbl")
   expect_gte(nrow(mov), nrow(mov_de))
   expect_is(mov_multi, "tbl")
-  expect_length(mov_multi, length(mov) + 1)
+  expect_length(mov_multi, length(mov))
 })

@@ -12,7 +12,7 @@ test_that("trakt.[shows|movies].ratings works", {
   expect_equal(ncol(ratings_show), 5)
   expect_equal(ncol(ratings_movie), 5)
 
-  expected_names <- c("id", "type", "votes", "rating", "distribution")
+  expected_names <- c("rating", "votes", "distribution", "id", "type")
 
   expect_named(ratings_show, expected_names)
   expect_named(ratings_movie, expected_names)
@@ -25,8 +25,8 @@ test_that("season and episode ratings work", {
   season <- 1:2
   episode <- 1:2
 
-  ratings_season_names <- c("id", "season", "votes", "rating", "distribution")
-  ratings_episode_names <- c("id", "season", "episode", "votes", "rating", "distribution")
+  ratings_season_names <- c("rating", "votes", "distribution", "id", "season")
+  ratings_episode_names <- c(ratings_season_names, "episode")
 
   trakt.seasons.ratings(target, season) %>%
     expect_is("tbl") %>%

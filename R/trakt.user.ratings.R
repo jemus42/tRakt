@@ -56,8 +56,7 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
      response$episode <- dplyr::bind_cols(response$episode %>% select(-ids),
                                           fix_ids(response$episode$ids)) %>%
        as_tibble() %>%
-       rename(episode = number,
-              episode_abs = number_abs)
+       set_names(., sub("number", "episode", names(.)))
 
      response$show <- unpack_show(response$show)
   }

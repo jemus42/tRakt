@@ -61,11 +61,11 @@ trakt.movies.ratings <- function(target) {
 #' @export
 trakt.seasons.ratings <- function(target, season = 1L) {
   if (length(target) > 1) {
-    return(purrr::map_df(target, ~trakt.episodes.ratings(.x, season, episode)))
+    return(purrr::map_df(target, ~trakt.seasons.ratings(.x, season)))
   }
 
   if (length(season) > 1) {
-    return(purrr::map_df(episode, ~trakt.episodes.ratings(target, .x, episode)))
+    return(purrr::map_df(episode, ~trakt.seasons.ratings(target, .x)))
   }
 
   # Construct URL, make API call
