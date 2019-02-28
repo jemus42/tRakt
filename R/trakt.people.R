@@ -19,10 +19,7 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
-    response <- purrr::map_df(target, function(target) {
-      trakt.people.summary(target = target, extended = extended)
-    })
-    return(response)
+    return(purrr::map_df(target, ~trakt.people.summary(.x, extended)))
   }
 
   # Construct URL, make API call
@@ -30,8 +27,7 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
   response <- trakt.api.call(url = url)
 
   # Substitute NULLs with explicit NAs and flatten IDs
-  response$ids <- purrr::modify_if(response$ids, is.null,
-                                   function(x) return(NA_character_))
+  response$ids <- fix_ids(response$ids)
   response <- purrr::modify_if(response, is.null,
                                function(x) return(NA_character_))
   response <- purrr::flatten_df(response)
@@ -46,13 +42,16 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
 #' Returns all movies or shows where this person is in the cast or crew.
 #' @inheritParams trakt_api_common_parameters
 #' @return A `list`.
-#' @export
+#' @name people_media
 #' @family people data
 #' @seealso [trakt.media.people], for the other direction: Media that has people.
 #' @examples
 #' \dontrun{
 #' trakt.people.movies("bryan-cranston")
 #' }
+NULL
+
+#' @keywords internal
 trakt.people.media <- function(type = c("shows", "movies"), target,
                                extended = c("min", "full")) {
   extended <- match.arg(extended)
@@ -63,13 +62,13 @@ trakt.people.media <- function(type = c("shows", "movies"), target,
   trakt.api.call(url = url)
 }
 
-#' @rdname trakt.people.media
+#' @rdname people_media
 #' @export
 trakt.people.movies <- function(target, extended = c("min", "full")) {
   trakt.people.media(type = "movies", target = target, extended = extended)
 }
 
-#' @rdname trakt.people.media
+#' @rdname people_media
 #' @export
 trakt.people.shows <- function(target, extended = c("min", "full")) {
   trakt.people.media(type = "shows", target = target, extended = extended)
@@ -83,7 +82,7 @@ trakt.people.shows <- function(target, extended = c("min", "full")) {
 #' available.
 #' @inheritParams trakt_api_common_parameters
 #' @return A `list`.
-#' @export
+#' @name media_people
 #' @family people data
 #' @seealso [trakt.people.media], for the other direction: People that have credits.
 #' @examples
@@ -91,6 +90,8 @@ trakt.people.shows <- function(target, extended = c("min", "full")) {
 #' breakingbad.people <- trakt.show.people("breaking-bad")
 #' }
 #'
+
+#' @keywords internal
 trakt.media.people <- function(type = c("shows", "movies"), target,
                                extended = c("min", "full")) {
 
@@ -114,13 +115,13 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
   response
 }
 
-#' @rdname trakt.media.people
+#' @rdname media_people
 #' @export
 trakt.shows.people <- function(target, extended = c("min", "full")) {
   trakt.media.people(type = "shows", target = target, extended = extended)
 }
 
-#' @rdname trakt.media.people
+#' @rdname media_people
 #' @export
 trakt.movies.people <- function(target, extended = c("min", "full")) {
   trakt.media.people(type = "movies", target = target, extended = extended)

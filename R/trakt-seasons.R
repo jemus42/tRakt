@@ -46,7 +46,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
   # Spreading out ids to get a flat data.frame
   response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
 
-  # If full data is pulled, ehance the dataset a little
+  # If full data is pulled, enhance the dataset a little
   if ("first_aired" %in% names(response)) {
     response$year <- lubridate::year(response$first_aired)
   }

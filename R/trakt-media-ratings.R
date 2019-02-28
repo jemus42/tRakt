@@ -38,7 +38,7 @@ trakt.media.ratings <- function(type = c("shows", "movies"), target) {
   response <- trakt.api.call(url = url)
 
   response %>%
-    fix_datings_distribution() %>%
+    fix_ratings_distribution() %>%
     as_tibble() %>%
     mutate(id = target,
            type = type)
@@ -79,7 +79,7 @@ trakt.seasons.ratings <- function(target, season = 1L) {
   response <- trakt.api.call(url = url)
 
   response %>%
-    fix_datings_distribution() %>%
+    fix_ratings_distribution() %>%
     as_tibble() %>%
     mutate(id = target,
            season = season)
@@ -109,7 +109,7 @@ trakt.episodes.ratings <- function(target, season = 1L, episode = 1L) {
   response <- trakt.api.call(url = url)
 
   response %>%
-    fix_datings_distribution() %>%
+    fix_ratings_distribution() %>%
     as_tibble() %>%
     mutate(id = target,
            season = season,

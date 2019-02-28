@@ -6,6 +6,7 @@
 #' @return A [tibble][tibble::tibble-package].
 #' @export
 #' @family user data
+#' @importFrom dplyr bind_cols
 #' @examples
 #' \dontrun{
 #' trakt.user.ratings(user = "jemus42")
@@ -35,13 +36,13 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
 
   if (type == "shows") {
     response <- response %>% select(-show) %>%
-        dplyr::bind_cols(unpack_show(response$show))
+        bind_cols(unpack_show(response$show))
   }
 
   if (type == "seasons") {
     # Also keeping seasons and show object separate, see comment below
-    response$season <- dplyr::bind_cols(response$season %>% select(-ids),
-                                         fix_ids(response$season$ids)) %>%
+    response$season <- bind_cols(response$season %>% select(-ids),
+                                 fix_ids(response$season$ids)) %>%
       as_tibble() %>%
       rename(season = number) %>%
       fix_datetime()
@@ -53,8 +54,8 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
     # Keep episode and show objects as separate list-like items so
     # the result is still data.frame-ish enough and duplicate names
     # don't cause headaches that way. Not perfectly tidy, but tidy enough.
-     response$episode <- dplyr::bind_cols(response$episode %>% select(-ids),
-                                          fix_ids(response$episode$ids)) %>%
+     response$episode <- bind_cols(response$episode %>% select(-ids),
+                                   fix_ids(response$episode$ids)) %>%
        as_tibble() %>%
        set_names(., sub("number", "episode", names(.)))
 

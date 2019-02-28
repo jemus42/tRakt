@@ -126,7 +126,7 @@ fix_datetime <- function(response) {
 
 # Unpack the ratings distribution my tibblurazing them
 #' @keywords internal
-fix_datings_distribution <- function(response) {
+fix_ratings_distribution <- function(response) {
   if (!tibble::has_name(response, "distribution")) {
     return(response)
   }

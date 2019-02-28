@@ -31,7 +31,7 @@ more_people <- trakt.people.summary(c("kit-harington", "emilia-clarke"))
 }
 }
 \seealso{
-Other people data: \code{\link{trakt.media.people}},
-  \code{\link{trakt.people.media}}
+Other people data: \code{\link{media_people}},
+  \code{\link{people_media}}
 }
 \concept{people data}
