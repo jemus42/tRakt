@@ -33,10 +33,28 @@ unpack_show <- function(show) {
   show <- show %>%
     dplyr::select(-ids) %>%
     dplyr::bind_cols(fix_ids(show$ids)) %>%
-    as_tibble()
+    as_tibble() %>%
+    fix_datetime()
 
   show
 }
+
+#' Unpack movie object
+#' @keywords internal
+#' @noRd
+unpack_movie <- function(response) {
+  if (!tibble::has_name(response, "movie")) {
+    return(response)
+  }
+
+  dplyr::bind_cols(
+    response %>% select(-movie),
+    response$movie %>% select(-ids),
+    response$movie$ids %>% fix_ids()
+  ) %>%
+    fix_datetime()
+}
+
 
 # Fixers ----
 
@@ -81,6 +99,7 @@ fix_ids <- function(ids) {
 #' @importFrom dplyr mutate_at
 #' @importFrom purrr map_at
 #' @keywords internal
+#' @noRd
 fix_datetime <- function(response) {
   if (!inherits(response, c("data.frame", "list"))) {
     stop("Object type not supported, must inherit from data.frame or list")

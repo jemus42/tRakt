@@ -6,13 +6,13 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' trakt.shows.stats("breaking-bad")
+#' trakt.shows.stats(c("breaking-bad", "game-of-thrones"))
 #' }
 trakt.media.stats <- function(type = c("shows", "movies"), target) {
   type <- match.arg(type)
 
   if (length(target) > 1) {
-    res <- purrr::map_df(target, ~ trakt.media.stats(type = type, .x))
+    res <- purrr::map_df(target, ~ trakt.media.stats(type, .x))
     return(res)
   }
 

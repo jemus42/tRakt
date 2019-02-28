@@ -13,9 +13,10 @@
 #' }
 trakt.user.ratings <- function(user = getOption("trakt.username"),
                                type = c("movies", "seasons", "shows", "episodes"),
-                               rating = NULL) {
+                               rating = NULL, extended = c("min", "full")) {
   check_username(user)
   type <- match.arg(type)
+  extended <- match.arg(extended)
 
   if (!is.null(rating)) {
     if (!(as.numeric(rating) %in% 1:10)) {
@@ -24,16 +25,12 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url("users", user, "ratings", type, rating)
+  url <- build_trakt_url("users", user, "ratings", type, rating, extended = extended)
   response <- trakt.api.call(url = url)
 
   # Flattening
   if (type == "movies") {
-    response <- dplyr::bind_cols(
-      response %>% select(-movie),
-      response$movie %>% select(-ids),
-      response$movie$ids %>% fix_ids()
-    )
+    response <- unpack_movie(response)
   }
 
   if (type == "shows") {
@@ -42,8 +39,12 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
   }
 
   if (type == "episodes") {
+    # Keep episode and show objects as separate list items
+    # the result is still data.frame-ish enough and duplicate names
+    # don't cause headaches that way. Not perfectly tidy, but tidy enough.
      response$episode$ids <- fix_ids(response$episode$ids)
-     response$episode <- dplyr::bind_cols(response$episode %>% select(-ids), response$episode$ids) %>%
+     response$episode <- dplyr::bind_cols(response$episode %>% select(-ids),
+                                          response$episode$ids) %>%
        as_tibble() %>%
        rename(episode = number)
      response$show <- unpack_show(response$show)
