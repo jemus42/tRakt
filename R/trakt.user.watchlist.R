@@ -5,7 +5,6 @@
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @export
-#' @note See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{the trakt API docs for further info}
 #' @family user data
 #' @examples
 #' \dontrun{

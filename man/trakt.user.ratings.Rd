@@ -24,7 +24,7 @@ returns more variables and should generally only be used if required.}
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-\code{trakt.user.ratings} retrieves a user's media ratings
+Retrieve a user's media ratings
 }
 \examples{
 \dontrun{

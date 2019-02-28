@@ -21,9 +21,11 @@ test_that("trakt.[shows|movies].ratings works", {
 })
 
 test_that("season and episode ratings work", {
+  skip_on_cran()
+
   target <- c("futurama", "the-simpsons")
   season <- 1:2
-  episode <- 1:2
+  episode <- 3:4
 
   ratings_season_names <- c("rating", "votes", "distribution", "id", "season")
   ratings_episode_names <- c(ratings_season_names, "episode")

@@ -24,9 +24,6 @@ A \link[tibble:tibble-package]{tibble}.
 \code{trakt.user.watchlist} pulls a user's watchlist.
 Either all shows or movies currently watchlisted will be returned.
 }
-\note{
-See \href{http://docs.trakt.apiary.io/#reference/users/ratings/get-watchlist}{the trakt API docs for further info}
-}
 \examples{
 \dontrun{
 library(tRakt)

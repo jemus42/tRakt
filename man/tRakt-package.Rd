@@ -6,10 +6,10 @@
 \alias{tRakt-package}
 \title{tRakt: Get Data from 'trakt.tv'}
 \description{
-A wrapper for the <https://trakt.tv> API to retrieve data
-    about shows and movies, including user ratings, credits and related
-    metadata. Additional functions retrieve user-specific information
-    including collections and history of watched items. A full
+A wrapper for the <https://trakt.tv> API to
+    retrieve data about shows and movies, including user ratings, credits
+    and related metadata. Additional functions retrieve user-specific
+    information including collections and history of watched items. A full
     API reference is available at <https://trakt.docs.apiary.io>.
 }
 \seealso{

@@ -65,7 +65,7 @@ trakt.seasons.ratings <- function(target, season = 1L) {
   }
 
   if (length(season) > 1) {
-    return(purrr::map_df(episode, ~trakt.seasons.ratings(target, .x)))
+    return(purrr::map_df(season, ~trakt.seasons.ratings(target, .x)))
   }
 
   # Construct URL, make API call
@@ -88,7 +88,7 @@ trakt.episodes.ratings <- function(target, season = 1L, episode = 1L) {
   }
 
   if (length(season) > 1) {
-    return(purrr::map_df(episode, ~trakt.episodes.ratings(target, .x, episode)))
+    return(purrr::map_df(season, ~trakt.episodes.ratings(target, .x, episode)))
   }
 
   if (length(episode) > 1) {
