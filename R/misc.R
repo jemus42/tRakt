@@ -87,35 +87,3 @@ build_trakt_url <- function(..., validate = FALSE) {
 
   url
 }
-
-#' Check username
-#'
-#' @param user The username input.
-#' @param validate `logical(1) [TRUE]`: Retrieve user profile to check if it exists.
-#' @return An error if the checks fail or else `TRUE` invisibly. If `validate`, the
-#' user profile is returned as a `list`.
-#' @keywords internal
-#' @importFrom httr stop_for_status
-check_username <- function(user, validate = FALSE) {
-  fail_option <- is.null(getOption("trakt.username"))
-  fail_empty_chr <- user == ""
-  fail_null <- is.null(user)
-  fail_chr <- !is.character(user)
-  fail_na <- is.na(user)
-
-  failed <- any(fail_option, fail_empty_chr, fail_null, fail_chr, fail_na)
-
-  if (failed) {
-    stop("Supplied user must be a character string, you provided <", user, ">")
-  }
-
-  if (validate) {
-    url <- build_trakt_url("users", user)
-    response <- trakt.api.call(url, HEAD = TRUE)
-    if (!identical(response$status, 200L)) {
-      httr::stop_for_status(response$status)
-    }
-  }
-  # Return TRUE if and only if everything else did not fail
-  invisible(TRUE)
-}
