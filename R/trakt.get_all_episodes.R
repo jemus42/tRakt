@@ -54,9 +54,9 @@ trakt.get_all_episodes <- function(target, season_nums = NULL, extended = "full"
 
   # Arrange appropriately
   episode_pad <- ifelse(nrow(show.episodes) > 90, 3, 2)
-  show.episodes$epid <- tRakt::pad(show.episodes$season,
-                                   show.episodes$episode,
-                                   e_width = episode_pad)
+  show.episodes$epid <- pad(show.episodes$season,
+                            show.episodes$episode,
+                            e_width = episode_pad)
 
   # Add things
   if (extended == "full") {
