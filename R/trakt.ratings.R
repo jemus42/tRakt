@@ -27,27 +27,18 @@ trakt.media.ratings <- function(type = c("shows", "movies"), target) {
   type <- match.arg(type)
 
   if (length(target) > 1) {
-    ret <- purrr::map_df(target, function(t) {
-      trakt.media.ratings(type = type, target = t)
-    })
-    return(ret)
+    return(purrr::map_df(target, ~trakt.media.ratings(type = type, target = .x)))
   }
 
   # Construct URL, make API call
   url <- build_trakt_url(type, target, "ratings")
   response <- trakt.api.call(url = url)
 
-  response$distribution <- tibble::enframe(unlist(response$distribution),
-                                           name = "rating", value = "n")
-  response$distribution$rating <- as.integer(response$distribution$rating)
-
-  tibble::tibble(
-    id = target,
-    type = type,
-    votes = response$votes,
-    rating = response$rating,
-    distribution = list(response$distribution)
-  )
+  response %>%
+    fix_datings_distribution() %>%
+    as_tibble() %>%
+    mutate(id = target,
+           type = type)
 }
 
 # Aliases for show/movie ratings ----
@@ -67,81 +58,51 @@ trakt.movies.ratings <- function(target) {
 # Seasons and episodes ratings ----
 
 #' @rdname media_ratings
-#' @param season `integer(1) [1L]`: The season number. If longer, e.g. `1:5`, the function
-#' is vectorized and the output will be combined via [purrr::map_df].
 #' @export
-trakt.seasons.ratings <- function(target, season = 1) {
+trakt.seasons.ratings <- function(target, season = 1L) {
   if (length(target) > 1) {
-    ret <- purrr::map_df(target, function(t) {
-      trakt.seasons.ratings(target = t, season = season)
-    })
-    return(ret)
+    return(purrr::map_df(target, ~trakt.episodes.ratings(.x, season, episode)))
   }
 
   if (length(season) > 1) {
-    ret <- purrr::map_df(season, function(season) {
-      trakt.seasons.ratings(target = target, season = season)
-    })
-    return(ret)
+    return(purrr::map_df(episode, ~trakt.episodes.ratings(target, .x, episode)))
   }
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", target, "seasons", season, "ratings")
   response <- trakt.api.call(url = url)
 
-  response$distribution <- tibble::enframe(unlist(response$distribution),
-                                           name = "rating", value = "n")
-  response$distribution$rating <- as.integer(response$distribution$rating)
-
-  tibble::tibble(
-    id = target,
-    season = season,
-    votes = response$votes,
-    rating = response$rating,
-    distribution = list(response$distribution)
-  )
+  response %>%
+    fix_datings_distribution() %>%
+    as_tibble() %>%
+    mutate(id = target,
+           season = season)
 }
 
 #' @rdname media_ratings
-#' @param episode `integer(1) [1L]`: The episode number. If longer, e.g. `1:13`, the function
-#' is vectorized and the output will be combined via [purrr::map_df].
 #' @export
-trakt.episodes.ratings <- function(target, season = 1, episode = 1) {
+trakt.episodes.ratings <- function(target, season = 1L, episode = 1L) {
+
   if (length(target) > 1) {
-    ret <- purrr::map_df(target, function(t) {
-      trakt.episodes.ratings(target = t, season = season, episode = episode)
-    })
-    return(ret)
+    return(purrr::map_df(target, ~trakt.episodes.ratings(.x, season, episode)))
   }
 
   if (length(season) > 1) {
-    ret <- purrr::map_df(season, function(season) {
-      trakt.episodes.ratings(target = target, season = season, episode = episode)
-    })
-    return(ret)
+    return(purrr::map_df(episode, ~trakt.episodes.ratings(target, .x, episode)))
   }
 
   if (length(episode) > 1) {
-    ret <- purrr::map_df(episode, function(episode) {
-      trakt.episodes.ratings(target = target, season = season, episode = episode)
-    })
-    return(ret)
+    return(purrr::map_df(episode, ~trakt.episodes.ratings(target, season, .x)))
   }
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", target, "seasons", season, "episodes", episode, "ratings")
   response <- trakt.api.call(url = url)
 
-  response$distribution <- tibble::enframe(unlist(response$distribution),
-                                           name = "rating", value = "n")
-  response$distribution$rating <- as.integer(response$distribution$rating)
-
-  tibble::tibble(
-    id = target,
-    season = season,
-    episode = episode,
-    votes = response$votes,
-    rating = response$rating,
-    distribution = list(response$distribution)
-  )
+  response %>%
+    fix_datings_distribution() %>%
+    as_tibble() %>%
+    mutate(id = target,
+           season = season,
+           episode = episode)
 }

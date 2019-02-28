@@ -15,4 +15,3 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.httr-oauth$
-.travis.yml

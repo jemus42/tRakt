@@ -12,9 +12,9 @@ trakt.shows.ratings(target)
 
 trakt.movies.ratings(target)
 
-trakt.seasons.ratings(target, season = 1)
+trakt.seasons.ratings(target, season = 1L)
 
-trakt.episodes.ratings(target, season = 1, episode = 1)
+trakt.episodes.ratings(target, season = 1L, episode = 1L)
 }
 \arguments{
 \item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
@@ -23,11 +23,13 @@ trakt.episodes.ratings(target, season = 1, episode = 1)
 Can also be of length greater than 1, in which case the function is called on all
 \code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df} if possible.}
 
-\item{season}{\code{integer(1) [1L]}: The season number. If longer, e.g. \code{1:5}, the function
-is vectorized and the output will be combined via \link[purrr:map_df]{purrr::map_df}.}
+\item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+e.g. \code{1:5}, the function is vectorized and the output will be
+combined via \link[purrr:map_df]{purrr::map_df}. This may result in \emph{a lot} of API calls. Use wisely.}
 
-\item{episode}{\code{integer(1) [1L]}: The episode number. If longer, e.g. \code{1:13}, the function
-is vectorized and the output will be combined via \link[purrr:map_df]{purrr::map_df}.}
+\item{episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+e.g. \code{1:5}, the function is vectorized and the output will be
+combined via \link[purrr:map_df]{purrr::map_df}. This may result in \emph{a lot} of API calls. Use wisely.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.

@@ -123,3 +123,17 @@ fix_datetime <- function(response) {
     purrr::map_at(response, datevars, lubridate::ymd_hms)
   }
 }
+
+# Unpack the ratings distribution my tibblurazing them
+#' @keywords internal
+fix_datings_distribution <- function(response) {
+  if (!tibble::has_name(response, "distribution")) {
+    return(response)
+  }
+
+  response$distribution <- tibble::enframe(unlist(response$distribution),
+                                           name = "rating", value = "n")
+  response$distribution$rating <- as.integer(response$distribution$rating)
+  response$distribution <- list(response$distribution)
+  response
+}

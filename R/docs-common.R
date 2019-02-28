@@ -20,4 +20,7 @@
 #' are `"weekly"`, `"monthly"`, `"yearly"`, `"all"`.
 #' @param limit `integer(1) [10L]`: Number of items to return. Must be greater
 #' than `0` and will be coerced to `integer`.
+#' @param season,episode `integer(1) [1L]`: The season and eisode number. If longer,
+#' e.g. `1:5`, the function is vectorized and the output will be
+#' combined via [purrr::map_df]. This may result in *a lot* of API calls. Use wisely.
 NULL

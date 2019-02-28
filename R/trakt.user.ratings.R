@@ -19,8 +19,8 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
   extended <- match.arg(extended)
 
   if (!is.null(rating)) {
-    if (!(as.numeric(rating) %in% 1:10)) {
-      stop("rating must be between 1 and 10")
+    if (!(as.integer(rating) %in% 1:10)) {
+      stop("rating must be a whole number between 1 and 10")
     }
   }
 
@@ -38,17 +38,28 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
         dplyr::bind_cols(unpack_show(response$show))
   }
 
-  if (type == "episodes") {
-    # Keep episode and show objects as separate list items
-    # the result is still data.frame-ish enough and duplicate names
-    # don't cause headaches that way. Not perfectly tidy, but tidy enough.™
-     response$episode$ids <- fix_ids(response$episode$ids)
-     response$episode <- dplyr::bind_cols(response$episode %>% select(-ids),
-                                          response$episode$ids) %>%
-       as_tibble() %>%
-       rename(episode = number)
-     response$show <- unpack_show(response$show)
+  if (type == "seasons") {
+    # Also keeping seasons and show object separate, see comment below
+    response$season <- dplyr::bind_cols(response$season %>% select(-ids),
+                                         fix_ids(response$season$ids)) %>%
+      as_tibble() %>%
+      rename(season = number) %>%
+      fix_datetime()
 
+    response$show <- unpack_show(response$show)
+  }
+
+  if (type == "episodes") {
+    # Keep episode and show objects as separate list-like items so
+    # the result is still data.frame-ish enough and duplicate names
+    # don't cause headaches that way. Not perfectly tidy, but tidy enough.
+     response$episode <- dplyr::bind_cols(response$episode %>% select(-ids),
+                                          fix_ids(response$episode$ids)) %>%
+       as_tibble() %>%
+       rename(episode = number,
+              episode_abs = number_abs)
+
+     response$show <- unpack_show(response$show)
   }
   tibble::as_tibble(response)
 }

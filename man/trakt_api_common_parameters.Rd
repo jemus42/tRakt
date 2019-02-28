@@ -24,6 +24,10 @@ are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
 
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced to \code{integer}.}
+
+\item{season, episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+e.g. \code{1:5}, the function is vectorized and the output will be
+combined via \link[purrr:map_df]{purrr::map_df}. This may result in \emph{a lot} of API calls. Use wisely.}
 }
 \description{
 These parameters are used \emph{a lot} throughout this package, and they tend to be
