@@ -37,7 +37,6 @@ breakingbad.seasons.more <- trakt.seasons.summary("breaking-bad", extended = "fu
 }
 \seealso{
 Other show data: \code{\link{trakt.get_all_episodes}},
-  \code{\link{trakt.get_full_showdata}},
   \code{\link{trakt.seasons.season}}
 }
 \concept{show data}
