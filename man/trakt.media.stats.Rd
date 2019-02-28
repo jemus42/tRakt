@@ -29,6 +29,6 @@ The data includes show/movie ratings, scrobbles, checkins, plays, comments...
 }
 \examples{
 \dontrun{
-trakt.shows.stats("breaking-bad")
+trakt.shows.stats(c("breaking-bad", "game-of-thrones"))
 }
 }

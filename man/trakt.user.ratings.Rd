@@ -5,7 +5,8 @@
 \title{Get a user's ratings}
 \usage{
 trakt.user.ratings(user = getOption("trakt.username"),
-  type = c("movies", "seasons", "shows", "episodes"), rating = NULL)
+  type = c("movies", "seasons", "shows", "episodes"), rating = NULL,
+  extended = c("min", "full"))
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
@@ -15,6 +16,9 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
 
 \item{rating}{\code{integer(1L)}: Rating to filter by. Can be \code{1} through \code{10}, default is \code{NULL}}
+
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.

@@ -41,7 +41,7 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
   if (type == "episodes") {
     # Keep episode and show objects as separate list items
     # the result is still data.frame-ish enough and duplicate names
-    # don't cause headaches that way. Not perfectly tidy, but tidy enough.
+    # don't cause headaches that way. Not perfectly tidy, but tidy enough.™
      response$episode$ids <- fix_ids(response$episode$ids)
      response$episode <- dplyr::bind_cols(response$episode %>% select(-ids),
                                           response$episode$ids) %>%
