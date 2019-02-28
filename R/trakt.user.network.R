@@ -39,7 +39,7 @@ trakt.user.network <- function(relationship = c("friends", "followers", "followi
   response <- response[names(response) != "images"]
 
   # Ensure datetime conversion
-  response <- convert_datetime(response)
+  response <- fix_datetime(response)
 
   tibble::as_tibble(tibble::remove_rownames(response))
 }

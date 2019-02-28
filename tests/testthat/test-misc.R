@@ -25,17 +25,17 @@ test_that("build_trakt_url builds a url", {
   expect_error(build_trakt_url("3o2bkf", "qkfb23vf", validate = TRUE))
 })
 
-test_that("convert_datetime converts datetime", {
+test_that("fix_datetime converts datetime", {
   skip_on_cran()
   skip_if_not_installed("lubridate")
   skip_if_not_installed("tibble")
 
   res <- tibble::tibble(updated_at = as.character(lubridate::now()))
 
-  res <- tRakt:::convert_datetime(res)
+  res <- tRakt:::fix_datetime(res)
   expect_is(res$updated_at, "POSIXct")
   expect_equal(attr(res$updated_at, "tzone"), "UTC")
-  expect_error(tRakt:::convert_datetime("not_a_df_or_list"))
+  expect_error(tRakt:::fix_datetime("not_a_df_or_list"))
 })
 
 test_that("check_user is okay", {

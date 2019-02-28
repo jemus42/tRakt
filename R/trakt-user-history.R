@@ -43,10 +43,10 @@ trakt.user.history <- function(user = getOption("trakt.username"),
       dplyr::bind_cols(fix_ids(response$episode$ids)) %>%
       dplyr::rename(episode = number) %>%
       tibble::as_tibble() %>%
-      convert_datetime()
+      fix_datetime()
 
     # Unpack the show media object and bind it to the base tbl
-    response$show <- unpack_show(response$show) %>% convert_datetime()
+    response$show <- unpack_show(response$show) %>% fix_datetime()
   }
   if (type == "movies") {
     response$movie$ids <- fix_ids(response$movie$ids)
@@ -57,7 +57,7 @@ trakt.user.history <- function(user = getOption("trakt.username"),
     response <- response %>%
       dplyr::select(-movie) %>%
       dplyr::bind_cols(response$movie) %>%
-      convert_datetime()
+      fix_datetime()
   }
 
   tibble::as_tibble(response)

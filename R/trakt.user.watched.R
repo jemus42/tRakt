@@ -67,6 +67,6 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
   }
 
   # To be sure
-  response <- convert_datetime(response)
+  response <- fix_datetime(response)
   tibble::as_tibble(response)
 }

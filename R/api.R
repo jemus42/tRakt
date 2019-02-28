@@ -139,7 +139,7 @@ trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
 
   # Do it in every other function or do it here once
   if (convert.datetime & !is.null(names(response))) {
-    response <- convert_datetime(response)
+    response <- fix_datetime(response)
   }
 
   response

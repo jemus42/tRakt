@@ -77,7 +77,7 @@ trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated",
     )
   }
 
-  response
+  fix_datetime(response)
 }
 
 # list type ----

@@ -57,7 +57,7 @@ trakt.user.collection <- function(user = getOption("trakt.username"),
     response <- cbind(response[names(response) != "movie"], response$movie)
   }
   # To be sure
-  response <- convert_datetime(response)
+  response <- fix_datetime(response)
 
   tibble::as_tibble(response)
 }

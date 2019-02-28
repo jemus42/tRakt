@@ -103,7 +103,7 @@ as soon as the API endpoint actually works.
 - **Add** `trakt.movie.watching` and `trakt.show.watching`: Get trakt.tv users watching.
 - **Add** `trakt.movie.releases`: Gets release dates & certifications per movie.
 - **Fix** `trakt.search.byid`: Used to only work on shows, now actually works on movies.
-- **Fix** `convert_datetime` (internal): improve reliability.
+- **Fix** `fix_datetime` (internal): improve reliability.
 
 ## Minor changes
 

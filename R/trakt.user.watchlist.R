@@ -33,6 +33,6 @@ trakt.user.watchlist <- function(user = getOption("trakt.username"),
     response <- cbind(response[names(response) != "movie"], response$movie)
   }
   response <- cbind(response[names(response) != "ids"], response$ids)
-  response <- convert_datetime(response)
+  response <- fix_datetime(response)
   tibble::as_tibble(response)
 }

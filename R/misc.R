@@ -30,35 +30,6 @@ pad <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
   paste0("s", s, "e", e)
 }
 
-#' Quick datetime conversion
-#'
-#' Searches for datetime variables and converts them to `POSIXct` via \pkg{lubridate}.
-#' @param response The input object. Must be `data.frame`(ish) or named `list`.
-#' @return The same object with converted datetimes
-#' @importFrom lubridate ymd_hms
-#' @importFrom dplyr mutate_at
-#' @importFrom purrr map_at
-#' @keywords internal
-convert_datetime <- function(response) {
-  if (!inherits(response, c("data.frame", "list"))) {
-    stop("Object type not supported, must inherit from data.frame or list")
-  }
-  datevars <- c(
-    "first_aired", "updated_at", "listed_at", "last_watched_at", "last_updated_at",
-    "last_collected_at", "rated_at", "friends_at", "followed_at", "collected_at",
-    "joined_at", "watched_at"
-  )
-
-  datevars <- datevars[datevars %in% names(response)]
-
-  if (inherits(response, "data.frame")) {
-    response %>%
-      dplyr::mutate_at(.vars = dplyr::vars(datevars), lubridate::ymd_hms)
-  } else {
-    purrr::map_at(response, datevars, lubridate::ymd_hms)
-  }
-}
-
 #' Assemble a trakt.tv API URL
 #'
 #' `build_trakt_url` assembles a trakt.tv API URL from different arguments.
