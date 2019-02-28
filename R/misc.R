@@ -8,7 +8,7 @@
 #' @param e_width The length of the episode number padding. Defaults to 2.
 #' @return A `character` in the common `sXXeYY` format
 #' @family utility functions
-#' @export
+#' @noRd
 #' @note I like my sXXeYY format, okay?
 #' @examples
 #' pad(2, 4) # Returns "s02e04"

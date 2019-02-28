@@ -42,18 +42,16 @@ reference:
       - ends_with(".people")
   - title: API & misc helpers
     contents:
-      - parse_trakt_url
       - build_trakt_url
       - trakt.api.call
       - trakt_credentials
-      - pad
       - trakt_api_common_parameters
   - title: Episode datasets
     contents:
       - futurama
       - gameofthrones
   - title: Internal datasets
-    desc: These are unlikely to be useful to users, but there are there, just in case.
+    desc: These are unlikely to be useful to users, but they are there, just in case.
     contents:
       - countries
       - genres

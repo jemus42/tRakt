@@ -40,7 +40,4 @@ build_trakt_url("users/jemus42", "ratings")
 # Validate a URL works
 build_trakt_url("shows", "popular", page = 1, limit = 5, validate = TRUE)
 }
-\seealso{
-Other utility functions: \code{\link{pad}}
-}
 \concept{utility functions}

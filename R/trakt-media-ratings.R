@@ -23,11 +23,14 @@
 NULL
 
 #' @keywords internal
+#' @importFrom dplyr mutate
+#' @importFrom tibble as_tibble
+#' @importFrom purrr map_df
 trakt.media.ratings <- function(type = c("shows", "movies"), target) {
   type <- match.arg(type)
 
   if (length(target) > 1) {
-    return(purrr::map_df(target, ~trakt.media.ratings(type = type, target = .x)))
+    return(map_df(target, ~trakt.media.ratings(type = type, target = .x)))
   }
 
   # Construct URL, make API call
@@ -59,13 +62,16 @@ trakt.movies.ratings <- function(target) {
 
 #' @rdname media_ratings
 #' @export
+#' @importFrom dplyr mutate
+#' @importFrom tibble as_tibble
+#' @importFrom purrr map_df
 trakt.seasons.ratings <- function(target, season = 1L) {
   if (length(target) > 1) {
-    return(purrr::map_df(target, ~trakt.seasons.ratings(.x, season)))
+    return(map_df(target, ~trakt.seasons.ratings(.x, season)))
   }
 
   if (length(season) > 1) {
-    return(purrr::map_df(season, ~trakt.seasons.ratings(target, .x)))
+    return(map_df(season, ~trakt.seasons.ratings(target, .x)))
   }
 
   # Construct URL, make API call
@@ -81,18 +87,21 @@ trakt.seasons.ratings <- function(target, season = 1L) {
 
 #' @rdname media_ratings
 #' @export
+#' @importFrom dplyr mutate
+#' @importFrom tibble as_tibble
+#' @importFrom purrr map_df
 trakt.episodes.ratings <- function(target, season = 1L, episode = 1L) {
 
   if (length(target) > 1) {
-    return(purrr::map_df(target, ~trakt.episodes.ratings(.x, season, episode)))
+    return(map_df(target, ~trakt.episodes.ratings(.x, season, episode)))
   }
 
   if (length(season) > 1) {
-    return(purrr::map_df(season, ~trakt.episodes.ratings(target, .x, episode)))
+    return(map_df(season, ~trakt.episodes.ratings(target, .x, episode)))
   }
 
   if (length(episode) > 1) {
-    return(purrr::map_df(episode, ~trakt.episodes.ratings(target, season, .x)))
+    return(map_df(episode, ~trakt.episodes.ratings(target, season, .x)))
   }
 
   # Construct URL, make API call

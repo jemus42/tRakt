@@ -1,4 +1,4 @@
-context("test-trakt-get_a_lot")
+context("test-get-all-episodes")
 
 test_that("trakt.get_all_episodes works", {
   skip_on_cran()
@@ -14,17 +14,4 @@ test_that("trakt.get_all_episodes works", {
   x2 <- trakt.get_all_episodes("futurama", season_nums = 1:3)
 
   expect_identical(x1, x2)
-})
-
-test_that("trakt.get_full_showdata works", {
-  skip_on_cran()
-
-  result <- trakt.get_full_showdata("Breaking Bad")
-
-  expect_is(result, "list")
-  expect_named(result, c("summary", "seasons", "episodes"))
-  expect_true(nrow(result$episodes) > 40)
-  expect_true(ncol(result$episodes) > 6)
-
-  expect_error(trakt.get_full_showdata())
 })
