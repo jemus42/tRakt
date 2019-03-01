@@ -2,21 +2,15 @@
 % Please edit documentation in R/trakt.people.R
 \name{media_people}
 \alias{media_people}
-\alias{trakt.media.people}
 \alias{trakt.shows.people}
 \alias{trakt.movies.people}
 \title{Get the cast and crew of a show or movie}
 \usage{
-trakt.media.people(type = c("shows", "movies"), target,
-  extended = c("min", "full"))
-
 trakt.shows.people(target, extended = c("min", "full"))
 
 trakt.movies.people(target, extended = c("min", "full"))
 }
 \arguments{
-\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
-
 \item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
 (e.g. \code{"game-of-thrones"} for a show, or \code{"bryan-cranston"} for a person),
 \code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"} or \code{"nm0186505"}).
@@ -27,7 +21,8 @@ Can also be of length greater than 1, in which case the function is called on al
 returns more variables and should generally only be used if required.}
 }
 \value{
-A \code{list}.
+A \code{list} of one or more \link[tibble:tibble-package]{tibbles} for \code{cast}
+and \code{crew}. The latter \code{tibble} objects are as flat as possible.#' @name media_people
 }
 \description{
 Returns all cast and crew for a show/movie, depending on how much data is
@@ -35,15 +30,13 @@ available.
 }
 \examples{
 \dontrun{
-breakingbad.people <- trakt.show.people("breaking-bad")
+breakingbad_credits <- trakt.shows.people("breaking-bad")
 }
-
 }
 \seealso{
-\link{trakt.people.media}, for the other direction: People that have credits.
+\link{people_media}, for the other direction: People that have credits.
 
 Other people data: \code{\link{people_media}},
   \code{\link{trakt.people.summary}}
 }
 \concept{people data}
-\keyword{internal}

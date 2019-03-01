@@ -41,17 +41,26 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
 #'
 #' Returns all movies or shows where this person is in the cast or crew.
 #' @inheritParams trakt_api_common_parameters
-#' @return A `list`.
+#' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
+#' and `crew`. The latter `tibble` objects are as flat as possible.
 #' @name people_media
 #' @family people data
-#' @seealso [trakt.media.people], for the other direction: Media that has people.
+#' @seealso [media_people], for the other direction: Media that has people.
 #' @examples
 #' \dontrun{
-#' trakt.people.movies("bryan-cranston")
+#' trakt.people.movies("christopher-nolan")
+#'
+#' trakt.people.shows("kit-harington")
 #' }
 NULL
 
 #' @keywords internal
+#' @noRd
+#' @importFrom tibble has_name
+#' @importFrom tibble as_tibble
+#' @importFrom tibble tibble
+#' @importFrom dplyr bind_cols
+#' @importFrom dplyr select
 trakt.people.media <- function(type = c("shows", "movies"), target,
                                extended = c("min", "full")) {
   extended <- match.arg(extended)
@@ -59,8 +68,37 @@ trakt.people.media <- function(type = c("shows", "movies"), target,
 
   # Construct URL, make API call
   url <- build_trakt_url("people", target, type, extended = extended)
-  trakt.api.call(url = url)
+  response <- trakt.api.call(url = url)
+
+  if (identical(response, list(cast = list()))) {
+    return(tibble())
+  }
+
+  if (type == "shows") {
+    if (has_name(response, "cast") & !identical(response$cast, list())) {
+      response$cast <- response$cast$show %>%
+        unpack_show() %>%
+        bind_cols(response$cast %>% select(-show)) %>%
+        as_tibble()
+    }
+    if (has_name(response, "crew") & !identical(response$crew, list())) {
+      response$crew <- unpack_crew_sections(response$crew, type = "shows")
+    }
+  }
+  if (type == "movies") {
+    if (has_name(response, "cast") & !identical(response$cast, list())) {
+      response$cast <- response$cast %>%
+        unpack_movie() %>%
+        as_tibble()
+    }
+    if (has_name(response, "crew") & !identical(response$crew, list())) {
+      response$crew <- unpack_crew_sections(response$crew, type = "movies")
+    }
+  }
+
+  response
 }
+
 
 #' @rdname people_media
 #' @export
@@ -80,18 +118,25 @@ trakt.people.shows <- function(target, extended = c("min", "full")) {
 #'
 #' Returns all cast and crew for a show/movie, depending on how much data is
 #' available.
-#' @inheritParams trakt_api_common_parameters
-#' @return A `list`.
 #' @name media_people
+#' @inheritParams trakt_api_common_parameters
+#' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
+#' and `crew`. The latter `tibble` objects are as flat as possible.#' @name media_people
 #' @family people data
-#' @seealso [trakt.people.media], for the other direction: People that have credits.
+#' @seealso [people_media], for the other direction: People that have credits.
 #' @examples
 #' \dontrun{
-#' breakingbad.people <- trakt.show.people("breaking-bad")
+#' breakingbad_credits <- trakt.shows.people("breaking-bad")
 #' }
-#'
+NULL
 
+#' Retrieve cast & crew for shows and movies
 #' @keywords internal
+#' @noRd
+#' @importFrom purrr is_empty
+#' @importFrom dplyr bind_cols
+#' @importFrom dplyr select
+#' @importFrom tibble as_tibble
 trakt.media.people <- function(type = c("shows", "movies"), target,
                                extended = c("min", "full")) {
 
@@ -103,14 +148,42 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
   response <- trakt.api.call(url = url)
 
   # Flatten the data.frame
-  response$cast <- cbind(
-    response$cast[names(response$cast) != "person"],
-    response$cast$person
-  )
-  response$cast <- cbind(
-    response$cast[names(response$cast) != "ids"],
-    response$cast$ids
-  )
+  if (has_name(response, "cast") & !is_empty(response$cast)) {
+    response$cast$person[["images"]] <- NULL
+
+    response$cast$person %<>%
+      select(-ids) %>%
+      bind_cols(fix_ids(response$cast$person$ids))
+
+    response$cast %<>%
+      select(-person) %>%
+      bind_cols(response$cast$person) %>%
+      as_tibble()
+  }
+
+  if (has_name(response, "crew") & !is_empty(response$crew)) {
+    crew_sections <- c("production", "art", "crew", "directing", "writing",
+                       "sound", "camera", "costume & make-up")
+
+    response$crew <- map_df(crew_sections, function(section) {
+
+      if (!has_name(crew, section) | is_empty(crew[[section]])) {
+        return(tibble())
+      }
+
+      crew[[section]]$person %<>%
+        select(-ids) %>%
+        bind_cols(fix_ids(crew[[section]]$person$ids))
+
+      crew[[section]] %<>%
+        select(-person) %>%
+        bind_cols(crew[[section]]$person) %>%
+        mutate(crew_type = section)
+
+      as_tibble(crew[[section]])
+    })
+
+  }
 
   response
 }

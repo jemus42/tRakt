@@ -59,6 +59,49 @@ unpack_movie <- function(response) {
     fix_datetime()
 }
 
+#' Crew subsections
+#' Unpacks production, art, crew, costume & make-up, directing,
+#' writing, sound, and camera
+#' @keywords internal
+#' @noRd
+#' @importFrom purrr map_df
+#' @importFrom tibble has_name
+#' @importFrom dplyr bind_cols
+#' @importFrom dplyr mutate
+#' @importFrom dplyr select
+#' @source <https://trakt.docs.apiary.io/#reference/people/shows> for crew sections
+unpack_crew_sections <- function(crew, type) {
+
+  crew_sections <- c("production", "art", "crew", "directing", "writing",
+                     "sound", "camera", "costume & make-up")
+
+  if (type == "shows") {
+    map_df(crew_sections, function(section) {
+      if (has_name(crew, section)) {
+        crew[[section]] <- crew[[section]]$show %>%
+          unpack_show() %>%
+          bind_cols(crew[[section]] %>% select(-show)) %>%
+          as_tibble() %>%
+          mutate(crew_type = section)
+      }
+
+      crew[[section]]
+    })
+  } else if (type == "movies") {
+    map_df(crew_sections, function(section) {
+      if (has_name(crew, section)) {
+        crew[[section]] <- crew[[section]] %>%
+          unpack_movie() %>%
+          as_tibble() %>%
+          mutate(crew_type = section)
+      }
+
+      crew[[section]]
+    })
+  }
+
+}
+
 
 # Fixers ----
 

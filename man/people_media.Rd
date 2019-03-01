@@ -21,18 +21,21 @@ Can also be of length greater than 1, in which case the function is called on al
 returns more variables and should generally only be used if required.}
 }
 \value{
-A \code{list}.
+A \code{list} of one or more \link[tibble:tibble-package]{tibbles} for \code{cast}
+and \code{crew}. The latter \code{tibble} objects are as flat as possible.
 }
 \description{
 Returns all movies or shows where this person is in the cast or crew.
 }
 \examples{
 \dontrun{
-trakt.people.movies("bryan-cranston")
+trakt.people.movies("christopher-nolan")
+
+trakt.people.shows("kit-harington")
 }
 }
 \seealso{
-\link{trakt.media.people}, for the other direction: Media that has people.
+\link{media_people}, for the other direction: Media that has people.
 
 Other people data: \code{\link{media_people}},
   \code{\link{trakt.people.summary}}
