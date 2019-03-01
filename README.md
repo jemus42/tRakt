@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tRakt
+# tRakt <img src="man/figures/logo.png" align="right" height=140/>
 
 [![Travis build
 status](https://travis-ci.org/jemus42/tRakt.svg?branch=master)](https://travis-ci.org/jemus42/tRakt)
@@ -46,17 +46,16 @@ library(tRakt)
 show_info <- trakt.search("Utopia", type = "show")
 glimpse(show_info)
 #> Observations: 1
-#> Variables: 10
-#> $ type   <chr> "show"
-#> $ score  <dbl> 1000
-#> $ title  <chr> "Utopia"
-#> $ year   <int> 2013
-#> $ trakt  <chr> "46241"
-#> $ slug   <chr> "utopia"
-#> $ tvdb   <chr> "264991"
-#> $ imdb   <chr> "tt2384811"
-#> $ tmdb   <chr> "46511"
-#> $ tvrage <chr> NA
+#> Variables: 9
+#> $ type  <chr> "show"
+#> $ score <dbl> 1000
+#> $ title <chr> "Utopia"
+#> $ year  <int> 2013
+#> $ trakt <chr> "46241"
+#> $ slug  <chr> "utopia"
+#> $ tvdb  <chr> "264991"
+#> $ imdb  <chr> "tt2384811"
+#> $ tmdb  <chr> "46511"
 
 # Get season information for the show
 show_seasons <- trakt.seasons.summary(show_info$trakt)
@@ -64,10 +63,10 @@ show_seasons <- trakt.seasons.summary(show_info$trakt)
 knitr::kable(show_seasons)
 ```
 
-| season | trakt | tvdb   | tmdb  | tvrage |
-| -----: | :---- | :----- | :---- | :----- |
-|      1 | 56008 | 507598 | 54695 | NA     |
-|      2 | 56009 | 524149 | 54696 | NA     |
+| season | trakt | tvdb   | tmdb  |
+| -----: | :---- | :----- | :---- |
+|      1 | 56008 | 507598 | 54695 |
+|      2 | 56009 | 524149 | 54696 |
 
 ``` r
 
@@ -82,8 +81,8 @@ show_episodes %>%
 
 | season | episode | title     |  rating | votes | first\_aired        |
 | -----: | ------: | :-------- | ------: | ----: | :------------------ |
-|      1 |       1 | Episode 1 | 8.25247 |  1010 | 2013-01-15 21:00:00 |
-|      1 |       2 | Episode 2 | 8.13653 |   813 | 2013-01-22 21:00:00 |
+|      1 |       1 | Episode 1 | 8.25124 |  1011 | 2013-01-15 21:00:00 |
+|      1 |       2 | Episode 2 | 8.13636 |   814 | 2013-01-22 21:00:00 |
 |      1 |       3 | Episode 3 | 8.15875 |   737 | 2013-01-29 21:00:00 |
 |      1 |       4 | Episode 4 | 8.11078 |   677 | 2013-02-05 21:00:00 |
 |      1 |       5 | Episode 5 | 8.32504 |   643 | 2013-02-12 21:00:00 |
