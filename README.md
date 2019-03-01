@@ -9,22 +9,27 @@ status](https://travis-ci.org/jemus42/tRakt.svg?branch=master)](https://travis-c
 status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
+![GitHub
+release](https://img.shields.io/github/release/jemus42/tRakt.svg?label=GitHub)
+![GitHub commits since latest
+release](https://img.shields.io/github/commits-since/jemus42/tRakt/latest.svg)
 
 This is `tRakt` version `0.14.9000`.  
 It contains functions to retrieve data from
-[trakt.tv](http://trakt.tv/), a site similiar to [IMDb](http://imdb.com)
-with a broader focus including TV shows and more social features – and,
-most importantly, a publicly available API.
+[trakt.tv](https://trakt.tv/), a site similiar to
+[IMDb](https://imdb.com) with a broader focus including TV shows and
+more social features – and, most importantly, [a publicly available
+API](https://trakt.docs.apiary.io).
 
 It’s an [R package](http://r-project.org) primarily used by (i.e. built
-for) [this webapp](http://trakt.jemu.name), but you can fiddle around
-with it if you like.  
+for) [this webapp](http://trakt.jemu.name).  
 Please note that while this package *basically* is an API-client, it is
 a little more opinionated and might deliver results that don not exactly
 match the data delivered by the API. The primary motivation for this
 package is to retrieve data that is easily processable for data analysis
 and display, which is why it tries hard to coerce most data into tabular
-form instead of using, for example, nested lists.
+form instead of using nested lists, which is what the direct translation
+of the API results would look like.
 
 ## Installation
 
@@ -57,42 +62,39 @@ glimpse(show_info)
 #> $ imdb  <chr> "tt2384811"
 #> $ tmdb  <chr> "46511"
 
-# Get season information for the show
-show_seasons <- trakt.seasons.summary(show_info$trakt)
+# Get season information for the show using its trakt ID
+trakt.seasons.summary(show_info$trakt, extended = "full")
+#> # A tibble: 2 x 12
+#>   season rating votes episode_count aired_episodes title overview
+#>    <int>  <dbl> <int>         <int>          <int> <chr> <chr>   
+#> 1      1   8.71   164             6              6 Seas… When a …
+#> 2      2   8.28   119             6              6 Seas… It has …
+#> # … with 5 more variables: first_aired <dttm>, network <chr>, trakt <chr>,
+#> #   tvdb <chr>, tmdb <chr>
 
-knitr::kable(show_seasons)
+# Get episode data for both seasons
+trakt.seasons.season(show_info$trakt, seasons = c(1, 2), extended = "full") %>%
+  glimpse()
+#> Observations: 12
+#> Variables: 17
+#> $ season                 <int> 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2
+#> $ episode                <int> 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6
+#> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "E…
+#> $ episode_abs            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+#> $ overview               <chr> "When five strangers from an online comic…
+#> $ rating                 <dbl> 8.25124, 8.13636, 8.15875, 8.11078, 8.325…
+#> $ votes                  <int> 1011, 814, 737, 677, 643, 673, 677, 596, …
+#> $ comment_count          <int> 3, 0, 1, 2, 1, 1, 1, 1, 0, 1, 2, 1
+#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00…
+#> $ updated_at             <dttm> 2019-03-01 01:44:38, 2019-03-01 01:44:38…
+#> $ available_translations <list> [<"bs", "de", "el", "en", "es", "fr", "h…
+#> $ runtime                <int> 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 5…
+#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056…
+#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748…
+#> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "t…
+#> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "…
+#> $ year                   <dbl> 2013, 2013, 2013, 2013, 2013, 2013, 2014,…
 ```
-
-| season | trakt | tvdb   | tmdb  |
-| -----: | :---- | :----- | :---- |
-|      1 | 56008 | 507598 | 54695 |
-|      2 | 56009 | 524149 | 54696 |
-
-``` r
-
-# Get episode data
-show_episodes <- trakt.seasons.season(show_info$trakt, 
-                                      seasons = c(1, 2), extended = "full")
-
-show_episodes %>%
-  select(season, episode, title, rating, votes, first_aired) %>%
-  knitr::kable()
-```
-
-| season | episode | title     |  rating | votes | first\_aired        |
-| -----: | ------: | :-------- | ------: | ----: | :------------------ |
-|      1 |       1 | Episode 1 | 8.25124 |  1011 | 2013-01-15 21:00:00 |
-|      1 |       2 | Episode 2 | 8.13636 |   814 | 2013-01-22 21:00:00 |
-|      1 |       3 | Episode 3 | 8.15875 |   737 | 2013-01-29 21:00:00 |
-|      1 |       4 | Episode 4 | 8.11078 |   677 | 2013-02-05 21:00:00 |
-|      1 |       5 | Episode 5 | 8.32504 |   643 | 2013-02-12 21:00:00 |
-|      1 |       6 | Episode 6 | 8.71620 |   673 | 2013-02-19 21:00:00 |
-|      2 |       1 | Episode 1 | 8.57016 |   677 | 2014-07-14 20:00:00 |
-|      2 |       2 | Episode 2 | 8.35738 |   596 | 2014-07-15 20:00:00 |
-|      2 |       3 | Episode 3 | 8.28975 |   566 | 2014-07-22 20:00:00 |
-|      2 |       4 | Episode 4 | 8.26964 |   560 | 2014-07-29 20:00:00 |
-|      2 |       5 | Episode 5 | 8.30287 |   558 | 2014-08-05 20:00:00 |
-|      2 |       6 | Episode 6 | 8.28253 |   538 | 2014-08-12 20:00:00 |
 
 ## Setting credentials
 

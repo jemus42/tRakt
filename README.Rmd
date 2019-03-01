@@ -19,12 +19,14 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.org/jemus42/tRakt.svg?branch=master)](https://travis-ci.org/jemus42/tRakt)
 [![Coverage status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
+![GitHub release](https://img.shields.io/github/release/jemus42/tRakt.svg?label=GitHub)
+![GitHub commits since latest release](https://img.shields.io/github/commits-since/jemus42/tRakt/latest.svg)
 
 This is `tRakt` version ``r desc::desc_get("Version")``.  
-It contains functions to retrieve data from [trakt.tv](http://trakt.tv/), a site similiar to [IMDb](http://imdb.com) with a broader focus including TV shows and more social features – and, most importantly, a publicly available API.
+It contains functions to retrieve data from [trakt.tv](https://trakt.tv/), a site similiar to [IMDb](https://imdb.com) with a broader focus including TV shows and more social features – and, most importantly, [a publicly available API](https://trakt.docs.apiary.io).
 
-It's an [R package](http://r-project.org) primarily used by (i.e. built for) [this webapp](http://trakt.jemu.name), but you can fiddle around with it if you like.  
-Please note that while this package *basically* is an API-client, it is a little more opinionated and might deliver results that don not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using, for example, nested lists.
+It's an [R package](http://r-project.org) primarily used by (i.e. built for) [this webapp](http://trakt.jemu.name).  
+Please note that while this package *basically* is an API-client, it is a little more opinionated and might deliver results that don not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.
 
 ## Installation
 
@@ -46,18 +48,12 @@ library(tRakt)
 show_info <- trakt.search("Utopia", type = "show")
 glimpse(show_info)
 
-# Get season information for the show
-show_seasons <- trakt.seasons.summary(show_info$trakt)
+# Get season information for the show using its trakt ID
+trakt.seasons.summary(show_info$trakt, extended = "full")
 
-knitr::kable(show_seasons)
-
-# Get episode data
-show_episodes <- trakt.seasons.season(show_info$trakt, 
-                                      seasons = c(1, 2), extended = "full")
-
-show_episodes %>%
-  select(season, episode, title, rating, votes, first_aired) %>%
-  knitr::kable()
+# Get episode data for both seasons
+trakt.seasons.season(show_info$trakt, seasons = c(1, 2), extended = "full") %>%
+  glimpse()
 ```
 
 
