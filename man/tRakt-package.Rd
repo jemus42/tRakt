@@ -6,6 +6,8 @@
 \alias{tRakt-package}
 \title{tRakt: Get Data from 'trakt.tv'}
 \description{
+\if{html}{\figure{logo.png}{options: align='right'}}
+
 A wrapper for the <https://trakt.tv> API to
     retrieve data about shows and movies, including user ratings, credits
     and related metadata. Additional functions retrieve user-specific
