@@ -15,7 +15,9 @@ Can also be of length greater than 1, in which case the function is called on al
 A list of \link[tibble:tibble-package]{tibbles}.
 }
 \description{
-\code{trakt.user.stats} retrieves a user's stats.
+Data about a user's interactions with movies, shows, seasons, episodes,
+as well as their social network (friends, followings, followers) and a
+frequency table of the user's media ratings so far.
 }
 \examples{
 \dontrun{
