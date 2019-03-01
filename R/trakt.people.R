@@ -162,25 +162,23 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
   }
 
   if (has_name(response, "crew") & !is_empty(response$crew)) {
-    crew_sections <- c("production", "art", "crew", "directing", "writing",
-                       "sound", "camera", "costume & make-up")
 
-    response$crew <- map_df(crew_sections, function(section) {
+    response$crew <- map_df(trakt_people_crew_sections, function(section) {
 
-      if (!has_name(crew, section) | is_empty(crew[[section]])) {
+      if (!has_name(response$crew, section) | is_empty(response$crew[[section]])) {
         return(tibble())
       }
 
-      crew[[section]]$person %<>%
+      response$crew[[section]]$person %<>%
         select(-ids) %>%
-        bind_cols(fix_ids(crew[[section]]$person$ids))
+        bind_cols(fix_ids(response$crew[[section]]$person$ids))
 
-      crew[[section]] %<>%
+      response$crew[[section]] %<>%
         select(-person) %>%
-        bind_cols(crew[[section]]$person) %>%
+        bind_cols(response$crew[[section]]$person) %>%
         mutate(crew_type = section)
 
-      as_tibble(crew[[section]])
+      as_tibble(response$crew[[section]])
     })
 
   }

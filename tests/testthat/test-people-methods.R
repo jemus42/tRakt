@@ -10,10 +10,10 @@ test_that("trakt.people.summary works", {
 
   expect_is(people_min, "tbl")
   expect_equal(nrow(people_min), 1)
-  expect_equal(ncol(people_min), 6)
+  expect_equal(ncol(people_min), 5)
   expect_is(people_max, "tbl")
   expect_equal(nrow(people_max), 1)
-  expect_equal(ncol(people_max), 11)
+  expect_equal(ncol(people_max), 10)
 
   expect_identical(
     rbind(
@@ -34,12 +34,16 @@ test_that("trakt.people.[movies|shows] works", {
 
   expect_is(mov_min, "list")
   expect_named(mov_min, c("cast", "crew"))
+  expect_is(mov_min$cast, "tbl")
+  expect_is(mov_min$crew, "tbl")
 
   sho_min <- trakt.people.shows(target = target, extended = "min")
   sho_max <- trakt.people.shows(target = target, extended = "full")
 
   expect_is(sho_min, "list")
   expect_named(sho_min, c("cast", "crew"))
+  expect_is(sho_min$cast, "tbl")
+  expect_is(sho_min$crew, "tbl")
 })
 
 
@@ -49,13 +53,13 @@ test_that("trakt.[show|movie].people works", {
   target_mov <- "inception-2010"
   target_sho <- "futurama"
 
-  show <- trakt.shows.people(target = target_sho)
-  movie <- trakt.movies.people(target = target_mov)
+  show_people <- trakt.shows.people(target = target_sho)
+  movie_people <- trakt.movies.people(target = target_mov)
 
-  expect_is(show, "list")
-  expect_is(movie, "list")
+  expect_is(show_people, "list")
+  expect_is(movie_people, "list")
 
-  expect_equal(names(show), names(movie))
-  expect_named(show, c("cast", "crew"))
-  expect_named(movie, c("cast", "crew"))
+  expect_equal(names(show_people), names(movie_people))
+  expect_named(show_people, c("cast", "crew"))
+  expect_named(movie_people, c("cast", "crew"))
 })

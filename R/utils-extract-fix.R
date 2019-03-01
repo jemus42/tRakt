@@ -7,6 +7,7 @@
 #' @importFrom tibble as_tibble
 #' @importFrom tibble has_name
 #' @importFrom purrr modify_if
+#' @importFrom purrr modify_in
 #' @importFrom dplyr select
 #' @importFrom dplyr bind_cols
 unpack_show <- function(show) {
@@ -72,11 +73,8 @@ unpack_movie <- function(response) {
 #' @source <https://trakt.docs.apiary.io/#reference/people/shows> for crew sections
 unpack_crew_sections <- function(crew, type) {
 
-  crew_sections <- c("production", "art", "crew", "directing", "writing",
-                     "sound", "camera", "costume & make-up")
-
   if (type == "shows") {
-    map_df(crew_sections, function(section) {
+    map_df(trakt_people_crew_sections, function(section) {
       if (has_name(crew, section)) {
         crew[[section]] <- crew[[section]]$show %>%
           unpack_show() %>%
@@ -88,7 +86,7 @@ unpack_crew_sections <- function(crew, type) {
       crew[[section]]
     })
   } else if (type == "movies") {
-    map_df(crew_sections, function(section) {
+    map_df(trakt_people_crew_sections, function(section) {
       if (has_name(crew, section)) {
         crew[[section]] <- crew[[section]] %>%
           unpack_movie() %>%
