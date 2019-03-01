@@ -11,9 +11,9 @@
 #' @family people data
 #' @examples
 #' \dontrun{
-#' person <- trakt.people.summary("bryan-cranston", "min")
+#' trakt.people.summary("bryan-cranston", "min")
 #'
-#' more_people <- trakt.people.summary(c("kit-harington", "emilia-clarke"))
+#' trakt.people.summary(c("kit-harington", "emilia-clarke"))
 #' }
 trakt.people.summary <- function(target, extended = c("min", "full")) {
   extended <- match.arg(extended)
@@ -174,7 +174,7 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
         select(-ids) %>%
         bind_cols(fix_ids(response$crew[[section]]$person$ids))
 
-      response$crew[[section]] %<>%
+      response$crew[[section]] <- response$crew[[section]] %>%
         select(-person) %>%
         bind_cols(response$crew[[section]]$person) %>%
         mutate(crew_type = section)
