@@ -10,8 +10,8 @@ This is a big one, like v1.0.0 big one.
 - Also consolidate many similar functions by factoring out the relevant bits into more flexible helper functions. In some cases those are exported as well.
 - In the process, some functions where partially renamed (`.show.` -> `.shows.`, `.movie.` -> `.movies.`) for consistency.
 
-- Functions that have movie and show counterparts but are identical in terms of arguments usually gain a "main" function, e.g. `trakt.media.summary` that's the general version of `trakt.shows.summary` and `trakt.movies.summary`. Note that `trakt.people.summary` and `trakt.seasons.summary` are still their own thing. Because organization is hard.
 - Rename `get_trakt_credentials` -> `trakt_credentials`
+- Many functions now return much flatter output, notably `*people*` functions. They return a `list` with `cast` and `crew` objects, which in turn are both flat `tibbles`.
 
 ## Features
 

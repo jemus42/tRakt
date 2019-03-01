@@ -137,6 +137,7 @@ NULL
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
 #' @importFrom tibble as_tibble
+#' @importFrom purrr map_df
 trakt.media.people <- function(type = c("shows", "movies"), target,
                                extended = c("min", "full")) {
 
@@ -169,7 +170,7 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
         return(tibble())
       }
 
-      response$crew[[section]]$person %<>%
+      response$crew[[section]]$person <- response$crew[[section]]$person %>%
         select(-ids) %>%
         bind_cols(fix_ids(response$crew[[section]]$person$ids))
 
