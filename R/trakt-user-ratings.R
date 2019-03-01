@@ -7,6 +7,7 @@
 #' @export
 #' @family user data
 #' @importFrom dplyr bind_cols
+#' @importFrom purrr set_names
 #' @examples
 #' \dontrun{
 #' trakt.user.ratings(user = "jemus42")
