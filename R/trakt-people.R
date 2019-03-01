@@ -19,7 +19,7 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
-    return(purrr::map_df(target, ~trakt.people.summary(.x, extended)))
+    return(map_df(target, ~trakt.people.summary(.x, extended)))
   }
 
   # Construct URL, make API call
@@ -28,9 +28,8 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
 
   # Substitute NULLs with explicit NAs and flatten IDs
   response$ids <- fix_ids(response$ids)
-  response <- purrr::modify_if(response, is.null,
-                               function(x) return(NA_character_))
-  response <- purrr::flatten_df(response)
+  response <- modify_if(response, is.null, ~return(NA_character_))
+  response <- flatten_df(response)
 
   response
 }
@@ -61,6 +60,7 @@ NULL
 #' @importFrom tibble tibble
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
+#' @importFrom purrr is_empty
 trakt.people.media <- function(type = c("shows", "movies"), target,
                                extended = c("min", "full")) {
   extended <- match.arg(extended)
@@ -75,23 +75,23 @@ trakt.people.media <- function(type = c("shows", "movies"), target,
   }
 
   if (type == "shows") {
-    if (has_name(response, "cast") & !identical(response$cast, list())) {
+    if (has_name(response, "cast") & !is_empty(response$cast)) {
       response$cast <- response$cast$show %>%
         unpack_show() %>%
         bind_cols(response$cast %>% select(-show)) %>%
         as_tibble()
     }
-    if (has_name(response, "crew") & !identical(response$crew, list())) {
+    if (has_name(response, "crew") & !is_empty(response$crew)) {
       response$crew <- unpack_crew_sections(response$crew, type = "shows")
     }
   }
   if (type == "movies") {
-    if (has_name(response, "cast") & !identical(response$cast, list())) {
+    if (has_name(response, "cast") & !is_empty(response$cast)) {
       response$cast <- response$cast %>%
         unpack_movie() %>%
         as_tibble()
     }
-    if (has_name(response, "crew") & !identical(response$crew, list())) {
+    if (has_name(response, "crew") & !is_empty(response$crew)) {
       response$crew <- unpack_crew_sections(response$crew, type = "movies")
     }
   }

@@ -1,11 +1,12 @@
 #' Get a user's stats
 #'
-#' `trakt.user.stats` retrieves a user's stats.
+#' Data about a user's interactions with movies, shows, seasons, episodes,
+#' as well as their social network (friends, followings, followers) and a
+#' frequency table of the user's media ratings so far.
 #' @inheritParams trakt_api_common_parameters
 #' @return A list of [tibbles][tibble::tibble-package].
 #' @export
-#' @importFrom tibble enframe
-#' @importFrom purrr modify_at
+#' @importFrom purrr map
 #' @family user data
 #' @examples
 #' \dontrun{
@@ -19,11 +20,8 @@ trakt.user.stats <- function(user = getOption("trakt.username")) {
   url <- build_trakt_url("users", user, "stats")
   response <- trakt.api.call(url = url)
 
-  # Flattening the distribution a little
-  response$ratings$distribution <- tibble::enframe(unlist(response$ratings$distribution),
-                                                   name = "rating", value = "n")
+  # Flattening/list-columnifying the distribution a little
+  response$ratings <- fix_ratings_distribution(response$ratings)
 
-  # Exclude the last element (ratings) from tibbleization
-  # to avoid duplication of "total" value across rows
-  purrr::modify_at(response, -length(response), tibble::as_tibble)
+  map(response, as_tibble)
 }
