@@ -137,6 +137,7 @@ NULL
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
 #' @importFrom tibble as_tibble
+#' @importFrom tibble has_name
 #' @importFrom purrr map_df
 trakt.media.people <- function(type = c("shows", "movies"), target,
                                extended = c("min", "full")) {
@@ -148,17 +149,19 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
   url <- build_trakt_url(type, target, "people", extended = extended)
   response <- trakt.api.call(url = url)
 
+  if (is_empty(response)) return(tibble())
+
   # Flatten the data.frame
   if (has_name(response, "cast") & !is_empty(response$cast)) {
     response$cast$person[["images"]] <- NULL
 
-    response$cast$person %<>%
+    response$cast$person <- response$cast$person %>%
       select(-ids) %>%
-      bind_cols(fix_ids(response$cast$person$ids))
+      cbind(fix_ids(response$cast$person$ids))
 
-    response$cast %<>%
+    response$cast <- response$cast %>%
       select(-person) %>%
-      bind_cols(response$cast$person) %>%
+      cbind(response$cast$person) %>%
       as_tibble()
   }
 
@@ -172,11 +175,11 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
 
       response$crew[[section]]$person <- response$crew[[section]]$person %>%
         select(-ids) %>%
-        bind_cols(fix_ids(response$crew[[section]]$person$ids))
+        cbind(fix_ids(response$crew[[section]]$person$ids))
 
       response$crew[[section]] <- response$crew[[section]] %>%
         select(-person) %>%
-        bind_cols(response$crew[[section]]$person) %>%
+        cbind(response$crew[[section]]$person) %>%
         mutate(crew_type = section)
 
       as_tibble(response$crew[[section]])
