@@ -5,7 +5,8 @@
 \title{Get a user's collected shows or movies}
 \usage{
 trakt.user.collection(user = getOption("trakt.username"),
-  type = c("shows", "movies"), unnest_episodes = FALSE)
+  type = c("shows", "movies"), extended = c("min", "full"),
+  unnest_episodes = FALSE)
 }
 \arguments{
 \item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
@@ -13,6 +14,9 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
 
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
+
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 
 \item{unnest_episodes}{\code{logical(1) [FALSE]}: Unnests episode data using
 \code{[tidyr](tidyr::unnest)} and returns one row per episode rather than one row per show.}
@@ -24,6 +28,16 @@ A \link[tibble:tibble-package]{tibble}.
 \code{trakt.user.collection} retrieves a user's collected shows or movies.
 It does not use OAuth2, so you can only get data for a user with a
 public profile.
+}
+\details{
+This function wraps \href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{this API method}
+at the endpoint \code{/users/:user_id/collection/:type}.
+}
+\note{
+The \code{extended = "metadata"} API parameter is not implemented. This would
+add media information \code{media_type}, \code{resolution}, \code{audio}, \code{audio_channels} and \code{3D}
+to the output, which may or may not be available. If this feature is important to
+you, please open an issue on GitHub.
 }
 \examples{
 \dontrun{
