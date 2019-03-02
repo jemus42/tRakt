@@ -29,7 +29,7 @@
 #' # Use a values set in ~/.Renviron in an R session:
 #' # (This is automatically executed when calling library(tRakt))
 #' trakt_credentials()
-#'
+#' 
 #' # Explicitly set values in an R session, overriding .Renviron values if present
 #' trakt_credentials(
 #'   username = "sean",
@@ -37,7 +37,7 @@
 #' )
 #' }
 trakt_credentials <- function(username, client.id,
-                                  silent = TRUE) {
+                              silent = TRUE) {
   username <- ifelse(missing(username), Sys.getenv("trakt_username"), username)
   client_id <- ifelse(missing(client.id), Sys.getenv("trakt_client_id"), client.id)
 
@@ -52,7 +52,7 @@ trakt_credentials <- function(username, client.id,
   } else {
     options(trakt.client.id = tRakt_client_id)
     if (!silent) {
-    message("I provided my client.id as a fallback for you. Please use it responsibly.")
+      message("I provided my client.id as a fallback for you. Please use it responsibly.")
     }
   }
 
@@ -88,15 +88,14 @@ trakt_credentials <- function(username, client.id,
 #' @examples
 #' # A simple request to a direct URL
 #' trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
-#'
+#' 
 #' # A HEAD-only request useful for validating a URL exists
 #' trakt.api.call("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
-#'
+#' 
 #' # Optionally be lazy about URL specification (not encouraged):
 #' trakt.api.call("shows/game-of-thrones")
 trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
                            convert.datetime = TRUE, HEAD = FALSE) {
-
   if (!grepl(pattern = "^https://api.trakt.tv", url)) {
     url <- build_trakt_url(url)
   }

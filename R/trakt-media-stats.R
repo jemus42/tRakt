@@ -10,7 +10,7 @@
 #' \dontrun{
 #' # Stats for multiple shows at once
 #' trakt.shows.stats(c("breaking-bad", "game-of-thrones"))
-#'
+#' 
 #' # Stats for multiple episodes
 #' trakt.episodes.stats("futurama", season = 1, episode = 1:7)
 #' }
@@ -21,7 +21,7 @@ trakt.media.stats <- function(type = c("shows", "movies"), target) {
   type <- match.arg(type)
 
   if (length(target) > 1) {
-    res <- purrr::map_df(target, ~trakt.media.stats(type, .x))
+    res <- purrr::map_df(target, ~ trakt.media.stats(type, .x))
     return(res)
   }
 
@@ -51,13 +51,12 @@ trakt.movies.stats <- function(target) {
 #' @rdname media_stats
 #' @export
 trakt.season.stats <- function(target, season = 1L) {
-
   if (length(target) > 1) {
-    return(purrr::map_df(target, ~trakt.season.stats(.x, season)))
+    return(purrr::map_df(target, ~ trakt.season.stats(.x, season)))
   }
 
   if (length(season) > 1) {
-    return(purrr::map_df(episode, ~trakt.season.stats(target, .x)))
+    return(purrr::map_df(episode, ~ trakt.season.stats(target, .x)))
   }
 
   # Construct URL, make API call
@@ -72,17 +71,16 @@ trakt.season.stats <- function(target, season = 1L) {
 #' @rdname media_stats
 #' @export
 trakt.episodes.stats <- function(target, season = 1L, episode = 1L) {
-
   if (length(target) > 1) {
-    return(purrr::map_df(target, ~trakt.episodes.stats(.x, season, episode)))
+    return(purrr::map_df(target, ~ trakt.episodes.stats(.x, season, episode)))
   }
 
   if (length(season) > 1) {
-    return(purrr::map_df(season, ~trakt.episodes.stats(target, .x, episode)))
+    return(purrr::map_df(season, ~ trakt.episodes.stats(target, .x, episode)))
   }
 
   if (length(episode) > 1) {
-    return(purrr::map_df(episode, ~trakt.episodes.stats(target, season, .x)))
+    return(purrr::map_df(episode, ~ trakt.episodes.stats(target, season, .x)))
   }
 
   # Construct URL, make API call

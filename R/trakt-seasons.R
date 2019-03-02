@@ -28,7 +28,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 
   # Vectorize
   if (length(seasons) > 1) {
-    return(map_df(seasons, ~trakt.seasons.season(target, .x, extended)))
+    return(map_df(seasons, ~ trakt.seasons.season(target, .x, extended)))
   }
 
   # Basic sanity check

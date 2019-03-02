@@ -20,8 +20,10 @@ unpack_show <- function(show) {
 
   # Flatten "airs" (not present in minimal output)
   if (has_name(show, "airs")) {
-    show      <- modify_in(show, "airs",
-                                  ~modify_if(.x, is.null, ~return(NA_character_)))
+    show <- modify_in(
+      show, "airs",
+      ~ modify_if(.x, is.null, ~ return(NA_character_))
+    )
     show$airs <- as_tibble(show$airs)
 
     names(show$airs) <- paste0("airs_", names(show$airs))
@@ -72,7 +74,6 @@ unpack_movie <- function(response) {
 #' @importFrom dplyr select
 #' @source <https://trakt.docs.apiary.io/#reference/people/shows> for crew sections
 unpack_crew_sections <- function(crew, type) {
-
   if (type == "shows") {
     map_df(trakt_people_crew_sections, function(section) {
       if (has_name(crew, section)) {
@@ -97,7 +98,6 @@ unpack_crew_sections <- function(crew, type) {
       crew[[section]]
     })
   }
-
 }
 
 
@@ -134,8 +134,7 @@ fix_ids <- function(ids) {
     ids["tvrage"] <- NULL
   }
 
-  modify_if(ids, is.null, ~return(NA_character_), .else = as.character)
-
+  modify_if(ids, is.null, ~ return(NA_character_), .else = as.character)
 }
 
 #' Quick datetime conversion
@@ -187,7 +186,8 @@ fix_ratings_distribution <- function(response) {
   }
 
   response$distribution <- enframe(unlist(response$distribution),
-                                           name = "rating", value = "n")
+    name = "rating", value = "n"
+  )
   response$distribution$rating <- as.integer(response$distribution$rating)
   response$distribution <- list(response$distribution)
   response
@@ -213,8 +213,10 @@ check_username <- function(user, validate = FALSE) {
   failed <- any(fail_option, fail_empty_chr, fail_null, fail_chr, fail_na)
 
   if (failed) {
-    stop("Supplied user must be a character string, you provided <",
-         user, "> of class ", class(user))
+    stop(
+      "Supplied user must be a character string, you provided <",
+      user, "> of class ", class(user)
+    )
   }
 
   if (validate) {
@@ -227,4 +229,3 @@ check_username <- function(user, validate = FALSE) {
   # Return TRUE if and only if everything else did not fail
   invisible(TRUE)
 }
-

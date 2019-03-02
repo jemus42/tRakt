@@ -53,18 +53,17 @@ pad <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
 #' @examples
 #' build_trakt_url("shows", "breaking-bad", extended = "full")
 #' build_trakt_url("shows", "popular", page = 3, limit = 5)
-#'
+#' 
 #' # Path can also be partially assembled already
 #' build_trakt_url("users/jemus42", "ratings")
-#'
+#' 
 #' # Validate a URL works
 #' build_trakt_url("shows", "popular", page = 1, limit = 5, validate = TRUE)
 build_trakt_url <- function(..., validate = FALSE) {
-
   dots <- list(...)
 
   # Nuke NULL elements
-  dots <- dots[purrr::map_lgl(dots, ~!is.null(.x))]
+  dots <- dots[purrr::map_lgl(dots, ~ !is.null(.x))]
 
   # If there are no named elements, names() will return NULL
   if (!is.null(names(dots))) {

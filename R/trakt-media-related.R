@@ -24,12 +24,14 @@ trakt.media.related <- function(target, type = c("shows", "movies"),
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
-    return(map_df(target, ~trakt.media.related(.x, type, extended)))
+    return(map_df(target, ~ trakt.media.related(.x, type, extended)))
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, target, "related", extended = extended,
-                         limit = limit)
+  url <- build_trakt_url(type, target, "related",
+    extended = extended,
+    limit = limit
+  )
   response <- trakt.api.call(url = url)
 
   # Flattening

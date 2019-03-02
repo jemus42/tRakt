@@ -18,7 +18,7 @@
 #' }
 trakt.movies.releases <- function(target, country = NULL) {
   if (length(target) > 1) {
-    return(map_df(target, ~trakt.movies.releases(target = .x, country = country)))
+    return(map_df(target, ~ trakt.movies.releases(target = .x, country = country)))
   }
 
   # Construct URL, make API call

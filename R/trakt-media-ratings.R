@@ -13,10 +13,10 @@
 #' \dontrun{
 #' trakt.movies.ratings("tron-legacy-2010")
 #' trakt.shows.ratings("game-of-thrones")
-#'
+#' 
 #' # Ratings for seasons 1 through 5
 #' trakt.seasons.ratings("futurama", season = 1:5)
-#'
+#' 
 #' # Ratings for episodes 1 through 7 of season 1
 #' trakt.episodes.ratings("futurama", season = 1, episode = 1:7)
 #' }
@@ -30,7 +30,7 @@ trakt.media.ratings <- function(type = c("shows", "movies"), target) {
   type <- match.arg(type)
 
   if (length(target) > 1) {
-    return(map_df(target, ~trakt.media.ratings(type = type, target = .x)))
+    return(map_df(target, ~ trakt.media.ratings(type = type, target = .x)))
   }
 
   # Construct URL, make API call
@@ -40,8 +40,10 @@ trakt.media.ratings <- function(type = c("shows", "movies"), target) {
   response %>%
     fix_ratings_distribution() %>%
     as_tibble() %>%
-    mutate(id = target,
-           type = type)
+    mutate(
+      id = target,
+      type = type
+    )
 }
 
 # Aliases for show/movie ratings ----
@@ -67,11 +69,11 @@ trakt.movies.ratings <- function(target) {
 #' @importFrom purrr map_df
 trakt.seasons.ratings <- function(target, season = 1L) {
   if (length(target) > 1) {
-    return(map_df(target, ~trakt.seasons.ratings(.x, season)))
+    return(map_df(target, ~ trakt.seasons.ratings(.x, season)))
   }
 
   if (length(season) > 1) {
-    return(map_df(season, ~trakt.seasons.ratings(target, .x)))
+    return(map_df(season, ~ trakt.seasons.ratings(target, .x)))
   }
 
   # Construct URL, make API call
@@ -81,8 +83,10 @@ trakt.seasons.ratings <- function(target, season = 1L) {
   response %>%
     fix_ratings_distribution() %>%
     as_tibble() %>%
-    mutate(id = target,
-           season = season)
+    mutate(
+      id = target,
+      season = season
+    )
 }
 
 #' @rdname media_ratings
@@ -91,17 +95,16 @@ trakt.seasons.ratings <- function(target, season = 1L) {
 #' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
 trakt.episodes.ratings <- function(target, season = 1L, episode = 1L) {
-
   if (length(target) > 1) {
-    return(map_df(target, ~trakt.episodes.ratings(.x, season, episode)))
+    return(map_df(target, ~ trakt.episodes.ratings(.x, season, episode)))
   }
 
   if (length(season) > 1) {
-    return(map_df(season, ~trakt.episodes.ratings(target, .x, episode)))
+    return(map_df(season, ~ trakt.episodes.ratings(target, .x, episode)))
   }
 
   if (length(episode) > 1) {
-    return(map_df(episode, ~trakt.episodes.ratings(target, season, .x)))
+    return(map_df(episode, ~ trakt.episodes.ratings(target, season, .x)))
   }
 
   # Construct URL, make API call
@@ -111,7 +114,9 @@ trakt.episodes.ratings <- function(target, season = 1L, episode = 1L) {
   response %>%
     fix_ratings_distribution() %>%
     as_tibble() %>%
-    mutate(id = target,
-           season = season,
-           episode = episode)
+    mutate(
+      id = target,
+      season = season,
+      episode = episode
+    )
 }

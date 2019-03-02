@@ -11,7 +11,7 @@
 #' \dontrun{
 #' # More information
 #' trakt.shows.summary("breaking-bad", extended = "full")
-#'
+#' 
 #' # Info for multiple movies
 #' trakt.movies.summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
 #' }
@@ -30,7 +30,7 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
-    return(map_df(target, ~trakt.media.summary(type, target = .x, extended)))
+    return(map_df(target, ~ trakt.media.summary(type, target = .x, extended)))
   }
 
   # Construct URL, make API call
@@ -55,7 +55,6 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
 
   # Clean up shows and movie objects separately, feels cleaner that way.
   if (type == "shows") {
-
     response$airs <- response$airs %>%
       as_tibble() %>%
       set_names(., paste0("airs_", names(.)))
@@ -63,9 +62,7 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
     response <- response[!(names(response) %in% c("ids", "airs"))] %>%
       as_tibble() %>%
       bind_cols(response$airs, response$id)
-
   } else if (type == "movies") {
-
     response <- response[names(response) != "ids"] %>%
       as_tibble() %>%
       bind_cols(response$id)

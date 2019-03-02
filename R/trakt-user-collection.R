@@ -43,7 +43,6 @@ trakt.user.collection <- function(user = getOption("trakt.username"),
   response <- trakt.api.call(url = url)
 
   if (type == "shows") {
-
     response <- response %>%
       select(-show) %>%
       bind_cols(unpack_show(response$show)) %>%

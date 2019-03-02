@@ -81,8 +81,10 @@ test_that("trakt.anticipated works", {
 test_that("trakt.played and trakt.watched also do things", {
 
   # Both have the same variables, the difference is just sorting
-  nm <- c("watcher_count", "play_count", "collected_count", "collector_count",
-          "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb")
+  nm <- c(
+    "watcher_count", "play_count", "collected_count", "collector_count",
+    "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb"
+  )
 
   trakt.watched("shows", extended = "min", period = "weekly") %>%
     expect_is("tbl") %>%

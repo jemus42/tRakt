@@ -19,13 +19,12 @@
 trakt.user.network <- function(relationship = c("friends", "followers", "following"),
                                user = getOption("trakt.username"),
                                extended = c("min", "full")) {
-
   check_username(user)
   extended <- match.arg(extended)
   relationship <- match.arg(relationship)
 
   if (length(user) > 1) {
-    return(map_df(user, ~trakt.user.network(relationship, user = .x, extended)))
+    return(map_df(user, ~ trakt.user.network(relationship, user = .x, extended)))
   }
 
   # Construct URL, make API call

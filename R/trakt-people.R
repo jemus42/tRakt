@@ -11,14 +11,14 @@
 #' @examples
 #' # A single person's extended information
 #' trakt.people.summary("bryan-cranston", "full")
-#'
+#' 
 #' # Multiple people
 #' trakt.people.summary(c("kit-harington", "emilia-clarke"))
 trakt.people.summary <- function(target, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
-    return(map_df(target, ~trakt.people.summary(.x, extended)))
+    return(map_df(target, ~ trakt.people.summary(.x, extended)))
   }
 
   # Construct URL, make API call
@@ -27,7 +27,7 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
 
   # Substitute NULLs with explicit NAs and flatten IDs
   response$ids <- as_tibble(fix_ids(response$ids))
-  response <- modify_if(response, is.null, ~return(NA_character_))
+  response <- modify_if(response, is.null, ~ return(NA_character_))
   response <- fix_datetime(response)
   response[names(response) != "ids"] %>%
     as_tibble() %>%
@@ -48,7 +48,7 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
 #' @examples
 #' \dontrun{
 #' trakt.people.movies("christopher-nolan")
-#'
+#' 
 #' trakt.people.shows("kit-harington")
 #' }
 NULL
@@ -141,7 +141,6 @@ NULL
 #' @importFrom tibble has_name
 trakt.media.people <- function(type = c("shows", "movies"), target,
                                extended = c("min", "full")) {
-
   type <- match.arg(type)
   extended <- match.arg(extended)
 
@@ -168,9 +167,7 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
   }
 
   if (has_name(response, "crew") & !is_empty(response$crew)) {
-
     response$crew <- map_df(trakt_people_crew_sections, function(section) {
-
       response$crew[[section]]$person[["images"]] <- NULL
 
       if (!has_name(response$crew, section) | is_empty(response$crew[[section]])) {
@@ -188,7 +185,6 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
         as_tibble() %>%
         fix_datetime()
     })
-
   }
 
   response
@@ -205,4 +201,3 @@ trakt.shows.people <- function(target, extended = c("min", "full")) {
 trakt.movies.people <- function(target, extended = c("min", "full")) {
   trakt.media.people(type = "movies", target = target, extended = extended)
 }
-

@@ -28,20 +28,19 @@
 #' \dontrun{
 #' # A show
 #' trakt.search("Breaking Bad", type = "show", n_results = 3)
-#'
+#' 
 #' # A show by its trakt id, and now with more information
 #' trakt.search.byid(1388, "trakt", type = "show", extended = "full")
-#'
+#' 
 #' # A person
 #' trakt.search("J. K. Simmons", type = "person", extended = "full")
-#'
+#' 
 #' # A movie or a show
 #' trakt.search("Tron", "movie", n_results = 2)
 #' trakt.search("Tron", "show", n_results = 2)
 #' }
 trakt.search <- function(query, type = c("movie", "show", "episode", "person", "list"),
                          years = NULL, n_results = 1L, extended = c("min", "full")) {
-
   type <- match.arg(type)
   extended <- match.arg(extended)
 
@@ -59,10 +58,9 @@ trakt.search <- function(query, type = c("movie", "show", "episode", "person", "
 
 #' @rdname trakt.search
 #' @export
-trakt.search.byid <- function(id, id_type = c("trakt" , "imdb" , "tmdb" , "tvdb"),
+trakt.search.byid <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
                               type = c("movie", "show", "episode", "person", "list"),
                               n_results = 1L, extended = c("min", "full")) {
-
   id_type <- match.arg(id_type)
   type <- match.arg(type)
   extended <- match.arg(extended)

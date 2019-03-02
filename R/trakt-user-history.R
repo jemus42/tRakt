@@ -23,14 +23,14 @@ trakt.user.history <- function(user = getOption("trakt.username"),
                                type = c("shows", "movies"),
                                limit = 10L, start_at = NULL, end_at = NULL,
                                extended = c("min", "full")) {
-
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "history", type,
-                         extended = extended, limit = limit)
+    extended = extended, limit = limit
+  )
   response <- trakt.api.call(url = url)
   response <- tibble::as_tibble(response)
 

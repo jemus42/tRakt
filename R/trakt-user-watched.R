@@ -20,7 +20,7 @@
 #' @examples
 #' \dontrun{
 #' myshows <- trakt.user.watched() # Defaults to your username if set
-#'
+#' 
 #' # Use noseasons = TRUE to avoid receiving detailed season/episode data
 #' seans.shows <- trakt.user.watched(user = "sean", noseasons = TRUE)
 #' }
@@ -28,13 +28,12 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
                                type = c("shows", "movies"),
                                extended = c("min", "full"),
                                noseasons = TRUE) {
-
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)
 
   if (noseasons) {
-    extended = paste0(extended, ",noseasons")
+    extended <- paste0(extended, ",noseasons")
   }
 
   # Construct URL, make API call
@@ -48,9 +47,11 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
     response <- response %>%
       select(-show) %>%
       bind_cols(unpack_show(response$show)) %>%
-      select(-contains("seasons"),
-             everything(),
-             contains("seasons"))
+      select(
+        -contains("seasons"),
+        everything(),
+        contains("seasons")
+      )
     # This uses contains() because the seasons column might not exist
     # and this way I don't have to use an extra if-statement to check "noseasons == TRUE"
   } else if (type == "movies") {

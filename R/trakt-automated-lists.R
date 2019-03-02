@@ -14,10 +14,10 @@
 #' \dontrun{
 #' # Get popular shows with only ids
 #' trakt.popular(type = "shows")
-#'
+#' 
 #' # Get trending movies with extended information
 #' trakt.trending(type = "movies", 5, extended = "full")
-#'
+#' 
 #' # Get top 5 anticipated movies
 #' trakt.anticipated(type = "movies", 5)
 #' }
@@ -25,16 +25,18 @@ NULL
 
 # Worker function ----
 #' @keywords internal
-trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated",
-                                           "played", "watched"),
-                            type = c("shows", "movies"),
-                            limit = 10L,
-                            extended = c("min", "full"),
-                            period = NULL) {
+trakt_auto_lists <- function(list_type = c(
+                               "popular", "trending", "anticipated",
+                               "played", "watched"
+                             ),
+                             type = c("shows", "movies"),
+                             limit = 10L,
+                             extended = c("min", "full"),
+                             period = NULL) {
   list_type <- match.arg(list_type)
-  type      <- match.arg(type)
-  extended  <- match.arg(extended)
-  limit     <- as.integer(limit)
+  type <- match.arg(type)
+  extended <- match.arg(extended)
+  limit <- as.integer(limit)
 
   if (limit < 1) {
     stop("'limit' must be greater than zero, supplied <", limit, ">")
@@ -42,7 +44,8 @@ trakt_auto_lists <- function(list_type = c("popular", "trending", "anticipated",
 
   # Construct URL, make API call
   url <- build_trakt_url(type, list_type, period,
-                         limit = limit, extended = extended)
+    limit = limit, extended = extended
+  )
   response <- trakt.api.call(url)
   response <- tibble::as_tibble(response)
 
@@ -88,8 +91,10 @@ trakt.popular <- function(type = c("shows", "movies"), limit = 10,
   type <- match.arg(type)
   extended <- match.arg(extended)
 
-  trakt_auto_lists(list_type = "popular", type = type,
-                   limit = limit, extended = extended)
+  trakt_auto_lists(
+    list_type = "popular", type = type,
+    limit = limit, extended = extended
+  )
 }
 
 #' @rdname automated_lists
@@ -99,45 +104,53 @@ trakt.trending <- function(type = c("shows", "movies"), limit = 10,
   type <- match.arg(type)
   extended <- match.arg(extended)
 
-  trakt_auto_lists(list_type = "trending", type = type,
-                   limit = limit, extended = extended)
+  trakt_auto_lists(
+    list_type = "trending", type = type,
+    limit = limit, extended = extended
+  )
 }
 
 #' @rdname automated_lists
 #' @export
 trakt.anticipated <- function(type = c("shows", "movies"), limit = 10,
-                           extended = c("min", "full")) {
+                              extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
-  trakt_auto_lists(list_type = "anticipated", type = type,
-                   limit = limit, extended = extended)
+  trakt_auto_lists(
+    list_type = "anticipated", type = type,
+    limit = limit, extended = extended
+  )
 }
 
 #' @rdname automated_lists
 #' @export
 trakt.played <- function(type = c("shows", "movies"),
                          limit = 10, extended = c("min", "full"),
-                         period = c("weekly" , "monthly" , "yearly" , "all")) {
+                         period = c("weekly", "monthly", "yearly", "all")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
   period <- match.arg(period)
 
-  trakt_auto_lists(list_type = "played", type = type,
-                   limit = limit,
-                   extended = extended, period = period)
+  trakt_auto_lists(
+    list_type = "played", type = type,
+    limit = limit,
+    extended = extended, period = period
+  )
 }
 
 #' @rdname automated_lists
 #' @export
 trakt.watched <- function(type = c("shows", "movies"),
-                         limit = 10, extended = c("min", "full"),
-                         period = c("weekly" , "monthly" , "yearly" , "all")) {
+                          limit = 10, extended = c("min", "full"),
+                          period = c("weekly", "monthly", "yearly", "all")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
   period <- match.arg(period)
 
-  trakt_auto_lists(list_type = "watched", type = type,
-                   limit = limit,
-                   extended = extended, period = period)
+  trakt_auto_lists(
+    list_type = "watched", type = type,
+    limit = limit,
+    extended = extended, period = period
+  )
 }
