@@ -121,9 +121,9 @@ trakt.people.shows <- function(target, extended = c("min", "full")) {
 #' @name media_people
 #' @inheritParams trakt_api_common_parameters
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
-#' and `crew`. The latter `tibble` objects are as flat as possible.#' @name media_people
+#' and `crew`. The latter `tibble` objects are as flat as possible.
 #' @family people data
-#' @seealso [people_media], for the other direction: People that have credits.
+#' @seealso [people_media], for the other direction: People that have credits in shows/movies.
 #' @examples
 #' \dontrun{
 #' breakingbad_credits <- trakt.shows.people("breaking-bad")

@@ -22,7 +22,7 @@ returns more variables and should generally only be used if required.}
 }
 \value{
 A \code{list} of one or more \link[tibble:tibble-package]{tibbles} for \code{cast}
-and \code{crew}. The latter \code{tibble} objects are as flat as possible.#' @name media_people
+and \code{crew}. The latter \code{tibble} objects are as flat as possible.
 }
 \description{
 Returns all cast and crew for a show/movie, depending on how much data is
@@ -34,7 +34,7 @@ breakingbad_credits <- trakt.shows.people("breaking-bad")
 }
 }
 \seealso{
-\link{people_media}, for the other direction: People that have credits.
+\link{people_media}, for the other direction: People that have credits in shows/movies.
 
 Other people data: \code{\link{people_media}},
   \code{\link{trakt.people.summary}}

@@ -10,14 +10,16 @@
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr everything
 #' @importFrom dplyr mutate
-#' @export
+#' @name media_related
 #' @examples
-#' \dontrun{
-#' trakt.related("breaking-bad", "shows", limit = 5)
-#' }
-trakt.related <- function(target, type = c("shows", "movies"),
-                          limit = 10L,
-                          extended = c("min", "full")) {
+#' trakt.shows.related("breaking-bad", limit = 5)
+NULL
+
+#' @keywords internal
+#' @noRd
+trakt.media.related <- function(target, type = c("shows", "movies"),
+                                limit = 10L,
+                                extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
@@ -34,9 +36,7 @@ trakt.related <- function(target, type = c("shows", "movies"),
   if (type == "shows") {
     response <- unpack_show(response)
   } else if (type == "movies") {
-    response <- response %>%
-      select(-ids) %>%
-      bind_cols(response$ids)
+    response <- unpack_movie(response)
   }
 
   response %>%
@@ -48,18 +48,18 @@ trakt.related <- function(target, type = c("shows", "movies"),
 
 # Aliased/derived ----
 
-#' @rdname trakt.related
+#' @rdname media_related
 #' @export
 trakt.movies.related <- function(target,
                                  limit = 10L,
                                  extended = c("min", "full")) {
-  trakt.related(target, type = "movies", extended = extended)
+  trakt.media.related(target, type = "movies", extended = extended, limit = limit)
 }
 
-#' @rdname trakt.related
+#' @rdname media_related
 #' @export
 trakt.shows.related <- function(target,
                                 limit = 10L,
                                 extended = c("min", "full")) {
-  trakt.related(target, type = "shows", extended = extended)
+  trakt.media.related(target, type = "shows", extended = extended, limit = limit)
 }
