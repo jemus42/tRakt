@@ -3,18 +3,18 @@
 
 # tRakt <img src="man/figures/logo.png" align="right" height=140/>
 
-[![Travis build
-status](https://travis-ci.org/jemus42/tRakt.svg?branch=master)](https://travis-ci.org/jemus42/tRakt)
+![Travis
+(.org)](https://img.shields.io/travis/jemus42/tRakt.svg?logo=travis)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/jemus42/tRakt?branch=master&svg=true)](https://ci.appveyor.com/project/jemus42/tRakt)
 [![Coverage
-status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)
+status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)  
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
 ![GitHub
-release](https://img.shields.io/github/release/jemus42/tRakt.svg?label=GitHub)
-![GitHub commits since latest
-release](https://img.shields.io/github/commits-since/jemus42/tRakt/latest.svg)
+release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)
+![GitHub last commit
+(master)](https://img.shields.io/github/last-commit/jemus42/tRakt/master.svg?logo=GithUb)
 
 This is `tRakt` version `0.14.9000`.  
 It contains functions to retrieve data from
