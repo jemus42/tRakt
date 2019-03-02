@@ -23,55 +23,56 @@ NULL
 #' @importFrom purrr flatten_df
 #' @importFrom tibble has_name
 #' @importFrom lubridate as_datetime
+#' @importFrom dplyr bind_cols
+#' @importFrom dplyr select
+#' @note Handling of this result is annoying because it's always just a list, not a data.frame
 trakt.media.summary <- function(type = c("movies", "shows"), target, extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
-    response <- map_df(target, function(t) {
-      trakt.media.summary(type = type, target = t, extended = extended)
-    })
-    return(response)
+    return(map_df(target, ~trakt.media.summary(type, target = .x, extended)))
   }
 
   # Construct URL, make API call
   url <- build_trakt_url(type, target, extended = extended)
   response <- trakt.api.call(url = url)
 
-  # Sometimes IDs are NULL which is bad. See target = "67188"
-  response$ids <- fix_ids(response$ids)
+  # All variants have this in common
+  response$ids <- fix_ids(as_tibble(response$ids))
 
-  if (has_name(response, "airs")) {
-    names(response$airs) <- paste0("airs_", names(response$airs))
+  # If extended == "min", we only have IDs to worry about, so early return
+  if (extended == "min") {
+    response <- response[names(response) != "ids"] %>%
+      as_tibble() %>%
+      bind_cols(response$ids)
+
+    return(response)
   }
 
-  if (extended == "full") {
-    genres <- list(response$genres)
-    transl <- list(response$available_translations)
+  # extended == "full" objects have this in common
+  response$available_translations <- list(response$available_translations)
+  response$genres <- list(response$genres)
 
-    response$genres <- NULL
-    response$available_translations <- NULL
+  # Clean up shows and movie objects separately, feels cleaner that way.
+  if (type == "shows") {
 
-    response <- flatten_df(response)
+    response$airs <- response$airs %>%
+      as_tibble() %>%
+      set_names(., paste0("airs_", names(.)))
 
-    response$genres <- genres
-    response$available_translations <- transl
+    response <- response[!(names(response) %in% c("ids", "airs"))] %>%
+      as_tibble() %>%
+      bind_cols(response$airs, response$id)
 
-    if (has_name(response, "released")) {
-      response$released <- as_datetime(response$released, tz = "UTC")
-    }
+  } else if (type == "movies") {
 
-    # flatten_df breaks POSIXct classes – not intended behavior
-    # https://github.com/tidyverse/purrr/issues/648
-    if (has_name(response, "first_aired")) {
-      response$first_aired <- as_datetime(response$first_aired, tz = "UTC")
-    }
-    response$updated_at <- as_datetime(response$updated_at, tz = "UTC")
-  } else {
-    response <- flatten_df(response)
+    response <- response[names(response) != "ids"] %>%
+      as_tibble() %>%
+      bind_cols(response$id)
   }
 
-  response
+  as_tibble(response)
 }
 
 # Derived ----
