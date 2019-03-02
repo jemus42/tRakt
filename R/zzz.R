@@ -6,7 +6,8 @@
 
 # Please R CMD check
 globalVariables(c("ids", "airs", "movie", "shows", "show", "episode", "number_abs",
-                  "number", "seasons", "episodes", "collected_at", ".", "person"))
+                  "number", "seasons", "episodes", "collected_at", ".", "person",
+                  "related_to"))
 
 #' The tRakt client id for this particular app
 #' @keywords internal
