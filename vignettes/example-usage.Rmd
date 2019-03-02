@@ -21,44 +21,6 @@ knitr::opts_chunk$set(
 
 ```{r startup}
 library(tRakt)
-library(knitr)   # for knitr::kable, used to render simple tables
 ```
 
-## Let's pull some data
-
-### Search
-
-There are two ways to search on trakt.tv. The first is via text query (i.e. `Game of Thrones`),
-the second is via ID (various types supported).  
-
-At the time of this writing (2015-02-16), the trakt.tv search is a little derpy, so search by ID is recommended.
-
-```{r search}
-# Search via text query
-show1  <- trakt.search("Game of Thrones", type = "show")
-
-# Search via ID (trakt id is used by default)
-show2 <- trakt.search.byid(1390) # trakt id of Game of Thrones
-
-# The returned show is identical
-identical(show1$title, show2$title)
-```
-
-### Getting more data
-
-```{r data_pulls}
-# Search a show and receive basic info
-show          <- trakt.search("Breaking Bad", type = "show")
-# Save the slug of the show, that's needed for other functions as an ID
-trakt_id          <- show$trakt
-trakt_id
-
-# Get the season & episode data
-show.seasons  <- trakt.seasons.summary(trakt_id, extended = "full") # How many seasons are there?
-show.episodes <- trakt.get_all_episodes(trakt_id, extended = "full")
-
-# Glimpse at data (only some columns each)
-show.seasons[c(1, 3, 4)] %>% kable(row.names = FALSE)
-
-show.episodes[c(1:3, 6, 7, 17)] %>% head(10) %>% kable
-```
+Vignette put on hold until the API is stable.
