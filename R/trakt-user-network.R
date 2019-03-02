@@ -8,6 +8,9 @@
 #' @export
 #' @note Since no OAuth2 methods are supported yet, the specified user must not be private.
 #' @family user data
+#' @importFrom purrr map_df
+#' @importFrom tibble as_tibble
+#' @importFrom tibble remove_rownames
 #' @examples
 #' \dontrun{
 #' trakt.user.network("friends", "jemus42")
@@ -22,14 +25,14 @@ trakt.user.network <- function(relationship = c("friends", "followers", "followi
   relationship <- match.arg(relationship)
 
   if (length(user) > 1) {
-    return(purrr::map_df(user, ~trakt.user.network(relationship, user = .x, extended)))
+    return(map_df(user, ~trakt.user.network(relationship, user = .x, extended)))
   }
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, relationship, extended = extended)
   response <- trakt.api.call(url = url)
 
-  response <- tibble::as_tibble(response)
+  response <- as_tibble(response)
 
   # Flatten the tbl
   response <- cbind(response[names(response) != "user"], response$user)
@@ -41,5 +44,5 @@ trakt.user.network <- function(relationship = c("friends", "followers", "followi
   # Ensure datetime conversion
   response <- fix_datetime(response)
 
-  tibble::as_tibble(tibble::remove_rownames(response))
+  as_tibble(remove_rownames(response))
 }
