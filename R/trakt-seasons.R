@@ -16,7 +16,8 @@
 #' @importFrom purrr is_integer
 #' @importFrom purrr map_df
 #' @importFrom tibble as_tibble
-#' @note If you want to quickly gather data of multiple seasons, see [trakt.get_all_episodes].
+#' @note If you want to quickly gather episode data of multiple seasons,
+#' see [trakt.seasons.summary] and use the `episodes = TRUE` parameter.
 #' @family show data
 #' @examples
 #' \dontrun{

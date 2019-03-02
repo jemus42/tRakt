@@ -31,7 +31,8 @@ This function accesses \href{https://trakt.docs.apiary.io/#reference/seasons/sea
 at the endpoint \code{/shows/:show_id/seasons/:season_num}.
 }
 \note{
-If you want to quickly gather data of multiple seasons, see \link{trakt.get_all_episodes}.
+If you want to quickly gather episode data of multiple seasons,
+see \link{trakt.seasons.summary} and use the \code{episodes = TRUE} parameter.
 }
 \examples{
 \dontrun{
