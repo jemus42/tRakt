@@ -4,6 +4,12 @@
 #' @inheritParams trakt_api_common_parameters
 #' @inheritParams automated_lists
 #' @return A [tibble][tibble::tibble-package].
+#' @importFrom tibble as_tibble
+#' @importFrom purrr map_df
+#' @importFrom dplyr select
+#' @importFrom dplyr bind_cols
+#' @importFrom dplyr everything
+#' @importFrom dplyr mutate
 #' @export
 #' @examples
 #' \dontrun{
@@ -16,7 +22,7 @@ trakt.related <- function(target, type = c("shows", "movies"),
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
-    return(purrr::map_df(target, ~trakt.related(.x, type, extended)))
+    return(map_df(target, ~trakt.related(.x, type, extended)))
   }
 
   # Construct URL, make API call
@@ -25,10 +31,19 @@ trakt.related <- function(target, type = c("shows", "movies"),
   response <- trakt.api.call(url = url)
 
   # Flattening
-  response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
-  response$related_to <- target
+  if (type == "shows") {
+    response <- unpack_show(response)
+  } else if (type == "movies") {
+    response <- response %>%
+      select(-ids) %>%
+      bind_cols(response$ids)
+  }
 
-  tibble::as_tibble(response)
+  response %>%
+    mutate(related_to = target) %>%
+    select(related_to, everything()) %>%
+    fix_ratings() %>%
+    as_tibble()
 }
 
 # Aliased/derived ----

@@ -4,10 +4,6 @@
 #' It does not use OAuth2, so you can only get data for a user with a
 #' **public profile**.
 #'
-#' If `type` is set to `shows.extended`, the resulting [tibble][tibble::tibble-package]
-#' contains play stats for _every_ watched episode of _every_ show. Otherwise,
-#' the returned [tibble][tibble::tibble-package] only contains play stats per show or movie respectively.
-#'
 #' @inheritParams trakt_api_common_parameters
 #' @param noseasons `logical(1) [TRUE]`: Only for `type = "show"`: Exclude detailed season
 #' data from output. This is advisable if you do not need per-episode data and want to
@@ -16,8 +12,11 @@
 #' @export
 #' @family user data
 #' @importFrom dplyr bind_cols
-#' @importFrom dplyr select_if
-#' @importFrom dplyr pull
+#' @importFrom dplyr select
+#' @importFrom dplyr contains
+#' @importFrom dplyr everything
+#' @importFrom tibble tibble
+#' @importFrom tibble as_tibble
 #' @examples
 #' \dontrun{
 #' myshows <- trakt.user.watched() # Defaults to your username if set
@@ -41,32 +40,24 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "watched", type, extended = extended)
   response <- trakt.api.call(url = url)
-  response <- tibble::as_tibble(response)
 
-  if (identical(response, tibble::tibble())) return(response)
+  if (identical(response, tibble())) return(response)
 
   if (type == "shows") {
     # Unpack the show media object and bind it to the base tbl
-    response <- dplyr::bind_cols(
-      response %>% dplyr::select(-show),
-      unpack_show(response$show)
-    ) %>%
-      dplyr::select(-dplyr::contains("seasons"),
-                    dplyr::everything(),
-                    dplyr::contains("seasons"))
+    response <- response %>%
+      select(-show) %>%
+      bind_cols(unpack_show(response$show)) %>%
+      select(-contains("seasons"),
+             everything(),
+             contains("seasons"))
     # This uses contains() because the seasons column might not exist
-    # and this way I don't have to use an extra if statement to check "noseasons"
-  }
-  if (type == "movies") {
-    response$movie$ids <- fix_ids(response$movie$ids)
-    response$movie <- dplyr::bind_cols(response$movie %>% dplyr::select(-ids),
-                                       response$movie$ids)
-
-    response <- dplyr::bind_cols(response %>% dplyr::select(-movie),
-                                 response$movie)
+    # and this way I don't have to use an extra if-statement to check "noseasons == TRUE"
+  } else if (type == "movies") {
+    response <- unpack_movie(response)
   }
 
   # To be sure
   response <- fix_datetime(response)
-  tibble::as_tibble(response)
+  as_tibble(response)
 }
