@@ -30,6 +30,7 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
   response$ids <- fix_ids(response$ids)
   response <- modify_if(response, is.null, ~return(NA_character_))
   response <- flatten_df(response)
+  response <- fix_datetime(response)
 
   response
 }
@@ -126,7 +127,7 @@ trakt.people.shows <- function(target, extended = c("min", "full")) {
 #' @seealso [people_media], for the other direction: People that have credits in shows/movies.
 #' @examples
 #' \dontrun{
-#' breakingbad_credits <- trakt.shows.people("breaking-bad")
+#' trakt.shows.people("breaking-bad")
 #' }
 NULL
 
@@ -134,11 +135,11 @@ NULL
 #' @keywords internal
 #' @noRd
 #' @importFrom purrr is_empty
+#' @importFrom purrr map_df
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
 #' @importFrom tibble as_tibble
 #' @importFrom tibble has_name
-#' @importFrom purrr map_df
 trakt.media.people <- function(type = c("shows", "movies"), target,
                                extended = c("min", "full")) {
 
@@ -157,7 +158,9 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
 
     response$cast$person <- response$cast$person %>%
       select(-ids) %>%
-      cbind(fix_ids(response$cast$person$ids))
+      cbind(fix_ids(response$cast$person$ids)) %>%
+      fix_datetime() %>%
+      as_tibble()
 
     response$cast <- response$cast %>%
       select(-person) %>%
@@ -182,9 +185,9 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
       response$crew[[section]] <- response$crew[[section]] %>%
         select(-person) %>%
         cbind(response$crew[[section]]$person) %>%
-        mutate(crew_type = section)
-
-      as_tibble(response$crew[[section]])
+        mutate(crew_type = section) %>%
+        as_tibble() %>%
+        fix_datetime()
     })
 
   }

@@ -30,7 +30,7 @@ available.
 }
 \examples{
 \dontrun{
-breakingbad_credits <- trakt.shows.people("breaking-bad")
+trakt.shows.people("breaking-bad")
 }
 }
 \seealso{

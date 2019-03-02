@@ -144,7 +144,7 @@ fix_ids <- function(ids) {
 #' @param response The input object. Must be `data.frame`(ish) or named `list`.
 #' @return The same object with converted datetimes
 #' @importFrom lubridate ymd_hms
-#' @importFrom lubridate as_datetime
+#' @importFrom lubridate as_date
 #' @importFrom dplyr mutate_at
 #' @importFrom dplyr vars
 #' @importFrom purrr map_at
@@ -163,7 +163,10 @@ fix_datetime <- function(response) {
   datevars <- datevars[datevars %in% names(response)]
 
   if (has_name(response, "released")) {
-    response$released <- as_datetime(response$released)
+    response$released <- as_date(response$released)
+  }
+  if (has_name(response, "birthday")) {
+    response$birthday <- as_date(response$birthday)
   }
 
   if (inherits(response, "data.frame")) {
