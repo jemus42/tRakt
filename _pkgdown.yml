@@ -1,38 +1,31 @@
 reference:
   - title: Finding media
     desc: >
-      Searching for items is often required to retrieve some kind of ID, like the `slug`,
+      Searching for items is usually required to retrieve some kind of ID, like the `slug`,
       which is required for use of item-specific functions.
     contents:
       - starts_with("trakt.search")
-  - title: Getting a lot of data about a show
-    desc: >
-      These are convenience functions for the cases where you are *sure* you want all the
-      available data. These are the highest-level functions and internally use the more
-      specific functions.
-    contents:
-      - starts_with("trakt.get")
   - title: Shows & movies that are popular, trending, anticipated, ...
     contents:
       - matches("trakt.(popular|trending|anticipated|watched|played)")
   - title: Simple summary data
     contents:
       - ends_with("summary")
+      - -trakt.seasons.summary
   - title: Season and episode data
     contents:
       - starts_with("trakt.season")
-  - title: Movie-specific data
-    contents:
-      - contains("movies")
   - title: Media ratings
     contents:
       - ends_with(".ratings")
+      - -contains("user")
   - title: Media stats
     contents:
       - ends_with(".stats")
+      - -contains("user")
   - title: Related media
     contents:
-      - contains("related")
+      - ends_with(".related")
   - title: User-specific data
     contents:
       - starts_with("trakt.user")

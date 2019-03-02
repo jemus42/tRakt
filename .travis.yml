@@ -40,7 +40,7 @@ after_success:
 before_deploy: Rscript -e 'remotes::install_cran("pkgdown")'
 deploy:
   provider: script
-  script: Rscript -e 'pkgdown::deploy_site_github()'
+  script: Rscript -e 'pkgdown::deploy_site_github(run_dont_run = TRUE)'
   skip_cleanup: true
   on:
     branch: master
