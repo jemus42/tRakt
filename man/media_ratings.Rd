@@ -37,7 +37,7 @@ A \link[tibble:tibble-package]{tibble}.
 \description{
 Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
 If you \emph{do not} want the full ratings distribution, it is highly advised to
-just use \code{*.summary} functions or \code{trakt.seasons.season} for episode ratings.
+just use \code{*.summary} functions or \link{trakt.seasons.season} for episode ratings.
 }
 \note{
 Since this function is able to work on multi-length inputs for
@@ -45,10 +45,13 @@ Since this function is able to work on multi-length inputs for
 of one API call \emph{per element in each argument}. Please be kind to the API.
 }
 \examples{
-\dontrun{
+# A movie's ratings
 trakt.movies.ratings("tron-legacy-2010")
+
+# A show's ratings
 trakt.shows.ratings("game-of-thrones")
 
+\dontrun{
 # Ratings for seasons 1 through 5
 trakt.seasons.ratings("futurama", season = 1:5)
 

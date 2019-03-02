@@ -10,19 +10,21 @@
 #' \dontrun{
 #' # Stats for multiple shows at once
 #' trakt.shows.stats(c("breaking-bad", "game-of-thrones"))
-#' 
+#'
 #' # Stats for multiple episodes
 #' trakt.episodes.stats("futurama", season = 1, episode = 1:7)
 #' }
 NULL
 
 #' @keywords internal
+#' @noRd
+#' @importFrom purrr map_df
+#' @importFrom tibble as_tibble
 trakt.media.stats <- function(type = c("shows", "movies"), target) {
   type <- match.arg(type)
 
   if (length(target) > 1) {
-    res <- purrr::map_df(target, ~ trakt.media.stats(type, .x))
-    return(res)
+   return(map_df(target, ~ trakt.media.stats(type, .x)))
   }
 
   # Construct URL, make API call
@@ -31,7 +33,7 @@ trakt.media.stats <- function(type = c("shows", "movies"), target) {
   response$type <- type
   response$id <- target
 
-  tibble::as_tibble(response)
+  as_tibble(response)
 }
 
 # Derived ----
@@ -50,13 +52,15 @@ trakt.movies.stats <- function(target) {
 
 #' @rdname media_stats
 #' @export
+#' @importFrom purrr map_df
+#' @importFrom tibble as_tibble
 trakt.season.stats <- function(target, season = 1L) {
   if (length(target) > 1) {
-    return(purrr::map_df(target, ~ trakt.season.stats(.x, season)))
+    return(map_df(target, ~ trakt.season.stats(.x, season)))
   }
 
   if (length(season) > 1) {
-    return(purrr::map_df(episode, ~ trakt.season.stats(target, .x)))
+    return(map_df(episode, ~ trakt.season.stats(target, .x)))
   }
 
   # Construct URL, make API call
@@ -65,22 +69,24 @@ trakt.season.stats <- function(target, season = 1L) {
   response$season <- season
   response$id <- target
 
-  tibble::as_tibble(response)
+  as_tibble(response)
 }
 
 #' @rdname media_stats
 #' @export
+#' @importFrom purrr map_df
+#' @importFrom tibble as_tibble
 trakt.episodes.stats <- function(target, season = 1L, episode = 1L) {
   if (length(target) > 1) {
-    return(purrr::map_df(target, ~ trakt.episodes.stats(.x, season, episode)))
+    return(map_df(target, ~ trakt.episodes.stats(.x, season, episode)))
   }
 
   if (length(season) > 1) {
-    return(purrr::map_df(season, ~ trakt.episodes.stats(target, .x, episode)))
+    return(map_df(season, ~ trakt.episodes.stats(target, .x, episode)))
   }
 
   if (length(episode) > 1) {
-    return(purrr::map_df(episode, ~ trakt.episodes.stats(target, season, .x)))
+    return(map_df(episode, ~ trakt.episodes.stats(target, season, .x)))
   }
 
   # Construct URL, make API call
@@ -90,5 +96,5 @@ trakt.episodes.stats <- function(target, season = 1L, episode = 1L) {
   response$episode <- episode
   response$id <- target
 
-  tibble::as_tibble(response)
+  as_tibble(response)
 }

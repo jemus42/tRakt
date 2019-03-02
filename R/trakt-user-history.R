@@ -10,6 +10,8 @@
 #' @importFrom dplyr select
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr rename
+#' @importFrom tibble tibble
+#' @importFrom tibble as_tibble
 #' @return A [tibble][tibble::tibble-package]. For `type == "show"`, the `tibble` contains
 #' two list-columns `show` and `episode` which are *not* unnested by default due to
 #' duplicate variable names, the preferref handling of which is left to the user.
@@ -32,33 +34,29 @@ trakt.user.history <- function(user = getOption("trakt.username"),
     extended = extended, limit = limit
   )
   response <- trakt.api.call(url = url)
-  response <- tibble::as_tibble(response)
+  response <- as_tibble(response)
 
-  if (identical(response, tibble::tibble())) return(response)
+  if (identical(response, tibble())) return(response)
 
   if (type == "shows") {
     # Fix episodes first
     response$episode <- response$episode %>%
-      dplyr::select(-ids) %>%
-      dplyr::bind_cols(fix_ids(response$episode$ids)) %>%
-      dplyr::rename(episode = number) %>%
-      tibble::as_tibble() %>%
-      fix_datetime()
+      select(-ids) %>%
+      bind_cols(fix_ids(response$episode$ids)) %>%
+      rename(episode = number) %>%
+      as_tibble() %>%
+      fix_datetime() %>%
+      fix_ratings()
 
     # Unpack the show media object and bind it to the base tbl
-    response$show <- unpack_show(response$show) %>% fix_datetime()
+    response$show <- unpack_show(response$show) %>%
+      fix_datetime() %>%
+      fix_ratings()
   }
   if (type == "movies") {
-    response$movie$ids <- fix_ids(response$movie$ids)
-    response$movie <- response$movie %>%
-      dplyr::select(-ids) %>%
-      dplyr::bind_cols(response$movie$ids)
-
-    response <- response %>%
-      dplyr::select(-movie) %>%
-      dplyr::bind_cols(response$movie) %>%
-      fix_datetime()
+    response <- unpack_movie(response) %>%
+      fix_ratings()
   }
 
-  tibble::as_tibble(response)
+  as_tibble(response)
 }
