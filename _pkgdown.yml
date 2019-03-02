@@ -14,11 +14,12 @@ reference:
       - -trakt.seasons.summary
   - title: Season and episode data
     contents:
-      - starts_with("trakt.season")
+      - trakt.seasons.summary
+      - trakt.seasons.season
   - title: Movie-specific data
-    contens:
-      - ends_with(".releases")
-      - ends_with(".boxoffice")
+    contents:
+      - trakt.movies.releases
+      - trakt.movies.boxoffice
   - title: Media ratings
     contents:
       - ends_with(".ratings")
@@ -35,8 +36,7 @@ reference:
       - starts_with("trakt.user")
   - title: Data relating to people
     contents:
-      - starts_with("trakt.people")
-      - ends_with(".people")
+      - contains("people")
   - title: API & misc helpers
     contents:
       - build_trakt_url
