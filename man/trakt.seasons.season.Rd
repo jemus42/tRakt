@@ -22,23 +22,23 @@ returns more variables and should generally only be used if required.}
 A \link[tibble:tibble-package]{tibble}.
 }
 \description{
-\code{trakt.seasons.season} pulls a season's full data.
+\code{trakt.seasons.season} gets a season's full data.
 Similar to \link{trakt.seasons.summary}, but this function returns full data for
-a single season, i.e. all the episodes of the season.
-See \href{http://docs.trakt.apiary.io/#introduction/extended-info}{the API docs} for possible values of
-\code{extended} to customize output amount.
+a single season, i.e. all the episodes of the season
+}
+\details{
+This function accesses \href{https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show}{this API method}
+at the endpoint \code{/shows/:show_id/seasons/:season_num}.
 }
 \note{
-See \href{http://docs.trakt.apiary.io/reference/seasons/season/get-single-season-for-a-show}{the trakt API docs for further info}.
-If you want to quickly gather data of multiple seasons, see \link[tRakt]{trakt.get_all_episodes}
+If you want to quickly gather data of multiple seasons, see \link{trakt.get_all_episodes}.
 }
 \examples{
 \dontrun{
-breakingbad.seasons <- trakt.seasons.season("breaking-bad", 1)
+trakt.seasons.season("breaking-bad", 1)
 }
 }
 \seealso{
-Other show data: \code{\link{trakt.get_all_episodes}},
-  \code{\link{trakt.seasons.summary}}
+Other show data: \code{\link{trakt.seasons.summary}}
 }
 \concept{show data}

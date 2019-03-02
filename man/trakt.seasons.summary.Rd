@@ -5,7 +5,7 @@
 \title{Get a show's season information}
 \usage{
 trakt.seasons.summary(target, extended = c("min", "full"),
-  drop.specials = TRUE, drop.unaired = TRUE)
+  episodes = FALSE, drop.specials = TRUE, drop.unaired = TRUE)
 }
 \arguments{
 \item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
@@ -17,6 +17,9 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
 
+\item{episodes}{\code{logical(1) [FALSE]}: If \code{TRUE}, all episodes for each season
+are appended as a list-column, with the amount of variables depending on \code{extended}.}
+
 \item{drop.specials}{\code{logical(1) [TRUE]}: Special episodes (season 0) are dropped}
 
 \item{drop.unaired}{\code{logical(1) [TRUE]}: Seasons without aired episodes are dropped.
@@ -27,16 +30,21 @@ A \link[tibble:tibble-package]{tibble}.
 }
 \description{
 Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes
-each season has.
+each season has. With \code{episodes == TRUE} and \code{extended == "full"}, this function
+is also suitable to retrieve all episode ratings for all seasons of a show with
+just a single API call.
+}
+\details{
+This function wraps \href{https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show}{this API method}
+with the endpoint \code{/shows/:show_id/seasons}.
 }
 \examples{
 \dontrun{
-breakingbad.seasons <- trakt.seasons.summary("breaking-bad", extended = "min")
-breakingbad.seasons.more <- trakt.seasons.summary("breaking-bad", extended = "full")
+trakt.seasons.summary("breaking-bad", extended = "min")
+trakt.seasons.summary("utopia", extended = "full", episodes = TRUE)
 }
 }
 \seealso{
-Other show data: \code{\link{trakt.get_all_episodes}},
-  \code{\link{trakt.seasons.season}}
+Other show data: \code{\link{trakt.seasons.season}}
 }
 \concept{show data}

@@ -109,9 +109,9 @@ trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
   }
 
   # Headers and metadata
-  agent <- httr::user_agent("https://github.com/jemus42/tRakt")
+  agent <- user_agent("https://github.com/jemus42/tRakt")
 
-  headers <- httr::add_headers(.headers = c(
+  headers <- add_headers(.headers = c(
     "trakt-api-key" = client.id,
     "Content-Type" = "application/json",
     "trakt-api-version" = 2
@@ -119,22 +119,22 @@ trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
 
   # Make the call
   if (HEAD) {
-    response <- httr::HEAD(url, headers, agent)
-    response <- purrr::flatten(response$all_headers)
+    response <- HEAD(url, headers, agent)
+    response <- flatten(response$all_headers)
     return(response)
   }
 
-  response <- httr::GET(url, headers, agent)
+  response <- GET(url, headers, agent)
   # Fail on HTTP error, i.e. 404 or 5xx.
-  httr::stop_for_status(response, paste0("retrieve data from ", url))
+  stop_for_status(response, paste0("retrieve data from ", url))
 
   # Parse output
-  response <- httr::content(response, as = "text")
-  response <- jsonlite::fromJSON(response)
+  response <- content(response, as = "text")
+  response <- fromJSON(response)
 
   # To make empty response handling easier
   if (identical(response, list()) | is.null(response)) {
-    return(tibble::tibble())
+    return(tibble())
   }
 
   # Do it in every other function or do it here once
