@@ -24,11 +24,11 @@ Get a single person's details, like their various IDs. If \code{extended} is \co
 there will also be biographical data if available.
 }
 \examples{
-\dontrun{
-trakt.people.summary("bryan-cranston", "min")
+# A single person's extended information
+trakt.people.summary("bryan-cranston", "full")
 
+# Multiple people
 trakt.people.summary(c("kit-harington", "emilia-clarke"))
-}
 }
 \seealso{
 Other people data: \code{\link{media_people}},

@@ -5,16 +5,15 @@
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble][tibble::tibble-package].
 #' @export
-#' @importFrom purrr flatten_df
 #' @importFrom purrr modify_if
 #' @importFrom purrr map_df
 #' @family people data
 #' @examples
-#' \dontrun{
-#' trakt.people.summary("bryan-cranston", "min")
+#' # A single person's extended information
+#' trakt.people.summary("bryan-cranston", "full")
 #'
+#' # Multiple people
 #' trakt.people.summary(c("kit-harington", "emilia-clarke"))
-#' }
 trakt.people.summary <- function(target, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
@@ -27,12 +26,12 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
   response <- trakt.api.call(url = url)
 
   # Substitute NULLs with explicit NAs and flatten IDs
-  response$ids <- fix_ids(response$ids)
+  response$ids <- as_tibble(fix_ids(response$ids))
   response <- modify_if(response, is.null, ~return(NA_character_))
-  response <- flatten_df(response)
   response <- fix_datetime(response)
-
-  response
+  response[names(response) != "ids"] %>%
+    as_tibble() %>%
+    bind_cols(response$ids)
 }
 
 # People that have media ----

@@ -20,7 +20,6 @@ NULL
 #' @keywords internal
 #' @noRd
 #' @importFrom purrr map_df
-#' @importFrom purrr flatten_df
 #' @importFrom tibble has_name
 #' @importFrom lubridate as_datetime
 #' @importFrom dplyr bind_cols
