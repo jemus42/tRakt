@@ -15,6 +15,10 @@ reference:
   - title: Season and episode data
     contents:
       - starts_with("trakt.season")
+  - title: Movie-specific data
+    contens:
+      - ends_with(".releases")
+      - ends_with(".boxoffice")
   - title: Media ratings
     contents:
       - ends_with(".ratings")
