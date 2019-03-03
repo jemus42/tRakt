@@ -15,7 +15,7 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{country}{Optional two letter country code to filter by.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Retrieve one or more movie's release information,

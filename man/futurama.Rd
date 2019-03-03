@@ -4,7 +4,7 @@
 \name{futurama}
 \alias{futurama}
 \title{Futurama episodes}
-\format{A \link[tibble:tibble-package]{tibble} with 124 rows and 18 variables:
+\format{A \link[tibble:tibble-package]{tibble()} with 124 rows and 18 variables:
 \describe{
 \item{episode, season}{Episode within each season and season number}
 \item{title}{Episode title}

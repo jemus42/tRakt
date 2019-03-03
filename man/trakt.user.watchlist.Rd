@@ -19,7 +19,7 @@ functions, values \code{seasons} or \code{episodes} are also allowed.}
 returns more variables and should generally only be used if required.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 \code{trakt.user.watchlist} pulls a user's watchlist.

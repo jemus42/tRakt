@@ -25,7 +25,7 @@ are appended as a list-column, with the amount of variables depending on \code{e
 Only works if \code{extended} is \code{"full"}.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes

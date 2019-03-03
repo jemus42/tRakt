@@ -24,7 +24,7 @@ data from output. This is advisable if you do not need per-episode data and want
 be nice to the API.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 \code{trakt.user.watched} retrieves a user's watched shows or movies.

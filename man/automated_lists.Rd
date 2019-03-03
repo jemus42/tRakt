@@ -51,16 +51,40 @@ are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
 \item{start_date}{\code{character(1)}: A date in the past from which on to count updates.
 If no date is supplied, the default is to use the date 7 days in the past relative
 to the current date. Value must either be standard \code{YYYY-MM-DD} format or an object
-of class \link[base:Dates]{Date}.}
+of class \link[base:Dates]{Date}, which will then be coerced via \link[base:as.character]{as.character()}.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 According to the API docs, popularity is calculated based both ratings
 and number of ratings. Trending items are those being watched right now, where
 items with the most users watching are returned first. Anticipation is measured
 by the number of user-created lists an items is part of while not being released yet.
+}
+\details{
+These functions access the automatically updated lists provided by trakt.tv.
+Each function comes in two flavors: Shows or movies. The following descriptions
+are adapted directly from the \href{https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies}{API reference}.
+\itemize{
+\item \strong{Popular}: Popularity is calculated using the rating percentage and the number of ratings.
+\item \strong{Trending}: Returns all movies/shows being watched right now.
+Movies/shows with the most users are returned first.
+\item \strong{Played}: Returns the most played (a single user can watch multiple times)
+movies/shows in the specified time \code{period}.
+\item \strong{Watched}: Returns the most watched (unique users) movies/shows in the specified
+time \code{period}.
+\item \strong{Collected}: Returns the most collected (unique users) movies/shows in the
+specified time \code{period}.
+\item \strong{Anticipated}: Returns the most anticipated movies/shows based on the number of
+lists a movie/show appears on.
+\item \strong{Updates}: Returns all movies/shows updated since the specified UTC \code{start_date}.
+In this case, the upper bound for \code{limit} is 100.
+}
+
+The functions for \strong{Played}, \strong{Watched}, \strong{Collected} and \strong{Played} each return the
+same additional variables besides the media information: \code{watcher_count},
+\code{play_count}, \code{collected_count}, \code{collector_count}.
 }
 \examples{
 \dontrun{

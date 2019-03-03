@@ -77,7 +77,7 @@ interested in the \code{votes} and \code{rating} variables, as well as additiona
 like air dates, plot summaries, and a plethora of other variables depending on the \code{type}.
 If you intend on retrieving data for a large number of items, e.g. via \link{trakt.popular},
 it is highly recommend to cache the output locally when using \code{extended = "full"} and
-subsequently only use \code{extended = "min"}. Then you can merge or \link[dplyr:full_join]{full_join}
+subsequently only use \code{extended = "min"}. Then you can merge or \link[dplyr:full_join]{full_join()}
 the minimal data with your cached data.
 }
 }

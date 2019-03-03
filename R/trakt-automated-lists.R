@@ -12,8 +12,33 @@
 #' @param start_date `character(1)`: A date in the past from which on to count updates.
 #' If no date is supplied, the default is to use the date 7 days in the past relative
 #' to the current date. Value must either be standard `YYYY-MM-DD` format or an object
-#' of class [Date][base::Dates].
+#' of class [Date][base::Dates], which will then be coerced via [as.character()][base::as.character].
 #' @return A [tibble()][tibble::tibble-package].
+#'
+#' @details
+#'
+#' These functions access the automatically updated lists provided by trakt.tv.
+#' Each function comes in two flavors: Shows or movies. The following descriptions
+#' are adapted directly from the [API reference](https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies).
+#'
+#' - **Popular**: Popularity is calculated using the rating percentage and the number of ratings.
+#' - **Trending**: Returns all movies/shows being watched right now.
+#' Movies/shows with the most users are returned first.
+#' - **Played**: Returns the most played (a single user can watch multiple times)
+#' movies/shows in the specified time `period`.
+#' - **Watched**: Returns the most watched (unique users) movies/shows in the specified
+#' time `period`.
+#' - **Collected**: Returns the most collected (unique users) movies/shows in the
+#' specified time `period`.
+#' - **Anticipated**: Returns the most anticipated movies/shows based on the number of
+#' lists a movie/show appears on.
+#' - **Updates**: Returns all movies/shows updated since the specified UTC `start_date`.
+#' In this case, the upper bound for `limit` is 100.
+#'
+#' The functions for **Played**, **Watched**, **Collected** and **Played** each return the
+#' same additional variables besides the media information: `watcher_count`,
+#' `play_count`, `collected_count`, `collector_count`.
+#'
 #' @examples
 #' \dontrun{
 #' # Get popular shows with only ids

@@ -23,7 +23,7 @@ than \code{0} and will be coerced to \code{integer}.}
 returns more variables and should generally only be used if required.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Receive a set of media items that are related to a specific show or movie.

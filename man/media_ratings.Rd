@@ -31,7 +31,7 @@ e.g. \code{1:5}, the function is vectorized and the output will be
 combined. This may result in \emph{a lot} of API calls. Use wisely.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.

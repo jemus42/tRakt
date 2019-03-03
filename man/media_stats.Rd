@@ -31,7 +31,7 @@ e.g. \code{1:5}, the function is vectorized and the output will be
 combined. This may result in \emph{a lot} of API calls. Use wisely.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 The data contains watchers, playes, collectors, comments, lists, and votes.
@@ -39,6 +39,7 @@ The data contains watchers, playes, collectors, comments, lists, and votes.
 \examples{
 # Stats for a movie
 trakt.movies.stats("inception-2010")
+
 \dontrun{
 # Stats for multiple shows at once
 trakt.shows.stats(c("breaking-bad", "game-of-thrones"))

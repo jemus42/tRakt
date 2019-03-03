@@ -34,7 +34,7 @@ returns more variables and should generally only be used if required.}
 \item{id_type}{The type of \code{id}. One of \code{trakt} (default), \code{imdb}, \code{tmdb}, \code{tvdb}.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble} containing a \code{n_result} result.
+A \link[tibble:tibble-package]{tibble()} containing a \code{n_result} result.
 If no results are found, the \code{tibble} has 0 rows.
 }
 \description{

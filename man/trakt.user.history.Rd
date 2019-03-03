@@ -26,7 +26,7 @@ to a datetime object of class \code{POSIXct}. See \link{ISOdate} for further inf
 returns more variables and should generally only be used if required.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}. For \code{type == "show"}, the \code{tibble} contains
+A \link[tibble:tibble-package]{tibble()}. For \code{type == "show"}, the \code{tibble} contains
 two list-columns \code{show} and \code{episode} which are \emph{not} unnested by default due to
 duplicate variable names, the preferref handling of which is left to the user.
 }

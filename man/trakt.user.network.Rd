@@ -19,7 +19,7 @@ Can also be of length greater than 1, in which case the function is called on al
 returns more variables and should generally only be used if required.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Retrieve a user's followers, followings or friends (the two-way relationship).

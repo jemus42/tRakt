@@ -22,7 +22,7 @@ or other headers, and don't want to waste resources on additional bandwidth.}
 }
 \value{
 The \link[jsonlite:fromJSON]{parsed} content of the API response.
-An empty \link[tibble:tibble-package]{tibble} if the response is an empty \code{JSON} array.
+An empty \link[tibble:tibble-package]{tibble()} if the response is an empty \code{JSON} array.
 }
 \description{
 \code{trakt.api.call} makes an API call to a specified URL and returns the parsed output.

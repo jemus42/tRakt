@@ -11,7 +11,7 @@ trakt.movies.boxoffice(extended = c("min", "full"))
 returns more variables and should generally only be used if required.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Returns the top 10 grossing movies in the U.S. box office last weekend.

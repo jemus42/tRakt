@@ -23,7 +23,7 @@ returns more variables and should generally only be used if required.}
 \code{[tidyr](tidyr::unnest)} and returns one row per episode rather than one row per show.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 \code{trakt.user.collection} retrieves a user's collected shows or movies.
