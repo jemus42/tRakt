@@ -1,3 +1,9 @@
+development:
+  mode: auto
+template:
+  params:
+    bootswatch: cosmo
+
 reference:
   - title: Finding media
     desc: >
