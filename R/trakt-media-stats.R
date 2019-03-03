@@ -2,11 +2,12 @@
 #'
 #' The data contains watchers, playes, collectors, comments, lists, and votes.
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble][tibble::tibble-package].
+#' @return A [tibble()][tibble::tibble-package].
 #' @name media_stats
 #' @examples
 #' # Stats for a movie
 #' trakt.movies.stats("inception-2010")
+#'
 #' \dontrun{
 #' # Stats for multiple shows at once
 #' trakt.shows.stats(c("breaking-bad", "game-of-thrones"))

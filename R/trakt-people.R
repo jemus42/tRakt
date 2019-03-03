@@ -3,7 +3,7 @@
 #' Get a single person's details, like their various IDs. If `extended` is `"full"`,
 #' there will also be biographical data if available.
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble][tibble::tibble-package].
+#' @return A [tibble()][tibble::tibble-package].
 #' @export
 #' @importFrom purrr modify_if
 #' @importFrom purrr map_df

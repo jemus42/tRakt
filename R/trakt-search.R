@@ -14,7 +14,7 @@
 #' `c("show", "movie")`.
 #' @param years Optionally filter by years.
 #' @param n_results `integer(1) [1]`: How many results to return.
-#' @return A [tibble][tibble::tibble-package] containing a `n_result` result.
+#' @return A [tibble()][tibble::tibble-package] containing a `n_result` result.
 #'         If no results are found, the `tibble` has 0 rows.
 #' @inheritParams trakt_api_common_parameters
 #' @export

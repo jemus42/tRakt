@@ -63,6 +63,6 @@
 #' like air dates, plot summaries, and a plethora of other variables depending on the `type`.
 #' If you intend on retrieving data for a large number of items, e.g. via [trakt.popular],
 #' it is highly recommend to cache the output locally when using `extended = "full"` and
-#' subsequently only use `extended = "min"`. Then you can merge or [full_join][dplyr::full_join]
+#' subsequently only use `extended = "min"`. Then you can merge or [full_join()][dplyr::full_join]
 #' the minimal data with your cached data.
 NULL

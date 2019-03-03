@@ -3,7 +3,7 @@
 #' Receive a set of media items that are related to a specific show or movie.
 #' @inheritParams trakt_api_common_parameters
 #' @inheritParams automated_lists
-#' @return A [tibble][tibble::tibble-package].
+#' @return A [tibble()][tibble::tibble-package].
 #' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
 #' @importFrom dplyr select

@@ -4,7 +4,7 @@
 #' If you *do not* want the full ratings distribution, it is highly advised to
 #' just use `*.summary` functions or [trakt.seasons.season] for episode ratings.
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble][tibble::tibble-package].
+#' @return A [tibble()][tibble::tibble-package].
 #' @name media_ratings
 #' @note Since this function is able to work on multi-length inputs for
 #' `target`, `season` and `episode`, it is possible to get a lot of data, *but* at the cost

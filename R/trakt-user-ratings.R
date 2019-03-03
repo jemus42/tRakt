@@ -3,7 +3,7 @@
 #' Retrieve a user's media ratings
 #' @inheritParams trakt_api_common_parameters
 #' @param rating `integer(1L)`: Rating to filter by. Can be `1` through `10`, default is `NULL`
-#' @return A [tibble][tibble::tibble-package].
+#' @return A [tibble()][tibble::tibble-package].
 #' @export
 #' @family user data
 #' @importFrom dplyr bind_cols

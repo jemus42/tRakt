@@ -74,7 +74,7 @@ trakt_credentials <- function(username, client.id,
 #' and its content returned. This is useful if you are only interested in status codes
 #' or other headers, and don't want to waste resources on additional bandwidth.
 #' @return The [parsed][jsonlite::fromJSON] content of the API response.
-#' An empty [tibble][tibble::tibble-package] if the response is an empty `JSON` array.
+#' An empty [tibble()][tibble::tibble-package] if the response is an empty `JSON` array.
 #' @export
 #' @importFrom httr user_agent
 #' @importFrom httr add_headers

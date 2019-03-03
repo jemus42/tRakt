@@ -3,7 +3,7 @@
 #' `trakt.user.watchlist` pulls a user's watchlist.
 #' Either all shows or movies currently watchlisted will be returned.
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble][tibble::tibble-package].
+#' @return A [tibble()][tibble::tibble-package].
 #' @export
 #' @importFrom tibble as_tibble
 #' @importFrom tibble tibble

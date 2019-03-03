@@ -7,13 +7,13 @@
 #' items with the most users watching are returned first. Anticipation is measured
 #' by the number of user-created lists an items is part of while not being released yet.
 #'
+#' @name automated_lists
 #' @inheritParams trakt_api_common_parameters
 #' @param start_date `character(1)`: A date in the past from which on to count updates.
 #' If no date is supplied, the default is to use the date 7 days in the past relative
 #' to the current date. Value must either be standard `YYYY-MM-DD` format or an object
 #' of class [Date][base::Dates].
-#' @return A [tibble][tibble::tibble-package].
-#' @name automated_lists
+#' @return A [tibble()][tibble::tibble-package].
 #' @examples
 #' \dontrun{
 #' # Get popular shows with only ids
@@ -29,6 +29,7 @@ NULL
 
 # Worker function ----
 #' @keywords internal
+#' @noRd
 trakt_auto_lists <- function(list_type = c(
                                "popular", "trending", "anticipated",
                                "played", "watched", "collected", "updates"

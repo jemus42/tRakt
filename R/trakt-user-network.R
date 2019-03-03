@@ -4,7 +4,7 @@
 #' @param relationship `character(1) ["friends"]`: Type of user relationship. Either
 #' `"friends"`, `"followers"`, or `"following"`.
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble][tibble::tibble-package].
+#' @return A [tibble()][tibble::tibble-package].
 #' @export
 #' @note Since no OAuth2 methods are supported yet, the specified user must not be private.
 #' @family user data

@@ -3,7 +3,7 @@
 #' This data comes from <https://trakt.tv> and
 #'  <https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes>.
 #'
-#' @format A [tibble][tibble::tibble-package] with 67 rows and 17 variables:
+#' @format A [tibble()][tibble::tibble-package] with 67 rows and 17 variables:
 #' \describe{
 #' \item{episode_abs}{Overall episode number}
 #' \item{episode, season}{Episode within each season and season number}
@@ -30,7 +30,7 @@
 #'
 #' This data comes from <https://trakt.tv> and serves as an example of episode data output.
 #'
-#' @format A [tibble][tibble::tibble-package] with 124 rows and 18 variables:
+#' @format A [tibble()][tibble::tibble-package] with 124 rows and 18 variables:
 #' \describe{
 #' \item{episode, season}{Episode within each season and season number}
 #' \item{title}{Episode title}

@@ -5,7 +5,7 @@
 #' the certification (e.g. `PG`).
 #' @inheritParams trakt_api_common_parameters
 #' @param country Optional two letter country code to filter by.
-#' @return A [tibble][tibble::tibble-package].
+#' @return A [tibble()][tibble::tibble-package].
 #' @export
 #' @note See \href{http://docs.trakt.apiary.io/reference/movies/releases/get-all-movie-releases}{the
 #'  trakt API docs for further info}
@@ -41,7 +41,7 @@ trakt.movies.releases <- function(target, country = NULL) {
 #' The endpoint used is `/movies/boxoffice`.
 #'
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble][tibble::tibble-package].
+#' @return A [tibble()][tibble::tibble-package].
 #' @export
 #' @family movie data
 #' @importFrom tibble as_tibble

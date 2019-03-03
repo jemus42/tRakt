@@ -2,7 +2,7 @@
 #'
 #' Note that this function returns the same amount of informations as [trakt.search].
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble][tibble::tibble-package].
+#' @return A [tibble()][tibble::tibble-package].
 #' @family summary data
 #' @name media_summary
 #' @examples

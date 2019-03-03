@@ -12,7 +12,7 @@
 #' @importFrom dplyr rename
 #' @importFrom tibble tibble
 #' @importFrom tibble as_tibble
-#' @return A [tibble][tibble::tibble-package]. For `type == "show"`, the `tibble` contains
+#' @return A [tibble()][tibble::tibble-package]. For `type == "show"`, the `tibble` contains
 #' two list-columns `show` and `episode` which are *not* unnested by default due to
 #' duplicate variable names, the preferref handling of which is left to the user.
 #' @export
