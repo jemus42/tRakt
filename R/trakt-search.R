@@ -16,25 +16,25 @@
 #' @param n_results `integer(1) [1]`: How many results to return.
 #' @return A [tibble][tibble::tibble-package] containing a `n_result` result.
 #'         If no results are found, the `tibble` has 0 rows.
-#' @inherit trakt_api_common_parameters
+#' @inheritParams trakt_api_common_parameters
 #' @export
 #' @note The API technically allows concatenated types for text query searches,
 #' e.g. `movie,show,episode` to search all three types of items, but this is not supported
-#' in this package. If you really want this functionality, open an issue on GitHub.
+#' in this package. If you really want this functionality, please open an issue on GitHub.
 #' @source [The trakt.tv API docs](https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results)
 #' @family API-basics
 #' @family search functions
 #' @examples
-#' \dontrun{
 #' # A show
 #' trakt.search("Breaking Bad", type = "show", n_results = 3)
-#' 
+#'
+#' \dontrun{
 #' # A show by its trakt id, and now with more information
 #' trakt.search.byid(1388, "trakt", type = "show", extended = "full")
-#' 
+#'
 #' # A person
 #' trakt.search("J. K. Simmons", type = "person", extended = "full")
-#' 
+#'
 #' # A movie or a show
 #' trakt.search("Tron", "movie", n_results = 2)
 #' trakt.search("Tron", "show", n_results = 2)
