@@ -8,7 +8,7 @@
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/jemus42/tRakt?branch=master&svg=true)](https://ci.appveyor.com/project/jemus42/tRakt)
 [![Coverage
-status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)  
+status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
 [![GitHub
