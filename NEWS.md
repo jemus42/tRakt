@@ -1,6 +1,4 @@
-# tRakt 0.14.9000.9000
-
-# tRakt 0.14.90000
+# tRakt 0.14.0.90000
 
 This is a big one, like v1.0.0 big one.
 
