@@ -1,10 +1,10 @@
 ---
-title: "Example Usage"
+title: "Getting Started"
 author: "Lukas Burk"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Example Usage}
+  %\VignetteIndexEntry{Getting Started}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -13,7 +13,8 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  message = FALSE, warning = FALSE, error = FALSE
+  message = FALSE, warning = FALSE, error = FALSE,
+  out.width = "100%"
 )
 ```
 
