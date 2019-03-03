@@ -27,7 +27,8 @@ trakt.watched(type = c("shows", "movies"), limit = 10,
   "yearly", "all"))
 }
 \arguments{
-\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
+\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
+functions, values \code{seasons} or \code{episodes} are also allowed.}
 
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced to \code{integer}.}

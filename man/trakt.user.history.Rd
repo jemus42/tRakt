@@ -9,11 +9,12 @@ trakt.user.history(user = getOption("trakt.username"),
   end_at = NULL, extended = c("min", "full"))
 }
 \arguments{
-\item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
+\item{user}{Target username. Defaults to \code{getOption("trakt.username")}.
 Can also be of length greater than 1, in which case the function is called on all
-\code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
+\code{user} values separately and the result is combined.}
 
-\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
+\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
+functions, values \code{seasons} or \code{episodes} are also allowed.}
 
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced to \code{integer}.}

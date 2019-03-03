@@ -48,13 +48,13 @@ the value of \code{extended}.
 \note{
 The API technically allows concatenated types for text query searches,
 e.g. \code{movie,show,episode} to search all three types of items, but this is not supported
-in this package. If you really want this functionality, open an issue on GitHub.
+in this package. If you really want this functionality, please open an issue on GitHub.
 }
 \examples{
-\dontrun{
 # A show
 trakt.search("Breaking Bad", type = "show", n_results = 3)
 
+\dontrun{
 # A show by its trakt id, and now with more information
 trakt.search.byid(1388, "trakt", type = "show", extended = "full")
 

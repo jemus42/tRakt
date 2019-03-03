@@ -9,11 +9,12 @@ trakt.user.watched(user = getOption("trakt.username"),
   noseasons = TRUE)
 }
 \arguments{
-\item{user}{Target user. Defaults to \code{getOption("trakt.username")}.
+\item{user}{Target username. Defaults to \code{getOption("trakt.username")}.
 Can also be of length greater than 1, in which case the function is called on all
-\code{user} values separately and combined using \link[purrr:map_df]{purrr::map_df}.}
+\code{user} values separately and the result is combined.}
 
-\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}.}
+\item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
+functions, values \code{seasons} or \code{episodes} are also allowed.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}

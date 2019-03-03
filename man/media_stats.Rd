@@ -17,19 +17,18 @@ trakt.season.stats(target, season = 1L)
 trakt.episodes.stats(target, season = 1L, episode = 1L)
 }
 \arguments{
-\item{target}{\code{character(1)}: The \code{id} of the item requested. Either the \code{slug}
-(e.g. \code{"game-of-thrones"} for a show, or \code{"bryan-cranston"} for a person),
-\code{Trakt ID} (e.g. \code{1390}) or \code{IMDB ID} (e.g. \code{"tt0944947"} or \code{"nm0186505"}).
+\item{target}{\code{character(1)}: The ID of the item requested. Preferably the
+\code{Trakt ID} (e.g. \code{1390}), \code{slug} (e.g. \code{"game-of-thrones"}), or \code{IMDb ID} (e.g. \code{"tt0944947"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{target} values separately and combined using \link[purrr:map_df]{purrr::map_df} if possible.}
+\code{target} values separately and the result is combined.}
 
 \item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
-combined via \link[purrr:map_df]{purrr::map_df}. This may result in \emph{a lot} of API calls. Use wisely.}
+combined. This may result in \emph{a lot} of API calls. Use wisely.}
 
 \item{episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
-combined via \link[purrr:map_df]{purrr::map_df}. This may result in \emph{a lot} of API calls. Use wisely.}
+combined. This may result in \emph{a lot} of API calls. Use wisely.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.
