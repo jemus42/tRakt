@@ -7,6 +7,8 @@
 \alias{trakt.anticipated}
 \alias{trakt.played}
 \alias{trakt.watched}
+\alias{trakt.collected}
+\alias{trakt.updates}
 \title{See which movies / shows are popular}
 \usage{
 trakt.popular(type = c("shows", "movies"), limit = 10,
@@ -25,6 +27,13 @@ trakt.played(type = c("shows", "movies"), limit = 10,
 trakt.watched(type = c("shows", "movies"), limit = 10,
   extended = c("min", "full"), period = c("weekly", "monthly",
   "yearly", "all"))
+
+trakt.collected(type = c("shows", "movies"), limit = 10,
+  extended = c("min", "full"), period = c("weekly", "monthly",
+  "yearly", "all"))
+
+trakt.updates(type = c("shows", "movies"), limit = 10,
+  extended = c("min", "full"), start_date = Sys.Date() - 7)
 }
 \arguments{
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
@@ -38,6 +47,11 @@ returns more variables and should generally only be used if required.}
 
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
+
+\item{start_date}{\code{character(1)}: A date in the past from which on to count updates.
+If no date is supplied, the default is to use the date 7 days in the past relative
+to the current date. Value must either be standard \code{YYYY-MM-DD} format or an object
+of class \link[base:Dates]{Date}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble}.

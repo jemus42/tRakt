@@ -8,16 +8,20 @@
 #' by the number of user-created lists an items is part of while not being released yet.
 #'
 #' @inheritParams trakt_api_common_parameters
+#' @param start_date `character(1)`: A date in the past from which on to count updates.
+#' If no date is supplied, the default is to use the date 7 days in the past relative
+#' to the current date. Value must either be standard `YYYY-MM-DD` format or an object
+#' of class [Date][base::Dates].
 #' @return A [tibble][tibble::tibble-package].
 #' @name automated_lists
 #' @examples
 #' \dontrun{
 #' # Get popular shows with only ids
 #' trakt.popular(type = "shows")
-#' 
+#'
 #' # Get trending movies with extended information
 #' trakt.trending(type = "movies", 5, extended = "full")
-#' 
+#'
 #' # Get top 5 anticipated movies
 #' trakt.anticipated(type = "movies", 5)
 #' }
@@ -27,12 +31,12 @@ NULL
 #' @keywords internal
 trakt_auto_lists <- function(list_type = c(
                                "popular", "trending", "anticipated",
-                               "played", "watched"
+                               "played", "watched", "collected", "updates"
                              ),
                              type = c("shows", "movies"),
                              limit = 10L,
                              extended = c("min", "full"),
-                             period = NULL) {
+                             period = NULL, start_date = NULL) {
   list_type <- match.arg(list_type)
   type <- match.arg(type)
   extended <- match.arg(extended)
@@ -43,7 +47,7 @@ trakt_auto_lists <- function(list_type = c(
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, list_type, period,
+  url <- build_trakt_url(type, list_type, start_date, period,
     limit = limit, extended = extended
   )
   response <- trakt.api.call(url)
@@ -152,5 +156,41 @@ trakt.watched <- function(type = c("shows", "movies"),
     list_type = "watched", type = type,
     limit = limit,
     extended = extended, period = period
+  )
+}
+
+#' @rdname automated_lists
+#' @export
+trakt.collected <- function(type = c("shows", "movies"),
+                            limit = 10, extended = c("min", "full"),
+                            period = c("weekly", "monthly", "yearly", "all")) {
+  type <- match.arg(type)
+  extended <- match.arg(extended)
+  period <- match.arg(period)
+
+  trakt_auto_lists(
+    list_type = "collected", type = type,
+    limit = limit,
+    extended = extended, period = period
+  )
+}
+
+#' @rdname automated_lists
+#' @export
+trakt.updates <- function(type = c("shows", "movies"),
+                          limit = 10, extended = c("min", "full"),
+                          start_date = Sys.Date() - 7) {
+  type <- match.arg(type)
+  extended <- match.arg(extended)
+  start_date <- as.character(as.Date(start_date))
+
+  if (is.null(start_date)) {
+    start_date <- Sys.Date() - 28
+  }
+
+  trakt_auto_lists(
+    list_type = "updates", type = type,
+    limit = limit,
+    extended = extended, start_date = start_date
   )
 }
