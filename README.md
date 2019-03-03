@@ -46,7 +46,7 @@ library("tRakt")
 ## Basic usage
 
 ``` r
-library(dplyr)
+library(tibble) # for glimpse()
 library(tRakt)
 
 # Search for show, get basic info
