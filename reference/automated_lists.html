@@ -144,25 +144,43 @@ by the number of user-created lists an items is part of while not being released
     </div>
 
     <pre class="usage"><span class='fu'>trakt.popular</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>genres</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>countries</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>runtimes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ratings</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>certifications</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>networks</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>genres</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>countries</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>runtimes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ratings</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>certifications</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>networks</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
 <span class='fu'>trakt.anticipated</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>genres</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>countries</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>runtimes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ratings</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>certifications</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>networks</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
 <span class='fu'>trakt.played</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
   <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>period</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"weekly"</span>, <span class='st'>"monthly"</span>,
-  <span class='st'>"yearly"</span>, <span class='st'>"all"</span>))
+  <span class='st'>"yearly"</span>, <span class='st'>"all"</span>), <span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>genres</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>countries</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>runtimes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>ratings</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>certifications</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
 <span class='fu'>trakt.watched</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
   <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>period</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"weekly"</span>, <span class='st'>"monthly"</span>,
-  <span class='st'>"yearly"</span>, <span class='st'>"all"</span>))
+  <span class='st'>"yearly"</span>, <span class='st'>"all"</span>), <span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>genres</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>countries</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>runtimes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>ratings</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>certifications</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
 <span class='fu'>trakt.collected</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
   <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>period</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"weekly"</span>, <span class='st'>"monthly"</span>,
-  <span class='st'>"yearly"</span>, <span class='st'>"all"</span>))
+  <span class='st'>"yearly"</span>, <span class='st'>"all"</span>), <span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>genres</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>countries</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>runtimes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>ratings</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>certifications</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
 <span class='fu'>trakt.updates</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
   <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>start_date</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>() - <span class='fl'>7</span>)</pre>
@@ -184,6 +202,54 @@ than <code>0</code> and will be coerced to <code>integer</code>.</p></td>
       <th>extended</th>
       <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.</p></td>
+    </tr>
+    <tr>
+      <th>query</th>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Search titles and descriptions.</p></td>
+    </tr>
+    <tr>
+      <th>years</th>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/integer'>integer(1)</a></code>: 4-digit year or range, e.g. <code>2010-2020</code>. Can also be an integer
+vector of length two which will be coerced appropriately.</p></td>
+    </tr>
+    <tr>
+      <th>genres</th>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(n)</a></code>: Genre <a href='https://trakt.docs.apiary.io/#reference/genres'>slugs</a>.
+Multiple values are allowed and will be concatenated.</p></td>
+    </tr>
+    <tr>
+      <th>languages</th>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(n)</a></code>: Two-digit language code. Also see <code><a href='languages.html'>languages</a></code> for
+table of available languages.</p></td>
+    </tr>
+    <tr>
+      <th>countries</th>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(n)</a></code>: Two-character country code. See <code><a href='countries.html'>countries</a></code>.</p></td>
+    </tr>
+    <tr>
+      <th>runtimes</th>
+      <td><p><code>character | integer</code>: Numeric range in minutes, e.g. <code>30-90</code>. Can also be an integer
+vector of length two which will be coerced appropriately.</p></td>
+    </tr>
+    <tr>
+      <th>ratings</th>
+      <td><p><code>character | integer</code>:  Numeric range between <code>0</code> and <code>100</code>. Can also be an integer
+vector of length two which will be coerced appropriately.</p></td>
+    </tr>
+    <tr>
+      <th>certifications</th>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(n)</a></code>: Certification like <code>pg-13</code>.
+Multiple values are allowed. Use <code><a href='certifications.html'>certifications</a></code> for reference. Note that there
+are different certifications for shows and movies.</p></td>
+    </tr>
+    <tr>
+      <th>networks</th>
+      <td><p>Network name like <code>HBO</code>. See <code><a href='networks.html'>networks</a></code> for a list of known networks.</p></td>
+    </tr>
+    <tr>
+      <th>status</th>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(n)</a></code>: The status of the shows. One of <code>returning series</code>,
+<code>in production</code>, <code>planned</code>, <code>canceled</code>, or <code>ended</code></p></td>
     </tr>
     <tr>
       <th>period</th>
@@ -226,6 +292,10 @@ In this case, the upper bound for <code>limit</code> is 100.</p></li>
 same additional variables besides the media information: <code>watcher_count</code>,
 <code>play_count</code>, <code>collected_count</code>, <code>collector_count</code>.</p>
     
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>Does not support filters</p>
+    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Get popular shows with only ids</span>
@@ -246,11 +316,11 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1      102 Spid…  2018 More T… "Miles … 2018-12-14     117 us      http:/…
-#&gt; 2       68 Bohe…  2018 Fearle… Singer … 2018-11-02     135 us      http:/…
-#&gt; 3       67 Gree…  2018 Inspir… Tony Li… 2018-11-21     130 us      http:/…
-#&gt; 4       67 Inst…  2018 Just a… When Pe… 2018-11-16     118 us      http:/…
-#&gt; 5       50 Aqua…  2018 Home I… Once ho… 2018-12-21     143 us      http:/…
+#&gt; 1       85 Spid…  2018 More T… "Miles … 2018-12-14     117 us      http:/…
+#&gt; 2       58 Aqua…  2018 Home I… Once ho… 2018-12-21     143 us      http:/…
+#&gt; 3       54 Bohe…  2018 Fearle… Singer … 2018-11-02     135 us      http:/…
+#&gt; 4       54 Gree…  2018 Inspir… Tony Li… 2018-11-21     130 us      http:/…
+#&gt; 5       46 Inst…  2018 Just a… When Pe… 2018-11-16     118 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
@@ -273,6 +343,8 @@ same additional variables besides the media information: <code>watcher_count</co
       <li><a href="#value">Value</a></li>
 
       <li><a href="#details">Details</a></li>
+
+      <li><a href="#note">Note</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>
