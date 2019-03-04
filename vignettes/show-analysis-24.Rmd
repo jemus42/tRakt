@@ -7,6 +7,8 @@ vignette: >
   %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+toc:
+  depth: 2
 ---
 
 ```{r setup, include = FALSE}
@@ -23,9 +25,7 @@ library(tRakt)
 library(tibble) # For glimpse()
 ```
 
-## Case Study: "24"
-
-### Step 1: Search
+## Step 1: Search
 
 Use the search function to find the show you're looking for.
 
@@ -34,7 +34,7 @@ show_info <- trakt.search("24", "show")
 show_info
 ```
 
-### Step 2: Use the ID
+## Step 2: Use the ID
 
 Use the `trakt` ID (recommended over other IDs) for subsequent API calls.  
 In this case, we'll use `trakt.seasons.summary()` to get data for all seasons of the show, while also getting an additional list-column containing all episode data, which includes user ratings.
@@ -44,7 +44,7 @@ seasons <- trakt.seasons.summary(target = show_info$trakt, extended = "full", ep
 glimpse(seasons)
 ```
 
-### Step 3: Tidying up
+## Step 3: Tidying up
 
 We're interested in the `episodes` list-column, which needs unnesting. In `tidyr::unnest()`, we use `.sep = "_"`, which will prepend `episodes_` to all the variables names in the nested list-column. This is recommended because the variables names will clash with the variables names already present in the `seasons` dataset.
 
@@ -55,7 +55,7 @@ episodes <- unnest(seasons, episodes, .sep = "_")
 glimpse(episodes)
 ```
 
-### Step 4: Graph!
+## Step 4: Graph!
 
 ```{r 24_episodes_plot}
 library(ggplot2)
