@@ -39,7 +39,6 @@ The data contains watchers, playes, collectors, comments, lists, and votes.
 \examples{
 # Stats for a movie
 trakt.movies.stats("inception-2010")
-
 \dontrun{
 # Stats for multiple shows at once
 trakt.shows.stats(c("breaking-bad", "game-of-thrones"))

@@ -49,7 +49,6 @@ trakt.movies.ratings("tron-legacy-2010")
 
 # A show's ratings
 trakt.shows.ratings("game-of-thrones")
-
 \dontrun{
 # Ratings for seasons 1 through 5
 trakt.seasons.ratings("futurama", season = 1:5)

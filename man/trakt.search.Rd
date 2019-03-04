@@ -5,12 +5,11 @@
 \alias{trakt.search.byid}
 \title{Search for a show via text query or id}
 \usage{
-trakt.search(query, type = c("movie", "show", "episode", "person",
-  "list"), years = NULL, n_results = 1L, extended = c("min", "full"))
+trakt.search(query, type = "movie", years = NULL, n_results = 1L,
+  extended = c("min", "full"))
 
 trakt.search.byid(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
-  type = c("movie", "show", "episode", "person", "list"),
-  n_results = 1L, extended = c("min", "full"))
+  type = "movie", n_results = 1L, extended = c("min", "full"))
 }
 \arguments{
 \item{query}{\code{character(1)}: The keyword used for the search, e.g. \code{"game of thrones"}.}
@@ -52,7 +51,6 @@ which fields of the item metadata are searched by default.
 \examples{
 # A show
 trakt.search("Breaking Bad", type = "show", n_results = 3)
-
 \dontrun{
 # A show by its trakt id, and now with more information
 trakt.search.byid(1388, "trakt", type = "show", extended = "full")

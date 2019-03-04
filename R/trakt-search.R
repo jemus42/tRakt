@@ -32,16 +32,17 @@
 #' \dontrun{
 #' # A show by its trakt id, and now with more information
 #' trakt.search.byid(1388, "trakt", type = "show", extended = "full")
-#' 
+#'
 #' # A person
 #' trakt.search("J. K. Simmons", type = "person", extended = "full")
-#' 
+#'
 #' # A movie or a show, two of each
 #' trakt.search("Tron", type = c("movie", "show"), n_results = 2)
 #' }
-trakt.search <- function(query, type = c("movie", "show", "episode", "person", "list"),
+trakt.search <- function(query, type = "movie",
                          years = NULL, n_results = 1L, extended = c("min", "full")) {
-  type <- match.arg(type, several.ok = TRUE)
+  ok_types <- c("movie", "show", "episode", "person", "list")
+  type <- match.arg(type, choices = ok_types, several.ok = TRUE)
   extended <- match.arg(extended)
   years <- check_filter_arg(years, "years")
 
@@ -64,10 +65,11 @@ trakt.search <- function(query, type = c("movie", "show", "episode", "person", "
 #' @rdname trakt.search
 #' @export
 trakt.search.byid <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
-                              type = c("movie", "show", "episode", "person", "list"),
+                              type = "movie",
                               n_results = 1L, extended = c("min", "full")) {
   id_type <- match.arg(id_type)
-  type <- match.arg(type, several.ok = TRUE)
+  ok_types <- c("movie", "show", "episode", "person", "list")
+  type <- match.arg(type, choices = ok_types, several.ok = TRUE)
   extended <- match.arg(extended)
 
   if (length(type) > 1) {
