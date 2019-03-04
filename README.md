@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height=140/>
+# tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="140"/>
 
 [![Travis
 (.org)](https://img.shields.io/travis/jemus42/tRakt.svg?logo=travis)](https://travis-ci.org/jemus42/tRakt)
