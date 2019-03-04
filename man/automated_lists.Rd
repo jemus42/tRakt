@@ -134,7 +134,7 @@ same additional variables besides the media information: \code{watcher_count},
 \code{play_count}, \code{collected_count}, \code{collector_count}.
 }
 \note{
-Does not support filters
+\code{trakt.updates} does not support filters.
 }
 \examples{
 \dontrun{
@@ -146,5 +146,15 @@ trakt.trending(type = "movies", 5, extended = "full")
 
 # Get top 5 anticipated movies
 trakt.anticipated(type = "movies", 5)
+
+# Get 15 the most anticipated upcoming shows on Netflix that air this year
+current_year <- format(Sys.Date(), "\%Y")
+trakt.anticipated("shows", limit = 15, networks = "Netflix", years = current_year)
+
+# Get the most popular German-language movies between 1990 and 2010
+trakt.popular("movies", languages = "de", years = c(1990, 2010))
 }
+}
+\seealso{
+search_filters
 }

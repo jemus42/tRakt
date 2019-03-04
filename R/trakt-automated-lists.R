@@ -16,6 +16,7 @@
 #' of class [Date][base::Dates], which will then be coerced via [as.character()][base::as.character].
 #' @return A [tibble()][tibble::tibble-package].
 #'
+#' @seealso search_filters
 #' @details
 #'
 #' These functions access the automatically updated lists provided by trakt.tv.
@@ -50,6 +51,13 @@
 #'
 #' # Get top 5 anticipated movies
 #' trakt.anticipated(type = "movies", 5)
+#'
+#' # Get 15 the most anticipated upcoming shows on Netflix that air this year
+#' current_year <- format(Sys.Date(), "%Y")
+#' trakt.anticipated("shows", limit = 15, networks = "Netflix", years = current_year)
+#'
+#' # Get the most popular German-language movies between 1990 and 2010
+#' trakt.popular("movies", languages = "de", years = c(1990, 2010))
 #' }
 NULL
 
@@ -280,7 +288,7 @@ trakt.collected <- function(type = c("shows", "movies"),
 
 #' @rdname automated_lists
 #' @export
-#' @note Does not support filters
+#' @note `trakt.updates` does not support filters.
 trakt.updates <- function(type = c("shows", "movies"),
                           limit = 10, extended = c("min", "full"),
                           start_date = Sys.Date() - 7) {
