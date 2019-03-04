@@ -94,6 +94,7 @@ trakt.search.byid <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
 #' @importFrom utils head
 #' @importFrom tibble has_name
 #' @importFrom tibble as_tibble
+#' @importFrom tibble remove_rownames
 #' @noRd
 search_result_cleanup <- function(response, type, n_results, extended) {
 
@@ -119,5 +120,5 @@ search_result_cleanup <- function(response, type, n_results, extended) {
     response <- response[order(response$score, decreasing = TRUE), ]
   }
 
-  head(response, n_results)
+  remove_rownames(head(response, n_results))
 }
