@@ -1,6 +1,8 @@
-context("test-user-history")
+context("User / History")
 
 test_that("trakt.user.history does things", {
+  skip_on_cran()
+
   trakt.user.history(user = "jemus42", "shows") %>%
     expect_is("tbl") %>%
     expect_length(6) %>%

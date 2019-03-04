@@ -1,4 +1,4 @@
-context("test-user-watchlist")
+context("User / Watchlist")
 
 test_that("trakt.user.watchlist works", {
   skip_on_cran()

@@ -1,4 +1,4 @@
-context("test-test-api")
+context("API interaction")
 
 test_that("Client ID is set without .Renviron", {
   client.id <- "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2"

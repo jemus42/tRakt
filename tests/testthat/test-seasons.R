@@ -38,7 +38,6 @@ test_that("trakt.seasons.season works", {
   )
 })
 
-
 test_that("trakt.seasons.summary works", {
   skip_on_cran()
 
@@ -70,4 +69,21 @@ test_that("trakt.seasons.summary works", {
   )
 
   expect_error(trakt.seasons.summary(target = "bvkjqbkqjbf"))
+})
+
+test_that("trakt.seasons.summary works for episodes", {
+  skip_on_cran()
+
+  target <- "utopia"
+  res <- trakt.seasons.summary(target, extended = "full", episodes = TRUE)
+
+  expect_is(res, "tbl")
+  expect_is(res$episodes, "list")
+  expect_length(res$episodes, 2)
+
+  res$episodes[[1]] %>%
+    expect_is("tbl") %>%
+    expect_length(16) %>%
+    nrow() %>%
+    expect_equal(6)
 })

@@ -1,4 +1,4 @@
-context("test-user-ratings")
+context("User / Ratings")
 
 test_that("trakt.user.ratings works", {
   skip_on_cran()

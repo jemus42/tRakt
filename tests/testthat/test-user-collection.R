@@ -1,4 +1,4 @@
-context("test-user-collection")
+context("User / Collection")
 
 test_that("trakt.user.collection works", {
   skip_on_cran()

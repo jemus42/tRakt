@@ -1,4 +1,4 @@
-context("test-people-methods")
+context("People methods")
 
 test_that("trakt.people.summary works", {
   skip_on_cran()

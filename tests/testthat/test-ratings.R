@@ -1,4 +1,4 @@
-context("test-media-ratings")
+context("Ratings")
 
 test_that("trakt.[shows|movies].ratings works", {
   skip_on_cran()

@@ -1,4 +1,4 @@
-context("test-search")
+context("Search")
 
 test_that("trakt.search works", {
   skip_on_cran()

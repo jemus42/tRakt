@@ -1,4 +1,4 @@
-context("test-misc")
+context("Utils")
 
 test_that("pad() pads", {
   expect_equal(
@@ -60,6 +60,4 @@ test_that("check_filter_arg fails how it should", {
   expect_warning(check_filter_arg("five", "certifications"))
   expect_warning(check_filter_arg("five", "countries"))
   expect_warning(check_filter_arg("five", "status"))
-
-
 })

@@ -1,4 +1,4 @@
-context("*.stats functions")
+context("Stats")
 
 test_that("trakt.user.stats works", {
   skip_on_cran()

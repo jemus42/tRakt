@@ -1,4 +1,4 @@
-context("test-related")
+context("Related media")
 
 test_that("trakt.media.related works", {
   skip_on_cran()

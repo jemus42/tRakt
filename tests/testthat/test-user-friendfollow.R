@@ -1,4 +1,4 @@
-context("test-user-friendfollow")
+context("User / Network")
 
 test_that("trakt.user.network works", {
   skip_on_cran()

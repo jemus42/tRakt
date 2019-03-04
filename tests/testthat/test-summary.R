@@ -1,4 +1,4 @@
-context("test-media-summary")
+context("Summary")
 
 test_that("trakt.shows.summary works", {
   skip_on_cran()
