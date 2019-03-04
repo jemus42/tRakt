@@ -12,14 +12,13 @@
 #' @examples
 #' # A movie's ratings
 #' trakt.movies.ratings("tron-legacy-2010")
-#'
+#' 
 #' # A show's ratings
 #' trakt.shows.ratings("game-of-thrones")
-#'
 #' \dontrun{
 #' # Ratings for seasons 1 through 5
 #' trakt.seasons.ratings("futurama", season = 1:5)
-#'
+#' 
 #' # Ratings for episodes 1 through 7 of season 1
 #' trakt.episodes.ratings("futurama", season = 1, episode = 1:7)
 #' }

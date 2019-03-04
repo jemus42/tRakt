@@ -34,9 +34,9 @@ Suggests:
     ggplot2,
     knitr,
     rmarkdown,
+    scales,
     testthat,
-    tidyr,
-    scales
+    tidyr
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

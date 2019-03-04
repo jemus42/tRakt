@@ -29,14 +29,13 @@
 #' @examples
 #' # A show
 #' trakt.search("Breaking Bad", type = "show", n_results = 3)
-#'
 #' \dontrun{
 #' # A show by its trakt id, and now with more information
 #' trakt.search.byid(1388, "trakt", type = "show", extended = "full")
-#'
+#' 
 #' # A person
 #' trakt.search("J. K. Simmons", type = "person", extended = "full")
-#'
+#' 
 #' # A movie or a show, two of each
 #' trakt.search("Tron", type = c("movie", "show"), n_results = 2)
 #' }
@@ -47,7 +46,7 @@ trakt.search <- function(query, type = c("movie", "show", "episode", "person", "
   years <- check_filter_arg(years, "years")
 
   if (length(type) > 1) {
-    return(map_df(type, ~trakt.search(query, type = .x, years, n_results, extended)))
+    return(map_df(type, ~ trakt.search(query, type = .x, years, n_results, extended)))
   }
 
   # Construct URL, make API call
@@ -72,7 +71,7 @@ trakt.search.byid <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
   extended <- match.arg(extended)
 
   if (length(type) > 1) {
-    return(map_df(type, ~trakt.search.byid(id, id_type, type = .x, n_results, extended)))
+    return(map_df(type, ~ trakt.search.byid(id, id_type, type = .x, n_results, extended)))
   }
 
   # Construct URL, make API call

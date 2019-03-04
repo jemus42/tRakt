@@ -250,7 +250,6 @@ check_filter_arg <- function(filter,
     filter <- as.character(filter)
   }
   if (filter_type == "years") {
-
     if (!(length(filter) %in% c(1, 2))) {
       warning("Filter 'years' must be of length 1 or 2, keeping only first two values")
       filter <- filter[1:2]
@@ -258,7 +257,9 @@ check_filter_arg <- function(filter,
 
     filter <- as.integer(filter)
 
-    if (any(map_lgl(filter, ~{!(nchar(.x) == 4)}))) {
+    if (any(map_lgl(filter, ~ {
+      !(nchar(.x) == 4)
+    }))) {
       warning("Filter 'years' must be 4-digit year, ignoring filter")
       filter <- NULL
     }
@@ -287,7 +288,9 @@ check_filter_arg <- function(filter,
 
     filter <- as.integer(filter)
 
-    if (any(map_lgl(filter, ~{filter >= 0 & filter <= 100}))) {
+    if (any(map_lgl(filter, ~ {
+      filter >= 0 & filter <= 100
+    }))) {
       warning("Filter 'ratings' must be between 0 and 100, ignoring filter")
       filter <- NULL
     }
@@ -299,8 +302,10 @@ check_filter_arg <- function(filter,
   if (filter_type == "genres") {
     if (any(!(filter %in% genres$slug))) {
       if (any(!(filter %in% genres$slug))) {
-        warning("Filter 'genres' includes unknown genre, ignoring: '",
-                paste0(filter[!(filter %in% genres$slug)], collapse = ", "), "'")
+        warning(
+          "Filter 'genres' includes unknown genre, ignoring: '",
+          paste0(filter[!(filter %in% genres$slug)], collapse = ", "), "'"
+        )
 
         # Subset to the only elements allowed
         filter <- filter[filter %in% genres$slug]
@@ -311,8 +316,10 @@ check_filter_arg <- function(filter,
   if (filter_type == "languages") {
     if (any(!(filter %in% languages$code))) {
       if (any(!(filter %in% languages$code))) {
-        warning("Filter 'languages' includes unknown language, ignoring: '",
-                paste0(filter[!(filter %in% languages$code)], collapse = ", "), "'")
+        warning(
+          "Filter 'languages' includes unknown language, ignoring: '",
+          paste0(filter[!(filter %in% languages$code)], collapse = ", "), "'"
+        )
 
         # Subset to the only elements allowed
         filter <- filter[filter %in% languages$code]
@@ -323,8 +330,10 @@ check_filter_arg <- function(filter,
   if (filter_type == "countries") {
     if (any(!(filter %in% countries$code))) {
       if (any(!(filter %in% countries$code))) {
-        warning("Filter 'countries' includes unknown country, ignoring: '",
-                paste0(filter[!(filter %in% countries$code)], collapse = ", "), "'")
+        warning(
+          "Filter 'countries' includes unknown country, ignoring: '",
+          paste0(filter[!(filter %in% countries$code)], collapse = ", "), "'"
+        )
 
         # Subset to the only elements allowed
         filter <- filter[filter %in% countries$code]
@@ -335,8 +344,10 @@ check_filter_arg <- function(filter,
   if (filter_type == "certifications") {
     if (any(!(filter %in% certifications$slug))) {
       if (any(!(filter %in% certifications$slug))) {
-        warning("Filter 'certifications' includes unknown value, ignoring: '",
-                paste0(filter[!(filter %in% certifications$slug)], collapse = ", "), "'")
+        warning(
+          "Filter 'certifications' includes unknown value, ignoring: '",
+          paste0(filter[!(filter %in% certifications$slug)], collapse = ", "), "'"
+        )
 
         # Subset to the only elements allowed
         filter <- filter[filter %in% certifications$slug]
@@ -347,8 +358,10 @@ check_filter_arg <- function(filter,
   if (filter_type == "networks") {
     if (any(!(filter %in% networks))) {
       if (any(!(filter %in% networks))) {
-        warning("Filter 'networks' includes unknown value, ignoring: '",
-                paste0(filter[!(filter %in% networks)], collapse = ", "), "'")
+        warning(
+          "Filter 'networks' includes unknown value, ignoring: '",
+          paste0(filter[!(filter %in% networks)], collapse = ", "), "'"
+        )
 
         # Subset to the only elements allowed
         filter <- filter[filter %in% networks]
@@ -360,13 +373,15 @@ check_filter_arg <- function(filter,
     status_okay <- c("returning series", "in production", "planned", "canceled", "ended")
 
     if (any(!(filter %in% status_okay))) {
-      warning("Filter 'status' must be one of '", paste0(status_okay, collapse = ", "),
-              "', ignoring: '", paste0(filter[!(filter %in% status_okay)], collapse = ", "), "'")
+      warning(
+        "Filter 'status' must be one of '", paste0(status_okay, collapse = ", "),
+        "', ignoring: '", paste0(filter[!(filter %in% status_okay)], collapse = ", "), "'"
+      )
 
       # Subset to the only elements allowed
       filter <- filter[filter %in% status_okay]
     }
-     filter <- paste0(unique(filter), collapse = ",")
+    filter <- paste0(unique(filter), collapse = ",")
   }
   filter
 }
