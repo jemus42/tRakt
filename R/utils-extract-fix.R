@@ -245,7 +245,8 @@ check_filter_arg <- function(filter,
                              )) {
   filter_type <- match.arg(filter_type)
 
-  if (is_empty(filter)) return(NULL)
+  # Empty in, empty out. Can't explain that.
+  if (is_empty(filter) | filter == "") return(NULL)
 
   if (filter_type == "query") {
     filter <- as.character(filter)
