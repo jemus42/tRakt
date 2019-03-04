@@ -141,7 +141,7 @@
 
 <span class='fu'>trakt.movies.stats</span>(<span class='no'>target</span>)
 
-<span class='fu'>trakt.season.stats</span>(<span class='no'>target</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>)
+<span class='fu'>trakt.seasons.stats</span>(<span class='no'>target</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>)
 
 <span class='fu'>trakt.episodes.stats</span>(<span class='no'>target</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</pre>
     
@@ -183,19 +183,19 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 <span class='fu'>trakt.shows.stats</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"breaking-bad"</span>, <span class='st'>"game-of-thrones"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 9
 #&gt;   watchers   plays collectors collected_episo… comments  lists votes type  id   
 #&gt;      &lt;int&gt;   &lt;int&gt;      &lt;int&gt;            &lt;int&gt;    &lt;int&gt;  &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1   417416  2.55e7     344518         17281680      402 119167 63966 shows brea…
-#&gt; 2   771427  4.56e7    1101183         58336533      331 263564 88137 shows game…</div><div class='input'>
+#&gt; 1   417679  2.55e7     344518         17281972      402 119197 63985 shows brea…
+#&gt; 2   771427  4.56e7    1101183         58338418      331 263627 88169 shows game…</div><div class='input'>
 <span class='co'># Stats for multiple episodes</span>
 <span class='fu'>trakt.episodes.stats</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 9
 #&gt;   watchers  plays collectors comments lists votes season episode id      
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;int&gt; &lt;chr&gt;   
-#&gt; 1    87074 116099     115313        1   171  1909      1       1 futurama
-#&gt; 2    82976 110635     114858        1   116  1493      1       2 futurama
-#&gt; 3    81867 109156     114852        0   103  1361      1       3 futurama
-#&gt; 4    80343 107125     114262        0   106  1213      1       4 futurama
-#&gt; 5    79734 106312     114489        1   104  1167      1       5 futurama
-#&gt; 6    79635 106180     114162        0   103  1150      1       6 futurama
-#&gt; 7    78850 105134     114077        0   102  1068      1       7 futurama</div></pre>
+#&gt; 1    87133 116178     115455        1   172  1912      1       1 futurama
+#&gt; 2    83028 110704     115002        1   117  1494      1       2 futurama
+#&gt; 3    81916 109222     114996        0   104  1362      1       3 futurama
+#&gt; 4    80395 107194     114406        0   107  1214      1       4 futurama
+#&gt; 5    79783 106378     114634        1   105  1167      1       5 futurama
+#&gt; 6    79682 106243     114306        0   104  1150      1       6 futurama
+#&gt; 7    78900 105200     114221        0   103  1068      1       7 futurama</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
