@@ -5,7 +5,7 @@ library(dplyr)
 
 # Networks ----
 networks <- trakt.api.call(build_trakt_url("networks"))
-networks <- as_tibble(networks)
+networks <- networks$name
 use_data(networks, overwrite = TRUE)
 
 # Languages ----

@@ -4,7 +4,10 @@
 \name{networks}
 \alias{networks}
 \title{Available networks}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1328 rows and 1 columns.}
+\format{An object of class \code{character} of length 1329.}
+\source{
+\url{https://trakt.docs.apiary.io/#reference/networks/list/get-networks}
+}
 \usage{
 networks
 }

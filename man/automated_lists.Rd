@@ -12,25 +12,43 @@
 \title{See which movies / shows are popular}
 \usage{
 trakt.popular(type = c("shows", "movies"), limit = 10,
-  extended = c("min", "full"))
+  extended = c("min", "full"), query = NULL, years = NULL,
+  genres = NULL, languages = NULL, countries = NULL,
+  runtimes = NULL, ratings = NULL, certifications = NULL,
+  networks = NULL, status = NULL)
 
 trakt.trending(type = c("shows", "movies"), limit = 10,
-  extended = c("min", "full"))
+  extended = c("min", "full"), query = NULL, years = NULL,
+  genres = NULL, languages = NULL, countries = NULL,
+  runtimes = NULL, ratings = NULL, certifications = NULL,
+  networks = NULL, status = NULL)
 
 trakt.anticipated(type = c("shows", "movies"), limit = 10,
-  extended = c("min", "full"))
+  extended = c("min", "full"), query = NULL, years = NULL,
+  genres = NULL, languages = NULL, countries = NULL,
+  runtimes = NULL, ratings = NULL, certifications = NULL,
+  networks = NULL, status = NULL)
 
 trakt.played(type = c("shows", "movies"), limit = 10,
   extended = c("min", "full"), period = c("weekly", "monthly",
-  "yearly", "all"))
+  "yearly", "all"), query = NULL, years = NULL, genres = NULL,
+  languages = NULL, countries = NULL, runtimes = NULL,
+  ratings = NULL, certifications = NULL, networks = NULL,
+  status = NULL)
 
 trakt.watched(type = c("shows", "movies"), limit = 10,
   extended = c("min", "full"), period = c("weekly", "monthly",
-  "yearly", "all"))
+  "yearly", "all"), query = NULL, years = NULL, genres = NULL,
+  languages = NULL, countries = NULL, runtimes = NULL,
+  ratings = NULL, certifications = NULL, networks = NULL,
+  status = NULL)
 
 trakt.collected(type = c("shows", "movies"), limit = 10,
   extended = c("min", "full"), period = c("weekly", "monthly",
-  "yearly", "all"))
+  "yearly", "all"), query = NULL, years = NULL, genres = NULL,
+  languages = NULL, countries = NULL, runtimes = NULL,
+  ratings = NULL, certifications = NULL, networks = NULL,
+  status = NULL)
 
 trakt.updates(type = c("shows", "movies"), limit = 10,
   extended = c("min", "full"), start_date = Sys.Date() - 7)
@@ -44,6 +62,34 @@ than \code{0} and will be coerced to \code{integer}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
+
+\item{query}{\code{character(1)}: Search titles and descriptions.}
+
+\item{years}{\code{integer(1)}: 4-digit year or range, e.g. \code{2010-2020}. Can also be an integer
+vector of length two which will be coerced appropriately.}
+
+\item{genres}{\code{character(n)}: Genre \href{https://trakt.docs.apiary.io/#reference/genres}{slugs}.
+Multiple values are allowed and will be concatenated.}
+
+\item{languages}{\code{character(n)}: Two-digit language code. Also see \code{\link{languages}} for
+table of available languages.}
+
+\item{countries}{\code{character(n)}: Two-character country code. See \code{\link{countries}}.}
+
+\item{runtimes}{\code{character | integer}: Numeric range in minutes, e.g. \code{30-90}. Can also be an integer
+vector of length two which will be coerced appropriately.}
+
+\item{ratings}{\code{character | integer}:  Numeric range between \code{0} and \code{100}. Can also be an integer
+vector of length two which will be coerced appropriately.}
+
+\item{certifications}{\code{character(n)}: Certification like \code{pg-13}.
+Multiple values are allowed. Use \code{\link{certifications}} for reference. Note that there
+are different certifications for shows and movies.}
+
+\item{networks}{Network name like \code{HBO}. See \code{\link{networks}} for a list of known networks.}
+
+\item{status}{\code{character(n)}: The status of the shows. One of \code{returning series},
+\code{in production}, \code{planned}, \code{canceled}, or \code{ended}}
 
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
@@ -85,6 +131,9 @@ In this case, the upper bound for \code{limit} is 100.
 The functions for \strong{Played}, \strong{Watched}, \strong{Collected} and \strong{Played} each return the
 same additional variables besides the media information: \code{watcher_count},
 \code{play_count}, \code{collected_count}, \code{collector_count}.
+}
+\note{
+Does not support filters
 }
 \examples{
 \dontrun{

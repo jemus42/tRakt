@@ -5,6 +5,9 @@
 \alias{genres}
 \title{Genres}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 36 rows and 2 columns.}
+\source{
+\url{https://trakt.docs.apiary.io/#reference/genres/list/get-genres}
+}
 \usage{
 genres
 }

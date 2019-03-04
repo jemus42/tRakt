@@ -5,6 +5,9 @@
 \alias{certifications}
 \title{Certifications}
 \format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 12 rows and 5 columns.}
+\source{
+\url{https://trakt.docs.apiary.io/#reference/certifications/list/get-certifications}
+}
 \usage{
 certifications
 }
