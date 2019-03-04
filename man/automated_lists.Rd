@@ -158,3 +158,6 @@ trakt.popular("movies", languages = "de", years = c(1990, 2010))
 \seealso{
 search_filters
 }
+\seealso{
+search_filters
+}
