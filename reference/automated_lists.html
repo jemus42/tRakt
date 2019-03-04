@@ -299,7 +299,7 @@ same additional variables besides the media information: <code>watcher_count</co
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='search_filters.html'>search_filters</a></p></div>
+    <div class='dont-index'><p><a href='search_filters.html'>search_filters</a>, for more information on search filters.</p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -321,11 +321,11 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1       58 Spid…  2018 More T… "Miles … 2018-12-14     117 us      http:/…
-#&gt; 2       49 Aqua…  2018 Home I… Once ho… 2018-12-21     143 us      http:/…
-#&gt; 3       43 Gree…  2018 Inspir… Tony Li… 2018-11-21     130 us      http:/…
-#&gt; 4       39 Bohe…  2018 Fearle… Singer … 2018-11-02     135 us      http:/…
-#&gt; 5       36 Isn'…  2019 None o… For a l… 2019-02-13      88 us      http:/…
+#&gt; 1       44 Spid…  2018 More T… "Miles … 2018-12-14     117 us      http:/…
+#&gt; 2       37 Aqua…  2018 Home I… Once ho… 2018-12-21     143 us      http:/…
+#&gt; 3       36 Gree…  2018 Inspir… Tony Li… 2018-11-21     130 us      http:/…
+#&gt; 4       36 Inst…  2018 Just a… When Pe… 2018-11-16     118 us      http:/…
+#&gt; 5       35 Bohe…  2018 Fearle… Singer … 2018-11-02     135 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
@@ -341,9 +341,38 @@ same additional variables besides the media information: <code>watcher_count</co
 #&gt; 5      20907 The Flash           2020 195144 the-flash-2020       tt0439… 298618</div><div class='input'>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/format'>format</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
-<span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; <span class='error'>Error in map_lgl(filter, ~{    !(nchar(.x) == 4)}): could not find function "map_lgl"</span></div><div class='input'>
+<span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 15 x 8
+#&gt;    list_count title              year trakt  slug            tvdb  imdb    tmdb 
+#&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;
+#&gt;  1        862 Ultraman           2019 133835 ultraman-2019   3499… &lt;NA&gt;    80795
+#&gt;  2        639 The Order          2019 144216 the-order-2019  3596… tt8295… 82104
+#&gt;  3        500 Love, Death &amp; Ro…  2019 142611 love-death-rob… 3578… tt9561… &lt;NA&gt; 
+#&gt;  4        402 After Life         2019 130511 after-life      3475… tt8398… &lt;NA&gt; 
+#&gt;  5        282 Our Planet         2019 139672 our-planet-2019 3552… tt9253… &lt;NA&gt; 
+#&gt;  6        271 Turn Up Charlie    2019 135212 turn-up-charlie 3515… tt8304… &lt;NA&gt; 
+#&gt;  7        129 Osmosis            2019 143847 osmosis-2019    3592… tt7043… &lt;NA&gt; 
+#&gt;  8        129 Quicksand          2019 143600 quicksand       3589… tt8686… 86621
+#&gt;  9        100 After Life         2019 143763 after-life-143… 3591… tt8398… &lt;NA&gt; 
+#&gt; 10         94 Formula 1: Drive…  2019 144377 formula-1-driv… 3599… tt8289… &lt;NA&gt; 
+#&gt; 11         83 7 Seeds            2019 140359 7-seeds         3560… tt9348… 85940
+#&gt; 12         46 Most Beautiful T…  2019 133896 most-beautiful… 3374… tt8001… &lt;NA&gt; 
+#&gt; 13         17 ULTRAMAN           2019 140389 ultraman-2019-… 3560… &lt;NA&gt;    80795
+#&gt; 14         17 After Life         2019 142902 after-life-2019 3581… tt8398… &lt;NA&gt; 
+#&gt; 15         13 After Life         2019 143613 after-life-201… 3510… tt8398… &lt;NA&gt; </div><div class='input'>
 <span class='co'># Get the most popular German-language movies between 1990 and 2010</span>
-<span class='fu'>trakt.popular</span>(<span class='st'>"movies"</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>1990</span>, <span class='fl'>2010</span>))</div><div class='output co'>#&gt; <span class='error'>Error in map_lgl(filter, ~{    !(nchar(.x) == 4)}): could not find function "map_lgl"</span></div></pre>
+<span class='fu'>trakt.popular</span>(<span class='st'>"movies"</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>1990</span>, <span class='fl'>2010</span>))</div><div class='output co'>#&gt; # A tibble: 10 x 6
+#&gt;    title                    year trakt slug                       imdb      tmdb
+#&gt;    &lt;chr&gt;                   &lt;int&gt; &lt;int&gt; &lt;chr&gt;                      &lt;chr&gt;    &lt;int&gt;
+#&gt;  1 Downfall                 2004   489 downfall-2004              tt03631…   613
+#&gt;  2 The Lives of Others      2006   461 the-lives-of-others-2006   tt04050…   582
+#&gt;  3 Run Lola Run             1998    73 run-lola-run-1998          tt01308…   104
+#&gt;  4 The Wave                 2008  3954 the-wave-2008              tt10636…  7735
+#&gt;  5 Good bye, Lenin!         2003   285 good-bye-lenin-2003        tt03013…   338
+#&gt;  6 The Experiment           2001   454 the-experiment-2001        tt02502…   575
+#&gt;  7 Funny Games              1997  5445 funny-games-1997           tt01191… 10234
+#&gt;  8 The White Ribbon         2009 24371 the-white-ribbon-2009      tt11493… 37903
+#&gt;  9 The Baader Meinhof Com…  2008  3789 the-baader-meinhof-comple… tt07654…  6968
+#&gt; 10 Cargo                    2009 21807 cargo-2009                 tt03819… 34069</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
