@@ -11,19 +11,18 @@
 #' @param id_type The type of `id`. One of `trakt` (default), `imdb`, `tmdb`, `tvdb`.
 #' @param type `character(1) ["movie"]`: The type of data you're looking for. One of `show`,
 #' `movie`, `episode`, `person` or `list` or a character vector with those elements, e.g.
-#' `c("show", "movie")`.
+#' `c("show", "movie")`. Note that not every combination is reasonably combinable, e.g.
+#' `c("movie", "list")`. Use separate function calls in that case.
 #' @param years Optionally filter by years.
 #' @param n_results `integer(1) [1]`: How many results to return.
 #' @return A [tibble()][tibble::tibble-package] containing a `n_result` result.
 #'         If no results are found, the `tibble` has 0 rows.
 #' @inheritParams trakt_api_common_parameters
 #' @export
-#' @note The API technically allows concatenated types for text query searches,
-#' e.g. `movie,show,episode` to search all three types of items, but this is not supported
-#' in this package. If you really want this functionality, please open an issue on GitHub.
 #' @source [The trakt.tv API docs](https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results)
 #' @family API-basics
-#' @family search functions
+#' @importFrom tibble tibble
+#' @importFrom purrr map_df
 #' @examples
 #' # A show
 #' trakt.search("Breaking Bad", type = "show", n_results = 3)
@@ -35,20 +34,23 @@
 #' # A person
 #' trakt.search("J. K. Simmons", type = "person", extended = "full")
 #'
-#' # A movie or a show
-#' trakt.search("Tron", "movie", n_results = 2)
-#' trakt.search("Tron", "show", n_results = 2)
+#' # A movie or a show, two of each
+#' trakt.search("Tron", type = c("movie", "show"), n_results = 2)
 #' }
 trakt.search <- function(query, type = c("movie", "show", "episode", "person", "list"),
                          years = NULL, n_results = 1L, extended = c("min", "full")) {
-  type <- match.arg(type)
+  type <- match.arg(type, several.ok = TRUE)
   extended <- match.arg(extended)
+
+  if (length(type) > 1) {
+    return(map_df(type, ~trakt.search(query, type = .x, years, n_results, extended)))
+  }
 
   # Construct URL, make API call
   url <- build_trakt_url("search", type, query = query, years = years, extended = extended)
   response <- trakt.api.call(url = url)
 
-  if (identical(response, tibble::tibble())) {
+  if (identical(response, tibble())) {
     warning("No results for query '", query, "'")
     return(response)
   }

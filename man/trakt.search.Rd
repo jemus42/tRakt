@@ -20,7 +20,8 @@ trakt.search.byid(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
 
 \item{type}{\code{character(1) ["movie"]}: The type of data you're looking for. One of \code{show},
 \code{movie}, \code{episode}, \code{person} or \code{list} or a character vector with those elements, e.g.
-\code{c("show", "movie")}.}
+\code{c("show", "movie")}. Note that not every combination is reasonably combinable, e.g.
+\code{c("movie", "list")}. Use separate function calls in that case.}
 
 \item{years}{Optionally filter by years.}
 
@@ -45,11 +46,6 @@ as receiving a quick overview of a show/movie. The amount of
 information returned is equal to \code{.summary} API methods and also depends on
 the value of \code{extended}.
 }
-\note{
-The API technically allows concatenated types for text query searches,
-e.g. \code{movie,show,episode} to search all three types of items, but this is not supported
-in this package. If you really want this functionality, please open an issue on GitHub.
-}
 \examples{
 # A show
 trakt.search("Breaking Bad", type = "show", n_results = 3)
@@ -61,9 +57,8 @@ trakt.search.byid(1388, "trakt", type = "show", extended = "full")
 # A person
 trakt.search("J. K. Simmons", type = "person", extended = "full")
 
-# A movie or a show
-trakt.search("Tron", "movie", n_results = 2)
-trakt.search("Tron", "show", n_results = 2)
+# A movie or a show, two of each
+trakt.search("Tron", type = c("movie", "show"), n_results = 2)
 }
 }
 \seealso{
@@ -71,4 +66,3 @@ Other API-basics: \code{\link{trakt.api.call}},
   \code{\link{trakt_credentials}}
 }
 \concept{API-basics}
-\concept{search functions}
