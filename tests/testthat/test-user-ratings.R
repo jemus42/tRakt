@@ -7,6 +7,8 @@ test_that("trakt.user.ratings works", {
 
   trakt.user.ratings(user = user, type = "shows") %>%
     expect_is("tbl")
+  trakt.user.ratings(user = user, type = "seasons") %>%
+    expect_is("tbl")
   trakt.user.ratings(user = user, type = "episodes") %>%
     expect_is("tbl")
   trakt.user.ratings(user = user, type = "movies") %>%
