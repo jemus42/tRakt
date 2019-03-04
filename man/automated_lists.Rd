@@ -134,7 +134,7 @@ same additional variables besides the media information: \code{watcher_count},
 \code{play_count}, \code{collected_count}, \code{collector_count}.
 }
 \note{
-Does not support filters
+\code{trakt.updates} does not support filters.
 }
 \examples{
 \dontrun{
@@ -147,4 +147,7 @@ trakt.trending(type = "movies", 5, extended = "full")
 # Get top 5 anticipated movies
 trakt.anticipated(type = "movies", 5)
 }
+}
+\seealso{
+search_filters
 }

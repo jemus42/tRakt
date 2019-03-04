@@ -38,3 +38,6 @@ You can specifiy additional search filters in some functions. These filters are
 documented \href{https://trakt.docs.apiary.io/#introduction/filters}{in the official API reference}.
 For convenience, all supported filters are implemented as explicit, named arguments.
 }
+\seealso{
+automated_lists
+}

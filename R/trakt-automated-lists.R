@@ -16,6 +16,7 @@
 #' of class [Date][base::Dates], which will then be coerced via [as.character()][base::as.character].
 #' @return A [tibble()][tibble::tibble-package].
 #'
+#' @seealso search_filters
 #' @details
 #'
 #' These functions access the automatically updated lists provided by trakt.tv.
@@ -280,7 +281,7 @@ trakt.collected <- function(type = c("shows", "movies"),
 
 #' @rdname automated_lists
 #' @export
-#' @note Does not support filters
+#' @note `trakt.updates` does not support filters.
 trakt.updates <- function(type = c("shows", "movies"),
                           limit = 10, extended = c("min", "full"),
                           start_date = Sys.Date() - 7) {
