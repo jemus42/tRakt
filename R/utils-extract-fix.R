@@ -233,6 +233,8 @@ check_username <- function(user, validate = FALSE) {
 #' Check filter arguments
 #'
 #' @param filter The username input.
+#' @param filter_type The kind of filter.
+#' @noRd
 #' @keywords internal
 check_filter_arg <- function(filter,
                              filter_type = c(
