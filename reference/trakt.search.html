@@ -42,9 +42,7 @@
 <meta property="og:description" content="Search for a show or movie with a keyword (e.g. &quot;Breaking Bad&quot;) and receive
 basic info of the first search result. It's main use is to retrieve
 the ids or proper show/movie title for further use, as well
-as receiving a quick overview of a show/movie. The amount of
-information returned is equal to .summary API methods and also depends on
-the value of extended." />
+as receiving a quick overview of a show/movie." />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -141,35 +139,34 @@ the value of extended." />
     <p>Search for a show or movie with a keyword (e.g. <code>"Breaking Bad"</code>) and receive
 basic info of the first search result. It's main use is to retrieve
 the ids or proper show/movie title for further use, as well
-as receiving a quick overview of a show/movie. The amount of
-information returned is equal to <code>.summary</code> API methods and also depends on
-the value of <code>extended</code>.</p>
+as receiving a quick overview of a show/movie.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>trakt.search</span>(<span class='no'>query</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"movie"</span>, <span class='st'>"show"</span>, <span class='st'>"episode"</span>, <span class='st'>"person"</span>,
-  <span class='st'>"list"</span>), <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
+    <pre class="usage"><span class='fu'>trakt.search</span>(<span class='no'>query</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movie"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
 
 <span class='fu'>trakt.search.byid</span>(<span class='no'>id</span>, <span class='kw'>id_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"trakt"</span>, <span class='st'>"imdb"</span>, <span class='st'>"tmdb"</span>, <span class='st'>"tvdb"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"movie"</span>, <span class='st'>"show"</span>, <span class='st'>"episode"</span>, <span class='st'>"person"</span>, <span class='st'>"list"</span>),
-  <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movie"</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>query</th>
-      <td><p>The keyword used for the search.</p></td>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: The keyword used for the search, e.g. <code>"game of thrones"</code>.</p></td>
     </tr>
     <tr>
       <th>type</th>
       <td><p><code>character(1) ["movie"]</code>: The type of data you're looking for. One of <code>show</code>,
 <code>movie</code>, <code>episode</code>, <code>person</code> or <code>list</code> or a character vector with those elements, e.g.
-<code><a href='https://www.rdocumentation.org/packages/base/topics/c'>c("show", "movie")</a></code>.</p></td>
+<code><a href='https://www.rdocumentation.org/packages/base/topics/c'>c("show", "movie")</a></code>. Note that not every combination is reasonably combinable, e.g.
+<code><a href='https://www.rdocumentation.org/packages/base/topics/c'>c("movie", "list")</a></code>. Use separate function calls in that case.</p></td>
     </tr>
     <tr>
       <th>years</th>
-      <td><p>Optionally filter by years.</p></td>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/integer'>integer(1)</a></code>: 4-digit year <strong>or</strong> range, e.g. <code>2010-2020</code>. Can also be an integer
+vector of length two which will be coerced appropriately.</p></td>
     </tr>
     <tr>
       <th>n_results</th>
@@ -182,28 +179,26 @@ returns more variables and should generally only be used if required.</p></td>
     </tr>
     <tr>
       <th>id</th>
-      <td><p>The id used for the search.</p></td>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: The id used for the search, e.g. <code>14701</code> for a <code>Trakt ID</code>.</p></td>
     </tr>
     <tr>
       <th>id_type</th>
-      <td><p>The type of <code>id</code>. One of <code>trakt</code> (default), <code>imdb</code>, <code>tmdb</code>, <code>tvdb</code>.</p></td>
+      <td><p><code>character(1) ["trakt"]</code>: The type of <code>id</code>. One of <code>trakt</code>, <code>imdb</code>, <code>tmdb</code>, <code>tvdb</code>.</p></td>
     </tr>
     </table>
-    
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p><a href='https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results'>The trakt.tv API docs</a></p>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> containing a <code>n_result</code> result.
 If no results are found, the <code>tibble</code> has 0 rows.</p>
     
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>The API technically allows concatenated types for text query searches,
-e.g. <code>movie,show,episode</code> to search all three types of items, but this is not supported
-in this package. If you really want this functionality, please open an issue on GitHub.</p>
+    <p>The amount of
+information returned is equal to <code>.summary</code> API methods and in turn depends on
+the value of <code>extended</code>.
+See also <a href='https://trakt.docs.apiary.io/#reference/search'>the API reference here</a> for
+which fields of the item metadata are searched by default.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
@@ -218,8 +213,7 @@ in this package. If you really want this functionality, please open an issue on 
 #&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;
 #&gt; 1 show  1000   Breaking Bad    2008 1388   breaking-bad  81189 tt0903747   1396 
 #&gt; 2 show   396.  Breaking Bad:…  2018 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
-#&gt; 3 show    12.0 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'>
-</div><div class='input'><span class='co'># A show by its trakt id, and now with more information</span>
+#&gt; 3 show    12.0 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># A show by its trakt id, and now with more information</span>
 <span class='fu'>trakt.search.byid</span>(<span class='fl'>1388</span>, <span class='st'>"trakt"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 29
 #&gt;   type  score title  year overview first_aired         runtime certification
 #&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;    &lt;dttm&gt;                &lt;int&gt; &lt;chr&gt;        
@@ -236,27 +230,23 @@ in this package. If you really want this functionality, please open an issue on 
 #&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;    &lt;lgl&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;chr&gt; &lt;chr&gt;
 #&gt; 1 pers…  1.54 J.K.… "Jonatha… 1955-01… NA    Detroit, … NA       15722 j-k-…
 #&gt; # … with 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'>
-<span class='co'># A movie or a show</span>
-<span class='fu'>trakt.search</span>(<span class='st'>"Tron"</span>, <span class='st'>"movie"</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 8
-#&gt;   type  score title         year trakt slug             imdb      tmdb 
-#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;        &lt;int&gt; &lt;chr&gt; &lt;chr&gt;            &lt;chr&gt;     &lt;chr&gt;
-#&gt; 1 movie 1000  Tron          1982 66    tron-1982        tt0084827 97   
-#&gt; 2 movie  718. TRON: Legacy  2010 12601 tron-legacy-2010 tt1104001 20526</div><div class='input'><span class='fu'>trakt.search</span>(<span class='st'>"Tron"</span>, <span class='st'>"show"</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 9
-#&gt;   type  score title            year trakt slug            tvdb   imdb      tmdb 
-#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;
-#&gt; 1 show  583.  Tron: Uprising   2012 34209 tron-uprising   258480 tt1812523 34356
-#&gt; 2 show   10.1 Game of Thrones  2011 1390  game-of-thrones 121361 tt0944947 1399 </div></pre>
+<span class='co'># A movie or a show, two of each</span>
+<span class='fu'>trakt.search</span>(<span class='st'>"Tron"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"movie"</span>, <span class='st'>"show"</span>), <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 4 x 9
+#&gt;   type  score title        year trakt  slug         imdb             tmdb  tvdb 
+#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;
+#&gt; 1 movie 1000  Tron         1982 66     tron-1982    tt0084827        97    &lt;NA&gt; 
+#&gt; 2 movie  718. TRON: Lega…  2010 12601  tron-legacy… tt1104001        20526 &lt;NA&gt; 
+#&gt; 3 show   583. Tron: Upri…  2012 34209  tron-uprisi… tt1812523        34356 2584…
+#&gt; 4 show    20  Tron           NA 142773 tron         https://m.imdb.… &lt;NA&gt;  3580…</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#source">Source</a></li>
-
       <li><a href="#value">Value</a></li>
 
-      <li><a href="#note">Note</a></li>
+      <li><a href="#details">Details</a></li>
 
       <li><a href="#see-also">See also</a></li>
       
