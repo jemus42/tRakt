@@ -3,23 +3,26 @@
 #' Search for a show or movie with a keyword (e.g. `"Breaking Bad"`) and receive
 #' basic info of the first search result. It's main use is to retrieve
 #' the ids or proper show/movie title for further use, as well
-#' as receiving a quick overview of a show/movie. The amount of
-#' information returned is equal to `.summary` API methods and also depends on
+#' as receiving a quick overview of a show/movie.
+#'
+#' The amount of
+#' information returned is equal to `.summary` API methods and in turn depends on
 #' the value of `extended`.
-#' @param query The keyword used for the search.
-#' @param id The id used for the search.
-#' @param id_type The type of `id`. One of `trakt` (default), `imdb`, `tmdb`, `tvdb`.
+#' See also [the API reference here](https://trakt.docs.apiary.io/#reference/search) for
+#' which fields of the item metadata are searched by default.
+#' @param query `character(1)`: The keyword used for the search, e.g. `"game of thrones"`.
+#' @param id `character(1)`: The id used for the search, e.g. `14701` for a `Trakt ID`.
+#' @param id_type `character(1) ["trakt"]`: The type of `id`. One of `trakt`, `imdb`, `tmdb`, `tvdb`.
 #' @param type `character(1) ["movie"]`: The type of data you're looking for. One of `show`,
 #' `movie`, `episode`, `person` or `list` or a character vector with those elements, e.g.
 #' `c("show", "movie")`. Note that not every combination is reasonably combinable, e.g.
 #' `c("movie", "list")`. Use separate function calls in that case.
-#' @param years Optionally filter by years.
+#' @inheritParams search_filters
 #' @param n_results `integer(1) [1]`: How many results to return.
 #' @return A [tibble()][tibble::tibble-package] containing a `n_result` result.
 #'         If no results are found, the `tibble` has 0 rows.
 #' @inheritParams trakt_api_common_parameters
 #' @export
-#' @source [The trakt.tv API docs](https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results)
 #' @family API-basics
 #' @importFrom tibble tibble
 #' @importFrom purrr map_df
@@ -41,6 +44,7 @@ trakt.search <- function(query, type = c("movie", "show", "episode", "person", "
                          years = NULL, n_results = 1L, extended = c("min", "full")) {
   type <- match.arg(type, several.ok = TRUE)
   extended <- match.arg(extended)
+  years <- check_filter_arg(years, "years")
 
   if (length(type) > 1) {
     return(map_df(type, ~trakt.search(query, type = .x, years, n_results, extended)))
@@ -64,8 +68,12 @@ trakt.search.byid <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
                               type = c("movie", "show", "episode", "person", "list"),
                               n_results = 1L, extended = c("min", "full")) {
   id_type <- match.arg(id_type)
-  type <- match.arg(type)
+  type <- match.arg(type, several.ok = TRUE)
   extended <- match.arg(extended)
+
+  if (length(type) > 1) {
+    return(map_df(type, ~trakt.search.byid(id, id_type, type = .x, n_results, extended)))
+  }
 
   # Construct URL, make API call
   url <- build_trakt_url("search", id_type, id, type = type, extended = extended)
@@ -83,6 +91,8 @@ trakt.search.byid <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
 #' Search helper function
 #' @keywords internal
 #' @importFrom utils head
+#' @importFrom tibble has_name
+#' @importFrom tibble as_tibble
 #' @noRd
 search_result_cleanup <- function(response, type, n_results, extended) {
 
@@ -96,16 +106,17 @@ search_result_cleanup <- function(response, type, n_results, extended) {
   response <- cbind(response[names(response) != type], response[[type]])
 
   # Already handled by unpack_show so it would fail here
-  if (tibble::has_name(response, "ids")) {
+  if (has_name(response, "ids")) {
     response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
   }
 
-  # Sanity filter: Remove items with a year of NA, like "show" + "tron"
+  # Sanity filter: Bump down items with a year of NA, like "show" + "tron"
   # Happens for exact title matches (bumps "score") but e.g. false type in this case
-  response <- tibble::as_tibble(response)
-  if (tibble::has_name(response, "year")) {
-    response <- response[!(is.na(response$year) & response$score == 1000), ]
+  response <- as_tibble(response)
+  if (has_name(response, "year")) {
+    response[is.na(response$year) & response$score == 1000, "score"] <- 20
+    response <- response[order(response$score, decreasing = TRUE), ]
   }
 
-  utils::head(response, n_results)
+  head(response, n_results)
 }

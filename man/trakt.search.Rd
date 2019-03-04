@@ -4,9 +4,6 @@
 \alias{trakt.search}
 \alias{trakt.search.byid}
 \title{Search for a show via text query or id}
-\source{
-\href{https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results}{The trakt.tv API docs}
-}
 \usage{
 trakt.search(query, type = c("movie", "show", "episode", "person",
   "list"), years = NULL, n_results = 1L, extended = c("min", "full"))
@@ -16,23 +13,24 @@ trakt.search.byid(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
   n_results = 1L, extended = c("min", "full"))
 }
 \arguments{
-\item{query}{The keyword used for the search.}
+\item{query}{\code{character(1)}: The keyword used for the search, e.g. \code{"game of thrones"}.}
 
 \item{type}{\code{character(1) ["movie"]}: The type of data you're looking for. One of \code{show},
 \code{movie}, \code{episode}, \code{person} or \code{list} or a character vector with those elements, e.g.
 \code{c("show", "movie")}. Note that not every combination is reasonably combinable, e.g.
 \code{c("movie", "list")}. Use separate function calls in that case.}
 
-\item{years}{Optionally filter by years.}
+\item{years}{\code{integer(1)}: 4-digit year \strong{or} range, e.g. \code{2010-2020}. Can also be an integer
+vector of length two which will be coerced appropriately.}
 
 \item{n_results}{\code{integer(1) [1]}: How many results to return.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
 
-\item{id}{The id used for the search.}
+\item{id}{\code{character(1)}: The id used for the search, e.g. \code{14701} for a \code{Trakt ID}.}
 
-\item{id_type}{The type of \code{id}. One of \code{trakt} (default), \code{imdb}, \code{tmdb}, \code{tvdb}.}
+\item{id_type}{\code{character(1) ["trakt"]}: The type of \code{id}. One of \code{trakt}, \code{imdb}, \code{tmdb}, \code{tvdb}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()} containing a \code{n_result} result.
@@ -42,9 +40,14 @@ If no results are found, the \code{tibble} has 0 rows.
 Search for a show or movie with a keyword (e.g. \code{"Breaking Bad"}) and receive
 basic info of the first search result. It's main use is to retrieve
 the ids or proper show/movie title for further use, as well
-as receiving a quick overview of a show/movie. The amount of
-information returned is equal to \code{.summary} API methods and also depends on
+as receiving a quick overview of a show/movie.
+}
+\details{
+The amount of
+information returned is equal to \code{.summary} API methods and in turn depends on
 the value of \code{extended}.
+See also \href{https://trakt.docs.apiary.io/#reference/search}{the API reference here} for
+which fields of the item metadata are searched by default.
 }
 \examples{
 # A show
