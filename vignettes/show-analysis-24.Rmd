@@ -7,8 +7,6 @@ vignette: >
   %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-toc:
-  depth: 2
 ---
 
 ```{r setup, include = FALSE}
