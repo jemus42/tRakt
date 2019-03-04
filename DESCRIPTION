@@ -31,11 +31,11 @@ Imports:
     utils
 Suggests:
     covr,
+    ggplot2,
     knitr,
     rmarkdown,
     testthat,
-    tidyr,
-    ggplot2
+    tidyr
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
