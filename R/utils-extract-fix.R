@@ -252,7 +252,7 @@ check_filter_arg <- function(filter,
   if (filter_type == "years") {
     if (!(length(filter) %in% c(1, 2))) {
       warning("Filter 'years' must be of length 1 or 2, keeping only first two values")
-      filter <- filter[1:2]
+      filter <- sort(filter[1:2])
     }
 
     filter <- as.integer(filter)
@@ -265,7 +265,7 @@ check_filter_arg <- function(filter,
     }
 
     if (length(filter) == 2) {
-      filter <- paste0(filter, collapse = "-")
+      filter <- paste0(sort(filter), collapse = "-")
     }
   }
   if (filter_type == "runtimes") {
