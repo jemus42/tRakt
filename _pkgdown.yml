@@ -44,18 +44,21 @@ reference:
   - title: Data relating to people
     contents:
       - contains("people")
-  - title: API & misc helpers
+  - title: API interaction and reference topics
     contents:
       - build_trakt_url
       - trakt.api.call
       - trakt_credentials
       - trakt_api_common_parameters
+      - search_filters
   - title: Episode datasets
     contents:
       - futurama
       - gameofthrones
   - title: Internal datasets
-    desc: These are unlikely to be useful to users, but they are there, just in case.
+    desc: >
+       These are unlikely to be useful on their own, but they are useful as a reference
+       for optional filters.
     contents:
       - countries
       - genres

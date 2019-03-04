@@ -65,30 +65,31 @@ returns more variables and should generally only be used if required.}
 
 \item{query}{\code{character(1)}: Search titles and descriptions.}
 
-\item{years}{\code{integer(1)}: 4-digit year or range, e.g. \code{2010-2020}. Can also be an integer
+\item{years}{\code{integer(1)}: 4-digit year \strong{or} range, e.g. \code{2010-2020}. Can also be an integer
 vector of length two which will be coerced appropriately.}
 
-\item{genres}{\code{character(n)}: Genre \href{https://trakt.docs.apiary.io/#reference/genres}{slugs}.
+\item{genres}{\code{character(n)}: Genre  slug(s). See \code{\link{genres}} for a table of genres.
 Multiple values are allowed and will be concatenated.}
 
-\item{languages}{\code{character(n)}: Two-digit language code. Also see \code{\link{languages}} for
+\item{languages}{\code{character(n)}: Two-digit language code(s). Also see \code{\link{languages}} for
 table of available languages.}
 
-\item{countries}{\code{character(n)}: Two-character country code. See \code{\link{countries}}.}
+\item{countries}{\code{character(n)}: Two-character country code(s). See \code{\link{countries}}.}
 
-\item{runtimes}{\code{character | integer}: Numeric range in minutes, e.g. \code{30-90}. Can also be an integer
+\item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}. Can also be an integer
 vector of length two which will be coerced appropriately.}
 
-\item{ratings}{\code{character | integer}:  Numeric range between \code{0} and \code{100}. Can also be an integer
+\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}. Can also be an integer
 vector of length two which will be coerced appropriately.}
 
-\item{certifications}{\code{character(n)}: Certification like \code{pg-13}.
+\item{certifications}{\code{character(n)}: Certification(s) like \code{pg-13}.
 Multiple values are allowed. Use \code{\link{certifications}} for reference. Note that there
 are different certifications for shows and movies.}
 
-\item{networks}{Network name like \code{HBO}. See \code{\link{networks}} for a list of known networks.}
+\item{networks}{\code{character(n)}: (Shows only) Network name like \code{HBO}. See \code{\link{networks}}
+for a list of known networks.}
 
-\item{status}{\code{character(n)}: The status of the shows. One of \code{returning series},
+\item{status}{\code{character(n)}: (Shows only) The status of the shows. One of \code{returning series},
 \code{in production}, \code{planned}, \code{canceled}, or \code{ended}}
 
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
