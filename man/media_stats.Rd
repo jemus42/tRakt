@@ -4,7 +4,7 @@
 \alias{media_stats}
 \alias{trakt.shows.stats}
 \alias{trakt.movies.stats}
-\alias{trakt.season.stats}
+\alias{trakt.seasons.stats}
 \alias{trakt.episodes.stats}
 \title{Get a show or movie's stats}
 \usage{
@@ -12,7 +12,7 @@ trakt.shows.stats(target)
 
 trakt.movies.stats(target)
 
-trakt.season.stats(target, season = 1L)
+trakt.seasons.stats(target, season = 1L)
 
 trakt.episodes.stats(target, season = 1L, episode = 1L)
 }

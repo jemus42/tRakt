@@ -236,6 +236,7 @@ check_username <- function(user, validate = FALSE) {
 #' @param filter_type The kind of filter.
 #' @noRd
 #' @importFrom purrr map_lgl
+#' @importFrom purrr is_empty
 #' @keywords internal
 check_filter_arg <- function(filter,
                              filter_type = c(
@@ -244,7 +245,7 @@ check_filter_arg <- function(filter,
                              )) {
   filter_type <- match.arg(filter_type)
 
-  if (is.null(filter)) return(filter)
+  if (is_empty(filter)) return(NULL)
 
   if (filter_type == "query") {
     filter <- as.character(filter)

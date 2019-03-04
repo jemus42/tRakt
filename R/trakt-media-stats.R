@@ -10,7 +10,7 @@
 #' \dontrun{
 #' # Stats for multiple shows at once
 #' trakt.shows.stats(c("breaking-bad", "game-of-thrones"))
-#' 
+#'
 #' # Stats for multiple episodes
 #' trakt.episodes.stats("futurama", season = 1, episode = 1:7)
 #' }
@@ -54,13 +54,13 @@ trakt.movies.stats <- function(target) {
 #' @export
 #' @importFrom purrr map_df
 #' @importFrom tibble as_tibble
-trakt.season.stats <- function(target, season = 1L) {
+trakt.seasons.stats <- function(target, season = 1L) {
   if (length(target) > 1) {
-    return(map_df(target, ~ trakt.season.stats(.x, season)))
+    return(map_df(target, ~ trakt.seasons.stats(.x, season)))
   }
 
   if (length(season) > 1) {
-    return(map_df(episode, ~ trakt.season.stats(target, .x)))
+    return(map_df(season, ~ trakt.seasons.stats(target, .x)))
   }
 
   # Construct URL, make API call

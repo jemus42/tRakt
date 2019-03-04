@@ -35,7 +35,7 @@ test_that("fix_datetime converts datetime", {
   expect_error(fix_datetime("not_a_df_or_list"))
 })
 
-test_that("check_user is okay", {
+test_that("check_user throws errors when it should", {
   skip_on_cran()
 
   expect_error(check_username(user = NULL))
@@ -45,4 +45,21 @@ test_that("check_user is okay", {
   expect_failure(expect_error(
     check_username(user = "jemus42", validate = TRUE), "list"
   ))
+})
+
+test_that("check_filter_arg fails how it should", {
+
+  expect_null(check_filter_arg(NULL))
+
+  expect_warning(check_filter_arg(10239, "years"))
+  expect_warning(check_filter_arg(11, "ratings"))
+  expect_warning(check_filter_arg(1:5, "runtimes"))
+  expect_warning(check_filter_arg("five", "genres"))
+  expect_warning(check_filter_arg("five", "networks"))
+  expect_warning(check_filter_arg("five", "languages"))
+  expect_warning(check_filter_arg("five", "certifications"))
+  expect_warning(check_filter_arg("five", "countries"))
+  expect_warning(check_filter_arg("five", "status"))
+
+
 })

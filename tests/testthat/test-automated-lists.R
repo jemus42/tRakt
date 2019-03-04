@@ -1,4 +1,4 @@
-context("test-automated-lists")
+context("Automated Lists (popular, trending, ...)")
 
 test_that("trakt.popular works", {
   skip_on_cran()
@@ -97,6 +97,28 @@ test_that("trakt.played and trakt.watched also do things", {
     expect_is("tbl") %>%
     expect_length(11) %>%
     expect_named(nm) %>%
+    nrow() %>%
+    expect_equal(10)
+})
+
+test_that("trakt.collected does its thing", {
+  trakt.collected("shows", limit = 5) %>%
+    expect_is("tbl") %>%
+    expect_length(11) %>%
+    nrow() %>%
+    expect_equal(5)
+
+  trakt.collected("movies", limit = 5) %>%
+    expect_is("tbl") %>%
+    expect_length(9) %>%
+    nrow() %>%
+    expect_equal(5)
+})
+
+test_that("trakt.updates works", {
+  trakt.updates("shows") %>%
+    expect_is("tbl") %>%
+    expect_length(8) %>%
     nrow() %>%
     expect_equal(10)
 })
