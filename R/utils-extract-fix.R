@@ -235,6 +235,7 @@ check_username <- function(user, validate = FALSE) {
 #' @param filter The username input.
 #' @param filter_type The kind of filter.
 #' @noRd
+#' @importFrom purrr map_lgl
 #' @keywords internal
 check_filter_arg <- function(filter,
                              filter_type = c(

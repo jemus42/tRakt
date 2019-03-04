@@ -16,7 +16,7 @@
 #' of class [Date][base::Dates], which will then be coerced via [as.character()][base::as.character].
 #' @return A [tibble()][tibble::tibble-package].
 #'
-#' @seealso [search_filters]
+#' @seealso [search_filters], for more information on search filters.
 #' @details
 #'
 #' These functions access the automatically updated lists provided by trakt.tv.

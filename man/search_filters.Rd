@@ -39,5 +39,5 @@ documented \href{https://trakt.docs.apiary.io/#introduction/filters}{in the offi
 For convenience, all supported filters are implemented as explicit, named arguments.
 }
 \seealso{
-\link{automated_lists}
+\link{automated_lists}, where these parameters are used
 }
