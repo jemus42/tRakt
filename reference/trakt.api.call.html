@@ -160,24 +160,18 @@
     </div>
 
     <pre class="usage"><span class='fu'>trakt.api.call</span>(<span class='no'>url</span>, <span class='kw'>client.id</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt.client.id"</span>),
-  <span class='kw'>convert.datetime</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+  <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>url</th>
-      <td><p>APIv2 method. See <a href='http://docs.trakt.apiary.io/'>the trakt API</a>.</p></td>
+      <td><p>APIv2 endpoint. See <a href='http://docs.trakt.apiary.io/'>the trakt API</a>.</p></td>
     </tr>
     <tr>
       <th>client.id</th>
       <td><p>API client id. see <a href='trakt_credentials.html'>trakt_credentials</a> for further information.</p></td>
-    </tr>
-    <tr>
-      <th>convert.datetime</th>
-      <td><p>If <code>TRUE</code> (default), known top-level datetime variables
-are converted to <code>POSIXct</code>. This might miss some variables and does not recurse
-into nested lists or list-columns.</p></td>
     </tr>
     <tr>
       <th>HEAD</th>
@@ -226,7 +220,7 @@ An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>ti
 #&gt; [1] 18164
 #&gt; 
 #&gt; </div><div class='input'>
-<span class='co'># A HEAD-only request useful for validating a URL exists</span>
+<span class='co'># A HEAD-only request, useful for validating a URL exists or the API is accessable</span>
 <span class='fu'>trakt.api.call</span>(<span class='st'>"https://api.trakt.tv/users/jemus42"</span>, <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; $status
 #&gt; [1] 200
 #&gt; 
@@ -235,7 +229,7 @@ An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>ti
 #&gt; 
 #&gt; $headers
 #&gt; $date
-#&gt; [1] "Tue, 05 Mar 2019 06:32:14 GMT"
+#&gt; [1] "Tue, 05 Mar 2019 07:07:29 GMT"
 #&gt; 
 #&gt; $`content-type`
 #&gt; [1] "application/json; charset=utf-8"
@@ -247,13 +241,13 @@ An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>ti
 #&gt; [1] "max-age=0, private, must-revalidate"
 #&gt; 
 #&gt; $`cf-railgun`
-#&gt; [1] "e842c5ece4 stream 0.000000 0200 57da"
+#&gt; [1] "e6db36746e stream 0.000000 0200 57da"
 #&gt; 
 #&gt; $`content-encoding`
 #&gt; [1] "gzip"
 #&gt; 
 #&gt; $etag
-#&gt; [1] "W/\"4ac7c37deabe50854a130ed2729df8a3\""
+#&gt; [1] "W/\"095f87164fd727c93333949e632763c7\""
 #&gt; 
 #&gt; $vary
 #&gt; [1] "Accept-Encoding"
@@ -268,10 +262,10 @@ An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>ti
 #&gt; [1] "false"
 #&gt; 
 #&gt; $`x-request-id`
-#&gt; [1] "893e0468-ee36-444d-b2c1-00b58637601d"
+#&gt; [1] "6ce5a62c-64c9-4a5d-bcf7-ddefa6a9678d"
 #&gt; 
 #&gt; $`x-runtime`
-#&gt; [1] "0.005083"
+#&gt; [1] "0.009760"
 #&gt; 
 #&gt; $`x-xss-protection`
 #&gt; [1] "1; mode=block"
@@ -283,12 +277,12 @@ An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>ti
 #&gt; [1] "cloudflare"
 #&gt; 
 #&gt; $`cf-ray`
-#&gt; [1] "4b2a0d334ad6561f-ORD"
+#&gt; [1] "4b2a40d34f58c562-ORD"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "insensitive" "list"       
 #&gt; </div><div class='input'>
-<span class='co'># Optionally be lazy about URL specification (not encouraged):</span>
+<span class='co'># Optionally be lazy about URL specification by dropping the hostname:</span>
 <span class='fu'>trakt.api.call</span>(<span class='st'>"shows/game-of-thrones"</span>)</div><div class='output co'>#&gt; $title
 #&gt; [1] "Game of Thrones"
 #&gt; 
