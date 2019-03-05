@@ -5,16 +5,12 @@
 \title{Make an API call to any URL}
 \usage{
 trakt.api.call(url, client.id = getOption("trakt.client.id"),
-  convert.datetime = TRUE, HEAD = FALSE)
+  HEAD = FALSE)
 }
 \arguments{
-\item{url}{APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.}
+\item{url}{APIv2 endpoint. See \href{http://docs.trakt.apiary.io/}{the trakt API}.}
 
 \item{client.id}{API client id. see \link{trakt_credentials} for further information.}
-
-\item{convert.datetime}{If \code{TRUE} (default), known top-level datetime variables
-are converted to \code{POSIXct}. This might miss some variables and does not recurse
-into nested lists or list-columns.}
 
 \item{HEAD}{\code{logical(1) [FALSE]}: If \code{TRUE}, only a HTTP \code{HEAD} request is performed
 and its content returned. This is useful if you are only interested in status codes
@@ -31,10 +27,10 @@ An empty \link[tibble:tibble-package]{tibble()} if the response is an empty \cod
 # A simple request to a direct URL
 trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
 
-# A HEAD-only request useful for validating a URL exists
+# A HEAD-only request, useful for validating a URL exists or the API is accessable
 trakt.api.call("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
 
-# Optionally be lazy about URL specification (not encouraged):
+# Optionally be lazy about URL specification by dropping the hostname:
 trakt.api.call("shows/game-of-thrones")
 }
 \seealso{
