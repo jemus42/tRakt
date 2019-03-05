@@ -48,9 +48,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
   # Spreading out ids to get a flat data.frame
   response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
 
-  response %>%
-    fix_ratings() %>%
-    as_tibble()
+  fix_tibble_response(response)
 }
 
 #' Get a show's season information
@@ -128,7 +126,5 @@ trakt.seasons.summary <- function(target, extended = c("min", "full"), episodes 
     })
   }
 
-  response %>%
-    fix_ratings() %>%
-    as_tibble()
+  fix_tibble_response(response)
 }

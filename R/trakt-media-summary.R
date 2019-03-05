@@ -11,7 +11,7 @@
 #' \dontrun{
 #' # More information
 #' trakt.shows.summary("breaking-bad", extended = "full")
-#' 
+#'
 #' # Info for multiple movies
 #' trakt.movies.summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
 #' }
@@ -68,7 +68,7 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
       bind_cols(response$id)
   }
 
-  as_tibble(response)
+  fix_tibble_response(response)
 }
 
 # Derived ----

@@ -20,7 +20,7 @@
 #' @examples
 #' \dontrun{
 #' myshows <- trakt.user.watched() # Defaults to your username if set
-#' 
+#'
 #' # Use noseasons = TRUE to avoid receiving detailed season/episode data
 #' seans.shows <- trakt.user.watched(user = "sean", noseasons = TRUE)
 #' }
@@ -58,7 +58,5 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
     response <- unpack_movie(response)
   }
 
-  # To be sure
-  response <- fix_datetime(response)
-  as_tibble(response)
+  fix_tibble_response(response)
 }

@@ -45,17 +45,17 @@
 #' \dontrun{
 #' # Get popular shows with only ids
 #' trakt.popular(type = "shows")
-#' 
+#'
 #' # Get trending movies with extended information
 #' trakt.trending(type = "movies", 5, extended = "full")
-#' 
+#'
 #' # Get top 5 anticipated movies
 #' trakt.anticipated(type = "movies", 5)
-#' 
+#'
 #' # Get 15 the most anticipated upcoming shows on Netflix that air this year
 #' current_year <- format(Sys.Date(), "%Y")
 #' trakt.anticipated("shows", limit = 15, networks = "Netflix", years = current_year)
-#' 
+#'
 #' # Get the most popular German-language movies between 1990 and 2010
 #' trakt.popular("movies", languages = "de", years = c(1990, 2010))
 #' }
@@ -141,7 +141,7 @@ trakt_auto_lists <- function(list_type = c(
     )
   }
 
-  fix_datetime(response)
+  fix_tibble_response(response)
 }
 
 # list type ----

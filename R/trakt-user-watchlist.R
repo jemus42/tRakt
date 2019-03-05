@@ -1,7 +1,6 @@
 #' Get a user's watchlist
 #'
-#' `trakt.user.watchlist` pulls a user's watchlist.
-#' Either all shows or movies currently watchlisted will be returned.
+#' Retrieve a user's watchlisted shows or movies.
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble()][tibble::tibble-package].
 #' @export
@@ -10,8 +9,8 @@
 #' @family user data
 #' @examples
 #' \dontrun{
-#' movie_watchlist <- trakt.user.watchlist(type = "movies") # Defaults to your username if set
-#' sean_movies <- trakt.user.watchlist(user = "sean") # Defaults to movie watchlist
+#' # Defaults to movie watchlist and minimal info
+#' trakt.user.watchlist(user = "sean")
 #' }
 trakt.user.watchlist <- function(user = getOption("trakt.username"),
                                  type = c("movies", "shows"),
@@ -34,6 +33,5 @@ trakt.user.watchlist <- function(user = getOption("trakt.username"),
     response <- unpack_movie(response)
   }
 
-  response <- fix_datetime(response)
-  as_tibble(response)
+  fix_tibble_response(response)
 }

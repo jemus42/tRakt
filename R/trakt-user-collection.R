@@ -69,8 +69,6 @@ trakt.user.collection <- function(user = getOption("trakt.username"),
   } else if (type == "movies") {
     response <- unpack_movie(response)
   }
-  # To be sure
-  response <- fix_datetime(response)
 
-  as_tibble(response)
+  fix_tibble_response(response)
 }

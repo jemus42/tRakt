@@ -44,8 +44,7 @@ trakt.media.related <- function(target, type = c("shows", "movies"),
   response %>%
     mutate(related_to = target) %>%
     select(related_to, everything()) %>%
-    fix_ratings() %>%
-    as_tibble()
+    fix_tibble_response()
 }
 
 # Aliased/derived ----

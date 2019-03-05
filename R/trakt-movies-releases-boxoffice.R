@@ -26,9 +26,8 @@ trakt.movies.releases <- function(target, country = NULL) {
   response <- trakt.api.call(url = url)
 
   response %>%
-    fix_datetime() %>%
     mutate(movie = target) %>%
-    as_tibble()
+    fix_tibble_response()
 }
 
 #' Get the weekend box office
@@ -56,5 +55,5 @@ trakt.movies.boxoffice <- function(extended = c("min", "full")) {
 
   response %>%
     unpack_movie() %>%
-    as_tibble()
+    fix_tibble_response()
 }

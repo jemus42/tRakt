@@ -48,9 +48,11 @@ unpack_show <- function(show) {
 #' Unpack movie object
 #' @keywords internal
 #' @importFrom dplyr bind_cols
+#' @importFrom dplyr select
+#' @importFrom tibble has_name
 #' @noRd
 unpack_movie <- function(response) {
-  if (!tibble::has_name(response, "movie")) {
+  if (!has_name(response, "movie")) {
     return(response)
   }
 
@@ -193,6 +195,19 @@ fix_ratings_distribution <- function(response) {
   response
 }
 
+#' FIx a tibble for final output
+#' @keywords internal
+#' @noRd
+#' @importFrom tibble as_tibble
+#' @importFrom tibble remove_rownames
+fix_tibble_response <- function(response) {
+  response %>%
+    as_tibble() %>%
+    fix_datetime() %>%
+    fix_ratings() %>%
+    remove_rownames()
+}
+
 # Checkers ----
 
 #' Check username
@@ -205,7 +220,7 @@ fix_ratings_distribution <- function(response) {
 #' @importFrom httr stop_for_status
 check_username <- function(user, validate = FALSE) {
   fail_option <- is.null(getOption("trakt.username"))
-  fail_empty_chr <- user == ""
+  fail_empty_chr <- identical(user, "")
   fail_null <- is.null(user)
   fail_chr <- !is.character(user)
   fail_na <- is.na(user)
@@ -215,7 +230,7 @@ check_username <- function(user, validate = FALSE) {
   if (failed) {
     stop(
       "Supplied user must be a character string, you provided <",
-      user, "> of class ", class(user)
+      user, "> of class '", class(user), "'"
     )
   }
 
