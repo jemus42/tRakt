@@ -219,13 +219,13 @@ fix_tibble_response <- function(response) {
 #' @keywords internal
 #' @importFrom httr stop_for_status
 check_username <- function(user, validate = FALSE) {
-  fail_option <- is.null(getOption("trakt.username"))
+
   fail_empty_chr <- identical(user, "")
   fail_null <- is.null(user)
   fail_chr <- !is.character(user)
   fail_na <- is.na(user)
 
-  failed <- any(fail_option, fail_empty_chr, fail_null, fail_chr, fail_na)
+  failed <- any(fail_empty_chr, fail_null, fail_chr, fail_na)
 
   if (failed) {
     stop(
