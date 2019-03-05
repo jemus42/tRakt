@@ -4,6 +4,7 @@ development:
 template:
   params:
     bootswatch: cosmo
+    matomo: 20
 
 reference:
   - title: Finding media
