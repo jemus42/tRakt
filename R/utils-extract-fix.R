@@ -172,9 +172,9 @@ fix_datetime <- function(response) {
 
   if (inherits(response, "data.frame")) {
     response %>%
-      mutate_at(.vars = vars(datevars), lubridate::ymd_hms)
+      mutate_at(.vars = vars(datevars), ymd_hms)
   } else {
-    map_at(response, datevars, lubridate::ymd_hms)
+    map_at(response, datevars, ymd_hms)
   }
 }
 

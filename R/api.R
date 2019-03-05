@@ -29,7 +29,7 @@
 #' # Use a values set in ~/.Renviron in an R session:
 #' # (This is automatically executed when calling library(tRakt))
 #' trakt_credentials()
-#' 
+#'
 #' # Explicitly set values in an R session, overriding .Renviron values if present
 #' trakt_credentials(
 #'   username = "sean",
@@ -65,11 +65,8 @@ trakt_credentials <- function(username, client.id,
 #'
 #' `trakt.api.call` makes an API call to a specified URL and returns the parsed output.
 #'
-#' @param url APIv2 method. See \href{http://docs.trakt.apiary.io/}{the trakt API}.
+#' @param url APIv2 endpoint. See \href{http://docs.trakt.apiary.io/}{the trakt API}.
 #' @param client.id API client id. see [trakt_credentials] for further information.
-#' @param convert.datetime If `TRUE` (default), known top-level datetime variables
-#' are converted to `POSIXct`. This might miss some variables and does not recurse
-#' into nested lists or list-columns.
 #' @param HEAD `logical(1) [FALSE]`: If `TRUE`, only a HTTP `HEAD` request is performed
 #' and its content returned. This is useful if you are only interested in status codes
 #' or other headers, and don't want to waste resources on additional bandwidth.
@@ -88,14 +85,14 @@ trakt_credentials <- function(username, client.id,
 #' @examples
 #' # A simple request to a direct URL
 #' trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
-#' 
-#' # A HEAD-only request useful for validating a URL exists
+#'
+#' # A HEAD-only request, useful for validating a URL exists or the API is accessable
 #' trakt.api.call("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
-#' 
-#' # Optionally be lazy about URL specification (not encouraged):
+#'
+#' # Optionally be lazy about URL specification by dropping the hostname:
 #' trakt.api.call("shows/game-of-thrones")
 trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
-                           convert.datetime = TRUE, HEAD = FALSE) {
+                           HEAD = FALSE) {
   if (!grepl(pattern = "^https://api.trakt.tv", url)) {
     url <- build_trakt_url(url)
   }
@@ -137,7 +134,7 @@ trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
   }
 
   # Do it in every other function or do it here once
-  if (convert.datetime & !is.null(names(response))) {
+  if (!is.null(names(response))) {
     response <- fix_datetime(response)
   }
 

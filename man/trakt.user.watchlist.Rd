@@ -22,13 +22,12 @@ returns more variables and should generally only be used if required.}
 A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
-\code{trakt.user.watchlist} pulls a user's watchlist.
-Either all shows or movies currently watchlisted will be returned.
+Retrieve a user's watchlisted shows or movies.
 }
 \examples{
 \dontrun{
-movie_watchlist <- trakt.user.watchlist(type = "movies") # Defaults to your username if set
-sean_movies <- trakt.user.watchlist(user = "sean") # Defaults to movie watchlist
+# Defaults to movie watchlist and minimal info
+trakt.user.watchlist(user = "sean")
 }
 }
 \seealso{
