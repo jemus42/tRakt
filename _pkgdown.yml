@@ -4,7 +4,8 @@ development:
 template:
   params:
     bootswatch: cosmo
-    matomo: 20
+    matomo_siteid: 20
+    matomo_site: "https://analytics.tadaa-data.de"
 
 reference:
   - title: Finding media
