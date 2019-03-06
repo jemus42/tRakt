@@ -33,10 +33,8 @@ It does not use OAuth2, so you can only get data for a user with a
 }
 \examples{
 \dontrun{
-myshows <- trakt.user.watched() # Defaults to your username if set
-
 # Use noseasons = TRUE to avoid receiving detailed season/episode data
-seans.shows <- trakt.user.watched(user = "sean", noseasons = TRUE)
+trakt.user.watched(user = "sean", noseasons = TRUE)
 }
 }
 \seealso{

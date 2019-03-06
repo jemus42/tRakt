@@ -6,6 +6,7 @@
 #' @export
 #' @importFrom tibble as_tibble
 #' @importFrom tibble tibble
+#' @importFrom purrr map_df
 #' @family user data
 #' @examples
 #' \dontrun{
@@ -18,6 +19,11 @@ trakt.user.watchlist <- function(user = getOption("trakt.username"),
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)
+
+  if (length(user) > 1) {
+    names(user) <- user
+    return(map_df(user, ~ trakt.user.watchlist(user = .x, type, extended), .id = "user"))
+  }
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "watchlist", type, extended = extended)

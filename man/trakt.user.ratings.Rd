@@ -30,7 +30,7 @@ Retrieve a user's media ratings
 \examples{
 \dontrun{
 trakt.user.ratings(user = "jemus42")
-trakt.user.ratings(user = "jemus42", type = "movies")
+trakt.user.ratings(user = "sean", type = "movies")
 }
 }
 \seealso{

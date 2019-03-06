@@ -42,7 +42,7 @@ you, please open an issue on GitHub.
 }
 \examples{
 \dontrun{
-seans.movies <- trakt.user.collection(user = "sean", type = "movies")
+trakt.user.collection(user = "sean", type = "movies")
 }
 }
 \seealso{

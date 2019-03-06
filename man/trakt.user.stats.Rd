@@ -12,7 +12,7 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{user} values separately and the result is combined.}
 }
 \value{
-A list of \link[tibble:tibble-package]{tibbles}.
+A \code{list} of \link[tibble:tibble-package]{tibbles}.
 }
 \description{
 Data about a user's interactions with movies, shows, seasons, episodes,
@@ -21,8 +21,7 @@ frequency table of the user's media ratings so far.
 }
 \examples{
 \dontrun{
-mystats <- trakt.user.stats() # Defaults to your username if set
-seanstats <- trakt.user.stats(user = "sean")
+trakt.user.stats(user = "sean")
 }
 }
 \seealso{

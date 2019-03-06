@@ -19,10 +19,8 @@
 #' @importFrom tibble as_tibble
 #' @examples
 #' \dontrun{
-#' myshows <- trakt.user.watched() # Defaults to your username if set
-#'
 #' # Use noseasons = TRUE to avoid receiving detailed season/episode data
-#' seans.shows <- trakt.user.watched(user = "sean", noseasons = TRUE)
+#' trakt.user.watched(user = "sean", noseasons = TRUE)
 #' }
 trakt.user.watched <- function(user = getOption("trakt.username"),
                                type = c("shows", "movies"),
@@ -31,6 +29,11 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)
+
+  if (length(user) > 1) {
+    names(user) <- user
+    return(map_df(user, ~ trakt.user.watched(user = .x, type, extended, noseasons), .id = "user"))
+  }
 
   if (noseasons) {
     extended <- paste0(extended, ",noseasons")

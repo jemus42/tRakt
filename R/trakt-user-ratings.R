@@ -11,7 +11,7 @@
 #' @examples
 #' \dontrun{
 #' trakt.user.ratings(user = "jemus42")
-#' trakt.user.ratings(user = "jemus42", type = "movies")
+#' trakt.user.ratings(user = "sean", type = "movies")
 #' }
 trakt.user.ratings <- function(user = getOption("trakt.username"),
                                type = c("movies", "seasons", "shows", "episodes"),
@@ -24,6 +24,11 @@ trakt.user.ratings <- function(user = getOption("trakt.username"),
     if (!(as.integer(rating) %in% 1:10)) {
       stop("rating must be a whole number between 1 and 10")
     }
+  }
+
+  if (length(user) > 1) {
+    names(user) <- user
+    return(map_df(user, ~ trakt.user.ratings(user = .x, type, rating, extended), .id = "user"))
   }
 
   # Construct URL, make API call

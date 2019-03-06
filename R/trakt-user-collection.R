@@ -26,9 +26,10 @@
 #' @importFrom dplyr rename
 #' @importFrom tibble as_tibble
 #' @importFrom purrr map
+#' @importFrom purrr map_df
 #' @examples
 #' \dontrun{
-#' seans.movies <- trakt.user.collection(user = "sean", type = "movies")
+#' trakt.user.collection(user = "sean", type = "movies")
 #' }
 trakt.user.collection <- function(user = getOption("trakt.username"),
                                   type = c("shows", "movies"),
@@ -37,6 +38,12 @@ trakt.user.collection <- function(user = getOption("trakt.username"),
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)
+
+  if (length(user) > 1) {
+    names(user) <- user
+    return(map_df(user, ~ trakt.user.collection(user = .x, type, extended, unnest_episodes),
+                  .id = "user"))
+  }
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "collection", type, extended = extended)
