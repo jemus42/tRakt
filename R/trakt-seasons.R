@@ -16,7 +16,7 @@
 #' @importFrom purrr is_integer
 #' @importFrom purrr map_df
 #' @importFrom tibble as_tibble
-#' @note If you want to quickly gather episode data of multiple seasons,
+#' @note If you want to quickly gather episode data of all available seasons,
 #' see [trakt.seasons.summary] and use the `episodes = TRUE` parameter.
 #' @family show data
 #' @examples
@@ -76,17 +76,14 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 #' @importFrom purrr map
 #' @importFrom purrr map_df
 #' @examples
-#' \dontrun{
 #' trakt.seasons.summary("breaking-bad", extended = "min")
+#'
+#' \dontrun{
 #' trakt.seasons.summary("utopia", extended = "full", episodes = TRUE)
 #' }
 trakt.seasons.summary <- function(target, extended = c("min", "full"), episodes = FALSE,
                                   drop.specials = TRUE, drop.unaired = TRUE) {
   extended <- match.arg(extended)
-
-  if (episodes) {
-    extended <- paste0(extended, ",episodes")
-  }
 
   if (length(target) > 1) {
     response <- map_df(target, function(t) {
@@ -96,6 +93,10 @@ trakt.seasons.summary <- function(target, extended = c("min", "full"), episodes 
       )
     })
     return(response)
+  }
+
+  if (episodes) {
+    extended <- paste0(extended, ",episodes")
   }
 
   # Construct URL, make API call

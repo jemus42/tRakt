@@ -1,4 +1,4 @@
-#' Pipe operator
+#' Pipe operators
 #'
 #' See \code{magrittr::\link[magrittr]{\%>\%}} for details.
 #'

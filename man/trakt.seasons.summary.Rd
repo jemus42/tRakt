@@ -38,8 +38,9 @@ This function wraps \href{https://trakt.docs.apiary.io/#reference/seasons/summar
 with the endpoint \code{/shows/:show_id/seasons}.
 }
 \examples{
-\dontrun{
 trakt.seasons.summary("breaking-bad", extended = "min")
+
+\dontrun{
 trakt.seasons.summary("utopia", extended = "full", episodes = TRUE)
 }
 }

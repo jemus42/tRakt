@@ -33,7 +33,8 @@
 #' # Explicitly set values in an R session, overriding .Renviron values if present
 #' trakt_credentials(
 #'   username = "sean",
-#'   client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2"
+#'   client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2",
+#'   silent = FALSE
 #' )
 #' }
 trakt_credentials <- function(username, client.id,
@@ -65,8 +66,9 @@ trakt_credentials <- function(username, client.id,
 #'
 #' `trakt.api.call` makes an API call to a specified URL and returns the parsed output.
 #'
-#' @param url APIv2 endpoint. See \href{http://docs.trakt.apiary.io/}{the trakt API}.
-#' @param client.id API client id. see [trakt_credentials] for further information.
+#' @param url `character(1)`: The API endpoint. Either a full URL like
+#' `"https://api.trakt.tv/shows/breaking-bad"` or just the endpoint like `shows/breaking-bad`.
+#' @param client.id `character(1)`: API client id. see [trakt_credentials] for further information.
 #' @param HEAD `logical(1) [FALSE]`: If `TRUE`, only a HTTP `HEAD` request is performed
 #' and its content returned. This is useful if you are only interested in status codes
 #' or other headers, and don't want to waste resources on additional bandwidth.

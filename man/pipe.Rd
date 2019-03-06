@@ -3,7 +3,7 @@
 \name{\%>\%}
 \alias{\%>\%}
 \alias{\%<>\%}
-\title{Pipe operator}
+\title{Pipe operators}
 \usage{
 lhs \%>\% rhs
 

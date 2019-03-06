@@ -30,7 +30,7 @@ This function accesses \href{https://trakt.docs.apiary.io/#reference/seasons/sea
 at the endpoint \code{/shows/:show_id/seasons/:season_num}.
 }
 \note{
-If you want to quickly gather episode data of multiple seasons,
+If you want to quickly gather episode data of all available seasons,
 see \link{trakt.seasons.summary} and use the \code{episodes = TRUE} parameter.
 }
 \examples{
