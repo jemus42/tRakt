@@ -343,11 +343,11 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1      164 Aqua…  2018 Home I… Once ho… 2018-12-21     143 us      http:/…
-#&gt; 2       49 Spid…  2018 More T… "Miles … 2018-12-14     117 us      http:/…
-#&gt; 3       37 Gree…  2018 Inspir… Tony Li… 2018-11-21     130 us      http:/…
-#&gt; 4       35 Inst…  2018 Just a… When Pe… 2018-11-16     118 us      http:/…
-#&gt; 5       34 Fant…  2018 Fate o… Gellert… 2018-11-16     134 us      http:/…
+#&gt; 1       63 Aqua…  2018 Home I… Once ho… 2018-12-21     143 us      http:/…
+#&gt; 2       15 Spid…  2018 More T… "Miles … 2018-12-14     117 us      http:/…
+#&gt; 3       12 Bohe…  2018 Fearle… Singer … 2018-11-02     135 us      http:/…
+#&gt; 4       10 Mort…  2018 Some S… Many th… 2018-12-14     129 us      http:/…
+#&gt; 5        8 Gree…  2018 Inspir… Tony Li… 2018-11-21     130 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
@@ -363,22 +363,24 @@ same additional variables besides the media information: <code>watcher_count</co
 #&gt; 5      20907 The Flash           2020 195144 the-flash-2020       tt0439… 298618</div><div class='input'>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/format'>format</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
-<span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 13 x 8
+<span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 15 x 8
 #&gt;    list_count title              year trakt  slug            tvdb  imdb    tmdb 
 #&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;
-#&gt;  1        895 Ultraman           2019 133835 ultraman-2019   3499… &lt;NA&gt;    80795
-#&gt;  2        720 The Order          2019 144216 the-order-2019  3596… tt8295… 82104
-#&gt;  3        560 Love, Death &amp; Ro…  2019 142611 love-death-rob… 3578… tt9561… &lt;NA&gt; 
-#&gt;  4        486 After Life         2019 130511 after-life      3475… tt8398… &lt;NA&gt; 
-#&gt;  5        284 Turn Up Charlie    2019 135212 turn-up-charlie 3515… tt8304… &lt;NA&gt; 
-#&gt;  6        282 Our Planet         2019 139672 our-planet-2019 3552… tt9253… &lt;NA&gt; 
-#&gt;  7        182 Osmosis            2019 143847 osmosis-2019    3592… tt7043… 85424
+#&gt;  1        905 Ultraman           2019 133835 ultraman-2019   3499… &lt;NA&gt;    80795
+#&gt;  2        854 The Order          2019 144216 the-order-2019  3596… tt8295… 82104
+#&gt;  3        598 Love, Death &amp; Ro…  2019 142611 love-death-rob… 3578… tt9561… &lt;NA&gt; 
+#&gt;  4        543 After Life         2019 130511 after-life      3475… tt8398… &lt;NA&gt; 
+#&gt;  5        307 Turn Up Charlie    2019 135212 turn-up-charlie 3515… tt8304… 85486
+#&gt;  6        282 Our Planet         2019 139672 our-planet-2019 3552… tt9253… 83880
+#&gt;  7        200 Osmosis            2019 143847 osmosis-2019    3592… tt7043… 85424
 #&gt;  8        129 Quicksand          2019 143600 quicksand       3589… tt8686… 86621
-#&gt;  9        107 Formula 1: Drive…  2019 144377 formula-1-driv… 3599… tt8289… &lt;NA&gt; 
+#&gt;  9        122 Formula 1: Drive…  2019 144377 formula-1-driv… 3599… tt8289… &lt;NA&gt; 
 #&gt; 10         89 7 Seeds            2019 140359 7-seeds         3560… tt9348… 85940
 #&gt; 11         46 Most Beautiful T…  2019 133896 most-beautiful… 3374… tt8001… &lt;NA&gt; 
 #&gt; 12         17 ULTRAMAN           2019 140389 ultraman-2019-… 3560… &lt;NA&gt;    80795
-#&gt; 13          9 Sintonia           2019 131399 sintonia        3443… tt8165… &lt;NA&gt; </div><div class='input'>
+#&gt; 13          9 Sintonia           2019 131399 sintonia        3443… tt8165… &lt;NA&gt; 
+#&gt; 14          8 When They See Us   2019 144923 when-they-see-… 3603… tt7137… 81355
+#&gt; 15          1 No Good Nick       2019 144963 no-good-nick-2… 3606… &lt;NA&gt;    &lt;NA&gt; </div><div class='input'>
 <span class='co'># Get the most popular German-language movies between 1990 and 2010</span>
 <span class='fu'>trakt.popular</span>(<span class='st'>"movies"</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>1990</span>, <span class='fl'>2010</span>))</div><div class='output co'>#&gt; # A tibble: 10 x 6
 #&gt;    title                    year trakt slug                       imdb      tmdb
