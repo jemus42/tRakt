@@ -1,4 +1,4 @@
-context("test-seasons")
+context("Seasons")
 
 test_that("trakt.seasons.season works", {
   skip_on_cran()

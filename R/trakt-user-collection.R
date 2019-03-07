@@ -25,8 +25,10 @@
 #' @importFrom dplyr everything
 #' @importFrom dplyr rename
 #' @importFrom tibble as_tibble
+#' @importFrom tibble tibble
 #' @importFrom purrr map
 #' @importFrom purrr map_df
+#' @importFrom purrr is_empty
 #' @examples
 #' \dontrun{
 #' trakt.user.collection(user = "sean", type = "movies")
@@ -48,6 +50,8 @@ trakt.user.collection <- function(user = getOption("trakt.username"),
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "collection", type, extended = extended)
   response <- trakt.api.call(url = url)
+
+  if (is_empty(response)) return(tibble())
 
   if (type == "shows") {
     response <- response %>%

@@ -83,6 +83,7 @@ trakt_credentials <- function(username, client.id,
 #' @importFrom httr content
 #' @importFrom jsonlite fromJSON
 #' @importFrom purrr flatten
+#' @importFrom purrr is_empty
 #' @family API-basics
 #' @examples
 #' # A simple request to a direct URL
@@ -131,7 +132,7 @@ trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
   response <- fromJSON(response)
 
   # To make empty response handling easier
-  if (identical(response, list()) | is.null(response)) {
+  if (is_empty(response)) {
     return(tibble())
   }
 

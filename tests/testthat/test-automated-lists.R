@@ -1,4 +1,4 @@
-context("Automated Lists (popular, trending, ...)")
+context("Automated Lists")
 
 test_that("trakt.popular works", {
   skip_on_cran()
