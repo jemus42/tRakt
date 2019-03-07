@@ -17,3 +17,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.httr-oauth$
+^tRakt\.Rcheck$
+^tRakt.*\.tar\.gz$
+^tRakt.*\.tgz$

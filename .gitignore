@@ -18,3 +18,6 @@ meta.R
 .Rprofile
 # Ignore built vignettes
 inst/doc/*
+tRakt.Rcheck/
+tRakt*.tar.gz
+tRakt*.tgz
