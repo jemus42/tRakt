@@ -69,4 +69,20 @@ test_that("check_filter_arg fails how it should", {
     check_filter_arg(c("HBO", "TNT"), filter_type = "networks"),
     "HBO,TNT"
   )
+  expect_equal(
+    check_filter_arg(c("en", "de"), filter_type = "languages"),
+    "en,de"
+  )
+  expect_equal(
+    check_filter_arg(c("pg-13", "r"), filter_type = "certifications"),
+    "pg-13,r"
+  )
+  expect_equal(
+    check_filter_arg(c("ar", "am"), filter_type = "countries"),
+    "ar,am"
+  )
+  expect_equal(
+    check_filter_arg(c("ended", "canceled"), filter_type = "status"),
+    "ended,canceled"
+  )
 })
