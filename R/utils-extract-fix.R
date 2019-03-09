@@ -229,7 +229,7 @@ check_username <- function(user, validate = FALSE) {
 
   if (failed) {
     stop(
-      "Supplied user must be a character string, you provided <",
+      "Supplied user must be a non-empty character string, you provided <",
       user, "> of class '", class(user), "'"
     )
   }
@@ -317,88 +317,44 @@ check_filter_arg <- function(filter,
     }
   }
   if (filter_type == "genres") {
-    if (any(!(filter %in% genres$slug))) {
-      if (any(!(filter %in% genres$slug))) {
-        warning(
-          "Filter 'genres' includes unknown genre, ignoring: '",
-          paste0(filter[!(filter %in% genres$slug)], collapse = ", "), "'"
-        )
+    filter <- check_filter_arg_fixed(filter, filter_type, genres$slug)
 
-        # Subset to the only elements allowed
-        filter <- filter[filter %in% genres$slug]
-      }
-      filter <- paste0(unique(filter), collapse = ",")
-    }
   }
   if (filter_type == "languages") {
-    if (any(!(filter %in% languages$code))) {
-      if (any(!(filter %in% languages$code))) {
-        warning(
-          "Filter 'languages' includes unknown language, ignoring: '",
-          paste0(filter[!(filter %in% languages$code)], collapse = ", "), "'"
-        )
+    filter <- check_filter_arg_fixed(filter, filter_type, languages$code)
 
-        # Subset to the only elements allowed
-        filter <- filter[filter %in% languages$code]
-      }
-      filter <- paste0(unique(filter), collapse = ",")
-    }
   }
   if (filter_type == "countries") {
-    if (any(!(filter %in% countries$code))) {
-      if (any(!(filter %in% countries$code))) {
-        warning(
-          "Filter 'countries' includes unknown country, ignoring: '",
-          paste0(filter[!(filter %in% countries$code)], collapse = ", "), "'"
-        )
+    filter <- check_filter_arg_fixed(filter, filter_type, countries$code)
 
-        # Subset to the only elements allowed
-        filter <- filter[filter %in% countries$code]
-      }
-      filter <- paste0(unique(filter), collapse = ",")
-    }
   }
   if (filter_type == "certifications") {
-    if (any(!(filter %in% certifications$slug))) {
-      if (any(!(filter %in% certifications$slug))) {
-        warning(
-          "Filter 'certifications' includes unknown value, ignoring: '",
-          paste0(filter[!(filter %in% certifications$slug)], collapse = ", "), "'"
-        )
+    filter <- check_filter_arg_fixed(filter, filter_type, certifications$slug)
 
-        # Subset to the only elements allowed
-        filter <- filter[filter %in% certifications$slug]
-      }
-      filter <- paste0(unique(filter), collapse = ",")
-    }
   }
   if (filter_type == "networks") {
-    if (any(!(filter %in% networks))) {
-      if (any(!(filter %in% networks))) {
-        warning(
-          "Filter 'networks' includes unknown value, ignoring: '",
-          paste0(filter[!(filter %in% networks)], collapse = ", "), "'"
-        )
-
-        # Subset to the only elements allowed
-        filter <- filter[filter %in% networks]
-      }
-      filter <- paste0(unique(filter), collapse = ",")
-    }
+    filter <- check_filter_arg_fixed(filter, filter_type, networks)
   }
   if (filter_type == "status") {
-    status_okay <- c("returning series", "in production", "planned", "canceled", "ended")
+    status_ok <- c("returning series", "in production", "planned", "canceled", "ended")
 
-    if (any(!(filter %in% status_okay))) {
-      warning(
-        "Filter 'status' must be one of '", paste0(status_okay, collapse = ", "),
-        "', ignoring: '", paste0(filter[!(filter %in% status_okay)], collapse = ", "), "'"
-      )
-
-      # Subset to the only elements allowed
-      filter <- filter[filter %in% status_okay]
-    }
-    filter <- paste0(unique(filter), collapse = ",")
+    filter <- check_filter_arg_fixed(filter, filter_type, status_ok)
   }
   filter
+}
+
+#' The helper's helper
+#' @keywords internal
+#' @noRd
+check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
+  if (any(!(filter %in% filter_ok))) {
+    warning(
+      "Filter '", filter_type, "' includes unknown value, ignoring: '",
+      paste0(unique(filter[!(filter %in% filter_ok)]), collapse = ", "), "'"
+    )
+
+    # Subset to the only elements allowed
+    filter <- filter[filter %in% filter_ok]
+  }
+  paste0(unique(filter), collapse = ",")
 }

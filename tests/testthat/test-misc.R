@@ -60,4 +60,13 @@ test_that("check_filter_arg fails how it should", {
   expect_warning(check_filter_arg("five", "certifications"))
   expect_warning(check_filter_arg("five", "countries"))
   expect_warning(check_filter_arg("five", "status"))
+
+  expect_equal(
+    check_filter_arg(c("action", "drama"), filter_type = "genres"),
+    "action,drama"
+  )
+  expect_equal(
+    check_filter_arg(c("HBO", "TNT"), filter_type = "networks"),
+    "HBO,TNT"
+  )
 })
