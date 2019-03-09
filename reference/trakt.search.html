@@ -250,15 +250,15 @@ which fields of the item metadata are searched by default.</p>
 <span class='fu'>trakt.search</span>(<span class='st'>"J. K. Simmons"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"person"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 12
 #&gt;   type  score name  biography birthday   death birthplace homepage trakt slug 
 #&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;date&gt;     &lt;lgl&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 pers…  1.55 J.K.… "Jonatha… 1955-01-09 NA    Detroit, … NA       15722 j-k-…
+#&gt; 1 pers…  1.54 J.K.… "Jonatha… 1955-01-09 NA    Detroit, … NA       15722 j-k-…
 #&gt; # … with 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'>
 <span class='co'># A movie or a show, two of each</span>
 <span class='fu'>trakt.search</span>(<span class='st'>"Tron"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"movie"</span>, <span class='st'>"show"</span>), <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 4 x 9
 #&gt;   type  score title        year trakt  slug         imdb             tmdb  tvdb 
 #&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;
 #&gt; 1 movie 1000  Tron         1982 66     tron-1982    tt0084827        97    &lt;NA&gt; 
-#&gt; 2 movie  723. TRON: Lega…  2010 12601  tron-legacy… tt1104001        20526 &lt;NA&gt; 
-#&gt; 3 show   587. Tron: Upri…  2012 34209  tron-uprisi… tt1812523        34356 2584…
+#&gt; 2 movie  721. TRON: Lega…  2010 12601  tron-legacy… tt1104001        20526 &lt;NA&gt; 
+#&gt; 3 show   599. Tron: Upri…  2012 34209  tron-uprisi… tt1812523        34356 2584…
 #&gt; 4 show    20  Tron           NA 142773 tron         https://m.imdb.… &lt;NA&gt;  3580…</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

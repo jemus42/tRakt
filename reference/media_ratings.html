@@ -211,12 +211,12 @@ of one API call <em>per element in each argument</em>. Please be kind to the API
 <span class='fu'>trakt.movies.ratings</span>(<span class='st'>"tron-legacy-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;   rating votes distribution      id               type  
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;            &lt;chr&gt; 
-#&gt; 1   7.27 12019 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
+#&gt; 1   7.27 12023 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
 <span class='co'># A show's ratings</span>
 <span class='fu'>trakt.shows.ratings</span>(<span class='st'>"game-of-thrones"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;   rating votes distribution      id              type 
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;           &lt;chr&gt;
-#&gt; 1   9.30 88296 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># Ratings for seasons 1 through 5</span>
+#&gt; 1   9.30 88358 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># Ratings for seasons 1 through 5</span>
 <span class='fu'>trakt.seasons.ratings</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 5
 #&gt;   rating votes distribution      id       season
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;     &lt;int&gt;
