@@ -41,6 +41,12 @@ trakt.media.related <- function(target, type = c("shows", "movies"),
     response <- unpack_movie(response)
   }
 
+  if (extended == "min" & type == "movies") {
+    response <- response %>%
+      select(-ids) %>%
+      bind_cols(fix_ids(response$ids))
+  }
+
   response %>%
     mutate(related_to = target) %>%
     select(related_to, everything()) %>%
