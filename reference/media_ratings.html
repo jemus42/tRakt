@@ -211,31 +211,31 @@ of one API call <em>per element in each argument</em>. Please be kind to the API
 <span class='fu'>trakt.movies.ratings</span>(<span class='st'>"tron-legacy-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;   rating votes distribution      id               type  
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;            &lt;chr&gt; 
-#&gt; 1   7.27 12023 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
+#&gt; 1   7.27 12026 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
 <span class='co'># A show's ratings</span>
 <span class='fu'>trakt.shows.ratings</span>(<span class='st'>"game-of-thrones"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;   rating votes distribution      id              type 
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;           &lt;chr&gt;
-#&gt; 1   9.30 88358 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># Ratings for seasons 1 through 5</span>
+#&gt; 1   9.30 88420 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># Ratings for seasons 1 through 5</span>
 <span class='fu'>trakt.seasons.ratings</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 5
 #&gt;   rating votes distribution      id       season
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;     &lt;int&gt;
-#&gt; 1   8.21   205 &lt;tibble [10 × 2]&gt; futurama      1
-#&gt; 2   8.33   151 &lt;tibble [10 × 2]&gt; futurama      2
-#&gt; 3   8.49   132 &lt;tibble [10 × 2]&gt; futurama      3
-#&gt; 4   8.26   124 &lt;tibble [10 × 2]&gt; futurama      4
+#&gt; 1   8.21   207 &lt;tibble [10 × 2]&gt; futurama      1
+#&gt; 2   8.34   152 &lt;tibble [10 × 2]&gt; futurama      2
+#&gt; 3   8.50   133 &lt;tibble [10 × 2]&gt; futurama      3
+#&gt; 4   8.26   125 &lt;tibble [10 × 2]&gt; futurama      4
 #&gt; 5   8.22   106 &lt;tibble [10 × 2]&gt; futurama      5</div><div class='input'>
 <span class='co'># Ratings for episodes 1 through 7 of season 1</span>
 <span class='fu'>trakt.episodes.ratings</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 6
 #&gt;   rating votes distribution      id       season episode
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;     &lt;dbl&gt;   &lt;int&gt;
-#&gt; 1   8.11  1914 &lt;tibble [10 × 2]&gt; futurama      1       1
-#&gt; 2   7.88  1498 &lt;tibble [10 × 2]&gt; futurama      1       2
-#&gt; 3   7.89  1363 &lt;tibble [10 × 2]&gt; futurama      1       3
-#&gt; 4   7.81  1215 &lt;tibble [10 × 2]&gt; futurama      1       4
-#&gt; 5   7.78  1169 &lt;tibble [10 × 2]&gt; futurama      1       5
-#&gt; 6   7.84  1153 &lt;tibble [10 × 2]&gt; futurama      1       6
-#&gt; 7   7.77  1070 &lt;tibble [10 × 2]&gt; futurama      1       7</div></pre>
+#&gt; 1   8.11  1916 &lt;tibble [10 × 2]&gt; futurama      1       1
+#&gt; 2   7.88  1499 &lt;tibble [10 × 2]&gt; futurama      1       2
+#&gt; 3   7.89  1364 &lt;tibble [10 × 2]&gt; futurama      1       3
+#&gt; 4   7.81  1216 &lt;tibble [10 × 2]&gt; futurama      1       4
+#&gt; 5   7.78  1170 &lt;tibble [10 × 2]&gt; futurama      1       5
+#&gt; 6   7.84  1155 &lt;tibble [10 × 2]&gt; futurama      1       6
+#&gt; 7   7.78  1071 &lt;tibble [10 × 2]&gt; futurama      1       7</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

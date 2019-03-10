@@ -201,23 +201,23 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 <span class='fu'>trakt.movies.stats</span>(<span class='st'>"inception-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 8
 #&gt;   watchers  plays collectors comments lists votes type   id            
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         
-#&gt; 1   254907 339877     156274      106 38054 47605 movies inception-2010</div><div class='input'><span class='co'># Stats for multiple shows at once</span>
+#&gt; 1   255244 340326     156592      106 38108 47633 movies inception-2010</div><div class='input'><span class='co'># Stats for multiple shows at once</span>
 <span class='fu'>trakt.shows.stats</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"breaking-bad"</span>, <span class='st'>"game-of-thrones"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 9
 #&gt;   watchers   plays collectors collected_episo… comments  lists votes type  id   
 #&gt;      &lt;int&gt;   &lt;int&gt;      &lt;int&gt;            &lt;int&gt;    &lt;int&gt;  &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1   418423  2.55e7     346138         17351646      403 119361 64070 shows brea…
-#&gt; 2   774759  4.57e7    1106318         58632342      331 263992 88359 shows game…</div><div class='input'>
+#&gt; 1   418593  2.55e7     346404         17363264      403 119408 64088 shows brea…
+#&gt; 2   775432  4.58e7    1107380         58693219      331 264108 88423 shows game…</div><div class='input'>
 <span class='co'># Stats for multiple episodes</span>
 <span class='fu'>trakt.episodes.stats</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 9
 #&gt;   watchers  plays collectors comments lists votes season episode id      
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;int&gt; &lt;chr&gt;   
-#&gt; 1    87317 116423     116029        1   171  1914      1       1 futurama
-#&gt; 2    83180 110907     115569        1   116  1498      1       2 futurama
-#&gt; 3    82079 109439     115559        0   103  1363      1       3 futurama
-#&gt; 4    80544 107392     114974        0   106  1215      1       4 futurama
-#&gt; 5    79926 106569     115202        1   104  1169      1       5 futurama
-#&gt; 6    79827 106437     114874        0   103  1153      1       6 futurama
-#&gt; 7    79045 105394     114786        0   102  1070      1       7 futurama</div></pre>
+#&gt; 1    87353 116471     116162        1   171  1916      1       1 futurama
+#&gt; 2    83214 110953     115698        1   115  1499      1       2 futurama
+#&gt; 3    82110 109481     115689        0   103  1364      1       3 futurama
+#&gt; 4    80569 107426     115102        0   106  1216      1       4 futurama
+#&gt; 5    79951 106602     115331        1   104  1170      1       5 futurama
+#&gt; 6    79855 106474     115002        0   103  1155      1       6 futurama
+#&gt; 7    79071 105429     114919        0   102  1071      1       7 futurama</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
