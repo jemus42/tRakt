@@ -2,6 +2,9 @@
 % Please edit documentation in R/trakt-user-network.R
 \name{trakt.user.network}
 \alias{trakt.user.network}
+\alias{trakt.user.friends}
+\alias{trakt.user.followers}
+\alias{trakt.user.following}
 \title{Get a user's social connections}
 \usage{
 trakt.user.network(relationship = c("friends", "followers", "following"),
@@ -23,6 +26,16 @@ A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Retrieve a user's followers, followings or friends (the two-way relationship).
+}
+\details{
+The corresponding API methods \href{https://trakt.docs.apiary.io/#reference/users/followers}{are described in the API reference}.
+
+The relevant endpoints for this function are, depending on \code{relationship}:
+\itemize{
+\item \code{followers}: \code{users/:id/followers}
+\item \code{following}: \code{users/:id/following}
+\item \code{friends}: \code{users/:id/friends}
+}
 }
 \note{
 Since no OAuth2 methods are supported yet, the specified user must not be private.

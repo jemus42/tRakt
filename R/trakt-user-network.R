@@ -1,6 +1,15 @@
 #' Get a user's social connections
 #'
 #' Retrieve a user's followers, followings or friends (the two-way relationship).
+#'
+#' @details
+#' The corresponding API methods [are described in the API reference](https://trakt.docs.apiary.io/#reference/users/followers).
+#'
+#' The relevant endpoints for this function are, depending on `relationship`:
+#' - `followers`: `users/:id/followers`
+#' - `following`: `users/:id/following`
+#' - `friends`: `users/:id/friends`
+#' @aliases trakt.user.friends trakt.user.followers trakt.user.following
 #' @param relationship `character(1) ["friends"]`: Type of user relationship. Either
 #' `"friends"`, `"followers"`, or `"following"`.
 #' @inheritParams trakt_api_common_parameters
@@ -11,6 +20,8 @@
 #' @importFrom purrr map_df
 #' @importFrom tibble as_tibble
 #' @importFrom tibble remove_rownames
+#' @importFrom tibble has_name
+#' @importFrom dplyr mutate_if
 #' @examples
 #' \dontrun{
 #' trakt.user.network("friends", "jemus42")
@@ -41,7 +52,7 @@ trakt.user.network <- function(relationship = c("friends", "followers", "followi
     response <- response[names(response) != "images"]
   }
 
-  # Consistency: "", NA, NULL, they should all be NA_character
+  # Consistency: "", NA, NULL, they should all be NA_character_
   response %>%
     mutate_if(is.character, fix_missing) %>%
     fix_tibble_response()
