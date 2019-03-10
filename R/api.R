@@ -62,17 +62,27 @@ trakt_credentials <- function(username, client.id,
   }
 }
 
-#' Make an API call to any URL
+#' Make an API call and receive parsed output
 #'
-#' `trakt_get` makes an API call to a specified URL and returns the parsed output.
+#' The most basic form of API interaction: Querying a specific URL and getting its parsed
+#' result. If the response is empty, the function returns an empty [tibble()][tibble::tibble-package],
+#' and if there are date-time variables present in the response, they are converted to
+#' `POSIXct` via [lubridate::ymd_hms()] or to `Date` via [lubridate::as_date()] if the variable
+#' only contains date information.
 #'
+#' @details
+#' See [the official API reference](https://trakt.docs.apiary.io) for a detailed overview
+#' of available methods. Most methods of potential interest for data collection have
+#' dedicated functions in this package.
+#' @note No OAuth2 methods are supported yet, meaning you don't have access to `POST` methods
+#' or user information of non-public profiles.
 #' @param url `character(1)`: The API endpoint. Either a full URL like
 #' `"https://api.trakt.tv/shows/breaking-bad"` or just the endpoint like `shows/breaking-bad`.
 #' @param client.id `character(1)`: API client id. see [trakt_credentials] for further information.
 #' @param HEAD `logical(1) [FALSE]`: If `TRUE`, only a HTTP `HEAD` request is performed
 #' and its content returned. This is useful if you are only interested in status codes
-#' or other headers, and don't want to waste resources on additional bandwidth.
-#' @return The [parsed][jsonlite::fromJSON] content of the API response.
+#' or other headers, and don't want to waste resources/bandwidth on the response body.
+#' @return The parsed ([jsonlite::fromJSON()]) content of the API response.
 #' An empty [tibble()][tibble::tibble-package] if the response is an empty `JSON` array.
 #' @export
 #' @importFrom httr user_agent
