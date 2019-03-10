@@ -1,11 +1,12 @@
 #' Set the required trakt.tv API credentials
 #'
 #' `trakt_credentials` searches for your credentials and stores them
-#' in the appropriate `option` variables.
-#' It also sets the HTTP header required for v2 API calls.
+#' in the appropriate [options()] variables of the same name.
 #' To make this work automatically, place your key as environment variables in
-#' `~/.Renviron`.
-#' Arguments to this function take precedence over any key file.
+#' `~/.Renviron` (see `Details`).
+#' Arguments to this function take precedence over any key file. To make API functions work,
+#' you do not have to use this function unless you want to supply your own client ID, which
+#' is recommended for larger data collection projects.
 #'
 #' Set appropriate values in your `~/.Renviron` like this:
 #'
@@ -16,7 +17,7 @@
 #' ```
 #'
 #' @param username `character(1)`: Explicitly set your trakt.tv username (optional).
-#' @param client.id `character(1)`: Explicitly set your APIv2 client ID (required for API interaciton).
+#' @param client.id `character(1)`: Explicitly set your API client ID (required for API interaciton).
 #' @param silent `logical(1) [TRUE]`: No messages are printed showing you the API information.
 #' Mostly for debug purposes.
 #' @return Nothing. Only messages.
