@@ -22,7 +22,7 @@
 #' # The last 5 movies that user "jemus42" has watched
 #' trakt.user.history(user = "jemus42", type = "movies", limit = 5)
 #' }
-trakt.user.history <- function(user = getOption("trakt.username"),
+trakt.user.history <- function(user = getOption("trakt_username"),
                                type = c("shows", "movies"),
                                limit = 10L, start_at = NULL, end_at = NULL,
                                extended = c("min", "full")) {

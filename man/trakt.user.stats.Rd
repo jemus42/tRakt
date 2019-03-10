@@ -4,10 +4,10 @@
 \alias{trakt.user.stats}
 \title{Get a user's stats}
 \usage{
-trakt.user.stats(user = getOption("trakt.username"))
+trakt.user.stats(user = getOption("trakt_username"))
 }
 \arguments{
-\item{user}{Target username. Defaults to \code{getOption("trakt.username")}.
+\item{user}{Target username. Defaults to \code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 }

@@ -43,22 +43,22 @@ trakt_credentials <- function(username, client.id,
   client_id <- ifelse(missing(client.id), Sys.getenv("trakt_client_id"), client.id)
 
   if (username != "") {
-    options(trakt.username = username)
+    options(trakt_username = username)
     if (!silent) {
-      message(paste("Your trakt.tv username is set to", getOption("trakt.username")))
+      message(paste("Your trakt.tv username is set to", getOption("trakt_username")))
     }
   }
   if (client_id != "") {
-    options(trakt.client.id = client_id)
+    options(trakt_client_id = client_id)
   } else {
-    options(trakt.client.id = tRakt_client_id)
+    options(trakt_client_id = tRakt_client_id)
     if (!silent) {
       message("I provided my client.id as a fallback for you. Please use it responsibly.")
     }
   }
 
   if (!silent) {
-    message(paste("Your client id is set to", getOption("trakt.client.id")))
+    message(paste("Your client id is set to", getOption("trakt_client_id")))
   }
 }
 
@@ -94,17 +94,17 @@ trakt_credentials <- function(username, client.id,
 #'
 #' # Optionally be lazy about URL specification by dropping the hostname:
 #' trakt_get("shows/game-of-thrones")
-trakt_get <- function(url, client.id = getOption("trakt.client.id"),
+trakt_get <- function(url, client.id = getOption("trakt_client_id"),
                            HEAD = FALSE) {
   if (!grepl(pattern = "^https://api.trakt.tv", url)) {
     url <- build_trakt_url(url)
   }
 
   if (is.null(client.id)) {
-    if (is.null(getOption("trakt.client.id"))) {
-      options(trakt.client.id = tRakt_client_id)
+    if (is.null(getOption("trakt_client_id"))) {
+      options(trakt_client_id = tRakt_client_id)
     }
-    client.id <- getOption("trakt.client.id")
+    client.id <- getOption("trakt_client_id")
   }
 
   # Headers and metadata

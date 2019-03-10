@@ -4,12 +4,12 @@
 \alias{trakt.user.history}
 \title{Get a user's watch history}
 \usage{
-trakt.user.history(user = getOption("trakt.username"),
+trakt.user.history(user = getOption("trakt_username"),
   type = c("shows", "movies"), limit = 10L, start_at = NULL,
   end_at = NULL, extended = c("min", "full"))
 }
 \arguments{
-\item{user}{Target username. Defaults to \code{getOption("trakt.username")}.
+\item{user}{Target username. Defaults to \code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 

@@ -4,12 +4,12 @@
 \alias{trakt.user.watched}
 \title{Get a user's watched shows or movies}
 \usage{
-trakt.user.watched(user = getOption("trakt.username"),
+trakt.user.watched(user = getOption("trakt_username"),
   type = c("shows", "movies"), extended = c("min", "full"),
   noseasons = TRUE)
 }
 \arguments{
-\item{user}{Target username. Defaults to \code{getOption("trakt.username")}.
+\item{user}{Target username. Defaults to \code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 

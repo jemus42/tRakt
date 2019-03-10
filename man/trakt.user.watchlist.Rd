@@ -4,11 +4,11 @@
 \alias{trakt.user.watchlist}
 \title{Get a user's watchlist}
 \usage{
-trakt.user.watchlist(user = getOption("trakt.username"),
+trakt.user.watchlist(user = getOption("trakt_username"),
   type = c("movies", "shows"), extended = c("min", "full"))
 }
 \arguments{
-\item{user}{Target username. Defaults to \code{getOption("trakt.username")}.
+\item{user}{Target username. Defaults to \code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 

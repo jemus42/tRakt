@@ -13,7 +13,7 @@
 #' trakt.user.ratings(user = "jemus42")
 #' trakt.user.ratings(user = "sean", type = "movies")
 #' }
-trakt.user.ratings <- function(user = getOption("trakt.username"),
+trakt.user.ratings <- function(user = getOption("trakt_username"),
                                type = c("movies", "seasons", "shows", "episodes"),
                                rating = NULL, extended = c("min", "full")) {
   check_username(user)

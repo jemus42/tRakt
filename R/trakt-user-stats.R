@@ -12,7 +12,7 @@
 #' \dontrun{
 #' trakt.user.stats(user = "sean")
 #' }
-trakt.user.stats <- function(user = getOption("trakt.username")) {
+trakt.user.stats <- function(user = getOption("trakt_username")) {
   check_username(user)
 
   if (length(user) > 1) {

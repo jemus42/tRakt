@@ -33,7 +33,7 @@
 #' \dontrun{
 #' trakt.user.collection(user = "sean", type = "movies")
 #' }
-trakt.user.collection <- function(user = getOption("trakt.username"),
+trakt.user.collection <- function(user = getOption("trakt_username"),
                                   type = c("shows", "movies"),
                                   extended = c("min", "full"),
                                   unnest_episodes = FALSE) {

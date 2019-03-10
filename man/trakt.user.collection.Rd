@@ -4,12 +4,12 @@
 \alias{trakt.user.collection}
 \title{Get a user's collected shows or movies}
 \usage{
-trakt.user.collection(user = getOption("trakt.username"),
+trakt.user.collection(user = getOption("trakt_username"),
   type = c("shows", "movies"), extended = c("min", "full"),
   unnest_episodes = FALSE)
 }
 \arguments{
-\item{user}{Target username. Defaults to \code{getOption("trakt.username")}.
+\item{user}{Target username. Defaults to \code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 

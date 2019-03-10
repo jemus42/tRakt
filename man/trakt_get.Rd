@@ -4,7 +4,7 @@
 \alias{trakt_get}
 \title{Make an API call to any URL}
 \usage{
-trakt_get(url, client.id = getOption("trakt.client.id"), HEAD = FALSE)
+trakt_get(url, client.id = getOption("trakt_client_id"), HEAD = FALSE)
 }
 \arguments{
 \item{url}{\code{character(1)}: The API endpoint. Either a full URL like

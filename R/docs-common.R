@@ -13,7 +13,7 @@
 #' returns more variables and should generally only be used if required.
 #' @param type `character(1)`: Either `"shows"` or `"movies"`. For season/episode-specific
 #' functions, values `seasons` or `episodes` are also allowed.
-#' @param user Target username. Defaults to `getOption("trakt.username")`.
+#' @param user Target username. Defaults to `getOption("trakt_username")`.
 #' Can also be of length greater than 1, in which case the function is called on all
 #' `user` values separately and the result is combined.
 #' @param period `character(1) ["weekly"]`: Which period to filter by. Possible values
