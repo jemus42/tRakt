@@ -44,21 +44,23 @@ glimpse(seasons)
 
 ## Step 3: Tidying up
 
-We're interested in the `episodes` list-column, which needs unnesting. In `tidyr::unnest()`, we use `.sep = "_"`, which will prepend `episodes_` to all the variables names in the nested list-column. This is recommended because the variables names will clash with the variables names already present in the `seasons` dataset.
+We're interested in the `episodes` list-column, which needs unnesting. In this case we can simply use `dplyr::bind_rows` to take the list of `tbls` that is `seasons$episodes` and basically `rbind` them all together, meaning the result is a `tibble` of the episode data we care about.
 
 ```{r 24_episodes_unnesting}
-library(tidyr) # for unnest()
+library(dplyr) 
 
-episodes <- unnest(seasons, episodes, .sep = "_")
+episodes <- bind_rows(seasons$episodes)
 glimpse(episodes)
 ```
 
 ## Step 4: Graph!
 
+Now we have our episode data in a tidy form, might as well look at it.
+
 ```{r 24_episodes_plot}
 library(ggplot2)
 
-ggplot(data = episodes, aes(x = episodes_episode, y = episodes_rating, color = episodes_votes)) +
+ggplot(data = episodes, aes(x = episode, y = rating, color = votes)) +
   geom_point(size = 3) +
   facet_wrap(~season, nrow = 1, labeller = label_both, scales = "free_x") +
   scale_x_continuous(breaks = scales::pretty_breaks()) +
