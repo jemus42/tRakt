@@ -31,17 +31,18 @@ trakt.user.network <- function(relationship = c("friends", "followers", "followi
   url <- build_trakt_url("users", user, relationship, extended = extended)
   response <- trakt_get(url = url)
 
-  response <- as_tibble(response)
-
   # Flatten the tbl
   response <- cbind(response[names(response) != "user"], response$user)
   response <- cbind(response[names(response) != "ids"], response$ids)
 
   # Drop avatars because no.
-  response <- response[names(response) != "images"]
+  if (has_name(response, "images")) {
+    response$avatar <- response$images$avatar$full
+    response <- response[names(response) != "images"]
+  }
 
-  # Ensure datetime conversion
-  response <- fix_datetime(response)
-
-  as_tibble(remove_rownames(response))
+  # Consistency: "", NA, NULL, they should all be NA_character
+  response %>%
+    mutate_if(is.character, fix_missing) %>%
+    fix_tibble_response()
 }

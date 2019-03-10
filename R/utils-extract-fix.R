@@ -195,7 +195,7 @@ fix_ratings_distribution <- function(response) {
   response
 }
 
-#' FIx a tibble for final output
+#' Fix a tibble for final output
 #' @keywords internal
 #' @noRd
 #' @importFrom tibble as_tibble
@@ -206,6 +206,17 @@ fix_tibble_response <- function(response) {
     fix_datetime() %>%
     fix_ratings() %>%
     remove_rownames()
+}
+
+#' Replace "" and NULL with explicit NAs
+#' @keywords internal
+#' @noRd
+#' @note Currently only for [character()] variables. Because this might nuke classes.
+fix_missing <- function(x) {
+  if (inherits(x, "character")) {
+    x <- map_chr(x, ~ if_else(identical(.x, ""), NA_character_, .x))
+  }
+  x
 }
 
 # Checkers ----
