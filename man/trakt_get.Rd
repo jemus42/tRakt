@@ -10,7 +10,8 @@ trakt_get(url, client.id = getOption("trakt_client_id"), HEAD = FALSE)
 \item{url}{\code{character(1)}: The API endpoint. Either a full URL like
 \code{"https://api.trakt.tv/shows/breaking-bad"} or just the endpoint like \code{shows/breaking-bad}.}
 
-\item{client.id}{\code{character(1)}: API client id. see \link{trakt_credentials} for further information.}
+\item{client.id}{\code{character(1)}: API client ID. If no value is set, this defaults
+to the package's client ID. See \link{trakt_credentials} for further information.}
 
 \item{HEAD}{\code{logical(1) [FALSE]}: If \code{TRUE}, only a HTTP \code{HEAD} request is performed
 and its content returned. This is useful if you are only interested in status codes

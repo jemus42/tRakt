@@ -1,4 +1,4 @@
-#' Easy episode id padding
+#' Easy episode ID padding
 #'
 #' Simple function to ease the creation of `sXXeYY` episode ids.
 #' Note that `s` and `e` must have the same length.

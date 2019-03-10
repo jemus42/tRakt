@@ -12,7 +12,7 @@ globalVariables(c(
   "runtimes", "ratings", "certifications", "networks", "status"
 ))
 
-#' The tRakt client id for this particular app
+#' The tRakt client ID for this particular app
 #' @keywords internal
 #' @noRd
 tRakt_client_id <- "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2"

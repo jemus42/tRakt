@@ -9,7 +9,7 @@ trakt_credentials(username, client.id, silent = TRUE)
 \arguments{
 \item{username}{\code{character(1)}: Explicitly set your trakt.tv username (optional).}
 
-\item{client.id}{\code{character(1)}: Explicitly set your APIv2 client id (required for API interaciton).}
+\item{client.id}{\code{character(1)}: Explicitly set your APIv2 client ID (required for API interaciton).}
 
 \item{silent}{\code{logical(1) [TRUE]}: No messages are printed showing you the API information.
 Mostly for debug purposes.}
@@ -33,7 +33,7 @@ trakt_client_id=12[...]f2
 }
 \note{
 Please note that no OAuth2 methods are supported yet,
-only client id really matters.
+only client ID really matters.
 }
 \examples{
 \dontrun{

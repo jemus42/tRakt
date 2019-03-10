@@ -16,13 +16,13 @@
 #' ```
 #'
 #' @param username `character(1)`: Explicitly set your trakt.tv username (optional).
-#' @param client.id `character(1)`: Explicitly set your APIv2 client id (required for API interaciton).
+#' @param client.id `character(1)`: Explicitly set your APIv2 client ID (required for API interaciton).
 #' @param silent `logical(1) [TRUE]`: No messages are printed showing you the API information.
 #' Mostly for debug purposes.
 #' @return Nothing. Only messages.
 #' @export
 #' @note Please note that no OAuth2 methods are supported yet,
-#' only client id really matters.
+#' only client ID really matters.
 #' @family API-basics
 #' @examples
 #' \dontrun{
@@ -58,7 +58,7 @@ trakt_credentials <- function(username, client.id,
   }
 
   if (!silent) {
-    message(paste("Your client id is set to", getOption("trakt_client_id")))
+    message(paste("Your client ID is set to", getOption("trakt_client_id")))
   }
 }
 
@@ -78,7 +78,8 @@ trakt_credentials <- function(username, client.id,
 #' or user information of non-public profiles.
 #' @param url `character(1)`: The API endpoint. Either a full URL like
 #' `"https://api.trakt.tv/shows/breaking-bad"` or just the endpoint like `shows/breaking-bad`.
-#' @param client.id `character(1)`: API client id. see [trakt_credentials] for further information.
+#' @param client.id `character(1)`: API client ID. If no value is set, this defaults
+#' to the package's client ID. See [trakt_credentials] for further information.
 #' @param HEAD `logical(1) [FALSE]`: If `TRUE`, only a HTTP `HEAD` request is performed
 #' and its content returned. This is useful if you are only interested in status codes
 #' or other headers, and don't want to waste resources/bandwidth on the response body.
