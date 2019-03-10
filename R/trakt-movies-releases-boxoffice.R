@@ -23,7 +23,7 @@ trakt.movies.releases <- function(target, country = NULL) {
 
   # Construct URL, make API call
   url <- build_trakt_url("movies", target, "releases", country = country)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   response %>%
     mutate(movie = target) %>%
@@ -51,7 +51,7 @@ trakt.movies.boxoffice <- function(extended = c("min", "full")) {
 
   # Construct URL, make API call
   url <- build_trakt_url("movies/boxoffice", extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   response %>%
     unpack_movie() %>%

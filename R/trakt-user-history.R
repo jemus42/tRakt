@@ -40,7 +40,7 @@ trakt.user.history <- function(user = getOption("trakt.username"),
   url <- build_trakt_url("users", user, "history", type,
     extended = extended, limit = limit
   )
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
   response <- as_tibble(response)
 
   if (identical(response, tibble())) return(response)

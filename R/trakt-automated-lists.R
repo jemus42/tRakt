@@ -107,7 +107,7 @@ trakt_auto_lists <- function(list_type = c(
     ratings = ratings, certifications = certifications, networks = networks,
     status = status
   )
-  response <- trakt.api.call(url)
+  response <- trakt_get(url)
   response <- tibble::as_tibble(response)
 
   # For this case we *only* get show objects, so we handle that first

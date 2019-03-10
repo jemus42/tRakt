@@ -32,7 +32,7 @@ trakt.media.related <- function(target, type = c("shows", "movies"),
     extended = extended,
     limit = limit
   )
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   # Flattening
   if (type == "shows") {

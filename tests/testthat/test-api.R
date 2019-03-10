@@ -15,12 +15,12 @@ test_that("Client ID is set without .Renviron", {
   expect_message(trakt_credentials(client.id = client.id, silent = FALSE))
 })
 
-test_that("trakt.api.call can make API calls", {
+test_that("trakt_get can make API calls", {
   skip_on_cran()
 
   url <- "https://api.trakt.tv/shows/breaking-bad"
-  result <- trakt.api.call(url)
+  result <- trakt_get(url)
 
   expect_is(result, "list")
-  expect_error(trakt.api.call("https://example.com"))
+  expect_error(trakt_get("https://example.com"))
 })

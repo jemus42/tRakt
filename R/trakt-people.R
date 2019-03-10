@@ -23,7 +23,7 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
 
   # Construct URL, make API call
   url <- build_trakt_url("people", target, extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   # Substitute NULLs with explicit NAs and flatten IDs
   response$ids <- as_tibble(fix_ids(response$ids))
@@ -68,7 +68,7 @@ trakt.people.media <- function(type = c("shows", "movies"), target,
 
   # Construct URL, make API call
   url <- build_trakt_url("people", target, type, extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   if (identical(response, list(cast = list()))) {
     return(tibble())
@@ -146,7 +146,7 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
 
   # Construct URL, make API call
   url <- build_trakt_url(type, target, "people", extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   if (is_empty(response)) return(tibble())
 

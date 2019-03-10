@@ -37,7 +37,7 @@ trakt.media.ratings <- function(type = c("shows", "movies"), target) {
 
   # Construct URL, make API call
   url <- build_trakt_url(type, target, "ratings")
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   response %>%
     fix_ratings_distribution() %>%
@@ -80,7 +80,7 @@ trakt.seasons.ratings <- function(target, season = 1L) {
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", target, "seasons", season, "ratings")
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   response %>%
     fix_ratings_distribution() %>%
@@ -111,7 +111,7 @@ trakt.episodes.ratings <- function(target, season = 1L, episode = 1L) {
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", target, "seasons", season, "episodes", episode, "ratings")
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   response %>%
     fix_ratings_distribution() %>%

@@ -29,7 +29,7 @@ trakt.user.network <- function(relationship = c("friends", "followers", "followi
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, relationship, extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   response <- as_tibble(response)
 

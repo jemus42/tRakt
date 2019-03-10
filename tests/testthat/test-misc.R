@@ -16,7 +16,7 @@ test_that("build_trakt_url builds a url", {
   x <- build_trakt_url("shows", "breaking-bad", extended = "min", validate = TRUE)
   expect_is(x, "character")
 
-  y <- trakt.api.call(x)
+  y <- trakt_get(x)
   expect_length(y, 3)
   expect_named(y, c("title", "year", "ids"))
 

@@ -40,7 +40,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", target, "seasons", seasons, extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   # Reorganization
   names(response) <- sub("number", "episode", names(response))
@@ -101,7 +101,7 @@ trakt.seasons.summary <- function(target, extended = c("min", "full"), episodes 
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", target, "seasons", extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   # Data cleanup
   if (drop.specials) {

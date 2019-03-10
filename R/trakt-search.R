@@ -52,7 +52,7 @@ trakt.search <- function(query, type = "movie",
 
   # Construct URL, make API call
   url <- build_trakt_url("search", type, query = query, years = years, extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   if (identical(response, tibble())) {
     warning("No results for query '", query, "'")
@@ -78,7 +78,7 @@ trakt.search.byid <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
 
   # Construct URL, make API call
   url <- build_trakt_url("search", id_type, id, type = type, extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   # Check if response is empty (nothing found)
   if (identical(response, tibble::tibble())) {

@@ -35,7 +35,7 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
 
   # Construct URL, make API call
   url <- build_trakt_url(type, target, extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   # All variants have this in common
   response$ids <- fix_ids(as_tibble(response$ids))

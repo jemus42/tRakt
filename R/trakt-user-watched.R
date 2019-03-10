@@ -41,7 +41,7 @@ trakt.user.watched <- function(user = getOption("trakt.username"),
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "watched", type, extended = extended)
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   if (identical(response, tibble())) return(response)
 

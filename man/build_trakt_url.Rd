@@ -21,7 +21,7 @@ the HTTP status code return by a \code{HEAD} request.
 }
 \description{
 \code{build_trakt_url} assembles a trakt.tv API URL from different arguments.
-The result should be fine for use with \link{trakt.api.call}, since that's what this
+The result should be fine for use with \link{trakt_get}, since that's what this
 function was created for.
 }
 \note{

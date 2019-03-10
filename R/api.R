@@ -64,7 +64,7 @@ trakt_credentials <- function(username, client.id,
 
 #' Make an API call to any URL
 #'
-#' `trakt.api.call` makes an API call to a specified URL and returns the parsed output.
+#' `trakt_get` makes an API call to a specified URL and returns the parsed output.
 #'
 #' @param url `character(1)`: The API endpoint. Either a full URL like
 #' `"https://api.trakt.tv/shows/breaking-bad"` or just the endpoint like `shows/breaking-bad`.
@@ -87,14 +87,14 @@ trakt_credentials <- function(username, client.id,
 #' @family API-basics
 #' @examples
 #' # A simple request to a direct URL
-#' trakt.api.call("https://api.trakt.tv/shows/breaking-bad")
+#' trakt_get("https://api.trakt.tv/shows/breaking-bad")
 #'
 #' # A HEAD-only request, useful for validating a URL exists or the API is accessable
-#' trakt.api.call("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
+#' trakt_get("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
 #'
 #' # Optionally be lazy about URL specification by dropping the hostname:
-#' trakt.api.call("shows/game-of-thrones")
-trakt.api.call <- function(url, client.id = getOption("trakt.client.id"),
+#' trakt_get("shows/game-of-thrones")
+trakt_get <- function(url, client.id = getOption("trakt.client.id"),
                            HEAD = FALSE) {
   if (!grepl(pattern = "^https://api.trakt.tv", url)) {
     url <- build_trakt_url(url)

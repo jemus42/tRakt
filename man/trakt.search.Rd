@@ -63,7 +63,7 @@ trakt.search("Tron", type = c("movie", "show"), n_results = 2)
 }
 }
 \seealso{
-Other API-basics: \code{\link{trakt.api.call}},
-  \code{\link{trakt_credentials}}
+Other API-basics: \code{\link{trakt_credentials}},
+  \code{\link{trakt_get}}
 }
 \concept{API-basics}

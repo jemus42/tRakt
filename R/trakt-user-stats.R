@@ -22,7 +22,7 @@ trakt.user.stats <- function(user = getOption("trakt.username")) {
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "stats")
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
 
   # Flattening/list-columnifying the distribution a little
   response$ratings <- fix_ratings_distribution(response$ratings)

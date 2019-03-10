@@ -33,7 +33,7 @@ pad <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
 #' Assemble a trakt.tv API URL
 #'
 #' `build_trakt_url` assembles a trakt.tv API URL from different arguments.
-#' The result should be fine for use with [trakt.api.call], since that's what this
+#' The result should be fine for use with [trakt_get], since that's what this
 #' function was created for.
 #' @param ... Unnamed arguments will be concatenated with `/` as separators to
 #' form the path of the API url, e.g. the arguments `movies`, `tron-legacy-2012` and
@@ -78,7 +78,7 @@ build_trakt_url <- function(..., validate = FALSE) {
 
   # Validate
   if (validate) {
-    response <- trakt.api.call(url, HEAD = TRUE)
+    response <- trakt_get(url, HEAD = TRUE)
     if (!identical(response$status, 200L)) {
       httr::stop_for_status(response$status)
     }

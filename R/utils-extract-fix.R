@@ -236,7 +236,7 @@ check_username <- function(user, validate = FALSE) {
 
   if (validate) {
     url <- build_trakt_url("users", user)
-    response <- trakt.api.call(url, HEAD = TRUE)
+    response <- trakt_get(url, HEAD = TRUE)
     if (!identical(response$status, 200L)) {
       stop_for_status(response$status)
     }

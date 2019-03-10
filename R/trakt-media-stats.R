@@ -29,7 +29,7 @@ trakt.media.stats <- function(type = c("shows", "movies"), target) {
 
   # Construct URL, make API call
   url <- build_trakt_url(type, target, "stats")
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
   response$type <- type
   response$id <- target
 
@@ -65,7 +65,7 @@ trakt.seasons.stats <- function(target, season = 1L) {
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", target, "seasons", season, "stats")
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
   response$season <- season
   response$id <- target
 
@@ -91,7 +91,7 @@ trakt.episodes.stats <- function(target, season = 1L, episode = 1L) {
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", target, "seasons", season, "episodes", episode, "stats")
-  response <- trakt.api.call(url = url)
+  response <- trakt_get(url = url)
   response$season <- season
   response$episode <- episode
   response$id <- target
