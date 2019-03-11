@@ -49,7 +49,7 @@ reference:
   - title: API interaction and reference topics
     contents:
       - build_trakt_url
-      - trakt.api.call
+      - trakt_get
       - trakt_credentials
       - trakt_api_common_parameters
       - search_filters
