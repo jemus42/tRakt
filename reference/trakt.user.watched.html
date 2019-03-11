@@ -23,7 +23,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
@@ -104,7 +105,7 @@ public profile." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -134,7 +135,7 @@ public profile." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -163,7 +164,7 @@ It does not use OAuth2, so you can only get data for a user with a
     
     </div>
 
-    <pre class="usage"><span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt.username"</span>),
+    <pre class="usage"><span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
   <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
   <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
@@ -172,7 +173,7 @@ It does not use OAuth2, so you can only get data for a user with a
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>user</th>
-      <td><p>Target username. Defaults to <code><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption("trakt.username")</a></code>.
+      <td><p>Target username. Defaults to <code><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
@@ -213,16 +214,16 @@ be nice to the API.</p></td>
 <span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 473 x 10
 #&gt;    plays last_watched_at     last_updated_at     title  year trakt slug  tvdb 
 #&gt;    &lt;int&gt; &lt;dttm&gt;              &lt;dttm&gt;              &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt;  1   220 2019-03-09 12:09:12 2019-03-09 12:09:12 Supe…  2015 98985 supe… 2956…
-#&gt;  2    23 2019-03-09 05:47:45 2019-03-09 05:47:45 Star…  2017 1104… star… 3287…
-#&gt;  3    15 2019-03-09 04:48:30 2019-03-09 04:48:30 The …  2018 1344… the-… 3506…
-#&gt;  4   154 2019-03-08 10:41:37 2019-03-08 10:41:37 The …  2012 15556 the-… 2562…
-#&gt;  5  1946 2019-03-08 08:10:05 2019-03-08 08:10:05 The …  2007 1409  the-… 80379
-#&gt;  6    52 2019-03-08 07:50:52 2019-03-08 07:50:52 Drun…  2013 55867 drun… 2705…
-#&gt;  7   139 2019-03-08 07:29:26 2019-03-08 07:29:26 Top …  2006 41613 top-… 79313
-#&gt;  8  1191 2019-03-08 06:17:50 2019-03-08 06:17:50 Broo…  2013 48587 broo… 2695…
-#&gt;  9    46 2019-03-08 05:56:00 2019-03-08 05:56:01 The …  2015 1009… the-… 2991…
-#&gt; 10     9 2019-03-07 20:04:18 2019-03-07 20:04:18 Dead…  2019 1371… dead… 3537…
+#&gt;  1   156 2019-03-10 10:28:59 2019-03-10 10:28:59 The …  2012 15556 the-… 2562…
+#&gt;  2    67 2019-03-10 05:29:47 2019-03-10 04:41:47 Brea…  2008 1388  brea… 81189
+#&gt;  3   220 2019-03-09 12:09:12 2019-03-09 12:09:12 Supe…  2015 98985 supe… 2956…
+#&gt;  4    23 2019-03-09 05:47:45 2019-03-09 05:47:45 Star…  2017 1104… star… 3287…
+#&gt;  5    15 2019-03-09 04:48:30 2019-03-09 04:48:30 The …  2018 1344… the-… 3506…
+#&gt;  6  1946 2019-03-08 08:10:05 2019-03-08 08:10:05 The …  2007 1409  the-… 80379
+#&gt;  7    52 2019-03-08 07:50:52 2019-03-08 07:50:52 Drun…  2013 55867 drun… 2705…
+#&gt;  8   139 2019-03-08 07:29:26 2019-03-08 07:29:26 Top …  2006 41613 top-… 79313
+#&gt;  9  1191 2019-03-08 06:17:50 2019-03-08 06:17:50 Broo…  2013 48587 broo… 2695…
+#&gt; 10    46 2019-03-08 05:56:00 2019-03-08 05:56:01 The …  2015 1009… the-… 2991…
 #&gt; # … with 463 more rows, and 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

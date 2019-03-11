@@ -23,7 +23,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
@@ -105,7 +106,7 @@ by the number of user-created lists an items is part of while not being released
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -135,7 +136,7 @@ by the number of user-created lists an items is part of while not being released
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -343,11 +344,11 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1      227 Aqua…  2018 Home I… Once ho… 2018-12-21     143 us      http:/…
-#&gt; 2      109 Spid…  2018 More T… "Miles … 2018-12-14     117 us      http:/…
-#&gt; 3       89 Mary…  2018 Magic … In Depr… 2018-12-19     131 us      http:/…
-#&gt; 4       87 Capt…  2019 Higher… The sto… 2019-03-08     124 us      http:/…
-#&gt; 5       80 Inst…  2018 Just a… When Pe… 2018-11-16     118 us      http:/…
+#&gt; 1      156 Aqua…  2018 Home I… Once ho… 2018-12-21     143 us      http:/…
+#&gt; 2       92 Spid…  2018 More T… "Miles … 2018-12-14     117 us      http:/…
+#&gt; 3       86 Capt…  2019 Higher… The sto… 2019-03-08     124 us      http:/…
+#&gt; 4       71 Inst…  2018 Just a… When Pe… 2018-11-16     118 us      http:/…
+#&gt; 5       61 Mary…  2018 Magic … In Depr… 2018-12-19     131 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
@@ -363,21 +364,23 @@ same additional variables besides the media information: <code>watcher_count</co
 #&gt; 5      18897 Justice League 2    2019 193970 justice-league-2-20… tt4121… 298619</div><div class='input'>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/format'>format</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
-<span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 12 x 8
+<span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 14 x 8
 #&gt;    list_count title             year trakt  slug             tvdb  imdb    tmdb 
 #&gt;         &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;
-#&gt;  1        916 Ultraman          2019 133835 ultraman-2019    3499… &lt;NA&gt;    80795
-#&gt;  2        651 Love, Death &amp; R…  2019 142611 love-death-robo… 3578… tt9561… &lt;NA&gt; 
-#&gt;  3        330 Turn Up Charlie   2019 135212 turn-up-charlie  3515… tt8304… 85486
+#&gt;  1        925 Ultraman          2019 133835 ultraman-2019    3499… &lt;NA&gt;    80795
+#&gt;  2        668 Love, Death &amp; R…  2019 142611 love-death-robo… 3578… tt9561… &lt;NA&gt; 
+#&gt;  3        337 Turn Up Charlie   2019 135212 turn-up-charlie  3515… tt8304… 85486
 #&gt;  4        282 Our Planet        2019 139672 our-planet-2019  3552… tt9253… 83880
 #&gt;  5        219 Osmosis           2019 143847 osmosis-2019     3592… tt7043… 85424
 #&gt;  6        129 Quicksand         2019 143600 quicksand        3589… tt8686… 86621
-#&gt;  7         97 7 Seeds           2019 140359 7-seeds          3560… tt9348… 85940
-#&gt;  8         58 Most Beautiful …  2019 133896 most-beautiful-… 3374… tt8001… &lt;NA&gt; 
+#&gt;  7         98 7 Seeds           2019 140359 7-seeds          3560… tt9348… 85940
+#&gt;  8         60 Most Beautiful …  2019 133896 most-beautiful-… 3374… tt8001… &lt;NA&gt; 
 #&gt;  9         17 ULTRAMAN          2019 140389 ultraman-2019-1… 3560… &lt;NA&gt;    80795
-#&gt; 10          9 Sintonia          2019 131399 sintonia         3443… tt8165… &lt;NA&gt; 
-#&gt; 11          8 When They See Us  2019 144923 when-they-see-us 3603… tt7137… 81355
-#&gt; 12          6 No Good Nick      2019 144963 no-good-nick-20… 3606… tt9039… &lt;NA&gt; </div><div class='input'>
+#&gt; 10         10 No Good Nick      2019 144963 no-good-nick-20… 3606… tt9039… &lt;NA&gt; 
+#&gt; 11          9 Sintonia          2019 131399 sintonia         3443… tt8165… &lt;NA&gt; 
+#&gt; 12          8 When They See Us  2019 144923 when-they-see-us 3603… tt7137… 81355
+#&gt; 13          2 Leila             2019 145058 leila            3607… tt9337… &lt;NA&gt; 
+#&gt; 14          1 Because It's Fi…  2019 145103 because-it-s-fi… 3607… &lt;NA&gt;    &lt;NA&gt; </div><div class='input'>
 <span class='co'># Get the most popular German-language movies between 1990 and 2010</span>
 <span class='fu'>trakt.popular</span>(<span class='st'>"movies"</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>1990</span>, <span class='fl'>2010</span>))</div><div class='output co'>#&gt; # A tibble: 10 x 6
 #&gt;    title                    year trakt slug                       imdb      tmdb

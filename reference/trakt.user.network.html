@@ -23,7 +23,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
@@ -102,7 +103,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -132,7 +133,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -160,7 +161,7 @@
     </div>
 
     <pre class="usage"><span class='fu'>trakt.user.network</span>(<span class='kw'>relationship</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"friends"</span>, <span class='st'>"followers"</span>, <span class='st'>"following"</span>),
-  <span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt.username"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+  <span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt_username"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -172,7 +173,7 @@
     </tr>
     <tr>
       <th>user</th>
-      <td><p>Target username. Defaults to <code><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption("trakt.username")</a></code>.
+      <td><p>Target username. Defaults to <code><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
@@ -186,6 +187,15 @@ returns more variables and should generally only be used if required.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The corresponding API methods <a href='https://trakt.docs.apiary.io/#reference/users/followers'>are described in the API reference</a>.</p>
+<p>The relevant endpoints for this function are, depending on <code>relationship</code>:</p><ul>
+<li><p><code>followers</code>: <code>users/:id/followers</code></p></li>
+<li><p><code>following</code>: <code>users/:id/following</code></p></li>
+<li><p><code>friends</code>: <code>users/:id/friends</code></p></li>
+</ul>
     
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
@@ -206,23 +216,23 @@ returns more variables and should generally only be used if required.</p></td>
 #&gt;    friends_at          username       private name    vip   vip_ep slug         
 #&gt;    &lt;dttm&gt;              &lt;chr&gt;          &lt;lgl&gt;   &lt;chr&gt;   &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;        
 #&gt;  1 2012-08-03 19:15:59 sofakissen     FALSE   Daniel  FALSE FALSE  sofakissen   
-#&gt;  2 2012-08-03 21:52:54 Farthen        FALSE   ""      FALSE FALSE  farthen      
+#&gt;  2 2012-08-03 21:52:54 Farthen        FALSE   &lt;NA&gt;    FALSE FALSE  farthen      
 #&gt;  3 2012-11-26 15:41:11 lsanoj         FALSE   Jonas   FALSE FALSE  lsanoj       
-#&gt;  4 2012-11-26 15:41:13 viirus         FALSE   ""      FALSE FALSE  viirus       
-#&gt;  5 2013-01-08 19:05:33 ekelias        FALSE   ""      FALSE FALSE  ekelias      
+#&gt;  4 2012-11-26 15:41:13 viirus         FALSE   &lt;NA&gt;    FALSE FALSE  viirus       
+#&gt;  5 2013-01-08 19:05:33 ekelias        FALSE   &lt;NA&gt;    FALSE FALSE  ekelias      
 #&gt;  6 2014-02-10 20:00:47 kimberley_jon… FALSE   ayn ra… FALSE FALSE  kimberley_jo…
 #&gt;  7 2014-02-14 21:47:33 Fenhl          FALSE   &lt;NA&gt;    FALSE FALSE  fenhl        
 #&gt;  8 2014-05-04 08:49:24 drseilzug      FALSE   &lt;NA&gt;    FALSE FALSE  drseilzug    
-#&gt;  9 2014-09-10 18:35:22 pwndbynck      FALSE   ""      FALSE FALSE  pwndbynck    
-#&gt; 10 2014-12-15 14:36:23 realtin        FALSE   ""      FALSE FALSE  realtin      
+#&gt;  9 2014-09-10 18:35:22 pwndbynck      FALSE   &lt;NA&gt;    FALSE FALSE  pwndbynck    
+#&gt; 10 2014-12-15 14:36:23 realtin        FALSE   &lt;NA&gt;    FALSE FALSE  realtin      
 #&gt; # … with 11 more rows</div><div class='input'><span class='fu'>trakt.user.network</span>(<span class='st'>"following"</span>, <span class='st'>"jemus42"</span>)</div><div class='output co'>#&gt; # A tibble: 42 x 7
 #&gt;    followed_at         username      private name       vip   vip_ep slug       
 #&gt;    &lt;dttm&gt;              &lt;chr&gt;         &lt;lgl&gt;   &lt;chr&gt;      &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;      
 #&gt;  1 2012-08-03 19:15:59 sofakissen    FALSE   Daniel     FALSE FALSE  sofakissen 
-#&gt;  2 2012-08-03 21:52:54 Farthen       FALSE   ""         FALSE FALSE  farthen    
+#&gt;  2 2012-08-03 21:52:54 Farthen       FALSE   &lt;NA&gt;       FALSE FALSE  farthen    
 #&gt;  3 2012-11-26 15:41:11 lsanoj        FALSE   Jonas      FALSE FALSE  lsanoj     
-#&gt;  4 2012-11-26 15:41:13 viirus        FALSE   ""         FALSE FALSE  viirus     
-#&gt;  5 2013-09-24 19:51:15 ekelias       FALSE   ""         FALSE FALSE  ekelias    
+#&gt;  4 2012-11-26 15:41:13 viirus        FALSE   &lt;NA&gt;       FALSE FALSE  viirus     
+#&gt;  5 2013-09-24 19:51:15 ekelias       FALSE   &lt;NA&gt;       FALSE FALSE  ekelias    
 #&gt;  6 2014-02-10 20:00:32 kimberley_jo… FALSE   ayn rant   FALSE FALSE  kimberley_…
 #&gt;  7 2014-02-14 21:48:30 Fenhl         FALSE   &lt;NA&gt;       FALSE FALSE  fenhl      
 #&gt;  8 2014-03-03 10:39:03 mxey          FALSE   &lt;NA&gt;       FALSE FALSE  mxey       
@@ -236,6 +246,8 @@ returns more variables and should generally only be used if required.</p></td>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
 
       <li><a href="#note">Note</a></li>
 

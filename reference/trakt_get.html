@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get a single person's details — trakt.people.summary • tRakt</title>
+<title>Make an API call and receive parsed output — trakt_get • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -38,10 +38,13 @@
 
 
 
-<meta property="og:title" content="Get a single person's details — trakt.people.summary" />
+<meta property="og:title" content="Make an API call and receive parsed output — trakt_get" />
 
-<meta property="og:description" content="Get a single person's details, like their various IDs. If extended is &quot;full&quot;,
-there will also be biographical data if available." />
+<meta property="og:description" content="The most basic form of API interaction: Querying a specific URL and getting its parsed
+result. If the response is empty, the function returns an empty tibble(),
+and if there are date-time variables present in the response, they are converted to
+POSIXct via lubridate::ymd_hms() or to Date via lubridate::as_date() if the variable
+only contains date information." />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -150,59 +153,183 @@ there will also be biographical data if available." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get a single person's details</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/trakt-people.R'><code>R/trakt-people.R</code></a></small>
-    <div class="hidden name"><code>trakt.people.summary.Rd</code></div>
+    <h1>Make an API call and receive parsed output</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/api.R'><code>R/api.R</code></a></small>
+    <div class="hidden name"><code>trakt_get.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Get a single person's details, like their various IDs. If <code>extended</code> is <code>"full"</code>,
-there will also be biographical data if available.</p>
+    <p>The most basic form of API interaction: Querying a specific URL and getting its parsed
+result. If the response is empty, the function returns an empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>,
+and if there are date-time variables present in the response, they are converted to
+<code>POSIXct</code> via <code><a href='http://lubridate.tidyverse.org/reference/ymd_hms.html'>lubridate::ymd_hms()</a></code> or to <code>Date</code> via <code><a href='http://lubridate.tidyverse.org/reference/as_date.html'>lubridate::as_date()</a></code> if the variable
+only contains date information.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>trakt.people.summary</span>(<span class='no'>target</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+    <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client.id</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>target</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: The ID of the item requested. Preferably the
-<code>Trakt ID</code> (e.g. <code>1390</code>), <code>slug</code> (e.g. <code>"game-of-thrones"</code>), or <code>IMDb ID</code> (e.g. <code>"tt0944947"</code>).
-Can also be of length greater than 1, in which case the function is called on all
-<code>target</code> values separately and the result is combined.</p></td>
+      <th>url</th>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: The API endpoint. Either a full URL like
+<code>"https://api.trakt.tv/shows/breaking-bad"</code> or just the endpoint like <code>shows/breaking-bad</code>.</p></td>
     </tr>
     <tr>
-      <th>extended</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
-returns more variables and should generally only be used if required.</p></td>
+      <th>client.id</th>
+      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: API client ID. If no value is set, this defaults
+to the package's client ID. See <a href='trakt_credentials.html'>trakt_credentials</a> for further information.</p></td>
+    </tr>
+    <tr>
+      <th>HEAD</th>
+      <td><p><code>logical(1) [FALSE]</code>: If <code>TRUE</code>, only a HTTP <code>HEAD</code> request is performed
+and its content returned. This is useful if you are only interested in status codes
+or other headers, and don't want to waste resources/bandwidth on the response body.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    <p>The parsed (<code><a href='https://www.rdocumentation.org/packages/jsonlite/topics/fromJSON'>jsonlite::fromJSON()</a></code>) content of the API response.
+An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> if the response is an empty <code>JSON</code> array.</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>See <a href='https://trakt.docs.apiary.io'>the official API reference</a> for a detailed overview
+of available methods. Most methods of potential interest for data collection have
+dedicated functions in this package.</p>
+    
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>No OAuth2 methods are supported yet, meaning you don't have access to <code>POST</code> methods
+or user information of non-public profiles.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other people data: <code><a href='media_people.html'>media_people</a></code>,
-  <code><a href='people_media.html'>people_media</a></code></p></div>
+    <div class='dont-index'><p>Other API-basics: <code><a href='trakt.search.html'>trakt.search</a></code>,
+  <code><a href='trakt_credentials.html'>trakt_credentials</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># A single person's extended information</span>
-<span class='fu'>trakt.people.summary</span>(<span class='st'>"bryan-cranston"</span>, <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 10
-#&gt;   name   biography  birthday   death birthplace homepage trakt slug  imdb  tmdb 
-#&gt;   &lt;chr&gt;  &lt;chr&gt;      &lt;date&gt;     &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 Bryan… "Bryan Le… 1956-03-07 &lt;NA&gt;  San Ferna… &lt;NA&gt;     2977… brya… nm01… 17419</div><div class='input'>
-<span class='co'># Multiple people</span>
-<span class='fu'>trakt.people.summary</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"kit-harington"</span>, <span class='st'>"emilia-clarke"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 5
-#&gt;   name          trakt  slug          imdb      tmdb   
-#&gt;   &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt;     &lt;chr&gt;  
-#&gt; 1 Kit Harington 436512 kit-harington nm3229685 239019 
-#&gt; 2 Emilia Clarke 436511 emilia-clarke nm3592338 1223786</div></pre>
+    <pre class="examples"><div class='input'><span class='co'># A simple request to a direct URL</span>
+<span class='fu'>trakt_get</span>(<span class='st'>"https://api.trakt.tv/shows/breaking-bad"</span>)</div><div class='output co'>#&gt; $title
+#&gt; [1] "Breaking Bad"
+#&gt; 
+#&gt; $year
+#&gt; [1] 2008
+#&gt; 
+#&gt; $ids
+#&gt; $ids$trakt
+#&gt; [1] 1388
+#&gt; 
+#&gt; $ids$slug
+#&gt; [1] "breaking-bad"
+#&gt; 
+#&gt; $ids$tvdb
+#&gt; [1] 81189
+#&gt; 
+#&gt; $ids$imdb
+#&gt; [1] "tt0903747"
+#&gt; 
+#&gt; $ids$tmdb
+#&gt; [1] 1396
+#&gt; 
+#&gt; $ids$tvrage
+#&gt; [1] 18164
+#&gt; 
+#&gt; </div><div class='input'>
+<span class='co'># A HEAD-only request, useful for validating a URL exists or the API is accessable</span>
+<span class='fu'>trakt_get</span>(<span class='st'>"https://api.trakt.tv/users/jemus42"</span>, <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; $status
+#&gt; [1] 200
+#&gt; 
+#&gt; $version
+#&gt; [1] "HTTP/1.1"
+#&gt; 
+#&gt; $headers
+#&gt; $date
+#&gt; [1] "Mon, 11 Mar 2019 00:25:11 GMT"
+#&gt; 
+#&gt; $`content-type`
+#&gt; [1] "application/json; charset=utf-8"
+#&gt; 
+#&gt; $connection
+#&gt; [1] "keep-alive"
+#&gt; 
+#&gt; $`cache-control`
+#&gt; [1] "max-age=0, private, must-revalidate"
+#&gt; 
+#&gt; $`cf-railgun`
+#&gt; [1] "83756b41d4 stream 0.000000 0200 57da"
+#&gt; 
+#&gt; $`content-encoding`
+#&gt; [1] "gzip"
+#&gt; 
+#&gt; $etag
+#&gt; [1] "W/\"5fc1bcdebcec936dcccde451ae4ad135\""
+#&gt; 
+#&gt; $vary
+#&gt; [1] "Accept-Encoding"
+#&gt; 
+#&gt; $`x-content-type-options`
+#&gt; [1] "nosniff"
+#&gt; 
+#&gt; $`x-frame-options`
+#&gt; [1] "SAMEORIGIN"
+#&gt; 
+#&gt; $`x-private-user`
+#&gt; [1] "false"
+#&gt; 
+#&gt; $`x-request-id`
+#&gt; [1] "91e72d02-dd67-487d-8196-162f0538b02b"
+#&gt; 
+#&gt; $`x-runtime`
+#&gt; [1] "0.006986"
+#&gt; 
+#&gt; $`x-xss-protection`
+#&gt; [1] "1; mode=block"
+#&gt; 
+#&gt; $`expect-ct`
+#&gt; [1] "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+#&gt; 
+#&gt; $server
+#&gt; [1] "cloudflare"
+#&gt; 
+#&gt; $`cf-ray`
+#&gt; [1] "4b5963c56ab5c512-ORD"
+#&gt; 
+#&gt; attr(,"class")
+#&gt; [1] "insensitive" "list"       
+#&gt; </div><div class='input'>
+<span class='co'># Optionally be lazy about URL specification by dropping the hostname:</span>
+<span class='fu'>trakt_get</span>(<span class='st'>"shows/game-of-thrones"</span>)</div><div class='output co'>#&gt; $title
+#&gt; [1] "Game of Thrones"
+#&gt; 
+#&gt; $year
+#&gt; [1] 2011
+#&gt; 
+#&gt; $ids
+#&gt; $ids$trakt
+#&gt; [1] 1390
+#&gt; 
+#&gt; $ids$slug
+#&gt; [1] "game-of-thrones"
+#&gt; 
+#&gt; $ids$tvdb
+#&gt; [1] 121361
+#&gt; 
+#&gt; $ids$imdb
+#&gt; [1] "tt0944947"
+#&gt; 
+#&gt; $ids$tmdb
+#&gt; [1] 1399
+#&gt; 
+#&gt; $ids$tvrage
+#&gt; [1] 24493
+#&gt; 
+#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -210,6 +337,10 @@ returns more variables and should generally only be used if required.</p></td>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
+
+      <li><a href="#note">Note</a></li>
 
       <li><a href="#see-also">See also</a></li>
       

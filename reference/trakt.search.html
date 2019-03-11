@@ -23,7 +23,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
@@ -105,7 +106,7 @@ as receiving a quick overview of a show/movie." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -135,7 +136,7 @@ as receiving a quick overview of a show/movie." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -224,8 +225,8 @@ which fields of the item metadata are searched by default.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other API-basics: <code><a href='trakt.api.call.html'>trakt.api.call</a></code>,
-  <code><a href='trakt_credentials.html'>trakt_credentials</a></code></p></div>
+    <div class='dont-index'><p>Other API-basics: <code><a href='trakt_credentials.html'>trakt_credentials</a></code>,
+  <code><a href='trakt_get.html'>trakt_get</a></code></p></div>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -234,8 +235,8 @@ which fields of the item metadata are searched by default.</p>
 #&gt;   type   score title           year trakt  slug          tvdb  imdb        tmdb 
 #&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;
 #&gt; 1 show  1000   Breaking Bad    2008 1388   breaking-bad  81189 tt0903747   1396 
-#&gt; 2 show   393.  Breaking Bad:…  2018 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
-#&gt; 3 show    12.0 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># A show by its trakt id, and now with more information</span>
+#&gt; 2 show   392.  Breaking Bad:…  2018 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
+#&gt; 3 show    11.9 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># A show by its trakt id, and now with more information</span>
 <span class='fu'>trakt.search.byid</span>(<span class='fl'>1388</span>, <span class='st'>"trakt"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 29
 #&gt;   type  score title  year overview first_aired         runtime certification
 #&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;    &lt;dttm&gt;                &lt;int&gt; &lt;chr&gt;        
@@ -250,15 +251,15 @@ which fields of the item metadata are searched by default.</p>
 <span class='fu'>trakt.search</span>(<span class='st'>"J. K. Simmons"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"person"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 12
 #&gt;   type  score name  biography birthday   death birthplace homepage trakt slug 
 #&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;date&gt;     &lt;lgl&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 pers…  1.54 J.K.… "Jonatha… 1955-01-09 NA    Detroit, … NA       15722 j-k-…
+#&gt; 1 pers…  1.55 J.K.… "Jonatha… 1955-01-09 NA    Detroit, … NA       15722 j-k-…
 #&gt; # … with 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'>
 <span class='co'># A movie or a show, two of each</span>
 <span class='fu'>trakt.search</span>(<span class='st'>"Tron"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"movie"</span>, <span class='st'>"show"</span>), <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 4 x 9
 #&gt;   type  score title        year trakt  slug         imdb             tmdb  tvdb 
 #&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;
 #&gt; 1 movie 1000  Tron         1982 66     tron-1982    tt0084827        97    &lt;NA&gt; 
-#&gt; 2 movie  716. TRON: Lega…  2010 12601  tron-legacy… tt1104001        20526 &lt;NA&gt; 
-#&gt; 3 show   594. Tron: Upri…  2012 34209  tron-uprisi… tt1812523        34356 2584…
+#&gt; 2 movie  712. TRON: Lega…  2010 12601  tron-legacy… tt1104001        20526 &lt;NA&gt; 
+#&gt; 3 show   585. Tron: Upri…  2012 34209  tron-uprisi… tt1812523        34356 2584…
 #&gt; 4 show    20  Tron           NA 142773 tron         https://m.imdb.… &lt;NA&gt;  3580…</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
