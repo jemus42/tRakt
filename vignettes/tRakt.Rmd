@@ -1,5 +1,5 @@
 ---
-title: "The Basics of tRakt"
+title: "The Basics"
 author: "Lukas Burk"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -18,7 +18,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-## First step: Loading packages and trakt.tv credentials
+## Preamble: The trakt.tv API and this package
+
+
+## Getting data from trakt.tv
+
+### 1. Loading packages and trakt.tv credentials
 
 ```{r startup}
 library(tRakt)
