@@ -1,11 +1,17 @@
 development:
   mode: auto
   destination: "."
+
 template:
+  path: pkgdown/templates
   params:
     bootswatch: cosmo
     matomo_siteid: 20
     matomo_site: "https://analytics.tadaa-data.de"
+
+authors:
+  Lukas Burk:
+    href: https://jemu.name
 
 reference:
   - title: Finding media
