@@ -9,9 +9,9 @@ addons:
   apt:
     packages:
       - libgit2-dev
+      - r-base-dev
 
 r_binary_packages:
-  - r-base-dev
   - testthat
   - jsonlite
   - git2r
