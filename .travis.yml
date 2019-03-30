@@ -30,7 +30,7 @@ r_binary_packages:
   - roxygen2
 
 r_github_packages:
-  - tidyverse/pkgdown
+  - r-lib/pkgdown
 
 r:
   - oldrel
