@@ -28,6 +28,7 @@ r_binary_packages:
   - highlight
   - xml2
   - roxygen2
+  - pkgdown
 
 r:
   - oldrel
@@ -37,7 +38,6 @@ r:
 after_success:
   - test $TRAVIS_R_VERSION_STRING = "release" && Rscript -e 'covr::codecov()'
 
-before_deploy: Rscript -e 'remotes::install_github("jemus42/pkgdown")'
 deploy:
   provider: script
   script: Rscript -e 'pkgdown::deploy_site_github(run_dont_run = TRUE)'
