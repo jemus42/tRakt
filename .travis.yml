@@ -28,7 +28,9 @@ r_binary_packages:
   - highlight
   - xml2
   - roxygen2
-  - pkgdown
+
+r_github_packages:
+  - tidyverse/pkgdown
 
 r:
   - oldrel
