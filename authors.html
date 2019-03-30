@@ -55,6 +55,28 @@
 <![endif]-->
 
 
+
+<!-- Matomo / Piwik -->
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.tadaa-data.de/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '20']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
   </head>
 
   <body>
@@ -130,7 +152,7 @@
 
     <ul class="list-unstyled">
       <li>
-        <p><strong>Lukas Burk</strong>. Author, maintainer. <a href='https://orcid.org/0000-0001-7528-3795' target='orcid.widget'><img src='https://members.orcid.org/sites/default/files/vector_iD_icon.svg' class='orcid' alt='ORCID' height='16'></a>
+        <p><strong><a href='https://jemu.name'>Lukas Burk</a></strong>. Author, maintainer. <a href='https://orcid.org/0000-0001-7528-3795' target='orcid.widget'><img src='https://members.orcid.org/sites/default/files/vector_iD_icon.svg' class='orcid' alt='ORCID' height='16'></a>
         </p>
       </li>
     </ul>
@@ -142,7 +164,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Lukas Burk.</p>
+  <p>Developed by <a href='https://jemu.name'>Lukas Burk</a>.</p>
 </div>
 
 <div class="pkgdown">

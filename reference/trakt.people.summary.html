@@ -58,6 +58,28 @@ there will also be biographical data if available." />
 <![endif]-->
 
 
+
+<!-- Matomo / Piwik -->
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(["setDoNotTrack", true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.tadaa-data.de/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '20']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Matomo Code -->
+
   </head>
 
   <body>
@@ -199,7 +221,7 @@ returns more variables and should generally only be used if required.</p></td>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Lukas Burk.</p>
+  <p>Developed by <a href='https://jemu.name'>Lukas Burk</a>.</p>
 </div>
 
 <div class="pkgdown">
