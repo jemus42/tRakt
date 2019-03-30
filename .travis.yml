@@ -35,9 +35,6 @@ r_binary_packages:
   - openssl
   - rlang
 
-r_github_packages:
-  - r-lib/pkgdown
-
 r:
   - oldrel
   - release
@@ -46,6 +43,8 @@ r:
 after_success:
   - test $TRAVIS_R_VERSION_STRING = "release" && Rscript -e 'covr::codecov()'
 
+
+before_deploy: Rscript -e 'remotes::install_github("r-lib/pkgdown")'
 deploy:
   provider: script
   script: Rscript -e 'pkgdown::deploy_site_github(run_dont_run = TRUE)'
