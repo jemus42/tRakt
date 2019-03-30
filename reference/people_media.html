@@ -57,28 +57,6 @@
 <![endif]-->
 
 
-
-<!-- Matomo / Piwik -->
-
-<!-- Matomo -->
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://analytics.tadaa-data.de/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Matomo Code -->
-
   </head>
 
   <body>
@@ -215,7 +193,7 @@ and <code>crew</code>. The latter <code>tibble</code> objects are as flat as pos
 #&gt; 15 Himself   Film Noir: Bringing…  2006 216490 film-noir-bringing-d… tt08… 3119…
 #&gt; 
 #&gt; $crew
-#&gt; # A tibble: 57 x 8
+#&gt; # A tibble: 58 x 8
 #&gt;    job      title             year trakt  slug             imdb  tmdb  crew_type
 #&gt;    &lt;chr&gt;    &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    
 #&gt;  1 Producer Untitled Christ…  2020 427989 untitled-christ… tt67… 5779… producti…
@@ -228,7 +206,7 @@ and <code>crew</code>. The latter <code>tibble</code> objects are as flat as pos
 #&gt;  8 Executi… Transcendence     2014 102164 transcendence-2… tt22… 1573… producti…
 #&gt;  9 Producer Man of Steel      2013 34507  man-of-steel-20… tt07… 49521 producti…
 #&gt; 10 Producer The Dark Knight…  2012 34073  the-dark-knight… tt13… 49026 producti…
-#&gt; # … with 47 more rows
+#&gt; # … with 48 more rows
 #&gt; </div><div class='input'>
 <span class='fu'>trakt.people.shows</span>(<span class='st'>"kit-harington"</span>)</div><div class='output co'>#&gt; $cast
 #&gt; # A tibble: 2 x 8

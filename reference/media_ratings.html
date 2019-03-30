@@ -59,28 +59,6 @@ just use *.summary functions or trakt.seasons.season for episode ratings." />
 <![endif]-->
 
 
-
-<!-- Matomo / Piwik -->
-
-<!-- Matomo -->
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://analytics.tadaa-data.de/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Matomo Code -->
-
   </head>
 
   <body>
@@ -212,31 +190,31 @@ of one API call <em>per element in each argument</em>. Please be kind to the API
 <span class='fu'>trakt.movies.ratings</span>(<span class='st'>"tron-legacy-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;   rating votes distribution      id               type  
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;            &lt;chr&gt; 
-#&gt; 1   7.27 12031 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
+#&gt; 1   7.27 12103 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
 <span class='co'># A show's ratings</span>
 <span class='fu'>trakt.shows.ratings</span>(<span class='st'>"game-of-thrones"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;   rating votes distribution      id              type 
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;           &lt;chr&gt;
-#&gt; 1   9.30 88481 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># Ratings for seasons 1 through 5</span>
+#&gt; 1   9.30 89364 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># Ratings for seasons 1 through 5</span>
 <span class='fu'>trakt.seasons.ratings</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 5
 #&gt;   rating votes distribution      id       season
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;     &lt;int&gt;
-#&gt; 1   8.21   207 &lt;tibble [10 × 2]&gt; futurama      1
-#&gt; 2   8.34   152 &lt;tibble [10 × 2]&gt; futurama      2
+#&gt; 1   8.21   210 &lt;tibble [10 × 2]&gt; futurama      1
+#&gt; 2   8.31   155 &lt;tibble [10 × 2]&gt; futurama      2
 #&gt; 3   8.50   133 &lt;tibble [10 × 2]&gt; futurama      3
-#&gt; 4   8.26   125 &lt;tibble [10 × 2]&gt; futurama      4
-#&gt; 5   8.22   106 &lt;tibble [10 × 2]&gt; futurama      5</div><div class='input'>
+#&gt; 4   8.29   127 &lt;tibble [10 × 2]&gt; futurama      4
+#&gt; 5   8.21   109 &lt;tibble [10 × 2]&gt; futurama      5</div><div class='input'>
 <span class='co'># Ratings for episodes 1 through 7 of season 1</span>
 <span class='fu'>trakt.episodes.ratings</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 6
 #&gt;   rating votes distribution      id       season episode
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;     &lt;dbl&gt;   &lt;int&gt;
-#&gt; 1   8.11  1919 &lt;tibble [10 × 2]&gt; futurama      1       1
-#&gt; 2   7.88  1502 &lt;tibble [10 × 2]&gt; futurama      1       2
-#&gt; 3   7.89  1367 &lt;tibble [10 × 2]&gt; futurama      1       3
-#&gt; 4   7.80  1219 &lt;tibble [10 × 2]&gt; futurama      1       4
-#&gt; 5   7.78  1173 &lt;tibble [10 × 2]&gt; futurama      1       5
-#&gt; 6   7.84  1156 &lt;tibble [10 × 2]&gt; futurama      1       6
-#&gt; 7   7.78  1072 &lt;tibble [10 × 2]&gt; futurama      1       7</div></pre>
+#&gt; 1   8.11  1936 &lt;tibble [10 × 2]&gt; futurama      1       1
+#&gt; 2   7.88  1513 &lt;tibble [10 × 2]&gt; futurama      1       2
+#&gt; 3   7.89  1381 &lt;tibble [10 × 2]&gt; futurama      1       3
+#&gt; 4   7.81  1230 &lt;tibble [10 × 2]&gt; futurama      1       4
+#&gt; 5   7.78  1185 &lt;tibble [10 × 2]&gt; futurama      1       5
+#&gt; 6   7.84  1169 &lt;tibble [10 × 2]&gt; futurama      1       6
+#&gt; 7   7.77  1085 &lt;tibble [10 × 2]&gt; futurama      1       7</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

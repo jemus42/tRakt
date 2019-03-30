@@ -60,28 +60,6 @@ just a single API call." />
 <![endif]-->
 
 
-
-<!-- Matomo / Piwik -->
-
-<!-- Matomo -->
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://analytics.tadaa-data.de/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Matomo Code -->
-
   </head>
 
   <body>
@@ -226,7 +204,7 @@ with the endpoint <code>/shows/:show_id/seasons</code>.</p>
 </div><div class='input'><span class='fu'>trakt.seasons.summary</span>(<span class='st'>"utopia"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>, <span class='kw'>episodes</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 13
 #&gt;   season rating votes episode_count aired_episodes title overview
 #&gt;    &lt;int&gt;  &lt;dbl&gt; &lt;int&gt;         &lt;int&gt;          &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   
-#&gt; 1      1   8.71   164             6              6 Seas… When a …
+#&gt; 1      1   8.71   165             6              6 Seas… When a …
 #&gt; 2      2   8.28   119             6              6 Seas… It has …
 #&gt; # … with 6 more variables: first_aired &lt;dttm&gt;, network &lt;chr&gt;, episodes &lt;list&gt;,
 #&gt; #   trakt &lt;chr&gt;, tvdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>

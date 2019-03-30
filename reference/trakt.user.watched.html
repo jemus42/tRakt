@@ -59,28 +59,6 @@ public profile." />
 <![endif]-->
 
 
-
-<!-- Matomo / Piwik -->
-
-<!-- Matomo -->
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://analytics.tadaa-data.de/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Matomo Code -->
-
   </head>
 
   <body>
@@ -211,20 +189,20 @@ be nice to the API.</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Use noseasons = TRUE to avoid receiving detailed season/episode data</span>
-<span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 473 x 10
+<span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 474 x 10
 #&gt;    plays last_watched_at     last_updated_at     title  year trakt slug  tvdb 
 #&gt;    &lt;int&gt; &lt;dttm&gt;              &lt;dttm&gt;              &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt;  1   156 2019-03-10 10:28:59 2019-03-10 10:28:59 The …  2012 15556 the-… 2562…
-#&gt;  2    67 2019-03-10 05:29:47 2019-03-10 04:41:47 Brea…  2008 1388  brea… 81189
-#&gt;  3   220 2019-03-09 12:09:12 2019-03-09 12:09:12 Supe…  2015 98985 supe… 2956…
-#&gt;  4    23 2019-03-09 05:47:45 2019-03-09 05:47:45 Star…  2017 1104… star… 3287…
-#&gt;  5    15 2019-03-09 04:48:30 2019-03-09 04:48:30 The …  2018 1344… the-… 3506…
-#&gt;  6  1946 2019-03-08 08:10:05 2019-03-08 08:10:05 The …  2007 1409  the-… 80379
-#&gt;  7    52 2019-03-08 07:50:52 2019-03-08 07:50:52 Drun…  2013 55867 drun… 2705…
-#&gt;  8   139 2019-03-08 07:29:26 2019-03-08 07:29:26 Top …  2006 41613 top-… 79313
-#&gt;  9  1191 2019-03-08 06:17:50 2019-03-08 06:17:50 Broo…  2013 48587 broo… 2695…
-#&gt; 10    46 2019-03-08 05:56:00 2019-03-08 05:56:01 The …  2015 1009… the-… 2991…
-#&gt; # … with 463 more rows, and 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
+#&gt;  1    22 2019-03-30 16:50:28 2019-03-30 16:50:28 The …  2016 1089… the-… 3140…
+#&gt;  2    49 2019-03-29 04:45:53 2019-03-29 04:45:53 The …  2015 1009… the-… 2991…
+#&gt;  3    37 2019-03-28 17:46:26 2019-03-28 17:46:26 SEAL…  2017 1191… seal… 3286…
+#&gt;  4  3249 2019-03-28 16:38:08 2019-03-28 16:38:08 How …  2005 1095  how-… 75760
+#&gt;  5    17 2019-03-28 04:32:31 2019-03-28 04:32:31 The …  2018 1344… the-… 3506…
+#&gt;  6    36 2019-03-28 01:32:10 2019-03-28 01:32:10 True…  2014 46375 true… 2706…
+#&gt;  7     3 2019-03-27 22:28:28 2019-03-27 22:28:28 Shif…  2018 1271… shif… 3413…
+#&gt;  8  1068 2019-03-27 18:07:01 2019-03-27 18:07:02 Tosh…  2009 17933 tosh… 97731
+#&gt;  9   291 2019-03-27 05:00:31 2019-03-27 05:00:31 Supe…  2015 98985 supe… 2956…
+#&gt; 10    11 2019-03-27 04:46:14 2019-03-27 04:46:14 Abse…  2017 1212… abse… 3305…
+#&gt; # … with 464 more rows, and 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

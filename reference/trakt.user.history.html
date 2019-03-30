@@ -58,28 +58,6 @@ which it was logged (e.g. scrobble or checkin)." />
 <![endif]-->
 
 
-
-<!-- Matomo / Piwik -->
-
-<!-- Matomo -->
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://analytics.tadaa-data.de/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Matomo Code -->
-
   </head>
 
   <body>
@@ -216,13 +194,13 @@ duplicate variable names, the preferref handling of which is left to the user.</
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># The last 5 movies that user "jemus42" has watched</span>
 <span class='fu'>trakt.user.history</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 10
-#&gt;        id watched_at          action  type  title  year trakt slug   imdb  tmdb 
-#&gt;     &lt;dbl&gt; &lt;dttm&gt;              &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;
-#&gt; 1  4.30e9 2019-03-07 21:06:41 watch   movie Capt…  2019 1939… capta… tt41… 2995…
-#&gt; 2  4.24e9 2019-02-15 00:00:54 scrobb… movie Horns  2013 98504 horns… tt15… 1495…
-#&gt; 3  4.18e9 2019-01-22 21:17:08 scrobb… movie Bird…  2018 2500… bird-… tt27… 4057…
-#&gt; 4  4.12e9 2018-12-30 00:36:59 scrobb… movie Enemy  2013 1143… enemy… tt23… 1818…
-#&gt; 5  4.12e9 2018-12-29 01:32:31 scrobb… movie The …  2016 2033… the-a… tt21… 3029…</div></pre>
+#&gt;        id watched_at          action type  title   year trakt slug   imdb  tmdb 
+#&gt;     &lt;dbl&gt; &lt;dttm&gt;              &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;
+#&gt; 1  4.33e9 2019-03-23 01:08:55 scrob… movie Video…  1983 680   video… tt00… 837  
+#&gt; 2  4.33e9 2019-03-22 23:29:34 check… movie The M…  2017 1794… the-m… tt23… 2820…
+#&gt; 3  4.33e9 2019-03-21 01:28:41 check… movie Frequ…  2000 5736  frequ… tt01… 10559
+#&gt; 4  4.33e9 2019-03-20 23:04:33 scrob… movie Three…  2017 2660… three… tt50… 3599…
+#&gt; 5  4.33e9 2019-03-20 03:51:53 scrob… movie The E…  2015 2222… the-e… tt42… 3425…</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

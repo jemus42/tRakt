@@ -59,28 +59,6 @@ function was created for." />
 <![endif]-->
 
 
-
-<!-- Matomo / Piwik -->
-
-<!-- Matomo -->
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://analytics.tadaa-data.de/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Matomo Code -->
-
   </head>
 
   <body>
@@ -152,7 +130,7 @@ function was created for." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Assemble a trakt.tv API URL</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/misc.R'><code>R/misc.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/utils-misc.R'><code>R/utils-misc.R</code></a></small>
     <div class="hidden name"><code>build_trakt_url.Rd</code></div>
     </div>
 

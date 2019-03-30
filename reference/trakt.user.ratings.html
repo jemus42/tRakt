@@ -57,28 +57,6 @@
 <![endif]-->
 
 
-
-<!-- Matomo / Piwik -->
-
-<!-- Matomo -->
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://analytics.tadaa-data.de/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Matomo Code -->
-
   </head>
 
   <body>
@@ -204,20 +182,20 @@ returns more variables and should generally only be used if required.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>)</div><div class='output co'>#&gt; # A tibble: 309 x 9
+    <pre class="examples"><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>)</div><div class='output co'>#&gt; # A tibble: 325 x 9
 #&gt;    rated_at            rating type  title      year trakt  slug      imdb  tmdb 
 #&gt;    &lt;dttm&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
-#&gt;  1 2019-03-07 22:47:20      7 movie Captain …  2019 193963 captain-… tt41… 2995…
-#&gt;  2 2019-02-21 20:06:20      7 movie The Girl…  2011 47598  the-girl… tt15… 65754
-#&gt;  3 2019-02-21 20:06:12      8 movie Serenity   2005 10041  serenity… tt03… 16320
-#&gt;  4 2019-02-21 20:03:12      6 movie Frozen     2013 77349  frozen-2… tt22… 1094…
-#&gt;  5 2019-02-15 10:53:58      7 movie Horns      2013 98504  horns-20… tt15… 1495…
-#&gt;  6 2019-01-22 22:58:29      6 movie Bird Box   2018 250049 bird-box… tt27… 4057…
-#&gt;  7 2018-12-30 15:26:48      7 movie Enemy      2013 114374 enemy-20… tt23… 1818…
-#&gt;  8 2018-12-29 06:06:38     10 movie Deadpool…  2018 226108 deadpool… tt54… 3834…
-#&gt;  9 2018-12-29 03:38:19      9 movie Sicario    2015 171369 sicario-… tt33… 2734…
-#&gt; 10 2018-12-29 03:38:16      8 movie The Acco…  2016 203309 the-acco… tt21… 3029…
-#&gt; # … with 299 more rows</div><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>)</div><div class='output co'>#&gt; # A tibble: 144 x 9
+#&gt;  1 2019-03-23 22:31:56      7 movie Videodro…  1983 680    videodro… tt00… 837  
+#&gt;  2 2019-03-22 23:41:38      6 movie The Mummy  2017 179407 the-mumm… tt23… 2820…
+#&gt;  3 2019-03-21 02:06:11      7 movie Frequency  2000 5736   frequenc… tt01… 10559
+#&gt;  4 2019-03-20 23:30:18      8 movie Three Bi…  2017 266092 three-bi… tt50… 3599…
+#&gt;  5 2019-03-20 14:08:04      7 movie The Empi…  2015 222274 the-empi… tt42… 3425…
+#&gt;  6 2019-03-20 02:27:29      7 movie Winter's…  2010 25290  winter-s… tt13… 39013
+#&gt;  7 2019-03-19 00:45:23      9 movie Swiss Ar…  2016 223914 swiss-ar… tt40… 3470…
+#&gt;  8 2019-03-18 03:27:19      9 movie Spider-M…  2018 205404 spider-m… tt46… 3248…
+#&gt;  9 2019-03-18 01:46:58      7 movie Bad Time…  2018 292712 bad-time… tt66… 4460…
+#&gt; 10 2019-03-17 17:35:50      7 movie Triple F…  2019 242616 triple-f… tt14… 3993…
+#&gt; # … with 315 more rows</div><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>)</div><div class='output co'>#&gt; # A tibble: 144 x 9
 #&gt;    rated_at            rating type  title      year trakt  slug      imdb  tmdb 
 #&gt;    &lt;dttm&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
 #&gt;  1 2018-07-28 05:41:30      9 movie Watchmen   2009 7729   watchmen… tt04… 13183

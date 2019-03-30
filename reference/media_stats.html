@@ -57,28 +57,6 @@
 <![endif]-->
 
 
-
-<!-- Matomo / Piwik -->
-
-<!-- Matomo -->
-<script type="text/javascript">
-  var _paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-  _paq.push(["setDoNotTrack", true]);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://analytics.tadaa-data.de/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Matomo Code -->
-
   </head>
 
   <body>
@@ -202,23 +180,23 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 <span class='fu'>trakt.movies.stats</span>(<span class='st'>"inception-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 8
 #&gt;   watchers  plays collectors comments lists votes type   id            
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         
-#&gt; 1   255244 340326     156592      106 38108 47633 movies inception-2010</div><div class='input'><span class='co'># Stats for multiple shows at once</span>
+#&gt; 1   258167 344223     160089      106 38489 48071 movies inception-2010</div><div class='input'><span class='co'># Stats for multiple shows at once</span>
 <span class='fu'>trakt.shows.stats</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"breaking-bad"</span>, <span class='st'>"game-of-thrones"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 9
 #&gt;   watchers   plays collectors collected_episo… comments  lists votes type  id   
 #&gt;      &lt;int&gt;   &lt;int&gt;      &lt;int&gt;            &lt;int&gt;    &lt;int&gt;  &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1   418795  2.56e7     346671         17374601      403 119467 64118 shows brea…
-#&gt; 2   776221  4.58e7    1108404         58753121      332 264223 88487 shows game…</div><div class='input'>
+#&gt; 1   422568  2.58e7     352114         17607605      407 120266 64532 shows brea…
+#&gt; 2   789146  4.65e7    1129356         59958090      333 266119 89368 shows game…</div><div class='input'>
 <span class='co'># Stats for multiple episodes</span>
 <span class='fu'>trakt.episodes.stats</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 9
 #&gt;   watchers  plays collectors comments lists votes season episode id      
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;int&gt; &lt;chr&gt;   
-#&gt; 1    87393 116525     116313        1   171  1919      1       1 futurama
-#&gt; 2    83253 111004     115854        1   115  1502      1       2 futurama
-#&gt; 3    82156 109542     115843        0   103  1367      1       3 futurama
-#&gt; 4    80605 107474     115259        0   106  1219      1       4 futurama
-#&gt; 5    79986 106649     115487        1   104  1173      1       5 futurama
-#&gt; 6    79894 106526     115159        0   103  1156      1       6 futurama
-#&gt; 7    79113 105485     115072        0   102  1072      1       7 futurama</div></pre>
+#&gt; 1    88359 117812     119030        1   173  1936      1       1 futurama
+#&gt; 2    84120 112161     118547        1   116  1513      1       2 futurama
+#&gt; 3    83021 110695     118535        0   103  1381      1       3 futurama
+#&gt; 4    81426 108568     117959        0   106  1230      1       4 futurama
+#&gt; 5    80787 107717     118183        1   104  1185      1       5 futurama
+#&gt; 6    80698 107598     117855        0   103  1169      1       6 futurama
+#&gt; 7    79920 106560     117787        0   102  1085      1       7 futurama</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
