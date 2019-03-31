@@ -3,7 +3,7 @@
 
 # tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="140"/>
 
-\<– badge:start –\> [![Travis
+[![Travis
 (.org)](https://img.shields.io/travis/jemus42/tRakt.svg?logo=travis)](https://travis-ci.org/jemus42/tRakt)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/jemus42/tRakt?branch=master&svg=true)](https://ci.appveyor.com/project/jemus42/tRakt)
@@ -15,7 +15,6 @@ status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/
 release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](https://github.com/jemus42/tRakt/releases)
 [![GitHub last commit
 (master)](https://img.shields.io/github/last-commit/jemus42/tRakt/master.svg?logo=GithUb)](https://github.com/jemus42/tRakt/commits/master)
-\<– badge:end –\>
 
 This is `tRakt` version `0.14.0.9000`.  
 It contains functions to retrieve data from
