@@ -344,11 +344,11 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1       93 Aqua…  2018 Home I… Once ho… 2018-12-21     144 us      http:/…
-#&gt; 2       92 Bumb…  2018 Every … On the … 2018-12-21     114 us      http:/…
-#&gt; 3       83 The …  2018 Nobody… Earl St… 2018-12-14     116 us      http:/…
-#&gt; 4       74 How …  2019 The fr… As Hicc… 2019-02-22     104 us      http:/…
-#&gt; 5       56 Spid…  2018 More T… "Miles … 2018-12-14     117 us      http:/…
+#&gt; 1       23 Aqua…  2018 Home I… Once ho… 2018-12-21     144 us      http:/…
+#&gt; 2       21 Capt…  2019 Higher… The sto… 2019-03-08     124 us      http:/…
+#&gt; 3       20 Bumb…  2018 Every … On the … 2018-12-21     114 us      http:/…
+#&gt; 4       16 The …  2019 The le… In 1934… 2019-03-15     133 us      http:/…
+#&gt; 5       12 How …  2019 The fr… As Hicc… 2019-02-22     104 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
@@ -357,31 +357,31 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.anticipated</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 7
 #&gt;   list_count title               year  trakt slug                 imdb      tmdb
 #&gt;        &lt;int&gt; &lt;chr&gt;              &lt;int&gt;  &lt;int&gt; &lt;chr&gt;                &lt;chr&gt;    &lt;int&gt;
-#&gt; 1      36131 Avengers: Endgame   2019 191798 avengers-endgame-20… tt4154… 299534
-#&gt; 2      29005 Avatar: The Way o…  2020  56580 avatar-the-way-of-w… tt1630…  76600
-#&gt; 3      26753 Star Wars: Episod…  2019 114335 star-wars-episode-i… tt2527… 181812
-#&gt; 4      21360 The Flash           2020 195144 the-flash-2020       tt0439… 298618
-#&gt; 5      20289 Shazam!             2019 184992 shazam-2019          tt0448… 287947</div><div class='input'>
+#&gt; 1      36237 Avengers: Endgame   2019 191798 avengers-endgame-20… tt4154… 299534
+#&gt; 2      29041 Avatar: The Way o…  2020  56580 avatar-the-way-of-w… tt1630…  76600
+#&gt; 3      26797 Star Wars: Episod…  2019 114335 star-wars-episode-i… tt2527… 181812
+#&gt; 4      21384 The Flash           2020 195144 the-flash-2020       tt0439… 298618
+#&gt; 5      20605 Shazam!             2019 184992 shazam-2019          tt0448… 287947</div><div class='input'>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/format'>format</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.time'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
 <span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 15 x 8
-#&gt;    list_count title            year trakt  slug            tvdb   imdb     tmdb 
-#&gt;         &lt;int&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;
-#&gt;  1        576 Osmosis          2019 143847 osmosis-2019    359238 tt70433… 85424
-#&gt;  2        315 ULTRAMAN         2019 140389 ultraman-2019   356041 tt86992… 80795
-#&gt;  3        291 Black Summer     2019 134364 black-summer-2… 350587 tt89238… &lt;NA&gt; 
-#&gt;  4        282 Our Planet       2019 139672 our-planet-2019 355229 tt92538… 83880
-#&gt;  5        272 Quicksand        2019 143600 quicksand       358977 tt86861… 86621
-#&gt;  6        146 7SEEDS           2019 140359 7seeds          356032 tt93487… 85940
-#&gt;  7         60 When They See …  2019 144923 when-they-see-… 360388 tt71379… 81355
-#&gt;  8         55 Special          2019 128079 special-2019    342976 tt93816… 87194
-#&gt;  9         47 Cannon Busters   2019 123305 cannon-busters  334180 tt50666… &lt;NA&gt; 
-#&gt; 10         43 Rilakkuma and …  2019 131094 rilakkuma-and-… 347929 tt93487… 84655
-#&gt; 11         32 Leila            2019 145058 leila           360738 tt93375… &lt;NA&gt; 
-#&gt; 12         29 No Good Nick     2019 144963 no-good-nick-2… 360627 tt90391… &lt;NA&gt; 
-#&gt; 13         25 You vs. Wild     2019 145479 you-vs-wild     361214 tt10044… &lt;NA&gt; 
-#&gt; 14         25 Bonding          2019 129021 bonding         344643 tt77180… &lt;NA&gt; 
-#&gt; 15         19 Chambers         2019 145789 chambers-2019   361542 tt79492… 80055</div><div class='input'>
+#&gt;    list_count title              year trakt  slug             tvdb  imdb   tmdb 
+#&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;
+#&gt;  1        362 ULTRAMAN           2019 140389 ultraman-2019    3560… tt869… 80795
+#&gt;  2        307 Black Summer       2019 134364 black-summer-20… 3505… tt892… &lt;NA&gt; 
+#&gt;  3        282 Our Planet         2019 139672 our-planet-2019  3552… tt925… 83880
+#&gt;  4        272 Quicksand          2019 143600 quicksand        3589… tt868… 86621
+#&gt;  5        146 7SEEDS             2019 140359 7seeds           3560… tt934… 85940
+#&gt;  6         60 When They See Us   2019 144923 when-they-see-us 3603… tt713… 81355
+#&gt;  7         60 Special            2019 128079 special-2019     3429… tt938… 87194
+#&gt;  8         49 Cannon Busters     2019 123305 cannon-busters   3341… tt506… &lt;NA&gt; 
+#&gt;  9         48 Trailer Park Boy…  2019 145759 trailer-park-bo… 3615… tt981… 88071
+#&gt; 10         45 Rilakkuma and Ka…  2019 131094 rilakkuma-and-k… 3479… tt934… 84655
+#&gt; 11         44 Chambers           2019 145789 chambers-2019    3615… tt794… 80055
+#&gt; 12         32 Leila              2019 145058 leila            3607… tt933… &lt;NA&gt; 
+#&gt; 13         29 No Good Nick       2019 144963 no-good-nick-20… 3606… tt903… &lt;NA&gt; 
+#&gt; 14         25 Bonding            2019 129021 bonding          3446… tt771… &lt;NA&gt; 
+#&gt; 15         25 You vs. Wild       2019 145479 you-vs-wild      3612… tt100… &lt;NA&gt; </div><div class='input'>
 <span class='co'># Get the most popular German-language movies between 1990 and 2010</span>
 <span class='fu'>trakt.popular</span>(<span class='st'>"movies"</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='fl'>1990</span>, <span class='fl'>2010</span>))</div><div class='output co'>#&gt; # A tibble: 10 x 6
 #&gt;    title                    year trakt slug                       imdb      tmdb
