@@ -209,6 +209,8 @@ fix_tibble_response <- function(response) {
 }
 
 #' Replace "" and NULL with explicit NAs
+#' @importFrom dplyr if_else
+#' @importFrom purrr map_chr
 #' @keywords internal
 #' @noRd
 #' @note Currently only for [character()] variables. Because this might nuke classes.

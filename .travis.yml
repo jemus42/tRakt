@@ -9,6 +9,7 @@ addons:
   apt:
     packages:
       - libgit2-dev
+      - r-base-dev
 
 r_binary_packages:
   - testthat
@@ -21,6 +22,7 @@ r_binary_packages:
   - lubridate
   - purrr
   - stringr
+  - stringi
   - ggplot2
   - knitr
   - rmarkdown
@@ -28,6 +30,10 @@ r_binary_packages:
   - highlight
   - xml2
   - roxygen2
+  - assertthat
+  - glue
+  - openssl
+  - rlang
 
 r:
   - oldrel
@@ -37,7 +43,8 @@ r:
 after_success:
   - test $TRAVIS_R_VERSION_STRING = "release" && Rscript -e 'covr::codecov()'
 
-before_deploy: Rscript -e 'remotes::install_github("jemus42/pkgdown")'
+
+before_deploy: Rscript -e 'remotes::install_github("r-lib/pkgdown")'
 deploy:
   provider: script
   script: Rscript -e 'pkgdown::deploy_site_github(run_dont_run = TRUE)'
