@@ -173,7 +173,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>target</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: The ID of the item requested. Preferably the
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
 <code>Trakt ID</code> (e.g. <code>1390</code>), <code>slug</code> (e.g. <code>"game-of-thrones"</code>), or <code>IMDb ID</code> (e.g. <code>"tt0944947"</code>).
 Can also be of length greater than 1, in which case the function is called on all
 <code>target</code> values separately and the result is combined.</p></td>
@@ -202,23 +202,23 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 <span class='fu'>trakt.movies.stats</span>(<span class='st'>"inception-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 8
 #&gt;   watchers  plays collectors comments lists votes type   id            
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         
-#&gt; 1   258462 344616     160427      107 38520 48097 movies inception-2010</div><div class='input'><span class='co'># Stats for multiple shows at once</span>
-<span class='fu'>trakt.shows.stats</span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"breaking-bad"</span>, <span class='st'>"game-of-thrones"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 9
+#&gt; 1   261619 348826     165401      109 38974 48568 movies inception-2010</div><div class='input'><span class='co'># Stats for multiple shows at once</span>
+<span class='fu'>trakt.shows.stats</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"breaking-bad"</span>, <span class='st'>"game-of-thrones"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 9
 #&gt;   watchers   plays collectors collected_episo… comments  lists votes type  id   
 #&gt;      &lt;int&gt;   &lt;int&gt;      &lt;int&gt;            &lt;int&gt;    &lt;int&gt;  &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1   422757  2.58e7     352717         17633260      407 120328 64555 shows brea…
-#&gt; 2   789885  4.65e7    1130422         60022077      333 266228 89445 shows game…</div><div class='input'>
+#&gt; 1   427591  2.61e7     360129         17956668      411 121315 65102 shows brea…
+#&gt; 2   816207  4.81e7    1164379         62013238      303 263027 90944 shows game…</div><div class='input'>
 <span class='co'># Stats for multiple episodes</span>
 <span class='fu'>trakt.episodes.stats</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 9
 #&gt;   watchers  plays collectors comments lists votes season episode id      
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;int&gt; &lt;chr&gt;   
-#&gt; 1    88409 117879     119191        1   173  1936      1       1 futurama
-#&gt; 2    84171 112229     118698        1   116  1513      1       2 futurama
-#&gt; 3    83115 110820     118860        0   103  1381      1       3 futurama
-#&gt; 4    81467 108623     118110        0   106  1230      1       4 futurama
-#&gt; 5    80826 107769     118334        1   104  1186      1       5 futurama
-#&gt; 6    80739 107653     118006        0   103  1169      1       6 futurama
-#&gt; 7    79958 106611     117945        0   102  1085      1       7 futurama</div></pre>
+#&gt; 1    89577 119436     123251        1   172  1950      1       1 futurama
+#&gt; 2    85239 113653     122736        1   115  1520      1       2 futurama
+#&gt; 3    84139 112186     122722        0   103  1389      1       3 futurama
+#&gt; 4    82505 110007     122154        0   106  1240      1       4 futurama
+#&gt; 5    81854 109139     122379        1   105  1192      1       5 futurama
+#&gt; 6    81779 109039     122051        0   103  1175      1       6 futurama
+#&gt; 7    80979 107973     121994        0   102  1092      1       7 futurama</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

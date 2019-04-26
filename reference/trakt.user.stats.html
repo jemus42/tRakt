@@ -164,14 +164,14 @@ frequency table of the user's media ratings so far.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>trakt.user.stats</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt_username"</span>))</pre>
+    <pre class="usage"><span class='fu'>trakt.user.stats</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>user</th>
-      <td><p>Target username. Defaults to <code><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption("trakt_username")</a></code>.
+      <td><p>Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
@@ -196,13 +196,13 @@ Can also be of length greater than 1, in which case the function is called on al
 #&gt; # A tibble: 1 x 6
 #&gt;   plays watched minutes collected ratings comments
 #&gt;   &lt;int&gt;   &lt;int&gt;   &lt;int&gt;     &lt;int&gt;   &lt;int&gt;    &lt;int&gt;
-#&gt; 1  2115    1613  235754      2640     144       42
+#&gt; 1  2115    1613  235763      2647     144       42
 #&gt; 
 #&gt; $shows
 #&gt; # A tibble: 1 x 4
 #&gt;   watched collected ratings comments
 #&gt;     &lt;int&gt;     &lt;int&gt;   &lt;int&gt;    &lt;int&gt;
-#&gt; 1     475       317      94       36
+#&gt; 1     479       329      94       39
 #&gt; 
 #&gt; $seasons
 #&gt; # A tibble: 1 x 2
@@ -214,7 +214,7 @@ Can also be of length greater than 1, in which case the function is called on al
 #&gt; # A tibble: 1 x 6
 #&gt;   plays watched minutes collected ratings comments
 #&gt;   &lt;int&gt;   &lt;int&gt;   &lt;int&gt;     &lt;int&gt;   &lt;int&gt;    &lt;int&gt;
-#&gt; 1 43465   18053 1301728     11075       6        5
+#&gt; 1 43792   18153 1310560     11292       6        5
 #&gt; 
 #&gt; $network
 #&gt; # A tibble: 1 x 3

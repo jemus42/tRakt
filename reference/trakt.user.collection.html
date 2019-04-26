@@ -164,8 +164,8 @@ public profile.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>trakt.user.collection</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+    <pre class="usage"><span class='fu'>trakt.user.collection</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
   <span class='kw'>unnest_episodes</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -173,18 +173,18 @@ public profile.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>user</th>
-      <td><p>Target username. Defaults to <code><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption("trakt_username")</a></code>.
+      <td><p>Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
     <tr>
       <th>type</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"shows"</code> or <code>"movies"</code>. For season/episode-specific
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"shows"</code> or <code>"movies"</code>. For season/episode-specific
 functions, values <code>seasons</code> or <code>episodes</code> are also allowed.</p></td>
     </tr>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.</p></td>
     </tr>
     <tr>
@@ -221,7 +221,7 @@ you, please open an issue on GitHub.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>trakt.user.collection</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>)</div><div class='output co'>#&gt; # A tibble: 2,638 x 8
+    <pre class="examples"><div class='input'><span class='fu'>trakt.user.collection</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>)</div><div class='output co'>#&gt; # A tibble: 2,645 x 8
 #&gt;    collected_at        updated_at          title   year trakt slug   imdb  tmdb 
 #&gt;    &lt;dttm&gt;              &lt;dttm&gt;              &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;
 #&gt;  1 2015-12-06 03:22:28 2016-01-12 00:31:23 Star …  1977 7     star-… tt00… 11   
@@ -234,7 +234,7 @@ you, please open an issue on GitHub.</p>
 #&gt;  8 2012-12-17 06:28:41 2016-01-12 00:31:33 The S…  2007 28    the-s… tt04… 35   
 #&gt;  9 2012-11-22 09:35:35 2016-01-12 00:31:31 Etern…  2004 29    etern… tt03… 38   
 #&gt; 10 2013-03-29 07:18:32 2016-01-12 00:31:10 Pirat…  2006 31    pirat… tt03… 58   
-#&gt; # … with 2,628 more rows</div></pre>
+#&gt; # … with 2,635 more rows</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

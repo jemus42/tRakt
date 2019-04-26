@@ -168,19 +168,19 @@ only contains date information.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client.id</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client.id</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>url</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: The API endpoint. Either a full URL like
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The API endpoint. Either a full URL like
 <code>"https://api.trakt.tv/shows/breaking-bad"</code> or just the endpoint like <code>shows/breaking-bad</code>.</p></td>
     </tr>
     <tr>
       <th>client.id</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: API client ID. If no value is set, this defaults
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: API client ID. If no value is set, this defaults
 to the package's client ID. See <a href='trakt_credentials.html'>trakt_credentials</a> for further information.</p></td>
     </tr>
     <tr>
@@ -193,7 +193,7 @@ or other headers, and don't want to waste resources/bandwidth on the response bo
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>The parsed (<code><a href='https://www.rdocumentation.org/packages/jsonlite/topics/fromJSON'>jsonlite::fromJSON()</a></code>) content of the API response.
+    <p>The parsed (<code><a href='https://rdrr.io/pkg/jsonlite/man/fromJSON.html'>jsonlite::fromJSON()</a></code>) content of the API response.
 An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> if the response is an empty <code>JSON</code> array.</p>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
@@ -250,7 +250,7 @@ or user information of non-public profiles.</p>
 #&gt; 
 #&gt; $headers
 #&gt; $date
-#&gt; [1] "Mon, 01 Apr 2019 06:25:28 GMT"
+#&gt; [1] "Fri, 26 Apr 2019 22:09:22 GMT"
 #&gt; 
 #&gt; $`content-type`
 #&gt; [1] "application/json; charset=utf-8"
@@ -262,13 +262,13 @@ or user information of non-public profiles.</p>
 #&gt; [1] "max-age=0, private, must-revalidate"
 #&gt; 
 #&gt; $`cf-railgun`
-#&gt; [1] "15afb65a84 stream 0.000000 0200 57da"
+#&gt; [1] "3ae383dd05 stream 0.000000 0200 57da"
 #&gt; 
 #&gt; $`content-encoding`
 #&gt; [1] "gzip"
 #&gt; 
 #&gt; $etag
-#&gt; [1] "W/\"475850d2d6dfe0f9e48396fc573b64da\""
+#&gt; [1] "W/\"33a482912a9a9629c3ef959af0e1fbdd\""
 #&gt; 
 #&gt; $vary
 #&gt; [1] "Accept-Encoding"
@@ -283,10 +283,10 @@ or user information of non-public profiles.</p>
 #&gt; [1] "false"
 #&gt; 
 #&gt; $`x-request-id`
-#&gt; [1] "73b3cbd7-7c36-467c-894e-6d1495c403a1"
+#&gt; [1] "7a583bb5-d6df-4e6a-be02-3eb9ba25c09e"
 #&gt; 
 #&gt; $`x-runtime`
-#&gt; [1] "0.008696"
+#&gt; [1] "0.011735"
 #&gt; 
 #&gt; $`x-xss-protection`
 #&gt; [1] "1; mode=block"
@@ -298,7 +298,7 @@ or user information of non-public profiles.</p>
 #&gt; [1] "cloudflare"
 #&gt; 
 #&gt; $`cf-ray`
-#&gt; [1] "4c087c6a9ceec50e-ORD"
+#&gt; [1] "4cdbe1741ed5c52a-ORD"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "insensitive" "list"       

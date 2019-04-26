@@ -177,7 +177,7 @@ just use <code>*.summary</code> functions or <a href='trakt.seasons.season.html'
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>target</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: The ID of the item requested. Preferably the
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
 <code>Trakt ID</code> (e.g. <code>1390</code>), <code>slug</code> (e.g. <code>"game-of-thrones"</code>), or <code>IMDb ID</code> (e.g. <code>"tt0944947"</code>).
 Can also be of length greater than 1, in which case the function is called on all
 <code>target</code> values separately and the result is combined.</p></td>
@@ -212,31 +212,31 @@ of one API call <em>per element in each argument</em>. Please be kind to the API
 <span class='fu'>trakt.movies.ratings</span>(<span class='st'>"tron-legacy-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;   rating votes distribution      id               type  
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;            &lt;chr&gt; 
-#&gt; 1   7.27 12111 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
+#&gt; 1   7.27 12205 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
 <span class='co'># A show's ratings</span>
 <span class='fu'>trakt.shows.ratings</span>(<span class='st'>"game-of-thrones"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;   rating votes distribution      id              type 
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;           &lt;chr&gt;
-#&gt; 1   9.30 89444 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># Ratings for seasons 1 through 5</span>
+#&gt; 1   9.30 90944 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># Ratings for seasons 1 through 5</span>
 <span class='fu'>trakt.seasons.ratings</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 5
 #&gt;   rating votes distribution      id       season
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;     &lt;int&gt;
-#&gt; 1   8.21   210 &lt;tibble [10 × 2]&gt; futurama      1
+#&gt; 1   8.20   213 &lt;tibble [10 × 2]&gt; futurama      1
 #&gt; 2   8.31   155 &lt;tibble [10 × 2]&gt; futurama      2
-#&gt; 3   8.50   133 &lt;tibble [10 × 2]&gt; futurama      3
+#&gt; 3   8.49   134 &lt;tibble [10 × 2]&gt; futurama      3
 #&gt; 4   8.29   127 &lt;tibble [10 × 2]&gt; futurama      4
 #&gt; 5   8.21   109 &lt;tibble [10 × 2]&gt; futurama      5</div><div class='input'>
 <span class='co'># Ratings for episodes 1 through 7 of season 1</span>
 <span class='fu'>trakt.episodes.ratings</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 6
 #&gt;   rating votes distribution      id       season episode
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;     &lt;dbl&gt;   &lt;int&gt;
-#&gt; 1   8.11  1936 &lt;tibble [10 × 2]&gt; futurama      1       1
-#&gt; 2   7.88  1513 &lt;tibble [10 × 2]&gt; futurama      1       2
-#&gt; 3   7.89  1381 &lt;tibble [10 × 2]&gt; futurama      1       3
-#&gt; 4   7.81  1230 &lt;tibble [10 × 2]&gt; futurama      1       4
-#&gt; 5   7.78  1186 &lt;tibble [10 × 2]&gt; futurama      1       5
-#&gt; 6   7.84  1169 &lt;tibble [10 × 2]&gt; futurama      1       6
-#&gt; 7   7.77  1085 &lt;tibble [10 × 2]&gt; futurama      1       7</div></pre>
+#&gt; 1   8.11  1950 &lt;tibble [10 × 2]&gt; futurama      1       1
+#&gt; 2   7.88  1520 &lt;tibble [10 × 2]&gt; futurama      1       2
+#&gt; 3   7.89  1389 &lt;tibble [10 × 2]&gt; futurama      1       3
+#&gt; 4   7.81  1240 &lt;tibble [10 × 2]&gt; futurama      1       4
+#&gt; 5   7.79  1192 &lt;tibble [10 × 2]&gt; futurama      1       5
+#&gt; 6   7.84  1175 &lt;tibble [10 × 2]&gt; futurama      1       6
+#&gt; 7   7.76  1092 &lt;tibble [10 × 2]&gt; futurama      1       7</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

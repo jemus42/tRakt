@@ -160,26 +160,26 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>trakt.user.watchlist</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"movies"</span>, <span class='st'>"shows"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+    <pre class="usage"><span class='fu'>trakt.user.watchlist</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"movies"</span>, <span class='st'>"shows"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>user</th>
-      <td><p>Target username. Defaults to <code><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption("trakt_username")</a></code>.
+      <td><p>Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
     <tr>
       <th>type</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"shows"</code> or <code>"movies"</code>. For season/episode-specific
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"shows"</code> or <code>"movies"</code>. For season/episode-specific
 functions, values <code>seasons</code> or <code>episodes</code> are also allowed.</p></td>
     </tr>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.</p></td>
     </tr>
     </table>
@@ -200,7 +200,7 @@ returns more variables and should generally only be used if required.</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Defaults to movie watchlist and minimal info</span>
-<span class='fu'>trakt.user.watchlist</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>)</div><div class='output co'>#&gt; # A tibble: 271 x 10
+<span class='fu'>trakt.user.watchlist</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>)</div><div class='output co'>#&gt; # A tibble: 289 x 10
 #&gt;     rank      id listed_at           type  title   year trakt slug   imdb  tmdb 
 #&gt;    &lt;int&gt;   &lt;int&gt; &lt;dttm&gt;              &lt;chr&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;
 #&gt;  1     1  7.27e7 2015-12-21 06:37:12 movie Creed   2015 2182… creed… tt30… 3122…
@@ -213,7 +213,7 @@ returns more variables and should generally only be used if required.</p></td>
 #&gt;  8     8  9.36e7 2016-05-11 19:56:23 movie Free …  2016 1970… free-… tt11… 3161…
 #&gt;  9     9  8.44e7 2016-03-04 07:18:16 movie Green…  2016 1934… green… tt40… 3139…
 #&gt; 10    10  9.36e7 2016-05-11 19:57:19 movie Money…  2016 2099… money… tt22… 3038…
-#&gt; # … with 261 more rows</div></pre>
+#&gt; # … with 279 more rows</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

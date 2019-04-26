@@ -110,7 +110,7 @@
       <h1>Show Analysis: 24</h1>
                         <h4 class="author">Lukas Burk</h4>
             
-            <h4 class="date">2019-04-01</h4>
+            <h4 class="date">2019-04-26</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jemus42/tRakt/blob/master/vignettes/show-analysis-24.Rmd"><code>vignettes/show-analysis-24.Rmd</code></a></small>
       <div class="hidden name"><code>show-analysis-24.Rmd</code></div>
@@ -119,8 +119,8 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(tRakt)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(tibble) <span class="co"># For glimpse()</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tRakt)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tibble) <span class="co"># For glimpse()</span></a></code></pre></div>
 <div id="step-1-search" class="section level2">
 <h2 class="hasAnchor">
 <a href="#step-1-search" class="anchor"></a>Step 1: Search</h2>
@@ -142,8 +142,8 @@ In this case, we’ll use <code><a href="../reference/trakt.seasons.summary.html
 <a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt; Observations: 9</span></a>
 <a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt; Variables: 13</span></a>
 <a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt; $ season         &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9</span></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt; $ rating         &lt;dbl&gt; 8.45455, 8.41026, 8.32353, 8.36134, 8.41509, 7.47…</span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt; $ votes          &lt;int&gt; 220, 156, 136, 119, 106, 93, 86, 78, 113</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt; $ rating         &lt;dbl&gt; 8.44000, 8.39873, 8.33577, 8.37500, 8.42593, 7.48…</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt; $ votes          &lt;int&gt; 225, 158, 137, 120, 108, 94, 89, 81, 115</span></a>
 <a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt; $ episode_count  &lt;int&gt; 24, 24, 24, 24, 24, 24, 24, 24, 12</span></a>
 <a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt; $ aired_episodes &lt;int&gt; 24, 24, 24, 24, 24, 24, 24, 24, 12</span></a>
 <a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; $ title          &lt;chr&gt; "Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day…</span></a>
@@ -159,7 +159,7 @@ In this case, we’ll use <code><a href="../reference/trakt.seasons.summary.html
 <h2 class="hasAnchor">
 <a href="#step-3-tidying-up" class="anchor"></a>Step 3: Tidying up</h2>
 <p>We’re interested in the <code>episodes</code> list-column, which needs unnesting. In this case we can simply use <code><a href="https://dplyr.tidyverse.org/reference/bind.html">dplyr::bind_rows</a></code> to take the list of <code>tbls</code> that is <code>seasons$episodes</code> and basically <code>rbind</code> them all together, meaning the result is a <code>tibble</code> of the episode data we care about.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(dplyr) </a>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr) </a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb4-3" data-line-number="3">episodes &lt;-<span class="st"> </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_rows</a></span>(seasons<span class="op">$</span>episodes)</a>
 <a class="sourceLine" id="cb4-4" data-line-number="4"><span class="kw"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>(episodes)</a>
@@ -170,11 +170,11 @@ In this case, we’ll use <code><a href="../reference/trakt.seasons.summary.html
 <a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt; $ title                  &lt;chr&gt; "12:00 A.M. - 1:00 A.M.", "1:00 A.M. - 2:…</span></a>
 <a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt; $ episode_abs            &lt;int&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…</span></a>
 <a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt; $ overview               &lt;chr&gt; "It is California Presidential Primary Da…</span></a>
-<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt; $ rating                 &lt;dbl&gt; 7.79821, 7.84396, 7.83429, 7.85509, 7.809…</span></a>
-<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt; $ votes                  &lt;int&gt; 1343, 1019, 869, 835, 789, 768, 753, 746,…</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt; $ rating                 &lt;dbl&gt; 7.79881, 7.84457, 7.83486, 7.85663, 7.811…</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt; $ votes                  &lt;int&gt; 1347, 1023, 872, 837, 791, 770, 755, 748,…</span></a>
 <a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt; $ comment_count          &lt;int&gt; 2, 2, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,…</span></a>
 <a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt; $ first_aired            &lt;chr&gt; "2001-11-06T05:00:00.000Z", "2001-11-13T0…</span></a>
-<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt; $ updated_at             &lt;chr&gt; "2019-03-31T13:17:45.000Z", "2019-03-31T1…</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt; $ updated_at             &lt;chr&gt; "2019-04-26T15:30:38.000Z", "2019-04-26T1…</span></a>
 <a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt; $ available_translations &lt;list&gt; [&lt;"bg", "bs", "cs", "da", "de", "el", "e…</span></a>
 <a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt; $ runtime                &lt;int&gt; 42, 43, 44, 43, 43, 44, 44, 44, 44, 44, 4…</span></a>
 <a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt; $ trakt                  &lt;chr&gt; "146247", "146248", "146249", "146250", "…</span></a>
@@ -186,21 +186,21 @@ In this case, we’ll use <code><a href="../reference/trakt.seasons.summary.html
 <h2 class="hasAnchor">
 <a href="#step-4-graph" class="anchor"></a>Step 4: Graph!</h2>
 <p>Now we have our episode data in a tidy form, might as well look at it.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)</a>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ggplot2)</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(<span class="dt">data =</span> episodes, <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">x =</span> episode, <span class="dt">y =</span> rating, <span class="dt">color =</span> votes)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/facet_wrap">facet_wrap</a></span>(<span class="op">~</span>season, <span class="dt">nrow =</span> <span class="dv">1</span>, <span class="dt">labeller =</span> label_both, <span class="dt">scales =</span> <span class="st">"free_x"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_continuous">scale_x_continuous</a></span>(<span class="dt">breaks =</span> scales<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/scales/topics/pretty_breaks">pretty_breaks</a></span>()) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_continuous">scale_y_continuous</a></span>(<span class="dt">breaks =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="fl">.5</span>), <span class="dt">minor_breaks =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/seq">seq</a></span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="fl">.25</span>), <span class="dt">limits =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">7</span>, <span class="dv">9</span>)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_viridis">scale_color_viridis_c</a></span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/labs">labs</a></span>(<span class="dt">title =</span> <span class="st">"24: Episode Ratings on trakt.tv"</span>,</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/ggplot.html">ggplot</a></span>(<span class="dt">data =</span> episodes, <span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/aes.html">aes</a></span>(<span class="dt">x =</span> episode, <span class="dt">y =</span> rating, <span class="dt">color =</span> votes)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/geom_point.html">geom_point</a></span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="st">  </span><span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/facet_wrap.html">facet_wrap</a></span>(<span class="op">~</span>season, <span class="dt">nrow =</span> <span class="dv">1</span>, <span class="dt">labeller =</span> label_both, <span class="dt">scales =</span> <span class="st">"free_x"</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/scale_continuous.html">scale_x_continuous</a></span>(<span class="dt">breaks =</span> scales<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/scales/man/pretty_breaks.html">pretty_breaks</a></span>()) <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="st">  </span><span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/scale_continuous.html">scale_y_continuous</a></span>(<span class="dt">breaks =</span> <span class="kw"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="fl">.5</span>), <span class="dt">minor_breaks =</span> <span class="kw"><a href="https://rdrr.io/r/base/seq.html">seq</a></span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="fl">.25</span>), <span class="dt">limits =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">7</span>, <span class="dv">9</span>)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="st">  </span><span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/scale_viridis.html">scale_color_viridis_c</a></span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="st">  </span><span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/labs.html">labs</a></span>(<span class="dt">title =</span> <span class="st">"24: Episode Ratings on trakt.tv"</span>,</a>
 <a class="sourceLine" id="cb5-10" data-line-number="10">       <span class="dt">subtitle =</span> <span class="st">"Episode ratings by trakt.tv users by season"</span>,</a>
 <a class="sourceLine" id="cb5-11" data-line-number="11">       <span class="dt">x =</span> <span class="st">"Episode Number"</span>, <span class="dt">y =</span> <span class="st">"Rating (0-10)"</span>, <span class="dt">color =</span> <span class="st">"# of Votes"</span>,</a>
 <a class="sourceLine" id="cb5-12" data-line-number="12">       <span class="dt">caption =</span> <span class="st">"jemus42.github.io/tRakt"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggtheme">theme_minimal</a></span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/theme">theme</a></span>(<span class="dt">legend.position =</span> <span class="st">"bottom"</span>,</a>
-<a class="sourceLine" id="cb5-15" data-line-number="15">        <span class="dt">axis.text.x =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/element">element_text</a></span>(<span class="dt">size =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/element">rel</a></span>(.<span class="dv">6</span>)))</a></code></pre></div>
+<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="st">  </span><span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/ggtheme.html">theme_minimal</a></span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="st">  </span><span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/theme.html">theme</a></span>(<span class="dt">legend.position =</span> <span class="st">"bottom"</span>,</a>
+<a class="sourceLine" id="cb5-15" data-line-number="15">        <span class="dt">axis.text.x =</span> <span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/element.html">element_text</a></span>(<span class="dt">size =</span> <span class="kw"><a href="https://rdrr.io/pkg/ggplot2/man/element.html">rel</a></span>(.<span class="dv">6</span>)))</a></code></pre></div>
 <p><img src="show-analysis-24_files/figure-html/24_episodes_plot-1.png" width="100%"></p>
 </div>
   </div>

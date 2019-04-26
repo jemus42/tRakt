@@ -160,31 +160,31 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"movies"</span>, <span class='st'>"seasons"</span>, <span class='st'>"shows"</span>, <span class='st'>"episodes"</span>), <span class='kw'>rating</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+    <pre class="usage"><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"movies"</span>, <span class='st'>"seasons"</span>, <span class='st'>"shows"</span>, <span class='st'>"episodes"</span>), <span class='kw'>rating</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>user</th>
-      <td><p>Target username. Defaults to <code><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption("trakt_username")</a></code>.
+      <td><p>Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
     <tr>
       <th>type</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"shows"</code> or <code>"movies"</code>. For season/episode-specific
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"shows"</code> or <code>"movies"</code>. For season/episode-specific
 functions, values <code>seasons</code> or <code>episodes</code> are also allowed.</p></td>
     </tr>
     <tr>
       <th>rating</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/integer'>integer(1L)</a></code>: Rating to filter by. Can be <code>1</code> through <code>10</code>, default is <code>NULL</code></p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/integer.html'>integer(1L)</a></code>: Rating to filter by. Can be <code>1</code> through <code>10</code>, default is <code>NULL</code></p></td>
     </tr>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.</p></td>
     </tr>
     </table>
@@ -204,20 +204,20 @@ returns more variables and should generally only be used if required.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>)</div><div class='output co'>#&gt; # A tibble: 325 x 9
+    <pre class="examples"><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>)</div><div class='output co'>#&gt; # A tibble: 327 x 9
 #&gt;    rated_at            rating type  title      year trakt  slug      imdb  tmdb 
 #&gt;    &lt;dttm&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
-#&gt;  1 2019-03-23 22:31:56      7 movie Videodro…  1983 680    videodro… tt00… 837  
-#&gt;  2 2019-03-22 23:41:38      6 movie The Mummy  2017 179407 the-mumm… tt23… 2820…
-#&gt;  3 2019-03-21 02:06:11      7 movie Frequency  2000 5736   frequenc… tt01… 10559
-#&gt;  4 2019-03-20 23:30:18      8 movie Three Bi…  2017 266092 three-bi… tt50… 3599…
-#&gt;  5 2019-03-20 14:08:04      7 movie The Empi…  2015 222274 the-empi… tt42… 3425…
-#&gt;  6 2019-03-20 02:27:29      7 movie Winter's…  2010 25290  winter-s… tt13… 39013
-#&gt;  7 2019-03-19 00:45:23      9 movie Swiss Ar…  2016 223914 swiss-ar… tt40… 3470…
-#&gt;  8 2019-03-18 03:27:19      9 movie Spider-M…  2018 205404 spider-m… tt46… 3248…
-#&gt;  9 2019-03-18 01:46:58      7 movie Bad Time…  2018 292712 bad-time… tt66… 4460…
-#&gt; 10 2019-03-17 17:35:50      7 movie Triple F…  2019 242616 triple-f… tt14… 3993…
-#&gt; # … with 315 more rows</div><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>)</div><div class='output co'>#&gt; # A tibble: 144 x 9
+#&gt;  1 2019-04-18 23:43:10      6 movie Glass      2019 298686 glass-20… tt68… 4504…
+#&gt;  2 2019-04-14 20:39:40      8 movie Imperium   2016 224616 imperium… tt47… 3746…
+#&gt;  3 2019-03-23 22:31:56      7 movie Videodro…  1983 680    videodro… tt00… 837  
+#&gt;  4 2019-03-22 23:41:38      6 movie The Mummy  2017 179407 the-mumm… tt23… 2820…
+#&gt;  5 2019-03-21 02:06:11      7 movie Frequency  2000 5736   frequenc… tt01… 10559
+#&gt;  6 2019-03-20 23:30:18      8 movie Three Bi…  2017 266092 three-bi… tt50… 3599…
+#&gt;  7 2019-03-20 14:08:04      7 movie The Empi…  2015 222274 the-empi… tt42… 3425…
+#&gt;  8 2019-03-20 02:27:29      7 movie Winter's…  2010 25290  winter-s… tt13… 39013
+#&gt;  9 2019-03-19 00:45:23      9 movie Swiss Ar…  2016 223914 swiss-ar… tt40… 3470…
+#&gt; 10 2019-03-18 03:27:19      9 movie Spider-M…  2018 205404 spider-m… tt46… 3248…
+#&gt; # … with 317 more rows</div><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>)</div><div class='output co'>#&gt; # A tibble: 144 x 9
 #&gt;    rated_at            rating type  title      year trakt  slug      imdb  tmdb 
 #&gt;    &lt;dttm&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
 #&gt;  1 2018-07-28 05:41:30      9 movie Watchmen   2009 7729   watchmen… tt04… 13183

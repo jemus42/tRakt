@@ -164,8 +164,8 @@ It does not use OAuth2, so you can only get data for a user with a
     
     </div>
 
-    <pre class="usage"><span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+    <pre class="usage"><span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
   <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -173,18 +173,18 @@ It does not use OAuth2, so you can only get data for a user with a
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>user</th>
-      <td><p>Target username. Defaults to <code><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption("trakt_username")</a></code>.
+      <td><p>Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
     <tr>
       <th>type</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"shows"</code> or <code>"movies"</code>. For season/episode-specific
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"shows"</code> or <code>"movies"</code>. For season/episode-specific
 functions, values <code>seasons</code> or <code>episodes</code> are also allowed.</p></td>
     </tr>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.</p></td>
     </tr>
     <tr>
@@ -211,20 +211,20 @@ be nice to the API.</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Use noseasons = TRUE to avoid receiving detailed season/episode data</span>
-<span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 475 x 10
+<span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 479 x 10
 #&gt;    plays last_watched_at     last_updated_at     title  year trakt slug  tvdb 
 #&gt;    &lt;int&gt; &lt;dttm&gt;              &lt;dttm&gt;              &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt;  1   226 2019-04-01 05:05:15 2019-04-01 05:05:15 Last…  2014 60267 last… 2785…
-#&gt;  2     1 2019-04-01 04:47:33 2019-04-01 04:47:33 Mada…  2014 60857 mada… 2816…
-#&gt;  3    40 2019-04-01 04:16:25 2019-04-01 04:16:25 Bill…  2016 77692 bill… 2795…
-#&gt;  4    24 2019-03-31 08:51:38 2019-03-31 08:51:38 The …  2016 1089… the-… 3140…
-#&gt;  5   292 2019-03-31 06:48:43 2019-03-31 06:48:43 Supe…  2015 98985 supe… 2956…
-#&gt;  6    26 2019-03-31 06:26:56 2019-03-31 06:26:56 Star…  2017 1104… star… 3287…
-#&gt;  7    49 2019-03-29 04:45:53 2019-03-29 04:45:53 The …  2015 1009… the-… 2991…
-#&gt;  8    37 2019-03-28 17:46:26 2019-03-28 17:46:26 SEAL…  2017 1191… seal… 3286…
-#&gt;  9  3249 2019-03-28 16:38:08 2019-03-28 16:38:08 How …  2005 1095  how-… 75760
-#&gt; 10    17 2019-03-28 04:32:31 2019-03-28 04:32:31 The …  2018 1344… the-… 3506…
-#&gt; # … with 465 more rows, and 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
+#&gt;  1     1 2019-04-26 18:42:29 2019-04-26 18:12:29 Stre…  2019 1464… stre… 3623…
+#&gt;  2   299 2019-04-26 16:39:52 2019-04-26 16:39:52 Supe…  2015 98985 supe… 2956…
+#&gt;  3  1314 2019-04-26 15:42:41 2019-04-26 15:42:41 Broo…  2013 48587 broo… 2695…
+#&gt;  4    17 2019-04-26 05:06:26 2019-04-26 05:06:26 The …  2018 1257… the-… 3387…
+#&gt;  5    41 2019-04-25 21:38:40 2019-04-25 21:38:41 SEAL…  2017 1191… seal… 3286…
+#&gt;  6  1147 2019-04-24 08:24:09 2019-04-24 08:24:09 Tosh…  2009 17933 tosh… 97731
+#&gt;  7    29 2019-04-24 04:03:46 2019-04-24 04:03:46 Star…  2017 1104… star… 3287…
+#&gt;  8   216 2019-04-23 23:30:34 2019-04-23 23:30:34 Game…  2011 1390  game… 1213…
+#&gt;  9    80 2019-04-23 16:30:45 2019-04-23 16:30:45 Stre…  2013 60545 stre… 2702…
+#&gt; 10  1948 2019-04-23 05:25:38 2019-04-23 05:25:39 The …  2007 1409  the-… 80379
+#&gt; # … with 469 more rows, and 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

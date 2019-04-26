@@ -162,22 +162,22 @@ which it was logged (e.g. <em>scrobble</em> or <em>checkin</em>).</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>trakt.user.history</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>, <span class='kw'>start_at</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>end_at</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+    <pre class="usage"><span class='fu'>trakt.user.history</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>, <span class='kw'>start_at</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>end_at</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>user</th>
-      <td><p>Target username. Defaults to <code><a href='https://www.rdocumentation.org/packages/base/topics/options'>getOption("trakt_username")</a></code>.
+      <td><p>Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
     <tr>
       <th>type</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"shows"</code> or <code>"movies"</code>. For season/episode-specific
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"shows"</code> or <code>"movies"</code>. For season/episode-specific
 functions, values <code>seasons</code> or <code>episodes</code> are also allowed.</p></td>
     </tr>
     <tr>
@@ -187,12 +187,12 @@ than <code>0</code> and will be coerced to <code>integer</code>.</p></td>
     </tr>
     <tr>
       <th>start_at, end_at</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: A time-window to filter by. Must be coercible
-to a datetime object of class <code>POSIXct</code>. See <a href='https://www.rdocumentation.org/packages/base/topics/ISOdatetime'>ISOdate</a> for further information.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: A time-window to filter by. Must be coercible
+to a datetime object of class <code>POSIXct</code>. See <a href='https://rdrr.io/r/base/ISOdatetime.html'>ISOdate</a> for further information.</p></td>
     </tr>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://www.rdocumentation.org/packages/base/topics/character'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.</p></td>
     </tr>
     </table>
@@ -216,13 +216,13 @@ duplicate variable names, the preferref handling of which is left to the user.</
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># The last 5 movies that user "jemus42" has watched</span>
 <span class='fu'>trakt.user.history</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 10
-#&gt;        id watched_at          action type  title   year trakt slug   imdb  tmdb 
-#&gt;     &lt;dbl&gt; &lt;dttm&gt;              &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;
-#&gt; 1  4.33e9 2019-03-23 01:08:55 scrob… movie Video…  1983 680   video… tt00… 837  
-#&gt; 2  4.33e9 2019-03-22 23:29:34 check… movie The M…  2017 1794… the-m… tt23… 2820…
-#&gt; 3  4.33e9 2019-03-21 01:28:41 check… movie Frequ…  2000 5736  frequ… tt01… 10559
-#&gt; 4  4.33e9 2019-03-20 23:04:33 scrob… movie Three…  2017 2660… three… tt50… 3599…
-#&gt; 5  4.33e9 2019-03-20 03:51:53 scrob… movie The E…  2015 2222… the-e… tt42… 3425…</div></pre>
+#&gt;        id watched_at          action  type  title  year trakt slug   imdb  tmdb 
+#&gt;     &lt;dbl&gt; &lt;dttm&gt;              &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;
+#&gt; 1  4.39e9 2019-04-18 21:44:40 scrobb… movie Glass  2019 2986… glass… tt68… 4504…
+#&gt; 2  4.39e9 2019-04-16 14:36:39 scrobb… movie Mad …  2015 56360 mad-m… tt13… 76341
+#&gt; 3  4.38e9 2019-04-14 20:36:32 scrobb… movie Impe…  2016 2246… imper… tt47… 3746…
+#&gt; 4  4.33e9 2019-03-23 01:08:55 scrobb… movie Vide…  1983 680   video… tt00… 837  
+#&gt; 5  4.33e9 2019-03-22 23:29:34 checkin movie The …  2017 1794… the-m… tt23… 2820…</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
