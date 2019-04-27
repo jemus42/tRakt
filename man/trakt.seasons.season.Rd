@@ -12,7 +12,7 @@ trakt.seasons.season(target, seasons = 1L, extended = c("min", "full"))
 Can also be of length greater than 1, in which case the function is called on all
 \code{target} values separately and the result is combined.}
 
-\item{seasons}{\code{integer(1) [1L]}: The season(s) to get. Use 0 for special episodes.}
+\item{seasons}{\code{integer(1) [1L]}: The season(s) to get. Use \code{0} for specials.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}

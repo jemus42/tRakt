@@ -8,7 +8,7 @@
 #' at the endpoint `/shows/:show_id/seasons/:season_num`.
 #'
 #' @inheritParams trakt_api_common_parameters
-#' @param seasons `integer(1) [1L]`: The season(s) to get. Use 0 for special episodes.
+#' @param seasons `integer(1) [1L]`: The season(s) to get. Use `0` for specials.
 #' @inheritParams trakt.seasons.summary
 #' @return A [tibble()][tibble::tibble-package].
 #' @export
@@ -51,7 +51,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
   fix_tibble_response(response)
 }
 
-#' Get a show's season information
+#' Get a show's seasons
 #'
 #' Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes
 #' each season has. With `episodes == TRUE` and `extended == "full"`, this function
@@ -60,6 +60,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 #' @details
 #' This function wraps [this API method](https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show)
 #' with the endpoint `/shows/:show_id/seasons`.
+#'
 #' @inheritParams trakt_api_common_parameters
 #' @param episodes `logical(1) [FALSE]`: If `TRUE`, all episodes for each season
 #' are appended as a list-column, with the amount of variables depending on `extended`.
@@ -76,9 +77,12 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 #' @importFrom purrr map
 #' @importFrom purrr map_df
 #' @examples
+#' # Get just the season numbers and their IDs
 #' trakt.seasons.summary("breaking-bad", extended = "min")
 #'
 #' \dontrun{
+#' # Get season numbers, ratings, votes, titles and other metadata as well as
+#' # a list-column containing all episode data
 #' trakt.seasons.summary("utopia", extended = "full", episodes = TRUE)
 #' }
 trakt.seasons.summary <- function(target, extended = c("min", "full"), episodes = FALSE,

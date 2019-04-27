@@ -2,7 +2,7 @@
 % Please edit documentation in R/trakt-seasons.R
 \name{trakt.seasons.summary}
 \alias{trakt.seasons.summary}
-\title{Get a show's season information}
+\title{Get a show's seasons}
 \usage{
 trakt.seasons.summary(target, extended = c("min", "full"),
   episodes = FALSE, drop.specials = TRUE, drop.unaired = TRUE)
@@ -38,9 +38,12 @@ This function wraps \href{https://trakt.docs.apiary.io/#reference/seasons/summar
 with the endpoint \code{/shows/:show_id/seasons}.
 }
 \examples{
+# Get just the season numbers and their IDs
 trakt.seasons.summary("breaking-bad", extended = "min")
 
 \dontrun{
+# Get season numbers, ratings, votes, titles and other metadata as well as
+# a list-column containing all episode data
 trakt.seasons.summary("utopia", extended = "full", episodes = TRUE)
 }
 }
