@@ -90,7 +90,7 @@ trakt.seasons.season(show_info$trakt, seasons = c(1, 2), extended = "full") %>%
 #> $ votes                  <int> 1019, 818, 743, 681, 649, 678, 681, 600, …
 #> $ comment_count          <int> 3, 0, 1, 2, 1, 1, 1, 1, 0, 1, 2, 1
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00…
-#> $ updated_at             <dttm> 2019-04-26 04:06:10, 2019-04-26 04:06:15…
+#> $ updated_at             <dttm> 2019-04-27 04:06:00, 2019-04-27 04:06:17…
 #> $ available_translations <list> [<"bs", "de", "el", "en", "es", "fr", "h…
 #> $ runtime                <int> 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 5…
 #> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056…
@@ -101,7 +101,7 @@ trakt.seasons.season(show_info$trakt, seasons = c(1, 2), extended = "full") %>%
 
 ## Setting credentials
 
-The APIv2 requires at least a `client id` for the API calls.  
+The API requires at least a `client id` for the API calls.  
 Calling `trakt_credentials()` will set everything up for you, but you
 either have to manually plug your values in (see
 `?trakt_credentials()`), or have the values supplied via enviroment
@@ -113,23 +113,27 @@ trakt_username=jemus42
 trakt_client_id=12fc1de7[...]3d629afdf2
 ```
 
-  - `trakt_username` Optional. For functions that pull a user’s watched
-    shows or stats (`trakt.user.*`)
-  - `trakt_client_id` Required. It’s used in the HTTP headers for the
-    API calls, which is kind of a biggie.
+  - `trakt_username` **Optional**. For functions that pull a user’s
+    watched shows or stats (`trakt.user.*`), this just sets the default
+    value so you don’t have to keep supplying it in individual function
+    calls.
+  - `trakt_client_id` **Required**. It’s used in the HTTP headers for
+    the API calls, which is kind of a biggie.
 
 To get your credentials, [you have to have an (approved) app over at
 trakt.tv](http://trakt.tv/oauth/applications).  
 Don’t worry, it’s really easy to set up. Even I did it.
 
-### Use my app’s client.id as a fallback
-
 As a convenience for you, and also to make automated testing a little
-easier, `trakt_credentials()` automatically sets my `client.id` as a
-fallback, so you theoretically never need to supply your own
+easier, when the package is loaded either directly via `library(tRakt)`
+or indirectly via any kind of `tRakt::function` call,
+`trakt_credentials()` automatically sets my registered app’s `client id`
+as a fallback, so you theoretically never need to supply your own
 credentials. However, if you want to actually use this package for some
-project, I do not recommend relying on my credentials. That would make
-me a sad panda.
+project, I do not recommend relying on my credentials.  
+That would make me a sad panda. As of now, the trakt.tv API does not
+have any rate-limiting, but it’s not guaranteed to stay like this in the
+future.
 
 # Code of Conduct
 
