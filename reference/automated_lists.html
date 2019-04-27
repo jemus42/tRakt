@@ -344,11 +344,11 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1      247 Aven…  2019 Part o… After t… 2019-04-26     181 us      http:/…
-#&gt; 2      148 Aven…  2018 An ent… As the … 2018-04-27     149 us      http:/…
-#&gt; 3       90 Capt…  2019 Higher… The sto… 2019-03-08     124 us      http:/…
-#&gt; 4       52 Cold…  2019 Meet N… Nels Co… 2019-02-08     118 us      http:/…
-#&gt; 5       40 Glass  2019 You Ca… In a se… 2019-01-18     130 us      http:/…
+#&gt; 1      160 Aven…  2019 Part o… After t… 2019-04-26     181 us      http:/…
+#&gt; 2       90 Aven…  2018 An ent… As the … 2018-04-27     149 us      http:/…
+#&gt; 3       52 Capt…  2019 Higher… The sto… 2019-03-08     124 us      http:/…
+#&gt; 4       28 What…  2019 She ca… Magical… 2019-02-08     117 &lt;NA&gt;    http:/…
+#&gt; 5       25 Glass  2019 You Ca… In a se… 2019-01-18     130 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
@@ -367,21 +367,21 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 15 x 8
 #&gt;    list_count title              year trakt  slug             tvdb  imdb   tmdb 
 #&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;
-#&gt;  1        572 Chambers           2019 145789 chambers-2019    3615… tt794… 80055
+#&gt;  1        597 Chambers           2019 145789 chambers-2019    3615… tt794… 80055
 #&gt;  2        381 The Society        2019 145772 the-society      3615… tt877… &lt;NA&gt; 
-#&gt;  3        318 Dead to Me         2019 146064 dead-to-me-2019  3618… tt806… &lt;NA&gt; 
-#&gt;  4        313 When They See Us   2019 144923 when-they-see-us 3603… tt713… 81355
+#&gt;  3        344 When They See Us   2019 144923 when-they-see-us 3603… tt713… 81355
+#&gt;  4        318 Dead to Me         2019 146064 dead-to-me-2019  3618… tt806… &lt;NA&gt; 
 #&gt;  5        215 7Seeds             2019 140359 7seeds           3560… tt934… 85940
-#&gt;  6        134 What/If            2019 135769 what-if-2019     3522… tt886… 81940
-#&gt;  7         75 Cannon Busters     2019 123305 cannon-busters   3341… tt506… &lt;NA&gt; 
-#&gt;  8         71 Jinn               2019 130869 jinn             3477… tt892… &lt;NA&gt; 
-#&gt;  9         70 Street Food        2019 146436 street-food      3623… tt100… 87832
+#&gt;  6        171 WHAT / IF          2019 135769 what-if-2019     3522… tt886… 81940
+#&gt;  7         85 Street Food        2019 146436 street-food      3623… tt100… 87832
+#&gt;  8         78 Jinn               2019 130869 jinn             3477… tt892… &lt;NA&gt; 
+#&gt;  9         75 Cannon Busters     2019 123305 cannon-busters   3341… tt506… &lt;NA&gt; 
 #&gt; 10         66 The Politician     2019 145654 the-politician-… 3614… tt797… &lt;NA&gt; 
 #&gt; 11         61 Tuca &amp; Bertie      2019 145299 tuca-bertie-2019 3610… tt803… 79356
 #&gt; 12         58 Leila              2019 145058 leila            3607… tt933… &lt;NA&gt; 
 #&gt; 13         56 How to Sell Drug…  2019 145328 how-to-sell-dru… 3610… tt918… &lt;NA&gt; 
-#&gt; 14         34 Saint Seiya: Kni…  2019 145687 saint-seiya-kni… 3514… tt690… &lt;NA&gt; 
-#&gt; 15         30 High Seas          2019 137034 high-seas        3535… tt896… 88239</div><div class='input'>
+#&gt; 14         37 High Seas          2019 137034 high-seas        3535… tt896… 88239
+#&gt; 15         34 Saint Seiya: Kni…  2019 145687 saint-seiya-kni… 3514… tt690… &lt;NA&gt; </div><div class='input'>
 <span class='co'># Get the most popular German-language movies between 1990 and 2010</span>
 <span class='fu'>trakt.popular</span>(<span class='st'>"movies"</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1990</span>, <span class='fl'>2010</span>))</div><div class='output co'>#&gt; # A tibble: 10 x 6
 #&gt;    title                    year trakt slug                       imdb      tmdb
