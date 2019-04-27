@@ -12,6 +12,15 @@ test_that("trakt.user.stats works", {
     "movies", "shows", "seasons", "episodes",
     "network", "ratings"
   ))
+
+  userstats <- trakt.user.stats(user = c(user, "sean"))
+  expect_is(userstats, "list")
+  expect_named(userstats, c(user, "sean"))
+  expect_named(userstats[[user]], c(
+    "movies", "shows", "seasons", "episodes",
+    "network", "ratings"
+  ))
+
 })
 
 test_that("trakt.media.stats does things", {
