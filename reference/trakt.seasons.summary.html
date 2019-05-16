@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get a show's season information — trakt.seasons.summary • tRakt</title>
+<title>Get a show's seasons — trakt.seasons.summary • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -38,7 +38,7 @@
 
 
 
-<meta property="og:title" content="Get a show's season information — trakt.seasons.summary" />
+<meta property="og:title" content="Get a show's seasons — trakt.seasons.summary" />
 
 <meta property="og:description" content="Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes
 each season has. With episodes == TRUE and extended == &quot;full&quot;, this function
@@ -152,7 +152,7 @@ just a single API call." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get a show's season information</h1>
+    <h1>Get a show's seasons</h1>
     <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/trakt-seasons.R'><code>R/trakt-seasons.R</code></a></small>
     <div class="hidden name"><code>trakt.seasons.summary.Rd</code></div>
     </div>
@@ -215,7 +215,8 @@ with the endpoint <code>/shows/:show_id/seasons</code>.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>trakt.seasons.summary</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 4
+    <pre class="examples"><div class='input'><span class='co'># Get just the season numbers and their IDs</span>
+<span class='fu'>trakt.seasons.summary</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 4
 #&gt;   season trakt tvdb   tmdb 
 #&gt;    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;
 #&gt; 1      1 3950  30272  3572 
@@ -223,7 +224,9 @@ with the endpoint <code>/shows/:show_id/seasons</code>.</p>
 #&gt; 3      3 3952  171641 3575 
 #&gt; 4      4 3953  297361 3576 
 #&gt; 5      5 3954  490110 3578 </div><div class='input'>
-</div><div class='input'><span class='fu'>trakt.seasons.summary</span>(<span class='st'>"utopia"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>, <span class='kw'>episodes</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 13
+</div><div class='input'><span class='co'># Get season numbers, ratings, votes, titles and other metadata as well as</span>
+<span class='co'># a list-column containing all episode data</span>
+<span class='fu'>trakt.seasons.summary</span>(<span class='st'>"utopia"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>, <span class='kw'>episodes</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 13
 #&gt;   season rating votes episode_count aired_episodes title overview
 #&gt;    &lt;int&gt;  &lt;dbl&gt; &lt;int&gt;         &lt;int&gt;          &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   
 #&gt; 1      1   8.70   166             6              6 Seas… When a …

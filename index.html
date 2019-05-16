@@ -174,11 +174,11 @@ Please note that while this package <em>basically</em> is an API-client, it is a
 <a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt; $ title                  &lt;chr&gt; "Episode 1", "Episode 2", "Episode 3", "E…</span></a>
 <a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt; $ episode_abs            &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12</span></a>
 <a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt; $ overview               &lt;chr&gt; "When five strangers from an online comic…</span></a>
-<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.25025, 8.13325, 8.15612, 8.11160, 8.318…</span></a>
-<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt; $ votes                  &lt;int&gt; 1019, 818, 743, 681, 649, 678, 681, 600, …</span></a>
+<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.25000, 8.12985, 8.15416, 8.11274, 8.312…</span></a>
+<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt; $ votes                  &lt;int&gt; 1024, 824, 746, 683, 652, 680, 683, 601, …</span></a>
 <a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt; $ comment_count          &lt;int&gt; 3, 0, 1, 2, 1, 1, 1, 1, 0, 1, 2, 1</span></a>
 <a class="sourceLine" id="cb2-42" data-line-number="42"><span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00…</span></a>
-<a class="sourceLine" id="cb2-43" data-line-number="43"><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2019-04-27 04:06:00, 2019-04-27 04:06:17…</span></a>
+<a class="sourceLine" id="cb2-43" data-line-number="43"><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2019-05-16 15:33:47, 2019-05-16 15:27:26…</span></a>
 <a class="sourceLine" id="cb2-44" data-line-number="44"><span class="co">#&gt; $ available_translations &lt;list&gt; [&lt;"bs", "de", "el", "en", "es", "fr", "h…</span></a>
 <a class="sourceLine" id="cb2-45" data-line-number="45"><span class="co">#&gt; $ runtime                &lt;int&gt; 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 5…</span></a>
 <a class="sourceLine" id="cb2-46" data-line-number="46"><span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056…</span></a>
@@ -189,24 +189,21 @@ Please note that while this package <em>basically</em> is an API-client, it is a
 <div id="setting-credentials" class="section level2">
 <h2 class="hasAnchor">
 <a href="#setting-credentials" class="anchor"></a>Setting credentials</h2>
-<p>The APIv2 requires at least a <code>client id</code> for the API calls.<br>
+<p>The API requires at least a <code>client id</code> for the API calls.<br>
 Calling <code><a href="reference/trakt_credentials.html">trakt_credentials()</a></code> will set everything up for you, but you either have to manually plug your values in (see <code>?trakt_credentials()</code>), or have the values supplied via enviroment variables in your <code>.Renviron</code> like this:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># tRakt</span></a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="va">trakt_username=</span>jemus42</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3"><span class="va">trakt_client_id=</span>12fc1de7[<span class="ex">...</span>]3d629afdf2</a></code></pre></div>
 <ul>
 <li>
-<code>trakt_username</code> Optional. For functions that pull a user’s watched shows or stats (<code>trakt.user.*</code>)</li>
+<code>trakt_username</code> <strong>Optional</strong>. For functions that pull a user’s watched shows or stats (<code>trakt.user.*</code>), this just sets the default value so you don’t have to keep supplying it in individual function calls.</li>
 <li>
-<code>trakt_client_id</code> Required. It’s used in the HTTP headers for the API calls, which is kind of a biggie.</li>
+<code>trakt_client_id</code> <strong>Required</strong>. It’s used in the HTTP headers for the API calls, which is kind of a biggie.</li>
 </ul>
 <p>To get your credentials, <a href="http://trakt.tv/oauth/applications">you have to have an (approved) app over at trakt.tv</a>.<br>
 Don’t worry, it’s really easy to set up. Even I did it.</p>
-<div id="use-my-apps-client-id-as-a-fallback" class="section level3">
-<h3 class="hasAnchor">
-<a href="#use-my-apps-client-id-as-a-fallback" class="anchor"></a>Use my app’s client.id as a fallback</h3>
-<p>As a convenience for you, and also to make automated testing a little easier, <code><a href="reference/trakt_credentials.html">trakt_credentials()</a></code> automatically sets my <code>client.id</code> as a fallback, so you theoretically never need to supply your own credentials. However, if you want to actually use this package for some project, I do not recommend relying on my credentials. That would make me a sad panda.</p>
-</div>
+<p>As a convenience for you, and also to make automated testing a little easier, when the package is loaded either directly via <code><a href="https://rdrr.io/r/base/library.html">library(tRakt)</a></code> or indirectly via any kind of <code>tRakt::function</code> call, <code><a href="reference/trakt_credentials.html">trakt_credentials()</a></code> automatically sets my registered app’s <code>client id</code> as a fallback, so you theoretically never need to supply your own credentials. However, if you want to actually use this package for some project, I do not recommend relying on my credentials.<br>
+That would make me a sad panda. As of now, the trakt.tv API does not have any rate-limiting, but it’s not guaranteed to stay like this in the future.</p>
 </div>
 </div>
 <div id="code-of-conduct" class="section level1">

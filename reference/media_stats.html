@@ -202,23 +202,23 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 <span class='fu'>trakt.movies.stats</span>(<span class='st'>"inception-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 8
 #&gt;   watchers  plays collectors comments lists votes type   id            
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         
-#&gt; 1   261708 348945     165533      109 38990 48580 movies inception-2010</div><div class='input'><span class='co'># Stats for multiple shows at once</span>
+#&gt; 1   264541 352722     168335      110 39403 48935 movies inception-2010</div><div class='input'><span class='co'># Stats for multiple shows at once</span>
 <span class='fu'>trakt.shows.stats</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"breaking-bad"</span>, <span class='st'>"game-of-thrones"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 9
 #&gt;   watchers   plays collectors collected_episo… comments  lists votes type  id   
 #&gt;      &lt;int&gt;   &lt;int&gt;      &lt;int&gt;            &lt;int&gt;    &lt;int&gt;  &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1   427765  2.61e7     360450         17970628      412 121335 65114 shows brea…
-#&gt; 2   816207  4.81e7    1164379         62014635      303 263054 90988 shows game…</div><div class='input'>
+#&gt; 1   431479  2.63e7     365548         18219326      412 122180 65548 shows brea…
+#&gt; 2   835797  4.96e7    1187472         63443982      307 263096 92250 shows game…</div><div class='input'>
 <span class='co'># Stats for multiple episodes</span>
 <span class='fu'>trakt.episodes.stats</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 9
 #&gt;   watchers  plays collectors comments lists votes season episode id      
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;int&gt; &lt;chr&gt;   
-#&gt; 1    89577 119436     123251        1   172  1950      1       1 futurama
-#&gt; 2    85273 113698     122877        1   115  1520      1       2 futurama
-#&gt; 3    84174 112232     122865        0   103  1389      1       3 futurama
-#&gt; 4    82536 110048     122294        0   106  1240      1       4 futurama
-#&gt; 5    81881 109175     122519        1   105  1192      1       5 futurama
-#&gt; 6    81813 109084     122192        0   103  1175      1       6 futurama
-#&gt; 7    80979 107973     121994        0   102  1092      1       7 futurama</div></pre>
+#&gt; 1    90495 120660     125919        1   173  1955      1       1 futurama
+#&gt; 2    86060 114747     125393        1   115  1524      1       2 futurama
+#&gt; 3    84950 113267     125379        0   104  1393      1       3 futurama
+#&gt; 4    83298 111065     124803        0   107  1245      1       4 futurama
+#&gt; 5    82628 110171     125027        1   107  1196      1       5 futurama
+#&gt; 6    82563 110084     124714        0   104  1179      1       6 futurama
+#&gt; 7    81768 109025     124649        0   103  1100      1       7 futurama</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
