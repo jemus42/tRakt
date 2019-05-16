@@ -28,7 +28,7 @@ This is `tRakt` version ``r desc::desc_get("Version")``.
 It contains functions to retrieve data from [trakt.tv](https://trakt.tv/), a site similiar to [IMDb](https://imdb.com) with a broader focus including TV shows and more social features – and, most importantly, [a publicly available API](https://trakt.docs.apiary.io).
 
 It's an [R package](http://r-project.org) primarily used by (i.e. built for) [this webapp](http://trakt.jemu.name).  
-Please note that while this package *basically* is an API-client, it is a little more opinionated and might deliver results that don not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.
+Please note that while this package is *basically* an API-client, it is a little more opinionated and might deliver results that do not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.
 
 ## Installation
 
@@ -71,7 +71,7 @@ trakt_username=jemus42
 trakt_client_id=12fc1de7[...]3d629afdf2
 ```
 
-* `trakt_username` **Optional**. For functions that pull a user's watched shows or stats (`trakt.user.*`), this just sets the default value so you don't have to keep supplying it in individual function calls.
+* `trakt_username` **Optional**. For functions that retrieve a user's watched shows or stats (`trakt.user.*`), this just sets the default value so you don't have to keep supplying it in individual function calls when you're just looking at your own data anyway.
 * `trakt_client_id` **Required**. It's used in the HTTP headers for the API calls, which is kind of a biggie.
 
 To get your credentials, [you have to have an (approved) app over at trakt.tv](http://trakt.tv/oauth/applications).  
