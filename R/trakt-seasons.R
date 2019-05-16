@@ -125,8 +125,7 @@ trakt.seasons.summary <- function(target, extended = c("min", "full"), episodes 
       episodes %>%
         select(-ids) %>%
         cbind(fix_ids(episodes$ids)) %>%
-        as_tibble() %>%
-        fix_ratings() %>%
+        fix_tibble_response() %>%
         set_names(., sub("number", "episode", names(.)))
     })
   }
