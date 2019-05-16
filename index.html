@@ -124,7 +124,7 @@
 <p>This is <code>tRakt</code> version <code>0.14.0.9000</code>.<br>
 It contains functions to retrieve data from <a href="https://trakt.tv/">trakt.tv</a>, a site similiar to <a href="https://imdb.com">IMDb</a> with a broader focus including TV shows and more social features – and, most importantly, <a href="https://trakt.docs.apiary.io">a publicly available API</a>.</p>
 <p>It’s an <a href="http://r-project.org">R package</a> primarily used by (i.e. built for) <a href="http://trakt.jemu.name">this webapp</a>.<br>
-Please note that while this package <em>basically</em> is an API-client, it is a little more opinionated and might deliver results that don not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.</p>
+Please note that while this package is <em>basically</em> an API-client, it is a little more opinionated and might deliver results that do not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -196,7 +196,7 @@ Calling <code><a href="reference/trakt_credentials.html">trakt_credentials()</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3"><span class="va">trakt_client_id=</span>12fc1de7[<span class="ex">...</span>]3d629afdf2</a></code></pre></div>
 <ul>
 <li>
-<code>trakt_username</code> <strong>Optional</strong>. For functions that pull a user’s watched shows or stats (<code>trakt.user.*</code>), this just sets the default value so you don’t have to keep supplying it in individual function calls.</li>
+<code>trakt_username</code> <strong>Optional</strong>. For functions that retrieve a user’s watched shows or stats (<code>trakt.user.*</code>), this just sets the default value so you don’t have to keep supplying it in individual function calls when you’re just looking at your own data anyway.</li>
 <li>
 <code>trakt_client_id</code> <strong>Required</strong>. It’s used in the HTTP headers for the API calls, which is kind of a biggie.</li>
 </ul>
