@@ -6,12 +6,12 @@ library(stringr)
 library(tidyr)
 
 # Futurama ----
-futurama <- as_tibble(tRakt::trakt.get_all_episodes("futurama"))
+futurama <- trakt.seasons.season("futurama",  seasons = 1:7, extended = "full")
 usethis::use_data(futurama, overwrite = TRUE)
 
 
 # Game of Thrones ----
-got <- trakt.get_all_episodes("game-of-thrones")
+got <- trakt.seasons.season("game-of-thrones", seasons = 1:8, extended = "full")
 
 # Wiki
 "https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes" %>%
