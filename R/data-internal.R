@@ -1,25 +1,25 @@
 #' Genres
 #' @source <https://trakt.docs.apiary.io/#reference/genres/list/get-genres>
 #' @examples
-#' genres
+#' head(genres)
 "genres"
 
 #' Language codes
 #' @source <https://trakt.docs.apiary.io/#reference/languages/list/get-languages>
 #' @examples
-#' languages
+#' head(languages)
 "languages"
 
 #' Available networks
 #' @source <https://trakt.docs.apiary.io/#reference/networks/list/get-networks>
 #' @examples
-#' networks
+#' head(networks)
 "networks"
 
 #' Country codes
 #' @source <https://trakt.docs.apiary.io/#reference/countries/list/get-countries>
 #' @examples
-#' countries
+#' head(countries)
 "countries"
 
 #' Certifications
