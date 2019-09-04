@@ -35,11 +35,10 @@
 #' }
 trakt.user.collection <- function(user = getOption("trakt_username"),
                                   type = c("shows", "movies"),
-                                  extended = c("min", "full"),
                                   unnest_episodes = FALSE) {
   check_username(user)
   type <- match.arg(type)
-  extended <- match.arg(extended)
+  # extended <- match.arg(extended)
 
   if (length(user) > 1) {
     names(user) <- user
@@ -48,7 +47,7 @@ trakt.user.collection <- function(user = getOption("trakt_username"),
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url("users", user, "collection", type, extended = extended)
+  url <- build_trakt_url("users", user, "collection", type)
   response <- trakt_get(url = url)
 
   if (is_empty(response)) return(tibble())
