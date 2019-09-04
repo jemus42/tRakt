@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,12 +40,12 @@
 
 
 
+
 <meta property="og:title" content="Futurama episodes — futurama" />
-
 <meta property="og:description" content="This data comes from https://trakt.tv and serves as an example of episode data output." />
-
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
+
 
 <meta name="robots" content="noindex">
 
@@ -78,6 +80,7 @@
 </script>
 <noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
 
   </head>
 
@@ -129,7 +132,6 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
@@ -144,6 +146,7 @@
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -155,13 +158,12 @@
     </div>
 
     <div class="ref-description">
-    
     <p>This data comes from <a href='https://trakt.tv'>https://trakt.tv</a> and serves as an example of episode data output.</p>
-    
     </div>
 
     <pre class="usage"><span class='no'>futurama</span></pre>
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> with 124 rows and 18 variables:</p><dl class='dl-horizontal'>
@@ -177,44 +179,41 @@
 <dt>trakt, tvdb, tmdb</dt><dd><p>Episode IDs for trakt.tv, TVDb, and TMDb</p></dd>
 <dt>year</dt><dd><p>Year of first airing</p></dd>
 <dt>epid</dt><dd><p>Episode ID in <code>s00e00</code> format</p></dd>
+
 </dl>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Episode datasets: <code><a href='gameofthrones.html'>gameofthrones</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>futurama</span></div><div class='output co'>#&gt; # A tibble: 124 x 18
+    <pre class="examples"><div class='input'><span class='no'>futurama</span></div><div class='output co'>#&gt; # A tibble: 124 x 16
 #&gt;    season episode title episode_abs overview rating votes comment_count
 #&gt;     &lt;int&gt;   &lt;int&gt; &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;int&gt;         &lt;int&gt;
-#&gt;  1      1       1 Spac…           1 Fry, a …   8.11  1905             1
-#&gt;  2      1       2 The …           2 After j…   7.88  1490             1
-#&gt;  3      1       3 I, R…           3 "Everyo…   7.90  1358             0
-#&gt;  4      1       4 Love…           4 "On a m…   7.81  1209             0
-#&gt;  5      1       5 Fear…           5 At Madi…   7.79  1165             1
-#&gt;  6      1       6 A Fi…           6 A thous…   7.84  1148             0
-#&gt;  7      1       7 My T…           7 The cre…   7.78  1067             0
-#&gt;  8      1       8 A Bi…           8 A big p…   7.84  1045             0
-#&gt;  9      1       9 Hell…           9 "During…   7.93  1050             1
-#&gt; 10      2       1 A Fl…          10 The Pla…   7.90  1098             0
-#&gt; # … with 114 more rows, and 10 more variables: first_aired &lt;dttm&gt;,
-#&gt; #   updated_at &lt;dttm&gt;, runtime &lt;int&gt;, trakt &lt;int&gt;, tvdb &lt;int&gt;, imdb &lt;chr&gt;,
-#&gt; #   tmdb &lt;int&gt;, tvrage &lt;int&gt;, year &lt;dbl&gt;, epid &lt;chr&gt;</div></pre>
+#&gt;  1      1       1 Spac…           1 Fry, a …   8.12  1996             2
+#&gt;  2      1       2 The …           2 After j…   7.88  1552             1
+#&gt;  3      1       3 I, R…           3 "Everyo…   7.89  1419             0
+#&gt;  4      1       4 Love…           4 "On a m…   7.81  1271             0
+#&gt;  5      1       5 Fear…           5 At Madi…   7.78  1223             1
+#&gt;  6      1       6 A Fi…           6 A thous…   7.84  1201             0
+#&gt;  7      1       7 My T…           7 The cre…   7.76  1123             0
+#&gt;  8      1       8 A Bi…           8 A big p…   7.84  1104             0
+#&gt;  9      1       9 Hell…           9 "During…   7.92  1101             1
+#&gt; 10      2       1 A Fl…          10 The Pla…   7.91  1152             0
+#&gt; # … with 114 more rows, and 8 more variables: first_aired &lt;dttm&gt;,
+#&gt; #   updated_at &lt;dttm&gt;, available_translations &lt;list&gt;, runtime &lt;int&gt;,
+#&gt; #   trakt &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      
       <li><a href="#format">Format</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -222,13 +221,16 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

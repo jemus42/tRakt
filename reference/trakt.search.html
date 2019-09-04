@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,15 +40,15 @@
 
 
 
-<meta property="og:title" content="Search for a show via text query or id — trakt.search" />
 
+<meta property="og:title" content="Search for a show via text query or id — trakt.search" />
 <meta property="og:description" content="Search for a show or movie with a keyword (e.g. &quot;Breaking Bad&quot;) and receive
 basic info of the first search result. It's main use is to retrieve
 the ids or proper show/movie title for further use, as well
 as receiving a quick overview of a show/movie." />
-
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
+
 
 <meta name="robots" content="noindex">
 
@@ -81,6 +83,7 @@ as receiving a quick overview of a show/movie." />
 </script>
 <noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
 
   </head>
 
@@ -132,7 +135,6 @@ as receiving a quick overview of a show/movie." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
@@ -147,6 +149,7 @@ as receiving a quick overview of a show/movie." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -158,12 +161,10 @@ as receiving a quick overview of a show/movie." />
     </div>
 
     <div class="ref-description">
-    
     <p>Search for a show or movie with a keyword (e.g. <code>"Breaking Bad"</code>) and receive
 basic info of the first search result. It's main use is to retrieve
 the ids or proper show/movie title for further use, as well
 as receiving a quick overview of a show/movie.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>trakt.search</span>(<span class='no'>query</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movie"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
@@ -171,7 +172,7 @@ as receiving a quick overview of a show/movie.</p>
 
 <span class='fu'>trakt.search.byid</span>(<span class='no'>id</span>, <span class='kw'>id_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"trakt"</span>, <span class='st'>"imdb"</span>, <span class='st'>"tmdb"</span>, <span class='st'>"tvdb"</span>),
   <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movie"</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -209,12 +210,11 @@ returns more variables and should generally only be used if required.</p></td>
       <td><p><code>character(1) ["trakt"]</code>: The type of <code>id</code>. One of <code>trakt</code>, <code>imdb</code>, <code>tmdb</code>, <code>tvdb</code>.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> containing a <code>n_result</code> result.
 If no results are found, the <code>tibble</code> has 0 rows.</p>
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The amount of
@@ -222,12 +222,10 @@ information returned is equal to <code>.summary</code> API methods and in turn d
 the value of <code>extended</code>.
 See also <a href='https://trakt.docs.apiary.io/#reference/search'>the API reference here</a> for
 which fields of the item metadata are searched by default.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other API-basics: <code><a href='trakt_credentials.html'>trakt_credentials</a></code>,
   <code><a href='trakt_get.html'>trakt_get</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A show</span>
@@ -235,8 +233,9 @@ which fields of the item metadata are searched by default.</p>
 #&gt;   type   score title           year trakt  slug          tvdb  imdb        tmdb 
 #&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;
 #&gt; 1 show  1000   Breaking Bad    2008 1388   breaking-bad  81189 tt0903747   1396 
-#&gt; 2 show   397.  Breaking Bad:…  2018 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
-#&gt; 3 show    12.0 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># A show by its trakt id, and now with more information</span>
+#&gt; 2 show   403.  Breaking Bad:…  2018 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
+#&gt; 3 show    12.2 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># \dontrun{</span>
+<span class='co'># A show by its trakt id, and now with more information</span>
 <span class='fu'>trakt.search.byid</span>(<span class='fl'>1388</span>, <span class='st'>"trakt"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 29
 #&gt;   type  score title  year overview first_aired         runtime certification
 #&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;    &lt;dttm&gt;                &lt;int&gt; &lt;chr&gt;        
@@ -251,33 +250,31 @@ which fields of the item metadata are searched by default.</p>
 <span class='fu'>trakt.search</span>(<span class='st'>"J. K. Simmons"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"person"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 12
 #&gt;   type  score name  biography birthday   death birthplace homepage trakt slug 
 #&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;date&gt;     &lt;lgl&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 pers…  1.53 J.K.… "Jonatha… 1955-01-09 NA    Detroit, … NA       15722 j-k-…
+#&gt; 1 pers…  1.56 J.K.… "Jonatha… 1955-01-09 NA    Detroit, … NA       15722 j-k-…
 #&gt; # … with 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'>
 <span class='co'># A movie or a show, two of each</span>
 <span class='fu'>trakt.search</span>(<span class='st'>"Tron"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"movie"</span>, <span class='st'>"show"</span>), <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 4 x 9
 #&gt;   type    score title           year trakt slug            imdb      tmdb  tvdb 
 #&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
 #&gt; 1 movie 1000    Tron            1982 66    tron-1982       tt0084827 97    &lt;NA&gt; 
-#&gt; 2 movie  720.   TRON: Legacy    2010 12601 tron-legacy-20… tt1104001 20526 &lt;NA&gt; 
-#&gt; 3 show   610.   Tron: Uprising  2012 34209 tron-uprising   tt1812523 34356 2584…
-#&gt; 4 show     8.62 Game of Thron…  2011 1390  game-of-thrones tt0944947 1399  1213…</div></pre>
+#&gt; 2 movie  705.   TRON: Legacy    2010 12601 tron-legacy-20… tt1104001 20526 &lt;NA&gt; 
+#&gt; 3 show   581.   Tron: Uprising  2012 34209 tron-uprising   tt1812523 34356 2584…
+#&gt; 4 show     8.39 Game of Thron…  2011 1390  game-of-thrones tt0944947 1399  1213…</div><div class='input'># }
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#details">Details</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -285,13 +282,16 @@ which fields of the item metadata are searched by default.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

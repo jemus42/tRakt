@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,13 +40,13 @@
 
 
 
-<meta property="og:title" content="Game of Thrones episodes — gameofthrones" />
 
+<meta property="og:title" content="Game of Thrones episodes — gameofthrones" />
 <meta property="og:description" content="This data comes from https://trakt.tv and
 https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes." />
-
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
+
 
 <meta name="robots" content="noindex">
 
@@ -79,6 +81,7 @@ https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes." />
 </script>
 <noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
 
   </head>
 
@@ -130,7 +133,6 @@ https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
@@ -145,6 +147,7 @@ https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -156,14 +159,13 @@ https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes." />
     </div>
 
     <div class="ref-description">
-    
     <p>This data comes from <a href='https://trakt.tv'>https://trakt.tv</a> and
 <a href='https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes'>https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes</a>.</p>
-    
     </div>
 
     <pre class="usage"><span class='no'>gameofthrones</span></pre>
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> with 67 rows and 17 variables:</p><dl class='dl-horizontal'>
@@ -181,44 +183,41 @@ https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes." />
 <dt>trakt, tvdb, tmdb</dt><dd><p>Episode IDs for trakt.tv, TVDb, and TMDb</p></dd>
 <dt>year</dt><dd><p>Year of first airing</p></dd>
 <dt>epid</dt><dd><p>Episode ID in <code>s00e00</code> format</p></dd>
+
 </dl>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Episode datasets: <code><a href='futurama.html'>futurama</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>gameofthrones</span></div><div class='output co'>#&gt; # A tibble: 67 x 20
-#&gt;    episode_abs episode season runtime title overview rating votes viewers
-#&gt;          &lt;int&gt;   &lt;int&gt;  &lt;int&gt;   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;
-#&gt;  1           1       1      1      61 Wint… Ned Sta…   8.09 14255    2.22
-#&gt;  2           2       2      1      55 The … Having …   8.09 11124    2.2 
-#&gt;  3           3       3      1      57 Lord… Arrivin…   8.03 10218    2.44
-#&gt;  4           4       4      1      55 Crip… Ned loo…   8.06  9730    2.45
-#&gt;  5           5       5      1      54 The … Incense…   8.09  9421    2.58
-#&gt;  6           6       6      1      52 A Go… "Reinst…   8.28  9371    2.44
-#&gt;  7           7       7      1      57 You … Explain…   8.26  9196    2.4 
-#&gt;  8           8       8      1      58 The … In the …   8.12  8882    2.72
-#&gt;  9           9       9      1      56 Bael… With Sa…   8.34  8915    2.66
-#&gt; 10          10      10      1      52 Fire… As trag…   8.57  8981    3.04
-#&gt; # … with 57 more rows, and 11 more variables: director &lt;chr&gt;, writer &lt;chr&gt;,
-#&gt; #   first_aired &lt;dttm&gt;, year &lt;dbl&gt;, comment_count &lt;int&gt;, trakt &lt;int&gt;,
-#&gt; #   imdb &lt;chr&gt;, tvdb &lt;int&gt;, tmdb &lt;int&gt;, tvrage &lt;int&gt;, updated_at &lt;dttm&gt;</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>gameofthrones</span></div><div class='output co'>#&gt; # A tibble: 73 x 19
+#&gt;    episode_abs director writer viewers season episode title overview rating
+#&gt;          &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;    &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;
+#&gt;  1           1 Tim Van… David…    2.22      1       1 Wint… Ned Sta…   8.09
+#&gt;  2           2 Tim Van… David…    2.2       1       2 The … Having …   8.10
+#&gt;  3           3 Brian K… David…    2.44      1       3 Lord… Arrivin…   8.03
+#&gt;  4           4 Brian K… Bryan…    2.45      1       4 Crip… Ned loo…   8.07
+#&gt;  5           5 Brian K… David…    2.58      1       5 The … Incense…   8.10
+#&gt;  6           6 Daniel … Story…    2.44      1       6 A Go… "Reinst…   8.28
+#&gt;  7           7 Daniel … David…    2.4       1       7 You … Explain…   8.26
+#&gt;  8           8 Daniel … Georg…    2.72      1       8 The … In the …   8.13
+#&gt;  9           9 Alan Ta… David…    2.66      1       9 Bael… With Sa…   8.34
+#&gt; 10          10 Alan Ta… David…    3.04      1      10 Fire… As trag…   8.57
+#&gt; # … with 63 more rows, and 10 more variables: votes &lt;int&gt;, comment_count &lt;int&gt;,
+#&gt; #   first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;, available_translations &lt;list&gt;,
+#&gt; #   runtime &lt;int&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      
       <li><a href="#format">Format</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -226,13 +225,16 @@ https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes." />
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

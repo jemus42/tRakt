@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,16 +40,16 @@
 
 
 
-<meta property="og:title" content="Make an API call and receive parsed output — trakt_get" />
 
+<meta property="og:title" content="Make an API call and receive parsed output — trakt_get" />
 <meta property="og:description" content="The most basic form of API interaction: Querying a specific URL and getting its parsed
 result. If the response is empty, the function returns an empty tibble(),
 and if there are date-time variables present in the response, they are converted to
 POSIXct via lubridate::ymd_hms() or to Date via lubridate::as_date() if the variable
 only contains date information." />
-
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
+
 
 <meta name="robots" content="noindex">
 
@@ -82,6 +84,7 @@ only contains date information." />
 </script>
 <noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
 
   </head>
 
@@ -133,7 +136,6 @@ only contains date information." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
@@ -148,6 +150,7 @@ only contains date information." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -159,17 +162,15 @@ only contains date information." />
     </div>
 
     <div class="ref-description">
-    
     <p>The most basic form of API interaction: Querying a specific URL and getting its parsed
 result. If the response is empty, the function returns an empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>,
 and if there are date-time variables present in the response, they are converted to
 <code>POSIXct</code> via <code><a href='http://lubridate.tidyverse.org/reference/ymd_hms.html'>lubridate::ymd_hms()</a></code> or to <code>Date</code> via <code><a href='http://lubridate.tidyverse.org/reference/as_date.html'>lubridate::as_date()</a></code> if the variable
 only contains date information.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client.id</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -190,28 +191,24 @@ and its content returned. This is useful if you are only interested in status co
 or other headers, and don't want to waste resources/bandwidth on the response body.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>The parsed (<code><a href='https://rdrr.io/pkg/jsonlite/man/fromJSON.html'>jsonlite::fromJSON()</a></code>) content of the API response.
 An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> if the response is an empty <code>JSON</code> array.</p>
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>See <a href='https://trakt.docs.apiary.io'>the official API reference</a> for a detailed overview
 of available methods. Most methods of potential interest for data collection have
 dedicated functions in this package.</p>
-    
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>No OAuth2 methods are supported yet, meaning you don't have access to <code>POST</code> methods
 or user information of non-public profiles.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other API-basics: <code><a href='trakt.search.html'>trakt.search</a></code>,
   <code><a href='trakt_credentials.html'>trakt_credentials</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A simple request to a direct URL</span>
@@ -250,7 +247,7 @@ or user information of non-public profiles.</p>
 #&gt; 
 #&gt; $headers
 #&gt; $date
-#&gt; [1] "Thu, 16 May 2019 20:50:41 GMT"
+#&gt; [1] "Wed, 04 Sep 2019 17:07:04 GMT"
 #&gt; 
 #&gt; $`content-type`
 #&gt; [1] "application/json; charset=utf-8"
@@ -262,13 +259,13 @@ or user information of non-public profiles.</p>
 #&gt; [1] "max-age=0, private, must-revalidate"
 #&gt; 
 #&gt; $`cf-railgun`
-#&gt; [1] "a8069e95ca stream 0.000000 0200 57da"
+#&gt; [1] "787de7bb3e stream 0.000000 0200 57da"
 #&gt; 
 #&gt; $`content-encoding`
 #&gt; [1] "gzip"
 #&gt; 
 #&gt; $etag
-#&gt; [1] "W/\"19fbedd50dfead0d62f481af034202f7\""
+#&gt; [1] "W/\"966c8d693eddf6c0b3fab957fad1f960\""
 #&gt; 
 #&gt; $vary
 #&gt; [1] "Accept-Encoding"
@@ -283,10 +280,10 @@ or user information of non-public profiles.</p>
 #&gt; [1] "false"
 #&gt; 
 #&gt; $`x-request-id`
-#&gt; [1] "026a9d93-7e92-4198-9c70-17357bc1218c"
+#&gt; [1] "00501a8e-b3f7-4804-a709-4a18c78e6770"
 #&gt; 
 #&gt; $`x-runtime`
-#&gt; [1] "0.012336"
+#&gt; [1] "0.004784"
 #&gt; 
 #&gt; $`x-xss-protection`
 #&gt; [1] "1; mode=block"
@@ -298,7 +295,7 @@ or user information of non-public profiles.</p>
 #&gt; [1] "cloudflare"
 #&gt; 
 #&gt; $`cf-ray`
-#&gt; [1] "4d8039b3aaa555c8-ORD"
+#&gt; [1] "51118ec0bcc3e22a-ORD"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "insensitive" "list"       
@@ -335,20 +332,16 @@ or user information of non-public profiles.</p>
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#details">Details</a></li>
-
       <li><a href="#note">Note</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -356,13 +349,16 @@ or user information of non-public profiles.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

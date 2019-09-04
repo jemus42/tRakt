@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,15 +40,15 @@
 
 
 
-<meta property="og:title" content="See which movies / shows are popular — automated_lists" />
 
+<meta property="og:title" content="See which movies / shows are popular — automated_lists" />
 <meta property="og:description" content="According to the API docs, popularity is calculated based both ratings
 and number of ratings. Trending items are those being watched right now, where
 items with the most users watching are returned first. Anticipation is measured
 by the number of user-created lists an items is part of while not being released yet." />
-
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
+
 
 <meta name="robots" content="noindex">
 
@@ -81,6 +83,7 @@ by the number of user-created lists an items is part of while not being released
 </script>
 <noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
 
   </head>
 
@@ -132,7 +135,6 @@ by the number of user-created lists an items is part of while not being released
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
@@ -147,6 +149,7 @@ by the number of user-created lists an items is part of while not being released
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -158,12 +161,10 @@ by the number of user-created lists an items is part of while not being released
     </div>
 
     <div class="ref-description">
-    
     <p>According to the API docs, popularity is calculated based both ratings
 and number of ratings. Trending items are those being watched right now, where
 items with the most users watching are returned first. Anticipation is measured
 by the number of user-created lists an items is part of while not being released yet.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>trakt.popular</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
@@ -207,7 +208,7 @@ by the number of user-created lists an items is part of while not being released
 
 <span class='fu'>trakt.updates</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
   <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>start_date</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>() - <span class='fl'>7</span>)</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -288,11 +289,10 @@ to the current date. Value must either be standard <code>YYYY-MM-DD</code> forma
 of class <a href='https://rdrr.io/r/base/Dates.html'>Date</a>, which will then be coerced via <a href='https://rdrr.io/r/base/character.html'>as.character()</a>.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>These functions access the automatically updated lists provided by trakt.tv.
@@ -312,43 +312,42 @@ lists a movie/show appears on.</p></li>
 <li><p><strong>Updates</strong>: Returns all movies/shows updated since the specified UTC <code>start_date</code>.
 In this case, the upper bound for <code>limit</code> is 100.</p></li>
 </ul>
-    <p>The functions for <strong>Played</strong>, <strong>Watched</strong>, <strong>Collected</strong> and <strong>Played</strong> each return the
+
+<p>The functions for <strong>Played</strong>, <strong>Watched</strong>, <strong>Collected</strong> and <strong>Played</strong> each return the
 same additional variables besides the media information: <code>watcher_count</code>,
 <code>play_count</code>, <code>collected_count</code>, <code>collector_count</code>.</p>
-    
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p><code>trakt.updates</code> does not support filters.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><a href='search_filters.html'>search_filters</a>, for more information on search filters.</p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Get popular shows with only ids</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+<span class='co'># Get popular shows with only ids</span>
 <span class='fu'>trakt.popular</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"shows"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 7
-#&gt;    title                  year trakt slug                  tvdb   imdb     tmdb 
-#&gt;    &lt;chr&gt;                 &lt;int&gt; &lt;chr&gt; &lt;chr&gt;                 &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;
-#&gt;  1 Game of Thrones        2011 1390  game-of-thrones       121361 tt09449… 1399 
-#&gt;  2 Breaking Bad           2008 1388  breaking-bad          81189  tt09037… 1396 
-#&gt;  3 The Walking Dead       2010 1393  the-walking-dead      153021 tt15202… 1402 
-#&gt;  4 The Big Bang Theory    2007 1409  the-big-bang-theory   80379  tt08982… 1418 
-#&gt;  5 Sherlock               2010 19792 sherlock              176941 tt14755… 19885
-#&gt;  6 How I Met Your Mother  2005 1095  how-i-met-your-mother 75760  tt04606… 1100 
-#&gt;  7 Dexter                 2006 1396  dexter                79349  tt07732… 1405 
-#&gt;  8 Arrow                  2012 1403  arrow                 257655 tt21930… 1412 
-#&gt;  9 Friends                1994 1657  friends               79168  tt01087… 1668 
-#&gt; 10 Lost                   2004 4583  lost-2004             73739  tt04110… 4607 </div><div class='input'>
+#&gt;    title                  year trakt  slug                  tvdb  imdb     tmdb 
+#&gt;    &lt;chr&gt;                 &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;                 &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;
+#&gt;  1 Game of Thrones        2011 1390   game-of-thrones       1213… tt09449… 1399 
+#&gt;  2 Breaking Bad           2008 1388   breaking-bad          81189 tt09037… 1396 
+#&gt;  3 The Walking Dead       2010 1393   the-walking-dead      1530… tt15202… 1402 
+#&gt;  4 The Big Bang Theory    2007 1409   the-big-bang-theory   80379 tt08982… 1418 
+#&gt;  5 Sherlock               2010 19792  sherlock              1769… tt14755… 19885
+#&gt;  6 How I Met Your Mother  2005 1095   how-i-met-your-mother 75760 tt04606… 1100 
+#&gt;  7 Dexter                 2006 1396   dexter                79349 tt07732… 1405 
+#&gt;  8 Arrow                  2012 1403   arrow                 2576… tt21930… 1412 
+#&gt;  9 Friends                1994 1657   friends               79168 tt01087… 1668 
+#&gt; 10 Stranger Things        2016 104439 stranger-things       3052… tt45743… 66732</div><div class='input'>
 <span class='co'># Get trending movies with extended information</span>
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1       59 Aven…  2019 Part o… After t… 2019-04-26     181 us      http:/…
-#&gt; 2       47 Shaz…  2019 Just S… A boy i… 2019-04-05     132 us      http:/…
-#&gt; 3       43 John…  2019 The Gr… John Wi… 2019-05-15     130 us      http:/…
-#&gt; 4       29 John…  2017 Never … John Wi… 2017-02-10     122 us      http:/…
-#&gt; 5       25 Aqua…  2018 Home I… Once ho… 2018-12-21     144 us      http:/…
+#&gt; 1       66 Dark…  2019 The ph… The X-M… 2019-06-07     114 us      http:/…
+#&gt; 2       33 Aven…  2019 Part o… After t… 2019-04-26     181 us      http:/…
+#&gt; 3       33 John…  2019 The Gr… Super-a… 2019-05-17     131 us      http:/…
+#&gt; 4       32 Alad…  2019 Choose… A kindh… 2019-05-24     128 us      http:/…
+#&gt; 5       18 The …  2019 They s… Max the… 2019-06-07      86 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
@@ -357,31 +356,31 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.anticipated</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 7
 #&gt;   list_count title                year  trakt slug                 imdb     tmdb
 #&gt;        &lt;int&gt; &lt;chr&gt;               &lt;int&gt;  &lt;int&gt; &lt;chr&gt;                &lt;chr&gt;   &lt;int&gt;
-#&gt; 1      29804 Avatar 2             2021  56580 avatar-2-2021        tt163…  76600
-#&gt; 2      28018 Star Wars: The Ris…  2019 114335 star-wars-the-rise-… tt252… 181812
-#&gt; 3      22011 The Flash              NA 195144 the-flash            tt043… 298618
-#&gt; 4      20197 Dark Phoenix         2019 200946 dark-phoenix-2019    tt656… 320288
-#&gt; 5      19589 Justice League 2     2019 193970 justice-league-2-20… tt412… 298619</div><div class='input'>
+#&gt; 1      31086 Avatar 2             2021  56580 avatar-2-2021        tt163…  76600
+#&gt; 2      30587 Star Wars: The Ris…  2019 114335 star-wars-the-rise-… tt252… 181812
+#&gt; 3      23050 The Flash            2021 195144 the-flash-2021       tt043… 298618
+#&gt; 4      15296 Sherlock Holmes 3    2021 191791 sherlock-holmes-3-2… tt209… 297708
+#&gt; 5      15200 Guardians of the G…  2022 293990 guardians-of-the-ga… tt679… 447365</div><div class='input'>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
 <span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 15 x 8
-#&gt;    list_count title            year trakt  slug          tvdb  imdb        tmdb 
-#&gt;         &lt;int&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;
-#&gt;  1        562 When They See …  2019 144923 when-they-se… 3603… tt7137906   81355
-#&gt;  2        265 7Seeds           2019 140359 7seeds        3560… tt9348718   85940
-#&gt;  3        224 Jinn             2019 130869 jinn          3477… tt8923396   &lt;NA&gt; 
-#&gt;  4        161 High Seas        2019 137034 high-seas     3535… tt8961508   88239
-#&gt;  5        151 How to Sell Dr…  2019 145328 how-to-sell-… 3610… tt9184994   &lt;NA&gt; 
-#&gt;  6        126 Leila            2019 145058 leila         3607… tt9337588   &lt;NA&gt; 
-#&gt;  7         66 The Politician   2019 145654 the-politici… 3614… tt7971476   &lt;NA&gt; 
-#&gt;  8         60 Mr. Iglesias     2019 135693 mr-iglesias   3522… tt8403536   &lt;NA&gt; 
-#&gt;  9         56 See You Yester…  2019 146964 see-you-yest… 3629… tt8743064   &lt;NA&gt; 
-#&gt; 10         45 Saint Seiya: K…  2019 145687 saint-seiya-… 3514… tt6908976   &lt;NA&gt; 
-#&gt; 11         37 It's Bruno       2019 146647 it-s-bruno    3625… tt10186846  &lt;NA&gt; 
-#&gt; 12         28 Kengan Ashura    2019 138247 kengan-ashura 3541… tt9058134/  &lt;NA&gt; 
-#&gt; 13         10 Tales of the C…  2019 147488 tales-of-the… 3635… https://ww… &lt;NA&gt; 
-#&gt; 14          9 Sintonia         2019 131399 sintonia      3443… tt8165086   &lt;NA&gt; 
-#&gt; 15          9 Historical Roa…  2019 147124 historical-r… 3631… tt9169602   &lt;NA&gt; </div><div class='input'>
+#&gt;    list_count title              year trakt  slug             tvdb  imdb   tmdb 
+#&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;
+#&gt;  1        908 The Politician     2019 145654 the-politician   3614… tt797… &lt;NA&gt; 
+#&gt;  2        780 Unbelievable       2019 150532 unbelievable     3670… tt790… 91275
+#&gt;  3        566 The I-Land         2019 151661 the-i-land       3683… tt906… 90755
+#&gt;  4        555 The Spy            2019 151429 the-spy          3681… tt595… 91725
+#&gt;  5        486 Criminal           2019 140662 criminal         3564… tt934… 92926
+#&gt;  6        279 Raising Dion       2019 124235 raising-dion     3359… tt782… &lt;NA&gt; 
+#&gt;  7        140 V-Wars             2019 133365 v-wars           3493… tt740… &lt;NA&gt; 
+#&gt;  8        139 Marianne           2019 149066 marianne         3654… tt108… 92916
+#&gt;  9        124 Sintonia           2019 131399 sintonia         3443… tt816… &lt;NA&gt; 
+#&gt; 10        116 The Faction        2019 141592 the-faction      3566… &lt;NA&gt;   &lt;NA&gt; 
+#&gt; 11        113 Inside Bill's Br…  2019 151722 inside-bill-s-b… 3684… tt108… 93016
+#&gt; 12        112 The Last Kids on…  2019 148014 the-last-kids-o… 3641… tt891… &lt;NA&gt; 
+#&gt; 13         83 Living with Your…  2019 151776 living-with-you… 3685… tt888… &lt;NA&gt; 
+#&gt; 14         45 Bard of Blood      2019 151788 bard-of-blood    3684… tt806… &lt;NA&gt; 
+#&gt; 15         19 Cidades Invisive…  2019 134761 cidades-invisiv… 3493… &lt;NA&gt;   &lt;NA&gt; </div><div class='input'>
 <span class='co'># Get the most popular German-language movies between 1990 and 2010</span>
 <span class='fu'>trakt.popular</span>(<span class='st'>"movies"</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1990</span>, <span class='fl'>2010</span>))</div><div class='output co'>#&gt; # A tibble: 10 x 6
 #&gt;    title                    year trakt slug                       imdb      tmdb
@@ -395,26 +394,23 @@ same additional variables besides the media information: <code>watcher_count</co
 #&gt;  7 Funny Games              1997  5445 funny-games-1997           tt01191… 10234
 #&gt;  8 The White Ribbon         2009 24371 the-white-ribbon-2009      tt11493… 37903
 #&gt;  9 The Baader Meinhof Com…  2008  3789 the-baader-meinhof-comple… tt07654…  6968
-#&gt; 10 Cargo                    2009 21807 cargo-2009                 tt03819… 34069</div></pre>
+#&gt; 10 Cargo                    2009 21807 cargo-2009                 tt03819… 34069</div><div class='input'># }
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#details">Details</a></li>
-
       <li><a href="#note">Note</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -422,13 +418,16 @@ same additional variables besides the media information: <code>watcher_count</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

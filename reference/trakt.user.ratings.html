@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,12 +40,12 @@
 
 
 
+
 <meta property="og:title" content="Get a user's ratings — trakt.user.ratings" />
-
 <meta property="og:description" content="Retrieve a user's media ratings" />
-
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
+
 
 <meta name="robots" content="noindex">
 
@@ -78,6 +80,7 @@
 </script>
 <noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
 
   </head>
 
@@ -129,7 +132,6 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
@@ -144,6 +146,7 @@
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -155,15 +158,13 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Retrieve a user's media ratings</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
   <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"movies"</span>, <span class='st'>"seasons"</span>, <span class='st'>"shows"</span>, <span class='st'>"episodes"</span>), <span class='kw'>rating</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -188,11 +189,10 @@ functions, values <code>seasons</code> or <code>episodes</code> are also allowed
 returns more variables and should generally only be used if required.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other user data: <code><a href='trakt.user.collection.html'>trakt.user.collection</a></code>,
@@ -201,23 +201,23 @@ returns more variables and should generally only be used if required.</p></td>
   <code><a href='trakt.user.stats.html'>trakt.user.stats</a></code>,
   <code><a href='trakt.user.watched.html'>trakt.user.watched</a></code>,
   <code><a href='trakt.user.watchlist.html'>trakt.user.watchlist</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>)</div><div class='output co'>#&gt; # A tibble: 330 x 9
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+<span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>)</div><div class='output co'>#&gt; # A tibble: 339 x 9
 #&gt;    rated_at            rating type  title      year trakt  slug      imdb  tmdb 
 #&gt;    &lt;dttm&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
-#&gt;  1 2019-05-13 19:54:37      8 movie The Man …  2007 7848   the-man-… tt07… 13363
-#&gt;  2 2019-05-11 22:29:50      8 movie Coherence  2013 135581 coherenc… tt28… 2202…
-#&gt;  3 2019-04-30 23:51:33      7 movie Insidious  2010 34068  insidiou… tt15… 49018
-#&gt;  4 2019-04-30 23:51:12      8 movie Deadpool…  2018 226108 deadpool… tt54… 3834…
-#&gt;  5 2019-04-30 23:42:45      7 movie Avengers…  2019 191798 avengers… tt41… 2995…
-#&gt;  6 2019-04-18 23:43:10      6 movie Glass      2019 298686 glass-20… tt68… 4504…
-#&gt;  7 2019-04-14 20:39:40      8 movie Imperium   2016 224616 imperium… tt47… 3746…
-#&gt;  8 2019-03-23 22:31:56      7 movie Videodro…  1983 680    videodro… tt00… 837  
-#&gt;  9 2019-03-22 23:41:38      6 movie The Mummy  2017 179407 the-mumm… tt23… 2820…
-#&gt; 10 2019-03-21 02:06:11      7 movie Frequency  2000 5736   frequenc… tt01… 10559
-#&gt; # … with 320 more rows</div><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>)</div><div class='output co'>#&gt; # A tibble: 144 x 9
+#&gt;  1 2019-08-11 17:32:58      6 movie Hellboy …  2008 6375   hellboy-… tt04… 11253
+#&gt;  2 2019-08-11 17:32:58      7 movie Shazam!    2019 184992 shazam-2… tt04… 2879…
+#&gt;  3 2019-08-11 17:32:50      7 movie Hellboy    2004 981    hellboy-… tt01… 1487 
+#&gt;  4 2019-08-08 21:57:47      7 movie Collater…  2004 998    collater… tt03… 1538 
+#&gt;  5 2019-08-05 00:33:17      6 movie Pokémon …  2019 294039 pokemon-… tt58… 4474…
+#&gt;  6 2019-07-31 14:51:49      8 movie Spider-M…  2019 273537 spider-m… tt63… 4296…
+#&gt;  7 2019-07-28 23:27:30      6 movie Forbidde…  1956 673    forbidde… tt00… 830  
+#&gt;  8 2019-07-19 22:20:02      6 movie Alita: B…  2019 243128 alita-ba… tt04… 3995…
+#&gt;  9 2019-07-19 21:07:10      7 movie My Neigh…  1988 4169   my-neigh… tt00… 8392 
+#&gt; 10 2019-06-08 23:35:29      8 movie John Wic…  2019 304278 john-wic… tt61… 4581…
+#&gt; # … with 329 more rows</div><div class='input'><span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>)</div><div class='output co'>#&gt; # A tibble: 144 x 9
 #&gt;    rated_at            rating type  title      year trakt  slug      imdb  tmdb 
 #&gt;    &lt;dttm&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
 #&gt;  1 2018-07-28 05:41:30      9 movie Watchmen   2009 7729   watchmen… tt04… 13183
@@ -230,22 +230,21 @@ returns more variables and should generally only be used if required.</p></td>
 #&gt;  8 2017-07-24 22:43:51      9 movie Baby Dri…  2017 219867 baby-dri… tt38… 3394…
 #&gt;  9 2017-07-21 04:43:03      8 movie Dunkirk    2017 224641 dunkirk-… tt50… 3747…
 #&gt; 10 2017-01-23 19:55:14      6 movie xXx: Ret…  2017 33214  xxx-retu… tt12… 47971
-#&gt; # … with 134 more rows</div></pre>
+#&gt; # … with 134 more rows</div><div class='input'># }
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -253,13 +252,16 @@ returns more variables and should generally only be used if required.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

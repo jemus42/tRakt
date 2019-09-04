@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,14 +40,14 @@
 
 
 
-<meta property="og:title" content="Get a user's stats — trakt.user.stats" />
 
+<meta property="og:title" content="Get a user's stats — trakt.user.stats" />
 <meta property="og:description" content="Data about a user's interactions with movies, shows, seasons, episodes,
 as well as their social network (friends, followings, followers) and a
 frequency table of the user's media ratings so far." />
-
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
+
 
 <meta name="robots" content="noindex">
 
@@ -80,6 +82,7 @@ frequency table of the user's media ratings so far." />
 </script>
 <noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
 
   </head>
 
@@ -131,7 +134,6 @@ frequency table of the user's media ratings so far." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
@@ -146,6 +148,7 @@ frequency table of the user's media ratings so far." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -157,15 +160,13 @@ frequency table of the user's media ratings so far." />
     </div>
 
     <div class="ref-description">
-    
     <p>Data about a user's interactions with movies, shows, seasons, episodes,
 as well as their social network (friends, followings, followers) and a
 frequency table of the user's media ratings so far.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>trakt.user.stats</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>))</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -176,11 +177,10 @@ Can also be of length greater than 1, in which case the function is called on al
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <code>list</code> of <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibbles</a>.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other user data: <code><a href='trakt.user.collection.html'>trakt.user.collection</a></code>,
@@ -189,20 +189,20 @@ Can also be of length greater than 1, in which case the function is called on al
   <code><a href='trakt.user.ratings.html'>trakt.user.ratings</a></code>,
   <code><a href='trakt.user.watched.html'>trakt.user.watched</a></code>,
   <code><a href='trakt.user.watchlist.html'>trakt.user.watchlist</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>trakt.user.stats</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>)</div><div class='output co'>#&gt; $movies
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+<span class='fu'>trakt.user.stats</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>)</div><div class='output co'>#&gt; $movies
 #&gt; # A tibble: 1 x 6
 #&gt;   plays watched minutes collected ratings comments
 #&gt;   &lt;int&gt;   &lt;int&gt;   &lt;int&gt;     &lt;int&gt;   &lt;int&gt;    &lt;int&gt;
-#&gt; 1  2117    1614  236065      2653     144       42
+#&gt; 1  2125    1620  236916      2680     144       42
 #&gt; 
 #&gt; $shows
 #&gt; # A tibble: 1 x 4
 #&gt;   watched collected ratings comments
 #&gt;     &lt;int&gt;     &lt;int&gt;   &lt;int&gt;    &lt;int&gt;
-#&gt; 1     480       329      94       40
+#&gt; 1     490       346      95       40
 #&gt; 
 #&gt; $seasons
 #&gt; # A tibble: 1 x 2
@@ -214,7 +214,7 @@ Can also be of length greater than 1, in which case the function is called on al
 #&gt; # A tibble: 1 x 6
 #&gt;   plays watched minutes collected ratings comments
 #&gt;   &lt;int&gt;   &lt;int&gt;   &lt;int&gt;     &lt;int&gt;   &lt;int&gt;    &lt;int&gt;
-#&gt; 1 44090   18209 1318028     11404       6        5
+#&gt; 1 45500   18473 1354069     11844       6        5
 #&gt; 
 #&gt; $network
 #&gt; # A tibble: 1 x 3
@@ -226,23 +226,22 @@ Can also be of length greater than 1, in which case the function is called on al
 #&gt; # A tibble: 1 x 2
 #&gt;   total distribution     
 #&gt;   &lt;int&gt; &lt;list&gt;           
-#&gt; 1   244 &lt;tibble [10 × 2]&gt;
-#&gt; </div></pre>
+#&gt; 1   245 &lt;tibble [10 × 2]&gt;
+#&gt; </div><div class='input'># }
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -250,13 +249,16 @@ Can also be of length greater than 1, in which case the function is called on al
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

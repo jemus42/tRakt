@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,15 +40,15 @@
 
 
 
-<meta property="og:title" content="Get a show's seasons — trakt.seasons.summary" />
 
+<meta property="og:title" content="Get a show's seasons — trakt.seasons.summary" />
 <meta property="og:description" content="Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes
 each season has. With episodes == TRUE and extended == &quot;full&quot;, this function
 is also suitable to retrieve all episode ratings for all seasons of a show with
 just a single API call." />
-
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
+
 
 <meta name="robots" content="noindex">
 
@@ -81,6 +83,7 @@ just a single API call." />
 </script>
 <noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
 
   </head>
 
@@ -132,7 +135,6 @@ just a single API call." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
@@ -147,6 +149,7 @@ just a single API call." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -158,17 +161,15 @@ just a single API call." />
     </div>
 
     <div class="ref-description">
-    
     <p>Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes
 each season has. With <code>episodes == TRUE</code> and <code>extended == "full"</code>, this function
 is also suitable to retrieve all episode ratings for all seasons of a show with
 just a single API call.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>trakt.seasons.summary</span>(<span class='no'>target</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
   <span class='kw'>episodes</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>drop.specials</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>drop.unaired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -199,20 +200,17 @@ are appended as a list-column, with the amount of variables depending on <code>e
 Only works if <code>extended</code> is <code>"full"</code>.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This function wraps <a href='https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show'>this API method</a>
 with the endpoint <code>/shows/:show_id/seasons</code>.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other show data: <code><a href='trakt.seasons.season.html'>trakt.seasons.season</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Get just the season numbers and their IDs</span>
@@ -224,32 +222,31 @@ with the endpoint <code>/shows/:show_id/seasons</code>.</p>
 #&gt; 3      3 3952  171641 3575 
 #&gt; 4      4 3953  297361 3576 
 #&gt; 5      5 3954  490110 3578 </div><div class='input'>
-</div><div class='input'><span class='co'># Get season numbers, ratings, votes, titles and other metadata as well as</span>
+<span class='co'># \dontrun{</span>
+<span class='co'># Get season numbers, ratings, votes, titles and other metadata as well as</span>
 <span class='co'># a list-column containing all episode data</span>
 <span class='fu'>trakt.seasons.summary</span>(<span class='st'>"utopia"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>, <span class='kw'>episodes</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 13
 #&gt;   season rating votes episode_count aired_episodes title overview
 #&gt;    &lt;int&gt;  &lt;dbl&gt; &lt;int&gt;         &lt;int&gt;          &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   
-#&gt; 1      1   8.70   166             6              6 Seas… When a …
-#&gt; 2      2   8.27   120             6              6 Seas… It has …
+#&gt; 1      1   8.66   170             6              6 Seas… When a …
+#&gt; 2      2   8.22   122             6              6 Seas… It has …
 #&gt; # … with 6 more variables: first_aired &lt;dttm&gt;, network &lt;chr&gt;, episodes &lt;list&gt;,
-#&gt; #   trakt &lt;chr&gt;, tvdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
+#&gt; #   trakt &lt;chr&gt;, tvdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'># }
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#details">Details</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -257,13 +254,16 @@ with the endpoint <code>/shows/:show_id/seasons</code>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 

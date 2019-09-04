@@ -15,10 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
 
@@ -38,14 +40,14 @@
 
 
 
-<meta property="og:title" content="Get a user's watched shows or movies — trakt.user.watched" />
 
+<meta property="og:title" content="Get a user's watched shows or movies — trakt.user.watched" />
 <meta property="og:description" content="trakt.user.watched retrieves a user's watched shows or movies.
 It does not use OAuth2, so you can only get data for a user with a
 public profile." />
-
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
+
 
 <meta name="robots" content="noindex">
 
@@ -80,6 +82,7 @@ public profile." />
 </script>
 <noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
+
 
   </head>
 
@@ -131,7 +134,6 @@ public profile." />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/jemus42/tRakt">
@@ -146,6 +148,7 @@ public profile." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -157,17 +160,14 @@ public profile." />
     </div>
 
     <div class="ref-description">
-    
     <p><code>trakt.user.watched</code> retrieves a user's watched shows or movies.
 It does not use OAuth2, so you can only get data for a user with a
 <strong>public profile</strong>.</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
-  <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
-    
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -183,22 +183,16 @@ Can also be of length greater than 1, in which case the function is called on al
 functions, values <code>seasons</code> or <code>episodes</code> are also allowed.</p></td>
     </tr>
     <tr>
-      <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
-returns more variables and should generally only be used if required.</p></td>
-    </tr>
-    <tr>
       <th>noseasons</th>
       <td><p><code>logical(1) [TRUE]</code>: Only for <code>type = "show"</code>: Exclude detailed season
 data from output. This is advisable if you do not need per-episode data and want to
 be nice to the API.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
-    
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other user data: <code><a href='trakt.user.collection.html'>trakt.user.collection</a></code>,
@@ -207,39 +201,39 @@ be nice to the API.</p></td>
   <code><a href='trakt.user.ratings.html'>trakt.user.ratings</a></code>,
   <code><a href='trakt.user.stats.html'>trakt.user.stats</a></code>,
   <code><a href='trakt.user.watchlist.html'>trakt.user.watchlist</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Use noseasons = TRUE to avoid receiving detailed season/episode data</span>
-<span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 480 x 10
-#&gt;    plays last_watched_at     last_updated_at     title  year trakt slug  tvdb 
-#&gt;    &lt;int&gt; &lt;dttm&gt;              &lt;dttm&gt;              &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt;  1   395 2019-05-15 19:56:53 2019-05-15 19:56:53 Supe…  2015 98985 supe… 2956…
-#&gt;  2    82 2019-05-15 17:09:26 2019-05-15 17:09:26 Stre…  2013 60545 stre… 2702…
-#&gt;  3    46 2019-05-15 04:13:14 2019-05-15 04:13:14 Bill…  2016 77692 bill… 2795…
-#&gt;  4   173 2019-05-15 00:54:22 2019-05-15 00:54:22 Life…  2015 99080 life… 2957…
-#&gt;  5   233 2019-05-14 07:05:00 2019-05-14 07:05:00 Last…  2014 60267 last… 2785…
-#&gt;  6   219 2019-05-14 04:04:12 2019-05-14 04:07:26 Game…  2011 1390  game… 1213…
-#&gt;  7    43 2019-05-13 23:11:31 2019-05-13 23:11:31 SEAL…  2017 1191… seal… 3286…
-#&gt;  8   225 2019-05-13 20:09:01 2019-05-13 20:09:01 Shar…  2009 30569 shar… 1009…
-#&gt;  9   150 2019-05-13 18:32:42 2019-05-13 18:32:43 The …  2013 46676 the-… 2661…
-#&gt; 10   469 2019-05-10 05:24:18 2019-05-10 05:24:18 Law …  1999 2716  law-… 75692
-#&gt; # … with 470 more rows, and 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+<span class='co'># Use noseasons = TRUE to avoid receiving detailed season/episode data</span>
+<span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 490 x 11
+#&gt;    plays last_watched_at     last_updated_at     reset_at title  year trakt
+#&gt;    &lt;int&gt; &lt;dttm&gt;              &lt;dttm&gt;              &lt;lgl&gt;    &lt;chr&gt; &lt;int&gt; &lt;chr&gt;
+#&gt;  1  3386 2019-09-04 07:04:32 2019-09-04 07:04:33 NA       How …  2005 1095 
+#&gt;  2     2 2019-09-04 05:11:55 2019-09-04 05:11:55 NA       Carn…  2019 1487…
+#&gt;  3   121 2019-09-03 22:31:17 2019-09-03 22:31:17 NA       Fast…  2012 46598
+#&gt;  4  1992 2019-09-03 08:30:30 2019-09-03 08:30:30 NA       The …  2007 1409 
+#&gt;  5     2 2019-09-03 05:22:08 2019-09-03 05:22:08 NA       Home…  2018 1343…
+#&gt;  6     3 2019-09-02 21:02:37 2019-09-02 21:02:37 NA       On B…  2019 1335…
+#&gt;  7  2586 2019-08-31 16:09:57 2019-08-31 16:09:57 NA       Arch…  2009 10234
+#&gt;  8    51 2019-08-31 06:10:30 2019-08-31 06:10:30 NA       Anim…  2016 1039…
+#&gt;  9    42 2019-08-31 01:45:17 2019-08-31 01:45:17 NA       Jers…  2018 1256…
+#&gt; 10   509 2019-08-30 21:55:57 2019-08-30 21:55:57 NA       Key …  2012 42855
+#&gt; # … with 480 more rows, and 4 more variables: slug &lt;chr&gt;, tvdb &lt;chr&gt;,
+#&gt; #   imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'># }
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      
       <li><a href="#value">Value</a></li>
-
       <li><a href="#see-also">See also</a></li>
-      
       <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -247,13 +241,16 @@ be nice to the API.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 
