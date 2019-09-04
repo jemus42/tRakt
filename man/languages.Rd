@@ -15,6 +15,6 @@ languages
 Language codes
 }
 \examples{
-languages
+head(languages)
 }
 \keyword{datasets}

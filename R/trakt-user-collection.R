@@ -42,7 +42,7 @@ trakt.user.collection <- function(user = getOption("trakt_username"),
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map_df(user, ~ trakt.user.collection(user = .x, type, extended, unnest_episodes),
+    return(map_df(user, ~ trakt.user.collection(user = .x, type, unnest_episodes),
                   .id = "user"))
   }
 

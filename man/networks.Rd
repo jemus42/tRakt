@@ -15,6 +15,6 @@ networks
 Available networks
 }
 \examples{
-networks
+head(networks)
 }
 \keyword{datasets}

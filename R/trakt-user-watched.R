@@ -24,19 +24,15 @@
 #' }
 trakt.user.watched <- function(user = getOption("trakt_username"),
                                type = c("shows", "movies"),
-                               extended = c("min", "full"),
                                noseasons = TRUE) {
   check_username(user)
   type <- match.arg(type)
-  extended <- match.arg(extended)
+  #extended <- match.arg(extended)
+  extended <- if (type == "shows" & noseasons) "noseasons"
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map_df(user, ~ trakt.user.watched(user = .x, type, extended, noseasons), .id = "user"))
-  }
-
-  if (noseasons) {
-    extended <- paste0(extended, ",noseasons")
+    return(map_df(user, ~ trakt.user.watched(user = .x, type, noseasons), .id = "user"))
   }
 
   # Construct URL, make API call

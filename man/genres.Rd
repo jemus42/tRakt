@@ -15,6 +15,6 @@ genres
 Genres
 }
 \examples{
-genres
+head(genres)
 }
 \keyword{datasets}

@@ -5,8 +5,7 @@
 \title{Get a user's watched shows or movies}
 \usage{
 trakt.user.watched(user = getOption("trakt_username"),
-  type = c("shows", "movies"), extended = c("min", "full"),
-  noseasons = TRUE)
+  type = c("shows", "movies"), noseasons = TRUE)
 }
 \arguments{
 \item{user}{Target username. Defaults to \code{getOption("trakt_username")}.
@@ -15,9 +14,6 @@ Can also be of length greater than 1, in which case the function is called on al
 
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
 functions, values \code{seasons} or \code{episodes} are also allowed.}
-
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.}
 
 \item{noseasons}{\code{logical(1) [TRUE]}: Only for \code{type = "show"}: Exclude detailed season
 data from output. This is advisable if you do not need per-episode data and want to

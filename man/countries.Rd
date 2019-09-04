@@ -15,6 +15,6 @@ countries
 Country codes
 }
 \examples{
-countries
+head(countries)
 }
 \keyword{datasets}
