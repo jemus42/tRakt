@@ -3,7 +3,7 @@
 language: R
 sudo: true
 cache: packages
-dist: xenial
+dist: bionic
 
 addons:
   apt:
@@ -12,28 +12,31 @@ addons:
       - r-base-dev
 
 r_binary_packages:
-  - testthat
-  - jsonlite
-  - git2r
-  - ps
-  - processx
-  - httr
-  - dplyr
-  - lubridate
-  - purrr
-  - stringr
-  - stringi
-  - ggplot2
-  - knitr
-  - rmarkdown
-  - commonmark
-  - highlight
-  - xml2
-  - roxygen2
   - assertthat
+  - commonmark
+  - curl
+  - dplyr
+  - fs
+  - ggplot2
+  - git2r
   - glue
+  - highlight
+  - httr
+  - jsonlite
+  - knitr
+  - lubridate
   - openssl
+  - processx
+  - ps
+  - purrr
   - rlang
+  - rmarkdown
+  - roxygen2
+  - stringi
+  - stringr
+  - testthat
+  - tidyr
+  - xml2
 
 r:
   - oldrel
@@ -42,7 +45,6 @@ r:
 
 after_success:
   - test $TRAVIS_R_VERSION_STRING = "release" && Rscript -e 'covr::codecov()'
-
 
 # before_deploy: Rscript -e 'remotes::install_github("r-lib/pkgdown")'
 before_deploy: Rscript -e 'install.packages("pkgdown")'
