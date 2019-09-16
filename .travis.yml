@@ -55,3 +55,9 @@ deploy:
   on:
     branch: master
     condition: "$TRAVIS_R_VERSION_STRING = release"
+
+# notifications only when things change
+notifications:
+  email:
+    on_success: change
+    on_failure: change
