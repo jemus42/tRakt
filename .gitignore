@@ -21,3 +21,5 @@ inst/doc/*
 tRakt.Rcheck/
 tRakt*.tar.gz
 tRakt*.tgz
+README.html
+README_cache

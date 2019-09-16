@@ -6,6 +6,7 @@ output: github_document
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
+  cache = TRUE,
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
@@ -14,7 +15,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="140"/>
+# tRakt 
+
+<img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="140"/>
 
 <!-- badges: start -->
 [![Travis (.org)](https://img.shields.io/travis/jemus42/tRakt.svg?logo=travis)](https://travis-ci.org/jemus42/tRakt) 
@@ -35,8 +38,11 @@ Please note that while this package is *basically* an API-client, it is a little
 Get it from GitHub:
 
 ```r
-if (!require("remotes")) install.packages("remotes")
+if (!("remotes" %in% installed.packages())) {
+  install.packages("remotes")
+}
 remotes::install_github("jemus42/tRakt")
+
 library("tRakt")
 ```
 
