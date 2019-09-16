@@ -14,4 +14,10 @@ test_that("trakt.user.history does things", {
     expect_length(10) %>%
     nrow() %>%
     expect_equal(10)
+
+  trakt.user.history(user = c("jemus42", "sean"), limit = 2) %>%
+    expect_is("tbl") %>%
+    expect_length(7) %>%
+    nrow() %>%
+    expect_equal(4)
 })

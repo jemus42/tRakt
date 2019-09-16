@@ -13,6 +13,7 @@ test_that("trakt.user.collection works", {
 
   # Error conditions ----
   expect_error(trakt.user.collection(user = -1))
+  expect_error(trakt.user.collection(user = c("jemus42", "notarealuser")))
   expect_error(trakt.user.collection(user = user, type = "wurst"))
 })
 
