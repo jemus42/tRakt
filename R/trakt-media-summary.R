@@ -20,6 +20,7 @@ NULL
 #' @keywords internal
 #' @noRd
 #' @importFrom purrr map_df
+#' @importFrom purrr modify_if
 #' @importFrom tibble has_name
 #' @importFrom lubridate as_datetime
 #' @importFrom dplyr bind_cols
@@ -38,7 +39,7 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
   response <- trakt_get(url = url)
 
   # All variants have this in common
-  response$ids <- fix_ids(as_tibble(response$ids))
+  response$ids <- fix_ids(response$ids)
 
   # If extended == "min", we only have IDs to worry about, so early return
   if (extended == "min") {
@@ -56,6 +57,7 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
   # Clean up shows and movie objects separately, feels cleaner that way.
   if (type == "shows") {
     response$airs <- response$airs %>%
+      modify_if(is.null, ~ return(NA_character_), .else = as.character) %>%
       as_tibble() %>%
       set_names(., paste0("airs_", names(.)))
 

@@ -3,7 +3,7 @@ context("Summary")
 test_that("trakt.shows.summary works", {
   skip_on_cran()
 
-  target <- "breaking-bad"
+  target <- c("breaking-bad", "dexter")
   show_min_df <- trakt.shows.summary(target)
   show_full_df <- trakt.shows.summary(target, extended = "full")
 
