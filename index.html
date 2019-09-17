@@ -15,7 +15,7 @@
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Get Data from trakt.tv">
 <meta property="og:description" content="A wrapper for the &lt;https://trakt.tv&gt; API to
     retrieve data about shows and movies, including user ratings, credits
@@ -114,13 +114,13 @@
 
 <div id="trakt" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#trakt" class="anchor"></a>tRakt</h1></div>
-<p><img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="140"></p>
+<a href="#trakt" class="anchor"></a>tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="120">
+</h1></div>
 <!-- badges: start -->
 
 <p>This is <code>tRakt</code> version <code>0.14.0.9000</code>.<br>
 It contains functions to retrieve data from <a href="https://trakt.tv/">trakt.tv</a>, a site similiar to <a href="https://imdb.com">IMDb</a> with a broader focus including TV shows and more social features – and, most importantly, <a href="https://trakt.docs.apiary.io">a publicly available API</a>.</p>
-<p>It’s an <a href="http://r-project.org">R package</a> primarily used by (i.e. built for) <a href="http://trakt.jemu.name">this webapp</a>.<br>
+<p>It’s an <a href="http://r-project.org">R</a> package primarily used by (i.e. built for) <a href="http://trakt.jemu.name">this webapp</a>.<br>
 Please note that while this package is <em>basically</em> an API-client, it is a little more opinionated and might deliver results that do not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
@@ -133,9 +133,9 @@ Please note that while this package is <em>basically</em> an API-client, it is a
 <a class="sourceLine" id="cb1-5" data-line-number="5"></a>
 <a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"tRakt"</span>)</a></code></pre></div>
 </div>
-<div id="basic-usage" class="section level2">
+<div id="usage" class="section level2">
 <h2 class="hasAnchor">
-<a href="#basic-usage" class="anchor"></a>Basic usage</h2>
+<a href="#usage" class="anchor"></a>Usage</h2>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tibble) <span class="co"># for glimpse()</span></a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tRakt)</a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"></a>
@@ -254,7 +254,6 @@ That would make me a sad panda. As of now, the trakt.tv API does not have any ra
 <li><a href="https://travis-ci.org/jemus42/tRakt"><img src="https://img.shields.io/travis/jemus42/tRakt.svg?logo=travis" alt="Travis (.org)"></a></li>
 <li><a href="https://ci.appveyor.com/project/jemus42/tRakt"><img src="https://ci.appveyor.com/api/projects/status/github/jemus42/tRakt?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
 <li><a href="https://codecov.io/github/jemus42/tRakt?branch=master"><img src="https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
-<li><a href="https://cran.r-project.org/package=tRakt"><img src="https://www.r-pkg.org/badges/version/tRakt" alt="CRAN status"></a></li>
 <li><a href="https://github.com/jemus42/tRakt/releases"><img src="https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub" alt="GitHub release"></a></li>
 <li><a href="https://github.com/jemus42/tRakt/commits/master"><img src="https://img.shields.io/github/last-commit/jemus42/tRakt/master.svg?logo=GithUb" alt="GitHub last commit (master)"></a></li>
 </ul>
