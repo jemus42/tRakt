@@ -12,7 +12,7 @@ test_that("trakt.user.collection works", {
 
   col_sho %>%
     expect_is("tbl") %>%
-    expect_length(8)
+    expect_length(10)
 
   trakt.user.collection(user = user, type = "movies") %>%
     expect_is("tbl") %>%
