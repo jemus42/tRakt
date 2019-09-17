@@ -343,11 +343,11 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1       86 Spid…  2019 It’s t… Peter P… 2019-07-02     129 us      http:/…
-#&gt; 2       51 Toy …  2019 Get Re… "Woody … 2019-06-21     100 us      http:/…
-#&gt; 3       48 Anna   2019 Never … Beneath… 2019-06-21     119 fr      http:/…
-#&gt; 4       35 Aven…  2019 Part o… After t… 2019-04-26     181 us      http:/…
-#&gt; 5       35 Alad…  2019 Choose… A kindh… 2019-05-24     128 us      http:/…
+#&gt; 1       68 Spid…  2019 It’s t… Peter P… 2019-07-02     129 us      http:/…
+#&gt; 2       26 Toy …  2019 Get Re… "Woody … 2019-06-21     100 us      http:/…
+#&gt; 3       26 Anna   2019 Never … Beneath… 2019-06-21     119 fr      http:/…
+#&gt; 4       18 Alad…  2019 Choose… A kindh… 2019-05-24     128 us      http:/…
+#&gt; 5       16 John…  2019 The Gr… Super-a… 2019-05-17     131 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
@@ -358,23 +358,23 @@ same additional variables besides the media information: <code>watcher_count</co
 #&gt;        &lt;int&gt; &lt;chr&gt;               &lt;int&gt;  &lt;int&gt; &lt;chr&gt;                &lt;chr&gt;   &lt;int&gt;
 #&gt; 1      31211 Avatar 2             2021  56580 avatar-2-2021        tt163…  76600
 #&gt; 2      30941 Star Wars: The Ris…  2019 114335 star-wars-the-rise-… tt252… 181812
-#&gt; 3      23153 The Flash            2021 195144 the-flash-2021       tt043… 298618
+#&gt; 3      23172 The Flash            2021 195144 the-flash-2021       tt043… 298618
 #&gt; 4      15435 Sherlock Holmes 3    2021 191791 sherlock-holmes-3-2… tt209… 297708
-#&gt; 5      15386 Guardians of the G…  2022 293990 guardians-of-the-ga… tt679… 447365</div><div class='input'>
+#&gt; 5      15409 Guardians of the G…  2022 293990 guardians-of-the-ga… tt679… 447365</div><div class='input'>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
 <span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 15 x 8
 #&gt;    list_count title              year trakt  slug             tvdb  imdb   tmdb 
 #&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;
 #&gt;  1       1170 The Politician     2019 145654 the-politician   3614… tt797… 83127
-#&gt;  2        859 Criminal           2019 140662 criminal         3564… tt934… 92926
-#&gt;  3        398 Raising Dion       2019 124235 raising-dion     3359… tt782… &lt;NA&gt; 
-#&gt;  4        301 Living with Your…  2019 151776 living-with-you… 3685… tt888… &lt;NA&gt; 
+#&gt;  2        871 Criminal           2019 140662 criminal         3564… tt934… 92926
+#&gt;  3        425 Living With Your…  2019 151776 living-with-you… 3685… tt888… 81532
+#&gt;  4        402 Raising Dion       2019 124235 raising-dion     3359… tt782… &lt;NA&gt; 
 #&gt;  5        194 Inside Bill's Br…  2019 151722 inside-bill-s-b… 3684… tt108… 93016
-#&gt;  6        145 The Last Kids on…  2019 148014 the-last-kids-o… 3641… tt891… &lt;NA&gt; 
-#&gt;  7        140 V-Wars             2019 133365 v-wars           3493… tt740… &lt;NA&gt; 
-#&gt;  8        131 Sintonia           2019 131399 sintonia         3443… tt816… &lt;NA&gt; 
-#&gt;  9        123 Daybreak           2019 152108 daybreak-2019    3547… tt875… 83478
+#&gt;  6        160 Daybreak           2019 152108 daybreak-2019    3547… tt875… 83478
+#&gt;  7        147 The Last Kids on…  2019 148014 the-last-kids-o… 3641… tt891… &lt;NA&gt; 
+#&gt;  8        140 V-Wars             2019 133365 v-wars           3493… tt740… &lt;NA&gt; 
+#&gt;  9        131 Sintonia           2019 131399 sintonia         3443… tt816… &lt;NA&gt; 
 #&gt; 10        116 The Faction        2019 141592 the-faction      3566… &lt;NA&gt;   &lt;NA&gt; 
 #&gt; 11        100 Bard of Blood      2019 151788 bard-of-blood    3684… tt806… &lt;NA&gt; 
 #&gt; 12         30 Skylines           2019 152036 skylines         3688… tt918… &lt;NA&gt; 
