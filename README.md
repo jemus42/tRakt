@@ -1,9 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tRakt
-
-<img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="140"/>
+# tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="120"/>
 
 <!-- badges: start -->
 
@@ -13,12 +11,12 @@
 status](https://ci.appveyor.com/api/projects/status/github/jemus42/tRakt?branch=master&svg=true)](https://ci.appveyor.com/project/jemus42/tRakt)
 [![Coverage
 status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
+<!-- [![CRAN status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt) -->
 [![GitHub
 release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](https://github.com/jemus42/tRakt/releases)
 [![GitHub last commit
 (master)](https://img.shields.io/github/last-commit/jemus42/tRakt/master.svg?logo=GithUb)](https://github.com/jemus42/tRakt/commits/master)
+<!-- badges: end -->
 
 This is `tRakt` version `0.14.0.9000`.  
 It contains functions to retrieve data from
@@ -27,7 +25,7 @@ It contains functions to retrieve data from
 more social features – and, most importantly, [a publicly available
 API](https://trakt.docs.apiary.io).
 
-It’s an [R package](http://r-project.org) primarily used by (i.e. built
+It’s an [R](http://r-project.org) package primarily used by (i.e. built
 for) [this webapp](http://trakt.jemu.name).  
 Please note that while this package is *basically* an API-client, it is
 a little more opinionated and might deliver results that do not exactly
@@ -50,7 +48,7 @@ remotes::install_github("jemus42/tRakt")
 library("tRakt")
 ```
 
-## Basic usage
+## Usage
 
 ``` r
 library(tibble) # for glimpse()
