@@ -6,14 +6,25 @@ test_that("trakt.user.collection works", {
   user <- "jemus42"
 
   col_sho <- trakt.user.collection(user = user, type = "shows", unnest_episodes = FALSE)
-  col_mov <- trakt.user.collection(user = user, type = "movies")
   col_sho2 <- trakt.user.collection(user = user)
 
   expect_identical(col_sho, col_sho2)
 
+  col_sho %>%
+    expect_is("tbl") %>%
+    expect_length(8)
+
+  trakt.user.collection(user = user, type = "movies") %>%
+    expect_is("tbl") %>%
+    expect_length(8)
+
+  trakt.user.collection(user = c("jemus42", "sean"), type = "movies") %>%
+    expect_is("tbl") %>%
+    expect_length(9)
+
   # Error conditions ----
   expect_error(trakt.user.collection(user = -1))
-  expect_error(trakt.user.collection(user = c("jemus42", "sean")))
+  expect_error(trakt.user.collection(user = c("jemus42", "totallynotarealuser")))
   expect_error(trakt.user.collection(user = user, type = "wurst"))
 })
 
