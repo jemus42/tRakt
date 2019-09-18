@@ -10,6 +10,7 @@
 #' @importFrom dplyr select
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr rename
+#' @importFrom dplyr rename_all
 #' @importFrom tibble tibble
 #' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
