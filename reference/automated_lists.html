@@ -344,11 +344,11 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1       77 Spid…  2019 It’s t… Peter P… 2019-07-02     129 us      http:/…
-#&gt; 2       45 Anna   2019 Never … Beneath… 2019-06-21     119 fr      http:/…
-#&gt; 3       41 Toy …  2019 Get Re… "Woody … 2019-06-21     100 us      http:/…
-#&gt; 4       24 John…  2019 The Gr… Super-a… 2019-05-17     131 us      http:/…
-#&gt; 5       21 Dark…  2019 The ph… The X-M… 2019-06-07     114 us      http:/…
+#&gt; 1       71 Spid…  2019 It’s t… Peter P… 2019-07-02     129 us      http:/…
+#&gt; 2       31 Toy …  2019 Get Re… "Woody … 2019-06-21     100 us      http:/…
+#&gt; 3       16 Anna   2019 Never … Beneath… 2019-06-21     119 us      http:/…
+#&gt; 4       15 Alad…  2019 Choose… A kindh… 2019-05-24     128 us      http:/…
+#&gt; 5       15 It C…  2019 You'll… 27 year… 2019-09-06     169 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
@@ -368,20 +368,20 @@ same additional variables besides the media information: <code>watcher_count</co
 #&gt;    list_count title              year trakt  slug             tvdb  imdb   tmdb 
 #&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;
 #&gt;  1       1170 The Politician     2019 145654 the-politician   3614… tt797… 83127
-#&gt;  2        871 Criminal           2019 140662 criminal         3564… tt934… 92926
-#&gt;  3        425 Living With Your…  2019 151776 living-with-you… 3685… tt888… 81532
+#&gt;  2        901 Criminal           2019 140662 criminal         3564… tt934… 92926
+#&gt;  3        492 Living With Your…  2019 151776 living-with-you… 3685… tt888… 81532
 #&gt;  4        402 Raising Dion       2019 124235 raising-dion     3359… tt782… &lt;NA&gt; 
-#&gt;  5        194 Inside Bill's Br…  2019 151722 inside-bill-s-b… 3684… tt108… 93016
-#&gt;  6        160 Daybreak           2019 152108 daybreak-2019    3547… tt875… 83478
-#&gt;  7        147 The Last Kids on…  2019 148014 the-last-kids-o… 3641… tt891… &lt;NA&gt; 
+#&gt;  5        197 Daybreak           2019 152108 daybreak-2019    3547… tt875… 83478
+#&gt;  6        194 Inside Bill's Br…  2019 151722 inside-bill-s-b… 3684… tt108… 93016
+#&gt;  7        145 The Last Kids on…  2019 148014 the-last-kids-o… 3641… tt891… 92684
 #&gt;  8        140 V-Wars             2019 133365 v-wars           3493… tt740… &lt;NA&gt; 
 #&gt;  9        131 Sintonia           2019 131399 sintonia         3443… tt816… &lt;NA&gt; 
 #&gt; 10        116 The Faction        2019 141592 the-faction      3566… &lt;NA&gt;   &lt;NA&gt; 
 #&gt; 11        100 Bard of Blood      2019 151788 bard-of-blood    3684… tt806… &lt;NA&gt; 
-#&gt; 12         30 Skylines           2019 152036 skylines         3688… tt918… &lt;NA&gt; 
-#&gt; 13         20 Rhythm + Flow      2019 152211 rhythm-flow      3690… tt927… 83996
-#&gt; 14         19 Cidades Invisive…  2019 134761 cidades-invisiv… 3493… &lt;NA&gt;   &lt;NA&gt; 
-#&gt; 15         10 The Hockey Girls   2019 152203 the-hockey-girls 3690… tt948… &lt;NA&gt; </div><div class='input'>
+#&gt; 12         96 Beastars           2019 145309 beastars         3610… &lt;NA&gt;   90937
+#&gt; 13         30 Skylines           2019 152036 skylines         3688… tt918… &lt;NA&gt; 
+#&gt; 14         20 Rhythm + Flow      2019 152211 rhythm-flow      3690… tt927… 83996
+#&gt; 15         19 Cidades Invisive…  2019 134761 cidades-invisiv… 3493… &lt;NA&gt;   &lt;NA&gt; </div><div class='input'>
 <span class='co'># Get the most popular German-language movies between 1990 and 2010</span>
 <span class='fu'>trakt.popular</span>(<span class='st'>"movies"</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1990</span>, <span class='fl'>2010</span>))</div><div class='output co'>#&gt; # A tibble: 10 x 6
 #&gt;    title                    year trakt slug                       imdb      tmdb

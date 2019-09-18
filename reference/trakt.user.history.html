@@ -201,9 +201,13 @@ returns more variables and should generally only be used if required.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. For <code>type == "show"</code>, the <code>tibble</code> contains
-two list-columns <code>show</code> and <code>episode</code> which are <em>not</em> unnested by default due to
-duplicate variable names, the preferref handling of which is left to the user.</p>
+    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>For <code>type = "shows"</code>, the
+original output contains a nested object with <code>show</code> and <code>episode</code> data,
+which are unnested by this function. Due to duplicate variable names,
+all episode-related variables are prefixed with <code>episode_</code>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other user data: <code><a href='trakt.user.collection.html'>trakt.user.collection</a></code>,
@@ -231,6 +235,7 @@ duplicate variable names, the preferref handling of which is left to the user.</
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#note">Note</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
