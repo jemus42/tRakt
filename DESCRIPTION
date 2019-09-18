@@ -20,7 +20,7 @@ BugReports: http://github.com/jemus42/tRakt/issues
 Depends:
     R (>= 2.10)
 Imports:
-    dplyr,
+    dplyr (>= 0.6.0),
     httr,
     jsonlite (>= 0.9.14),
     lubridate,

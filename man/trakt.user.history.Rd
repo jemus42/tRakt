@@ -26,13 +26,17 @@ to a datetime object of class \code{POSIXct}. See \link{ISOdate} for further inf
 returns more variables and should generally only be used if required.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble()}. For \code{type == "show"}, the \code{tibble} contains
-two list-columns \code{show} and \code{episode} which are \emph{not} unnested by default due to
-duplicate variable names, the preferref handling of which is left to the user.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Retrieve a the last \code{limit} items a user has watched, including the method by
 which it was logged (e.g. \emph{scrobble} or \emph{checkin}).
+}
+\note{
+For \code{type = "shows"}, the
+original output contains a nested object with \code{show} and \code{episode} data,
+which are unnested by this function. Due to duplicate variable names,
+all episode-related variables are prefixed with \code{episode_}.
 }
 \examples{
 \dontrun{
