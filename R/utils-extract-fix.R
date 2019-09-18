@@ -172,7 +172,14 @@ fix_datetime <- function(response) {
 
   if (inherits(response, "data.frame")) {
     response %>%
-      mutate_at(.vars = vars(datevars), ymd_hms)
+      mutate_at(.vars = vars(datevars), ~{
+        # Don't convert already POSIXct vars
+        if (!(inherits(response$first_aired, "POSIXct"))) {
+          ymd_hms(.x)
+        } else {
+          .x
+        }
+      })
   } else {
     map_at(response, datevars, ymd_hms)
   }
