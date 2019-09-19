@@ -54,6 +54,11 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
   response$available_translations <- list(response$available_translations)
   response$genres <- list(response$genres)
 
+  # Make sure top-level elements that could be NULL aren't
+  # Check e.g. show "1657" for homepage = NULL
+  response <- response %>%
+    modify_if(is.null, ~ return(NA_character_))
+
   # Clean up shows and movie objects separately, feels cleaner that way.
   if (type == "shows") {
     response$airs <- response$airs %>%
