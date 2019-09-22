@@ -10,10 +10,10 @@
 #' the value of `extended`.
 #' See also [the API reference here](https://trakt.docs.apiary.io/#reference/search) for
 #' which fields of the item metadata are searched by default.
-#' @param query `character(1)`: The keyword used for the search, e.g. `"game of thrones"`.
+#' @param query `character(1)`: The keyword used for the search, e.g. `"breaking bad"`.
 #' @param id `character(1)`: The id used for the search, e.g. `14701` for a `Trakt ID`.
 #' @param id_type `character(1) ["trakt"]`: The type of `id`. One of `trakt`, `imdb`, `tmdb`, `tvdb`.
-#' @param type `character(1) ["movie"]`: The type of data you're looking for. One of `show`,
+#' @param type `character(1) ["show"]`: The type of data you're looking for. One of `show`,
 #' `movie`, `episode`, `person` or `list` or a character vector with those elements, e.g.
 #' `c("show", "movie")`. Note that not every combination is reasonably combinable, e.g.
 #' `c("movie", "list")`. Use separate function calls in that case.
@@ -39,8 +39,9 @@
 #' # A movie or a show, two of each
 #' trakt.search("Tron", type = c("movie", "show"), n_results = 2)
 #' }
-trakt.search <- function(query, type = "movie",
+trakt.search <- function(query, type = "show",
                          years = NULL, n_results = 1L, extended = c("min", "full")) {
+
   ok_types <- c("movie", "show", "episode", "person", "list")
   type <- match.arg(type, choices = ok_types, several.ok = TRUE)
   extended <- match.arg(extended)
