@@ -18,10 +18,9 @@ release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](h
 (master)](https://img.shields.io/github/last-commit/jemus42/tRakt/master.svg?logo=GithUb)](https://github.com/jemus42/tRakt/commits/master)
 <!-- badges: end -->
 
-This is `tRakt` version `0.14.0.9000`.  
-It contains functions to retrieve data from
+`tRakt` contains functions to retrieve data from
 [trakt.tv](https://trakt.tv/), a site similiar to
-[IMDb](https://imdb.com) with a broader focus including TV shows and
+[IMDb](https://imdb.com) with a broader focus, including TV shows and
 more social features – and, most importantly, [a publicly available
 API](https://trakt.docs.apiary.io).
 
@@ -102,38 +101,38 @@ trakt.seasons.season(show_info$trakt, seasons = c(1, 2), extended = "full") %>%
 #> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "…
 ```
 
-## Setting credentials
+## Credentials
 
 The API requires at least a `client id` for the API calls.  
-Calling `trakt_credentials()` will set everything up for you, but you
-either have to manually plug your values in (see
-`?trakt_credentials()`), or have the values supplied via enviroment
+Loading the package (or calling its functions via `tRakt::` wil
+automatically set the app’s client id (see `?trakt_credentials()`) – for
+extended use you should set your own credentials via enviroment
 variables in your `.Renviron` like this:
 
 ``` sh
 # tRakt
-trakt_username=jemus42
 trakt_client_id=12fc1de7[...]3d629afdf2
+trakt_username=jemus42
 ```
 
+  - `trakt_client_id` **Required**. It’s used in the HTTP headers for
+    the API calls, which is kind of a biggie.
   - `trakt_username` **Optional**. For functions that retrieve a user’s
     watched shows or stats (`trakt.user.*`), this just sets the default
     value so you don’t have to keep supplying it in individual function
     calls when you’re just looking at your own data anyway.
-  - `trakt_client_id` **Required**. It’s used in the HTTP headers for
-    the API calls, which is kind of a biggie.
+
+Please not that there’s no client secret listed – that’s because this
+package doesn’t implement any authenticated methods. Maybe in the
+future.
 
 To get your credentials, [you have to have an (approved) app over at
 trakt.tv](http://trakt.tv/oauth/applications).  
 Don’t worry, it’s really easy to set up. Even I did it.
 
-As a convenience for you, and also to make automated testing a little
-easier, when the package is loaded either directly via `library(tRakt)`
-or indirectly via any kind of `tRakt::function` call,
-`trakt_credentials()` automatically sets my registered app’s `client id`
-as a fallback, so you theoretically never need to supply your own
-credentials. However, if you want to actually use this package for some
-project, I do not recommend relying on my credentials.  
+You theoretically never need to supply your own credentials. However, if
+you want to actually use this package for some project, I do not
+recommend relying on my credentials.  
 That would make me a sad panda. As of now, the trakt.tv API does not
 have any rate-limiting, but it’s not guaranteed to stay like this in the
 future.
