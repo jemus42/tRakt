@@ -174,7 +174,7 @@ fix_datetime <- function(response) {
     response %>%
       mutate_at(.vars = vars(datevars), ~{
         # Don't convert already POSIXct vars
-        if (!(inherits(response$first_aired, "POSIXct"))) {
+        if (!(inherits(.x, "POSIXct"))) {
           ymd_hms(.x)
         } else {
           .x

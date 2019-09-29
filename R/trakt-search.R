@@ -5,9 +5,8 @@
 #' the ids or proper show/movie title for further use, as well
 #' as receiving a quick overview of a show/movie.
 #'
-#' The amount of
-#' information returned is equal to `.summary` API methods and in turn depends on
-#' the value of `extended`.
+#' The amount of information returned is equal to `.summary` API methods and
+#' in turn depends on the value of `extended`.
 #' See also [the API reference here](https://trakt.docs.apiary.io/#reference/search) for
 #' which fields of the item metadata are searched by default.
 #' @param query `character(1)`: The keyword used for the search, e.g. `"breaking bad"`.
@@ -19,8 +18,10 @@
 #' `c("movie", "list")`. Use separate function calls in that case.
 #' @inheritParams search_filters
 #' @param n_results `integer(1) [1]`: How many results to return.
-#' @return A [tibble()][tibble::tibble-package] containing a `n_result` result.
+#' @return A [tibble][tibble::tibble-package] containing `n_results` results.
 #'         If no results are found, the `tibble` has 0 rows.
+#'         If more than one `type` is specified, e.g. `c("movie", "show")`,
+#'         there will be `n_results` results *per type*.
 #' @inheritParams trakt_api_common_parameters
 #' @export
 #' @family API-basics

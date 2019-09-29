@@ -74,7 +74,7 @@ trakt.user.collection <- function(user = getOption("trakt_username"),
         rename(season = number) %>%
         tidyr::unnest(episodes) %>%
         rename(episode = number) %>%
-        dplyr::mutate(collected_at = ymd_hms(collected_at))
+        mutate(collected_at = ymd_hms(collected_at))
     }
   } else if (type == "movies") {
     response <- unpack_movie(response)
