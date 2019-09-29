@@ -7,7 +7,7 @@
 #' This function wraps the API method
 #' [`/users/:id/stats`](https://trakt.docs.apiary.io/#reference/users/stats/get-stats).
 #' @inheritParams trakt_api_common_parameters
-#' @return A `list` of [tibbles][tibble::tibble-package] contining the following elements:
+#' @return A `list` of [tibbles][tibble::tibble-package] containing the following elements:
 #' - "movies"
 #' - "shows"
 #' - "seasons"

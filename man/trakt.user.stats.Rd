@@ -12,7 +12,7 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{user} values separately and the result is combined.}
 }
 \value{
-A \code{list} of \link[tibble:tibble-package]{tibbles} contining the following elements:
+A \code{list} of \link[tibble:tibble-package]{tibbles} containing the following elements:
 \itemize{
 \item "movies"
 \item "shows"
