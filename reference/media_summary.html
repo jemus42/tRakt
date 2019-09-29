@@ -43,7 +43,7 @@
 
 
 <meta property="og:title" content="Get show or movie summary info — media_summary" />
-<meta property="og:description" content="Note that this function returns the same amount of informations as trakt.search." />
+<meta property="og:description" content="Get show or movie summary info" />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -159,7 +159,7 @@
     </div>
 
     <div class="ref-description">
-    <p>Note that this function returns the same amount of informations as <a href='trakt.search.html'>trakt.search</a>.</p>
+    <p>Get show or movie summary info</p>
     </div>
 
     <pre class="usage"><span class='fu'>trakt.movies.summary</span>(<span class='no'>target</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
@@ -186,6 +186,16 @@ returns more variables and should generally only be used if required.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>These functions wrap the "single item" API methods:</p><ul>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show'>/shows/:id</a></p></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie'>/movies/:id</a></p></li>
+</ul>
+
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>Thes function returns the same amount of informations as <a href='trakt.search.html'>trakt.search</a>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Minimal info by default</span>
@@ -220,6 +230,8 @@ returns more variables and should generally only be used if required.</p></td>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#note">Note</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

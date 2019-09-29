@@ -43,9 +43,9 @@
 
 
 <meta property="og:title" content="See which movies / shows are popular — automated_lists" />
-<meta property="og:description" content="According to the API docs, popularity is calculated based both ratings
-and number of ratings. Trending items are those being watched right now, where
-items with the most users watching are returned first. Anticipation is measured
+<meta property="og:description" content="According to the API docs, popularity is calculated based both on ratings
+and the number of ratings (i.e., votes). Trending items are those being watched right now, where
+items with the most users currently watching are returned first. Anticipation is measured
 by the number of user-created lists an items is part of while not being released yet." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -162,9 +162,9 @@ by the number of user-created lists an items is part of while not being released
     </div>
 
     <div class="ref-description">
-    <p>According to the API docs, popularity is calculated based both ratings
-and number of ratings. Trending items are those being watched right now, where
-items with the most users watching are returned first. Anticipation is measured
+    <p>According to the API docs, popularity is calculated based both on ratings
+and the number of ratings (i.e., votes). Trending items are those being watched right now, where
+items with the most users currently watching are returned first. Anticipation is measured
 by the number of user-created lists an items is part of while not being released yet.</p>
     </div>
 
@@ -344,11 +344,11 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1       97 Fast…  2019 ""      A spino… 2019-08-02     136 us      http:/…
-#&gt; 2       91 Toy …  2019 Get Re… "Woody … 2019-06-21     100 us      http:/…
-#&gt; 3       85 Spid…  2019 It’s t… Peter P… 2019-07-02     129 us      http:/…
-#&gt; 4       47 Alad…  2019 Choose… A kindh… 2019-05-24     128 us      http:/…
-#&gt; 5       42 Dark…  2019 The ph… The X-M… 2019-06-07     114 us      http:/…
+#&gt; 1      121 Fast…  2019 ""      A spino… 2019-08-02     136 us      http:/…
+#&gt; 2       99 Spid…  2019 It’s t… Peter P… 2019-07-02     129 us      http:/…
+#&gt; 3       94 Toy …  2019 Get Re… "Woody … 2019-06-21     100 us      http:/…
+#&gt; 4       58 Alad…  2019 Choose… A kindh… 2019-05-24     128 us      http:/…
+#&gt; 5       45 Mids…  2019 Let th… A young… 2019-07-03     147 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,

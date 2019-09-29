@@ -43,7 +43,9 @@
 
 
 <meta property="og:title" content="Get a show or movie's stats — media_stats" />
-<meta property="og:description" content="The data contains watchers, playes, collectors, comments, lists, and votes." />
+<meta property="og:description" content="The data contains watchers, playes, collectors, comments, lists, and votes.
+#' @details
+The API methods for these functions are:" />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -159,7 +161,9 @@
     </div>
 
     <div class="ref-description">
-    <p>The data contains watchers, playes, collectors, comments, lists, and votes.</p>
+    <p>The data contains watchers, playes, collectors, comments, lists, and votes.
+#' @details
+The API methods for these functions are:</p>
     </div>
 
     <pre class="usage"><span class='fu'>trakt.shows.stats</span>(<span class='no'>target</span>)
@@ -197,6 +201,16 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    
+<ul>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats'>/movies/:id/stats</a></p></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats'>/shows/:id/stats</a></p></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats'>/shows/:id/seasons/:season/stats</a></p></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats'>/shows/:id/seasons/:season/episodes/:episode/stats</a></p></li>
+</ul>
+
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Stats for a movie</span>
@@ -228,6 +242,7 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

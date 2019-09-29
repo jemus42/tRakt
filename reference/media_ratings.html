@@ -201,6 +201,15 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The API methods for these functions are:</p><ul>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings'>/movies/:id/ratings</a></p></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings'>/shows/:id/ratings</a></p></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings'>/shows/:id/seasons/:season/ratings</a></p></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings'>/shows/:id/seasons/:season/episodes/:episode/ratings</a></p></li>
+</ul>
+
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>Since this function is able to work on multi-length inputs for
@@ -245,6 +254,7 @@ of one API call <em>per element in each argument</em>. Please be kind to the API
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
       <li><a href="#note">Note</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>

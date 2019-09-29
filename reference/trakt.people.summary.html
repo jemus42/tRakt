@@ -44,7 +44,7 @@
 
 <meta property="og:title" content="Get a single person's details — trakt.people.summary" />
 <meta property="og:description" content="Get a single person's details, like their various IDs. If extended is &quot;full&quot;,
-there will also be biographical data if available." />
+there will also be biographical data if available, e.g. their birthday." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -161,7 +161,7 @@ there will also be biographical data if available." />
 
     <div class="ref-description">
     <p>Get a single person's details, like their various IDs. If <code>extended</code> is <code>"full"</code>,
-there will also be biographical data if available.</p>
+there will also be biographical data if available, e.g. their birthday.</p>
     </div>
 
     <pre class="usage"><span class='fu'>trakt.people.summary</span>(<span class='no'>target</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
@@ -186,6 +186,10 @@ returns more variables and should generally only be used if required.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This function wraps the API method
+<a href='https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person'>/people/:id</a>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other people data: <code><a href='media_people.html'>media_people</a></code>,
@@ -209,6 +213,7 @@ returns more variables and should generally only be used if required.</p></td>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
