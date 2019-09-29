@@ -1,8 +1,12 @@
 #' Get a user's ratings
 #'
 #' Retrieve a user's media ratings
+#' @details
+#' This function wraps the API method
+#' [`/users/:id/ratings/:type/:rating`](https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings).
 #' @inheritParams trakt_api_common_parameters
-#' @param rating `integer(1L)`: Rating to filter by. Can be `1` through `10`, default is `NULL`
+#' @param rating `integer(1L)`: Optional rating to filter by. Can be `1` through `10`,
+#' default is `NULL` for no filtering.
 #' @return A [tibble()][tibble::tibble-package].
 #' @export
 #' @family user data

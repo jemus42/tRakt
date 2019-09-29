@@ -3,8 +3,17 @@
 #' Data about a user's interactions with movies, shows, seasons, episodes,
 #' as well as their social network (friends, followings, followers) and a
 #' frequency table of the user's media ratings so far.
+#' @details
+#' This function wraps the API method
+#' [`/users/:id/stats`](https://trakt.docs.apiary.io/#reference/users/stats/get-stats).
 #' @inheritParams trakt_api_common_parameters
-#' @return A `list` of [tibbles][tibble::tibble-package].
+#' @return A `list` of [tibbles][tibble::tibble-package] contining the following elements:
+#' - "movies"
+#' - "shows"
+#' - "seasons"
+#' - "episodes"
+#' - "network"
+#' - "ratings"
 #' @export
 #' @importFrom purrr map
 #' @family user data

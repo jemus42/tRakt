@@ -12,12 +12,24 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{user} values separately and the result is combined.}
 }
 \value{
-A \code{list} of \link[tibble:tibble-package]{tibbles}.
+A \code{list} of \link[tibble:tibble-package]{tibbles} contining the following elements:
+\itemize{
+\item "movies"
+\item "shows"
+\item "seasons"
+\item "episodes"
+\item "network"
+\item "ratings"
+}
 }
 \description{
 Data about a user's interactions with movies, shows, seasons, episodes,
 as well as their social network (friends, followings, followers) and a
 frequency table of the user's media ratings so far.
+}
+\details{
+This function wraps the API method
+\href{https://trakt.docs.apiary.io/#reference/users/stats/get-stats}{/users/:id/stats}.
 }
 \examples{
 \dontrun{

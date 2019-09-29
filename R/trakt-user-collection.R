@@ -5,8 +5,8 @@
 #' public profile.
 #'
 #' @details
-#' This function wraps [this API method](https://trakt.docs.apiary.io/#reference/users/collection/get-collection)
-#' at the endpoint `/users/:user_id/collection/:type`.
+#' This function wraps the API method
+#' [`/users/:user_id/collection/:type`](https://trakt.docs.apiary.io/#reference/users/collection/get-collection).
 #' @note The `extended = "metadata"` API parameter is not implemented. This would
 #' add media information `media_type`, `resolution`, `audio`, `audio_channels` and `3D`
 #' to the output, which may or may not be available. If this feature is important to

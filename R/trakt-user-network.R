@@ -3,7 +3,8 @@
 #' Retrieve a user's followers, followings or friends (the two-way relationship).
 #'
 #' @details
-#' The corresponding API methods [are described in the API reference](https://trakt.docs.apiary.io/#reference/users/followers).
+#' The corresponding API methods
+#' [are described in the API reference](https://trakt.docs.apiary.io/#reference/users/followers).
 #'
 #' The relevant endpoints for this function are, depending on `relationship`:
 #' - `followers`: `users/:id/followers`

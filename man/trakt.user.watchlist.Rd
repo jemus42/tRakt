@@ -24,6 +24,10 @@ A \link[tibble:tibble-package]{tibble()}.
 \description{
 Retrieve a user's watchlisted shows or movies.
 }
+\details{
+This function wraps the API method
+\href{https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist}{/users/:id/watchlist/:type}.
+}
 \examples{
 \dontrun{
 # Defaults to movie watchlist and minimal info

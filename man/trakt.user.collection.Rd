@@ -27,8 +27,8 @@ It does not use OAuth2, so you can only get data for a user with a
 public profile.
 }
 \details{
-This function wraps \href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{this API method}
-at the endpoint \code{/users/:user_id/collection/:type}.
+This function wraps the API method
+\href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{/users/:user_id/collection/:type}.
 }
 \note{
 The \code{extended = "metadata"} API parameter is not implemented. This would

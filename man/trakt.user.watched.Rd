@@ -27,6 +27,10 @@ A \link[tibble:tibble-package]{tibble()}.
 It does not use OAuth2, so you can only get data for a user with a
 \strong{public profile}.
 }
+\details{
+This function wraps the API method
+\href{https://trakt.docs.apiary.io/#reference/users/watched/get-watched}{/users/:id/watched/:type}.
+}
 \examples{
 \dontrun{
 # Use noseasons = TRUE to avoid receiving detailed season/episode data

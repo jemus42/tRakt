@@ -32,6 +32,10 @@ A \link[tibble:tibble-package]{tibble()}.
 Retrieve a the last \code{limit} items a user has watched, including the method by
 which it was logged (e.g. \emph{scrobble} or \emph{checkin}).
 }
+\details{
+This function wraps the API method
+\href{https://trakt.docs.apiary.io/#reference/users/history/get-watched-history}{/users/:id/history/:type}.
+}
 \note{
 For \code{type = "shows"}, the
 original output contains a nested object with \code{show} and \code{episode} data,

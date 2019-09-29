@@ -16,7 +16,8 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
 functions, values \code{seasons} or \code{episodes} are also allowed.}
 
-\item{rating}{\code{integer(1L)}: Rating to filter by. Can be \code{1} through \code{10}, default is \code{NULL}}
+\item{rating}{\code{integer(1L)}: Optional rating to filter by. Can be \code{1} through \code{10},
+default is \code{NULL} for no filtering.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
@@ -26,6 +27,10 @@ A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Retrieve a user's media ratings
+}
+\details{
+This function wraps the API method
+\href{https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings}{/users/:id/ratings/:type/:rating}.
 }
 \examples{
 \dontrun{

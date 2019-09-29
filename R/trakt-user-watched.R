@@ -4,6 +4,9 @@
 #' It does not use OAuth2, so you can only get data for a user with a
 #' **public profile**.
 #'
+#' @details
+#' This function wraps the API method
+#' [`/users/:id/watched/:type`](https://trakt.docs.apiary.io/#reference/users/watched/get-watched).
 #' @inheritParams trakt_api_common_parameters
 #' @param noseasons `logical(1) [TRUE]`: Only for `type = "show"`: Exclude detailed season
 #' data from output. This is advisable if you do not need per-episode data and want to

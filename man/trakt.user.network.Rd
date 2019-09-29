@@ -28,7 +28,8 @@ A \link[tibble:tibble-package]{tibble()}.
 Retrieve a user's followers, followings or friends (the two-way relationship).
 }
 \details{
-The corresponding API methods \href{https://trakt.docs.apiary.io/#reference/users/followers}{are described in the API reference}.
+The corresponding API methods
+\href{https://trakt.docs.apiary.io/#reference/users/followers}{are described in the API reference}.
 
 The relevant endpoints for this function are, depending on \code{relationship}:
 \itemize{
