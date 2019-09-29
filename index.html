@@ -118,8 +118,7 @@
 </h1></div>
 <!-- badges: start -->
 
-<p>This is <code>tRakt</code> version <code>0.14.0.9000</code>.<br>
-It contains functions to retrieve data from <a href="https://trakt.tv/">trakt.tv</a>, a site similiar to <a href="https://imdb.com">IMDb</a> with a broader focus including TV shows and more social features – and, most importantly, <a href="https://trakt.docs.apiary.io">a publicly available API</a>.</p>
+<p><code>tRakt</code> contains functions to retrieve data from <a href="https://trakt.tv/">trakt.tv</a>, a site similiar to <a href="https://imdb.com">IMDb</a> with a broader focus, including TV shows and more social features – and, most importantly, <a href="https://trakt.docs.apiary.io">a publicly available API</a>.</p>
 <p>It’s an <a href="http://r-project.org">R</a> package primarily used by (i.e. built for) <a href="http://trakt.jemu.name">this webapp</a>.<br>
 Please note that while this package is <em>basically</em> an API-client, it is a little more opinionated and might deliver results that do not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.</p>
 <div id="installation" class="section level2">
@@ -186,23 +185,24 @@ Please note that while this package is <em>basically</em> an API-client, it is a
 <a class="sourceLine" id="cb2-48" data-line-number="48"><span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "t…</span></a>
 <a class="sourceLine" id="cb2-49" data-line-number="49"><span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "…</span></a></code></pre></div>
 </div>
-<div id="setting-credentials" class="section level2">
+<div id="credentials" class="section level2">
 <h2 class="hasAnchor">
-<a href="#setting-credentials" class="anchor"></a>Setting credentials</h2>
+<a href="#credentials" class="anchor"></a>Credentials</h2>
 <p>The API requires at least a <code>client id</code> for the API calls.<br>
-Calling <code><a href="reference/trakt_credentials.html">trakt_credentials()</a></code> will set everything up for you, but you either have to manually plug your values in (see <code>?trakt_credentials()</code>), or have the values supplied via enviroment variables in your <code>.Renviron</code> like this:</p>
+Loading the package (or calling its functions via <code>tRakt::</code> wil automatically set the app’s client id (see <code>?trakt_credentials()</code>) – for extended use you should set your own credentials via enviroment variables in your <code>.Renviron</code> like this:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># tRakt</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="va">trakt_username=</span>jemus42</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="va">trakt_client_id=</span>12fc1de7[<span class="ex">...</span>]3d629afdf2</a></code></pre></div>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="va">trakt_client_id=</span>12fc1de7[<span class="ex">...</span>]3d629afdf2</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="va">trakt_username=</span>jemus42</a></code></pre></div>
 <ul>
 <li>
-<code>trakt_username</code> <strong>Optional</strong>. For functions that retrieve a user’s watched shows or stats (<code>trakt.user.*</code>), this just sets the default value so you don’t have to keep supplying it in individual function calls when you’re just looking at your own data anyway.</li>
-<li>
 <code>trakt_client_id</code> <strong>Required</strong>. It’s used in the HTTP headers for the API calls, which is kind of a biggie.</li>
+<li>
+<code>trakt_username</code> <strong>Optional</strong>. For functions that retrieve a user’s watched shows or stats (<code>trakt.user.*</code>), this just sets the default value so you don’t have to keep supplying it in individual function calls when you’re just looking at your own data anyway.</li>
 </ul>
+<p>Please not that there’s no client secret listed – that’s because this package doesn’t implement any authenticated methods. Maybe in the future.</p>
 <p>To get your credentials, <a href="http://trakt.tv/oauth/applications">you have to have an (approved) app over at trakt.tv</a>.<br>
 Don’t worry, it’s really easy to set up. Even I did it.</p>
-<p>As a convenience for you, and also to make automated testing a little easier, when the package is loaded either directly via <code><a href="https://rdrr.io/r/base/library.html">library(tRakt)</a></code> or indirectly via any kind of <code>tRakt::function</code> call, <code><a href="reference/trakt_credentials.html">trakt_credentials()</a></code> automatically sets my registered app’s <code>client id</code> as a fallback, so you theoretically never need to supply your own credentials. However, if you want to actually use this package for some project, I do not recommend relying on my credentials.<br>
+<p>You theoretically never need to supply your own credentials. However, if you want to actually use this package for some project, I do not recommend relying on my credentials.<br>
 That would make me a sad panda. As of now, the trakt.tv API does not have any rate-limiting, but it’s not guaranteed to stay like this in the future.</p>
 </div>
 </div>

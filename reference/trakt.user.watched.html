@@ -206,20 +206,20 @@ be nice to the API.</p></td>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># Use noseasons = TRUE to avoid receiving detailed season/episode data</span>
-<span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Unknown or uninitialised column: 'first_aired'.</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Unknown or uninitialised column: 'first_aired'.</span></div><div class='output co'>#&gt; # A tibble: 490 x 11
+<span class='fu'>trakt.user.watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 491 x 11
 #&gt;    plays last_watched_at     last_updated_at     reset_at title  year trakt
 #&gt;    &lt;int&gt; &lt;dttm&gt;              &lt;dttm&gt;              &lt;lgl&gt;    &lt;chr&gt; &lt;int&gt; &lt;chr&gt;
-#&gt;  1  1795 2019-09-19 14:07:01 2019-09-19 14:07:01 NA       Broo…  2013 48587
-#&gt;  2   805 2019-09-19 06:50:00 2019-09-19 06:50:00 NA       Rick…  2013 69829
-#&gt;  3    15 2019-09-18 21:37:37 2019-09-18 21:37:38 NA       Marv…  2018 1271…
-#&gt;  4   167 2019-09-18 19:18:45 2019-09-18 19:18:45 NA       Marv…  2013 1394 
-#&gt;  5     8 2019-09-18 04:23:51 2019-09-18 04:32:10 NA       Carn…  2019 1487…
-#&gt;  6   123 2019-09-17 22:59:21 2019-09-17 22:59:21 NA       Fast…  2012 46598
-#&gt;  7   568 2019-09-17 13:32:59 2019-09-17 13:32:59 NA       Work…  2011 36837
-#&gt;  8  3431 2019-09-17 13:26:57 2019-09-17 13:26:57 NA       How …  2005 1095 
-#&gt;  9     5 2019-09-16 21:36:26 2019-09-16 21:36:26 NA       On B…  2019 1335…
-#&gt; 10    43 2019-09-16 20:23:36 2019-09-16 20:23:36 NA       Ball…  2015 78111
-#&gt; # … with 480 more rows, and 4 more variables: slug &lt;chr&gt;, tvdb &lt;chr&gt;,
+#&gt;  1   818 2019-09-29 07:32:17 2019-09-29 07:32:17 NA       Rick…  2013 69829
+#&gt;  2  1857 2019-09-28 11:56:59 2019-09-28 11:56:59 NA       Broo…  2013 48587
+#&gt;  3     1 2019-09-27 04:16:54 2019-09-27 04:16:54 NA       Stum…  2019 1441…
+#&gt;  4    39 2019-09-26 22:16:49 2019-09-26 22:16:49 NA       The …  2017 1190…
+#&gt;  5  2766 2019-09-26 20:48:09 2019-09-26 20:48:09 NA       Sout…  1997 2177 
+#&gt;  6   174 2019-09-26 19:20:00 2019-09-26 19:20:00 NA       Suits  2011 37522
+#&gt;  7    26 2019-09-26 18:32:17 2019-09-26 18:32:17 NA       Brai…  2016 1064…
+#&gt;  8  3434 2019-09-26 06:49:36 2019-09-26 06:49:36 NA       How …  2005 1095 
+#&gt;  9  1177 2019-09-26 04:38:27 2019-09-26 04:38:27 NA       Tosh…  2009 17933
+#&gt; 10     6 2019-09-24 20:37:40 2019-09-24 20:37:40 NA       On B…  2019 1335…
+#&gt; # … with 481 more rows, and 4 more variables: slug &lt;chr&gt;, tvdb &lt;chr&gt;,
 #&gt; #   imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'># }
 </div></pre>
   </div>

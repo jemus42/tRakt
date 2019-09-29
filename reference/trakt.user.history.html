@@ -220,14 +220,14 @@ all episode-related variables are prefixed with <code>episode_</code>.</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># The last 5 movies that user "jemus42" has watched</span>
-<span class='fu'>trakt.user.history</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Unknown or uninitialised column: 'first_aired'.</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Unknown or uninitialised column: 'first_aired'.</span></div><div class='output co'>#&gt; # A tibble: 5 x 10
+<span class='fu'>trakt.user.history</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 10
 #&gt;        id watched_at          action type  title   year trakt slug   imdb  tmdb 
 #&gt;     &lt;dbl&gt; &lt;dttm&gt;              &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;
-#&gt; 1  4.82e9 2019-09-14 20:43:02 scrob… movie The D…  2019 3873… the-d… tt86… 5355…
-#&gt; 2  4.72e9 2019-08-07 22:13:58 scrob… movie Shaza…  2019 1849… shaza… tt04… 2879…
-#&gt; 3  4.72e9 2019-08-06 21:41:45 scrob… movie Colla…  2004 998   colla… tt03… 1538 
-#&gt; 4  4.72e9 2019-08-04 21:39:07 scrob… movie Pokém…  2019 2940… pokem… tt58… 4474…
-#&gt; 5  4.70e9 2019-07-30 20:30:00 watch  movie Spide…  2019 2735… spide… tt63… 4296…</div><div class='input'># }
+#&gt; 1  4.84e9 2019-09-24 19:33:05 scrob… movie Ghost…  2004 7057  ghost… tt03… 12140
+#&gt; 2  4.84e9 2019-09-21 22:17:53 scrob… movie Tokyo…  2003 7877  tokyo… tt03… 13398
+#&gt; 3  4.82e9 2019-09-14 20:43:02 scrob… movie The D…  2019 3873… the-d… tt86… 5355…
+#&gt; 4  4.72e9 2019-08-07 22:13:58 scrob… movie Shaza…  2019 1849… shaza… tt04… 2879…
+#&gt; 5  4.72e9 2019-08-06 21:41:45 scrob… movie Colla…  2004 998   colla… tt03… 1538 </div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
