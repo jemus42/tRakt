@@ -11,21 +11,25 @@ use_data(networks, overwrite = TRUE)
 # Languages ----
 lang_movies <- trakt_get(build_trakt_url("languages", "movies"))
 lang_shows <- trakt_get(build_trakt_url("languages", "shows"))
-languages <- full_join(lang_movies, lang_shows) %>% as_tibble()
+languages <- full_join(lang_movies, lang_shows, by = c("name", "code")) %>%
+  as_tibble()
+
 use_data(languages, overwrite = TRUE)
 
-use_data(genres, overwrite = TRUE)
 # Genres ----
 genres_movies <- trakt_get(build_trakt_url("genres", "movies"))
 genres_shows <- trakt_get(build_trakt_url("genres", "shows"))
-genres <- full_join(genres_movies, genres_shows) %>% as_tibble()
-use_data(genres, overwrite = TRUE)
+genres <- full_join(genres_movies, genres_shows, by = c("name", "slug")) %>%
+  as_tibble()
 
+use_data(genres, overwrite = TRUE)
 
 # Countries ----
 countries_movies <- trakt_get(build_trakt_url("countries", "movies"))
 countries_shows <- trakt_get(build_trakt_url("countries", "shows"))
-countries <- full_join(countries_movies, countries_shows) %>% as_tibble()
+countries <- full_join(countries_movies, countries_shows, by = c("name", "code")) %>%
+  as_tibble()
+
 use_data(countries, overwrite = TRUE)
 
 # Certifications ----

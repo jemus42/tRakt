@@ -32,17 +32,15 @@ got <- trakt.seasons.season("game-of-thrones", seasons = 1:8, extended = "full")
   full_join(got, by = c("episode_abs" = "episode_abs")) -> got
 
 # Cleanup, reordering
-got %<>%
+gameofthrones <- got %>%
   select(
     episode_abs, episode, season, runtime, title,
     overview, rating, votes, viewers,
     director, writer,
-    first_aired, year, comment_count,
-    trakt, imdb, tvdb, tmdb, tvrage, updated_at
+    first_aired, comment_count,
+    trakt, imdb, tvdb, tmdb, updated_at
   ) %>%
-  arrange(episode_abs)
-
-gameofthrones <- as_tibble(got)
-rm(got)
+  arrange(episode_abs) %>%
+  as_tibble()
 
 usethis::use_data(gameofthrones, overwrite = TRUE)

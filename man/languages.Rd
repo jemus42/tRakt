@@ -4,7 +4,7 @@
 \name{languages}
 \alias{languages}
 \title{Language codes}
-\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 147 rows and 2 columns.}
+\format{An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 150 rows and 2 columns.}
 \source{
 \url{https://trakt.docs.apiary.io/#reference/languages/list/get-languages}
 }
