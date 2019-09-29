@@ -1,7 +1,8 @@
 #' Get a show or movie's stats
 #'
 #' The data contains watchers, playes, collectors, comments, lists, and votes.
-#' #' @details
+#'
+#' @details
 #' The API methods for these functions are:
 #'
 #' - [/movies/:id/stats](https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats)
