@@ -42,8 +42,7 @@
 #' \item{first_aired, updated_at}{Original air date and last update in UTC as `POSIXct`}
 #' \item{runtime}{Runtime in minutes}
 #' \item{trakt, tvdb, tmdb}{Episode IDs for trakt.tv, TVDb, and TMDb}
-#' \item{year}{Year of first airing}
-#' \item{epid}{Episode ID in `s00e00` format}
+#' \item{available_translations}{List-column of available translation on trakt.tv}
 #' }
 #' @family Episode datasets
 #' @examples

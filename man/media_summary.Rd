@@ -12,7 +12,8 @@ trakt.shows.summary(target, extended = c("min", "full"))
 }
 \arguments{
 \item{target}{\code{character(1)}: The ID of the item requested. Preferably the
-\code{Trakt ID} (e.g. \code{1390}), \code{slug} (e.g. \code{"game-of-thrones"}), or \code{IMDb ID} (e.g. \code{"tt0944947"}).
+\code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
+or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{target} values separately and the result is combined.}
 

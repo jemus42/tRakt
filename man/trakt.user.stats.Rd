@@ -7,7 +7,7 @@
 trakt.user.stats(user = getOption("trakt_username"))
 }
 \arguments{
-\item{user}{Target username. Defaults to \code{getOption("trakt_username")}.
+\item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 }
