@@ -51,7 +51,7 @@ trakt.collected(type = c("shows", "movies"), limit = 10,
   status = NULL)
 
 trakt.updates(type = c("shows", "movies"), limit = 10,
-  extended = c("min", "full"), start_date = Sys.Date() - 7)
+  extended = c("min", "full"), start_date = Sys.Date() - 1)
 }
 \arguments{
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
@@ -96,7 +96,7 @@ for a list of known networks.}
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
 
 \item{start_date}{\code{character(1)}: A date in the past from which on to count updates.
-If no date is supplied, the default is to use the date 7 days in the past relative
+If no date is supplied, the default is to use yesterday relative
 to the current date. Value must either be standard \code{YYYY-MM-DD} format or an object
 of class \link[base:Dates]{Date}, which will then be coerced via \link[base:as.character]{as.character()}.}
 }

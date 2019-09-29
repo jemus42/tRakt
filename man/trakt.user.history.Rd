@@ -40,12 +40,16 @@ This function wraps the API method
 For \code{type = "shows"}, the
 original output contains a nested object with \code{show} and \code{episode} data,
 which are unnested by this function. Due to duplicate variable names,
-all episode-related variables are prefixed with \code{episode_}.
+all episode-related variables are prefixed with \code{episode_}. This results in the
+episode number having the name \code{episode_episode}, which is quite silly. Sorry.
 }
 \examples{
 \dontrun{
-# The last 5 movies that user "jemus42" has watched
-trakt.user.history(user = "jemus42", type = "movies", limit = 5)
+# Shows user "jemus42" watched around christmas 2016
+trakt.user.history(
+  user = "jemus42", type = "shows", limit = 5,
+  start_at = "2015-12-24", end_at = "2015-12-28"
+  )
 }
 }
 \seealso{

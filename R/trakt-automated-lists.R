@@ -11,7 +11,7 @@
 #' @inheritParams trakt_api_common_parameters
 #' @inheritParams search_filters
 #' @param start_date `character(1)`: A date in the past from which on to count updates.
-#' If no date is supplied, the default is to use the date 7 days in the past relative
+#' If no date is supplied, the default is to use yesterday relative
 #' to the current date. Value must either be standard `YYYY-MM-DD` format or an object
 #' of class [Date][base::Dates], which will then be coerced via [as.character()][base::as.character].
 #' @return A [tibble()][tibble::tibble-package].
@@ -291,13 +291,13 @@ trakt.collected <- function(type = c("shows", "movies"),
 #' @note `trakt.updates` does not support filters.
 trakt.updates <- function(type = c("shows", "movies"),
                           limit = 10, extended = c("min", "full"),
-                          start_date = Sys.Date() - 7) {
+                          start_date = Sys.Date() - 1) {
   type <- match.arg(type)
   extended <- match.arg(extended)
   start_date <- as.character(as.Date(start_date))
 
   if (is.null(start_date)) {
-    start_date <- Sys.Date() - 28
+    start_date <- Sys.Date() - 1
   }
 
   trakt_auto_lists(
