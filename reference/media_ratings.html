@@ -180,7 +180,8 @@ just use <code>*.summary</code> functions or <a href='trakt.seasons.season.html'
     <tr>
       <th>target</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
-<code>Trakt ID</code> (e.g. <code>1390</code>), <code>slug</code> (e.g. <code>"game-of-thrones"</code>), or <code>IMDb ID</code> (e.g. <code>"tt0944947"</code>).
+<code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
+or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
 Can also be of length greater than 1, in which case the function is called on all
 <code>target</code> values separately and the result is combined.</p></td>
     </tr>
@@ -221,12 +222,12 @@ of one API call <em>per element in each argument</em>. Please be kind to the API
 <span class='fu'>trakt.movies.ratings</span>(<span class='st'>"tron-legacy-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;   rating votes distribution      id               type  
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;            &lt;chr&gt; 
-#&gt; 1   7.27 12745 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
+#&gt; 1   7.27 12746 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
 <span class='co'># A show's ratings</span>
 <span class='fu'>trakt.shows.ratings</span>(<span class='st'>"game-of-thrones"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
 #&gt;   rating votes distribution      id              type 
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;           &lt;chr&gt;
-#&gt; 1   9.23 98975 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># \dontrun{</span>
+#&gt; 1   9.23 99006 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># Ratings for seasons 1 through 5</span>
 <span class='fu'>trakt.seasons.ratings</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 5
 #&gt;   rating votes distribution      id       season
@@ -241,9 +242,9 @@ of one API call <em>per element in each argument</em>. Please be kind to the API
 #&gt;   rating votes distribution      id       season episode
 #&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;     &lt;dbl&gt;   &lt;int&gt;
 #&gt; 1   8.12  2031 &lt;tibble [10 × 2]&gt; futurama      1       1
-#&gt; 2   7.86  1583 &lt;tibble [10 × 2]&gt; futurama      1       2
-#&gt; 3   7.88  1452 &lt;tibble [10 × 2]&gt; futurama      1       3
-#&gt; 4   7.80  1293 &lt;tibble [10 × 2]&gt; futurama      1       4
+#&gt; 2   7.86  1584 &lt;tibble [10 × 2]&gt; futurama      1       2
+#&gt; 3   7.88  1453 &lt;tibble [10 × 2]&gt; futurama      1       3
+#&gt; 4   7.80  1294 &lt;tibble [10 × 2]&gt; futurama      1       4
 #&gt; 5   7.78  1250 &lt;tibble [10 × 2]&gt; futurama      1       5
 #&gt; 6   7.83  1227 &lt;tibble [10 × 2]&gt; futurama      1       6
 #&gt; 7   7.75  1145 &lt;tibble [10 × 2]&gt; futurama      1       7</div><div class='input'># }

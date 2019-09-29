@@ -176,7 +176,8 @@
     <tr>
       <th>target</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
-<code>Trakt ID</code> (e.g. <code>1390</code>), <code>slug</code> (e.g. <code>"game-of-thrones"</code>), or <code>IMDb ID</code> (e.g. <code>"tt0944947"</code>).
+<code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
+or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
 Can also be of length greater than 1, in which case the function is called on all
 <code>target</code> values separately and the result is combined.</p></td>
     </tr>
@@ -217,8 +218,8 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 <span class='fu'>trakt.shows.stats</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"breaking-bad"</span>, <span class='st'>"game-of-thrones"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 9
 #&gt;   watchers   plays collectors collected_episo… comments  lists votes type  id   
 #&gt;      &lt;int&gt;   &lt;int&gt;      &lt;int&gt;            &lt;int&gt;    &lt;int&gt;  &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1   467967  2.85e7     404919         20134709      425 130048 69121 shows brea…
-#&gt; 2   915543  5.57e7    1290361         69812555      341 271027 98977 shows game…</div><div class='input'>
+#&gt; 1   468228  2.85e7     405265         20148066      425 130080 69138 shows brea…
+#&gt; 2   916399  5.57e7    1291030         69853813      342 271062 99006 shows game…</div><div class='input'>
 <span class='co'># Stats for multiple episodes</span>
 <span class='fu'>trakt.episodes.stats</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 9
 #&gt;   watchers  plays collectors comments lists votes season episode id      

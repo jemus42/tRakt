@@ -43,9 +43,10 @@
 
 
 <meta property="og:title" content="Common API parameters — trakt_api_common_parameters" />
-<meta property="og:description" content="These parameters are used a lot throughout this package, and they tend to be
-alsways the same. Here there are all documented in one place, which is intended
-to make the individual function documentation more consistent." />
+<meta property="og:description" content="These parameters are used extensively throughout this package as they are required for many
+API methods. Here there are all documented in one place, which is intended
+to make the individual function documentation more consistent. The additional sections below
+also expand on the way media items are identified, and what the extended parameter really does." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -161,9 +162,10 @@ to make the individual function documentation more consistent." />
     </div>
 
     <div class="ref-description">
-    <p>These parameters are used <em>a lot</em> throughout this package, and they tend to be
-alsways the same. Here there are all documented in one place, which is intended
-to make the individual function documentation more consistent.</p>
+    <p>These parameters are used extensively throughout this package as they are required for many
+API methods. Here there are all documented in one place, which is intended
+to make the individual function documentation more consistent. The additional sections below
+also expand on the way media items are identified, and what the <code>extended</code> parameter really does.</p>
     </div>
 
 
@@ -173,7 +175,8 @@ to make the individual function documentation more consistent.</p>
     <tr>
       <th>target</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
-<code>Trakt ID</code> (e.g. <code>1390</code>), <code>slug</code> (e.g. <code>"game-of-thrones"</code>), or <code>IMDb ID</code> (e.g. <code>"tt0944947"</code>).
+<code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
+or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
 Can also be of length greater than 1, in which case the function is called on all
 <code>target</code> values separately and the result is combined.</p></td>
     </tr>
@@ -189,7 +192,7 @@ functions, values <code>seasons</code> or <code>episodes</code> are also allowed
     </tr>
     <tr>
       <th>user</th>
-      <td><p>Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
@@ -215,29 +218,30 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 
     
 
-
 <p>The <code>target</code> parameter is usually used to identify shows, movies or people.
 In each of these cases, the value of the parameter must be a valid ID of one of the
 following kinds:</p><ul>
-<li><p><strong>Trakt ID</strong>: A numeric ID used by trakt.tv, which is included as a variable
+<li><p><strong>Trakt ID</strong> (<code>trakt</code>): A numeric ID used by trakt.tv, which is included as a variable
 named <code>trakt</code> by every function for the output item. These IDs are unique for their
 respective category (or <code>type</code>, e.g. shows, movies, people) and can be expected to
 have full coverage, meaning that every item will have a Trakt ID.</p></li>
-<li><p><strong>Slug</strong>: A human-readable identifier used on the trakt.tv site, e.g. <code>game-of-thrones</code>.
+<li><p><strong>Slug</strong> (<code>slug</code>): A human-readable identifier used on the trakt.tv site, e.g. <code>the-wire</code>.
 While these are easy to remember, they have the risk of clashing with numeric IDs.
 One example is the show "24", which has the slug <code>24</code>. However, the show "Presidio Med"
 has the <strong>Trakt ID</strong> <code>24</code>, so if you supply <code>target = 24</code> the API assumes you meant the
-Trakt ID instead of the slug. This is bad. Use <code>Trakt ID</code>s whenever possible.</p></li>
-<li><p><strong>IMDb ID</strong>: Relatively self-explanatory. You can retrieve them easily via most
+Trakt ID instead of the slug. This is... suboptimal. Use <code>Trakt ID</code>s whenever possible.</p></li>
+<li><p><strong>IMDb ID</strong> (<code>imdb</code>): Relatively self-explanatory. You can retrieve them easily via most
 functions or by searching on <a href='https://www.imdb.com/'>IMDb.com</a>. Since IMDb is an
-external service, these IDs should be used for linking with other data source rather
+external service, these IDs should be used for linking with other data sources rather
 than as search parameters for the trakt API, as it can not be guaranteed that
 every item on trakt.tv does have an IMDb ID.</p></li>
 </ul>
 
 <p>The API does return some other IDs, notably for <a href='https://www.thetvdb.com'>the tvdb</a>.
 These are useful for linking with other data sources like <a href='https://fanart.tv/'>fanart.tv</a>.
-They are not used as search parameters for the trakt API.</p>
+They are not used as search parameters for the trakt API. The API also includes a TVRage ID,
+but since this site seems to not exist anymore (and therefore newer items don't have this ID)
+this ID is removed from all output.</p>
     <h2 class="hasAnchor" id="extended-information"><a class="anchor" href="#extended-information"></a>Extended Information</h2>
 
     
