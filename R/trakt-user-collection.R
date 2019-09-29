@@ -14,7 +14,7 @@
 #'
 #' @inheritParams trakt_api_common_parameters
 #' @param unnest_episodes `logical(1) [FALSE]`: Unnests episode data using
-#' `[tidyr](tidyr::unnest)` and returns one row per episode rather than one row per show.
+#' [tidyr::unnest()] and returns one row per episode rather than one row per show.
 #' @return A [tibble()][tibble::tibble-package].
 #' @export
 #' @family user data

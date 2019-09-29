@@ -16,7 +16,7 @@ Can also be of length greater than 1, in which case the function is called on al
 functions, values \code{seasons} or \code{episodes} are also allowed.}
 
 \item{unnest_episodes}{\code{logical(1) [FALSE]}: Unnests episode data using
-\code{[tidyr](tidyr::unnest)} and returns one row per episode rather than one row per show.}
+\code{\link[tidyr:unnest]{tidyr::unnest()}} and returns one row per episode rather than one row per show.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.
