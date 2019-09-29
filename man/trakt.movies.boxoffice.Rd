@@ -18,8 +18,8 @@ Returns the top 10 grossing movies in the U.S. box office last weekend.
 Updated every Monday morning.
 }
 \details{
-This function wraps \href{https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office}{this API method}.
-The endpoint used is \code{/movies/boxoffice}.
+This function wraps
+\href{https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office}{movies/boxoffice}.
 }
 \examples{
 trakt.movies.boxoffice()

@@ -3,6 +3,14 @@
 #' Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
 #' If you *do not* want the full ratings distribution, it is highly advised to
 #' just use `*.summary` functions or [trakt.seasons.season] for episode ratings.
+#' @details
+#' The API methods for these functions are:
+#'
+#' - [/movies/:id/ratings](https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings)
+#' - [/shows/:id/ratings](https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings)
+#' - [/shows/:id/seasons/:season/ratings](https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings)
+#' - [/shows/:id/seasons/:season/episodes/:episode/ratings](https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings)
+#'
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble()][tibble::tibble-package].
 #' @name media_ratings
@@ -12,13 +20,13 @@
 #' @examples
 #' # A movie's ratings
 #' trakt.movies.ratings("tron-legacy-2010")
-#' 
+#'
 #' # A show's ratings
 #' trakt.shows.ratings("game-of-thrones")
 #' \dontrun{
 #' # Ratings for seasons 1 through 5
 #' trakt.seasons.ratings("futurama", season = 1:5)
-#' 
+#'
 #' # Ratings for episodes 1 through 7 of season 1
 #' trakt.episodes.ratings("futurama", season = 1, episode = 1:7)
 #' }

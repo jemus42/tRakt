@@ -20,7 +20,11 @@ A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Get a single person's details, like their various IDs. If \code{extended} is \code{"full"},
-there will also be biographical data if available.
+there will also be biographical data if available, e.g. their birthday.
+}
+\details{
+This function wraps the API method
+\href{https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person}{/people/:id}.
 }
 \examples{
 # A single person's extended information

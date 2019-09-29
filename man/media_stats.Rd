@@ -35,6 +35,16 @@ A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 The data contains watchers, playes, collectors, comments, lists, and votes.
+#' @details
+The API methods for these functions are:
+}
+\details{
+\itemize{
+\item \href{https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats}{/movies/:id/stats}
+\item \href{https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats}{/shows/:id/stats}
+\item \href{https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats}{/shows/:id/seasons/:season/stats}
+\item \href{https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats}{/shows/:id/seasons/:season/episodes/:episode/stats}
+}
 }
 \examples{
 # Stats for a movie

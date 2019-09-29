@@ -28,6 +28,13 @@ A \link[tibble:tibble-package]{tibble()}.
 \description{
 Receive a set of media items that are related to a specific show or movie.
 }
+\details{
+The API methods wrapped are:
+\itemize{
+\item \href{https://trakt.docs.apiary.io/#reference/shows/related/get-related-shows}{/shows/:id/related}
+\item \href{https://trakt.docs.apiary.io/#reference/movies/related/get-related-movies}{/movies/:id/related}
+}
+}
 \examples{
 trakt.shows.related("breaking-bad", limit = 5)
 }

@@ -23,7 +23,17 @@ returns more variables and should generally only be used if required.}
 A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
-Note that this function returns the same amount of informations as \link{trakt.search}.
+Get show or movie summary info
+}
+\details{
+These functions wrap the "single item" API methods:
+\itemize{
+\item \href{https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show}{/shows/:id}
+\item \href{https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie}{/movies/:id}
+}
+}
+\note{
+Thes function returns the same amount of informations as \link{trakt.search}.
 }
 \examples{
 # Minimal info by default

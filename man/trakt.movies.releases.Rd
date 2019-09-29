@@ -22,9 +22,9 @@ Retrieve one or more movie's release information,
 including the release date, country code (two letter, e.g. \code{us}), and
 the certification (e.g. \code{PG}).
 }
-\note{
-See \href{http://docs.trakt.apiary.io/reference/movies/releases/get-all-movie-releases}{the
-trakt API docs for further info}
+\details{
+This function wraps the endpoint
+\href{http://docs.trakt.apiary.io/reference/movies/releases/get-all-movie-releases}{movies/:id/releases/:country}
 }
 \examples{
 \dontrun{

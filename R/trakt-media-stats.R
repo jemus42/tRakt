@@ -1,6 +1,14 @@
 #' Get a show or movie's stats
 #'
 #' The data contains watchers, playes, collectors, comments, lists, and votes.
+#' #' @details
+#' The API methods for these functions are:
+#'
+#' - [/movies/:id/stats](https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats)
+#' - [/shows/:id/stats](https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats)
+#' - [/shows/:id/seasons/:season/stats](https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats)
+#' - [/shows/:id/seasons/:season/episodes/:episode/stats](https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats)
+#'
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble()][tibble::tibble-package].
 #' @name media_stats

@@ -1,6 +1,12 @@
 #' Search for related shows or movies
 #'
 #' Receive a set of media items that are related to a specific show or movie.
+#' @details
+#' The API methods wrapped are:
+#'
+#' - [/shows/:id/related](https://trakt.docs.apiary.io/#reference/shows/related/get-related-shows)
+#' - [/movies/:id/related](https://trakt.docs.apiary.io/#reference/movies/related/get-related-movies)
+#'
 #' @inheritParams trakt_api_common_parameters
 #' @inheritParams automated_lists
 #' @return A [tibble()][tibble::tibble-package].

@@ -1,7 +1,10 @@
 #' Get a single person's details
 #'
 #' Get a single person's details, like their various IDs. If `extended` is `"full"`,
-#' there will also be biographical data if available.
+#' there will also be biographical data if available, e.g. their birthday.
+#' @details
+#' This function wraps the API method
+#' [/people/:id](https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person).
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble()][tibble::tibble-package].
 #' @export
@@ -11,7 +14,7 @@
 #' @examples
 #' # A single person's extended information
 #' trakt.people.summary("bryan-cranston", "full")
-#' 
+#'
 #' # Multiple people
 #' trakt.people.summary(c("kit-harington", "emilia-clarke"))
 trakt.people.summary <- function(target, extended = c("min", "full")) {
@@ -48,7 +51,7 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
 #' @examples
 #' \dontrun{
 #' trakt.people.movies("christopher-nolan")
-#' 
+#'
 #' trakt.people.shows("kit-harington")
 #' }
 NULL

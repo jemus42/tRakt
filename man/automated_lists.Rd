@@ -104,9 +104,9 @@ of class \link[base:Dates]{Date}, which will then be coerced via \link[base:as.c
 A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
-According to the API docs, popularity is calculated based both ratings
-and number of ratings. Trending items are those being watched right now, where
-items with the most users watching are returned first. Anticipation is measured
+According to the API docs, popularity is calculated based both on ratings
+and the number of ratings (i.e., votes). Trending items are those being watched right now, where
+items with the most users currently watching are returned first. Anticipation is measured
 by the number of user-created lists an items is part of while not being released yet.
 }
 \details{

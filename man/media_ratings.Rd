@@ -38,6 +38,15 @@ Returns a movie's or show's (or season's, or episode's) rating and ratings distr
 If you \emph{do not} want the full ratings distribution, it is highly advised to
 just use \code{*.summary} functions or \link{trakt.seasons.season} for episode ratings.
 }
+\details{
+The API methods for these functions are:
+\itemize{
+\item \href{https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings}{/movies/:id/ratings}
+\item \href{https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings}{/shows/:id/ratings}
+\item \href{https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings}{/shows/:id/seasons/:season/ratings}
+\item \href{https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings}{/shows/:id/seasons/:season/episodes/:episode/ratings}
+}
+}
 \note{
 Since this function is able to work on multi-length inputs for
 \code{target}, \code{season} and \code{episode}, it is possible to get a lot of data, \emph{but} at the cost
