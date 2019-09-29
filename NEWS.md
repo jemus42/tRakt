@@ -165,7 +165,7 @@ as soon as the API endpoint actually works.
     * If `lubridate::parse_date_time` fails, `as.POSIXct` is used as a fallback
 - Various bug fixes
 
-## v0.10.0
+# tRakt 0.10.0
 
 - **Add** movie functions:
     * `trakt.movies.popular`: Analogous to `trakt.shows.popular`
