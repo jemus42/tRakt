@@ -182,7 +182,8 @@ functions, values <code>seasons</code> or <code>episodes</code> are also allowed
     </tr>
     <tr>
       <th>rating</th>
-      <td><p><code><a href='https://rdrr.io/r/base/integer.html'>integer(1L)</a></code>: Rating to filter by. Can be <code>1</code> through <code>10</code>, default is <code>NULL</code></p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/integer.html'>integer(1L)</a></code>: Optional rating to filter by. Can be <code>1</code> through <code>10</code>,
+default is <code>NULL</code> for no filtering.</p></td>
     </tr>
     <tr>
       <th>extended</th>
@@ -194,6 +195,10 @@ returns more variables and should generally only be used if required.</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>This function wraps the API method
+<a href='https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings'>/users/:id/ratings/:type/:rating</a>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other user data: <code><a href='trakt.user.collection.html'>trakt.user.collection</a></code>,
@@ -208,7 +213,7 @@ returns more variables and should generally only be used if required.</p></td>
 <span class='fu'>trakt.user.ratings</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>)</div><div class='output co'>#&gt; # A tibble: 342 x 9
 #&gt;    rated_at            rating type  title      year trakt  slug      imdb  tmdb 
 #&gt;    &lt;dttm&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
-#&gt;  1 2019-09-29 16:22:36      8 movie Mad Max:…  2015 56360  mad-max-… tt13… 76341
+#&gt;  1 2019-09-29 20:00:59      8 movie Mad Max:…  2015 56360  mad-max-… tt13… 76341
 #&gt;  2 2019-09-28 23:34:23      7 movie Tokyo Go…  2003 7877   tokyo-go… tt03… 13398
 #&gt;  3 2019-09-27 03:00:59      8 movie Spider-M…  2019 273537 spider-m… tt63… 4296…
 #&gt;  4 2019-09-26 03:06:31      8 movie Ghost in…  2004 7057   ghost-in… tt03… 12140
@@ -239,6 +244,7 @@ returns more variables and should generally only be used if required.</p></td>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
+      <li><a href="#details">Details</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
