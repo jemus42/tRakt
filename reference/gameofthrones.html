@@ -191,22 +191,22 @@ https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes." />
     <div class='dont-index'><p>Other Episode datasets: <code><a href='futurama.html'>futurama</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>gameofthrones</span></div><div class='output co'>#&gt; # A tibble: 73 x 19
-#&gt;    episode_abs director writer viewers season episode title overview rating
-#&gt;          &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;    &lt;dbl&gt;  &lt;int&gt;   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;
-#&gt;  1           1 Tim Van… David…    2.22      1       1 Wint… Ned Sta…   8.09
-#&gt;  2           2 Tim Van… David…    2.2       1       2 The … Having …   8.10
-#&gt;  3           3 Brian K… David…    2.44      1       3 Lord… Arrivin…   8.03
-#&gt;  4           4 Brian K… Bryan…    2.45      1       4 Crip… Ned loo…   8.07
-#&gt;  5           5 Brian K… David…    2.58      1       5 The … Incense…   8.10
-#&gt;  6           6 Daniel … Story…    2.44      1       6 A Go… "Reinst…   8.28
-#&gt;  7           7 Daniel … David…    2.4       1       7 You … Explain…   8.26
-#&gt;  8           8 Daniel … Georg…    2.72      1       8 The … In the …   8.13
-#&gt;  9           9 Alan Ta… David…    2.66      1       9 Bael… With Sa…   8.34
-#&gt; 10          10 Alan Ta… David…    3.04      1      10 Fire… As trag…   8.57
-#&gt; # … with 63 more rows, and 10 more variables: votes &lt;int&gt;, comment_count &lt;int&gt;,
-#&gt; #   first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;, available_translations &lt;list&gt;,
-#&gt; #   runtime &lt;int&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>gameofthrones</span></div><div class='output co'>#&gt; # A tibble: 73 x 18
+#&gt;    episode_abs episode season runtime title overview rating votes viewers
+#&gt;          &lt;int&gt;   &lt;int&gt;  &lt;int&gt;   &lt;int&gt; &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;
+#&gt;  1           1       1      1      61 Wint… Ned Sta…   8.09 15561    2.22
+#&gt;  2           2       2      1      55 The … Having …   8.10 12114    2.2 
+#&gt;  3           3       3      1      57 Lord… Arrivin…   8.03 11142    2.44
+#&gt;  4           4       4      1      55 Crip… Ned loo…   8.06 10636    2.45
+#&gt;  5           5       5      1      54 The … Incense…   8.09 10252    2.58
+#&gt;  6           6       6      1      52 A Go… "Reinst…   8.28 10213    2.44
+#&gt;  7           7       7      1      57 You … Explain…   8.26 10017    2.4 
+#&gt;  8           8       8      1      58 The … In the …   8.13  9664    2.72
+#&gt;  9           9       9      1      56 Bael… With Sa…   8.34  9721    2.66
+#&gt; 10          10      10      1      52 Fire… As trag…   8.57  9806    3.04
+#&gt; # … with 63 more rows, and 9 more variables: director &lt;chr&gt;, writer &lt;chr&gt;,
+#&gt; #   first_aired &lt;dttm&gt;, comment_count &lt;int&gt;, trakt &lt;chr&gt;, imdb &lt;chr&gt;,
+#&gt; #   tvdb &lt;chr&gt;, tmdb &lt;chr&gt;, updated_at &lt;dttm&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
