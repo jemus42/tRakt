@@ -27,6 +27,13 @@ and \code{crew}. The latter \code{tibble} objects are as flat as possible.
 Returns all cast and crew for a show/movie, depending on how much data is
 available.
 }
+\details{
+The API methods for these functions are:
+\itemize{
+\item \href{https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show}{/shows/:id/people}
+\item \href{https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{/movies/:id/people}
+}
+}
 \examples{
 \dontrun{
 trakt.shows.people("breaking-bad")

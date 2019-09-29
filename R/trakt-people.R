@@ -42,6 +42,10 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
 #' Get a single person's movie or show credits
 #'
 #' Returns all movies or shows where this person is in the cast or crew.
+#' @details
+#' The API methods wrapped are
+#' - [`/people/:id/movies`](https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits)
+#' - [`/people/:id/shows`](https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits)
 #' @inheritParams trakt_api_common_parameters
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
 #' and `crew`. The latter `tibble` objects are as flat as possible.
@@ -121,6 +125,11 @@ trakt.people.shows <- function(target, extended = c("min", "full")) {
 #'
 #' Returns all cast and crew for a show/movie, depending on how much data is
 #' available.
+#' @details
+#' The API methods for these functions are:
+#'
+#' - [/shows/:id/people](https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show)
+#' - [/movies/:id/people](https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie)
 #' @name media_people
 #' @inheritParams trakt_api_common_parameters
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`

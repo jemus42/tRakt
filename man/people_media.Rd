@@ -26,6 +26,13 @@ and \code{crew}. The latter \code{tibble} objects are as flat as possible.
 \description{
 Returns all movies or shows where this person is in the cast or crew.
 }
+\details{
+The API methods wrapped are
+\itemize{
+\item \href{https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits}{/people/:id/movies}
+\item \href{https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits}{/people/:id/shows}
+}
+}
 \examples{
 \dontrun{
 trakt.people.movies("christopher-nolan")
