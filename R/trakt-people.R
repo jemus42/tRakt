@@ -46,6 +46,11 @@ trakt.people.summary <- function(target, extended = c("min", "full")) {
 #' The API methods wrapped are
 #' - [`/people/:id/movies`](https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits)
 #' - [`/people/:id/shows`](https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits)
+#'
+#' Note that as of 2019-09-30, there are two representations of `character[s]` and `job[s]`:
+#' One is a regular character variable, and the other is a list-column. The former is
+#' [deprecated and only included for compatibility reasons](https://github.com/trakt/api-help/issues/74).
+#'
 #' @inheritParams trakt_api_common_parameters
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
 #' and `crew`. The latter `tibble` objects are as flat as possible.
@@ -130,6 +135,11 @@ trakt.people.shows <- function(target, extended = c("min", "full")) {
 #'
 #' - [/shows/:id/people](https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show)
 #' - [/movies/:id/people](https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie)
+#'
+#' Note that as of 2019-09-30, there are two representations of `character[s]` and `job[s]`:
+#' One is a regular character variable, and the other is a list-column. The former is
+#' [deprecated and only included for compatibility reasons](https://github.com/trakt/api-help/issues/74).
+#'
 #' @name media_people
 #' @inheritParams trakt_api_common_parameters
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
