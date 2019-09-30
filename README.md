@@ -21,15 +21,13 @@ release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](h
 `tRakt` helps you to retrieve data from [trakt.tv](https://trakt.tv/), a
 site similiar to [IMDb](https://imdb.com) with a wider focus, yet
 smaller user base. The site also enables media-center integration, so
-you can automatically sync you collection and watch progress, as well as
-scrobble playback and ratings via [Plex](https://www.plex.tv/),
+you can automatically sync your collection and watch progress, as well
+as scrobble playback and ratings via [Plex](https://www.plex.tv/),
 [Kodi](https://kodi.tv/) and the likes.  
 And, most importantly, [trakt.tv has a publicly available
 API](https://trakt.docs.apiary.io) – which makes this package possible
 and allows you to collect all that nice data people have contributed.
 
-This package was originally built for [this
-webapp](http://trakt.jemu.name).  
 Please note that while this package is *basically* an API-client, it is
 a little more opinionated and might deliver results that do not exactly
 match the data delivered by the API. The primary motivation for this
