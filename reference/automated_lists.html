@@ -208,7 +208,7 @@ by the number of user-created lists an items is part of while not being released
   <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
 <span class='fu'>trakt.updates</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>,
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>start_date</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>() - <span class='fl'>7</span>)</pre>
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>start_date</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>() - <span class='fl'>1</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -285,7 +285,7 @@ are <code>"weekly"</code>, <code>"monthly"</code>, <code>"yearly"</code>, <code>
     <tr>
       <th>start_date</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: A date in the past from which on to count updates.
-If no date is supplied, the default is to use the date 7 days in the past relative
+If no date is supplied, the default is to use yesterday relative
 to the current date. Value must either be standard <code>YYYY-MM-DD</code> format or an object
 of class <a href='https://rdrr.io/r/base/Dates.html'>Date</a>, which will then be coerced via <a href='https://rdrr.io/r/base/character.html'>as.character()</a>.</p></td>
     </tr>
@@ -344,11 +344,11 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.trending</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='fl'>5</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 22
 #&gt;   watchers title  year tagline overview released   runtime country trailer
 #&gt;      &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1      120 Fast…  2019 ""      A spino… 2019-08-02     136 us      http:/…
-#&gt; 2       96 Spid…  2019 It’s t… Peter P… 2019-07-02     129 us      http:/…
-#&gt; 3       73 Toy …  2019 Get Re… "Woody … 2019-06-21     100 us      http:/…
-#&gt; 4       48 Mids…  2019 Let th… A young… 2019-07-03     147 us      http:/…
-#&gt; 5       39 Alad…  2019 Choose… A kindh… 2019-05-24     128 us      http:/…
+#&gt; 1       40 Fast…  2019 ""      A spino… 2019-08-02     136 us      http:/…
+#&gt; 2       39 Toy …  2019 Get Re… "Woody … 2019-06-21     100 us      http:/…
+#&gt; 3       25 Spid…  2019 It’s t… Peter P… 2019-07-02     129 us      http:/…
+#&gt; 4       19 Alad…  2019 Choose… A kindh… 2019-05-24     128 us      http:/…
+#&gt; 5       15 John…  2019 The Gr… Super-a… 2019-05-17     131 us      http:/…
 #&gt; # … with 13 more variables: homepage &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
 #&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
 #&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
@@ -367,21 +367,21 @@ same additional variables besides the media information: <code>watcher_count</co
 <span class='fu'>trakt.anticipated</span>(<span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 15 x 8
 #&gt;    list_count title              year trakt  slug            tvdb  imdb    tmdb 
 #&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;
-#&gt;  1       9072 The Witcher        2019 138163 the-witcher-20… 3626… tt5180… 71912
-#&gt;  2        997 Raising Dion       2019 124235 raising-dion    3359… tt7826… 93392
-#&gt;  3        869 Living With Your…  2019 151776 living-with-yo… 3685… tt8880… 81532
-#&gt;  4        427 Daybreak           2019 152108 daybreak-2019   3547… tt8755… 83478
-#&gt;  5        140 V-Wars             2019 133365 v-wars          3493… tt7403… &lt;NA&gt; 
-#&gt;  6        139 Sintonia           2019 131399 sintonia        3443… tt8165… &lt;NA&gt; 
-#&gt;  7        116 The Faction        2019 141592 the-faction     3566… &lt;NA&gt;    &lt;NA&gt; 
-#&gt;  8         49 Rhythm + Flow      2019 152211 rhythm-flow     3690… tt9278… 83996
-#&gt;  9         29 Hache              2019 147926 hache           3555… tt8575… 84112
-#&gt; 10         25 Seis Manos         2019 152707 seis-manos      3665… tt1010… 93953
-#&gt; 11         19 Cidades Invisive…  2019 134761 cidades-invisi… 3493… &lt;NA&gt;    &lt;NA&gt; 
-#&gt; 12          9 Living Undocumen…  2019 153094 living-undocum… 3699… tt1097… &lt;NA&gt; 
-#&gt; 13          7 Brotherhood        2019 153095 brotherhood-20… 3589… tt8905… &lt;NA&gt; 
-#&gt; 14          7 Queer Eye: We're…  2019 152948 queer-eye-we-r… 3697… &lt;NA&gt;    &lt;NA&gt; 
-#&gt; 15          7 Prank Encounters   2019 152904 prank-encounte… 3697… &lt;NA&gt;    &lt;NA&gt; </div><div class='input'>
+#&gt;  1       1062 Raising Dion       2019 124235 raising-dion    3359… tt7826… 93392
+#&gt;  2        993 Living With Your…  2019 151776 living-with-yo… 3685… tt8880… 81532
+#&gt;  3        427 Daybreak           2019 152108 daybreak-2019   3547… tt8755… 83478
+#&gt;  4        251 V-Wars             2019 133365 v-wars          3493… tt7403… &lt;NA&gt; 
+#&gt;  5        139 Sintonia           2019 131399 sintonia        3443… tt8165… &lt;NA&gt; 
+#&gt;  6        116 The Faction        2019 141592 the-faction     3566… &lt;NA&gt;    &lt;NA&gt; 
+#&gt;  7         51 Rhythm + Flow      2019 152211 rhythm-flow     3690… tt9278… 83996
+#&gt;  8         29 Hache              2019 147926 hache           3555… tt8575… 84112
+#&gt;  9         25 Seis Manos         2019 152707 seis-manos      3665… tt1010… 93953
+#&gt; 10         19 Cidades Invisive…  2019 134761 cidades-invisi… 3493… &lt;NA&gt;    &lt;NA&gt; 
+#&gt; 11          9 Living Undocumen…  2019 153094 living-undocum… 3699… tt1097… &lt;NA&gt; 
+#&gt; 12          7 Brotherhood        2019 153095 brotherhood-20… 3589… tt8905… &lt;NA&gt; 
+#&gt; 13          7 Queer Eye: We're…  2019 152948 queer-eye-we-r… 3697… &lt;NA&gt;    &lt;NA&gt; 
+#&gt; 14          7 Prank Encounters   2019 152904 prank-encounte… 3697… &lt;NA&gt;    &lt;NA&gt; 
+#&gt; 15          6 Nowhere Man        2019 153240 nowhere-man-15… 3700… tt1089… &lt;NA&gt; </div><div class='input'>
 <span class='co'># Get the most popular German-language movies between 1990 and 2010</span>
 <span class='fu'>trakt.popular</span>(<span class='st'>"movies"</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1990</span>, <span class='fl'>2010</span>))</div><div class='output co'>#&gt; # A tibble: 10 x 6
 #&gt;    title                    year trakt slug                       imdb      tmdb

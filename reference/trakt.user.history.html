@@ -211,7 +211,8 @@ returns more variables and should generally only be used if required.</p></td>
     <p>For <code>type = "shows"</code>, the
 original output contains a nested object with <code>show</code> and <code>episode</code> data,
 which are unnested by this function. Due to duplicate variable names,
-all episode-related variables are prefixed with <code>episode_</code>.</p>
+all episode-related variables are prefixed with <code>episode_</code>. This results in the
+episode number having the name <code>episode_episode</code>, which is quite silly. Sorry.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other user data: <code><a href='trakt.user.collection.html'>trakt.user.collection</a></code>,
@@ -223,15 +224,19 @@ all episode-related variables are prefixed with <code>episode_</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='co'># The last 5 movies that user "jemus42" has watched</span>
-<span class='fu'>trakt.user.history</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movies"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 10
-#&gt;        id watched_at          action type  title   year trakt slug   imdb  tmdb 
-#&gt;     &lt;dbl&gt; &lt;dttm&gt;              &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;
-#&gt; 1  4.84e9 2019-09-24 19:33:05 scrob… movie Ghost…  2004 7057  ghost… tt03… 12140
-#&gt; 2  4.84e9 2019-09-21 22:17:53 scrob… movie Tokyo…  2003 7877  tokyo… tt03… 13398
-#&gt; 3  4.82e9 2019-09-14 20:43:02 scrob… movie The D…  2019 3873… the-d… tt86… 5355…
-#&gt; 4  4.72e9 2019-08-07 22:13:58 scrob… movie Shaza…  2019 1849… shaza… tt04… 2879…
-#&gt; 5  4.72e9 2019-08-06 21:41:45 scrob… movie Colla…  2004 998   colla… tt03… 1538 </div><div class='input'># }
+<span class='co'># Shows user "jemus42" watched around christmas 2016</span>
+<span class='fu'>trakt.user.history</span>(
+  <span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"jemus42"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"shows"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>,
+  <span class='kw'>start_at</span> <span class='kw'>=</span> <span class='st'>"2015-12-24"</span>, <span class='kw'>end_at</span> <span class='kw'>=</span> <span class='st'>"2015-12-28"</span>
+  )</div><div class='output co'>#&gt; # A tibble: 3 x 18
+#&gt;       id watched_at          action type  title  year trakt slug  tvdb  imdb 
+#&gt;    &lt;int&gt; &lt;dttm&gt;              &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
+#&gt; 1 1.73e9 2015-12-26 23:44:41 scrob… epis… Doct…  2005 56872 doct… 78804 tt04…
+#&gt; 2 1.73e9 2015-12-26 02:15:27 scrob… epis… Lege…  2014 60412 lege… 2650… tt24…
+#&gt; 3 1.73e9 2015-12-26 01:17:14 scrob… epis… QI     2003 1543  qi    72716 tt03…
+#&gt; # … with 8 more variables: tmdb &lt;chr&gt;, episode_season &lt;int&gt;,
+#&gt; #   episode_episode &lt;int&gt;, episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;,
+#&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
