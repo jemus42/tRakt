@@ -20,6 +20,15 @@ knitr::opts_chunk$set(
 
 ## Preamble: The trakt.tv API and this package
 
+First thing's first: This packages _does not_ support OAuth2 API calls (yet?).  
+You can only *get* data, and more importantly for user-specific data: You can only get *public* data.
+
+The second thing: The goal of this package is to easily gather lots of data – therefore I prioritize functions like `trakt.seasons.summary`, which lets you retrieve _all_ episodes for a show with *a single API call* over API methods that would let you do the same on a per-episode basis. That's the reason there's no `trakt.episodes.summary` – there are, however, per-episode methods for ratings and stats.
+
+So, to make a long story short:
+
+- You'll only get public data, not send data to trakt.tv.
+- You'll get more data rather than less data.
 
 ## Getting data from trakt.tv
 
@@ -27,6 +36,7 @@ knitr::opts_chunk$set(
 
 ```{r startup}
 library(tRakt)
+library(dplyr) # For later
 ```
 
 That's all you need to to for basic things. If you're planning a larger project with lots and lots of data retrieval, you might want to create your own API app [on trakt.tv](https://trakt.tv/oauth/applications) and use `trakt_credentials` to set your `client id`.
@@ -35,10 +45,15 @@ That's all you need to to for basic things. If you're planning a larger project 
 
 #### Via direct search
 
+Using a text query:
+
 ```{r search}
-# Text search
 trakt.search("Game of Thrones", type = "show")
-# Search by explicit ID
+```
+
+Search by explicit ID:
+
+```{r search_id}
 trakt.search.byid("121361", id_type = "tvdb", type = "show")
 ```
 
@@ -46,10 +61,15 @@ trakt.search.byid("121361", id_type = "tvdb", type = "show")
 
 Another scenario would be that you're not necessarily interested in some specific media item, but rather a collection of items that fulfill certain criteria, like being popular on trakt.tv and maybe being from a specific period or genre and whatnot. While you can also filter `trakt.search` by other criteria, it's maybe more useful to filter, let's say, the most watched movies of the past week by the release year of the movie.
 
-```{r auto-lists}
-# The 5 most popular shows
-trakt.popular(type = "shows", limit = 5)
-# The 10 most watched (during the past week) movies from 1990-2000
-trakt.watched(type = "movies", period = "weekly", years = c(1990, 2000))
-```
 
+The 5 most popular shows:
+
+```{r auto-lists}
+trakt.popular(type = "shows", limit = 5)
+```
+The 10 most watched (during the past week) movies from 1990-2000:
+
+```{r auto-lists-watched}
+trakt.watched(type = "movies", period = "weekly", years = c(1990, 2000)) %>%
+  select(watcher_count, title, year)
+```
