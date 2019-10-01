@@ -111,7 +111,7 @@
       <h1>The Basics</h1>
                         <h4 class="author">Lukas Burk</h4>
             
-            <h4 class="date">2019-09-30</h4>
+            <h4 class="date">2019-10-01</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/jemus42/tRakt/blob/master/vignettes/tRakt.Rmd"><code>vignettes/tRakt.Rmd</code></a></small>
       <div class="hidden name"><code>tRakt.Rmd</code></div>
@@ -123,6 +123,14 @@
 <div id="preamble-the-trakt-tv-api-and-this-package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#preamble-the-trakt-tv-api-and-this-package" class="anchor"></a>Preamble: The trakt.tv API and this package</h2>
+<p>First thing’s first: This packages <em>does not</em> support OAuth2 API calls (yet?).<br>
+You can only <em>get</em> data, and more importantly for user-specific data: You can only get <em>public</em> data.</p>
+<p>The second thing: The goal of this package is to easily gather lots of data – therefore I prioritize functions like <code>trakt.seasons.summary</code>, which lets you retrieve <em>all</em> episodes for a show with <em>a single API call</em> over API methods that would let you do the same on a per-episode basis. That’s the reason there’s no <code>trakt.episodes.summary</code> – there are, however, per-episode methods for ratings and stats.</p>
+<p>So, to make a long story short:</p>
+<ul>
+<li>You’ll only get public data, not send data to trakt.tv.</li>
+<li>You’ll get more data rather than less data.</li>
+</ul>
 </div>
 <div id="getting-data-from-trakt-tv" class="section level2">
 <h2 class="hasAnchor">
@@ -130,7 +138,8 @@
 <div id="loading-packages-and-trakt-tv-credentials" class="section level3">
 <h3 class="hasAnchor">
 <a href="#loading-packages-and-trakt-tv-credentials" class="anchor"></a>1. Loading packages and trakt.tv credentials</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tRakt)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tRakt)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr) <span class="co"># For later</span></a></code></pre></div>
 <p>That’s all you need to to for basic things. If you’re planning a larger project with lots and lots of data retrieval, you might want to create your own API app <a href="https://trakt.tv/oauth/applications">on trakt.tv</a> and use <code>trakt_credentials</code> to set your <code>client id</code>.</p>
 </div>
 <div id="find-things" class="section level3">
@@ -139,49 +148,49 @@
 <div id="via-direct-search" class="section level4">
 <h4 class="hasAnchor">
 <a href="#via-direct-search" class="anchor"></a>Via direct search</h4>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Text search</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="../reference/trakt.search.html">trakt.search</a></span>(<span class="st">"Game of Thrones"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt; # A tibble: 1 x 9</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;   type  score title          year trakt slug          tvdb   imdb     tmdb </span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;int&gt; &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; 1 show   1000 Game of Thro…  2011 1390  game-of-thro… 121361 tt09449… 1399</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co"># Search by explicit ID</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="kw"><a href="../reference/trakt.search.html">trakt.search.byid</a></span>(<span class="st">"121361"</span>, <span class="dt">id_type =</span> <span class="st">"tvdb"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; # A tibble: 1 x 9</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;   type  score title          year trakt slug          tvdb   imdb     tmdb </span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;int&gt; &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; 1 show   1000 Game of Thro…  2011 1390  game-of-thro… 121361 tt09449… 1399</span></a></code></pre></div>
+<p>Using a text query:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/trakt.search.html">trakt.search</a></span>(<span class="st">"Game of Thrones"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1 x 9</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;   type  score title          year trakt slug          tvdb   imdb     tmdb </span></a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;int&gt; &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; 1 show   1000 Game of Thro…  2011 1390  game-of-thro… 121361 tt09449… 1399</span></a></code></pre></div>
+<p>Search by explicit ID:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/trakt.search.html">trakt.search.byid</a></span>(<span class="st">"121361"</span>, <span class="dt">id_type =</span> <span class="st">"tvdb"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1 x 9</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt;   type  score title          year trakt slug          tvdb   imdb     tmdb </span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;int&gt; &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt; 1 show   1000 Game of Thro…  2011 1390  game-of-thro… 121361 tt09449… 1399</span></a></code></pre></div>
 </div>
 <div id="via-whatevers-popularish" class="section level4">
 <h4 class="hasAnchor">
 <a href="#via-whatevers-popularish" class="anchor"></a>Via whatever’s popular(ish)</h4>
 <p>Another scenario would be that you’re not necessarily interested in some specific media item, but rather a collection of items that fulfill certain criteria, like being popular on trakt.tv and maybe being from a specific period or genre and whatnot. While you can also filter <code>trakt.search</code> by other criteria, it’s maybe more useful to filter, let’s say, the most watched movies of the past week by the release year of the movie.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># The 5 most popular shows</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="../reference/automated_lists.html">trakt.popular</a></span>(<span class="dt">type =</span> <span class="st">"shows"</span>, <span class="dt">limit =</span> <span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt; # A tibble: 5 x 7</span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt;   title                year trakt slug                tvdb   imdb     tmdb </span></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt;   &lt;chr&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;               &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt; 1 Game of Thrones      2011 1390  game-of-thrones     121361 tt09449… 1399 </span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt; 2 Breaking Bad         2008 1388  breaking-bad        81189  tt09037… 1396 </span></a>
-<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt; 3 The Walking Dead     2010 1393  the-walking-dead    153021 tt15202… 1402 </span></a>
-<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt; 4 The Big Bang Theory  2007 1409  the-big-bang-theory 80379  tt08982… 1418 </span></a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; 5 Sherlock             2010 19792 sherlock            176941 tt14755… 19885</span></a>
-<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co"># The 10 most watched (during the past week) movies from 1990-2000</span></a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="kw"><a href="../reference/automated_lists.html">trakt.watched</a></span>(<span class="dt">type =</span> <span class="st">"movies"</span>, <span class="dt">period =</span> <span class="st">"weekly"</span>, <span class="dt">years =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">1990</span>, <span class="dv">2000</span>))</a>
-<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt; # A tibble: 10 x 9</span></a>
-<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;    watcher_count play_count collected_count title  year trakt slug  imdb </span></a>
-<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt;            &lt;int&gt;      &lt;int&gt;           &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt;  1           850       1134              12 The …  1990 38180 the-… tt00…</span></a>
-<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt;  2           748        998             130 Toy …  1995   705 toy-… tt01…</span></a>
-<a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt;  3           716        955             180 The …  1994  4242 the-… tt01…</span></a>
-<a class="sourceLine" id="cb3-19" data-line-number="19"><span class="co">#&gt;  4           647        863              72 Léon…  1994    70 leon… tt01…</span></a>
-<a class="sourceLine" id="cb3-20" data-line-number="20"><span class="co">#&gt;  5           621        828             811 Star…  1999  1268 star… tt01…</span></a>
-<a class="sourceLine" id="cb3-21" data-line-number="21"><span class="co">#&gt;  6           615        820             141 The …  1999   481 the-… tt01…</span></a>
-<a class="sourceLine" id="cb3-22" data-line-number="22"><span class="co">#&gt;  7           610        814             101 Alad…  1992   655 alad… tt01…</span></a>
-<a class="sourceLine" id="cb3-23" data-line-number="23"><span class="co">#&gt;  8           571        762             112 Toy …  1999   706 toy-… tt01…</span></a>
-<a class="sourceLine" id="cb3-24" data-line-number="24"><span class="co">#&gt;  9           472        630             104 Term…  1991   236 term… tt01…</span></a>
-<a class="sourceLine" id="cb3-25" data-line-number="25"><span class="co">#&gt; 10           456        608              84 The …  1993  4765 the-… tt01…</span></a>
-<a class="sourceLine" id="cb3-26" data-line-number="26"><span class="co">#&gt; # … with 1 more variable: tmdb &lt;int&gt;</span></a></code></pre></div>
+<p>The 5 most popular shows:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/automated_lists.html">trakt.popular</a></span>(<span class="dt">type =</span> <span class="st">"shows"</span>, <span class="dt">limit =</span> <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; # A tibble: 5 x 7</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;   title                year trakt slug                tvdb   imdb     tmdb </span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt;   &lt;chr&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;               &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; 1 Game of Thrones      2011 1390  game-of-thrones     121361 tt09449… 1399 </span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; 2 Breaking Bad         2008 1388  breaking-bad        81189  tt09037… 1396 </span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt; 3 The Walking Dead     2010 1393  the-walking-dead    153021 tt15202… 1402 </span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; 4 The Big Bang Theory  2007 1409  the-big-bang-theory 80379  tt08982… 1418 </span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt; 5 Sherlock             2010 19792 sherlock            176941 tt14755… 19885</span></a></code></pre></div>
+<p>The 10 most watched (during the past week) movies from 1990-2000:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/automated_lists.html">trakt.watched</a></span>(<span class="dt">type =</span> <span class="st">"movies"</span>, <span class="dt">period =</span> <span class="st">"weekly"</span>, <span class="dt">years =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">1990</span>, <span class="dv">2000</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(watcher_count, title, year)</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt; # A tibble: 10 x 3</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt;    watcher_count title                                      year</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt;            &lt;int&gt; &lt;chr&gt;                                     &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt;  1           849 The Ages of Lulu                           1990</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt;  2           765 Toy Story                                  1995</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;  3           719 The Lion King                              1994</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;  4           654 Léon: The Professional                     1994</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt;  5           644 Star Wars: Episode I - The Phantom Menace  1999</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt;  6           624 Aladdin                                    1992</span></a>
+<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#&gt;  7           621 The Matrix                                 1999</span></a>
+<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#&gt;  8           578 Pocahontas                                 1995</span></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt;  9           577 Toy Story 2                                1999</span></a>
+<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt; 10           472 Terminator 2: Judgment Day                 1991</span></a></code></pre></div>
 </div>
 </div>
 </div>

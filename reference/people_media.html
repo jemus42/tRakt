@@ -195,6 +195,9 @@ and <code>crew</code>. The latter <code>tibble</code> objects are as flat as pos
 <li><p><a href='https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits'>/people/:id/shows</a></p></li>
 </ul>
 
+<p>Note that as of 2019-09-30, there are two representations of <code>character[s]</code> and <code>job[s]</code>:
+One is a regular character variable, and the other is a list-column. The former is
+<a href='https://github.com/trakt/api-help/issues/74'>deprecated and only included for compatibility reasons</a>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><a href='media_people.html'>media_people</a>, for the other direction: Media that has people.</p>
