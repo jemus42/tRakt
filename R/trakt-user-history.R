@@ -40,10 +40,6 @@ trakt.user.history <- function(user = getOption("trakt_username"),
   type <- match.arg(type)
   extended <- match.arg(extended)
 
-  # start_at <- "2019-01-01"
-  # end_at <- "2019-12-31"
-  # limit <- 10100
-
   start_at <- if (!is.null(start_at)) format(as.POSIXct(start_at), "%FT%T.000Z", tz = "UTC")
   end_at   <- if (!is.null(end_at))   format(as.POSIXct(end_at),   "%FT%T.000Z", tz = "UTC")
 

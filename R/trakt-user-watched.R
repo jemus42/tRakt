@@ -30,7 +30,6 @@ trakt.user.watched <- function(user = getOption("trakt_username"),
                                noseasons = TRUE) {
   check_username(user)
   type <- match.arg(type)
-  #extended <- match.arg(extended)
   extended <- if (type == "shows" & noseasons) "noseasons" else ""
 
   if (length(user) > 1) {

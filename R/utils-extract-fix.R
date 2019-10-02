@@ -81,7 +81,10 @@ unpack_crew_sections <- function(crew, type) {
       if (has_name(crew, section)) {
         crew[[section]] <- crew[[section]]$show %>%
           unpack_show() %>%
-          bind_cols(crew[[section]] %>% select(-show)) %>%
+          bind_cols(
+            crew[[section]] %>%
+              select(-show)
+          ) %>%
           as_tibble() %>%
           mutate(crew_type = section)
       }

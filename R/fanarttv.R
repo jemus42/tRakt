@@ -39,4 +39,3 @@ fanarttv_get <- function(tvdb) {
 
   bind_cols(res_x, res_y)
 }
-

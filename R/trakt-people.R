@@ -1,7 +1,8 @@
 #' Get a single person's details
 #'
-#' Get a single person's details, like their various IDs. If `extended` is `"full"`,
-#' there will also be biographical data if available, e.g. their birthday.
+#' Get a single person's details, like their various IDs. If `extended` is
+#' `"full"`, there will also be biographical data if available, e.g. their
+#' birthday.
 #' @details
 #' This function wraps the API method
 #' [/people/:id](https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person).
@@ -90,7 +91,10 @@ trakt.people.media <- function(type = c("shows", "movies"), target,
     if (has_name(response, "cast") & !is_empty(response$cast)) {
       response$cast <- response$cast$show %>%
         unpack_show() %>%
-        bind_cols(response$cast %>% select(-show)) %>%
+        bind_cols(
+          response$cast %>%
+            select(-show)
+        ) %>%
         as_tibble()
     }
     if (has_name(response, "crew") & !is_empty(response$crew)) {

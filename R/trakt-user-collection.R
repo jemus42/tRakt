@@ -38,7 +38,6 @@ trakt.user.collection <- function(user = getOption("trakt_username"),
                                   unnest_episodes = FALSE) {
   check_username(user)
   type <- match.arg(type)
-  # extended <- match.arg(extended)
 
   if (length(user) > 1) {
     names(user) <- user
