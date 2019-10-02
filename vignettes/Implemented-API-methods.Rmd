@@ -19,12 +19,16 @@ api <- yaml::read_yaml(here::here("api-methods.yml"))
 
 api %>%
   map_dfr(~{
-    map_dfr(.x, as_tibble, .id = "Method")
+    map_dfr(.x, ~{
+      modify_if(.x, is.null, NA_character_) %>%
+        as_tibble()
+    }, .id = "Method")
   }, .id = "Section") %>%
   mutate(
     endpoint = cell_spec(endpoint, link = url),
     Method = stringr::str_to_title(Method),
     Section = stringr::str_to_title(Section),
+    implementation = if_else(is.na(implementation), "N/A", implementation),
     implementation = cell_spec(implementation, monospace = TRUE)
   ) %>%
   select(-url) %>%

@@ -74,4 +74,214 @@ movies:
   watching:
     url: https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now
     endpoint: movies/:id/watching
+    implementation:
+
+people:
+  summary:
+    url: https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person
+    endpoint: people/:id
+    implementation: trakt.people.summary
+  movies:
+    url: https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits
+    endpoint: people/:id/movies
+    implementation: trakt.people.movies
+  shows:
+    url: https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits
+    endpoint: people/:id/shows
+    implementation: trakt.people.shows
+  lists:
+    url: https://trakt.docs.apiary.io/#reference/people/lists/get-lists-containing-this-person
+    endpoint: people/:id/lists/:type/:sort
     implementation: N/A
+
+search:
+  text query:
+    url: https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results
+    endpoint: search/:type?query=
+    implementation: trakt.search()
+  ID lookup:
+    url: https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results
+    endpoint: search/:id_type/:id?type=
+    implementation: trakt.search.byid()
+
+shows:
+  trending:
+    url: https://trakt.docs.apiary.io/#reference/shows/trending/get-trending-shows
+    endpoint: shows/trending
+    implementation: trakt.trending()
+  popular:
+    url: https://trakt.docs.apiary.io/#reference/shows/popular/get-popular-shows
+    endpoint: shows/popular
+    implementation: trakt.popular()
+  played:
+    url: https://trakt.docs.apiary.io/#reference/shows/played/get-the-most-played-shows
+    endpoint: shows/played/:period
+    implementation: trakt.played()
+  watched:
+    url: https://trakt.docs.apiary.io/#reference/shows/watched/get-the-most-watched-shows
+    endpoint: shows/watched/:period
+    implementation: trakt.watched()
+  collected:
+    url: https://trakt.docs.apiary.io/#reference/shows/collected/get-the-most-collected-shows
+    endpoint: shows/collected/:period
+    implementation: trakt.collected()
+  anticipated:
+    url: https://trakt.docs.apiary.io/#reference/shows/anticipated/get-the-most-anticipated-shows
+    endpoint: shows/anticipated
+    implementation: trakt.anticipated()
+  updated:
+    url: https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows
+    endpoint: shows/updates/:start_date
+    implementation: trakt.updates()
+  summary:
+    url: https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show
+    endpoint: shows/:id
+    implementation: trakt.shows.summary()
+  aliases:
+    url: https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases
+    endpoint: shows/:id/aliases
+    implementation: N/A
+  translations:
+    url: https://trakt.docs.apiary.io/#reference/shows/translations/get-all-show-translations
+    endpoint: shows/:id/translations/:language
+    implementation: N/A
+  comments:
+    url: https://trakt.docs.apiary.io/#reference/shows/comments/get-all-show-comments
+    endpoint: shows/:id/comments/:sort
+    implementation: N/A
+  lists:
+    url: https://trakt.docs.apiary.io/#reference/shows/lists/get-lists-containing-this-show
+    endpoint: shows/:id/lists/:type/:sort
+    implementation:
+  collection progress:
+    url: https://trakt.docs.apiary.io/#reference/shows/collection-progress/get-show-collection-progress
+    endpoint: shows/:id/progress/collection
+    implementation: N/A (requires auth)
+  watched progress:
+   url: https://trakt.docs.apiary.io/#reference/shows/watched-progress/get-show-watched-progress
+   endpoint: shows/:id/progress/watched
+   implementation: N/A (requires auth)
+  people:
+    url: https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show
+    endpoint: shows/:id/people
+    implementation: trakt.shows.people()
+  ratings:
+    url: https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings
+    endpoint: shows/:ids/ratings
+    implementation: trakt.shows.related()
+  related:
+    url: https://trakt.docs.apiary.io/#reference/shows/related/get-related-shows
+    endpoint: shows/:id/related
+    implementation: trakt.shows.related()
+  stats:
+    url: https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats
+    endpoint: shows/:id/stats
+    implementation: trakt.shows.stats()
+  watching:
+    url: https://trakt.docs.apiary.io/#reference/shows/watching/get-users-watching-right-now
+    endpoint: shows/:id/watching
+    implementation: N/A
+  next episode:
+    url: https://trakt.docs.apiary.io/#reference/shows/next-episode/get-next-episode
+    endpoint: shows/:id/next_episode
+    implementation: N/A
+  last episode:
+    url: https://trakt.docs.apiary.io/#reference/shows/last-episode/get-last-episode
+    endpoint: shows/:id/last_episode
+    implementation: N/A
+
+seasons:
+  summary:
+    url: https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show
+    endpoint: shows/:id/seasons/seasons
+    implementation: N/A
+  season:
+    url: https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show
+    endpoint: shows/id/seasons/season
+    implementation: N/A
+  comments:
+    url: https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments
+    endpoint: shows/:id/seasons/:season/comments/:sort
+    implementation: N/A
+  lists:
+    url: https://trakt.docs.apiary.io/#reference/seasons/lists/get-lists-containing-this-season
+    endpoint: shows/:id/seasons/:season/lists/:type/:sort
+    implementation: N/A
+  people:
+    url: https://trakt.docs.apiary.io/#reference/seasons/people/get-all-people-for-a-season
+    endpoint: shows/:id/seasons/:season/people
+    implementation: N/A
+  ratings:
+    url: https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings
+    endpoint: shows/:id/seasons/:season/ratings
+    implementation: N/A
+  stats:
+    url: https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats
+    endpoint: shows/:id/seasons/:season/stats
+    implementation: N/A
+  watching:
+    url: https://trakt.docs.apiary.io/#reference/seasons/watching/get-users-watching-right-now
+    endpoint: shows/:id/seasons/:season/watching
+    implementation: N/A
+
+episodes:
+  summary:
+    url: https://trakt.docs.apiary.io/#reference/episodes/summary/get-a-single-episode-for-a-show
+    endpoint: shows/:id/seasons/:season/episodes/:episode
+    implementation:
+  translations:
+    url: https://trakt.docs.apiary.io/#reference/episodes/translations/get-all-episode-translations
+    endpoint: shows/:id/seasons/:season/episodes/:episode/translations/:language
+    implementation:
+  comments:
+    url: https://trakt.docs.apiary.io/#reference/episodes/comments/get-all-episode-comments
+    endpoint: shows/:id/seasons/:season/episodes/:episode/comments/:sort
+    implementation:
+  lists:
+    url: https://trakt.docs.apiary.io/#reference/episodes/lists/get-lists-containing-this-episode
+    endpoint: shows/:id/seasons/:season/episodes/:episode/lists/:type/:sort
+    implementation:
+  people:
+    url: https://trakt.docs.apiary.io/#reference/episodes/people/get-all-people-for-an-episode
+    endpoint: shows/:id/seasons/:season/episodes/:episode/people
+    implementation:
+  ratings: 
+    url: https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings
+    endpoint: shows/:id/seasons/:season/episodes/:episode/ratings
+    implementation:
+  stats:
+    url: https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats
+    endpoint: shows/:id/seasons/:season/episodes/:episode/stats
+    implementation:
+  watching:
+    url: https://trakt.docs.apiary.io/#reference/episodes/watching/get-users-watching-right-now
+    endpoint: shows/:id/seasons/:season/episodes/:episode/watching
+    implementation:
+
+
+# These are just cached lists
+certifications:
+  list:
+    url: https://trakt.docs.apiary.io/#reference/certifications/list/get-certifications
+    endpoint: certifications/:type
+    implementation: certifications
+countries:
+  list:
+    url: https://trakt.docs.apiary.io/#reference/countries/list/get-countries
+    endpoint: countries/:type
+    implementation: countries
+genres:
+  list:
+    url: https://trakt.docs.apiary.io/#reference/genres/list/get-genres
+    endpoint: genres/:type
+    implementation: genres
+languages:
+  list:
+    url: https://trakt.docs.apiary.io/#reference/languages/list/get-languages
+    endpoint: languages/:type
+    implementation: languages
+networks:
+  list:
+    url: https://trakt.docs.apiary.io/#reference/networks/list/get-networks
+    endpoint: networks
+    implementation: networks
