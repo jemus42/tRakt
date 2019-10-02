@@ -258,6 +258,23 @@ episodes:
     endpoint: shows/:id/seasons/:season/episodes/:episode/watching
     implementation:
 
+users:
+  likes:
+    url: https://trakt.docs.apiary.io/#reference/users/likes/get-likes
+    endpoint: users/likes/:type
+    implementation:
+  profile:
+    url: https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile
+    endpoint: users/:id
+    implementation:
+  collection:
+    url: https://trakt.docs.apiary.io/#reference/users/collection/get-collection
+    endpoint: users/:id/collection/:type
+    implementation: trakt.users.collection()
+  comments:
+    url: https://trakt.docs.apiary.io/#reference/users/comments/get-comments
+  lists:
+    url: https://trakt.docs.apiary.io/#reference/users/lists/get-a-user's-custom-lists
 
 # These are just cached lists
 certifications:

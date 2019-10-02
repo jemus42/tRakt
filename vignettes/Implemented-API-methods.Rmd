@@ -7,7 +7,8 @@ editor_options:
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  echo = FALSE
 )
 
 library(tRakt)
@@ -16,32 +17,116 @@ library(purrr)
 library(dplyr)
 ```
 
-```{r api-list, echo = FALSE}
-api <- yaml::read_yaml(here::here("api-methods.yml"))
-
-api %>%
+```{r api-list}
+api <- yaml::read_yaml(here::here("api-methods.yml")) %>%
   map_dfr(~{
     map_dfr(.x, ~{
       modify_if(.x, is.null, NA_character_) %>%
         as_tibble()
     }, .id = "Method")
-  }, .id = "Section") %>%
+  }, .id = "Section")
+
+format_api_table <- function(xdf) {
+  xdf %>%
   mutate(
     endpoint = cell_spec(endpoint, link = url),
-    Section = stringr::str_to_title(Section),
-    Section = cell_spec(Section, bold = TRUE),
+    # Section = stringr::str_to_title(Section),
+    # Section = cell_spec(Section, bold = TRUE),
     Method = stringr::str_to_title(Method),
+    Method = stringr::str_replace_all(Method, "^Id\\s", "ID "),
     implementation = if_else(is.na(implementation), "N/A", implementation),
     implementation = cell_spec(implementation, monospace = TRUE)
   ) %>%
-  select(-url) %>%
-  kable(
-    escape = FALSE,
-    col.names = c("Section", "Method", "Endpoint", "Implementation")
-  ) %>%
-  kable_styling(position = "center") %>%
-  collapse_rows(columns = 1)
+  select(-url, Endpoint = endpoint, Implementation = implementation)
+}
+
+print_api_table <- function(xdf) {
+  xdf %>%
+    kable(escape = FALSE) %>%
+    kable_styling(position = "center", bootstrap_options = c("striped", "hover"))
+}
 
 ```
 
+# Search
 
+```{r api-movies}
+api %>%
+  filter(Section == "search") %>%
+  select(-Section) %>%
+  format_api_table() %>%
+  print_api_table()
+```
+
+# Movies
+
+```{r api-movies}
+api %>%
+  filter(Section == "movies") %>%
+  select(-Section) %>%
+  format_api_table() %>%
+  print_api_table()
+```
+
+# Shows
+
+```{r api-movies}
+api %>%
+  filter(Section == "shows") %>%
+  select(-Section) %>%
+  format_api_table() %>%
+  print_api_table()
+```
+
+## Seasons
+
+```{r api-movies}
+api %>%
+  filter(Section == "seasons") %>%
+  select(-Section) %>%
+  format_api_table() %>%
+  print_api_table()
+```
+
+## Episodes
+
+```{r api-movies}
+api %>%
+  filter(Section == "episodes") %>%
+  select(-Section) %>%
+  format_api_table() %>%
+  print_api_table()
+```
+
+# People
+
+```{r api-movies}
+api %>%
+  filter(Section == "people") %>%
+  select(-Section) %>%
+  format_api_table() %>%
+  print_api_table()
+```
+
+# User
+
+```{r api-movies}
+api %>%
+  filter(Section == "users") %>%
+  select(-Section) %>%
+  format_api_table() %>%
+  print_api_table()
+```
+
+# Misc
+
+These endpoints are used to check filter arguments. The output is cached in tidied up
+format as package datasets.
+
+```{r api-movies}
+api %>%
+  filter(Section %in% c("certifications", "countries", 
+                        "genres", "languages", "networks")) %>%
+  format_api_table() %>%
+  print_api_table()
+```
