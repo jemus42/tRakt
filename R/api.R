@@ -4,9 +4,10 @@
 #' in the appropriate [options()] variables of the same name.
 #' To make this work automatically, place your key as environment variables in
 #' `~/.Renviron` (see `Details`).
-#' Arguments to this function take precedence over any key file. To make API functions work,
-#' you do not have to use this function unless you want to supply your own client ID, which
-#' is recommended for larger data collection projects.
+#' Arguments to this function take precedence over any key file. To make API
+#' functions work, you do not have to use this function unless you want to
+#' supply your own client ID, which is recommended for larger data collection
+#' projects.
 #'
 #' Set appropriate values in your `~/.Renviron` like this:
 #'
@@ -16,9 +17,12 @@
 #' trakt_client_id=12[...]f2
 #' ```
 #'
-#' @param username `character(1)`: Explicitly set your trakt.tv username (optional).
-#' @param client.id `character(1)`: Explicitly set your API client ID (required for API interaciton).
-#' @param silent `logical(1) [TRUE]`: No messages are printed showing you the API information.
+#' @param username `character(1)`: Explicitly set your trakt.tv username
+#'    (optional).
+#' @param client_id `character(1)`: Explicitly set your API client ID
+#'    (required for API interaciton).
+#' @param silent `logical(1) [TRUE]`: No messages are printed showing you the
+#'    API information.
 #' Mostly for debug purposes.
 #' @return Nothing. Only messages.
 #' @export
@@ -31,22 +35,23 @@
 #' # (This is automatically executed when calling library(tRakt))
 #' trakt_credentials()
 #'
-#' # Explicitly set values in an R session, overriding .Renviron values if present
+#' # Explicitly set values in an R session, overriding .Renviron values
 #' trakt_credentials(
 #'   username = "sean",
-#'   client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2",
+#'   client_id = "12fc1de7674[...]d5e11e3490823d629afdf2",
 #'   silent = FALSE
 #' )
 #' }
-trakt_credentials <- function(username, client.id,
-                              silent = TRUE) {
-  username <- ifelse(missing(username), Sys.getenv("trakt_username"), username)
-  client_id <- ifelse(missing(client.id), Sys.getenv("trakt_client_id"), client.id)
+trakt_credentials <- function(username, client_id, silent = TRUE) {
+  username <- ifelse(missing(username),
+                     Sys.getenv("trakt_username"), username)
+  client_id <- ifelse(missing(client_id),
+                      Sys.getenv("trakt_client_id"), client_id)
 
   if (username != "") {
     options(trakt_username = username)
     if (!silent) {
-      message(paste("Your trakt.tv username is set to", getOption("trakt_username")))
+      message("Your trakt.tv username is set to ", getOption("trakt_username"))
     }
   }
   if (client_id != "") {
@@ -54,7 +59,8 @@ trakt_credentials <- function(username, client.id,
   } else {
     options(trakt_client_id = tRakt_client_id)
     if (!silent) {
-      message("I provided my client.id as a fallback for you. Please use it responsibly.")
+      message("I provided my client_id as a fallback for you. ",
+              "Please use it responsibly.")
     }
   }
 
@@ -65,27 +71,32 @@ trakt_credentials <- function(username, client.id,
 
 #' Make an API call and receive parsed output
 #'
-#' The most basic form of API interaction: Querying a specific URL and getting its parsed
-#' result. If the response is empty, the function returns an empty [tibble()][tibble::tibble-package],
-#' and if there are date-time variables present in the response, they are converted to
-#' `POSIXct` via [lubridate::ymd_hms()] or to `Date` via [lubridate::as_date()] if the variable
-#' only contains date information.
+#' The most basic form of API interaction: Querying a specific URL and getting
+#' its parsed result. If the response is empty, the function returns an empty
+#' [tibble()][tibble::tibble-package], and if there are date-time variables
+#' present in the response, they are converted to `POSIXct` via
+#' [lubridate::ymd_hms()] or to `Date` via [lubridate::as_date()] if the
+#' variable only contains date information.
 #'
 #' @details
-#' See [the official API reference](https://trakt.docs.apiary.io) for a detailed overview
-#' of available methods. Most methods of potential interest for data collection have
-#' dedicated functions in this package.
-#' @note No OAuth2 methods are supported yet, meaning you don't have access to `POST` methods
-#' or user information of non-public profiles.
+#' See [the official API reference](https://trakt.docs.apiary.io) for a detailed
+#' overview of available methods. Most methods of potential interest for data
+#' collection have dedicated functions in this package.
+#' @note No OAuth2 methods are supported yet, meaning you don't have access to
+#'   `POST` methods or user information of non-public profiles.
 #' @param url `character(1)`: The API endpoint. Either a full URL like
-#' `"https://api.trakt.tv/shows/breaking-bad"` or just the endpoint like `shows/breaking-bad`.
-#' @param client.id `character(1)`: API client ID. If no value is set, this defaults
-#' to the package's client ID. See [trakt_credentials] for further information.
-#' @param HEAD `logical(1) [FALSE]`: If `TRUE`, only a HTTP `HEAD` request is performed
-#' and its content returned. This is useful if you are only interested in status codes
-#' or other headers, and don't want to waste resources/bandwidth on the response body.
+#'   `"https://api.trakt.tv/shows/breaking-bad"` or just the endpoint like
+#'   `shows/breaking-bad`.
+#' @param client_id `character(1)`: API client ID. If no value is set,
+#'   this defaults to the package's client ID. See [trakt_credentials] for
+#'   further information.
+#' @param HEAD `logical(1) [FALSE]`: If `TRUE`, only a HTTP `HEAD` request is
+#'   performed and its content returned. This is useful if you are only
+#'   interested in status codes or other headers, and don't want to waste
+#'   resources/bandwidth on the response body.
 #' @return The parsed ([jsonlite::fromJSON()]) content of the API response.
-#' An empty [tibble()][tibble::tibble-package] if the response is an empty `JSON` array.
+#'   An empty [tibble()][tibble::tibble-package] if the response is an empty
+#'   `JSON` array.
 #' @export
 #' @importFrom httr user_agent
 #' @importFrom httr add_headers
@@ -101,29 +112,30 @@ trakt_credentials <- function(username, client.id,
 #' # A simple request to a direct URL
 #' trakt_get("https://api.trakt.tv/shows/breaking-bad")
 #'
-#' # A HEAD-only request, useful for validating a URL exists or the API is accessable
+#' # A HEAD-only request
+#' # useful for validating a URL exists or the API is accessible
 #' trakt_get("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
 #'
 #' # Optionally be lazy about URL specification by dropping the hostname:
 #' trakt_get("shows/game-of-thrones")
-trakt_get <- function(url, client.id = getOption("trakt_client_id"),
+trakt_get <- function(url, client_id = getOption("trakt_client_id"),
                            HEAD = FALSE) {
   if (!grepl(pattern = "^https://api.trakt.tv", url)) {
     url <- build_trakt_url(url)
   }
 
-  if (is.null(client.id)) {
+  if (is.null(client_id)) {
     if (is.null(getOption("trakt_client_id"))) {
       options(trakt_client_id = tRakt_client_id)
     }
-    client.id <- getOption("trakt_client_id")
+    client_id <- getOption("trakt_client_id")
   }
 
   # Headers and metadata
   agent <- user_agent("https://github.com/jemus42/tRakt")
 
   headers <- add_headers(.headers = c(
-    "trakt-api-key" = client.id,
+    "trakt-api-key" = client_id,
     "Content-Type" = "application/json",
     "trakt-api-version" = 2
   ))

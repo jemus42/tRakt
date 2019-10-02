@@ -4,44 +4,50 @@
 \alias{trakt_get}
 \title{Make an API call and receive parsed output}
 \usage{
-trakt_get(url, client.id = getOption("trakt_client_id"), HEAD = FALSE)
+trakt_get(url, client_id = getOption("trakt_client_id"), HEAD = FALSE)
 }
 \arguments{
 \item{url}{\code{character(1)}: The API endpoint. Either a full URL like
-\code{"https://api.trakt.tv/shows/breaking-bad"} or just the endpoint like \code{shows/breaking-bad}.}
+\code{"https://api.trakt.tv/shows/breaking-bad"} or just the endpoint like
+\code{shows/breaking-bad}.}
 
-\item{client.id}{\code{character(1)}: API client ID. If no value is set, this defaults
-to the package's client ID. See \link{trakt_credentials} for further information.}
+\item{client_id}{\code{character(1)}: API client ID. If no value is set,
+this defaults to the package's client ID. See \link{trakt_credentials} for
+further information.}
 
-\item{HEAD}{\code{logical(1) [FALSE]}: If \code{TRUE}, only a HTTP \code{HEAD} request is performed
-and its content returned. This is useful if you are only interested in status codes
-or other headers, and don't want to waste resources/bandwidth on the response body.}
+\item{HEAD}{\code{logical(1) [FALSE]}: If \code{TRUE}, only a HTTP \code{HEAD} request is
+performed and its content returned. This is useful if you are only
+interested in status codes or other headers, and don't want to waste
+resources/bandwidth on the response body.}
 }
 \value{
 The parsed (\code{\link[jsonlite:fromJSON]{jsonlite::fromJSON()}}) content of the API response.
-An empty \link[tibble:tibble-package]{tibble()} if the response is an empty \code{JSON} array.
+An empty \link[tibble:tibble-package]{tibble()} if the response is an empty
+\code{JSON} array.
 }
 \description{
-The most basic form of API interaction: Querying a specific URL and getting its parsed
-result. If the response is empty, the function returns an empty \link[tibble:tibble-package]{tibble()},
-and if there are date-time variables present in the response, they are converted to
-\code{POSIXct} via \code{\link[lubridate:ymd_hms]{lubridate::ymd_hms()}} or to \code{Date} via \code{\link[lubridate:as_date]{lubridate::as_date()}} if the variable
-only contains date information.
+The most basic form of API interaction: Querying a specific URL and getting
+its parsed result. If the response is empty, the function returns an empty
+\link[tibble:tibble-package]{tibble()}, and if there are date-time variables
+present in the response, they are converted to \code{POSIXct} via
+\code{\link[lubridate:ymd_hms]{lubridate::ymd_hms()}} or to \code{Date} via \code{\link[lubridate:as_date]{lubridate::as_date()}} if the
+variable only contains date information.
 }
 \details{
-See \href{https://trakt.docs.apiary.io}{the official API reference} for a detailed overview
-of available methods. Most methods of potential interest for data collection have
-dedicated functions in this package.
+See \href{https://trakt.docs.apiary.io}{the official API reference} for a detailed
+overview of available methods. Most methods of potential interest for data
+collection have dedicated functions in this package.
 }
 \note{
-No OAuth2 methods are supported yet, meaning you don't have access to \code{POST} methods
-or user information of non-public profiles.
+No OAuth2 methods are supported yet, meaning you don't have access to
+\code{POST} methods or user information of non-public profiles.
 }
 \examples{
 # A simple request to a direct URL
 trakt_get("https://api.trakt.tv/shows/breaking-bad")
 
-# A HEAD-only request, useful for validating a URL exists or the API is accessable
+# A HEAD-only request
+# useful for validating a URL exists or the API is accessible
 trakt_get("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
 
 # Optionally be lazy about URL specification by dropping the hostname:

@@ -4,14 +4,17 @@
 \alias{trakt_credentials}
 \title{Set the required trakt.tv API credentials}
 \usage{
-trakt_credentials(username, client.id, silent = TRUE)
+trakt_credentials(username, client_id, silent = TRUE)
 }
 \arguments{
-\item{username}{\code{character(1)}: Explicitly set your trakt.tv username (optional).}
+\item{username}{\code{character(1)}: Explicitly set your trakt.tv username
+(optional).}
 
-\item{client.id}{\code{character(1)}: Explicitly set your API client ID (required for API interaciton).}
+\item{client_id}{\code{character(1)}: Explicitly set your API client ID
+(required for API interaciton).}
 
-\item{silent}{\code{logical(1) [TRUE]}: No messages are printed showing you the API information.
+\item{silent}{\code{logical(1) [TRUE]}: No messages are printed showing you the
+API information.
 Mostly for debug purposes.}
 }
 \value{
@@ -22,9 +25,10 @@ Nothing. Only messages.
 in the appropriate \code{\link[=options]{options()}} variables of the same name.
 To make this work automatically, place your key as environment variables in
 \code{~/.Renviron} (see \code{Details}).
-Arguments to this function take precedence over any key file. To make API functions work,
-you do not have to use this function unless you want to supply your own client ID, which
-is recommended for larger data collection projects.
+Arguments to this function take precedence over any key file. To make API
+functions work, you do not have to use this function unless you want to
+supply your own client ID, which is recommended for larger data collection
+projects.
 }
 \details{
 Set appropriate values in your \code{~/.Renviron} like this:\preformatted{# tRakt
@@ -42,10 +46,10 @@ only client ID really matters.
 # (This is automatically executed when calling library(tRakt))
 trakt_credentials()
 
-# Explicitly set values in an R session, overriding .Renviron values if present
+# Explicitly set values in an R session, overriding .Renviron values
 trakt_credentials(
   username = "sean",
-  client.id = "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2",
+  client_id = "12fc1de7674[...]d5e11e3490823d629afdf2",
   silent = FALSE
 )
 }
