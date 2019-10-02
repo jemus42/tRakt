@@ -14,7 +14,9 @@ library(tRakt)
 library(kableExtra)
 library(purrr)
 library(dplyr)
+```
 
+```{r api-list, echo = FALSE}
 api <- yaml::read_yaml(here::here("api-methods.yml"))
 
 api %>%
