@@ -325,24 +325,24 @@ certifications:
   list:
     url: https://trakt.docs.apiary.io/#reference/certifications/list/get-certifications
     endpoint: certifications/:type
-    implementation: certifications
+    implementation: ?certifications
 countries:
   list:
     url: https://trakt.docs.apiary.io/#reference/countries/list/get-countries
     endpoint: countries/:type
-    implementation: countries
+    implementation: ?countries
 genres:
   list:
     url: https://trakt.docs.apiary.io/#reference/genres/list/get-genres
     endpoint: genres/:type
-    implementation: genres
+    implementation: ?genres
 languages:
   list:
     url: https://trakt.docs.apiary.io/#reference/languages/list/get-languages
     endpoint: languages/:type
-    implementation: languages
+    implementation: ?languages
 networks:
   list:
     url: https://trakt.docs.apiary.io/#reference/networks/list/get-networks
     endpoint: networks
-    implementation: networks
+    implementation: ?networks

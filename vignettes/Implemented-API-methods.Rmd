@@ -60,6 +60,9 @@ print_api_table <- function(xdf) {
 
 ```
 
+This is a list reference list of [API methods available](https://trakt.docs.apiary.io/), their endpoint URLs (with user-specified parameters indiciated by a `:` prefix) and a link to their respective implementation in this package, if applicable.  
+Note that not all available methods are listed here, especially those geared towards interactive apps.
+
 # Search
 
 ```{r api-search}
