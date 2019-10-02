@@ -55,12 +55,16 @@ format_api_table <- function(xdf) {
 print_api_table <- function(xdf) {
   xdf %>%
     kable(escape = FALSE) %>%
-    kable_styling(position = "center", bootstrap_options = c("striped", "hover"))
+    kable_styling(
+      position = "center", 
+      bootstrap_options = c("striped", "hover"),
+      full_width = TRUE
+    )
 }
 
 ```
 
-This is a list reference list of [API methods available](https://trakt.docs.apiary.io/), their endpoint URLs (with user-specified parameters indiciated by a `:` prefix) and a link to their respective implementation in this package, if applicable.  
+This is a reference list of [API methods available](https://trakt.docs.apiary.io/), their endpoint URLs (with user-specified parameters indiciated by a `:` prefix) and a link to their respective implementation in this package, if applicable.  
 Note that not all available methods are listed here, especially those geared towards interactive apps.
 
 # Search
