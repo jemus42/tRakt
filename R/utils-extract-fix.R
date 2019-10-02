@@ -291,38 +291,41 @@ check_filter_arg <- function(filter,
   }
   if (filter_type == "years") {
     if (!(length(filter) %in% c(1, 2))) {
-      warning("Filter 'years' must be of length 1 or 2, keeping only first two values")
+      warning("'years' must be of length 1 or 2, keeping only first two values")
       filter <- sort(filter[1:2])
-    }
-
-    filter <- as.integer(filter)
-
-    if (any(map_lgl(filter, ~ {
-      !(nchar(.x) == 4)
-    }))) {
-      warning("Filter 'years' must be 4-digit year, ignoring filter")
-      filter <- NULL
     }
 
     if (length(filter) == 2) {
       filter <- paste0(sort(filter), collapse = "-")
     }
+
+    # Check if the filter is okay now
+    if (grepl(x = filter, pattern = "(^\\d{4}-\\d{4}$)|(^\\d{4}$)")) {
+      filter
+    } else {
+     warning("'years' must be interpretable as 4 digit year or range of 4-digit years")
+    }
   }
   if (filter_type == "runtimes") {
     if (!(length(filter) %in% c(1, 2))) {
-      warning("Filter 'runtimes' must be of length 1 or 2, keeping only first two values")
+      warning("'runtimes' must be of length 1 or 2, keeping only first two values")
       filter <- filter[1:2]
     }
 
-    filter <- as.integer(filter)
-
     if (length(filter) == 2) {
-      filter <- paste0(filter, collapse = "-")
+      filter <- paste0(sort(filter), collapse = "-")
+    }
+
+    # Check if the filter is okay now
+    if (grepl(x = filter, pattern = "(^\\d+-\\d+$)|(^\\d+$)")) {
+      filter
+    } else {
+      warning("'runtimes' must be interpretable as duration in minutes or range.")
     }
   }
   if (filter_type == "ratings") {
     if (!(length(filter) %in% c(1, 2))) {
-      warning("Filter 'ratings' must be of length 1 or 2, keeping only first two values")
+      warning("'ratings' must be of length 1 or 2, keeping only first two values")
       filter <- filter[1:2]
     }
 
@@ -331,7 +334,7 @@ check_filter_arg <- function(filter,
     if (any(map_lgl(filter, ~ {
       filter >= 0 & filter <= 100
     }))) {
-      warning("Filter 'ratings' must be between 0 and 100, ignoring filter")
+      warning("'ratings' must be between 0 and 100, ignoring filter")
       filter <- NULL
     }
 
@@ -372,7 +375,7 @@ check_filter_arg <- function(filter,
 check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
   if (any(!(filter %in% filter_ok))) {
     warning(
-      "Filter '", filter_type, "' includes unknown value, ignoring: '",
+      "'", filter_type, "' includes unknown value, ignoring: '",
       paste0(unique(filter[!(filter %in% filter_ok)]), collapse = ", "), "'"
     )
 
