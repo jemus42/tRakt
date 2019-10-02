@@ -20,8 +20,9 @@ returns more variables and should generally only be used if required.}
 A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
-Get a single person's details, like their various IDs. If \code{extended} is \code{"full"},
-there will also be biographical data if available, e.g. their birthday.
+Get a single person's details, like their various IDs. If \code{extended} is
+\code{"full"}, there will also be biographical data if available, e.g. their
+birthday.
 }
 \details{
 This function wraps the API method

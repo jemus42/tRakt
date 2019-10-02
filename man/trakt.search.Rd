@@ -12,12 +12,14 @@ trakt.search.byid(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
   type = "movie", n_results = 1L, extended = c("min", "full"))
 }
 \arguments{
-\item{query}{\code{character(1)}: The keyword used for the search, e.g. \code{"breaking bad"}.}
+\item{query}{\code{character(1)}: The keyword used for the search, e.g.
+\code{"breaking bad"}.}
 
-\item{type}{\code{character(1) ["show"]}: The type of data you're looking for. One of \code{show},
-\code{movie}, \code{episode}, \code{person} or \code{list} or a character vector with those elements, e.g.
-\code{c("show", "movie")}. Note that not every combination is reasonably combinable, e.g.
-\code{c("movie", "list")}. Use separate function calls in that case.}
+\item{type}{\code{character(1) ["show"]}: The type of data you're looking for.
+One of \code{show}, \code{movie}, \code{episode}, \code{person} or \code{list} or a character vector
+with those elements, e.g. \code{c("show", "movie")}. Note that not every
+combination is reasonably combinable, e.g. \code{c("movie", "list")}. Use
+separate function calls in that case.}
 
 \item{years}{\code{integer(1)}: 4-digit year \strong{or} range, e.g. \code{2010-2020}. Can also be an integer
 vector of length two which will be coerced appropriately.}
@@ -27,9 +29,11 @@ vector of length two which will be coerced appropriately.}
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
 
-\item{id}{\code{character(1)}: The id used for the search, e.g. \code{14701} for a \code{Trakt ID}.}
+\item{id}{\code{character(1)}: The id used for the search, e.g. \code{14701} for
+a \code{Trakt ID}.}
 
-\item{id_type}{\code{character(1) ["trakt"]}: The type of \code{id}. One of \code{trakt}, \code{imdb}, \code{tmdb}, \code{tvdb}.}
+\item{id_type}{\code{character(1) ["trakt"]}: The type of \code{id}. One of \code{trakt},
+\code{imdb}, \code{tmdb}, \code{tvdb}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble} containing \code{n_results} results.
@@ -46,7 +50,8 @@ as receiving a quick overview of a show/movie.
 \details{
 The amount of information returned is equal to \code{.summary} API methods and
 in turn depends on the value of \code{extended}.
-See also \href{https://trakt.docs.apiary.io/#reference/search}{the API reference here} for
+See also the
+\href{https://trakt.docs.apiary.io/#reference/search}{API reference here} for
 which fields of the item metadata are searched by default.
 }
 \examples{
