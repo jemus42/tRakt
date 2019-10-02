@@ -22,11 +22,11 @@ movies:
   anticipated:
     url: https://trakt.docs.apiary.io/#reference/movies/anticipated/get-the-most-anticipated-movies
     endpoint: movies/anticipated
-    implementation:
+    implementation: N/A
   box office:
     url: https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office
     endpoint: movies/boxoffice
-    implementation:
+    implementation: N/A
   updates:
     url: https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies
     endpoint: movies/updates/:start_date
@@ -38,23 +38,23 @@ movies:
   aliases:
     url: https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases
     endpoint: movies/:id/aliases
-    implementation:
+    implementation: N/A
   releases:
     url: https://trakt.docs.apiary.io/#reference/movies/releases/get-all-movie-releases
     endpoint: movies/:id/releases/:country
-    implementation:
+    implementation: trakt.movies.releases
   translations:
     url: https://trakt.docs.apiary.io/#reference/movies/translations/get-all-movie-translations
     endpoint: movies/:id/translations/:language
-    implementation:
+    implementation: N/A
   comments:
     url: https://trakt.docs.apiary.io/#reference/movies/comments/get-all-movie-comments
     endpoint: movies/:id/comments/:sort
-    implementation:
+    implementation: N/A
   lists:
     url: https://trakt.docs.apiary.io/#reference/movies/lists/get-lists-containing-this-movie
     endpoint: movies/:id/lists/:type/:sort
-    implementation:
+    implementation: N/A
   people:
     url: https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie
     endpoint: movies/:id/people
@@ -74,4 +74,4 @@ movies:
   watching:
     url: https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now
     endpoint: movies/:id/watching
-    implementation:
+    implementation: N/A
