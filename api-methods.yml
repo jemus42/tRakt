@@ -58,19 +58,19 @@ movies:
   people:
     url: https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie
     endpoint: movies/:id/people
-    implementation: trakt.movies.people
+    implementation: trakt.movies.people()
   ratings:
     url: https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings
     endpoint: movies/:id/ratings
-    implementation: trakt.movies.ratings
+    implementation: trakt.movies.ratings()
   related:
     url: https://trakt.docs.apiary.io/#reference/movies/related/get-related-movies
     endpoint: movies/:id/related
-    implementation: trakt.movies.related
+    implementation: trakt.movies.related()
   stats:
     url: https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats
     endpoint: movies/:id/stats
-    implementation: trakt.movies.stats
+    implementation: trakt.movies.stats()
   watching:
     url: https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now
     endpoint: movies/:id/watching
@@ -80,15 +80,15 @@ people:
   summary:
     url: https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person
     endpoint: people/:id
-    implementation: trakt.people.summary
+    implementation: trakt.people.summary()
   movies:
     url: https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits
     endpoint: people/:id/movies
-    implementation: trakt.people.movies
+    implementation: trakt.people.movies()
   shows:
     url: https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits
     endpoint: people/:id/shows
-    implementation: trakt.people.shows
+    implementation: trakt.people.shows()
   lists:
     url: https://trakt.docs.apiary.io/#reference/people/lists/get-lists-containing-this-person
     endpoint: people/:id/lists/:type/:sort
@@ -214,11 +214,11 @@ seasons:
   ratings:
     url: https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings
     endpoint: shows/:id/seasons/:season/ratings
-    implementation: trakt.seasons.ratings
+    implementation: trakt.seasons.ratings()
   stats:
     url: https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats
     endpoint: shows/:id/seasons/:season/stats
-    implementation: trakt.seasons.stats
+    implementation: trakt.seasons.stats()
   watching:
     url: https://trakt.docs.apiary.io/#reference/seasons/watching/get-users-watching-right-now
     endpoint: shows/:id/seasons/:season/watching

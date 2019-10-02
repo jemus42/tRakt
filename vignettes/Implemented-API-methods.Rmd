@@ -15,6 +15,7 @@ library(tRakt)
 library(kableExtra)
 library(purrr)
 library(dplyr)
+library(stringr)
 ```
 
 ```{r api-list}
@@ -27,7 +28,7 @@ api <- yaml::read_yaml(here::here("api-methods.yml")) %>%
   }, .id = "Section")
 
 pkg_funs <- getNamespaceExports("tRakt") %>%
-  stringr::str_subset("%>%|trakt_get|build_trakt_url|trakt_credentials", negate = TRUE)
+  str_subset("%>%|trakt_get|build_trakt_url|trakt_credentials", negate = TRUE)
 
 unmentioned <- pkg_funs[!(pkg_funs %in% str_remove_all(api$implementation, pattern = "\\(\\)"))]
   
@@ -38,10 +39,15 @@ format_api_table <- function(xdf) {
     endpoint = cell_spec(endpoint, link = url),
     # Section = stringr::str_to_title(Section),
     # Section = cell_spec(Section, bold = TRUE),
-    Method = stringr::str_to_title(Method),
-    Method = stringr::str_replace_all(Method, "^Id\\s", "ID "),
+    Method = str_to_title(Method),
+    Method = str_replace_all(Method, "^Id\\s", "ID "),
     implementation = if_else(is.na(implementation), "N/A", implementation),
-    implementation = cell_spec(implementation, monospace = TRUE)
+    # implementation = cell_spec(implementation, monospace = TRUE)
+    implementation = if_else(
+      str_detect(implementation, "^N\\/A"),
+      implementation,
+      paste0("<code>", implementation, "</code>")
+    )
   ) %>%
   select(-url, Endpoint = endpoint, Implementation = implementation)
 }
