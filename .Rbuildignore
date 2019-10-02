@@ -22,3 +22,5 @@
 ^tRakt.*\.tgz$
 ^vignettes/Implemented-API-methods\.Rmd$
 ^api-methods\.yml$
+^\.lintr$
+^\.pre-commit-config\.yaml$
