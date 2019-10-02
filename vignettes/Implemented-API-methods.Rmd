@@ -26,6 +26,12 @@ api <- yaml::read_yaml(here::here("api-methods.yml")) %>%
     }, .id = "Method")
   }, .id = "Section")
 
+pkg_funs <- getNamespaceExports("tRakt") %>%
+  stringr::str_subset("%>%|trakt_get|build_trakt_url|trakt_credentials", negate = TRUE)
+
+unmentioned <- pkg_funs[!(pkg_funs %in% str_remove_all(api$implementation, pattern = "\\(\\)"))]
+  
+
 format_api_table <- function(xdf) {
   xdf %>%
   mutate(
@@ -50,7 +56,7 @@ print_api_table <- function(xdf) {
 
 # Search
 
-```{r api-movies}
+```{r api-search}
 api %>%
   filter(Section == "search") %>%
   select(-Section) %>%
@@ -70,7 +76,7 @@ api %>%
 
 # Shows
 
-```{r api-movies}
+```{r api-shows}
 api %>%
   filter(Section == "shows") %>%
   select(-Section) %>%
@@ -80,7 +86,7 @@ api %>%
 
 ## Seasons
 
-```{r api-movies}
+```{r api-shows-seasons}
 api %>%
   filter(Section == "seasons") %>%
   select(-Section) %>%
@@ -90,7 +96,7 @@ api %>%
 
 ## Episodes
 
-```{r api-movies}
+```{r api-shows-episodes}
 api %>%
   filter(Section == "episodes") %>%
   select(-Section) %>%
@@ -100,7 +106,7 @@ api %>%
 
 # People
 
-```{r api-movies}
+```{r api-people}
 api %>%
   filter(Section == "people") %>%
   select(-Section) %>%
@@ -108,9 +114,9 @@ api %>%
   print_api_table()
 ```
 
-# User
+# Users
 
-```{r api-movies}
+```{r api-users}
 api %>%
   filter(Section == "users") %>%
   select(-Section) %>%
@@ -123,7 +129,7 @@ api %>%
 These endpoints are used to check filter arguments. The output is cached in tidied up
 format as package datasets.
 
-```{r api-movies}
+```{r api-misc}
 api %>%
   filter(Section %in% c("certifications", "countries", 
                         "genres", "languages", "networks")) %>%
