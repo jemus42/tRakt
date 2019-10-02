@@ -1,0 +1,40 @@
+---
+title: "Implemented API methods"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+library(tRakt)
+library(kableExtra)
+library(purrr)
+library(dplyr)
+
+api <- yaml::read_yaml(here::here("api-methods.yml"))
+
+api %>%
+  map_dfr(~{
+    map_dfr(.x, as_tibble, .id = "Method")
+  }, .id = "Section") %>%
+  mutate(
+    endpoint = cell_spec(endpoint, link = url),
+    Method = stringr::str_to_title(Method),
+    Section = stringr::str_to_title(Section),
+    implementation = cell_spec(implementation, monospace = TRUE)
+  ) %>%
+  select(-url) %>%
+  kable(
+    escape = FALSE,
+    col.names = c("Section", "Method", "Endpoint", "Implementation")
+  ) %>%
+  kable_styling(position = "center") %>%
+  collapse_rows(columns = 1)
+
+```
+
+

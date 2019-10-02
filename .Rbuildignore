@@ -20,3 +20,5 @@
 ^tRakt\.Rcheck$
 ^tRakt.*\.tar\.gz$
 ^tRakt.*\.tgz$
+^vignettes/Implemented-API-methods\.Rmd$
+^api-methods\.yml$

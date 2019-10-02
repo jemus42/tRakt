@@ -1,0 +1,77 @@
+movies:
+  trending:
+    url: https://trakt.docs.apiary.io/#reference/movies/trending/get-trending-movies
+    endpoint: movies/trending
+    implementation: trakt.trending()
+  popular:
+    url: https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies
+    endpoint: movies/popular
+    implementation: trakt.popular()
+  played:
+    url: https://trakt.docs.apiary.io/#reference/movies/played/get-the-most-played-movies
+    endpoint: movies/played/:period
+    implementation: trakt.played()
+  watched:
+    url: https://trakt.docs.apiary.io/#reference/movies/watched/get-the-most-watched-movies
+    endpoint: movies/watched/:period
+    implementation: trakt.watched()
+  collected:
+    url: https://trakt.docs.apiary.io/#reference/movies/collected/get-the-most-collected-movies
+    endpoint: movies/collected/:period
+    implementation: trakt.collected()
+  anticipated:
+    url: https://trakt.docs.apiary.io/#reference/movies/anticipated/get-the-most-anticipated-movies
+    endpoint: movies/anticipated
+    implementation:
+  box office:
+    url: https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office
+    endpoint: movies/boxoffice
+    implementation:
+  updates:
+    url: https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies
+    endpoint: movies/updates/:start_date
+    implementation: trakt.updates
+  summary:
+    url: https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie
+    endpoint: movies/id
+    implementation: trakt.movies.summary
+  aliases:
+    url: https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases
+    endpoint: movies/:id/aliases
+    implementation:
+  releases:
+    url: https://trakt.docs.apiary.io/#reference/movies/releases/get-all-movie-releases
+    endpoint: movies/:id/releases/:country
+    implementation:
+  translations:
+    url: https://trakt.docs.apiary.io/#reference/movies/translations/get-all-movie-translations
+    endpoint: movies/:id/translations/:language
+    implementation:
+  comments:
+    url: https://trakt.docs.apiary.io/#reference/movies/comments/get-all-movie-comments
+    endpoint: movies/:id/comments/:sort
+    implementation:
+  lists:
+    url: https://trakt.docs.apiary.io/#reference/movies/lists/get-lists-containing-this-movie
+    endpoint: movies/:id/lists/:type/:sort
+    implementation:
+  people:
+    url: https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie
+    endpoint: movies/:id/people
+    implementation: trakt.movies.people
+  ratings:
+    url: https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings
+    endpoint: movies/:id/ratings
+    implementation: trakt.movies.ratings
+  related:
+    url: https://trakt.docs.apiary.io/#reference/movies/related/get-related-movies
+    endpoint: movies/:id/related
+    implementation: trakt.movies.related
+  stats:
+    url: https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats
+    endpoint: movies/:id/stats
+    implementation: trakt.movies.stats
+  watching:
+    url: https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now
+    endpoint: movies/:id/watching
+    implementation:
