@@ -2,6 +2,7 @@ pandoc: '2.2'
 pkgdown: 1.4.1
 pkgdown_sha: ~
 articles:
+  Implemented-API-methods: Implemented-API-methods.html
   show-analysis-24: show-analysis-24.html
   tRakt: tRakt.html
 

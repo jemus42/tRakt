@@ -127,6 +127,9 @@ function was created for." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="../articles/Implemented-API-methods.html">Implemented API methods</a>
+    </li>
+    <li>
       <a href="../articles/show-analysis-24.html">Show Analysis: 24</a>
     </li>
   </ul>
@@ -174,27 +177,28 @@ function was created for.</p>
     <tr>
       <th>...</th>
       <td><p>Unnamed arguments will be concatenated with <code>/</code> as separators to
-form the path of the API url, e.g. the arguments <code>movies</code>, <code>tron-legacy-2012</code> and
-<code>releases</code> will be concatenated to <code>movies/tron-legacy-2012/releases</code>. Additional
-<strong>named</strong> arguments will be used as query parameters, usually <code>extended = "full"</code> or
-others.</p></td>
+form the path of the API URL, e.g. the arguments <code>movies</code>,
+<code>tron-legacy-2012</code> and <code>releases</code> will be concatenated to
+<code>movies/tron-legacy-2012/releases</code>. Additional <strong>named</strong> arguments will be
+used as query parameters, usually <code>extended = "full"</code> or others.</p></td>
     </tr>
     <tr>
       <th>validate</th>
-      <td><p><code>logical(1) [TRUE]</code>: Whether to check the URl via <code><a href='https://httr.r-lib.org/reference/HEAD.html'>httr::HEAD</a></code> request.</p></td>
+      <td><p><code>logical(1) [TRUE]</code>: Whether to check the URL via
+<code><a href='https://httr.r-lib.org/reference/HEAD.html'>httr::HEAD</a></code> request.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A url: <code>character</code> of length 1. If <code>validate = TRUE</code>, also a message including
-the HTTP status code return by a <code>HEAD</code> request.</p>
+    <p>A URL: <code>character</code> of length 1. If <code>validate = TRUE</code>, also a message
+including the HTTP status code return by a <code>HEAD</code> request.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>Please be aware that the result of this function is not verified to be a working trakt.tv
-API URL unless <code>validate = TRUE</code>, in which case a <code>HEAD</code> request is performed that
-does not actually receive any data, but from its returned status code the validity
-of the URL can be inferred.</p>
+    <p>Please be aware that the result of this function is not verified to be
+a working trakt.tv API URL unless <code>validate = TRUE</code>, in which case a <code>HEAD</code>
+request is performed that does not actually receive any data, but from its
+returned status code the validity of the URL can be inferred.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>build_trakt_url</span>(<span class='st'>"shows"</span>, <span class='st'>"breaking-bad"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; [1] "https://api.trakt.tv/shows/breaking-bad?extended=full"</div><div class='input'><span class='fu'>build_trakt_url</span>(<span class='st'>"shows"</span>, <span class='st'>"popular"</span>, <span class='kw'>page</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; [1] "https://api.trakt.tv/shows/popular?page=3&amp;limit=5"</div><div class='input'>

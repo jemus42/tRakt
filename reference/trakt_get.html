@@ -43,11 +43,12 @@
 
 
 <meta property="og:title" content="Make an API call and receive parsed output — trakt_get" />
-<meta property="og:description" content="The most basic form of API interaction: Querying a specific URL and getting its parsed
-result. If the response is empty, the function returns an empty tibble(),
-and if there are date-time variables present in the response, they are converted to
-POSIXct via lubridate::ymd_hms() or to Date via lubridate::as_date() if the variable
-only contains date information." />
+<meta property="og:description" content="The most basic form of API interaction: Querying a specific URL and getting
+its parsed result. If the response is empty, the function returns an empty
+tibble(), and if there are date-time variables
+present in the response, they are converted to POSIXct via
+lubridate::ymd_hms() or to Date via lubridate::as_date() if the
+variable only contains date information." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -129,6 +130,9 @@ only contains date information." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="../articles/Implemented-API-methods.html">Implemented API methods</a>
+    </li>
+    <li>
       <a href="../articles/show-analysis-24.html">Show Analysis: 24</a>
     </li>
   </ul>
@@ -163,14 +167,15 @@ only contains date information." />
     </div>
 
     <div class="ref-description">
-    <p>The most basic form of API interaction: Querying a specific URL and getting its parsed
-result. If the response is empty, the function returns an empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>,
-and if there are date-time variables present in the response, they are converted to
-<code>POSIXct</code> via <code><a href='http://lubridate.tidyverse.org/reference/ymd_hms.html'>lubridate::ymd_hms()</a></code> or to <code>Date</code> via <code><a href='http://lubridate.tidyverse.org/reference/as_date.html'>lubridate::as_date()</a></code> if the variable
-only contains date information.</p>
+    <p>The most basic form of API interaction: Querying a specific URL and getting
+its parsed result. If the response is empty, the function returns an empty
+<a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>, and if there are date-time variables
+present in the response, they are converted to <code>POSIXct</code> via
+<code><a href='http://lubridate.tidyverse.org/reference/ymd_hms.html'>lubridate::ymd_hms()</a></code> or to <code>Date</code> via <code><a href='http://lubridate.tidyverse.org/reference/as_date.html'>lubridate::as_date()</a></code> if the
+variable only contains date information.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client.id</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client_id</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -178,34 +183,38 @@ only contains date information.</p>
     <tr>
       <th>url</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The API endpoint. Either a full URL like
-<code>"https://api.trakt.tv/shows/breaking-bad"</code> or just the endpoint like <code>shows/breaking-bad</code>.</p></td>
+<code>"https://api.trakt.tv/shows/breaking-bad"</code> or just the endpoint like
+<code>shows/breaking-bad</code>.</p></td>
     </tr>
     <tr>
-      <th>client.id</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: API client ID. If no value is set, this defaults
-to the package's client ID. See <a href='trakt_credentials.html'>trakt_credentials</a> for further information.</p></td>
+      <th>client_id</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: API client ID. If no value is set,
+this defaults to the package's client ID. See <a href='trakt_credentials.html'>trakt_credentials</a> for
+further information.</p></td>
     </tr>
     <tr>
       <th>HEAD</th>
-      <td><p><code>logical(1) [FALSE]</code>: If <code>TRUE</code>, only a HTTP <code>HEAD</code> request is performed
-and its content returned. This is useful if you are only interested in status codes
-or other headers, and don't want to waste resources/bandwidth on the response body.</p></td>
+      <td><p><code>logical(1) [FALSE]</code>: If <code>TRUE</code>, only a HTTP <code>HEAD</code> request is
+performed and its content returned. This is useful if you are only
+interested in status codes or other headers, and don't want to waste
+resources/bandwidth on the response body.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>The parsed (<code><a href='https://rdrr.io/pkg/jsonlite/man/fromJSON.html'>jsonlite::fromJSON()</a></code>) content of the API response.
-An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> if the response is an empty <code>JSON</code> array.</p>
+An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> if the response is an empty
+<code>JSON</code> array.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>See <a href='https://trakt.docs.apiary.io'>the official API reference</a> for a detailed overview
-of available methods. Most methods of potential interest for data collection have
-dedicated functions in this package.</p>
+    <p>See <a href='https://trakt.docs.apiary.io'>the official API reference</a> for a detailed
+overview of available methods. Most methods of potential interest for data
+collection have dedicated functions in this package.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>No OAuth2 methods are supported yet, meaning you don't have access to <code>POST</code> methods
-or user information of non-public profiles.</p>
+    <p>No OAuth2 methods are supported yet, meaning you don't have access to
+<code>POST</code> methods or user information of non-public profiles.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other API-basics: <code><a href='trakt.search.html'>trakt.search</a></code>,
@@ -239,34 +248,29 @@ or user information of non-public profiles.</p>
 #&gt; [1] 18164
 #&gt; 
 #&gt; </div><div class='input'>
-<span class='co'># A HEAD-only request, useful for validating a URL exists or the API is accessable</span>
+<span class='co'># A HEAD-only request</span>
+<span class='co'># useful for validating a URL exists or the API is accessible</span>
 <span class='fu'>trakt_get</span>(<span class='st'>"https://api.trakt.tv/users/jemus42"</span>, <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; $status
-#&gt; [1] 200
+#&gt; [1] 403
 #&gt; 
 #&gt; $version
 #&gt; [1] "HTTP/1.1"
 #&gt; 
 #&gt; $headers
 #&gt; $date
-#&gt; [1] "Tue, 01 Oct 2019 10:54:57 GMT"
+#&gt; [1] "Wed, 02 Oct 2019 19:30:45 GMT"
 #&gt; 
 #&gt; $`content-type`
-#&gt; [1] "application/json; charset=utf-8"
+#&gt; [1] "text/html"
 #&gt; 
 #&gt; $connection
 #&gt; [1] "keep-alive"
 #&gt; 
 #&gt; $`cache-control`
-#&gt; [1] "max-age=0, private, must-revalidate"
+#&gt; [1] "max-age=0, private, no-cache, no-store, must-revalidate"
 #&gt; 
 #&gt; $`cf-railgun`
-#&gt; [1] "f0b715588b stream 0.000000 0200 57da"
-#&gt; 
-#&gt; $`content-encoding`
-#&gt; [1] "gzip"
-#&gt; 
-#&gt; $etag
-#&gt; [1] "W/\"ca2e150239822358e17021c48220d246\""
+#&gt; [1] "590aab5e9a stream 0.000000 0200 57da"
 #&gt; 
 #&gt; $vary
 #&gt; [1] "Accept-Encoding"
@@ -277,14 +281,11 @@ or user information of non-public profiles.</p>
 #&gt; $`x-frame-options`
 #&gt; [1] "SAMEORIGIN"
 #&gt; 
-#&gt; $`x-private-user`
-#&gt; [1] "false"
-#&gt; 
 #&gt; $`x-request-id`
-#&gt; [1] "054c54f3-d826-427a-96a7-4099eef269e8"
+#&gt; [1] "de73506f-8ff8-42aa-b1ce-98f402fb5838"
 #&gt; 
 #&gt; $`x-runtime`
-#&gt; [1] "0.004750"
+#&gt; [1] "0.004383"
 #&gt; 
 #&gt; $`x-xss-protection`
 #&gt; [1] "1; mode=block"
@@ -296,7 +297,10 @@ or user information of non-public profiles.</p>
 #&gt; [1] "cloudflare"
 #&gt; 
 #&gt; $`cf-ray`
-#&gt; [1] "51ede6cb3f1ac570-ORD"
+#&gt; [1] "51f917b80a22c530-ORD"
+#&gt; 
+#&gt; $`content-encoding`
+#&gt; [1] "gzip"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "insensitive" "list"       

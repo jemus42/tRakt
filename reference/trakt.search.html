@@ -128,6 +128,9 @@ as receiving a quick overview of a show/movie." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="../articles/Implemented-API-methods.html">Implemented API methods</a>
+    </li>
+    <li>
       <a href="../articles/show-analysis-24.html">Show Analysis: 24</a>
     </li>
   </ul>
@@ -179,14 +182,16 @@ as receiving a quick overview of a show/movie.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>query</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The keyword used for the search, e.g. <code>"breaking bad"</code>.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The keyword used for the search, e.g.
+<code>"breaking bad"</code>.</p></td>
     </tr>
     <tr>
       <th>type</th>
-      <td><p><code>character(1) ["show"]</code>: The type of data you're looking for. One of <code>show</code>,
-<code>movie</code>, <code>episode</code>, <code>person</code> or <code>list</code> or a character vector with those elements, e.g.
-<code><a href='https://rdrr.io/r/base/c.html'>c("show", "movie")</a></code>. Note that not every combination is reasonably combinable, e.g.
-<code><a href='https://rdrr.io/r/base/c.html'>c("movie", "list")</a></code>. Use separate function calls in that case.</p></td>
+      <td><p><code>character(1) ["show"]</code>: The type of data you're looking for.
+One of <code>show</code>, <code>movie</code>, <code>episode</code>, <code>person</code> or <code>list</code> or a character vector
+with those elements, e.g. <code><a href='https://rdrr.io/r/base/c.html'>c("show", "movie")</a></code>. Note that not every
+combination is reasonably combinable, e.g. <code><a href='https://rdrr.io/r/base/c.html'>c("movie", "list")</a></code>. Use
+separate function calls in that case.</p></td>
     </tr>
     <tr>
       <th>years</th>
@@ -204,11 +209,13 @@ returns more variables and should generally only be used if required.</p></td>
     </tr>
     <tr>
       <th>id</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The id used for the search, e.g. <code>14701</code> for a <code>Trakt ID</code>.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The id used for the search, e.g. <code>14701</code> for
+a <code>Trakt ID</code>.</p></td>
     </tr>
     <tr>
       <th>id_type</th>
-      <td><p><code>character(1) ["trakt"]</code>: The type of <code>id</code>. One of <code>trakt</code>, <code>imdb</code>, <code>tmdb</code>, <code>tvdb</code>.</p></td>
+      <td><p><code>character(1) ["trakt"]</code>: The type of <code>id</code>. One of <code>trakt</code>,
+<code>imdb</code>, <code>tmdb</code>, <code>tvdb</code>.</p></td>
     </tr>
     </table>
 
@@ -222,7 +229,8 @@ there will be <code>n_results</code> results <em>per type</em>.</p>
 
     <p>The amount of information returned is equal to <code>.summary</code> API methods and
 in turn depends on the value of <code>extended</code>.
-See also <a href='https://trakt.docs.apiary.io/#reference/search'>the API reference here</a> for
+See also the
+<a href='https://trakt.docs.apiary.io/#reference/search'>API reference here</a> for
 which fields of the item metadata are searched by default.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
@@ -235,8 +243,8 @@ which fields of the item metadata are searched by default.</p>
 #&gt;   type   score title           year trakt  slug          tvdb  imdb        tmdb 
 #&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;
 #&gt; 1 show  1000   Breaking Bad    2008 1388   breaking-bad  81189 tt0903747   1396 
-#&gt; 2 show   399.  Breaking Bad:…  2018 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
-#&gt; 3 show    12.1 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># \dontrun{</span>
+#&gt; 2 show   397.  Breaking Bad:…  2018 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
+#&gt; 3 show    12.0 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># A show by its trakt id, and now with more information</span>
 <span class='fu'>trakt.search.byid</span>(<span class='fl'>1388</span>, <span class='st'>"trakt"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 29
 #&gt;   type  score title  year overview first_aired         runtime certification
@@ -259,9 +267,9 @@ which fields of the item metadata are searched by default.</p>
 #&gt;   type    score title           year trakt slug            imdb      tmdb  tvdb 
 #&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
 #&gt; 1 movie 1000    Tron            1982 66    tron-1982       tt0084827 97    &lt;NA&gt; 
-#&gt; 2 movie  706.   TRON: Legacy    2010 12601 tron-legacy-20… tt1104001 20526 &lt;NA&gt; 
-#&gt; 3 show   591.   Tron: Uprising  2012 34209 tron-uprising   tt1812523 34356 2584…
-#&gt; 4 show     8.61 Game of Thron…  2011 1390  game-of-thrones tt0944947 1399  1213…</div><div class='input'># }
+#&gt; 2 movie  700.   TRON: Legacy    2010 12601 tron-legacy-20… tt1104001 20526 &lt;NA&gt; 
+#&gt; 3 show   594.   Tron: Uprising  2012 34209 tron-uprising   tt1812523 34356 2584…
+#&gt; 4 show     8.52 Game of Thron…  2011 1390  game-of-thrones tt0944947 1399  1213…</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
