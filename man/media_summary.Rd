@@ -34,7 +34,7 @@ These functions wrap the "single item" API methods:
 }
 }
 \note{
-Thes function returns the same amount of informations as \link{trakt.search}.
+These functions return the same amount of information as \link{trakt.search}.
 }
 \examples{
 # Minimal info by default

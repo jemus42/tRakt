@@ -4,7 +4,7 @@
 #' These functions wrap the "single item" API methods:
 #' - [/shows/:id](https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show)
 #' - [/movies/:id](https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie)
-#' @note Thes function returns the same amount of informations as [trakt.search].
+#' @note These functions return the same amount of information as [trakt.search].
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble()][tibble::tibble-package].
 #' @family summary data
