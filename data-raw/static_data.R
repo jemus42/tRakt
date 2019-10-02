@@ -1,58 +1,49 @@
+library(tRakt)
 library(tibble)
 library(dplyr)
+library(usethis)
 
 # These datasets are used to check optional filter parameters.
 
 # Networks ----
-networks <- trakt_get(build_trakt_url("networks"))
-networks <- networks$name
+networks <- trakt_get("networks") %>% pull(name)
 use_data(networks, overwrite = TRUE)
 
 # Languages ----
-lang_movies <- trakt_get(build_trakt_url("languages", "movies"))
-lang_shows <- trakt_get(build_trakt_url("languages", "shows"))
-languages <- full_join(lang_movies, lang_shows, by = c("name", "code")) %>%
+languages <- full_join(
+  trakt_get("languages/movies"),
+  trakt_get("languages/shows"),
+  by = c("name", "code")
+  ) %>%
   as_tibble()
 
 use_data(languages, overwrite = TRUE)
 
 # Genres ----
-genres_movies <- trakt_get(build_trakt_url("genres", "movies"))
-genres_shows <- trakt_get(build_trakt_url("genres", "shows"))
-genres <- full_join(genres_movies, genres_shows, by = c("name", "slug")) %>%
+genres <- full_join(
+  trakt_get("genres/movies"),
+  trakt_get("genres/shows"),
+  by = c("name", "slug")
+  ) %>%
   as_tibble()
 
 use_data(genres, overwrite = TRUE)
 
 # Countries ----
-countries_movies <- trakt_get(build_trakt_url("countries", "movies"))
-countries_shows <- trakt_get(build_trakt_url("countries", "shows"))
-countries <- full_join(countries_movies, countries_shows, by = c("name", "code")) %>%
+countries <- full_join(
+  trakt_get("countries/movies"),
+  trakt_get("countries/shows"),
+  by = c("name", "code")
+  ) %>%
   as_tibble()
 
 use_data(countries, overwrite = TRUE)
 
 # Certifications ----
-certifications_movies <- trakt_get(build_trakt_url("certifications", "movies"))
-certifications_shows <- trakt_get(build_trakt_url("certifications", "shows"))
-
-certifications_movies <- map_df(names(certifications_movies), function(cc) {
-  certifications_movies[[cc]] %>%
-    as_tibble() %>%
-    mutate(
-      type = "movies",
-      country = cc
-    )
+certifications <- map_df(c("movies", "shows"), ~{
+  trakt_get(build_trakt_url("certifications", .x)) %>%
+    map_df(as_tibble, .id = "country") %>%
+    mutate(type = .x)
 })
 
-certifications_shows <- map_df(names(certifications_shows), function(cc) {
-  certifications_shows[[cc]] %>%
-    as_tibble() %>%
-    mutate(
-      type = "shows",
-      country = cc
-    )
-})
-
-certifications <- bind_rows(certifications_movies, certifications_shows)
 use_data(certifications, overwrite = TRUE)

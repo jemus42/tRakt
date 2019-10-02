@@ -4,7 +4,7 @@
 \name{networks}
 \alias{networks}
 \title{Available networks}
-\format{An object of class \code{character} of length 1512.}
+\format{An object of class \code{character} of length 1526.}
 \source{
 \url{https://trakt.docs.apiary.io/#reference/networks/list/get-networks}
 }
