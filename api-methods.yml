@@ -33,7 +33,7 @@ movies:
     implementation: trakt.updates
   summary:
     url: https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie
-    endpoint: movies/id
+    endpoint: movies/:id
     implementation: trakt.movies.summary
   aliases:
     url: https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases
@@ -168,7 +168,7 @@ shows:
   ratings:
     url: https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings
     endpoint: shows/:ids/ratings
-    implementation: trakt.shows.related()
+    implementation: trakt.shows.ratings()
   related:
     url: https://trakt.docs.apiary.io/#reference/shows/related/get-related-shows
     endpoint: shows/:id/related
@@ -194,11 +194,11 @@ seasons:
   summary:
     url: https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show
     endpoint: shows/:id/seasons/seasons
-    implementation: N/A
+    implementation: trakt.seasons.summary
   season:
     url: https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show
     endpoint: shows/id/seasons/season
-    implementation: N/A
+    implementation: trakt.seasons.season
   comments:
     url: https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments
     endpoint: shows/:id/seasons/:season/comments/:sort
@@ -214,11 +214,11 @@ seasons:
   ratings:
     url: https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings
     endpoint: shows/:id/seasons/:season/ratings
-    implementation: N/A
+    implementation: trakt.seasons.ratings
   stats:
     url: https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats
     endpoint: shows/:id/seasons/:season/stats
-    implementation: N/A
+    implementation: trakt.seasons.stats
   watching:
     url: https://trakt.docs.apiary.io/#reference/seasons/watching/get-users-watching-right-now
     endpoint: shows/:id/seasons/:season/watching
@@ -245,14 +245,14 @@ episodes:
     url: https://trakt.docs.apiary.io/#reference/episodes/people/get-all-people-for-an-episode
     endpoint: shows/:id/seasons/:season/episodes/:episode/people
     implementation:
-  ratings: 
+  ratings:
     url: https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings
     endpoint: shows/:id/seasons/:season/episodes/:episode/ratings
-    implementation:
+    implementation: trakt.episodes.ratings
   stats:
     url: https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats
     endpoint: shows/:id/seasons/:season/episodes/:episode/stats
-    implementation:
+    implementation: trakt.episodes.stats
   watching:
     url: https://trakt.docs.apiary.io/#reference/episodes/watching/get-users-watching-right-now
     endpoint: shows/:id/seasons/:season/episodes/:episode/watching
