@@ -42,7 +42,6 @@ format_api_table <- function(xdf) {
     Method = str_to_title(Method),
     Method = str_replace_all(Method, "^Id\\s", "ID "),
     implementation = if_else(is.na(implementation), "N/A", implementation),
-    # implementation = cell_spec(implementation, monospace = TRUE)
     implementation = if_else(
       str_detect(implementation, "^N\\/A"),
       implementation,
