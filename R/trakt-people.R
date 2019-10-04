@@ -174,7 +174,9 @@ trakt.media.people <- function(type = c("shows", "movies"), target,
   url <- build_trakt_url(type, target, "people", extended = extended)
   response <- trakt_get(url = url)
 
-  if (is_empty(response)) return(tibble())
+  if (is_empty(response)) {
+    return(tibble())
+  }
 
   # Flatten the data.frame
   if (has_name(response, "cast") & !is_empty(response$cast)) {

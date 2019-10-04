@@ -21,7 +21,8 @@
 #' }
 omdb_get <- function(imdb) {
   base_url <- modify_url("https://www.omdbapi.com/",
-                         query = list(apikey = Sys.getenv("OMDB_API_KEY")))
+    query = list(apikey = Sys.getenv("OMDB_API_KEY"))
+  )
 
   url <- modify_url(base_url, query = list(i = imdb))
 

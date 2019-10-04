@@ -34,7 +34,7 @@ fanarttv_get <- function(tvdb) {
   )
 
   res_y <- res[!(names(res) %in% c("name", "thetvdb_id"))] %>%
-    map(~list(.x)) %>%
+    map(~ list(.x)) %>%
     as_tibble()
 
   bind_cols(res_x, res_y)

@@ -27,7 +27,6 @@ test_that("trakt.user.network works", {
 })
 
 test_that("No NULLs or \"\" in trakt.user.network", {
-
   friends <- trakt.user.network("followers", "jemus42", "full")
   expect_true(!any(map_lgl(friends, function(col) any(is.null(col)))))
   expect_true(!any(map_lgl(friends, function(col) any(identical(col, "")))))

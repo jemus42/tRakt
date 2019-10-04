@@ -43,9 +43,11 @@
 #' }
 trakt_credentials <- function(username, client_id, silent = TRUE) {
   username <- ifelse(missing(username),
-                     Sys.getenv("trakt_username"), username)
+    Sys.getenv("trakt_username"), username
+  )
   client_id <- ifelse(missing(client_id),
-                      Sys.getenv("trakt_client_id"), client_id)
+    Sys.getenv("trakt_client_id"), client_id
+  )
 
   if (username != "") {
     options(trakt_username = username)
@@ -58,8 +60,10 @@ trakt_credentials <- function(username, client_id, silent = TRUE) {
   } else {
     options(trakt_client_id = tRakt_client_id)
     if (!silent) {
-      message("I provided my client_id as a fallback for you. ",
-              "Please use it responsibly.")
+      message(
+        "I provided my client_id as a fallback for you. ",
+        "Please use it responsibly."
+      )
     }
   }
 
@@ -195,7 +199,8 @@ trakt_get_token <- function() {
 
   # 3. Get OAuth credentials
   oauth2.0_token(
-    trakt_endpoint, app, use_oob = TRUE,
+    trakt_endpoint, app,
+    use_oob = TRUE,
     config_init = user_agent("https://github.com/jemus42/tRakt")
   )
 }

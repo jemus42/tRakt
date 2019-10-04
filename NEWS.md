@@ -1,6 +1,7 @@
-# tRakt 0.14.0.90000
+# tRakt 0.15.0
 
-This is a big one, like v1.0.0 big one.
+This is a big one, but not 1.0.0 big one I guess.  
+This is a consolidation release with lots of internal improvements, but for the 1.0.0 I decided to overhaul the structure of the package *again*, so before I completely break any kind of backwards compatiblity, I thought I'd get this one out.
 
 ## Consolidation for the people
 

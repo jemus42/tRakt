@@ -20,7 +20,6 @@ test_that("trakt.user.stats works", {
     "movies", "shows", "seasons", "episodes",
     "network", "ratings"
   ))
-
 })
 
 test_that("trakt.media.stats does things", {

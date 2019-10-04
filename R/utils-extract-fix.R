@@ -175,7 +175,7 @@ fix_datetime <- function(response) {
 
   if (inherits(response, "data.frame")) {
     response %>%
-      mutate_at(.vars = vars(datevars), ~{
+      mutate_at(.vars = vars(datevars), ~ {
         # Don't convert already POSIXct vars
         if (!(inherits(.x, "POSIXct"))) {
           ymd_hms(.x)
@@ -242,7 +242,6 @@ fix_missing <- function(x) {
 #' @keywords internal
 #' @importFrom httr stop_for_status
 check_username <- function(user, validate = FALSE) {
-
   fail_empty_chr <- identical(user, "")
   fail_null <- is.null(user)
   fail_chr <- !is.character(user)
@@ -284,7 +283,9 @@ check_filter_arg <- function(filter,
   filter_type <- match.arg(filter_type)
 
   # Empty in, empty out. Can't explain that.
-  if (is_empty(filter) | identical(filter, "")) return(NULL)
+  if (is_empty(filter) | identical(filter, "")) {
+    return(NULL)
+  }
 
   if (filter_type == "query") {
     filter <- as.character(filter)
@@ -303,7 +304,7 @@ check_filter_arg <- function(filter,
     if (grepl(x = filter, pattern = "(^\\d{4}-\\d{4}$)|(^\\d{4}$)")) {
       filter
     } else {
-     warning("'years' must be interpretable as 4 digit year or range of 4-digit years")
+      warning("'years' must be interpretable as 4 digit year or range of 4-digit years")
     }
   }
   if (filter_type == "runtimes") {
@@ -344,19 +345,15 @@ check_filter_arg <- function(filter,
   }
   if (filter_type == "genres") {
     filter <- check_filter_arg_fixed(filter, filter_type, genres$slug)
-
   }
   if (filter_type == "languages") {
     filter <- check_filter_arg_fixed(filter, filter_type, languages$code)
-
   }
   if (filter_type == "countries") {
     filter <- check_filter_arg_fixed(filter, filter_type, countries$code)
-
   }
   if (filter_type == "certifications") {
     filter <- check_filter_arg_fixed(filter, filter_type, certifications$slug)
-
   }
   if (filter_type == "networks") {
     filter <- check_filter_arg_fixed(filter, filter_type, networks)

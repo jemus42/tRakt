@@ -48,20 +48,23 @@
 trakt.search <- function(query, type = "show",
                          years = NULL, n_results = 1L,
                          extended = c("min", "full")) {
-
   ok_types <- c("movie", "show", "episode", "person", "list")
   type <- match.arg(type, choices = ok_types, several.ok = TRUE)
   extended <- match.arg(extended)
   years <- check_filter_arg(years, "years")
 
   if (length(type) > 1) {
-    return(map_df(type, ~ trakt.search(query, type = .x, years,
-                                       n_results, extended)))
+    return(map_df(type, ~ trakt.search(query,
+      type = .x, years,
+      n_results, extended
+    )))
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url("search", type, query = query, years = years,
-                         extended = extended)
+  url <- build_trakt_url("search", type,
+    query = query, years = years,
+    extended = extended
+  )
   response <- trakt_get(url = url)
 
   if (identical(response, tibble())) {

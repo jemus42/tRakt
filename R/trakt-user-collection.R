@@ -42,14 +42,17 @@ trakt.user.collection <- function(user = getOption("trakt_username"),
   if (length(user) > 1) {
     names(user) <- user
     return(map_df(user, ~ trakt.user.collection(user = .x, type, unnest_episodes),
-                  .id = "user"))
+      .id = "user"
+    ))
   }
 
   # Construct URL, make API call
   url <- build_trakt_url("users", user, "collection", type)
   response <- trakt_get(url = url)
 
-  if (is_empty(response)) return(tibble())
+  if (is_empty(response)) {
+    return(tibble())
+  }
 
   if (type == "shows") {
     response <- response %>%

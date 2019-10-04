@@ -79,7 +79,6 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 #' @examples
 #' # Get just the season numbers and their IDs
 #' trakt.seasons.summary("breaking-bad", extended = "min")
-#'
 #' \dontrun{
 #' # Get season numbers, ratings, votes, titles and other metadata as well as
 #' # a list-column containing all episode data

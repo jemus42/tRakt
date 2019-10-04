@@ -6,7 +6,7 @@ library(stringr)
 library(tidyr)
 
 # Futurama ----
-futurama <- trakt.seasons.season("futurama",  seasons = 1:7, extended = "full")
+futurama <- trakt.seasons.season("futurama", seasons = 1:7, extended = "full")
 usethis::use_data(futurama, overwrite = TRUE)
 
 

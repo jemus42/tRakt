@@ -48,7 +48,6 @@ test_that("check_user throws errors when it should", {
 })
 
 test_that("check_filter_arg fails how it should", {
-
   expect_null(check_filter_arg(NULL))
 
   expect_warning(check_filter_arg(10239, "years"))

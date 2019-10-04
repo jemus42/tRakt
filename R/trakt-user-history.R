@@ -30,7 +30,7 @@
 #' trakt.user.history(
 #'   user = "jemus42", type = "shows", limit = 5,
 #'   start_at = "2015-12-24", end_at = "2015-12-28"
-#'   )
+#' )
 #' }
 trakt.user.history <- function(user = getOption("trakt_username"),
                                type = c("shows", "movies"),
@@ -41,12 +41,13 @@ trakt.user.history <- function(user = getOption("trakt_username"),
   extended <- match.arg(extended)
 
   start_at <- if (!is.null(start_at)) format(as.POSIXct(start_at), "%FT%T.000Z", tz = "UTC")
-  end_at   <- if (!is.null(end_at))   format(as.POSIXct(end_at),   "%FT%T.000Z", tz = "UTC")
+  end_at <- if (!is.null(end_at)) format(as.POSIXct(end_at), "%FT%T.000Z", tz = "UTC")
 
   if (length(user) > 1) {
     names(user) <- user
     return(map_df(user, ~ trakt.user.history(user = .x, type, limit, start_at, end_at, extended),
-                  .id = "user"))
+      .id = "user"
+    ))
   }
 
   # Construct URL, make API call
@@ -56,7 +57,9 @@ trakt.user.history <- function(user = getOption("trakt_username"),
   response <- trakt_get(url = url)
   response <- as_tibble(response)
 
-  if (identical(response, tibble())) return(response)
+  if (identical(response, tibble())) {
+    return(response)
+  }
 
   if (type == "shows") {
     response <- bind_cols(
@@ -71,7 +74,7 @@ trakt.user.history <- function(user = getOption("trakt_username"),
         bind_cols(fix_ids(response$episode$ids)) %>%
         rename(episode = number) %>%
         fix_tibble_response() %>%
-        rename_all(~paste0("episode_", .x))
+        rename_all(~ paste0("episode_", .x))
     )
   }
   if (type == "movies") {

@@ -14,7 +14,7 @@ languages <- full_join(
   trakt_get("languages/movies"),
   trakt_get("languages/shows"),
   by = c("name", "code")
-  ) %>%
+) %>%
   as_tibble()
 
 use_data(languages, overwrite = TRUE)
@@ -24,7 +24,7 @@ genres <- full_join(
   trakt_get("genres/movies"),
   trakt_get("genres/shows"),
   by = c("name", "slug")
-  ) %>%
+) %>%
   as_tibble()
 
 use_data(genres, overwrite = TRUE)
@@ -34,13 +34,13 @@ countries <- full_join(
   trakt_get("countries/movies"),
   trakt_get("countries/shows"),
   by = c("name", "code")
-  ) %>%
+) %>%
   as_tibble()
 
 use_data(countries, overwrite = TRUE)
 
 # Certifications ----
-certifications <- map_df(c("movies", "shows"), ~{
+certifications <- map_df(c("movies", "shows"), ~ {
   trakt_get(build_trakt_url("certifications", .x)) %>%
     map_df(as_tibble, .id = "country") %>%
     mutate(type = .x)
