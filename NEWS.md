@@ -1,3 +1,10 @@
+# tRakt 0.15.9000
+ 
+## The Renamingering
+
+- `trakt.search` -> `search_query`
+- `trakt.search.byid` -> `search_id`
+
 # tRakt 0.15.0
 
 This is a big one, but not 1.0.0 big one I guess.  

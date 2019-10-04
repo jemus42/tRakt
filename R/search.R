@@ -1,11 +1,11 @@
-#' Search for a show via text query or id
+#' Search trakt.tv via text query or ID
 #'
 #' Search for a show or movie with a keyword (e.g. `"Breaking Bad"`) and receive
 #' basic info of the first search result. It's main use is to retrieve
-#' the ids or proper show/movie title for further use, as well
+#' the IDs or proper show/movie title for further use, as well
 #' as receiving a quick overview of a show/movie.
 #'
-#' The amount of information returned is equal to `.summary` API methods and
+#' The amount of information returned is equal to `*_summary` API methods and
 #' in turn depends on the value of `extended`.
 #' See also the
 #' [API reference here](https://trakt.docs.apiary.io/#reference/search) for
@@ -34,18 +34,18 @@
 #' @importFrom purrr map_df
 #' @examples
 #' # A show
-#' trakt.search("Breaking Bad", type = "show", n_results = 3)
+#' search_query("Breaking Bad", type = "show", n_results = 3)
 #' \dontrun{
 #' # A show by its trakt id, and now with more information
-#' trakt.search.byid(1388, "trakt", type = "show", extended = "full")
+#' search_id(1388, "trakt", type = "show", extended = "full")
 #'
 #' # A person
-#' trakt.search("J. K. Simmons", type = "person", extended = "full")
+#' search_query("J. K. Simmons", type = "person", extended = "full")
 #'
 #' # A movie or a show, two of each
-#' trakt.search("Tron", type = c("movie", "show"), n_results = 2)
+#' search_query("Tron", type = c("movie", "show"), n_results = 2)
 #' }
-trakt.search <- function(query, type = "show",
+search_query <- function(query, type = "show",
                          years = NULL, n_results = 1L,
                          extended = c("min", "full")) {
   ok_types <- c("movie", "show", "episode", "person", "list")
@@ -54,7 +54,7 @@ trakt.search <- function(query, type = "show",
   years <- check_filter_arg(years, "years")
 
   if (length(type) > 1) {
-    return(map_df(type, ~ trakt.search(query,
+    return(map_df(type, ~ search_query(query,
       type = .x, years,
       n_results, extended
     )))
@@ -75,9 +75,9 @@ trakt.search <- function(query, type = "show",
   search_result_cleanup(response, type, n_results, extended)
 }
 
-#' @rdname trakt.search
+#' @rdname search_query
 #' @export
-trakt.search.byid <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
+search_id <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
                               type = "movie",
                               n_results = 1L, extended = c("min", "full")) {
   id_type <- match.arg(id_type)
@@ -86,7 +86,7 @@ trakt.search.byid <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
   extended <- match.arg(extended)
 
   if (length(type) > 1) {
-    return(map_df(type, ~ trakt.search.byid(id, id_type, type = .x, n_results, extended)))
+    return(map_df(type, ~ search_id(id, id_type, type = .x, n_results, extended)))
   }
 
   # Construct URL, make API call
@@ -94,9 +94,9 @@ trakt.search.byid <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
   response <- trakt_get(url = url)
 
   # Check if response is empty (nothing found)
-  if (identical(response, tibble::tibble())) {
+  if (identical(response, tibble())) {
     warning("No results for id '", id, "' (", id_type, ")")
-    return(tibble::tibble())
+    return(tibble())
   }
 
   search_result_cleanup(response, type, n_results, extended)

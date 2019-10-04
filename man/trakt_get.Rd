@@ -58,7 +58,7 @@ trakt_get("https://api.trakt.tv/users/jemus42", HEAD = TRUE)
 trakt_get("shows/game-of-thrones")
 }
 \seealso{
-Other API-basics: \code{\link{trakt.search}},
+Other API-basics: \code{\link{search_query}},
   \code{\link{trakt_credentials}},
   \code{\link{trakt_get_token}}
 }

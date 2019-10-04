@@ -49,7 +49,7 @@ episode number having the name \code{episode_episode}, which is quite silly. Sor
 trakt.user.history(
   user = "jemus42", type = "shows", limit = 5,
   start_at = "2015-12-24", end_at = "2015-12-28"
-  )
+)
 }
 }
 \seealso{
