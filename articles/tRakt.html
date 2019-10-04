@@ -123,31 +123,15 @@
 
     
     
-<div id="preamble-the-trakt-tv-api-and-this-package" class="section level2">
-<h2 class="hasAnchor">
-<a href="#preamble-the-trakt-tv-api-and-this-package" class="anchor"></a>Preamble: The trakt.tv API and this package</h2>
-<p>First thing’s first: This packages <em>does not</em> support OAuth2 API calls (yet?).<br>
-You can only <em>get</em> data, and more importantly for user-specific data: You can only get <em>public</em> data.</p>
-<p>The second thing: The goal of this package is to easily gather lots of data – therefore I prioritize functions like <code>trakt.seasons.summary</code>, which lets you retrieve <em>all</em> episodes for a show with <em>a single API call</em> over API methods that would let you do the same on a per-episode basis. That’s the reason there’s no <code>trakt.episodes.summary</code> – there are, however, per-episode methods for ratings and stats.</p>
-<p>So, to make a long story short:</p>
-<ul>
-<li>You’ll only get public data, not send data to trakt.tv.</li>
-<li>You’ll get more data rather than less data.</li>
-</ul>
-</div>
-<div id="getting-data-from-trakt-tv" class="section level2">
-<h2 class="hasAnchor">
-<a href="#getting-data-from-trakt-tv" class="anchor"></a>Getting data from trakt.tv</h2>
-<div id="loading-packages-and-trakt-tv-credentials" class="section level3">
-<h3 class="hasAnchor">
-<a href="#loading-packages-and-trakt-tv-credentials" class="anchor"></a>1. Loading packages and trakt.tv credentials</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tRakt)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr) <span class="co"># For later</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tRakt)</a></code></pre></div>
 <p>That’s all you need to to for basic things. If you’re planning a larger project with lots and lots of data retrieval, you might want to create your own API app <a href="https://trakt.tv/oauth/applications">on trakt.tv</a> and use <code><a href="../reference/trakt_credentials.html">trakt_credentials()</a></code> to set your <code>client id</code>.</p>
+<div id="getting-data-from-trakt-tv" class="section level1">
+<h1 class="hasAnchor">
+<a href="#getting-data-from-trakt-tv" class="anchor"></a>Getting data from trakt.tv</h1>
 </div>
-<div id="find-things" class="section level3">
-<h3 class="hasAnchor">
-<a href="#find-things" class="anchor"></a>2. Find things</h3>
+<div id="find-things" class="section level1">
+<h1 class="hasAnchor">
+<a href="#find-things" class="anchor"></a>1. Find things</h1>
 <p>Using a text query:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/search_query.html">search_query</a></span>(<span class="st">"Game of Thrones"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1 x 9</span></a>
@@ -173,22 +157,23 @@ You can only <em>get</em> data, and more importantly for user-specific data: You
 <a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; 4 The Big Bang Theory  2007 1409  the-big-bang-theory 80379  tt08982… 1418 </span></a>
 <a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt; 5 Sherlock             2010 19792 sherlock            176941 tt14755… 19885</span></a></code></pre></div>
 <p>The 10 most watched (during the past year) movies from 1990-2000:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/watched_media.html">movies_watched</a></span>(<span class="dt">period =</span> <span class="st">"yearly"</span>, <span class="dt">years =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">1990</span>, <span class="dv">2000</span>)) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(watcher_count, title, year)</a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt; # A tibble: 10 x 3</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt;    watcher_count title                           year</span></a>
-<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt;            &lt;int&gt; &lt;chr&gt;                          &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt;  1         59385 Toy Story                       1995</span></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt;  2         57512 The Lion King                   1994</span></a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;  3         50925 Aladdin                         1992</span></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;  4         44811 The Matrix                      1999</span></a>
-<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt;  5         43287 Home Alone                      1990</span></a>
-<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt;  6         42795 Toy Story 2                     1999</span></a>
-<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#&gt;  7         33792 Unbreakable                     2000</span></a>
-<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#&gt;  8         31300 Mercury Rising                  1998</span></a>
-<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt;  9         30329 Home Alone 2: Lost in New York  1992</span></a>
-<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt; 10         29358 Beauty and the Beast            1991</span></a></code></pre></div>
-</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr)</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw"><a href="../reference/watched_media.html">movies_watched</a></span>(<span class="dt">period =</span> <span class="st">"yearly"</span>, <span class="dt">years =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">1990</span>, <span class="dv">2000</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(watcher_count, title, year)</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt; # A tibble: 10 x 3</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt;    watcher_count title                           year</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt;            &lt;int&gt; &lt;chr&gt;                          &lt;int&gt;</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;  1         59385 Toy Story                       1995</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;  2         57512 The Lion King                   1994</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt;  3         50925 Aladdin                         1992</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt;  4         44811 The Matrix                      1999</span></a>
+<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#&gt;  5         43287 Home Alone                      1990</span></a>
+<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#&gt;  6         42795 Toy Story 2                     1999</span></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt;  7         33792 Unbreakable                     2000</span></a>
+<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt;  8         31300 Mercury Rising                  1998</span></a>
+<a class="sourceLine" id="cb5-16" data-line-number="16"><span class="co">#&gt;  9         30329 Home Alone 2: Lost in New York  1992</span></a>
+<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="co">#&gt; 10         29358 Beauty and the Beast            1991</span></a></code></pre></div>
 </div>
   </div>
 
@@ -198,8 +183,8 @@ You can only <em>get</em> data, and more importantly for user-specific data: You
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-<li><a href="#preamble-the-trakt-tv-api-and-this-package">Preamble: The trakt.tv API and this package</a></li>
-      <li><a href="#getting-data-from-trakt-tv">Getting data from trakt.tv</a></li>
+<li><a href="#getting-data-from-trakt-tv">Getting data from trakt.tv</a></li>
+      <li><a href="#find-things">1. Find things</a></li>
       </ul>
 </div>
       </div>
