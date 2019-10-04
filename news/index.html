@@ -47,7 +47,7 @@
 <meta name="twitter:card" content="summary" />
 
 
-
+<meta name="robots" content="noindex">
 
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
@@ -98,7 +98,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tRakt</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.15.0.9000</span>
       </span>
     </div>
 
@@ -159,6 +159,247 @@
       <small>Source: <a href='https://github.com/jemus42/tRakt/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="trakt-0-15-9000" class="section level1">
+<h1 class="page-header">
+<a href="#trakt-0-15-9000" class="anchor"></a>tRakt 0.15.9000<small> Unreleased </small>
+</h1>
+<div id="new-functions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#new-functions" class="anchor"></a>New functions</h2>
+<ul>
+<li>
+<code><a href="../reference/episodes_summary.html">episodes_summary()</a></code>: What <code><a href="../reference/seasons_season.html">seasons_season()</a></code> and <code>seasons_sumamry()</code> do, but for a single episode. Only really implemented for completeness’ sake.</li>
+<li>
+<code>user_summary</code>: Wraps <a href="https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile"><code>user/:id</code></a> to get user profiles</li>
+</ul>
+</div>
+<div id="the-renamingering" class="section level2">
+<h2 class="hasAnchor">
+<a href="#the-renamingering" class="anchor"></a>The Renamingering</h2>
+<p>Rename <em>all the things</em> to snake_case and drop the <code>trakt.</code> prefix.<br>
+This results in (most) functions mapping directly to <a href="https://trakt.docs.apiary.io/">API endpoints</a> in the form <code>section_method</code>, e.g. the API endpoint <code>movies/collected</code> is handled by function <code><a href="../reference/collected_media.html">movies_collected()</a></code>.</p>
+<div id="search" class="section level3">
+<h3 class="hasAnchor">
+<a href="#search" class="anchor"></a>Search</h3>
+<ul>
+<li>
+<code>trakt.search</code> -&gt; <code>search_query</code>
+</li>
+<li>
+<code>trakt.search.byid</code> -&gt; <code>search_id</code>
+</li>
+</ul>
+</div>
+<div id="dynamic-lists" class="section level3">
+<h3 class="hasAnchor">
+<a href="#dynamic-lists" class="anchor"></a>Dynamic Lists</h3>
+<ul>
+<li>
+<code>trakt.popular</code>
+<ul>
+<li>-&gt; <code>movies_popular</code>
+</li>
+<li>-&gt; <code>shows_popular</code>
+</li>
+</ul>
+</li>
+<li>
+<code>trakt.trending</code>
+<ul>
+<li>-&gt; <code>movies_trending</code>
+</li>
+<li>-&gt; <code>shows_trending</code>
+</li>
+</ul>
+</li>
+<li>
+<code>trakt.anticipated</code>
+<ul>
+<li>-&gt; <code>movies_anticipated</code>
+</li>
+<li>-&gt; <code>shows_anticipated</code>
+</li>
+</ul>
+</li>
+<li>
+<code>trakt.played</code>
+<ul>
+<li>-&gt; <code>movies_played</code>
+</li>
+<li>-&gt; <code>shows_played</code>
+</li>
+</ul>
+</li>
+<li>
+<code>trakt.watched</code>
+<ul>
+<li>-&gt; <code>movies_watched</code>
+</li>
+<li>-&gt; <code>shows_watched</code>
+</li>
+</ul>
+</li>
+<li>
+<code>trakt.collected</code>
+<ul>
+<li>-&gt; <code>movies_collected</code>
+</li>
+<li>-&gt; <code>shows_collected</code>
+</li>
+</ul>
+</li>
+<li>
+<code>trakt.updates</code>
+<ul>
+<li>-&gt; <code>movies_updates</code>
+</li>
+<li>-&gt; <code>shows_updates</code>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="movies" class="section level3">
+<h3 class="hasAnchor">
+<a href="#movies" class="anchor"></a>Movies</h3>
+<ul>
+<li>
+<code>trakt.movies.summary</code> -&gt; <code>movies_summary</code>
+</li>
+<li>
+<code>trakt.movies.boxoffice</code> -&gt; <code>movies_boxoffice</code>
+</li>
+<li>
+<code>trakt.movies.releases</code> -&gt; <code>movies_releases</code>
+</li>
+<li>
+<code>trakt.movies.people</code> -&gt; <code>movies_people</code>
+</li>
+</ul>
+</div>
+<div id="shows" class="section level3">
+<h3 class="hasAnchor">
+<a href="#shows" class="anchor"></a>Shows</h3>
+<ul>
+<li>
+<code>trakt.shows.summary</code> -&gt; <code>shows_summary</code>
+</li>
+<li>
+<code>trakt.shows.people</code> -&gt; <code>shows_people</code>
+</li>
+</ul>
+</div>
+<div id="seasons" class="section level3">
+<h3 class="hasAnchor">
+<a href="#seasons" class="anchor"></a>Seasons</h3>
+<ul>
+<li>
+<code>trakt.seasons.summary</code> -&gt; <code>seasons_summary</code>
+</li>
+<li>
+<code>trakt.seasons.season</code> -&gt; <code>seasons_season</code> (It’s silly, I know, but oh well)</li>
+</ul>
+</div>
+<div id="ratings" class="section level3">
+<h3 class="hasAnchor">
+<a href="#ratings" class="anchor"></a>Ratings</h3>
+<ul>
+<li>
+<code>trakt.movies.ratings</code> -&gt; <code>movies_ratings</code>
+</li>
+<li>
+<code>trakt.shows.ratings</code> -&gt; <code>shows_ratings</code>
+</li>
+<li>
+<code>trakt.seasons.ratings</code> -&gt; <code>seasons_ratings</code>
+</li>
+<li>
+<code>trakt.episodes.ratings</code> -&gt; <code>episodes_ratings</code>
+</li>
+</ul>
+</div>
+<div id="related" class="section level3">
+<h3 class="hasAnchor">
+<a href="#related" class="anchor"></a>Related</h3>
+<ul>
+<li>
+<code>trakt.movies.related</code> -&gt; <code>movies_related</code>
+</li>
+<li>
+<code>trakt.shows.related</code> -&gt; <code>shows_related</code>
+</li>
+</ul>
+</div>
+<div id="stats" class="section level3">
+<h3 class="hasAnchor">
+<a href="#stats" class="anchor"></a>Stats</h3>
+<ul>
+<li>
+<code>trakt.movies.stats</code> -&gt; <code>movies_stats</code>
+</li>
+<li>
+<code>trakt.shows.stats</code> -&gt; <code>shows_stats</code>
+</li>
+<li>
+<code>trakt.seasons.stats</code> -&gt; <code>seasons_stats</code>
+</li>
+<li>
+<code>trakt.episodes.stats</code> -&gt; <code>episodes_stats</code>
+</li>
+</ul>
+</div>
+<div id="people" class="section level3">
+<h3 class="hasAnchor">
+<a href="#people" class="anchor"></a>People</h3>
+<ul>
+<li>
+<code>trakt.people.summary</code> -&gt; <code>people_summary</code>
+</li>
+<li>
+<code>trakt.people.movies</code> -&gt; <code>people_movies</code>
+</li>
+<li>
+<code>trakt.people.shows</code> -&gt; <code>people_shows</code>
+</li>
+</ul>
+</div>
+<div id="user-functions" class="section level3">
+<h3 class="hasAnchor">
+<a href="#user-functions" class="anchor"></a>User functions</h3>
+<ul>
+<li>
+<code>trakt.user.network</code>
+<ul>
+<li>-&gt; <code>user_followers</code>
+</li>
+<li>-&gt; <code>user_following</code>
+</li>
+<li>-&gt; <code>user_friends</code>
+</li>
+</ul>
+</li>
+<li>
+<code>trakt.user.collection</code> -&gt; <code>user_collection</code>
+</li>
+<li>
+<code>trakt.user.history</code> -&gt; <code>user_history</code>
+</li>
+<li>
+<code>trakt.user.ratings</code> -&gt; <code>user_ratings</code>
+</li>
+<li>
+<code>trakt.user.stats</code> -&gt; <code>user_stats</code>
+</li>
+<li>
+<code>trakt.user.watched</code> -&gt; <code>user_watched</code>
+</li>
+<li>
+<code>trakt.user.watchlist</code> -&gt; <code>user_watchlist</code>
+</li>
+</ul>
+</div>
+</div>
+</div>
     <div id="trakt-0-15-0" class="section level1">
 <h1 class="page-header">
 <a href="#trakt-0-15-0" class="anchor"></a>tRakt 0.15.0<small> Unreleased </small>
@@ -561,11 +802,11 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <a href="#section" class="anchor"></a>2015-02-16</h2>
 <p>I’ve been working on some user-specific methods, so you can now use the <code>trakt.user.*</code> family of functions to get a user’s…</p>
 <ul>
-<li>Collection: <code><a href="../reference/trakt.user.collection.html">trakt.user.collection()</a></code>
+<li>Collection: <code>trakt.user.collection()</code>
 </li>
-<li>Watched items: <code><a href="../reference/trakt.user.watched.html">trakt.user.watched()</a></code>
+<li>Watched items: <code>trakt.user.watched()</code>
 </li>
-<li>Stats: <code><a href="../reference/trakt.user.stats.html">trakt.user.stats()</a></code>
+<li>Stats: <code>trakt.user.stats()</code>
 </li>
 </ul>
 <p>All of them default to the username set in <code><a href="https://rdrr.io/r/base/options.html">getOption("trakt.username")</a></code>, but any publicly viewable user should work. Note that OAuth2 is not implemented, so private users can’t be accessed.</p>
@@ -588,6 +829,7 @@ Not only do most functions return a <code>tibble</code> now, but some additional
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#trakt-0-15-9000">0.15.9000</a></li>
         <li><a href="#trakt-0-15-0">0.15.0</a></li>
         <li><a href="#trakt-0-14-0">0.14.0</a></li>
         <li><a href="#trakt-0-13-0">0.13.0</a></li>

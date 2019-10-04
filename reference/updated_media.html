@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Media user ratings — media_ratings • tRakt</title>
+<title>Recently updated media — updated_media • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,10 +42,8 @@
 
 
 
-<meta property="og:title" content="Media user ratings — media_ratings" />
-<meta property="og:description" content="Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
-If you do not want the full ratings distribution, it is highly advised to
-just use *_summary functions or seasons_season for episode ratings." />
+<meta property="og:title" content="Recently updated media — updated_media" />
+<meta property="og:description" content="These functions return recently updated movies/shows on trakt.tv." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -158,109 +156,90 @@ just use *_summary functions or seasons_season for episode ratings." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Media user ratings</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/media_ratings.R'><code>R/media_ratings.R</code></a></small>
-    <div class="hidden name"><code>media_ratings.Rd</code></div>
+    <h1>Recently updated media</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/dynamic-lists.R'><code>R/dynamic-lists.R</code></a></small>
+    <div class="hidden name"><code>updated_media.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
-If you <em>do not</em> want the full ratings distribution, it is highly advised to
-just use <code>*_summary</code> functions or <a href='seasons_season.html'>seasons_season</a> for episode ratings.</p>
+    <p>These functions return recently updated movies/shows on trakt.tv.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>shows_ratings</span>(<span class='no'>id</span>)
+    <pre class="usage"><span class='fu'>movies_updates</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+  <span class='kw'>start_date</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>() - <span class='fl'>1</span>)
 
-<span class='fu'>movies_ratings</span>(<span class='no'>id</span>)
-
-<span class='fu'>seasons_ratings</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>)
-
-<span class='fu'>episodes_ratings</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</pre>
+<span class='fu'>shows_updates</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+  <span class='kw'>start_date</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>() - <span class='fl'>1</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>id</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
-<code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
-or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
-Can also be of length greater than 1, in which case the function is called on all
-<code>id</code> values separately and the result is combined.</p></td>
+      <th>limit</th>
+      <td><p><code>integer(1) [10L]</code>: Number of items to return. Must be greater
+than <code>0</code> and will be coerced to <code>integer</code>.</p></td>
     </tr>
     <tr>
-      <th>season</th>
-      <td><p><code>integer(1) [1L]</code>: The season and eisode number. If longer,
-e.g. <code>1:5</code>, the function is vectorized and the output will be
-combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
+      <th>extended</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+returns more variables and should generally only be used if required.</p></td>
     </tr>
     <tr>
-      <th>episode</th>
-      <td><p><code>integer(1) [1L]</code>: The season and eisode number. If longer,
-e.g. <code>1:5</code>, the function is vectorized and the output will be
-combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
+      <th>start_date</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: A date in the past from which
+on to count updates. If no date is supplied, the default is to
+use yesterday relative to the current date. Value must either
+be standard <code>YYYY-MM-DD</code> format or an object of class <a href='https://rdrr.io/r/base/Dates.html'>Date</a>,
+which will then be coerced via <a href='https://rdrr.io/r/base/character.html'>as.character()</a>.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>The API methods for these functions are:</p><ul>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings'>/movies/:id/ratings</a></p></li>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings'>/shows/:id/ratings</a></p></li>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings'>/shows/:id/seasons/:season/ratings</a></p></li>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings'>/shows/:id/seasons/:season/episodes/:episode/ratings</a></p></li>
-</ul>
-
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>Since this function is able to work on multi-length inputs for
-<code>id</code>, <code>season</code> and <code>episode</code>, it is possible to get a lot of data, <em>but</em> at the cost
-of one API call <em>per element in each argument</em>. Please be kind to the API.</p>
+    <p><code>shows_updates</code> and <code>movies_updates</code> do not support filters.</p>
+    <h2 class="hasAnchor" id="the-dynamic-lists-on-trakt-tv"><a class="anchor" href="#the-dynamic-lists-on-trakt-tv"></a>The Dynamic Lists on trakt.tv</h2>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># A movie's ratings</span>
-<span class='fu'>movies_ratings</span>(<span class='st'>"tron-legacy-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
-#&gt;   rating votes distribution      id               type  
-#&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;            &lt;chr&gt; 
-#&gt; 1   7.27 12758 &lt;tibble [10 × 2]&gt; tron-legacy-2010 movies</div><div class='input'>
-<span class='co'># A show's ratings</span>
-<span class='fu'>shows_ratings</span>(<span class='st'>"game-of-thrones"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 5
-#&gt;   rating votes distribution      id              type 
-#&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;           &lt;chr&gt;
-#&gt; 1   9.23 99177 &lt;tibble [10 × 2]&gt; game-of-thrones shows</div><div class='input'><span class='co'># \dontrun{</span>
-<span class='co'># Ratings for seasons 1 through 5</span>
-<span class='fu'>seasons_ratings</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 5
-#&gt;   rating votes distribution      id       season
-#&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;     &lt;int&gt;
-#&gt; 1   8.22   232 &lt;tibble [10 × 2]&gt; futurama      1
-#&gt; 2   8.26   170 &lt;tibble [10 × 2]&gt; futurama      2
-#&gt; 3   8.47   145 &lt;tibble [10 × 2]&gt; futurama      3
-#&gt; 4   8.31   137 &lt;tibble [10 × 2]&gt; futurama      4
-#&gt; 5   8.21   117 &lt;tibble [10 × 2]&gt; futurama      5</div><div class='input'>
-<span class='co'># Ratings for episodes 1 through 7 of season 1</span>
-<span class='fu'>episodes_ratings</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 6
-#&gt;   rating votes distribution      id       season episode
-#&gt;    &lt;dbl&gt; &lt;int&gt; &lt;list&gt;            &lt;chr&gt;     &lt;int&gt;   &lt;int&gt;
-#&gt; 1   8.12  2033 &lt;tibble [10 × 2]&gt; futurama      1       1
-#&gt; 2   7.87  1587 &lt;tibble [10 × 2]&gt; futurama      1       2
-#&gt; 3   7.88  1455 &lt;tibble [10 × 2]&gt; futurama      1       3
-#&gt; 4   7.80  1296 &lt;tibble [10 × 2]&gt; futurama      1       4
-#&gt; 5   7.78  1252 &lt;tibble [10 × 2]&gt; futurama      1       5
-#&gt; 6   7.83  1228 &lt;tibble [10 × 2]&gt; futurama      1       6
-#&gt; 7   7.75  1147 &lt;tibble [10 × 2]&gt; futurama      1       7</div><div class='input'># }
-</div></pre>
+    
+
+
+<p>These functions access the automatically updated lists provided by trakt.tv.
+Each function comes in two flavors: Shows or movies. The following descriptions
+are adapted directly from the
+<a href='https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies'>API reference</a>.</p><ul>
+<li><p><a href='popular_media.html'>Popular</a>: Popularity is calculated using the rating percentage and the number of
+ratings.</p></li>
+<li><p><a href='trending_media.html'>Trending</a>: Returns all movies/shows being watched right now.
+Movies/shows with the most users are returned first.</p></li>
+<li><p><a href='played_media.html'>Played</a>: Returns the most played (a single user can watch multiple times)
+movies/shows in the specified time <code>period</code>.</p></li>
+<li><p><a href='watched_media.html'>Watched</a>: Returns the most watched (unique users) movies/shows in the specified
+time <code>period</code>.</p></li>
+<li><p><a href='collected_media.html'>Collected</a>: Returns the most collected (unique users) movies/shows in the
+specified time <code>period</code>.</p></li>
+<li><p><a href='anticipated_media.html'>Anticipated</a>: Returns the most anticipated movies/shows based on the number of
+lists a movie/show appears on.</p></li>
+<li><p>Updates: Returns all movies/shows updated since the specified UTC <code>start_date</code>.
+In this case, the upper bound for <code>limit</code> is 100.</p></li>
+</ul>
+
+<p>The functions for <strong>Played</strong>, <strong>Watched</strong>, <strong>Collected</strong> and <strong>Played</strong> each return
+the same additional variables besides the media information: <code>watcher_count</code>,
+<code>play_count</code>, <code>collected_count</code>, <code>collector_count</code>.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other dynamic lists: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
+  <code><a href='collected_media.html'>collected_media</a></code>,
+  <code><a href='played_media.html'>played_media</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
+  <code><a href='trending_media.html'>trending_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p></div>
+
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
       <li><a href="#note">Note</a></li>
-      <li><a href="#examples">Examples</a></li>
+      <li><a href="#the-dynamic-lists-on-trakt-tv">The Dynamic Lists on trakt.tv</a></li>
+      <li><a href="#see-also">See also</a></li>
     </ul>
 
   </div>

@@ -20,6 +20,7 @@
 <meta property="og:description" content="">
 <meta property="og:image" content="/logo.png">
 <meta name="twitter:card" content="summary">
+<meta name="robots" content="noindex">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -53,7 +54,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tRakt</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.15.0.9000</span>
       </span>
     </div>
 
@@ -146,7 +147,7 @@ Text Query
 <a href="https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results" style="     ">search/:type?query=</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.search.html">trakt.search()</a></code>
+<code><a href="../reference/search_query.html">search_query()</a></code>
 </td>
 </tr>
 <tr>
@@ -157,7 +158,7 @@ ID Lookup
 <a href="https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results" style="     ">search/:id_type/:id?type=</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.search.html">trakt.search.byid()</a></code>
+<code><a href="../reference/search_query.html">search_id()</a></code>
 </td>
 </tr>
 </tbody>
@@ -187,7 +188,7 @@ Trending
 <a href="https://trakt.docs.apiary.io/#reference/movies/trending/get-trending-movies" style="     ">movies/trending</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.trending()</a></code>
+<code><a href="../reference/trending_media.html">movies_trending()</a></code>
 </td>
 </tr>
 <tr>
@@ -198,7 +199,7 @@ Popular
 <a href="https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies" style="     ">movies/popular</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.popular()</a></code>
+<code><a href="../reference/popular_media.html">movies_popular()</a></code>
 </td>
 </tr>
 <tr>
@@ -209,7 +210,7 @@ Played
 <a href="https://trakt.docs.apiary.io/#reference/movies/played/get-the-most-played-movies" style="     ">movies/played/:period</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.played()</a></code>
+<code><a href="../reference/played_media.html">movies_played()</a></code>
 </td>
 </tr>
 <tr>
@@ -220,7 +221,7 @@ Watched
 <a href="https://trakt.docs.apiary.io/#reference/movies/watched/get-the-most-watched-movies" style="     ">movies/watched/:period</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.watched()</a></code>
+<code><a href="../reference/watched_media.html">movies_watched()</a></code>
 </td>
 </tr>
 <tr>
@@ -231,7 +232,7 @@ Collected
 <a href="https://trakt.docs.apiary.io/#reference/movies/collected/get-the-most-collected-movies" style="     ">movies/collected/:period</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.collected()</a></code>
+<code><a href="../reference/collected_media.html">movies_collected()</a></code>
 </td>
 </tr>
 <tr>
@@ -242,7 +243,7 @@ Anticipated
 <a href="https://trakt.docs.apiary.io/#reference/movies/anticipated/get-the-most-anticipated-movies" style="     ">movies/anticipated</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.anticipated()</a></code>
+<code><a href="../reference/anticipated_media.html">movies_anticipated()</a></code>
 </td>
 </tr>
 <tr>
@@ -253,7 +254,7 @@ Box Office
 <a href="https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office" style="     ">movies/boxoffice</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.movies.boxoffice.html">trakt.movies.boxoffice()</a></code>
+<code><a href="../reference/movies_boxoffice.html">movies_boxoffice()</a></code>
 </td>
 </tr>
 <tr>
@@ -264,7 +265,7 @@ Updates
 <a href="https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies" style="     ">movies/updates/:start_date</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.updates()</a></code>
+<code><a href="../reference/updated_media.html">movies_updates()</a></code>
 </td>
 </tr>
 <tr>
@@ -275,7 +276,7 @@ Summary
 <a href="https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie" style="     ">movies/:id</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_summary.html">trakt.movies.summary()</a></code>
+<code><a href="../reference/media_summary.html">movies_summary()</a></code>
 </td>
 </tr>
 <tr>
@@ -297,7 +298,7 @@ Releases
 <a href="https://trakt.docs.apiary.io/#reference/movies/releases/get-all-movie-releases" style="     ">movies/:id/releases/:country</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.movies.releases.html">trakt.movies.releases()</a></code>
+<code><a href="../reference/movies_releases.html">movies_releases()</a></code>
 </td>
 </tr>
 <tr>
@@ -341,7 +342,7 @@ People
 <a href="https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie" style="     ">movies/:id/people</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_people.html">trakt.movies.people()</a></code>
+<code><a href="../reference/media_people.html">movies_people()</a></code>
 </td>
 </tr>
 <tr>
@@ -352,7 +353,7 @@ Ratings
 <a href="https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings" style="     ">movies/:id/ratings</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_ratings.html">trakt.movies.ratings()</a></code>
+<code><a href="../reference/media_ratings.html">movies_ratings()</a></code>
 </td>
 </tr>
 <tr>
@@ -363,7 +364,7 @@ Related
 <a href="https://trakt.docs.apiary.io/#reference/movies/related/get-related-movies" style="     ">movies/:id/related</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_related.html">trakt.movies.related()</a></code>
+<code><a href="../reference/media_related.html">movies_related()</a></code>
 </td>
 </tr>
 <tr>
@@ -374,7 +375,7 @@ Stats
 <a href="https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats" style="     ">movies/:id/stats</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_stats.html">trakt.movies.stats()</a></code>
+<code><a href="../reference/media_stats.html">movies_stats()</a></code>
 </td>
 </tr>
 <tr>
@@ -415,7 +416,7 @@ Trending
 <a href="https://trakt.docs.apiary.io/#reference/shows/trending/get-trending-shows" style="     ">shows/trending</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.trending()</a></code>
+<code><a href="../reference/trending_media.html">shows_trending()</a></code>
 </td>
 </tr>
 <tr>
@@ -426,7 +427,7 @@ Popular
 <a href="https://trakt.docs.apiary.io/#reference/shows/popular/get-popular-shows" style="     ">shows/popular</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.popular()</a></code>
+<code><a href="../reference/popular_media.html">shows_popular()</a></code>
 </td>
 </tr>
 <tr>
@@ -437,7 +438,7 @@ Played
 <a href="https://trakt.docs.apiary.io/#reference/shows/played/get-the-most-played-shows" style="     ">shows/played/:period</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.played()</a></code>
+<code><a href="../reference/played_media.html">shows_played()</a></code>
 </td>
 </tr>
 <tr>
@@ -448,7 +449,7 @@ Watched
 <a href="https://trakt.docs.apiary.io/#reference/shows/watched/get-the-most-watched-shows" style="     ">shows/watched/:period</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.watched()</a></code>
+<code><a href="../reference/watched_media.html">shows_watched()</a></code>
 </td>
 </tr>
 <tr>
@@ -459,7 +460,7 @@ Collected
 <a href="https://trakt.docs.apiary.io/#reference/shows/collected/get-the-most-collected-shows" style="     ">shows/collected/:period</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.collected()</a></code>
+<code><a href="../reference/collected_media.html">shows_collected()</a></code>
 </td>
 </tr>
 <tr>
@@ -470,7 +471,7 @@ Anticipated
 <a href="https://trakt.docs.apiary.io/#reference/shows/anticipated/get-the-most-anticipated-shows" style="     ">shows/anticipated</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.anticipated()</a></code>
+<code><a href="../reference/anticipated_media.html">shows_anticipated()</a></code>
 </td>
 </tr>
 <tr>
@@ -481,7 +482,7 @@ Updated
 <a href="https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows" style="     ">shows/updates/:start_date</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/automated_lists.html">trakt.updates()</a></code>
+<code><a href="../reference/updated_media.html">shows_updates()</a></code>
 </td>
 </tr>
 <tr>
@@ -492,7 +493,7 @@ Summary
 <a href="https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show" style="     ">shows/:id</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_summary.html">trakt.shows.summary()</a></code>
+<code><a href="../reference/media_summary.html">shows_summary()</a></code>
 </td>
 </tr>
 <tr>
@@ -569,7 +570,7 @@ People
 <a href="https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show" style="     ">shows/:id/people</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_people.html">trakt.shows.people()</a></code>
+<code><a href="../reference/media_people.html">shows_people()</a></code>
 </td>
 </tr>
 <tr>
@@ -580,7 +581,7 @@ Ratings
 <a href="https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings" style="     ">shows/:ids/ratings</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_ratings.html">trakt.shows.ratings()</a></code>
+<code><a href="../reference/media_ratings.html">shows_ratings()</a></code>
 </td>
 </tr>
 <tr>
@@ -591,7 +592,7 @@ Related
 <a href="https://trakt.docs.apiary.io/#reference/shows/related/get-related-shows" style="     ">shows/:id/related</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_related.html">trakt.shows.related()</a></code>
+<code><a href="../reference/media_related.html">shows_related()</a></code>
 </td>
 </tr>
 <tr>
@@ -602,7 +603,7 @@ Stats
 <a href="https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats" style="     ">shows/:id/stats</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_stats.html">trakt.shows.stats()</a></code>
+<code><a href="../reference/media_stats.html">shows_stats()</a></code>
 </td>
 </tr>
 <tr>
@@ -664,7 +665,7 @@ Summary
 <a href="https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show" style="     ">shows/:id/seasons/seasons</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.seasons.summary.html">trakt.seasons.summary()</a></code>
+<code><a href="../reference/seasons_summary.html">seasons_summary()</a></code>
 </td>
 </tr>
 <tr>
@@ -675,7 +676,7 @@ Season
 <a href="https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show" style="     ">shows/id/seasons/season</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.seasons.season.html">trakt.seasons.season()</a></code>
+<code><a href="../reference/seasons_season.html">seasons_season()</a></code>
 </td>
 </tr>
 <tr>
@@ -719,7 +720,7 @@ Ratings
 <a href="https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings" style="     ">shows/:id/seasons/:season/ratings</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_ratings.html">trakt.seasons.ratings()</a></code>
+<code><a href="../reference/media_ratings.html">seasons_ratings()</a></code>
 </td>
 </tr>
 <tr>
@@ -730,7 +731,7 @@ Stats
 <a href="https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats" style="     ">shows/:id/seasons/:season/stats</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_stats.html">trakt.seasons.stats()</a></code>
+<code><a href="../reference/media_stats.html">seasons_stats()</a></code>
 </td>
 </tr>
 <tr>
@@ -771,7 +772,7 @@ Summary
 <a href="https://trakt.docs.apiary.io/#reference/episodes/summary/get-a-single-episode-for-a-show" style="     ">shows/:id/seasons/:season/episodes/:episode</a>
 </td>
 <td style="text-align:left;">
-N/A
+<code><a href="../reference/episodes_summary.html">episodes_summary()</a></code>
 </td>
 </tr>
 <tr>
@@ -826,7 +827,7 @@ Ratings
 <a href="https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings" style="     ">shows/:id/seasons/:season/episodes/:episode/ratings</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_ratings.html">trakt.episodes.ratings()</a></code>
+<code><a href="../reference/media_ratings.html">episodes_ratings()</a></code>
 </td>
 </tr>
 <tr>
@@ -837,7 +838,7 @@ Stats
 <a href="https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats" style="     ">shows/:id/seasons/:season/episodes/:episode/stats</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/media_stats.html">trakt.episodes.stats()</a></code>
+<code><a href="../reference/media_stats.html">episodes_stats()</a></code>
 </td>
 </tr>
 <tr>
@@ -879,7 +880,7 @@ Summary
 <a href="https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person" style="     ">people/:id</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.people.summary.html">trakt.people.summary()</a></code>
+<code><a href="../reference/people_summary.html">people_summary()</a></code>
 </td>
 </tr>
 <tr>
@@ -890,7 +891,7 @@ Movies
 <a href="https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits" style="     ">people/:id/movies</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/people_media.html">trakt.people.movies()</a></code>
+<code><a href="../reference/people_media.html">people_movies()</a></code>
 </td>
 </tr>
 <tr>
@@ -901,7 +902,7 @@ Shows
 <a href="https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits" style="     ">people/:id/shows</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/people_media.html">trakt.people.shows()</a></code>
+<code><a href="../reference/people_media.html">people_shows()</a></code>
 </td>
 </tr>
 <tr>
@@ -953,7 +954,7 @@ Profile
 <a href="https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile" style="     ">users/:id</a>
 </td>
 <td style="text-align:left;">
-N/A
+<code><a href="../reference/user_summary.html">user_summary()</a></code>
 </td>
 </tr>
 <tr>
@@ -964,7 +965,7 @@ Collection
 <a href="https://trakt.docs.apiary.io/#reference/users/collection/get-collection" style="     ">users/:id/collection/:type</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.user.collection.html">trakt.user.collection()</a></code>
+<code><a href="../reference/user_collection.html">user_collection()</a></code>
 </td>
 </tr>
 <tr>
@@ -1030,7 +1031,7 @@ Followers
 <a href="https://trakt.docs.apiary.io/#reference/users/followers/get-followers" style="     ">users/:id/followers</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.user.network.html">trakt.user.network()</a></code>
+<code><a href="../reference/user_network.html">user_followers()</a></code>
 </td>
 </tr>
 <tr>
@@ -1041,7 +1042,7 @@ Following
 <a href="https://trakt.docs.apiary.io/#reference/users/following/get-following" style="     ">users/:id/following</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.user.network.html">trakt.user.network()</a></code>
+<code><a href="../reference/user_network.html">user_following()</a></code>
 </td>
 </tr>
 <tr>
@@ -1052,7 +1053,7 @@ Friends
 <a href="https://trakt.docs.apiary.io/#reference/users/friends/get-friends" style="     ">users/:id/friends</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.user.network.html">trakt.user.network()</a></code>
+<code><a href="../reference/user_network.html">user_friends()</a></code>
 </td>
 </tr>
 <tr>
@@ -1063,7 +1064,7 @@ History
 <a href="https://trakt.docs.apiary.io/#reference/users/history/get-watched-history" style="     ">users/:id/history/:type/:item_id?start_at=&amp;end_at=</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.user.history.html">trakt.user.history()</a></code>
+<code><a href="../reference/user_history.html">user_history()</a></code>
 </td>
 </tr>
 <tr>
@@ -1074,7 +1075,7 @@ Ratings
 <a href="https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings" style="     ">users/:id/ratings/:type/:rating</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.user.ratings.html">trakt.user.ratings()</a></code>
+<code><a href="../reference/user_ratings.html">user_ratings()</a></code>
 </td>
 </tr>
 <tr>
@@ -1085,7 +1086,7 @@ Watchlist
 <a href="https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist" style="     ">users/:id/watchlist/:type</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.user.watchlist.html">trakt.user.watchlist()</a></code>
+<code><a href="../reference/user_watchlist.html">user_watchlist()</a></code>
 </td>
 </tr>
 <tr>
@@ -1096,7 +1097,7 @@ Watched
 <a href="https://trakt.docs.apiary.io/#reference/users/watched/get-watched" style="     ">users/:id/watched/:type</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.user.watched.html">trakt.user.watched()</a></code>
+<code><a href="../reference/user_watched.html">user_watched()</a></code>
 </td>
 </tr>
 <tr>
@@ -1107,7 +1108,7 @@ Stats
 <a href="https://trakt.docs.apiary.io/#reference/users/stats/get-stats" style="     ">users/:id/stats</a>
 </td>
 <td style="text-align:left;">
-<code><a href="../reference/trakt.user.stats.html">trakt.user.stats()</a></code>
+<code><a href="../reference/user_stats.html">user_stats()</a></code>
 </td>
 </tr>
 </tbody>

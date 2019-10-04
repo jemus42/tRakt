@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get a show or movie's (or season's or episode's) stats — media_stats • tRakt</title>
+<title>See which movies / shows are popular across various metrics — dynamic_lists • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,8 +42,12 @@
 
 
 
-<meta property="og:title" content="Get a show or movie's (or season's or episode's) stats — media_stats" />
-<meta property="og:description" content="The data contains watchers, playes, collectors, comments, lists, and votes." />
+<meta property="og:title" content="See which movies / shows are popular across various metrics — dynamic_lists" />
+<meta property="og:description" content="According to the API docs, popularity is calculated based both on ratings
+and the number of ratings (i.e., votes). Trending items are those being
+watched right now, where items with the most users currently watching are
+returned first. Anticipation is measured by the number of user-created lists
+an items is part of while not being released yet." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -156,93 +160,63 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get a show or movie's (or season's or episode's) stats</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/media_stats.R'><code>R/media_stats.R</code></a></small>
-    <div class="hidden name"><code>media_stats.Rd</code></div>
+    <h1>See which movies / shows are popular across various metrics</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/docs-dynamic-lists.R'><code>R/docs-dynamic-lists.R</code></a></small>
+    <div class="hidden name"><code>dynamic_lists.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>The data contains watchers, playes, collectors, comments, lists, and votes.</p>
+    <p>According to the API docs, popularity is calculated based both on ratings
+and the number of ratings (i.e., votes). Trending items are those being
+watched right now, where items with the most users currently watching are
+returned first. Anticipation is measured by the number of user-created lists
+an items is part of while not being released yet.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>shows_stats</span>(<span class='no'>id</span>)
 
-<span class='fu'>movies_stats</span>(<span class='no'>id</span>)
-
-<span class='fu'>seasons_stats</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>)
-
-<span class='fu'>episodes_stats</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>)</pre>
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>id</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
-<code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
-or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
-Can also be of length greater than 1, in which case the function is called on all
-<code>id</code> values separately and the result is combined.</p></td>
-    </tr>
-    <tr>
-      <th>season</th>
-      <td><p><code>integer(1) [1L]</code>: The season and eisode number. If longer,
-e.g. <code>1:5</code>, the function is vectorized and the output will be
-combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
-    </tr>
-    <tr>
-      <th>episode</th>
-      <td><p><code>integer(1) [1L]</code>: The season and eisode number. If longer,
-e.g. <code>1:5</code>, the function is vectorized and the output will be
-combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
-    </tr>
-    </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="the-dynamic-lists-on-trakt-tv"><a class="anchor" href="#the-dynamic-lists-on-trakt-tv"></a>The Dynamic Lists on trakt.tv</h2>
 
-    <p>The API methods for these functions are:</p><ul>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats'>/movies/:id/stats</a></p></li>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats'>/shows/:id/stats</a></p></li>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats'>/shows/:id/seasons/:season/stats</a></p></li>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats'>/shows/:id/seasons/:season/episodes/:episode/stats</a></p></li>
+    
+
+
+<p>These functions access the automatically updated lists provided by trakt.tv.
+Each function comes in two flavors: Shows or movies. The following descriptions
+are adapted directly from the
+<a href='https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies'>API reference</a>.</p><ul>
+<li><p><a href='popular_media.html'>Popular</a>: Popularity is calculated using the rating percentage and the number of
+ratings.</p></li>
+<li><p><a href='trending_media.html'>Trending</a>: Returns all movies/shows being watched right now.
+Movies/shows with the most users are returned first.</p></li>
+<li><p><a href='played_media.html'>Played</a>: Returns the most played (a single user can watch multiple times)
+movies/shows in the specified time <code>period</code>.</p></li>
+<li><p><a href='watched_media.html'>Watched</a>: Returns the most watched (unique users) movies/shows in the specified
+time <code>period</code>.</p></li>
+<li><p><a href='collected_media.html'>Collected</a>: Returns the most collected (unique users) movies/shows in the
+specified time <code>period</code>.</p></li>
+<li><p><a href='anticipated_media.html'>Anticipated</a>: Returns the most anticipated movies/shows based on the number of
+lists a movie/show appears on.</p></li>
+<li><p><a href='updated_media.html'>Updates</a>: Returns all movies/shows updated since the specified UTC <code>start_date</code>.
+In this case, the upper bound for <code>limit</code> is 100.</p></li>
 </ul>
 
+<p>The functions for <strong>Played</strong>, <strong>Watched</strong>, <strong>Collected</strong> and <strong>Played</strong> each return
+the same additional variables besides the media information: <code>watcher_count</code>,
+<code>play_count</code>, <code>collected_count</code>, <code>collector_count</code>.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Stats for a movie</span>
-<span class='fu'>movies_stats</span>(<span class='st'>"inception-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 8
-#&gt;   watchers  plays collectors comments lists votes type   id            
-#&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         
-#&gt; 1   287090 382787     189357      114 42424 51542 movies inception-2010</div><div class='input'><span class='co'># \dontrun{</span>
-<span class='co'># Stats for multiple shows at once</span>
-<span class='fu'>shows_stats</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"breaking-bad"</span>, <span class='st'>"game-of-thrones"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 9
-#&gt;   watchers   plays collectors collected_episo… comments  lists votes type  id   
-#&gt;      &lt;int&gt;   &lt;int&gt;      &lt;int&gt;            &lt;int&gt;    &lt;int&gt;  &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1   469148  2.85e7     406503         20206538      425 130325 69243 shows brea…
-#&gt; 2   918428  5.59e7    1293492         70008018      343 271264 99178 shows game…</div><div class='input'>
-<span class='co'># Stats for multiple episodes</span>
-<span class='fu'>episodes_stats</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 9
-#&gt;   watchers  plays collectors comments lists votes season episode id      
-#&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;int&gt; &lt;chr&gt;   
-#&gt; 1    97800 130401     142397        2   177  2033      1       1 futurama
-#&gt; 2    92691 123589     141919        1   116  1587      1       2 futurama
-#&gt; 3    91451 121935     141944        0   107  1455      1       3 futurama
-#&gt; 4    90141 120189     141337        0   108  1296      1       4 futurama
-#&gt; 5    89061 118749     141564        1   108  1252      1       5 futurama
-#&gt; 6    88790 118387     141217        0   105  1228      1       6 futurama
-#&gt; 7    87847 117130     141080        0   104  1147      1       7 futurama</div><div class='input'># }
-</div></pre>
+    <div class='dont-index'><p><a href='search_filters.html'>search_filters</a>, for more information on search filters.</p></div>
+
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#examples">Examples</a></li>
+      <li><a href="#the-dynamic-lists-on-trakt-tv">The Dynamic Lists on trakt.tv</a></li>
+      <li><a href="#see-also">See also</a></li>
     </ul>
 
   </div>

@@ -47,7 +47,7 @@
 <meta name="twitter:card" content="summary" />
 
 
-
+<meta name="robots" content="noindex">
 
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
@@ -98,7 +98,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tRakt</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.15.0.9000</span>
       </span>
     </div>
 
@@ -176,9 +176,15 @@
       <tr>
         
         <td>
-          <p><code><a href="trakt.search.html">trakt.search()</a></code> <code><a href="trakt.search.html">trakt.search.byid()</a></code> </p>
+          <p><code><a href="search_filters.html">search_filters</a></code> </p>
         </td>
-        <td><p>Search for a show via text query or id</p></td>
+        <td><p>Result Filters</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="search_query.html">search_query()</a></code> <code><a href="search_query.html">search_id()</a></code> </p>
+        </td>
+        <td><p>Search trakt.tv via text query or ID</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -190,9 +196,39 @@
       <tr>
         
         <td>
-          <p><code><a href="automated_lists.html">trakt.popular()</a></code> <code><a href="automated_lists.html">trakt.trending()</a></code> <code><a href="automated_lists.html">trakt.anticipated()</a></code> <code><a href="automated_lists.html">trakt.played()</a></code> <code><a href="automated_lists.html">trakt.watched()</a></code> <code><a href="automated_lists.html">trakt.collected()</a></code> <code><a href="automated_lists.html">trakt.updates()</a></code> </p>
+          <p><code><a href="anticipated_media.html">movies_anticipated()</a></code> <code><a href="anticipated_media.html">shows_anticipated()</a></code> </p>
         </td>
-        <td><p>See which movies / shows are popular</p></td>
+        <td><p>Anticipated media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="collected_media.html">movies_collected()</a></code> <code><a href="collected_media.html">shows_collected()</a></code> </p>
+        </td>
+        <td><p>Most collected media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="played_media.html">movies_played()</a></code> <code><a href="played_media.html">shows_played()</a></code> </p>
+        </td>
+        <td><p>Most played media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="popular_media.html">movies_popular()</a></code> <code><a href="popular_media.html">shows_popular()</a></code> </p>
+        </td>
+        <td><p>Popular media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="trending_media.html">movies_trending()</a></code> <code><a href="trending_media.html">shows_trending()</a></code> </p>
+        </td>
+        <td><p>Trending media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="watched_media.html">movies_watched()</a></code> <code><a href="watched_media.html">shows_watched()</a></code> </p>
+        </td>
+        <td><p>Most watched media</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -204,15 +240,27 @@
       <tr>
         
         <td>
-          <p><code><a href="media_summary.html">trakt.movies.summary()</a></code> <code><a href="media_summary.html">trakt.shows.summary()</a></code> </p>
+          <p><code><a href="episodes_summary.html">episodes_summary()</a></code> </p>
+        </td>
+        <td><p>Get a single episode's details</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="media_summary.html">movies_summary()</a></code> <code><a href="media_summary.html">shows_summary()</a></code> </p>
         </td>
         <td><p>Get show or movie summary info</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="trakt.people.summary.html">trakt.people.summary()</a></code> </p>
+          <p><code><a href="people_summary.html">people_summary()</a></code> </p>
         </td>
         <td><p>Get a single person's details</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="seasons_summary.html">seasons_summary()</a></code> </p>
+        </td>
+        <td><p>Get a show's seasons</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -224,15 +272,27 @@
       <tr>
         
         <td>
-          <p><code><a href="trakt.seasons.summary.html">trakt.seasons.summary()</a></code> </p>
+          <p><code><a href="media_ratings.html">shows_ratings()</a></code> <code><a href="media_ratings.html">movies_ratings()</a></code> <code><a href="media_ratings.html">seasons_ratings()</a></code> <code><a href="media_ratings.html">episodes_ratings()</a></code> </p>
         </td>
-        <td><p>Get a show's seasons</p></td>
+        <td><p>Media user ratings</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="trakt.seasons.season.html">trakt.seasons.season()</a></code> </p>
+          <p><code><a href="media_stats.html">shows_stats()</a></code> <code><a href="media_stats.html">movies_stats()</a></code> <code><a href="media_stats.html">seasons_stats()</a></code> <code><a href="media_stats.html">episodes_stats()</a></code> </p>
+        </td>
+        <td><p>Get a show or movie's (or season's or episode's) stats</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="seasons_season.html">seasons_season()</a></code> </p>
         </td>
         <td><p>Get a season of a show</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="seasons_summary.html">seasons_summary()</a></code> </p>
+        </td>
+        <td><p>Get a show's seasons</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -244,15 +304,87 @@
       <tr>
         
         <td>
-          <p><code><a href="trakt.movies.releases.html">trakt.movies.releases()</a></code> </p>
+          <p><code><a href="anticipated_media.html">movies_anticipated()</a></code> <code><a href="anticipated_media.html">shows_anticipated()</a></code> </p>
+        </td>
+        <td><p>Anticipated media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="collected_media.html">movies_collected()</a></code> <code><a href="collected_media.html">shows_collected()</a></code> </p>
+        </td>
+        <td><p>Most collected media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="media_people.html">shows_people()</a></code> <code><a href="media_people.html">movies_people()</a></code> </p>
+        </td>
+        <td><p>Get the cast and crew of a show or movie</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="media_ratings.html">shows_ratings()</a></code> <code><a href="media_ratings.html">movies_ratings()</a></code> <code><a href="media_ratings.html">seasons_ratings()</a></code> <code><a href="media_ratings.html">episodes_ratings()</a></code> </p>
+        </td>
+        <td><p>Media user ratings</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="media_related.html">movies_related()</a></code> <code><a href="media_related.html">shows_related()</a></code> </p>
+        </td>
+        <td><p>Search for related shows or movies</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="media_stats.html">shows_stats()</a></code> <code><a href="media_stats.html">movies_stats()</a></code> <code><a href="media_stats.html">seasons_stats()</a></code> <code><a href="media_stats.html">episodes_stats()</a></code> </p>
+        </td>
+        <td><p>Get a show or movie's (or season's or episode's) stats</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="media_summary.html">movies_summary()</a></code> <code><a href="media_summary.html">shows_summary()</a></code> </p>
+        </td>
+        <td><p>Get show or movie summary info</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="movies_boxoffice.html">movies_boxoffice()</a></code> </p>
+        </td>
+        <td><p>Get the weekend box office</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="movies_releases.html">movies_releases()</a></code> </p>
         </td>
         <td><p>Get a movie's release details</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="trakt.movies.boxoffice.html">trakt.movies.boxoffice()</a></code> </p>
+          <p><code><a href="played_media.html">movies_played()</a></code> <code><a href="played_media.html">shows_played()</a></code> </p>
         </td>
-        <td><p>Get the weekend box office</p></td>
+        <td><p>Most played media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="popular_media.html">movies_popular()</a></code> <code><a href="popular_media.html">shows_popular()</a></code> </p>
+        </td>
+        <td><p>Popular media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="trending_media.html">movies_trending()</a></code> <code><a href="trending_media.html">shows_trending()</a></code> </p>
+        </td>
+        <td><p>Trending media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="updated_media.html">movies_updates()</a></code> <code><a href="updated_media.html">shows_updates()</a></code> </p>
+        </td>
+        <td><p>Recently updated media</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="watched_media.html">movies_watched()</a></code> <code><a href="watched_media.html">shows_watched()</a></code> </p>
+        </td>
+        <td><p>Most watched media</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -264,9 +396,9 @@
       <tr>
         
         <td>
-          <p><code><a href="media_ratings.html">trakt.shows.ratings()</a></code> <code><a href="media_ratings.html">trakt.movies.ratings()</a></code> <code><a href="media_ratings.html">trakt.seasons.ratings()</a></code> <code><a href="media_ratings.html">trakt.episodes.ratings()</a></code> </p>
+          <p><code><a href="media_ratings.html">shows_ratings()</a></code> <code><a href="media_ratings.html">movies_ratings()</a></code> <code><a href="media_ratings.html">seasons_ratings()</a></code> <code><a href="media_ratings.html">episodes_ratings()</a></code> </p>
         </td>
-        <td><p>Show or movie user ratings</p></td>
+        <td><p>Media user ratings</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -278,9 +410,9 @@
       <tr>
         
         <td>
-          <p><code><a href="media_stats.html">trakt.shows.stats()</a></code> <code><a href="media_stats.html">trakt.movies.stats()</a></code> <code><a href="media_stats.html">trakt.seasons.stats()</a></code> <code><a href="media_stats.html">trakt.episodes.stats()</a></code> </p>
+          <p><code><a href="media_stats.html">shows_stats()</a></code> <code><a href="media_stats.html">movies_stats()</a></code> <code><a href="media_stats.html">seasons_stats()</a></code> <code><a href="media_stats.html">episodes_stats()</a></code> </p>
         </td>
-        <td><p>Get a show or movie's stats</p></td>
+        <td><p>Get a show or movie's (or season's or episode's) stats</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -292,7 +424,7 @@
       <tr>
         
         <td>
-          <p><code><a href="media_related.html">trakt.movies.related()</a></code> <code><a href="media_related.html">trakt.shows.related()</a></code> </p>
+          <p><code><a href="media_related.html">movies_related()</a></code> <code><a href="media_related.html">shows_related()</a></code> </p>
         </td>
         <td><p>Search for related shows or movies</p></td>
       </tr>
@@ -306,43 +438,49 @@
       <tr>
         
         <td>
-          <p><code><a href="trakt.user.collection.html">trakt.user.collection()</a></code> </p>
+          <p><code><a href="user_collection.html">user_collection()</a></code> </p>
         </td>
         <td><p>Get a user's collected shows or movies</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="trakt.user.history.html">trakt.user.history()</a></code> </p>
+          <p><code><a href="user_history.html">user_history()</a></code> </p>
         </td>
         <td><p>Get a user's watch history</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="trakt.user.network.html">trakt.user.network()</a></code> </p>
+          <p><code><a href="user_network.html">user_followers()</a></code> <code><a href="user_network.html">user_following()</a></code> <code><a href="user_network.html">user_friends()</a></code> </p>
         </td>
         <td><p>Get a user's social connections</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="trakt.user.ratings.html">trakt.user.ratings()</a></code> </p>
+          <p><code><a href="user_ratings.html">user_ratings()</a></code> </p>
         </td>
         <td><p>Get a user's ratings</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="trakt.user.stats.html">trakt.user.stats()</a></code> </p>
+          <p><code><a href="user_stats.html">user_stats()</a></code> </p>
         </td>
         <td><p>Get a user's stats</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="trakt.user.watched.html">trakt.user.watched()</a></code> </p>
+          <p><code><a href="user_summary.html">user_summary()</a></code> </p>
+        </td>
+        <td><p>Get a user's profile</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="user_watched.html">user_watched()</a></code> </p>
         </td>
         <td><p>Get a user's watched shows or movies</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="trakt.user.watchlist.html">trakt.user.watchlist()</a></code> </p>
+          <p><code><a href="user_watchlist.html">user_watchlist()</a></code> </p>
         </td>
         <td><p>Get a user's watchlist</p></td>
       </tr>
@@ -356,19 +494,19 @@
       <tr>
         
         <td>
-          <p><code><a href="media_people.html">trakt.shows.people()</a></code> <code><a href="media_people.html">trakt.movies.people()</a></code> </p>
+          <p><code><a href="media_people.html">shows_people()</a></code> <code><a href="media_people.html">movies_people()</a></code> </p>
         </td>
         <td><p>Get the cast and crew of a show or movie</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="people_media.html">trakt.people.movies()</a></code> <code><a href="people_media.html">trakt.people.shows()</a></code> </p>
+          <p><code><a href="people_media.html">people_movies()</a></code> <code><a href="people_media.html">people_shows()</a></code> </p>
         </td>
         <td><p>Get a single person's movie or show credits</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="trakt.people.summary.html">trakt.people.summary()</a></code> </p>
+          <p><code><a href="people_summary.html">people_summary()</a></code> </p>
         </td>
         <td><p>Get a single person's details</p></td>
       </tr>
@@ -409,6 +547,12 @@
           <p><code><a href="search_filters.html">search_filters</a></code> </p>
         </td>
         <td><p>Result Filters</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="dynamic_lists.html">dynamic_lists</a></code> </p>
+        </td>
+        <td><p>See which movies / shows are popular across various metrics</p></td>
       </tr>
     </tbody><tbody>
       <tr>

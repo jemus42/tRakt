@@ -20,6 +20,7 @@
 <meta property="og:description" content="">
 <meta property="og:image" content="/logo.png">
 <meta name="twitter:card" content="summary">
+<meta name="robots" content="noindex">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -53,7 +54,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tRakt</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.15.0.9000</span>
       </span>
     </div>
 
@@ -148,21 +149,21 @@ You can only <em>get</em> data, and more importantly for user-specific data: You
 <h3 class="hasAnchor">
 <a href="#find-things" class="anchor"></a>2. Find things</h3>
 <p>Using a text query:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/trakt.search.html">trakt.search</a></span>(<span class="st">"Game of Thrones"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/search_query.html">search_query</a></span>(<span class="st">"Game of Thrones"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1 x 9</span></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;   type  score title          year trakt slug          tvdb   imdb     tmdb </span></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;int&gt; &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span></a>
 <a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; 1 show   1000 Game of Thro…  2011 1390  game-of-thro… 121361 tt09449… 1399</span></a></code></pre></div>
 <p>Search by explicit ID:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/trakt.search.html">trakt.search.byid</a></span>(<span class="st">"121361"</span>, <span class="dt">id_type =</span> <span class="st">"tvdb"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/search_query.html">search_id</a></span>(<span class="st">"121361"</span>, <span class="dt">id_type =</span> <span class="st">"tvdb"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#&gt; # A tibble: 1 x 9</span></a>
 <a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt;   type  score title          year trakt slug          tvdb   imdb     tmdb </span></a>
 <a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;int&gt; &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span></a>
 <a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt; 1 show   1000 Game of Thro…  2011 1390  game-of-thro… 121361 tt09449… 1399</span></a></code></pre></div>
 <p>Or via whatever’s popular(ish):</p>
-<p>Another scenario would be that you’re not necessarily interested in some specific media item, but rather a collection of items that fulfill certain criteria, like being popular on trakt.tv and maybe being from a specific period or genre and whatnot. While you can also filter <code>trakt.search</code> by other criteria, it’s maybe more useful to filter, let’s say, the most watched movies of the past week by the release year of the movie.</p>
+<p>Another scenario would be that you’re not necessarily interested in some specific media item, but rather a collection of items that fulfill certain criteria, like being popular on trakt.tv and maybe being from a specific period or genre and whatnot. While you can also filter <code>search_query</code> by other criteria, it’s maybe more useful to filter, let’s say, the most watched movies of the past week by the release year of the movie.</p>
 <p>The 5 most popular shows:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/automated_lists.html">trakt.popular</a></span>(<span class="dt">type =</span> <span class="st">"shows"</span>, <span class="dt">limit =</span> <span class="dv">5</span>)</a>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/popular_media.html">shows_popular</a></span>(<span class="dt">limit =</span> <span class="dv">5</span>)</a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; # A tibble: 5 x 7</span></a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt;   title                year trakt slug                tvdb   imdb     tmdb </span></a>
 <a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt;   &lt;chr&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;               &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span></a>
@@ -171,22 +172,22 @@ You can only <em>get</em> data, and more importantly for user-specific data: You
 <a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt; 3 The Walking Dead     2010 1393  the-walking-dead    153021 tt15202… 1402 </span></a>
 <a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; 4 The Big Bang Theory  2007 1409  the-big-bang-theory 80379  tt08982… 1418 </span></a>
 <a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt; 5 Sherlock             2010 19792 sherlock            176941 tt14755… 19885</span></a></code></pre></div>
-<p>The 10 most watched (during the past week) movies from 1990-2000:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/automated_lists.html">trakt.watched</a></span>(<span class="dt">type =</span> <span class="st">"movies"</span>, <span class="dt">period =</span> <span class="st">"weekly"</span>, <span class="dt">years =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">1990</span>, <span class="dv">2000</span>)) <span class="op">%&gt;%</span></a>
+<p>The 10 most watched (during the past year) movies from 1990-2000:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="../reference/watched_media.html">movies_watched</a></span>(<span class="dt">period =</span> <span class="st">"yearly"</span>, <span class="dt">years =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="dv">1990</span>, <span class="dv">2000</span>)) <span class="op">%&gt;%</span></a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(watcher_count, title, year)</a>
 <a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt; # A tibble: 10 x 3</span></a>
 <a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt;    watcher_count title                           year</span></a>
 <a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt;            &lt;int&gt; &lt;chr&gt;                          &lt;int&gt;</span></a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt;  1           851 The Ages of Lulu                1990</span></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt;  2           813 Terminator 2: Judgment Day      1991</span></a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;  3           808 Toy Story                       1995</span></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;  4           705 Hocus Pocus                     1993</span></a>
-<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt;  5           677 The Lion King                   1994</span></a>
-<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt;  6           642 Aladdin                         1992</span></a>
-<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#&gt;  7           630 Léon: The Professional          1994</span></a>
-<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#&gt;  8           629 The Matrix                      1999</span></a>
-<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt;  9           610 The Nightmare Before Christmas  1993</span></a>
-<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt; 10           606 Pocahontas                      1995</span></a></code></pre></div>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt;  1         59385 Toy Story                       1995</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt;  2         57512 The Lion King                   1994</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;  3         50925 Aladdin                         1992</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;  4         44811 The Matrix                      1999</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt;  5         43287 Home Alone                      1990</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt;  6         42795 Toy Story 2                     1999</span></a>
+<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#&gt;  7         33792 Unbreakable                     2000</span></a>
+<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#&gt;  8         31300 Mercury Rising                  1998</span></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt;  9         30329 Home Alone 2: Lost in New York  1992</span></a>
+<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt; 10         29358 Beauty and the Beast            1991</span></a></code></pre></div>
 </div>
 </div>
   </div>

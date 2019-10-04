@@ -20,6 +20,7 @@
 <meta property="og:description" content="">
 <meta property="og:image" content="/logo.png">
 <meta name="twitter:card" content="summary">
+<meta name="robots" content="noindex">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -53,7 +54,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tRakt</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.15.0.9000</span>
       </span>
     </div>
 
@@ -128,7 +129,7 @@
 <h2 class="hasAnchor">
 <a href="#step-1-search" class="anchor"></a>Step 1: Search</h2>
 <p>Use the search function to find the show you’re looking for.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">show_info &lt;-<span class="st"> </span><span class="kw"><a href="../reference/trakt.search.html">trakt.search</a></span>(<span class="st">"24"</span>, <span class="st">"show"</span>)</a>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">show_info &lt;-<span class="st"> </span><span class="kw"><a href="../reference/search_query.html">search_query</a></span>(<span class="st">"24"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2">show_info</a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt; # A tibble: 1 x 9</span></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;   type  score title  year trakt slug  tvdb  imdb      tmdb </span></a>
@@ -139,8 +140,8 @@
 <h2 class="hasAnchor">
 <a href="#step-2-use-the-id" class="anchor"></a>Step 2: Use the ID</h2>
 <p>Use the <code>trakt</code> ID (recommended over other IDs) for subsequent API calls.<br>
-In this case, we’ll use <code><a href="../reference/trakt.seasons.summary.html">trakt.seasons.summary()</a></code> to get data for all seasons of the show, while also getting an additional list-column containing all episode data, which includes user ratings.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">seasons &lt;-<span class="st"> </span><span class="kw"><a href="../reference/trakt.seasons.summary.html">trakt.seasons.summary</a></span>(<span class="dt">target =</span> show_info<span class="op">$</span>trakt, <span class="dt">extended =</span> <span class="st">"full"</span>, <span class="dt">episodes =</span> <span class="ot">TRUE</span>)</a>
+In this case, we’ll use <code><a href="../reference/seasons_summary.html">seasons_summary()</a></code> to get data for all seasons of the show, while also getting an additional list-column containing all episode data, which includes user ratings.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">seasons &lt;-<span class="st"> </span><span class="kw"><a href="../reference/seasons_summary.html">seasons_summary</a></span>(show_info<span class="op">$</span>trakt, <span class="dt">extended =</span> <span class="st">"full"</span>, <span class="dt">episodes =</span> <span class="ot">TRUE</span>)</a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>(seasons)</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt; Observations: 9</span></a>
 <a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt; Variables: 13</span></a>
@@ -173,11 +174,11 @@ In this case, we’ll use <code><a href="../reference/trakt.seasons.summary.html
 <a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt; $ title                  &lt;chr&gt; "12:00 A.M. - 1:00 A.M.", "1:00 A.M. - 2:…</span></a>
 <a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt; $ episode_abs            &lt;int&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…</span></a>
 <a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt; $ overview               &lt;chr&gt; "It is California Presidential Primary Da…</span></a>
-<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt; $ rating                 &lt;dbl&gt; 7.79236, 7.82873, 7.82031, 7.83837, 7.799…</span></a>
-<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt; $ votes                  &lt;int&gt; 1387, 1051, 896, 860, 814, 788, 771, 769,…</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt; $ rating                 &lt;dbl&gt; 7.79236, 7.82795, 7.82031, 7.83837, 7.799…</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt; $ votes                  &lt;int&gt; 1387, 1052, 896, 860, 814, 788, 771, 769,…</span></a>
 <a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt; $ comment_count          &lt;int&gt; 2, 2, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0,…</span></a>
 <a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2001-11-06 05:00:00, 2001-11-13 05:00:00…</span></a>
-<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2019-10-04 12:05:01, 2019-10-04 12:56:59…</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2019-10-04 16:21:48, 2019-10-04 16:38:52…</span></a>
 <a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt; $ available_translations &lt;list&gt; [&lt;"ar", "bg", "bs", "cs", "da", "de", "e…</span></a>
 <a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt; $ runtime                &lt;int&gt; 42, 43, 44, 43, 43, 44, 44, 44, 44, 44, 4…</span></a>
 <a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt; $ trakt                  &lt;chr&gt; "146247", "146248", "146249", "146250", "…</span></a>

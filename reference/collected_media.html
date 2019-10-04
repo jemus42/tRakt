@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Result Filters — search_filters • tRakt</title>
+<title>Most collected media — collected_media • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,10 +42,8 @@
 
 
 
-<meta property="og:title" content="Result Filters — search_filters" />
-<meta property="og:description" content="You can specifiy additional search filters in some functions. These filters are
-documented in the official API reference.
-For convenience, all supported filters are implemented as explicit, named arguments." />
+<meta property="og:title" content="Most collected media — collected_media" />
+<meta property="og:description" content="These functions return the most collected movies/shows on trakt.tv." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -158,21 +156,45 @@ For convenience, all supported filters are implemented as explicit, named argume
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Result Filters</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/docs-filters.R'><code>R/docs-filters.R</code></a></small>
-    <div class="hidden name"><code>search_filters.Rd</code></div>
+    <h1>Most collected media</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/dynamic-lists.R'><code>R/dynamic-lists.R</code></a></small>
+    <div class="hidden name"><code>collected_media.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>You can specifiy additional search filters in some functions. These filters are
-documented <a href='https://trakt.docs.apiary.io/#introduction/filters'>in the official API reference</a>.
-For convenience, all supported filters are implemented as explicit, named arguments.</p>
+    <p>These functions return the most collected movies/shows on trakt.tv.</p>
     </div>
 
+    <pre class="usage"><span class='fu'>movies_collected</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+  <span class='kw'>period</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"weekly"</span>, <span class='st'>"monthly"</span>, <span class='st'>"yearly"</span>, <span class='st'>"all"</span>), <span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>genres</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>countries</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>runtimes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ratings</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>certifications</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>networks</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
+
+<span class='fu'>shows_collected</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+  <span class='kw'>period</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"weekly"</span>, <span class='st'>"monthly"</span>, <span class='st'>"yearly"</span>, <span class='st'>"all"</span>), <span class='kw'>query</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>genres</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>countries</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>runtimes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>ratings</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>certifications</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>networks</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>limit</th>
+      <td><p><code>integer(1) [10L]</code>: Number of items to return. Must be greater
+than <code>0</code> and will be coerced to <code>integer</code>.</p></td>
+    </tr>
+    <tr>
+      <th>extended</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+returns more variables and should generally only be used if required.</p></td>
+    </tr>
+    <tr>
+      <th>period</th>
+      <td><p><code>character(1) ["weekly"]</code>: Which period to filter by. Possible values
+are <code>"weekly"</code>, <code>"monthly"</code>, <code>"yearly"</code>, <code>"all"</code>.</p></td>
+    </tr>
     <tr>
       <th>query</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Search titles and descriptions.</p></td>
@@ -224,15 +246,47 @@ for a list of known networks.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="the-dynamic-lists-on-trakt-tv"><a class="anchor" href="#the-dynamic-lists-on-trakt-tv"></a>The Dynamic Lists on trakt.tv</h2>
+
+    
+
+
+<p>These functions access the automatically updated lists provided by trakt.tv.
+Each function comes in two flavors: Shows or movies. The following descriptions
+are adapted directly from the
+<a href='https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies'>API reference</a>.</p><ul>
+<li><p><a href='popular_media.html'>Popular</a>: Popularity is calculated using the rating percentage and the number of
+ratings.</p></li>
+<li><p><a href='trending_media.html'>Trending</a>: Returns all movies/shows being watched right now.
+Movies/shows with the most users are returned first.</p></li>
+<li><p><a href='played_media.html'>Played</a>: Returns the most played (a single user can watch multiple times)
+movies/shows in the specified time <code>period</code>.</p></li>
+<li><p><a href='watched_media.html'>Watched</a>: Returns the most watched (unique users) movies/shows in the specified
+time <code>period</code>.</p></li>
+<li><p>Collected: Returns the most collected (unique users) movies/shows in the
+specified time <code>period</code>.</p></li>
+<li><p><a href='anticipated_media.html'>Anticipated</a>: Returns the most anticipated movies/shows based on the number of
+lists a movie/show appears on.</p></li>
+<li><p><a href='updated_media.html'>Updates</a>: Returns all movies/shows updated since the specified UTC <code>start_date</code>.
+In this case, the upper bound for <code>limit</code> is 100.</p></li>
+</ul>
+
+<p>The functions for <strong>Played</strong>, <strong>Watched</strong>, <strong>Collected</strong> and <strong>Played</strong> each return
+the same additional variables besides the media information: <code>watcher_count</code>,
+<code>play_count</code>, <code>collected_count</code>, <code>collector_count</code>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p><a href='dynamic_lists.html'>dynamic_lists</a>, where these parameters are used</p></div>
+    <div class='dont-index'><p>Other dynamic lists: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
+  <code><a href='played_media.html'>played_media</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
+  <code><a href='trending_media.html'>trending_media</a></code>,
+  <code><a href='updated_media.html'>updated_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#the-dynamic-lists-on-trakt-tv">The Dynamic Lists on trakt.tv</a></li>
       <li><a href="#see-also">See also</a></li>
     </ul>
 
