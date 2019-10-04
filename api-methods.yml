@@ -228,7 +228,7 @@ episodes:
   summary:
     url: https://trakt.docs.apiary.io/#reference/episodes/summary/get-a-single-episode-for-a-show
     endpoint: shows/:id/seasons/:season/episodes/:episode
-    implementation:
+    implementation: episodes_summary()
   translations:
     url: https://trakt.docs.apiary.io/#reference/episodes/translations/get-all-episode-translations
     endpoint: shows/:id/seasons/:season/episodes/:episode/translations/:language

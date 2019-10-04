@@ -11,6 +11,11 @@
 #'   or `imdb` ID (e.g. `"tt0306414"`).
 #'   Can also be of length greater than 1, in which case the function is called on all
 #'   `target` values separately and the result is combined.
+#' @param id `character(1)`: The ID of the item requested. Preferably the
+#'   `trakt` ID (e.g. `1429`). Other options are the trakt.tv `slug` (e.g. `"the-wire"`)
+#'   or `imdb` ID (e.g. `"tt0306414"`).
+#'   Can also be of length greater than 1, in which case the function is called on all
+#'   `id` values separately and the result is combined.
 #' @param extended `character(1)`: Either `"min"` (API default) or `"full"`. The latter
 #'   returns more variables and should generally only be used if required.
 #' @param type `character(1)`: Either `"shows"` or `"movies"`. For season/episode-specific

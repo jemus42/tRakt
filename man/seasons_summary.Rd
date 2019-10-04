@@ -35,7 +35,7 @@ is also suitable to retrieve all episode data for all seasons of a show with
 just a single API call.
 }
 \details{
-This function wraps \href{https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show}{this API method}
+This function wraps \href{https://trakt.docs.apiary.io/#reference/seasons/summary/}{this API method}
 with the endpoint \code{/shows/:show_id/seasons}.
 }
 \examples{
@@ -48,6 +48,7 @@ seasons_summary("utopia", extended = "full", episodes = TRUE)
 }
 }
 \seealso{
-Other show data: \code{\link{seasons_season}}
+Other show data: \code{\link{episodes_summary}},
+  \code{\link{seasons_season}}
 }
 \concept{show data}

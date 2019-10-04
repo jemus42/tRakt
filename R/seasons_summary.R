@@ -5,7 +5,7 @@
 #' is also suitable to retrieve all episode data for all seasons of a show with
 #' just a single API call.
 #' @details
-#' This function wraps [this API method](https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show)
+#' This function wraps [this API method](https://trakt.docs.apiary.io/#reference/seasons/summary/)
 #' with the endpoint `/shows/:show_id/seasons`.
 #'
 #' @inheritParams trakt_api_common_parameters

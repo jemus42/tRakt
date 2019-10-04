@@ -42,6 +42,7 @@ seasons_season("breaking-bad", 1, extended = "full")
 }
 }
 \seealso{
-Other show data: \code{\link{seasons_summary}}
+Other show data: \code{\link{episodes_summary}},
+  \code{\link{seasons_summary}}
 }
 \concept{show data}

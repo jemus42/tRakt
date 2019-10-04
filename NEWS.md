@@ -2,6 +2,7 @@
 
 ## New functions
 
+- `episodes_summary()`: What `seasons_season()` and `seasons_sumamry()` do, but for a single episode. Only really implemented for completeness' sake.
 - `user_summary`: Wraps [`user/:id`](https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile) to get user profiles
 
 ## The Renamingering
