@@ -3,34 +3,34 @@ context("Search")
 test_that("trakt.search works", {
   skip_on_cran()
 
-  res <- trakt.search("russian doll", type = "show")
-  res_y <- trakt.search("russian doll", type = "show", years = "2019")
+  res <- search_query("russian doll", type = "show")
+  res_y <- search_query("russian doll", type = "show", years = "2019")
 
 
   expect_is(res, "tbl")
   expect_equal(nrow(res), 1)
   expect_equal(res$title, res_y$title)
 
-  res <- trakt.search("russian doll", type = "movie")
+  res <- search_query("russian doll", type = "movie")
   expect_is(res, "tbl")
   expect_equal(nrow(res), 1)
 
-  expect_warning(trakt.search("this is just a garbled mess", type = "movie"))
-  expect_warning(trakt.search("deadpuul", type = "movie"))
-  expect_warning(trakt.search("nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb", type = "movie", years = 1100))
+  expect_warning(search_query("this is just a garbled mess", type = "movie"))
+  expect_warning(search_query("deadpuul", type = "movie"))
+  expect_warning(search_query("nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb", type = "movie", years = 1100))
 })
 
 test_that("trakt.search.byid works", {
   skip_on_cran()
 
   # Oddly enough, 614 matches Home Alone oO
-  res <- trakt.search.byid(id = 614, id_type = "trakt", type = "show")
-  res2 <- trakt.search(query = "futurama", type = "show")
+  res <- search_id(id = 614, id_type = "trakt", type = "show")
+  res2 <- search_query(query = "futurama", type = "show")
 
   expect_identical(res$title, res2$title)
 
-  expect_warning(trakt.search.byid(id = 1, id_type = "imdb"))
-  expect_warning(trakt.search.byid(
+  expect_warning(search_id(id = 1, id_type = "imdb"))
+  expect_warning(search_id(
     id = "nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb",
     id_type = "trakt"
   ))

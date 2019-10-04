@@ -2,27 +2,27 @@ movies:
   trending:
     url: https://trakt.docs.apiary.io/#reference/movies/trending/get-trending-movies
     endpoint: movies/trending
-    implementation: trakt.trending()
+    implementation: movies_trending()
   popular:
     url: https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies
     endpoint: movies/popular
-    implementation: trakt.popular()
+    implementation: movies_popular()
   played:
     url: https://trakt.docs.apiary.io/#reference/movies/played/get-the-most-played-movies
     endpoint: movies/played/:period
-    implementation: trakt.played()
+    implementation: movies_played()
   watched:
     url: https://trakt.docs.apiary.io/#reference/movies/watched/get-the-most-watched-movies
     endpoint: movies/watched/:period
-    implementation: trakt.watched()
+    implementation: movies_watched()
   collected:
     url: https://trakt.docs.apiary.io/#reference/movies/collected/get-the-most-collected-movies
     endpoint: movies/collected/:period
-    implementation: trakt.collected()
+    implementation: movies_collected()
   anticipated:
     url: https://trakt.docs.apiary.io/#reference/movies/anticipated/get-the-most-anticipated-movies
     endpoint: movies/anticipated
-    implementation: trakt.anticipated()
+    implementation: movies_anticipated()
   box office:
     url: https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office
     endpoint: movies/boxoffice
@@ -30,7 +30,7 @@ movies:
   updates:
     url: https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies
     endpoint: movies/updates/:start_date
-    implementation: trakt.updates()
+    implementation: movies_updates()
   summary:
     url: https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie
     endpoint: movies/:id
@@ -108,31 +108,31 @@ shows:
   trending:
     url: https://trakt.docs.apiary.io/#reference/shows/trending/get-trending-shows
     endpoint: shows/trending
-    implementation: trakt.trending()
+    implementation: shows_trending()
   popular:
     url: https://trakt.docs.apiary.io/#reference/shows/popular/get-popular-shows
     endpoint: shows/popular
-    implementation: trakt.popular()
+    implementation: shows_popular()
   played:
     url: https://trakt.docs.apiary.io/#reference/shows/played/get-the-most-played-shows
     endpoint: shows/played/:period
-    implementation: trakt.played()
+    implementation: shows_played()
   watched:
     url: https://trakt.docs.apiary.io/#reference/shows/watched/get-the-most-watched-shows
     endpoint: shows/watched/:period
-    implementation: trakt.watched()
+    implementation: shows_watched()
   collected:
     url: https://trakt.docs.apiary.io/#reference/shows/collected/get-the-most-collected-shows
     endpoint: shows/collected/:period
-    implementation: trakt.collected()
+    implementation: shows_collected()
   anticipated:
     url: https://trakt.docs.apiary.io/#reference/shows/anticipated/get-the-most-anticipated-shows
     endpoint: shows/anticipated
-    implementation: trakt.anticipated()
+    implementation: shows_anticipated()
   updated:
     url: https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows
     endpoint: shows/updates/:start_date
-    implementation: trakt.updates()
+    implementation: shows_updates()
   summary:
     url: https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show
     endpoint: shows/:id

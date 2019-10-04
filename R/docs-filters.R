@@ -25,5 +25,5 @@
 #' @param status `character(n)`: (Shows only) The status of the shows. One of `returning series`,
 #'   `in production`, `planned`, `canceled`, or `ended`
 #'
-#' @seealso [automated_lists], where these parameters are used
+#' @seealso [dynamic_lists], where these parameters are used
 NULL

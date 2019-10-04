@@ -4,8 +4,8 @@ test_that("trakt.popular works", {
   skip_on_cran()
 
   # movies
-  pop_mov_min <- trakt.popular(type = "movies", limit = 5, extended = "min")
-  pop_mov_max <- trakt.popular(type = "movies", limit = 5, extended = "full")
+  pop_mov_min <- movies_popular(limit = 5, extended = "min")
+  pop_mov_max <- movies_popular(limit = 5, extended = "full")
 
   expect_is(pop_mov_min, "tbl")
   expect_is(pop_mov_max, "tbl")
@@ -13,11 +13,11 @@ test_that("trakt.popular works", {
   expect_equal(nrow(pop_mov_min), 5)
   expect_equal(nrow(pop_mov_min), nrow(pop_mov_max))
 
-  expect_error(trakt.popular(type = "movies", limit = -4))
+  expect_error(movies_popular(limit = -4))
 
   # shows
-  pop_sho_min <- trakt.popular(type = "shows", limit = 5, extended = "min")
-  pop_sho_max <- trakt.popular(type = "shows", limit = 5, extended = "full")
+  pop_sho_min <- shows_popular(limit = 5, extended = "min")
+  pop_sho_max <- shows_popular(limit = 5, extended = "full")
 
   expect_is(pop_sho_min, "tbl")
   expect_is(pop_sho_max, "tbl")
@@ -30,8 +30,8 @@ test_that("trakt.trending works", {
   skip_on_cran()
 
   # movies
-  tre_mov_min <- trakt.trending(type = "movies", limit = 5, extended = "min")
-  tre_mov_max <- trakt.trending(type = "movies", limit = 5, extended = "full")
+  tre_mov_min <- movies_trending(limit = 5, extended = "min")
+  tre_mov_max <- movies_trending(limit = 5, extended = "full")
 
   expect_is(tre_mov_min, "tbl")
   expect_is(tre_mov_max, "tbl")
@@ -39,11 +39,11 @@ test_that("trakt.trending works", {
   expect_equal(nrow(tre_mov_min), 5)
   expect_equal(nrow(tre_mov_min), nrow(tre_mov_max))
 
-  expect_error(trakt.trending(type = "movies", limit = -4))
+  expect_error(movies_trending(limit = -4))
 
   # shows
-  tre_sho_min <- trakt.trending(type = "shows", limit = 5, extended = "min")
-  tre_sho_max <- trakt.trending(type = "shows", limit = 5, extended = "full")
+  tre_sho_min <- shows_trending(limit = 5, extended = "min")
+  tre_sho_max <- shows_trending(limit = 5, extended = "full")
 
   expect_is(tre_sho_min, "tbl")
   expect_is(tre_sho_max, "tbl")
@@ -56,8 +56,8 @@ test_that("trakt.anticipated works", {
   skip_on_cran()
 
   # movies
-  tre_mov_min <- trakt.anticipated(type = "movies", limit = 5, extended = "min")
-  tre_mov_max <- trakt.anticipated(type = "movies", limit = 5, extended = "full")
+  tre_mov_min <- movies_anticipated(limit = 5, extended = "min")
+  tre_mov_max <- movies_anticipated(limit = 5, extended = "full")
 
   expect_is(tre_mov_min, "tbl")
   expect_is(tre_mov_max, "tbl")
@@ -65,11 +65,11 @@ test_that("trakt.anticipated works", {
   expect_equal(nrow(tre_mov_min), 5)
   expect_equal(nrow(tre_mov_min), nrow(tre_mov_max))
 
-  expect_error(trakt.anticipated(type = "movies", limit = -4))
+  expect_error(movies_anticipated(limit = -4))
 
   # shows
-  tre_sho_min <- trakt.anticipated(type = "shows", limit = 5, extended = "min")
-  tre_sho_max <- trakt.anticipated(type = "shows", limit = 5, extended = "full")
+  tre_sho_min <- shows_anticipated(limit = 5, extended = "min")
+  tre_sho_max <- shows_anticipated(limit = 5, extended = "full")
 
   expect_is(tre_sho_min, "tbl")
   expect_is(tre_sho_max, "tbl")
@@ -86,14 +86,14 @@ test_that("trakt.played and trakt.watched also do things", {
     "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb"
   )
 
-  trakt.watched("shows", extended = "min", period = "weekly") %>%
+  shows_watched(extended = "min", period = "weekly") %>%
     expect_is("tbl") %>%
     expect_length(11) %>%
     expect_named(nm) %>%
     nrow() %>%
     expect_equal(10)
 
-  trakt.played("shows", extended = "min", period = "weekly") %>%
+  shows_played(extended = "min", period = "weekly") %>%
     expect_is("tbl") %>%
     expect_length(11) %>%
     expect_named(nm) %>%
@@ -102,13 +102,13 @@ test_that("trakt.played and trakt.watched also do things", {
 })
 
 test_that("trakt.collected does its thing", {
-  trakt.collected("shows", limit = 5) %>%
+  shows_collected(limit = 5) %>%
     expect_is("tbl") %>%
     expect_length(11) %>%
     nrow() %>%
     expect_equal(5)
 
-  trakt.collected("movies", limit = 5) %>%
+  movies_collected(limit = 5) %>%
     expect_is("tbl") %>%
     expect_length(9) %>%
     nrow() %>%
@@ -116,7 +116,7 @@ test_that("trakt.collected does its thing", {
 })
 
 test_that("trakt.updates works", {
-  trakt.updates("shows") %>%
+  shows_updates() %>%
     expect_is("tbl") %>%
     expect_length(8) %>%
     nrow() %>%

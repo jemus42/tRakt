@@ -4,6 +4,28 @@
 
 - `trakt.search` -> `search_query`
 - `trakt.search.byid` -> `search_id`
+- `trakt.popular`
+  - -> `movies_popular`
+  - -> `shows_popular`
+- `trakt.trending`
+  - -> `movies_trending`
+  - -> `shows_trending`
+- `trakt.anticipated`
+  - -> `movies_anticipated`
+  - -> `shows_anticipated`
+- `trakt.played`
+  - -> `movies_played`
+  - -> `shows_played`
+- `trakt.watched`
+  - -> `movies_watched`
+  - -> `shows_watched`
+- `trakt.collected`
+  - -> `movies_collected`
+  - -> `shows_collected`
+- `trakt.updates`
+  - -> `movies_updates`
+  - -> `shows_updates`
+
 
 # tRakt 0.15.0
 

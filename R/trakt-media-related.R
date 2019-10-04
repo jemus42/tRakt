@@ -8,7 +8,7 @@
 #' - [/movies/:id/related](https://trakt.docs.apiary.io/#reference/movies/related/get-related-movies)
 #'
 #' @inheritParams trakt_api_common_parameters
-#' @inheritParams automated_lists
+#' @inheritParams dynamic_lists
 #' @return A [tibble()][tibble::tibble-package].
 #' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
