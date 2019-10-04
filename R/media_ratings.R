@@ -1,8 +1,8 @@
-#' Show or movie user ratings
+#' Media user ratings
 #'
 #' Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
 #' If you *do not* want the full ratings distribution, it is highly advised to
-#' just use `*.summary` functions or [trakt.seasons.season] for episode ratings.
+#' just use `*_summary` functions or [seasons_season] for episode ratings.
 #' @details
 #' The API methods for these functions are:
 #'
@@ -19,16 +19,16 @@
 #' of one API call *per element in each argument*. Please be kind to the API.
 #' @examples
 #' # A movie's ratings
-#' trakt.movies.ratings("tron-legacy-2010")
+#' movies_ratings("tron-legacy-2010")
 #'
 #' # A show's ratings
-#' trakt.shows.ratings("game-of-thrones")
+#' shows_ratings("game-of-thrones")
 #' \dontrun{
 #' # Ratings for seasons 1 through 5
-#' trakt.seasons.ratings("futurama", season = 1:5)
+#' seasons_ratings("futurama", season = 1:5)
 #'
 #' # Ratings for episodes 1 through 7 of season 1
-#' trakt.episodes.ratings("futurama", season = 1, episode = 1:7)
+#' episodes_ratings("futurama", season = 1, episode = 1:7)
 #' }
 NULL
 
@@ -36,11 +36,11 @@ NULL
 #' @importFrom dplyr mutate
 #' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
-trakt.media.ratings <- function(type = c("shows", "movies"), target) {
+media_ratings <- function(type = c("shows", "movies"), target) {
   type <- match.arg(type)
 
   if (length(target) > 1) {
-    return(map_df(target, ~ trakt.media.ratings(type = type, target = .x)))
+    return(map_df(target, ~ media_ratings(type = type, target = .x)))
   }
 
   # Construct URL, make API call
@@ -60,14 +60,14 @@ trakt.media.ratings <- function(type = c("shows", "movies"), target) {
 
 #' @rdname media_ratings
 #' @export
-trakt.shows.ratings <- function(target) {
-  trakt.media.ratings(type = "shows", target)
+shows_ratings <- function(target) {
+  media_ratings(type = "shows", target)
 }
 
 #' @rdname media_ratings
 #' @export
-trakt.movies.ratings <- function(target) {
-  trakt.media.ratings(type = "movies", target)
+movies_ratings <- function(target) {
+  media_ratings(type = "movies", target)
 }
 
 # Seasons and episodes ratings ----
@@ -77,13 +77,13 @@ trakt.movies.ratings <- function(target) {
 #' @importFrom dplyr mutate
 #' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
-trakt.seasons.ratings <- function(target, season = 1L) {
+seasons_ratings <- function(target, season = 1L) {
   if (length(target) > 1) {
-    return(map_df(target, ~ trakt.seasons.ratings(.x, season)))
+    return(map_df(target, ~ seasons_ratings(.x, season)))
   }
 
   if (length(season) > 1) {
-    return(map_df(season, ~ trakt.seasons.ratings(target, .x)))
+    return(map_df(season, ~ seasons_ratings(target, .x)))
   }
 
   # Construct URL, make API call
@@ -104,21 +104,26 @@ trakt.seasons.ratings <- function(target, season = 1L) {
 #' @importFrom dplyr mutate
 #' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
-trakt.episodes.ratings <- function(target, season = 1L, episode = 1L) {
+episodes_ratings <- function(target, season = 1L, episode = 1L) {
   if (length(target) > 1) {
-    return(map_df(target, ~ trakt.episodes.ratings(.x, season, episode)))
+    return(map_df(target, ~ episodes_ratings(.x, season, episode)))
   }
 
   if (length(season) > 1) {
-    return(map_df(season, ~ trakt.episodes.ratings(target, .x, episode)))
+    return(map_df(season, ~ episodes_ratings(target, .x, episode)))
   }
 
   if (length(episode) > 1) {
-    return(map_df(episode, ~ trakt.episodes.ratings(target, season, .x)))
+    return(map_df(episode, ~ episodes_ratings(target, season, .x)))
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url("shows", target, "seasons", season, "episodes", episode, "ratings")
+  url <- build_trakt_url(
+    "shows", target,
+    "seasons", season,
+    "episodes", episode,
+    "ratings"
+  )
   response <- trakt_get(url = url)
 
   response %>%
@@ -126,7 +131,7 @@ trakt.episodes.ratings <- function(target, season = 1L, episode = 1L) {
     as_tibble() %>%
     mutate(
       id = target,
-      season = season,
-      episode = episode
+      season = as.integer(season),
+      episode = as.integer(episode)
     )
 }

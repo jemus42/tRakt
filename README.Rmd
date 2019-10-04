@@ -61,14 +61,14 @@ glimpse(show_info)
 Get season information for the show using its trakt ID:
 
 ```{r}
-trakt.seasons.summary(show_info$trakt, extended = "full") %>%
+seasons_summary(show_info$trakt, extended = "full") %>%
   glimpse()
 ```
 
 Get episode data for the first season:
 
 ```{r}
-trakt.seasons.season(show_info$trakt, seasons = 1, extended = "full") %>%
+seasons_season(show_info$trakt, seasons = 1, extended = "full") %>%
   glimpse()
 ```
 

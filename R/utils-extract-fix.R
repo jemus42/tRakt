@@ -130,7 +130,7 @@ fix_ratings <- function(response) {
 #' @noRd
 fix_ids <- function(ids) {
   if (!inherits(ids, c("data.frame", "list"))) {
-    stop("ids must be list or data.frame")
+    stop("IDs must be list or data.frame")
   }
 
   # Since tvrage is dead and tvrage IDs tend to be NA/0,
@@ -152,6 +152,7 @@ fix_ids <- function(ids) {
 #' @importFrom dplyr mutate_at
 #' @importFrom dplyr vars
 #' @importFrom purrr map_at
+#' @importFrom rlang has_name
 #' @keywords internal
 #' @noRd
 fix_datetime <- function(response) {

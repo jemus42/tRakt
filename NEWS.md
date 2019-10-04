@@ -1,11 +1,22 @@
 # tRakt 0.15.9000
- 
+
+## New functions
+
+- `user_summary`: Wraps [`user/:id`](https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile) to get user profiles
+
 ## The Renamingering
 
-### Movies and Shows
+Rename _all the things_ to snake_case and drop the `trakt.` prefix.  
+This results in (most) functions mapping directly to [API endpoints](https://trakt.docs.apiary.io/) in the form `section_method`,
+e.g. the API endpoint `movies/collected` is handled by function `movies_collected()`. 
+
+### Search
 
 - `trakt.search` -> `search_query`
 - `trakt.search.byid` -> `search_id`
+
+### Dynamic Lists
+
 - `trakt.popular`
   - -> `movies_popular`
   - -> `shows_popular`
@@ -27,8 +38,51 @@
 - `trakt.updates`
   - -> `movies_updates`
   - -> `shows_updates`
+  
+### Movies
 
-### Users
+- `trakt.movies.summary` -> `movies_summary`
+- `trakt.movies.boxoffice` -> `movies_boxoffice`
+- `trakt.movies.releases` -> `movies_releases`
+- `trakt.movies.people` -> `movies_people`
+  
+### Shows
+
+- `trakt.shows.summary` -> `shows_summary`
+- `trakt.shows.people` -> `shows_people`
+
+### Seasons
+
+- `trakt.seasons.summary` -> `seasons_summary`
+- `trakt.seasons.season` -> `seasons_season` (It's silly, I know, but oh well)
+
+### Ratings
+
+- `trakt.movies.ratings` -> `movies_ratings`
+- `trakt.shows.ratings` -> `shows_ratings`
+- `trakt.seasons.ratings` -> `seasons_ratings`
+- `trakt.episodes.ratings` -> `episodes_ratings`
+
+### Related
+
+- `trakt.movies.related` -> `movies_related`
+- `trakt.shows.related` -> `shows_related`
+
+### Stats
+
+- `trakt.movies.stats` -> `movies_stats`
+- `trakt.shows.stats` -> `shows_stats`
+- `trakt.seasons.stats` -> `seasons_stats`
+- `trakt.episodes.stats` -> `episodes_stats`
+
+### People 
+
+- `trakt.people.summary` -> `people_summary`
+- `trakt.people.movies` -> `people_movies`
+- `trakt.people.shows` -> `people_shows`
+
+
+### User functions
 
 - `trakt.user.network`
   - -> `user_followers`

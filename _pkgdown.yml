@@ -26,28 +26,25 @@ reference:
       - -starts_with("user_")
   - title: Simple summary data
     contents:
-      - ends_with("summary")
-      - -trakt.seasons.summary
+      - ends_with("_summary")
       - -starts_with("user_")
   - title: Season and episode data
     contents:
-      - trakt.seasons.summary
-      - trakt.seasons.season
+      - starts_with("seasons_")
   - title: Movie-specific data
     contents:
-      - trakt.movies.releases
-      - trakt.movies.boxoffice
+      - starts_with("movies_")
   - title: Media ratings
     contents:
-      - ends_with(".ratings")
+      - ends_with("_ratings")
       - -starts_with("user_")
   - title: Media stats
     contents:
-      - ends_with(".stats")
+      - ends_with("_stats")
       - -starts_with("user_")
   - title: Related media
     contents:
-      - ends_with(".related")
+      - ends_with("_related")
   - title: User-specific data
     contents:
       - starts_with("user_")
@@ -61,6 +58,7 @@ reference:
       - trakt_credentials
       - trakt_api_common_parameters
       - search_filters
+      - dynamic_lists
   - title: Episode datasets
     contents:
       - futurama

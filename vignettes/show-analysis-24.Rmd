@@ -14,8 +14,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   message = FALSE, warning = FALSE, error = FALSE,
-  out.width = "100%",
-  eval = FALSE
+  out.width = "100%"
 )
 ```
 
@@ -29,17 +28,17 @@ library(tibble) # For glimpse()
 Use the search function to find the show you're looking for.
 
 ```{r 24_search}
-show_info <- trakt.search("24", "show")
+show_info <- search_query("24", type = "show")
 show_info
 ```
 
 ## Step 2: Use the ID
 
 Use the `trakt` ID (recommended over other IDs) for subsequent API calls.  
-In this case, we'll use `trakt.seasons.summary()` to get data for all seasons of the show, while also getting an additional list-column containing all episode data, which includes user ratings.
+In this case, we'll use `seasons_summary()` to get data for all seasons of the show, while also getting an additional list-column containing all episode data, which includes user ratings.
 
 ```{r 24_getting_seasons}
-seasons <- trakt.seasons.summary(target = show_info$trakt, extended = "full", episodes = TRUE)
+seasons <- seasons_summary(target = show_info$trakt, extended = "full", episodes = TRUE)
 glimpse(seasons)
 ```
 

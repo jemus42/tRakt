@@ -77,7 +77,7 @@ glimpse(show_info)
 Get season information for the show using its trakt ID:
 
 ``` r
-trakt.seasons.summary(show_info$trakt, extended = "full") %>%
+seasons_summary(show_info$trakt, extended = "full") %>%
   glimpse()
 #> Observations: 2
 #> Variables: 12
@@ -98,7 +98,7 @@ trakt.seasons.summary(show_info$trakt, extended = "full") %>%
 Get episode data for the first season:
 
 ``` r
-trakt.seasons.season(show_info$trakt, seasons = 1, extended = "full") %>%
+seasons_season(show_info$trakt, seasons = 1, extended = "full") %>%
   glimpse()
 #> Observations: 6
 #> Variables: 16
@@ -111,7 +111,7 @@ trakt.seasons.season(show_info$trakt, seasons = 1, extended = "full") %>%
 #> $ votes                  <int> 1039, 839, 758, 693, 661, 689
 #> $ comment_count          <int> 3, 0, 1, 1, 1, 1
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00…
-#> $ updated_at             <dttm> 2019-10-04 04:49:30, 2019-10-03 11:03:32…
+#> $ updated_at             <dttm> 2019-10-04 04:49:30, 2019-10-04 12:29:56…
 #> $ available_translations <list> [<"bs", "de", "el", "en", "es", "fr", "h…
 #> $ runtime                <int> 60, 60, 60, 60, 60, 60
 #> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056…

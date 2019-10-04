@@ -1,4 +1,4 @@
-#' Get a show or movie's stats
+#' Get a show or movie's (or season's or episode's) stats
 #'
 #' The data contains watchers, playes, collectors, comments, lists, and votes.
 #'
@@ -15,13 +15,13 @@
 #' @name media_stats
 #' @examples
 #' # Stats for a movie
-#' trakt.movies.stats("inception-2010")
+#' movies_stats("inception-2010")
 #' \dontrun{
 #' # Stats for multiple shows at once
-#' trakt.shows.stats(c("breaking-bad", "game-of-thrones"))
+#' shows_stats(c("breaking-bad", "game-of-thrones"))
 #'
 #' # Stats for multiple episodes
-#' trakt.episodes.stats("futurama", season = 1, episode = 1:7)
+#' episodes_stats("futurama", season = 1, episode = 1:7)
 #' }
 NULL
 
@@ -29,11 +29,11 @@ NULL
 #' @noRd
 #' @importFrom purrr map_df
 #' @importFrom tibble as_tibble
-trakt.media.stats <- function(type = c("shows", "movies"), target) {
+media_stats <- function(type = c("shows", "movies"), target) {
   type <- match.arg(type)
 
   if (length(target) > 1) {
-    return(map_df(target, ~ trakt.media.stats(type, .x)))
+    return(map_df(target, ~ media_stats(type, .x)))
   }
 
   # Construct URL, make API call
@@ -49,27 +49,27 @@ trakt.media.stats <- function(type = c("shows", "movies"), target) {
 
 #' @rdname media_stats
 #' @export
-trakt.shows.stats <- function(target) {
-  trakt.media.stats(type = "shows", target)
+shows_stats <- function(target) {
+  media_stats(type = "shows", target)
 }
 
 #' @rdname media_stats
 #' @export
-trakt.movies.stats <- function(target) {
-  trakt.media.stats(type = "movies", target)
+movies_stats <- function(target) {
+  media_stats(type = "movies", target)
 }
 
 #' @rdname media_stats
 #' @export
 #' @importFrom purrr map_df
 #' @importFrom tibble as_tibble
-trakt.seasons.stats <- function(target, season = 1L) {
+seasons_stats <- function(target, season = 1L) {
   if (length(target) > 1) {
-    return(map_df(target, ~ trakt.seasons.stats(.x, season)))
+    return(map_df(target, ~ seasons_stats(.x, season)))
   }
 
   if (length(season) > 1) {
-    return(map_df(season, ~ trakt.seasons.stats(target, .x)))
+    return(map_df(season, ~ seasons_stats(target, .x)))
   }
 
   # Construct URL, make API call
@@ -85,17 +85,17 @@ trakt.seasons.stats <- function(target, season = 1L) {
 #' @export
 #' @importFrom purrr map_df
 #' @importFrom tibble as_tibble
-trakt.episodes.stats <- function(target, season = 1L, episode = 1L) {
+episodes_stats <- function(target, season = 1L, episode = 1L) {
   if (length(target) > 1) {
-    return(map_df(target, ~ trakt.episodes.stats(.x, season, episode)))
+    return(map_df(target, ~ episodes_stats(.x, season, episode)))
   }
 
   if (length(season) > 1) {
-    return(map_df(season, ~ trakt.episodes.stats(target, .x, episode)))
+    return(map_df(season, ~ episodes_stats(target, .x, episode)))
   }
 
   if (length(episode) > 1) {
-    return(map_df(episode, ~ trakt.episodes.stats(target, season, .x)))
+    return(map_df(episode, ~ episodes_stats(target, season, .x)))
   }
 
   # Construct URL, make API call

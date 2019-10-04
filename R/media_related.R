@@ -18,19 +18,19 @@
 #' @importFrom dplyr mutate
 #' @name media_related
 #' @examples
-#' trakt.shows.related("breaking-bad", limit = 5)
+#' shows_related("breaking-bad", limit = 5)
 NULL
 
 #' @keywords internal
 #' @noRd
-trakt.media.related <- function(target, type = c("shows", "movies"),
+media_related <- function(target, type = c("shows", "movies"),
                                 limit = 10L,
                                 extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
-    return(map_df(target, ~ trakt.media.related(.x, type, extended)))
+    return(map_df(target, ~ media_related(.x, type, extended)))
   }
 
   # Construct URL, make API call
@@ -63,16 +63,16 @@ trakt.media.related <- function(target, type = c("shows", "movies"),
 
 #' @rdname media_related
 #' @export
-trakt.movies.related <- function(target,
+movies_related <- function(target,
                                  limit = 10L,
                                  extended = c("min", "full")) {
-  trakt.media.related(target, type = "movies", extended = extended, limit = limit)
+  media_related(target, type = "movies", extended = extended, limit = limit)
 }
 
 #' @rdname media_related
 #' @export
-trakt.shows.related <- function(target,
+shows_related <- function(target,
                                 limit = 10L,
                                 extended = c("min", "full")) {
-  trakt.media.related(target, type = "shows", extended = extended, limit = limit)
+  media_related(target, type = "shows", extended = extended, limit = limit)
 }

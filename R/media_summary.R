@@ -11,13 +11,13 @@
 #' @name media_summary
 #' @examples
 #' # Minimal info by default
-#' trakt.shows.summary("breaking-bad")
+#' shows_summary("breaking-bad")
 #' \dontrun{
 #' # More information
-#' trakt.shows.summary("breaking-bad", extended = "full")
+#' shows_summary("breaking-bad", extended = "full")
 #'
 #' # Info for multiple movies
-#' trakt.movies.summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
+#' movies_summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
 #' }
 NULL
 
@@ -30,12 +30,12 @@ NULL
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
 #' @note Handling of this result is annoying because it's always just a list, not a data.frame
-trakt.media.summary <- function(type = c("movies", "shows"), target, extended = c("min", "full")) {
+media_summary <- function(type = c("movies", "shows"), target, extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
   if (length(target) > 1) {
-    return(map_df(target, ~ trakt.media.summary(type, target = .x, extended)))
+    return(map_df(target, ~ media_summary(type, target = .x, extended)))
   }
 
   # Construct URL, make API call
@@ -86,12 +86,12 @@ trakt.media.summary <- function(type = c("movies", "shows"), target, extended = 
 
 #' @rdname media_summary
 #' @export
-trakt.movies.summary <- function(target, extended = c("min", "full")) {
-  trakt.media.summary(type = "movies", target = target, extended = extended)
+movies_summary <- function(target, extended = c("min", "full")) {
+  media_summary(type = "movies", target = target, extended = extended)
 }
 
 #' @rdname media_summary
 #' @export
-trakt.shows.summary <- function(target, extended = c("min", "full")) {
-  trakt.media.summary(type = "shows", target = target, extended = extended)
+shows_summary <- function(target, extended = c("min", "full")) {
+  media_summary(type = "shows", target = target, extended = extended)
 }
