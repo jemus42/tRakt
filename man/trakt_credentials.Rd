@@ -34,11 +34,8 @@ projects.
 Set appropriate values in your \code{~/.Renviron} like this:\preformatted{# tRakt
 trakt_username=jemus42
 trakt_client_id=12[...]f2
+trakt_client_secret=f23[...]2nkjb
 }
-}
-\note{
-Please note that no OAuth2 methods are supported yet,
-only client ID really matters.
 }
 \examples{
 \dontrun{
@@ -56,6 +53,6 @@ trakt_credentials(
 }
 \seealso{
 Other API-basics: \code{\link{trakt.search}},
-  \code{\link{trakt_get}}
+  \code{\link{trakt_get_token}}, \code{\link{trakt_get}}
 }
 \concept{API-basics}

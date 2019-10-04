@@ -15,6 +15,7 @@
 #' # tRakt
 #' trakt_username=jemus42
 #' trakt_client_id=12[...]f2
+#' trakt_client_secret=f23[...]2nkjb
 #' ```
 #'
 #' @param username `character(1)`: Explicitly set your trakt.tv username
@@ -26,8 +27,6 @@
 #' Mostly for debug purposes.
 #' @return Nothing. Only messages.
 #' @export
-#' @note Please note that no OAuth2 methods are supported yet,
-#' only client ID really matters.
 #' @family API-basics
 #' @examples
 #' \dontrun{
@@ -94,14 +93,14 @@ trakt_credentials <- function(username, client_id, silent = TRUE) {
 #'   performed and its content returned. This is useful if you are only
 #'   interested in status codes or other headers, and don't want to waste
 #'   resources/bandwidth on the response body.
+#' @param auth `logical(1) [FALSE]`: If `TRUE`, an authenticated request is made.
+#'   This requires a set client secret and manual interaction.
 #' @return The parsed ([jsonlite::fromJSON()]) content of the API response.
 #'   An empty [tibble()][tibble::tibble-package] if the response is an empty
 #'   `JSON` array.
 #' @export
-#' @importFrom httr user_agent
-#' @importFrom httr add_headers
-#' @importFrom httr HEAD
-#' @importFrom httr GET
+#' @importFrom httr user_agent config add_headers
+#' @importFrom httr HEAD GET
 #' @importFrom httr stop_for_status
 #' @importFrom httr content
 #' @importFrom jsonlite fromJSON
@@ -119,7 +118,7 @@ trakt_credentials <- function(username, client_id, silent = TRUE) {
 #' # Optionally be lazy about URL specification by dropping the hostname:
 #' trakt_get("shows/game-of-thrones")
 trakt_get <- function(url, client_id = getOption("trakt_client_id"),
-                           HEAD = FALSE) {
+                      HEAD = FALSE, auth = FALSE) {
   if (!grepl(pattern = "^https://api.trakt.tv", url)) {
     url <- build_trakt_url(url)
   }
@@ -147,7 +146,11 @@ trakt_get <- function(url, client_id = getOption("trakt_client_id"),
     return(response)
   }
 
-  response <- GET(url, headers, agent)
+  token <- NULL
+  if (auth) token <- trakt_get_token()
+
+  response <- GET(url, headers, agent, config(token = token))
+  # response <- GET(url, headers, agent, config = config(token = token))
   # Fail on HTTP error, i.e. 404 or 5xx.
   stop_for_status(response, paste0("retrieve data from ", url))
 
@@ -166,4 +169,33 @@ trakt_get <- function(url, client_id = getOption("trakt_client_id"),
   }
 
   response
+}
+
+#' Get a trakt.tv OAuth2 token
+#'
+#' This is used internally for authenticated requests.
+#' @return An OAuth2 token object. See [oauth2.0_token][httr::oauth2.0_token].
+#' @keywords internal
+#' @family API-basics
+#' @importFrom httr oauth_endpoint oauth_app oauth2.0_token user_agent
+trakt_get_token <- function() {
+  # Set up OAuth URLs
+  trakt_endpoint <- oauth_endpoint(
+    authorize = "https://trakt.tv/oauth/authorize",
+    access = "https://api.trakt.tv/oauth/token"
+  )
+
+  # Application credentials: https://trakt.tv/oauth/applications
+  app <- oauth_app(
+    appname = "trakt",
+    key = getOption("trakt_client_id"),
+    secret = Sys.getenv("trakt_client_secret"),
+    redirect_uri = "urn:ietf:wg:oauth:2.0:oob"
+  )
+
+  # 3. Get OAuth credentials
+  oauth2.0_token(
+    trakt_endpoint, app, use_oob = TRUE,
+    config_init = user_agent("https://github.com/jemus42/tRakt")
+  )
 }
