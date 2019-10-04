@@ -6,7 +6,10 @@
 \title{Search trakt.tv via text query or ID}
 \usage{
 search_query(query, type = "show", years = NULL, n_results = 1L,
-  extended = c("min", "full"))
+  extended = c("min", "full"), period = NULL, genres = NULL,
+  languages = NULL, countries = NULL, runtimes = NULL,
+  ratings = NULL, certifications = NULL, networks = NULL,
+  status = NULL)
 
 search_id(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
   type = "movie", n_results = 1L, extended = c("min", "full"))
@@ -28,6 +31,33 @@ Can also be an integer vector of length two which will be coerced appropriately.
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
+
+\item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
+are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
+
+\item{genres}{\code{character(n)}: Genre  slug(s). See \code{\link{genres}} for a table of genres.
+Multiple values are allowed and will be concatenated.}
+
+\item{languages}{\code{character(n)}: Two-digit language code(s). Also see \code{\link{languages}} for
+table of available languages.}
+
+\item{countries}{\code{character(n)}: Two-character country code(s). See \code{\link{countries}}.}
+
+\item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}. Can also
+be an integer vector of length two which will be coerced appropriately.}
+
+\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}. Can also be
+an integer vector of length two which will be coerced appropriately.}
+
+\item{certifications}{\code{character(n)}: Certification(s) like \code{pg-13}.
+Multiple values are allowed. Use \code{\link{certifications}} for reference. Note that there
+are different certifications for shows and movies.}
+
+\item{networks}{\code{character(n)}: (Shows only) Network name like \code{HBO}. See \code{\link{networks}}
+for a list of known networks.}
+
+\item{status}{\code{character(n)}: (Shows only) The status of the shows. One of \code{returning series},
+\code{in production}, \code{planned}, \code{canceled}, or \code{ended}}
 
 \item{id}{\code{character(1)}: The id used for the search, e.g. \code{14701} for
 a \code{Trakt ID}.}

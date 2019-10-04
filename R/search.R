@@ -47,7 +47,12 @@
 #' }
 search_query <- function(query, type = "show",
                          years = NULL, n_results = 1L,
-                         extended = c("min", "full")) {
+                         extended = c("min", "full"),
+                         period = NULL,
+                         genres = NULL, languages = NULL,
+                         countries = NULL, runtimes = NULL,
+                         ratings = NULL, certifications = NULL,
+                         networks = NULL, status = NULL) {
   ok_types <- c("movie", "show", "episode", "person", "list")
   type <- match.arg(type, choices = ok_types, several.ok = TRUE)
   extended <- match.arg(extended)
@@ -63,7 +68,9 @@ search_query <- function(query, type = "show",
   # Construct URL, make API call
   url <- build_trakt_url("search", type,
     query = query, years = years,
-    extended = extended
+    extended = extended, genres = genres, languages = languages,
+    countries = countries, runtimes = runtimes, ratings = ratings,
+    certifications = certifications, networks = networks, status = status
   )
   response <- trakt_get(url = url)
 
@@ -78,8 +85,8 @@ search_query <- function(query, type = "show",
 #' @rdname search_query
 #' @export
 search_id <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
-                              type = "movie",
-                              n_results = 1L, extended = c("min", "full")) {
+                      type = "movie",
+                      n_results = 1L, extended = c("min", "full")) {
   id_type <- match.arg(id_type)
   ok_types <- c("movie", "show", "episode", "person", "list")
   type <- match.arg(type, choices = ok_types, several.ok = TRUE)
