@@ -1,5 +1,4 @@
 test_that("episodes_summary works", {
-
   episode_summary_names_min <- c(
     "id", "season", "episode", "title", "trakt", "tvdb", "imdb", "tmdb"
   )
@@ -27,5 +26,4 @@ test_that("episodes_summary works", {
   expect_equal(nrow(res), 2)
   expect_equal(res$season, c(1, 1))
   expect_equal(res$episode, c(1, 2))
-
 })

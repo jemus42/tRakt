@@ -18,8 +18,7 @@
 #' # Get just this one episode with its ratings, votes, etc.
 #' episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
 episodes_summary <- function(id, season = 1L, episode = 1L,
-                            extended = c("min", "full")) {
-
+                             extended = c("min", "full")) {
   if (length(id) > 1) {
     return(map_df(id, ~ episodes_summary(.x, season, episode, extended = extended)))
   }
@@ -36,7 +35,8 @@ episodes_summary <- function(id, season = 1L, episode = 1L,
 
   # Construct URL, make API call
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "episodes", episode, extended = extended
+    "shows", id, "seasons", season, "episodes", episode,
+    extended = extended
   )
   response <- trakt_get(url = url)
 

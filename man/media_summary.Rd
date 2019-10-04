@@ -34,7 +34,8 @@ These functions wrap the "single item" API methods:
 }
 }
 \note{
-These functions return the same amount of information as \link{trakt.search}.
+These functions return the same amount of information as
+\link[=search_query]{search_*}.
 }
 \examples{
 # Minimal info by default

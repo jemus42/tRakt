@@ -24,3 +24,4 @@
 ^api-methods\.yml$
 ^\.lintr$
 ^\.pre-commit-config\.yaml$
+^README_cache$

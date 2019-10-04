@@ -33,9 +33,9 @@
 #' )
 #' }
 user_history <- function(user = getOption("trakt_username"),
-                               type = c("shows", "movies"),
-                               limit = 10L, start_at = NULL, end_at = NULL,
-                               extended = c("min", "full")) {
+                         type = c("shows", "movies"),
+                         limit = 10L, start_at = NULL, end_at = NULL,
+                         extended = c("min", "full")) {
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)

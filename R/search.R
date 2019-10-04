@@ -56,7 +56,6 @@ search_query <- function(query, type = "show",
                          countries = NULL, runtimes = NULL,
                          ratings = NULL, certifications = NULL,
                          networks = NULL, status = NULL) {
-
   ok_types <- c("movie", "show", "episode", "person", "list")
   type <- match.arg(type, choices = ok_types, several.ok = TRUE)
   extended <- match.arg(extended)

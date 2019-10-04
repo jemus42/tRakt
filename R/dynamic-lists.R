@@ -100,13 +100,12 @@ trakt_auto_lists <- function(list_type = c(
 #' movies_popular(languages = "de", years = c(2000, 2010))
 #' }
 movies_popular <- function(limit = 10,
-                          extended = c("min", "full"),
-                          query = NULL, years = NULL,
-                          genres = NULL, languages = NULL,
-                          countries = NULL, runtimes = NULL,
-                          ratings = NULL, certifications = NULL,
-                          networks = NULL, status = NULL) {
-
+                           extended = c("min", "full"),
+                           query = NULL, years = NULL,
+                           genres = NULL, languages = NULL,
+                           countries = NULL, runtimes = NULL,
+                           ratings = NULL, certifications = NULL,
+                           networks = NULL, status = NULL) {
   extended <- match.arg(extended)
 
   trakt_auto_lists(
@@ -122,13 +121,12 @@ movies_popular <- function(limit = 10,
 #' @rdname popular_media
 #' @export
 shows_popular <- function(limit = 10,
-                           extended = c("min", "full"),
-                           query = NULL, years = NULL,
-                           genres = NULL, languages = NULL,
-                           countries = NULL, runtimes = NULL,
-                           ratings = NULL, certifications = NULL,
-                           networks = NULL, status = NULL) {
-
+                          extended = c("min", "full"),
+                          query = NULL, years = NULL,
+                          genres = NULL, languages = NULL,
+                          countries = NULL, runtimes = NULL,
+                          ratings = NULL, certifications = NULL,
+                          networks = NULL, status = NULL) {
   extended <- match.arg(extended)
 
   trakt_auto_lists(
@@ -153,13 +151,12 @@ shows_popular <- function(limit = 10,
 #' @export
 #' @family dynamic lists
 movies_trending <- function(limit = 10,
-                           extended = c("min", "full"),
-                           query = NULL, years = NULL,
-                           genres = NULL, languages = NULL,
-                           countries = NULL, runtimes = NULL,
-                           ratings = NULL, certifications = NULL,
-                           networks = NULL, status = NULL) {
-
+                            extended = c("min", "full"),
+                            query = NULL, years = NULL,
+                            genres = NULL, languages = NULL,
+                            countries = NULL, runtimes = NULL,
+                            ratings = NULL, certifications = NULL,
+                            networks = NULL, status = NULL) {
   extended <- match.arg(extended)
 
   trakt_auto_lists(
@@ -175,13 +172,12 @@ movies_trending <- function(limit = 10,
 #' @rdname trending_media
 #' @export
 shows_trending <- function(limit = 10,
-                            extended = c("min", "full"),
-                            query = NULL, years = NULL,
-                            genres = NULL, languages = NULL,
-                            countries = NULL, runtimes = NULL,
-                            ratings = NULL, certifications = NULL,
-                            networks = NULL, status = NULL) {
-
+                           extended = c("min", "full"),
+                           query = NULL, years = NULL,
+                           genres = NULL, languages = NULL,
+                           countries = NULL, runtimes = NULL,
+                           ratings = NULL, certifications = NULL,
+                           networks = NULL, status = NULL) {
   extended <- match.arg(extended)
 
   trakt_auto_lists(
@@ -206,13 +202,12 @@ shows_trending <- function(limit = 10,
 #' @export
 #' @family dynamic lists
 movies_anticipated <- function(limit = 10,
-                              extended = c("min", "full"),
-                              query = NULL, years = NULL,
-                              genres = NULL, languages = NULL,
-                              countries = NULL, runtimes = NULL,
-                              ratings = NULL, certifications = NULL,
-                              networks = NULL, status = NULL) {
-
+                               extended = c("min", "full"),
+                               query = NULL, years = NULL,
+                               genres = NULL, languages = NULL,
+                               countries = NULL, runtimes = NULL,
+                               ratings = NULL, certifications = NULL,
+                               networks = NULL, status = NULL) {
   extended <- match.arg(extended)
 
   trakt_auto_lists(
@@ -234,13 +229,12 @@ movies_anticipated <- function(limit = 10,
 #' shows_anticipated(limit = 15, networks = "Netflix", years = current_year)
 #' }
 shows_anticipated <- function(limit = 10,
-                               extended = c("min", "full"),
-                               query = NULL, years = NULL,
-                               genres = NULL, languages = NULL,
-                               countries = NULL, runtimes = NULL,
-                               ratings = NULL, certifications = NULL,
-                               networks = NULL, status = NULL) {
-
+                              extended = c("min", "full"),
+                              query = NULL, years = NULL,
+                              genres = NULL, languages = NULL,
+                              countries = NULL, runtimes = NULL,
+                              ratings = NULL, certifications = NULL,
+                              networks = NULL, status = NULL) {
   extended <- match.arg(extended)
 
   trakt_auto_lists(
@@ -265,13 +259,12 @@ shows_anticipated <- function(limit = 10,
 #' @export
 #' @family dynamic lists
 movies_played <- function(limit = 10, extended = c("min", "full"),
-                         period = c("weekly", "monthly", "yearly", "all"),
-                         query = NULL, years = NULL,
-                         genres = NULL, languages = NULL,
-                         countries = NULL, runtimes = NULL,
-                         ratings = NULL, certifications = NULL,
-                         networks = NULL, status = NULL) {
-
+                          period = c("weekly", "monthly", "yearly", "all"),
+                          query = NULL, years = NULL,
+                          genres = NULL, languages = NULL,
+                          countries = NULL, runtimes = NULL,
+                          ratings = NULL, certifications = NULL,
+                          networks = NULL, status = NULL) {
   extended <- match.arg(extended)
   period <- match.arg(period)
 
@@ -289,13 +282,12 @@ movies_played <- function(limit = 10, extended = c("min", "full"),
 #' @rdname played_media
 #' @export
 shows_played <- function(limit = 10, extended = c("min", "full"),
-                          period = c("weekly", "monthly", "yearly", "all"),
-                          query = NULL, years = NULL,
-                          genres = NULL, languages = NULL,
-                          countries = NULL, runtimes = NULL,
-                          ratings = NULL, certifications = NULL,
-                          networks = NULL, status = NULL) {
-
+                         period = c("weekly", "monthly", "yearly", "all"),
+                         query = NULL, years = NULL,
+                         genres = NULL, languages = NULL,
+                         countries = NULL, runtimes = NULL,
+                         ratings = NULL, certifications = NULL,
+                         networks = NULL, status = NULL) {
   extended <- match.arg(extended)
   period <- match.arg(period)
 
@@ -322,13 +314,12 @@ shows_played <- function(limit = 10, extended = c("min", "full"),
 #' @export
 #' @family dynamic lists
 movies_watched <- function(limit = 10, extended = c("min", "full"),
-                          period = c("weekly", "monthly", "yearly", "all"),
-                          query = NULL, years = NULL,
-                          genres = NULL, languages = NULL,
-                          countries = NULL, runtimes = NULL,
-                          ratings = NULL, certifications = NULL,
-                          networks = NULL, status = NULL) {
-
+                           period = c("weekly", "monthly", "yearly", "all"),
+                           query = NULL, years = NULL,
+                           genres = NULL, languages = NULL,
+                           countries = NULL, runtimes = NULL,
+                           ratings = NULL, certifications = NULL,
+                           networks = NULL, status = NULL) {
   extended <- match.arg(extended)
   period <- match.arg(period)
 
@@ -346,13 +337,12 @@ movies_watched <- function(limit = 10, extended = c("min", "full"),
 #' @rdname watched_media
 #' @export
 shows_watched <- function(limit = 10, extended = c("min", "full"),
-                           period = c("weekly", "monthly", "yearly", "all"),
-                           query = NULL, years = NULL,
-                           genres = NULL, languages = NULL,
-                           countries = NULL, runtimes = NULL,
-                           ratings = NULL, certifications = NULL,
-                           networks = NULL, status = NULL) {
-
+                          period = c("weekly", "monthly", "yearly", "all"),
+                          query = NULL, years = NULL,
+                          genres = NULL, languages = NULL,
+                          countries = NULL, runtimes = NULL,
+                          ratings = NULL, certifications = NULL,
+                          networks = NULL, status = NULL) {
   extended <- match.arg(extended)
   period <- match.arg(period)
 
@@ -379,12 +369,12 @@ shows_watched <- function(limit = 10, extended = c("min", "full"),
 #' @export
 #' @family dynamic lists
 movies_collected <- function(limit = 10, extended = c("min", "full"),
-                            period = c("weekly", "monthly", "yearly", "all"),
-                            query = NULL, years = NULL,
-                            genres = NULL, languages = NULL,
-                            countries = NULL, runtimes = NULL,
-                            ratings = NULL, certifications = NULL,
-                            networks = NULL, status = NULL) {
+                             period = c("weekly", "monthly", "yearly", "all"),
+                             query = NULL, years = NULL,
+                             genres = NULL, languages = NULL,
+                             countries = NULL, runtimes = NULL,
+                             ratings = NULL, certifications = NULL,
+                             networks = NULL, status = NULL) {
   extended <- match.arg(extended)
   period <- match.arg(period)
 
@@ -402,13 +392,12 @@ movies_collected <- function(limit = 10, extended = c("min", "full"),
 #' @rdname collected_media
 #' @export
 shows_collected <- function(limit = 10, extended = c("min", "full"),
-                             period = c("weekly", "monthly", "yearly", "all"),
-                             query = NULL, years = NULL,
-                             genres = NULL, languages = NULL,
-                             countries = NULL, runtimes = NULL,
-                             ratings = NULL, certifications = NULL,
-                             networks = NULL, status = NULL) {
-
+                            period = c("weekly", "monthly", "yearly", "all"),
+                            query = NULL, years = NULL,
+                            genres = NULL, languages = NULL,
+                            countries = NULL, runtimes = NULL,
+                            ratings = NULL, certifications = NULL,
+                            networks = NULL, status = NULL) {
   extended <- match.arg(extended)
   period <- match.arg(period)
 
@@ -436,8 +425,7 @@ shows_collected <- function(limit = 10, extended = c("min", "full"),
 #' @family dynamic lists
 #' @note `shows_updates` and `movies_updates` do not support filters.
 movies_updates <- function(limit = 10, extended = c("min", "full"),
-                          start_date = Sys.Date() - 1) {
-
+                           start_date = Sys.Date() - 1) {
   extended <- match.arg(extended)
   start_date <- as.character(as.Date(start_date))
 
@@ -456,7 +444,6 @@ movies_updates <- function(limit = 10, extended = c("min", "full"),
 #' @export
 shows_updates <- function(limit = 10, extended = c("min", "full"),
                           start_date = Sys.Date() - 1) {
-
   extended <- match.arg(extended)
   start_date <- as.character(as.Date(start_date))
 

@@ -24,8 +24,8 @@ NULL
 #' @keywords internal
 #' @noRd
 media_related <- function(id, type = c("shows", "movies"),
-                                limit = 10L,
-                                extended = c("min", "full")) {
+                          limit = 10L,
+                          extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
@@ -64,15 +64,15 @@ media_related <- function(id, type = c("shows", "movies"),
 #' @rdname media_related
 #' @export
 movies_related <- function(id,
-                                 limit = 10L,
-                                 extended = c("min", "full")) {
+                           limit = 10L,
+                           extended = c("min", "full")) {
   media_related(id, type = "movies", extended = extended, limit = limit)
 }
 
 #' @rdname media_related
 #' @export
 shows_related <- function(id,
-                                limit = 10L,
-                                extended = c("min", "full")) {
+                          limit = 10L,
+                          extended = c("min", "full")) {
   media_related(id, type = "shows", extended = extended, limit = limit)
 }

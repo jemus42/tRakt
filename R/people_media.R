@@ -33,7 +33,7 @@ NULL
 #' @importFrom dplyr select
 #' @importFrom purrr is_empty
 people_media <- function(type = c("shows", "movies"), id,
-                               extended = c("min", "full")) {
+                         extended = c("min", "full")) {
   extended <- match.arg(extended)
   type <- match.arg(type)
 
@@ -85,4 +85,3 @@ people_movies <- function(id, extended = c("min", "full")) {
 people_shows <- function(id, extended = c("min", "full")) {
   people_media(type = "shows", id = id, extended = extended)
 }
-

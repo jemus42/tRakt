@@ -31,8 +31,8 @@
 #' user_collection(user = "sean", type = "movies")
 #' }
 user_collection <- function(user = getOption("trakt_username"),
-                                  type = c("shows", "movies"),
-                                  unnest_episodes = FALSE) {
+                            type = c("shows", "movies"),
+                            unnest_episodes = FALSE) {
   check_username(user)
   type <- match.arg(type)
 

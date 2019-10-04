@@ -18,8 +18,8 @@
 #' user_watchlist(user = "sean")
 #' }
 user_watchlist <- function(user = getOption("trakt_username"),
-                                 type = c("movies", "shows"),
-                                 extended = c("min", "full")) {
+                           type = c("movies", "shows"),
+                           extended = c("min", "full")) {
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)

@@ -24,8 +24,8 @@
 #' user_watched(user = "sean", noseasons = TRUE)
 #' }
 user_watched <- function(user = getOption("trakt_username"),
-                               type = c("shows", "movies"),
-                               noseasons = TRUE) {
+                         type = c("shows", "movies"),
+                         noseasons = TRUE) {
   check_username(user)
   type <- match.arg(type)
   extended <- if (type == "shows" & noseasons) "noseasons" else ""

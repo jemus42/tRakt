@@ -35,7 +35,7 @@ NULL
 #' @importFrom tibble as_tibble
 #' @importFrom rlang has_name
 media_people <- function(type = c("shows", "movies"), id,
-                               extended = c("min", "full")) {
+                         extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
