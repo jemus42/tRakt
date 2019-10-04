@@ -1,8 +1,5 @@
 #' Get a user's collected shows or movies
 #'
-#' `trakt.user.collection` retrieves a user's collected shows or movies.
-#' It does not use OAuth2, so you can only get data for a user with a
-#' public profile.
 #'
 #' @details
 #' This function wraps the API method
@@ -31,9 +28,9 @@
 #' @importFrom purrr is_empty
 #' @examples
 #' \dontrun{
-#' trakt.user.collection(user = "sean", type = "movies")
+#' user_collection(user = "sean", type = "movies")
 #' }
-trakt.user.collection <- function(user = getOption("trakt_username"),
+user_collection <- function(user = getOption("trakt_username"),
                                   type = c("shows", "movies"),
                                   unnest_episodes = FALSE) {
   check_username(user)
@@ -41,7 +38,7 @@ trakt.user.collection <- function(user = getOption("trakt_username"),
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map_df(user, ~ trakt.user.collection(user = .x, type, unnest_episodes),
+    return(map_df(user, ~ user_collection(user = .x, type, unnest_episodes),
       .id = "user"
     ))
   }

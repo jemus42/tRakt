@@ -2,6 +2,8 @@
  
 ## The Renamingering
 
+### Movies and Shows
+
 - `trakt.search` -> `search_query`
 - `trakt.search.byid` -> `search_id`
 - `trakt.popular`
@@ -25,6 +27,19 @@
 - `trakt.updates`
   - -> `movies_updates`
   - -> `shows_updates`
+
+### Users
+
+- `trakt.user.network`
+  - -> `user_followers`
+  - -> `user_following`
+  - -> `user_friends`
+- `trakt.user.collection` -> `user_collection`
+- `trakt.user.history` -> `user_history`
+- `trakt.user.ratings` -> `user_ratings`
+- `trakt.user.stats` -> `user_stats`
+- `trakt.user.watched` -> `user_watched`
+- `trakt.user.watchlist` -> `user_watchlist`
 
 
 # tRakt 0.15.0

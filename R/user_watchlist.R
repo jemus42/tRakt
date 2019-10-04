@@ -15,9 +15,9 @@
 #' @examples
 #' \dontrun{
 #' # Defaults to movie watchlist and minimal info
-#' trakt.user.watchlist(user = "sean")
+#' user_watchlist(user = "sean")
 #' }
-trakt.user.watchlist <- function(user = getOption("trakt_username"),
+user_watchlist <- function(user = getOption("trakt_username"),
                                  type = c("movies", "shows"),
                                  extended = c("min", "full")) {
   check_username(user)
@@ -26,7 +26,7 @@ trakt.user.watchlist <- function(user = getOption("trakt_username"),
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map_df(user, ~ trakt.user.watchlist(user = .x, type, extended), .id = "user"))
+    return(map_df(user, ~ user_watchlist(user = .x, type, extended), .id = "user"))
   }
 
   # Construct URL, make API call

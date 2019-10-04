@@ -1,8 +1,6 @@
 #' Get a user's watched shows or movies
 #'
-#' `trakt.user.watched` retrieves a user's watched shows or movies.
-#' It does not use OAuth2, so you can only get data for a user with a
-#' **public profile**.
+#' For private users, an [authenticated request][trakt_credentials] is required.
 #'
 #' @details
 #' This function wraps the API method
@@ -23,9 +21,9 @@
 #' @examples
 #' \dontrun{
 #' # Use noseasons = TRUE to avoid receiving detailed season/episode data
-#' trakt.user.watched(user = "sean", noseasons = TRUE)
+#' user_watched(user = "sean", noseasons = TRUE)
 #' }
-trakt.user.watched <- function(user = getOption("trakt_username"),
+user_watched <- function(user = getOption("trakt_username"),
                                type = c("shows", "movies"),
                                noseasons = TRUE) {
   check_username(user)
@@ -34,7 +32,7 @@ trakt.user.watched <- function(user = getOption("trakt_username"),
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map_df(user, ~ trakt.user.watched(user = .x, type, noseasons), .id = "user"))
+    return(map_df(user, ~ user_watched(user = .x, type, noseasons), .id = "user"))
   }
 
   # Construct URL, make API call

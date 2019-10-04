@@ -19,14 +19,14 @@
 #' @family user data
 #' @examples
 #' \dontrun{
-#' trakt.user.stats(user = "sean")
+#' user_stats(user = "sean")
 #' }
-trakt.user.stats <- function(user = getOption("trakt_username")) {
+user_stats <- function(user = getOption("trakt_username")) {
   check_username(user)
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map(user, ~ trakt.user.stats(user = .x)))
+    return(map(user, ~ user_stats(user = .x)))
   }
 
   # Construct URL, make API call

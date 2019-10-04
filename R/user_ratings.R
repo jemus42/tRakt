@@ -14,25 +14,25 @@
 #' @importFrom purrr set_names
 #' @examples
 #' \dontrun{
-#' trakt.user.ratings(user = "jemus42")
-#' trakt.user.ratings(user = "sean", type = "movies")
+#' user_ratings(user = "jemus42")
+#' user_ratings(user = "sean", type = "movies")
 #' }
-trakt.user.ratings <- function(user = getOption("trakt_username"),
-                               type = c("movies", "seasons", "shows", "episodes"),
-                               rating = NULL, extended = c("min", "full")) {
+user_ratings <- function(user = getOption("trakt_username"),
+                         type = c("movies", "seasons", "shows", "episodes"),
+                         rating = NULL, extended = c("min", "full")) {
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)
 
   if (!is.null(rating)) {
     if (!(as.integer(rating) %in% 1:10)) {
-      stop("rating must be a whole number between 1 and 10")
+      stop("rating must be an integer between 1 and 10")
     }
   }
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map_df(user, ~ trakt.user.ratings(user = .x, type, rating, extended), .id = "user"))
+    return(map_df(user, ~ user_ratings(user = .x, type, rating, extended), .id = "user"))
   }
 
   # Construct URL, make API call
@@ -76,5 +76,5 @@ trakt.user.ratings <- function(user = getOption("trakt_username"),
 
     response$show <- unpack_show(response$show)
   }
-  tibble::as_tibble(response)
+  fix_tibble_response(response)
 }

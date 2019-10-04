@@ -270,7 +270,7 @@ users:
   collection:
     url: https://trakt.docs.apiary.io/#reference/users/collection/get-collection
     endpoint: users/:id/collection/:type
-    implementation: trakt.user.collection()
+    implementation: user_collection()
   comments:
     url: https://trakt.docs.apiary.io/#reference/users/comments/get-comments
     endpoint: users/:id/comments/:comment_type/:type?include_replies=
@@ -289,35 +289,35 @@ users:
   followers:
     url: https://trakt.docs.apiary.io/#reference/users/followers/get-followers
     endpoint: users/:id/followers
-    implementation: trakt.user.network()
+    implementation: user_followers()
   following:
     url: https://trakt.docs.apiary.io/#reference/users/following/get-following
     endpoint: users/:id/following
-    implementation: trakt.user.network()
+    implementation: user_following()
   friends:
     url: https://trakt.docs.apiary.io/#reference/users/friends/get-friends
     endpoint: users/:id/friends
-    implementation: trakt.user.network()
+    implementation: user_friends()
   history:
     url: https://trakt.docs.apiary.io/#reference/users/history/get-watched-history
     endpoint: users/:id/history/:type/:item_id?start_at=&end_at=
-    implementation: trakt.user.history()
+    implementation: user_history()
   ratings:
     url: https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings
     endpoint: users/:id/ratings/:type/:rating
-    implementation: trakt.user.ratings()
+    implementation: user_ratings()
   watchlist:
     url: https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist
     endpoint: users/:id/watchlist/:type
-    implementation: trakt.user.watchlist()
+    implementation: user_watchlist()
   watched:
     url: https://trakt.docs.apiary.io/#reference/users/watched/get-watched
     endpoint: users/:id/watched/:type
-    implementation: trakt.user.watched()
+    implementation: user_watched()
   stats:
     url: https://trakt.docs.apiary.io/#reference/users/stats/get-stats
     endpoint: users/:id/stats
-    implementation: trakt.user.stats()
+    implementation: user_stats()
 
 
 # These are just cached lists

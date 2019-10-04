@@ -23,10 +23,12 @@ reference:
   - title: Shows & movies that are popular, trending, anticipated, ...
     contents:
       - ends_with("(popular|trending|anticipated|watched|played|collected|updated)")
+      - -starts_with("user_")
   - title: Simple summary data
     contents:
       - ends_with("summary")
       - -trakt.seasons.summary
+      - -starts_with("user_")
   - title: Season and episode data
     contents:
       - trakt.seasons.summary
@@ -38,17 +40,17 @@ reference:
   - title: Media ratings
     contents:
       - ends_with(".ratings")
-      - -contains("user")
+      - -starts_with("user_")
   - title: Media stats
     contents:
       - ends_with(".stats")
-      - -contains("user")
+      - -starts_with("user_")
   - title: Related media
     contents:
       - ends_with(".related")
   - title: User-specific data
     contents:
-      - starts_with("trakt.user")
+      - starts_with("user_")
   - title: Data relating to people
     contents:
       - contains("people")

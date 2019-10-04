@@ -27,12 +27,12 @@
 #' @examples
 #' \dontrun{
 #' # Shows user "jemus42" watched around christmas 2016
-#' trakt.user.history(
+#' user_history(
 #'   user = "jemus42", type = "shows", limit = 5,
 #'   start_at = "2015-12-24", end_at = "2015-12-28"
 #' )
 #' }
-trakt.user.history <- function(user = getOption("trakt_username"),
+user_history <- function(user = getOption("trakt_username"),
                                type = c("shows", "movies"),
                                limit = 10L, start_at = NULL, end_at = NULL,
                                extended = c("min", "full")) {
@@ -45,7 +45,7 @@ trakt.user.history <- function(user = getOption("trakt_username"),
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map_df(user, ~ trakt.user.history(user = .x, type, limit, start_at, end_at, extended),
+    return(map_df(user, ~ user_history(user = .x, type, limit, start_at, end_at, extended),
       .id = "user"
     ))
   }
