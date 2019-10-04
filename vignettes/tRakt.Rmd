@@ -39,11 +39,9 @@ library(tRakt)
 library(dplyr) # For later
 ```
 
-That's all you need to to for basic things. If you're planning a larger project with lots and lots of data retrieval, you might want to create your own API app [on trakt.tv](https://trakt.tv/oauth/applications) and use `trakt_credentials` to set your `client id`.
+That's all you need to to for basic things. If you're planning a larger project with lots and lots of data retrieval, you might want to create your own API app [on trakt.tv](https://trakt.tv/oauth/applications) and use `trakt_credentials()` to set your `client id`.
 
 ### 2. Find things
-
-#### Via direct search
 
 Using a text query:
 
@@ -57,7 +55,7 @@ Search by explicit ID:
 trakt.search.byid("121361", id_type = "tvdb", type = "show")
 ```
 
-#### Via whatever's popular(ish)
+Or via whatever's popular(ish):
 
 Another scenario would be that you're not necessarily interested in some specific media item, but rather a collection of items that fulfill certain criteria, like being popular on trakt.tv and maybe being from a specific period or genre and whatnot. While you can also filter `trakt.search` by other criteria, it's maybe more useful to filter, let's say, the most watched movies of the past week by the release year of the movie.
 
