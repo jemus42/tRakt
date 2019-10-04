@@ -34,13 +34,13 @@ NULL
 #' @importFrom dplyr select
 #' @importFrom tibble as_tibble
 #' @importFrom rlang has_name
-media_people <- function(type = c("shows", "movies"), target,
+media_people <- function(type = c("shows", "movies"), id,
                                extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, target, "people", extended = extended)
+  url <- build_trakt_url(type, id, "people", extended = extended)
   response <- trakt_get(url = url)
 
   if (is_empty(response)) {
@@ -89,12 +89,12 @@ media_people <- function(type = c("shows", "movies"), target,
 
 #' @rdname media_people
 #' @export
-shows_people <- function(target, extended = c("min", "full")) {
-  media_people(type = "shows", target = target, extended = extended)
+shows_people <- function(id, extended = c("min", "full")) {
+  media_people(type = "shows", id = id, extended = extended)
 }
 
 #' @rdname media_people
 #' @export
-movies_people <- function(target, extended = c("min", "full")) {
-  media_people(type = "movies", target = target, extended = extended)
+movies_people <- function(id, extended = c("min", "full")) {
+  media_people(type = "movies", id = id, extended = extended)
 }

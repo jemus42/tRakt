@@ -92,8 +92,9 @@ shows_anticipated(limit = 15, networks = "Netflix", years = current_year)
 }
 }
 \seealso{
-Other Dynamic lists: \code{\link{played_media}},
-  \code{\link{popular_media}},
-  \code{\link{trending_media}}, \code{\link{watched_media}}
+Other dynamic lists: \code{\link{collected_media}},
+  \code{\link{played_media}}, \code{\link{popular_media}},
+  \code{\link{trending_media}},
+  \code{\link{updated_media}}, \code{\link{watched_media}}
 }
-\concept{Dynamic lists}
+\concept{dynamic lists}

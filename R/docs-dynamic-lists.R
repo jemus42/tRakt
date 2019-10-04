@@ -7,11 +7,6 @@
 #' an items is part of while not being released yet.
 #'
 #' @name dynamic_lists
-#' @param start_date `character(1)`: A date in the past from which
-#'   on to count updates. If no date is supplied, the default is to
-#'   use yesterday relative to the current date. Value must either
-#'   be standard `YYYY-MM-DD` format or an object of class [Date][base::Dates],
-#'   which will then be coerced via [as.character()][base::as.character].
 #' @return A [tibble()][tibble::tibble-package].
 #'
 #' @seealso [search_filters], for more information on search filters.

@@ -25,20 +25,20 @@ test_that("user_stats works", {
 test_that("media_stats does things", {
   skip_on_cran()
 
-  shows_stats(target = "futurama") %>%
+  shows_stats(id = "futurama") %>%
     expect_is("tbl") %>%
     expect_length(9) %>%
     nrow() %>%
     expect_equal(1)
 
 
-  stats_mov <- movies_stats(target = "deadpool-2016") %>%
+  stats_mov <- movies_stats(id = "deadpool-2016") %>%
     expect_is("tbl") %>%
     expect_length(8) %>%
     nrow() %>%
     expect_equal(1)
 
-  stats_multi <- shows_stats(target = c("futurama", "breaking-bad"))
+  stats_multi <- shows_stats(id = c("futurama", "breaking-bad"))
   expect_equal(nrow(stats_multi), 2)
 })
 

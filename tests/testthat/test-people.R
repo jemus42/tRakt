@@ -3,10 +3,10 @@ context("People methods")
 test_that("people_summary works", {
   skip_on_cran()
 
-  target <- "bryan-cranston"
+  id <- "bryan-cranston"
 
-  people_min <- people_summary(target = target, extended = "min")
-  people_max <- people_summary(target = target, extended = "full")
+  people_min <- people_summary(id = id, extended = "min")
+  people_max <- people_summary(id = id, extended = "full")
 
   expect_is(people_min, "tbl")
   expect_equal(nrow(people_min), 1)
@@ -17,28 +17,28 @@ test_that("people_summary works", {
 
   expect_identical(
     rbind(
-      people_summary(target = target),
-      people_summary(target = target)
+      people_summary(id = id),
+      people_summary(id = id)
     ),
-    people_summary(target = c(target, target))
+    people_summary(id = c(id, id))
   )
 })
 
 test_that("people_media works", {
   skip_on_cran()
 
-  target <- "bryan-cranston"
+  id <- "bryan-cranston"
 
-  mov_min <- people_movies(target = target, extended = "min")
-  mov_max <- people_movies(target = target, extended = "full")
+  mov_min <- people_movies(id = id, extended = "min")
+  mov_max <- people_movies(id = id, extended = "full")
 
   expect_is(mov_min, "list")
   expect_named(mov_min, c("cast", "crew"))
   expect_is(mov_min$cast, "tbl")
   expect_is(mov_min$crew, "tbl")
 
-  sho_min <- people_shows(target = target, extended = "min")
-  sho_max <- people_shows(target = target, extended = "full")
+  sho_min <- people_shows(id = id, extended = "min")
+  sho_max <- people_shows(id = id, extended = "full")
 
   expect_is(sho_min, "list")
   expect_named(sho_min, c("cast", "crew"))
@@ -50,11 +50,11 @@ test_that("people_media works", {
 test_that("media_people works", {
   skip_on_cran()
 
-  target_mov <- "inception-2010"
-  target_sho <- "futurama"
+  id_mov <- "inception-2010"
+  id_sho <- "futurama"
 
-  show_people <- shows_people(target = target_sho)
-  movie_people <- movies_people(target = target_mov)
+  show_people <- shows_people(id = id_sho)
+  movie_people <- movies_people(id = id_mov)
 
   expect_is(show_people, "list")
   expect_is(movie_people, "list")

@@ -30,16 +30,16 @@ NULL
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
 #' @note Handling of this result is annoying because it's always just a list, not a data.frame
-media_summary <- function(type = c("movies", "shows"), target, extended = c("min", "full")) {
+media_summary <- function(type = c("movies", "shows"), id, extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
-  if (length(target) > 1) {
-    return(map_df(target, ~ media_summary(type, target = .x, extended)))
+  if (length(id) > 1) {
+    return(map_df(id, ~ media_summary(type, id = .x, extended)))
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, target, extended = extended)
+  url <- build_trakt_url(type, id, extended = extended)
   response <- trakt_get(url = url)
 
   # All variants have this in common
@@ -86,12 +86,12 @@ media_summary <- function(type = c("movies", "shows"), target, extended = c("min
 
 #' @rdname media_summary
 #' @export
-movies_summary <- function(target, extended = c("min", "full")) {
-  media_summary(type = "movies", target = target, extended = extended)
+movies_summary <- function(id, extended = c("min", "full")) {
+  media_summary(type = "movies", id = id, extended = extended)
 }
 
 #' @rdname media_summary
 #' @export
-shows_summary <- function(target, extended = c("min", "full")) {
-  media_summary(type = "shows", target = target, extended = extended)
+shows_summary <- function(id, extended = c("min", "full")) {
+  media_summary(type = "shows", id = id, extended = extended)
 }

@@ -18,15 +18,15 @@
 #'
 #' # Multiple people
 #' people_summary(c("kit-harington", "emilia-clarke"))
-people_summary <- function(target, extended = c("min", "full")) {
+people_summary <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
-  if (length(target) > 1) {
-    return(map_df(target, ~ people_summary(.x, extended)))
+  if (length(id) > 1) {
+    return(map_df(id, ~ people_summary(.x, extended)))
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url("people", target, extended = extended)
+  url <- build_trakt_url("people", id, extended = extended)
   response <- trakt_get(url = url)
 
   # Substitute NULLs with explicit NAs and flatten IDs

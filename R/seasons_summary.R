@@ -31,14 +31,14 @@
 #' # a list-column containing all episode data
 #' seasons_summary("utopia", extended = "full", episodes = TRUE)
 #' }
-seasons_summary <- function(target, extended = c("min", "full"), episodes = FALSE,
+seasons_summary <- function(id, extended = c("min", "full"), episodes = FALSE,
                             drop_specials = TRUE, drop_unaired = TRUE) {
   extended <- match.arg(extended)
 
-  if (length(target) > 1) {
-    response <- map_df(target, function(t) {
+  if (length(id) > 1) {
+    response <- map_df(id, function(t) {
       seasons_summary(
-        target = t, extended = extended, episodes = episodes,
+        id = t, extended = extended, episodes = episodes,
         drop_specials = drop_specials, drop_unaired = drop_unaired
       )
     })
@@ -50,7 +50,7 @@ seasons_summary <- function(target, extended = c("min", "full"), episodes = FALS
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url("shows", target, "seasons", extended = extended)
+  url <- build_trakt_url("shows", id, "seasons", extended = extended)
   response <- trakt_get(url = url)
 
   # Data cleanup

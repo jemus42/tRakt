@@ -23,18 +23,18 @@ NULL
 
 #' @keywords internal
 #' @noRd
-media_related <- function(target, type = c("shows", "movies"),
+media_related <- function(id, type = c("shows", "movies"),
                                 limit = 10L,
                                 extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
-  if (length(target) > 1) {
-    return(map_df(target, ~ media_related(.x, type, extended)))
+  if (length(id) > 1) {
+    return(map_df(id, ~ media_related(.x, type, extended)))
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, target, "related",
+  url <- build_trakt_url(type, id, "related",
     extended = extended,
     limit = limit
   )
@@ -54,7 +54,7 @@ media_related <- function(target, type = c("shows", "movies"),
   }
 
   response %>%
-    mutate(related_to = target) %>%
+    mutate(related_to = id) %>%
     select(related_to, everything()) %>%
     fix_tibble_response()
 }
@@ -63,16 +63,16 @@ media_related <- function(target, type = c("shows", "movies"),
 
 #' @rdname media_related
 #' @export
-movies_related <- function(target,
+movies_related <- function(id,
                                  limit = 10L,
                                  extended = c("min", "full")) {
-  media_related(target, type = "movies", extended = extended, limit = limit)
+  media_related(id, type = "movies", extended = extended, limit = limit)
 }
 
 #' @rdname media_related
 #' @export
-shows_related <- function(target,
+shows_related <- function(id,
                                 limit = 10L,
                                 extended = c("min", "full")) {
-  media_related(target, type = "shows", extended = extended, limit = limit)
+  media_related(id, type = "shows", extended = extended, limit = limit)
 }

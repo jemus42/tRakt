@@ -4,14 +4,14 @@
 \alias{movies_releases}
 \title{Get a movie's release details}
 \usage{
-movies_releases(target, country = NULL)
+movies_releases(id, country = NULL)
 }
 \arguments{
-\item{target}{\code{character(1)}: The ID of the item requested. Preferably the
+\item{id}{\code{character(1)}: The ID of the item requested. Preferably the
 \code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{target} values separately and the result is combined.}
+\code{id} values separately and the result is combined.}
 
 \item{country}{Optional two letter country code to filter by.}
 }

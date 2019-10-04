@@ -32,13 +32,13 @@ NULL
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
 #' @importFrom purrr is_empty
-people_media <- function(type = c("shows", "movies"), target,
+people_media <- function(type = c("shows", "movies"), id,
                                extended = c("min", "full")) {
   extended <- match.arg(extended)
   type <- match.arg(type)
 
   # Construct URL, make API call
-  url <- build_trakt_url("people", target, type, extended = extended)
+  url <- build_trakt_url("people", id, type, extended = extended)
   response <- trakt_get(url = url)
 
   if (identical(response, list(cast = list()))) {
@@ -76,13 +76,13 @@ people_media <- function(type = c("shows", "movies"), target,
 
 #' @rdname people_media
 #' @export
-people_movies <- function(target, extended = c("min", "full")) {
-  people_media(type = "movies", target = target, extended = extended)
+people_movies <- function(id, extended = c("min", "full")) {
+  people_media(type = "movies", id = id, extended = extended)
 }
 
 #' @rdname people_media
 #' @export
-people_shows <- function(target, extended = c("min", "full")) {
-  people_media(type = "shows", target = target, extended = extended)
+people_shows <- function(id, extended = c("min", "full")) {
+  people_media(type = "shows", id = id, extended = extended)
 }
 

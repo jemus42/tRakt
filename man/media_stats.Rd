@@ -8,20 +8,20 @@
 \alias{episodes_stats}
 \title{Get a show or movie's (or season's or episode's) stats}
 \usage{
-shows_stats(target)
+shows_stats(id)
 
-movies_stats(target)
+movies_stats(id)
 
-seasons_stats(target, season = 1L)
+seasons_stats(id, season = 1L)
 
-episodes_stats(target, season = 1L, episode = 1L)
+episodes_stats(id, season = 1L, episode = 1L)
 }
 \arguments{
-\item{target}{\code{character(1)}: The ID of the item requested. Preferably the
+\item{id}{\code{character(1)}: The ID of the item requested. Preferably the
 \code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{target} values separately and the result is combined.}
+\code{id} values separately and the result is combined.}
 
 \item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be

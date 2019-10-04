@@ -5,9 +5,9 @@ test_that("movies_releases works", {
 
   movie <- "deadpool-2016"
 
-  mov <- movies_releases(target = movie)
-  mov_de <- movies_releases(target = movie, country = "de")
-  mov_multi <- movies_releases(target = c(movie, "inception-2010"), country = "de")
+  mov <- movies_releases(id = movie)
+  mov_de <- movies_releases(id = movie, country = "de")
+  mov_multi <- movies_releases(id = c(movie, "inception-2010"), country = "de")
 
   expect_is(mov, "tbl")
   expect_gte(nrow(mov), nrow(mov_de))

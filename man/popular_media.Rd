@@ -91,8 +91,9 @@ movies_popular(languages = "de", years = c(2000, 2010))
 }
 }
 \seealso{
-Other Dynamic lists: \code{\link{anticipated_media}},
+Other dynamic lists: \code{\link{anticipated_media}},
+  \code{\link{collected_media}},
   \code{\link{played_media}}, \code{\link{trending_media}},
-  \code{\link{watched_media}}
+  \code{\link{updated_media}}, \code{\link{watched_media}}
 }
-\concept{Dynamic lists}
+\concept{dynamic lists}

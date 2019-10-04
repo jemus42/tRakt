@@ -8,20 +8,20 @@
 \alias{episodes_ratings}
 \title{Media user ratings}
 \usage{
-shows_ratings(target)
+shows_ratings(id)
 
-movies_ratings(target)
+movies_ratings(id)
 
-seasons_ratings(target, season = 1L)
+seasons_ratings(id, season = 1L)
 
-episodes_ratings(target, season = 1L, episode = 1L)
+episodes_ratings(id, season = 1L, episode = 1L)
 }
 \arguments{
-\item{target}{\code{character(1)}: The ID of the item requested. Preferably the
+\item{id}{\code{character(1)}: The ID of the item requested. Preferably the
 \code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{target} values separately and the result is combined.}
+\code{id} values separately and the result is combined.}
 
 \item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
@@ -50,7 +50,7 @@ The API methods for these functions are:
 }
 \note{
 Since this function is able to work on multi-length inputs for
-\code{target}, \code{season} and \code{episode}, it is possible to get a lot of data, \emph{but} at the cost
+\code{id}, \code{season} and \code{episode}, it is possible to get a lot of data, \emph{but} at the cost
 of one API call \emph{per element in each argument}. Please be kind to the API.
 }
 \examples{

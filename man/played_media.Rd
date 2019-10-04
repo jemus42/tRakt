@@ -90,8 +90,10 @@ the same additional variables besides the media information: \code{watcher_count
 }
 
 \seealso{
-Other Dynamic lists: \code{\link{anticipated_media}},
+Other dynamic lists: \code{\link{anticipated_media}},
+  \code{\link{collected_media}},
   \code{\link{popular_media}},
-  \code{\link{trending_media}}, \code{\link{watched_media}}
+  \code{\link{trending_media}},
+  \code{\link{updated_media}}, \code{\link{watched_media}}
 }
-\concept{Dynamic lists}
+\concept{dynamic lists}

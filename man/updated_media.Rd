@@ -18,6 +18,12 @@ than \code{0} and will be coerced to \code{integer}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
+
+\item{start_date}{\code{character(1)}: A date in the past from which
+on to count updates. If no date is supplied, the default is to
+use yesterday relative to the current date. Value must either
+be standard \code{YYYY-MM-DD} format or an object of class \link[base:Dates]{Date},
+which will then be coerced via \link[base:as.character]{as.character()}.}
 }
 \description{
 These functions return recently updated movies/shows on trakt.tv.
@@ -55,6 +61,9 @@ the same additional variables besides the media information: \code{watcher_count
 }
 
 \seealso{
-Other Dynamic movie lists: \code{\link{collected_media}}
+Other dynamic lists: \code{\link{anticipated_media}},
+  \code{\link{collected_media}},
+  \code{\link{played_media}}, \code{\link{popular_media}},
+  \code{\link{trending_media}}, \code{\link{watched_media}}
 }
-\concept{Dynamic movie lists}
+\concept{dynamic lists}

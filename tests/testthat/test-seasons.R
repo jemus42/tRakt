@@ -3,15 +3,15 @@ context("Seasons")
 test_that("seasons_season works", {
   skip_on_cran()
 
-  target <- "futurama"
+  id <- "futurama"
 
   min_names <- c(
     "season", "episode", "title", "trakt", "tvdb",
     "imdb", "tmdb"
   )
 
-  min_s1_single <- seasons_season(target = target, seasons = 1, extended = "min")
-  full_s1_single <- seasons_season(target = target, seasons = 1, extended = "full")
+  min_s1_single <- seasons_season(id = id, seasons = 1, extended = "min")
+  full_s1_single <- seasons_season(id = id, seasons = 1, extended = "full")
 
   # Structural integrity
   expect_is(min_s1_single, "tbl")
@@ -23,32 +23,32 @@ test_that("seasons_season works", {
   expect_lt(length(min_s1_single), length(full_s1_single))
 
   # Error conditions
-  expect_error(seasons_season(target = target, seasons = NA))
-  expect_error(seasons_season(target = target, seasons = "seven"))
-  expect_error(seasons_season(target = target, seasons = NULL))
-  expect_error(seasons_season(target = target, seasons = 10))
+  expect_error(seasons_season(id = id, seasons = NA))
+  expect_error(seasons_season(id = id, seasons = "seven"))
+  expect_error(seasons_season(id = id, seasons = NULL))
+  expect_error(seasons_season(id = id, seasons = 10))
 
   # Multi-length input seasons
   expect_identical(
     rbind(
-      seasons_season(target = target, seasons = 1),
-      seasons_season(target = target, seasons = 2)
+      seasons_season(id = id, seasons = 1),
+      seasons_season(id = id, seasons = 2)
     ),
-    seasons_season(target = target, seasons = 1:2)
+    seasons_season(id = id, seasons = 1:2)
   )
 })
 
 test_that("seasons_summary works", {
   skip_on_cran()
 
-  target <- "futurama"
+  id <- "futurama"
 
   result_min <- seasons_summary(
-    target = target, extended = "min",
+    id = id, extended = "min",
     drop_specials = TRUE, drop_unaired = TRUE
   )
   result_max <- seasons_summary(
-    target = target, extended = "full",
+    id = id, extended = "full",
     drop_specials = TRUE, drop_unaired = TRUE
   )
 
@@ -62,20 +62,20 @@ test_that("seasons_summary works", {
 
   expect_identical(
     rbind(
-      seasons_summary(target),
-      seasons_summary(target)
+      seasons_summary(id),
+      seasons_summary(id)
     ),
-    seasons_summary(c(target, target))
+    seasons_summary(c(id, id))
   )
 
-  expect_error(seasons_summary(target = "bvkjqbkqjbf"))
+  expect_error(seasons_summary(id = "bvkjqbkqjbf"))
 })
 
 test_that("seasons_summary works for episodes", {
   skip_on_cran()
 
-  target <- "utopia"
-  res <- seasons_summary(target, extended = "full", episodes = TRUE)
+  id <- "utopia"
+  res <- seasons_summary(id, extended = "full", episodes = TRUE)
 
   expect_is(res, "tbl")
   expect_is(res$episodes, "list")

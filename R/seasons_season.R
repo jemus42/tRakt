@@ -25,12 +25,12 @@
 #' # Including all episode data:
 #' seasons_season("breaking-bad", 1, extended = "full")
 #' }
-seasons_season <- function(target, seasons = 1L, extended = c("min", "full")) {
+seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   # Vectorize
   if (length(seasons) > 1) {
-    return(map_df(seasons, ~ seasons_season(target, .x, extended)))
+    return(map_df(seasons, ~ seasons_season(id, .x, extended)))
   }
 
   # Basic sanity check
@@ -41,7 +41,7 @@ seasons_season <- function(target, seasons = 1L, extended = c("min", "full")) {
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url("shows", target, "seasons", seasons, extended = extended)
+  url <- build_trakt_url("shows", id, "seasons", seasons, extended = extended)
   response <- trakt_get(url = url)
 
   # Reorganization

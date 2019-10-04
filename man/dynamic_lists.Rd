@@ -3,13 +3,6 @@
 \name{dynamic_lists}
 \alias{dynamic_lists}
 \title{See which movies / shows are popular across various metrics}
-\arguments{
-\item{start_date}{\code{character(1)}: A date in the past from which
-on to count updates. If no date is supplied, the default is to
-use yesterday relative to the current date. Value must either
-be standard \code{YYYY-MM-DD} format or an object of class \link[base:Dates]{Date},
-which will then be coerced via \link[base:as.character]{as.character()}.}
-}
 \value{
 A \link[tibble:tibble-package]{tibble()}.
 }
