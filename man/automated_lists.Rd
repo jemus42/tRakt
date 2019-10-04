@@ -65,8 +65,8 @@ returns more variables and should generally only be used if required.}
 
 \item{query}{\code{character(1)}: Search titles and descriptions.}
 
-\item{years}{\code{integer(1)}: 4-digit year \strong{or} range, e.g. \code{2010-2020}. Can also be an integer
-vector of length two which will be coerced appropriately.}
+\item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range, e.g. \code{"2010-2020"}.
+Can also be an integer vector of length two which will be coerced appropriately.}
 
 \item{genres}{\code{character(n)}: Genre  slug(s). See \code{\link{genres}} for a table of genres.
 Multiple values are allowed and will be concatenated.}
@@ -76,11 +76,11 @@ table of available languages.}
 
 \item{countries}{\code{character(n)}: Two-character country code(s). See \code{\link{countries}}.}
 
-\item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}. Can also be an integer
-vector of length two which will be coerced appropriately.}
+\item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}. Can also
+be an integer vector of length two which will be coerced appropriately.}
 
-\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}. Can also be an integer
-vector of length two which will be coerced appropriately.}
+\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}. Can also be
+an integer vector of length two which will be coerced appropriately.}
 
 \item{certifications}{\code{character(n)}: Certification(s) like \code{pg-13}.
 Multiple values are allowed. Use \code{\link{certifications}} for reference. Note that there
@@ -95,26 +95,35 @@ for a list of known networks.}
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
 
-\item{start_date}{\code{character(1)}: A date in the past from which on to count updates.
-If no date is supplied, the default is to use yesterday relative
-to the current date. Value must either be standard \code{YYYY-MM-DD} format or an object
-of class \link[base:Dates]{Date}, which will then be coerced via \link[base:as.character]{as.character()}.}
+\item{start_date}{\code{character(1)}: A date in the past from which
+on to count updates. If no date is supplied, the default is to
+use yesterday relative to the current date. Value must either
+be standard \code{YYYY-MM-DD} format or an object of class \link[base:Dates]{Date},
+which will then be coerced via \link[base:as.character]{as.character()}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 According to the API docs, popularity is calculated based both on ratings
-and the number of ratings (i.e., votes). Trending items are those being watched right now, where
-items with the most users currently watching are returned first. Anticipation is measured
-by the number of user-created lists an items is part of while not being released yet.
+and the number of ratings (i.e., votes). Trending items are those being
+watched right now, where items with the most users currently watching are
+returned first. Anticipation is measured by the number of user-created lists
+an items is part of while not being released yet.
 }
-\details{
+\note{
+\code{trakt.updates} does not support filters.
+}
+\section{The Dynamic Lists on trakt.tv}{
+
+
 These functions access the automatically updated lists provided by trakt.tv.
 Each function comes in two flavors: Shows or movies. The following descriptions
-are adapted directly from the \href{https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies}{API reference}.
+are adapted directly from the
+\href{https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies}{API reference}.
 \itemize{
-\item \strong{Popular}: Popularity is calculated using the rating percentage and the number of ratings.
+\item \strong{Popular}: Popularity is calculated using the rating percentage and the number of
+ratings.
 \item \strong{Trending}: Returns all movies/shows being watched right now.
 Movies/shows with the most users are returned first.
 \item \strong{Played}: Returns the most played (a single user can watch multiple times)
@@ -129,13 +138,11 @@ lists a movie/show appears on.
 In this case, the upper bound for \code{limit} is 100.
 }
 
-The functions for \strong{Played}, \strong{Watched}, \strong{Collected} and \strong{Played} each return the
-same additional variables besides the media information: \code{watcher_count},
+The functions for \strong{Played}, \strong{Watched}, \strong{Collected} and \strong{Played} each return
+the same additional variables besides the media information: \code{watcher_count},
 \code{play_count}, \code{collected_count}, \code{collector_count}.
 }
-\note{
-\code{trakt.updates} does not support filters.
-}
+
 \examples{
 \dontrun{
 # Get popular shows with only ids

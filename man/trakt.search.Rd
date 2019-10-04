@@ -21,8 +21,8 @@ with those elements, e.g. \code{c("show", "movie")}. Note that not every
 combination is reasonably combinable, e.g. \code{c("movie", "list")}. Use
 separate function calls in that case.}
 
-\item{years}{\code{integer(1)}: 4-digit year \strong{or} range, e.g. \code{2010-2020}. Can also be an integer
-vector of length two which will be coerced appropriately.}
+\item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range, e.g. \code{"2010-2020"}.
+Can also be an integer vector of length two which will be coerced appropriately.}
 
 \item{n_results}{\code{integer(1) [1]}: How many results to return.}
 
@@ -70,6 +70,6 @@ trakt.search("Tron", type = c("movie", "show"), n_results = 2)
 }
 \seealso{
 Other API-basics: \code{\link{trakt_credentials}},
-  \code{\link{trakt_get}}
+  \code{\link{trakt_get_token}}, \code{\link{trakt_get}}
 }
 \concept{API-basics}

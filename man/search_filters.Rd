@@ -6,8 +6,8 @@
 \arguments{
 \item{query}{\code{character(1)}: Search titles and descriptions.}
 
-\item{years}{\code{integer(1)}: 4-digit year \strong{or} range, e.g. \code{2010-2020}. Can also be an integer
-vector of length two which will be coerced appropriately.}
+\item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range, e.g. \code{"2010-2020"}.
+Can also be an integer vector of length two which will be coerced appropriately.}
 
 \item{genres}{\code{character(n)}: Genre  slug(s). See \code{\link{genres}} for a table of genres.
 Multiple values are allowed and will be concatenated.}
@@ -17,11 +17,11 @@ table of available languages.}
 
 \item{countries}{\code{character(n)}: Two-character country code(s). See \code{\link{countries}}.}
 
-\item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}. Can also be an integer
-vector of length two which will be coerced appropriately.}
+\item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}. Can also
+be an integer vector of length two which will be coerced appropriately.}
 
-\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}. Can also be an integer
-vector of length two which will be coerced appropriately.}
+\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}. Can also be
+an integer vector of length two which will be coerced appropriately.}
 
 \item{certifications}{\code{character(n)}: Certification(s) like \code{pg-13}.
 Multiple values are allowed. Use \code{\link{certifications}} for reference. Note that there
