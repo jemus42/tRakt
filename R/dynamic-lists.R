@@ -1,5 +1,7 @@
 # Worker function ----
 #' @keywords internal
+#' @importFrom rlang has_name
+#' @importFrom dplyr select bind_rows
 #' @noRd
 trakt_auto_lists <- function(list_type = c(
                                "popular", "trending", "anticipated",
@@ -45,7 +47,7 @@ trakt_auto_lists <- function(list_type = c(
     status = status
   )
   response <- trakt_get(url)
-  response <- tibble::as_tibble(response)
+  response <- as_tibble(response)
 
   # For this case we *only* get show objects, so we handle that first
   if (type == "shows" & list_type == "popular") {
@@ -53,17 +55,17 @@ trakt_auto_lists <- function(list_type = c(
   }
 
   # Unnest show or movie object present only in some methods
-  if (tibble::has_name(response, "show")) {
-    response <- dplyr::bind_cols(
-      response %>% dplyr::select(-show),
+  if (has_name(response, "show")) {
+    response <- bind_cols(
+      response %>% select(-show),
       unpack_show(response$show)
     )
   }
 
-  if (tibble::has_name(response, "movie")) {
-    response <- dplyr::bind_cols(
-      response %>% dplyr::select(-movie),
-      response$movie %>% dplyr::select(-ids),
+  if (has_name(response, "movie")) {
+    response <- bind_cols(
+      response %>% select(-movie),
+      response$movie %>% select(-ids),
       response$movie$ids
     )
   }
@@ -71,9 +73,9 @@ trakt_auto_lists <- function(list_type = c(
   # Unpack ids – required for extended = "min"
   # This is done last because at this point we can be
   # reasonably certain there's no other problematic list/df columns
-  if (tibble::has_name(response, "ids")) {
-    response <- dplyr::bind_cols(
-      response %>% dplyr::select(-ids),
+  if (has_name(response, "ids")) {
+    response <- bind_cols(
+      response %>% select(-ids),
       response$ids
     )
   }

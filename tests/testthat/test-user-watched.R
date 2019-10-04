@@ -12,7 +12,7 @@ test_that("trakt.user.watched works", {
   expect_is(watched_shows, "tbl")
   expect_is(watched_shows_full, "tbl")
 
-  expect_true(tibble::has_name(watched_shows_full, "seasons"))
+  expect_true(rlang::has_name(watched_shows_full, "seasons"))
 
   expect_equal(setdiff(names(watched_shows_full), names(watched_shows)), "seasons")
 

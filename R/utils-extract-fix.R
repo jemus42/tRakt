@@ -5,7 +5,7 @@
 #' @keywords internal
 #' @noRd
 #' @importFrom tibble as_tibble
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 #' @importFrom purrr modify_if
 #' @importFrom purrr modify_in
 #' @importFrom dplyr select
@@ -49,7 +49,7 @@ unpack_show <- function(show) {
 #' @keywords internal
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 #' @noRd
 unpack_movie <- function(response) {
   if (!has_name(response, "movie")) {
@@ -70,7 +70,7 @@ unpack_movie <- function(response) {
 #' @keywords internal
 #' @noRd
 #' @importFrom purrr map_df
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr mutate
 #' @importFrom dplyr select
@@ -111,7 +111,7 @@ unpack_crew_sections <- function(crew, type) {
 #' Set ratings to NA if votes == 0
 #' @keywords internal
 #' @importFrom dplyr if_else
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 #' @noRd
 fix_ratings <- function(response) {
   if (!(has_name(response, "rating") & has_name(response, "votes"))) {
@@ -126,7 +126,7 @@ fix_ratings <- function(response) {
 #' Always return characters, replace NULL with explicit NA
 #' @keywords internal
 #' @importFrom purrr modify_if
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 #' @noRd
 fix_ids <- function(ids) {
   if (!inherits(ids, c("data.frame", "list"))) {
@@ -191,7 +191,7 @@ fix_datetime <- function(response) {
 # Unpack the ratings distribution my tibblurazing them
 #' @keywords internal
 #' @importFrom tibble enframe
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 fix_ratings_distribution <- function(response) {
   if (!has_name(response, "distribution")) {
     return(response)

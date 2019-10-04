@@ -19,10 +19,10 @@ reference:
       Searching for items is usually required to retrieve some kind of ID, like the `slug`,
       which is required for use of item-specific functions.
     contents:
-      - starts_with("trakt.search")
+      - starts_with("search")
   - title: Shows & movies that are popular, trending, anticipated, ...
     contents:
-      - matches("trakt.(popular|trending|anticipated|watched|played)")
+      - ends_with("(popular|trending|anticipated|watched|played|collected|updated)")
   - title: Simple summary data
     contents:
       - ends_with("summary")

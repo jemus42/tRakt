@@ -25,7 +25,7 @@ NULL
 #' @noRd
 #' @importFrom purrr map_df
 #' @importFrom purrr modify_if
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 #' @importFrom lubridate as_datetime
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select

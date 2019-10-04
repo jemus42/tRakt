@@ -71,7 +71,7 @@ trakt.seasons.season <- function(target, seasons = 1L, extended = c("min", "full
 #' @export
 #' @family show data
 #' @importFrom dplyr select
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 #' @importFrom tibble as_tibble
 #' @importFrom purrr set_names
 #' @importFrom purrr map

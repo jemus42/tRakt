@@ -54,7 +54,7 @@ library(tRakt)
 Search for a show, get basic info:
 
 ```{r}
-show_info <- trakt.search("Utopia", type = "show")
+show_info <- search_query("Utopia", type = "show")
 glimpse(show_info)
 ```
 
@@ -75,7 +75,7 @@ trakt.seasons.season(show_info$trakt, seasons = 1, extended = "full") %>%
 Or alternatively, get the [trending shows](https://trakt.tv/shows/trending):
 
 ```{r}
-trakt.trending("shows")
+shows_trending()
 ```
 
 
@@ -86,7 +86,7 @@ library(dplyr)
 library(hms)
 library(glue)
 
-trakt.trending("shows", extended = "full") %>%
+shows_trending(extended = "full") %>%
   transmute(
     show = glue("{title} ({year})"),
     runtime_hms = hms(minutes = runtime),

@@ -98,11 +98,11 @@ search:
   text query:
     url: https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results
     endpoint: search/:type?query=
-    implementation: trakt.search()
+    implementation: search_query()
   ID lookup:
     url: https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results
     endpoint: search/:id_type/:id?type=
-    implementation: trakt.search.byid()
+    implementation: search_id()
 
 shows:
   trending:

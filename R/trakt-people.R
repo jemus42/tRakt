@@ -68,7 +68,7 @@ NULL
 
 #' @keywords internal
 #' @noRd
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 #' @importFrom tibble as_tibble
 #' @importFrom tibble tibble
 #' @importFrom dplyr bind_cols
@@ -164,7 +164,7 @@ NULL
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
 #' @importFrom tibble as_tibble
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 trakt.media.people <- function(type = c("shows", "movies"), target,
                                extended = c("min", "full")) {
   type <- match.arg(type)

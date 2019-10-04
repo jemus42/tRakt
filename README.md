@@ -59,7 +59,7 @@ library(tRakt)
 Search for a show, get basic info:
 
 ``` r
-show_info <- trakt.search("Utopia", type = "show")
+show_info <- search_query("Utopia", type = "show")
 glimpse(show_info)
 #> Observations: 1
 #> Variables: 9
@@ -107,11 +107,11 @@ trakt.seasons.season(show_info$trakt, seasons = 1, extended = "full") %>%
 #> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "E…
 #> $ episode_abs            <int> 1, 2, 3, 4, 5, 6
 #> $ overview               <chr> "When five strangers from an online comic…
-#> $ rating                 <dbl> 8.23965, 8.12634, 8.14135, 8.11127, 8.304…
-#> $ votes                  <int> 1039, 839, 757, 692, 661, 689
+#> $ rating                 <dbl> 8.23869, 8.12515, 8.14380, 8.11400, 8.304…
+#> $ votes                  <int> 1039, 839, 758, 693, 661, 689
 #> $ comment_count          <int> 3, 0, 1, 1, 1, 1
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00…
-#> $ updated_at             <dttm> 2019-09-29 19:38:55, 2019-09-30 05:39:10…
+#> $ updated_at             <dttm> 2019-10-04 04:49:30, 2019-10-03 11:03:32…
 #> $ available_translations <list> [<"bs", "de", "el", "en", "es", "fr", "h…
 #> $ runtime                <int> 60, 60, 60, 60, 60, 60
 #> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056…
@@ -124,20 +124,20 @@ Or alternatively, get the [trending
 shows](https://trakt.tv/shows/trending):
 
 ``` r
-trakt.trending("shows")
+shows_trending()
 #> # A tibble: 10 x 8
-#>    watchers title            year trakt  slug            tvdb  imdb   tmdb 
-#>       <int> <chr>           <int> <chr>  <chr>           <chr> <chr>  <chr>
-#>  1       50 Fear the Walki…  2015 94961  fear-the-walki… 2908… tt374… 62286
-#>  2       49 Power            2014 54306  power           2765… tt328… 54650
-#>  3       48 The Rookie       2018 134421 the-rookie-2018 3506… tt758… 79744
-#>  4       42 NCIS: Los Ange…  2009 17532  ncis-los-angel… 95441 tt137… 17610
-#>  5       36 Last Week Toni…  2014 60267  last-week-toni… 2785… tt353… 60694
-#>  6       34 Preacher         2016 102034 preacher        3004… tt501… 64230
-#>  7       33 Ballers          2015 78111  ballers         2817… tt289… 62704
-#>  8       29 Suits            2011 37522  suits           2478… tt163… 37680
-#>  9       28 The Big Bang T…  2007 1409   the-big-bang-t… 80379 tt089… 1418 
-#> 10       28 God Friended Me  2018 133611 god-friended-me 3496… tt794… 81114
+#>    watchers title           year trakt  slug           tvdb  imdb     tmdb 
+#>       <int> <chr>          <int> <chr>  <chr>          <chr> <chr>    <chr>
+#>  1      101 Grey's Anatomy  2005 1407   grey-s-anatomy 73762 tt04135… 1416 
+#>  2       57 Titans          2018 127287 titans-2019    3416… tt10438… 75450
+#>  3       54 Evil            2019 147814 evil           3639… tt90550… 86848
+#>  4       52 Young Sheldon   2017 119172 young-sheldon  3287… tt62262… 71728
+#>  5       49 Raising Dion    2019 124235 raising-dion   3359… tt78261… 93392
+#>  6       48 The Good Place  2016 107700 the-good-place 3117… tt49556… 66573
+#>  7       44 Chicago Fire    2012 43764  chicago-fire   2585… tt22613… 44006
+#>  8       44 Goliath         2016 110358 goliath        3153… tt46878… 67384
+#>  9       42 Chicago P.D.    2014 58454  chicago-p-d    2696… tt28050… 58841
+#> 10       42 SEAL Team       2017 119142 seal-team      3286… tt64733… 71789
 ```
 
 Maybe you want to know how long it would take you to binge through these
@@ -148,7 +148,7 @@ library(dplyr)
 library(hms)
 library(glue)
 
-trakt.trending("shows", extended = "full") %>%
+shows_trending(extended = "full") %>%
   transmute(
     show = glue("{title} ({year})"),
     runtime_hms = hms(minutes = runtime),
@@ -160,18 +160,18 @@ trakt.trending("shows", extended = "full") %>%
   )
 ```
 
-| Show                                      | Episode Runtime | Aired Episodes | Total Runtime (aired) |
-| :---------------------------------------- | :-------------- | -------------: | :-------------------- |
-| Fear the Walking Dead (2015)              | 00:45:00        |             69 | 51:45:00              |
-| Power (2014)                              | 01:00:00        |             54 | 54:00:00              |
-| The Rookie (2018)                         | 00:43:00        |             21 | 15:03:00              |
-| NCIS: Los Angeles (2009)                  | 00:45:00        |            241 | 180:45:00             |
-| Last Week Tonight with John Oliver (2014) | 00:30:00        |            173 | 86:30:00              |
-| Preacher (2016)                           | 00:45:00        |             43 | 32:15:00              |
-| Ballers (2015)                            | 00:30:00        |             45 | 22:30:00              |
-| Suits (2011)                              | 00:45:00        |            134 | 100:30:00             |
-| The Big Bang Theory (2007)                | 00:22:00        |            279 | 102:18:00             |
-| God Friended Me (2018)                    | 00:45:00        |             21 | 15:45:00              |
+| Show                  | Episode Runtime | Aired Episodes | Total Runtime (aired) |
+| :-------------------- | :-------------- | -------------: | :-------------------- |
+| Grey’s Anatomy (2005) | 00:43:00        |            343 | 245:49:00             |
+| Titans (2018)         | 00:50:00        |             16 | 13:20:00              |
+| Evil (2019)           | 00:43:00        |              2 | 01:26:00              |
+| Young Sheldon (2017)  | 00:20:00        |             46 | 15:20:00              |
+| Raising Dion (2019)   | 00:45:00        |              9 | 06:45:00              |
+| The Good Place (2016) | 00:22:00        |             39 | 14:18:00              |
+| Chicago Fire (2012)   | 01:00:00        |            161 | 161:00:00             |
+| Goliath (2016)        | 00:55:00        |             24 | 22:00:00              |
+| Chicago P.D. (2014)   | 00:45:00        |            130 | 97:30:00              |
+| SEAL Team (2017)      | 00:45:00        |             45 | 33:45:00              |
 
 ## Credentials
 

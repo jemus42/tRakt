@@ -46,28 +46,28 @@ That's all you need to to for basic things. If you're planning a larger project 
 Using a text query:
 
 ```{r search}
-trakt.search("Game of Thrones", type = "show")
+search_query("Game of Thrones", type = "show")
 ```
 
 Search by explicit ID:
 
 ```{r search_id}
-trakt.search.byid("121361", id_type = "tvdb", type = "show")
+search_id("121361", id_type = "tvdb", type = "show")
 ```
 
 Or via whatever's popular(ish):
 
-Another scenario would be that you're not necessarily interested in some specific media item, but rather a collection of items that fulfill certain criteria, like being popular on trakt.tv and maybe being from a specific period or genre and whatnot. While you can also filter `trakt.search` by other criteria, it's maybe more useful to filter, let's say, the most watched movies of the past week by the release year of the movie.
+Another scenario would be that you're not necessarily interested in some specific media item, but rather a collection of items that fulfill certain criteria, like being popular on trakt.tv and maybe being from a specific period or genre and whatnot. While you can also filter `search_query` by other criteria, it's maybe more useful to filter, let's say, the most watched movies of the past week by the release year of the movie.
 
 
 The 5 most popular shows:
 
 ```{r auto-lists}
-trakt.popular(type = "shows", limit = 5)
+shows_popular(limit = 5)
 ```
-The 10 most watched (during the past week) movies from 1990-2000:
+The 10 most watched (during the past year) movies from 1990-2000:
 
 ```{r auto-lists-watched}
-trakt.watched(type = "movies", period = "weekly", years = c(1990, 2000)) %>%
+movies_watched(period = "yearly", years = c(1990, 2000)) %>%
   select(watcher_count, title, year)
 ```

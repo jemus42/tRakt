@@ -21,13 +21,16 @@
 #'   with those elements, e.g. `c("show", "movie")`. Note that not every
 #'   combination is reasonably combinable, e.g. `c("movie", "list")`. Use
 #'   separate function calls in that case.
+#' @inheritParams trakt_api_common_parameters
 #' @inheritParams search_filters
 #' @param n_results `integer(1) [1]`: How many results to return.
 #' @return A [tibble][tibble::tibble-package] containing `n_results` results.
+#'         Variable `type` is equivalent to the value of the `type` argument, and
+#'         variable `score` indicates the search match, where `1000` is a perfect
+#'         match.
 #'         If no results are found, the `tibble` has 0 rows.
 #'         If more than one `type` is specified, e.g. `c("movie", "show")`,
 #'         there will be `n_results` results *per type*.
-#' @inheritParams trakt_api_common_parameters
 #' @export
 #' @family API-basics
 #' @importFrom tibble tibble
@@ -46,22 +49,38 @@
 #' search_query("Tron", type = c("movie", "show"), n_results = 2)
 #' }
 search_query <- function(query, type = "show",
-                         years = NULL, n_results = 1L,
+                         n_results = 1L,
                          extended = c("min", "full"),
-                         period = NULL,
+                         years = NULL,
                          genres = NULL, languages = NULL,
                          countries = NULL, runtimes = NULL,
                          ratings = NULL, certifications = NULL,
                          networks = NULL, status = NULL) {
+
   ok_types <- c("movie", "show", "episode", "person", "list")
   type <- match.arg(type, choices = ok_types, several.ok = TRUE)
   extended <- match.arg(extended)
+
+  # Check filters
+  query <- check_filter_arg(query, "query")
   years <- check_filter_arg(years, "years")
+  genres <- check_filter_arg(genres, "genres")
+  languages <- check_filter_arg(languages, "languages")
+  countries <- check_filter_arg(countries, "countries")
+  runtimes <- check_filter_arg(runtimes, "runtimes")
+  ratings <- check_filter_arg(ratings, "ratings")
+  certifications <- check_filter_arg(certifications, "certifications")
+  networks <- check_filter_arg(networks, "networks")
+  status <- check_filter_arg(status, "status")
 
   if (length(type) > 1) {
     return(map_df(type, ~ search_query(query,
-      type = .x, years,
-      n_results, extended
+      type = .x,
+      n_results = n_results,
+      years = years,
+      extended = extended, genres = genres, languages = languages,
+      countries = countries, runtimes = runtimes, ratings = ratings,
+      certifications = certifications, networks = networks, status = status
     )))
   }
 
@@ -112,7 +131,7 @@ search_id <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
 #' Search helper function
 #' @keywords internal
 #' @importFrom utils head
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 #' @importFrom tibble as_tibble
 #' @importFrom tibble remove_rownames
 #' @noRd

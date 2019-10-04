@@ -5,8 +5,8 @@
 \alias{search_id}
 \title{Search trakt.tv via text query or ID}
 \usage{
-search_query(query, type = "show", years = NULL, n_results = 1L,
-  extended = c("min", "full"), period = NULL, genres = NULL,
+search_query(query, type = "show", n_results = 1L,
+  extended = c("min", "full"), years = NULL, genres = NULL,
   languages = NULL, countries = NULL, runtimes = NULL,
   ratings = NULL, certifications = NULL, networks = NULL,
   status = NULL)
@@ -24,16 +24,13 @@ with those elements, e.g. \code{c("show", "movie")}. Note that not every
 combination is reasonably combinable, e.g. \code{c("movie", "list")}. Use
 separate function calls in that case.}
 
-\item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range, e.g. \code{"2010-2020"}.
-Can also be an integer vector of length two which will be coerced appropriately.}
-
 \item{n_results}{\code{integer(1) [1]}: How many results to return.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.}
 
-\item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
-are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
+\item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range, e.g. \code{"2010-2020"}.
+Can also be an integer vector of length two which will be coerced appropriately.}
 
 \item{genres}{\code{character(n)}: Genre  slug(s). See \code{\link{genres}} for a table of genres.
 Multiple values are allowed and will be concatenated.}
@@ -67,6 +64,9 @@ a \code{Trakt ID}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble} containing \code{n_results} results.
+Variable \code{type} is equivalent to the value of the \code{type} argument, and
+variable \code{score} indicates the search match, where \code{1000} is a perfect
+match.
 If no results are found, the \code{tibble} has 0 rows.
 If more than one \code{type} is specified, e.g. \code{c("movie", "show")},
 there will be \code{n_results} results \emph{per type}.

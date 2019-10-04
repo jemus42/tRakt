@@ -21,7 +21,7 @@
 #' @importFrom purrr map_df
 #' @importFrom tibble as_tibble
 #' @importFrom tibble remove_rownames
-#' @importFrom tibble has_name
+#' @importFrom rlang has_name
 #' @importFrom dplyr mutate_if
 #' @examples
 #' \dontrun{
