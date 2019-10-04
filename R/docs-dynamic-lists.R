@@ -7,8 +7,6 @@
 #' an items is part of while not being released yet.
 #'
 #' @name dynamic_lists
-#' @inheritParams trakt_api_common_parameters
-#' @inheritParams search_filters
 #' @param start_date `character(1)`: A date in the past from which
 #'   on to count updates. If no date is supplied, the default is to
 #'   use yesterday relative to the current date. Value must either

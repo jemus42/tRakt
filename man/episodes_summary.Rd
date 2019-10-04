@@ -37,7 +37,7 @@ This function wraps \href{https://trakt.docs.apiary.io/#reference/episodes/summa
 with the endpoint \code{/shows/:id/seasons/episodes/:episode}.
 }
 \examples{
-# Get just the season numbers and their IDs
+# Get just this one episode with its ratings, votes, etc.
 episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
 }
 \seealso{

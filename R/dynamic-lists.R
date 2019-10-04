@@ -89,10 +89,11 @@ trakt_auto_lists <- function(list_type = c(
 #'
 #' These functions return the popular movies/shows on trakt.tv.
 #' @name popular_media
-#' @inheritParams dynamic_lists
+#' @inheritParams trakt_api_common_parameters
+#' @inheritParams search_filters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @export
-#' @family Dynamic lists
+#' @family dynamic lists
 #' @examples
 #' \dontrun{
 #' # Get the most popular German-language movies between 2000 and 2010
@@ -146,10 +147,11 @@ shows_popular <- function(limit = 10,
 #'
 #' These functions return the trending movies/shows on trakt.tv.
 #' @name trending_media
-#' @inheritParams dynamic_lists
+#' @inheritParams trakt_api_common_parameters
+#' @inheritParams search_filters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @export
-#' @family Dynamic lists
+#' @family dynamic lists
 movies_trending <- function(limit = 10,
                            extended = c("min", "full"),
                            query = NULL, years = NULL,
@@ -198,10 +200,11 @@ shows_trending <- function(limit = 10,
 #'
 #' These functions return the most anticipated movies/shows on trakt.tv.
 #' @name anticipated_media
-#' @inheritParams dynamic_lists
+#' @inheritParams trakt_api_common_parameters
+#' @inheritParams search_filters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @export
-#' @family Dynamic lists
+#' @family dynamic lists
 movies_anticipated <- function(limit = 10,
                               extended = c("min", "full"),
                               query = NULL, years = NULL,
@@ -256,10 +259,11 @@ shows_anticipated <- function(limit = 10,
 #'
 #' These functions return the most played movies/shows on trakt.tv.
 #' @name played_media
-#' @inheritParams dynamic_lists
+#' @inheritParams trakt_api_common_parameters
+#' @inheritParams search_filters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @export
-#' @family Dynamic lists
+#' @family dynamic lists
 movies_played <- function(limit = 10, extended = c("min", "full"),
                          period = c("weekly", "monthly", "yearly", "all"),
                          query = NULL, years = NULL,
@@ -312,10 +316,11 @@ shows_played <- function(limit = 10, extended = c("min", "full"),
 #'
 #' These functions return the most watched movies/shows on trakt.tv.
 #' @name watched_media
-#' @inheritParams dynamic_lists
+#' @inheritParams trakt_api_common_parameters
+#' @inheritParams search_filters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @export
-#' @family Dynamic lists
+#' @family dynamic lists
 movies_watched <- function(limit = 10, extended = c("min", "full"),
                           period = c("weekly", "monthly", "yearly", "all"),
                           query = NULL, years = NULL,
@@ -368,10 +373,11 @@ shows_watched <- function(limit = 10, extended = c("min", "full"),
 #'
 #' These functions return the most collected movies/shows on trakt.tv.
 #' @name collected_media
-#' @inheritParams dynamic_lists
+#' @inheritParams trakt_api_common_parameters
+#' @inheritParams search_filters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @export
-#' @family Dynamic movie lists
+#' @family dynamic lists
 movies_collected <- function(limit = 10, extended = c("min", "full"),
                             period = c("weekly", "monthly", "yearly", "all"),
                             query = NULL, years = NULL,
@@ -423,10 +429,11 @@ shows_collected <- function(limit = 10, extended = c("min", "full"),
 #'
 #' These functions return recently updated movies/shows on trakt.tv.
 #' @name updated_media
-#' @inheritParams dynamic_lists
+#' @inheritParams trakt_api_common_parameters
+#' @inheritParams search_filters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @export
-#' @family Dynamic movie lists
+#' @family dynamic lists
 #' @note `shows_updates` and `movies_updates` do not support filters.
 movies_updates <- function(limit = 10, extended = c("min", "full"),
                           start_date = Sys.Date() - 1) {

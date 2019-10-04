@@ -13,11 +13,11 @@ shows_updates(limit = 10, extended = c("min", "full"),
   start_date = Sys.Date() - 1)
 }
 \arguments{
-\item{start_date}{\code{character(1)}: A date in the past from which
-on to count updates. If no date is supplied, the default is to
-use yesterday relative to the current date. Value must either
-be standard \code{YYYY-MM-DD} format or an object of class \link[base:Dates]{Date},
-which will then be coerced via \link[base:as.character]{as.character()}.}
+\item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
+than \code{0} and will be coerced to \code{integer}.}
+
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.}
 }
 \description{
 These functions return recently updated movies/shows on trakt.tv.
