@@ -19,7 +19,8 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{user} values separately and the result is combined.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.}
+returns more variables and should generally only be used if required.
+See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.

@@ -21,7 +21,8 @@ shows_trending(limit = 10, extended = c("min", "full"), query = NULL,
 than \code{0} and will be coerced to \code{integer}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.}
+returns more variables and should generally only be used if required.
+See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
 
 \item{query}{\code{character(1)}: Search titles and descriptions.}
 

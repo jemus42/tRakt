@@ -8,7 +8,8 @@ movies_boxoffice(extended = c("min", "full"))
 }
 \arguments{
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.}
+returns more variables and should generally only be used if required.
+See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.

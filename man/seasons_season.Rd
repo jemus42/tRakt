@@ -11,12 +11,14 @@ seasons_season(id, seasons = 1L, extended = c("min", "full"))
 \code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{id} values separately and the result is combined.}
+\code{id} values separately and the result is combined. See section
+\link[=trakt_api_common_parameters]{"Item identifiers"} for more details.}
 
 \item{seasons}{\code{integer(1) [1L]}: The season(s) to get. Use \code{0} for specials.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.}
+returns more variables and should generally only be used if required.
+See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.

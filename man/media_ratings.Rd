@@ -21,7 +21,8 @@ episodes_ratings(id, season = 1L, episode = 1L)
 \code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{id} values separately and the result is combined.}
+\code{id} values separately and the result is combined. See section
+\link[=trakt_api_common_parameters]{"Item identifiers"} for more details.}
 
 \item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be

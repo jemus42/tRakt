@@ -23,7 +23,8 @@ than \code{0} and will be coerced to \code{integer}.}
 to a datetime object of class \code{POSIXct}. See \link{ISOdate} for further information.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.}
+returns more variables and should generally only be used if required.
+See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.

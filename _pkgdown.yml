@@ -58,7 +58,6 @@ reference:
       - trakt_credentials
       - trakt_api_common_parameters
       - search_filters
-      - dynamic_lists
   - title: Episode datasets
     contents:
       - futurama

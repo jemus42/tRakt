@@ -42,6 +42,4 @@ the same additional variables besides the media information: \code{watcher_count
 \code{play_count}, \code{collected_count}, \code{collector_count}.
 }
 
-\seealso{
-\link{search_filters}, for more information on search filters.
-}
+\keyword{internal}

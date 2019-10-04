@@ -12,10 +12,12 @@ seasons_summary(id, extended = c("min", "full"), episodes = FALSE,
 \code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{id} values separately and the result is combined.}
+\code{id} values separately and the result is combined. See section
+\link[=trakt_api_common_parameters]{"Item identifiers"} for more details.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.}
+returns more variables and should generally only be used if required.
+See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
 
 \item{episodes}{\code{logical(1) [FALSE]}: If \code{TRUE}, all episodes for each season
 are appended as a list-column, with the amount of variables depending on \code{extended}.}

@@ -8,8 +8,7 @@
 #'
 #' @name dynamic_lists
 #' @return A [tibble()][tibble::tibble-package].
-#'
-#' @seealso [search_filters], for more information on search filters.
+#' @keywords internal
 #'
 #' @section The Dynamic Lists on trakt.tv:
 #'
