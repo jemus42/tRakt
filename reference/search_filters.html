@@ -50,7 +50,7 @@ For convenience, all supported filters are implemented as explicit, named argume
 <meta name="twitter:card" content="summary" />
 
 
-<meta name="robots" content="noindex">
+
 
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
@@ -101,7 +101,7 @@ For convenience, all supported filters are implemented as explicit, named argume
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tRakt</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.14.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
       </span>
     </div>
 
@@ -179,8 +179,8 @@ For convenience, all supported filters are implemented as explicit, named argume
     </tr>
     <tr>
       <th>years</th>
-      <td><p><code><a href='https://rdrr.io/r/base/integer.html'>integer(1)</a></code>: 4-digit year <strong>or</strong> range, e.g. <code>2010-2020</code>. Can also be an integer
-vector of length two which will be coerced appropriately.</p></td>
+      <td><p><code>character | integer</code>: 4-digit year (<code>2010</code>) <strong>or</strong> range, e.g. <code>"2010-2020"</code>.
+Can also be an integer vector of length two which will be coerced appropriately.</p></td>
     </tr>
     <tr>
       <th>genres</th>
@@ -198,13 +198,13 @@ table of available languages.</p></td>
     </tr>
     <tr>
       <th>runtimes</th>
-      <td><p><code>character | integer</code>: Integer range in minutes, e.g. <code>30-90</code>. Can also be an integer
-vector of length two which will be coerced appropriately.</p></td>
+      <td><p><code>character | integer</code>: Integer range in minutes, e.g. <code>30-90</code>. Can also
+be an integer vector of length two which will be coerced appropriately.</p></td>
     </tr>
     <tr>
       <th>ratings</th>
-      <td><p><code>character | integer</code>:  Integer range between <code>0</code> and <code>100</code>. Can also be an integer
-vector of length two which will be coerced appropriately.</p></td>
+      <td><p><code>character | integer</code>:  Integer range between <code>0</code> and <code>100</code>. Can also be
+an integer vector of length two which will be coerced appropriately.</p></td>
     </tr>
     <tr>
       <th>certifications</th>

@@ -53,7 +53,7 @@ variable only contains date information." />
 <meta name="twitter:card" content="summary" />
 
 
-<meta name="robots" content="noindex">
+
 
 <!-- mathjax -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
@@ -104,7 +104,7 @@ variable only contains date information." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">tRakt</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.14.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
       </span>
     </div>
 
@@ -175,7 +175,8 @@ present in the response, they are converted to <code>POSIXct</code> via
 variable only contains date information.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client_id</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client_id</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>auth</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -199,6 +200,11 @@ performed and its content returned. This is useful if you are only
 interested in status codes or other headers, and don't want to waste
 resources/bandwidth on the response body.</p></td>
     </tr>
+    <tr>
+      <th>auth</th>
+      <td><p><code>logical(1) [FALSE]</code>: If <code>TRUE</code>, an authenticated request is made.
+This requires a set client secret and manual interaction.</p></td>
+    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -218,7 +224,8 @@ collection have dedicated functions in this package.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other API-basics: <code><a href='trakt.search.html'>trakt.search</a></code>,
-  <code><a href='trakt_credentials.html'>trakt_credentials</a></code></p></div>
+  <code><a href='trakt_credentials.html'>trakt_credentials</a></code>,
+  <code><a href='trakt_get_token.html'>trakt_get_token</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A simple request to a direct URL</span>
@@ -258,7 +265,7 @@ collection have dedicated functions in this package.</p>
 #&gt; 
 #&gt; $headers
 #&gt; $date
-#&gt; [1] "Wed, 02 Oct 2019 23:32:55 GMT"
+#&gt; [1] "Fri, 04 Oct 2019 16:22:47 GMT"
 #&gt; 
 #&gt; $`content-type`
 #&gt; [1] "text/html"
@@ -270,7 +277,7 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "max-age=0, private, no-cache, no-store, must-revalidate"
 #&gt; 
 #&gt; $`cf-railgun`
-#&gt; [1] "9627215ffc stream 0.000000 0200 57da"
+#&gt; [1] "69ebc94109 stream 0.000000 0200 57da"
 #&gt; 
 #&gt; $vary
 #&gt; [1] "Accept-Encoding"
@@ -282,10 +289,10 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "SAMEORIGIN"
 #&gt; 
 #&gt; $`x-request-id`
-#&gt; [1] "1b7d24f9-d8b3-426c-b191-7b53b05ce938"
+#&gt; [1] "d4a6fb9e-0c86-46ba-8386-54e6e2b7468a"
 #&gt; 
 #&gt; $`x-runtime`
-#&gt; [1] "0.004886"
+#&gt; [1] "0.004124"
 #&gt; 
 #&gt; $`x-xss-protection`
 #&gt; [1] "1; mode=block"
@@ -300,7 +307,7 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "cloudflare"
 #&gt; 
 #&gt; $`cf-ray`
-#&gt; [1] "51fa7a750cdbe222-ORD"
+#&gt; [1] "52087f22df9ce1de-ORD"
 #&gt; 
 #&gt; $`content-encoding`
 #&gt; [1] "gzip"
