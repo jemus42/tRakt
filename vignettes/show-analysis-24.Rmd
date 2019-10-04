@@ -38,7 +38,7 @@ Use the `trakt` ID (recommended over other IDs) for subsequent API calls.
 In this case, we'll use `seasons_summary()` to get data for all seasons of the show, while also getting an additional list-column containing all episode data, which includes user ratings.
 
 ```{r 24_getting_seasons}
-seasons <- seasons_summary(how_info$trakt, extended = "full", episodes = TRUE)
+seasons <- seasons_summary(show_info$trakt, extended = "full", episodes = TRUE)
 glimpse(seasons)
 ```
 
