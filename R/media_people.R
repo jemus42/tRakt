@@ -6,19 +6,22 @@
 #' @details
 #' The API methods for these functions are:
 #'
-#' - [/shows/:id/people](https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show)
-#' - [/movies/:id/people](https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie)
+#' - [/shows/:id/people](https://trakt.docs.apiary.io/#reference/shows/people/)
+#' - [/movies/:id/people](https://trakt.docs.apiary.io/#reference/movies/people/)
 #'
-#' Note that as of 2019-09-30, there are two representations of `character[s]` and `job[s]`:
+#' Note that as of 2019-09-30, there are two representations of `character[s]` and
+#' `job[s]`:
 #' One is a regular character variable, and the other is a list-column. The former is
-#' [deprecated and only included for compatibility reasons](https://github.com/trakt/api-help/issues/74).
+#' [deprecated](https://github.com/trakt/api-help/issues/74)  and only included for
+#' compatibility reasons.
 #'
 #' @name media_people
 #' @inheritParams trakt_api_common_parameters
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
 #' and `crew`. The latter `tibble` objects are as flat as possible.
 #' @family people data
-#' @seealso [people_media], for the other direction: People that have credits in shows/movies.
+#' @seealso [people_media], for the other direction: People that have credits
+#'   in shows/movies.
 #' @examples
 #' \dontrun{
 #' shows_people("breaking-bad")

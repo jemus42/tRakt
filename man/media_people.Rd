@@ -33,13 +33,15 @@ available.
 \details{
 The API methods for these functions are:
 \itemize{
-\item \href{https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show}{/shows/:id/people}
-\item \href{https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{/movies/:id/people}
+\item \href{https://trakt.docs.apiary.io/#reference/shows/people/}{/shows/:id/people}
+\item \href{https://trakt.docs.apiary.io/#reference/movies/people/}{/movies/:id/people}
 }
 
-Note that as of 2019-09-30, there are two representations of \code{character[s]} and \code{job[s]}:
+Note that as of 2019-09-30, there are two representations of \code{character[s]} and
+\code{job[s]}:
 One is a regular character variable, and the other is a list-column. The former is
-\href{https://github.com/trakt/api-help/issues/74}{deprecated and only included for compatibility reasons}.
+\href{https://github.com/trakt/api-help/issues/74}{deprecated}  and only included for
+compatibility reasons.
 }
 \examples{
 \dontrun{
@@ -47,7 +49,8 @@ shows_people("breaking-bad")
 }
 }
 \seealso{
-\link{people_media}, for the other direction: People that have credits in shows/movies.
+\link{people_media}, for the other direction: People that have credits
+in shows/movies.
 
 Other people data: \code{\link{people_media}},
   \code{\link{people_summary}}
