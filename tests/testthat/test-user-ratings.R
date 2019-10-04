@@ -1,23 +1,23 @@
 context("User / Ratings")
 
-test_that("trakt.user.ratings works", {
+test_that("user_ratings works", {
   skip_on_cran()
 
   user <- "jemus42"
 
-  trakt.user.ratings(user = user, type = "shows") %>%
+  user_ratings(user = user, type = "shows") %>%
     expect_is("tbl")
-  trakt.user.ratings(user = user, type = "seasons") %>%
+  user_ratings(user = user, type = "seasons") %>%
     expect_is("tbl")
-  trakt.user.ratings(user = user, type = "episodes") %>%
+  user_ratings(user = user, type = "episodes") %>%
     expect_is("tbl")
-  trakt.user.ratings(user = user, type = "movies") %>%
+  user_ratings(user = user, type = "movies") %>%
     expect_is("tbl")
 
 
   # Error conditions ----
-  expect_error(trakt.user.ratings(user = -1))
-  expect_error(trakt.user.ratings(user = user, type = "seven"))
-  expect_error(trakt.user.ratings(user = user, type = "movies", rating = -2))
-  expect_error(trakt.user.ratings(user = user, type = "movies", rating = NA))
+  expect_error(user_ratings(user = -1))
+  expect_error(user_ratings(user = user, type = "seven"))
+  expect_error(user_ratings(user = user, type = "movies", rating = -2))
+  expect_error(user_ratings(user = user, type = "movies", rating = NA))
 })

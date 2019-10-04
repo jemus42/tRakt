@@ -1,6 +1,6 @@
 context("Search")
 
-test_that("trakt.search works", {
+test_that("search_query works", {
   skip_on_cran()
 
   res <- search_query("russian doll", type = "show")
@@ -20,7 +20,7 @@ test_that("trakt.search works", {
   expect_warning(search_query("nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb", type = "movie", years = 1100))
 })
 
-test_that("trakt.search.byid works", {
+test_that("search_id works", {
   skip_on_cran()
 
   # Oddly enough, 614 matches Home Alone oO

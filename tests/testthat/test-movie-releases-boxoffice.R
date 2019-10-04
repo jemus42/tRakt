@@ -1,13 +1,13 @@
 context("Getting movie releases and box office")
 
-test_that("trakt.movies.releases works", {
+test_that("movies_releases works", {
   skip_on_cran()
 
   movie <- "deadpool-2016"
 
-  mov <- trakt.movies.releases(target = movie)
-  mov_de <- trakt.movies.releases(target = movie, country = "de")
-  mov_multi <- trakt.movies.releases(target = c(movie, "inception-2010"), country = "de")
+  mov <- movies_releases(target = movie)
+  mov_de <- movies_releases(target = movie, country = "de")
+  mov_multi <- movies_releases(target = c(movie, "inception-2010"), country = "de")
 
   expect_is(mov, "tbl")
   expect_gte(nrow(mov), nrow(mov_de))
@@ -15,10 +15,10 @@ test_that("trakt.movies.releases works", {
   expect_length(mov_multi, length(mov))
 })
 
-test_that("trakt.movies.boxoffice works", {
+test_that("movies_boxoffice works", {
   skip_on_cran()
 
-  trakt.movies.boxoffice() %>%
+  movies_boxoffice() %>%
     expect_is("tbl") %>%
     expect_length(7) %>%
     nrow() %>%

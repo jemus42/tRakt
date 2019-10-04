@@ -1,12 +1,12 @@
 context("People methods")
 
-test_that("trakt.people.summary works", {
+test_that("people_summary works", {
   skip_on_cran()
 
   target <- "bryan-cranston"
 
-  people_min <- trakt.people.summary(target = target, extended = "min")
-  people_max <- trakt.people.summary(target = target, extended = "full")
+  people_min <- people_summary(target = target, extended = "min")
+  people_max <- people_summary(target = target, extended = "full")
 
   expect_is(people_min, "tbl")
   expect_equal(nrow(people_min), 1)
@@ -17,28 +17,28 @@ test_that("trakt.people.summary works", {
 
   expect_identical(
     rbind(
-      trakt.people.summary(target = target),
-      trakt.people.summary(target = target)
+      people_summary(target = target),
+      people_summary(target = target)
     ),
-    trakt.people.summary(target = c(target, target))
+    people_summary(target = c(target, target))
   )
 })
 
-test_that("trakt.people.[movies|shows] works", {
+test_that("people_media works", {
   skip_on_cran()
 
   target <- "bryan-cranston"
 
-  mov_min <- trakt.people.movies(target = target, extended = "min")
-  mov_max <- trakt.people.movies(target = target, extended = "full")
+  mov_min <- people_movies(target = target, extended = "min")
+  mov_max <- people_movies(target = target, extended = "full")
 
   expect_is(mov_min, "list")
   expect_named(mov_min, c("cast", "crew"))
   expect_is(mov_min$cast, "tbl")
   expect_is(mov_min$crew, "tbl")
 
-  sho_min <- trakt.people.shows(target = target, extended = "min")
-  sho_max <- trakt.people.shows(target = target, extended = "full")
+  sho_min <- people_shows(target = target, extended = "min")
+  sho_max <- people_shows(target = target, extended = "full")
 
   expect_is(sho_min, "list")
   expect_named(sho_min, c("cast", "crew"))
@@ -47,14 +47,14 @@ test_that("trakt.people.[movies|shows] works", {
 })
 
 
-test_that("trakt.[show|movie].people works", {
+test_that("media_people works", {
   skip_on_cran()
 
   target_mov <- "inception-2010"
   target_sho <- "futurama"
 
-  show_people <- trakt.shows.people(target = target_sho)
-  movie_people <- trakt.movies.people(target = target_mov)
+  show_people <- shows_people(target = target_sho)
+  movie_people <- movies_people(target = target_mov)
 
   expect_is(show_people, "list")
   expect_is(movie_people, "list")

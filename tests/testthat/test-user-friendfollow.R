@@ -1,12 +1,12 @@
 context("User / Network")
 
-test_that("trakt.user.network works", {
+test_that("user_network stuff works", {
   skip_on_cran()
 
   user <- "jemus42"
 
-  fol_min <- trakt.user.network(relationship = "followers", user = "jemus42", extended = "min")
-  fol_max <- trakt.user.network(relationship = "followers", user = "jemus42", extended = "full")
+  fol_min <- user_followers(user = "jemus42", extended = "min")
+  fol_max <- user_followers(user = "jemus42", extended = "full")
 
   expect_is(fol_min, "tbl")
   expect_is(fol_max, "tbl")
@@ -14,20 +14,20 @@ test_that("trakt.user.network works", {
 
   expect_identical(
     rbind(
-      trakt.user.network(relationship = "followers", user = user),
-      trakt.user.network(relationship = "followers", user = user)
+      user_followers(user = user),
+      user_followers(user = user)
     ),
-    trakt.user.network(relationship = "followers", user = c(user, user))
+    user_followers(user = c(user, user))
   )
 
   # Error conditions
-  expect_error(trakt.user.network(user = ""))
-  expect_error(trakt.user.network(user = NA))
-  expect_error(trakt.user.network(user = 4))
+  expect_error(user_followers(user = ""))
+  expect_error(user_followers(user = NA))
+  expect_error(user_followers(user = 4))
 })
 
-test_that("No NULLs or \"\" in trakt.user.network", {
-  friends <- trakt.user.network("followers", "jemus42", "full")
+test_that("No NULLs or \"\" in user_network", {
+  friends <- user_followers("jemus42", "full")
   expect_true(!any(map_lgl(friends, function(col) any(is.null(col)))))
   expect_true(!any(map_lgl(friends, function(col) any(identical(col, "")))))
 })

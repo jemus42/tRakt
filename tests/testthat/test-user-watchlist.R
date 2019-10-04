@@ -1,13 +1,13 @@
 context("User / Watchlist")
 
-test_that("trakt.user.watchlist works", {
+test_that("user_watchlist works", {
   skip_on_cran()
 
   user <- "sean"
 
-  res_default <- trakt.user.watchlist(user = user)
-  res_shows <- trakt.user.watchlist(user = user, type = "shows")
-  res_movies <- trakt.user.watchlist(user = user, type = "movies")
+  res_default <- user_watchlist(user = user)
+  res_shows <- user_watchlist(user = user, type = "shows")
+  res_movies <- user_watchlist(user = user, type = "movies")
 
   expect_identical(res_default, res_movies)
   expect_is(res_shows, "tbl")
@@ -16,6 +16,6 @@ test_that("trakt.user.watchlist works", {
   # no shows
   expect_identical(
     tibble::tibble(),
-    trakt.user.watchlist(user = "jemus42", type = "shows")
+    user_watchlist(user = "jemus42", type = "shows")
   )
 })

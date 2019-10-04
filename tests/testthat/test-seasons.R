@@ -1,6 +1,6 @@
 context("Seasons")
 
-test_that("trakt.seasons.season works", {
+test_that("seasons_season works", {
   skip_on_cran()
 
   target <- "futurama"
@@ -10,8 +10,8 @@ test_that("trakt.seasons.season works", {
     "imdb", "tmdb"
   )
 
-  min_s1_single <- trakt.seasons.season(target = target, seasons = 1, extended = "min")
-  full_s1_single <- trakt.seasons.season(target = target, seasons = 1, extended = "full")
+  min_s1_single <- seasons_season(target = target, seasons = 1, extended = "min")
+  full_s1_single <- seasons_season(target = target, seasons = 1, extended = "full")
 
   # Structural integrity
   expect_is(min_s1_single, "tbl")
@@ -23,33 +23,33 @@ test_that("trakt.seasons.season works", {
   expect_lt(length(min_s1_single), length(full_s1_single))
 
   # Error conditions
-  expect_error(trakt.seasons.season(target = target, seasons = NA))
-  expect_error(trakt.seasons.season(target = target, seasons = "seven"))
-  expect_error(trakt.seasons.season(target = target, seasons = NULL))
-  expect_error(trakt.seasons.season(target = target, seasons = 10))
+  expect_error(seasons_season(target = target, seasons = NA))
+  expect_error(seasons_season(target = target, seasons = "seven"))
+  expect_error(seasons_season(target = target, seasons = NULL))
+  expect_error(seasons_season(target = target, seasons = 10))
 
   # Multi-length input seasons
   expect_identical(
     rbind(
-      trakt.seasons.season(target = target, seasons = 1),
-      trakt.seasons.season(target = target, seasons = 2)
+      seasons_season(target = target, seasons = 1),
+      seasons_season(target = target, seasons = 2)
     ),
-    trakt.seasons.season(target = target, seasons = 1:2)
+    seasons_season(target = target, seasons = 1:2)
   )
 })
 
-test_that("trakt.seasons.summary works", {
+test_that("seasons_summary works", {
   skip_on_cran()
 
   target <- "futurama"
 
-  result_min <- trakt.seasons.summary(
+  result_min <- seasons_summary(
     target = target, extended = "min",
-    drop.specials = TRUE, drop.unaired = TRUE
+    drop_specials = TRUE, drop_unaired = TRUE
   )
-  result_max <- trakt.seasons.summary(
+  result_max <- seasons_summary(
     target = target, extended = "full",
-    drop.specials = TRUE, drop.unaired = TRUE
+    drop_specials = TRUE, drop_unaired = TRUE
   )
 
   expect_is(result_min, "tbl")
@@ -62,20 +62,20 @@ test_that("trakt.seasons.summary works", {
 
   expect_identical(
     rbind(
-      trakt.seasons.summary(target),
-      trakt.seasons.summary(target)
+      seasons_summary(target),
+      seasons_summary(target)
     ),
-    trakt.seasons.summary(c(target, target))
+    seasons_summary(c(target, target))
   )
 
-  expect_error(trakt.seasons.summary(target = "bvkjqbkqjbf"))
+  expect_error(seasons_summary(target = "bvkjqbkqjbf"))
 })
 
-test_that("trakt.seasons.summary works for episodes", {
+test_that("seasons_summary works for episodes", {
   skip_on_cran()
 
   target <- "utopia"
-  res <- trakt.seasons.summary(target, extended = "full", episodes = TRUE)
+  res <- seasons_summary(target, extended = "full", episodes = TRUE)
 
   expect_is(res, "tbl")
   expect_is(res$episodes, "list")

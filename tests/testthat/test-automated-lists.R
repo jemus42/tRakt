@@ -1,6 +1,6 @@
 context("Automated Lists")
 
-test_that("trakt.popular works", {
+test_that("popular_media works", {
   skip_on_cran()
 
   # movies
@@ -26,7 +26,7 @@ test_that("trakt.popular works", {
   expect_equal(nrow(pop_sho_min), nrow(pop_sho_max))
 })
 
-test_that("trakt.trending works", {
+test_that("trending_media works", {
   skip_on_cran()
 
   # movies
@@ -52,7 +52,7 @@ test_that("trakt.trending works", {
   expect_equal(nrow(tre_sho_min), nrow(tre_sho_max))
 })
 
-test_that("trakt.anticipated works", {
+test_that("anticipated_media works", {
   skip_on_cran()
 
   # movies
@@ -78,7 +78,7 @@ test_that("trakt.anticipated works", {
   expect_equal(nrow(tre_sho_min), nrow(tre_sho_max))
 })
 
-test_that("trakt.played and trakt.watched also do things", {
+test_that("played_media and watched_media also do things", {
 
   # Both have the same variables, the difference is just sorting
   nm <- c(
@@ -101,7 +101,7 @@ test_that("trakt.played and trakt.watched also do things", {
     expect_equal(10)
 })
 
-test_that("trakt.collected does its thing", {
+test_that("collected_media does its thing", {
   shows_collected(limit = 5) %>%
     expect_is("tbl") %>%
     expect_length(11) %>%
@@ -115,7 +115,7 @@ test_that("trakt.collected does its thing", {
     expect_equal(5)
 })
 
-test_that("trakt.updates works", {
+test_that("updated_media works", {
   shows_updates() %>%
     expect_is("tbl") %>%
     expect_length(8) %>%
