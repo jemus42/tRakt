@@ -345,19 +345,29 @@ check_filter_arg <- function(filter,
     }
   }
   if (filter_type == "genres") {
-    filter <- check_filter_arg_fixed(filter, filter_type, trakt_genres$slug)
+    filter <- check_filter_arg_fixed(
+      filter, filter_type, tRakt::trakt_genres$slug
+    )
   }
   if (filter_type == "languages") {
-    filter <- check_filter_arg_fixed(filter, filter_type, trakt_languages$code)
+    filter <- check_filter_arg_fixed(
+      filter, filter_type, tRakt::trakt_languages$code
+    )
   }
   if (filter_type == "countries") {
-    filter <- check_filter_arg_fixed(filter, filter_type, trakt_countries$code)
+    filter <- check_filter_arg_fixed(
+      filter, filter_type, tRakt::trakt_countries$code
+    )
   }
   if (filter_type == "certifications") {
-    filter <- check_filter_arg_fixed(filter, filter_type, trakt_certifications$slug)
+    filter <- check_filter_arg_fixed(
+      filter, filter_type, tRakt::trakt_certifications$slug
+    )
   }
   if (filter_type == "networks") {
-    filter <- check_filter_arg_fixed(filter, filter_type, trakt_networks)
+    filter <- check_filter_arg_fixed(
+      filter, filter_type, tRakt::trakt_networks
+    )
   }
   if (filter_type == "status") {
     status_ok <- c("returning series", "in production", "planned", "canceled", "ended")
