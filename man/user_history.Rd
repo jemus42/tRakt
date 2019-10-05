@@ -55,8 +55,8 @@ user_history(
 }
 \seealso{
 Other user data: \code{\link{user_collection}},
-  \code{\link{user_network}}, \code{\link{user_ratings}},
-  \code{\link{user_stats}}, \code{\link{user_summary}},
+  \code{\link{user_network}}, \code{\link{user_profile}},
+  \code{\link{user_ratings}}, \code{\link{user_stats}},
   \code{\link{user_watched}}, \code{\link{user_watchlist}}
 }
 \concept{user data}

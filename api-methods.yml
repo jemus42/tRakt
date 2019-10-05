@@ -266,7 +266,7 @@ users:
   profile:
     url: https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile
     endpoint: users/:id
-    implementation: user_summary()
+    implementation: user_profile()
   collection:
     url: https://trakt.docs.apiary.io/#reference/users/collection/get-collection
     endpoint: users/:id/collection/:type
@@ -325,24 +325,24 @@ certifications:
   list:
     url: https://trakt.docs.apiary.io/#reference/certifications/list/get-certifications
     endpoint: certifications/:type
-    implementation: ?certifications
+    implementation: ?trakt_certifications
 countries:
   list:
     url: https://trakt.docs.apiary.io/#reference/countries/list/get-countries
     endpoint: countries/:type
-    implementation: ?countries
+    implementation: ?trakt_countries
 genres:
   list:
     url: https://trakt.docs.apiary.io/#reference/genres/list/get-genres
     endpoint: genres/:type
-    implementation: ?genres
+    implementation: ?trakt_genres
 languages:
   list:
     url: https://trakt.docs.apiary.io/#reference/languages/list/get-languages
     endpoint: languages/:type
-    implementation: ?languages
+    implementation: ?trakt_languages
 networks:
   list:
     url: https://trakt.docs.apiary.io/#reference/networks/list/get-networks
     endpoint: networks
-    implementation: ?networks
+    implementation: ?trakt_networks

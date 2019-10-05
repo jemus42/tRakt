@@ -12,15 +12,15 @@
 #' @family user data
 #' @examples
 #' \dontrun{
-#' user_summary("sean")
+#' user_profile("sean")
 #' }
-user_summary <- function(user = getOption("trakt_username"),
+user_profile <- function(user = getOption("trakt_username"),
                          extended = c("min", "full")) {
   check_username(user)
   extended <- match.arg(extended)
 
   if (length(user) > 1) {
-    return(map_df(user, ~ user_summary(user = .x, extended)))
+    return(map_df(user, ~ user_profile(user = .x, extended)))
   }
 
   # Construct URL, make API call
