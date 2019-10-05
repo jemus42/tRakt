@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get the cast and crew of a show or movie — media_people • tRakt</title>
+<title>Country codes — trakt_countries • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,9 +42,8 @@
 
 
 
-<meta property="og:title" content="Get the cast and crew of a show or movie — media_people" />
-<meta property="og:description" content="Returns all cast and crew for a show/movie, depending on how much data is
-available." />
+<meta property="og:title" content="Country codes — trakt_countries" />
+<meta property="og:description" content="Country codes" />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -157,104 +156,41 @@ available." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get the cast and crew of a show or movie</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/media_people.R'><code>R/media_people.R</code></a></small>
-    <div class="hidden name"><code>media_people.Rd</code></div>
+    <h1>Country codes</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/data-internal.R'><code>R/data-internal.R</code></a></small>
+    <div class="hidden name"><code>trakt_countries.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Returns all cast and crew for a show/movie, depending on how much data is
-available.</p>
+    <p>Country codes</p>
     </div>
 
-    <pre class="usage"><span class='fu'>shows_people</span>(<span class='no'>id</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
+    <pre class="usage"><span class='no'>trakt_countries</span></pre>
 
-<span class='fu'>movies_people</span>(<span class='no'>id</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>id</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
-<code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
-or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
-Can also be of length greater than 1, in which case the function is called on all
-<code>id</code> values separately and the result is combined. See section
-<a href='trakt_api_common_parameters.html'>"Item identifiers"</a> for more details.</p></td>
-    </tr>
-    <tr>
-      <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
-returns more variables and should generally only be used if required.
-See section <a href='trakt_api_common_parameters.html'>"Extended Information"</a> for more details.</p></td>
-    </tr>
-    </table>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 219 rows and 2 columns.</p>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>A <code>list</code> of one or more <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibbles</a> for <code>cast</code>
-and <code>crew</code>. The latter <code>tibble</code> objects are as flat as possible.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>The API methods for these functions are:</p><ul>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/shows/people/'>/shows/:id/people</a></p></li>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/movies/people/'>/movies/:id/people</a></p></li>
-</ul>
-
-<p>Note that as of 2019-09-30, there are two representations of <code>character[s]</code> and
-<code>job[s]</code>:
-One is a regular character variable, and the other is a list-column. The former is
-<a href='https://github.com/trakt/api-help/issues/74'>deprecated</a>  and only included for
-compatibility reasons.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p><a href='people_media.html'>people_media</a>, for the other direction: People that have credits
-in shows/movies.</p>
-<p>Other people data: <code><a href='people_media.html'>people_media</a></code>,
-  <code><a href='people_summary.html'>people_summary</a></code></p></div>
+    <p><a href='https://trakt.docs.apiary.io/#reference/countries/list/get-countries'>https://trakt.docs.apiary.io/#reference/countries/list/get-countries</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>shows_people</span>(<span class='st'>"breaking-bad"</span>)</div><div class='output co'>#&gt; $cast
-#&gt; # A tibble: 9 x 8
-#&gt;   character    characters episode_count name     trakt  slug         imdb  tmdb 
-#&gt;   &lt;chr&gt;        &lt;list&gt;             &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 Walter White &lt;chr [1]&gt;             62 Bryan C… 297737 bryan-crans… nm01… 17419
-#&gt; 2 Jesse Pinkm… &lt;chr [1]&gt;             62 Aaron P… 415249 aaron-paul   nm06… 84497
-#&gt; 3 Skyler White &lt;chr [1]&gt;             62 Anna Gu… 420986 anna-gunn    nm03… 1345…
-#&gt; 4 Hank Schrad… &lt;chr [1]&gt;             62 Dean No… 415192 dean-norris  nm06… 14329
-#&gt; 5 Marie Schra… &lt;chr [1]&gt;             62 Betsy B… 436547 betsy-brandt nm13… 1217…
-#&gt; 6 Walter Whit… &lt;chr [1]&gt;             62 RJ Mitte 459150 rj-mitte-06… nm26… 2096…
-#&gt; 7 Saul Goodman &lt;chr [1]&gt;             42 Bob Ode… 294857 bob-odenkirk nm06… 59410
-#&gt; 8 Mike Ehrman… &lt;chr [1]&gt;             42 Jonatha… 411251 jonathan-ba… nm00… 783  
-#&gt; 9 "Gustavo \"… &lt;chr [1]&gt;             26 Giancar… 412546 giancarlo-e… nm00… 4808 
-#&gt; 
-#&gt; $crew
-#&gt; # A tibble: 61 x 9
-#&gt;    job      jobs   episode_count name      trakt  slug     imdb  tmdb  crew_type
-#&gt;    &lt;chr&gt;    &lt;list&gt;         &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    
-#&gt;  1 Executi… &lt;chr …            62 Michelle… 12427  michell… nm05… 29779 producti…
-#&gt;  2 Producer &lt;chr …            62 Peter Go… 20811  peter-g… nm03… 24951 producti…
-#&gt;  3 Producer &lt;chr …            62 Thomas S… 67528  thomas-… nm10… 1030… producti…
-#&gt;  4 Producer &lt;chr …            62 Bryan Cr… 297737 bryan-c… nm01… 17419 producti…
-#&gt;  5 Producer &lt;chr …            62 Stewart … 325805 stewart… nm05… 1223… producti…
-#&gt;  6 Producer &lt;chr …            62 Moira Wa… 325808 moira-w… nm09… 1223… producti…
-#&gt;  7 Producer &lt;chr …            62 Karen Mo… 365840 karen-m… nm10… 1223… producti…
-#&gt;  8 Producer &lt;chr …            62 Patty Lin 398571 patty-l… nm05… 1218… producti…
-#&gt;  9 Producer &lt;chr …            62 Melissa … 400288 melissa… nm22… 1223… producti…
-#&gt; 10 Producer &lt;chr …            62 George M… 400289 george-… nm22… 1223… producti…
-#&gt; # … with 51 more rows
-#&gt; </div><div class='input'># }
-</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_countries</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 2
+#&gt;   name           code 
+#&gt;   &lt;chr&gt;          &lt;chr&gt;
+#&gt; 1 Afghanistan    af   
+#&gt; 2 Albania        al   
+#&gt; 3 Algeria        dz   
+#&gt; 4 American Samoa as   
+#&gt; 5 Andorra        ad   
+#&gt; 6 Angola         ao   </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#see-also">See also</a></li>
+      <li><a href="#format">Format</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

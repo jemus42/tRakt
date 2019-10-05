@@ -207,7 +207,8 @@ be nice to the API.</p></td>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># Use noseasons = TRUE to avoid receiving detailed season/episode data</span>
-<span class='fu'>user_watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='error'>Error in trakt_get(url = url): Forbidden (HTTP 403). Failed to retrieve data from https://api.trakt.tv/users/sean/watched/shows?extended=noseasons.</span></div><div class='input'># }
+<span class='fu'>user_watched</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>, <span class='kw'>noseasons</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
+#&gt; <span class='message'>https://api.trakt.tv/users/sean/watched/shows?extended=noseasons.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

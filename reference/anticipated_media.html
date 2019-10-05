@@ -200,17 +200,17 @@ Can also be an integer vector of length two which will be coerced appropriately.
     </tr>
     <tr>
       <th>genres</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Genre  slug(s). See <code><a href='genres.html'>genres</a></code> for a table of genres.
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Genre  slug(s). See <code><a href='trakt_genres.html'>trakt_genres</a></code> for a table of genres.
 Multiple values are allowed and will be concatenated.</p></td>
     </tr>
     <tr>
       <th>languages</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-digit language code(s). Also see <code><a href='languages.html'>languages</a></code> for
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-digit language code(s). Also see <code><a href='trakt_languages.html'>trakt_languages</a></code> for
 table of available languages.</p></td>
     </tr>
     <tr>
       <th>countries</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-character country code(s). See <code><a href='countries.html'>countries</a></code>.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-character country code(s). See <code><a href='trakt_countries.html'>trakt_countries</a></code>.</p></td>
     </tr>
     <tr>
       <th>runtimes</th>
@@ -225,12 +225,12 @@ an integer vector of length two which will be coerced appropriately.</p></td>
     <tr>
       <th>certifications</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Certification(s) like <code>pg-13</code>.
-Multiple values are allowed. Use <code><a href='certifications.html'>certifications</a></code> for reference. Note that there
+Multiple values are allowed. Use <code><a href='trakt_certifications.html'>trakt_certifications</a></code> for reference. Note that there
 are different certifications for shows and movies.</p></td>
     </tr>
     <tr>
       <th>networks</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) Network name like <code>HBO</code>. See <code><a href='networks.html'>networks</a></code>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) Network name like <code>HBO</code>. See <code><a href='trakt_networks.html'>trakt_networks</a></code>
 for a list of known networks.</p></td>
     </tr>
     <tr>
@@ -279,24 +279,23 @@ the same additional variables besides the media information: <code>watcher_count
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
-<span class='fu'>shows_anticipated</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 15 x 8
+<span class='fu'>shows_anticipated</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 14 x 8
 #&gt;    list_count title              year trakt  slug            tvdb  imdb    tmdb 
 #&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;
-#&gt;  1       9347 The Witcher        2019 138163 the-witcher-20… 3626… tt5180… 71912
-#&gt;  2       1304 Raising Dion       2019 124235 raising-dion    3359… tt7826… 93392
+#&gt;  1       9434 The Witcher        2019 138163 the-witcher-20… 3626… tt5180… 71912
+#&gt;  2       1533 Raising Dion       2019 124235 raising-dion    3359… tt7826… 93392
 #&gt;  3       1094 Living With Your…  2019 151776 living-with-yo… 3685… tt8880… 81532
 #&gt;  4        525 Daybreak           2019 152108 daybreak-2019   3547… tt8755… 83478
 #&gt;  5        266 V-Wars             2019 133365 v-wars          3493… tt7403… &lt;NA&gt; 
 #&gt;  6        161 The Faction        2019 141592 the-faction     3566… &lt;NA&gt;    &lt;NA&gt; 
 #&gt;  7        139 Sintonia           2019 131399 sintonia        3443… tt8165… &lt;NA&gt; 
-#&gt;  8         77 Seis Manos         2019 152707 seis-manos      3665… tt1010… 93953
-#&gt;  9         58 Rhythm + Flow      2019 152211 rhythm-flow     3690… tt9278… 83996
-#&gt; 10         29 Hache              2019 147926 hache           3555… tt8575… 84112
-#&gt; 11         19 Cidades Invisive…  2019 134761 cidades-invisi… 3493… &lt;NA&gt;    &lt;NA&gt; 
-#&gt; 12         18 Nowhere Man        2019 153240 nowhere-man-15… 3700… tt1089… &lt;NA&gt; 
-#&gt; 13          7 Brotherhood        2019 153095 brotherhood-20… 3589… tt8905… &lt;NA&gt; 
-#&gt; 14          7 Queer Eye: We're…  2019 152948 queer-eye-we-r… 3697… &lt;NA&gt;    &lt;NA&gt; 
-#&gt; 15          7 Prank Encounters   2019 152904 prank-encounte… 3697… &lt;NA&gt;    &lt;NA&gt; </div><div class='input'># }
+#&gt;  8         68 Rhythm + Flow      2019 152211 rhythm-flow     3690… tt9278… 83996
+#&gt;  9         29 Hache              2019 147926 hache           3555… tt8575… 84112
+#&gt; 10         19 Cidades Invisive…  2019 134761 cidades-invisi… 3493… &lt;NA&gt;    &lt;NA&gt; 
+#&gt; 11         18 Nowhere Man        2019 153240 nowhere-man-15… 3700… tt1089… &lt;NA&gt; 
+#&gt; 12          7 Brotherhood        2019 153095 brotherhood-20… 3589… tt8905… &lt;NA&gt; 
+#&gt; 13          7 Queer Eye: We're…  2019 152948 queer-eye-we-r… 3697… &lt;NA&gt;    &lt;NA&gt; 
+#&gt; 14          7 Prank Encounters   2019 152904 prank-encounte… 3697… &lt;NA&gt;    &lt;NA&gt; </div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
