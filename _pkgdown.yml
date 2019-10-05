@@ -19,38 +19,56 @@ reference:
       Searching for items is usually required to retrieve some kind of ID, like the `slug`,
       which is required for use of item-specific functions.
     contents:
-      - starts_with("search")
+      - search_query
+      - search_id
   - title: Shows & movies that are popular, trending, anticipated, ...
     contents:
-      - ends_with("(popular|trending|anticipated|watched|played|collected|updated)")
+      - ends_with("(popular|trending|anticipated|watched|played|collected)")
       - -starts_with("user_")
   - title: Simple summary data
     contents:
       - ends_with("_summary")
       - -starts_with("user_")
-  - title: Season and episode data
+  - title: Seasons and episodes
     contents:
-      - starts_with("seasons_")
+      - seasons_summary
+      - seasons_season
   - title: Movie-specific data
     contents:
-      - starts_with("movies_")
+      - movies_boxoffice
+      - movies_releases
   - title: Media ratings
+    desc: >
+      These functions return the full rating distribution for an item, in contrast to
+      the `_summary`-methods, which return the average rating of an item.
     contents:
       - ends_with("_ratings")
       - -starts_with("user_")
   - title: Media stats
+    desc: >
+      These functions return the number of watchers, plays, collectors, comments, lists and votes of an item.
     contents:
       - ends_with("_stats")
       - -starts_with("user_")
   - title: Related media
+    desc: Media related to media.
     contents:
-      - ends_with("_related")
+      - movies_related
+      - shows_related
   - title: User-specific data
     contents:
       - starts_with("user_")
   - title: Data relating to people
+    desc: >
+      Cast and crew for media items, as well as the reverse; credits for people.
     contents:
-      - contains("people")
+      - people_summary
+      - starts_with("people_")
+      - ends_with("_people")
+  - title: Recently updated items
+    contents:
+      - shows_updates
+      - movies_updates
   - title: API interaction and reference topics
     contents:
       - build_trakt_url

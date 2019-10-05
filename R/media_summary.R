@@ -30,7 +30,8 @@ NULL
 #' @importFrom lubridate as_datetime
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
-#' @note Handling of this result is annoying because it's always just a list, not a data.frame
+#' @note Handling of this result is annoying because it's always just a list,
+#'   not a data.frame
 media_summary <- function(type = c("movies", "shows"), id, extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
