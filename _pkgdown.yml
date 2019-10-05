@@ -85,11 +85,11 @@ reference:
        These are unlikely to be useful on their own, but they are useful as a reference
        for optional filters.
     contents:
-      - countries
-      - genres
-      - languages
-      - networks
-      - certifications
+      - trakt_countries
+      - trakt_genres
+      - trakt_languages
+      - trakt_networks
+      - trakt_certifications
   - title: This package
     contents:
       - tRakt

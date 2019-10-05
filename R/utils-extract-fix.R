@@ -345,19 +345,19 @@ check_filter_arg <- function(filter,
     }
   }
   if (filter_type == "genres") {
-    filter <- check_filter_arg_fixed(filter, filter_type, genres$slug)
+    filter <- check_filter_arg_fixed(filter, filter_type, trakt_genres$slug)
   }
   if (filter_type == "languages") {
-    filter <- check_filter_arg_fixed(filter, filter_type, languages$code)
+    filter <- check_filter_arg_fixed(filter, filter_type, trakt_languages$code)
   }
   if (filter_type == "countries") {
-    filter <- check_filter_arg_fixed(filter, filter_type, countries$code)
+    filter <- check_filter_arg_fixed(filter, filter_type, trakt_countries$code)
   }
   if (filter_type == "certifications") {
-    filter <- check_filter_arg_fixed(filter, filter_type, certifications$slug)
+    filter <- check_filter_arg_fixed(filter, filter_type, trakt_certifications$slug)
   }
   if (filter_type == "networks") {
-    filter <- check_filter_arg_fixed(filter, filter_type, networks)
+    filter <- check_filter_arg_fixed(filter, filter_type, trakt_networks)
   }
   if (filter_type == "status") {
     status_ok <- c("returning series", "in production", "planned", "canceled", "ended")
@@ -372,7 +372,7 @@ check_filter_arg <- function(filter,
 #' @noRd
 check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
   if (any(!(filter %in% filter_ok))) {
-    warning(
+    warning(call. = FALSE,
       "'", filter_type, "' includes unknown value, ignoring: '",
       paste0(unique(filter[!(filter %in% filter_ok)]), collapse = ", "), "'"
     )
