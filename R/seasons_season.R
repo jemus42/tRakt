@@ -12,6 +12,7 @@
 #' @return A [tibble()][tibble::tibble-package].
 #' @export
 #' @importFrom lubridate year
+#' @importFrom rlang is_integerish
 #' @importFrom purrr is_integer
 #' @importFrom purrr map_df
 #' @importFrom tibble as_tibble
@@ -35,14 +36,17 @@ seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
 
   # Basic sanity check
   # Do this after vectorization due to scalar ifs
-  seasons <- suppressWarnings(as.integer(seasons))
-  if (!is_integer(seasons) | seasons == 0) {
-    stop("'seasons' cannot be coerced to non-negative integer: '", seasons, "'")
+  if (!rlang::is_integerish(seasons)) {
+    stop("'seasons' cannot be coerced to integer: '", seasons, "'")
   }
 
   # Construct URL, make API call
   url <- build_trakt_url("shows", id, "seasons", seasons, extended = extended)
   response <- trakt_get(url = url)
+
+  if (identical(response, tibble())) {
+    return(tibble())
+  }
 
   # Reorganization
   names(response) <- sub("number", "episode", names(response))

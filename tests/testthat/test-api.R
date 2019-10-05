@@ -22,5 +22,5 @@ test_that("trakt_get can make API calls", {
   result <- trakt_get(url)
 
   expect_is(result, "list")
-  expect_error(trakt_get("https://example.com"))
+  expect_message(trakt_get("https://example.com"))
 })

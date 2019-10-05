@@ -53,6 +53,10 @@ seasons_summary <- function(id, extended = c("min", "full"), episodes = FALSE,
   url <- build_trakt_url("shows", id, "seasons", extended = extended)
   response <- trakt_get(url = url)
 
+  if (identical(response, tibble())) {
+    return(tibble())
+  }
+
   # Data cleanup
   if (drop_specials) {
     response <- response[response$number != 0, ]
