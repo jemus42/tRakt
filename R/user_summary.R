@@ -28,6 +28,10 @@ user_summary <- function(user = getOption("trakt_username"),
   response <- trakt_get(url = url)
   response <- as_tibble(response)
 
+  if (identical(response, tibble())) {
+    return(response)
+  }
+
   # Flatten the tbl
   response <- cbind(response[names(response) != "ids"], response$ids)
 

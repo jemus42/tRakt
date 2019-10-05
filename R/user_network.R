@@ -41,6 +41,10 @@ user_network <- function(relationship = c("friends", "followers", "following"),
   url <- build_trakt_url("users", user, relationship, extended = extended)
   response <- trakt_get(url = url)
 
+  if (identical(response, tibble())) {
+    return(response)
+  }
+
   # Flatten the tbl
   response <- cbind(response[names(response) != "user"], response$user)
   response <- cbind(response[names(response) != "ids"], response$ids)

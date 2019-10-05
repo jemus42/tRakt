@@ -39,6 +39,10 @@ user_ratings <- function(user = getOption("trakt_username"),
   url <- build_trakt_url("users", user, "ratings", type, rating, extended = extended)
   response <- trakt_get(url = url)
 
+  if (identical(response, tibble())) {
+    return(response)
+  }
+
   # Flattening
   if (type == "movies") {
     response <- unpack_movie(response)

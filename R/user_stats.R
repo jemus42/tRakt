@@ -33,6 +33,10 @@ user_stats <- function(user = getOption("trakt_username")) {
   url <- build_trakt_url("users", user, "stats")
   response <- trakt_get(url = url)
 
+  if (identical(response, tibble())) {
+    return(response)
+  }
+
   # Flattening/list-columnifying the distribution a little
   response$ratings <- fix_ratings_distribution(response$ratings)
 

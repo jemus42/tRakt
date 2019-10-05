@@ -105,7 +105,7 @@ trakt_credentials <- function(username, client_id, silent = TRUE) {
 #' @export
 #' @importFrom httr user_agent config add_headers
 #' @importFrom httr HEAD GET
-#' @importFrom httr stop_for_status
+#' @importFrom httr message_for_status status_code
 #' @importFrom httr content
 #' @importFrom jsonlite fromJSON
 #' @importFrom purrr flatten
@@ -154,12 +154,19 @@ trakt_get <- function(url, client_id = getOption("trakt_client_id"),
   if (auth) token <- trakt_get_token()
 
   response <- GET(url, headers, agent, config(token = token))
-  # response <- GET(url, headers, agent, config = config(token = token))
+
   # Fail on HTTP error, i.e. 404 or 5xx.
-  stop_for_status(response, paste0("retrieve data from ", url))
+  if (status_code(response) >= 300) {
+    message_for_status(response, paste0("retrieve data from\n", url))
+  }
 
   # Parse output
-  response <- content(response, as = "text")
+  response <- content(response, as = "text", encoding = "UTF-8")
+
+  if (identical(response, "")) {
+    return(tibble())
+  }
+
   response <- fromJSON(response)
 
   # To make empty response handling easier

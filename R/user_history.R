@@ -9,13 +9,7 @@
 #' @param start_at,end_at `character(1)`: A time-window to filter by. Must be coercible
 #' to a datetime object of class `POSIXct`. See [ISOdate] for further information.
 #' @family user data
-#' @importFrom dplyr bind_cols
-#' @importFrom dplyr select
-#' @importFrom dplyr bind_cols
-#' @importFrom dplyr rename
-#' @importFrom dplyr rename_all
-#' @importFrom tibble tibble
-#' @importFrom tibble as_tibble
+#' @importFrom dplyr bind_cols select rename rename_all
 #' @importFrom purrr map_df
 #' @return A [tibble()][tibble::tibble-package].
 #' @note For `type = "shows"`, the
