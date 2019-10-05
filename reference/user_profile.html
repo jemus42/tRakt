@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get a user's social connections — user_network • tRakt</title>
+<title>Get a user's profile — user_profile • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,8 +42,8 @@
 
 
 
-<meta property="og:title" content="Get a user's social connections — user_network" />
-<meta property="og:description" content="Get followers, followings or friends (the two-way relationship)." />
+<meta property="og:title" content="Get a user's profile — user_profile" />
+<meta property="og:description" content="Get a user's profile" />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -156,20 +156,17 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get a user's social connections</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/user_network.R'><code>R/user_network.R</code></a></small>
-    <div class="hidden name"><code>user_network.Rd</code></div>
+    <h1>Get a user's profile</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/user_summary.R'><code>R/user_summary.R</code></a></small>
+    <div class="hidden name"><code>user_profile.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Get followers, followings or friends (the two-way relationship).</p>
+    <p>Get a user's profile</p>
     </div>
 
-    <pre class="usage"><span class='fu'>user_followers</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_user"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>)
-
-<span class='fu'>user_following</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_user"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>)
-
-<span class='fu'>user_friends</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_user"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>)</pre>
+    <pre class="usage"><span class='fu'>user_profile</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>,
+  <span class='st'>"full"</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -193,34 +190,22 @@ See section <a href='trakt_api_common_parameters.html'>"Extended Information"</a
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>The corresponding API methods are described in
-<a href='https://trakt.docs.apiary.io/#reference/users/followers'>the API reference</a>.</p>
-<p>The relevant endpoints for this function are:</p><ul>
-<li><p><code>user_followers</code>: <code>users/:id/followers</code></p></li>
-<li><p><code>user_following</code>: <code>users/:id/following</code></p></li>
-<li><p><code>user_friends</code>: <code>users/:id/friends</code></p></li>
-</ul>
-
+    <p>The corresponding API methods is
+<a href='https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile'>users/:id</a>.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>If the specified user is private, you need to be able to make an <a href='trakt_credentials.html'>authenticated request</a> and be friends with the user.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other user data: <code><a href='user_collection.html'>user_collection</a></code>,
-  <code><a href='user_history.html'>user_history</a></code>, <code><a href='user_profile.html'>user_profile</a></code>,
+  <code><a href='user_history.html'>user_history</a></code>, <code><a href='user_network.html'>user_network</a></code>,
   <code><a href='user_ratings.html'>user_ratings</a></code>, <code><a href='user_stats.html'>user_stats</a></code>,
   <code><a href='user_watched.html'>user_watched</a></code>, <code><a href='user_watchlist.html'>user_watchlist</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>user_followers</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sean/followers?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='co'># }</span>
-<span class='co'># \dontrun{</span>
-<span class='fu'>user_following</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sean/following?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='co'># }</span>
-<span class='co'># \dontrun{</span>
-<span class='fu'>user_friends</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='st'>"sean"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sean/friends?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+<span class='fu'>user_profile</span>(<span class='st'>"sean"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
+#&gt; <span class='message'>https://api.trakt.tv/users/sean?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
