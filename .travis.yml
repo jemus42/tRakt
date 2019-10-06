@@ -4,7 +4,10 @@ language: R
 sudo: true
 cache: packages
 dist: bionic
-
+r:
+  - oldrel
+  - release
+  - devel
 addons:
   apt:
     packages:
@@ -37,11 +40,6 @@ r_binary_packages:
   - testthat
   - tidyr
   - xml2
-
-r:
-  - oldrel
-  - release
-  - devel
 
 after_success:
   - test $TRAVIS_R_VERSION_STRING = "release" && Rscript -e 'covr::codecov()'
