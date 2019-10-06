@@ -198,52 +198,59 @@ are <code>"weekly"</code>, <code>"monthly"</code>, <code>"yearly"</code>, <code>
     </tr>
     <tr>
       <th>query</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Search titles and descriptions.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Search string for titles and descriptions.
+For <code><a href='search_query.html'>search_query()</a></code> other fields are searched depending on the <code>type</code> of media.
+See <a href='https://trakt.docs.apiary.io/#reference/search/text-query'>the API docs</a> for a
+full reference.</p></td>
     </tr>
     <tr>
       <th>years</th>
-      <td><p><code>character | integer</code>: 4-digit year (<code>2010</code>) <strong>or</strong> range, e.g. <code>"2010-2020"</code>.
-Can also be an integer vector of length two which will be coerced appropriately.</p></td>
+      <td><p><code>character | integer</code>: 4-digit year (<code>2010</code>) <strong>or</strong> range,
+e.g. <code>"2010-2020"</code>. Can also be an integer vector of length two which will be
+coerced appropriately.</p></td>
     </tr>
     <tr>
       <th>genres</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Genre  slug(s). See <code><a href='trakt_genres.html'>trakt_genres</a></code> for a table of genres.
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Genre  slug(s).
+See <code><a href='trakt_genres.html'>trakt_genres</a></code> for a table of genres.
 Multiple values are allowed and will be concatenated.</p></td>
     </tr>
     <tr>
       <th>languages</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-digit language code(s). Also see <code><a href='trakt_languages.html'>trakt_languages</a></code> for
-table of available languages.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-digit language code(s).
+Also see <code><a href='trakt_languages.html'>trakt_languages</a></code> for table of available languages.</p></td>
     </tr>
     <tr>
       <th>countries</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-character country code(s). See <code><a href='trakt_countries.html'>trakt_countries</a></code>.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-character country code(s).
+See <code><a href='trakt_countries.html'>trakt_countries</a></code>.</p></td>
     </tr>
     <tr>
       <th>runtimes</th>
-      <td><p><code>character | integer</code>: Integer range in minutes, e.g. <code>30-90</code>. Can also
-be an integer vector of length two which will be coerced appropriately.</p></td>
+      <td><p><code>character | integer</code>: Integer range in minutes, e.g. <code>30-90</code>.
+Can also be an integer vector of length two which will be coerced appropriately.</p></td>
     </tr>
     <tr>
       <th>ratings</th>
-      <td><p><code>character | integer</code>:  Integer range between <code>0</code> and <code>100</code>. Can also be
-an integer vector of length two which will be coerced appropriately.</p></td>
+      <td><p><code>character | integer</code>:  Integer range between <code>0</code> and <code>100</code>.
+Can also be an integer vector of length two which will be coerced appropriately.</p></td>
     </tr>
     <tr>
       <th>certifications</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Certification(s) like <code>pg-13</code>.
-Multiple values are allowed. Use <code><a href='trakt_certifications.html'>trakt_certifications</a></code> for reference. Note that there
-are different certifications for shows and movies.</p></td>
+Multiple values are allowed. Use <code><a href='trakt_certifications.html'>trakt_certifications</a></code> for reference.
+Note that there are different certifications for shows and movies.</p></td>
     </tr>
     <tr>
       <th>networks</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) Network name like <code>HBO</code>. See <code><a href='trakt_networks.html'>trakt_networks</a></code>
-for a list of known networks.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) Network name like <code>HBO</code>.
+See <code><a href='trakt_networks.html'>trakt_networks</a></code> for a list of known networks.</p></td>
     </tr>
     <tr>
       <th>status</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) The status of the shows. One of <code>returning series</code>,
-<code>in production</code>, <code>planned</code>, <code>canceled</code>, or <code>ended</code></p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) The status of the shows.
+One of <code>"returning series"</code>, <code>"in production"</code>, <code>"planned"</code>,
+<code>"canceled"</code>, or <code>"ended"</code>.</p></td>
     </tr>
     </table>
 

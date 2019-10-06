@@ -185,8 +185,10 @@ as receiving a quick overview of a show/movie.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>query</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The keyword used for the search, e.g.
-<code>"breaking bad"</code>.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Search string for titles and descriptions.
+For <code>search_query()</code> other fields are searched depending on the <code>type</code> of media.
+See <a href='https://trakt.docs.apiary.io/#reference/search/text-query'>the API docs</a> for a
+full reference.</p></td>
     </tr>
     <tr>
       <th>type</th>
@@ -208,48 +210,52 @@ See section <a href='trakt_api_common_parameters.html'>"Extended Information"</a
     </tr>
     <tr>
       <th>years</th>
-      <td><p><code>character | integer</code>: 4-digit year (<code>2010</code>) <strong>or</strong> range, e.g. <code>"2010-2020"</code>.
-Can also be an integer vector of length two which will be coerced appropriately.</p></td>
+      <td><p><code>character | integer</code>: 4-digit year (<code>2010</code>) <strong>or</strong> range,
+e.g. <code>"2010-2020"</code>. Can also be an integer vector of length two which will be
+coerced appropriately.</p></td>
     </tr>
     <tr>
       <th>genres</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Genre  slug(s). See <code><a href='trakt_genres.html'>trakt_genres</a></code> for a table of genres.
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Genre  slug(s).
+See <code><a href='trakt_genres.html'>trakt_genres</a></code> for a table of genres.
 Multiple values are allowed and will be concatenated.</p></td>
     </tr>
     <tr>
       <th>languages</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-digit language code(s). Also see <code><a href='trakt_languages.html'>trakt_languages</a></code> for
-table of available languages.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-digit language code(s).
+Also see <code><a href='trakt_languages.html'>trakt_languages</a></code> for table of available languages.</p></td>
     </tr>
     <tr>
       <th>countries</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-character country code(s). See <code><a href='trakt_countries.html'>trakt_countries</a></code>.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-character country code(s).
+See <code><a href='trakt_countries.html'>trakt_countries</a></code>.</p></td>
     </tr>
     <tr>
       <th>runtimes</th>
-      <td><p><code>character | integer</code>: Integer range in minutes, e.g. <code>30-90</code>. Can also
-be an integer vector of length two which will be coerced appropriately.</p></td>
+      <td><p><code>character | integer</code>: Integer range in minutes, e.g. <code>30-90</code>.
+Can also be an integer vector of length two which will be coerced appropriately.</p></td>
     </tr>
     <tr>
       <th>ratings</th>
-      <td><p><code>character | integer</code>:  Integer range between <code>0</code> and <code>100</code>. Can also be
-an integer vector of length two which will be coerced appropriately.</p></td>
+      <td><p><code>character | integer</code>:  Integer range between <code>0</code> and <code>100</code>.
+Can also be an integer vector of length two which will be coerced appropriately.</p></td>
     </tr>
     <tr>
       <th>certifications</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Certification(s) like <code>pg-13</code>.
-Multiple values are allowed. Use <code><a href='trakt_certifications.html'>trakt_certifications</a></code> for reference. Note that there
-are different certifications for shows and movies.</p></td>
+Multiple values are allowed. Use <code><a href='trakt_certifications.html'>trakt_certifications</a></code> for reference.
+Note that there are different certifications for shows and movies.</p></td>
     </tr>
     <tr>
       <th>networks</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) Network name like <code>HBO</code>. See <code><a href='trakt_networks.html'>trakt_networks</a></code>
-for a list of known networks.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) Network name like <code>HBO</code>.
+See <code><a href='trakt_networks.html'>trakt_networks</a></code> for a list of known networks.</p></td>
     </tr>
     <tr>
       <th>status</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) The status of the shows. One of <code>returning series</code>,
-<code>in production</code>, <code>planned</code>, <code>canceled</code>, or <code>ended</code></p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) The status of the shows.
+One of <code>"returning series"</code>, <code>"in production"</code>, <code>"planned"</code>,
+<code>"canceled"</code>, or <code>"ended"</code>.</p></td>
     </tr>
     <tr>
       <th>id</th>
@@ -290,7 +296,7 @@ which fields of the item metadata are searched by default.</p>
 #&gt;   type   score title           year trakt  slug          tvdb  imdb        tmdb 
 #&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;
 #&gt; 1 show  1000   Breaking Bad    2008 1388   breaking-bad  81189 tt0903747   1396 
-#&gt; 2 show   398.  Breaking Bad:…  2018 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
+#&gt; 2 show   399.  Breaking Bad:…  2018 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
 #&gt; 3 show    12.1 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># A show by its trakt id, and now with more information</span>
 <span class='fu'>search_id</span>(<span class='fl'>1388</span>, <span class='st'>"trakt"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 29
@@ -314,9 +320,9 @@ which fields of the item metadata are searched by default.</p>
 #&gt;   type    score title           year trakt slug            imdb      tmdb  tvdb 
 #&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
 #&gt; 1 movie 1000    Tron            1982 66    tron-1982       tt0084827 97    &lt;NA&gt; 
-#&gt; 2 movie  703.   TRON: Legacy    2010 12601 tron-legacy-20… tt1104001 20526 &lt;NA&gt; 
-#&gt; 3 show   591.   Tron: Uprising  2012 34209 tron-uprising   tt1812523 34356 2584…
-#&gt; 4 show     8.62 Game of Thron…  2011 1390  game-of-thrones tt0944947 1399  1213…</div><div class='input'># }
+#&gt; 2 movie  696.   TRON: Legacy    2010 12601 tron-legacy-20… tt1104001 20526 &lt;NA&gt; 
+#&gt; 3 show   585.   Tron: Uprising  2012 34209 tron-uprising   tt1812523 34356 2584…
+#&gt; 4 show     8.69 Game of Thron…  2011 1390  game-of-thrones tt0944947 1399  1213…</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
