@@ -7,6 +7,8 @@
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble()][tibble::tibble-package].
 #' @export
+#' @importFrom dplyr select pull bind_cols
+#' @importFrom rlang is_empty
 #' @note In the embedded user data, `name` is renamed to `user_name` due
 #'   to duplication with e.g. list names,
 #'   and `slug` is renamed to `user_slug` for the same reason.

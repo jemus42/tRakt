@@ -143,6 +143,7 @@ unpack_crew_sections <- function(crew, type) {
 #' @return A flat `tibble()`
 #' @keywords internal
 #' @noRd
+#' @importFrom dplyr pull filter select bind_cols
 flatten_media_object <- function(x, type) {
 
   x <- x %>%
