@@ -25,7 +25,7 @@ Imports:
     jsonlite (>= 0.9.14),
     lubridate,
     magrittr,
-    purrr,
+    purrr (>= 0.2.3),
     tibble,
     utils,
     rlang
