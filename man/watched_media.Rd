@@ -29,34 +29,41 @@ See section \link[=trakt_api_common_parameters]{"Extended Information"} for more
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
 
-\item{query}{\code{character(1)}: Search titles and descriptions.}
+\item{query}{\code{character(1)}: Search string for titles and descriptions.
+For \code{search_query()} other fields are searched depending on the \code{type} of media.
+See \href{https://trakt.docs.apiary.io/#reference/search/text-query}{the API docs} for a
+full reference.}
 
-\item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range, e.g. \code{"2010-2020"}.
-Can also be an integer vector of length two which will be coerced appropriately.}
+\item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range,
+e.g. \code{"2010-2020"}. Can also be an integer vector of length two which will be
+coerced appropriately.}
 
-\item{genres}{\code{character(n)}: Genre  slug(s). See \code{\link{trakt_genres}} for a table of genres.
+\item{genres}{\code{character(n)}: Genre  slug(s).
+See \code{\link{trakt_genres}} for a table of genres.
 Multiple values are allowed and will be concatenated.}
 
-\item{languages}{\code{character(n)}: Two-digit language code(s). Also see \code{\link{trakt_languages}} for
-table of available languages.}
+\item{languages}{\code{character(n)}: Two-digit language code(s).
+Also see \code{\link{trakt_languages}} for table of available languages.}
 
-\item{countries}{\code{character(n)}: Two-character country code(s). See \code{\link{trakt_countries}}.}
+\item{countries}{\code{character(n)}: Two-character country code(s).
+See \code{\link{trakt_countries}}.}
 
-\item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}. Can also
-be an integer vector of length two which will be coerced appropriately.}
+\item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}.
+Can also be an integer vector of length two which will be coerced appropriately.}
 
-\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}. Can also be
-an integer vector of length two which will be coerced appropriately.}
+\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}.
+Can also be an integer vector of length two which will be coerced appropriately.}
 
 \item{certifications}{\code{character(n)}: Certification(s) like \code{pg-13}.
-Multiple values are allowed. Use \code{\link{trakt_certifications}} for reference. Note that there
-are different certifications for shows and movies.}
+Multiple values are allowed. Use \code{\link{trakt_certifications}} for reference.
+Note that there are different certifications for shows and movies.}
 
-\item{networks}{\code{character(n)}: (Shows only) Network name like \code{HBO}. See \code{\link{trakt_networks}}
-for a list of known networks.}
+\item{networks}{\code{character(n)}: (Shows only) Network name like \code{HBO}.
+See \code{\link{trakt_networks}} for a list of known networks.}
 
-\item{status}{\code{character(n)}: (Shows only) The status of the shows. One of \code{returning series},
-\code{in production}, \code{planned}, \code{canceled}, or \code{ended}}
+\item{status}{\code{character(n)}: (Shows only) The status of the shows.
+One of \code{"returning series"}, \code{"in production"}, \code{"planned"},
+\code{"canceled"}, or \code{"ended"}.}
 }
 \description{
 These functions return the most watched movies/shows on trakt.tv.

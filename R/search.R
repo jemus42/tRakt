@@ -10,8 +10,7 @@
 #' See also the
 #' [API reference here](https://trakt.docs.apiary.io/#reference/search) for
 #' which fields of the item metadata are searched by default.
-#' @param query `character(1)`: The keyword used for the search, e.g.
-#'   `"breaking bad"`.
+#' @inheritParams search_filters
 #' @param id `character(1)`: The id used for the search, e.g. `14701` for
 #'   a `Trakt ID`.
 #' @param id_type `character(1) ["trakt"]`: The type of `id`. One of `trakt`,
