@@ -1,4 +1,34 @@
 # Unpackers ----
+#' Unpack user objects
+#'
+#' @param response_user Basically `response$user`
+#'
+#' @return A `tibble` with tidy user data.
+#'   `name` is renamed to `user_name` due to duplication with e.g. list names,
+#'   and `slug` is renamed to `user_slug` for the same reason.
+#' @keywords internal
+#' @noRd
+#' @importFrom rlang has_name
+#' @importFrom dplyr rename
+unpack_user <- function(response_user) {
+
+  if (!inherits(response_user, what = "data.frame")) {
+    stop("User object must be data.frame like")
+  }
+
+  # Flatten the tbl
+  response_user <- cbind(response_user[names(response_user) != "ids"], response_user$ids)
+
+  #  Extract avatars
+  if (has_name(response_user, "images")) {
+    response_user$avatar <- response_user$images$avatar$full
+    response_user <- response_user[names(response_user) != "images"]
+  }
+
+  response_user %>%
+    rename(user_name = name, user_slug = slug) %>%
+    fix_tibble_response()
+}
 
 #' Unpack a standard show media object
 #' This should work regardless of the value of `extended` to be sufficiently robust
@@ -105,6 +135,58 @@ unpack_crew_sections <- function(crew, type) {
   }
 }
 
+#' Generalized unpacker
+#'
+#' @param x A response object
+#' @param type One of "movie", "show", "season", "episode", "person"
+#'
+#' @return A flat `tibble()`
+#' @keywords internal
+#' @noRd
+flatten_media_object <- function(x, type) {
+
+  x <- x %>%
+    as_tibble() %>%
+    filter(type == !!type)
+
+  if (nrow(x) == 0) {
+    return(tibble)
+  }
+
+  if (type == "show") {
+    res <- x %>%
+      pull(show) %>%
+      unpack_show()
+  } else if (type == "movie") {
+    res <- bind_cols(
+      x$movie %>% select(-ids),
+      x$movie$ids %>% fix_ids()
+    )
+  } else if (type == "season") {
+    res <- bind_cols(
+      x$season %>% select(-ids),
+      x$season$ids %>% fix_ids()
+    ) %>%
+      rename(season = number)
+  } else if (type == "episode") {
+    res <- bind_cols(
+      x$episode %>% select(-ids),
+      x$episode$ids %>% fix_ids()
+    ) %>%
+      rename(episode = number)
+  } else if (type == "person") {
+    res <- bind_cols(
+      x$person %>% select(-ids),
+      x$person$ids %>% fix_ids()
+    )
+
+  }
+
+  res %>%
+    fix_datetime() %>%
+    filter(!is.na(trakt)) %>%
+    as_tibble()
+}
 
 # Fixers ----
 
@@ -162,7 +244,8 @@ fix_datetime <- function(response) {
   datevars <- c(
     "first_aired", "updated_at", "listed_at", "last_watched_at", "last_updated_at",
     "last_collected_at", "rated_at", "friends_at", "followed_at", "collected_at",
-    "joined_at", "watched_at"
+    "joined_at", "watched_at",
+    "created_at"
   )
 
   datevars <- datevars[datevars %in% names(response)]
@@ -267,6 +350,44 @@ check_username <- function(user, validate = FALSE) {
   # Return TRUE if and only if everything else did not fail
   invisible(TRUE)
 }
+
+#' Check types
+#'
+#' Allowed types vary, and both "movie" and "movies" etc. should be allowed.
+#' This function normalizes plural forms to singulars and concatenates multiple
+#' results if allowed
+#' @param type `character(n)`: One or more types, e.g. `"movies"`.
+#' @param several.ok `logical(1) [TRUE]`: Passed to [match.arg][base::match.arg].
+#'
+#' @return A `character` of length 1.
+#' @keywords internal
+#' @noRd
+#' @importFrom dplyr case_when
+check_types <- function(type, several.ok = TRUE) {
+
+  if (is.null(type)) {
+    return(NULL)
+  }
+
+  type <- case_when(
+    type %in% c("movie", "movies") ~ "movie",
+    type %in% c("show", "shows") ~ "show",
+    type %in% c("episode", "episodes") ~ "episode",
+    type %in% c("season", "seasons") ~ "season",
+    type %in% c("person", "persons", "people") ~ "person",
+    TRUE ~ ""
+  )
+
+  possible_types <- c("movie" , "show" , "season" , "episode" , "person")
+  type <- match.arg(type, choices = possible_types, several.ok = several.ok)
+
+  if (length(type) > 1) {
+    type <- paste0(type, collapse = ",")
+  }
+
+  type
+}
+
 
 #' Check filter arguments
 #'

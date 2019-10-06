@@ -277,12 +277,14 @@ users:
   lists:
     url: https://trakt.docs.apiary.io/#reference/users/lists/get-a-user's-custom-lists
     endpoint: users/:id/lists
+    implementation: user_lists()
   list:
     url: https://trakt.docs.apiary.io/#reference/users/list/get-custom-list
     endpoint: users/:id/lists/:list_id
   list items:
     url: https://trakt.docs.apiary.io/#reference/users/list-items/get-items-on-a-custom-list
     endpoint: users/:id/lists/:list_id/items/:type
+    implementation: user_list_items()
   list comments:
     url: https://trakt.docs.apiary.io/#reference/users/list-comments/get-all-list-comments
     endpoint: users/:id/lists/:list_id/comments/:sort
