@@ -10,6 +10,7 @@
 #' @export
 #' @importFrom dplyr select one_of filter bind_cols arrange
 #' @importFrom purrr map_df
+#' @importFrom rlang is_empty
 #' @examples
 #' \dontrun{
 #' # A large list with various media types
@@ -29,6 +30,9 @@ user_list_items <- function(user = getOption("trakt_username"),
                          "items", type, extended = extended)
   response <- trakt_get(url)
 
+  if (is_empty(response)) {
+    return(tibble())
+  }
 
   # What types are present in the list
   list_types <- unique(response$type)
