@@ -2,8 +2,11 @@
 
 ## New functions
 
-- `episodes_summary()`: What `seasons_season()` and `seasons_sumamry()` do, but for a single episode. Only really implemented for completeness' sake. Wraps [`shows/:id/seasons/:season/episodes/:episode`](https://trakt.docs.apiary.io/#reference/episodes/summary)
-- `user_profile`: Wraps [`user/:id`](https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile) to get user profiles
+- `episodes_summary()` [`shows/:id/seasons/:season/episodes/:episode`]: What `seasons_season()` and `seasons_summary()` do, but for a single episode. Only really implemented for completeness' sake. [Wraps this methid]](https://trakt.docs.apiary.io/#reference/episodes/summary).
+- `user_profile()` [`user/:id`]: [Get a user's profile](https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile).
+- `user_lists()` [`users/:id/lists`]: Get [all user lists](https://trakt.docs.apiary.io/#reference/users/lists/get-custom-list).
+- `user_list()` [`users/:id/lists/:list_id`]: Get a [single list](https://trakt.docs.apiary.io/#reference/users/list/get-custom-list).
+- `user_list_items()` [`users/:id/lists/:list_id/items/:type`]: Get the [items in said lists](https://trakt.docs.apiary.io/#reference/users/list-items/get-custom-list).
 
 ## The Renamingering
 
