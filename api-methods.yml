@@ -281,6 +281,7 @@ users:
   list:
     url: https://trakt.docs.apiary.io/#reference/users/list/get-custom-list
     endpoint: users/:id/lists/:list_id
+    implementation: user_list()
   list items:
     url: https://trakt.docs.apiary.io/#reference/users/list-items/get-items-on-a-custom-list
     endpoint: users/:id/lists/:list_id/items/:type
