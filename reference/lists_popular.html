@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get a user's list's items — user_list_items • tRakt</title>
+<title>Get popular / trending lists — lists_popular • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,8 +42,8 @@
 
 
 
-<meta property="og:title" content="Get a user's list's items — user_list_items" />
-<meta property="og:description" content="Get a user's list's items" />
+<meta property="og:title" content="Get popular / trending lists — lists_popular" />
+<meta property="og:description" content="Get popular / trending lists" />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -156,71 +156,73 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get a user's list's items</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/user_list_items.R'><code>R/user_list_items.R</code></a></small>
-    <div class="hidden name"><code>user_list_items.Rd</code></div>
+    <h1>Get popular / trending lists</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/lists_popular.R'><code>R/lists_popular.R</code></a></small>
+    <div class="hidden name"><code>lists_popular.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Get a user's list's items</p>
+    <p>Get popular / trending lists</p>
     </div>
 
-    <pre class="usage"><span class='fu'>user_list_items</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>), <span class='no'>list_id</span>,
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+    <pre class="usage"><span class='fu'>lists_popular</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>)
+
+<span class='fu'>lists_trending</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>user</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
-Can also be of length greater than 1, in which case the function is called on all
-<code>user</code> values separately and the result is combined.</p></td>
-    </tr>
-    <tr>
-      <th>list_id</th>
-      <td><p>The list identifier, either <code>trakt</code> ID or <code>slug</code> of the list.
-Can be optained via the website (URL <code>slug</code>) or e.g. <a href='user_lists.html'>user_lists</a>.</p></td>
-    </tr>
-    <tr>
-      <th>type</th>
-      <td><p><code>character(1) [NULL]</code>: If not <code>NULL</code>, only items of that media type are
-returned. Possible values are <code>"movie"</code>, <code>"show"</code>, <code>"season"</code>, <code>"episode"</code>, <code>"person"</code>.</p></td>
-    </tr>
-    <tr>
-      <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
-returns more variables and should generally only be used if required.
-See section <a href='trakt_api_common_parameters.html'>"Extended Information"</a> for more details.</p></td>
+      <th>limit</th>
+      <td><p><code>integer(1) [10L]</code>: Number of items to return. Must be greater
+than <code>0</code> and will be coerced to <code>integer</code>.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> of length <code>limit</code>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other list methods: <code><a href='lists_popular.html'>lists_popular</a></code>,
+    <div class='dont-index'><p><a href='user_list_items.html'>user_list_items</a> For the actual content of a list.</p>
+<p>Other list methods: <code><a href='user_list_items.html'>user_list_items</a></code>,
   <code><a href='user_lists.html'>user_lists</a></code>, <code><a href='user_list.html'>user_list</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='co'># A large list with various media types</span>
-<span class='co'># All items</span>
-<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sp1ti/lists/5615781/items?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'>
-<span class='co'># Movies only</span>
-<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movie"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sp1ti/lists/5615781/items/movie?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'>
-<span class='co'># Shows...</span>
-<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"shows"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sp1ti/lists/5615781/items/show?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'>
-<span class='co'># Only seasons</span>
-<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"season"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sp1ti/lists/5615781/items/season?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'>
-<span class='co'># Only episodes</span>
-<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"episodes"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sp1ti/lists/5615781/items/episode?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+<span class='fu'>lists_popular</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 20
+#&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
+#&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
+#&gt;  1 Late… ""          public  FALSE           FALSE          rank    asc     
+#&gt;  2 MARV… **Chronolo… public  TRUE            TRUE           rank    asc     
+#&gt;  3 Best… What’s a m… public  FALSE           TRUE           rank    asc     
+#&gt;  4 Netf… series, mo… public  FALSE           TRUE           rank    asc     
+#&gt;  5 Late… ""          public  FALSE           FALSE          rank    asc     
+#&gt;  6 Late… ""          public  FALSE           TRUE           rank    asc     
+#&gt;  7 1001… &gt; 1001 Mov… public  TRUE            TRUE           rank    asc     
+#&gt;  8 Imdb… Daily Refr… public  TRUE            TRUE           rank    asc     
+#&gt;  9 Walt… List of al… public  TRUE            FALSE          rank    asc     
+#&gt; 10 Worl… ""          public  TRUE            TRUE           rank    asc     
+#&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
+#&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
+#&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
+#&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='fu'>lists_trending</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 20
+#&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
+#&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
+#&gt;  1 New … Recently a… public  FALSE           TRUE           rank    asc     
+#&gt;  2 Late… ""          public  FALSE           FALSE          rank    asc     
+#&gt;  3 New … ""          public  TRUE            TRUE           rank    asc     
+#&gt;  4 Late… ""          public  FALSE           TRUE           rank    asc     
+#&gt;  5 Late… ""          public  FALSE           FALSE          rank    asc     
+#&gt;  6 MARV… **Chronolo… public  TRUE            TRUE           rank    asc     
+#&gt;  7 [Tom… ""          public  FALSE           TRUE           rank    asc     
+#&gt;  8 IMDB… ""          public  TRUE            TRUE           rank    asc     
+#&gt;  9 Rott… Pulled fro… public  TRUE            TRUE           rank    asc     
+#&gt; 10 Imdb… Daily Refr… public  TRUE            TRUE           rank    asc     
+#&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
+#&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
+#&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
+#&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
