@@ -16,8 +16,7 @@ test_that("user_ratings works", {
 
 
   # Error conditions ----
-  expect_message(user_ratings(user = -1))
-  expect_true(rlang::is_empty(user_ratings(user = -1)))
+  expect_error(user_ratings(user = -1))
   expect_error(user_ratings(user = user, type = "seven"))
   expect_error(user_ratings(user = user, type = "movies", rating = -2))
   expect_error(user_ratings(user = user, type = "movies", rating = NA))
