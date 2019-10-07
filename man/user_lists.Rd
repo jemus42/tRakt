@@ -35,3 +35,12 @@ and \code{slug} is renamed to \code{user_slug} for the same reason.
 user_lists("jemus42")
 }
 }
+\seealso{
+\link{user_lists} for all lists a user has.
+
+\link{user_list_items} For the actual content of a list.
+
+Other list methods: \code{\link{user_list_items}},
+  \code{\link{user_list}}
+}
+\concept{list methods}

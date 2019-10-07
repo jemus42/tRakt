@@ -8,6 +8,7 @@
 #' @return A [tibble()][tibble::tibble-package].
 #'
 #' @export
+#' @family list methods
 #' @importFrom dplyr select one_of filter bind_cols arrange matches
 #' @importFrom purrr map_df
 #' @importFrom rlang is_empty

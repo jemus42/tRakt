@@ -143,7 +143,8 @@ unpack_crew_sections <- function(crew, type) {
 #' @return A flat `tibble()`
 #' @keywords internal
 #' @noRd
-#' @importFrom dplyr pull filter select bind_cols
+#' @importFrom dplyr pull filter select bind_cols vars rename_at rename_all ends_with
+#' @importFrom stringr str_c str_remove
 flatten_media_object <- function(x, type) {
 
   x <- x %>%
@@ -170,7 +171,12 @@ flatten_media_object <- function(x, type) {
       x$season$ids %>% fix_ids() %>%
         rename_all(~paste0("season_", .x))
     ) %>%
-      rename(season = number)
+      rename(season = number) %>%
+      rename_at(vars(ends_with("1")), ~{
+        .x %>%
+          str_remove("1$") %>%
+          str_c("season_", .)
+      })
   } else if (type == "episode") {
     res <- bind_cols(
       x$show %>% unpack_show(),
@@ -181,7 +187,13 @@ flatten_media_object <- function(x, type) {
         fix_ids() %>%
         rename_all(~paste0("episode_", .x))
     ) %>%
-      rename(episode = number)
+      rename(episode = number) %>%
+      rename_at(vars(ends_with("1")), ~{
+        .x %>%
+          str_remove("1$") %>%
+          str_c("episode_", .)
+      })
+
   } else if (type == "person") {
     res <- bind_cols(
       x$person %>% select(-ids),

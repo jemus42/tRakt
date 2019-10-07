@@ -47,3 +47,8 @@ user_list_items("sp1ti", list_id = "5615781", extended = "min", type = "season")
 user_list_items("sp1ti", list_id = "5615781", extended = "min", type = "episodes")
 }
 }
+\seealso{
+Other list methods: \code{\link{user_lists}},
+  \code{\link{user_list}}
+}
+\concept{list methods}

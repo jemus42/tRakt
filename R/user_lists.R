@@ -7,6 +7,9 @@
 #' @inheritParams trakt_api_common_parameters
 #' @return A [tibble()][tibble::tibble-package].
 #' @export
+#' @family list methods
+#' @seealso [user_lists] for all lists a user has.
+#' @seealso [user_list_items] For the actual content of a list.
 #' @importFrom dplyr select pull bind_cols
 #' @importFrom rlang is_empty
 #' @note In the embedded user data, `name` is renamed to `user_name` due
@@ -51,6 +54,9 @@ user_lists <- function(user = getOption("trakt_username"), extended = c("min", "
 #' @inheritParams user_list_items
 #' @return A [tibble()][tibble::tibble-package].
 #' @export
+#' @family list methods
+#' @seealso [user_list] for only a single list.
+#' @seealso [user_list_items] For the actual content of a list.
 #' @importFrom dplyr select pull bind_cols
 #' @importFrom rlang is_empty
 #' @importFrom purrr discard
