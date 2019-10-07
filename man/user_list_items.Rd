@@ -31,6 +31,19 @@ Get a user's list's items
 \examples{
 \dontrun{
 # A large list with various media types
-user_list_items("sp1ti", list_id = "anime-winter-season-2018-2019", extended = "min")
+# All items
+user_list_items("sp1ti", list_id = "5615781", extended = "min")
+
+# Movies only
+user_list_items("sp1ti", list_id = "5615781", extended = "min", type = "movie")
+
+# Shows...
+user_list_items("sp1ti", list_id = "5615781", extended = "min", type = "shows")
+
+# Only seasons
+user_list_items("sp1ti", list_id = "5615781", extended = "min", type = "season")
+
+# Only episodes
+user_list_items("sp1ti", list_id = "5615781", extended = "min", type = "episodes")
 }
 }

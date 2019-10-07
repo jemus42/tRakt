@@ -165,14 +165,21 @@ flatten_media_object <- function(x, type) {
     )
   } else if (type == "season") {
     res <- bind_cols(
+      x$show %>% unpack_show(),
       x$season %>% select(-ids),
-      x$season$ids %>% fix_ids()
+      x$season$ids %>% fix_ids() %>%
+        rename_all(~paste0("season_", .x))
     ) %>%
       rename(season = number)
   } else if (type == "episode") {
     res <- bind_cols(
-      x$episode %>% select(-ids),
-      x$episode$ids %>% fix_ids()
+      x$show %>% unpack_show(),
+      x$episode %>%
+        select(-ids) %>%
+        rename(episode_title = title),
+      x$episode$ids %>%
+        fix_ids() %>%
+        rename_all(~paste0("episode_", .x))
     ) %>%
       rename(episode = number)
   } else if (type == "person") {
@@ -326,15 +333,10 @@ fix_missing <- function(x) {
 #' user profile is returned as a `list`.
 #' @keywords internal
 #' @importFrom httr stop_for_status
+#' @importFrom rlang is_empty
 check_username <- function(user, validate = FALSE) {
-  fail_empty_chr <- identical(user, "")
-  fail_null <- is.null(user)
-  fail_chr <- !is.character(user)
-  fail_na <- is.na(user)
 
-  failed <- any(fail_empty_chr, fail_null, fail_chr, fail_na)
-
-  if (failed) {
+  if (is_empty(user) | identical(user, "")) {
     stop(
       "Supplied user must be a non-empty character string, you provided <",
       user, "> of class '", class(user), "'"
