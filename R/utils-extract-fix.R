@@ -143,8 +143,9 @@ unpack_crew_sections <- function(crew, type) {
 #' @return A flat `tibble()`
 #' @keywords internal
 #' @noRd
-#' @importFrom dplyr pull filter select bind_cols vars rename_at rename_all ends_with
-#' @importFrom stringr str_c str_remove
+#' @importFrom dplyr filter select bind_cols vars rename_at rename_all ends_with
+#' @importFrom stringr str_c str_remove str_replace
+#' @importFrom purrr pluck
 flatten_media_object <- function(x, type) {
 
   x <- x %>%
@@ -156,22 +157,24 @@ flatten_media_object <- function(x, type) {
   }
 
   if (type == "show") {
-    res <- x %>%
-      pull(show) %>%
+    res <- pluck(x, "show") %>%
       unpack_show()
   } else if (type == "movie") {
     res <- bind_cols(
-      x$movie %>% select(-ids),
-      x$movie$ids %>% fix_ids()
+      pluck(x, "movie") %>% select(-"ids"),
+      pluck(x, "movie", "ids") %>% fix_ids()
     )
   } else if (type == "season") {
     res <- bind_cols(
-      x$show %>% unpack_show(),
-      x$season %>% select(-ids),
-      x$season$ids %>% fix_ids() %>%
+      pluck(x, "show") %>%
+        unpack_show(),
+      pluck(x, "season") %>%
+        select(-"ids"),
+      pluck(x, "season", "ids") %>%
+        fix_ids() %>%
         rename_all(~paste0("season_", .x))
     ) %>%
-      rename(season = number) %>%
+      rename(season = "number") %>%
       rename_at(vars(ends_with("1")), ~{
         .x %>%
           str_remove("1$") %>%
@@ -179,15 +182,17 @@ flatten_media_object <- function(x, type) {
       })
   } else if (type == "episode") {
     res <- bind_cols(
-      x$show %>% unpack_show(),
-      x$episode %>%
+      pluck(x, "show") %>% unpack_show(),
+      pluck(x, "episode") %>%
         select(-ids) %>%
-        rename(episode_title = title),
-      x$episode$ids %>%
+        rename(episode_title = "title"),
+      pluck(x, "episode", "ids") %>%
         fix_ids() %>%
         rename_all(~paste0("episode_", .x))
     ) %>%
-      rename(episode = number) %>%
+      rename_at(vars(matches("number")), ~{
+        str_replace(.x, "number", "episode")
+        }) %>%
       rename_at(vars(ends_with("1")), ~{
         .x %>%
           str_remove("1$") %>%
@@ -196,8 +201,8 @@ flatten_media_object <- function(x, type) {
 
   } else if (type == "person") {
     res <- bind_cols(
-      x$person %>% select(-ids),
-      x$person$ids %>% fix_ids()
+      pluck(x, "person") %>% select(-"ids"),
+      pluck(x, "person", "ids") %>% fix_ids()
     )
 
   }

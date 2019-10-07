@@ -1,3 +1,13 @@
+lists:
+   popular: 
+     url: https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists
+     endpoint: lists/popular
+     implementation: lists_popular()
+   trending:
+     url: https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists
+     endpoint: lists/trending
+     implementation: lists_trending()
+
 movies:
   trending:
     url: https://trakt.docs.apiary.io/#reference/movies/trending/get-trending-movies
