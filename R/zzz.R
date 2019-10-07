@@ -11,7 +11,7 @@ globalVariables(c(
   "number", "seasons", "episodes", "collected_at", ".", "person",
   "related_to", "query", "years", "genres", "languages", "countries",
   "runtimes", "ratings", "certifications", "networks", "status", "trakt",
-  "name", "slug"
+  "name", "slug", "title"
 ))
 
 #' The tRakt client ID for this particular app
