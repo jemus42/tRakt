@@ -25,7 +25,6 @@ test_that("build_trakt_url builds a url", {
 
 test_that("fix_datetime converts datetime", {
   skip_if_not_installed("lubridate")
-  skip_if_not_installed("tibble")
 
   res <- tibble::tibble(updated_at = as.character(lubridate::now()))
 

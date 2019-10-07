@@ -333,10 +333,10 @@ fix_missing <- function(x) {
 #' user profile is returned as a `list`.
 #' @keywords internal
 #' @importFrom httr stop_for_status
-#' @importFrom rlang is_empty
+#' @importFrom rlang is_empty is_character
 check_username <- function(user, validate = FALSE) {
 
-  if (is_empty(user) | identical(user, "")) {
+  if (is_empty(user) | identical(user, "") | !is_character(user)) {
     stop(
       "Supplied user must be a non-empty character string, you provided <",
       user, "> of class '", class(user), "'"
