@@ -28,7 +28,8 @@ Imports:
     purrr (>= 0.2.3),
     tibble,
     utils,
-    rlang
+    rlang,
+    stringr
 Suggests:
     covr,
     ggplot2,

@@ -50,7 +50,6 @@ before_deploy:
   - Rscript -e 'install.packages("here")'
   - Rscript -e 'install.packages("kableExtra")'
   - Rscript -e 'install.packages("yaml")'
-  - Rscript -e 'install.packages("stringr")'
 deploy:
   provider: script
   script: Rscript -e 'pkgdown::deploy_site_github(run_dont_run = TRUE)'
