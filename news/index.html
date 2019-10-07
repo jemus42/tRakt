@@ -168,10 +168,15 @@
 <a href="#new-functions" class="anchor"></a>New functions</h2>
 <ul>
 <li>
-<code><a href="../reference/episodes_summary.html">episodes_summary()</a></code>: What <code><a href="../reference/seasons_season.html">seasons_season()</a></code> and <code>seasons_sumamry()</code> do, but for a single episode. Only really implemented for completeness’ sake. Wraps <a href="https://trakt.docs.apiary.io/#reference/episodes/summary"><code>shows/:id/seasons/:season/episodes/:episode</code></a>
-</li>
+<code><a href="../reference/episodes_summary.html">episodes_summary()</a></code> [<code>shows/:id/seasons/:season/episodes/:episode</code>]: What <code><a href="../reference/seasons_season.html">seasons_season()</a></code> and <code><a href="../reference/seasons_summary.html">seasons_summary()</a></code> do, but for a single episode. Only really implemented for completeness’ sake. [Wraps this methid]](<a href="https://trakt.docs.apiary.io/#reference/episodes/summary" class="uri">https://trakt.docs.apiary.io/#reference/episodes/summary</a>).</li>
 <li>
-<code>user_profile</code>: Wraps <a href="https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile"><code>user/:id</code></a> to get user profiles</li>
+<code><a href="../reference/user_profile.html">user_profile()</a></code> [<code>user/:id</code>]: <a href="https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile">Get a user’s profile</a>.</li>
+<li>
+<code><a href="../reference/user_lists.html">user_lists()</a></code> [<code>users/:id/lists</code>]: Get <a href="https://trakt.docs.apiary.io/#reference/users/lists/get-custom-list">all user lists</a>.</li>
+<li>
+<code><a href="../reference/user_list.html">user_list()</a></code> [<code>users/:id/lists/:list_id</code>]: Get a <a href="https://trakt.docs.apiary.io/#reference/users/list/get-custom-list">single list</a>.</li>
+<li>
+<code><a href="../reference/user_list_items.html">user_list_items()</a></code> [<code>users/:id/lists/:list_id/items/:type</code>]: Get the <a href="https://trakt.docs.apiary.io/#reference/users/list-items/get-custom-list">items in said lists</a>.</li>
 </ul>
 </div>
 <div id="the-renamingering" class="section level2">
