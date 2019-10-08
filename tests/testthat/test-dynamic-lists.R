@@ -81,32 +81,35 @@ test_that("anticipated_media works", {
 test_that("played_media and watched_media also do things", {
 
   # Both have the same variables, the difference is just sorting
-  nm <- c(
+  nm_shows <- c(
     "watcher_count", "play_count", "collected_count", "collector_count",
     "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb"
   )
 
+  nm_movies <- c("watcher_count", "play_count", "collected_count", "title",
+                 "year", "trakt", "slug", "imdb", "tmdb")
+
   shows_watched(extended = "min", period = "weekly") %>%
     expect_is("tbl") %>%
-    expect_named(nm) %>%
-    nrow() %>%
-    expect_equal(10)
-
-  shows_played(extended = "min", period = "weekly") %>%
-    expect_is("tbl") %>%
-    expect_named(nm) %>%
+    expect_named(nm_shows) %>%
     nrow() %>%
     expect_equal(10)
 
   movies_watched(extended = "min", period = "weekly") %>%
     expect_is("tbl") %>%
-    expect_named(nm) %>%
+    expect_named(nm_movies) %>%
+    nrow() %>%
+    expect_equal(10)
+
+  shows_played(extended = "min", period = "weekly") %>%
+    expect_is("tbl") %>%
+    expect_named(nm_shows) %>%
     nrow() %>%
     expect_equal(10)
 
   movies_played(extended = "min", period = "weekly") %>%
     expect_is("tbl") %>%
-    expect_named(nm) %>%
+    expect_named(nm_movies) %>%
     nrow() %>%
     expect_equal(10)
 })
@@ -134,7 +137,7 @@ test_that("updated_media works", {
 
   movies_updates() %>%
     expect_is("tbl") %>%
-    expect_length(8) %>%
+    expect_length(7) %>%
     nrow() %>%
     expect_equal(10)
 })
