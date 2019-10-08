@@ -6,11 +6,7 @@
 #'   "official" or "watchlists".
 #' @param sort `character(1) ["popular"]`: Sort lists by one of "popular", "likes",
 #'   "comments", "items", "added" or "updated".
-#'
 #' @return A [tibble()][tibble::tibble-package].
-#' @importFrom rlang is_empty
-#' @importFrom dplyr bind_cols select
-#' @importFrom purrr pluck
 #' @examples
 #' \dontrun{
 #' movies_lists("190430", type = "personal", limit = 5)
@@ -38,17 +34,8 @@ movies_lists <- function(id,
                          limit = limit, extended = extended)
   response <- trakt_get(url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
+  unpack_lists(response)
 
-  response %>%
-    select(-"ids", -"user") %>%
-    bind_cols(
-      pluck(response, "ids") %>% fix_ids(),
-      pluck(response, "user") %>% unpack_user()
-    ) %>%
-    fix_tibble_response()
 }
 
 #' @export
@@ -68,17 +55,7 @@ shows_lists <- function(id,
                          limit = limit, extended = extended)
   response <- trakt_get(url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
-
-  response %>%
-    select(-"ids", -"user") %>%
-    bind_cols(
-      pluck(response, "ids") %>% fix_ids(),
-      pluck(response, "user") %>% unpack_user()
-    ) %>%
-    fix_tibble_response()
+  unpack_lists(response)
 }
 
 #' @export
@@ -98,17 +75,7 @@ seasons_lists <- function(id, season,
                          limit = limit, extended = extended)
   response <- trakt_get(url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
-
-  response %>%
-    select(-"ids", -"user") %>%
-    bind_cols(
-      pluck(response, "ids") %>% fix_ids(),
-      pluck(response, "user") %>% unpack_user()
-    ) %>%
-    fix_tibble_response()
+  unpack_lists(response)
 }
 
 #' @export
@@ -129,17 +96,7 @@ episodes_lists <- function(id, season, episode,
                          limit = limit, extended = extended)
   response <- trakt_get(url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
-
-  response %>%
-    select(-"ids", -"user") %>%
-    bind_cols(
-      pluck(response, "ids") %>% fix_ids(),
-      pluck(response, "user") %>% unpack_user()
-    ) %>%
-    fix_tibble_response()
+  unpack_lists(response)
 }
 
 #' @export
@@ -159,15 +116,5 @@ people_lists <- function(id,
                          limit = limit, extended = extended)
   response <- trakt_get(url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
-
-  response %>%
-    select(-"ids", -"user") %>%
-    bind_cols(
-      pluck(response, "ids") %>% fix_ids(),
-      pluck(response, "user") %>% unpack_user()
-    ) %>%
-    fix_tibble_response()
+  unpack_lists(response)
 }

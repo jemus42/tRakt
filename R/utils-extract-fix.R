@@ -135,6 +135,30 @@ unpack_crew_sections <- function(crew, type) {
   }
 }
 
+#' Unpack lists in list methods
+#'
+#' @param response As returned by [trakt_get].
+#'
+#' @keywords internal
+#' @noRd
+#' @return A [tibble()][tibble::tibble-package].
+#' @importFrom rlang is_empty
+#' @importFrom dplyr bind_cols select
+#' @importFrom purrr pluck
+unpack_lists <- function(response) {
+  if (is_empty(response)) {
+    return(tibble())
+  }
+
+  response %>%
+    select(-"ids", -"user") %>%
+    bind_cols(
+      pluck(response, "ids") %>% fix_ids(),
+      pluck(response, "user") %>% unpack_user()
+    ) %>%
+    fix_tibble_response()
+}
+
 #' Generalized unpacker
 #'
 #' @param x A response object
