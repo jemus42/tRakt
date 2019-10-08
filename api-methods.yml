@@ -60,7 +60,7 @@ movies:
   comments:
     url: https://trakt.docs.apiary.io/#reference/movies/comments/get-all-movie-comments
     endpoint: movies/:id/comments/:sort
-    implementation: N/A
+    implementation: movies_comments()
   lists:
     url: https://trakt.docs.apiary.io/#reference/movies/lists/get-lists-containing-this-movie
     endpoint: movies/:id/lists/:type/:sort
@@ -158,7 +158,7 @@ shows:
   comments:
     url: https://trakt.docs.apiary.io/#reference/shows/comments/get-all-show-comments
     endpoint: shows/:id/comments/:sort
-    implementation: N/A
+    implementation: shows_comments()
   lists:
     url: https://trakt.docs.apiary.io/#reference/shows/lists/get-lists-containing-this-show
     endpoint: shows/:id/lists/:type/:sort
@@ -212,7 +212,7 @@ seasons:
   comments:
     url: https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments
     endpoint: shows/:id/seasons/:season/comments/:sort
-    implementation: N/A
+    implementation: seasons_comments()
   lists:
     url: https://trakt.docs.apiary.io/#reference/seasons/lists/get-lists-containing-this-season
     endpoint: shows/:id/seasons/:season/lists/:type/:sort
@@ -246,7 +246,7 @@ episodes:
   comments:
     url: https://trakt.docs.apiary.io/#reference/episodes/comments/get-all-episode-comments
     endpoint: shows/:id/seasons/:season/episodes/:episode/comments/:sort
-    implementation:
+    implementation: episodes_comments()
   lists:
     url: https://trakt.docs.apiary.io/#reference/episodes/lists/get-lists-containing-this-episode
     endpoint: shows/:id/seasons/:season/episodes/:episode/lists/:type/:sort
