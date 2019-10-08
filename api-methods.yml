@@ -315,6 +315,7 @@ users:
   comments:
     url: https://trakt.docs.apiary.io/#reference/users/comments/get-comments
     endpoint: users/:id/comments/:comment_type/:type?include_replies=
+    implementation: user_comments()
   lists:
     url: https://trakt.docs.apiary.io/#reference/users/lists/get-a-user's-custom-lists
     endpoint: users/:id/lists
