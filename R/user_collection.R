@@ -32,11 +32,6 @@ user_collection <- function(user = getOption("trakt_username"),
   type <- match.arg(type)
   extended <- match.arg(extended)
 
-  if (extended == "min") {
-    # extended = "min" causes weird output, expected result without param though
-    extended <- ""
-  }
-
   if (type == "movie" & unnest_episodes) {
     warning("'unnest_episodes' only applies to type = 'shows'")
   }
@@ -48,6 +43,11 @@ user_collection <- function(user = getOption("trakt_username"),
       ),
       .id = "user"
     ))
+  }
+
+  if (extended == "min") {
+    # extended = "min" causes weird output, expected result without param though
+    extended <- ""
   }
 
   # Construct URL, make API call
