@@ -327,7 +327,7 @@ flatten_media_object <- function(x, type) {
 #' @noRd
 #' @importFrom dplyr filter select bind_cols vars rename_at rename_all ends_with
 #' @importFrom stringr str_c str_remove str_replace
-#' @importFrom purrr modify_if discard pluck
+#' @importFrom purrr modify_if discard pluck list_merge set_names
 flatten_single_media_object <- function(response, type) {
 
   if (is_empty(response)) {
