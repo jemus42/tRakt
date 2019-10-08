@@ -158,6 +158,31 @@ unpack_lists <- function(response) {
     fix_tibble_response()
 }
 
+#' Unpack comments in comment methods
+#'
+#' @param response As returned by [trakt_get].
+#'
+#' @keywords internal
+#' @noRd
+#' @return A [tibble()][tibble::tibble-package].
+#' @importFrom rlang is_empty
+#' @importFrom dplyr bind_cols select
+#' @importFrom purrr pluck
+unpack_comments <- function(response) {
+
+  if (is_empty(response)) {
+    return(tibble())
+  }
+
+  response %>%
+    select(-"user") %>%
+    bind_cols(
+      pluck(response, "user") %>%
+        unpack_user()
+    ) %>%
+    fix_tibble_response()
+}
+
 #' Generalized unpacker
 #'
 #' @param x A response object

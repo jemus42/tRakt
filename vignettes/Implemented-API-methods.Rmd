@@ -136,6 +136,16 @@ api %>%
   print_api_table()
 ```
 
+# Comments
+
+```{r api-comments}
+api %>%
+  filter(Section == "comments") %>%
+  select(-Section) %>%
+  format_api_table() %>%
+  print_api_table()
+```
+
 # Lists
 
 ```{r api-lists}

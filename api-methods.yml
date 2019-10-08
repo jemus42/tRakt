@@ -1,12 +1,43 @@
+comments:
+  comment:
+    url: https://trakt.docs.apiary.io/#reference/comments/comment/get-a-comment-or-reply
+    endpoint: comments/:id
+    implementation:
+  replies:
+    url: https://trakt.docs.apiary.io/#reference/comments/replies/get-replies-for-a-comment
+    endpoint: comments/:id/replies
+    implementation:
+  item:
+    url: https://trakt.docs.apiary.io/#reference/comments/item/get-the-attached-media-item
+    endpoint: comments/:id/item
+    implementation:
+  likes:
+    url: https://trakt.docs.apiary.io/#reference/comments/likes/get-all-users-who-liked-a-comment
+    endpoint: comments/:id/likes
+    implementation:
+  trending:
+    url: https://trakt.docs.apiary.io/#reference/comments/trending/get-trending-comments
+    endpoint: comments/trending/:comment_type/:type?include_replies=
+    implementation:
+  recent:
+    url: https://trakt.docs.apiary.io/#reference/comments/recent/get-recently-created-comments
+    endpoint: comments/recent/:comment_type/:type?include_replies=
+    implementation:
+  updates:
+    url: https://trakt.docs.apiary.io/#reference/comments/updates/get-recently-updated-comments
+    endpoint: comments/updates/:comment_type/:type?include_replies=
+    implementation:
+
+
 lists:
-   popular: 
-     url: https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists
-     endpoint: lists/popular
-     implementation: lists_popular()
-   trending:
-     url: https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists
-     endpoint: lists/trending
-     implementation: lists_trending()
+  popular: 
+    url: https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists
+    endpoint: lists/popular
+    implementation: lists_popular()
+  trending:
+    url: https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists
+    endpoint: lists/trending
+    implementation: lists_trending()
 
 movies:
   trending:
