@@ -5,7 +5,7 @@
 \title{Get a user's collected shows or movies}
 \usage{
 user_collection(user = getOption("trakt_username"), type = c("shows",
-  "movies"), unnest_episodes = FALSE)
+  "movies"), unnest_episodes = FALSE, extended = c("min", "full"))
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
@@ -17,6 +17,10 @@ functions, values \code{seasons} or \code{episodes} are also allowed.}
 
 \item{unnest_episodes}{\code{logical(1) [FALSE]}: Unnests episode data using
 \code{\link[tidyr:unnest]{tidyr::unnest()}} and returns one row per episode rather than one row per show.}
+
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.
+See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.

@@ -16,25 +16,24 @@
 #' @export
 #' @family user data
 #' @importFrom lubridate ymd_hms
-#' @importFrom dplyr mutate
-#' @importFrom dplyr select
-#' @importFrom dplyr bind_cols
-#' @importFrom dplyr everything
-#' @importFrom dplyr rename
-#' @importFrom tibble as_tibble
-#' @importFrom tibble tibble
-#' @importFrom purrr map
-#' @importFrom purrr map_df
-#' @importFrom purrr is_empty
+#' @importFrom dplyr mutate select bind_cols rename everything
+#' @importFrom purrr map map_df pluck
+#' @importFrom rlang is_empty
 #' @examples
 #' \dontrun{
 #' user_collection(user = "sean", type = "movies")
 #' }
 user_collection <- function(user = getOption("trakt_username"),
                             type = c("shows", "movies"),
-                            unnest_episodes = FALSE) {
+                            unnest_episodes = FALSE,
+                            extended = c("min", "full")) {
   check_username(user)
   type <- match.arg(type)
+  extended <- match.arg(extended)
+
+  if (type == "movie" & unnest_episodes) {
+    warning("'unnest_episodes' only applies to type = 'shows'")
+  }
 
   if (length(user) > 1) {
     names(user) <- user
@@ -44,7 +43,7 @@ user_collection <- function(user = getOption("trakt_username"),
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url("users", user, "collection", type)
+  url <- build_trakt_url("users", user, "collection", type, extended = extended)
   response <- trakt_get(url = url)
 
   if (is_empty(response)) {
@@ -53,10 +52,13 @@ user_collection <- function(user = getOption("trakt_username"),
 
   if (type == "shows") {
     response <- response %>%
-      select(-show) %>%
-      bind_cols(unpack_show(response$show)) %>%
+      select(-"show") %>%
+      bind_cols(
+        pluck(response, "show") %>%
+          unpack_show()
+      ) %>%
       as_tibble() %>%
-      select(-seasons, everything(), seasons) %>%
+      select(-"seasons", everything(), "seasons") %>%
       mutate(seasons = map(seasons, as_tibble))
 
     # I think importing tidyr for this alone is worth it, because
@@ -69,10 +71,10 @@ user_collection <- function(user = getOption("trakt_username"),
       }
 
       response <- as_tibble(response) %>%
-        tidyr::unnest(seasons) %>%
-        rename(season = number) %>%
-        tidyr::unnest(episodes) %>%
-        rename(episode = number) %>%
+        tidyr::unnest(cols = "seasons") %>%
+        rename(season = "number") %>%
+        tidyr::unnest(cols = "episodes") %>%
+        rename(episode = "number") %>%
         mutate(collected_at = ymd_hms(collected_at))
     }
   } else if (type == "movies") {
