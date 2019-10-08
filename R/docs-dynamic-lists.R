@@ -7,7 +7,6 @@
 #' an items is part of while not being released yet.
 #'
 #' @name dynamic_lists
-#' @return A [tibble()][tibble::tibble-package].
 #' @keywords internal
 #'
 #' @section The Dynamic Lists on trakt.tv:

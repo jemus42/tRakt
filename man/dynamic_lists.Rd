@@ -3,9 +3,6 @@
 \name{dynamic_lists}
 \alias{dynamic_lists}
 \title{See which movies / shows are popular across various metrics}
-\value{
-A \link[tibble:tibble-package]{tibble()}.
-}
 \description{
 According to the API docs, popularity is calculated based both on ratings
 and the number of ratings (i.e., votes). Trending items are those being

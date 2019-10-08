@@ -18,3 +18,4 @@ ignore:
   - "zzz.R"
   - "data.R"
   - "utils-pipe.R"
+  - "utils-third-party-APIs.R"

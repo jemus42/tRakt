@@ -26,23 +26,8 @@ user_profile <- function(user = getOption("trakt_username"),
   # Construct URL, make API call
   url <- build_trakt_url("users", user, extended = extended)
   response <- trakt_get(url = url)
-  response <- as_tibble(response)
 
-  if (identical(response, tibble())) {
-    return(response)
-  }
-
-  # Flatten the tbl
-  response <- cbind(response[names(response) != "ids"], response$ids)
-
-  #  Extract avatars
-  if (has_name(response, "images")) {
-    response$avatar <- response$images$avatar$full
-    response <- response[names(response) != "images"]
-  }
-
-  # Consistency: "", NA, NULL, they should all be NA_character_
   response %>%
-    mutate_if(is.character, fix_missing) %>%
-    fix_tibble_response()
+    as_tibble() %>%
+    unpack_user()
 }
