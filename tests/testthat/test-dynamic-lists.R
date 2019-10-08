@@ -88,14 +88,24 @@ test_that("played_media and watched_media also do things", {
 
   shows_watched(extended = "min", period = "weekly") %>%
     expect_is("tbl") %>%
-    expect_length(11) %>%
     expect_named(nm) %>%
     nrow() %>%
     expect_equal(10)
 
   shows_played(extended = "min", period = "weekly") %>%
     expect_is("tbl") %>%
-    expect_length(11) %>%
+    expect_named(nm) %>%
+    nrow() %>%
+    expect_equal(10)
+
+  movies_watched(extended = "min", period = "weekly") %>%
+    expect_is("tbl") %>%
+    expect_named(nm) %>%
+    nrow() %>%
+    expect_equal(10)
+
+  movies_played(extended = "min", period = "weekly") %>%
+    expect_is("tbl") %>%
     expect_named(nm) %>%
     nrow() %>%
     expect_equal(10)
@@ -117,6 +127,12 @@ test_that("collected_media does its thing", {
 
 test_that("updated_media works", {
   shows_updates() %>%
+    expect_is("tbl") %>%
+    expect_length(8) %>%
+    nrow() %>%
+    expect_equal(10)
+
+  movies_updates() %>%
     expect_is("tbl") %>%
     expect_length(8) %>%
     nrow() %>%
