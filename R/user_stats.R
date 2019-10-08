@@ -1,4 +1,5 @@
-#' Get a user's stats
+#' Returns stats about the movies, shows, and episodes a user has watched,
+#' collected, and rated.
 #'
 #' Data about a user's interactions with movies, shows, seasons, episodes,
 #' as well as their social network (friends, followings, followers) and a

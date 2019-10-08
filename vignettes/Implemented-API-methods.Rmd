@@ -138,7 +138,7 @@ api %>%
 
 # Lists
 
-```{r api-users}
+```{r api-lists}
 api %>%
   filter(Section == "lists") %>%
   select(-Section) %>%

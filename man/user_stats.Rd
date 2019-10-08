@@ -2,7 +2,8 @@
 % Please edit documentation in R/user_stats.R
 \name{user_stats}
 \alias{user_stats}
-\title{Get a user's stats}
+\title{Returns stats about the movies, shows, and episodes a user has watched,
+collected, and rated.}
 \usage{
 user_stats(user = getOption("trakt_username"))
 }
