@@ -48,7 +48,7 @@ movies:
   aliases:
     url: https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases
     endpoint: movies/:id/aliases
-    implementation: N/A
+    implementation: movies_aliases()
   releases:
     url: https://trakt.docs.apiary.io/#reference/movies/releases/get-all-movie-releases
     endpoint: movies/:id/releases/:country
@@ -150,7 +150,7 @@ shows:
   aliases:
     url: https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases
     endpoint: shows/:id/aliases
-    implementation: N/A
+    implementation: shows_aliases()
   translations:
     url: https://trakt.docs.apiary.io/#reference/shows/translations/get-all-show-translations
     endpoint: shows/:id/translations/:language
