@@ -225,11 +225,11 @@ shows:
   next episode:
     url: https://trakt.docs.apiary.io/#reference/shows/next-episode/get-next-episode
     endpoint: shows/:id/next_episode
-    implementation: N/A
+    implementation: shows_next_episode()
   last episode:
     url: https://trakt.docs.apiary.io/#reference/shows/last-episode/get-last-episode
     endpoint: shows/:id/last_episode
-    implementation: N/A
+    implementation: shows_last_episode()
 
 seasons:
   summary:
@@ -251,7 +251,7 @@ seasons:
   people:
     url: https://trakt.docs.apiary.io/#reference/seasons/people/get-all-people-for-a-season
     endpoint: shows/:id/seasons/:season/people
-    implementation: N/A
+    implementation: seasons_people()
   ratings:
     url: https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings
     endpoint: shows/:id/seasons/:season/ratings
@@ -285,7 +285,7 @@ episodes:
   people:
     url: https://trakt.docs.apiary.io/#reference/episodes/people/get-all-people-for-an-episode
     endpoint: shows/:id/seasons/:season/episodes/:episode/people
-    implementation:
+    implementation: episodes_people()
   ratings:
     url: https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings
     endpoint: shows/:id/seasons/:season/episodes/:episode/ratings

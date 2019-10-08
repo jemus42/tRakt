@@ -16,87 +16,90 @@
 #'
 #' @name media_people
 #' @inheritParams trakt_api_common_parameters
+#' @param guest_stars `logical(1) ["FALSE"]`: Also include guest stars. This returns
+#'   a lot of data, so use with care.
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
-#' and `crew`. The latter `tibble` objects are as flat as possible.
+#'   and `crew`. The latter `tibble` objects are as flat as possible.
 #' @family people data
 #' @seealso [people_media], for the other direction: People that have credits
 #'   in shows/movies.
 #' @examples
 #' \dontrun{
+#' movies_people("deadpool-2016")
 #' shows_people("breaking-bad")
+#' seasons_people("breaking-bad", season = 1)
+#' episodes_people("breaking-bad", season = 1, episode = 1)
 #' }
 NULL
 
-#' Retrieve cast & crew for shows and movies
-#' @keywords internal
-#' @noRd
-#' @importFrom purrr is_empty
-#' @importFrom purrr map_df
-#' @importFrom dplyr bind_cols
-#' @importFrom dplyr select
-#' @importFrom tibble as_tibble
-#' @importFrom rlang has_name
-media_people <- function(type = c("shows", "movies"), id,
-                         extended = c("min", "full")) {
-  type <- match.arg(type)
+#' @describeIn media_people Get cast & crew of a movie.
+#' @export
+movies_people <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, id, "people", extended = extended)
+  url <- build_trakt_url("movies", id, "people", extended = extended)
   response <- trakt_get(url = url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
-
-  # Flatten the data.frame
-  if (has_name(response, "cast") & !is_empty(response$cast)) {
-    response$cast$person[["images"]] <- NULL
-
-    response$cast$person <- response$cast$person %>%
-      select(-ids) %>%
-      cbind(fix_ids(response$cast$person$ids)) %>%
-      fix_datetime() %>%
-      as_tibble()
-
-    response$cast <- response$cast %>%
-      select(-person) %>%
-      cbind(response$cast$person) %>%
-      as_tibble()
-  }
-
-  if (has_name(response, "crew") & !is_empty(response$crew)) {
-    response$crew <- map_df(trakt_people_crew_sections, function(section) {
-      response$crew[[section]]$person[["images"]] <- NULL
-
-      if (!has_name(response$crew, section) | is_empty(response$crew[[section]])) {
-        return(tibble())
-      }
-
-      response$crew[[section]]$person <- response$crew[[section]]$person %>%
-        select(-ids) %>%
-        cbind(fix_ids(response$crew[[section]]$person$ids))
-
-      response$crew[[section]] <- response$crew[[section]] %>%
-        select(-person) %>%
-        cbind(response$crew[[section]]$person) %>%
-        mutate(crew_type = section) %>%
-        as_tibble() %>%
-        fix_datetime()
-    })
-  }
-
-  response
+  unpack_people(response)
 }
 
-#' @rdname media_people
+#' @describeIn media_people Get cast & crew of a show.
 #' @export
-shows_people <- function(id, extended = c("min", "full")) {
-  media_people(type = "shows", id = id, extended = extended)
+shows_people <- function(id,
+                         guest_stars = FALSE,
+                         extended = c("min", "full")) {
+  extended <- match.arg(extended)
+
+  if (guest_stars) {
+    extended <- paste0(extended, ",guest_stars")
+  }
+
+  # Construct URL, make API call
+  url <- build_trakt_url("shows", id, "people", extended = extended)
+  response <- trakt_get(url = url)
+
+  unpack_people(response)
 }
 
-#' @rdname media_people
+#' @describeIn media_people Get cast & crew of a season.
 #' @export
-movies_people <- function(id, extended = c("min", "full")) {
-  media_people(type = "movies", id = id, extended = extended)
+seasons_people <- function(id,
+                           season = 1L,
+                           guest_stars = FALSE,
+                           extended = c("min", "full")) {
+  extended <- match.arg(extended)
+
+  if (guest_stars) {
+    extended <- paste0(extended, ",guest_stars")
+  }
+
+  # Construct URL, make API call
+  url <- build_trakt_url(
+    "shows", id, "seasons", season, "people", extended = extended
+  )
+  response <- trakt_get(url = url)
+
+  unpack_people(response)
+}
+
+#' @describeIn media_people Get cast & crew of an episode.
+#' @export
+episodes_people <- function(id,
+                           season = 1L, episode = 1L,
+                           guest_stars = FALSE,
+                           extended = c("min", "full")) {
+  extended <- match.arg(extended)
+
+  if (guest_stars) {
+    extended <- paste0(extended, ",guest_stars")
+  }
+
+  # Construct URL, make API call
+  url <- build_trakt_url(
+    "shows", id, "seasons", season, "episodes", episode, "people", extended = extended
+  )
+  response <- trakt_get(url = url)
+
+  unpack_people(response)
 }

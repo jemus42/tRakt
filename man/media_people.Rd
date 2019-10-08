@@ -2,13 +2,21 @@
 % Please edit documentation in R/media_people.R
 \name{media_people}
 \alias{media_people}
-\alias{shows_people}
 \alias{movies_people}
+\alias{shows_people}
+\alias{seasons_people}
+\alias{episodes_people}
 \title{Get the cast and crew of a show or movie}
 \usage{
-shows_people(id, extended = c("min", "full"))
-
 movies_people(id, extended = c("min", "full"))
+
+shows_people(id, guest_stars = FALSE, extended = c("min", "full"))
+
+seasons_people(id, season = 1L, guest_stars = FALSE,
+  extended = c("min", "full"))
+
+episodes_people(id, season = 1L, episode = 1L, guest_stars = FALSE,
+  extended = c("min", "full"))
 }
 \arguments{
 \item{id}{\code{character(1)}: The ID of the item requested. Preferably the
@@ -21,6 +29,17 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
 See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
+
+\item{guest_stars}{\code{logical(1) ["FALSE"]}: Also include guest stars. This returns
+a lot of data, so use with care.}
+
+\item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+e.g. \code{1:5}, the function is vectorized and the output will be
+combined. This may result in \emph{a lot} of API calls. Use wisely.}
+
+\item{episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+e.g. \code{1:5}, the function is vectorized and the output will be
+combined. This may result in \emph{a lot} of API calls. Use wisely.}
 }
 \value{
 A \code{list} of one or more \link[tibble:tibble-package]{tibbles} for \code{cast}
@@ -43,9 +62,23 @@ One is a regular character variable, and the other is a list-column. The former 
 \href{https://github.com/trakt/api-help/issues/74}{deprecated}  and only included for
 compatibility reasons.
 }
+\section{Functions}{
+\itemize{
+\item \code{movies_people}: Get cast & crew of a movie.
+
+\item \code{shows_people}: Get cast & crew of a show.
+
+\item \code{seasons_people}: Get cast & crew of a season.
+
+\item \code{episodes_people}: Get cast & crew of an episode.
+}}
+
 \examples{
 \dontrun{
+movies_people("deadpool-2016")
 shows_people("breaking-bad")
+seasons_people("breaking-bad", season = 1)
+episodes_people("breaking-bad", season = 1, episode = 1)
 }
 }
 \seealso{

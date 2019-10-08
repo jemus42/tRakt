@@ -134,6 +134,60 @@ unpack_crew_sections <- function(crew, type) {
   }
 }
 
+#' Unpack people in media_people functions
+#'
+#' @keywords internal
+#' @noRd
+#' @importFrom purrr map_df
+#' @importFrom rlang has_name is_empty
+#' @importFrom dplyr bind_cols
+#' @importFrom dplyr mutate select
+unpack_people <- function(response) {
+
+  if (is_empty(response)) {
+    return(tibble())
+  }
+
+  # Flatten the data.frame
+  if (has_name(response, "cast") & !is_empty(response$cast)) {
+    response$cast$person[["images"]] <- NULL
+
+    response$cast$person <- response$cast$person %>%
+      select(-ids) %>%
+      cbind(fix_ids(response$cast$person$ids)) %>%
+      fix_datetime() %>%
+      as_tibble()
+
+    response$cast <- response$cast %>%
+      select(-person) %>%
+      cbind(response$cast$person) %>%
+      as_tibble()
+  }
+
+  if (has_name(response, "crew") & !is_empty(response$crew)) {
+    response$crew <- map_df(trakt_people_crew_sections, function(section) {
+      response$crew[[section]]$person[["images"]] <- NULL
+
+      if (!has_name(response$crew, section) | is_empty(response$crew[[section]])) {
+        return(tibble())
+      }
+
+      response$crew[[section]]$person <- response$crew[[section]]$person %>%
+        select(-ids) %>%
+        cbind(fix_ids(response$crew[[section]]$person$ids))
+
+      response$crew[[section]] <- response$crew[[section]] %>%
+        select(-person) %>%
+        cbind(response$crew[[section]]$person) %>%
+        mutate(crew_type = section) %>%
+        as_tibble() %>%
+        fix_datetime()
+    })
+  }
+
+  response
+}
+
 #' Unpack lists in list methods
 #'
 #' @param response As returned by [trakt_get].

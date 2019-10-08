@@ -45,21 +45,3 @@ test_that("people_media works", {
   expect_is(sho_min$cast, "tbl")
   expect_is(sho_min$crew, "tbl")
 })
-
-
-test_that("media_people works", {
-  skip_on_cran()
-
-  id_mov <- "inception-2010"
-  id_sho <- "futurama"
-
-  show_people <- shows_people(id = id_sho)
-  movie_people <- movies_people(id = id_mov)
-
-  expect_is(show_people, "list")
-  expect_is(movie_people, "list")
-
-  expect_equal(names(show_people), names(movie_people))
-  expect_named(show_people, c("cast", "crew"))
-  expect_named(movie_people, c("cast", "crew"))
-})
