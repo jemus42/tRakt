@@ -34,7 +34,6 @@ NULL
 
 #' @keywords internal
 #' @importFrom dplyr mutate
-#' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
 media_ratings <- function(type = c("shows", "movies"), id) {
   type <- match.arg(type)
@@ -75,7 +74,6 @@ movies_ratings <- function(id) {
 #' @rdname media_ratings
 #' @export
 #' @importFrom dplyr mutate
-#' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
 seasons_ratings <- function(id, season = 1L) {
   if (length(id) > 1) {
@@ -102,7 +100,6 @@ seasons_ratings <- function(id, season = 1L) {
 #' @rdname media_ratings
 #' @export
 #' @importFrom dplyr mutate
-#' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
 episodes_ratings <- function(id, season = 1L, episode = 1L) {
   if (length(id) > 1) {

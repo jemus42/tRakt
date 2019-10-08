@@ -153,13 +153,13 @@ unpack_people <- function(response) {
     response$cast$person[["images"]] <- NULL
 
     response$cast$person <- response$cast$person %>%
-      select(-ids) %>%
+      select(-"ids") %>%
       cbind(fix_ids(response$cast$person$ids)) %>%
       fix_datetime() %>%
       as_tibble()
 
     response$cast <- response$cast %>%
-      select(-person) %>%
+      select(-"person") %>%
       cbind(response$cast$person) %>%
       as_tibble()
   }
@@ -173,11 +173,11 @@ unpack_people <- function(response) {
       }
 
       response$crew[[section]]$person <- response$crew[[section]]$person %>%
-        select(-ids) %>%
+        select(-"ids") %>%
         cbind(fix_ids(response$crew[[section]]$person$ids))
 
       response$crew[[section]] <- response$crew[[section]] %>%
-        select(-person) %>%
+        select(-"person") %>%
         cbind(response$crew[[section]]$person) %>%
         mutate(crew_type = section) %>%
         as_tibble() %>%
@@ -345,7 +345,7 @@ fix_ids <- function(ids) {
     ids["tvrage"] <- NULL
   }
 
-  modify_if(ids, is.null, ~ return(NA_character_), .else = as.character)
+  modify_if(ids, is.null, ~ NA_character_, .else = as.character)
 }
 
 #' Quick datetime conversion
@@ -517,7 +517,8 @@ check_types <- function(type, several.ok = TRUE) {
 check_filter_arg <- function(filter,
                              filter_type = c(
                                "query", "years", "genres", "languages", "countries",
-                               "runtimes", "ratings", "certifications", "networks", "status"
+                               "runtimes", "ratings", "certifications", "networks",
+                               "status"
                              )) {
   filter_type <- match.arg(filter_type)
 
