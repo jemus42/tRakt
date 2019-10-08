@@ -22,7 +22,7 @@ returns more variables and should generally only be used if required.
 See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble()} of length \code{limit}.
+A \link[tibble:tibble-package]{tibble()}.
 }
 \description{
 Get a shows next or latest episode
