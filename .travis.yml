@@ -5,7 +5,7 @@ sudo: true
 cache: packages
 dist: bionic
 r:
-  - oldrel
+#  - oldrel
   - release
   - devel
 addons:
