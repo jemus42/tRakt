@@ -181,7 +181,7 @@ trakt_get <- function(url, client_id = getOption("trakt_client_id"),
 
   response
 }
-
+# nocov start
 #' Get a trakt.tv OAuth2 token
 #'
 #' This is used internally for authenticated requests.
@@ -211,3 +211,4 @@ trakt_get_token <- function() {
     config_init = user_agent("https://github.com/jemus42/tRakt")
   )
 }
+# nocov end
