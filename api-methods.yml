@@ -64,7 +64,7 @@ movies:
   lists:
     url: https://trakt.docs.apiary.io/#reference/movies/lists/get-lists-containing-this-movie
     endpoint: movies/:id/lists/:type/:sort
-    implementation: N/A
+    implementation: movies_lists()
   people:
     url: https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie
     endpoint: movies/:id/people
@@ -162,7 +162,7 @@ shows:
   lists:
     url: https://trakt.docs.apiary.io/#reference/shows/lists/get-lists-containing-this-show
     endpoint: shows/:id/lists/:type/:sort
-    implementation:
+    implementation: shows_lists()
   collection progress:
     url: https://trakt.docs.apiary.io/#reference/shows/collection-progress/get-show-collection-progress
     endpoint: shows/:id/progress/collection
@@ -216,7 +216,7 @@ seasons:
   lists:
     url: https://trakt.docs.apiary.io/#reference/seasons/lists/get-lists-containing-this-season
     endpoint: shows/:id/seasons/:season/lists/:type/:sort
-    implementation: N/A
+    implementation: seasons_lists()
   people:
     url: https://trakt.docs.apiary.io/#reference/seasons/people/get-all-people-for-a-season
     endpoint: shows/:id/seasons/:season/people
@@ -250,7 +250,7 @@ episodes:
   lists:
     url: https://trakt.docs.apiary.io/#reference/episodes/lists/get-lists-containing-this-episode
     endpoint: shows/:id/seasons/:season/episodes/:episode/lists/:type/:sort
-    implementation:
+    implementation: episodes_lists()
   people:
     url: https://trakt.docs.apiary.io/#reference/episodes/people/get-all-people-for-an-episode
     endpoint: shows/:id/seasons/:season/episodes/:episode/people
