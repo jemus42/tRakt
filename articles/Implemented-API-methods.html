@@ -913,7 +913,7 @@ Lists
 <a href="https://trakt.docs.apiary.io/#reference/people/lists/get-lists-containing-this-person" style="     ">people/:id/lists/:type/:sort</a>
 </td>
 <td style="text-align:left;">
-N/A
+<code><a href="../reference/media_lists.html">people_lists()</a></code>
 </td>
 </tr>
 </tbody>
@@ -1114,6 +1114,47 @@ Stats
 </tbody>
 </table>
 </div>
+<div id="lists" class="section level1">
+<h1 class="hasAnchor">
+<a href="#lists" class="anchor"></a>Lists</h1>
+<table class="table table table-striped table-hover">
+<thead><tr>
+<th style="text-align:left;">
+Method
+</th>
+<th style="text-align:left;">
+Endpoint
+</th>
+<th style="text-align:left;">
+Implementation
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Popular
+</td>
+<td style="text-align:left;">
+<a href="https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists" style="     ">lists/popular</a>
+</td>
+<td style="text-align:left;">
+<code><a href="../reference/lists_popular.html">lists_popular()</a></code>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Trending
+</td>
+<td style="text-align:left;">
+<a href="https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists" style="     ">lists/trending</a>
+</td>
+<td style="text-align:left;">
+<code><a href="../reference/lists_popular.html">lists_trending()</a></code>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="misc" class="section level1">
 <h1 class="hasAnchor">
 <a href="#misc" class="anchor"></a>Misc</h1>
@@ -1225,6 +1266,7 @@ List
 </li>
       <li><a href="#people">People</a></li>
       <li><a href="#users">Users</a></li>
+      <li><a href="#lists">Lists</a></li>
       <li><a href="#misc">Misc</a></li>
       </ul>
 </div>
