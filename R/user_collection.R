@@ -22,6 +22,7 @@
 #' @examples
 #' \dontrun{
 #' user_collection(user = "sean", type = "movies")
+#' user_collection(user = "sean", type = "shows")
 #' }
 user_collection <- function(user = getOption("trakt_username"),
                             type = c("shows", "movies"),
@@ -31,13 +32,20 @@ user_collection <- function(user = getOption("trakt_username"),
   type <- match.arg(type)
   extended <- match.arg(extended)
 
+  if (extended == "min") {
+    # extended = "min" causes weird output, expected result without param though
+    extended <- ""
+  }
+
   if (type == "movie" & unnest_episodes) {
     warning("'unnest_episodes' only applies to type = 'shows'")
   }
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map_df(user, ~ user_collection(user = .x, type, unnest_episodes),
+    return(map_df(user, ~ user_collection(
+      user = .x, type = type, unnest_episodes = unnest_episodes, extended = extended
+      ),
       .id = "user"
     ))
   }

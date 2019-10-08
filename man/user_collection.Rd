@@ -41,6 +41,7 @@ you, please open an issue on GitHub.
 \examples{
 \dontrun{
 user_collection(user = "sean", type = "movies")
+user_collection(user = "sean", type = "shows")
 }
 }
 \seealso{

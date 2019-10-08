@@ -28,6 +28,11 @@ user_watched <- function(user = getOption("trakt_username"),
   type <- match.arg(type)
   extended <- match.arg(extended)
 
+  if (extended == "min") {
+    # extended = "min" causes weird output, expected result without param though
+    extended <- ""
+  }
+
   if (type == "shows" & noseasons) {
     extended <- paste0(extended, ",noseasons")
   }
