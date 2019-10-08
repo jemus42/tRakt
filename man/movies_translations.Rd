@@ -6,11 +6,12 @@
 \alias{episodes_translations}
 \title{Get translations for a movie, show or episode}
 \usage{
-movies_translations(id, language = NULL)
+movies_translations(id, languages = NULL)
 
-shows_translations(id, language = NULL)
+shows_translations(id, languages = NULL)
 
-episodes_translations(id, season = 1L, episode = 1L, language = NULL)
+episodes_translations(id, season = 1L, episode = 1L,
+  languages = NULL)
 }
 \arguments{
 \item{id}{\code{character(1)}: The ID of the item requested. Preferably the
@@ -19,6 +20,9 @@ or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See section
 \link[=trakt_api_common_parameters]{"Item identifiers"} for more details.}
+
+\item{languages}{\code{character(n)}: Two-digit language code(s).
+Also see \code{\link{trakt_languages}} for table of available languages.}
 
 \item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be

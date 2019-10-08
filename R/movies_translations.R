@@ -12,11 +12,11 @@
 #'
 #' # Only get a specific language
 #' movies_translations("193972", "de")
-movies_translations <- function(id, language = NULL) {
+movies_translations <- function(id, languages = NULL) {
 
-  language <- check_filter_arg(language, "languages")
+  languages <- check_filter_arg(languages, "languages")
 
-  url <- build_trakt_url("movies", id, "translations", language)
+  url <- build_trakt_url("movies", id, "translations", languages)
   response <- trakt_get(url)
 
   as_tibble(response)
@@ -24,11 +24,11 @@ movies_translations <- function(id, language = NULL) {
 
 #' @rdname movies_translations
 #' @export
-shows_translations <- function(id, language = NULL) {
+shows_translations <- function(id, languages = NULL) {
 
-  language <- check_filter_arg(language, "languages")
+  languages <- check_filter_arg(languages, "languages")
 
-  url <- build_trakt_url("shows", id, "translations", language)
+  url <- build_trakt_url("shows", id, "translations", languages)
   response <- trakt_get(url)
 
   as_tibble(response)
@@ -36,12 +36,12 @@ shows_translations <- function(id, language = NULL) {
 
 #' @rdname movies_translations
 #' @export
-episodes_translations <- function(id, season = 1L, episode = 1L, language = NULL) {
+episodes_translations <- function(id, season = 1L, episode = 1L, languages = NULL) {
 
-  language <- check_filter_arg(language, "languages")
+  languages <- check_filter_arg(languages, "languages")
 
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "episodes", episode, "translations", language
+    "shows", id, "seasons", season, "episodes", episode, "translations", languages
   )
   response <- trakt_get(url)
 
