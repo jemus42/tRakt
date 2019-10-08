@@ -37,7 +37,6 @@ unpack_user <- function(response_user) {
 #' This should work regardless of the value of `extended` to be sufficiently robust
 #' @keywords internal
 #' @noRd
-#' @importFrom tibble as_tibble
 #' @importFrom rlang has_name
 #' @importFrom purrr modify_if
 #' @importFrom purrr modify_in
@@ -62,7 +61,7 @@ unpack_show <- function(show) {
     names(show$airs) <- paste0("airs_", names(show$airs))
 
     show <- show %>%
-      select(-airs) %>%
+      select(-"airs") %>%
       cbind(show$airs) %>%
       as_tibble()
     # Note: Use cbind() over dplyr::bind_cols(): The latter complains about columns
@@ -70,7 +69,7 @@ unpack_show <- function(show) {
   }
 
   show <- show %>%
-    select(-ids) %>%
+    select(-"ids") %>%
     bind_cols(fix_ids(show$ids)) %>%
     as_tibble() %>%
     fix_datetime()
@@ -90,11 +89,11 @@ unpack_movie <- function(response) {
   }
 
   bind_cols(
-    response %>% select(-movie),
-    response$movie %>% select(-ids),
+    response %>% select(-"movie"),
+    response$movie %>% select(-"ids"),
     response$movie$ids %>% fix_ids()
   ) %>%
-    fix_datetime()
+    fix_tibble_response()
 }
 
 #' Crew subsections
@@ -116,7 +115,7 @@ unpack_crew_sections <- function(crew, type) {
           unpack_show() %>%
           bind_cols(
             crew[[section]] %>%
-              select(-show)
+              select(-"show")
           ) %>%
           as_tibble() %>%
           mutate(crew_type = section)
@@ -258,7 +257,7 @@ flatten_media_object <- function(x, type) {
     filter(type == !!type)
 
   if (nrow(x) == 0) {
-    return(tibble)
+    return(tibble())
   }
 
   if (type == "show") {
@@ -312,6 +311,6 @@ flatten_media_object <- function(x, type) {
 
   res %>%
     fix_datetime() %>%
-    filter(!is.na(trakt)) %>%
+    filter(!is.na(.data[["trakt"]])) %>%
     as_tibble()
 }
