@@ -7,6 +7,7 @@
 #' @param sort `character(1) ["popular"]`: Sort lists by one of "popular", "likes",
 #'   "comments", "items", "added" or "updated".
 #' @return A [tibble()][tibble::tibble-package].
+#' @family list methods
 #' @examples
 #' \dontrun{
 #' movies_lists("190430", type = "personal", limit = 5)
@@ -21,38 +22,41 @@ NULL
 #' @describeIn media_lists Lists containing a movie.
 movies_lists <- function(id,
                          type = c("all", "personal", "official", "watchlists"),
-                         sort = c("popular", "likes", "comments",
-                                  "items", "added", "updated"),
+                         sort = c(
+                           "popular", "likes", "comments",
+                           "items", "added", "updated"
+                         ),
                          limit = 10L,
                          extended = c("min", "full")) {
-
   type <- match.arg(type)
   sort <- match.arg(sort)
   extended <- match.arg(extended)
 
   url <- build_trakt_url("movies", id, "lists", type, sort,
-                         limit = limit, extended = extended)
+    limit = limit, extended = extended
+  )
   response <- trakt_get(url)
 
   unpack_lists(response)
-
 }
 
 #' @export
 #' @describeIn media_lists Lists containing a show.
 shows_lists <- function(id,
-                         type = c("all", "personal", "official", "watchlists"),
-                         sort = c("popular", "likes", "comments",
-                                  "items", "added", "updated"),
-                         limit = 10L,
-                         extended = c("min", "full")) {
-
+                        type = c("all", "personal", "official", "watchlists"),
+                        sort = c(
+                          "popular", "likes", "comments",
+                          "items", "added", "updated"
+                        ),
+                        limit = 10L,
+                        extended = c("min", "full")) {
   type <- match.arg(type)
   sort <- match.arg(sort)
   extended <- match.arg(extended)
 
   url <- build_trakt_url("shows", id, "lists", type, sort,
-                         limit = limit, extended = extended)
+    limit = limit, extended = extended
+  )
   response <- trakt_get(url)
 
   unpack_lists(response)
@@ -61,18 +65,20 @@ shows_lists <- function(id,
 #' @export
 #' @describeIn media_lists Lists containing a season.
 seasons_lists <- function(id, season,
-                         type = c("all", "personal", "official", "watchlists"),
-                         sort = c("popular", "likes", "comments",
-                                  "items", "added", "updated"),
-                         limit = 10L,
-                         extended = c("min", "full")) {
-
+                          type = c("all", "personal", "official", "watchlists"),
+                          sort = c(
+                            "popular", "likes", "comments",
+                            "items", "added", "updated"
+                          ),
+                          limit = 10L,
+                          extended = c("min", "full")) {
   type <- match.arg(type)
   sort <- match.arg(sort)
   extended <- match.arg(extended)
 
   url <- build_trakt_url("shows", id, "seasons", season, "lists", type, sort,
-                         limit = limit, extended = extended)
+    limit = limit, extended = extended
+  )
   response <- trakt_get(url)
 
   unpack_lists(response)
@@ -81,19 +87,21 @@ seasons_lists <- function(id, season,
 #' @export
 #' @describeIn media_lists Lists containing an episode.
 episodes_lists <- function(id, season, episode,
-                          type = c("all", "personal", "official", "watchlists"),
-                          sort = c("popular", "likes", "comments",
-                                   "items", "added", "updated"),
-                          limit = 10L,
-                          extended = c("min", "full")) {
-
+                           type = c("all", "personal", "official", "watchlists"),
+                           sort = c(
+                             "popular", "likes", "comments",
+                             "items", "added", "updated"
+                           ),
+                           limit = 10L,
+                           extended = c("min", "full")) {
   type <- match.arg(type)
   sort <- match.arg(sort)
   extended <- match.arg(extended)
 
   url <- build_trakt_url("shows", id, "seasons", season, "episodes", episode,
-                         "lists", type, sort,
-                         limit = limit, extended = extended)
+    "lists", type, sort,
+    limit = limit, extended = extended
+  )
   response <- trakt_get(url)
 
   unpack_lists(response)
@@ -103,17 +111,19 @@ episodes_lists <- function(id, season, episode,
 #' @describeIn media_lists Lists containing a person.
 people_lists <- function(id,
                          type = c("all", "personal", "official", "watchlists"),
-                         sort = c("popular", "likes", "comments",
-                                  "items", "added", "updated"),
+                         sort = c(
+                           "popular", "likes", "comments",
+                           "items", "added", "updated"
+                         ),
                          limit = 10L,
                          extended = c("min", "full")) {
-
   type <- match.arg(type)
   sort <- match.arg(sort)
   extended <- match.arg(extended)
 
   url <- build_trakt_url("people", id, "lists", type, sort,
-                         limit = limit, extended = extended)
+    limit = limit, extended = extended
+  )
   response <- trakt_get(url)
 
   unpack_lists(response)

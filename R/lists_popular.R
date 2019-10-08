@@ -15,7 +15,6 @@
 #' lists_trending()
 #' }
 lists_popular <- function(limit = 10) {
-
   url <- build_trakt_url("lists/popular", limit = limit)
   response <- trakt_get(url)
 
@@ -25,7 +24,7 @@ lists_popular <- function(limit = 10) {
 
   response %>%
     pull("list") %>%
-    select_if(~!is.data.frame(.x)) %>%
+    select_if(~ !is.data.frame(.x)) %>%
     bind_cols(
       pluck(response, "list", "ids") %>% fix_ids(),
       pluck(response, "list", "user") %>% unpack_user()
@@ -39,7 +38,6 @@ lists_popular <- function(limit = 10) {
 #' @importFrom dplyr bind_cols select_if pull
 #' @importFrom purrr pluck
 lists_trending <- function(limit = 10) {
-
   url <- build_trakt_url("lists/trending", limit = limit)
   response <- trakt_get(url)
 
@@ -49,13 +47,10 @@ lists_trending <- function(limit = 10) {
 
   response %>%
     pull("list") %>%
-    select_if(~!is.data.frame(.x)) %>%
+    select_if(~ !is.data.frame(.x)) %>%
     bind_cols(
       pluck(response, "list", "ids") %>% fix_ids(),
       pluck(response, "list", "user") %>% unpack_user()
     ) %>%
     fix_tibble_response()
 }
-
-
-

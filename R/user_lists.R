@@ -40,7 +40,6 @@ user_lists <- function(user = getOption("trakt_username"), extended = c("min", "
         unpack_user()
     ) %>%
     fix_tibble_response()
-
 }
 
 
@@ -68,7 +67,7 @@ user_lists <- function(user = getOption("trakt_username"), extended = c("min", "
 #' user_list("jemus42", list_id = 2121308)
 #' }
 user_list <- function(user = getOption("trakt_username"), list_id,
-                       extended = c("min", "full")) {
+                      extended = c("min", "full")) {
   check_username(user)
   extended <- match.arg(extended)
 
@@ -90,5 +89,4 @@ user_list <- function(user = getOption("trakt_username"), list_id,
         unpack_user()
     ) %>%
     fix_tibble_response()
-
 }

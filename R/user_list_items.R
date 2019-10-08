@@ -33,7 +33,6 @@
 user_list_items <- function(user = getOption("trakt_username"),
                             list_id, type = NULL,
                             extended = c("min", "full")) {
-
   check_username(user)
 
   type <- check_types(type, several.ok = TRUE)
@@ -41,7 +40,8 @@ user_list_items <- function(user = getOption("trakt_username"),
   extended <- match.arg(extended)
 
   url <- build_trakt_url(
-    "users", user, "lists", list_id, "items", type, extended = extended
+    "users", user, "lists", list_id, "items", type,
+    extended = extended
   )
   response <- trakt_get(url)
 
@@ -59,15 +59,13 @@ user_list_items <- function(user = getOption("trakt_username"),
     select(-one_of(list_types), -matches("^show$"))
 
   # Row-bind the list base to the unpackaed media items
-  map_df(list_types, ~{
-      bind_cols(
-        list_base %>%
-          filter(type == .x),
-        flatten_media_object(response, .x)
-      )
+  map_df(list_types, ~ {
+    bind_cols(
+      list_base %>%
+        filter(type == .x),
+      flatten_media_object(response, .x)
+    )
   }) %>%
     arrange(rank) %>%
     fix_tibble_response()
-
 }
-

@@ -87,3 +87,9 @@ episodes_lists("46241", season = 1, episode = 1)
 people_lists("david-tennant")
 }
 }
+\seealso{
+Other list methods: \code{\link{lists_popular}},
+  \code{\link{user_list_items}}, \code{\link{user_lists}},
+  \code{\link{user_list}}
+}
+\concept{list methods}

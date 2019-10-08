@@ -41,6 +41,7 @@ user_lists("jemus42")
 \link{user_list_items} For the actual content of a list.
 
 Other list methods: \code{\link{lists_popular}},
-  \code{\link{user_list_items}}, \code{\link{user_list}}
+  \code{\link{media_lists}}, \code{\link{user_list_items}},
+  \code{\link{user_list}}
 }
 \concept{list methods}

@@ -11,7 +11,6 @@
 #' @importFrom rlang has_name
 #' @importFrom dplyr rename
 unpack_user <- function(response_user) {
-
   if (!inherits(response_user, what = "data.frame")) {
     stop("User object must be data.frame like")
   }
@@ -171,7 +170,6 @@ unpack_lists <- function(response) {
 #' @importFrom stringr str_c str_remove str_replace
 #' @importFrom purrr pluck
 flatten_media_object <- function(x, type) {
-
   x <- x %>%
     as_tibble() %>%
     filter(type == !!type)
@@ -196,10 +194,10 @@ flatten_media_object <- function(x, type) {
         select(-"ids"),
       pluck(x, "season", "ids") %>%
         fix_ids() %>%
-        rename_all(~paste0("season_", .x))
+        rename_all(~ paste0("season_", .x))
     ) %>%
       rename(season = "number") %>%
-      rename_at(vars(ends_with("1")), ~{
+      rename_at(vars(ends_with("1")), ~ {
         .x %>%
           str_remove("1$") %>%
           str_c("season_", .)
@@ -212,23 +210,21 @@ flatten_media_object <- function(x, type) {
         rename(episode_title = "title"),
       pluck(x, "episode", "ids") %>%
         fix_ids() %>%
-        rename_all(~paste0("episode_", .x))
+        rename_all(~ paste0("episode_", .x))
     ) %>%
-      rename_at(vars(matches("number")), ~{
+      rename_at(vars(matches("number")), ~ {
         str_replace(.x, "number", "episode")
-        }) %>%
-      rename_at(vars(ends_with("1")), ~{
+      }) %>%
+      rename_at(vars(ends_with("1")), ~ {
         .x %>%
           str_remove("1$") %>%
           str_c("episode_", .)
       })
-
   } else if (type == "person") {
     res <- bind_cols(
       pluck(x, "person") %>% select(-"ids"),
       pluck(x, "person", "ids") %>% fix_ids()
     )
-
   }
 
   res %>%
@@ -376,7 +372,6 @@ fix_missing <- function(x) {
 #' @importFrom httr stop_for_status
 #' @importFrom rlang is_empty is_character
 check_username <- function(user, validate = FALSE) {
-
   if (is_empty(user) | identical(user, "") | !is_character(user)) {
     stop(
       "Supplied user must be a non-empty character string, you provided <",
@@ -408,7 +403,6 @@ check_username <- function(user, validate = FALSE) {
 #' @noRd
 #' @importFrom dplyr case_when
 check_types <- function(type, several.ok = TRUE) {
-
   if (is.null(type)) {
     return(NULL)
   }
@@ -422,7 +416,7 @@ check_types <- function(type, several.ok = TRUE) {
     TRUE ~ ""
   )
 
-  possible_types <- c("movie" , "show" , "season" , "episode" , "person")
+  possible_types <- c("movie", "show", "season", "episode", "person")
   type <- match.arg(type, choices = possible_types, several.ok = several.ok)
 
   if (length(type) > 1) {
@@ -547,7 +541,8 @@ check_filter_arg <- function(filter,
 #' @noRd
 check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
   if (any(!(filter %in% filter_ok))) {
-    warning(call. = FALSE,
+    warning(
+      call. = FALSE,
       "'", filter_type, "' includes unknown value, ignoring: '",
       paste0(unique(filter[!(filter %in% filter_ok)]), collapse = ", "), "'"
     )

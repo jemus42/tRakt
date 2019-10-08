@@ -33,5 +33,4 @@ test_that("user_list_items are correct", {
   user_list_items("ZoMa_TGM", list_id = 6562799, extended = "full") %>%
     expect_is("tbl_df") %>%
     expect_length(14)
-
 })
