@@ -5,7 +5,7 @@
 \title{Get a user's watched shows or movies}
 \usage{
 user_watched(user = getOption("trakt_username"), type = c("shows",
-  "movies"), noseasons = TRUE)
+  "movies"), noseasons = TRUE, extended = c("min", "full"))
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
@@ -18,6 +18,10 @@ functions, values \code{seasons} or \code{episodes} are also allowed.}
 \item{noseasons}{\code{logical(1) [TRUE]}: Only for \code{type = "show"}: Exclude detailed season
 data from output. This is advisable if you do not need per-episode data and want to
 be nice to the API.}
+
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.
+See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.

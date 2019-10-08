@@ -12,12 +12,9 @@
 #' @return A [tibble()][tibble::tibble-package].
 #' @export
 #' @family user data
-#' @importFrom dplyr bind_cols
-#' @importFrom dplyr select
-#' @importFrom dplyr contains
-#' @importFrom dplyr everything
-#' @importFrom tibble tibble
-#' @importFrom tibble as_tibble
+#' @importFrom dplyr bind_cols select matches everything
+#' @importFrom purrr pluck
+#' @importFrom rlang is_empty
 #' @examples
 #' \dontrun{
 #' # Use noseasons = TRUE to avoid receiving detailed season/episode data
@@ -25,10 +22,15 @@
 #' }
 user_watched <- function(user = getOption("trakt_username"),
                          type = c("shows", "movies"),
-                         noseasons = TRUE) {
+                         noseasons = TRUE,
+                         extended = c("min", "full")) {
   check_username(user)
   type <- match.arg(type)
-  extended <- if (type == "shows" & noseasons) "noseasons" else ""
+  extended <- match.arg(extended)
+
+  if (type == "shows" & noseasons) {
+    extended <- paste0(extended, ",noseasons")
+  }
 
   if (length(user) > 1) {
     names(user) <- user
@@ -39,19 +41,21 @@ user_watched <- function(user = getOption("trakt_username"),
   url <- build_trakt_url("users", user, "watched", type, extended = extended)
   response <- trakt_get(url = url)
 
-  if (identical(response, tibble())) {
-    return(response)
+  if (is_empty(response)) {
+    return(tibble())
   }
 
   if (type == "shows") {
     # Unpack the show media object and bind it to the base tbl
     response <- response %>%
-      select(-show) %>%
-      bind_cols(unpack_show(response$show)) %>%
+      select(-"show") %>%
+      bind_cols(
+        pluck(response, "show") %>% unpack_show()
+        ) %>%
       select(
-        -contains("seasons"),
+        -matches("^seasons$"),
         everything(),
-        contains("seasons")
+        matches("^seasons$")
       )
     # This uses contains() because the seasons column might not exist
     # and this way I don't have to use an extra if-statement to check "noseasons == TRUE"
