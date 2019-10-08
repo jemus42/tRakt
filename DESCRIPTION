@@ -37,7 +37,8 @@ Suggests:
     rmarkdown,
     scales,
     testthat (>= 2.1.0),
-    tidyr
+    tidyr,
+    kableExtra
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
