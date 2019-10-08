@@ -99,8 +99,7 @@ episodes_lists <- function(id, season, episode,
   extended <- match.arg(extended)
 
   url <- build_trakt_url("shows", id, "seasons", season, "episodes", episode,
-    "lists", type, sort,
-    limit = limit, extended = extended
+    "lists", type, sort, limit = limit, extended = extended
   )
   response <- trakt_get(url)
 
@@ -126,5 +125,8 @@ people_lists <- function(id,
   )
   response <- trakt_get(url)
 
-  unpack_lists(response)
+  # limit param seems to be ignoren in this method, so manual workaround
+  response %>%
+    unpack_lists() %>%
+    head(limit)
 }
