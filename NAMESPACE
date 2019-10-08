@@ -2,6 +2,7 @@
 
 export("%>%")
 export(build_trakt_url)
+export(comments_comment)
 export(episodes_comments)
 export(episodes_lists)
 export(episodes_people)

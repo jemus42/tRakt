@@ -2,7 +2,7 @@ comments:
   comment:
     url: https://trakt.docs.apiary.io/#reference/comments/comment/get-a-comment-or-reply
     endpoint: comments/:id
-    implementation:
+    implementation: comments_comment()
   replies:
     url: https://trakt.docs.apiary.io/#reference/comments/replies/get-replies-for-a-comment
     endpoint: comments/:id/replies
