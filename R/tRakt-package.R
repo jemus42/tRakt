@@ -7,4 +7,5 @@
 #' @importFrom tibble tibble
 #' @importFrom tibble as_tibble
 ## usethis namespace: end
+#' @importFrom rlang .data
 NULL
