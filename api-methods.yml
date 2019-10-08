@@ -102,7 +102,7 @@ people:
   lists:
     url: https://trakt.docs.apiary.io/#reference/people/lists/get-lists-containing-this-person
     endpoint: people/:id/lists/:type/:sort
-    implementation: N/A
+    implementation: people_lists()
 
 search:
   text query:

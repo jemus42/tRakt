@@ -136,6 +136,16 @@ api %>%
   print_api_table()
 ```
 
+# Lists
+
+```{r api-users}
+api %>%
+  filter(Section == "lists") %>%
+  select(-Section) %>%
+  format_api_table() %>%
+  print_api_table()
+```
+
 # Misc
 
 These endpoints are used to check filter arguments. The output is cached in tidied up
