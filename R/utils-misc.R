@@ -1,4 +1,4 @@
-#' Easy episode ID padding
+#' Easy episode number padding
 #'
 #' Simple function to ease the creation of `sXXeYY` episode ids.
 #' Note that `s` and `e` must have the same length.
@@ -8,11 +8,13 @@
 #' @param e_width The length of the episode number padding. Defaults to 2.
 #' @return A `character` in the common `sXXeYY` format
 #' @family utility functions
-#' @noRd
 #' @note I like my sXXeYY format, okay?
+#' @export
 #' @examples
-#' pad(2, 4) # Returns "s02e04"
-pad <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
+#' # Season 2, episode 4
+#' pad_episode(2, 4)
+#' pad_episode(1, 85, e_width = 3)
+pad_episode <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
   if (length(s) != length(e)) {
     warning("pad() called with wrong argument sizes")
     return(rep("", max(length(s), length(e))))
