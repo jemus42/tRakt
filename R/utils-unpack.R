@@ -223,8 +223,8 @@ unpack_lists <- function(response) {
 #' @noRd
 #' @return A [tibble()][tibble::tibble-package].
 #' @importFrom rlang is_empty
-#' @importFrom dplyr bind_cols select
-#' @importFrom purrr pluck
+#' @importFrom dplyr bind_cols
+#' @importFrom purrr pluck discard
 unpack_comments <- function(response) {
 
   if (is_empty(response)) {
@@ -232,9 +232,11 @@ unpack_comments <- function(response) {
   }
 
   response %>%
-    select(-"user") %>%
+    discard(is.list) %>%
+    as_tibble() %>%
     bind_cols(
       pluck(response, "user") %>%
+        as_tibble() %>%
         unpack_user()
     ) %>%
     fix_tibble_response()
@@ -313,4 +315,102 @@ flatten_media_object <- function(x, type) {
     fix_datetime() %>%
     filter(!is.na(.data[["trakt"]])) %>%
     as_tibble()
+}
+
+#' Generalized unpacker for single items in _summary functions
+#'
+#' @param x A response object
+#' @param type One of "movie", "show", "season", "episode", "person"
+#'
+#' @return A flat `tibble()`
+#' @keywords internal
+#' @noRd
+#' @importFrom dplyr filter select bind_cols vars rename_at rename_all ends_with
+#' @importFrom stringr str_c str_remove str_replace
+#' @importFrom purrr modify_if discard pluck
+flatten_single_media_object <- function(response, type) {
+
+  if (is_empty(response)) {
+    return(tibble())
+  }
+
+  if (type %in% c("movie", "movies")) {
+    if (has_name(response, "movie")) {
+      response <- pluck(response, "movie")
+    }
+
+    res <- response %>%
+      modify_if(is.null, ~NA_character_) %>%
+      discard(is.list) %>%
+      list_merge(
+        !!!(pluck(response, "ids") %>% fix_ids())
+      ) %>%
+      modify_if(~ length(.x) > 1, list)
+  }
+
+  if (type %in% c("show", "shows")) {
+    if (has_name(response, "show")) {
+      response <- pluck(response, "show")
+    }
+
+    res <- response %>%
+      modify_if(is.null, ~NA_character_) %>%
+      discard(is.list) %>%
+      modify_if(~ length(.x) > 1, list)
+
+    if (has_name(response, "airs")) {
+      airs <- response %>%
+        pluck("airs", .default = NULL) %>%
+        set_names(~paste0("airs_", .x))
+
+      res <- list_merge(res, !!!airs)
+    }
+
+    res <- res %>% list_merge(
+      !!!(pluck(response, "ids") %>% fix_ids())
+    )
+  }
+
+  if (type %in% c("episode", "episodes")) {
+     res <- response %>%
+      pluck("episode") %>%
+      modify_if(is.null, ~NA_character_) %>%
+      discard(is.list) %>%
+      modify_if(~ length(.x) > 1, list) %>%
+      list_merge(
+        !!!(pluck(response, "episode", "ids") %>% fix_ids())
+      ) %>%
+      as_tibble() %>%
+      rename(episode = "number") %>%
+      rename_at(vars(-"season", -"episode"), ~paste0("episode_", .x))
+
+     res <- bind_cols(
+       flatten_single_media_object(response[["show"]], "show"),
+       res
+     )
+  }
+
+  if (type %in% c("season", "seasons")) {
+    res <- response %>%
+      pluck("season") %>%
+      modify_if(is.null, ~NA_character_) %>%
+      discard(is.list) %>%
+      modify_if(~ length(.x) > 1, list) %>%
+      list_merge(
+        !!!(pluck(response, "season", "ids") %>% fix_ids())
+      ) %>%
+      as_tibble() %>%
+      rename(season = "number") %>%
+      rename_at(vars(-"season"), ~paste0("season_", .x))
+
+    res <- bind_cols(
+      flatten_single_media_object(response[["show"]], "show"),
+      res
+    )
+  }
+
+
+  res %>%
+    fix_tibble_response()
+
 }

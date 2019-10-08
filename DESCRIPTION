@@ -28,7 +28,7 @@ Imports:
     purrr (>= 0.2.3),
     tibble,
     utils,
-    rlang,
+    rlang (>= 0.1.2),
     stringr
 Suggests:
     covr,
@@ -38,7 +38,8 @@ Suggests:
     scales,
     testthat (>= 2.1.0),
     tidyr,
-    kableExtra
+    kableExtra,
+    roxygen2
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

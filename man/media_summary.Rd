@@ -42,6 +42,7 @@ These functions return the same amount of information as
 \examples{
 # Minimal info by default
 shows_summary("breaking-bad")
+movies_summary("inception-2010")
 \dontrun{
 # More information
 shows_summary("breaking-bad", extended = "full")

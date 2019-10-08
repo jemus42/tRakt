@@ -2,9 +2,18 @@
 % Please edit documentation in R/comments_comment.R
 \name{comments_comment}
 \alias{comments_comment}
+\alias{comments_replies}
+\alias{comments_likes}
+\alias{comments_item}
 \title{Get a single comment}
 \usage{
 comments_comment(id, extended = c("min", "full"))
+
+comments_replies(id, extended = c("min", "full"))
+
+comments_likes(id, extended = c("min", "full"))
+
+comments_item(id, extended = c("min", "full"))
 }
 \arguments{
 \item{id}{\code{character(1)}: The ID of the item requested. Preferably the
@@ -24,10 +33,42 @@ A \link[tibble:tibble-package]{tibble()}.
 \description{
 Get a single comment
 }
+\section{Functions}{
+\itemize{
+\item \code{comments_replies}: Get a comment's replies
+
+\item \code{comments_likes}: Get users who liked a comment.
+
+\item \code{comments_item}: Get the media item attached to the comment.
+}}
+
 \examples{
 # A single comment
-comments_summary("236397")
+comments_comment("236397")
 
 # Multiple comments
 comments_comment(c("236397", "112561"))
+\dontrun{
+comments_replies("236397")
+}
+\dontrun{
+comments_likes("236397")
+}
+\dontrun{
+# A movie
+comments_item("236397")
+comments_item("236397", extended = "full")
+
+# A show
+comments_item("120768")
+comments_item("120768", extended = "full")
+
+# A season
+comments_item("140265")
+comments_item("140265", extended = "full")
+
+# An episode
+comments_item("136632")
+comments_item("136632", extended = "full")
+}
 }

@@ -6,7 +6,7 @@ comments:
   replies:
     url: https://trakt.docs.apiary.io/#reference/comments/replies/get-replies-for-a-comment
     endpoint: comments/:id/replies
-    implementation:
+    implementation: comments_replies()
   item:
     url: https://trakt.docs.apiary.io/#reference/comments/item/get-the-attached-media-item
     endpoint: comments/:id/item
@@ -14,7 +14,7 @@ comments:
   likes:
     url: https://trakt.docs.apiary.io/#reference/comments/likes/get-all-users-who-liked-a-comment
     endpoint: comments/:id/likes
-    implementation:
+    implementation: comments_likes()
   trending:
     url: https://trakt.docs.apiary.io/#reference/comments/trending/get-trending-comments
     endpoint: comments/trending/:comment_type/:type?include_replies=

@@ -13,6 +13,7 @@
 #' @examples
 #' # Minimal info by default
 #' shows_summary("breaking-bad")
+#' movies_summary("inception-2010")
 #' \dontrun{
 #' # More information
 #' shows_summary("breaking-bad", extended = "full")
@@ -44,44 +45,15 @@ media_summary <- function(type = c("movies", "shows"), id, extended = c("min", "
   url <- build_trakt_url(type, id, extended = extended)
   response <- trakt_get(url = url)
 
-  # All variants have this in common
-  response$ids <- fix_ids(response$ids)
-
   # If extended == "min", we only have IDs to worry about, so early return
   if (extended == "min") {
-    response <- response[names(response) != "ids"] %>%
+   response[names(response) != "ids"] %>%
       as_tibble() %>%
       bind_cols(response$ids)
-
-    return(response)
+  } else {
+    flatten_single_media_object(response, type)
   }
 
-  # extended == "full" objects have this in common
-  response$available_translations <- list(response$available_translations)
-  response$genres <- list(response$genres)
-
-  # Make sure top-level elements that could be NULL aren't
-  # Check e.g. show "1657" for homepage = NULL
-  response <- response %>%
-    modify_if(is.null, ~ return(NA_character_))
-
-  # Clean up shows and movie objects separately, feels cleaner that way.
-  if (type == "shows") {
-    response$airs <- response$airs %>%
-      modify_if(is.null, ~ return(NA_character_), .else = as.character) %>%
-      as_tibble() %>%
-      set_names(., paste0("airs_", names(.)))
-
-    response <- response[!(names(response) %in% c("ids", "airs"))] %>%
-      as_tibble() %>%
-      bind_cols(response$airs, response$id)
-  } else if (type == "movies") {
-    response <- response[names(response) != "ids"] %>%
-      as_tibble() %>%
-      bind_cols(response$id)
-  }
-
-  fix_tibble_response(response)
 }
 
 # Derived ----
