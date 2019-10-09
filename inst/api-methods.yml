@@ -330,6 +330,7 @@ users:
   list comments:
     url: https://trakt.docs.apiary.io/#reference/users/list-comments/get-all-list-comments
     endpoint: users/:id/lists/:list_id/comments/:sort
+    implementation: user_list_comments()
   followers:
     url: https://trakt.docs.apiary.io/#reference/users/followers/get-followers
     endpoint: users/:id/followers
