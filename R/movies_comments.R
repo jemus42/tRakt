@@ -1,9 +1,6 @@
 #' Get all comments of a thing
 #' @name media_comments
 #' @inheritParams trakt_api_common_parameters
-#' @inheritParams search_filters
-#' @param sort `character(1) ["newest"]`: Comment sort order, one of
-#'   "newest", "oldest", "likes" or "replies".
 #' @return A [tibble()][tibble::tibble-package].
 #' @family comment methods
 #' @examples

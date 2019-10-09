@@ -17,14 +17,14 @@ Can also be of length greater than 1, in which case the function is called on al
 functions, values \code{seasons} or \code{episodes} are also allowed.}
 
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
-than \code{0} and will be coerced to \code{integer}.}
+than \code{0} and will be coerced via \code{as.integer()}.}
 
 \item{start_at, end_at}{\code{character(1)}: A time-window to filter by. Must be coercible
 to a datetime object of class \code{POSIXct}. See \link{ISOdate} for further information.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
+See \code{vignette("finding-things", package = "tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.

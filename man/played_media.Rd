@@ -20,11 +20,11 @@ shows_played(limit = 10, extended = c("min", "full"),
 }
 \arguments{
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
-than \code{0} and will be coerced to \code{integer}.}
+than \code{0} and will be coerced via \code{as.integer()}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
+See \code{vignette("finding-things", package = "tRakt")} for more details.}
 
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}

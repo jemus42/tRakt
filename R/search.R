@@ -10,7 +10,7 @@
 #' See also the
 #' [API reference here](https://trakt.docs.apiary.io/#reference/search) for
 #' which fields of the item metadata are searched by default.
-#' @inheritParams search_filters
+#' @inheritParams trakt_api_common_parameters
 #' @param id `character(1)`: The id used for the search, e.g. `14701` for
 #'   a `Trakt ID`.
 #' @param id_type `character(1) ["trakt"]`: The type of `id`. One of `trakt`,
@@ -21,7 +21,6 @@
 #'   combination is reasonably combinable, e.g. `c("movie", "list")`. Use
 #'   separate function calls in that case.
 #' @inheritParams trakt_api_common_parameters
-#' @inheritParams search_filters
 #' @param n_results `integer(1) [1]`: How many results to return.
 #' @return A [tibble][tibble::tibble-package] containing `n_results` results.
 #'         Variable `type` is equivalent to the value of the `type` argument, and

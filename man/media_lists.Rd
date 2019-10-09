@@ -35,8 +35,8 @@ people_lists(id, type = c("all", "personal", "official", "watchlists"),
 \code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{id} values separately and the result is combined. See section
-\link[=trakt_api_common_parameters]{"Item identifiers"} for more details.}
+\code{id} values separately and the result is combined. See
+\code{vignette("finding-things", package = "tRakt")} for more details.}
 
 \item{type}{\code{character(1) ["all"]}: The type of list, one of "all", "personal",
 "official" or "watchlists".}
@@ -45,11 +45,11 @@ Can also be of length greater than 1, in which case the function is called on al
 "comments", "items", "added" or "updated".}
 
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
-than \code{0} and will be coerced to \code{integer}.}
+than \code{0} and will be coerced via \code{as.integer()}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
+See \code{vignette("finding-things", package = "tRakt")} for more details.}
 
 \item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be

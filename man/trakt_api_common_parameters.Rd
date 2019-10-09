@@ -8,12 +8,12 @@
 \code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{id} values separately and the result is combined. See section
-\link[=trakt_api_common_parameters]{"Item identifiers"} for more details.}
+\code{id} values separately and the result is combined. See
+\code{vignette("finding-things", package = "tRakt")} for more details.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
+See \code{vignette("finding-things", package = "tRakt")} for more details.}
 
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
 functions, values \code{seasons} or \code{episodes} are also allowed.}
@@ -26,7 +26,7 @@ Can also be of length greater than 1, in which case the function is called on al
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
 
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
-than \code{0} and will be coerced to \code{integer}.}
+than \code{0} and will be coerced via \code{as.integer()}.}
 
 \item{season, episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
@@ -37,6 +37,45 @@ on to count updates. If no date is supplied, the default is to
 use yesterday relative to the current date. Value must either
 be standard \code{YYYY-MM-DD} format or an object of class \link[base:Dates]{Date},
 which will then be coerced via \link[base:as.character]{as.character()}.}
+
+\item{sort}{\code{character(1) ["newest"]}: Comment sort order, one of
+"newest", "oldest", "likes" or "replies".}
+
+\item{query}{\code{character(1)}: Search string for titles and descriptions.
+For \code{search_query()} other fields are searched depending on the \code{type} of media.
+See \href{https://trakt.docs.apiary.io/#reference/search/text-query}{the API docs} for a
+full reference.}
+
+\item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range,
+e.g. \code{"2010-2020"}. Can also be an integer vector of length two which will be
+coerced appropriately.}
+
+\item{genres}{\code{character(n)}: Genre  slug(s).
+See \code{\link{trakt_genres}} for a table of genres.
+Multiple values are allowed and will be concatenated.}
+
+\item{languages}{\code{character(n)}: Two-digit language code(s).
+Also see \code{\link{trakt_languages}} for table of available languages.}
+
+\item{countries}{\code{character(n)}: Two-character country code(s).
+See \code{\link{trakt_countries}}.}
+
+\item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}.
+Can also be an integer vector of length two which will be coerced appropriately.}
+
+\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}.
+Can also be an integer vector of length two which will be coerced appropriately.}
+
+\item{certifications}{\code{character(n)}: Certification(s) like \code{pg-13}.
+Multiple values are allowed. Use \code{\link{trakt_certifications}} for reference.
+Note that there are different certifications for shows and movies.}
+
+\item{networks}{\code{character(n)}: (Shows only) Network name like \code{HBO}.
+See \code{\link{trakt_networks}} for a list of known networks.}
+
+\item{status}{\code{character(n)}: (Shows only) The status of the shows.
+One of \code{"returning series"}, \code{"in production"}, \code{"planned"},
+\code{"canceled"}, or \code{"ended"}.}
 }
 \description{
 These parameters are used extensively throughout this package as they are required
@@ -45,56 +84,3 @@ intended to make the individual function documentation more consistent.
 The additional sections below also expand on the way media items are identified,
 and what the \code{extended} parameter really does.
 }
-\section{Item identifiers}{
-
-The \code{id} parameter is usually used to identify shows, movies or people.
-In each of these cases, the value of the parameter must be a valid ID of one of the
-following kinds:
-\itemize{
-\item \strong{Trakt ID} (\code{trakt}): A numeric ID used by trakt.tv, which is included
-as a variable named \code{trakt} by every function for the output item. These
-IDs are unique for their respective category (or \code{type}, e.g. shows, movies, people)
-and can be expected to have full coverage, meaning that every item will have a
-Trakt ID.
-\item \strong{Slug} (\code{slug}): A human-readable identifier used on the trakt.tv site,
-e.g. \code{the-wire}. While these are easy to remember, they have the risk of
-clashing with numeric IDs. One example is the show "24", which has the slug \code{24}.
-However, the show "Presidio Med" has the \strong{Trakt ID} \code{24}, so if you supply
-\code{id = 24} the API assumes you meant the Trakt ID instead of the slug.
-This is... suboptimal. Use \code{trakt} ID's whenever possible.
-\item \strong{IMDb ID} (\code{imdb}): Relatively self-explanatory. You can retrieve them easily
-via most functions or by searching on \href{https://www.imdb.com/}{IMDb.com}. Since
-IMDb is an external service, these IDs should be used for linking with other
-data sources rather than as search parameters for the trakt API, as it can not
-be guaranteed that every item on trakt.tv does have an IMDb ID.
-}
-
-The API does return some other IDs, notably for \href{https://www.thetvdb.com}{the tvdb}.
-These are useful for linking with other data sources like
-\href{https://fanart.tv/}{fanart.tv}.
-They are not used as search parameters for the trakt API. The API also includes
-a TVRage ID, but since this site seems to not exist anymore (and therefore newer
-items don't have this ID) this ID is removed from all output.
-}
-
-\section{Extended Information}{
-
-The \code{extended} parameter controls the amount of information (i.e. the number of
-variables) included in the output.
-\itemize{
-\item \code{"min"}: The default option returns minimal information. For shows, movies, episodes
-and people, the result will only include a title or name, possibly a year, and the
-standard set of IDs (see section above). This is the fastest option as it requires
-less content to be sent from the API and less post-processing work to produce tabular
-output.
-\item \code{"full"}: The maximum amount of information. This option is required if you are
-interested in the \code{votes} and \code{rating} variables, as well as additional metadata
-like air dates, plot summaries, and a plethora of other variables depending on
-the \code{type}. If you intend on retrieving data for a large number of items,
-e.g. via \link{popular_media}, it is highly recommend to cache the output locally when
-using \code{extended = "full"} and subsequently only use \code{extended = "min"}.
-Then you can merge or \link[dplyr:left_join]{left_join()} the minimal data with your
-cached data.
-}
-}
-

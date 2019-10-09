@@ -20,7 +20,7 @@ returned. Possible values are \code{"movie"}, \code{"show"}, \code{"season"}, \c
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
+See \code{vignette("finding-things", package = "tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.

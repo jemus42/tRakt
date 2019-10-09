@@ -11,11 +11,11 @@
 #'   `trakt` ID (e.g. `1429`). Other options are the trakt.tv `slug` (e.g. `"the-wire"`)
 #'   or `imdb` ID (e.g. `"tt0306414"`).
 #'   Can also be of length greater than 1, in which case the function is called on all
-#'   `id` values separately and the result is combined. See section
-#'   ["Item identifiers"][trakt_api_common_parameters] for more details.
+#'   `id` values separately and the result is combined. See
+#'   `vignette("finding-things", package = "tRakt")` for more details.
 #' @param extended `character(1)`: Either `"min"` (API default) or `"full"`. The latter
 #'   returns more variables and should generally only be used if required.
-#'   See section ["Extended Information"][trakt_api_common_parameters] for more details.
+#'   See `vignette("finding-things", package = "tRakt")` for more details.
 #' @param type `character(1)`: Either `"shows"` or `"movies"`. For season/episode-specific
 #'   functions, values `seasons` or `episodes` are also allowed.
 #' @param user `character(1)`: Target username. Defaults to `getOption("trakt_username")`.
@@ -24,7 +24,7 @@
 #' @param period `character(1) ["weekly"]`: Which period to filter by. Possible values
 #'   are `"weekly"`, `"monthly"`, `"yearly"`, `"all"`.
 #' @param limit `integer(1) [10L]`: Number of items to return. Must be greater
-#'   than `0` and will be coerced to `integer`.
+#'   than `0` and will be coerced via `as.integer()`.
 #' @param season,episode `integer(1) [1L]`: The season and eisode number. If longer,
 #'   e.g. `1:5`, the function is vectorized and the output will be
 #'   combined. This may result in *a lot* of API calls. Use wisely.
@@ -33,51 +33,34 @@
 #'   use yesterday relative to the current date. Value must either
 #'   be standard `YYYY-MM-DD` format or an object of class [Date][base::Dates],
 #'   which will then be coerced via [as.character()][base::as.character].
-#'
-#' @section Item identifiers:
-#' The `id` parameter is usually used to identify shows, movies or people.
-#' In each of these cases, the value of the parameter must be a valid ID of one of the
-#' following kinds:
-#'
-#' - **Trakt ID** (`trakt`): A numeric ID used by trakt.tv, which is included
-#' as a variable named `trakt` by every function for the output item. These
-#' IDs are unique for their respective category (or `type`, e.g. shows, movies, people)
-#' and can be expected to have full coverage, meaning that every item will have a
-#' Trakt ID.
-#' - **Slug** (`slug`): A human-readable identifier used on the trakt.tv site,
-#' e.g. `the-wire`. While these are easy to remember, they have the risk of
-#' clashing with numeric IDs. One example is the show "24", which has the slug `24`.
-#' However, the show "Presidio Med" has the **Trakt ID** `24`, so if you supply
-#' `id = 24` the API assumes you meant the Trakt ID instead of the slug.
-#' This is... suboptimal. Use `trakt` ID's whenever possible.
-#' - **IMDb ID** (`imdb`): Relatively self-explanatory. You can retrieve them easily
-#' via most functions or by searching on [IMDb.com](https://www.imdb.com/). Since
-#' IMDb is an external service, these IDs should be used for linking with other
-#' data sources rather than as search parameters for the trakt API, as it can not
-#' be guaranteed that every item on trakt.tv does have an IMDb ID.
-#'
-#' The API does return some other IDs, notably for [the tvdb](https://www.thetvdb.com).
-#' These are useful for linking with other data sources like
-#' [fanart.tv](https://fanart.tv/).
-#' They are not used as search parameters for the trakt API. The API also includes
-#' a TVRage ID, but since this site seems to not exist anymore (and therefore newer
-#' items don't have this ID) this ID is removed from all output.
-#'
-#' @section Extended Information:
-#' The `extended` parameter controls the amount of information (i.e. the number of
-#' variables) included in the output.
-#'
-#' - `"min"`: The default option returns minimal information. For shows, movies, episodes
-#' and people, the result will only include a title or name, possibly a year, and the
-#' standard set of IDs (see section above). This is the fastest option as it requires
-#' less content to be sent from the API and less post-processing work to produce tabular
-#' output.
-#' - `"full"`: The maximum amount of information. This option is required if you are
-#' interested in the `votes` and `rating` variables, as well as additional metadata
-#' like air dates, plot summaries, and a plethora of other variables depending on
-#' the `type`. If you intend on retrieving data for a large number of items,
-#' e.g. via [popular_media], it is highly recommend to cache the output locally when
-#' using `extended = "full"` and subsequently only use `extended = "min"`.
-#' Then you can merge or [left_join()][dplyr::left_join] the minimal data with your
-#' cached data.
+#' @param sort `character(1) ["newest"]`: Comment sort order, one of
+#'   "newest", "oldest", "likes" or "replies".
+# Search filters -----
+# These filters are documented [in the API reference](https://trakt.docs.apiary.io/#introduction/filters)
+#' @param query `character(1)`: Search string for titles and descriptions.
+#'   For `search_query()` other fields are searched depending on the `type` of media.
+#'   See [the API docs](https://trakt.docs.apiary.io/#reference/search/text-query) for a
+#'   full reference.
+#' @param years `character | integer`: 4-digit year (`2010`) **or** range,
+#'   e.g. `"2010-2020"`. Can also be an integer vector of length two which will be
+#'   coerced appropriately.
+#' @param genres `character(n)`: Genre  slug(s).
+#'   See [`trakt_genres`] for a table of genres.
+#'   Multiple values are allowed and will be concatenated.
+#' @param languages `character(n)`: Two-digit language code(s).
+#'   Also see [`trakt_languages`] for table of available languages.
+#' @param countries `character(n)`: Two-character country code(s).
+#'   See [`trakt_countries`].
+#' @param runtimes `character | integer`: Integer range in minutes, e.g. `30-90`.
+#'   Can also be an integer vector of length two which will be coerced appropriately.
+#' @param ratings `character | integer`:  Integer range between `0` and `100`.
+#'   Can also be an integer vector of length two which will be coerced appropriately.
+#' @param certifications `character(n)`: Certification(s) like `pg-13`.
+#'   Multiple values are allowed. Use [`trakt_certifications`] for reference.
+#'   Note that there are different certifications for shows and movies.
+#' @param networks `character(n)`: (Shows only) Network name like `HBO`.
+#'   See [`trakt_networks`] for a list of known networks.
+#' @param status `character(n)`: (Shows only) The status of the shows.
+#'   One of `"returning series"`, `"in production"`, `"planned"`,
+#'   `"canceled"`, or `"ended"`.
 NULL

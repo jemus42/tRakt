@@ -11,7 +11,7 @@ lists_trending(limit = 10)
 }
 \arguments{
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
-than \code{0} and will be coerced to \code{integer}.}
+than \code{0} and will be coerced via \code{as.integer()}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()} of length \code{limit}.

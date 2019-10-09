@@ -23,12 +23,12 @@ episodes_people(id, season = 1L, episode = 1L, guest_stars = FALSE,
 \code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{id} values separately and the result is combined. See section
-\link[=trakt_api_common_parameters]{"Item identifiers"} for more details.}
+\code{id} values separately and the result is combined. See
+\code{vignette("finding-things", package = "tRakt")} for more details.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
+See \code{vignette("finding-things", package = "tRakt")} for more details.}
 
 \item{guest_stars}{\code{logical(1) ["FALSE"]}: Also include guest stars. This returns
 a lot of data, so use with care.}

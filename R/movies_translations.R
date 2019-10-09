@@ -1,7 +1,6 @@
 #' Get translations for a movie, show or episode
 #'
 #' @inheritParams trakt_api_common_parameters
-#' @inheritParams search_filters
 #'
 #' @return A [tibble()][tibble::tibble-package].
 #' @export

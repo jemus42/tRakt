@@ -30,7 +30,7 @@ separate function calls in that case.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See section \link[=trakt_api_common_parameters]{"Extended Information"} for more details.}
+See \code{vignette("finding-things", package = "tRakt")} for more details.}
 
 \item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range,
 e.g. \code{"2010-2020"}. Can also be an integer vector of length two which will be

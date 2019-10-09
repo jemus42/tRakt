@@ -87,7 +87,6 @@ reference:
       - trakt_get
       - trakt_credentials
       - trakt_api_common_parameters
-      - search_filters
       - pad_episode
   - title: Episode datasets
     contents:

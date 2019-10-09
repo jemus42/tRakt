@@ -18,8 +18,8 @@ episodes_translations(id, season = 1L, episode = 1L,
 \code{trakt} ID (e.g. \code{1429}). Other options are the trakt.tv \code{slug} (e.g. \code{"the-wire"})
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
-\code{id} values separately and the result is combined. See section
-\link[=trakt_api_common_parameters]{"Item identifiers"} for more details.}
+\code{id} values separately and the result is combined. See
+\code{vignette("finding-things", package = "tRakt")} for more details.}
 
 \item{languages}{\code{character(n)}: Two-digit language code(s).
 Also see \code{\link{trakt_languages}} for table of available languages.}

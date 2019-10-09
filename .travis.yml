@@ -47,9 +47,6 @@ after_success:
 # before_deploy: Rscript -e 'remotes::install_github("r-lib/pkgdown")'
 before_deploy:
   - Rscript -e 'install.packages("pkgdown")'
-  - Rscript -e 'install.packages("here")'
-  - Rscript -e 'install.packages("kableExtra")'
-  - Rscript -e 'install.packages("yaml")'
 deploy:
   provider: script
   script: Rscript -e 'pkgdown::deploy_site_github(run_dont_run = TRUE)'
