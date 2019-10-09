@@ -2,7 +2,7 @@
 #'
 #' @name comments_trending
 #' @inheritParams user_comments
-#' @inheritParams search_filters
+#' @inheritParams trakt_api_common_parameters
 #' @inherit user_comments return
 #' @export
 #'

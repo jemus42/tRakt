@@ -26,6 +26,9 @@ comments_updates(comment_type = c("all", "reviews", "shouts"),
 "all", "movies", "shows", "seasons", "episodes" or "lists".}
 
 \item{include_replies}{\code{logical(1) [FALSE]}: Whether to include replies.}
+
+\item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
+than \code{0} and will be coerced to \code{integer}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}.
