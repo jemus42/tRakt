@@ -209,7 +209,10 @@ See section <a href='trakt_api_common_parameters.html'>"Extended Information"</a
 <span class='fu'>shows_summary</span>(<span class='st'>"breaking-bad"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
 #&gt;   title         year trakt slug         tvdb  imdb      tmdb 
 #&gt;   &lt;chr&gt;        &lt;int&gt; &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;
-#&gt; 1 Breaking Bad  2008 1388  breaking-bad 81189 tt0903747 1396 </div><div class='input'><span class='co'># \dontrun{</span>
+#&gt; 1 Breaking Bad  2008 1388  breaking-bad 81189 tt0903747 1396 </div><div class='input'><span class='fu'>movies_summary</span>(<span class='st'>"inception-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
+#&gt;   title      year trakt slug           imdb      tmdb 
+#&gt;   &lt;chr&gt;     &lt;int&gt; &lt;chr&gt; &lt;chr&gt;          &lt;chr&gt;     &lt;chr&gt;
+#&gt; 1 Inception  2010 16662 inception-2010 tt1375666 27205</div><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># More information</span>
 <span class='fu'>shows_summary</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 27
 #&gt;   title  year overview first_aired         runtime certification network country
