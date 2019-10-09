@@ -56,7 +56,7 @@ user_watched <- function(user = getOption("trakt_username"),
       select(-"show") %>%
       bind_cols(
         pluck(response, "show") %>% unpack_show()
-        ) %>%
+      ) %>%
       select(
         -matches("^seasons$"),
         everything(),

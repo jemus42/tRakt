@@ -76,7 +76,8 @@ seasons_people <- function(id,
 
   # Construct URL, make API call
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "people", extended = extended
+    "shows", id, "seasons", season, "people",
+    extended = extended
   )
   response <- trakt_get(url = url)
 
@@ -86,9 +87,9 @@ seasons_people <- function(id,
 #' @describeIn media_people Get cast & crew of an episode.
 #' @export
 episodes_people <- function(id,
-                           season = 1L, episode = 1L,
-                           guest_stars = FALSE,
-                           extended = c("min", "full")) {
+                            season = 1L, episode = 1L,
+                            guest_stars = FALSE,
+                            extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (guest_stars) {
@@ -97,7 +98,8 @@ episodes_people <- function(id,
 
   # Construct URL, make API call
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "episodes", episode, "people", extended = extended
+    "shows", id, "seasons", season, "episodes", episode, "people",
+    extended = extended
   )
   response <- trakt_get(url = url)
 

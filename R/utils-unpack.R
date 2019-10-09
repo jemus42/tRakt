@@ -146,7 +146,6 @@ unpack_crew_sections <- function(crew, type) {
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr mutate select
 unpack_people <- function(response) {
-
   if (is_empty(response)) {
     return(tibble())
   }
@@ -226,7 +225,6 @@ unpack_lists <- function(response) {
 #' @importFrom dplyr bind_cols
 #' @importFrom purrr pluck discard
 unpack_comments <- function(response) {
-
   if (is_empty(response)) {
     return(tibble())
   }
@@ -366,7 +364,6 @@ flatten_media_object <- function(x, type) {
 #' @importFrom stringr str_c str_remove str_replace
 #' @importFrom purrr modify_if discard pluck list_merge set_names
 flatten_single_media_object <- function(response, type) {
-
   if (is_empty(response)) {
     return(tibble())
   }
@@ -398,7 +395,7 @@ flatten_single_media_object <- function(response, type) {
     if (has_name(response, "airs")) {
       airs <- response %>%
         pluck("airs", .default = NULL) %>%
-        set_names(~paste0("airs_", .x))
+        set_names(~ paste0("airs_", .x))
 
       res <- list_merge(res, !!!airs)
     }
@@ -409,7 +406,7 @@ flatten_single_media_object <- function(response, type) {
   }
 
   if (type %in% c("episode", "episodes")) {
-     res <- response %>%
+    res <- response %>%
       pluck("episode") %>%
       modify_if(is.null, ~NA_character_) %>%
       discard(is.list) %>%
@@ -419,12 +416,12 @@ flatten_single_media_object <- function(response, type) {
       ) %>%
       as_tibble() %>%
       rename(episode = "number") %>%
-      rename_at(vars(-"season", -"episode"), ~paste0("episode_", .x))
+      rename_at(vars(-"season", -"episode"), ~ paste0("episode_", .x))
 
-     res <- bind_cols(
-       flatten_single_media_object(response[["show"]], "show"),
-       res
-     )
+    res <- bind_cols(
+      flatten_single_media_object(response[["show"]], "show"),
+      res
+    )
   }
 
   if (type %in% c("season", "seasons")) {
@@ -438,7 +435,7 @@ flatten_single_media_object <- function(response, type) {
       ) %>%
       as_tibble() %>%
       rename(season = "number") %>%
-      rename_at(vars(-"season"), ~paste0("season_", .x))
+      rename_at(vars(-"season"), ~ paste0("season_", .x))
 
     res <- bind_cols(
       flatten_single_media_object(response[["show"]], "show"),
@@ -449,5 +446,4 @@ flatten_single_media_object <- function(response, type) {
 
   res %>%
     fix_tibble_response()
-
 }

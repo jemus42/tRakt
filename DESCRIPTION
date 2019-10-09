@@ -26,20 +26,20 @@ Imports:
     lubridate,
     magrittr,
     purrr (>= 0.2.3),
-    tibble,
-    utils,
     rlang (>= 0.1.2),
-    stringr
+    stringr,
+    tibble,
+    utils
 Suggests:
     covr,
     ggplot2,
+    kableExtra,
     knitr,
     rmarkdown,
+    roxygen2,
     scales,
     testthat (>= 2.1.0),
     tidyr,
-    kableExtra,
-    roxygen2,
     yaml
 VignetteBuilder: 
     knitr

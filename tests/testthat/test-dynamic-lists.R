@@ -86,8 +86,10 @@ test_that("played_media and watched_media also do things", {
     "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb"
   )
 
-  nm_movies <- c("watcher_count", "play_count", "collected_count", "title",
-                 "year", "trakt", "slug", "imdb", "tmdb")
+  nm_movies <- c(
+    "watcher_count", "play_count", "collected_count", "title",
+    "year", "trakt", "slug", "imdb", "tmdb"
+  )
 
   shows_watched(extended = "min", period = "weekly") %>%
     expect_is("tbl") %>%

@@ -8,8 +8,13 @@
 #'
 #' @examples
 #' \dontrun{
+#' # Trending reviews
 #' comments_trending("reviews")
+#'
+#' # Recent shouts (short comments)
 #' comments_recent("shouts")
+#'
+#' # Recently updated comments
 #' comments_updates()
 #' }
 NULL
@@ -17,8 +22,10 @@ NULL
 #' @describeIn comments_trending Get trending comments.
 #' @export
 comments_trending <- function(comment_type = c("all", "reviews", "shouts"),
-                              type = c("all", "movies", "shows", "seasons",
-                                       "episodes", "lists"),
+                              type = c(
+                                "all", "movies", "shows", "seasons",
+                                "episodes", "lists"
+                              ),
                               include_replies = FALSE,
                               limit = 10L) {
   comment_type <- match.arg(comment_type)
@@ -36,10 +43,12 @@ comments_trending <- function(comment_type = c("all", "reviews", "shouts"),
 #' @describeIn comments_trending Get recently made comments.
 #' @export
 comments_recent <- function(comment_type = c("all", "reviews", "shouts"),
-                              type = c("all", "movies", "shows", "seasons",
-                                       "episodes", "lists"),
-                              include_replies = FALSE,
-                              limit = 10L) {
+                            type = c(
+                              "all", "movies", "shows", "seasons",
+                              "episodes", "lists"
+                            ),
+                            include_replies = FALSE,
+                            limit = 10L) {
   comment_type <- match.arg(comment_type)
   type <- match.arg(type)
 
@@ -55,10 +64,12 @@ comments_recent <- function(comment_type = c("all", "reviews", "shouts"),
 #' @describeIn comments_trending Get recently updated comments.
 #' @export
 comments_updates <- function(comment_type = c("all", "reviews", "shouts"),
-                            type = c("all", "movies", "shows", "seasons",
-                                     "episodes", "lists"),
-                            include_replies = FALSE,
-                            limit = 10L) {
+                             type = c(
+                               "all", "movies", "shows", "seasons",
+                               "episodes", "lists"
+                             ),
+                             include_replies = FALSE,
+                             limit = 10L) {
   comment_type <- match.arg(comment_type)
   type <- match.arg(type)
 

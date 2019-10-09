@@ -99,7 +99,8 @@ episodes_lists <- function(id, season, episode,
   extended <- match.arg(extended)
 
   url <- build_trakt_url("shows", id, "seasons", season, "episodes", episode,
-    "lists", type, sort, limit = limit, extended = extended
+    "lists", type, sort,
+    limit = limit, extended = extended
   )
   response <- trakt_get(url)
 

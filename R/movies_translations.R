@@ -13,7 +13,6 @@
 #' # Only get a specific language
 #' movies_translations("193972", "de")
 movies_translations <- function(id, languages = NULL) {
-
   languages <- check_filter_arg(languages, "languages")
 
   url <- build_trakt_url("movies", id, "translations", languages)
@@ -25,7 +24,6 @@ movies_translations <- function(id, languages = NULL) {
 #' @rdname movies_translations
 #' @export
 shows_translations <- function(id, languages = NULL) {
-
   languages <- check_filter_arg(languages, "languages")
 
   url <- build_trakt_url("shows", id, "translations", languages)
@@ -37,7 +35,6 @@ shows_translations <- function(id, languages = NULL) {
 #' @rdname movies_translations
 #' @export
 episodes_translations <- function(id, season = 1L, episode = 1L, languages = NULL) {
-
   languages <- check_filter_arg(languages, "languages")
 
   url <- build_trakt_url(

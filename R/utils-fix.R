@@ -29,7 +29,7 @@ fix_ids <- function(ids) {
     ids["tvrage"] <- NULL
   }
 
-  modify_if(ids, is.null, ~ NA_character_, .else = as.character)
+  modify_if(ids, is.null, ~NA_character_, .else = as.character)
 }
 
 #' Quick datetime conversion
@@ -90,7 +90,7 @@ fix_ratings_distribution <- function(response) {
   }
 
   response$distribution <- enframe(unlist(response$distribution),
-                                   name = "rating", value = "n"
+    name = "rating", value = "n"
   )
   response$distribution$rating <- as.integer(response$distribution$rating)
   response$distribution <- list(response$distribution)

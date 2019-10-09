@@ -11,11 +11,10 @@
 #' # Multiple comments
 #' comments_comment(c("236397", "112561"))
 comments_comment <- function(id, extended = c("min", "full")) {
-
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    res <- map_df(id, ~{
+    res <- map_df(id, ~ {
       comments_comment(.x, extended = extended)
     })
     return(res)
@@ -25,7 +24,6 @@ comments_comment <- function(id, extended = c("min", "full")) {
   response <- trakt_get(url)
 
   unpack_comments(response)
-
 }
 
 #' @describeIn comments_comment Get a comment's replies
@@ -35,11 +33,10 @@ comments_comment <- function(id, extended = c("min", "full")) {
 #' comments_replies("236397")
 #' }
 comments_replies <- function(id, extended = c("min", "full")) {
-
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    res <- map_df(id, ~{
+    res <- map_df(id, ~ {
       comments_replies(.x, extended = extended)
     })
     return(res)
@@ -60,11 +57,10 @@ comments_replies <- function(id, extended = c("min", "full")) {
 #' comments_likes("236397")
 #' }
 comments_likes <- function(id, extended = c("min", "full")) {
-
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    res <- map_df(id, ~{
+    res <- map_df(id, ~ {
       comments_likes(.x, extended = extended)
     })
     return(res)
@@ -105,11 +101,10 @@ comments_likes <- function(id, extended = c("min", "full")) {
 #' comments_item("136632", extended = "full")
 #' }
 comments_item <- function(id, extended = c("min", "full")) {
-
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    res <- map_df(id, ~{
+    res <- map_df(id, ~ {
       comments_item(.x, extended = extended)
     })
     return(res)

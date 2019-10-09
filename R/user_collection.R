@@ -40,8 +40,8 @@ user_collection <- function(user = getOption("trakt_username"),
     names(user) <- user
     return(map_df(user, ~ user_collection(
       user = .x, type = type, unnest_episodes = unnest_episodes, extended = extended
-      ),
-      .id = "user"
+    ),
+    .id = "user"
     ))
   }
 

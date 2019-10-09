@@ -44,8 +44,13 @@ Get trending, recent or recently updated comments
 
 \examples{
 \dontrun{
+# Trending reviews
 comments_trending("reviews")
+
+# Recent shouts (short comments)
 comments_recent("shouts")
+
+# Recently updated comments
 comments_updates()
 }
 }

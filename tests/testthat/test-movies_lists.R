@@ -8,7 +8,7 @@ test_that("media lists work", {
 
   movies_lists("190430", type = "personal", limit = 5) %>%
     expect_is("tbl_df") %>%
-    expect_named(media_list_names)  %>%
+    expect_named(media_list_names) %>%
     nrow() %>%
     expect_equal(5)
 
