@@ -39,7 +39,8 @@ Suggests:
     testthat (>= 2.1.0),
     tidyr,
     kableExtra,
-    roxygen2
+    roxygen2,
+    yaml
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

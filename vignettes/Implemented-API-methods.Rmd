@@ -4,7 +4,7 @@ author: "Lukas Burk"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Getting Started}
+  %\VignetteIndexEntry{Implemented API methods}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 editor_options: 
@@ -26,7 +26,8 @@ library(stringr)
 ```
 
 ```{r api-list}
-api <- yaml::read_yaml(here::here("api-methods.yml")) %>%
+api <- system.file("api-methods.yml", package = "tRakt") %>%
+  yaml::read_yaml() %>%
   map_dfr(~{
     map_dfr(.x, ~{
       modify_if(.x, is.null, NA_character_) %>%
