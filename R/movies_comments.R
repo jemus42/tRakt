@@ -5,7 +5,7 @@
 #' @param sort `character(1) ["newest"]`: Comment sort order, one of
 #'   "newest", "oldest", "likes" or "replies".
 #' @return A [tibble()][tibble::tibble-package].
-#'
+#' @family comment methods
 #' @examples
 #' \dontrun{
 #' movies_comments(193972)

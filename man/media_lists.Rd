@@ -89,6 +89,7 @@ people_lists("david-tennant")
 }
 \seealso{
 Other list methods: \code{\link{lists_popular}},
+  \code{\link{user_list_comments}},
   \code{\link{user_list_items}}, \code{\link{user_lists}},
   \code{\link{user_list}}
 }

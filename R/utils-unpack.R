@@ -237,6 +237,7 @@ unpack_comments <- function(response) {
         as_tibble() %>%
         unpack_user()
     ) %>%
+    mutate(user_rating = as.integer(.data[["user_rating"]])) %>%
     fix_tibble_response()
 }
 

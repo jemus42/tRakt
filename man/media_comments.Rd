@@ -72,3 +72,7 @@ seasons_comments(46241, season = 1, sort = "likes")
 episodes_comments(46241, season = 1, episode = 2, sort = "likes")
 }
 }
+\seealso{
+Other comment methods: \code{\link{user_list_comments}}
+}
+\concept{comment methods}

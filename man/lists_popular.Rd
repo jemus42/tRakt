@@ -29,6 +29,7 @@ lists_trending()
 \link{user_list_items} For the actual content of a list.
 
 Other list methods: \code{\link{media_lists}},
+  \code{\link{user_list_comments}},
   \code{\link{user_list_items}}, \code{\link{user_lists}},
   \code{\link{user_list}}
 }
