@@ -128,6 +128,9 @@
       <a href="../articles/Implemented-API-methods.html">Implemented API methods</a>
     </li>
     <li>
+      <a href="../articles/finding-things.html">Finding things (and the right amount)</a>
+    </li>
+    <li>
       <a href="../articles/show-analysis-24.html">Show Analysis: 24</a>
     </li>
   </ul>
@@ -197,7 +200,7 @@
     <tr>
       <th>limit</th>
       <td><p><code>integer(1) [10L]</code>: Number of items to return. Must be greater
-than <code>0</code> and will be coerced to <code>integer</code>.</p></td>
+than <code>0</code> and will be coerced via <code><a href='https://rdrr.io/r/base/integer.html'>as.integer()</a></code>.</p></td>
     </tr>
     </table>
 
@@ -239,16 +242,16 @@ than <code>0</code> and will be coerced to <code>integer</code>.</p></td>
 <span class='fu'>comments_recent</span>(<span class='st'>"shouts"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 31
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 show  254169 What a… FALSE   FALSE          0 2019-10-09 11:11:11
-#&gt;  2 show  254164 "**My … FALSE   FALSE          0 2019-10-09 10:40:50
+#&gt;  1 epis… 254171 Beau a… TRUE    FALSE          0 2019-10-09 11:57:35
+#&gt;  2 epis… 254170 [spoil… FALSE   FALSE          0 2019-10-09 11:33:44
 #&gt;  3 epis… 254168 Really… FALSE   FALSE          0 2019-10-09 11:05:16
 #&gt;  4 epis… 254158 I woul… TRUE    FALSE          0 2019-10-09 10:15:06
 #&gt;  5 epis… 254156 Caldwe… FALSE   FALSE          0 2019-10-09 08:56:55
 #&gt;  6 epis… 254155 "I lov… FALSE   FALSE          0 2019-10-09 08:48:11
 #&gt;  7 epis… 254154 I am s… FALSE   FALSE          0 2019-10-09 08:26:58
-#&gt;  8 epis… 254153 "Not t… FALSE   FALSE          0 2019-10-09 08:25:53
-#&gt;  9 movie 254160 Wasn't… FALSE   FALSE          0 2019-10-09 10:29:16
-#&gt; 10 movie 254152 Absolu… FALSE   FALSE          0 2019-10-09 08:08:56
+#&gt;  8 show  254169 What a… FALSE   FALSE          0 2019-10-09 11:11:11
+#&gt;  9 show  254164 "**My … FALSE   FALSE          0 2019-10-09 10:40:50
+#&gt; 10 movie 254160 Wasn't… FALSE   FALSE          0 2019-10-09 10:29:16
 #&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
@@ -256,25 +259,26 @@ than <code>0</code> and will be coerced to <code>integer</code>.</p></td>
 #&gt; #   episode &lt;int&gt;, episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;,
 #&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div><div class='input'>
 <span class='co'># Recently updated comments</span>
-<span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 31
+<span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 34
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 epis… 254155 "I lov… FALSE   FALSE          0 2019-10-09 08:48:11
-#&gt;  2 epis… 248905 That l… TRUE    FALSE          0 2019-09-03 01:22:37
-#&gt;  3 epis… 242226 "DC Un… FALSE   FALSE          0 2019-07-22 00:38:58
-#&gt;  4 epis… 248834 Finall… FALSE   FALSE          0 2019-09-02 16:39:08
-#&gt;  5 epis… 254168 Really… FALSE   FALSE          0 2019-10-09 11:05:16
-#&gt;  6 movie  92330 "Borin… FALSE   FALSE          0 2016-08-09 10:16:35
-#&gt;  7 movie  96547 I do n… FALSE   FALSE          0 2016-09-20 21:21:43
-#&gt;  8 show  229013 "Well,… FALSE   TRUE           0 2019-04-27 23:43:08
-#&gt;  9 show  254169 What a… FALSE   FALSE          0 2019-10-09 11:11:11
-#&gt; 10 show  175430 "Just … FALSE   FALSE          0 2018-05-17 18:19:44
-#&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
+#&gt;  1 show  175430 "Just … FALSE   FALSE          0 2018-05-17 18:19:44
+#&gt;  2 show  105665 @crawf… FALSE   FALSE          0 2016-12-07 03:10:19
+#&gt;  3 show  121586 "5 Sep… FALSE   TRUE           0 2017-04-07 16:34:26
+#&gt;  4 show  253187 This s… FALSE   FALSE          0 2019-10-03 15:47:41
+#&gt;  5 epis… 253219 Can't … FALSE   FALSE          0 2019-10-03 20:17:05
+#&gt;  6 epis… 247208 "David… FALSE   FALSE          0 2019-08-21 23:24:10
+#&gt;  7 epis… 219788 Ah, fr… TRUE    FALSE          0 2019-03-06 06:38:05
+#&gt;  8 seas… 254054 Oh god… FALSE   FALSE          0 2019-10-08 17:02:57
+#&gt;  9 movie 192062 Slight… FALSE   FALSE          0 2018-09-21 03:06:47
+#&gt; 10 movie  20751 Trippy… FALSE   FALSE          0 2013-04-23 09:15:57
+#&gt; # … with 27 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
 #&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, season &lt;int&gt;,
 #&gt; #   episode &lt;int&gt;, episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;,
-#&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div><div class='input'># }
+#&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;,
+#&gt; #   season_trakt &lt;chr&gt;, season_tvdb &lt;chr&gt;, season_tmdb &lt;chr&gt;</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

@@ -132,6 +132,9 @@ and what the extended parameter really does." />
       <a href="../articles/Implemented-API-methods.html">Implemented API methods</a>
     </li>
     <li>
+      <a href="../articles/finding-things.html">Finding things (and the right amount)</a>
+    </li>
+    <li>
       <a href="../articles/show-analysis-24.html">Show Analysis: 24</a>
     </li>
   </ul>
@@ -183,14 +186,14 @@ and what the <code>extended</code> parameter really does.</p>
 <code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
 or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
 Can also be of length greater than 1, in which case the function is called on all
-<code>id</code> values separately and the result is combined. See section
-"Item identifiers" for more details.</p></td>
+<code>id</code> values separately and the result is combined. See
+<code><a href='../articles/finding-things.html'>vignette("finding-things", package = "tRakt")</a></code> for more details.</p></td>
     </tr>
     <tr>
       <th>extended</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
-See section "Extended Information" for more details.</p></td>
+See <code><a href='../articles/finding-things.html'>vignette("finding-things", package = "tRakt")</a></code> for more details.</p></td>
     </tr>
     <tr>
       <th>type</th>
@@ -211,7 +214,7 @@ are <code>"weekly"</code>, <code>"monthly"</code>, <code>"yearly"</code>, <code>
     <tr>
       <th>limit</th>
       <td><p><code>integer(1) [10L]</code>: Number of items to return. Must be greater
-than <code>0</code> and will be coerced to <code>integer</code>.</p></td>
+than <code>0</code> and will be coerced via <code><a href='https://rdrr.io/r/base/integer.html'>as.integer()</a></code>.</p></td>
     </tr>
     <tr>
       <th>season, episode</th>
@@ -227,59 +230,68 @@ use yesterday relative to the current date. Value must either
 be standard <code>YYYY-MM-DD</code> format or an object of class <a href='https://rdrr.io/r/base/Dates.html'>Date</a>,
 which will then be coerced via <a href='https://rdrr.io/r/base/character.html'>as.character()</a>.</p></td>
     </tr>
+    <tr>
+      <th>sort</th>
+      <td><p><code>character(1) ["newest"]</code>: Comment sort order, one of
+"newest", "oldest", "likes" or "replies".</p></td>
+    </tr>
+    <tr>
+      <th>query</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Search string for titles and descriptions.
+For <code><a href='search_query.html'>search_query()</a></code> other fields are searched depending on the <code>type</code> of media.
+See <a href='https://trakt.docs.apiary.io/#reference/search/text-query'>the API docs</a> for a
+full reference.</p></td>
+    </tr>
+    <tr>
+      <th>years</th>
+      <td><p><code>character | integer</code>: 4-digit year (<code>2010</code>) <strong>or</strong> range,
+e.g. <code>"2010-2020"</code>. Can also be an integer vector of length two which will be
+coerced appropriately.</p></td>
+    </tr>
+    <tr>
+      <th>genres</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Genre  slug(s).
+See <code><a href='trakt_genres.html'>trakt_genres</a></code> for a table of genres.
+Multiple values are allowed and will be concatenated.</p></td>
+    </tr>
+    <tr>
+      <th>languages</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-digit language code(s).
+Also see <code><a href='trakt_languages.html'>trakt_languages</a></code> for table of available languages.</p></td>
+    </tr>
+    <tr>
+      <th>countries</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-character country code(s).
+See <code><a href='trakt_countries.html'>trakt_countries</a></code>.</p></td>
+    </tr>
+    <tr>
+      <th>runtimes</th>
+      <td><p><code>character | integer</code>: Integer range in minutes, e.g. <code>30-90</code>.
+Can also be an integer vector of length two which will be coerced appropriately.</p></td>
+    </tr>
+    <tr>
+      <th>ratings</th>
+      <td><p><code>character | integer</code>:  Integer range between <code>0</code> and <code>100</code>.
+Can also be an integer vector of length two which will be coerced appropriately.</p></td>
+    </tr>
+    <tr>
+      <th>certifications</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Certification(s) like <code>pg-13</code>.
+Multiple values are allowed. Use <code><a href='trakt_certifications.html'>trakt_certifications</a></code> for reference.
+Note that there are different certifications for shows and movies.</p></td>
+    </tr>
+    <tr>
+      <th>networks</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) Network name like <code>HBO</code>.
+See <code><a href='trakt_networks.html'>trakt_networks</a></code> for a list of known networks.</p></td>
+    </tr>
+    <tr>
+      <th>status</th>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) The status of the shows.
+One of <code>"returning series"</code>, <code>"in production"</code>, <code>"planned"</code>,
+<code>"canceled"</code>, or <code>"ended"</code>.</p></td>
+    </tr>
     </table>
-
-    <h2 class="hasAnchor" id="item-identifiers"><a class="anchor" href="#item-identifiers"></a>Item identifiers</h2>
-
-    
-
-<p>The <code>id</code> parameter is usually used to identify shows, movies or people.
-In each of these cases, the value of the parameter must be a valid ID of one of the
-following kinds:</p><ul>
-<li><p><strong>Trakt ID</strong> (<code>trakt</code>): A numeric ID used by trakt.tv, which is included
-as a variable named <code>trakt</code> by every function for the output item. These
-IDs are unique for their respective category (or <code>type</code>, e.g. shows, movies, people)
-and can be expected to have full coverage, meaning that every item will have a
-Trakt ID.</p></li>
-<li><p><strong>Slug</strong> (<code>slug</code>): A human-readable identifier used on the trakt.tv site,
-e.g. <code>the-wire</code>. While these are easy to remember, they have the risk of
-clashing with numeric IDs. One example is the show "24", which has the slug <code>24</code>.
-However, the show "Presidio Med" has the <strong>Trakt ID</strong> <code>24</code>, so if you supply
-<code>id = 24</code> the API assumes you meant the Trakt ID instead of the slug.
-This is... suboptimal. Use <code>trakt</code> ID's whenever possible.</p></li>
-<li><p><strong>IMDb ID</strong> (<code>imdb</code>): Relatively self-explanatory. You can retrieve them easily
-via most functions or by searching on <a href='https://www.imdb.com/'>IMDb.com</a>. Since
-IMDb is an external service, these IDs should be used for linking with other
-data sources rather than as search parameters for the trakt API, as it can not
-be guaranteed that every item on trakt.tv does have an IMDb ID.</p></li>
-</ul>
-
-<p>The API does return some other IDs, notably for <a href='https://www.thetvdb.com'>the tvdb</a>.
-These are useful for linking with other data sources like
-<a href='https://fanart.tv/'>fanart.tv</a>.
-They are not used as search parameters for the trakt API. The API also includes
-a TVRage ID, but since this site seems to not exist anymore (and therefore newer
-items don't have this ID) this ID is removed from all output.</p>
-    <h2 class="hasAnchor" id="extended-information"><a class="anchor" href="#extended-information"></a>Extended Information</h2>
-
-    
-
-<p>The <code>extended</code> parameter controls the amount of information (i.e. the number of
-variables) included in the output.</p><ul>
-<li><p><code>"min"</code>: The default option returns minimal information. For shows, movies, episodes
-and people, the result will only include a title or name, possibly a year, and the
-standard set of IDs (see section above). This is the fastest option as it requires
-less content to be sent from the API and less post-processing work to produce tabular
-output.</p></li>
-<li><p><code>"full"</code>: The maximum amount of information. This option is required if you are
-interested in the <code>votes</code> and <code>rating</code> variables, as well as additional metadata
-like air dates, plot summaries, and a plethora of other variables depending on
-the <code>type</code>. If you intend on retrieving data for a large number of items,
-e.g. via <a href='popular_media.html'>popular_media</a>, it is highly recommend to cache the output locally when
-using <code>extended = "full"</code> and subsequently only use <code>extended = "min"</code>.
-Then you can merge or <a href='https://dplyr.tidyverse.org/reference/join.html'>left_join()</a> the minimal data with your
-cached data.</p></li>
-</ul>
 
 
   </div>
@@ -287,8 +299,6 @@ cached data.</p></li>
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#item-identifiers">Item identifiers</a></li>
-      <li><a href="#extended-information">Extended Information</a></li>
     </ul>
 
   </div>
