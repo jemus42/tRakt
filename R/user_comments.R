@@ -30,28 +30,5 @@ user_comments <- function(user = getOption("trakt_username"),
   )
   response <- trakt_get(url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
-
-  # What types are present in the list
-  list_types <- unique(response$type)
-
-  # Get the list "base" without media items
-  # in this case only a type column
-  list_base <- response %>% select("type")
-
-  # Row-bind the list base to the unpackaed media items
-  map_df(list_types, ~ {
-    bind_cols(
-      list_base %>%
-        filter(type == .x),
-      response %>%
-        filter(type == .x) %>%
-        pull("comment") %>%
-        unpack_comments(),
-      flatten_media_object(response, .x)
-    )
-  }) %>%
-    fix_tibble_response()
+  unpack_comments_multitype(response)
 }

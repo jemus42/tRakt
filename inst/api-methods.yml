@@ -18,16 +18,15 @@ comments:
   trending:
     url: https://trakt.docs.apiary.io/#reference/comments/trending/get-trending-comments
     endpoint: comments/trending/:comment_type/:type?include_replies=
-    implementation:
+    implementation: comments_trending()
   recent:
     url: https://trakt.docs.apiary.io/#reference/comments/recent/get-recently-created-comments
     endpoint: comments/recent/:comment_type/:type?include_replies=
-    implementation:
+    implementation: comments_recent()
   updates:
     url: https://trakt.docs.apiary.io/#reference/comments/updates/get-recently-updated-comments
     endpoint: comments/updates/:comment_type/:type?include_replies=
-    implementation:
-
+    implementation: comments_updates()
 
 lists:
   popular: 

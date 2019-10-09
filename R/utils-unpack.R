@@ -242,6 +242,43 @@ unpack_comments <- function(response) {
     fix_tibble_response()
 }
 
+#' Unpack comments in comment methods
+#'
+#' @param response As returned by [trakt_get].
+#'
+#' @keywords internal
+#' @noRd
+#' @return A [tibble()][tibble::tibble-package].
+#' @importFrom rlang is_empty
+#' @importFrom dplyr bind_cols filter select pull
+#' @importFrom purrr pluck map_df
+unpack_comments_multitype <- function(response) {
+  if (is_empty(response)) {
+    return(tibble())
+  }
+
+  # What types are present in the list
+  list_types <- unique(response$type)
+
+  # Get the list "base" without media items
+  # in this case only a type column
+  list_base <- response %>% select("type")
+
+  # Row-bind the list base to the unpackaed media items
+  map_df(list_types, ~ {
+    bind_cols(
+      list_base %>%
+        filter(type == .x),
+      response %>%
+        filter(type == .x) %>%
+        pull("comment") %>%
+        unpack_comments(),
+      flatten_media_object(response, .x)
+    )
+  }) %>%
+    fix_tibble_response()
+}
+
 #' Generalized unpacker
 #'
 #' @param x A response object
