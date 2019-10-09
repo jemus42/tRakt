@@ -13,9 +13,3 @@ coverage:
       default:
         target: auto
         threshold: 1%
-
-ignore:
-  - "zzz.R"
-  - "data.R"
-  - "utils-pipe.R"
-  - "utils-third-party-APIs.R"

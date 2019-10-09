@@ -1,3 +1,5 @@
+# nocov start
+
 #' Make an OMDb API call
 #'
 #' This requires a valid OMDb API key to be available in the environment
@@ -86,3 +88,4 @@ fanarttv_get <- function(tvdb) {
 
   bind_cols(res_x, res_y)
 }
+# nocov end
