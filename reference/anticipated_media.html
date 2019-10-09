@@ -286,23 +286,24 @@ the same additional variables besides the media information: <code>watcher_count
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
-<span class='fu'>shows_anticipated</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 14 x 8
+<span class='fu'>shows_anticipated</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 15 x 8
 #&gt;    list_count title              year trakt  slug            tvdb  imdb    tmdb 
 #&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;
-#&gt;  1       9595 The Witcher        2019 138163 the-witcher-20… 3626… tt5180… 71912
-#&gt;  2       1215 Living with Your…  2019 151776 living-with-yo… 3685… tt8880… 81532
-#&gt;  3        696 Daybreak           2019 152108 daybreak-2019   3547… tt8755… 83478
+#&gt;  1       9643 The Witcher        2019 138163 the-witcher-20… 3626… tt5180… 71912
+#&gt;  2       1279 Living with Your…  2019 151776 living-with-yo… 3685… tt8880… 81532
+#&gt;  3        705 Daybreak           2019 152108 daybreak-2019   3547… tt8755… 83478
 #&gt;  4        296 V-Wars             2019 133365 v-wars          3493… tt7403… &lt;NA&gt; 
 #&gt;  5        170 The Faction        2019 141592 the-faction     3566… &lt;NA&gt;    &lt;NA&gt; 
 #&gt;  6        139 Sintonia           2019 131399 sintonia        3443… tt8165… &lt;NA&gt; 
-#&gt;  7         88 Rhythm + Flow      2019 152211 rhythm-flow     3690… tt9278… 83996
-#&gt;  8         35 Nowhere Man        2019 153240 nowhere-man-15… 3700… tt1089… &lt;NA&gt; 
-#&gt;  9         29 Hache              2019 147926 hache           3555… tt8575… 84112
-#&gt; 10         19 Cidades Invisive…  2019 134761 cidades-invisi… 3493… &lt;NA&gt;    &lt;NA&gt; 
-#&gt; 11          7 Brotherhood        2019 153095 brotherhood-20… 3589… tt8905… &lt;NA&gt; 
-#&gt; 12          7 Queer Eye: We're…  2019 152948 queer-eye-we-r… 3697… &lt;NA&gt;    &lt;NA&gt; 
-#&gt; 13          7 Prank Encounters   2019 152904 prank-encounte… 3697… &lt;NA&gt;    &lt;NA&gt; 
-#&gt; 14          6 Unnatural Select…  2019 153627 unnatural-sele… 3704… tt1106… &lt;NA&gt; </div><div class='input'># }
+#&gt;  7         97 Rhythm + Flow      2019 152211 rhythm-flow     3690… tt9278… 83996
+#&gt;  8         56 Green Eggs and H…  2019 131694 green-eggs-and… 3486… tt4651… 86957
+#&gt;  9         36 Nowhere Man        2019 153240 nowhere-man-15… 3700… tt1089… &lt;NA&gt; 
+#&gt; 10         29 Hache              2019 147926 hache           3555… tt8575… 84112
+#&gt; 11         19 Cidades Invisive…  2019 134761 cidades-invisi… 3493… &lt;NA&gt;    &lt;NA&gt; 
+#&gt; 12          9 Unnatural Select…  2019 153627 unnatural-sele… 3704… tt1106… &lt;NA&gt; 
+#&gt; 13          7 Brotherhood        2019 153095 brotherhood-20… 3589… tt8905… &lt;NA&gt; 
+#&gt; 14          7 Queer Eye: We're…  2019 152948 queer-eye-we-r… 3697… &lt;NA&gt;    &lt;NA&gt; 
+#&gt; 15          7 Prank Encounters   2019 152904 prank-encounte… 3697… &lt;NA&gt;    &lt;NA&gt; </div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
