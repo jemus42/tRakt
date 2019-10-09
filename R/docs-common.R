@@ -7,6 +7,7 @@
 #' and what the `extended` parameter really does.
 #'
 #' @name trakt_api_common_parameters
+#' @keywords internal
 #' @param id `character(1)`: The ID of the item requested. Preferably the
 #'   `trakt` ID (e.g. `1429`). Other options are the trakt.tv `slug` (e.g. `"the-wire"`)
 #'   or `imdb` ID (e.g. `"tt0306414"`).

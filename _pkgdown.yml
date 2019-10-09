@@ -14,6 +14,10 @@ authors:
     href: https://jemu.name
 
 reference:
+  - title: Basic API interaction
+    contents:
+      - trakt_get
+      - trakt_credentials
   - title: Finding media
     desc: >
       Searching for items is usually required to retrieve some kind of ID, like the `slug`,
@@ -81,12 +85,9 @@ reference:
     contents:
       - ends_with("aliases")
       - ends_with("translations")
-  - title: API interaction, reference topics and utilities
+  - title: Utilities
     contents:
       - build_trakt_url
-      - trakt_get
-      - trakt_credentials
-      - trakt_api_common_parameters
       - pad_episode
   - title: Episode datasets
     contents:
