@@ -33,6 +33,7 @@ reference:
     contents:
       - seasons_summary
       - seasons_season
+      - matches("shows_.*_episode")
   - title: Movie-specific data
     contents:
       - movies_boxoffice
@@ -69,13 +70,25 @@ reference:
     contents:
       - shows_updates
       - movies_updates
-  - title: API interaction and reference topics
+  - title: List methods
+    contents:
+      - starts_with("list")
+      - contains("list")
+  - title: Comments
+    contents:
+      - contains("comment")
+  - title: Localization
+    contents:
+      - ends_with("aliases")
+      - ends_with("translations")
+  - title: API interaction, reference topics and utilities
     contents:
       - build_trakt_url
       - trakt_get
       - trakt_credentials
       - trakt_api_common_parameters
       - search_filters
+      - pad_episode
   - title: Episode datasets
     contents:
       - futurama
