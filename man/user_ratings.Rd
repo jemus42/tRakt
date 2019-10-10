@@ -16,7 +16,7 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
 functions, values \code{seasons} or \code{episodes} are also allowed.}
 
-\item{rating}{\code{integer(1) [NULL]}: Optional rating in \link{1, 10} to filter by.}
+\item{rating}{\code{integer(1) [NULL]}: Optional rating between \code{1} and \code{10} to filter by.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
@@ -36,7 +36,7 @@ This function wraps the API method
 }
 \examples{
 \dontrun{
-user_ratings(user = "jemus42")
+user_ratings(user = "jemus42", "shows")
 user_ratings(user = "sean", type = "movies")
 }
 }

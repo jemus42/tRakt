@@ -131,17 +131,16 @@ check_filter_arg <- function(filter,
       filter <- filter[1:2]
     }
 
-    filter <- as.integer(filter)
-
-    if (any(map_lgl(filter, ~ {
-      filter >= 0 & filter <= 100
-    }))) {
-      warning("'ratings' must be between 0 and 100, ignoring filter")
-      filter <- NULL
+    if (length(filter) == 2) {
+      filter <- paste0(sort(filter), collapse = "-")
     }
 
-    if (length(filter) == 2) {
-      filter <- paste0(filter, collapse = "-")
+    # Check if the filter is okay now
+    if (grepl(x = filter, pattern = "(^[1-9]{1,2}-[1-9]{1,3}$)|(^[1-9]{1,3}$)")) {
+      filter
+    } else {
+      warning("'ratings' must be interpretable as integer range or single integer ",
+              "between 1 and 100")
     }
   }
   if (filter_type == "genres") {

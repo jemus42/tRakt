@@ -50,8 +50,10 @@ See \code{\link{trakt_countries}}.}
 \item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}.
 Can also be an integer vector of length two which will be coerced appropriately.}
 
-\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{10}.
-Can also be an integer vector of length two which will be coerced appropriately.}
+\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}.
+Can also be an integer vector of length two which will be coerced appropriately.
+Note that user-supplied ratings are in the range of 1 to 10, yet the ratings
+on the site itself are scaled to the range of 1 to 100.}
 
 \item{certifications}{\code{character(n)}: Certification(s) like \code{pg-13}.
 Multiple values are allowed. Use \code{\link{trakt_certifications}} for reference.

@@ -53,8 +53,10 @@
 #'   See [`trakt_countries`].
 #' @param runtimes `character | integer`: Integer range in minutes, e.g. `30-90`.
 #'   Can also be an integer vector of length two which will be coerced appropriately.
-#' @param ratings `character | integer`:  Integer range between `0` and `10`.
+#' @param ratings `character | integer`:  Integer range between `0` and `100`.
 #'   Can also be an integer vector of length two which will be coerced appropriately.
+#'   Note that user-supplied ratings are in the range of 1 to 10, yet the ratings
+#'   on the site itself are scaled to the range of 1 to 100.
 #' @param certifications `character(n)`: Certification(s) like `pg-13`.
 #'   Multiple values are allowed. Use [`trakt_certifications`] for reference.
 #'   Note that there are different certifications for shows and movies.
