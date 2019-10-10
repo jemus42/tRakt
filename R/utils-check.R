@@ -33,12 +33,15 @@ check_username <- function(user, validate = FALSE) {
 #' results if allowed
 #' @param type `character(n)`: One or more types, e.g. `"movies"`.
 #' @param several.ok `logical(1) [TRUE]`: Passed to [match.arg][base::match.arg].
-#'
+#' @param possible_types Types allowed (after normalization).
+#'   Passed to [match.arg][base::match.arg] as `choices` param.
 #' @return A `character` of length 1.
 #' @keywords internal
 #' @noRd
 #' @importFrom dplyr case_when
-check_types <- function(type, several.ok = TRUE) {
+check_types <- function(type, several.ok = TRUE,
+                        possible_types = c("movie", "show", "season",
+                                           "episode", "person")) {
   if (is.null(type)) {
     return(NULL)
   }
@@ -49,10 +52,11 @@ check_types <- function(type, several.ok = TRUE) {
     type %in% c("episode", "episodes") ~ "episode",
     type %in% c("season", "seasons") ~ "season",
     type %in% c("person", "persons", "people") ~ "person",
+    type %in% c("comment", "comments") ~ "comments",
+    type %in% c("list", "lists") ~ "lists",
     TRUE ~ ""
   )
 
-  possible_types <- c("movie", "show", "season", "episode", "person")
   type <- match.arg(type, choices = possible_types, several.ok = several.ok)
 
   if (length(type) > 1) {

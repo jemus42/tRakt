@@ -54,9 +54,15 @@ format_api_table <- function(xdf) {
       str_detect(implementation, "^N\\/A"),
       implementation,
       paste0("<code>", implementation, "</code>")
-    )
+    ),
+    authentication = if_else(!is.na(authentication), "Required", "Optional")
   ) %>%
-  select(-url, Endpoint = endpoint, Implementation = implementation)
+  select(
+    -url, 
+    Endpoint = endpoint, 
+    Auth = authentication,
+    Implementation = implementation
+  )
 }
 
 print_api_table <- function(xdf) {

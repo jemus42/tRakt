@@ -196,11 +196,13 @@ shows:
   collection progress:
     url: https://trakt.docs.apiary.io/#reference/shows/collection-progress/get-show-collection-progress
     endpoint: shows/:id/progress/collection
-    implementation: N/A (requires auth)
+    implementation:
+    authentication: yes
   watched progress:
    url: https://trakt.docs.apiary.io/#reference/shows/watched-progress/get-show-watched-progress
    endpoint: shows/:id/progress/watched
-   implementation: N/A (requires auth)
+   implementation: N/A
+   authentication: yes
   people:
     url: https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show
     endpoint: shows/:id/people
@@ -302,7 +304,8 @@ users:
   likes:
     url: https://trakt.docs.apiary.io/#reference/users/likes/get-likes
     endpoint: users/likes/:type
-    implementation:
+    implementation: user_likes()
+    authentication: yes
   profile:
     url: https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile
     endpoint: users/:id
