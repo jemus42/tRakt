@@ -1,5 +1,3 @@
-context("Related media")
-
 test_that("media_related works", {
   skip_on_cran()
 

@@ -1,4 +1,4 @@
-test_that("multiplication works", {
+test_that("shows_(next|last)_episode() works", {
   shows_next_episode("one-piece") %>%
     expect_is("tbl_df")
 

@@ -1,5 +1,3 @@
-context("Ratings")
-
 test_that("media_ratings works", {
   skip_on_cran()
 
