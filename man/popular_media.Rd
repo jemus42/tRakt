@@ -8,8 +8,7 @@
 \usage{
 movies_popular(limit = 10, extended = c("min", "full"), query = NULL,
   years = NULL, genres = NULL, languages = NULL, countries = NULL,
-  runtimes = NULL, ratings = NULL, certifications = NULL,
-  networks = NULL, status = NULL)
+  runtimes = NULL, ratings = NULL, certifications = NULL)
 
 shows_popular(limit = 10, extended = c("min", "full"), query = NULL,
   years = NULL, genres = NULL, languages = NULL, countries = NULL,

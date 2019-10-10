@@ -20,19 +20,19 @@ trakt_auto_lists <- function(list_type = c(
   list_type <- match.arg(list_type)
 
   extended <- match.arg(extended)
-  limit <- as.integer(limit)
+  limit    <- as.integer(limit)
 
   # Check filters
-  query <- check_filter_arg(query, "query")
-  years <- check_filter_arg(years, "years")
-  genres <- check_filter_arg(genres, "genres")
-  languages <- check_filter_arg(languages, "languages")
-  countries <- check_filter_arg(countries, "countries")
-  runtimes <- check_filter_arg(runtimes, "runtimes")
-  ratings <- check_filter_arg(ratings, "ratings")
+  query          <- check_filter_arg(query, "query")
+  years          <- check_filter_arg(years, "years")
+  genres         <- check_filter_arg(genres, "genres")
+  languages      <- check_filter_arg(languages, "languages")
+  countries      <- check_filter_arg(countries, "countries")
+  runtimes       <- check_filter_arg(runtimes, "runtimes")
+  ratings        <- check_filter_arg(ratings, "ratings")
   certifications <- check_filter_arg(certifications, "certifications")
-  networks <- check_filter_arg(networks, "networks")
-  status <- check_filter_arg(status, "status")
+  networks       <- check_filter_arg(networks, "networks")
+  status         <- check_filter_arg(status, "status")
 
   # Check limit
   if (limit < 1) {
@@ -104,17 +104,13 @@ movies_popular <- function(limit = 10,
                            query = NULL, years = NULL,
                            genres = NULL, languages = NULL,
                            countries = NULL, runtimes = NULL,
-                           ratings = NULL, certifications = NULL,
-                           networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
-
+                           ratings = NULL, certifications = NULL) {
   trakt_auto_lists(
     list_type = "popular", type = "movies",
     limit = limit, extended = extended,
     query = query, years = years, genres = genres,
     languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
-    status = status
+    ratings = ratings, certifications = certifications
   )
 }
 
@@ -127,8 +123,6 @@ shows_popular <- function(limit = 10,
                           countries = NULL, runtimes = NULL,
                           ratings = NULL, certifications = NULL,
                           networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
-
   trakt_auto_lists(
     list_type = "popular", type = "shows",
     limit = limit, extended = extended,
@@ -154,17 +148,13 @@ movies_trending <- function(limit = 10,
                             query = NULL, years = NULL,
                             genres = NULL, languages = NULL,
                             countries = NULL, runtimes = NULL,
-                            ratings = NULL, certifications = NULL,
-                            networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
-
+                            ratings = NULL, certifications = NULL) {
   trakt_auto_lists(
     list_type = "trending", type = "movies",
     limit = limit, extended = extended,
     query = query, years = years, genres = genres,
     languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
-    status = status
+    ratings = ratings, certifications = certifications
   )
 }
 
@@ -177,8 +167,6 @@ shows_trending <- function(limit = 10,
                            countries = NULL, runtimes = NULL,
                            ratings = NULL, certifications = NULL,
                            networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
-
   trakt_auto_lists(
     list_type = "trending", type = "shows",
     limit = limit, extended = extended,
@@ -204,17 +192,13 @@ movies_anticipated <- function(limit = 10,
                                query = NULL, years = NULL,
                                genres = NULL, languages = NULL,
                                countries = NULL, runtimes = NULL,
-                               ratings = NULL, certifications = NULL,
-                               networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
-
+                               ratings = NULL, certifications = NULL) {
   trakt_auto_lists(
     list_type = "anticipated", type = "movies",
     limit = limit, extended = extended,
     query = query, years = years, genres = genres,
     languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
-    status = status
+    ratings = ratings, certifications = certifications
   )
 }
 
@@ -233,8 +217,6 @@ shows_anticipated <- function(limit = 10,
                               countries = NULL, runtimes = NULL,
                               ratings = NULL, certifications = NULL,
                               networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
-
   trakt_auto_lists(
     list_type = "anticipated", type = "shows",
     limit = limit, extended = extended,
@@ -260,9 +242,7 @@ movies_played <- function(limit = 10, extended = c("min", "full"),
                           query = NULL, years = NULL,
                           genres = NULL, languages = NULL,
                           countries = NULL, runtimes = NULL,
-                          ratings = NULL, certifications = NULL,
-                          networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
+                          ratings = NULL, certifications = NULL) {
   period <- match.arg(period)
 
   trakt_auto_lists(
@@ -271,8 +251,7 @@ movies_played <- function(limit = 10, extended = c("min", "full"),
     extended = extended, period = period,
     query = query, years = years, genres = genres,
     languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
-    status = status
+    ratings = ratings, certifications = certifications
   )
 }
 
@@ -285,7 +264,6 @@ shows_played <- function(limit = 10, extended = c("min", "full"),
                          countries = NULL, runtimes = NULL,
                          ratings = NULL, certifications = NULL,
                          networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
   period <- match.arg(period)
 
   trakt_auto_lists(
@@ -314,9 +292,7 @@ movies_watched <- function(limit = 10, extended = c("min", "full"),
                            query = NULL, years = NULL,
                            genres = NULL, languages = NULL,
                            countries = NULL, runtimes = NULL,
-                           ratings = NULL, certifications = NULL,
-                           networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
+                           ratings = NULL, certifications = NULL) {
   period <- match.arg(period)
 
   trakt_auto_lists(
@@ -325,8 +301,7 @@ movies_watched <- function(limit = 10, extended = c("min", "full"),
     extended = extended, period = period,
     query = query, years = years, genres = genres,
     languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
-    status = status
+    ratings = ratings, certifications = certifications
   )
 }
 
@@ -339,7 +314,6 @@ shows_watched <- function(limit = 10, extended = c("min", "full"),
                           countries = NULL, runtimes = NULL,
                           ratings = NULL, certifications = NULL,
                           networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
   period <- match.arg(period)
 
   trakt_auto_lists(
@@ -368,9 +342,7 @@ movies_collected <- function(limit = 10, extended = c("min", "full"),
                              query = NULL, years = NULL,
                              genres = NULL, languages = NULL,
                              countries = NULL, runtimes = NULL,
-                             ratings = NULL, certifications = NULL,
-                             networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
+                             ratings = NULL, certifications = NULL) {
   period <- match.arg(period)
 
   trakt_auto_lists(
@@ -379,8 +351,7 @@ movies_collected <- function(limit = 10, extended = c("min", "full"),
     extended = extended, period = period,
     query = query, years = years, genres = genres,
     languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
-    status = status
+    ratings = ratings, certifications = certifications
   )
 }
 
@@ -393,7 +364,6 @@ shows_collected <- function(limit = 10, extended = c("min", "full"),
                             countries = NULL, runtimes = NULL,
                             ratings = NULL, certifications = NULL,
                             networks = NULL, status = NULL) {
-  extended <- match.arg(extended)
   period <- match.arg(period)
 
   trakt_auto_lists(
@@ -420,12 +390,7 @@ shows_collected <- function(limit = 10, extended = c("min", "full"),
 #' @note `shows_updates` and `movies_updates` do not support filters.
 movies_updates <- function(limit = 10, extended = c("min", "full"),
                            start_date = Sys.Date() - 1) {
-  extended <- match.arg(extended)
   start_date <- as.character(as.Date(start_date))
-
-  if (is.null(start_date)) {
-    start_date <- Sys.Date() - 1
-  }
 
   trakt_auto_lists(
     list_type = "updates", type = "movies",
@@ -438,12 +403,7 @@ movies_updates <- function(limit = 10, extended = c("min", "full"),
 #' @export
 shows_updates <- function(limit = 10, extended = c("min", "full"),
                           start_date = Sys.Date() - 1) {
-  extended <- match.arg(extended)
   start_date <- as.character(as.Date(start_date))
-
-  if (is.null(start_date)) {
-    start_date <- Sys.Date() - 1
-  }
 
   trakt_auto_lists(
     list_type = "updates", type = "shows",

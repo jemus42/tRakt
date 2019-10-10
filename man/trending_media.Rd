@@ -9,7 +9,7 @@
 movies_trending(limit = 10, extended = c("min", "full"),
   query = NULL, years = NULL, genres = NULL, languages = NULL,
   countries = NULL, runtimes = NULL, ratings = NULL,
-  certifications = NULL, networks = NULL, status = NULL)
+  certifications = NULL)
 
 shows_trending(limit = 10, extended = c("min", "full"), query = NULL,
   years = NULL, genres = NULL, languages = NULL, countries = NULL,

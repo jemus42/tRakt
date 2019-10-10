@@ -9,8 +9,7 @@
 movies_collected(limit = 10, extended = c("min", "full"),
   period = c("weekly", "monthly", "yearly", "all"), query = NULL,
   years = NULL, genres = NULL, languages = NULL, countries = NULL,
-  runtimes = NULL, ratings = NULL, certifications = NULL,
-  networks = NULL, status = NULL)
+  runtimes = NULL, ratings = NULL, certifications = NULL)
 
 shows_collected(limit = 10, extended = c("min", "full"),
   period = c("weekly", "monthly", "yearly", "all"), query = NULL,
