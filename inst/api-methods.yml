@@ -262,7 +262,7 @@ seasons:
   watching:
     url: https://trakt.docs.apiary.io/#reference/seasons/watching/get-users-watching-right-now
     endpoint: shows/:id/seasons/:season/watching
-    implementation:
+    implementation: seasons_watching()
 
 episodes:
   summary:

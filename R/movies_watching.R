@@ -8,6 +8,7 @@
 #' \dontrun{
 #' movies_watching("deadpool-2016")
 #' shows_watching("the-simpsons", extended = "full")
+#' seasons_watching("the-simpsons", season = 6)
 #' episodes_watching("the-simpsons", season = 6, episode = 12)
 #' }
 NULL
@@ -33,6 +34,21 @@ shows_watching <- function(id, extended = c("min", "full")) {
 
   unpack_user(response)
 }
+
+#' @describeIn media_watching Who's watching a season.
+#' @export
+seasons_watching <- function(id, season = 1L,
+                              extended = c("min", "full")) {
+  extended <- match.arg(extended)
+
+  url <- build_trakt_url(
+    "shows", id, "seasons", season, "watching", extended = extended
+  )
+  response <- trakt_get(url)
+
+  unpack_user(response)
+}
+
 
 #' @describeIn media_watching Who's watching an episode.
 #' @export

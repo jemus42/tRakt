@@ -21,14 +21,20 @@ unpack_user <- function(response_user) {
   # Flatten the tbl
   response_user <- cbind(response_user[names(response_user) != "ids"], response_user$ids)
 
-  #  Extract avatars
+  #  Extract avatars because they're doubly nested but only one value
   if (has_name(response_user, "images")) {
     response_user$avatar <- response_user$images$avatar$full
     response_user <- response_user[names(response_user) != "images"]
   }
 
+  # Private users don't have a "name" field
+  if (has_name(response_user, "name")) {
+    response_user <- response_user %>%
+      rename(user_name = "name")
+  }
+
   response_user %>%
-    rename(user_name = "name", user_slug = "slug") %>%
+    rename(user_slug = "slug") %>%
     mutate_if(is.factor, as.character) %>%
     fix_tibble_response()
 }

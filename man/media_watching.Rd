@@ -4,12 +4,15 @@
 \alias{media_watching}
 \alias{movies_watching}
 \alias{shows_watching}
+\alias{seasons_watching}
 \alias{episodes_watching}
 \title{Get who's watching a thing right now}
 \usage{
 movies_watching(id, extended = c("min", "full"))
 
 shows_watching(id, extended = c("min", "full"))
+
+seasons_watching(id, season = 1L, extended = c("min", "full"))
 
 episodes_watching(id, season = 1L, episode = 1L, extended = c("min",
   "full"))
@@ -46,6 +49,8 @@ Get who's watching a thing right now
 
 \item \code{shows_watching}: Who's watching a show.
 
+\item \code{seasons_watching}: Who's watching a season.
+
 \item \code{episodes_watching}: Who's watching an episode.
 }}
 
@@ -53,6 +58,7 @@ Get who's watching a thing right now
 \dontrun{
 movies_watching("deadpool-2016")
 shows_watching("the-simpsons", extended = "full")
+seasons_watching("the-simpsons", season = 6)
 episodes_watching("the-simpsons", season = 6, episode = 12)
 }
 }
