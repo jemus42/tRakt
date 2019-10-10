@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get a season of a show — seasons_season • tRakt</title>
+<title>Get who's watching a thing right now — media_watching • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,9 +42,8 @@
 
 
 
-<meta property="og:title" content="Get a season of a show — seasons_season" />
-<meta property="og:description" content="Similar to seasons_summary, but this function returns full data for
-a single season, i.e. all the episodes of the season" />
+<meta property="og:title" content="Get who's watching a thing right now — media_watching" />
+<meta property="og:description" content="Get who's watching a thing right now" />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -160,17 +159,21 @@ a single season, i.e. all the episodes of the season" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get a season of a show</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/seasons_season.R'><code>R/seasons_season.R</code></a></small>
-    <div class="hidden name"><code>seasons_season.Rd</code></div>
+    <h1>Get who's watching a thing right now</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/movies_watching.R'><code>R/movies_watching.R</code></a></small>
+    <div class="hidden name"><code>media_watching.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Similar to <a href='seasons_summary.html'>seasons_summary</a>, but this function returns full data for
-a single season, i.e. all the episodes of the season</p>
+    <p>Get who's watching a thing right now</p>
     </div>
 
-    <pre class="usage"><span class='fu'>seasons_season</span>(<span class='no'>id</span>, <span class='kw'>seasons</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+    <pre class="usage"><span class='fu'>movies_watching</span>(<span class='no'>id</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
+
+<span class='fu'>shows_watching</span>(<span class='no'>id</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
+
+<span class='fu'>episodes_watching</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>,
+  <span class='st'>"full"</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -185,59 +188,57 @@ Can also be of length greater than 1, in which case the function is called on al
 <code><a href='../articles/finding-things.html'>vignette("finding-things", package = "tRakt")</a></code> for more details.</p></td>
     </tr>
     <tr>
-      <th>seasons</th>
-      <td><p><code>integer(1) [1L]</code>: The season(s) to get. Use <code>0</code> for specials.</p></td>
-    </tr>
-    <tr>
       <th>extended</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
 See <code><a href='../articles/finding-things.html'>vignette("finding-things", package = "tRakt")</a></code> for more details.</p></td>
+    </tr>
+    <tr>
+      <th>season</th>
+      <td><p><code>integer(1) [1L]</code>: The season and eisode number. If longer,
+e.g. <code>1:5</code>, the function is vectorized and the output will be
+combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
+    </tr>
+    <tr>
+      <th>episode</th>
+      <td><p><code>integer(1) [1L]</code>: The season and eisode number. If longer,
+e.g. <code>1:5</code>, the function is vectorized and the output will be
+combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
 
-    <p>This function accesses <a href='https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show'>this API method</a>
-at the endpoint <code>/shows/:show_id/seasons/:season_num</code>.</p>
-    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
-
-    <p>If you want to quickly gather episode data of all available seasons,
-see <a href='seasons_summary.html'>seasons_summary</a> and use the <code>episodes = TRUE</code> parameter.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p>Other show data: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
-  <code><a href='seasons_summary.html'>seasons_summary</a></code></p></div>
+    
+<ul>
+<li><p><code>movies_watching</code>: Who's watching a movie.</p></li>
+<li><p><code>shows_watching</code>: Who's watching a show.</p></li>
+<li><p><code>episodes_watching</code>: Who's watching an episode.</p></li>
+</ul>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>seasons_season</span>(<span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 7
-#&gt;   season episode title                         trakt tvdb   imdb      tmdb 
-#&gt;    &lt;int&gt;   &lt;int&gt; &lt;chr&gt;                         &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;
-#&gt; 1      1       1 Pilot                         73482 349232 tt0959621 62085
-#&gt; 2      1       2 Cat's in the Bag...           73483 349233 tt1054724 62086
-#&gt; 3      1       3 ...And the Bag's in the River 73484 349235 tt1054725 62087
-#&gt; 4      1       4 Cancer Man                    73485 349236 tt1054726 62088
-#&gt; 5      1       5 Gray Matter                   73486 349238 tt1054727 62089
-#&gt; 6      1       6 Crazy Handful of Nothin'      73487 355100 tt1054728 62090
-#&gt; 7      1       7 A No-Rough-Stuff-Type Deal    73488 352534 tt1054729 62091</div><div class='input'>
-<span class='co'># Including all episode data:</span>
-<span class='fu'>seasons_season</span>(<span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 16
-#&gt;   season episode title episode_abs overview rating votes comment_count
-#&gt;    &lt;int&gt;   &lt;int&gt; &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;int&gt;         &lt;int&gt;
-#&gt; 1      1       1 Pilot           1 When an…   8.35  7087            26
-#&gt; 2      1       2 Cat'…           2 Walt an…   8.14  5588             3
-#&gt; 3      1       3 ...A…           3 Walter …   8.06  5019             2
-#&gt; 4      1       4 Canc…           4 Walter …   8.00  4862             3
-#&gt; 5      1       5 Gray…           5 Walter …   7.99  4740             3
-#&gt; 6      1       6 Craz…           6 The sid…   8.52  4834             3
-#&gt; 7      1       7 A No…           7 Walter …   8.39  4690             2
-#&gt; # … with 8 more variables: first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   available_translations &lt;list&gt;, runtime &lt;int&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;,
-#&gt; #   imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'># }
+<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
+#&gt;   username        private user_name    vip   vip_ep user_slug      
+#&gt;   &lt;chr&gt;           &lt;lgl&gt;   &lt;chr&gt;        &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;          
+#&gt; 1 Senthil Kumar S FALSE   Senthilkumar FALSE FALSE  senthil-kumar-s</div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 29 x 12
+#&gt;    username private user_name vip   vip_ep joined_at           location about
+#&gt;    &lt;chr&gt;    &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;dttm&gt;              &lt;chr&gt;    &lt;chr&gt;
+#&gt;  1 gocenik  FALSE   &lt;NA&gt;      FALSE FALSE  2014-04-24 16:32:54 &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  2 agentx9… FALSE   Tomas Za… FALSE FALSE  2017-10-29 12:56:29 ""       ""   
+#&gt;  3 NELS8672 TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  4 tuzem_2  FALSE   ""        FALSE FALSE  2015-02-02 14:41:38 Denmark  the …
+#&gt;  5 AstroSm… TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  6 markeynz FALSE   &lt;NA&gt;      FALSE FALSE  2015-04-13 20:47:52 &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  7 laral99a FALSE   ""        FALSE FALSE  2015-06-10 15:50:12 ""       ""   
+#&gt;  8 popi19   TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  9 TommyAn… TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
+#&gt; 10 scjohns… FALSE   Sean Joh… FALSE FALSE  2018-03-18 21:05:01 London,… &lt;NA&gt; 
+#&gt; # … with 19 more rows, and 4 more variables: gender &lt;chr&gt;, age &lt;int&gt;,
+#&gt; #   user_slug &lt;chr&gt;, avatar &lt;chr&gt;</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -245,9 +246,7 @@ see <a href='seasons_summary.html'>seasons_summary</a> and use the <code>episode
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#note">Note</a></li>
-      <li><a href="#see-also">See also</a></li>
+      <li><a href="#functions">Functions</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 
