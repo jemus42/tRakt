@@ -172,6 +172,8 @@
 
 <span class='fu'>shows_watching</span>(<span class='no'>id</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
 
+<span class='fu'>seasons_watching</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
+
 <span class='fu'>episodes_watching</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>,
   <span class='st'>"full"</span>))</pre>
 
@@ -216,6 +218,7 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 <ul>
 <li><p><code>movies_watching</code>: Who's watching a movie.</p></li>
 <li><p><code>shows_watching</code>: Who's watching a show.</p></li>
+<li><p><code>seasons_watching</code>: Who's watching a season.</p></li>
 <li><p><code>episodes_watching</code>: Who's watching an episode.</p></li>
 </ul>
 
@@ -224,21 +227,24 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 <span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
 #&gt;   username        private user_name    vip   vip_ep user_slug      
 #&gt;   &lt;chr&gt;           &lt;lgl&gt;   &lt;chr&gt;        &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;          
-#&gt; 1 Senthil Kumar S FALSE   Senthilkumar FALSE FALSE  senthil-kumar-s</div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 29 x 12
+#&gt; 1 Senthil Kumar S FALSE   Senthilkumar FALSE FALSE  senthil-kumar-s</div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 28 x 12
 #&gt;    username private user_name vip   vip_ep joined_at           location about
 #&gt;    &lt;chr&gt;    &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;dttm&gt;              &lt;chr&gt;    &lt;chr&gt;
-#&gt;  1 gocenik  FALSE   &lt;NA&gt;      FALSE FALSE  2014-04-24 16:32:54 &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  2 agentx9… FALSE   Tomas Za… FALSE FALSE  2017-10-29 12:56:29 ""       ""   
-#&gt;  3 NELS8672 TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  4 tuzem_2  FALSE   ""        FALSE FALSE  2015-02-02 14:41:38 Denmark  the …
-#&gt;  5 AstroSm… TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  6 markeynz FALSE   &lt;NA&gt;      FALSE FALSE  2015-04-13 20:47:52 &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  1 NELS8672 TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  2 JackDan… TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  3 mizteri… FALSE   Theresa … FALSE FALSE  2016-06-22 22:09:01 Bow Isl… ""   
+#&gt;  4 geoffre… FALSE   Geoffrey… FALSE FALSE  2012-11-02 09:42:16 ""       ""   
+#&gt;  5 drdadda  FALSE   &lt;NA&gt;      FALSE FALSE  2016-09-09 13:26:01 &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  6 Zelo90   FALSE   Zelo      FALSE FALSE  2017-05-18 16:22:31 VESZPREM ""   
 #&gt;  7 laral99a FALSE   ""        FALSE FALSE  2015-06-10 15:50:12 ""       ""   
-#&gt;  8 popi19   TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  9 TommyAn… TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
-#&gt; 10 scjohns… FALSE   Sean Joh… FALSE FALSE  2018-03-18 21:05:01 London,… &lt;NA&gt; 
-#&gt; # … with 19 more rows, and 4 more variables: gender &lt;chr&gt;, age &lt;int&gt;,
-#&gt; #   user_slug &lt;chr&gt;, avatar &lt;chr&gt;</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+#&gt;  8 MarkKis… FALSE   &lt;NA&gt;      FALSE FALSE  2019-02-24 18:13:55 &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  9 vishal2… FALSE   Vick      FALSE FALSE  2017-09-12 04:32:21 Fairfax… &lt;NA&gt; 
+#&gt; 10 Cash750… FALSE   ""        FALSE FALSE  2019-02-12 13:28:43 Paris, … &lt;NA&gt; 
+#&gt; # … with 18 more rows, and 4 more variables: gender &lt;chr&gt;, age &lt;int&gt;,
+#&gt; #   user_slug &lt;chr&gt;, avatar &lt;chr&gt;</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
+#&gt;   username  private user_name vip   vip_ep user_slug
+#&gt;   &lt;chr&gt;     &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
+#&gt; 1 vishal207 FALSE   Vick      FALSE FALSE  vishal207</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
