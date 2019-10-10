@@ -29,7 +29,7 @@ comments:
     implementation: comments_updates()
 
 lists:
-  popular: 
+  popular:
     url: https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists
     endpoint: lists/popular
     implementation: lists_popular()
@@ -114,7 +114,7 @@ movies:
   watching:
     url: https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now
     endpoint: movies/:id/watching
-    implementation:
+    implementation: movies_watching()
 
 people:
   summary:
@@ -220,7 +220,7 @@ shows:
   watching:
     url: https://trakt.docs.apiary.io/#reference/shows/watching/get-users-watching-right-now
     endpoint: shows/:id/watching
-    implementation: N/A
+    implementation: shows_watching()
   next episode:
     url: https://trakt.docs.apiary.io/#reference/shows/next-episode/get-next-episode
     endpoint: shows/:id/next_episode
@@ -296,7 +296,7 @@ episodes:
   watching:
     url: https://trakt.docs.apiary.io/#reference/episodes/watching/get-users-watching-right-now
     endpoint: shows/:id/seasons/:season/episodes/:episode/watching
-    implementation:
+    implementation: episodes_watching()
 
 users:
   likes:

@@ -84,3 +84,4 @@ intended to make the individual function documentation more consistent.
 The additional sections below also expand on the way media items are identified,
 and what the \code{extended} parameter really does.
 }
+\keyword{internal}
