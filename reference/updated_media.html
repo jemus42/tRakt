@@ -198,6 +198,11 @@ which will then be coerced via <a href='https://rdrr.io/r/base/character.html'>a
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
+(defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
+If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p><code>shows_updates</code> and <code>movies_updates</code> do not support filters.</p>
@@ -241,6 +246,7 @@ the same additional variables besides the media information: <code>watcher_count
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#value">Value</a></li>
       <li><a href="#note">Note</a></li>
       <li><a href="#the-dynamic-lists-on-trakt-tv">The Dynamic Lists on trakt.tv</a></li>
       <li><a href="#see-also">See also</a></li>

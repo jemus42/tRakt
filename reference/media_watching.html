@@ -211,7 +211,9 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
+(defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
+If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
     <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
 
     
@@ -224,28 +226,28 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 6
-#&gt;   username  private user_name    vip   vip_ep user_slug
-#&gt;   &lt;chr&gt;     &lt;lgl&gt;   &lt;chr&gt;        &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
-#&gt; 1 jerrygwiz FALSE   Jerrygwiz    FALSE FALSE  jerrygwiz
-#&gt; 2 FK1       FALSE   Fareez Kalib FALSE FALSE  fk1      </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 30 x 12
-#&gt;    username private user_name vip   vip_ep joined_at           location about
-#&gt;    &lt;chr&gt;    &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;dttm&gt;              &lt;chr&gt;    &lt;chr&gt;
-#&gt;  1 T0mservo FALSE   ""        FALSE FALSE  2016-08-06 11:01:07 ""       ""   
-#&gt;  2 kris.pr… TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  3 fiveamp  FALSE   Jason Ha… FALSE FALSE  2017-03-23 14:14:42 &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  4 Grit     FALSE   ""        FALSE FALSE  2014-09-13 17:29:17 ""       ""   
-#&gt;  5 Lenajo   FALSE   Lena      FALSE FALSE  2019-02-17 09:02:40 North W… &lt;NA&gt; 
-#&gt;  6 FraDiav… FALSE   Russell … FALSE FALSE  2018-03-11 12:17:29 Padding… &lt;NA&gt; 
-#&gt;  7 gocenik  FALSE   &lt;NA&gt;      FALSE FALSE  2014-04-24 16:32:54 &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  8 chris_uk FALSE   &lt;NA&gt;      FALSE FALSE  2011-02-12 17:37:07 &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  9 EJD      FALSE   ""        FALSE FALSE  2017-01-04 22:25:58 ""       ""   
-#&gt; 10 erousr   TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
-#&gt; # … with 20 more rows, and 4 more variables: gender &lt;chr&gt;, age &lt;int&gt;,
-#&gt; #   user_slug &lt;chr&gt;, avatar &lt;chr&gt;</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
-#&gt;   username   private user_name  vip   vip_ep user_slug 
-#&gt;   &lt;chr&gt;      &lt;lgl&gt;   &lt;chr&gt;      &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;     
-#&gt; 1 iLewisssHD FALSE   iLewisssHD TRUE  FALSE  ilewissshd</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 3 x 6
+#&gt;   username     private user_name                vip   vip_ep user_slug   
+#&gt;   &lt;chr&gt;        &lt;lgl&gt;   &lt;chr&gt;                    &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;       
+#&gt; 1 davyboy731   FALSE   David                    FALSE FALSE  davyboy731  
+#&gt; 2 Mercycollege FALSE   Stephen James Cunningham FALSE FALSE  mercycollege
+#&gt; 3 buentjm2     FALSE   ""                       FALSE FALSE  buentjm2    </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 26 x 6
+#&gt;    username        private user_name         vip   vip_ep user_slug      
+#&gt;    &lt;chr&gt;           &lt;lgl&gt;   &lt;chr&gt;             &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;          
+#&gt;  1 smw204          FALSE   Steven Wymer      FALSE FALSE  smw204         
+#&gt;  2 orthodoxmonster FALSE   &lt;NA&gt;              FALSE FALSE  orthodoxmonster
+#&gt;  3 jw-sadler123    FALSE   James West-Sadler FALSE FALSE  jw-sadler123   
+#&gt;  4 DanielSal       FALSE   &lt;NA&gt;              FALSE FALSE  danielsal      
+#&gt;  5 DBlukas         FALSE   DBLukas           FALSE FALSE  dblukas        
+#&gt;  6 shea9872        FALSE   Shea Smith        FALSE FALSE  shea9872       
+#&gt;  7 throstur        TRUE    &lt;NA&gt;              NA    NA     throstur       
+#&gt;  8 The_BIG_Texan   FALSE   ""                FALSE FALSE  the_big_texan  
+#&gt;  9 silvestrerito   FALSE   Silvestre Rito    FALSE FALSE  silvestrerito  
+#&gt; 10 ecopt           FALSE   &lt;NA&gt;              FALSE FALSE  ecopt          
+#&gt; # … with 16 more rows</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
+#&gt;   username private user_name       vip   vip_ep user_slug
+#&gt;   &lt;chr&gt;    &lt;lgl&gt;   &lt;chr&gt;           &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
+#&gt; 1 thermbug FALSE   Eric Silberberg FALSE FALSE  thermbug </div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

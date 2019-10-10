@@ -246,7 +246,7 @@ full reference.</p></td>
       <th>years</th>
       <td><p><code>character | integer</code>: 4-digit year (<code>2010</code>) <strong>or</strong> range,
 e.g. <code>"2010-2020"</code>. Can also be an integer vector of length two which will be
-coerced appropriately.</p></td>
+coerced appropriately, e.g. <code><a href='https://rdrr.io/r/base/c.html'>c(2010, 2020)</a></code>.</p></td>
     </tr>
     <tr>
       <th>genres</th>
@@ -256,12 +256,12 @@ Multiple values are allowed and will be concatenated.</p></td>
     </tr>
     <tr>
       <th>languages</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-digit language code(s).
-Also see <code><a href='trakt_languages.html'>trakt_languages</a></code> for table of available languages.</p></td>
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-letter language code(s).
+Also see <code><a href='trakt_languages.html'>trakt_languages</a></code> for available languages (code and name).</p></td>
     </tr>
     <tr>
       <th>countries</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-character country code(s).
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-letter country code(s).
 See <code><a href='trakt_countries.html'>trakt_countries</a></code>.</p></td>
     </tr>
     <tr>
@@ -272,7 +272,9 @@ Can also be an integer vector of length two which will be coerced appropriately.
     <tr>
       <th>ratings</th>
       <td><p><code>character | integer</code>:  Integer range between <code>0</code> and <code>100</code>.
-Can also be an integer vector of length two which will be coerced appropriately.</p></td>
+Can also be an integer vector of length two which will be coerced appropriately.
+Note that user-supplied ratings are in the range of 1 to 10, yet the ratings
+on the site itself are scaled to the range of 1 to 100.</p></td>
     </tr>
     <tr>
       <th>certifications</th>
@@ -293,12 +295,18 @@ One of <code>"returning series"</code>, <code>"in production"</code>, <code>"pla
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
+(defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
+If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#value">Value</a></li>
     </ul>
 
   </div>

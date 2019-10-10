@@ -207,7 +207,9 @@ See <code><a href='../articles/finding-things.html'>vignette("finding-things", p
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.</p>
+    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
+(defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
+If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This function wraps <a href='https://trakt.docs.apiary.io/#reference/episodes/summary'>this API method</a>

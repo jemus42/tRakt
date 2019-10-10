@@ -184,7 +184,9 @@ than <code>0</code> and will be coerced via <code><a href='https://rdrr.io/r/bas
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> of length <code>limit</code>.</p>
+    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
+(defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
+If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><a href='user_list_items.html'>user_list_items</a> For the actual content of a list.</p>
@@ -219,11 +221,11 @@ than <code>0</code> and will be coerced via <code><a href='https://rdrr.io/r/bas
 #&gt;  3 Late… ""          public  FALSE           FALSE          rank    asc     
 #&gt;  4 MARV… **Chronolo… public  TRUE            TRUE           rank    asc     
 #&gt;  5 Late… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  6 New … Recently a… public  FALSE           TRUE           rank    asc     
-#&gt;  7 Imdb… Daily Refr… public  TRUE            TRUE           rank    asc     
-#&gt;  8 New … ""          public  TRUE            TRUE           rank    asc     
-#&gt;  9 Acti… ""          public  FALSE           TRUE           rank    asc     
-#&gt; 10 Come… ""          public  FALSE           FALSE          rank    asc     
+#&gt;  6 Imdb… Daily Refr… public  TRUE            TRUE           rank    asc     
+#&gt;  7 Acti… ""          public  FALSE           TRUE           rank    asc     
+#&gt;  8 Come… ""          public  FALSE           FALSE          rank    asc     
+#&gt;  9 New … Recently a… public  FALSE           TRUE           rank    asc     
+#&gt; 10 Horr… ""          public  FALSE           FALSE          rank    asc     
 #&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
 #&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
 #&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
