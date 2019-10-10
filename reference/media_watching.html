@@ -224,27 +224,28 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
-#&gt;   username        private user_name    vip   vip_ep user_slug      
-#&gt;   &lt;chr&gt;           &lt;lgl&gt;   &lt;chr&gt;        &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;          
-#&gt; 1 Senthil Kumar S FALSE   Senthilkumar FALSE FALSE  senthil-kumar-s</div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 28 x 12
+<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 6
+#&gt;   username  private user_name    vip   vip_ep user_slug
+#&gt;   &lt;chr&gt;     &lt;lgl&gt;   &lt;chr&gt;        &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
+#&gt; 1 jerrygwiz FALSE   Jerrygwiz    FALSE FALSE  jerrygwiz
+#&gt; 2 FK1       FALSE   Fareez Kalib FALSE FALSE  fk1      </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 30 x 12
 #&gt;    username private user_name vip   vip_ep joined_at           location about
 #&gt;    &lt;chr&gt;    &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;dttm&gt;              &lt;chr&gt;    &lt;chr&gt;
-#&gt;  1 NELS8672 TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  2 JackDan… TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  3 mizteri… FALSE   Theresa … FALSE FALSE  2016-06-22 22:09:01 Bow Isl… ""   
-#&gt;  4 geoffre… FALSE   Geoffrey… FALSE FALSE  2012-11-02 09:42:16 ""       ""   
-#&gt;  5 drdadda  FALSE   &lt;NA&gt;      FALSE FALSE  2016-09-09 13:26:01 &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  6 Zelo90   FALSE   Zelo      FALSE FALSE  2017-05-18 16:22:31 VESZPREM ""   
-#&gt;  7 laral99a FALSE   ""        FALSE FALSE  2015-06-10 15:50:12 ""       ""   
-#&gt;  8 MarkKis… FALSE   &lt;NA&gt;      FALSE FALSE  2019-02-24 18:13:55 &lt;NA&gt;     &lt;NA&gt; 
-#&gt;  9 vishal2… FALSE   Vick      FALSE FALSE  2017-09-12 04:32:21 Fairfax… &lt;NA&gt; 
-#&gt; 10 Cash750… FALSE   ""        FALSE FALSE  2019-02-12 13:28:43 Paris, … &lt;NA&gt; 
-#&gt; # … with 18 more rows, and 4 more variables: gender &lt;chr&gt;, age &lt;int&gt;,
+#&gt;  1 T0mservo FALSE   ""        FALSE FALSE  2016-08-06 11:01:07 ""       ""   
+#&gt;  2 kris.pr… TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  3 fiveamp  FALSE   Jason Ha… FALSE FALSE  2017-03-23 14:14:42 &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  4 Grit     FALSE   ""        FALSE FALSE  2014-09-13 17:29:17 ""       ""   
+#&gt;  5 Lenajo   FALSE   Lena      FALSE FALSE  2019-02-17 09:02:40 North W… &lt;NA&gt; 
+#&gt;  6 FraDiav… FALSE   Russell … FALSE FALSE  2018-03-11 12:17:29 Padding… &lt;NA&gt; 
+#&gt;  7 gocenik  FALSE   &lt;NA&gt;      FALSE FALSE  2014-04-24 16:32:54 &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  8 chris_uk FALSE   &lt;NA&gt;      FALSE FALSE  2011-02-12 17:37:07 &lt;NA&gt;     &lt;NA&gt; 
+#&gt;  9 EJD      FALSE   ""        FALSE FALSE  2017-01-04 22:25:58 ""       ""   
+#&gt; 10 erousr   TRUE    &lt;NA&gt;      NA    NA     NA                  &lt;NA&gt;     &lt;NA&gt; 
+#&gt; # … with 20 more rows, and 4 more variables: gender &lt;chr&gt;, age &lt;int&gt;,
 #&gt; #   user_slug &lt;chr&gt;, avatar &lt;chr&gt;</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
-#&gt;   username  private user_name vip   vip_ep user_slug
-#&gt;   &lt;chr&gt;     &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
-#&gt; 1 vishal207 FALSE   Vick      FALSE FALSE  vishal207</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+#&gt;   username   private user_name  vip   vip_ep user_slug 
+#&gt;   &lt;chr&gt;      &lt;lgl&gt;   &lt;chr&gt;      &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;     
+#&gt; 1 iLewisssHD FALSE   iLewisssHD TRUE  FALSE  ilewissshd</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
