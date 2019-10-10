@@ -136,7 +136,7 @@ check_filter_arg <- function(filter,
     }
 
     # Check if the filter is okay now
-    if (grepl(x = filter, pattern = "(^[1-9]{1,2}-[1-9]{1,3}$)|(^[1-9]{1,3}$)")) {
+    if (grepl(x = filter, pattern = "(^[1-9]{1,2}-[1-9]{1,3}$)|(^[1-9]{1,2}$|^100$)")) {
       filter
     } else {
       warning("'ratings' must be interpretable as integer range or single integer ",

@@ -14,7 +14,7 @@ test_that("check_filter_arg fails how it should", {
   expect_null(check_filter_arg(NULL))
 
   expect_warning(check_filter_arg(10239, "years"))
-  expect_warning(check_filter_arg(11, "ratings"))
+  expect_warning(check_filter_arg(119, "ratings"))
   expect_warning(check_filter_arg(1:5, "runtimes"))
   expect_warning(check_filter_arg("five", "genres"))
   expect_warning(check_filter_arg("five", "networks"))
