@@ -3,10 +3,10 @@
 #' This requires authentication.
 #'
 #' @param type One of "comments", "lists".
-#'
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
-#'
+#' @importFrom purrr discard pluck
+#' @importFrom dplyr bind_cols
 #' @examples
 #' # Get liked lists
 #' if (FALSE) {

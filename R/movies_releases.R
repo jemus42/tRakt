@@ -5,7 +5,7 @@
 #' the certification (e.g. `PG`).
 #' @inheritParams trakt_api_common_parameters
 #' @param country Optional two letter country code to filter by.
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @details
 #' This function wraps the endpoint

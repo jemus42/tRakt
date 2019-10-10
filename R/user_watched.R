@@ -9,7 +9,7 @@
 #' @param noseasons `logical(1) [TRUE]`: Only for `type = "show"`: Exclude detailed season
 #' data from output. This is advisable if you do not need per-episode data and want to
 #' be nice to the API.
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family user data
 #' @importFrom dplyr bind_cols select matches everything

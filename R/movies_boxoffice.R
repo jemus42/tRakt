@@ -8,7 +8,7 @@
 #' [movies/boxoffice](https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office).
 #'
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family movie data
 #' @importFrom tibble as_tibble

@@ -11,7 +11,7 @@
 #' - `user_following`: `users/:id/following`
 #' - `user_friends`: `users/:id/friends`
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @note If the specified user is private, you need to be able to make an [authenticated
 #' request][trakt_credentials] and be friends with the user.

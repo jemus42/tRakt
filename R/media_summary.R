@@ -7,7 +7,7 @@
 #' @note These functions return the same amount of information as
 #'   [search_*][search_query].
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @family summary data
 #' @name media_summary
 #' @examples

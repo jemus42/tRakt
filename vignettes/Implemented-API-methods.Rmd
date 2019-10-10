@@ -55,7 +55,7 @@ format_api_table <- function(xdf) {
       implementation,
       paste0("<code>", implementation, "</code>")
     ),
-    authentication = if_else(!is.na(authentication), "Required", "Optional")
+    authentication = if_else(!is.na(authentication), "Required", "-")
   ) %>%
   select(
     -url, 
@@ -74,11 +74,12 @@ print_api_table <- function(xdf) {
       full_width = TRUE
     )
 }
-
 ```
 
 This is a reference list of [API methods available](https://trakt.docs.apiary.io/), their endpoint URLs (with user-specified parameters indiciated by a `:` prefix) and a link to their respective implementation in this package, if applicable.  
-Note that not all available methods are listed here, especially those geared towards interactive apps.
+Authenticated methods (there's only a few) are indicated as such, whereas a "-" in that column indicates authentication is optional.
+
+Note that not all available methods are listed here, especially those geared towards interactive apps – I highly doubt that people will want to post (or update) comments through this package.
 
 # Search
 
@@ -180,5 +181,6 @@ api %>%
   filter(Section %in% c("certifications", "countries", 
                         "genres", "languages", "networks")) %>%
   format_api_table() %>%
+  select(-Auth) %>%
   print_api_table()
 ```

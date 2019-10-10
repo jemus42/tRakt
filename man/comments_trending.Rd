@@ -31,7 +31,9 @@ comments_updates(comment_type = c("all", "reviews", "shouts"),
 than \code{0} and will be coerced via \code{as.integer()}.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble()}.
+A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
+(defaulting to \code{10}), this will be the (maximum) number of rows of the \code{tibble}.
+If there are no results (or the API is unreachable), an empty \code{tibble()} is returned.
 }
 \description{
 Get trending, recent or recently updated comments

@@ -12,7 +12,7 @@
 #' - [/shows/:id/seasons/:season/episodes/:episode/ratings](https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings)
 #'
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @name media_ratings
 #' @note Since this function is able to work on multi-length inputs for
 #' `id`, `season` and `episode`, it is possible to get a lot of data, *but* at the cost

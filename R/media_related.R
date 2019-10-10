@@ -9,7 +9,7 @@
 #'
 #' @inheritParams trakt_api_common_parameters
 #' @inheritParams dynamic_lists
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @importFrom tibble as_tibble
 #' @importFrom purrr map_df
 #' @importFrom dplyr select

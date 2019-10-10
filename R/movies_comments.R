@@ -1,7 +1,7 @@
 #' Get all comments of a thing
 #' @name media_comments
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @family comment methods
 #' @examples
 #' \dontrun{

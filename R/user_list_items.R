@@ -5,7 +5,7 @@
 #'   Can be optained via the website (URL `slug`) or e.g. [user_lists].
 #' @param type `character(1) [NULL]`: If not `NULL`, only items of that media type are
 #' returned. Possible values are `"movie"`, `"show"`, `"season"`, `"episode"`, `"person"`.
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #'
 #' @export
 #' @family list methods

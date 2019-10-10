@@ -2,7 +2,7 @@
 #'
 #' @inheritParams trakt_api_common_parameters
 #'
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @importFrom dplyr bind_cols vars matches
 #' @importFrom purrr discard modify_if modify_at pluck

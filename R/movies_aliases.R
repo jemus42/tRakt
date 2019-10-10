@@ -2,7 +2,7 @@
 #'
 #' @inheritParams trakt_api_common_parameters
 #'
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #'
 #' @examples

@@ -7,7 +7,7 @@
 #' with the endpoint `/shows/:id/seasons/episodes/:episode`.
 #'
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family show data
 #' @importFrom dplyr select rename bind_cols mutate everything

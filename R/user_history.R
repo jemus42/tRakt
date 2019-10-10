@@ -11,7 +11,7 @@
 #' @family user data
 #' @importFrom dplyr bind_cols select rename rename_all
 #' @importFrom purrr map_df
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @note For `type = "shows"`, the
 #' original output contains a nested object with `show` and `episode` data,
 #' which are unnested by this function. Due to duplicate variable names,

@@ -12,7 +12,7 @@
 #'
 #' @param imdb `character(1)`: A valid `imdb` ID for a movie, show, or episode.
 #' @noRd
-#' @return A [tibble()](tibble::tibble-package).
+#' @inherit trakt_api_common_parameters return
 #' @keywords internal
 #' @importFrom httr modify_url GET content stop_for_status
 #' @importFrom jsonlite fromJSON

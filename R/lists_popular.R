@@ -1,14 +1,13 @@
 #' Get popular / trending lists
 #'
 #' @inheritParams trakt_api_common_parameters
-#'
-#' @return A [tibble()][tibble::tibble-package] of length `limit`.
 #' @export
 #' @family list methods
 #' @seealso [user_list_items] For the actual content of a list.
 #' @importFrom rlang is_empty
 #' @importFrom dplyr bind_cols select_if pull
 #' @importFrom purrr pluck
+#' @inherit trakt_api_common_parameters return
 #' @examples
 #' \dontrun{
 #' lists_popular()

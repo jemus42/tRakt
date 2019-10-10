@@ -6,7 +6,7 @@
 #' This function wraps the API method
 #' [`/users/:id/watchlist/:type`](https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist).
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @importFrom tibble as_tibble
 #' @importFrom tibble tibble

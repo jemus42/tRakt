@@ -7,7 +7,7 @@
 #'   "all", "movies", "shows", "seasons", "episodes" or "lists".
 #' @param include_replies `logical(1) [FALSE]`: Whether to include replies.
 #'
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @importFrom dplyr select filter pull bind_cols
 #' @importFrom purrr map_df

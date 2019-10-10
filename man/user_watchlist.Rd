@@ -20,7 +20,9 @@ returns more variables and should generally only be used if required.
 See \code{vignette("finding-things", package = "tRakt")} for more details.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble()}.
+A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
+(defaulting to \code{10}), this will be the (maximum) number of rows of the \code{tibble}.
+If there are no results (or the API is unreachable), an empty \code{tibble()} is returned.
 }
 \description{
 Retrieve a user's watchlisted shows or movies.

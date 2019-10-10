@@ -6,7 +6,7 @@
 #'   "official" or "watchlists".
 #' @param sort `character(1) ["popular"]`: Sort lists by one of "popular", "likes",
 #'   "comments", "items", "added" or "updated".
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @family list methods
 #' @examples
 #' \dontrun{

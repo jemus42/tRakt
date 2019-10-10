@@ -92,6 +92,7 @@ trakt_auto_lists <- function(list_type = c(
 #' @name popular_media
 #' @inheritParams trakt_api_common_parameters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family dynamic lists
 #' @examples
@@ -141,6 +142,7 @@ shows_popular <- function(limit = 10,
 #' @name trending_media
 #' @inheritParams trakt_api_common_parameters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family dynamic lists
 movies_trending <- function(limit = 10,
@@ -185,6 +187,7 @@ shows_trending <- function(limit = 10,
 #' @name anticipated_media
 #' @inheritParams trakt_api_common_parameters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family dynamic lists
 movies_anticipated <- function(limit = 10,
@@ -235,6 +238,7 @@ shows_anticipated <- function(limit = 10,
 #' @name played_media
 #' @inheritParams trakt_api_common_parameters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family dynamic lists
 movies_played <- function(limit = 10, extended = c("min", "full"),
@@ -285,6 +289,7 @@ shows_played <- function(limit = 10, extended = c("min", "full"),
 #' @name watched_media
 #' @inheritParams trakt_api_common_parameters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family dynamic lists
 movies_watched <- function(limit = 10, extended = c("min", "full"),
@@ -335,6 +340,7 @@ shows_watched <- function(limit = 10, extended = c("min", "full"),
 #' @name collected_media
 #' @inheritParams trakt_api_common_parameters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family dynamic lists
 movies_collected <- function(limit = 10, extended = c("min", "full"),
@@ -385,6 +391,7 @@ shows_collected <- function(limit = 10, extended = c("min", "full"),
 #' @name updated_media
 #' @inheritParams trakt_api_common_parameters
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family dynamic lists
 #' @note `shows_updates` and `movies_updates` do not support filters.

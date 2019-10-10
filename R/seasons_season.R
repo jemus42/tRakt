@@ -9,7 +9,7 @@
 #' @inheritParams trakt_api_common_parameters
 #' @param seasons `integer(1) [1L]`: The season(s) to get. Use `0` for specials.
 #' @inheritParams seasons_summary
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @importFrom lubridate year
 #' @importFrom rlang is_integerish

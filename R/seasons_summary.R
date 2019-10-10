@@ -14,7 +14,7 @@
 #' @param drop_specials `logical(1) [TRUE]`: Special episodes (season 0) are dropped
 #' @param drop_unaired `logical(1) [TRUE]`: Seasons without aired episodes are dropped.
 #' Only works if `extended` is `"full"`.
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family show data
 #' @importFrom dplyr select

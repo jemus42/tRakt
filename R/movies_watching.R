@@ -1,13 +1,12 @@
 #' Get who's watching a thing right now
 #' @name media_watching
 #' @inheritParams trakt_api_common_parameters
-#'
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #'
 #' @examples
 #' \dontrun{
 #' movies_watching("deadpool-2016")
-#' shows_watching("the-simpsons", extended = "full")
+#' shows_watching("the-simpsons")
 #' seasons_watching("the-simpsons", season = 6)
 #' episodes_watching("the-simpsons", season = 6, episode = 12)
 #' }

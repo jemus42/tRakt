@@ -16,15 +16,16 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
 functions, values \code{seasons} or \code{episodes} are also allowed.}
 
-\item{rating}{\code{integer(1L)}: Optional rating to filter by. Can be \code{1} through \code{10},
-default is \code{NULL} for no filtering.}
+\item{rating}{\code{integer(1) [NULL]}: Optional rating in \link{1, 10} to filter by.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
 See \code{vignette("finding-things", package = "tRakt")} for more details.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble()}.
+A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
+(defaulting to \code{10}), this will be the (maximum) number of rows of the \code{tibble}.
+If there are no results (or the API is unreachable), an empty \code{tibble()} is returned.
 }
 \description{
 Retrieve a user's media ratings

@@ -26,6 +26,11 @@ use yesterday relative to the current date. Value must either
 be standard \code{YYYY-MM-DD} format or an object of class \link[base:Dates]{Date},
 which will then be coerced via \link[base:as.character]{as.character()}.}
 }
+\value{
+A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
+(defaulting to \code{10}), this will be the (maximum) number of rows of the \code{tibble}.
+If there are no results (or the API is unreachable), an empty \code{tibble()} is returned.
+}
 \description{
 These functions return recently updated movies/shows on trakt.tv.
 }

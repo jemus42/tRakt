@@ -3,8 +3,7 @@
 #' @inheritParams trakt_api_common_parameters
 #' @inheritParams movies_comments
 #' @inheritParams user_list_items
-#'
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family comment methods
 #' @family list methods

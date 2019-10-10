@@ -10,7 +10,9 @@ user_likes(type = c("comments", "lists"))
 \item{type}{One of "comments", "lists".}
 }
 \value{
-A \link[tibble:tibble-package]{tibble()}.
+A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
+(defaulting to \code{10}), this will be the (maximum) number of rows of the \code{tibble}.
+If there are no results (or the API is unreachable), an empty \code{tibble()} is returned.
 }
 \description{
 This requires authentication.

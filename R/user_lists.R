@@ -5,7 +5,7 @@
 #' The returned variables `trakt` (list ID) or `slug` (list slug) can be used to
 #' retrieve the list's items via [user_list_items].
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family list methods
 #' @seealso [user_lists] for all lists a user has.
@@ -51,7 +51,7 @@ user_lists <- function(user = getOption("trakt_username"), extended = c("min", "
 #' retrieve the list's items via [user_list_items].
 #' @inheritParams trakt_api_common_parameters
 #' @inheritParams user_list_items
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family list methods
 #' @seealso [user_list] for only a single list.

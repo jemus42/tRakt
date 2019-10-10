@@ -7,7 +7,7 @@
 #' This function wraps the API method
 #' [/people/:id](https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person).
 #' @inheritParams trakt_api_common_parameters
-#' @return A [tibble()][tibble::tibble-package].
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @importFrom purrr modify_if
 #' @importFrom purrr map_df

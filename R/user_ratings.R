@@ -5,9 +5,8 @@
 #' This function wraps the API method
 #' [`/users/:id/ratings/:type/:rating`](https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings).
 #' @inheritParams trakt_api_common_parameters
-#' @param rating `integer(1L)`: Optional rating to filter by. Can be `1` through `10`,
-#' default is `NULL` for no filtering.
-#' @return A [tibble()][tibble::tibble-package].
+#' @param rating `integer(1) [NULL]`: Optional rating in [1, 10] to filter by.
+#' @inherit trakt_api_common_parameters return
 #' @export
 #' @family user data
 #' @importFrom dplyr bind_cols

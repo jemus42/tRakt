@@ -34,22 +34,22 @@ See \code{vignette("finding-things", package = "tRakt")} for more details.}
 
 \item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range,
 e.g. \code{"2010-2020"}. Can also be an integer vector of length two which will be
-coerced appropriately.}
+coerced appropriately, e.g. \code{c(2010, 2020)}.}
 
 \item{genres}{\code{character(n)}: Genre  slug(s).
 See \code{\link{trakt_genres}} for a table of genres.
 Multiple values are allowed and will be concatenated.}
 
-\item{languages}{\code{character(n)}: Two-digit language code(s).
-Also see \code{\link{trakt_languages}} for table of available languages.}
+\item{languages}{\code{character(n)}: Two-letter language code(s).
+Also see \code{\link{trakt_languages}} for available languages (code and name).}
 
-\item{countries}{\code{character(n)}: Two-character country code(s).
+\item{countries}{\code{character(n)}: Two-letter country code(s).
 See \code{\link{trakt_countries}}.}
 
 \item{runtimes}{\code{character | integer}: Integer range in minutes, e.g. \code{30-90}.
 Can also be an integer vector of length two which will be coerced appropriately.}
 
-\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{100}.
+\item{ratings}{\code{character | integer}:  Integer range between \code{0} and \code{10}.
 Can also be an integer vector of length two which will be coerced appropriately.}
 
 \item{certifications}{\code{character(n)}: Certification(s) like \code{pg-13}.

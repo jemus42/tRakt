@@ -21,8 +21,8 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{id} values separately and the result is combined. See
 \code{vignette("finding-things", package = "tRakt")} for more details.}
 
-\item{languages}{\code{character(n)}: Two-digit language code(s).
-Also see \code{\link{trakt_languages}} for table of available languages.}
+\item{languages}{\code{character(n)}: Two-letter language code(s).
+Also see \code{\link{trakt_languages}} for available languages (code and name).}
 
 \item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
@@ -33,7 +33,9 @@ e.g. \code{1:5}, the function is vectorized and the output will be
 combined. This may result in \emph{a lot} of API calls. Use wisely.}
 }
 \value{
-A \link[tibble:tibble-package]{tibble()}.
+A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
+(defaulting to \code{10}), this will be the (maximum) number of rows of the \code{tibble}.
+If there are no results (or the API is unreachable), an empty \code{tibble()} is returned.
 }
 \description{
 Get translations for a movie, show or episode
