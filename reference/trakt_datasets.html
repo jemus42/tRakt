@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get a season of a show — seasons_season • tRakt</title>
+<title>Cached filter datasets — trakt_datasets • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,9 +42,11 @@
 
 
 
-<meta property="og:title" content="Get a season of a show — seasons_season" />
-<meta property="og:description" content="Similar to seasons_summary, but this function returns full data for
-a single season, i.e. all the episodes of the season" />
+<meta property="og:title" content="Cached filter datasets — trakt_datasets" />
+<meta property="og:description" content="These datasets are used internally to check the optional
+filter parameters for certain
+functions (see search_query or the dynamic lists like shows_popular).
+They are unlikely to change often and are therefore included as package datasets." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -160,96 +162,119 @@ a single season, i.e. all the episodes of the season" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get a season of a show</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/seasons_season.R'><code>R/seasons_season.R</code></a></small>
-    <div class="hidden name"><code>seasons_season.Rd</code></div>
+    <h1>Cached filter datasets</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/data-internal.R'><code>R/data-internal.R</code></a></small>
+    <div class="hidden name"><code>trakt_datasets.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Similar to <a href='seasons_summary.html'>seasons_summary</a>, but this function returns full data for
-a single season, i.e. all the episodes of the season</p>
+    <p>These datasets are used internally to check the optional
+<a href='https://trakt.docs.apiary.io/#introduction/filters'>filter parameters</a> for certain
+functions (see <a href='search_query.html'>search_query</a> or the dynamic lists like <a href='popular_media.html'>shows_popular</a>).
+They are unlikely to change often and are therefore included as package datasets.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>seasons_season</span>(<span class='no'>id</span>, <span class='kw'>seasons</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+    <pre class="usage"><span class='no'>trakt_genres</span>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>id</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
-<code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
-or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
-Can also be of length greater than 1, in which case the function is called on all
-<code>id</code> values separately and the result is combined. See
-<code><a href='../articles/finding-things.html'>vignette("finding-things", package = "tRakt")</a></code> for more details.</p></td>
-    </tr>
-    <tr>
-      <th>seasons</th>
-      <td><p><code>integer(1) [1L]</code>: The season(s) to get. Use <code>0</code> for specials.</p></td>
-    </tr>
-    <tr>
-      <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
-returns more variables and should generally only be used if required.
-See <code><a href='../articles/finding-things.html'>vignette("finding-things", package = "tRakt")</a></code> for more details.</p></td>
-    </tr>
-    </table>
+<span class='no'>trakt_languages</span>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+<span class='no'>trakt_networks</span>
 
-    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
-(defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
-If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
+<span class='no'>trakt_countries</span>
+
+<span class='no'>trakt_certifications</span></pre>
+
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>Every dataset is a <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>.
+The following list includes the dataset topic with a link to the API documentation,
+a short description and a list of variables with example values:</p><ul>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/genres/list/get-genres'>Genres</a>:
+Genres for shows and movies (with their two-letter codes) trakt.tv knows.</p><ul>
+<li><p>3 Variables: <code>name</code> ("Action"), <code>slug</code> ("action"), <code>type</code> ("movies")</p></li>
+</ul></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/languages/list'>Languages</a>:
+Languages (and two-letter codes) trakt.tv knows.</p><ul>
+<li><p>3 Variables: <code>name</code> ("Arabic"), <code>code</code> ("ar"), <code>type</code> ("movies")</p></li>
+</ul></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/networks/list'>Networks</a>:
+TV networks trakt.tv knows.</p><ul>
+<li><p>2 Variables: <code>name</code> ("TBS"), <code>name_clean</code> ("tbs") (lower-case, no trailing whitespaces)</p></li>
+</ul></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/countries/list'>Countries</a>:
+Country names (and two-letter codes).</p><ul>
+<li><p>3 Variables: <code>name</code> ("Belarus"), <code>code</code> ("by"), <code>type</code> ("movies")</p></li>
+</ul></li>
+<li><p><a href='https://trakt.docs.apiary.io/#reference/certifications/list'>Certifications</a>:
+TV and movie certifications (e.g. "PG-13" and the likes).</p><ul>
+<li><p>5 Variables: <code>country</code> ("us" only), <code>name</code> ("TV-PG"),
+<code>slug</code> ("tv-pg"), <code>description</code> ("Parental Guidance Suggested"), <code>type</code> ("shows")</p></li>
+</ul></li>
+</ul>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>This function accesses <a href='https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show'>this API method</a>
-at the endpoint <code>/shows/:show_id/seasons/:season_num</code>.</p>
+    <p>The datasets are prefixed with <code>trakt_</code> purely to avoid confusion or masking for
+filter arguments of the same name.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
-    <p>If you want to quickly gather episode data of all available seasons,
-see <a href='seasons_summary.html'>seasons_summary</a> and use the <code>episodes = TRUE</code> parameter.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p>Other show data: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
-  <code><a href='seasons_summary.html'>seasons_summary</a></code></p></div>
+    <p>Currently only US certifications are available.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>seasons_season</span>(<span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 7
-#&gt;   season episode title                         trakt tvdb   imdb      tmdb 
-#&gt;    &lt;int&gt;   &lt;int&gt; &lt;chr&gt;                         &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;
-#&gt; 1      1       1 Pilot                         73482 349232 tt0959621 62085
-#&gt; 2      1       2 Cat's in the Bag...           73483 349233 tt1054724 62086
-#&gt; 3      1       3 ...And the Bag's in the River 73484 349235 tt1054725 62087
-#&gt; 4      1       4 Cancer Man                    73485 349236 tt1054726 62088
-#&gt; 5      1       5 Gray Matter                   73486 349238 tt1054727 62089
-#&gt; 6      1       6 Crazy Handful of Nothin'      73487 355100 tt1054728 62090
-#&gt; 7      1       7 A No-Rough-Stuff-Type Deal    73488 352534 tt1054729 62091</div><div class='input'>
-<span class='co'># Including all episode data:</span>
-<span class='fu'>seasons_season</span>(<span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 16
-#&gt;   season episode title episode_abs overview rating votes comment_count
-#&gt;    &lt;int&gt;   &lt;int&gt; &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;int&gt;         &lt;int&gt;
-#&gt; 1      1       1 Pilot           1 When an…   8.35  7089            26
-#&gt; 2      1       2 Cat'…           2 Walt an…   8.14  5589             3
-#&gt; 3      1       3 ...A…           3 Walter …   8.06  5020             2
-#&gt; 4      1       4 Canc…           4 Walter …   8.00  4863             3
-#&gt; 5      1       5 Gray…           5 Walter …   7.99  4742             3
-#&gt; 6      1       6 Craz…           6 The sid…   8.52  4836             3
-#&gt; 7      1       7 A No…           7 Walter …   8.39  4692             2
-#&gt; # … with 8 more variables: first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   available_translations &lt;list&gt;, runtime &lt;int&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;,
-#&gt; #   imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'># }
-</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_genres</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 3
+#&gt;   name      slug      type  
+#&gt;   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt; 
+#&gt; 1 Action    action    movies
+#&gt; 2 Action    action    shows 
+#&gt; 3 Adventure adventure movies
+#&gt; 4 Adventure adventure shows 
+#&gt; 5 Animation animation movies
+#&gt; 6 Animation animation shows </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_languages</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 3
+#&gt;   name      code  type  
+#&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; 
+#&gt; 1 Afar      aa    movies
+#&gt; 2 Abkhazian ab    movies
+#&gt; 3 Abkhazian ab    shows 
+#&gt; 4 Afrikaans af    movies
+#&gt; 5 Akan      ak    movies
+#&gt; 6 Amharic   am    movies</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_networks</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 2
+#&gt;   name          name_clean
+#&gt;   &lt;chr&gt;         &lt;chr&gt;     
+#&gt; 1 " BBC Choice" bbc choice
+#&gt; 2 " Nova"       nova      
+#&gt; 3 " VTV "       vtv       
+#&gt; 4 #0            #0        
+#&gt; 5 +Globosat     +globosat 
+#&gt; 6 1+1           1+1       </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_countries</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 3
+#&gt;   name                 code  type  
+#&gt;   &lt;chr&gt;                &lt;chr&gt; &lt;chr&gt; 
+#&gt; 1 Andorra              ad    movies
+#&gt; 2 Andorra              ad    shows 
+#&gt; 3 United Arab Emirates ae    movies
+#&gt; 4 United Arab Emirates ae    shows 
+#&gt; 5 Afghanistan          af    movies
+#&gt; 6 Antigua and Barbuda  ag    movies</div><div class='input'><span class='no'>trakt_certifications</span></div><div class='output co'>#&gt; # A tibble: 12 x 5
+#&gt;    country name      slug  description                                     type 
+#&gt;    &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;                                           &lt;chr&gt;
+#&gt;  1 us      G         g     All Ages                                        movi…
+#&gt;  2 us      PG        pg    Parental Guidance Suggested                     movi…
+#&gt;  3 us      PG-13     pg-13 Parents Strongly Cautioned - Ages 13+ Recommen… movi…
+#&gt;  4 us      R         r     Mature Audiences - Ages 17+ Recommended         movi…
+#&gt;  5 us      Not Rated nr    Not Rated                                       movi…
+#&gt;  6 us      TV-Y      tv-y  All Children                                    shows
+#&gt;  7 us      TV-Y7     tv-y7 Older Children - Ages 7+ Recommended            shows
+#&gt;  8 us      TV-G      tv-g  All Ages                                        shows
+#&gt;  9 us      TV-PG     tv-pg Parental Guidance Suggested                     shows
+#&gt; 10 us      TV-14     tv-14 Parents Strongly Cautioned - Ages 14+ Recommen… shows
+#&gt; 11 us      TV-MA     tv-ma Mature Audiences - Ages 17+ Recommended         shows
+#&gt; 12 us      Not Rated nr    Not Rated                                       shows</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
+      <li><a href="#format">Format</a></li>
       <li><a href="#details">Details</a></li>
       <li><a href="#note">Note</a></li>
-      <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 
