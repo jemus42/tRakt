@@ -136,7 +136,7 @@ check_filter_arg <- function(filter,
     }
 
     # Check if the filter is okay now
-    if (grepl(x = filter, pattern = "(^[1-9]{1,2}-[1-9]{1,3}$)|(^[1-9]{1,2}$|^100$)")) {
+    if (grepl(x = filter, pattern = "(^[1-9]{1,2}-[1-9]{1,3}$)|((^[1-9]{1,2}$)|(^100$))")) {
       filter
     } else {
       warning("'ratings' must be interpretable as integer range or single integer ",
@@ -165,7 +165,7 @@ check_filter_arg <- function(filter,
   }
   if (filter_type == "networks") {
     filter <- check_filter_arg_fixed(
-      filter, filter_type, tRakt::trakt_networks
+      filter, filter_type, tRakt::trakt_networks$name_clean
     )
   }
   if (filter_type == "status") {
@@ -178,8 +178,12 @@ check_filter_arg <- function(filter,
 
 #' The helper's helper
 #' @keywords internal
+#' @importFrom stringr str_trim str_to_lower
 #' @noRd
 check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
+
+  filter <- str_to_lower(filter) %>% str_trim("both")
+
   if (any(!(filter %in% filter_ok))) {
     warning(
       call. = FALSE,
