@@ -98,11 +98,7 @@ reference:
        These are unlikely to be useful on their own, but they are useful as a reference
        for optional filters.
     contents:
-      - trakt_countries
-      - trakt_genres
-      - trakt_languages
-      - trakt_networks
-      - trakt_certifications
+      - trakt_datasets
   - title: This package
     contents:
       - tRakt
