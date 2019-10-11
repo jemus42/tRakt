@@ -367,9 +367,9 @@ flatten_media_object <- function(x, type) {
 #' @return A flat `tibble()`
 #' @keywords internal
 #' @noRd
-#' @importFrom dplyr filter select bind_cols vars rename_at rename_all ends_with
+#' @importFrom dplyr filter select bind_cols vars rename_at rename_all ends_with matches
 #' @importFrom stringr str_c str_remove str_replace
-#' @importFrom purrr modify_if discard pluck list_merge set_names
+#' @importFrom purrr modify_if modify_at discard pluck list_merge set_names
 flatten_single_media_object <- function(response, type) {
   if (is_empty(response)) {
     return(tibble())
@@ -451,6 +451,15 @@ flatten_single_media_object <- function(response, type) {
   }
 
 
+  # Take possible list-columns (genres etc.) and make them lists if not already
+  # Required to be able to bind_row() them to other results where the column
+  # might not be a list already
   res %>%
+    modify_at(
+      vars(matches("^genres$|^available_translations$")),
+      ~ {
+        if (!is.list(.x)) list(.x) else .x
+      }
+    ) %>%
     fix_tibble_response()
 }
