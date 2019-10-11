@@ -16,27 +16,27 @@ a short description and a list of variables with example values:
 \item \href{https://trakt.docs.apiary.io/#reference/genres/list/get-genres}{Genres}:
 Genres for shows and movies (with their two-letter codes) trakt.tv knows.
 \itemize{
-\item Variables: \code{name} ("Action"), \code{slug} ("action"), \code{type} ("movies")
+\item 3 Variables: \code{name} ("Action"), \code{slug} ("action"), \code{type} ("movies")
 }
 \item \href{https://trakt.docs.apiary.io/#reference/languages/list}{Languages}:
 Languages (and two-letter codes) trakt.tv knows.
 \itemize{
-\item Variables: \code{name} ("Arabic"), \code{code} ("ar"), \code{type} ("movies")
+\item 3 Variables: \code{name} ("Arabic"), \code{code} ("ar"), \code{type} ("movies")
 }
 \item \href{https://trakt.docs.apiary.io/#reference/networks/list}{Networks}:
 TV networks trakt.tv knows.
 \itemize{
-\item Variables: \code{name} ("TBS"), \code{name_clean} ("tbs") (lower-case, no trailing whitespaces)
+\item 2 Variables: \code{name} ("TBS"), \code{name_clean} ("tbs") (lower-case, no trailing whitespaces)
 }
 \item \href{https://trakt.docs.apiary.io/#reference/countries/list}{Countries}:
 Country names (and two-letter codes).
 \itemize{
-\item Variables: \code{name} ("Belarus"), \code{code} ("by"), \code{type} ("movies")
+\item 3 Variables: \code{name} ("Belarus"), \code{code} ("by"), \code{type} ("movies")
 }
 \item \href{https://trakt.docs.apiary.io/#reference/certifications/list}{Certifications}:
 TV and movie certifications (e.g. "PG-13" and the likes).
 \itemize{
-\item Variables: \code{country} ("us" only), \code{name} ("TV-PG"),
+\item 5 Variables: \code{country} ("us" only), \code{name} ("TV-PG"),
 \code{slug} ("tv-pg"), \code{description} ("Parental Guidance Suggested"), \code{type} ("shows")
 }
 }}

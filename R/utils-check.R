@@ -165,7 +165,7 @@ check_filter_arg <- function(filter,
   }
   if (filter_type == "networks") {
     filter <- check_filter_arg_fixed(
-      filter, filter_type, tRakt::trakt_networks$name_clean
+      filter, filter_type, tRakt::trakt_networks$name
     )
   }
   if (filter_type == "status") {
@@ -178,21 +178,33 @@ check_filter_arg <- function(filter,
 
 #' The helper's helper
 #' @keywords internal
-#' @importFrom stringr str_trim str_to_lower
+#' @importFrom stringr str_trim str_to_lower str_split
+#' @importFrom purrr map_chr
 #' @noRd
 check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
 
-  filter <- str_to_lower(filter) %>% str_trim("both")
+  filter <- as.vector(str_split(filter, ",", simplify = TRUE))
 
-  if (any(!(filter %in% filter_ok))) {
-    warning(
-      call. = FALSE,
-      "'", filter_type, "' includes unknown value, ignoring: '",
-      paste0(unique(filter[!(filter %in% filter_ok)]), collapse = ", "), "'"
-    )
+  clean_filter <- str_to_lower(filter) %>%
+    str_trim("both")
 
-    # Subset to the only elements allowed
-    filter <- filter[filter %in% filter_ok]
-  }
+  clean_filter_ok <- str_trim(filter_ok, "both") %>%
+    str_to_lower()
+
+  filter <- map_chr(clean_filter, ~{
+    matches <- .x %in% clean_filter_ok
+
+    if (!matches) {
+      warning(
+        call. = FALSE,
+        "'", filter_type, "' includes unknown value, ignoring: '", .x, "'"
+      )
+      ""
+    } else {
+      filter_ok[.x == clean_filter_ok] %>%
+        unique()
+    }
+  })
+
   paste0(unique(filter), collapse = ",")
 }
