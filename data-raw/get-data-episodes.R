@@ -6,18 +6,17 @@ library(stringr)
 library(tidyr)
 
 # Futurama ----
-futurama <- trakt.seasons.season("futurama", seasons = 1:7, extended = "full")
+futurama <- seasons_season("futurama", seasons = 1:7, extended = "full")
 usethis::use_data(futurama, overwrite = TRUE)
 
 
 # Game of Thrones ----
-got <- trakt.seasons.season("game-of-thrones", seasons = 1:8, extended = "full")
+got_trakt <- seasons_season("game-of-thrones", seasons = 1:8, extended = "full")
 
 # Wiki
-"https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes" %>%
-  read_html() %>%
+got_wiki <- read_html("https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes") %>%
   html_table(fill = TRUE) %>%
-  magrittr::extract(c(2:7)) %>%
+  magrittr::extract(c(2:9)) %>%
   bind_rows() %>%
   set_colnames(c(
     "episode_abs", "episode", "title", "director",
@@ -29,10 +28,15 @@ got <- trakt.seasons.season("game-of-thrones", seasons = 1:8, extended = "full")
     viewers = as.numeric(viewers)
   ) %>%
   select(-episode, -title) %>%
-  full_join(got, by = c("episode_abs" = "episode_abs")) -> got
+  as_tibble()
+
 
 # Cleanup, reordering
-gameofthrones <- got %>%
+gameofthrones <- left_join(
+  got_trakt,
+  got_wiki,
+  by = "episode_abs"
+  ) %>%
   select(
     episode_abs, episode, season, runtime, title,
     overview, rating, votes, viewers,
