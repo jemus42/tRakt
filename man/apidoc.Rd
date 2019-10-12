@@ -19,9 +19,4 @@ apidoc(section, method, key = NULL)
 \description{
 Get API docs keys
 }
-\examples{
-apidoc("movies", "summary", "url")
-apidoc("movies", "summary", "endpoint")
-apidoc("movies", "summary", "authentication") # Usually NULL
-}
 \keyword{internal}

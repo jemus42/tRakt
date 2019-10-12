@@ -17,7 +17,4 @@ Markdown-formatted url
 \description{
 Get a formatted API url for an endpoint
 }
-\examples{
-apiurl("lists", "popular")
-}
 \keyword{internal}

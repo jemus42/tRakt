@@ -100,15 +100,15 @@ build_trakt_url <- function(..., validate = FALSE) {
 #'
 #' @return `character(1)`
 #' @keywords internal
-#' @importFrom yaml read_yaml
 #' @importFrom purrr pluck
-#' @examples
-#' apidoc("movies", "summary", "url")
-#' apidoc("movies", "summary", "endpoint")
-#' apidoc("movies", "summary", "authentication") # Usually NULL
 apidoc <- function(section, method, key = NULL) {
+
+  if (!requireNamespace("yaml", quietly = TRUE)) {
+    stop("Please install the 'yaml' package")
+  }
+
   system.file("api-methods.yml", package = "tRakt") %>%
-    read_yaml() %>%
+    yaml::read_yaml() %>%
     pluck(section, method, key)
 }
 
@@ -119,10 +119,11 @@ apidoc <- function(section, method, key = NULL) {
 #'
 #' @return Markdown-formatted url
 #' @keywords internal
-#' @importFrom glue glue
-#' @examples
-#' apiurl("lists", "popular")
 apiurl <- function(section, method, prefix = "@source ") {
+  if (!requireNamespace("glue", quietly = TRUE)) {
+    stop("Please install the 'glue' package")
+  }
+
   glue::glue('{prefix} [{apidoc(section, method, "endpoint")}]({apidoc(section, method, "url")})')
 }
 
