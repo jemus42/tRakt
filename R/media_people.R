@@ -31,6 +31,7 @@ NULL
 #' @rdname media_people
 #' @eval apiurl("movies", "people")
 #' @family movie data
+#' @family people data
 #' @export
 movies_people <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
@@ -45,6 +46,7 @@ movies_people <- function(id, extended = c("min", "full")) {
 #' @rdname media_people
 #' @eval apiurl("shows", "people")
 #' @family show data
+#' @family people data
 #' @export
 shows_people <- function(id,
                          guest_stars = FALSE,
@@ -65,6 +67,7 @@ shows_people <- function(id,
 #' @rdname media_people
 #' @eval apiurl("seasons", "people")
 #' @family season data
+#' @family people data
 #' @export
 seasons_people <- function(id,
                            season = 1L,
@@ -89,6 +92,7 @@ seasons_people <- function(id,
 #' @rdname media_people
 #' @eval apiurl("episodes", "people")
 #' @family episode data
+#' @family people data
 #' @export
 episodes_people <- function(id,
                             season = 1L, episode = 1L,

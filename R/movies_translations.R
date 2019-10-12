@@ -1,9 +1,11 @@
 #' Get translations for a movie, show or episode
 #'
+#' @name media_translations
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @export
-#'
+#' @eval apiurl("movies", "translations")
+#' @family movie data
 #' @examples
 #' # Get all translations
 #' movies_translations("193972")
@@ -19,7 +21,9 @@ movies_translations <- function(id, languages = NULL) {
   as_tibble(response)
 }
 
-#' @rdname movies_translations
+#' @rdname media_translations
+#' @eval apiurl("shows", "translations")
+#' @family show data
 #' @export
 shows_translations <- function(id, languages = NULL) {
   languages <- check_filter_arg(languages, "languages")
@@ -30,7 +34,9 @@ shows_translations <- function(id, languages = NULL) {
   as_tibble(response)
 }
 
-#' @rdname movies_translations
+#' @rdname media_translations
+#' @eval apiurl("episodes", "translations")
+#' @family episode data
 #' @export
 episodes_translations <- function(id, season = 1L, episode = 1L, languages = NULL) {
   languages <- check_filter_arg(languages, "languages")

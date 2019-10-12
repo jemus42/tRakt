@@ -7,6 +7,15 @@
 \alias{seasons_comments}
 \alias{episodes_comments}
 \title{Get all comments of a thing}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/movies/comments/get-all-movie-comments}{movies/:id/comments/:sort}
+
+\href{https://trakt.docs.apiary.io/#reference/shows/comments/get-all-show-comments}{shows/:id/comments/:sort}
+
+\href{https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments}{shows/:id/seasons/:season/comments/:sort}
+
+\href{https://trakt.docs.apiary.io/#reference/episodes/comments/get-all-episode-comments}{shows/:id/seasons/:season/episodes/:episode/comments/:sort}
+}
 \usage{
 movies_comments(id, sort = c("newest", "oldest", "likes", "replies"),
   extended = c("min", "full"), limit = 10L)
@@ -76,5 +85,38 @@ episodes_comments(46241, season = 1, episode = 2, sort = "likes")
 }
 \seealso{
 Other comment methods: \code{\link{user_list_comments}}
+
+Other movie data: \code{\link{media_aliases}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{movies_boxoffice}},
+  \code{\link{movies_related}},
+  \code{\link{movies_releases}},
+  \code{\link{movies_summary}}
+
+Other show data: \code{\link{media_aliases}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{shows_next_episode}},
+  \code{\link{shows_related}}, \code{\link{shows_summary}}
+
+Other season data: \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}},
+  \code{\link{shows_next_episode}}
 }
 \concept{comment methods}
+\concept{episode data}
+\concept{movie data}
+\concept{season data}
+\concept{show data}

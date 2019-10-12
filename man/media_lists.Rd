@@ -8,6 +8,15 @@
 \alias{episodes_lists}
 \alias{people_lists}
 \title{Get lists containing a movie, show, season, episode or person}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/movies/lists/get-lists-containing-this-movie}{movies/:id/lists/:type/:sort}
+
+\href{https://trakt.docs.apiary.io/#reference/shows/lists/get-lists-containing-this-show}{shows/:id/lists/:type/:sort}
+
+\href{https://trakt.docs.apiary.io/#reference/seasons/lists/get-lists-containing-this-season}{shows/:id/seasons/:season/lists/:type/:sort}
+
+\href{https://trakt.docs.apiary.io/#reference/episodes/lists/get-lists-containing-this-episode}{shows/:id/seasons/:season/episodes/:episode/lists/:type/:sort}
+}
 \usage{
 movies_lists(id, type = c("all", "personal", "official", "watchlists"),
   sort = c("popular", "likes", "comments", "items", "added", "updated"),

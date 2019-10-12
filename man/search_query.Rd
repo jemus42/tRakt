@@ -4,6 +4,11 @@
 \alias{search_query}
 \alias{search_id}
 \title{Search trakt.tv via text query or ID}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results}{search/:type?query=}
+
+\href{https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results}{search/:id_type/:id?type=}
+}
 \usage{
 search_query(query, type = "show", n_results = 1L,
   extended = c("min", "full"), years = NULL, genres = NULL,
@@ -12,7 +17,7 @@ search_query(query, type = "show", n_results = 1L,
   status = NULL)
 
 search_id(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
-  type = "movie", n_results = 1L, extended = c("min", "full"))
+  type = "show", n_results = 1L, extended = c("min", "full"))
 }
 \arguments{
 \item{query}{\code{character(1)}: Search string for titles and descriptions.
@@ -107,8 +112,4 @@ search_query("J. K. Simmons", type = "person", extended = "full")
 search_query("Tron", type = c("movie", "show"), n_results = 2)
 }
 }
-\seealso{
-Other API-basics: \code{\link{trakt_credentials}},
-  \code{\link{trakt_get_token}}, \code{\link{trakt_get}}
-}
-\concept{API-basics}
+\concept{search functions}

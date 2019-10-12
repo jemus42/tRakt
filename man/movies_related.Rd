@@ -36,8 +36,10 @@ Get similiar(ish) movies
 movies_related("the-avengers-2012", limit = 5)
 }
 \seealso{
-Other movie data: \code{\link{media_people}},
+Other movie data: \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
   \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
   \code{\link{movies_boxoffice}},
   \code{\link{movies_releases}},
   \code{\link{movies_summary}}

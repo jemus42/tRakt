@@ -38,8 +38,11 @@ shows_summary("breaking-bad", extended = "full")
 }
 }
 \seealso{
-Other show data: \code{\link{media_people}},
+Other show data: \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
   \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{shows_next_episode}},
   \code{\link{shows_related}}
 
 Other summary methods: \code{\link{episodes_summary}},

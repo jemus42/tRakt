@@ -3,6 +3,9 @@
 \name{movies_boxoffice}
 \alias{movies_boxoffice}
 \title{Get the weekend box office}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office}{movies/boxoffice}
+}
 \usage{
 movies_boxoffice(extended = c("min", "full"))
 }
@@ -20,16 +23,14 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Returns the top 10 grossing movies in the U.S. box office last weekend.
 Updated every Monday morning.
 }
-\details{
-This function wraps the endpoint
-\href{https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office}{movies/boxoffice}.
-}
 \examples{
 movies_boxoffice()
 }
 \seealso{
-Other movie data: \code{\link{media_people}},
+Other movie data: \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
   \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
   \code{\link{movies_related}},
   \code{\link{movies_releases}},
   \code{\link{movies_summary}}

@@ -38,8 +38,10 @@ movies_summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
 }
 }
 \seealso{
-Other movie data: \code{\link{media_people}},
+Other movie data: \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
   \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
   \code{\link{movies_boxoffice}},
   \code{\link{movies_related}},
   \code{\link{movies_releases}}

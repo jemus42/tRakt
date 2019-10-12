@@ -3,14 +3,11 @@
 #' Returns the top 10 grossing movies in the U.S. box office last weekend.
 #' Updated every Monday morning.
 #'
-#' @details
-#' This function wraps the endpoint
-#' [movies/boxoffice](https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office).
-#'
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @family movie data
+#' @eval apiurl("movies", "box office")
 #' @importFrom tibble as_tibble
 #' @examples
 #' movies_boxoffice()

@@ -51,13 +51,16 @@ seasons_summary("utopia", extended = "full", episodes = TRUE)
 }
 }
 \seealso{
-Other season data: \code{\link{media_people}},
-  \code{\link{media_ratings}}, \code{\link{media_stats}},
-  \code{\link{seasons_season}}
-
-Other episode data: \code{\link{episodes_summary}},
+Other season data: \code{\link{media_comments}},
   \code{\link{media_people}}, \code{\link{media_ratings}},
   \code{\link{media_stats}}, \code{\link{seasons_season}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{seasons_season}},
+  \code{\link{shows_next_episode}}
 
 Other summary methods: \code{\link{episodes_summary}},
   \code{\link{movies_summary}},

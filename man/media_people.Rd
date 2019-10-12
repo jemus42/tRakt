@@ -80,25 +80,46 @@ in shows/movies.
 Other people data: \code{\link{people_media}},
   \code{\link{people_summary}}
 
-Other movie data: \code{\link{media_ratings}},
-  \code{\link{media_stats}},
+Other movie data: \code{\link{media_aliases}},
+  \code{\link{media_comments}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
   \code{\link{movies_boxoffice}},
   \code{\link{movies_related}},
   \code{\link{movies_releases}},
   \code{\link{movies_summary}}
 
-Other show data: \code{\link{media_ratings}},
-  \code{\link{media_stats}}, \code{\link{shows_related}},
-  \code{\link{shows_summary}}
+Other people data: \code{\link{people_media}},
+  \code{\link{people_summary}}
 
-Other season data: \code{\link{media_ratings}},
-  \code{\link{media_stats}}, \code{\link{seasons_season}},
-  \code{\link{seasons_summary}}
+Other show data: \code{\link{media_aliases}},
+  \code{\link{media_comments}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{shows_next_episode}},
+  \code{\link{shows_related}}, \code{\link{shows_summary}}
 
-Other episode data: \code{\link{episodes_summary}},
+Other people data: \code{\link{people_media}},
+  \code{\link{people_summary}}
+
+Other season data: \code{\link{media_comments}},
   \code{\link{media_ratings}}, \code{\link{media_stats}},
   \code{\link{seasons_season}},
   \code{\link{seasons_summary}}
+
+Other people data: \code{\link{people_media}},
+  \code{\link{people_summary}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_comments}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}},
+  \code{\link{shows_next_episode}}
+
+Other people data: \code{\link{people_media}},
+  \code{\link{people_summary}}
 }
 \concept{episode data}
 \concept{movie data}

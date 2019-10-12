@@ -13,6 +13,8 @@
 NULL
 
 #' @describeIn media_comments Get comments for a movie
+#' @eval apiurl("movies", "comments")
+#' @family movie data
 #' @export
 movies_comments <- function(id,
                             sort = c("newest", "oldest", "likes", "replies"),
@@ -26,6 +28,8 @@ movies_comments <- function(id,
 }
 
 #' @describeIn media_comments Get comments for a movie
+#' @eval apiurl("shows", "comments")
+#' @family show data
 #' @export
 shows_comments <- function(id,
                            sort = c("newest", "oldest", "likes", "replies"),
@@ -39,6 +43,8 @@ shows_comments <- function(id,
 }
 
 #' @describeIn media_comments Get comments for a season
+#' @eval apiurl("seasons", "comments")
+#' @family season data
 #' @export
 seasons_comments <- function(id, season = 1L,
                              sort = c("newest", "oldest", "likes", "replies"),
@@ -55,6 +61,8 @@ seasons_comments <- function(id, season = 1L,
 }
 
 #' @describeIn media_comments Get comments for an episode
+#' @eval apiurl("episodes", "comments")
+#' @family episode data
 #' @export
 episodes_comments <- function(id, season = 1L, episode = 1L,
                               sort = c("newest", "oldest", "likes", "replies"),

@@ -13,8 +13,8 @@ An OAuth2 token object. See \link[httr:oauth2.0_token]{oauth2.0_token}.
 This is used internally for authenticated requests.
 }
 \seealso{
-Other API-basics: \code{\link{search_query}},
-  \code{\link{trakt_credentials}}, \code{\link{trakt_get}}
+Other API-basics: \code{\link{trakt_credentials}},
+  \code{\link{trakt_get}}
 }
 \concept{API-basics}
 \keyword{internal}

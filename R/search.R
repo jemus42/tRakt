@@ -30,7 +30,8 @@
 #'         If more than one `type` is specified, e.g. `c("movie", "show")`,
 #'         there will be `n_results` results *per type*.
 #' @export
-#' @family API-basics
+#' @family search functions
+#' @eval apiurl("search", "text query")
 #' @importFrom tibble tibble
 #' @importFrom purrr map_df
 #' @examples
@@ -54,8 +55,21 @@ search_query <- function(query, type = "show",
                          countries = NULL, runtimes = NULL,
                          ratings = NULL, certifications = NULL,
                          networks = NULL, status = NULL) {
+
+  if (length(type) > 1) {
+    res <- map_df(type, ~ search_query(
+     query, type = .x,
+     n_results = n_results,
+     years = years,
+     extended = extended, genres = genres, languages = languages,
+     countries = countries, runtimes = runtimes, ratings = ratings,
+     certifications = certifications, networks = networks, status = status
+    ))
+    return(res)
+  }
   ok_types <- c("movie", "show", "episode", "person", "list")
-  type <- match.arg(type, choices = ok_types, several.ok = TRUE)
+  type <- check_types(type, several.ok = TRUE, possible_types = ok_types)
+
   extended <- match.arg(extended)
 
   # Check filters
@@ -69,17 +83,6 @@ search_query <- function(query, type = "show",
   certifications <- check_filter_arg(certifications, "certifications")
   networks <- check_filter_arg(networks, "networks")
   status <- check_filter_arg(status, "status")
-
-  if (length(type) > 1) {
-    return(map_df(type, ~ search_query(query,
-      type = .x,
-      n_results = n_results,
-      years = years,
-      extended = extended, genres = genres, languages = languages,
-      countries = countries, runtimes = runtimes, ratings = ratings,
-      certifications = certifications, networks = networks, status = status
-    )))
-  }
 
   # Construct URL, make API call
   url <- build_trakt_url("search", type,
@@ -99,18 +102,21 @@ search_query <- function(query, type = "show",
 }
 
 #' @rdname search_query
+#' @family search functions
+#' @eval apiurl("search", "ID lookup")
 #' @export
 search_id <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
-                      type = "movie",
+                      type = "show",
                       n_results = 1L, extended = c("min", "full")) {
-  id_type <- match.arg(id_type)
-  ok_types <- c("movie", "show", "episode", "person", "list")
-  type <- match.arg(type, choices = ok_types, several.ok = TRUE)
-  extended <- match.arg(extended)
 
   if (length(type) > 1) {
     return(map_df(type, ~ search_id(id, id_type, type = .x, n_results, extended)))
   }
+
+  id_type <- match.arg(id_type)
+  ok_types <- c("movie", "show", "episode", "person", "list")
+  type <- check_types(type, several.ok = TRUE, possible_types = ok_types)
+  extended <- match.arg(extended)
 
   # Construct URL, make API call
   url <- build_trakt_url("search", id_type, id, type = type, extended = extended)

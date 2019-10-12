@@ -4,6 +4,11 @@
 \alias{shows_next_episode}
 \alias{shows_last_episode}
 \title{Get a shows next or latest episode}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/shows/next-episode/get-next-episode}{shows/:id/next_episode}
+
+\href{https://trakt.docs.apiary.io/#reference/shows/last-episode/get-last-episode}{shows/:id/last_episode}
+}
 \usage{
 shows_next_episode(id, extended = c("min", "full"))
 
@@ -33,3 +38,32 @@ Get a shows next or latest episode
 shows_next_episode("one-piece")
 shows_last_episode("one-piece")
 }
+\seealso{
+Other show data: \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{shows_related}}, \code{\link{shows_summary}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}}
+
+Other show data: \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{shows_related}}, \code{\link{shows_summary}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}}
+}
+\concept{episode data}
+\concept{show data}

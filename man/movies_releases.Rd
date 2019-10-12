@@ -3,6 +3,9 @@
 \name{movies_releases}
 \alias{movies_releases}
 \title{Get a movie's release details}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/movies/releases/get-all-movie-releases}{movies/:id/releases/:country}
+}
 \usage{
 movies_releases(id, country = NULL)
 }
@@ -14,7 +17,8 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{id} values separately and the result is combined. See
 \code{vignette("finding-things", package = "tRakt")} for more details.}
 
-\item{country}{Optional two letter country code to filter by.}
+\item{country}{Optional two letter country code to filter by. See \link{trakt_countries}
+for a table of country codes.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
@@ -26,18 +30,16 @@ Retrieve one or more movie's release information,
 including the release date, country code (two letter, e.g. \code{us}), and
 the certification (e.g. \code{PG}).
 }
-\details{
-This function wraps the endpoint
-\href{http://docs.trakt.apiary.io/reference/movies/releases/get-all-movie-releases}{movies/:id/releases/:country}
-}
 \examples{
 \dontrun{
 movies_releases("tron-legacy-2010")
 }
 }
 \seealso{
-Other movie data: \code{\link{media_people}},
+Other movie data: \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
   \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
   \code{\link{movies_boxoffice}},
   \code{\link{movies_related}},
   \code{\link{movies_summary}}

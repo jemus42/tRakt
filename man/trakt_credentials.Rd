@@ -52,7 +52,7 @@ trakt_credentials(
 }
 }
 \seealso{
-Other API-basics: \code{\link{search_query}},
-  \code{\link{trakt_get_token}}, \code{\link{trakt_get}}
+Other API-basics: \code{\link{trakt_get_token}},
+  \code{\link{trakt_get}}
 }
 \concept{API-basics}

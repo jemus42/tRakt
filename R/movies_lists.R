@@ -19,6 +19,7 @@
 NULL
 
 #' @export
+#' @eval apiurl("movies", "lists")
 #' @describeIn media_lists Lists containing a movie.
 movies_lists <- function(id,
                          type = c("all", "personal", "official", "watchlists"),
@@ -41,6 +42,7 @@ movies_lists <- function(id,
 }
 
 #' @export
+#' @eval apiurl("shows", "lists")
 #' @describeIn media_lists Lists containing a show.
 shows_lists <- function(id,
                         type = c("all", "personal", "official", "watchlists"),
@@ -63,6 +65,7 @@ shows_lists <- function(id,
 }
 
 #' @export
+#' @eval apiurl("seasons", "lists")
 #' @describeIn media_lists Lists containing a season.
 seasons_lists <- function(id, season,
                           type = c("all", "personal", "official", "watchlists"),
@@ -85,6 +88,7 @@ seasons_lists <- function(id, season,
 }
 
 #' @export
+#' @eval apiurl("episodes", "lists")
 #' @describeIn media_lists Lists containing an episode.
 episodes_lists <- function(id, season, episode,
                            type = c("all", "personal", "official", "watchlists"),

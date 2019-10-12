@@ -36,8 +36,11 @@ Get similiar(ish) shows
 shows_related("breaking-bad", limit = 5)
 }
 \seealso{
-Other show data: \code{\link{media_people}},
+Other show data: \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
   \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{shows_next_episode}},
   \code{\link{shows_summary}}
 }
 \concept{show data}

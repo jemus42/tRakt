@@ -4,6 +4,9 @@
 #'
 #' @inherit trakt_api_common_parameters return
 #' @export
+#' @eval apiurl("shows", "next episode")
+#' @family show data
+#' @family episode data
 #' @importFrom dplyr bind_cols vars matches
 #' @importFrom purrr discard modify_if modify_at pluck
 #' @examples
@@ -26,6 +29,9 @@ shows_next_episode <- function(id, extended = c("min", "full")) {
 }
 
 #' @rdname shows_next_episode
+#' @eval apiurl("shows", "last episode")
+#' @family show data
+#' @family episode data
 #' @export
 shows_last_episode <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)

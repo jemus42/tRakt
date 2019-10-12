@@ -71,25 +71,34 @@ episodes_ratings("futurama", season = 1, episode = 1:7)
 }
 }
 \seealso{
-Other show data: \code{\link{media_people}},
-  \code{\link{media_stats}}, \code{\link{shows_related}},
-  \code{\link{shows_summary}}
-
-Other movie data: \code{\link{media_people}},
+Other show data: \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
   \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{shows_next_episode}},
+  \code{\link{shows_related}}, \code{\link{shows_summary}}
+
+Other movie data: \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
   \code{\link{movies_boxoffice}},
   \code{\link{movies_related}},
   \code{\link{movies_releases}},
   \code{\link{movies_summary}}
 
-Other season data: \code{\link{media_people}},
-  \code{\link{media_stats}}, \code{\link{seasons_season}},
-  \code{\link{seasons_summary}}
-
-Other episode data: \code{\link{episodes_summary}},
+Other season data: \code{\link{media_comments}},
   \code{\link{media_people}}, \code{\link{media_stats}},
   \code{\link{seasons_season}},
   \code{\link{seasons_summary}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_comments}}, \code{\link{media_people}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}},
+  \code{\link{shows_next_episode}}
 }
 \concept{episode data}
 \concept{movie data}
