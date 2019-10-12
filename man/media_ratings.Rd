@@ -7,6 +7,15 @@
 \alias{seasons_ratings}
 \alias{episodes_ratings}
 \title{Media user ratings}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings}{shows/:ids/ratings}
+
+\href{https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings}{movies/:id/ratings}
+
+\href{https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings}{shows/:id/seasons/:season/ratings}
+
+\href{https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings}{shows/:id/seasons/:season/episodes/:episode/ratings}
+}
 \usage{
 shows_ratings(id)
 
@@ -42,15 +51,6 @@ Returns a movie's or show's (or season's, or episode's) rating and ratings distr
 If you \emph{do not} want the full ratings distribution, it is highly advised to
 just use \code{*_summary} functions or \link{seasons_season} for episode ratings.
 }
-\details{
-The API methods for these functions are:
-\itemize{
-\item \href{https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings}{/movies/:id/ratings}
-\item \href{https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings}{/shows/:id/ratings}
-\item \href{https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings}{/shows/:id/seasons/:season/ratings}
-\item \href{https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings}{/shows/:id/seasons/:season/episodes/:episode/ratings}
-}
-}
 \note{
 Since this function is able to work on multi-length inputs for
 \code{id}, \code{season} and \code{episode}, it is possible to get a lot of data, \emph{but} at the cost
@@ -70,3 +70,28 @@ seasons_ratings("futurama", season = 1:5)
 episodes_ratings("futurama", season = 1, episode = 1:7)
 }
 }
+\seealso{
+Other show data: \code{\link{media_people}},
+  \code{\link{media_stats}}, \code{\link{shows_related}},
+  \code{\link{shows_summary}}
+
+Other movie data: \code{\link{media_people}},
+  \code{\link{media_stats}},
+  \code{\link{movies_boxoffice}},
+  \code{\link{movies_related}},
+  \code{\link{movies_releases}},
+  \code{\link{movies_summary}}
+
+Other season data: \code{\link{media_people}},
+  \code{\link{media_stats}}, \code{\link{seasons_season}},
+  \code{\link{seasons_summary}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_people}}, \code{\link{media_stats}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}}
+}
+\concept{episode data}
+\concept{movie data}
+\concept{season data}
+\concept{show data}

@@ -20,6 +20,6 @@ This requires authentication.
 \examples{
 # Get liked lists
 if (FALSE) {
-user_likes("lists")
+  user_likes("lists")
 }
 }

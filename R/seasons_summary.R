@@ -4,10 +4,6 @@
 #' each season has. With `episodes == TRUE` and `extended == "full"`, this function
 #' is also suitable to retrieve all episode data for all seasons of a show with
 #' just a single API call.
-#' @details
-#' This function wraps [this API method](https://trakt.docs.apiary.io/#reference/seasons/summary/)
-#' with the endpoint `/shows/:show_id/seasons`.
-#'
 #' @inheritParams trakt_api_common_parameters
 #' @param episodes `logical(1) [FALSE]`: If `TRUE`, all episodes for each season
 #' are appended as a list-column, with the amount of variables depending on `extended`.
@@ -16,13 +12,13 @@
 #' Only works if `extended` is `"full"`.
 #' @inherit trakt_api_common_parameters return
 #' @export
-#' @family show data
+#' @family season data
+#' @family episode data
+#' @family summary methods
+#' @eval apiurl("seasons", "summary")
 #' @importFrom dplyr select
-#' @importFrom rlang has_name
-#' @importFrom tibble as_tibble
-#' @importFrom purrr set_names
-#' @importFrom purrr map
-#' @importFrom purrr map_df
+#' @importFrom rlang has_name is_empty
+#' @importFrom purrr map map_df set_names
 #' @examples
 #' # Get just the season numbers and their IDs
 #' seasons_summary("breaking-bad", extended = "min")
@@ -31,14 +27,15 @@
 #' # a list-column containing all episode data
 #' seasons_summary("utopia", extended = "full", episodes = TRUE)
 #' }
-seasons_summary <- function(id, extended = c("min", "full"), episodes = FALSE,
-                            drop_specials = TRUE, drop_unaired = TRUE) {
+seasons_summary <- function(id, episodes = FALSE,
+                            drop_specials = TRUE, drop_unaired = TRUE,
+                            extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    response <- map_df(id, function(t) {
+    response <- map_df(id, ~ {
       seasons_summary(
-        id = t, extended = extended, episodes = episodes,
+        id = .x, extended = extended, episodes = episodes,
         drop_specials = drop_specials, drop_unaired = drop_unaired
       )
     })
@@ -53,7 +50,7 @@ seasons_summary <- function(id, extended = c("min", "full"), episodes = FALSE,
   url <- build_trakt_url("shows", id, "seasons", extended = extended)
   response <- trakt_get(url = url)
 
-  if (identical(response, tibble())) {
+  if (is_empty(response)) {
     return(tibble())
   }
 

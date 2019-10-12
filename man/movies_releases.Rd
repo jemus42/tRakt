@@ -36,6 +36,10 @@ movies_releases("tron-legacy-2010")
 }
 }
 \seealso{
-Other movie data: \code{\link{movies_boxoffice}}
+Other movie data: \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{movies_boxoffice}},
+  \code{\link{movies_related}},
+  \code{\link{movies_summary}}
 }
 \concept{movie data}

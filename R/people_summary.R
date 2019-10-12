@@ -3,15 +3,14 @@
 #' Get a single person's details, like their various IDs. If `extended` is
 #' `"full"`, there will also be biographical data if available, e.g. their
 #' birthday.
-#' @details
-#' This function wraps the API method
-#' [/people/:id](https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person).
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @importFrom purrr modify_if
 #' @importFrom purrr map_df
 #' @family people data
+#' @family summary methods
+#' @eval apiurl("people", "summary")
 #' @examples
 #' # A single person's extended information
 #' people_summary("bryan-cranston", "full")

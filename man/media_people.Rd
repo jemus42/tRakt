@@ -7,6 +7,15 @@
 \alias{seasons_people}
 \alias{episodes_people}
 \title{Get the cast and crew of a show or movie}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{movies/:id/people}
+
+\href{https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show}{shows/:id/people}
+
+\href{https://trakt.docs.apiary.io/#reference/seasons/people/get-all-people-for-a-season}{shows/:id/seasons/:season/people}
+
+\href{https://trakt.docs.apiary.io/#reference/episodes/people/get-all-people-for-an-episode}{shows/:id/seasons/:season/episodes/:episode/people}
+}
 \usage{
 movies_people(id, extended = c("min", "full"))
 
@@ -43,36 +52,19 @@ combined. This may result in \emph{a lot} of API calls. Use wisely.}
 }
 \value{
 A \code{list} of one or more \link[tibble:tibble-package]{tibbles} for \code{cast}
-and \code{crew}. The latter \code{tibble} objects are as flat as possible.
+and/or \code{crew}. The latter \code{tibble} objects are as flat as possible.
 }
 \description{
 Returns all cast and crew for a show/movie, depending on how much data is
 available.
 }
-\details{
-The API methods for these functions are:
-\itemize{
-\item \href{https://trakt.docs.apiary.io/#reference/shows/people/}{/shows/:id/people}
-\item \href{https://trakt.docs.apiary.io/#reference/movies/people/}{/movies/:id/people}
-}
-
-Note that as of 2019-09-30, there are two representations of \code{character[s]} and
+\note{
+As of 2019-09-30, there are two representations of \code{character[s]} and
 \code{job[s]}:
 One is a regular character variable, and the other is a list-column. The former is
-\href{https://github.com/trakt/api-help/issues/74}{deprecated}  and only included for
+\href{https://github.com/trakt/api-help/issues/74}{deprecated} and only included for
 compatibility reasons.
 }
-\section{Functions}{
-\itemize{
-\item \code{movies_people}: Get cast & crew of a movie.
-
-\item \code{shows_people}: Get cast & crew of a show.
-
-\item \code{seasons_people}: Get cast & crew of a season.
-
-\item \code{episodes_people}: Get cast & crew of an episode.
-}}
-
 \examples{
 \dontrun{
 movies_people("deadpool-2016")
@@ -87,5 +79,29 @@ in shows/movies.
 
 Other people data: \code{\link{people_media}},
   \code{\link{people_summary}}
+
+Other movie data: \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{movies_boxoffice}},
+  \code{\link{movies_related}},
+  \code{\link{movies_releases}},
+  \code{\link{movies_summary}}
+
+Other show data: \code{\link{media_ratings}},
+  \code{\link{media_stats}}, \code{\link{shows_related}},
+  \code{\link{shows_summary}}
+
+Other season data: \code{\link{media_ratings}},
+  \code{\link{media_stats}}, \code{\link{seasons_season}},
+  \code{\link{seasons_summary}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}}
 }
+\concept{episode data}
+\concept{movie data}
 \concept{people data}
+\concept{season data}
+\concept{show data}

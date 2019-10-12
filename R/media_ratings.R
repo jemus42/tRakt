@@ -3,14 +3,6 @@
 #' Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
 #' If you *do not* want the full ratings distribution, it is highly advised to
 #' just use `*_summary` functions or [seasons_season] for episode ratings.
-#' @details
-#' The API methods for these functions are:
-#'
-#' - [/movies/:id/ratings](https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings)
-#' - [/shows/:id/ratings](https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings)
-#' - [/shows/:id/seasons/:season/ratings](https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings)
-#' - [/shows/:id/seasons/:season/episodes/:episode/ratings](https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings)
-#'
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @name media_ratings
@@ -58,12 +50,16 @@ media_ratings <- function(type = c("shows", "movies"), id) {
 # Aliases for show/movie ratings ----
 
 #' @rdname media_ratings
+#' @family show data
+#' @eval apiurl("shows", "ratings")
 #' @export
 shows_ratings <- function(id) {
   media_ratings(type = "shows", id)
 }
 
 #' @rdname media_ratings
+#' @family movie data
+#' @eval apiurl("movies", "ratings")
 #' @export
 movies_ratings <- function(id) {
   media_ratings(type = "movies", id)
@@ -72,6 +68,8 @@ movies_ratings <- function(id) {
 # Seasons and episodes ratings ----
 
 #' @rdname media_ratings
+#' @eval apiurl("seasons", "ratings")
+#' @family season data
 #' @export
 #' @importFrom dplyr mutate
 #' @importFrom purrr map_df
@@ -98,6 +96,8 @@ seasons_ratings <- function(id, season = 1L) {
 }
 
 #' @rdname media_ratings
+#' @eval apiurl("episodes", "ratings")
+#' @family episode data
 #' @export
 #' @importFrom dplyr mutate
 #' @importFrom purrr map_df

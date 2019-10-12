@@ -3,6 +3,9 @@
 \name{seasons_season}
 \alias{seasons_season}
 \title{Get a season of a show}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show}{shows/id/seasons/season}
+}
 \usage{
 seasons_season(id, seasons = 1L, extended = c("min", "full"))
 }
@@ -29,10 +32,6 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Similar to \link{seasons_summary}, but this function returns full data for
 a single season, i.e. all the episodes of the season
 }
-\details{
-This function accesses \href{https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show}{this API method}
-at the endpoint \code{/shows/:show_id/seasons/:season_num}.
-}
 \note{
 If you want to quickly gather episode data of all available seasons,
 see \link{seasons_summary} and use the \code{episodes = TRUE} parameter.
@@ -46,7 +45,13 @@ seasons_season("breaking-bad", 1, extended = "full")
 }
 }
 \seealso{
-Other show data: \code{\link{episodes_summary}},
+Other season data: \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
   \code{\link{seasons_summary}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}}, \code{\link{seasons_summary}}
 }
-\concept{show data}
+\concept{episode data}
+\concept{season data}

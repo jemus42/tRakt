@@ -40,7 +40,8 @@ Suggests:
     scales,
     testthat (>= 2.1.0),
     tidyr,
-    yaml
+    yaml,
+    glue
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

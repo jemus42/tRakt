@@ -3,10 +3,6 @@
 #' Returns all movies or shows where this person is in the cast or crew.
 #' @name people_media
 #' @details
-#' The API methods wrapped are
-#' - [`/people/:id/movies`](https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits)
-#' - [`/people/:id/shows`](https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits)
-#'
 #' Note that as of 2019-09-30, there are two representations of `character[s]` and `job[s]`:
 #' One is a regular character variable, and the other is a list-column. The singular is
 #' [deprecated and only included for compatibility reasons](https://github.com/trakt/api-help/issues/74).
@@ -14,7 +10,6 @@
 #' @inheritParams trakt_api_common_parameters
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
 #' and `crew`. The latter `tibble` objects are as flat as possible.
-#' @family people data
 #' @seealso [media_people], for the other direction: Media that has people.
 #' @examples
 #' \dontrun{
@@ -75,12 +70,16 @@ people_media <- function(type = c("shows", "movies"), id,
 
 
 #' @rdname people_media
+#' @eval apiurl("people", "movies")
+#' @family people data
 #' @export
 people_movies <- function(id, extended = c("min", "full")) {
   people_media(type = "movies", id = id, extended = extended)
 }
 
 #' @rdname people_media
+#' @eval apiurl("people", "shows")
+#' @family people data
 #' @export
 people_shows <- function(id, extended = c("min", "full")) {
   people_media(type = "shows", id = id, extended = extended)

@@ -28,6 +28,10 @@ This function wraps the endpoint
 movies_boxoffice()
 }
 \seealso{
-Other movie data: \code{\link{movies_releases}}
+Other movie data: \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{movies_related}},
+  \code{\link{movies_releases}},
+  \code{\link{movies_summary}}
 }
 \concept{movie data}

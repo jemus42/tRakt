@@ -2,14 +2,12 @@
 #'
 #' This retrieves a single episode. See [seasons_season] for a whole season, and
 #' [seasons_summary] for (potentially) all episodes of a show.
-#' @details
-#' This function wraps [this API method](https://trakt.docs.apiary.io/#reference/episodes/summary)
-#' with the endpoint `/shows/:id/seasons/episodes/:episode`.
-#'
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @export
-#' @family show data
+#' @family episode data
+#' @family summary methods
+#' @eval apiurl("episodes", "summary")
 #' @importFrom dplyr select rename bind_cols mutate everything
 #' @importFrom rlang has_name
 #' @importFrom tibble as_tibble

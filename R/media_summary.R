@@ -1,27 +1,4 @@
-#' Get show or movie summary info
-#'
-#' @details
-#' These functions wrap the "single item" API methods:
-#' - [/shows/:id](https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show)
-#' - [/movies/:id](https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie)
-#' @note These functions return the same amount of information as
-#'   [search_*][search_query].
-#' @inheritParams trakt_api_common_parameters
-#' @inherit trakt_api_common_parameters return
-#' @family summary data
-#' @name media_summary
-#' @examples
-#' # Minimal info by default
-#' shows_summary("breaking-bad")
-#' movies_summary("inception-2010")
-#' \dontrun{
-#' # More information
-#' shows_summary("breaking-bad", extended = "full")
-#'
-#' # Info for multiple movies
-#' movies_summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
-#' }
-NULL
+# Internal worker ----
 
 #' @keywords internal
 #' @noRd
@@ -31,8 +8,6 @@ NULL
 #' @importFrom lubridate as_datetime
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
-#' @note Handling of this result is annoying because it's always just a list,
-#'   not a data.frame
 media_summary <- function(type = c("movies", "shows"), id, extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
@@ -59,16 +34,40 @@ media_summary <- function(type = c("movies", "shows"), id, extended = c("min", "
   }
 }
 
-# Derived ----
+# Exported ----
 
-#' @rdname media_summary
+#' Get a single movie
+#' @inheritParams trakt_api_common_parameters
+#' @inherit trakt_api_common_parameters return
 #' @export
+#' @eval apiurl("movies", "summary")
+#' @family movie data
+#' @family summary methods
+#' @examples
+#' # Minimal info by default
+#' movies_summary("inception-2010")
+#' \dontrun{
+#' # Full information,  multiple movies
+#' movies_summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
+#' }
 movies_summary <- function(id, extended = c("min", "full")) {
   media_summary(type = "movies", id = id, extended = extended)
 }
 
-#' @rdname media_summary
+#' Get a single show
+#' @inheritParams trakt_api_common_parameters
+#' @inherit trakt_api_common_parameters return
 #' @export
+#' @family show data
+#' @family summary methods
+#' @eval apiurl("shows", "summary")
+#' @examples
+#' # Minimal info by default
+#' shows_summary("breaking-bad")
+#' \dontrun{
+#' # More information
+#' shows_summary("breaking-bad", extended = "full")
+#' }
 shows_summary <- function(id, extended = c("min", "full")) {
   media_summary(type = "shows", id = id, extended = extended)
 }

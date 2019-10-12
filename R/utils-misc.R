@@ -89,3 +89,40 @@ build_trakt_url <- function(..., validate = FALSE) {
 
   url
 }
+
+# API docs helpers -----
+
+#' Get API docs keys
+#'
+#' @param section E.g. "movies"
+#' @param method  E.g "summary"
+#' @param key  E.g. "url", "endpoint"
+#'
+#' @return `character(1)`
+#' @keywords internal
+#' @importFrom yaml read_yaml
+#' @importFrom purrr pluck
+#' @examples
+#' apidoc("movies", "summary", "url")
+#' apidoc("movies", "summary", "endpoint")
+#' apidoc("movies", "summary", "authentication") # Usually NULL
+apidoc <- function(section, method, key = NULL) {
+  system.file("api-methods.yml", package = "tRakt") %>%
+    read_yaml() %>%
+    pluck(section, method, key)
+}
+
+#' Get a formatted API url for an endpoint
+#'
+#' @param section E.g. "movies"
+#' @param method  E.g. "summary"
+#'
+#' @return Markdown-formatted url
+#' @keywords internal
+#' @importFrom glue glue
+#' @examples
+#' apiurl("lists", "popular")
+apiurl <- function(section, method, prefix = "@source ") {
+  glue::glue('{prefix} [{apidoc(section, method, "endpoint")}]({apidoc(section, method, "url")})')
+}
+

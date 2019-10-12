@@ -2,14 +2,6 @@
 #'
 #' The data contains watchers, playes, collectors, comments, lists, and votes.
 #'
-#' @details
-#' The API methods for these functions are:
-#'
-#' - [/movies/:id/stats](https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats)
-#' - [/shows/:id/stats](https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats)
-#' - [/shows/:id/seasons/:season/stats](https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats)
-#' - [/shows/:id/seasons/:season/episodes/:episode/stats](https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats)
-#'
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @name media_stats
@@ -48,21 +40,26 @@ media_stats <- function(type = c("shows", "movies"), id) {
 # Derived ----
 
 #' @rdname media_stats
+#' @eval apiurl("shows", "stats")
+#' @family show data
 #' @export
 shows_stats <- function(id) {
   media_stats(type = "shows", id)
 }
 
 #' @rdname media_stats
+#' @eval apiurl("movies", "stats")
+#' @family movie data
 #' @export
 movies_stats <- function(id) {
   media_stats(type = "movies", id)
 }
 
 #' @rdname media_stats
+#' @eval apiurl("seasons", "stats")
+#' @family season data
 #' @export
 #' @importFrom purrr map_df
-#' @importFrom tibble as_tibble
 seasons_stats <- function(id, season = 1L) {
   if (length(id) > 1) {
     return(map_df(id, ~ seasons_stats(.x, season)))
@@ -82,9 +79,10 @@ seasons_stats <- function(id, season = 1L) {
 }
 
 #' @rdname media_stats
+#' @eval apiurl("episodes", "stats")
+#' @family episode data
 #' @export
 #' @importFrom purrr map_df
-#' @importFrom tibble as_tibble
 episodes_stats <- function(id, season = 1L, episode = 1L) {
   if (length(id) > 1) {
     return(map_df(id, ~ episodes_stats(.x, season, episode)))

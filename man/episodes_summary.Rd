@@ -3,6 +3,9 @@
 \name{episodes_summary}
 \alias{episodes_summary}
 \title{Get a single episode's details}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/episodes/summary/get-a-single-episode-for-a-show}{shows/:id/seasons/:season/episodes/:episode}
+}
 \usage{
 episodes_summary(id, season = 1L, episode = 1L, extended = c("min",
   "full"))
@@ -36,16 +39,20 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 This retrieves a single episode. See \link{seasons_season} for a whole season, and
 \link{seasons_summary} for (potentially) all episodes of a show.
 }
-\details{
-This function wraps \href{https://trakt.docs.apiary.io/#reference/episodes/summary}{this API method}
-with the endpoint \code{/shows/:id/seasons/episodes/:episode}.
-}
 \examples{
 # Get just this one episode with its ratings, votes, etc.
 episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
 }
 \seealso{
-Other show data: \code{\link{seasons_season}},
+Other episode data: \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
+  \code{\link{seasons_season}},
   \code{\link{seasons_summary}}
+
+Other summary methods: \code{\link{movies_summary}},
+  \code{\link{people_summary}},
+  \code{\link{seasons_summary}},
+  \code{\link{shows_summary}}
 }
-\concept{show data}
+\concept{episode data}
+\concept{summary methods}

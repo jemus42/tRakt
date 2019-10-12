@@ -2,16 +2,12 @@
 #'
 #' Returns all cast and crew for a show/movie, depending on how much data is
 #' available.
-#' @details
-#' The API methods for these functions are:
 #'
-#' - [/shows/:id/people](https://trakt.docs.apiary.io/#reference/shows/people/)
-#' - [/movies/:id/people](https://trakt.docs.apiary.io/#reference/movies/people/)
-#'
-#' Note that as of 2019-09-30, there are two representations of `character[s]` and
+#' @note
+#' As of 2019-09-30, there are two representations of `character[s]` and
 #' `job[s]`:
 #' One is a regular character variable, and the other is a list-column. The former is
-#' [deprecated](https://github.com/trakt/api-help/issues/74)  and only included for
+#' [deprecated](https://github.com/trakt/api-help/issues/74) and only included for
 #' compatibility reasons.
 #'
 #' @name media_people
@@ -19,7 +15,7 @@
 #' @param guest_stars `logical(1) ["FALSE"]`: Also include guest stars. This returns
 #'   a lot of data, so use with care.
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
-#'   and `crew`. The latter `tibble` objects are as flat as possible.
+#'   and/or `crew`. The latter `tibble` objects are as flat as possible.
 #' @family people data
 #' @seealso [people_media], for the other direction: People that have credits
 #'   in shows/movies.
@@ -32,7 +28,9 @@
 #' }
 NULL
 
-#' @describeIn media_people Get cast & crew of a movie.
+#' @rdname media_people
+#' @eval apiurl("movies", "people")
+#' @family movie data
 #' @export
 movies_people <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
@@ -44,7 +42,9 @@ movies_people <- function(id, extended = c("min", "full")) {
   unpack_people(response)
 }
 
-#' @describeIn media_people Get cast & crew of a show.
+#' @rdname media_people
+#' @eval apiurl("shows", "people")
+#' @family show data
 #' @export
 shows_people <- function(id,
                          guest_stars = FALSE,
@@ -62,7 +62,9 @@ shows_people <- function(id,
   unpack_people(response)
 }
 
-#' @describeIn media_people Get cast & crew of a season.
+#' @rdname media_people
+#' @eval apiurl("seasons", "people")
+#' @family season data
 #' @export
 seasons_people <- function(id,
                            season = 1L,
@@ -84,7 +86,9 @@ seasons_people <- function(id,
   unpack_people(response)
 }
 
-#' @describeIn media_people Get cast & crew of an episode.
+#' @rdname media_people
+#' @eval apiurl("episodes", "people")
+#' @family episode data
 #' @export
 episodes_people <- function(id,
                             season = 1L, episode = 1L,

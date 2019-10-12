@@ -7,6 +7,15 @@
 \alias{seasons_stats}
 \alias{episodes_stats}
 \title{Get a show or movie's (or season's or episode's) stats}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats}{shows/:id/stats}
+
+\href{https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats}{movies/:id/stats}
+
+\href{https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats}{shows/:id/seasons/:season/stats}
+
+\href{https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats}{shows/:id/seasons/:season/episodes/:episode/stats}
+}
 \usage{
 shows_stats(id)
 
@@ -40,15 +49,6 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 \description{
 The data contains watchers, playes, collectors, comments, lists, and votes.
 }
-\details{
-The API methods for these functions are:
-\itemize{
-\item \href{https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats}{/movies/:id/stats}
-\item \href{https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats}{/shows/:id/stats}
-\item \href{https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats}{/shows/:id/seasons/:season/stats}
-\item \href{https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats}{/shows/:id/seasons/:season/episodes/:episode/stats}
-}
-}
 \examples{
 # Stats for a movie
 movies_stats("inception-2010")
@@ -60,3 +60,29 @@ shows_stats(c("breaking-bad", "game-of-thrones"))
 episodes_stats("futurama", season = 1, episode = 1:7)
 }
 }
+\seealso{
+Other show data: \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{shows_related}},
+  \code{\link{shows_summary}}
+
+Other movie data: \code{\link{media_people}},
+  \code{\link{media_ratings}},
+  \code{\link{movies_boxoffice}},
+  \code{\link{movies_related}},
+  \code{\link{movies_releases}},
+  \code{\link{movies_summary}}
+
+Other season data: \code{\link{media_people}},
+  \code{\link{media_ratings}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}}
+}
+\concept{episode data}
+\concept{movie data}
+\concept{season data}
+\concept{show data}

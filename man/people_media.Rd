@@ -5,6 +5,11 @@
 \alias{people_movies}
 \alias{people_shows}
 \title{Get a single person's movie or show credits}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits}{people/:id/movies}
+
+\href{https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits}{people/:id/shows}
+}
 \usage{
 people_movies(id, extended = c("min", "full"))
 
@@ -30,12 +35,6 @@ and \code{crew}. The latter \code{tibble} objects are as flat as possible.
 Returns all movies or shows where this person is in the cast or crew.
 }
 \details{
-The API methods wrapped are
-\itemize{
-\item \href{https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits}{/people/:id/movies}
-\item \href{https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits}{/people/:id/shows}
-}
-
 Note that as of 2019-09-30, there are two representations of \code{character[s]} and \code{job[s]}:
 One is a regular character variable, and the other is a list-column. The singular is
 \href{https://github.com/trakt/api-help/issues/74}{deprecated and only included for compatibility reasons}.
@@ -49,6 +48,9 @@ people_shows("kit-harington")
 }
 \seealso{
 \link{media_people}, for the other direction: Media that has people.
+
+Other people data: \code{\link{media_people}},
+  \code{\link{people_summary}}
 
 Other people data: \code{\link{media_people}},
   \code{\link{people_summary}}

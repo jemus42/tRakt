@@ -2,10 +2,6 @@
 #'
 #' Similar to [seasons_summary], but this function returns full data for
 #' a single season, i.e. all the episodes of the season
-#' @details
-#' This function accesses [this API method](https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show)
-#' at the endpoint `/shows/:show_id/seasons/:season_num`.
-#'
 #' @inheritParams trakt_api_common_parameters
 #' @param seasons `integer(1) [1L]`: The season(s) to get. Use `0` for specials.
 #' @inheritParams seasons_summary
@@ -18,7 +14,9 @@
 #' @importFrom tibble as_tibble
 #' @note If you want to quickly gather episode data of all available seasons,
 #' see [seasons_summary] and use the `episodes = TRUE` parameter.
-#' @family show data
+#' @family season data
+#' @family episode data
+#' @eval apiurl("seasons", "season")
 #' @examples
 #' \dontrun{
 #' seasons_season("breaking-bad", 1)

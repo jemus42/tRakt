@@ -3,9 +3,12 @@
 \name{seasons_summary}
 \alias{seasons_summary}
 \title{Get a show's seasons}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show}{shows/:id/seasons/seasons}
+}
 \usage{
-seasons_summary(id, extended = c("min", "full"), episodes = FALSE,
-  drop_specials = TRUE, drop_unaired = TRUE)
+seasons_summary(id, episodes = FALSE, drop_specials = TRUE,
+  drop_unaired = TRUE, extended = c("min", "full"))
 }
 \arguments{
 \item{id}{\code{character(1)}: The ID of the item requested. Preferably the
@@ -15,10 +18,6 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{id} values separately and the result is combined. See
 \code{vignette("finding-things", package = "tRakt")} for more details.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("finding-things", package = "tRakt")} for more details.}
-
 \item{episodes}{\code{logical(1) [FALSE]}: If \code{TRUE}, all episodes for each season
 are appended as a list-column, with the amount of variables depending on \code{extended}.}
 
@@ -26,6 +25,10 @@ are appended as a list-column, with the amount of variables depending on \code{e
 
 \item{drop_unaired}{\code{logical(1) [TRUE]}: Seasons without aired episodes are dropped.
 Only works if \code{extended} is \code{"full"}.}
+
+\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
+returns more variables and should generally only be used if required.
+See \code{vignette("finding-things", package = "tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
@@ -38,10 +41,6 @@ each season has. With \code{episodes == TRUE} and \code{extended == "full"}, thi
 is also suitable to retrieve all episode data for all seasons of a show with
 just a single API call.
 }
-\details{
-This function wraps \href{https://trakt.docs.apiary.io/#reference/seasons/summary/}{this API method}
-with the endpoint \code{/shows/:show_id/seasons}.
-}
 \examples{
 # Get just the season numbers and their IDs
 seasons_summary("breaking-bad", extended = "min")
@@ -52,7 +51,18 @@ seasons_summary("utopia", extended = "full", episodes = TRUE)
 }
 }
 \seealso{
-Other show data: \code{\link{episodes_summary}},
+Other season data: \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
   \code{\link{seasons_season}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}}, \code{\link{seasons_season}}
+
+Other summary methods: \code{\link{episodes_summary}},
+  \code{\link{movies_summary}},
+  \code{\link{people_summary}}, \code{\link{shows_summary}}
 }
-\concept{show data}
+\concept{episode data}
+\concept{season data}
+\concept{summary methods}
