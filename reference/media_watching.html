@@ -226,25 +226,24 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 3 x 6
-#&gt;   username    private user_name  vip   vip_ep user_slug  
-#&gt;   &lt;chr&gt;       &lt;lgl&gt;   &lt;chr&gt;      &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;      
-#&gt; 1 ScottDenson FALSE   ""         FALSE FALSE  scottdenson
-#&gt; 2 speedxy     FALSE   Eike Swat  FALSE FALSE  speedxy    
-#&gt; 3 pitkin2020  FALSE   Pitkin2020 FALSE FALSE  pitkin2020 </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 24 x 6
-#&gt;    username      private user_name           vip   vip_ep user_slug    
-#&gt;    &lt;chr&gt;         &lt;lgl&gt;   &lt;chr&gt;               &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;        
-#&gt;  1 mverteuil     FALSE   Matthew de Verteuil TRUE  FALSE  mverteuil    
-#&gt;  2 maragek       FALSE   ""                  FALSE FALSE  maragek      
-#&gt;  3 hellmer       FALSE   ""                  FALSE FALSE  hellmer      
-#&gt;  4 OllieC        FALSE   ""                  FALSE FALSE  olliec       
-#&gt;  5 arkique       FALSE   &lt;NA&gt;                FALSE FALSE  arkique      
-#&gt;  6 cfochs        FALSE   &lt;NA&gt;                FALSE FALSE  cfochs       
-#&gt;  7 kingbuzzo     FALSE   kingbuzzo           FALSE FALSE  kingbuzzo    
-#&gt;  8 Sparky33      FALSE   ""                  FALSE FALSE  sparky33     
-#&gt;  9 foxracing4500 FALSE   Chris Roscoe        FALSE FALSE  foxracing4500
-#&gt; 10 JohnZon       FALSE   ""                  FALSE FALSE  johnzon      
-#&gt; # … with 14 more rows</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 6
+#&gt;   username      private user_name  vip   vip_ep user_slug    
+#&gt;   &lt;chr&gt;         &lt;lgl&gt;   &lt;chr&gt;      &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;        
+#&gt; 1 anilchand8969 FALSE   anil chand FALSE FALSE  anilchand8969
+#&gt; 2 ScottDenson   FALSE   ""         FALSE FALSE  scottdenson  </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 27 x 6
+#&gt;    username   private user_name               vip   vip_ep user_slug 
+#&gt;    &lt;chr&gt;      &lt;lgl&gt;   &lt;chr&gt;                   &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;     
+#&gt;  1 mijoseluis FALSE   &lt;NA&gt;                    FALSE FALSE  mijoseluis
+#&gt;  2 nauseous   FALSE   &lt;NA&gt;                    FALSE FALSE  nauseous  
+#&gt;  3 rast1971   FALSE   Rast1971                FALSE FALSE  rast1971  
+#&gt;  4 felipones  FALSE   FelipeMassa             FALSE FALSE  felipones 
+#&gt;  5 mattx86    FALSE   &lt;NA&gt;                    FALSE FALSE  mattx86   
+#&gt;  6 BWS1978    TRUE    &lt;NA&gt;                    NA    NA     bws1978   
+#&gt;  7 xero246    FALSE   xero                    FALSE FALSE  xero246   
+#&gt;  8 Kan55      TRUE    &lt;NA&gt;                    NA    NA     kan55     
+#&gt;  9 Cowip      FALSE   ""                      FALSE FALSE  cowip     
+#&gt; 10 alphayax   FALSE   Yann Ponzoni (AlphaYaX) FALSE FALSE  alphayax  
+#&gt; # … with 17 more rows</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

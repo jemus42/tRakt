@@ -244,36 +244,36 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <span class='fu'>comments_recent</span>(<span class='st'>"shouts"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 31
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 epis… 254839 The ac… FALSE   FALSE          0 2019-10-12 20:45:07
-#&gt;  2 epis… 254837 This o… FALSE   FALSE          0 2019-10-12 20:43:48
-#&gt;  3 epis… 254832 "So, u… FALSE   FALSE          0 2019-10-12 20:33:59
-#&gt;  4 epis… 254831 If Shi… FALSE   FALSE          0 2019-10-12 20:16:39
-#&gt;  5 epis… 254830 One co… FALSE   FALSE          0 2019-10-12 20:07:15
-#&gt;  6 epis… 254827 awesom… FALSE   FALSE          0 2019-10-12 19:55:58
-#&gt;  7 movie 254836 "Occup… FALSE   FALSE          0 2019-10-12 20:41:23
-#&gt;  8 movie 254829 Painfu… FALSE   FALSE          0 2019-10-12 20:01:23
-#&gt;  9 movie 254828 Just a… FALSE   FALSE          0 2019-10-12 19:59:03
-#&gt; 10 movie 254826 It mus… FALSE   FALSE          0 2019-10-12 19:55:18
+#&gt;  1 movie 254853 Two si… FALSE   FALSE          0 2019-10-12 21:58:35
+#&gt;  2 movie 254852 Not te… FALSE   FALSE          0 2019-10-12 21:57:19
+#&gt;  3 movie 254850 So stu… FALSE   FALSE          0 2019-10-12 21:36:27
+#&gt;  4 movie 254843 kind o… FALSE   FALSE          0 2019-10-12 20:56:11
+#&gt;  5 epis… 254851 Whats … FALSE   FALSE          0 2019-10-12 21:55:41
+#&gt;  6 epis… 254847 Good i… FALSE   FALSE          0 2019-10-12 21:27:36
+#&gt;  7 epis… 254845 This w… FALSE   FALSE          0 2019-10-12 21:13:18
+#&gt;  8 epis… 254839 The ac… FALSE   FALSE          0 2019-10-12 20:45:07
+#&gt;  9 epis… 254837 This o… FALSE   FALSE          0 2019-10-12 20:43:48
+#&gt; 10 show  254849 It was… FALSE   FALSE          0 2019-10-12 21:32:29
 #&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
-#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, season &lt;int&gt;,
+#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, tvdb &lt;chr&gt;, season &lt;int&gt;,
 #&gt; #   episode &lt;int&gt;, episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;,
 #&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div><div class='input'>
 <span class='co'># Recently updated comments</span>
 <span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 31
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 movie  18799 Fury s… FALSE   FALSE          0 2014-12-26 09:14:36
-#&gt;  2 movie 254840 "**Thi… FALSE   TRUE           0 2019-10-12 20:52:43
-#&gt;  3 movie 248784 "I've … FALSE   TRUE           0 2019-09-02 08:12:58
-#&gt;  4 movie 254836 "Occup… FALSE   FALSE          0 2019-10-12 20:41:23
-#&gt;  5 show  254266 "Toxic… FALSE   FALSE          0 2019-10-09 23:14:42
-#&gt;  6 show  164795 I have… FALSE   FALSE          0 2018-03-05 13:45:48
-#&gt;  7 epis… 254841 "[7.3/… FALSE   TRUE           0 2019-10-12 20:53:50
-#&gt;  8 epis… 254423 Solid … FALSE   FALSE          0 2019-10-10 23:46:10
-#&gt;  9 epis… 254839 The ac… FALSE   FALSE          0 2019-10-12 20:45:07
-#&gt; 10 epis… 254837 This o… FALSE   FALSE          0 2019-10-12 20:43:48
+#&gt;  1 movie 254853 Two si… FALSE   FALSE          0 2019-10-12 21:58:35
+#&gt;  2 movie 254852 Not te… FALSE   FALSE          0 2019-10-12 21:57:19
+#&gt;  3 movie 254405 "_Joke… FALSE   FALSE          0 2019-10-10 21:41:12
+#&gt;  4 movie 254850 So stu… FALSE   FALSE          0 2019-10-12 21:36:27
+#&gt;  5 show  254438 Gets b… FALSE   FALSE          0 2019-10-11 01:05:23
+#&gt;  6 show  155417 I stum… FALSE   FALSE          0 2017-12-31 01:05:33
+#&gt;  7 show   19022 David … FALSE   FALSE          0 2013-04-02 05:52:06
+#&gt;  8 show  254407 "An ab… FALSE   FALSE          0 2019-10-10 21:59:55
+#&gt;  9 epis… 254851 Whats … FALSE   FALSE          0 2019-10-12 21:55:41
+#&gt; 10 epis… 254423 Solid … FALSE   FALSE          0 2019-10-10 23:46:10
 #&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,

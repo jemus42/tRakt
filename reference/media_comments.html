@@ -223,6 +223,12 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://trakt.docs.apiary.io/#reference/movies/comments/get-all-movie-comments'>movies/:id/comments/:sort</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/shows/comments/get-all-show-comments'>shows/:id/comments/:sort</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments'>shows/:id/seasons/:season/comments/:sort</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/episodes/comments/get-all-episode-comments'>shows/:id/seasons/:season/episodes/:episode/comments/:sort</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
@@ -239,7 +245,32 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </ul>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other comment methods: <code><a href='user_list_comments.html'>user_list_comments</a></code></p></div>
+    <div class='dont-index'><p>Other comment methods: <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
+<p>Other movie data: <code><a href='media_aliases.html'>media_aliases</a></code>,
+  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='movies_boxoffice.html'>movies_boxoffice</a></code>,
+  <code><a href='movies_related.html'>movies_related</a></code>,
+  <code><a href='movies_releases.html'>movies_releases</a></code>,
+  <code><a href='movies_summary.html'>movies_summary</a></code></p>
+<p>Other show data: <code><a href='media_aliases.html'>media_aliases</a></code>,
+  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='shows_next_episode.html'>shows_next_episode</a></code>,
+  <code><a href='shows_related.html'>shows_related</a></code>, <code><a href='shows_summary.html'>shows_summary</a></code></p>
+<p>Other season data: <code><a href='media_people.html'>media_people</a></code>,
+  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='seasons_season.html'>seasons_season</a></code>,
+  <code><a href='seasons_summary.html'>seasons_summary</a></code></p>
+<p>Other episode data: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
+  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='seasons_season.html'>seasons_season</a></code>,
+  <code><a href='seasons_summary.html'>seasons_summary</a></code>,
+  <code><a href='shows_next_episode.html'>shows_next_episode</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
@@ -280,6 +311,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#functions">Functions</a></li>
       <li><a href="#see-also">See also</a></li>

@@ -181,7 +181,7 @@ as receiving a quick overview of a show/movie.</p>
   <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
 
 <span class='fu'>search_id</span>(<span class='no'>id</span>, <span class='kw'>id_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"trakt"</span>, <span class='st'>"imdb"</span>, <span class='st'>"tmdb"</span>, <span class='st'>"tvdb"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movie"</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -274,6 +274,10 @@ a <code>Trakt ID</code>.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results'>search/:type?query=</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results'>search/:id_type/:id?type=</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble</a> containing <code>n_results</code> results.
@@ -290,10 +294,6 @@ in turn depends on the value of <code>extended</code>.
 See also the
 <a href='https://trakt.docs.apiary.io/#reference/search'>API reference here</a> for
 which fields of the item metadata are searched by default.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p>Other API-basics: <code><a href='trakt_credentials.html'>trakt_credentials</a></code>,
-  <code><a href='trakt_get_token.html'>trakt_get_token</a></code>, <code><a href='trakt_get.html'>trakt_get</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A show</span>
@@ -334,9 +334,9 @@ which fields of the item metadata are searched by default.</p>
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
-      <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 
