@@ -10,10 +10,9 @@
 #' @examples
 #' # Get liked lists
 #' if (FALSE) {
-#' user_likes("lists")
+#'   user_likes("lists")
 #' }
 user_likes <- function(type = c("comments", "lists")) {
-
   type <- check_types(type, several.ok = FALSE, possible_types = c("comments", "lists"))
 
   url <- build_trakt_url("users", "likes", type)

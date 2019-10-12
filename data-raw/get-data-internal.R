@@ -10,7 +10,7 @@ library(stringr)
 trakt_networks <- trakt_get("networks") %>%
   mutate(
     name_clean = str_to_lower(name) %>%
-           str_trim("both")
+      str_trim("both")
   ) %>%
   as_tibble()
 
@@ -20,7 +20,7 @@ use_data(trakt_networks, overwrite = TRUE)
 trakt_languages <- bind_rows(
   trakt_get("languages/movies") %>% mutate(type = "movies"),
   trakt_get("languages/shows") %>% mutate(type = "shows")
-  ) %>%
+) %>%
   arrange(code) %>%
   as_tibble()
 
@@ -30,7 +30,7 @@ use_data(trakt_languages, overwrite = TRUE)
 trakt_genres <- bind_rows(
   trakt_get("genres/movies") %>% mutate(type = "movies"),
   trakt_get("genres/shows") %>% mutate(type = "shows")
-  ) %>%
+) %>%
   arrange(slug) %>%
   as_tibble()
 
@@ -40,7 +40,7 @@ use_data(trakt_genres, overwrite = TRUE)
 trakt_countries <- bind_rows(
   trakt_get("countries/movies") %>% mutate(type = "movies"),
   trakt_get("countries/shows") %>% mutate(type = "shows")
-  ) %>%
+) %>%
   arrange(code) %>%
   as_tibble()
 

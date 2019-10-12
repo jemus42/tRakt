@@ -40,8 +40,10 @@ check_username <- function(user, validate = FALSE) {
 #' @noRd
 #' @importFrom dplyr case_when
 check_types <- function(type, several.ok = TRUE,
-                        possible_types = c("movie", "show", "season",
-                                           "episode", "person")) {
+                        possible_types = c(
+                          "movie", "show", "season",
+                          "episode", "person"
+                        )) {
   if (is.null(type)) {
     return(NULL)
   }
@@ -139,8 +141,10 @@ check_filter_arg <- function(filter,
     if (grepl(x = filter, pattern = "(^[1-9]{1,2}-[1-9]{1,3}$)|((^[1-9]{1,2}$)|(^100$))")) {
       filter
     } else {
-      warning("'ratings' must be interpretable as integer range or single integer ",
-              "between 1 and 100")
+      warning(
+        "'ratings' must be interpretable as integer range or single integer ",
+        "between 1 and 100"
+      )
     }
   }
   if (filter_type == "genres") {
@@ -182,7 +186,6 @@ check_filter_arg <- function(filter,
 #' @importFrom purrr map_chr
 #' @noRd
 check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
-
   filter <- as.vector(str_split(filter, ",", simplify = TRUE))
 
   clean_filter <- str_to_lower(filter) %>%
@@ -191,7 +194,7 @@ check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
   clean_filter_ok <- str_trim(filter_ok, "both") %>%
     str_to_lower()
 
-  filter <- map_chr(clean_filter, ~{
+  filter <- map_chr(clean_filter, ~ {
     matches <- .x %in% clean_filter_ok
 
     if (!matches) {
