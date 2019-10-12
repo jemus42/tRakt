@@ -194,19 +194,22 @@ See <code><a href='../articles/finding-things.html'>vignette("finding-things", p
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person'>people/:id</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
 (defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
 If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>This function wraps the API method
-<a href='https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person'>/people/:id</a>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other people data: <code><a href='media_people.html'>media_people</a></code>,
-  <code><a href='people_media.html'>people_media</a></code></p></div>
+  <code><a href='people_media.html'>people_media</a></code></p>
+<p>Other summary methods: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
+  <code><a href='movies_summary.html'>movies_summary</a></code>,
+  <code><a href='seasons_summary.html'>seasons_summary</a></code>,
+  <code><a href='shows_summary.html'>shows_summary</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A single person's extended information</span>
@@ -225,8 +228,8 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>

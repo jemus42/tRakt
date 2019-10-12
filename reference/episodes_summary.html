@@ -205,26 +205,31 @@ See <code><a href='../articles/finding-things.html'>vignette("finding-things", p
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://trakt.docs.apiary.io/#reference/episodes/summary/get-a-single-episode-for-a-show'>shows/:id/seasons/:season/episodes/:episode</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
 (defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
 If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>This function wraps <a href='https://trakt.docs.apiary.io/#reference/episodes/summary'>this API method</a>
-with the endpoint <code>/shows/:id/seasons/episodes/:episode</code>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other show data: <code><a href='seasons_season.html'>seasons_season</a></code>,
-  <code><a href='seasons_summary.html'>seasons_summary</a></code></p></div>
+    <div class='dont-index'><p>Other episode data: <code><a href='media_people.html'>media_people</a></code>,
+  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='seasons_season.html'>seasons_season</a></code>,
+  <code><a href='seasons_summary.html'>seasons_summary</a></code></p>
+<p>Other summary methods: <code><a href='movies_summary.html'>movies_summary</a></code>,
+  <code><a href='people_summary.html'>people_summary</a></code>,
+  <code><a href='seasons_summary.html'>seasons_summary</a></code>,
+  <code><a href='shows_summary.html'>shows_summary</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Get just this one episode with its ratings, votes, etc.</span>
 <span class='fu'>episodes_summary</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 17
 #&gt;   id    season episode title number_abs overview rating votes comment_count
 #&gt;   &lt;chr&gt;  &lt;int&gt;   &lt;int&gt; &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;int&gt;         &lt;int&gt;
-#&gt; 1 brea…      1       1 Pilot          1 When an…   8.35  7095            26
+#&gt; 1 brea…      1       1 Pilot          1 When an…   8.35  7098            26
 #&gt; # … with 8 more variables: first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;,
 #&gt; #   available_translations &lt;list&gt;, runtime &lt;int&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;,
 #&gt; #   imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
@@ -233,8 +238,8 @@ with the endpoint <code>/shows/:id/seasons/episodes/:episode</code>.</p>
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>

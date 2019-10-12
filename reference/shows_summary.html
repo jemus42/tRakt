@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get all comments of a thing — media_comments • tRakt</title>
+<title>Get a single show — shows_summary • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,8 +42,8 @@
 
 
 
-<meta property="og:title" content="Get all comments of a thing — media_comments" />
-<meta property="og:description" content="Get all comments of a thing" />
+<meta property="og:title" content="Get a single show — shows_summary" />
+<meta property="og:description" content="Get a single show" />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -159,27 +159,16 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get all comments of a thing</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/movies_comments.R'><code>R/movies_comments.R</code></a></small>
-    <div class="hidden name"><code>media_comments.Rd</code></div>
+    <h1>Get a single show</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/media_summary.R'><code>R/media_summary.R</code></a></small>
+    <div class="hidden name"><code>shows_summary.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Get all comments of a thing</p>
+    <p>Get a single show</p>
     </div>
 
-    <pre class="usage"><span class='fu'>movies_comments</span>(<span class='no'>id</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>, <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>, <span class='st'>"replies"</span>),
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)
-
-<span class='fu'>shows_comments</span>(<span class='no'>id</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>, <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>, <span class='st'>"replies"</span>),
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)
-
-<span class='fu'>seasons_comments</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>, <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>,
-  <span class='st'>"replies"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)
-
-<span class='fu'>episodes_comments</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>,
-  <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>, <span class='st'>"replies"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
-  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)</pre>
+    <pre class="usage"><span class='fu'>shows_summary</span>(<span class='no'>id</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -194,94 +183,55 @@ Can also be of length greater than 1, in which case the function is called on al
 <code><a href='../articles/finding-things.html'>vignette("finding-things", package = "tRakt")</a></code> for more details.</p></td>
     </tr>
     <tr>
-      <th>sort</th>
-      <td><p><code>character(1) ["newest"]</code>: Comment sort order, one of
-"newest", "oldest", "likes" or "replies".</p></td>
-    </tr>
-    <tr>
       <th>extended</th>
       <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
 See <code><a href='../articles/finding-things.html'>vignette("finding-things", package = "tRakt")</a></code> for more details.</p></td>
     </tr>
-    <tr>
-      <th>limit</th>
-      <td><p><code>integer(1) [10L]</code>: Number of items to return. Must be greater
-than <code>0</code> and will be coerced via <code><a href='https://rdrr.io/r/base/integer.html'>as.integer()</a></code>.</p></td>
-    </tr>
-    <tr>
-      <th>season</th>
-      <td><p><code>integer(1) [1L]</code>: The season and eisode number. If longer,
-e.g. <code>1:5</code>, the function is vectorized and the output will be
-combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
-    </tr>
-    <tr>
-      <th>episode</th>
-      <td><p><code>integer(1) [1L]</code>: The season and eisode number. If longer,
-e.g. <code>1:5</code>, the function is vectorized and the output will be
-combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
-    </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show'>shows/:id</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
 (defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
 If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
-    <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
-
-    
-<ul>
-<li><p><code>movies_comments</code>: Get comments for a movie</p></li>
-<li><p><code>shows_comments</code>: Get comments for a movie</p></li>
-<li><p><code>seasons_comments</code>: Get comments for a season</p></li>
-<li><p><code>episodes_comments</code>: Get comments for an episode</p></li>
-</ul>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other comment methods: <code><a href='user_list_comments.html'>user_list_comments</a></code></p></div>
+    <div class='dont-index'><p>Other show data: <code><a href='media_people.html'>media_people</a></code>,
+  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='shows_related.html'>shows_related</a></code></p>
+<p>Other summary methods: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
+  <code><a href='movies_summary.html'>movies_summary</a></code>,
+  <code><a href='people_summary.html'>people_summary</a></code>,
+  <code><a href='seasons_summary.html'>seasons_summary</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_comments</span>(<span class='fl'>193972</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 16
-#&gt;        id comment spoiler review parent_id created_at         
-#&gt;     &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 254777 I was … FALSE   FALSE          0 2019-10-12 16:41:10
-#&gt;  2 254536 It's a… TRUE    FALSE          0 2019-10-11 15:20:59
-#&gt;  3 252661 how do… FALSE   FALSE          0 2019-09-30 00:56:09
-#&gt;  4 252389 "One t… FALSE   FALSE          0 2019-09-28 18:33:46
-#&gt;  5 252274 Woody … FALSE   FALSE          0 2019-09-28 00:37:38
-#&gt;  6 252267 Can't … FALSE   FALSE          0 2019-09-27 22:32:29
-#&gt;  7 251391 "that … FALSE   FALSE          0 2019-09-21 16:42:50
-#&gt;  8 250960 i grew… FALSE   FALSE          0 2019-09-18 00:26:55
-#&gt;  9 250798 It's v… FALSE   FALSE          0 2019-09-16 16:48:08
-#&gt; 10 250646 "It's … FALSE   FALSE          0 2019-09-15 16:31:24
-#&gt; # … with 10 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='fu'>shows_comments</span>(<span class='fl'>46241</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 16
-#&gt;        id comment spoiler review parent_id created_at         
-#&gt;     &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1   4528 The br… FALSE   FALSE          0 2014-12-27 21:04:43
-#&gt;  2  11599 Televi… FALSE   FALSE          0 2013-02-24 18:13:58
-#&gt;  3  39755 Holy h… FALSE   FALSE          0 2015-03-11 07:54:07
-#&gt;  4 143277 "After… FALSE   FALSE          0 2017-10-01 18:42:14
-#&gt;  5  34510 It's O… FALSE   FALSE          0 2014-07-31 22:21:49
-#&gt;  6  42940 "Looke… FALSE   FALSE          0 2015-05-06 17:25:07
-#&gt;  7  11140 I like… FALSE   FALSE          0 2014-12-13 17:56:40
-#&gt;  8 185427 "In Fe… FALSE   FALSE          0 2018-08-01 12:50:58
-#&gt;  9  71014 Watch … FALSE   FALSE          0 2016-02-10 04:16:54
-#&gt; 10  38229 "This … FALSE   FALSE          0 2015-02-09 07:47:51
-#&gt; # … with 10 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='fu'>seasons_comments</span>(<span class='fl'>46241</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>episodes_comments</span>(<span class='fl'>46241</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+    <pre class="examples"><div class='input'><span class='co'># Minimal info by default</span>
+<span class='fu'>shows_summary</span>(<span class='st'>"breaking-bad"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+#&gt;   title         year trakt slug         tvdb  imdb      tmdb 
+#&gt;   &lt;chr&gt;        &lt;int&gt; &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;
+#&gt; 1 Breaking Bad  2008 1388  breaking-bad 81189 tt0903747 1396 </div><div class='input'><span class='co'># \dontrun{</span>
+<span class='co'># More information</span>
+<span class='fu'>shows_summary</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 27
+#&gt;   title  year overview first_aired         runtime certification network country
+#&gt;   &lt;chr&gt; &lt;int&gt; &lt;chr&gt;    &lt;dttm&gt;                &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;   &lt;chr&gt;  
+#&gt; 1 Brea…  2008 Walter … 2008-01-21 02:00:00      45 TV-MA         AMC     us     
+#&gt; # … with 19 more variables: trailer &lt;chr&gt;, homepage &lt;chr&gt;, status &lt;chr&gt;,
+#&gt; #   rating &lt;dbl&gt;, votes &lt;int&gt;, comment_count &lt;int&gt;, updated_at &lt;dttm&gt;,
+#&gt; #   language &lt;chr&gt;, available_translations &lt;list&gt;, genres &lt;list&gt;,
+#&gt; #   aired_episodes &lt;int&gt;, airs_day &lt;chr&gt;, airs_time &lt;chr&gt;, airs_timezone &lt;chr&gt;,
+#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#functions">Functions</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>

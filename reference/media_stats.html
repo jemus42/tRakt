@@ -202,52 +202,69 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats'>shows/:id/stats</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats'>movies/:id/stats</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats'>shows/:id/seasons/:season/stats</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats'>shows/:id/seasons/:season/episodes/:episode/stats</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
 (defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
 If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <p>The API methods for these functions are:</p><ul>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats'>/movies/:id/stats</a></p></li>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats'>/shows/:id/stats</a></p></li>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats'>/shows/:id/seasons/:season/stats</a></p></li>
-<li><p><a href='https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats'>/shows/:id/seasons/:season/episodes/:episode/stats</a></p></li>
-</ul>
-
+    <div class='dont-index'><p>Other show data: <code><a href='media_people.html'>media_people</a></code>,
+  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='shows_related.html'>shows_related</a></code>,
+  <code><a href='shows_summary.html'>shows_summary</a></code></p>
+<p>Other movie data: <code><a href='media_people.html'>media_people</a></code>,
+  <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='movies_boxoffice.html'>movies_boxoffice</a></code>,
+  <code><a href='movies_related.html'>movies_related</a></code>,
+  <code><a href='movies_releases.html'>movies_releases</a></code>,
+  <code><a href='movies_summary.html'>movies_summary</a></code></p>
+<p>Other season data: <code><a href='media_people.html'>media_people</a></code>,
+  <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='seasons_season.html'>seasons_season</a></code>,
+  <code><a href='seasons_summary.html'>seasons_summary</a></code></p>
+<p>Other episode data: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
+  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='seasons_season.html'>seasons_season</a></code>,
+  <code><a href='seasons_summary.html'>seasons_summary</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Stats for a movie</span>
 <span class='fu'>movies_stats</span>(<span class='st'>"inception-2010"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 8
 #&gt;   watchers  plays collectors comments lists votes type   id            
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         
-#&gt; 1   287945 383927     190598      114 42557 51649 movies inception-2010</div><div class='input'><span class='co'># \dontrun{</span>
+#&gt; 1   288190 384254     190801      114 42576 51675 movies inception-2010</div><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># Stats for multiple shows at once</span>
 <span class='fu'>shows_stats</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"breaking-bad"</span>, <span class='st'>"game-of-thrones"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 9
 #&gt;   watchers   plays collectors collected_episo… comments  lists votes type  id   
 #&gt;      &lt;int&gt;   &lt;int&gt;      &lt;int&gt;            &lt;int&gt;    &lt;int&gt;  &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt;
-#&gt; 1   472836  2.88e7     409332         20347742      426 130778 69476 shows brea…
-#&gt; 2   933084  5.70e7    1298800         70343369      343 271623 99454 shows game…</div><div class='input'>
+#&gt; 1   473658  2.89e7     409746         20369193      426 130827 69503 shows brea…
+#&gt; 2   935047  5.72e7    1299500         70386779      343 271689 99503 shows game…</div><div class='input'>
 <span class='co'># Stats for multiple episodes</span>
 <span class='fu'>episodes_stats</span>(<span class='st'>"futurama"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>7</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 9
 #&gt;   watchers  plays collectors comments lists votes season episode id      
 #&gt;      &lt;int&gt;  &lt;int&gt;      &lt;int&gt;    &lt;int&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;   &lt;int&gt; &lt;chr&gt;   
-#&gt; 1    98503 131338     143213        2   176  2037      1       1 futurama
-#&gt; 2    93246 124329     142733        1   116  1591      1       2 futurama
-#&gt; 3    91992 122657     142754        0   106  1457      1       3 futurama
-#&gt; 4    90678 120904     142152        0   107  1297      1       4 futurama
-#&gt; 5    89602 119470     142372        1   108  1255      1       5 futurama
-#&gt; 6    89334 119113     142022        0   104  1230      1       6 futurama
-#&gt; 7    88376 117835     141883        0   103  1147      1       7 futurama</div><div class='input'># }
+#&gt; 1    98656 131542     143317        2   176  2037      1       1 futurama
+#&gt; 2    93368 124491     142838        1   116  1591      1       2 futurama
+#&gt; 3    92114 122819     142858        0   106  1457      1       3 futurama
+#&gt; 4    90795 121060     142256        0   107  1298      1       4 futurama
+#&gt; 5    89718 119625     142476        1   108  1255      1       5 futurama
+#&gt; 6    89456 119275     142127        0   104  1230      1       6 futurama
+#&gt; 7    88503 118004     141983        0   103  1147      1       7 futurama</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
+      <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

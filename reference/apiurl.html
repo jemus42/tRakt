@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get a show's seasons — seasons_summary • tRakt</title>
+<title>Get a formatted API url for an endpoint — apiurl • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,11 +42,8 @@
 
 
 
-<meta property="og:title" content="Get a show's seasons — seasons_summary" />
-<meta property="og:description" content="Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes
-each season has. With episodes == TRUE and extended == &quot;full&quot;, this function
-is also suitable to retrieve all episode data for all seasons of a show with
-just a single API call." />
+<meta property="og:title" content="Get a formatted API url for an endpoint — apiurl" />
+<meta property="og:description" content="Get a formatted API url for an endpoint" />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -162,104 +159,40 @@ just a single API call." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get a show's seasons</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/seasons_summary.R'><code>R/seasons_summary.R</code></a></small>
-    <div class="hidden name"><code>seasons_summary.Rd</code></div>
+    <h1>Get a formatted API url for an endpoint</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/utils-misc.R'><code>R/utils-misc.R</code></a></small>
+    <div class="hidden name"><code>apiurl.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Get details for a show's seasons, e.g. how many seasons there are and  how many epsiodes
-each season has. With <code>episodes == TRUE</code> and <code>extended == "full"</code>, this function
-is also suitable to retrieve all episode data for all seasons of a show with
-just a single API call.</p>
+    <p>Get a formatted API url for an endpoint</p>
     </div>
 
-    <pre class="usage"><span class='fu'>seasons_summary</span>(<span class='no'>id</span>, <span class='kw'>episodes</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>drop_specials</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
-  <span class='kw'>drop_unaired</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+    <pre class="usage"><span class='fu'>apiurl</span>(<span class='no'>section</span>, <span class='no'>method</span>, <span class='kw'>prefix</span> <span class='kw'>=</span> <span class='st'>"@source "</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>id</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
-<code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
-or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
-Can also be of length greater than 1, in which case the function is called on all
-<code>id</code> values separately and the result is combined. See
-<code><a href='../articles/finding-things.html'>vignette("finding-things", package = "tRakt")</a></code> for more details.</p></td>
+      <th>section</th>
+      <td><p>E.g. "movies"</p></td>
     </tr>
     <tr>
-      <th>episodes</th>
-      <td><p><code>logical(1) [FALSE]</code>: If <code>TRUE</code>, all episodes for each season
-are appended as a list-column, with the amount of variables depending on <code>extended</code>.</p></td>
-    </tr>
-    <tr>
-      <th>drop_specials</th>
-      <td><p><code>logical(1) [TRUE]</code>: Special episodes (season 0) are dropped</p></td>
-    </tr>
-    <tr>
-      <th>drop_unaired</th>
-      <td><p><code>logical(1) [TRUE]</code>: Seasons without aired episodes are dropped.
-Only works if <code>extended</code> is <code>"full"</code>.</p></td>
-    </tr>
-    <tr>
-      <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
-returns more variables and should generally only be used if required.
-See <code><a href='../articles/finding-things.html'>vignette("finding-things", package = "tRakt")</a></code> for more details.</p></td>
+      <th>method</th>
+      <td><p>E.g. "summary"</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p><a href='https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show'>shows/:id/seasons/seasons</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
-(defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
-If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <p>Markdown-formatted url</p>
 
-    <div class='dont-index'><p>Other season data: <code><a href='media_people.html'>media_people</a></code>,
-  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='seasons_season.html'>seasons_season</a></code></p>
-<p>Other episode data: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
-  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
-  <code><a href='media_stats.html'>media_stats</a></code>, <code><a href='seasons_season.html'>seasons_season</a></code></p>
-<p>Other summary methods: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
-  <code><a href='movies_summary.html'>movies_summary</a></code>,
-  <code><a href='people_summary.html'>people_summary</a></code>, <code><a href='shows_summary.html'>shows_summary</a></code></p></div>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Get just the season numbers and their IDs</span>
-<span class='fu'>seasons_summary</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 4
-#&gt;   season trakt tvdb   tmdb 
-#&gt;    &lt;int&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;
-#&gt; 1      1 3950  30272  3572 
-#&gt; 2      2 3951  40719  3573 
-#&gt; 3      3 3952  171641 3575 
-#&gt; 4      4 3953  297361 3576 
-#&gt; 5      5 3954  490110 3578 </div><div class='input'><span class='co'># \dontrun{</span>
-<span class='co'># Get season numbers, ratings, votes, titles and other metadata as well as</span>
-<span class='co'># a list-column containing all episode data</span>
-<span class='fu'>seasons_summary</span>(<span class='st'>"utopia"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>, <span class='kw'>episodes</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 13
-#&gt;   season rating votes episode_count aired_episodes title overview
-#&gt;    &lt;int&gt;  &lt;dbl&gt; &lt;int&gt;         &lt;int&gt;          &lt;int&gt; &lt;chr&gt; &lt;chr&gt;   
-#&gt; 1      1   8.66   170             6              6 Seas… When a …
-#&gt; 2      2   8.22   122             6              6 Seas… It has …
-#&gt; # … with 6 more variables: first_aired &lt;dttm&gt;, network &lt;chr&gt;, episodes &lt;list&gt;,
-#&gt; #   trakt &lt;chr&gt;, tvdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'># }
-</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
