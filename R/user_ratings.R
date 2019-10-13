@@ -9,8 +9,7 @@
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @family user data
-#' @importFrom dplyr bind_cols
-#' @importFrom purrr set_names
+#' @importFrom dplyr bind_cols rename
 #' @examples
 #' \dontrun{
 #' user_ratings(user = "jemus42", "shows")
@@ -49,18 +48,18 @@ user_ratings <- function(user = getOption("trakt_username"),
 
   if (type == "shows") {
     response <- response %>%
-      select(-show) %>%
+      select(-"show") %>%
       bind_cols(unpack_show(response$show))
   }
 
   if (type == "seasons") {
     # Also keeping seasons and show object separate, see comment below
     response$season <- bind_cols(
-      response$season %>% select(-ids),
+      response$season %>% select(-"ids"),
       fix_ids(response$season$ids)
     ) %>%
       as_tibble() %>%
-      rename(season = number) %>%
+      rename(season = "number") %>%
       fix_datetime()
 
     response$show <- unpack_show(response$show)
@@ -71,11 +70,11 @@ user_ratings <- function(user = getOption("trakt_username"),
     # the result is still data.frame-ish enough and duplicate names
     # don't cause headaches that way. Not perfectly tidy, but tidy enough.
     response$episode <- bind_cols(
-      response$episode %>% select(-ids),
+      response$episode %>% select(-"ids"),
       fix_ids(response$episode$ids)
     ) %>%
       as_tibble() %>%
-      set_names(., sub("number", "episode", names(.)))
+      rename(episode = "number")
 
     response$show <- unpack_show(response$show)
   }

@@ -67,7 +67,7 @@ user_collection <- function(user = getOption("trakt_username"),
       ) %>%
       as_tibble() %>%
       select(-"seasons", everything(), "seasons") %>%
-      mutate(seasons = map(seasons, as_tibble))
+      mutate(seasons = map(.data[["seasons"]], as_tibble))
 
     # I think importing tidyr for this alone is worth it, because
     # A list structure this big and deeply nested is just wrong:
@@ -83,7 +83,7 @@ user_collection <- function(user = getOption("trakt_username"),
         rename(season = "number") %>%
         tidyr::unnest(cols = "episodes") %>%
         rename(episode = "number") %>%
-        mutate(collected_at = ymd_hms(collected_at))
+        mutate(collected_at = ymd_hms(.data[["collected_at"]]))
     }
   } else if (type == "movies") {
     response <- unpack_movie(response)

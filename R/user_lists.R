@@ -31,12 +31,12 @@ user_lists <- function(user = getOption("trakt_username"), extended = c("min", "
   }
 
   response %>%
-    select(-user, -ids) %>%
+    select(-"user", -"ids") %>%
     bind_cols(
       response %>%
-        pull(ids),
+        pull(.data[["ids"]]),
       response %>%
-        pull(user) %>%
+        pull(.data[["user"]]) %>%
         unpack_user()
     ) %>%
     fix_tibble_response()

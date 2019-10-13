@@ -18,7 +18,8 @@
 #' @eval apiurl("seasons", "summary")
 #' @importFrom dplyr select
 #' @importFrom rlang has_name is_empty
-#' @importFrom purrr map map_df set_names
+#' @importFrom purrr map map_df
+#' @importFrom dplyr rename
 #' @examples
 #' # Get just the season numbers and their IDs
 #' seasons_summary("breaking-bad", extended = "min")
@@ -70,10 +71,10 @@ seasons_summary <- function(id, episodes = FALSE,
   if (has_name(response, "episodes")) {
     response$episodes <- map(response$episodes, function(episodes) {
       episodes %>%
-        select(-ids) %>%
+        select(-"ids") %>%
         cbind(fix_ids(episodes$ids)) %>%
         fix_tibble_response() %>%
-        set_names(., sub("number", "episode", names(.)))
+        rename(episode = "number")
     })
   }
 

@@ -332,7 +332,7 @@ flatten_media_object <- function(x, type) {
     res <- bind_cols(
       pluck(x, "show") %>% unpack_show(),
       pluck(x, "episode") %>%
-        select(-ids) %>%
+        select(-"ids") %>%
         rename(episode_title = "title"),
       pluck(x, "episode", "ids") %>%
         fix_ids() %>%

@@ -1,18 +1,7 @@
 # nocov start
-
 .onLoad <- function(...) {
   trakt_credentials()
 }
-
-# Please R CMD check
-# (Should be fixed by being better at tidyeval)
-globalVariables(c(
-  "ids", "airs", "movie", "shows", "show", "episode", "number_abs",
-  "number", "seasons", "episodes", "collected_at", ".", "person",
-  "related_to", "query", "years", "genres", "languages", "countries",
-  "runtimes", "ratings", "certifications", "networks", "status", "trakt",
-  "name", "slug", "title"
-))
 
 #' The tRakt client ID for this particular app
 #' @keywords internal

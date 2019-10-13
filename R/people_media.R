@@ -46,7 +46,7 @@ people_media <- function(type = c("shows", "movies"), id,
         unpack_show() %>%
         bind_cols(
           response$cast %>%
-            select(-show)
+            select(-"show")
         ) %>%
         as_tibble()
     }
