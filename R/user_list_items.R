@@ -9,6 +9,7 @@
 #'
 #' @export
 #' @family list methods
+#' @eval apiurl("users", "list items")
 #' @importFrom dplyr select one_of filter bind_cols arrange matches
 #' @importFrom purrr map_df
 #' @importFrom rlang is_empty

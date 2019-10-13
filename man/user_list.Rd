@@ -8,7 +8,8 @@ user_list(user = getOption("trakt_username"), list_id,
   extended = c("min", "full"))
 }
 \arguments{
-\item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
+\item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
+\code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 

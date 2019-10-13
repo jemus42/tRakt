@@ -3,12 +3,16 @@
 \name{user_list_items}
 \alias{user_list_items}
 \title{Get a user's list's items}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/users/list-items/get-items-on-a-custom-list}{users/:id/lists/:list_id/items/:type}
+}
 \usage{
 user_list_items(user = getOption("trakt_username"), list_id,
   type = NULL, extended = c("min", "full"))
 }
 \arguments{
-\item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
+\item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
+\code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 

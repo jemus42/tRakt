@@ -94,6 +94,8 @@ trakt_auto_lists <- function(list_type = c(
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @inherit trakt_api_common_parameters return
 #' @export
+#' @eval apiurl("movies", "popular")
+#' @family movie data
 #' @family dynamic lists
 #' @examples
 #' \dontrun{
@@ -116,6 +118,9 @@ movies_popular <- function(limit = 10,
 }
 
 #' @rdname popular_media
+#' @eval apiurl("shows", "popular")
+#' @family shows data
+#' @family dynamic lists
 #' @export
 shows_popular <- function(limit = 10,
                           extended = c("min", "full"),
@@ -144,6 +149,8 @@ shows_popular <- function(limit = 10,
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @inherit trakt_api_common_parameters return
 #' @export
+#' @eval apiurl("movies", "trending")
+#' @family movie data
 #' @family dynamic lists
 movies_trending <- function(limit = 10,
                             extended = c("min", "full"),
@@ -161,6 +168,9 @@ movies_trending <- function(limit = 10,
 }
 
 #' @rdname trending_media
+#' @eval apiurl("shows", "trending")
+#' @family shows data
+#' @family dynamic lists
 #' @export
 shows_trending <- function(limit = 10,
                            extended = c("min", "full"),
@@ -189,6 +199,8 @@ shows_trending <- function(limit = 10,
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @inherit trakt_api_common_parameters return
 #' @export
+#' @eval apiurl("movies", "anticipated")
+#' @family movie data
 #' @family dynamic lists
 movies_anticipated <- function(limit = 10,
                                extended = c("min", "full"),
@@ -207,6 +219,9 @@ movies_anticipated <- function(limit = 10,
 
 #' @rdname anticipated_media
 #' @export
+#' @eval apiurl("shows", "anticipated")
+#' @family shows data
+#' @family dynamic lists
 #' @examples
 #' \dontrun{
 #' # Get 15 the most anticipated upcoming shows on Netflix that air this year
@@ -240,6 +255,8 @@ shows_anticipated <- function(limit = 10,
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @inherit trakt_api_common_parameters return
 #' @export
+#' @eval apiurl("movies", "played")
+#' @family movie data
 #' @family dynamic lists
 movies_played <- function(limit = 10, extended = c("min", "full"),
                           period = c("weekly", "monthly", "yearly", "all"),
@@ -260,6 +277,9 @@ movies_played <- function(limit = 10, extended = c("min", "full"),
 }
 
 #' @rdname played_media
+#' @eval apiurl("shows", "played")
+#' @family show data
+#' @family dynamic lists
 #' @export
 shows_played <- function(limit = 10, extended = c("min", "full"),
                          period = c("weekly", "monthly", "yearly", "all"),
@@ -291,6 +311,8 @@ shows_played <- function(limit = 10, extended = c("min", "full"),
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @inherit trakt_api_common_parameters return
 #' @export
+#' @eval apiurl("movies", "watched")
+#' @family movie data
 #' @family dynamic lists
 movies_watched <- function(limit = 10, extended = c("min", "full"),
                            period = c("weekly", "monthly", "yearly", "all"),
@@ -311,6 +333,9 @@ movies_watched <- function(limit = 10, extended = c("min", "full"),
 }
 
 #' @rdname watched_media
+#' @eval apiurl("shows", "watched")
+#' @family shows data
+#' @family dynamic lists
 #' @export
 shows_watched <- function(limit = 10, extended = c("min", "full"),
                           period = c("weekly", "monthly", "yearly", "all"),
@@ -342,6 +367,8 @@ shows_watched <- function(limit = 10, extended = c("min", "full"),
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @inherit trakt_api_common_parameters return
 #' @export
+#' @eval apiurl("movies", "collected")
+#' @family movie data
 #' @family dynamic lists
 movies_collected <- function(limit = 10, extended = c("min", "full"),
                              period = c("weekly", "monthly", "yearly", "all"),
@@ -362,6 +389,9 @@ movies_collected <- function(limit = 10, extended = c("min", "full"),
 }
 
 #' @rdname collected_media
+#' @eval apiurl("shows", "collected")
+#' @family show data
+#' @family dynamic lists
 #' @export
 shows_collected <- function(limit = 10, extended = c("min", "full"),
                             period = c("weekly", "monthly", "yearly", "all"),
@@ -393,8 +423,9 @@ shows_collected <- function(limit = 10, extended = c("min", "full"),
 #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
 #' @inherit trakt_api_common_parameters return
 #' @export
-#' @family dynamic lists
-#' @note `shows_updates` and `movies_updates` do not support filters.
+#' @eval apiurl("movies", "updates")
+#' @family movie data
+#' @note `shows_updates()` and `movies_updates()` do not support filters.
 movies_updates <- function(limit = 10, extended = c("min", "full"),
                            start_date = Sys.Date() - 1) {
   start_date <- as.character(as.Date(start_date))
@@ -407,6 +438,8 @@ movies_updates <- function(limit = 10, extended = c("min", "full"),
 }
 
 #' @rdname updated_media
+#' @eval apiurl("shows", "updates")
+#' @family show data
 #' @export
 shows_updates <- function(limit = 10, extended = c("min", "full"),
                           start_date = Sys.Date() - 1) {

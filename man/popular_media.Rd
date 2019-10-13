@@ -5,6 +5,11 @@
 \alias{movies_popular}
 \alias{shows_popular}
 \title{Popular media}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies}{movies/popular}
+
+\href{https://trakt.docs.apiary.io/#reference/shows/popular/get-popular-shows}{shows/popular}
+}
 \usage{
 movies_popular(limit = 10, extended = c("min", "full"), query = NULL,
   years = NULL, genres = NULL, languages = NULL, countries = NULL,
@@ -105,9 +110,34 @@ movies_popular(languages = "de", years = c(2000, 2010))
 }
 }
 \seealso{
-Other dynamic lists: \code{\link{anticipated_media}},
+Other movie data: \code{\link{anticipated_media}},
   \code{\link{collected_media}},
+  \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_lists}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{media_watching}},
+  \code{\link{movies_boxoffice}},
+  \code{\link{movies_related}},
+  \code{\link{movies_releases}},
+  \code{\link{movies_summary}}, \code{\link{people_media}},
   \code{\link{played_media}}, \code{\link{trending_media}},
   \code{\link{updated_media}}, \code{\link{watched_media}}
+
+Other dynamic lists: \code{\link{anticipated_media}},
+  \code{\link{collected_media}},
+  \code{\link{lists_popular}}, \code{\link{played_media}},
+  \code{\link{trending_media}}, \code{\link{watched_media}}
+
+Other shows data: \code{\link{anticipated_media}},
+  \code{\link{trending_media}}, \code{\link{watched_media}}
+
+Other dynamic lists: \code{\link{anticipated_media}},
+  \code{\link{collected_media}},
+  \code{\link{lists_popular}}, \code{\link{played_media}},
+  \code{\link{trending_media}}, \code{\link{watched_media}}
 }
 \concept{dynamic lists}
+\concept{movie data}
+\concept{shows data}

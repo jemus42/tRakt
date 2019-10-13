@@ -8,6 +8,7 @@
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @family list methods
+#' @eval apiurl("users", "lists")
 #' @seealso [user_lists] for all lists a user has.
 #' @seealso [user_list_items] For the actual content of a list.
 #' @importFrom dplyr select pull bind_cols

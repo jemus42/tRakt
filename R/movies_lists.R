@@ -7,7 +7,6 @@
 #' @param sort `character(1) ["popular"]`: Sort lists by one of "popular", "likes",
 #'   "comments", "items", "added" or "updated".
 #' @inherit trakt_api_common_parameters return
-#' @family list methods
 #' @examples
 #' \dontrun{
 #' movies_lists("190430", type = "personal", limit = 5)
@@ -20,6 +19,8 @@ NULL
 
 #' @export
 #' @eval apiurl("movies", "lists")
+#' @family list methods
+#' @family movie data
 #' @describeIn media_lists Lists containing a movie.
 movies_lists <- function(id,
                          type = c("all", "personal", "official", "watchlists"),
@@ -43,6 +44,8 @@ movies_lists <- function(id,
 
 #' @export
 #' @eval apiurl("shows", "lists")
+#' @family list methods
+#' @family show data
 #' @describeIn media_lists Lists containing a show.
 shows_lists <- function(id,
                         type = c("all", "personal", "official", "watchlists"),
@@ -66,6 +69,8 @@ shows_lists <- function(id,
 
 #' @export
 #' @eval apiurl("seasons", "lists")
+#' @family list methods
+#' @family season data
 #' @describeIn media_lists Lists containing a season.
 seasons_lists <- function(id, season,
                           type = c("all", "personal", "official", "watchlists"),
@@ -89,6 +94,8 @@ seasons_lists <- function(id, season,
 
 #' @export
 #' @eval apiurl("episodes", "lists")
+#' @family list methods
+#' @family episode data
 #' @describeIn media_lists Lists containing an episode.
 episodes_lists <- function(id, season, episode,
                            type = c("all", "personal", "official", "watchlists"),
@@ -112,6 +119,8 @@ episodes_lists <- function(id, season, episode,
 }
 
 #' @export
+#' @family list methods
+#' @family people data
 #' @describeIn media_lists Lists containing a person.
 people_lists <- function(id,
                          type = c("all", "personal", "official", "watchlists"),

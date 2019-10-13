@@ -5,6 +5,8 @@
 #' @param type One of "comments", "lists".
 #' @inherit trakt_api_common_parameters return
 #' @export
+#' @family user data
+#' @eval apiurl("users", "likes")
 #' @importFrom purrr discard pluck
 #' @importFrom dplyr bind_cols
 #' @examples

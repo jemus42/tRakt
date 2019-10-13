@@ -1,15 +1,13 @@
 #' Get a user's profile
 #'
-#' @details
-#' The corresponding API methods is
-#' [`users/:id`](https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile).
-#'
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @note If the specified user is private, you need to be able to make an [authenticated
 #' request][trakt_credentials] and be friends with the user.
 #' @family user data
+#' @family summary methods
+#' @eval apiurl("users", "profile")
 #' @examples
 #' \dontrun{
 #' user_profile("sean")

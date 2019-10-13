@@ -3,12 +3,16 @@
 \name{user_watchlist}
 \alias{user_watchlist}
 \title{Get a user's watchlist}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist}{users/:id/watchlist/:type}
+}
 \usage{
 user_watchlist(user = getOption("trakt_username"), type = c("movies",
   "shows"), extended = c("min", "full"))
 }
 \arguments{
-\item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
+\item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
+\code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 
@@ -25,11 +29,7 @@ A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} par
 If there are no results (or the API is unreachable), an empty \code{tibble()} is returned.
 }
 \description{
-Retrieve a user's watchlisted shows or movies.
-}
-\details{
-This function wraps the API method
-\href{https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist}{/users/:id/watchlist/:type}.
+Get a user's watchlist
 }
 \examples{
 \dontrun{
@@ -39,7 +39,8 @@ user_watchlist(user = "sean")
 }
 \seealso{
 Other user data: \code{\link{user_collection}},
-  \code{\link{user_history}}, \code{\link{user_network}},
+  \code{\link{user_comments}}, \code{\link{user_history}},
+  \code{\link{user_likes}}, \code{\link{user_network}},
   \code{\link{user_profile}}, \code{\link{user_ratings}},
   \code{\link{user_stats}}, \code{\link{user_watched}}
 }

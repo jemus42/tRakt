@@ -7,6 +7,13 @@
 \alias{seasons_watching}
 \alias{episodes_watching}
 \title{Get who's watching a thing right now}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now}{movies/:id/watching}
+
+\href{https://trakt.docs.apiary.io/#reference/shows/watching/get-users-watching-right-now}{shows/:id/watching}
+
+\href{https://trakt.docs.apiary.io/#reference/episodes/watching/get-users-watching-right-now}{shows/:id/seasons/:season/episodes/:episode/watching}
+}
 \usage{
 movies_watching(id, extended = c("min", "full"))
 
@@ -64,3 +71,42 @@ seasons_watching("the-simpsons", season = 6)
 episodes_watching("the-simpsons", season = 6, episode = 12)
 }
 }
+\seealso{
+Other movie data: \code{\link{anticipated_media}},
+  \code{\link{collected_media}},
+  \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_lists}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{movies_boxoffice}},
+  \code{\link{movies_related}},
+  \code{\link{movies_releases}},
+  \code{\link{movies_summary}}, \code{\link{people_media}},
+  \code{\link{played_media}}, \code{\link{popular_media}},
+  \code{\link{trending_media}},
+  \code{\link{updated_media}}, \code{\link{watched_media}}
+
+Other show data: \code{\link{collected_media}},
+  \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_lists}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{people_media}}, \code{\link{played_media}},
+  \code{\link{shows_next_episode}},
+  \code{\link{shows_related}}, \code{\link{shows_summary}},
+  \code{\link{updated_media}}
+
+Other episode data: \code{\link{episodes_summary}},
+  \code{\link{media_comments}}, \code{\link{media_lists}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{seasons_season}},
+  \code{\link{seasons_summary}},
+  \code{\link{shows_next_episode}}
+}
+\concept{episode data}
+\concept{movie data}
+\concept{show data}

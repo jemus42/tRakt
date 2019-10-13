@@ -2,9 +2,6 @@
 #'
 #' For private users, an [authenticated request][trakt_credentials] is required.
 #'
-#' @details
-#' This function wraps the API method
-#' [`/users/:id/watched/:type`](https://trakt.docs.apiary.io/#reference/users/watched/get-watched).
 #' @inheritParams trakt_api_common_parameters
 #' @param noseasons `logical(1) [TRUE]`: Only for `type = "show"`: Exclude detailed season
 #' data from output. This is advisable if you do not need per-episode data and want to
@@ -12,6 +9,7 @@
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @family user data
+#' @eval apiurl("users", "watched")
 #' @importFrom dplyr bind_cols select matches everything
 #' @importFrom purrr pluck
 #' @importFrom rlang is_empty

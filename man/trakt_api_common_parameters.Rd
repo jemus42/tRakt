@@ -18,7 +18,8 @@ See \code{vignette("finding-things", package = "tRakt")} for more details.}
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
 functions, values \code{seasons} or \code{episodes} are also allowed.}
 
-\item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
+\item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
+\code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 
@@ -88,7 +89,5 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 These parameters are used extensively throughout this package as they are required
 for many API methods. Here there are all documented in one place, which is
 intended to make the individual function documentation more consistent.
-The additional sections below also expand on the way media items are identified,
-and what the \code{extended} parameter really does.
 }
 \keyword{internal}

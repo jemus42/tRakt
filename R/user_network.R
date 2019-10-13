@@ -2,14 +2,6 @@
 #'
 #' Get followers, followings or friends (the two-way relationship).
 #' @name user_network
-#' @details
-#' The corresponding API methods are described in
-#' [the API reference](https://trakt.docs.apiary.io/#reference/users/followers).
-#'
-#' The relevant endpoints for this function are:
-#' - `user_followers`: `users/:id/followers`
-#' - `user_following`: `users/:id/following`
-#' - `user_friends`: `users/:id/friends`
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @export
@@ -64,6 +56,7 @@ user_network <- function(relationship = c("friends", "followers", "following"),
 #' Get a user's followers
 #' @rdname user_network
 #' @export
+#' @eval apiurl("users", "followers")
 #' @examples
 #' \dontrun{
 #' user_followers(user = "sean")
@@ -75,6 +68,7 @@ user_followers <- function(user = getOption("trakt_user"), extended = "min") {
 #' Get a user's followings
 #' @rdname user_network
 #' @export
+#' @eval apiurl("users", "following")
 #' @examples
 #' \dontrun{
 #' user_following(user = "sean")
@@ -86,6 +80,7 @@ user_following <- function(user = getOption("trakt_user"), extended = "min") {
 #' Get a user's friends
 #' @rdname user_network
 #' @export
+#' @eval apiurl("users", "friends")
 #' @examples
 #' \dontrun{
 #' user_friends(user = "sean")

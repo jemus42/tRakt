@@ -3,8 +3,6 @@
 #' These parameters are used extensively throughout this package as they are required
 #' for many API methods. Here there are all documented in one place, which is
 #' intended to make the individual function documentation more consistent.
-#' The additional sections below also expand on the way media items are identified,
-#' and what the `extended` parameter really does.
 #'
 #' @name trakt_api_common_parameters
 #' @keywords internal
@@ -19,7 +17,8 @@
 #'   See `vignette("finding-things", package = "tRakt")` for more details.
 #' @param type `character(1)`: Either `"shows"` or `"movies"`. For season/episode-specific
 #'   functions, values `seasons` or `episodes` are also allowed.
-#' @param user `character(1)`: Target username. Defaults to `getOption("trakt_username")`.
+#' @param user `character(1)`: Target username (or `slug`). Defaults to
+#'   `getOption("trakt_username")`.
 #'   Can also be of length greater than 1, in which case the function is called on all
 #'   `user` values separately and the result is combined.
 #' @param period `character(1) ["weekly"]`: Which period to filter by. Possible values

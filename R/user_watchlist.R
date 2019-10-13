@@ -1,10 +1,5 @@
 #' Get a user's watchlist
 #'
-#' Retrieve a user's watchlisted shows or movies.
-#'
-#' @details
-#' This function wraps the API method
-#' [`/users/:id/watchlist/:type`](https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist).
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @export
@@ -12,6 +7,7 @@
 #' @importFrom tibble tibble
 #' @importFrom purrr map_df
 #' @family user data
+#' @eval apiurl("users", "watchlist")
 #' @examples
 #' \dontrun{
 #' # Defaults to movie watchlist and minimal info

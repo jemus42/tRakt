@@ -1,14 +1,12 @@
 #' Get a user's ratings
 #'
 #' Retrieve a user's media ratings
-#' @details
-#' This function wraps the API method
-#' [`/users/:id/ratings/:type/:rating`](https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings).
 #' @inheritParams trakt_api_common_parameters
 #' @param rating `integer(1) [NULL]`: Optional rating between `1` and `10` to filter by.
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @family user data
+#' @eval apiurl("users", "ratings")
 #' @importFrom dplyr bind_cols rename
 #' @examples
 #' \dontrun{

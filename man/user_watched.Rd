@@ -3,12 +3,16 @@
 \name{user_watched}
 \alias{user_watched}
 \title{Get a user's watched shows or movies}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/users/watched/get-watched}{users/:id/watched/:type}
+}
 \usage{
 user_watched(user = getOption("trakt_username"), type = c("shows",
   "movies"), noseasons = TRUE, extended = c("min", "full"))
 }
 \arguments{
-\item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
+\item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
+\code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 
@@ -31,10 +35,6 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 \description{
 For private users, an \link[=trakt_credentials]{authenticated request} is required.
 }
-\details{
-This function wraps the API method
-\href{https://trakt.docs.apiary.io/#reference/users/watched/get-watched}{/users/:id/watched/:type}.
-}
 \examples{
 \dontrun{
 # Use noseasons = TRUE to avoid receiving detailed season/episode data
@@ -43,7 +43,8 @@ user_watched(user = "sean", noseasons = TRUE)
 }
 \seealso{
 Other user data: \code{\link{user_collection}},
-  \code{\link{user_history}}, \code{\link{user_network}},
+  \code{\link{user_comments}}, \code{\link{user_history}},
+  \code{\link{user_likes}}, \code{\link{user_network}},
   \code{\link{user_profile}}, \code{\link{user_ratings}},
   \code{\link{user_stats}}, \code{\link{user_watchlist}}
 }

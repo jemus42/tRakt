@@ -3,13 +3,17 @@
 \name{user_ratings}
 \alias{user_ratings}
 \title{Get a user's ratings}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings}{users/:id/ratings/:type/:rating}
+}
 \usage{
 user_ratings(user = getOption("trakt_username"), type = c("movies",
   "seasons", "shows", "episodes"), rating = NULL, extended = c("min",
   "full"))
 }
 \arguments{
-\item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
+\item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
+\code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 
@@ -30,10 +34,6 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 \description{
 Retrieve a user's media ratings
 }
-\details{
-This function wraps the API method
-\href{https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings}{/users/:id/ratings/:type/:rating}.
-}
 \examples{
 \dontrun{
 user_ratings(user = "jemus42", "shows")
@@ -42,7 +42,8 @@ user_ratings(user = "sean", type = "movies")
 }
 \seealso{
 Other user data: \code{\link{user_collection}},
-  \code{\link{user_history}}, \code{\link{user_network}},
+  \code{\link{user_comments}}, \code{\link{user_history}},
+  \code{\link{user_likes}}, \code{\link{user_network}},
   \code{\link{user_profile}}, \code{\link{user_stats}},
   \code{\link{user_watched}}, \code{\link{user_watchlist}}
 }

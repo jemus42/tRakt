@@ -5,6 +5,11 @@
 \alias{movies_watched}
 \alias{shows_watched}
 \title{Most watched media}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/movies/watched/get-the-most-watched-movies}{movies/watched/:period}
+
+\href{https://trakt.docs.apiary.io/#reference/shows/watched/get-the-most-watched-shows}{shows/watched/:period}
+}
 \usage{
 movies_watched(limit = 10, extended = c("min", "full"),
   period = c("weekly", "monthly", "yearly", "all"), query = NULL,
@@ -104,9 +109,34 @@ the same additional variables besides the media information: \code{watcher_count
 }
 
 \seealso{
-Other dynamic lists: \code{\link{anticipated_media}},
+Other movie data: \code{\link{anticipated_media}},
   \code{\link{collected_media}},
+  \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_lists}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{media_watching}},
+  \code{\link{movies_boxoffice}},
+  \code{\link{movies_related}},
+  \code{\link{movies_releases}},
+  \code{\link{movies_summary}}, \code{\link{people_media}},
   \code{\link{played_media}}, \code{\link{popular_media}},
   \code{\link{trending_media}}, \code{\link{updated_media}}
+
+Other dynamic lists: \code{\link{anticipated_media}},
+  \code{\link{collected_media}},
+  \code{\link{lists_popular}}, \code{\link{played_media}},
+  \code{\link{popular_media}}, \code{\link{trending_media}}
+
+Other shows data: \code{\link{anticipated_media}},
+  \code{\link{popular_media}}, \code{\link{trending_media}}
+
+Other dynamic lists: \code{\link{anticipated_media}},
+  \code{\link{collected_media}},
+  \code{\link{lists_popular}}, \code{\link{played_media}},
+  \code{\link{popular_media}}, \code{\link{trending_media}}
 }
 \concept{dynamic lists}
+\concept{movie data}
+\concept{shows data}

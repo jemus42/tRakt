@@ -169,7 +169,7 @@ shows:
     url: https://trakt.docs.apiary.io/#reference/shows/anticipated/get-the-most-anticipated-shows
     endpoint: shows/anticipated
     implementation: shows_anticipated()
-  updated:
+  updates:
     url: https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows
     endpoint: shows/updates/:start_date
     implementation: shows_updates()
@@ -199,10 +199,10 @@ shows:
     implementation:
     authentication: yes
   watched progress:
-   url: https://trakt.docs.apiary.io/#reference/shows/watched-progress/get-show-watched-progress
-   endpoint: shows/:id/progress/watched
-   implementation: N/A
-   authentication: yes
+    url: https://trakt.docs.apiary.io/#reference/shows/watched-progress/get-show-watched-progress
+    endpoint: shows/:id/progress/watched
+    implementation: N/A
+    authentication: yes
   people:
     url: https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show
     endpoint: shows/:id/people

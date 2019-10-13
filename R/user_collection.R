@@ -15,6 +15,7 @@
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @family user data
+#' @eval apiurl("users", "collection")
 #' @importFrom lubridate ymd_hms
 #' @importFrom dplyr mutate select bind_cols rename everything
 #' @importFrom purrr map map_df pluck

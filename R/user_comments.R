@@ -9,6 +9,9 @@
 #'
 #' @inherit trakt_api_common_parameters return
 #' @export
+#' @eval apiurl("users", "comments")
+#' @family user data
+#' @family comment methods
 #' @importFrom dplyr select filter pull bind_cols
 #' @importFrom purrr map_df
 #' @importFrom rlang is_empty

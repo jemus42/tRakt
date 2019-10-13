@@ -13,6 +13,8 @@
 NULL
 
 #' @describeIn media_watching Who's watching a movie.
+#' @eval apiurl("movies", "watching")
+#' @family movie data
 #' @export
 movies_watching <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
@@ -24,6 +26,8 @@ movies_watching <- function(id, extended = c("min", "full")) {
 }
 
 #' @describeIn media_watching Who's watching a show.
+#' @eval apiurl("shows", "watching")
+#' @family show data
 #' @export
 shows_watching <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
@@ -35,6 +39,8 @@ shows_watching <- function(id, extended = c("min", "full")) {
 }
 
 #' @describeIn media_watching Who's watching a season.
+#' @eval apiurl("episodes", "watching")
+#' @family episode data
 #' @export
 seasons_watching <- function(id, season = 1L,
                              extended = c("min", "full")) {

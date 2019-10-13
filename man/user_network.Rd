@@ -6,6 +6,13 @@
 \alias{user_following}
 \alias{user_friends}
 \title{Get a user's social connections}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/users/followers/get-followers}{users/:id/followers}
+
+\href{https://trakt.docs.apiary.io/#reference/users/following/get-following}{users/:id/following}
+
+\href{https://trakt.docs.apiary.io/#reference/users/friends/get-friends}{users/:id/friends}
+}
 \usage{
 user_followers(user = getOption("trakt_user"), extended = "min")
 
@@ -14,7 +21,8 @@ user_following(user = getOption("trakt_user"), extended = "min")
 user_friends(user = getOption("trakt_user"), extended = "min")
 }
 \arguments{
-\item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
+\item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
+\code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 
@@ -29,17 +37,6 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 }
 \description{
 Get followers, followings or friends (the two-way relationship).
-}
-\details{
-The corresponding API methods are described in
-\href{https://trakt.docs.apiary.io/#reference/users/followers}{the API reference}.
-
-The relevant endpoints for this function are:
-\itemize{
-\item \code{user_followers}: \code{users/:id/followers}
-\item \code{user_following}: \code{users/:id/following}
-\item \code{user_friends}: \code{users/:id/friends}
-}
 }
 \note{
 If the specified user is private, you need to be able to make an \link[=trakt_credentials]{authenticated request} and be friends with the user.
@@ -57,7 +54,8 @@ user_friends(user = "sean")
 }
 \seealso{
 Other user data: \code{\link{user_collection}},
-  \code{\link{user_history}}, \code{\link{user_profile}},
+  \code{\link{user_comments}}, \code{\link{user_history}},
+  \code{\link{user_likes}}, \code{\link{user_profile}},
   \code{\link{user_ratings}}, \code{\link{user_stats}},
   \code{\link{user_watched}}, \code{\link{user_watchlist}}
 }

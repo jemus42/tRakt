@@ -3,13 +3,17 @@
 \name{user_list_comments}
 \alias{user_list_comments}
 \title{Get comments on a user-created list}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/users/list-comments/get-all-list-comments}{users/:id/lists/:list_id/comments/:sort}
+}
 \usage{
 user_list_comments(user = getOption("trakt_username"), list_id,
   sort = c("newest", "oldest", "likes", "replies"), extended = c("min",
   "full"))
 }
 \arguments{
-\item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
+\item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
+\code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 
@@ -37,7 +41,9 @@ user_list_comments("donxy", "1248149")
 }
 }
 \seealso{
-Other comment methods: \code{\link{media_comments}}
+Other comment methods: \code{\link{comments_comment}},
+  \code{\link{comments_trending}},
+  \code{\link{media_comments}}, \code{\link{user_comments}}
 
 Other list methods: \code{\link{lists_popular}},
   \code{\link{media_lists}}, \code{\link{user_list_items}},

@@ -71,6 +71,7 @@ people_media <- function(type = c("shows", "movies"), id,
 
 #' @rdname people_media
 #' @eval apiurl("people", "movies")
+#' @family movie data
 #' @family people data
 #' @export
 people_movies <- function(id, extended = c("min", "full")) {
@@ -79,6 +80,7 @@ people_movies <- function(id, extended = c("min", "full")) {
 
 #' @rdname people_media
 #' @eval apiurl("people", "shows")
+#' @family show data
 #' @family people data
 #' @export
 people_shows <- function(id, extended = c("min", "full")) {

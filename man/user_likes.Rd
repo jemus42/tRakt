@@ -3,6 +3,9 @@
 \name{user_likes}
 \alias{user_likes}
 \title{Get items (comments, lists) a user likes}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/users/likes/get-likes}{users/likes/:type}
+}
 \usage{
 user_likes(type = c("comments", "lists"))
 }
@@ -23,3 +26,11 @@ if (FALSE) {
   user_likes("lists")
 }
 }
+\seealso{
+Other user data: \code{\link{user_collection}},
+  \code{\link{user_comments}}, \code{\link{user_history}},
+  \code{\link{user_network}}, \code{\link{user_profile}},
+  \code{\link{user_ratings}}, \code{\link{user_stats}},
+  \code{\link{user_watched}}, \code{\link{user_watchlist}}
+}
+\concept{user data}

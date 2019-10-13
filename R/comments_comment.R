@@ -1,7 +1,9 @@
 #' Get a single comment
 #'
 #' @inheritParams trakt_api_common_parameters
-#'
+#' @eval apiurl("comments", "comment")
+#' @family comment methods
+#' @family summary methods
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @examples
@@ -28,6 +30,8 @@ comments_comment <- function(id, extended = c("min", "full")) {
 
 #' @describeIn comments_comment Get a comment's replies
 #' @export
+#' @eval apiurl("comments", "replies")
+#' @family comment methods
 #' @examples
 #' \dontrun{
 #' comments_replies("236397")
@@ -50,6 +54,8 @@ comments_replies <- function(id, extended = c("min", "full")) {
 
 #' @describeIn comments_comment Get users who liked a comment.
 #' @export
+#' @eval apiurl("comments", "likes")
+#' @family comment methods
 #' @importFrom purrr discard pluck
 #' @importFrom dplyr bind_cols
 #' @examples
@@ -80,6 +86,8 @@ comments_likes <- function(id, extended = c("min", "full")) {
 
 #' @describeIn comments_comment Get the media item attached to the comment.
 #' @export
+#' @eval apiurl("comments", "item")
+#' @family comment methods
 #' @importFrom dplyr mutate select everything bind_cols
 #' @importFrom purrr map_df pluck
 #' @examples

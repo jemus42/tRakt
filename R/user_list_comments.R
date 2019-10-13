@@ -7,6 +7,7 @@
 #' @export
 #' @family comment methods
 #' @family list methods
+#' @eval apiurl("users", "list comments")
 #' @examples
 #' \dontrun{
 #' user_list_comments("donxy", "1248149")

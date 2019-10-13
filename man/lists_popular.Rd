@@ -4,6 +4,11 @@
 \alias{lists_popular}
 \alias{lists_trending}
 \title{Get popular / trending lists}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists}{lists/popular}
+
+\href{https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists}{lists/trending}
+}
 \usage{
 lists_popular(limit = 10)
 
@@ -28,11 +33,27 @@ lists_trending()
 }
 }
 \seealso{
-\link{user_list_items} For the actual content of a list.
+\code{\link[=user_list_items]{user_list_items()}} For the actual content of a list.
 
 Other list methods: \code{\link{media_lists}},
   \code{\link{user_list_comments}},
   \code{\link{user_list_items}}, \code{\link{user_lists}},
   \code{\link{user_list}}
+
+Other dynamic lists: \code{\link{anticipated_media}},
+  \code{\link{collected_media}},
+  \code{\link{played_media}}, \code{\link{popular_media}},
+  \code{\link{trending_media}}, \code{\link{watched_media}}
+
+Other list methods: \code{\link{media_lists}},
+  \code{\link{user_list_comments}},
+  \code{\link{user_list_items}}, \code{\link{user_lists}},
+  \code{\link{user_list}}
+
+Other dynamic lists: \code{\link{anticipated_media}},
+  \code{\link{collected_media}},
+  \code{\link{played_media}}, \code{\link{popular_media}},
+  \code{\link{trending_media}}, \code{\link{watched_media}}
 }
+\concept{dynamic lists}
 \concept{list methods}

@@ -3,12 +3,16 @@
 \name{user_profile}
 \alias{user_profile}
 \title{Get a user's profile}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile}{users/:id}
+}
 \usage{
 user_profile(user = getOption("trakt_username"), extended = c("min",
   "full"))
 }
 \arguments{
-\item{user}{\code{character(1)}: Target username. Defaults to \code{getOption("trakt_username")}.
+\item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
+\code{getOption("trakt_username")}.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 
@@ -24,10 +28,6 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 \description{
 Get a user's profile
 }
-\details{
-The corresponding API methods is
-\href{https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile}{users/:id}.
-}
 \note{
 If the specified user is private, you need to be able to make an \link[=trakt_credentials]{authenticated request} and be friends with the user.
 }
@@ -38,8 +38,17 @@ user_profile("sean")
 }
 \seealso{
 Other user data: \code{\link{user_collection}},
-  \code{\link{user_history}}, \code{\link{user_network}},
+  \code{\link{user_comments}}, \code{\link{user_history}},
+  \code{\link{user_likes}}, \code{\link{user_network}},
   \code{\link{user_ratings}}, \code{\link{user_stats}},
   \code{\link{user_watched}}, \code{\link{user_watchlist}}
+
+Other summary methods: \code{\link{comments_comment}},
+  \code{\link{episodes_summary}},
+  \code{\link{movies_summary}},
+  \code{\link{people_summary}},
+  \code{\link{seasons_summary}},
+  \code{\link{shows_summary}}
 }
+\concept{summary methods}
 \concept{user data}

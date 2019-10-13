@@ -5,6 +5,13 @@
 \alias{comments_recent}
 \alias{comments_updates}
 \title{Get trending, recent or recently updated comments}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/comments/trending/get-trending-comments}{comments/trending/:comment_type/:type?include_replies=}
+
+\href{https://trakt.docs.apiary.io/#reference/comments/recent/get-recently-created-comments}{comments/recent/:comment_type/:type?include_replies=}
+
+\href{https://trakt.docs.apiary.io/#reference/comments/updates/get-recently-updated-comments}{comments/updates/:comment_type/:type?include_replies=}
+}
 \usage{
 comments_trending(comment_type = c("all", "reviews", "shouts"),
   type = c("all", "movies", "shows", "seasons", "episodes", "lists"),
@@ -59,3 +66,20 @@ comments_recent("shouts")
 comments_updates()
 }
 }
+\seealso{
+Other comment methods: \code{\link{comments_comment}},
+  \code{\link{media_comments}},
+  \code{\link{user_comments}},
+  \code{\link{user_list_comments}}
+
+Other comment methods: \code{\link{comments_comment}},
+  \code{\link{media_comments}},
+  \code{\link{user_comments}},
+  \code{\link{user_list_comments}}
+
+Other comment methods: \code{\link{comments_comment}},
+  \code{\link{media_comments}},
+  \code{\link{user_comments}},
+  \code{\link{user_list_comments}}
+}
+\concept{comment methods}

@@ -5,6 +5,11 @@
 \alias{movies_updates}
 \alias{shows_updates}
 \title{Recently updated media}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies}{movies/updates/:start_date}
+
+\href{https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows}{shows/updates/:start_date}
+}
 \usage{
 movies_updates(limit = 10, extended = c("min", "full"),
   start_date = Sys.Date() - 1)
@@ -35,7 +40,7 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 These functions return recently updated movies/shows on trakt.tv.
 }
 \note{
-\code{shows_updates} and \code{movies_updates} do not support filters.
+\code{shows_updates()} and \code{movies_updates()} do not support filters.
 }
 \section{The Dynamic Lists on trakt.tv}{
 
@@ -67,9 +72,31 @@ the same additional variables besides the media information: \code{watcher_count
 }
 
 \seealso{
-Other dynamic lists: \code{\link{anticipated_media}},
+Other movie data: \code{\link{anticipated_media}},
   \code{\link{collected_media}},
+  \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_lists}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{media_watching}},
+  \code{\link{movies_boxoffice}},
+  \code{\link{movies_related}},
+  \code{\link{movies_releases}},
+  \code{\link{movies_summary}}, \code{\link{people_media}},
   \code{\link{played_media}}, \code{\link{popular_media}},
   \code{\link{trending_media}}, \code{\link{watched_media}}
+
+Other show data: \code{\link{collected_media}},
+  \code{\link{media_aliases}},
+  \code{\link{media_comments}}, \code{\link{media_lists}},
+  \code{\link{media_people}}, \code{\link{media_ratings}},
+  \code{\link{media_stats}},
+  \code{\link{media_translations}},
+  \code{\link{media_watching}}, \code{\link{people_media}},
+  \code{\link{played_media}},
+  \code{\link{shows_next_episode}},
+  \code{\link{shows_related}}, \code{\link{shows_summary}}
 }
-\concept{dynamic lists}
+\concept{movie data}
+\concept{show data}

@@ -3,7 +3,9 @@
 #' @inheritParams trakt_api_common_parameters
 #' @export
 #' @family list methods
-#' @seealso [user_list_items] For the actual content of a list.
+#' @family dynamic lists
+#' @eval apiurl("lists", "popular")
+#' @seealso [user_list_items()] For the actual content of a list.
 #' @importFrom rlang is_empty
 #' @importFrom dplyr bind_cols select_if pull
 #' @importFrom purrr pluck
@@ -33,6 +35,9 @@ lists_popular <- function(limit = 10) {
 
 #' @rdname lists_popular
 #' @export
+#' @family list methods
+#' @family dynamic lists
+#' @eval apiurl("lists", "trending")
 #' @importFrom rlang is_empty
 #' @importFrom dplyr bind_cols select_if pull
 #' @importFrom purrr pluck

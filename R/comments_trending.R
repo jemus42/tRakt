@@ -1,6 +1,8 @@
 #' Get trending, recent or recently updated comments
 #'
 #' @name comments_trending
+#' @eval apiurl("comments", "trending")
+#' @family comment methods
 #' @inheritParams user_comments
 #' @inheritParams trakt_api_common_parameters
 #' @inherit user_comments return
@@ -41,6 +43,8 @@ comments_trending <- function(comment_type = c("all", "reviews", "shouts"),
 }
 
 #' @describeIn comments_trending Get recently made comments.
+#' @eval apiurl("comments", "recent")
+#' @family comment methods
 #' @export
 comments_recent <- function(comment_type = c("all", "reviews", "shouts"),
                             type = c(
@@ -62,6 +66,8 @@ comments_recent <- function(comment_type = c("all", "reviews", "shouts"),
 }
 
 #' @describeIn comments_trending Get recently updated comments.
+#' @eval apiurl("comments", "updates")
+#' @family comment methods
 #' @export
 comments_updates <- function(comment_type = c("all", "reviews", "shouts"),
                              type = c(

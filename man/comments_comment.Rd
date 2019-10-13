@@ -6,6 +6,15 @@
 \alias{comments_likes}
 \alias{comments_item}
 \title{Get a single comment}
+\source{
+\href{https://trakt.docs.apiary.io/#reference/comments/comment/get-a-comment-or-reply}{comments/:id}
+
+\href{https://trakt.docs.apiary.io/#reference/comments/replies/get-replies-for-a-comment}{comments/:id/replies}
+
+\href{https://trakt.docs.apiary.io/#reference/comments/likes/get-all-users-who-liked-a-comment}{comments/:id/likes}
+
+\href{https://trakt.docs.apiary.io/#reference/comments/item/get-the-attached-media-item}{comments/:id/item}
+}
 \usage{
 comments_comment(id, extended = c("min", "full"))
 
@@ -74,3 +83,32 @@ comments_item("136632")
 comments_item("136632", extended = "full")
 }
 }
+\seealso{
+Other comment methods: \code{\link{comments_trending}},
+  \code{\link{media_comments}},
+  \code{\link{user_comments}},
+  \code{\link{user_list_comments}}
+
+Other summary methods: \code{\link{episodes_summary}},
+  \code{\link{movies_summary}},
+  \code{\link{people_summary}},
+  \code{\link{seasons_summary}},
+  \code{\link{shows_summary}}, \code{\link{user_profile}}
+
+Other comment methods: \code{\link{comments_trending}},
+  \code{\link{media_comments}},
+  \code{\link{user_comments}},
+  \code{\link{user_list_comments}}
+
+Other comment methods: \code{\link{comments_trending}},
+  \code{\link{media_comments}},
+  \code{\link{user_comments}},
+  \code{\link{user_list_comments}}
+
+Other comment methods: \code{\link{comments_trending}},
+  \code{\link{media_comments}},
+  \code{\link{user_comments}},
+  \code{\link{user_list_comments}}
+}
+\concept{comment methods}
+\concept{summary methods}

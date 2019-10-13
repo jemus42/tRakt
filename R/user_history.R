@@ -9,6 +9,7 @@
 #' @param start_at,end_at `character(1)`: A time-window to filter by. Must be coercible
 #' to a datetime object of class `POSIXct`. See [ISOdate] for further information.
 #' @family user data
+#' @eval apiurl("users", "history")
 #' @importFrom dplyr bind_cols select rename rename_all
 #' @importFrom purrr map_df
 #' @inherit trakt_api_common_parameters return

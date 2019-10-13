@@ -45,17 +45,19 @@ episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
 }
 \seealso{
 Other episode data: \code{\link{media_comments}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
+  \code{\link{media_lists}}, \code{\link{media_people}},
+  \code{\link{media_ratings}}, \code{\link{media_stats}},
   \code{\link{media_translations}},
+  \code{\link{media_watching}},
   \code{\link{seasons_season}},
   \code{\link{seasons_summary}},
   \code{\link{shows_next_episode}}
 
-Other summary methods: \code{\link{movies_summary}},
+Other summary methods: \code{\link{comments_comment}},
+  \code{\link{movies_summary}},
   \code{\link{people_summary}},
   \code{\link{seasons_summary}},
-  \code{\link{shows_summary}}
+  \code{\link{shows_summary}}, \code{\link{user_profile}}
 }
 \concept{episode data}
 \concept{summary methods}
