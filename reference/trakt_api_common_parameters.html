@@ -45,9 +45,7 @@
 <meta property="og:title" content="Common API parameters — trakt_api_common_parameters" />
 <meta property="og:description" content="These parameters are used extensively throughout this package as they are required
 for many API methods. Here there are all documented in one place, which is
-intended to make the individual function documentation more consistent.
-The additional sections below also expand on the way media items are identified,
-and what the extended parameter really does." />
+intended to make the individual function documentation more consistent." />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -171,9 +169,7 @@ and what the extended parameter really does." />
     <div class="ref-description">
     <p>These parameters are used extensively throughout this package as they are required
 for many API methods. Here there are all documented in one place, which is
-intended to make the individual function documentation more consistent.
-The additional sections below also expand on the way media items are identified,
-and what the <code>extended</code> parameter really does.</p>
+intended to make the individual function documentation more consistent.</p>
     </div>
 
 
@@ -202,7 +198,8 @@ functions, values <code>seasons</code> or <code>episodes</code> are also allowed
     </tr>
     <tr>
       <th>user</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Target username (or <code>slug</code>). Defaults to
+<code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>

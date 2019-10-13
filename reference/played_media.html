@@ -258,6 +258,10 @@ One of <code>"returning series"</code>, <code>"in production"</code>, <code>"pla
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://trakt.docs.apiary.io/#reference/movies/played/get-the-most-played-movies'>movies/played/:period</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/shows/played/get-the-most-played-shows'>shows/played/:period</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
@@ -293,17 +297,46 @@ the same additional variables besides the media information: <code>watcher_count
 <code>play_count</code>, <code>collected_count</code>, <code>collector_count</code>.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other dynamic lists: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
+    <div class='dont-index'><p>Other movie data: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
   <code><a href='collected_media.html'>collected_media</a></code>,
+  <code><a href='media_aliases.html'>media_aliases</a></code>,
+  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
+  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='media_watching.html'>media_watching</a></code>,
+  <code><a href='movies_boxoffice.html'>movies_boxoffice</a></code>,
+  <code><a href='movies_related.html'>movies_related</a></code>,
+  <code><a href='movies_releases.html'>movies_releases</a></code>,
+  <code><a href='movies_summary.html'>movies_summary</a></code>, <code><a href='people_media.html'>people_media</a></code>,
   <code><a href='popular_media.html'>popular_media</a></code>,
   <code><a href='trending_media.html'>trending_media</a></code>,
-  <code><a href='updated_media.html'>updated_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p></div>
+  <code><a href='updated_media.html'>updated_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p>
+<p>Other dynamic lists: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
+  <code><a href='collected_media.html'>collected_media</a></code>,
+  <code><a href='lists_popular.html'>lists_popular</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
+  <code><a href='trending_media.html'>trending_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p>
+<p>Other show data: <code><a href='collected_media.html'>collected_media</a></code>,
+  <code><a href='media_aliases.html'>media_aliases</a></code>,
+  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
+  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='media_watching.html'>media_watching</a></code>, <code><a href='people_media.html'>people_media</a></code>,
+  <code><a href='shows_next_episode.html'>shows_next_episode</a></code>,
+  <code><a href='shows_related.html'>shows_related</a></code>, <code><a href='shows_summary.html'>shows_summary</a></code>,
+  <code><a href='updated_media.html'>updated_media</a></code></p>
+<p>Other dynamic lists: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
+  <code><a href='collected_media.html'>collected_media</a></code>,
+  <code><a href='lists_popular.html'>lists_popular</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
+  <code><a href='trending_media.html'>trending_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p></div>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#the-dynamic-lists-on-trakt-tv">The Dynamic Lists on trakt.tv</a></li>
       <li><a href="#see-also">See also</a></li>

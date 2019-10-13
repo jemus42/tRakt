@@ -176,7 +176,8 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>user</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Target username. Defaults to <code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
+      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Target username (or <code>slug</code>). Defaults to
+<code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
@@ -198,6 +199,9 @@ See <code><a href='../articles/finding-things.html'>vignette("finding-things", p
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://trakt.docs.apiary.io/#reference/users/collection/get-collection'>users/:id/collection/:type</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
@@ -215,7 +219,8 @@ to the output, which may or may not be available. If this feature is important t
 you, please open an issue on GitHub.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other user data: <code><a href='user_history.html'>user_history</a></code>,
+    <div class='dont-index'><p>Other user data: <code><a href='user_comments.html'>user_comments</a></code>,
+  <code><a href='user_history.html'>user_history</a></code>, <code><a href='user_likes.html'>user_likes</a></code>,
   <code><a href='user_network.html'>user_network</a></code>, <code><a href='user_profile.html'>user_profile</a></code>,
   <code><a href='user_ratings.html'>user_ratings</a></code>, <code><a href='user_stats.html'>user_stats</a></code>,
   <code><a href='user_watched.html'>user_watched</a></code>, <code><a href='user_watchlist.html'>user_watchlist</a></code></p></div>
@@ -231,6 +236,7 @@ you, please open an issue on GitHub.</p>
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
       <li><a href="#note">Note</a></li>

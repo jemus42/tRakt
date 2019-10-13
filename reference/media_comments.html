@@ -245,29 +245,43 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </ul>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other comment methods: <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
-<p>Other movie data: <code><a href='media_aliases.html'>media_aliases</a></code>,
+    <div class='dont-index'><p>Other comment methods: <code><a href='comments_comment.html'>comments_comment</a></code>,
+  <code><a href='comments_trending.html'>comments_trending</a></code>,
+  <code><a href='user_comments.html'>user_comments</a></code>,
+  <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
+<p>Other movie data: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
+  <code><a href='collected_media.html'>collected_media</a></code>,
+  <code><a href='media_aliases.html'>media_aliases</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
   <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
   <code><a href='media_stats.html'>media_stats</a></code>,
   <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='media_watching.html'>media_watching</a></code>,
   <code><a href='movies_boxoffice.html'>movies_boxoffice</a></code>,
   <code><a href='movies_related.html'>movies_related</a></code>,
   <code><a href='movies_releases.html'>movies_releases</a></code>,
-  <code><a href='movies_summary.html'>movies_summary</a></code></p>
-<p>Other show data: <code><a href='media_aliases.html'>media_aliases</a></code>,
+  <code><a href='movies_summary.html'>movies_summary</a></code>, <code><a href='people_media.html'>people_media</a></code>,
+  <code><a href='played_media.html'>played_media</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
+  <code><a href='trending_media.html'>trending_media</a></code>,
+  <code><a href='updated_media.html'>updated_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p>
+<p>Other show data: <code><a href='collected_media.html'>collected_media</a></code>,
+  <code><a href='media_aliases.html'>media_aliases</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
   <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
   <code><a href='media_stats.html'>media_stats</a></code>,
   <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='media_watching.html'>media_watching</a></code>, <code><a href='people_media.html'>people_media</a></code>,
+  <code><a href='played_media.html'>played_media</a></code>,
   <code><a href='shows_next_episode.html'>shows_next_episode</a></code>,
-  <code><a href='shows_related.html'>shows_related</a></code>, <code><a href='shows_summary.html'>shows_summary</a></code></p>
-<p>Other season data: <code><a href='media_people.html'>media_people</a></code>,
-  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='seasons_season.html'>seasons_season</a></code>,
+  <code><a href='shows_related.html'>shows_related</a></code>, <code><a href='shows_summary.html'>shows_summary</a></code>,
+  <code><a href='updated_media.html'>updated_media</a></code></p>
+<p>Other season data: <code><a href='media_lists.html'>media_lists</a></code>,
+  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='media_stats.html'>media_stats</a></code>, <code><a href='seasons_season.html'>seasons_season</a></code>,
   <code><a href='seasons_summary.html'>seasons_summary</a></code></p>
 <p>Other episode data: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
-  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
-  <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='media_lists.html'>media_lists</a></code>, <code><a href='media_people.html'>media_people</a></code>,
+  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='media_stats.html'>media_stats</a></code>,
   <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='media_watching.html'>media_watching</a></code>,
   <code><a href='seasons_season.html'>seasons_season</a></code>,
   <code><a href='seasons_summary.html'>seasons_summary</a></code>,
   <code><a href='shows_next_episode.html'>shows_next_episode</a></code></p></div>
@@ -277,16 +291,16 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <span class='fu'>movies_comments</span>(<span class='fl'>193972</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 16
 #&gt;        id comment spoiler review parent_id created_at         
 #&gt;     &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 254777 I was … FALSE   FALSE          0 2019-10-12 16:41:10
-#&gt;  2 254536 It's a… TRUE    FALSE          0 2019-10-11 15:20:59
-#&gt;  3 252661 how do… FALSE   FALSE          0 2019-09-30 00:56:09
-#&gt;  4 252389 "One t… FALSE   FALSE          0 2019-09-28 18:33:46
-#&gt;  5 252274 Woody … FALSE   FALSE          0 2019-09-28 00:37:38
-#&gt;  6 252267 Can't … FALSE   FALSE          0 2019-09-27 22:32:29
-#&gt;  7 251391 "that … FALSE   FALSE          0 2019-09-21 16:42:50
-#&gt;  8 250960 i grew… FALSE   FALSE          0 2019-09-18 00:26:55
-#&gt;  9 250798 It's v… FALSE   FALSE          0 2019-09-16 16:48:08
-#&gt; 10 250646 "It's … FALSE   FALSE          0 2019-09-15 16:31:24
+#&gt;  1 254916 how ca… FALSE   FALSE          0 2019-10-13 07:38:34
+#&gt;  2 254777 I was … FALSE   FALSE          0 2019-10-12 16:41:10
+#&gt;  3 254536 It's a… TRUE    FALSE          0 2019-10-11 15:20:59
+#&gt;  4 252661 how do… FALSE   FALSE          0 2019-09-30 00:56:09
+#&gt;  5 252389 "One t… FALSE   FALSE          0 2019-09-28 18:33:46
+#&gt;  6 252274 Woody … FALSE   FALSE          0 2019-09-28 00:37:38
+#&gt;  7 252267 Can't … FALSE   FALSE          0 2019-09-27 22:32:29
+#&gt;  8 251391 "that … FALSE   FALSE          0 2019-09-21 16:42:50
+#&gt;  9 250960 i grew… FALSE   FALSE          0 2019-09-18 00:26:55
+#&gt; 10 250798 It's v… FALSE   FALSE          0 2019-09-16 16:48:08
 #&gt; # … with 10 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='fu'>shows_comments</span>(<span class='fl'>46241</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 16

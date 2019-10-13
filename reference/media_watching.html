@@ -209,6 +209,11 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now'>movies/:id/watching</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/shows/watching/get-users-watching-right-now'>shows/:id/watching</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/episodes/watching/get-users-watching-right-now'>shows/:id/seasons/:season/episodes/:episode/watching</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
@@ -223,35 +228,75 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <li><p><code>seasons_watching</code>: Who's watching a season.</p></li>
 <li><p><code>episodes_watching</code>: Who's watching an episode.</p></li>
 </ul>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other movie data: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
+  <code><a href='collected_media.html'>collected_media</a></code>,
+  <code><a href='media_aliases.html'>media_aliases</a></code>,
+  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
+  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='movies_boxoffice.html'>movies_boxoffice</a></code>,
+  <code><a href='movies_related.html'>movies_related</a></code>,
+  <code><a href='movies_releases.html'>movies_releases</a></code>,
+  <code><a href='movies_summary.html'>movies_summary</a></code>, <code><a href='people_media.html'>people_media</a></code>,
+  <code><a href='played_media.html'>played_media</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
+  <code><a href='trending_media.html'>trending_media</a></code>,
+  <code><a href='updated_media.html'>updated_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p>
+<p>Other show data: <code><a href='collected_media.html'>collected_media</a></code>,
+  <code><a href='media_aliases.html'>media_aliases</a></code>,
+  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
+  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='people_media.html'>people_media</a></code>, <code><a href='played_media.html'>played_media</a></code>,
+  <code><a href='shows_next_episode.html'>shows_next_episode</a></code>,
+  <code><a href='shows_related.html'>shows_related</a></code>, <code><a href='shows_summary.html'>shows_summary</a></code>,
+  <code><a href='updated_media.html'>updated_media</a></code></p>
+<p>Other episode data: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
+  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
+  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
+  <code><a href='media_stats.html'>media_stats</a></code>,
+  <code><a href='media_translations.html'>media_translations</a></code>,
+  <code><a href='seasons_season.html'>seasons_season</a></code>,
+  <code><a href='seasons_summary.html'>seasons_summary</a></code>,
+  <code><a href='shows_next_episode.html'>shows_next_episode</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 6
-#&gt;   username      private user_name  vip   vip_ep user_slug    
-#&gt;   &lt;chr&gt;         &lt;lgl&gt;   &lt;chr&gt;      &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;        
-#&gt; 1 anilchand8969 FALSE   anil chand FALSE FALSE  anilchand8969
-#&gt; 2 ScottDenson   FALSE   ""         FALSE FALSE  scottdenson  </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 27 x 6
-#&gt;    username   private user_name               vip   vip_ep user_slug 
-#&gt;    &lt;chr&gt;      &lt;lgl&gt;   &lt;chr&gt;                   &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;     
-#&gt;  1 mijoseluis FALSE   &lt;NA&gt;                    FALSE FALSE  mijoseluis
-#&gt;  2 nauseous   FALSE   &lt;NA&gt;                    FALSE FALSE  nauseous  
-#&gt;  3 rast1971   FALSE   Rast1971                FALSE FALSE  rast1971  
-#&gt;  4 felipones  FALSE   FelipeMassa             FALSE FALSE  felipones 
-#&gt;  5 mattx86    FALSE   &lt;NA&gt;                    FALSE FALSE  mattx86   
-#&gt;  6 BWS1978    TRUE    &lt;NA&gt;                    NA    NA     bws1978   
-#&gt;  7 xero246    FALSE   xero                    FALSE FALSE  xero246   
-#&gt;  8 Kan55      TRUE    &lt;NA&gt;                    NA    NA     kan55     
-#&gt;  9 Cowip      FALSE   ""                      FALSE FALSE  cowip     
-#&gt; 10 alphayax   FALSE   Yann Ponzoni (AlphaYaX) FALSE FALSE  alphayax  
-#&gt; # … with 17 more rows</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 3 x 6
+#&gt;   username private user_name vip   vip_ep user_slug
+#&gt;   &lt;chr&gt;    &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
+#&gt; 1 dattwing FALSE   &lt;NA&gt;      FALSE FALSE  dattwing 
+#&gt; 2 JBrasch  FALSE   JBrasch   FALSE FALSE  jbrasch  
+#&gt; 3 LuisNara FALSE   ""        FALSE FALSE  luisnara </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 36 x 6
+#&gt;    username        private user_name          vip   vip_ep user_slug      
+#&gt;    &lt;chr&gt;           &lt;lgl&gt;   &lt;chr&gt;              &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;          
+#&gt;  1 alexandrecadene FALSE   Alexandre Cadène   TRUE  FALSE  alexandrecadene
+#&gt;  2 KevinofDundas   FALSE   Kevin Archibald    FALSE FALSE  kevinofdundas  
+#&gt;  3 sirruf          FALSE   &lt;NA&gt;               FALSE FALSE  sirruf         
+#&gt;  4 rutski          FALSE   &lt;NA&gt;               FALSE FALSE  rutski         
+#&gt;  5 wRRex           FALSE   Damori Wrex Pierce FALSE FALSE  wrrex          
+#&gt;  6 SlowmotionJones FALSE   ""                 FALSE FALSE  slowmotionjones
+#&gt;  7 Broscu88        FALSE   Serj Ionel         FALSE FALSE  broscu88       
+#&gt;  8 AKAChoncho      FALSE   &lt;NA&gt;               FALSE FALSE  akachoncho     
+#&gt;  9 spg76           FALSE   Sebastián Porta    FALSE FALSE  spg76          
+#&gt; 10 mmarte85        FALSE   Michael M.         FALSE FALSE  mmarte85       
+#&gt; # … with 26 more rows</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
+#&gt;   username   private user_name vip   vip_ep user_slug 
+#&gt;   &lt;chr&gt;      &lt;lgl&gt;   &lt;lgl&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;     
+#&gt; 1 AKAChoncho FALSE   NA        FALSE FALSE  akachoncho</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#functions">Functions</a></li>
+      <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

@@ -196,6 +196,12 @@ See <code><a href='../articles/finding-things.html'>vignette("finding-things", p
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://trakt.docs.apiary.io/#reference/comments/comment/get-a-comment-or-reply'>comments/:id</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/comments/replies/get-replies-for-a-comment'>comments/:id/replies</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/comments/likes/get-all-users-who-liked-a-comment'>comments/:id/likes</a></p>
+<p><a href='https://trakt.docs.apiary.io/#reference/comments/item/get-the-attached-media-item'>comments/:id/item</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
@@ -209,6 +215,29 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <li><p><code>comments_likes</code>: Get users who liked a comment.</p></li>
 <li><p><code>comments_item</code>: Get the media item attached to the comment.</p></li>
 </ul>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other comment methods: <code><a href='comments_trending.html'>comments_trending</a></code>,
+  <code><a href='media_comments.html'>media_comments</a></code>,
+  <code><a href='user_comments.html'>user_comments</a></code>,
+  <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
+<p>Other summary methods: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
+  <code><a href='movies_summary.html'>movies_summary</a></code>,
+  <code><a href='people_summary.html'>people_summary</a></code>,
+  <code><a href='seasons_summary.html'>seasons_summary</a></code>,
+  <code><a href='shows_summary.html'>shows_summary</a></code>, <code><a href='user_profile.html'>user_profile</a></code></p>
+<p>Other comment methods: <code><a href='comments_trending.html'>comments_trending</a></code>,
+  <code><a href='media_comments.html'>media_comments</a></code>,
+  <code><a href='user_comments.html'>user_comments</a></code>,
+  <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
+<p>Other comment methods: <code><a href='comments_trending.html'>comments_trending</a></code>,
+  <code><a href='media_comments.html'>media_comments</a></code>,
+  <code><a href='user_comments.html'>user_comments</a></code>,
+  <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
+<p>Other comment methods: <code><a href='comments_trending.html'>comments_trending</a></code>,
+  <code><a href='media_comments.html'>media_comments</a></code>,
+  <code><a href='user_comments.html'>user_comments</a></code>,
+  <code><a href='user_list_comments.html'>user_list_comments</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A single comment</span>
@@ -315,8 +344,10 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#functions">Functions</a></li>
+      <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 
