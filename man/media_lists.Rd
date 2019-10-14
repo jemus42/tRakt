@@ -92,10 +92,20 @@ Get lists containing a movie, show, season, episode or person
 \examples{
 \dontrun{
 movies_lists("190430", type = "personal", limit = 5)
+}
+\dontrun{
 shows_lists("46241")
+}
+\dontrun{
 seasons_lists("46241", season = 1)
+}
+\dontrun{
 episodes_lists("46241", season = 1, episode = 1)
+}
+\dontrun{
 people_lists("david-tennant")
+
+people_lists("emilia-clarke", sort = "items")
 }
 }
 \seealso{

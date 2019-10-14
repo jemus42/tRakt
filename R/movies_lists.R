@@ -7,14 +7,6 @@
 #' @param sort `character(1) ["popular"]`: Sort lists by one of "popular", "likes",
 #'   "comments", "items", "added" or "updated".
 #' @inherit trakt_api_common_parameters return
-#' @examples
-#' \dontrun{
-#' movies_lists("190430", type = "personal", limit = 5)
-#' shows_lists("46241")
-#' seasons_lists("46241", season = 1)
-#' episodes_lists("46241", season = 1, episode = 1)
-#' people_lists("david-tennant")
-#' }
 NULL
 
 #' @export
@@ -22,6 +14,10 @@ NULL
 #' @family list methods
 #' @family movie data
 #' @describeIn media_lists Lists containing a movie.
+#' @examples
+#' \dontrun{
+#' movies_lists("190430", type = "personal", limit = 5)
+#' }
 movies_lists <- function(id,
                          type = c("all", "personal", "official", "watchlists"),
                          sort = c(
@@ -47,6 +43,10 @@ movies_lists <- function(id,
 #' @family list methods
 #' @family show data
 #' @describeIn media_lists Lists containing a show.
+#' @examples
+#' \dontrun{
+#' shows_lists("46241")
+#' }
 shows_lists <- function(id,
                         type = c("all", "personal", "official", "watchlists"),
                         sort = c(
@@ -72,6 +72,10 @@ shows_lists <- function(id,
 #' @family list methods
 #' @family season data
 #' @describeIn media_lists Lists containing a season.
+#' @examples
+#' \dontrun{
+#' seasons_lists("46241", season = 1)
+#' }
 seasons_lists <- function(id, season,
                           type = c("all", "personal", "official", "watchlists"),
                           sort = c(
@@ -97,6 +101,10 @@ seasons_lists <- function(id, season,
 #' @family list methods
 #' @family episode data
 #' @describeIn media_lists Lists containing an episode.
+#' @examples
+#' \dontrun{
+#' episodes_lists("46241", season = 1, episode = 1)
+#' }
 episodes_lists <- function(id, season, episode,
                            type = c("all", "personal", "official", "watchlists"),
                            sort = c(
@@ -122,6 +130,12 @@ episodes_lists <- function(id, season, episode,
 #' @family list methods
 #' @family people data
 #' @describeIn media_lists Lists containing a person.
+#' @examples
+#' \dontrun{
+#' people_lists("david-tennant")
+#'
+#' people_lists("emilia-clarke", sort = "items")
+#' }
 people_lists <- function(id,
                          type = c("all", "personal", "official", "watchlists"),
                          sort = c(
@@ -139,8 +153,5 @@ people_lists <- function(id,
   )
   response <- trakt_get(url)
 
-  # limit param seems to be ignoren in this method, so manual workaround
-  response %>%
-    unpack_lists() %>%
-    head(limit)
+  unpack_lists(response)
 }
