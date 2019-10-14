@@ -1,10 +1,14 @@
-context("API interaction")
+context("API interaction and credentials")
 
 test_that("Client ID is set without .Renviron", {
+  # Save current settings for later
+  username_pre <- Sys.getenv("trakt_username")
+  client_id_pre <- Sys.getenv("trakt_client_id")
+
   client_id <- "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629afdf2"
   expect_message(trakt_credentials(silent = FALSE))
 
-  Sys.setenv(trakt_client_id = "")
+  Sys.setenv("trakt_client_id" = "")
   expect_failure(expect_message(trakt_credentials()))
   expect_equal(Sys.getenv("trakt_client_id"), client_id)
 
@@ -13,6 +17,10 @@ test_that("Client ID is set without .Renviron", {
   )
   expect_equal(Sys.getenv("trakt_username"), "arbitraryusername")
   expect_message(trakt_credentials(client_id = client_id, silent = FALSE))
+
+  # Restore previous settings
+  Sys.setenv("trakt_username" = username_pre)
+  Sys.setenv("trakt_client_id" = client_id_pre)
 })
 
 test_that("trakt_get can make API calls", {
@@ -23,4 +31,7 @@ test_that("trakt_get can make API calls", {
 
   expect_is(result, "list")
   expect_message(trakt_get("https://example.com"))
+
+  # Authenticated method, should throw 401 message but no error
+  expect_message(trakt_get("users/settings"))
 })
