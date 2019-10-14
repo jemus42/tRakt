@@ -204,10 +204,10 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>user_profile() wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats'>shows/:id/stats</a></p>
-<p>user_profile() wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats'>movies/:id/stats</a></p>
-<p>user_profile() wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats'>shows/:id/seasons/:season/stats</a></p>
-<p>user_profile() wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats'>shows/:id/seasons/:season/episodes/:episode/stats</a></p>
+    <p><code>shows_stats()</code> wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats'>shows/:id/stats</a>.</p>
+<p><code>movies_stats()</code> wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats'>movies/:id/stats</a>.</p>
+<p><code>seasons_stats()</code> wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats'>shows/:id/seasons/:season/stats</a>.</p>
+<p><code>episodes_stats()</code> wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats'>shows/:id/seasons/:season/episodes/:episode/stats</a>.</p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
