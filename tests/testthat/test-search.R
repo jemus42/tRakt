@@ -18,6 +18,14 @@ test_that("search_query works", {
   expect_warning(search_query("this is just a garbled mess", type = "movie"))
   expect_warning(search_query("deadpuul", type = "movie"))
   expect_warning(search_query("nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb", type = "movie", years = 1100))
+
+
+  search_query("russian doll", type = c("show", "movie")) %>%
+    expect_is("tbl_df") %>%
+    expect_length(9) %>%
+    nrow() %>%
+    expect_equal(2)
+
 })
 
 test_that("search_id works", {

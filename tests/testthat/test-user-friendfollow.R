@@ -5,8 +5,8 @@ test_that("user_network stuff works", {
 
   user <- "jemus42"
 
-  fol_min <- user_followers(user = "jemus42", extended = "min")
-  fol_max <- user_followers(user = "jemus42", extended = "full")
+  fol_min <- user_followers(user = user, extended = "min")
+  fol_max <- user_followers(user = user, extended = "full")
 
   expect_is(fol_min, "tbl")
   expect_is(fol_max, "tbl")
@@ -24,6 +24,14 @@ test_that("user_network stuff works", {
   expect_error(user_followers(user = ""))
   expect_error(user_followers(user = NA))
   expect_error(user_followers(user = 4))
+
+  user_following(user) %>%
+    expect_is("tbl_df") %>%
+    expect_length(7)
+
+  user_friends(user) %>%
+    expect_is("tbl_df") %>%
+    expect_length(7)
 })
 
 test_that("No NULLs or \"\" in user_network", {
