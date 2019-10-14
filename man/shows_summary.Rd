@@ -4,7 +4,7 @@
 \alias{shows_summary}
 \title{Get a single show}
 \source{
-shows_summary() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show}{shows/:id}
+\code{shows_summary()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show}{shows/:id}.
 }
 \usage{
 shows_summary(id, extended = c("min", "full"))

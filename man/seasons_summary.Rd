@@ -4,7 +4,7 @@
 \alias{seasons_summary}
 \title{Get a show's seasons}
 \source{
-seasons_summary() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show}{shows/:id/seasons/seasons}
+\code{seasons_summary()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show}{shows/:id/seasons/seasons}.
 }
 \usage{
 seasons_summary(id, episodes = FALSE, drop_specials = TRUE,

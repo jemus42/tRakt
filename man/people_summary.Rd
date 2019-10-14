@@ -4,7 +4,7 @@
 \alias{people_summary}
 \title{Get a single person's details}
 \source{
-people_summary() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person}{people/:id}
+\code{people_summary()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person}{people/:id}.
 }
 \usage{
 people_summary(id, extended = c("min", "full"))

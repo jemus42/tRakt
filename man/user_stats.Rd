@@ -5,7 +5,7 @@
 \title{Returns stats about the movies, shows, and episodes a user has watched,
 collected, and rated.}
 \source{
-user_stats() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/stats/get-stats}{users/:id/stats}
+\code{user_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/stats/get-stats}{users/:id/stats}.
 }
 \usage{
 user_stats(user = getOption("trakt_username"))

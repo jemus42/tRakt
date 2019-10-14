@@ -8,11 +8,11 @@
 \alias{episodes_watching}
 \title{Get who's watching a thing right now}
 \source{
-movies_watching() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now}{movies/:id/watching}
+\code{movies_watching()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now}{movies/:id/watching}.
 
-shows_watching() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/watching/get-users-watching-right-now}{shows/:id/watching}
+\code{shows_watching()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/watching/get-users-watching-right-now}{shows/:id/watching}.
 
-episodes_watching() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/watching/get-users-watching-right-now}{shows/:id/seasons/:season/episodes/:episode/watching}
+\code{episodes_watching()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/watching/get-users-watching-right-now}{shows/:id/seasons/:season/episodes/:episode/watching}.
 }
 \usage{
 movies_watching(id, extended = c("min", "full"))

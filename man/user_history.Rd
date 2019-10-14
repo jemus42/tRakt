@@ -4,7 +4,7 @@
 \alias{user_history}
 \title{Get a user's watch history}
 \source{
-user_history() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/history/get-watched-history}{users/:id/history/:type/:item_id?start_at=&end_at=}
+\code{user_history()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/history/get-watched-history}{users/:id/history/:type/:item_id?start_at=&end_at=}.
 }
 \usage{
 user_history(user = getOption("trakt_username"), type = c("shows",

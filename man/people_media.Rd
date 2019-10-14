@@ -6,9 +6,9 @@
 \alias{people_shows}
 \title{Get a single person's movie or show credits}
 \source{
-people_movies() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits}{people/:id/movies}
+\code{people_movies()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/people/movies/get-movie-credits}{people/:id/movies}.
 
-people_shows() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits}{people/:id/shows}
+\code{people_shows()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits}{people/:id/shows}.
 }
 \usage{
 people_movies(id, extended = c("min", "full"))

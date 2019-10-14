@@ -4,7 +4,7 @@
 \alias{user_watchlist}
 \title{Get a user's watchlist}
 \source{
-user_watchlist() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist}{users/:id/watchlist/:type}
+\code{user_watchlist()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist}{users/:id/watchlist/:type}.
 }
 \usage{
 user_watchlist(user = getOption("trakt_username"), type = c("movies",

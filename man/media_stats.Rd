@@ -8,13 +8,13 @@
 \alias{episodes_stats}
 \title{Get a show or movie's (or season's or episode's) stats}
 \source{
-shows_stats() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats}{shows/:id/stats}
+\code{shows_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats}{shows/:id/stats}.
 
-movies_stats() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats}{movies/:id/stats}
+\code{movies_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats}{movies/:id/stats}.
 
-seasons_stats() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats}{shows/:id/seasons/:season/stats}
+\code{seasons_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats}{shows/:id/seasons/:season/stats}.
 
-episodes_stats() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats}{shows/:id/seasons/:season/episodes/:episode/stats}
+\code{episodes_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats}{shows/:id/seasons/:season/episodes/:episode/stats}.
 }
 \usage{
 shows_stats(id)

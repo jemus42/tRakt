@@ -4,7 +4,7 @@
 \alias{user_collection}
 \title{Get a user's collected shows or movies}
 \source{
-user_collection() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{users/:id/collection/:type}
+\code{user_collection()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{users/:id/collection/:type}.
 }
 \usage{
 user_collection(user = getOption("trakt_username"), type = c("shows",

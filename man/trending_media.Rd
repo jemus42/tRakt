@@ -6,9 +6,9 @@
 \alias{shows_trending}
 \title{Trending media}
 \source{
-movies_trending() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/trending/get-trending-movies}{movies/trending}
+\code{movies_trending()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/trending/get-trending-movies}{movies/trending}.
 
-shows_trending() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/trending/get-trending-shows}{shows/trending}
+\code{shows_trending()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/trending/get-trending-shows}{shows/trending}.
 }
 \usage{
 movies_trending(limit = 10, extended = c("min", "full"),

@@ -4,7 +4,7 @@
 \alias{user_comments}
 \title{Get a user's comments}
 \source{
-user_comments() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/comments/get-comments}{users/:id/comments/:comment_type/:type?include_replies=}
+\code{user_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/comments/get-comments}{users/:id/comments/:comment_type/:type?include_replies=}.
 }
 \usage{
 user_comments(user = getOption("trakt_username"),

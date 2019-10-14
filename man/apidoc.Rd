@@ -4,7 +4,7 @@
 \alias{apidoc}
 \title{Get API docs keys}
 \usage{
-apidoc(section, method, key = NULL)
+apidoc(section, method, key)
 }
 \arguments{
 \item{section}{E.g. "movies"}

@@ -5,9 +5,9 @@
 \alias{comments_recent}
 \title{Get trending or recently made comments}
 \source{
-comments_trending() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/trending/get-trending-comments}{comments/trending/:comment_type/:type?include_replies=}
+\code{comments_trending()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/trending/get-trending-comments}{comments/trending/:comment_type/:type?include_replies=}.
 
-comments_recent() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/recent/get-recently-created-comments}{comments/recent/:comment_type/:type?include_replies=}
+\code{comments_recent()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/recent/get-recently-created-comments}{comments/recent/:comment_type/:type?include_replies=}.
 }
 \usage{
 comments_trending(comment_type = c("all", "reviews", "shouts"),

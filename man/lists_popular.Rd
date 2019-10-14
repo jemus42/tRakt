@@ -5,9 +5,9 @@
 \alias{lists_trending}
 \title{Get popular / trending lists}
 \source{
-lists_popular() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists}{lists/popular}
+\code{lists_popular()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists}{lists/popular}.
 
-lists_trending() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists}{lists/trending}
+\code{lists_trending()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists}{lists/trending}.
 }
 \usage{
 lists_popular(limit = 10)

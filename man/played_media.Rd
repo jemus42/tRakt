@@ -6,9 +6,9 @@
 \alias{shows_played}
 \title{Most played media}
 \source{
-movies_played() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/played/get-the-most-played-movies}{movies/played/:period}
+\code{movies_played()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/played/get-the-most-played-movies}{movies/played/:period}.
 
-shows_played() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/played/get-the-most-played-shows}{shows/played/:period}
+\code{shows_played()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/played/get-the-most-played-shows}{shows/played/:period}.
 }
 \usage{
 movies_played(limit = 10, extended = c("min", "full"),

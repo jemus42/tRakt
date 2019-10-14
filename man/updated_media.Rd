@@ -6,9 +6,9 @@
 \alias{shows_updates}
 \title{Recently updated media}
 \source{
-movies_updates() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies}{movies/updates/:start_date}
+\code{movies_updates()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies}{movies/updates/:start_date}.
 
-shows_updates() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows}{shows/updates/:start_date}
+\code{shows_updates()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows}{shows/updates/:start_date}.
 }
 \usage{
 movies_updates(limit = 10, extended = c("min", "full"),
