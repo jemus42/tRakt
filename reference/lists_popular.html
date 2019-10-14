@@ -184,8 +184,8 @@ than <code>0</code> and will be coerced via <code><a href='https://rdrr.io/r/bas
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists'>lists/popular</a></p>
-<p><a href='https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists'>lists/trending</a></p>
+    <p>user_profile() wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists'>lists/popular</a></p>
+<p>user_profile() wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists'>lists/trending</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
@@ -234,14 +234,14 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 #&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
 #&gt;  1 Marv… This list … public  TRUE            TRUE           rank    asc     
 #&gt;  2 Late… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  3 Late… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  4 Late… ""          public  FALSE           TRUE           rank    asc     
+#&gt;  3 Late… ""          public  FALSE           TRUE           rank    asc     
+#&gt;  4 Late… ""          public  FALSE           FALSE          rank    asc     
 #&gt;  5 MARV… **Chronolo… public  TRUE            TRUE           rank    asc     
 #&gt;  6 Imdb… Daily Refr… public  TRUE            TRUE           rank    asc     
 #&gt;  7 1001… &gt; 1001 Mov… public  TRUE            TRUE           rank    asc     
-#&gt;  8 Mind… The object… public  FALSE           TRUE           rank    asc     
-#&gt;  9 Horr… ""          public  FALSE           FALSE          rank    asc     
-#&gt; 10 Rott… Pulled fro… public  TRUE            TRUE           rank    asc     
+#&gt;  8 Netf… series, mo… public  FALSE           TRUE           rank    asc     
+#&gt;  9 Mind… The object… public  FALSE           TRUE           rank    asc     
+#&gt; 10 Horr… ""          public  FALSE           FALSE          rank    asc     
 #&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
 #&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
 #&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,

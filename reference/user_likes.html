@@ -43,7 +43,7 @@
 
 
 <meta property="og:title" content="Get items (comments, lists) a user likes — user_likes" />
-<meta property="og:description" content="This requires authentication." />
+<meta property="og:description" content="Get items (comments, lists) a user likes" />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -165,7 +165,7 @@
     </div>
 
     <div class="ref-description">
-    <p>This requires authentication.</p>
+    <p>Get items (comments, lists) a user likes</p>
     </div>
 
     <pre class="usage"><span class='fu'>user_likes</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"comments"</span>, <span class='st'>"lists"</span>))</pre>
@@ -175,13 +175,13 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>type</th>
-      <td><p>One of "comments", "lists".</p></td>
+      <td><p><code>character(1) ["comments"]</code>: One of "comments", "lists".</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='https://trakt.docs.apiary.io/#reference/users/likes/get-likes'>users/likes/:type</a></p>
+    <p>user_profile() wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/users/likes/get-likes'>users/likes/:type</a>  (Authentication required)</p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
@@ -196,8 +196,9 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
   <code><a href='user_watched.html'>user_watched</a></code>, <code><a href='user_watchlist.html'>user_watchlist</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Get liked lists</span>
-<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+    <pre class="examples"><div class='input'><span class='co'># Get liked lists (only if there's a client secret set)</span>
+<span class='co'># See ?trakt_credentials</span>
+<span class='kw'>if</span> (<span class='fu'><a href='trakt_credentials.html'>trakt_credentials</a></span>()<span class='kw'>[[</span><span class='st'>"client_secret"</span>]]) {
   <span class='fu'>user_likes</span>(<span class='st'>"lists"</span>)
 }</div></pre>
   </div>

@@ -201,7 +201,7 @@ Can also be of length greater than 1, in which case the function is called on al
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='https://trakt.docs.apiary.io/#reference/users/comments/get-comments'>users/:id/comments/:comment_type/:type?include_replies=</a></p>
+    <p>user_profile() wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/users/comments/get-comments'>users/:id/comments/:comment_type/:type?include_replies=</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
@@ -216,6 +216,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
   <code><a href='user_watched.html'>user_watched</a></code>, <code><a href='user_watchlist.html'>user_watchlist</a></code></p>
 <p>Other comment methods: <code><a href='comments_comment.html'>comments_comment</a></code>,
   <code><a href='comments_trending.html'>comments_trending</a></code>,
+  <code><a href='comments_updates.html'>comments_updates</a></code>,
   <code><a href='media_comments.html'>media_comments</a></code>,
   <code><a href='user_list_comments.html'>user_list_comments</a></code></p></div>
 

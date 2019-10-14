@@ -178,8 +178,7 @@ present in the response, they are converted to <code>POSIXct</code> via
 variable only contains date information.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client_id</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>auth</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client_id</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.getenv.html'>Sys.getenv</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -202,11 +201,6 @@ further information.</p></td>
 performed and its content returned. This is useful if you are only
 interested in status codes or other headers, and don't want to waste
 resources/bandwidth on the response body.</p></td>
-    </tr>
-    <tr>
-      <th>auth</th>
-      <td><p><code>logical(1) [FALSE]</code>: If <code>TRUE</code>, an authenticated request is made.
-This requires a set client secret and manual interaction.</p></td>
     </tr>
     </table>
 
@@ -267,7 +261,7 @@ collection have dedicated functions in this package.</p>
 #&gt; 
 #&gt; $headers
 #&gt; $date
-#&gt; [1] "Sun, 13 Oct 2019 21:40:09 GMT"
+#&gt; [1] "Mon, 14 Oct 2019 00:57:49 GMT"
 #&gt; 
 #&gt; $`content-type`
 #&gt; [1] "text/html"
@@ -279,7 +273,7 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "max-age=0, private, no-cache, no-store, must-revalidate"
 #&gt; 
 #&gt; $`cf-railgun`
-#&gt; [1] "9ac0bdbd67 stream 0.000000 0200 57da"
+#&gt; [1] "e3db51d84e stream 0.000000 0200 57da"
 #&gt; 
 #&gt; $vary
 #&gt; [1] "Accept-Encoding"
@@ -291,10 +285,10 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "SAMEORIGIN"
 #&gt; 
 #&gt; $`x-request-id`
-#&gt; [1] "c8f9b579-2429-496e-acb4-02f337c6ff38"
+#&gt; [1] "735755f2-660d-4491-a90b-090d48f7d14e"
 #&gt; 
 #&gt; $`x-runtime`
-#&gt; [1] "0.003303"
+#&gt; [1] "0.003311"
 #&gt; 
 #&gt; $`x-xss-protection`
 #&gt; [1] "1; mode=block"
@@ -309,7 +303,7 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "cloudflare"
 #&gt; 
 #&gt; $`cf-ray`
-#&gt; [1] "525478659b31e216-ORD"
+#&gt; [1] "525599f22cc29f09-ORD"
 #&gt; 
 #&gt; $`content-encoding`
 #&gt; [1] "gzip"

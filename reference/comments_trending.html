@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get trending, recent or recently updated comments — comments_trending • tRakt</title>
+<title>Get trending or recently made comments — comments_trending • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,8 +42,8 @@
 
 
 
-<meta property="og:title" content="Get trending, recent or recently updated comments — comments_trending" />
-<meta property="og:description" content="Get trending, recent or recently updated comments" />
+<meta property="og:title" content="Get trending or recently made comments — comments_trending" />
+<meta property="og:description" content="Get trending or recently made comments" />
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -159,13 +159,13 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get trending, recent or recently updated comments</h1>
+    <h1>Get trending or recently made comments</h1>
     <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/comments_trending.R'><code>R/comments_trending.R</code></a></small>
     <div class="hidden name"><code>comments_trending.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Get trending, recent or recently updated comments</p>
+    <p>Get trending or recently made comments</p>
     </div>
 
     <pre class="usage"><span class='fu'>comments_trending</span>(<span class='kw'>comment_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"all"</span>, <span class='st'>"reviews"</span>, <span class='st'>"shouts"</span>),
@@ -173,10 +173,6 @@
   <span class='kw'>include_replies</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)
 
 <span class='fu'>comments_recent</span>(<span class='kw'>comment_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"all"</span>, <span class='st'>"reviews"</span>, <span class='st'>"shouts"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"all"</span>, <span class='st'>"movies"</span>, <span class='st'>"shows"</span>, <span class='st'>"seasons"</span>, <span class='st'>"episodes"</span>, <span class='st'>"lists"</span>),
-  <span class='kw'>include_replies</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)
-
-<span class='fu'>comments_updates</span>(<span class='kw'>comment_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"all"</span>, <span class='st'>"reviews"</span>, <span class='st'>"shouts"</span>),
   <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"all"</span>, <span class='st'>"movies"</span>, <span class='st'>"shows"</span>, <span class='st'>"seasons"</span>, <span class='st'>"episodes"</span>, <span class='st'>"lists"</span>),
   <span class='kw'>include_replies</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)</pre>
 
@@ -206,33 +202,22 @@ than <code>0</code> and will be coerced via <code><a href='https://rdrr.io/r/bas
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p><a href='https://trakt.docs.apiary.io/#reference/comments/trending/get-trending-comments'>comments/trending/:comment_type/:type?include_replies=</a></p>
-<p><a href='https://trakt.docs.apiary.io/#reference/comments/recent/get-recently-created-comments'>comments/recent/:comment_type/:type?include_replies=</a></p>
-<p><a href='https://trakt.docs.apiary.io/#reference/comments/updates/get-recently-updated-comments'>comments/updates/:comment_type/:type?include_replies=</a></p>
+    <p>user_profile() wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/comments/trending/get-trending-comments'>comments/trending/:comment_type/:type?include_replies=</a></p>
+<p>user_profile() wraps endpoint <a href='https://trakt.docs.apiary.io/#reference/comments/recent/get-recently-created-comments'>comments/recent/:comment_type/:type?include_replies=</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
 (defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
 If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
-    <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
-
-    
-<ul>
-<li><p><code>comments_trending</code>: Get trending comments.</p></li>
-<li><p><code>comments_recent</code>: Get recently made comments.</p></li>
-<li><p><code>comments_updates</code>: Get recently updated comments.</p></li>
-</ul>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other comment methods: <code><a href='comments_comment.html'>comments_comment</a></code>,
+  <code><a href='comments_updates.html'>comments_updates</a></code>,
   <code><a href='media_comments.html'>media_comments</a></code>,
   <code><a href='user_comments.html'>user_comments</a></code>,
   <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
 <p>Other comment methods: <code><a href='comments_comment.html'>comments_comment</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>,
-  <code><a href='user_comments.html'>user_comments</a></code>,
-  <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
-<p>Other comment methods: <code><a href='comments_comment.html'>comments_comment</a></code>,
+  <code><a href='comments_updates.html'>comments_updates</a></code>,
   <code><a href='media_comments.html'>media_comments</a></code>,
   <code><a href='user_comments.html'>user_comments</a></code>,
   <code><a href='user_list_comments.html'>user_list_comments</a></code></p></div>
@@ -244,15 +229,15 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
 #&gt;  1 movie 248784 "I've … FALSE   TRUE           0 2019-09-02 08:12:58
-#&gt;  2 movie 253420 "Well,… FALSE   TRUE           0 2019-10-04 23:25:50
-#&gt;  3 epis… 223777 "It is… FALSE   TRUE           0 2019-03-29 02:20:00
-#&gt;  4 epis… 228011 "Not t… FALSE   TRUE           0 2019-04-21 21:50:52
-#&gt;  5 epis… 224567 "Glad … FALSE   TRUE           0 2019-04-02 10:10:01
-#&gt;  6 epis… 233485 "I act… FALSE   TRUE           0 2019-05-21 10:17:13
-#&gt;  7 epis… 190228 "[7.5/… TRUE    TRUE           0 2018-09-06 02:25:16
-#&gt;  8 epis… 197928 "Well,… TRUE    TRUE           0 2018-10-28 21:33:48
-#&gt;  9 epis… 226929 "We al… FALSE   TRUE           0 2019-04-15 21:03:56
-#&gt; 10 epis… 233212 "Such … TRUE    TRUE           0 2019-05-20 04:31:31
+#&gt;  2 epis… 223777 "It is… FALSE   TRUE           0 2019-03-29 02:20:00
+#&gt;  3 epis… 228011 "Not t… FALSE   TRUE           0 2019-04-21 21:50:52
+#&gt;  4 epis… 224567 "Glad … FALSE   TRUE           0 2019-04-02 10:10:01
+#&gt;  5 epis… 233485 "I act… FALSE   TRUE           0 2019-05-21 10:17:13
+#&gt;  6 epis… 190228 "[7.5/… TRUE    TRUE           0 2018-09-06 02:25:16
+#&gt;  7 epis… 197928 "Well,… TRUE    TRUE           0 2018-10-28 21:33:48
+#&gt;  8 epis… 226929 "We al… FALSE   TRUE           0 2019-04-15 21:03:56
+#&gt;  9 epis… 233212 "Such … TRUE    TRUE           0 2019-05-20 04:31:31
+#&gt; 10 epis… 224523 "[7.7/… TRUE    TRUE           0 2019-04-02 04:06:03
 #&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
@@ -263,37 +248,16 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <span class='fu'>comments_recent</span>(<span class='st'>"shouts"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 34
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 seas… 255026 Good a… FALSE   FALSE          0 2019-10-13 21:33:34
-#&gt;  2 epis… 255021 "OH MY… FALSE   FALSE          0 2019-10-13 21:29:57
-#&gt;  3 epis… 255019 Someon… FALSE   FALSE          0 2019-10-13 21:26:44
-#&gt;  4 epis… 255014 "So th… TRUE    FALSE          0 2019-10-13 21:03:34
-#&gt;  5 epis… 255010 this r… FALSE   FALSE          0 2019-10-13 20:12:30
-#&gt;  6 epis… 255007 Sheldo… FALSE   FALSE          0 2019-10-13 20:02:36
-#&gt;  7 epis… 255006 "The C… FALSE   FALSE          0 2019-10-13 19:56:29
-#&gt;  8 movie 255011 "And \… FALSE   FALSE          0 2019-10-13 20:17:15
-#&gt;  9 movie 255009 A grea… FALSE   FALSE          0 2019-10-13 20:12:16
-#&gt; 10 movie 255008 "I wil… FALSE   FALSE          0 2019-10-13 20:12:37
-#&gt; # … with 27 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
-#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, season &lt;int&gt;,
-#&gt; #   season_trakt &lt;chr&gt;, season_tvdb &lt;chr&gt;, season_tmdb &lt;chr&gt;, episode &lt;int&gt;,
-#&gt; #   episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;, episode_tvdb &lt;chr&gt;,
-#&gt; #   episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div><div class='input'>
-<span class='co'># Recently updated comments</span>
-<span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 34
-#&gt;    type      id comment spoiler review parent_id created_at         
-#&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 show  110541 A fasc… FALSE   FALSE          0 2017-01-16 04:16:45
-#&gt;  2 show  136001 Watche… FALSE   FALSE          0 2017-08-01 21:44:42
-#&gt;  3 show  155417 I stum… FALSE   FALSE          0 2017-12-31 01:05:33
-#&gt;  4 show  254438 Gets b… FALSE   FALSE          0 2019-10-11 01:05:23
-#&gt;  5 show  252620 Utterl… FALSE   FALSE          0 2019-09-29 21:29:12
-#&gt;  6 epis… 254646 "Any T… FALSE   FALSE          0 2019-10-12 00:35:26
-#&gt;  7 epis… 255021 "OH MY… FALSE   FALSE          0 2019-10-13 21:29:57
-#&gt;  8 seas… 255026 Good a… FALSE   FALSE          0 2019-10-13 21:33:34
-#&gt;  9 movie 253505 "Best … FALSE   FALSE          0 2019-10-05 16:13:43
-#&gt; 10 movie 225823 I thin… FALSE   FALSE          0 2019-04-10 08:21:30
+#&gt;  1 epis… 255051 This e… FALSE   FALSE          0 2019-10-14 00:14:11
+#&gt;  2 epis… 255048 Why al… FALSE   FALSE          0 2019-10-13 23:41:22
+#&gt;  3 epis… 255046 100% p… FALSE   FALSE          0 2019-10-13 23:38:57
+#&gt;  4 epis… 255043 "I'm t… FALSE   FALSE          0 2019-10-13 23:25:29
+#&gt;  5 epis… 255042 Best e… FALSE   FALSE          0 2019-10-13 23:19:02
+#&gt;  6 movie 255050 "It tr… FALSE   FALSE          0 2019-10-14 00:09:03
+#&gt;  7 movie 255044 Visual… FALSE   FALSE          0 2019-10-13 23:36:46
+#&gt;  8 show  255049 Yessss… FALSE   FALSE          0 2019-10-13 23:50:06
+#&gt;  9 show  255045 Master… FALSE   FALSE          0 2019-10-13 23:37:57
+#&gt; 10 seas… 255047 "Easil… FALSE   FALSE          0 2019-10-13 23:40:34
 #&gt; # … with 27 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
@@ -309,7 +273,6 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#source">Source</a></li>
       <li><a href="#value">Value</a></li>
-      <li><a href="#functions">Functions</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
