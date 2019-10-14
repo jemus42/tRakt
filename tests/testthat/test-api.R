@@ -6,12 +6,12 @@ test_that("Client ID is set without .Renviron", {
 
   Sys.setenv(trakt_client_id = "")
   expect_failure(expect_message(trakt_credentials()))
-  expect_equal(getOption("trakt_client_id"), client_id)
+  expect_equal(Sys.getenv("trakt_client_id"), client_id)
 
   expect_message(
     trakt_credentials(username = "arbitraryusername", silent = FALSE)
   )
-  expect_equal(getOption("trakt_username"), "arbitraryusername")
+  expect_equal(Sys.getenv("trakt_username"), "arbitraryusername")
   expect_message(trakt_credentials(client_id = client_id, silent = FALSE))
 })
 

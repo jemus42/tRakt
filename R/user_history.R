@@ -12,6 +12,7 @@
 #' @eval apiurl("users", "history")
 #' @importFrom dplyr bind_cols select rename rename_all
 #' @importFrom purrr map_df
+#' @importFrom rlang is_empty
 #' @inherit trakt_api_common_parameters return
 #' @note For `type = "shows"`, the
 #' original output contains a nested object with `show` and `episode` data,
@@ -52,8 +53,8 @@ user_history <- function(user = getOption("trakt_username"),
   response <- trakt_get(url = url)
   response <- as_tibble(response)
 
-  if (identical(response, tibble())) {
-    return(response)
+  if (is_empty(response)) {
+    return(tibble())
   }
 
   if (type == "shows") {

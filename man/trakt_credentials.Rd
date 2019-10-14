@@ -51,7 +51,7 @@ string (i.e. it's not \code{""}), then all requests will be made using authentic
 \dontrun{
 # Use a values set in ~/.Renviron in an R session:
 # (This is automatically executed when calling library(tRakt))
-trakt_credentials()
+trakt_credentials(silent = FALSE)
 
 # Explicitly set values in an R session, overriding .Renviron values
 trakt_credentials(
