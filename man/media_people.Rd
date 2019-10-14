@@ -8,13 +8,13 @@
 \alias{episodes_people}
 \title{Get the cast and crew of a show or movie}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{movies/:id/people}
+movies_people() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{movies/:id/people}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show}{shows/:id/people}
+shows_people() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show}{shows/:id/people}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/people/get-all-people-for-a-season}{shows/:id/seasons/:season/people}
+seasons_people() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/people/get-all-people-for-a-season}{shows/:id/seasons/:season/people}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/people/get-all-people-for-an-episode}{shows/:id/seasons/:season/episodes/:episode/people}
+episodes_people() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/people/get-all-people-for-an-episode}{shows/:id/seasons/:season/episodes/:episode/people}
 }
 \usage{
 movies_people(id, extended = c("min", "full"))

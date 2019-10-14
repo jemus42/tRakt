@@ -7,13 +7,13 @@
 \alias{comments_item}
 \title{Get a single comment}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/comment/get-a-comment-or-reply}{comments/:id}
+comments_comment() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/comment/get-a-comment-or-reply}{comments/:id}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/replies/get-replies-for-a-comment}{comments/:id/replies}
+comments_replies() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/replies/get-replies-for-a-comment}{comments/:id/replies}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/likes/get-all-users-who-liked-a-comment}{comments/:id/likes}
+comments_likes() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/likes/get-all-users-who-liked-a-comment}{comments/:id/likes}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/item/get-the-attached-media-item}{comments/:id/item}
+comments_item() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/item/get-the-attached-media-item}{comments/:id/item}
 }
 \usage{
 comments_comment(id, extended = c("min", "full"))

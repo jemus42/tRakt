@@ -4,7 +4,7 @@
 \alias{episodes_summary}
 \title{Get a single episode's details}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/summary/get-a-single-episode-for-a-show}{shows/:id/seasons/:season/episodes/:episode}
+episodes_summary() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/summary/get-a-single-episode-for-a-show}{shows/:id/seasons/:season/episodes/:episode}
 }
 \usage{
 episodes_summary(id, season = 1L, episode = 1L, extended = c("min",

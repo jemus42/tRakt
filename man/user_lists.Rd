@@ -4,7 +4,7 @@
 \alias{user_lists}
 \title{Get a user's lists}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/lists/get-a-user's-custom-lists}{users/:id/lists}
+user_lists() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/lists/get-a-user's-custom-lists}{users/:id/lists}
 }
 \usage{
 user_lists(user = getOption("trakt_username"), extended = c("min",

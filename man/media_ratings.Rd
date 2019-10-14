@@ -8,13 +8,13 @@
 \alias{episodes_ratings}
 \title{Media user ratings}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings}{shows/:ids/ratings}
+shows_ratings() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings}{shows/:ids/ratings}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings}{movies/:id/ratings}
+movies_ratings() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings}{movies/:id/ratings}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings}{shows/:id/seasons/:season/ratings}
+seasons_ratings() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings}{shows/:id/seasons/:season/ratings}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings}{shows/:id/seasons/:season/episodes/:episode/ratings}
+episodes_ratings() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings}{shows/:id/seasons/:season/episodes/:episode/ratings}
 }
 \usage{
 shows_ratings(id)

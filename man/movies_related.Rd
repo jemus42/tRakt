@@ -4,7 +4,7 @@
 \alias{movies_related}
 \title{Get similiar(ish) movies}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/related/get-related-movies}{movies/:id/related}
+movies_related() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/related/get-related-movies}{movies/:id/related}
 }
 \usage{
 movies_related(id, limit = 10L, extended = c("min", "full"))

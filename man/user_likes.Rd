@@ -4,7 +4,7 @@
 \alias{user_likes}
 \title{Get items (comments, lists) a user likes}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/likes/get-likes}{users/likes/:type}  (Authentication required)
+user_likes() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/likes/get-likes}{users/likes/:type}  (Authentication required)
 }
 \usage{
 user_likes(type = c("comments", "lists"))

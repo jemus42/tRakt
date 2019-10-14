@@ -4,7 +4,7 @@
 \alias{movies_summary}
 \title{Get a single movie}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie}{movies/:id}
+movies_summary() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie}{movies/:id}
 }
 \usage{
 movies_summary(id, extended = c("min", "full"))

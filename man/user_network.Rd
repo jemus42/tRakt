@@ -7,11 +7,11 @@
 \alias{user_friends}
 \title{Get a user's social connections}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/followers/get-followers}{users/:id/followers}
+user_followers() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/followers/get-followers}{users/:id/followers}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/following/get-following}{users/:id/following}
+user_following() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/following/get-following}{users/:id/following}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/friends/get-friends}{users/:id/friends}
+user_friends() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/friends/get-friends}{users/:id/friends}
 }
 \usage{
 user_followers(user = getOption("trakt_user"), extended = "min")

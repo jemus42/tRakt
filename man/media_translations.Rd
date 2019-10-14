@@ -7,11 +7,11 @@
 \alias{episodes_translations}
 \title{Get translations for a movie, show or episode}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/translations/get-all-movie-translations}{movies/:id/translations/:language}
+movies_translations() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/translations/get-all-movie-translations}{movies/:id/translations/:language}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/translations/get-all-show-translations}{shows/:id/translations/:language}
+shows_translations() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/translations/get-all-show-translations}{shows/:id/translations/:language}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/translations/get-all-episode-translations}{shows/:id/seasons/:season/episodes/:episode/translations/:language}
+episodes_translations() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/translations/get-all-episode-translations}{shows/:id/seasons/:season/episodes/:episode/translations/:language}
 }
 \usage{
 movies_translations(id, languages = NULL)

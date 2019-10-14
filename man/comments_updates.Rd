@@ -4,7 +4,7 @@
 \alias{comments_updates}
 \title{Get recently updated/edited comments}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/updates/get-recently-updated-comments}{comments/updates/:comment_type/:type?include_replies=}
+comments_updates() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/updates/get-recently-updated-comments}{comments/updates/:comment_type/:type?include_replies=}
 }
 \usage{
 comments_updates(comment_type = c("all", "reviews", "shouts"),

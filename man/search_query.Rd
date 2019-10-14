@@ -5,9 +5,9 @@
 \alias{search_id}
 \title{Search trakt.tv via text query or ID}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results}{search/:type?query=}
+search_query() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results}{search/:type?query=}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results}{search/:id_type/:id?type=}
+search_id() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results}{search/:id_type/:id?type=}
 }
 \usage{
 search_query(query, type = "show", n_results = 1L,

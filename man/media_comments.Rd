@@ -8,13 +8,13 @@
 \alias{episodes_comments}
 \title{Get all comments of a thing}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/comments/get-all-movie-comments}{movies/:id/comments/:sort}
+movies_comments() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/comments/get-all-movie-comments}{movies/:id/comments/:sort}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/comments/get-all-show-comments}{shows/:id/comments/:sort}
+shows_comments() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/comments/get-all-show-comments}{shows/:id/comments/:sort}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments}{shows/:id/seasons/:season/comments/:sort}
+seasons_comments() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments}{shows/:id/seasons/:season/comments/:sort}
 
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/comments/get-all-episode-comments}{shows/:id/seasons/:season/episodes/:episode/comments/:sort}
+episodes_comments() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/comments/get-all-episode-comments}{shows/:id/seasons/:season/episodes/:episode/comments/:sort}
 }
 \usage{
 movies_comments(id, sort = c("newest", "oldest", "likes", "replies"),

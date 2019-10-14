@@ -4,7 +4,7 @@
 \alias{user_list_comments}
 \title{Get comments on a user-created list}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-comments/get-all-list-comments}{users/:id/lists/:list_id/comments/:sort}
+user_list_comments() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-comments/get-all-list-comments}{users/:id/lists/:list_id/comments/:sort}
 }
 \usage{
 user_list_comments(user = getOption("trakt_username"), list_id,

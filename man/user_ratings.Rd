@@ -4,7 +4,7 @@
 \alias{user_ratings}
 \title{Get a user's ratings}
 \source{
-user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings}{users/:id/ratings/:type/:rating}
+user_ratings() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings}{users/:id/ratings/:type/:rating}
 }
 \usage{
 user_ratings(user = getOption("trakt_username"), type = c("movies",
