@@ -20,3 +20,14 @@ test_that("build_trakt_url builds a url", {
 
   expect_error(build_trakt_url("3o2bkf", "qkfb23vf", validate = TRUE))
 })
+
+test_that("apidoc helpers work", {
+
+  expect_equal(
+    apidoc("movies", "popular", "endpoint"),
+    "movies/popular"
+  )
+
+  expect_is(apiurl("movies", "trending"), "glue")
+
+})
