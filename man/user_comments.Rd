@@ -4,7 +4,7 @@
 \alias{user_comments}
 \title{Get a user's comments}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/users/comments/get-comments}{users/:id/comments/:comment_type/:type?include_replies=}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/comments/get-comments}{users/:id/comments/:comment_type/:type?include_replies=}
 }
 \usage{
 user_comments(user = getOption("trakt_username"),
@@ -48,6 +48,7 @@ Other user data: \code{\link{user_collection}},
 
 Other comment methods: \code{\link{comments_comment}},
   \code{\link{comments_trending}},
+  \code{\link{comments_updates}},
   \code{\link{media_comments}},
   \code{\link{user_list_comments}}
 }

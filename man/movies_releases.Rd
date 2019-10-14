@@ -4,7 +4,7 @@
 \alias{movies_releases}
 \title{Get a movie's release details}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/movies/releases/get-all-movie-releases}{movies/:id/releases/:country}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/releases/get-all-movie-releases}{movies/:id/releases/:country}
 }
 \usage{
 movies_releases(id, country = NULL)

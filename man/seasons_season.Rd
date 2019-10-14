@@ -4,7 +4,7 @@
 \alias{seasons_season}
 \title{Get a season of a show}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show}{shows/id/seasons/season}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show}{shows/id/seasons/season}
 }
 \usage{
 seasons_season(id, seasons = 1L, extended = c("min", "full"))

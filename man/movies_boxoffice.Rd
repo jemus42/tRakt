@@ -4,7 +4,7 @@
 \alias{movies_boxoffice}
 \title{Get the weekend box office}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office}{movies/boxoffice}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office}{movies/boxoffice}
 }
 \usage{
 movies_boxoffice(extended = c("min", "full"))

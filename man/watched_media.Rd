@@ -6,9 +6,9 @@
 \alias{shows_watched}
 \title{Most watched media}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/movies/watched/get-the-most-watched-movies}{movies/watched/:period}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/watched/get-the-most-watched-movies}{movies/watched/:period}
 
-\href{https://trakt.docs.apiary.io/#reference/shows/watched/get-the-most-watched-shows}{shows/watched/:period}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/watched/get-the-most-watched-shows}{shows/watched/:period}
 }
 \usage{
 movies_watched(limit = 10, extended = c("min", "full"),

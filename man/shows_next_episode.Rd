@@ -5,9 +5,9 @@
 \alias{shows_last_episode}
 \title{Get a shows next or latest episode}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/shows/next-episode/get-next-episode}{shows/:id/next_episode}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/next-episode/get-next-episode}{shows/:id/next_episode}
 
-\href{https://trakt.docs.apiary.io/#reference/shows/last-episode/get-last-episode}{shows/:id/last_episode}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/last-episode/get-last-episode}{shows/:id/last_episode}
 }
 \usage{
 shows_next_episode(id, extended = c("min", "full"))

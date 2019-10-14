@@ -4,38 +4,48 @@
 \alias{trakt_credentials}
 \title{Set the required trakt.tv API credentials}
 \usage{
-trakt_credentials(username, client_id, silent = TRUE)
+trakt_credentials(username, client_id, client_secret, silent = TRUE)
 }
 \arguments{
 \item{username}{\code{character(1)}: Explicitly set your trakt.tv username
 (optional).}
 
 \item{client_id}{\code{character(1)}: Explicitly set your API client ID
-(required for API interaciton).}
+(required for \emph{any} API interaction).}
+
+\item{client_secret}{\code{character(1)}: Explicitly set your API client secret
+(required only for \emph{authenticated} API interaction).}
 
 \item{silent}{\code{logical(1) [TRUE]}: No messages are printed showing you the
-API information.
-Mostly for debug purposes.}
+API information. Mostly for debug purposes.}
 }
 \value{
-Nothing. Only messages.
+Invisibly: A \code{list} with elements \code{username}, \code{client_id} and \code{client_secret},
+where values are \code{TRUE} if the corresponding value is non-empty.
 }
 \description{
 \code{trakt_credentials} searches for your credentials and stores them
-in the appropriate \code{\link[=options]{options()}} variables of the same name.
+in the appropriate \link[base:Sys.setenv]{environment variables} of the same name.
 To make this work automatically, place your key as environment variables in
 \code{~/.Renviron} (see \code{Details}).
-Arguments to this function take precedence over any key file. To make API
-functions work, you do not have to use this function unless you want to
-supply your own client ID, which is recommended for larger data collection
-projects.
+Arguments to this function take precedence over any configuration file.
 }
 \details{
+This function is called automatically when the package is loaded via \code{library(tRakt)}
+or \code{tRakt::fun} function calls – you basically never have to use it if you have
+stored your credentials as advised.
+Additionally, for regular (non-authenticated) API interaction, you do not have to
+set any credentials at all because the package's \code{client_secret} is used as a fallback,
+which allows you to use most functions out of the box.
+
 Set appropriate values in your \code{~/.Renviron} like this:\preformatted{# tRakt
 trakt_username=jemus42
 trakt_client_id=12[...]f2
 trakt_client_secret=f23[...]2nkjb
 }
+
+If (and only if) the environment option \code{trakt_client_secret} is set to a non-empty
+string (i.e. it's not \code{""}), then all requests will be made using authentication.
 }
 \examples{
 \dontrun{
@@ -45,8 +55,8 @@ trakt_credentials()
 
 # Explicitly set values in an R session, overriding .Renviron values
 trakt_credentials(
-  username = "sean",
-  client_id = "12fc1de7674[...]d5e11e3490823d629afdf2",
+  username = "jemus42",
+  client_id = "totallylegitclientsecret",
   silent = FALSE
 )
 }

@@ -15,6 +15,8 @@ authors:
 
 reference:
   - title: Basic API interaction
+    desc: >
+      These functions are basic building blocks – you don't have to use them directly.
     contents:
       - trakt_get
       - trakt_credentials

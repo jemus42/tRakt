@@ -6,9 +6,9 @@
 \alias{shows_popular}
 \title{Popular media}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies}{movies/popular}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies}{movies/popular}
 
-\href{https://trakt.docs.apiary.io/#reference/shows/popular/get-popular-shows}{shows/popular}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/popular/get-popular-shows}{shows/popular}
 }
 \usage{
 movies_popular(limit = 10, extended = c("min", "full"), query = NULL,

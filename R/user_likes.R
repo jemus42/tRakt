@@ -1,8 +1,6 @@
 #' Get items (comments, lists) a user likes
 #'
-#' This requires authentication.
-#'
-#' @param type One of "comments", "lists".
+#' @param type `character(1) ["comments"]`: One of "comments", "lists".
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @family user data
@@ -10,15 +8,16 @@
 #' @importFrom purrr discard pluck
 #' @importFrom dplyr bind_cols
 #' @examples
-#' # Get liked lists
-#' if (FALSE) {
+#' # Get liked lists (only if there's a client secret set)
+#' # See ?trakt_credentials
+#' if (trakt_credentials()[["client_secret"]]) {
 #'   user_likes("lists")
 #' }
 user_likes <- function(type = c("comments", "lists")) {
   type <- check_types(type, several.ok = FALSE, possible_types = c("comments", "lists"))
 
   url <- build_trakt_url("users", "likes", type)
-  response <- trakt_get(url, auth = TRUE)
+  response <- trakt_get(url)
 
   if (type == "comments") {
     response %>%

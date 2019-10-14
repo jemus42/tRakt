@@ -8,13 +8,13 @@
 \alias{episodes_stats}
 \title{Get a show or movie's (or season's or episode's) stats}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats}{shows/:id/stats}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats}{shows/:id/stats}
 
-\href{https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats}{movies/:id/stats}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats}{movies/:id/stats}
 
-\href{https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats}{shows/:id/seasons/:season/stats}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats}{shows/:id/seasons/:season/stats}
 
-\href{https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats}{shows/:id/seasons/:season/episodes/:episode/stats}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats}{shows/:id/seasons/:season/episodes/:episode/stats}
 }
 \usage{
 shows_stats(id)

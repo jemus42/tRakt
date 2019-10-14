@@ -4,7 +4,7 @@
 \alias{user_profile}
 \title{Get a user's profile}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile}{users/:id}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile}{users/:id}
 }
 \usage{
 user_profile(user = getOption("trakt_username"), extended = c("min",

@@ -7,13 +7,13 @@
 \alias{comments_item}
 \title{Get a single comment}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/comments/comment/get-a-comment-or-reply}{comments/:id}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/comment/get-a-comment-or-reply}{comments/:id}
 
-\href{https://trakt.docs.apiary.io/#reference/comments/replies/get-replies-for-a-comment}{comments/:id/replies}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/replies/get-replies-for-a-comment}{comments/:id/replies}
 
-\href{https://trakt.docs.apiary.io/#reference/comments/likes/get-all-users-who-liked-a-comment}{comments/:id/likes}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/likes/get-all-users-who-liked-a-comment}{comments/:id/likes}
 
-\href{https://trakt.docs.apiary.io/#reference/comments/item/get-the-attached-media-item}{comments/:id/item}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/item/get-the-attached-media-item}{comments/:id/item}
 }
 \usage{
 comments_comment(id, extended = c("min", "full"))
@@ -85,6 +85,7 @@ comments_item("136632", extended = "full")
 }
 \seealso{
 Other comment methods: \code{\link{comments_trending}},
+  \code{\link{comments_updates}},
   \code{\link{media_comments}},
   \code{\link{user_comments}},
   \code{\link{user_list_comments}}
@@ -96,16 +97,19 @@ Other summary methods: \code{\link{episodes_summary}},
   \code{\link{shows_summary}}, \code{\link{user_profile}}
 
 Other comment methods: \code{\link{comments_trending}},
+  \code{\link{comments_updates}},
   \code{\link{media_comments}},
   \code{\link{user_comments}},
   \code{\link{user_list_comments}}
 
 Other comment methods: \code{\link{comments_trending}},
+  \code{\link{comments_updates}},
   \code{\link{media_comments}},
   \code{\link{user_comments}},
   \code{\link{user_list_comments}}
 
 Other comment methods: \code{\link{comments_trending}},
+  \code{\link{comments_updates}},
   \code{\link{media_comments}},
   \code{\link{user_comments}},
   \code{\link{user_list_comments}}

@@ -4,7 +4,7 @@
 \alias{shows_related}
 \title{Get similiar(ish) shows}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/shows/related/get-related-shows}{shows/:id/related}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/related/get-related-shows}{shows/:id/related}
 }
 \usage{
 shows_related(id, limit = 10L, extended = c("min", "full"))

@@ -6,9 +6,9 @@
 \alias{shows_collected}
 \title{Most collected media}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/movies/collected/get-the-most-collected-movies}{movies/collected/:period}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/collected/get-the-most-collected-movies}{movies/collected/:period}
 
-\href{https://trakt.docs.apiary.io/#reference/shows/collected/get-the-most-collected-shows}{shows/collected/:period}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/collected/get-the-most-collected-shows}{shows/collected/:period}
 }
 \usage{
 movies_collected(limit = 10, extended = c("min", "full"),

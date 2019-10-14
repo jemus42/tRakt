@@ -4,13 +4,13 @@
 \alias{user_likes}
 \title{Get items (comments, lists) a user likes}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/users/likes/get-likes}{users/likes/:type}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/likes/get-likes}{users/likes/:type}  (Authentication required)
 }
 \usage{
 user_likes(type = c("comments", "lists"))
 }
 \arguments{
-\item{type}{One of "comments", "lists".}
+\item{type}{\code{character(1) ["comments"]}: One of "comments", "lists".}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
@@ -18,11 +18,12 @@ A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} par
 If there are no results (or the API is unreachable), an empty \code{tibble()} is returned.
 }
 \description{
-This requires authentication.
+Get items (comments, lists) a user likes
 }
 \examples{
-# Get liked lists
-if (FALSE) {
+# Get liked lists (only if there's a client secret set)
+# See ?trakt_credentials
+if (trakt_credentials()[["client_secret"]]) {
   user_likes("lists")
 }
 }

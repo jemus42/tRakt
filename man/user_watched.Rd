@@ -4,7 +4,7 @@
 \alias{user_watched}
 \title{Get a user's watched shows or movies}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/users/watched/get-watched}{users/:id/watched/:type}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/watched/get-watched}{users/:id/watched/:type}
 }
 \usage{
 user_watched(user = getOption("trakt_username"), type = c("shows",

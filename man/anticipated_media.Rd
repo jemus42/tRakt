@@ -6,9 +6,9 @@
 \alias{shows_anticipated}
 \title{Anticipated media}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/movies/anticipated/get-the-most-anticipated-movies}{movies/anticipated}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/anticipated/get-the-most-anticipated-movies}{movies/anticipated}
 
-\href{https://trakt.docs.apiary.io/#reference/shows/anticipated/get-the-most-anticipated-shows}{shows/anticipated}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/anticipated/get-the-most-anticipated-shows}{shows/anticipated}
 }
 \usage{
 movies_anticipated(limit = 10, extended = c("min", "full"),

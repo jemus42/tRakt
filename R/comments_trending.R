@@ -1,4 +1,4 @@
-#' Get trending, recent or recently updated comments
+#' Get trending or recently made comments
 #'
 #' @name comments_trending
 #' @eval apiurl("comments", "trending")
@@ -15,13 +15,10 @@
 #'
 #' # Recent shouts (short comments)
 #' comments_recent("shouts")
-#'
-#' # Recently updated comments
-#' comments_updates()
 #' }
 NULL
 
-#' @describeIn comments_trending Get trending comments.
+#' @name comments_trending
 #' @export
 comments_trending <- function(comment_type = c("all", "reviews", "shouts"),
                               type = c(
@@ -42,7 +39,7 @@ comments_trending <- function(comment_type = c("all", "reviews", "shouts"),
   unpack_comments_multitype(response)
 }
 
-#' @describeIn comments_trending Get recently made comments.
+#' @name comments_trending
 #' @eval apiurl("comments", "recent")
 #' @family comment methods
 #' @export
@@ -65,10 +62,18 @@ comments_recent <- function(comment_type = c("all", "reviews", "shouts"),
   unpack_comments_multitype(response)
 }
 
-#' @describeIn comments_trending Get recently updated comments.
+#' Get recently updated/edited comments
+#'
+#' @inheritParams user_comments
+#' @inheritParams trakt_api_common_parameters
+#' @inherit user_comments return
+#' @export
 #' @eval apiurl("comments", "updates")
 #' @family comment methods
 #' @export
+#' @examples
+#' # Recently updated comments
+#' comments_updates()
 comments_updates <- function(comment_type = c("all", "reviews", "shouts"),
                              type = c(
                                "all", "movies", "shows", "seasons",

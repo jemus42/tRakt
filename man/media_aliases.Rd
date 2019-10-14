@@ -6,9 +6,9 @@
 \alias{shows_aliases}
 \title{Get all movie / show aliases}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases}{movies/:id/aliases}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases}{movies/:id/aliases}
 
-\href{https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases}{shows/:id/aliases}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases}{shows/:id/aliases}
 }
 \usage{
 movies_aliases(id)

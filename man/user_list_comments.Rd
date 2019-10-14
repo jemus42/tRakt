@@ -4,7 +4,7 @@
 \alias{user_list_comments}
 \title{Get comments on a user-created list}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/users/list-comments/get-all-list-comments}{users/:id/lists/:list_id/comments/:sort}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-comments/get-all-list-comments}{users/:id/lists/:list_id/comments/:sort}
 }
 \usage{
 user_list_comments(user = getOption("trakt_username"), list_id,
@@ -43,6 +43,7 @@ user_list_comments("donxy", "1248149")
 \seealso{
 Other comment methods: \code{\link{comments_comment}},
   \code{\link{comments_trending}},
+  \code{\link{comments_updates}},
   \code{\link{media_comments}}, \code{\link{user_comments}}
 
 Other list methods: \code{\link{lists_popular}},

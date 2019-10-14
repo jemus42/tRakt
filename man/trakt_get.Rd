@@ -4,8 +4,7 @@
 \alias{trakt_get}
 \title{Make an API call and receive parsed output}
 \usage{
-trakt_get(url, client_id = getOption("trakt_client_id"), HEAD = FALSE,
-  auth = FALSE)
+trakt_get(url, client_id = Sys.getenv("trakt_client_id"), HEAD = FALSE)
 }
 \arguments{
 \item{url}{\code{character(1)}: The API endpoint. Either a full URL like
@@ -20,9 +19,6 @@ further information.}
 performed and its content returned. This is useful if you are only
 interested in status codes or other headers, and don't want to waste
 resources/bandwidth on the response body.}
-
-\item{auth}{\code{logical(1) [FALSE]}: If \code{TRUE}, an authenticated request is made.
-This requires a set client secret and manual interaction.}
 }
 \value{
 The parsed (\code{\link[jsonlite:fromJSON]{jsonlite::fromJSON()}}) content of the API response.

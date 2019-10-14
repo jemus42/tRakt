@@ -124,6 +124,12 @@ apiurl <- function(section, method, prefix = "@source ") {
     stop("Please install the 'glue' package")
   }
 
-  glue::glue('{prefix} [{apidoc(section, method, "endpoint")}]({apidoc(section, method, "url")})')
+  func <- apidoc("users", "profile", "implementation")
+  endpoint <- apidoc(section, method, "endpoint")
+  url <- apidoc(section, method, "url")
+  authenticated <- isTRUE(apidoc(section, method, "authentication"))
+  authenticated <- ifelse(authenticated, " (Authentication required)", "")
+
+  glue::glue('{prefix} {func} wraps endpoint [{endpoint}]({url}) {authenticated}')
 }
 

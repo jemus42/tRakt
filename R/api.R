@@ -1,13 +1,17 @@
 #' Set the required trakt.tv API credentials
 #'
 #' `trakt_credentials` searches for your credentials and stores them
-#' in the appropriate [options()] variables of the same name.
+#' in the appropriate [environment variables][base::Sys.setenv] of the same name.
 #' To make this work automatically, place your key as environment variables in
 #' `~/.Renviron` (see `Details`).
-#' Arguments to this function take precedence over any key file. To make API
-#' functions work, you do not have to use this function unless you want to
-#' supply your own client ID, which is recommended for larger data collection
-#' projects.
+#' Arguments to this function take precedence over any configuration file.
+#'
+#' This function is called automatically when the package is loaded via `library(tRakt)`
+#' or `tRakt::fun` function calls – you basically never have to use it if you have
+#' stored your credentials as advised.
+#' Additionally, for regular (non-authenticated) API interaction, you do not have to
+#' set any credentials at all because the package's `client_secret` is used as a fallback,
+#' which allows you to use most functions out of the box.
 #'
 #' Set appropriate values in your `~/.Renviron` like this:
 #'
@@ -18,16 +22,22 @@
 #' trakt_client_secret=f23[...]2nkjb
 #' ```
 #'
+#' If (and only if) the environment option `trakt_client_secret` is set to a non-empty
+#' string (i.e. it's not `""`), then all requests will be made using authentication.
+#'
 #' @param username `character(1)`: Explicitly set your trakt.tv username
 #'    (optional).
 #' @param client_id `character(1)`: Explicitly set your API client ID
-#'    (required for API interaciton).
+#'    (required for *any* API interaction).
+#' @param client_secret `character(1)`: Explicitly set your API client secret
+#'    (required only for *authenticated* API interaction).
 #' @param silent `logical(1) [TRUE]`: No messages are printed showing you the
-#'    API information.
-#' Mostly for debug purposes.
-#' @return Nothing. Only messages.
+#'    API information. Mostly for debug purposes.
+#' @return Invisibly: A `list` with elements `username`, `client_id` and `client_secret`,
+#'   where values are `TRUE` if the corresponding value is non-empty.
 #' @export
 #' @family API-basics
+#' @importFrom stringr str_trunc
 #' @examples
 #' \dontrun{
 #' # Use a values set in ~/.Renviron in an R session:
@@ -36,40 +46,56 @@
 #'
 #' # Explicitly set values in an R session, overriding .Renviron values
 #' trakt_credentials(
-#'   username = "sean",
-#'   client_id = "12fc1de7674[...]d5e11e3490823d629afdf2",
+#'   username = "jemus42",
+#'   client_id = "totallylegitclientsecret",
 #'   silent = FALSE
 #' )
 #' }
-trakt_credentials <- function(username, client_id, silent = TRUE) {
-  username <- ifelse(missing(username),
-    Sys.getenv("trakt_username"), username
-  )
-  client_id <- ifelse(missing(client_id),
-    Sys.getenv("trakt_client_id"), client_id
-  )
+trakt_credentials <- function(username,
+                              client_id,
+                              client_secret,
+                              silent = TRUE) {
 
-  if (username != "") {
-    options(trakt_username = username)
-    if (!silent) {
-      message("Your trakt.tv username is set to ", getOption("trakt_username"))
-    }
+  # Check username ----
+  if (!missing(username)) {
+    Sys.setenv("trakt_username" = username)
   }
-  if (client_id != "") {
-    options(trakt_client_id = client_id)
-  } else {
-    options(trakt_client_id = tRakt_client_id)
-    if (!silent) {
-      message(
-        "I provided my client_id as a fallback for you. ",
-        "Please use it responsibly."
-      )
-    }
+
+  # Check client id (required) ----
+  if (!missing(client_id)) {
+    Sys.setenv("trakt_client_id" = client_id)
+  }
+
+  # Set internal package client id if there is none yet
+  if (Sys.getenv("trakt_client_id") == "") {
+    Sys.setenv("trakt_client_id" = tRakt_client_id)
+  }
+
+  # check client secret (optional(ish)) ----
+  if (!missing(client_secret)) {
+    Sys.setenv("trakt_client_secret" = client_secret)
   }
 
   if (!silent) {
-    message(paste("Your client ID is set to", getOption("trakt_client_id")))
+    message("trakt username: ", Sys.getenv("trakt_username"))
+    message(
+      "trakt client id: ",
+      stringr::str_trunc(Sys.getenv("trakt_client_id"), width = 7, ellipsis = "...")
+    )
+    message(
+      "trakt client secret: ",
+      stringr::str_trunc(Sys.getenv("trakt_client_secret"), width = 5, ellipsis = "...")
+    )
   }
+
+  invisible(
+    list(
+      username = Sys.getenv("trakt_username") != "",
+      client_id = Sys.getenv("trakt_client_id") != "",
+      client_secret = Sys.getenv("trakt_client_secret") != ""
+    )
+  )
+
 }
 
 #' Make an API call and receive parsed output
@@ -97,8 +123,6 @@ trakt_credentials <- function(username, client_id, silent = TRUE) {
 #'   performed and its content returned. This is useful if you are only
 #'   interested in status codes or other headers, and don't want to waste
 #'   resources/bandwidth on the response body.
-#' @param auth `logical(1) [FALSE]`: If `TRUE`, an authenticated request is made.
-#'   This requires a set client secret and manual interaction.
 #' @return The parsed ([jsonlite::fromJSON()]) content of the API response.
 #'   An empty [tibble()][tibble::tibble-package] if the response is an empty
 #'   `JSON` array.
@@ -121,17 +145,17 @@ trakt_credentials <- function(username, client_id, silent = TRUE) {
 #'
 #' # Optionally be lazy about URL specification by dropping the hostname:
 #' trakt_get("shows/game-of-thrones")
-trakt_get <- function(url, client_id = getOption("trakt_client_id"),
-                      HEAD = FALSE, auth = FALSE) {
+trakt_get <- function(url,
+                      client_id = Sys.getenv("trakt_client_id"),
+                      HEAD = FALSE) {
   if (!grepl(pattern = "^https://api.trakt.tv", url)) {
     url <- build_trakt_url(url)
   }
 
-  if (is.null(client_id)) {
-    if (is.null(getOption("trakt_client_id"))) {
-      options(trakt_client_id = tRakt_client_id)
-    }
-    client_id <- getOption("trakt_client_id")
+  if (Sys.getenv("trakt_client_secret") != "") {
+    token <- trakt_get_token()
+  } else {
+    token <- NULL
   }
 
   # Headers and metadata
@@ -149,9 +173,6 @@ trakt_get <- function(url, client_id = getOption("trakt_client_id"),
     response <- flatten(response$all_headers)
     return(response)
   }
-
-  token <- NULL
-  if (auth) token <- trakt_get_token()
 
   response <- GET(url, headers, agent, config(token = token))
 
@@ -190,6 +211,12 @@ trakt_get <- function(url, client_id = getOption("trakt_client_id"),
 #' @family API-basics
 #' @importFrom httr oauth_endpoint oauth_app oauth2.0_token user_agent
 trakt_get_token <- function() {
+
+  if (Sys.getenv("trakt_client_secret") == "") {
+    stop("No client secret set, can't use authentication.\n",
+         "See ?trakt_credentials to see how to set up your credentials.")
+  }
+
   # Set up OAuth URLs
   trakt_endpoint <- oauth_endpoint(
     authorize = "https://trakt.tv/oauth/authorize",
@@ -199,7 +226,7 @@ trakt_get_token <- function() {
   # Application credentials: https://trakt.tv/oauth/applications
   app <- oauth_app(
     appname = "trakt",
-    key = getOption("trakt_client_id"),
+    key = Sys.getenv("trakt_client_id"),
     secret = Sys.getenv("trakt_client_secret"),
     redirect_uri = "urn:ietf:wg:oauth:2.0:oob"
   )

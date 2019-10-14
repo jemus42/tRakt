@@ -4,7 +4,7 @@
 \alias{user_list_items}
 \title{Get a user's list's items}
 \source{
-\href{https://trakt.docs.apiary.io/#reference/users/list-items/get-items-on-a-custom-list}{users/:id/lists/:list_id/items/:type}
+user_profile() wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-items/get-items-on-a-custom-list}{users/:id/lists/:list_id/items/:type}
 }
 \usage{
 user_list_items(user = getOption("trakt_username"), list_id,
