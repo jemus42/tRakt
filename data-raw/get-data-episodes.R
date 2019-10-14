@@ -36,7 +36,7 @@ gameofthrones <- left_join(
   got_trakt,
   got_wiki,
   by = "episode_abs"
-  ) %>%
+) %>%
   select(
     episode_abs, episode, season, runtime, title,
     overview, rating, votes, viewers,

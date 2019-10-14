@@ -25,7 +25,6 @@ test_that("search_query works", {
     expect_length(9) %>%
     nrow() %>%
     expect_equal(2)
-
 })
 
 test_that("search_id works", {

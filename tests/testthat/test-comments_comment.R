@@ -40,9 +40,11 @@ test_that("comments_likes works", {
 })
 
 test_that("comments_item works", {
-  nm_min <- c("type", "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb",
-              "season", "episode", "episode_title", "episode_trakt", "episode_tvdb",
-              "episode_imdb", "episode_tmdb")
+  nm_min <- c(
+    "type", "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb",
+    "season", "episode", "episode_title", "episode_trakt", "episode_tvdb",
+    "episode_imdb", "episode_tmdb"
+  )
 
   comments_item(c("136632", "236397")) %>%
     expect_is("tbl_df") %>%

@@ -55,15 +55,15 @@ search_query <- function(query, type = "show",
                          countries = NULL, runtimes = NULL,
                          ratings = NULL, certifications = NULL,
                          networks = NULL, status = NULL) {
-
   if (length(type) > 1) {
     res <- map_df(type, ~ search_query(
-     query, type = .x,
-     n_results = n_results,
-     years = years,
-     extended = extended, genres = genres, languages = languages,
-     countries = countries, runtimes = runtimes, ratings = ratings,
-     certifications = certifications, networks = networks, status = status
+      query,
+      type = .x,
+      n_results = n_results,
+      years = years,
+      extended = extended, genres = genres, languages = languages,
+      countries = countries, runtimes = runtimes, ratings = ratings,
+      certifications = certifications, networks = networks, status = status
     ))
     return(res)
   }
@@ -108,7 +108,6 @@ search_query <- function(query, type = "show",
 search_id <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
                       type = "show",
                       n_results = 1L, extended = c("min", "full")) {
-
   if (length(type) > 1) {
     return(map_df(type, ~ search_id(id, id_type, type = .x, n_results, extended)))
   }

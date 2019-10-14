@@ -95,7 +95,6 @@ trakt_credentials <- function(username,
       client_secret = Sys.getenv("trakt_client_secret") != ""
     )
   )
-
 }
 
 #' Make an API call and receive parsed output
@@ -211,10 +210,11 @@ trakt_get <- function(url,
 #' @family API-basics
 #' @importFrom httr oauth_endpoint oauth_app oauth2.0_token user_agent
 trakt_get_token <- function() {
-
   if (Sys.getenv("trakt_client_secret") == "") {
-    stop("No client secret set, can't use authentication.\n",
-         "See ?trakt_credentials to see how to set up your credentials.")
+    stop(
+      "No client secret set, can't use authentication.\n",
+      "See ?trakt_credentials to see how to set up your credentials."
+    )
   }
 
   # Set up OAuth URLs

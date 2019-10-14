@@ -22,12 +22,10 @@ test_that("build_trakt_url builds a url", {
 })
 
 test_that("apidoc helpers work", {
-
   expect_equal(
     apidoc("movies", "popular", "endpoint"),
     "movies/popular"
   )
 
   expect_is(apiurl("movies", "trending"), "glue")
-
 })

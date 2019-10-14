@@ -33,6 +33,7 @@ Imports:
 Suggests:
     covr,
     ggplot2,
+    glue,
     kableExtra,
     knitr,
     rmarkdown,
@@ -40,8 +41,7 @@ Suggests:
     scales,
     testthat (>= 2.1.0),
     tidyr,
-    yaml,
-    glue
+    yaml
 VignetteBuilder: 
     knitr
 Encoding: UTF-8

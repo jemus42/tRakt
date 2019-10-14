@@ -102,7 +102,6 @@ build_trakt_url <- function(..., validate = FALSE) {
 #' @keywords internal
 #' @importFrom purrr pluck
 apidoc <- function(section, method, key) {
-
   if (!requireNamespace("yaml", quietly = TRUE)) {
     stop("Please install the 'yaml' package")
   }
@@ -130,6 +129,5 @@ apiurl <- function(section, method, prefix = "@source ") {
   authenticated <- isTRUE(apidoc(section, method, "authentication"))
   authenticated <- ifelse(authenticated, " (Authentication required).", ".")
 
-  glue::glue('{prefix} `{func}` wraps endpoint [{endpoint}]({url}){authenticated}')
+  glue::glue("{prefix} `{func}` wraps endpoint [{endpoint}]({url}){authenticated}")
 }
-
