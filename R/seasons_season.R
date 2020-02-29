@@ -52,6 +52,6 @@ seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
     fix_tibble_response() %>%
     rename(
       episode = "number",
-      #  episode_abs = "number_abs" # Not sure if this renaming should be done
+      episode_abs = "number_abs" # Not sure if this renaming should be done
     )
 }

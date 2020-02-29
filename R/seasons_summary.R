@@ -76,7 +76,7 @@ seasons_summary <- function(id, episodes = FALSE,
         fix_tibble_response() %>%
         rename(
           episode = "number",
-        #  episode_abs = "number_abs" # Not sure if this renaming should be done
+          episode_abs = "number_abs" # Not sure if this renaming should be done
         )
     })
   }
