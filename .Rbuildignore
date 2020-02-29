@@ -27,3 +27,4 @@ vignettes/\.httr-oauth$
 ^\.pre-commit-config\.yaml$
 ^README_cache$
 ^\.covrignore$
+^\.github/workflows/R-CMD-check\.yaml$
