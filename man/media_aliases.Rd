@@ -36,31 +36,42 @@ movies_aliases(190430)
 shows_aliases(104439)
 }
 \seealso{
-Other movie data: \code{\link{anticipated_media}},
-  \code{\link{collected_media}},
-  \code{\link{media_comments}}, \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}},
-  \code{\link{movies_boxoffice}},
-  \code{\link{movies_related}},
-  \code{\link{movies_releases}},
-  \code{\link{movies_summary}}, \code{\link{people_media}},
-  \code{\link{played_media}}, \code{\link{popular_media}},
-  \code{\link{trending_media}},
-  \code{\link{updated_media}}, \code{\link{watched_media}}
+Other movie data: 
+\code{\link{anticipated_media}},
+\code{\link{collected_media}},
+\code{\link{media_comments}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{movies_boxoffice}()},
+\code{\link{movies_related}()},
+\code{\link{movies_releases}()},
+\code{\link{movies_summary}()},
+\code{\link{people_media}()},
+\code{\link{played_media}},
+\code{\link{popular_media}},
+\code{\link{trending_media}},
+\code{\link{updated_media}},
+\code{\link{watched_media}}
 
-Other show data: \code{\link{collected_media}},
-  \code{\link{media_comments}}, \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}}, \code{\link{people_media}},
-  \code{\link{played_media}},
-  \code{\link{shows_next_episode}},
-  \code{\link{shows_related}}, \code{\link{shows_summary}},
-  \code{\link{updated_media}}
+Other show data: 
+\code{\link{collected_media}},
+\code{\link{media_comments}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{people_media}()},
+\code{\link{played_media}},
+\code{\link{shows_next_episode}()},
+\code{\link{shows_related}()},
+\code{\link{shows_summary}()},
+\code{\link{updated_media}}
 }
 \concept{movie data}
 \concept{show data}

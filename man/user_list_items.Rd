@@ -7,8 +7,12 @@
 \code{user_list_items()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-items/get-items-on-a-custom-list}{users/:id/lists/:list_id/items/:type}.
 }
 \usage{
-user_list_items(user = getOption("trakt_username"), list_id,
-  type = NULL, extended = c("min", "full"))
+user_list_items(
+  user = getOption("trakt_username"),
+  list_id,
+  type = NULL,
+  extended = c("min", "full")
+)
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -54,9 +58,11 @@ user_list_items("sp1ti", list_id = "5615781", extended = "min", type = "episodes
 }
 }
 \seealso{
-Other list methods: \code{\link{lists_popular}},
-  \code{\link{media_lists}},
-  \code{\link{user_list_comments}},
-  \code{\link{user_lists}}, \code{\link{user_list}}
+Other list methods: 
+\code{\link{lists_popular}()},
+\code{\link{media_lists}},
+\code{\link{user_list_comments}()},
+\code{\link{user_lists}()},
+\code{\link{user_list}()}
 }
 \concept{list methods}

@@ -39,14 +39,18 @@ people_summary("bryan-cranston", "full")
 people_summary(c("kit-harington", "emilia-clarke"))
 }
 \seealso{
-Other people data: \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{people_media}}
+Other people data: 
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{people_media}()}
 
-Other summary methods: \code{\link{comments_comment}},
-  \code{\link{episodes_summary}},
-  \code{\link{movies_summary}},
-  \code{\link{seasons_summary}},
-  \code{\link{shows_summary}}, \code{\link{user_profile}}
+Other summary methods: 
+\code{\link{comments_comment}()},
+\code{\link{episodes_summary}()},
+\code{\link{movies_summary}()},
+\code{\link{seasons_summary}()},
+\code{\link{shows_summary}()},
+\code{\link{user_profile}()}
 }
 \concept{people data}
 \concept{summary methods}

@@ -32,7 +32,8 @@ This data comes from \url{https://trakt.tv} and
 gameofthrones
 }
 \seealso{
-Other Episode datasets: \code{\link{futurama}}
+Other Episode datasets: 
+\code{\link{futurama}}
 }
 \concept{Episode datasets}
 \keyword{datasets}

@@ -7,8 +7,12 @@
 \code{user_watched()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/watched/get-watched}{users/:id/watched/:type}.
 }
 \usage{
-user_watched(user = getOption("trakt_username"), type = c("shows",
-  "movies"), noseasons = TRUE, extended = c("min", "full"))
+user_watched(
+  user = getOption("trakt_username"),
+  type = c("shows", "movies"),
+  noseasons = TRUE,
+  extended = c("min", "full")
+)
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -42,10 +46,15 @@ user_watched(user = "sean", noseasons = TRUE)
 }
 }
 \seealso{
-Other user data: \code{\link{user_collection}},
-  \code{\link{user_comments}}, \code{\link{user_history}},
-  \code{\link{user_likes}}, \code{\link{user_network}},
-  \code{\link{user_profile}}, \code{\link{user_ratings}},
-  \code{\link{user_stats}}, \code{\link{user_watchlist}}
+Other user data: 
+\code{\link{user_collection}()},
+\code{\link{user_comments}()},
+\code{\link{user_history}()},
+\code{\link{user_likes}()},
+\code{\link{user_network}()},
+\code{\link{user_profile}()},
+\code{\link{user_ratings}()},
+\code{\link{user_stats}()},
+\code{\link{user_watchlist}()}
 }
 \concept{user data}

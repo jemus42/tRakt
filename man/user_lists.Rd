@@ -7,8 +7,7 @@
 \code{user_lists()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/lists/get-a-user's-custom-lists}{users/:id/lists}.
 }
 \usage{
-user_lists(user = getOption("trakt_username"), extended = c("min",
-  "full"))
+user_lists(user = getOption("trakt_username"), extended = c("min", "full"))
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -46,9 +45,11 @@ user_lists("jemus42")
 
 \link{user_list_items} For the actual content of a list.
 
-Other list methods: \code{\link{lists_popular}},
-  \code{\link{media_lists}},
-  \code{\link{user_list_comments}},
-  \code{\link{user_list_items}}, \code{\link{user_list}}
+Other list methods: 
+\code{\link{lists_popular}()},
+\code{\link{media_lists}},
+\code{\link{user_list_comments}()},
+\code{\link{user_list_items}()},
+\code{\link{user_list}()}
 }
 \concept{list methods}

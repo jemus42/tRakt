@@ -7,9 +7,12 @@
 \code{comments_updates()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/updates/get-recently-updated-comments}{comments/updates/:comment_type/:type?include_replies=}.
 }
 \usage{
-comments_updates(comment_type = c("all", "reviews", "shouts"),
+comments_updates(
+  comment_type = c("all", "reviews", "shouts"),
   type = c("all", "movies", "shows", "seasons", "episodes", "lists"),
-  include_replies = FALSE, limit = 10L)
+  include_replies = FALSE,
+  limit = 10L
+)
 }
 \arguments{
 \item{comment_type}{\code{character(1) ["all"]}: The type of comment, one of "all",
@@ -36,10 +39,11 @@ Get recently updated/edited comments
 comments_updates()
 }
 \seealso{
-Other comment methods: \code{\link{comments_comment}},
-  \code{\link{comments_trending}},
-  \code{\link{media_comments}},
-  \code{\link{user_comments}},
-  \code{\link{user_list_comments}}
+Other comment methods: 
+\code{\link{comments_comment}()},
+\code{\link{comments_trending}()},
+\code{\link{media_comments}},
+\code{\link{user_comments}()},
+\code{\link{user_list_comments}()}
 }
 \concept{comment methods}

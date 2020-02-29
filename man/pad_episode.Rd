@@ -31,6 +31,7 @@ pad_episode(2, 4)
 pad_episode(1, 85, e_width = 3)
 }
 \seealso{
-Other utility functions: \code{\link{build_trakt_url}}
+Other utility functions: 
+\code{\link{build_trakt_url}()}
 }
 \concept{utility functions}

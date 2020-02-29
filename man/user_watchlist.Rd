@@ -7,8 +7,11 @@
 \code{user_watchlist()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist}{users/:id/watchlist/:type}.
 }
 \usage{
-user_watchlist(user = getOption("trakt_username"), type = c("movies",
-  "shows"), extended = c("min", "full"))
+user_watchlist(
+  user = getOption("trakt_username"),
+  type = c("movies", "shows"),
+  extended = c("min", "full")
+)
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -38,10 +41,15 @@ user_watchlist(user = "sean")
 }
 }
 \seealso{
-Other user data: \code{\link{user_collection}},
-  \code{\link{user_comments}}, \code{\link{user_history}},
-  \code{\link{user_likes}}, \code{\link{user_network}},
-  \code{\link{user_profile}}, \code{\link{user_ratings}},
-  \code{\link{user_stats}}, \code{\link{user_watched}}
+Other user data: 
+\code{\link{user_collection}()},
+\code{\link{user_comments}()},
+\code{\link{user_history}()},
+\code{\link{user_likes}()},
+\code{\link{user_network}()},
+\code{\link{user_profile}()},
+\code{\link{user_ratings}()},
+\code{\link{user_stats}()},
+\code{\link{user_watched}()}
 }
 \concept{user data}

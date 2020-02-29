@@ -7,10 +7,12 @@
 \code{user_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/comments/get-comments}{users/:id/comments/:comment_type/:type?include_replies=}.
 }
 \usage{
-user_comments(user = getOption("trakt_username"),
-  comment_type = c("all", "reviews", "shouts"), type = c("all",
-  "movies", "shows", "seasons", "episodes", "lists"),
-  include_replies = FALSE)
+user_comments(
+  user = getOption("trakt_username"),
+  comment_type = c("all", "reviews", "shouts"),
+  type = c("all", "movies", "shows", "seasons", "episodes", "lists"),
+  include_replies = FALSE
+)
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -40,17 +42,23 @@ user_comments("jemus42")
 }
 }
 \seealso{
-Other user data: \code{\link{user_collection}},
-  \code{\link{user_history}}, \code{\link{user_likes}},
-  \code{\link{user_network}}, \code{\link{user_profile}},
-  \code{\link{user_ratings}}, \code{\link{user_stats}},
-  \code{\link{user_watched}}, \code{\link{user_watchlist}}
+Other user data: 
+\code{\link{user_collection}()},
+\code{\link{user_history}()},
+\code{\link{user_likes}()},
+\code{\link{user_network}()},
+\code{\link{user_profile}()},
+\code{\link{user_ratings}()},
+\code{\link{user_stats}()},
+\code{\link{user_watched}()},
+\code{\link{user_watchlist}()}
 
-Other comment methods: \code{\link{comments_comment}},
-  \code{\link{comments_trending}},
-  \code{\link{comments_updates}},
-  \code{\link{media_comments}},
-  \code{\link{user_list_comments}}
+Other comment methods: 
+\code{\link{comments_comment}()},
+\code{\link{comments_trending}()},
+\code{\link{comments_updates}()},
+\code{\link{media_comments}},
+\code{\link{user_list_comments}()}
 }
 \concept{comment methods}
 \concept{user data}

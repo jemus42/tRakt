@@ -39,43 +39,61 @@ shows_next_episode("one-piece")
 shows_last_episode("one-piece")
 }
 \seealso{
-Other show data: \code{\link{collected_media}},
-  \code{\link{media_aliases}},
-  \code{\link{media_comments}}, \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}}, \code{\link{people_media}},
-  \code{\link{played_media}}, \code{\link{shows_related}},
-  \code{\link{shows_summary}}, \code{\link{updated_media}}
+Other show data: 
+\code{\link{collected_media}},
+\code{\link{media_aliases}},
+\code{\link{media_comments}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{people_media}()},
+\code{\link{played_media}},
+\code{\link{shows_related}()},
+\code{\link{shows_summary}()},
+\code{\link{updated_media}}
 
-Other episode data: \code{\link{episodes_summary}},
-  \code{\link{media_comments}}, \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}},
-  \code{\link{seasons_season}},
-  \code{\link{seasons_summary}}
+Other episode data: 
+\code{\link{episodes_summary}()},
+\code{\link{media_comments}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{seasons_season}()},
+\code{\link{seasons_summary}()}
 
-Other show data: \code{\link{collected_media}},
-  \code{\link{media_aliases}},
-  \code{\link{media_comments}}, \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}}, \code{\link{people_media}},
-  \code{\link{played_media}}, \code{\link{shows_related}},
-  \code{\link{shows_summary}}, \code{\link{updated_media}}
+Other show data: 
+\code{\link{collected_media}},
+\code{\link{media_aliases}},
+\code{\link{media_comments}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{people_media}()},
+\code{\link{played_media}},
+\code{\link{shows_related}()},
+\code{\link{shows_summary}()},
+\code{\link{updated_media}}
 
-Other episode data: \code{\link{episodes_summary}},
-  \code{\link{media_comments}}, \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}},
-  \code{\link{seasons_season}},
-  \code{\link{seasons_summary}}
+Other episode data: 
+\code{\link{episodes_summary}()},
+\code{\link{media_comments}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{seasons_season}()},
+\code{\link{seasons_summary}()}
 }
 \concept{episode data}
 \concept{show data}

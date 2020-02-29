@@ -10,14 +10,29 @@
 \code{search_id()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results}{search/:id_type/:id?type=}.
 }
 \usage{
-search_query(query, type = "show", n_results = 1L,
-  extended = c("min", "full"), years = NULL, genres = NULL,
-  languages = NULL, countries = NULL, runtimes = NULL,
-  ratings = NULL, certifications = NULL, networks = NULL,
-  status = NULL)
+search_query(
+  query,
+  type = "show",
+  n_results = 1L,
+  extended = c("min", "full"),
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL,
+  networks = NULL,
+  status = NULL
+)
 
-search_id(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
-  type = "show", n_results = 1L, extended = c("min", "full"))
+search_id(
+  id,
+  id_type = c("trakt", "imdb", "tmdb", "tvdb"),
+  type = "show",
+  n_results = 1L,
+  extended = c("min", "full")
+)
 }
 \arguments{
 \item{query}{\code{character(1)}: Search string for titles and descriptions.
@@ -71,7 +86,7 @@ One of \code{"returning series"}, \code{"in production"}, \code{"planned"},
 \code{"canceled"}, or \code{"ended"}.}
 
 \item{id}{\code{character(1)}: The id used for the search, e.g. \code{14701} for
-a \code{Trakt ID}.}
+a \verb{Trakt ID}.}
 
 \item{id_type}{\code{character(1) ["trakt"]}: The type of \code{id}. One of \code{trakt},
 \code{imdb}, \code{tmdb}, \code{tvdb}.}
@@ -92,7 +107,7 @@ the IDs or proper show/movie title for further use, as well
 as receiving a quick overview of a show/movie.
 }
 \details{
-The amount of information returned is equal to \code{*_summary} API methods and
+The amount of information returned is equal to \verb{*_summary} API methods and
 in turn depends on the value of \code{extended}.
 See also the
 \href{https://trakt.docs.apiary.io/#reference/search}{API reference here} for

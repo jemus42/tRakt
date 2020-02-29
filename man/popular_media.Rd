@@ -11,14 +11,33 @@
 \code{shows_popular()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/popular/get-popular-shows}{shows/popular}.
 }
 \usage{
-movies_popular(limit = 10, extended = c("min", "full"), query = NULL,
-  years = NULL, genres = NULL, languages = NULL, countries = NULL,
-  runtimes = NULL, ratings = NULL, certifications = NULL)
+movies_popular(
+  limit = 10,
+  extended = c("min", "full"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL
+)
 
-shows_popular(limit = 10, extended = c("min", "full"), query = NULL,
-  years = NULL, genres = NULL, languages = NULL, countries = NULL,
-  runtimes = NULL, ratings = NULL, certifications = NULL,
-  networks = NULL, status = NULL)
+shows_popular(
+  limit = 10,
+  extended = c("min", "full"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL,
+  networks = NULL,
+  status = NULL
+)
 }
 \arguments{
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
@@ -82,19 +101,19 @@ Each function comes in two flavors: Shows or movies. The following descriptions
 are adapted directly from the
 \href{https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies}{API reference}.
 \itemize{
-\item \link[=popular_media]{Popular}: Popularity is calculated using the rating percentage and the number of
+\item \link[=popular_media]{\strong{Popular}}: Popularity is calculated using the rating percentage and the number of
 ratings.
-\item \link[=trending_media]{Trending}: Returns all movies/shows being watched right now.
+\item \link[=trending_media]{\strong{Trending}}: Returns all movies/shows being watched right now.
 Movies/shows with the most users are returned first.
-\item \link[=played_media]{Played}: Returns the most played (a single user can watch multiple times)
+\item \link[=played_media]{\strong{Played}}: Returns the most played (a single user can watch multiple times)
 movies/shows in the specified time \code{period}.
-\item \link[=watched_media]{Watched}: Returns the most watched (unique users) movies/shows in the specified
+\item \link[=watched_media]{\strong{Watched}}: Returns the most watched (unique users) movies/shows in the specified
 time \code{period}.
-\item \link[=collected_media]{Collected}: Returns the most collected (unique users) movies/shows in the
+\item \link[=collected_media]{\strong{Collected}}: Returns the most collected (unique users) movies/shows in the
 specified time \code{period}.
-\item \link[=anticipated_media]{Anticipated}: Returns the most anticipated movies/shows based on the number of
+\item \link[=anticipated_media]{\strong{Anticipated}}: Returns the most anticipated movies/shows based on the number of
 lists a movie/show appears on.
-\item \link[=updated_media]{Updates}: Returns all movies/shows updated since the specified UTC \code{start_date}.
+\item \link[=updated_media]{\strong{Updates}}: Returns all movies/shows updated since the specified UTC \code{start_date}.
 In this case, the upper bound for \code{limit} is 100.
 }
 
@@ -110,33 +129,47 @@ movies_popular(languages = "de", years = c(2000, 2010))
 }
 }
 \seealso{
-Other movie data: \code{\link{anticipated_media}},
-  \code{\link{collected_media}},
-  \code{\link{media_aliases}},
-  \code{\link{media_comments}}, \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}},
-  \code{\link{movies_boxoffice}},
-  \code{\link{movies_related}},
-  \code{\link{movies_releases}},
-  \code{\link{movies_summary}}, \code{\link{people_media}},
-  \code{\link{played_media}}, \code{\link{trending_media}},
-  \code{\link{updated_media}}, \code{\link{watched_media}}
+Other movie data: 
+\code{\link{anticipated_media}},
+\code{\link{collected_media}},
+\code{\link{media_aliases}},
+\code{\link{media_comments}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{movies_boxoffice}()},
+\code{\link{movies_related}()},
+\code{\link{movies_releases}()},
+\code{\link{movies_summary}()},
+\code{\link{people_media}()},
+\code{\link{played_media}},
+\code{\link{trending_media}},
+\code{\link{updated_media}},
+\code{\link{watched_media}}
 
-Other dynamic lists: \code{\link{anticipated_media}},
-  \code{\link{collected_media}},
-  \code{\link{lists_popular}}, \code{\link{played_media}},
-  \code{\link{trending_media}}, \code{\link{watched_media}}
+Other dynamic lists: 
+\code{\link{anticipated_media}},
+\code{\link{collected_media}},
+\code{\link{lists_popular}()},
+\code{\link{played_media}},
+\code{\link{trending_media}},
+\code{\link{watched_media}}
 
-Other shows data: \code{\link{anticipated_media}},
-  \code{\link{trending_media}}, \code{\link{watched_media}}
+Other shows data: 
+\code{\link{anticipated_media}},
+\code{\link{trending_media}},
+\code{\link{watched_media}}
 
-Other dynamic lists: \code{\link{anticipated_media}},
-  \code{\link{collected_media}},
-  \code{\link{lists_popular}}, \code{\link{played_media}},
-  \code{\link{trending_media}}, \code{\link{watched_media}}
+Other dynamic lists: 
+\code{\link{anticipated_media}},
+\code{\link{collected_media}},
+\code{\link{lists_popular}()},
+\code{\link{played_media}},
+\code{\link{trending_media}},
+\code{\link{watched_media}}
 }
 \concept{dynamic lists}
 \concept{movie data}

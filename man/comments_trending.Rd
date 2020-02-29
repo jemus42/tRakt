@@ -10,13 +10,19 @@
 \code{comments_recent()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/comments/recent/get-recently-created-comments}{comments/recent/:comment_type/:type?include_replies=}.
 }
 \usage{
-comments_trending(comment_type = c("all", "reviews", "shouts"),
+comments_trending(
+  comment_type = c("all", "reviews", "shouts"),
   type = c("all", "movies", "shows", "seasons", "episodes", "lists"),
-  include_replies = FALSE, limit = 10L)
+  include_replies = FALSE,
+  limit = 10L
+)
 
-comments_recent(comment_type = c("all", "reviews", "shouts"),
+comments_recent(
+  comment_type = c("all", "reviews", "shouts"),
   type = c("all", "movies", "shows", "seasons", "episodes", "lists"),
-  include_replies = FALSE, limit = 10L)
+  include_replies = FALSE,
+  limit = 10L
+)
 }
 \arguments{
 \item{comment_type}{\code{character(1) ["all"]}: The type of comment, one of "all",
@@ -48,16 +54,18 @@ comments_recent("shouts")
 }
 }
 \seealso{
-Other comment methods: \code{\link{comments_comment}},
-  \code{\link{comments_updates}},
-  \code{\link{media_comments}},
-  \code{\link{user_comments}},
-  \code{\link{user_list_comments}}
+Other comment methods: 
+\code{\link{comments_comment}()},
+\code{\link{comments_updates}()},
+\code{\link{media_comments}},
+\code{\link{user_comments}()},
+\code{\link{user_list_comments}()}
 
-Other comment methods: \code{\link{comments_comment}},
-  \code{\link{comments_updates}},
-  \code{\link{media_comments}},
-  \code{\link{user_comments}},
-  \code{\link{user_list_comments}}
+Other comment methods: 
+\code{\link{comments_comment}()},
+\code{\link{comments_updates}()},
+\code{\link{media_comments}},
+\code{\link{user_comments}()},
+\code{\link{user_list_comments}()}
 }
 \concept{comment methods}

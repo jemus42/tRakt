@@ -7,9 +7,12 @@
 \code{user_list_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-comments/get-all-list-comments}{users/:id/lists/:list_id/comments/:sort}.
 }
 \usage{
-user_list_comments(user = getOption("trakt_username"), list_id,
-  sort = c("newest", "oldest", "likes", "replies"), extended = c("min",
-  "full"))
+user_list_comments(
+  user = getOption("trakt_username"),
+  list_id,
+  sort = c("newest", "oldest", "likes", "replies"),
+  extended = c("min", "full")
+)
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -41,14 +44,19 @@ user_list_comments("donxy", "1248149")
 }
 }
 \seealso{
-Other comment methods: \code{\link{comments_comment}},
-  \code{\link{comments_trending}},
-  \code{\link{comments_updates}},
-  \code{\link{media_comments}}, \code{\link{user_comments}}
+Other comment methods: 
+\code{\link{comments_comment}()},
+\code{\link{comments_trending}()},
+\code{\link{comments_updates}()},
+\code{\link{media_comments}},
+\code{\link{user_comments}()}
 
-Other list methods: \code{\link{lists_popular}},
-  \code{\link{media_lists}}, \code{\link{user_list_items}},
-  \code{\link{user_lists}}, \code{\link{user_list}}
+Other list methods: 
+\code{\link{lists_popular}()},
+\code{\link{media_lists}},
+\code{\link{user_list_items}()},
+\code{\link{user_lists}()},
+\code{\link{user_list}()}
 }
 \concept{comment methods}
 \concept{list methods}

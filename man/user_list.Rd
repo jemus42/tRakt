@@ -4,8 +4,11 @@
 \alias{user_list}
 \title{Get a single list}
 \usage{
-user_list(user = getOption("trakt_username"), list_id,
-  extended = c("min", "full"))
+user_list(
+  user = getOption("trakt_username"),
+  list_id,
+  extended = c("min", "full")
+)
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -46,9 +49,11 @@ user_list("jemus42", list_id = 2121308)
 
 \link{user_list_items} For the actual content of a list.
 
-Other list methods: \code{\link{lists_popular}},
-  \code{\link{media_lists}},
-  \code{\link{user_list_comments}},
-  \code{\link{user_list_items}}, \code{\link{user_lists}}
+Other list methods: 
+\code{\link{lists_popular}()},
+\code{\link{media_lists}},
+\code{\link{user_list_comments}()},
+\code{\link{user_list_items}()},
+\code{\link{user_lists}()}
 }
 \concept{list methods}

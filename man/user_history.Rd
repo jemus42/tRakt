@@ -7,9 +7,14 @@
 \code{user_history()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/history/get-watched-history}{users/:id/history/:type/:item_id?start_at=&end_at=}.
 }
 \usage{
-user_history(user = getOption("trakt_username"), type = c("shows",
-  "movies"), limit = 10L, start_at = NULL, end_at = NULL,
-  extended = c("min", "full"))
+user_history(
+  user = getOption("trakt_username"),
+  type = c("shows", "movies"),
+  limit = 10L,
+  start_at = NULL,
+  end_at = NULL,
+  extended = c("min", "full")
+)
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -41,7 +46,7 @@ which it was logged (e.g. \emph{scrobble} or \emph{checkin}).
 }
 \details{
 This function wraps the API method
-\href{https://trakt.docs.apiary.io/#reference/users/history/get-watched-history}{/users/:id/history/:type}.
+\href{https://trakt.docs.apiary.io/#reference/users/history/get-watched-history}{\verb{/users/:id/history/:type}}.
 }
 \note{
 For \code{type = "shows"}, the
@@ -60,10 +65,15 @@ user_history(
 }
 }
 \seealso{
-Other user data: \code{\link{user_collection}},
-  \code{\link{user_comments}}, \code{\link{user_likes}},
-  \code{\link{user_network}}, \code{\link{user_profile}},
-  \code{\link{user_ratings}}, \code{\link{user_stats}},
-  \code{\link{user_watched}}, \code{\link{user_watchlist}}
+Other user data: 
+\code{\link{user_collection}()},
+\code{\link{user_comments}()},
+\code{\link{user_likes}()},
+\code{\link{user_network}()},
+\code{\link{user_profile}()},
+\code{\link{user_ratings}()},
+\code{\link{user_stats}()},
+\code{\link{user_watched}()},
+\code{\link{user_watchlist}()}
 }
 \concept{user data}

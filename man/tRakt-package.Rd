@@ -6,7 +6,7 @@
 \alias{tRakt-package}
 \title{tRakt: Get Data from 'trakt.tv'}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 A wrapper for the <https://trakt.tv> API to
     retrieve data about shows and movies, including user ratings, credits
@@ -24,7 +24,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Lukas Burk \email{lukas@quantenbrot.de} (0000-0001-7528-3795)
+\strong{Maintainer}: Lukas Burk \email{lukas@quantenbrot.de} (\href{https://orcid.org/0000-0001-7528-3795}{ORCID})
 
 }
 \keyword{internal}

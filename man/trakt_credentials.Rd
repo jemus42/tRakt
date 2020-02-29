@@ -27,7 +27,7 @@ where values are \code{TRUE} if the corresponding value is non-empty.
 \code{trakt_credentials} searches for your credentials and stores them
 in the appropriate \link[base:Sys.setenv]{environment variables} of the same name.
 To make this work automatically, place your key as environment variables in
-\code{~/.Renviron} (see \code{Details}).
+\verb{~/.Renviron} (see \code{Details}).
 Arguments to this function take precedence over any configuration file.
 }
 \details{
@@ -38,11 +38,11 @@ Additionally, for regular (non-authenticated) API interaction, you do not have t
 set any credentials at all because the package's \code{client_secret} is used as a fallback,
 which allows you to use most functions out of the box.
 
-Set appropriate values in your \code{~/.Renviron} like this:\preformatted{# tRakt
+Set appropriate values in your \verb{~/.Renviron} like this:\if{html}{\out{<div class="sh">}}\preformatted{# tRakt
 trakt_username=jemus42
 trakt_client_id=12[...]f2
 trakt_client_secret=f23[...]2nkjb
-}
+}\if{html}{\out{</div>}}
 
 If (and only if) the environment option \code{trakt_client_secret} is set to a non-empty
 string (i.e. it's not \code{""}), then all requests will be made using authentication.
@@ -62,7 +62,8 @@ trakt_credentials(
 }
 }
 \seealso{
-Other API-basics: \code{\link{trakt_get_token}},
-  \code{\link{trakt_get}}
+Other API-basics: 
+\code{\link{trakt_get_token}()},
+\code{\link{trakt_get}()}
 }
 \concept{API-basics}

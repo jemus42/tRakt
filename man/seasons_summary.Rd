@@ -7,8 +7,13 @@
 \code{seasons_summary()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show}{shows/:id/seasons/seasons}.
 }
 \usage{
-seasons_summary(id, episodes = FALSE, drop_specials = TRUE,
-  drop_unaired = TRUE, extended = c("min", "full"))
+seasons_summary(
+  id,
+  episodes = FALSE,
+  drop_specials = TRUE,
+  drop_unaired = TRUE,
+  extended = c("min", "full")
+)
 }
 \arguments{
 \item{id}{\code{character(1)}: The ID of the item requested. Preferably the
@@ -51,25 +56,33 @@ seasons_summary("utopia", extended = "full", episodes = TRUE)
 }
 }
 \seealso{
-Other season data: \code{\link{media_comments}},
-  \code{\link{media_lists}}, \code{\link{media_people}},
-  \code{\link{media_ratings}}, \code{\link{media_stats}},
-  \code{\link{seasons_season}}
+Other season data: 
+\code{\link{media_comments}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{seasons_season}()}
 
-Other episode data: \code{\link{episodes_summary}},
-  \code{\link{media_comments}}, \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}},
-  \code{\link{seasons_season}},
-  \code{\link{shows_next_episode}}
+Other episode data: 
+\code{\link{episodes_summary}()},
+\code{\link{media_comments}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{seasons_season}()},
+\code{\link{shows_next_episode}()}
 
-Other summary methods: \code{\link{comments_comment}},
-  \code{\link{episodes_summary}},
-  \code{\link{movies_summary}},
-  \code{\link{people_summary}},
-  \code{\link{shows_summary}}, \code{\link{user_profile}}
+Other summary methods: 
+\code{\link{comments_comment}()},
+\code{\link{episodes_summary}()},
+\code{\link{movies_summary}()},
+\code{\link{people_summary}()},
+\code{\link{shows_summary}()},
+\code{\link{user_profile}()}
 }
 \concept{episode data}
 \concept{season data}

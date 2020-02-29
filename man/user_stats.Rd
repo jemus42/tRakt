@@ -38,10 +38,15 @@ user_stats(user = "sean")
 }
 }
 \seealso{
-Other user data: \code{\link{user_collection}},
-  \code{\link{user_comments}}, \code{\link{user_history}},
-  \code{\link{user_likes}}, \code{\link{user_network}},
-  \code{\link{user_profile}}, \code{\link{user_ratings}},
-  \code{\link{user_watched}}, \code{\link{user_watchlist}}
+Other user data: 
+\code{\link{user_collection}()},
+\code{\link{user_comments}()},
+\code{\link{user_history}()},
+\code{\link{user_likes}()},
+\code{\link{user_network}()},
+\code{\link{user_profile}()},
+\code{\link{user_ratings}()},
+\code{\link{user_watched}()},
+\code{\link{user_watchlist}()}
 }
 \concept{user data}

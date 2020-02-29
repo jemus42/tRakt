@@ -7,8 +7,12 @@
 \code{user_collection()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{users/:id/collection/:type}.
 }
 \usage{
-user_collection(user = getOption("trakt_username"), type = c("shows",
-  "movies"), unnest_episodes = FALSE, extended = c("min", "full"))
+user_collection(
+  user = getOption("trakt_username"),
+  type = c("shows", "movies"),
+  unnest_episodes = FALSE,
+  extended = c("min", "full")
+)
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -36,11 +40,11 @@ Get a user's collected shows or movies
 }
 \details{
 This function wraps the API method
-\href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{/users/:user_id/collection/:type}.
+\href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{\verb{/users/:user_id/collection/:type}}.
 }
 \note{
 The \code{extended = "metadata"} API parameter is not implemented. This would
-add media information \code{media_type}, \code{resolution}, \code{audio}, \code{audio_channels} and \code{3D}
+add media information \code{media_type}, \code{resolution}, \code{audio}, \code{audio_channels} and \verb{3D}
 to the output, which may or may not be available. If this feature is important to
 you, please open an issue on GitHub.
 }
@@ -51,10 +55,15 @@ user_collection(user = "sean", type = "shows")
 }
 }
 \seealso{
-Other user data: \code{\link{user_comments}},
-  \code{\link{user_history}}, \code{\link{user_likes}},
-  \code{\link{user_network}}, \code{\link{user_profile}},
-  \code{\link{user_ratings}}, \code{\link{user_stats}},
-  \code{\link{user_watched}}, \code{\link{user_watchlist}}
+Other user data: 
+\code{\link{user_comments}()},
+\code{\link{user_history}()},
+\code{\link{user_likes}()},
+\code{\link{user_network}()},
+\code{\link{user_profile}()},
+\code{\link{user_ratings}()},
+\code{\link{user_stats}()},
+\code{\link{user_watched}()},
+\code{\link{user_watchlist}()}
 }
 \concept{user data}

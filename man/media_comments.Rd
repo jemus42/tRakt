@@ -17,18 +17,36 @@
 \code{episodes_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/comments/get-all-episode-comments}{shows/:id/seasons/:season/episodes/:episode/comments/:sort}.
 }
 \usage{
-movies_comments(id, sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full"), limit = 10L)
+movies_comments(
+  id,
+  sort = c("newest", "oldest", "likes", "replies"),
+  extended = c("min", "full"),
+  limit = 10L
+)
 
-shows_comments(id, sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full"), limit = 10L)
+shows_comments(
+  id,
+  sort = c("newest", "oldest", "likes", "replies"),
+  extended = c("min", "full"),
+  limit = 10L
+)
 
-seasons_comments(id, season = 1L, sort = c("newest", "oldest", "likes",
-  "replies"), extended = c("min", "full"), limit = 10L)
+seasons_comments(
+  id,
+  season = 1L,
+  sort = c("newest", "oldest", "likes", "replies"),
+  extended = c("min", "full"),
+  limit = 10L
+)
 
-episodes_comments(id, season = 1L, episode = 1L, sort = c("newest",
-  "oldest", "likes", "replies"), extended = c("min", "full"),
-  limit = 10L)
+episodes_comments(
+  id,
+  season = 1L,
+  episode = 1L,
+  sort = c("newest", "oldest", "likes", "replies"),
+  extended = c("min", "full"),
+  limit = 10L
+)
 }
 \arguments{
 \item{id}{\code{character(1)}: The ID of the item requested. Preferably the
@@ -84,51 +102,69 @@ episodes_comments(46241, season = 1, episode = 2, sort = "likes")
 }
 }
 \seealso{
-Other comment methods: \code{\link{comments_comment}},
-  \code{\link{comments_trending}},
-  \code{\link{comments_updates}},
-  \code{\link{user_comments}},
-  \code{\link{user_list_comments}}
+Other comment methods: 
+\code{\link{comments_comment}()},
+\code{\link{comments_trending}()},
+\code{\link{comments_updates}()},
+\code{\link{user_comments}()},
+\code{\link{user_list_comments}()}
 
-Other movie data: \code{\link{anticipated_media}},
-  \code{\link{collected_media}},
-  \code{\link{media_aliases}}, \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}},
-  \code{\link{movies_boxoffice}},
-  \code{\link{movies_related}},
-  \code{\link{movies_releases}},
-  \code{\link{movies_summary}}, \code{\link{people_media}},
-  \code{\link{played_media}}, \code{\link{popular_media}},
-  \code{\link{trending_media}},
-  \code{\link{updated_media}}, \code{\link{watched_media}}
+Other movie data: 
+\code{\link{anticipated_media}},
+\code{\link{collected_media}},
+\code{\link{media_aliases}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{movies_boxoffice}()},
+\code{\link{movies_related}()},
+\code{\link{movies_releases}()},
+\code{\link{movies_summary}()},
+\code{\link{people_media}()},
+\code{\link{played_media}},
+\code{\link{popular_media}},
+\code{\link{trending_media}},
+\code{\link{updated_media}},
+\code{\link{watched_media}}
 
-Other show data: \code{\link{collected_media}},
-  \code{\link{media_aliases}}, \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}}, \code{\link{people_media}},
-  \code{\link{played_media}},
-  \code{\link{shows_next_episode}},
-  \code{\link{shows_related}}, \code{\link{shows_summary}},
-  \code{\link{updated_media}}
+Other show data: 
+\code{\link{collected_media}},
+\code{\link{media_aliases}},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{people_media}()},
+\code{\link{played_media}},
+\code{\link{shows_next_episode}()},
+\code{\link{shows_related}()},
+\code{\link{shows_summary}()},
+\code{\link{updated_media}}
 
-Other season data: \code{\link{media_lists}},
-  \code{\link{media_people}}, \code{\link{media_ratings}},
-  \code{\link{media_stats}}, \code{\link{seasons_season}},
-  \code{\link{seasons_summary}}
+Other season data: 
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{seasons_season}()},
+\code{\link{seasons_summary}()}
 
-Other episode data: \code{\link{episodes_summary}},
-  \code{\link{media_lists}}, \code{\link{media_people}},
-  \code{\link{media_ratings}}, \code{\link{media_stats}},
-  \code{\link{media_translations}},
-  \code{\link{media_watching}},
-  \code{\link{seasons_season}},
-  \code{\link{seasons_summary}},
-  \code{\link{shows_next_episode}}
+Other episode data: 
+\code{\link{episodes_summary}()},
+\code{\link{media_lists}},
+\code{\link{media_people}},
+\code{\link{media_ratings}()},
+\code{\link{media_stats}()},
+\code{\link{media_translations}},
+\code{\link{media_watching}},
+\code{\link{seasons_season}()},
+\code{\link{seasons_summary}()},
+\code{\link{shows_next_episode}()}
 }
 \concept{comment methods}
 \concept{episode data}
