@@ -46,12 +46,16 @@ seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
     return(tibble())
   }
 
-  response %>%
+  response <- response %>%
     select(-"ids") %>%
     cbind(fix_ids(response$ids)) %>%
     fix_tibble_response() %>%
-    rename(
-      episode = "number",
-      episode_abs = "number_abs" # Not sure if this renaming should be done
-    )
+    rename(episode = "number")
+
+  if (has_name(response, "number_abs")) {
+    response <- response %>%
+      rename(episode_abs = "number_abs")
+  }
+
+  response
 }
