@@ -31,7 +31,11 @@ test_that("trakt_get can make API calls", {
 
   expect_is(result, "list")
   expect_message(trakt_get("https://example.com"))
+})
 
-  # Authenticated method, should throw 401 message but no error
-  expect_message(trakt_get("users/settings"))
+test_that("authenticated requests work", {
+  skip_if_no_auth()
+
+  # Authenticated method, should return a list
+  expect_is(trakt_get("users/settings"), class = "list")
 })
