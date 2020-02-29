@@ -278,24 +278,27 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 6
-#&gt;   username  private user_name vip   vip_ep user_slug
-#&gt;   &lt;chr&gt;     &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
-#&gt; 1 Gordo74   FALSE   &lt;NA&gt;      FALSE FALSE  gordo74  
-#&gt; 2 HumblePie FALSE   HumblePie FALSE FALSE  humblepie</div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 11 x 6
-#&gt;    username           private user_name           vip   vip_ep user_slug        
-#&gt;    &lt;chr&gt;              &lt;lgl&gt;   &lt;chr&gt;               &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;            
-#&gt;  1 SpeekaDievs        FALSE   "Artūrs Lukjaņenok… FALSE FALSE  speekadievs      
-#&gt;  2 ddas               FALSE   "Demetrius "        FALSE FALSE  ddas             
-#&gt;  3 Froboyl            FALSE   "Dean Stanghetta"   FALSE FALSE  froboyl          
-#&gt;  4 txdawg78@gmail.com FALSE   ""                  FALSE FALSE  txdawg78-gmail-c…
-#&gt;  5 twistym            FALSE   ""                  TRUE  FALSE  twistym          
-#&gt;  6 sjuf1jones         FALSE   "Freddy Jones"      TRUE  FALSE  sjuf1jones       
-#&gt;  7 firewalker74       FALSE    &lt;NA&gt;               FALSE FALSE  firewalker74     
-#&gt;  8 K100               FALSE   "Ken Shrimpton"     FALSE FALSE  k100             
-#&gt;  9 pcmofo             FALSE   ""                  FALSE FALSE  pcmofo           
-#&gt; 10 duff_miester       FALSE   "Spoon"             FALSE FALSE  duff_miester     
-#&gt; 11 Sootster           FALSE   "Dave"              FALSE FALSE  sootster         </div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 18 x 6
+#&gt;    username          private user_name           vip   vip_ep user_slug        
+#&gt;    &lt;chr&gt;             &lt;lgl&gt;   &lt;chr&gt;               &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;            
+#&gt;  1 shaunfinch        FALSE   "Shaun"             FALSE FALSE  shaunfinch       
+#&gt;  2 WildSlowpoke      FALSE   ""                  FALSE FALSE  wildslowpoke     
+#&gt;  3 simonarons        TRUE     &lt;NA&gt;               NA    NA     simonarons       
+#&gt;  4 Ladyluck11        FALSE   "Ladyluck"          FALSE FALSE  ladyluck11       
+#&gt;  5 elky              FALSE   "Damian Harrison"   TRUE  FALSE  elky             
+#&gt;  6 anubis6901        FALSE   "anubis"            FALSE FALSE  anubis6901       
+#&gt;  7 jankozabka        FALSE   ""                  FALSE FALSE  jankozabka       
+#&gt;  8 deusexmachina354  FALSE   "Tyler"             FALSE FALSE  deusexmachina354 
+#&gt;  9 patrk87           FALSE   ""                  FALSE FALSE  patrk87          
+#&gt; 10 papper            FALSE   "Papper"            FALSE FALSE  papper           
+#&gt; 11 LilleGill         FALSE   "LilleGill"         FALSE FALSE  lillegill        
+#&gt; 12 FrenchMcK         FALSE   "FrenchMcK"         FALSE FALSE  frenchmck        
+#&gt; 13 bonddan@gmail.com FALSE   ""                  FALSE FALSE  bonddan-gmail-com
+#&gt; 14 FakeMecksican     FALSE    &lt;NA&gt;               FALSE FALSE  fakemecksican    
+#&gt; 15 pandora           FALSE    &lt;NA&gt;               FALSE FALSE  pandora          
+#&gt; 16 DashRendar        FALSE   "Dashiel MacTavish" FALSE FALSE  dashrendar       
+#&gt; 17 tml19832001       FALSE   "Tracy Lumpkin"     FALSE FALSE  tml19832001      
+#&gt; 18 MartyniP          FALSE   ""                  FALSE FALSE  martynip         </div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
