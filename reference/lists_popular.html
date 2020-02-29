@@ -194,22 +194,32 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='user_list_items.html'>user_list_items()</a></code> For the actual content of a list.</p>
-<p>Other list methods: <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='user_list_comments.html'>user_list_comments</a></code>,
-  <code><a href='user_list_items.html'>user_list_items</a></code>, <code><a href='user_lists.html'>user_lists</a></code>,
-  <code><a href='user_list.html'>user_list</a></code></p>
-<p>Other dynamic lists: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
-  <code><a href='collected_media.html'>collected_media</a></code>,
-  <code><a href='played_media.html'>played_media</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
-  <code><a href='trending_media.html'>trending_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p>
-<p>Other list methods: <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='user_list_comments.html'>user_list_comments</a></code>,
-  <code><a href='user_list_items.html'>user_list_items</a></code>, <code><a href='user_lists.html'>user_lists</a></code>,
-  <code><a href='user_list.html'>user_list</a></code></p>
-<p>Other dynamic lists: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
-  <code><a href='collected_media.html'>collected_media</a></code>,
-  <code><a href='played_media.html'>played_media</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
-  <code><a href='trending_media.html'>trending_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p></div>
+<p>Other list methods: 
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='user_list_comments.html'>user_list_comments</a>()</code>,
+<code><a href='user_list_items.html'>user_list_items</a>()</code>,
+<code><a href='user_lists.html'>user_lists</a>()</code>,
+<code><a href='user_list.html'>user_list</a>()</code></p>
+<p>Other dynamic lists: 
+<code><a href='anticipated_media.html'>anticipated_media</a></code>,
+<code><a href='collected_media.html'>collected_media</a></code>,
+<code><a href='played_media.html'>played_media</a></code>,
+<code><a href='popular_media.html'>popular_media</a></code>,
+<code><a href='trending_media.html'>trending_media</a></code>,
+<code><a href='watched_media.html'>watched_media</a></code></p>
+<p>Other list methods: 
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='user_list_comments.html'>user_list_comments</a>()</code>,
+<code><a href='user_list_items.html'>user_list_items</a>()</code>,
+<code><a href='user_lists.html'>user_lists</a>()</code>,
+<code><a href='user_list.html'>user_list</a>()</code></p>
+<p>Other dynamic lists: 
+<code><a href='anticipated_media.html'>anticipated_media</a></code>,
+<code><a href='collected_media.html'>collected_media</a></code>,
+<code><a href='played_media.html'>played_media</a></code>,
+<code><a href='popular_media.html'>popular_media</a></code>,
+<code><a href='trending_media.html'>trending_media</a></code>,
+<code><a href='watched_media.html'>watched_media</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
@@ -217,31 +227,31 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 #&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
 #&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
 #&gt;  1 Late… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  2 MARV… **Chronolo… public  TRUE            TRUE           rank    asc     
-#&gt;  3 Best… What’s a m… public  FALSE           TRUE           rank    asc     
-#&gt;  4 Netf… series, mo… public  FALSE           TRUE           rank    asc     
-#&gt;  5 Late… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  6 Late… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  7 1001… &gt; 1001 Mov… public  TRUE            TRUE           rank    asc     
-#&gt;  8 Imdb… Daily Refr… public  TRUE            TRUE           rank    asc     
-#&gt;  9 Walt… List of al… public  TRUE            FALSE          rank    asc     
-#&gt; 10 Worl… ""          public  TRUE            TRUE           rank    asc     
+#&gt;  2 MARV… "**Chronol… public  TRUE            TRUE           rank    asc     
+#&gt;  3 Late… ""          public  FALSE           FALSE          rank    asc     
+#&gt;  4 Best… "What’s a … public  FALSE           TRUE           rank    asc     
+#&gt;  5 Late… ""          public  FALSE           TRUE           rank    asc     
+#&gt;  6 Netf… "series, m… public  FALSE           TRUE           rank    asc     
+#&gt;  7 1001… "&gt; 1001 Mo… public  TRUE            TRUE           rank    asc     
+#&gt;  8 Imdb… "Daily Ref… public  TRUE            TRUE           rank    asc     
+#&gt;  9 Worl… ""          public  TRUE            TRUE           rank    asc     
+#&gt; 10 Walt… "List of a… public  TRUE            FALSE          rank    asc     
 #&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
 #&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
 #&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
 #&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='fu'>lists_trending</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 20
 #&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
 #&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
-#&gt;  1 Marv… This list … public  TRUE            TRUE           rank    asc     
-#&gt;  2 Late… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  3 Late… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  4 Late… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  5 MARV… **Chronolo… public  TRUE            TRUE           rank    asc     
-#&gt;  6 Imdb… Daily Refr… public  TRUE            TRUE           rank    asc     
-#&gt;  7 Horr… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  8 1001… &gt; 1001 Mov… public  TRUE            TRUE           rank    asc     
-#&gt;  9 Netf… series, mo… public  FALSE           TRUE           rank    asc     
-#&gt; 10 Mind… The object… public  FALSE           TRUE           rank    asc     
+#&gt;  1 Late… ""          public  FALSE           FALSE          rank    asc     
+#&gt;  2 Sci-… ""          public  FALSE           TRUE           rank    asc     
+#&gt;  3 1001… "&gt; 1001 Mo… public  TRUE            TRUE           rank    asc     
+#&gt;  4 Subr… "This is a… public  FALSE           TRUE           rank    asc     
+#&gt;  5 Late… ""          public  FALSE           FALSE          rank    asc     
+#&gt;  6 Late… ""          public  FALSE           TRUE           rank    asc     
+#&gt;  7 Rott… "Pulled fr… public  TRUE            TRUE           rank    asc     
+#&gt;  8 MOVI… ""          public  FALSE           TRUE           rank    asc     
+#&gt;  9 Horr… ""          public  FALSE           FALSE          rank    asc     
+#&gt; 10 Netf… "series, m… public  FALSE           TRUE           rank    asc     
 #&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
 #&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
 #&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,

@@ -174,8 +174,7 @@
 
 <span class='fu'>seasons_watching</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
 
-<span class='fu'>episodes_watching</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>,
-  <span class='st'>"full"</span>))</pre>
+<span class='fu'>episodes_watching</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -230,55 +229,69 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </ul>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other movie data: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
-  <code><a href='collected_media.html'>collected_media</a></code>,
-  <code><a href='media_aliases.html'>media_aliases</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
-  <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='media_translations.html'>media_translations</a></code>,
-  <code><a href='movies_boxoffice.html'>movies_boxoffice</a></code>,
-  <code><a href='movies_related.html'>movies_related</a></code>,
-  <code><a href='movies_releases.html'>movies_releases</a></code>,
-  <code><a href='movies_summary.html'>movies_summary</a></code>, <code><a href='people_media.html'>people_media</a></code>,
-  <code><a href='played_media.html'>played_media</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
-  <code><a href='trending_media.html'>trending_media</a></code>,
-  <code><a href='updated_media.html'>updated_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p>
-<p>Other show data: <code><a href='collected_media.html'>collected_media</a></code>,
-  <code><a href='media_aliases.html'>media_aliases</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
-  <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='media_translations.html'>media_translations</a></code>,
-  <code><a href='people_media.html'>people_media</a></code>, <code><a href='played_media.html'>played_media</a></code>,
-  <code><a href='shows_next_episode.html'>shows_next_episode</a></code>,
-  <code><a href='shows_related.html'>shows_related</a></code>, <code><a href='shows_summary.html'>shows_summary</a></code>,
-  <code><a href='updated_media.html'>updated_media</a></code></p>
-<p>Other episode data: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
-  <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='media_translations.html'>media_translations</a></code>,
-  <code><a href='seasons_season.html'>seasons_season</a></code>,
-  <code><a href='seasons_summary.html'>seasons_summary</a></code>,
-  <code><a href='shows_next_episode.html'>shows_next_episode</a></code></p></div>
+    <div class='dont-index'><p>Other movie data: 
+<code><a href='anticipated_media.html'>anticipated_media</a></code>,
+<code><a href='collected_media.html'>collected_media</a></code>,
+<code><a href='media_aliases.html'>media_aliases</a></code>,
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_people.html'>media_people</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='media_translations.html'>media_translations</a></code>,
+<code><a href='movies_boxoffice.html'>movies_boxoffice</a>()</code>,
+<code><a href='movies_related.html'>movies_related</a>()</code>,
+<code><a href='movies_releases.html'>movies_releases</a>()</code>,
+<code><a href='movies_summary.html'>movies_summary</a>()</code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='played_media.html'>played_media</a></code>,
+<code><a href='popular_media.html'>popular_media</a></code>,
+<code><a href='trending_media.html'>trending_media</a></code>,
+<code><a href='updated_media.html'>updated_media</a></code>,
+<code><a href='watched_media.html'>watched_media</a></code></p>
+<p>Other show data: 
+<code><a href='collected_media.html'>collected_media</a></code>,
+<code><a href='media_aliases.html'>media_aliases</a></code>,
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_people.html'>media_people</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='media_translations.html'>media_translations</a></code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='played_media.html'>played_media</a></code>,
+<code><a href='shows_next_episode.html'>shows_next_episode</a>()</code>,
+<code><a href='shows_related.html'>shows_related</a>()</code>,
+<code><a href='shows_summary.html'>shows_summary</a>()</code>,
+<code><a href='updated_media.html'>updated_media</a></code></p>
+<p>Other episode data: 
+<code><a href='episodes_summary.html'>episodes_summary</a>()</code>,
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_people.html'>media_people</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='media_translations.html'>media_translations</a></code>,
+<code><a href='seasons_season.html'>seasons_season</a>()</code>,
+<code><a href='seasons_summary.html'>seasons_summary</a>()</code>,
+<code><a href='shows_next_episode.html'>shows_next_episode</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 32 x 6
-#&gt;    username     private user_name            vip   vip_ep user_slug   
-#&gt;    &lt;chr&gt;        &lt;lgl&gt;   &lt;chr&gt;                &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;       
-#&gt;  1 alcwyn       FALSE   &lt;NA&gt;                 FALSE FALSE  alcwyn      
-#&gt;  2 CrazyPhil    FALSE   Phil                 FALSE FALSE  crazyphil   
-#&gt;  3 jgrabenweger FALSE   Johannes Grabenweger FALSE FALSE  jgrabenweger
-#&gt;  4 nash926      FALSE   ""                   FALSE FALSE  nash926     
-#&gt;  5 elpaceno     FALSE   Elpa Ceno            FALSE FALSE  elpaceno    
-#&gt;  6 duketrep     FALSE   &lt;NA&gt;                 FALSE FALSE  duketrep    
-#&gt;  7 Kodi-Ego     FALSE   &lt;NA&gt;                 FALSE FALSE  kodi-ego    
-#&gt;  8 irishfrog    FALSE   &lt;NA&gt;                 FALSE FALSE  irishfrog   
-#&gt;  9 meeshsalts   FALSE   ""                   FALSE FALSE  meeshsalts  
-#&gt; 10 chris.sv     FALSE   Chris                FALSE FALSE  chris-sv    
-#&gt; # … with 22 more rows</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 11 x 6
+#&gt;    username           private user_name           vip   vip_ep user_slug        
+#&gt;    &lt;chr&gt;              &lt;lgl&gt;   &lt;chr&gt;               &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;            
+#&gt;  1 SpeekaDievs        FALSE   "Artūrs Lukjaņenok… FALSE FALSE  speekadievs      
+#&gt;  2 ddas               FALSE   "Demetrius "        FALSE FALSE  ddas             
+#&gt;  3 Froboyl            FALSE   "Dean Stanghetta"   FALSE FALSE  froboyl          
+#&gt;  4 txdawg78@gmail.com FALSE   ""                  FALSE FALSE  txdawg78-gmail-c…
+#&gt;  5 twistym            FALSE   ""                  TRUE  FALSE  twistym          
+#&gt;  6 sjuf1jones         FALSE   "Freddy Jones"      TRUE  FALSE  sjuf1jones       
+#&gt;  7 firewalker74       FALSE    &lt;NA&gt;               FALSE FALSE  firewalker74     
+#&gt;  8 K100               FALSE   "Ken Shrimpton"     FALSE FALSE  k100             
+#&gt;  9 pcmofo             FALSE   ""                  FALSE FALSE  pcmofo           
+#&gt; 10 duff_miester       FALSE   "Spoon"             FALSE FALSE  duff_miester     
+#&gt; 11 Sootster           FALSE   "Dave"              FALSE FALSE  sootster         </div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

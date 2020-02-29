@@ -217,31 +217,37 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </ul>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other comment methods: <code><a href='comments_trending.html'>comments_trending</a></code>,
-  <code><a href='comments_updates.html'>comments_updates</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>,
-  <code><a href='user_comments.html'>user_comments</a></code>,
-  <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
-<p>Other summary methods: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
-  <code><a href='movies_summary.html'>movies_summary</a></code>,
-  <code><a href='people_summary.html'>people_summary</a></code>,
-  <code><a href='seasons_summary.html'>seasons_summary</a></code>,
-  <code><a href='shows_summary.html'>shows_summary</a></code>, <code><a href='user_profile.html'>user_profile</a></code></p>
-<p>Other comment methods: <code><a href='comments_trending.html'>comments_trending</a></code>,
-  <code><a href='comments_updates.html'>comments_updates</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>,
-  <code><a href='user_comments.html'>user_comments</a></code>,
-  <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
-<p>Other comment methods: <code><a href='comments_trending.html'>comments_trending</a></code>,
-  <code><a href='comments_updates.html'>comments_updates</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>,
-  <code><a href='user_comments.html'>user_comments</a></code>,
-  <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
-<p>Other comment methods: <code><a href='comments_trending.html'>comments_trending</a></code>,
-  <code><a href='comments_updates.html'>comments_updates</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>,
-  <code><a href='user_comments.html'>user_comments</a></code>,
-  <code><a href='user_list_comments.html'>user_list_comments</a></code></p></div>
+    <div class='dont-index'><p>Other comment methods: 
+<code><a href='comments_trending.html'>comments_trending</a>()</code>,
+<code><a href='comments_updates.html'>comments_updates</a>()</code>,
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='user_comments.html'>user_comments</a>()</code>,
+<code><a href='user_list_comments.html'>user_list_comments</a>()</code></p>
+<p>Other summary methods: 
+<code><a href='episodes_summary.html'>episodes_summary</a>()</code>,
+<code><a href='movies_summary.html'>movies_summary</a>()</code>,
+<code><a href='people_summary.html'>people_summary</a>()</code>,
+<code><a href='seasons_summary.html'>seasons_summary</a>()</code>,
+<code><a href='shows_summary.html'>shows_summary</a>()</code>,
+<code><a href='user_profile.html'>user_profile</a>()</code></p>
+<p>Other comment methods: 
+<code><a href='comments_trending.html'>comments_trending</a>()</code>,
+<code><a href='comments_updates.html'>comments_updates</a>()</code>,
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='user_comments.html'>user_comments</a>()</code>,
+<code><a href='user_list_comments.html'>user_list_comments</a>()</code></p>
+<p>Other comment methods: 
+<code><a href='comments_trending.html'>comments_trending</a>()</code>,
+<code><a href='comments_updates.html'>comments_updates</a>()</code>,
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='user_comments.html'>user_comments</a>()</code>,
+<code><a href='user_list_comments.html'>user_list_comments</a>()</code></p>
+<p>Other comment methods: 
+<code><a href='comments_trending.html'>comments_trending</a>()</code>,
+<code><a href='comments_updates.html'>comments_updates</a>()</code>,
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='user_comments.html'>user_comments</a>()</code>,
+<code><a href='user_list_comments.html'>user_list_comments</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A single comment</span>
@@ -279,14 +285,14 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <span class='fu'>comments_item</span>(<span class='st'>"236397"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
 #&gt;   type  title                   year trakt  slug                   imdb    tmdb 
 #&gt;   &lt;chr&gt; &lt;chr&gt;                  &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;                  &lt;chr&gt;   &lt;chr&gt;
-#&gt; 1 movie John Wick: Chapter 3 …  2019 304278 john-wick-chapter-3-p… tt6146… 4581…</div><div class='input'><span class='fu'>comments_item</span>(<span class='st'>"236397"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 22
+#&gt; 1 movie John Wick: Chapter 3 …  2019 304278 john-wick-chapter-3-p… tt6146… 4581…</div><div class='input'><span class='fu'>comments_item</span>(<span class='st'>"236397"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 23
 #&gt;   type  title  year tagline overview released   runtime country trailer homepage
 #&gt;   &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   
 #&gt; 1 movie John…  2019 The Gr… Super-a… 2019-05-17     131 us      http:/… https:/…
-#&gt; # … with 12 more variables: rating &lt;dbl&gt;, votes &lt;int&gt;, comment_count &lt;int&gt;,
-#&gt; #   updated_at &lt;dttm&gt;, language &lt;chr&gt;, available_translations &lt;list&gt;,
-#&gt; #   genres &lt;list&gt;, certification &lt;chr&gt;, trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;,
-#&gt; #   tmdb &lt;chr&gt;</div><div class='input'>
+#&gt; # … with 13 more variables: status &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
+#&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
+#&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
+#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'>
 <span class='co'># A show</span>
 <span class='fu'>comments_item</span>(<span class='st'>"120768"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 8
 #&gt;   type  title           year trakt  slug           tvdb   imdb      tmdb 
@@ -294,7 +300,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 #&gt; 1 show  13 Reasons Why  2017 116129 13-reasons-why 323168 tt1837492 66788</div><div class='input'><span class='fu'>comments_item</span>(<span class='st'>"120768"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 28
 #&gt;   type  title  year overview first_aired         runtime certification country
 #&gt;   &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;    &lt;dttm&gt;                &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;  
-#&gt; 1 show  13 R…  2017 Follows… 2017-03-31 04:00:00      57 TV-MA         us     
+#&gt; 1 show  13 R…  2017 Follows… 2017-03-31 16:00:00      57 TV-MA         us     
 #&gt; # … with 20 more variables: trailer &lt;chr&gt;, homepage &lt;chr&gt;, status &lt;chr&gt;,
 #&gt; #   rating &lt;dbl&gt;, votes &lt;int&gt;, comment_count &lt;int&gt;, network &lt;chr&gt;,
 #&gt; #   updated_at &lt;dttm&gt;, language &lt;chr&gt;, available_translations &lt;list&gt;,

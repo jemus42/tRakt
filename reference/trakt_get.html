@@ -206,7 +206,7 @@ resources/bandwidth on the response body.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>The parsed (<code><a href='https://rdrr.io/pkg/jsonlite/man/fromJSON.html'>jsonlite::fromJSON()</a></code>) content of the API response.
+    <p>The parsed (<code><a href='https://jeroen.cran.dev/jsonlite/reference/fromJSON.html'>jsonlite::fromJSON()</a></code>) content of the API response.
 An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> if the response is an empty
 <code>JSON</code> array.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
@@ -220,8 +220,9 @@ collection have dedicated functions in this package.</p>
 <code>POST</code> methods or user information of non-public profiles.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other API-basics: <code><a href='trakt_credentials.html'>trakt_credentials</a></code>,
-  <code><a href='trakt_get_token.html'>trakt_get_token</a></code></p></div>
+    <div class='dont-index'><p>Other API-basics: 
+<code><a href='trakt_credentials.html'>trakt_credentials</a>()</code>,
+<code><a href='trakt_get_token.html'>trakt_get_token</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A simple request to a direct URL</span>
@@ -261,7 +262,7 @@ collection have dedicated functions in this package.</p>
 #&gt; 
 #&gt; $headers
 #&gt; $date
-#&gt; [1] "Mon, 14 Oct 2019 15:45:23 GMT"
+#&gt; [1] "Sat, 29 Feb 2020 04:14:10 GMT"
 #&gt; 
 #&gt; $`content-type`
 #&gt; [1] "text/html"
@@ -273,7 +274,7 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "max-age=0, private, no-cache, no-store, must-revalidate"
 #&gt; 
 #&gt; $`cf-railgun`
-#&gt; [1] "ce86139cbd stream 0.000000 0200 57da"
+#&gt; [1] "b360cfa062 stream 0.000000 0200 57da"
 #&gt; 
 #&gt; $vary
 #&gt; [1] "Accept-Encoding"
@@ -285,10 +286,10 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "SAMEORIGIN"
 #&gt; 
 #&gt; $`x-request-id`
-#&gt; [1] "f33d9946-8761-44aa-bd38-b41dc2e03706"
+#&gt; [1] "d4aa4496-c6da-42f2-bce8-314bbb086240"
 #&gt; 
 #&gt; $`x-runtime`
-#&gt; [1] "0.003656"
+#&gt; [1] "0.005129"
 #&gt; 
 #&gt; $`x-xss-protection`
 #&gt; [1] "1; mode=block"
@@ -303,7 +304,7 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "cloudflare"
 #&gt; 
 #&gt; $`cf-ray`
-#&gt; [1] "525aae1a98ea7159-ORD"
+#&gt; [1] "56c7cf55ec6ee21e-ORD"
 #&gt; 
 #&gt; $`content-encoding`
 #&gt; [1] "gzip"

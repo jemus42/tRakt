@@ -174,14 +174,29 @@ the IDs or proper show/movie title for further use, as well
 as receiving a quick overview of a show/movie.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>search_query</span>(<span class='no'>query</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>genres</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>countries</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>runtimes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>ratings</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>certifications</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
+    <pre class="usage"><span class='fu'>search_query</span>(
+  <span class='no'>query</span>,
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>,
+  <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+  <span class='kw'>years</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>genres</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>countries</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>runtimes</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>ratings</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>certifications</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>networks</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>status</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+)
 
-<span class='fu'>search_id</span>(<span class='no'>id</span>, <span class='kw'>id_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"trakt"</span>, <span class='st'>"imdb"</span>, <span class='st'>"tmdb"</span>, <span class='st'>"tvdb"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+<span class='fu'>search_id</span>(
+  <span class='no'>id</span>,
+  <span class='kw'>id_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"trakt"</span>, <span class='st'>"imdb"</span>, <span class='st'>"tmdb"</span>, <span class='st'>"tvdb"</span>),
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>,
+  <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>)
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -301,8 +316,8 @@ which fields of the item metadata are searched by default.</p>
 #&gt;   type   score title           year trakt  slug          tvdb  imdb        tmdb 
 #&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;
 #&gt; 1 show  1000   Breaking Bad    2008 1388   breaking-bad  81189 tt0903747   1396 
-#&gt; 2 show   411.  Breaking Bad:…  2018 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
-#&gt; 3 show    12.1 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># \dontrun{</span>
+#&gt; 2 show   406.  Breaking Bad:…  2009 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
+#&gt; 3 show    12.0 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># A show by its trakt id, and now with more information</span>
 <span class='fu'>search_id</span>(<span class='fl'>1388</span>, <span class='st'>"trakt"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 29
 #&gt;   type  score title  year overview first_aired         runtime certification
@@ -318,15 +333,15 @@ which fields of the item metadata are searched by default.</p>
 <span class='fu'>search_query</span>(<span class='st'>"J. K. Simmons"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"person"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 12
 #&gt;   type  score name  biography birthday   death birthplace homepage trakt slug 
 #&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;date&gt;     &lt;lgl&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 pers…  1.56 J.K.… "Jonatha… 1955-01-09 NA    Detroit, … NA       15722 j-k-…
+#&gt; 1 pers…  1.53 J.K.… "Jonatha… 1955-01-09 NA    Detroit, … NA       15722 j-k-…
 #&gt; # … with 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'>
 <span class='co'># A movie or a show, two of each</span>
 <span class='fu'>search_query</span>(<span class='st'>"Tron"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"movie"</span>, <span class='st'>"show"</span>), <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 4 x 9
 #&gt;   type    score title           year trakt slug            imdb      tmdb  tvdb 
 #&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
 #&gt; 1 movie 1000    Tron            1982 66    tron-1982       tt0084827 97    &lt;NA&gt; 
-#&gt; 2 movie  707.   TRON: Legacy    2010 12601 tron-legacy-20… tt1104001 20526 &lt;NA&gt; 
-#&gt; 3 show   597.   Tron: Uprising  2012 34209 tron-uprising   tt1812523 34356 2584…
+#&gt; 2 movie  700.   TRON: Legacy    2010 12601 tron-legacy-20… tt1104001 20526 &lt;NA&gt; 
+#&gt; 3 show   586.   Tron: Uprising  2012 34209 tron-uprising   tt1812523 34356 2584…
 #&gt; 4 show     8.56 Game of Thron…  2011 1390  game-of-thrones tt0944947 1399  1213…</div><div class='input'># }
 </div></pre>
   </div>

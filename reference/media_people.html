@@ -174,11 +174,20 @@ available.</p>
 
 <span class='fu'>shows_people</span>(<span class='no'>id</span>, <span class='kw'>guest_stars</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
 
-<span class='fu'>seasons_people</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>guest_stars</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))
+<span class='fu'>seasons_people</span>(
+  <span class='no'>id</span>,
+  <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
+  <span class='kw'>guest_stars</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>)
+)
 
-<span class='fu'>episodes_people</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>guest_stars</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+<span class='fu'>episodes_people</span>(
+  <span class='no'>id</span>,
+  <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
+  <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
+  <span class='kw'>guest_stars</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>)
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -238,70 +247,97 @@ compatibility reasons.</p>
 
     <div class='dont-index'><p><a href='people_media.html'>people_media</a>, for the other direction: People that have credits
 in shows/movies.</p>
-<p>Other people data: <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='people_media.html'>people_media</a></code>, <code><a href='people_summary.html'>people_summary</a></code></p>
-<p>Other movie data: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
-  <code><a href='collected_media.html'>collected_media</a></code>,
-  <code><a href='media_aliases.html'>media_aliases</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='media_translations.html'>media_translations</a></code>,
-  <code><a href='media_watching.html'>media_watching</a></code>,
-  <code><a href='movies_boxoffice.html'>movies_boxoffice</a></code>,
-  <code><a href='movies_related.html'>movies_related</a></code>,
-  <code><a href='movies_releases.html'>movies_releases</a></code>,
-  <code><a href='movies_summary.html'>movies_summary</a></code>, <code><a href='people_media.html'>people_media</a></code>,
-  <code><a href='played_media.html'>played_media</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
-  <code><a href='trending_media.html'>trending_media</a></code>,
-  <code><a href='updated_media.html'>updated_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p>
-<p>Other people data: <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='people_media.html'>people_media</a></code>, <code><a href='people_summary.html'>people_summary</a></code></p>
-<p>Other show data: <code><a href='collected_media.html'>collected_media</a></code>,
-  <code><a href='media_aliases.html'>media_aliases</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='media_translations.html'>media_translations</a></code>,
-  <code><a href='media_watching.html'>media_watching</a></code>, <code><a href='people_media.html'>people_media</a></code>,
-  <code><a href='played_media.html'>played_media</a></code>,
-  <code><a href='shows_next_episode.html'>shows_next_episode</a></code>,
-  <code><a href='shows_related.html'>shows_related</a></code>, <code><a href='shows_summary.html'>shows_summary</a></code>,
-  <code><a href='updated_media.html'>updated_media</a></code></p>
-<p>Other people data: <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='people_media.html'>people_media</a></code>, <code><a href='people_summary.html'>people_summary</a></code></p>
-<p>Other season data: <code><a href='media_comments.html'>media_comments</a></code>,
-  <code><a href='media_lists.html'>media_lists</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
-  <code><a href='media_stats.html'>media_stats</a></code>, <code><a href='seasons_season.html'>seasons_season</a></code>,
-  <code><a href='seasons_summary.html'>seasons_summary</a></code></p>
-<p>Other people data: <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='people_media.html'>people_media</a></code>, <code><a href='people_summary.html'>people_summary</a></code></p>
-<p>Other episode data: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
-  <code><a href='media_comments.html'>media_comments</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='media_translations.html'>media_translations</a></code>,
-  <code><a href='media_watching.html'>media_watching</a></code>,
-  <code><a href='seasons_season.html'>seasons_season</a></code>,
-  <code><a href='seasons_summary.html'>seasons_summary</a></code>,
-  <code><a href='shows_next_episode.html'>shows_next_episode</a></code></p>
-<p>Other people data: <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='people_media.html'>people_media</a></code>, <code><a href='people_summary.html'>people_summary</a></code></p></div>
+<p>Other people data: 
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='people_summary.html'>people_summary</a>()</code></p>
+<p>Other movie data: 
+<code><a href='anticipated_media.html'>anticipated_media</a></code>,
+<code><a href='collected_media.html'>collected_media</a></code>,
+<code><a href='media_aliases.html'>media_aliases</a></code>,
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='media_translations.html'>media_translations</a></code>,
+<code><a href='media_watching.html'>media_watching</a></code>,
+<code><a href='movies_boxoffice.html'>movies_boxoffice</a>()</code>,
+<code><a href='movies_related.html'>movies_related</a>()</code>,
+<code><a href='movies_releases.html'>movies_releases</a>()</code>,
+<code><a href='movies_summary.html'>movies_summary</a>()</code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='played_media.html'>played_media</a></code>,
+<code><a href='popular_media.html'>popular_media</a></code>,
+<code><a href='trending_media.html'>trending_media</a></code>,
+<code><a href='updated_media.html'>updated_media</a></code>,
+<code><a href='watched_media.html'>watched_media</a></code></p>
+<p>Other people data: 
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='people_summary.html'>people_summary</a>()</code></p>
+<p>Other show data: 
+<code><a href='collected_media.html'>collected_media</a></code>,
+<code><a href='media_aliases.html'>media_aliases</a></code>,
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='media_translations.html'>media_translations</a></code>,
+<code><a href='media_watching.html'>media_watching</a></code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='played_media.html'>played_media</a></code>,
+<code><a href='shows_next_episode.html'>shows_next_episode</a>()</code>,
+<code><a href='shows_related.html'>shows_related</a>()</code>,
+<code><a href='shows_summary.html'>shows_summary</a>()</code>,
+<code><a href='updated_media.html'>updated_media</a></code></p>
+<p>Other people data: 
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='people_summary.html'>people_summary</a>()</code></p>
+<p>Other season data: 
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='seasons_season.html'>seasons_season</a>()</code>,
+<code><a href='seasons_summary.html'>seasons_summary</a>()</code></p>
+<p>Other people data: 
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='people_summary.html'>people_summary</a>()</code></p>
+<p>Other episode data: 
+<code><a href='episodes_summary.html'>episodes_summary</a>()</code>,
+<code><a href='media_comments.html'>media_comments</a></code>,
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='media_translations.html'>media_translations</a></code>,
+<code><a href='media_watching.html'>media_watching</a></code>,
+<code><a href='seasons_season.html'>seasons_season</a>()</code>,
+<code><a href='seasons_summary.html'>seasons_summary</a>()</code>,
+<code><a href='shows_next_episode.html'>shows_next_episode</a>()</code></p>
+<p>Other people data: 
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='people_summary.html'>people_summary</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 <span class='fu'>movies_people</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; $cast
-#&gt; # A tibble: 44 x 7
+#&gt; # A tibble: 47 x 7
 #&gt;    character               characters name        trakt  slug       imdb   tmdb 
 #&gt;    &lt;chr&gt;                   &lt;list&gt;     &lt;chr&gt;       &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;
 #&gt;  1 Wade Wilson, Deadpool   &lt;chr [2]&gt;  Ryan Reyno… 416707 ryan-reyn… nm000… 10859
-#&gt;  2 Vanessa Carlysle        &lt;chr [1]&gt;  Morena Bac… 431157 morena-ba… nm107… 54882
+#&gt;  2 Dopinder                &lt;chr [1]&gt;  Karan Soni  203567 karan-soni nm417… 1109…
 #&gt;  3 Francis Freeman, Ajax   &lt;chr [2]&gt;  Ed Skrein   456186 ed-skrein  nm453… 1047…
-#&gt;  4 Jack Hammer, Weasel     &lt;chr [2]&gt;  T.J. Miller 421412 t-j-miller nm255… 51990
-#&gt;  5 Christina, Angel Dust   &lt;chr [2]&gt;  Gina Carano 430626 gina-cara… nm244… 78452
+#&gt;  4 Warlord                 &lt;chr [1]&gt;  Michael Be… 417888 michael-b… nm007… 27588
+#&gt;  5 Piotr Rasputin, Coloss… &lt;chr [2]&gt;  Stefan Kap… 431218 stefan-ka… nm129… 80507
 #&gt;  6 Ellie Phimister, Negas… &lt;chr [2]&gt;  Brianna Hi… 554869 brianna-h… nm655… 1492…
-#&gt;  7 Piotr Rasputin, Coloss… &lt;chr [2]&gt;  Stefan Kap… 431218 stefan-ka… nm129… 80507
-#&gt;  8 Piotr Rasputin, Coloss… &lt;chr [2]&gt;  Andre Tric… 554870 andre-tri… nm424… 1368…
-#&gt;  9 Blind Al                &lt;chr [1]&gt;  Leslie Ugg… 441144 leslie-ug… nm088… 1227…
-#&gt; 10 Dopinder                &lt;chr [1]&gt;  Karan Soni  203567 karan-soni nm417… 1109…
-#&gt; # … with 34 more rows
+#&gt;  7 Jeremy (Pizza Guy)      &lt;chr [1]&gt;  Style Dayne 495632 style-day… nm440… 1417…
+#&gt;  8 Gavin Merchant          &lt;chr [1]&gt;  Kyle Cassie 47532  kyle-cass… nm100… 62915
+#&gt;  9 Meghan Orlovsky         &lt;chr [1]&gt;  Taylor Hic… 554871 taylor-hi… nm688… 1493…
+#&gt; 10 Teen Girl #1            &lt;chr [1]&gt;  Ayzee       710498 ayzee      &lt;NA&gt;   1683…
+#&gt; # … with 37 more rows
 #&gt; 
 #&gt; $crew
 #&gt; # A tibble: 83 x 8
@@ -322,14 +358,14 @@ in shows/movies.</p>
 #&gt; # A tibble: 9 x 8
 #&gt;   character    characters episode_count name     trakt  slug         imdb  tmdb 
 #&gt;   &lt;chr&gt;        &lt;list&gt;             &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 Walter White &lt;chr [1]&gt;             62 Bryan C… 297737 bryan-crans… nm01… 17419
-#&gt; 2 Jesse Pinkm… &lt;chr [1]&gt;             62 Aaron P… 415249 aaron-paul   nm06… 84497
-#&gt; 3 Skyler White &lt;chr [1]&gt;             62 Anna Gu… 420986 anna-gunn    nm03… 1345…
-#&gt; 4 Hank Schrad… &lt;chr [1]&gt;             62 Dean No… 415192 dean-norris  nm06… 14329
-#&gt; 5 Marie Schra… &lt;chr [1]&gt;             62 Betsy B… 436547 betsy-brandt nm13… 1217…
-#&gt; 6 Walter Whit… &lt;chr [1]&gt;             62 RJ Mitte 459150 rj-mitte-06… nm26… 2096…
-#&gt; 7 Saul Goodman &lt;chr [1]&gt;             42 Bob Ode… 294857 bob-odenkirk nm06… 59410
-#&gt; 8 Mike Ehrman… &lt;chr [1]&gt;             42 Jonatha… 411251 jonathan-ba… nm00… 783  
+#&gt; 1 "Walter Whi… &lt;chr [1]&gt;             62 Bryan C… 297737 bryan-crans… nm01… 17419
+#&gt; 2 "Jesse Pink… &lt;chr [1]&gt;             62 Aaron P… 415249 aaron-paul   nm06… 84497
+#&gt; 3 "Skyler Whi… &lt;chr [1]&gt;             62 Anna Gu… 420986 anna-gunn    nm03… 1345…
+#&gt; 4 "Hank Schra… &lt;chr [1]&gt;             62 Dean No… 415192 dean-norris  nm06… 14329
+#&gt; 5 "Marie Schr… &lt;chr [1]&gt;             62 Betsy B… 436547 betsy-brandt nm13… 1217…
+#&gt; 6 "Walter Whi… &lt;chr [1]&gt;             62 RJ Mitte 459150 rj-mitte-06… nm26… 2096…
+#&gt; 7 "Saul Goodm… &lt;chr [1]&gt;             42 Bob Ode… 294857 bob-odenkirk nm06… 59410
+#&gt; 8 "Mike Ehrma… &lt;chr [1]&gt;             42 Jonatha… 411251 jonathan-ba… nm00… 783  
 #&gt; 9 "Gustavo \"… &lt;chr [1]&gt;             26 Giancar… 412546 giancarlo-e… nm00… 4808 
 #&gt; 
 #&gt; $crew

@@ -168,18 +168,36 @@
     <p>Get all comments of a thing</p>
     </div>
 
-    <pre class="usage"><span class='fu'>movies_comments</span>(<span class='no'>id</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>, <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>, <span class='st'>"replies"</span>),
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)
+    <pre class="usage"><span class='fu'>movies_comments</span>(
+  <span class='no'>id</span>,
+  <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>, <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>, <span class='st'>"replies"</span>),
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>
+)
 
-<span class='fu'>shows_comments</span>(<span class='no'>id</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>, <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>, <span class='st'>"replies"</span>),
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)
+<span class='fu'>shows_comments</span>(
+  <span class='no'>id</span>,
+  <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>, <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>, <span class='st'>"replies"</span>),
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>
+)
 
-<span class='fu'>seasons_comments</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>, <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>,
-  <span class='st'>"replies"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)
+<span class='fu'>seasons_comments</span>(
+  <span class='no'>id</span>,
+  <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
+  <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>, <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>, <span class='st'>"replies"</span>),
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>
+)
 
-<span class='fu'>episodes_comments</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>,
-  <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>, <span class='st'>"replies"</span>), <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
-  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>)</pre>
+<span class='fu'>episodes_comments</span>(
+  <span class='no'>id</span>,
+  <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
+  <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>,
+  <span class='kw'>sort</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"newest"</span>, <span class='st'>"oldest"</span>, <span class='st'>"likes"</span>, <span class='st'>"replies"</span>),
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>),
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -245,77 +263,95 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </ul>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other comment methods: <code><a href='comments_comment.html'>comments_comment</a></code>,
-  <code><a href='comments_trending.html'>comments_trending</a></code>,
-  <code><a href='comments_updates.html'>comments_updates</a></code>,
-  <code><a href='user_comments.html'>user_comments</a></code>,
-  <code><a href='user_list_comments.html'>user_list_comments</a></code></p>
-<p>Other movie data: <code><a href='anticipated_media.html'>anticipated_media</a></code>,
-  <code><a href='collected_media.html'>collected_media</a></code>,
-  <code><a href='media_aliases.html'>media_aliases</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
-  <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='media_translations.html'>media_translations</a></code>,
-  <code><a href='media_watching.html'>media_watching</a></code>,
-  <code><a href='movies_boxoffice.html'>movies_boxoffice</a></code>,
-  <code><a href='movies_related.html'>movies_related</a></code>,
-  <code><a href='movies_releases.html'>movies_releases</a></code>,
-  <code><a href='movies_summary.html'>movies_summary</a></code>, <code><a href='people_media.html'>people_media</a></code>,
-  <code><a href='played_media.html'>played_media</a></code>, <code><a href='popular_media.html'>popular_media</a></code>,
-  <code><a href='trending_media.html'>trending_media</a></code>,
-  <code><a href='updated_media.html'>updated_media</a></code>, <code><a href='watched_media.html'>watched_media</a></code></p>
-<p>Other show data: <code><a href='collected_media.html'>collected_media</a></code>,
-  <code><a href='media_aliases.html'>media_aliases</a></code>, <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
-  <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='media_translations.html'>media_translations</a></code>,
-  <code><a href='media_watching.html'>media_watching</a></code>, <code><a href='people_media.html'>people_media</a></code>,
-  <code><a href='played_media.html'>played_media</a></code>,
-  <code><a href='shows_next_episode.html'>shows_next_episode</a></code>,
-  <code><a href='shows_related.html'>shows_related</a></code>, <code><a href='shows_summary.html'>shows_summary</a></code>,
-  <code><a href='updated_media.html'>updated_media</a></code></p>
-<p>Other season data: <code><a href='media_lists.html'>media_lists</a></code>,
-  <code><a href='media_people.html'>media_people</a></code>, <code><a href='media_ratings.html'>media_ratings</a></code>,
-  <code><a href='media_stats.html'>media_stats</a></code>, <code><a href='seasons_season.html'>seasons_season</a></code>,
-  <code><a href='seasons_summary.html'>seasons_summary</a></code></p>
-<p>Other episode data: <code><a href='episodes_summary.html'>episodes_summary</a></code>,
-  <code><a href='media_lists.html'>media_lists</a></code>, <code><a href='media_people.html'>media_people</a></code>,
-  <code><a href='media_ratings.html'>media_ratings</a></code>, <code><a href='media_stats.html'>media_stats</a></code>,
-  <code><a href='media_translations.html'>media_translations</a></code>,
-  <code><a href='media_watching.html'>media_watching</a></code>,
-  <code><a href='seasons_season.html'>seasons_season</a></code>,
-  <code><a href='seasons_summary.html'>seasons_summary</a></code>,
-  <code><a href='shows_next_episode.html'>shows_next_episode</a></code></p></div>
+    <div class='dont-index'><p>Other comment methods: 
+<code><a href='comments_comment.html'>comments_comment</a>()</code>,
+<code><a href='comments_trending.html'>comments_trending</a>()</code>,
+<code><a href='comments_updates.html'>comments_updates</a>()</code>,
+<code><a href='user_comments.html'>user_comments</a>()</code>,
+<code><a href='user_list_comments.html'>user_list_comments</a>()</code></p>
+<p>Other movie data: 
+<code><a href='anticipated_media.html'>anticipated_media</a></code>,
+<code><a href='collected_media.html'>collected_media</a></code>,
+<code><a href='media_aliases.html'>media_aliases</a></code>,
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_people.html'>media_people</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='media_translations.html'>media_translations</a></code>,
+<code><a href='media_watching.html'>media_watching</a></code>,
+<code><a href='movies_boxoffice.html'>movies_boxoffice</a>()</code>,
+<code><a href='movies_related.html'>movies_related</a>()</code>,
+<code><a href='movies_releases.html'>movies_releases</a>()</code>,
+<code><a href='movies_summary.html'>movies_summary</a>()</code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='played_media.html'>played_media</a></code>,
+<code><a href='popular_media.html'>popular_media</a></code>,
+<code><a href='trending_media.html'>trending_media</a></code>,
+<code><a href='updated_media.html'>updated_media</a></code>,
+<code><a href='watched_media.html'>watched_media</a></code></p>
+<p>Other show data: 
+<code><a href='collected_media.html'>collected_media</a></code>,
+<code><a href='media_aliases.html'>media_aliases</a></code>,
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_people.html'>media_people</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='media_translations.html'>media_translations</a></code>,
+<code><a href='media_watching.html'>media_watching</a></code>,
+<code><a href='people_media.html'>people_media</a>()</code>,
+<code><a href='played_media.html'>played_media</a></code>,
+<code><a href='shows_next_episode.html'>shows_next_episode</a>()</code>,
+<code><a href='shows_related.html'>shows_related</a>()</code>,
+<code><a href='shows_summary.html'>shows_summary</a>()</code>,
+<code><a href='updated_media.html'>updated_media</a></code></p>
+<p>Other season data: 
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_people.html'>media_people</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='seasons_season.html'>seasons_season</a>()</code>,
+<code><a href='seasons_summary.html'>seasons_summary</a>()</code></p>
+<p>Other episode data: 
+<code><a href='episodes_summary.html'>episodes_summary</a>()</code>,
+<code><a href='media_lists.html'>media_lists</a></code>,
+<code><a href='media_people.html'>media_people</a></code>,
+<code><a href='media_ratings.html'>media_ratings</a>()</code>,
+<code><a href='media_stats.html'>media_stats</a>()</code>,
+<code><a href='media_translations.html'>media_translations</a></code>,
+<code><a href='media_watching.html'>media_watching</a></code>,
+<code><a href='seasons_season.html'>seasons_season</a>()</code>,
+<code><a href='seasons_summary.html'>seasons_summary</a>()</code>,
+<code><a href='shows_next_episode.html'>shows_next_episode</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 <span class='fu'>movies_comments</span>(<span class='fl'>193972</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 16
 #&gt;        id comment spoiler review parent_id created_at         
 #&gt;     &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 254916 how ca… FALSE   FALSE          0 2019-10-13 07:38:34
-#&gt;  2 254777 I was … FALSE   FALSE          0 2019-10-12 16:41:10
-#&gt;  3 254536 It's a… TRUE    FALSE          0 2019-10-11 15:20:59
-#&gt;  4 252661 how do… FALSE   FALSE          0 2019-09-30 00:56:09
-#&gt;  5 252389 "One t… FALSE   FALSE          0 2019-09-28 18:33:46
-#&gt;  6 252274 Woody … FALSE   FALSE          0 2019-09-28 00:37:38
-#&gt;  7 252267 Can't … FALSE   FALSE          0 2019-09-27 22:32:29
-#&gt;  8 251391 "that … FALSE   FALSE          0 2019-09-21 16:42:50
-#&gt;  9 250960 i grew… FALSE   FALSE          0 2019-09-18 00:26:55
-#&gt; 10 250798 It's v… FALSE   FALSE          0 2019-09-16 16:48:08
+#&gt;  1 281887 "Until… FALSE   FALSE          0 2020-02-27 12:20:26
+#&gt;  2 280572 "I lik… FALSE   FALSE          0 2020-02-20 06:30:54
+#&gt;  3 278981 "[spoi… FALSE   FALSE          0 2020-02-12 13:59:56
+#&gt;  4 278254 "Not a… FALSE   FALSE          0 2020-02-08 18:28:37
+#&gt;  5 277234 "Toy s… FALSE   FALSE          0 2020-02-04 22:56:45
+#&gt;  6 276655 ":cry:… FALSE   FALSE          0 2020-02-02 19:38:12
+#&gt;  7 270565 "This … FALSE   FALSE          0 2020-01-03 17:27:23
+#&gt;  8 270548 "\"Hea… FALSE   FALSE          0 2020-01-03 15:18:56
+#&gt;  9 270463 "I'm h… FALSE   FALSE          0 2020-01-03 01:25:14
+#&gt; 10 269660 "Just … FALSE   FALSE          0 2019-12-31 15:43:21
 #&gt; # … with 10 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='fu'>shows_comments</span>(<span class='fl'>46241</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 16
 #&gt;        id comment spoiler review parent_id created_at         
 #&gt;     &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1   4528 The br… FALSE   FALSE          0 2014-12-27 21:04:43
-#&gt;  2  11599 Televi… FALSE   FALSE          0 2013-02-24 18:13:58
-#&gt;  3  39755 Holy h… FALSE   FALSE          0 2015-03-11 07:54:07
+#&gt;  1   4528 "The b… FALSE   FALSE          0 2014-12-27 21:04:43
+#&gt;  2  11599 "Telev… FALSE   FALSE          0 2013-02-24 18:13:58
+#&gt;  3  39755 "Holy … FALSE   FALSE          0 2015-03-11 07:54:07
 #&gt;  4 143277 "After… FALSE   FALSE          0 2017-10-01 18:42:14
-#&gt;  5  34510 It's O… FALSE   FALSE          0 2014-07-31 22:21:49
+#&gt;  5  34510 "It's … FALSE   FALSE          0 2014-07-31 22:21:49
 #&gt;  6  42940 "Looke… FALSE   FALSE          0 2015-05-06 17:25:07
-#&gt;  7  11140 I like… FALSE   FALSE          0 2014-12-13 17:56:40
+#&gt;  7  11140 "I lik… FALSE   FALSE          0 2014-12-13 17:56:40
 #&gt;  8 185427 "In Fe… FALSE   FALSE          0 2018-08-01 12:50:58
-#&gt;  9  71014 Watch … FALSE   FALSE          0 2016-02-10 04:16:54
+#&gt;  9  71014 "Watch… FALSE   FALSE          0 2016-02-10 04:16:54
 #&gt; 10  38229 "This … FALSE   FALSE          0 2015-02-09 07:47:51
 #&gt; # … with 10 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,

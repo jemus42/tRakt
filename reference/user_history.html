@@ -170,9 +170,14 @@ which it was logged (e.g. scrobble or checkin)." />
 which it was logged (e.g. <em>scrobble</em> or <em>checkin</em>).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>user_history</span>(<span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>), <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"shows"</span>,
-  <span class='st'>"movies"</span>), <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>, <span class='kw'>start_at</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>end_at</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+    <pre class="usage"><span class='fu'>user_history</span>(
+  <span class='kw'>user</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/options.html'>getOption</a></span>(<span class='st'>"trakt_username"</span>),
+  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"shows"</span>, <span class='st'>"movies"</span>),
+  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>,
+  <span class='kw'>start_at</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>end_at</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>)
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -218,7 +223,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This function wraps the API method
-<a href='https://trakt.docs.apiary.io/#reference/users/history/get-watched-history'>/users/:id/history/:type</a>.</p>
+<a href='https://trakt.docs.apiary.io/#reference/users/history/get-watched-history'><code>/users/:id/history/:type</code></a>.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>For <code>type = "shows"</code>, the
@@ -228,11 +233,16 @@ all episode-related variables are prefixed with <code>episode_</code>. This resu
 episode number having the name <code>episode_episode</code>, which is quite silly. Sorry.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    <div class='dont-index'><p>Other user data: <code><a href='user_collection.html'>user_collection</a></code>,
-  <code><a href='user_comments.html'>user_comments</a></code>, <code><a href='user_likes.html'>user_likes</a></code>,
-  <code><a href='user_network.html'>user_network</a></code>, <code><a href='user_profile.html'>user_profile</a></code>,
-  <code><a href='user_ratings.html'>user_ratings</a></code>, <code><a href='user_stats.html'>user_stats</a></code>,
-  <code><a href='user_watched.html'>user_watched</a></code>, <code><a href='user_watchlist.html'>user_watchlist</a></code></p></div>
+    <div class='dont-index'><p>Other user data: 
+<code><a href='user_collection.html'>user_collection</a>()</code>,
+<code><a href='user_comments.html'>user_comments</a>()</code>,
+<code><a href='user_likes.html'>user_likes</a>()</code>,
+<code><a href='user_network.html'>user_network</a>()</code>,
+<code><a href='user_profile.html'>user_profile</a>()</code>,
+<code><a href='user_ratings.html'>user_ratings</a>()</code>,
+<code><a href='user_stats.html'>user_stats</a>()</code>,
+<code><a href='user_watched.html'>user_watched</a>()</code>,
+<code><a href='user_watchlist.html'>user_watchlist</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
