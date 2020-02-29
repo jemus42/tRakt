@@ -17,6 +17,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.httr-oauth$
+tests/testthat/…\.httr-oauth$
+vignettes/\.httr-oauth$
 ^tRakt\.Rcheck$
 ^tRakt.*\.tar\.gz$
 ^tRakt.*\.tgz$
