@@ -16,10 +16,6 @@ status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](http
 release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](https://github.com/jemus42/tRakt/releases)
 [![GitHub last commit
 (master)](https://img.shields.io/github/last-commit/jemus42/tRakt/master.svg?logo=GithUb)](https://github.com/jemus42/tRakt/commits/master)
-[![Travis build
-status](https://travis-ci.org/jemus42/tRakt.svg?branch=master)](https://travis-ci.org/jemus42/tRakt)
-[![Codecov test
-coverage](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/gh/jemus42/tRakt?branch=master)
 <!-- badges: end -->
 
 `tRakt` helps you to retrieve data from [trakt.tv](https://trakt.tv/), a
