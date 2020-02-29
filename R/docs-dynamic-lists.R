@@ -16,19 +16,19 @@
 #' are adapted directly from the
 #' [API reference](https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies).
 #'
-#' - [**Popular**][popular_media]: Popularity is calculated using the rating percentage and the number of
+#' - [Popular][popular_media]: Popularity is calculated using the rating percentage and the number of
 #' ratings.
-#' - [**Trending**][trending_media]: Returns all movies/shows being watched right now.
+#' - [Trending][trending_media]: Returns all movies/shows being watched right now.
 #' Movies/shows with the most users are returned first.
-#' - [**Played**][played_media]: Returns the most played (a single user can watch multiple times)
+#' - [Played][played_media]: Returns the most played (a single user can watch multiple times)
 #' movies/shows in the specified time `period`.
-#' - [**Watched**][watched_media]: Returns the most watched (unique users) movies/shows in the specified
+#' - [Watched][watched_media]: Returns the most watched (unique users) movies/shows in the specified
 #' time `period`.
-#' - [**Collected**][collected_media]: Returns the most collected (unique users) movies/shows in the
+#' - [Collected][collected_media]: Returns the most collected (unique users) movies/shows in the
 #' specified time `period`.
-#' - [**Anticipated**][anticipated_media]: Returns the most anticipated movies/shows based on the number of
+#' - [Anticipated][anticipated_media]: Returns the most anticipated movies/shows based on the number of
 #' lists a movie/show appears on.
-#' - [**Updates**][updated_media]: Returns all movies/shows updated since the specified UTC `start_date`.
+#' - [Updates][updated_media]: Returns all movies/shows updated since the specified UTC `start_date`.
 #' In this case, the upper bound for `limit` is 100.
 #'
 #' The functions for **Played**, **Watched**, **Collected** and **Played** each return
