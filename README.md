@@ -9,6 +9,8 @@
 (.org)](https://img.shields.io/travis/jemus42/tRakt.svg?logo=travis)](https://travis-ci.org/jemus42/tRakt)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/jemus42/tRakt?branch=master&svg=true)](https://ci.appveyor.com/project/jemus42/tRakt)
+[![R build
+status](https://github.com/jemus42/tRakt/workflows/R-CMD-check/badge.svg)](https://github.com/jemus42/tRakt/actions)
 [![Coverage
 status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)
 <!-- [![CRAN status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt) -->
@@ -16,8 +18,6 @@ status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](http
 release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](https://github.com/jemus42/tRakt/releases)
 [![GitHub last commit
 (master)](https://img.shields.io/github/last-commit/jemus42/tRakt/master.svg?logo=GithUb)](https://github.com/jemus42/tRakt/commits/master)
-[![R build
-status](https://github.com/jemus42/tRakt/workflows/R-CMD-check/badge.svg)](https://github.com/jemus42/tRakt/actions)
 <!-- badges: end -->
 
 `tRakt` helps you to retrieve data from [trakt.tv](https://trakt.tv/), a
