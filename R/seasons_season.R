@@ -46,11 +46,14 @@ seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
     return(tibble())
   }
 
-  # Reorganization
-  names(response) <- sub("number", "episode", names(response))
-
-  # Spreading out ids to get a flat data.frame
-  response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
+  response %>%
+    select(-"ids") %>%
+    cbind(fix_ids(response$ids)) %>%
+    fix_tibble_response() %>%
+    rename(
+      episode = "number",
+      #  episode_abs = "number_abs" # Not sure if this renaming should be done
+    )
 
   fix_tibble_response(response)
 }
