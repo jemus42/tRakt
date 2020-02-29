@@ -18,7 +18,7 @@ URL: https://jemus42.github.io/tRakt,
     http://github.com/jemus42/tRakt
 BugReports: http://github.com/jemus42/tRakt/issues
 Depends:
-    R (>= 2.10)
+    R (>= 3.2)
 Imports:
     dplyr (>= 0.7.0),
     httr,

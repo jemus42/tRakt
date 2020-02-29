@@ -1,7 +1,9 @@
 ## Test environments
-* local OS X install, R 3.5.2
-* ubuntu 16.04 (on travis-ci), oldred, release, devel
-* r-hub (rhub::check_for_cran)
+
+* local: darwin15.6.0-3.6.2
+* travis: 3.1, 3.2, 3.3, oldrel, release, devel
+* r-hub: windows-x86_64-devel, ubuntu-gcc-release, fedora-clang-devel
+* win-builder: windows-x86_64-devel
 
 ## R CMD check results
 

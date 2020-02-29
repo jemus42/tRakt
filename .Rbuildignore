@@ -26,3 +26,4 @@ vignettes/\.httr-oauth$
 ^\.lintr$
 ^\.pre-commit-config\.yaml$
 ^README_cache$
+^\.covrignore$
