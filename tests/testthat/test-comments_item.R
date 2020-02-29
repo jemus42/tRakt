@@ -4,7 +4,7 @@ test_that("comments_item works", {
   nm_movie_min <- c("type", "title", "year", "trakt", "slug", "imdb", "tmdb")
   nm_movie_full <- c(
     "type", "title", "year", "tagline", "overview", "released",
-    "runtime", "country", "trailer", "homepage", "rating", "votes",
+    "runtime", "country", "trailer", "homepage", "status", "rating", "votes",
     "comment_count", "updated_at", "language", "available_translations",
     "genres", "certification", "trakt", "slug", "imdb", "tmdb"
   )

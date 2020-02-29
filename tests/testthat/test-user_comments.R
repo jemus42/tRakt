@@ -3,7 +3,7 @@ test_that("user_comments", {
     "type", "id", "comment", "spoiler", "review", "parent_id",
     "created_at", "updated_at", "replies", "likes", "user_rating",
     "username", "private", "user_name", "vip", "vip_ep", "user_slug",
-    "title", "year", "trakt", "slug", "imdb", "tmdb", "tvdb", "season",
+    "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb", "season",
     "episode", "episode_title", "episode_trakt", "episode_tvdb",
     "episode_imdb", "episode_tmdb", "season_trakt", "season_tvdb",
     "season_tmdb"

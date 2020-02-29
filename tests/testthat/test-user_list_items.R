@@ -25,12 +25,4 @@ test_that("user_list_items are correct", {
     expect_length(60) %>%
     nrow() %>%
     expect_equal(72)
-
-  user_list_items("ZoMa_TGM", list_id = 6562799, extended = "min") %>%
-    expect_is("tbl_df") %>%
-    expect_length(9)
-
-  user_list_items("ZoMa_TGM", list_id = 6562799, extended = "full") %>%
-    expect_is("tbl_df") %>%
-    expect_length(14)
 })
