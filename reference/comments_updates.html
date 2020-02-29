@@ -218,26 +218,25 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Recently updated comments</span>
-<span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 34
+<span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 31
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 movie 282352 "Some … FALSE   FALSE          0 2020-02-29 16:10:32
-#&gt;  2 movie 282351 "A Che… FALSE   FALSE          0 2020-02-29 16:05:04
-#&gt;  3 movie 282350 "Oh bo… FALSE   FALSE          0 2020-02-29 16:03:33
-#&gt;  4 seas… 282048 "I did… FALSE   FALSE          0 2020-02-28 06:52:36
-#&gt;  5 seas… 282325 "Seaso… FALSE   FALSE          0 2020-02-29 12:48:20
-#&gt;  6 seas… 282040 "I don… FALSE   FALSE          0 2020-02-28 05:44:56
-#&gt;  7 epis… 282229 "I lov… FALSE   FALSE          0 2020-02-29 01:21:25
-#&gt;  8 epis… 281981 "\"He'… FALSE   FALSE          0 2020-02-27 23:11:16
-#&gt;  9 epis… 282348 "This … FALSE   FALSE          0 2020-02-29 15:45:56
-#&gt; 10 show  281857 "Holy … FALSE   FALSE          0 2020-02-27 07:08:17
-#&gt; # … with 27 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
+#&gt;  1 movie 280445 "I sti… FALSE   TRUE           0 2020-02-19 16:39:33
+#&gt;  2 movie 279707 "The c… FALSE   FALSE          0 2020-02-16 06:49:59
+#&gt;  3 movie 282150 "A dar… FALSE   FALSE          0 2020-02-28 17:19:37
+#&gt;  4 epis… 282011 "That … TRUE    FALSE          0 2020-02-28 01:50:35
+#&gt;  5 epis… 282365 "Wow, … TRUE    TRUE           0 2020-02-29 17:36:57
+#&gt;  6 epis… 243972 "\"Com… TRUE    FALSE          0 2019-08-01 07:33:59
+#&gt;  7 epis… 242616 "[Spoi… FALSE   FALSE          0 2019-07-24 17:14:10
+#&gt;  8 epis… 282364 "When … TRUE    FALSE          0 2020-02-29 17:01:34
+#&gt;  9 epis… 281961 "Liam'… FALSE   FALSE          0 2020-02-27 22:02:44
+#&gt; 10 show    1181 "This … FALSE   FALSE          0 2011-03-19 17:12:26
+#&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
 #&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, tvdb &lt;chr&gt;, season &lt;int&gt;,
-#&gt; #   season_trakt &lt;chr&gt;, season_tvdb &lt;chr&gt;, season_tmdb &lt;chr&gt;, episode &lt;int&gt;,
-#&gt; #   episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;, episode_tvdb &lt;chr&gt;,
-#&gt; #   episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div></pre>
+#&gt; #   episode &lt;int&gt;, episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;,
+#&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

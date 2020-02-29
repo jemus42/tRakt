@@ -352,7 +352,7 @@ the same additional variables besides the media information: <code>watcher_count
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
-<span class='fu'>shows_anticipated</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 12 x 8
+<span class='fu'>shows_anticipated</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 13 x 8
 #&gt;    list_count title              year trakt  slug             tvdb  imdb   tmdb 
 #&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;
 #&gt;  1        416 Queen Sono         2020 156169 queen-sono       3661… tt942… 96676
@@ -366,7 +366,8 @@ the same additional variables besides the media information: <code>watcher_count
 #&gt;  9         30 Vampires           2020 158412 vampires-2020    3772… &lt;NA&gt;   &lt;NA&gt; 
 #&gt; 10         26 Feel Good          2020 158435 feel-good        3772… tt100… &lt;NA&gt; 
 #&gt; 11         16 The Circle Brazil  2020 153249 the-circle-braz… 3699… tt958… 99620
-#&gt; 12          8 Tiger King         2020 158420 tiger-king       3772… tt118… &lt;NA&gt; </div><div class='input'># }
+#&gt; 12          8 Tiger King         2020 158420 tiger-king       3772… tt118… &lt;NA&gt; 
+#&gt; 13          3 Restaurants on t…  2020 158773 restaurants-on-… 3778… tt878… &lt;NA&gt; </div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
