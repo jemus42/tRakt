@@ -233,9 +233,11 @@ trakt_get_token <- function() {
 
   # 3. Get OAuth credentials
   oauth2.0_token(
-    trakt_endpoint, app,
+    endpoint = trakt_endpoint,
+    app = app,
     use_oob = TRUE,
-    config_init = user_agent("https://github.com/jemus42/tRakt")
+    config_init = user_agent("https://github.com/jemus42/tRakt"),
+    cache = TRUE
   )
 }
 # nocov end
