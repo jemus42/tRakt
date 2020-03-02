@@ -278,27 +278,29 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
-#&gt;   username private user_name vip   vip_ep user_slug
-#&gt;   &lt;chr&gt;    &lt;lgl&gt;   &lt;lgl&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
-#&gt; 1 flagg    FALSE   NA        FALSE FALSE  flagg    </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 23 x 6
-#&gt;    username            private user_name        vip   vip_ep user_slug          
-#&gt;    &lt;chr&gt;               &lt;lgl&gt;   &lt;chr&gt;            &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;              
-#&gt;  1 orthodoxmonster     FALSE   &lt;NA&gt;             FALSE FALSE  orthodoxmonster    
-#&gt;  2 filipve             FALSE   Filip Vanden Ey… FALSE FALSE  filipve            
-#&gt;  3 bublinak            TRUE    &lt;NA&gt;             NA    NA     bublinak           
-#&gt;  4 DashRendar          FALSE   Dashiel MacTavi… FALSE FALSE  dashrendar         
-#&gt;  5 Guyde               TRUE    &lt;NA&gt;             NA    NA     guyde              
-#&gt;  6 tomislav_sb         FALSE   &lt;NA&gt;             FALSE FALSE  tomislav_sb        
-#&gt;  7 deusexmachina354    FALSE   Tyler            FALSE FALSE  deusexmachina354   
-#&gt;  8 papper              FALSE   Papper           FALSE FALSE  papper             
-#&gt;  9 moreton.andy@gmail… FALSE   Andy             FALSE FALSE  moreton-andy-gmail…
-#&gt; 10 jackyaz             TRUE    &lt;NA&gt;             NA    NA     jackyaz            
-#&gt; # … with 13 more rows</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 6
-#&gt;   username    private user_name vip   vip_ep user_slug  
-#&gt;   &lt;chr&gt;       &lt;lgl&gt;   &lt;lgl&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;      
-#&gt; 1 Guyde       TRUE    NA        NA    NA     guyde      
-#&gt; 2 tomislav_sb FALSE   NA        FALSE FALSE  tomislav_sb</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 4 x 6
+#&gt;   username        private user_name             vip   vip_ep user_slug      
+#&gt;   &lt;chr&gt;           &lt;lgl&gt;   &lt;chr&gt;                 &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;          
+#&gt; 1 Igor Pacheco    FALSE    &lt;NA&gt;                 FALSE FALSE  igor-pacheco   
+#&gt; 2 BrunshuusZimmer FALSE   "BrunshuusZimmermann" FALSE FALSE  brunshuuszimmer
+#&gt; 3 Ryanross53      FALSE   ""                    FALSE FALSE  ryanross53     
+#&gt; 4 Vali M          FALSE   "Valentin Marinescu"  FALSE FALSE  vali-m         </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 52 x 6
+#&gt;    username     private user_name       vip   vip_ep user_slug   
+#&gt;    &lt;chr&gt;        &lt;lgl&gt;   &lt;chr&gt;           &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;       
+#&gt;  1 mattchambers FALSE   "Matt Chambers" FALSE FALSE  mattchambers
+#&gt;  2 JiveCork     FALSE   "Alan O'Connor" FALSE FALSE  jivecork    
+#&gt;  3 shaunfinch   FALSE   "Shaun"         FALSE FALSE  shaunfinch  
+#&gt;  4 YDinopoulos  TRUE     &lt;NA&gt;           NA    NA     ydinopoulos 
+#&gt;  5 hezzie       FALSE   "Hezzie J"      FALSE FALSE  hezzie      
+#&gt;  6 Boeuf78      FALSE   "youness boeuf" TRUE  FALSE  boeuf78     
+#&gt;  7 Wetai        TRUE     &lt;NA&gt;           NA    NA     wetai       
+#&gt;  8 Ellyk        TRUE     &lt;NA&gt;           NA    NA     ellyk       
+#&gt;  9 bull2525     FALSE    &lt;NA&gt;           FALSE FALSE  bull2525    
+#&gt; 10 Waldi68      FALSE   ""              FALSE FALSE  waldi68     
+#&gt; # … with 42 more rows</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
+#&gt;   username  private user_name vip   vip_ep user_slug
+#&gt;   &lt;chr&gt;     &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
+#&gt; 1 Cash75008 FALSE   ""        FALSE FALSE  cash75008</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

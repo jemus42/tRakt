@@ -162,10 +162,23 @@
       <small>Source: <a href='https://github.com/jemus42/tRakt/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="trakt-0-15-9000" class="section level1">
+    <div id="trakt-development-version" class="section level1">
 <h1 class="page-header">
-<a href="#trakt-0-15-9000" class="anchor"></a>tRakt 0.15.9000<small> Unreleased </small>
+<a href="#trakt-development-version" class="anchor"></a>tRakt (development version)<small> Unreleased </small>
 </h1>
+<ul>
+<li>Add GitHub actions via <code>usethis::use_github_actions()</code>
+</li>
+<li>Use the tidy CI setup via <code>usethis::use_tidy_ci()</code>, this bumps the R dependency to <code>&gt;= 3.2</code>.</li>
+</ul>
+<div id="authenticated-requests" class="section level2">
+<h2 class="hasAnchor">
+<a href="#authenticated-requests" class="anchor"></a>Authenticated requests</h2>
+<p>By default, all requests to the API are now made using authentication <em>if</em> a <code>trakt_client_secret</code> is set. See <code>?trakt_credentials()</code> for details on how to set your credentials.<br>
+If now secret is available, unauthenticated requests are made as in previous versions. In this case, you still <strong>need</strong> either the built-in or your own <code>trakt_client_id</code>.</p>
+<p>OAuth2 supports comes with the need to handle secrets, i.e. <code>.httr-oauth</code> files. This can be a pain with headless/automated setups, which is why I am trying to keep “no auth needed” as the default, as most (implemented) endpoints don’t strictly require authentication.</p>
+<p>See <code><a href="../articles/Implemented-API-methods.html">vignette("Implemented-API-methods", package = "tRakt")</a></code> for an overview of implemented methods with an indicator on whether authentication is required (it usually isn’t).</p>
+</div>
 <div id="new-functions" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-functions" class="anchor"></a>New functions</h2>
@@ -192,10 +205,10 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <a href="#search" class="anchor"></a>Search</h3>
 <ul>
 <li>
-<code>trakt.search</code> -&gt; <code>search_query</code>
+<code>trakt.search</code> -&gt; <code><a href="../reference/search_query.html">search_query()</a></code>
 </li>
 <li>
-<code>trakt.search.byid</code> -&gt; <code>search_id</code>
+<code>trakt.search.byid</code> -&gt; <code><a href="../reference/search_query.html">search_id()</a></code>
 </li>
 </ul>
 </div>
@@ -206,63 +219,63 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <li>
 <code>trakt.popular</code>
 <ul>
-<li>-&gt; <code>movies_popular</code>
+<li>-&gt; <code><a href="../reference/popular_media.html">movies_popular()</a></code>
 </li>
-<li>-&gt; <code>shows_popular</code>
+<li>-&gt; <code><a href="../reference/popular_media.html">shows_popular()</a></code>
 </li>
 </ul>
 </li>
 <li>
 <code>trakt.trending</code>
 <ul>
-<li>-&gt; <code>movies_trending</code>
+<li>-&gt; <code><a href="../reference/trending_media.html">movies_trending()</a></code>
 </li>
-<li>-&gt; <code>shows_trending</code>
+<li>-&gt; <code><a href="../reference/trending_media.html">shows_trending()</a></code>
 </li>
 </ul>
 </li>
 <li>
 <code>trakt.anticipated</code>
 <ul>
-<li>-&gt; <code>movies_anticipated</code>
+<li>-&gt; <code><a href="../reference/anticipated_media.html">movies_anticipated()</a></code>
 </li>
-<li>-&gt; <code>shows_anticipated</code>
+<li>-&gt; <code><a href="../reference/anticipated_media.html">shows_anticipated()</a></code>
 </li>
 </ul>
 </li>
 <li>
 <code>trakt.played</code>
 <ul>
-<li>-&gt; <code>movies_played</code>
+<li>-&gt; <code><a href="../reference/played_media.html">movies_played()</a></code>
 </li>
-<li>-&gt; <code>shows_played</code>
+<li>-&gt; <code><a href="../reference/played_media.html">shows_played()</a></code>
 </li>
 </ul>
 </li>
 <li>
 <code>trakt.watched</code>
 <ul>
-<li>-&gt; <code>movies_watched</code>
+<li>-&gt; <code><a href="../reference/watched_media.html">movies_watched()</a></code>
 </li>
-<li>-&gt; <code>shows_watched</code>
-</li>
-</ul>
-</li>
-<li>
-<code>trakt.collected</code>
-<ul>
-<li>-&gt; <code>movies_collected</code>
-</li>
-<li>-&gt; <code>shows_collected</code>
+<li>-&gt; <code><a href="../reference/watched_media.html">shows_watched()</a></code>
 </li>
 </ul>
 </li>
 <li>
-<code>trakt.updates</code>
+<code>trakt.collected()</code>
 <ul>
-<li>-&gt; <code>movies_updates</code>
+<li>-&gt; <code><a href="../reference/collected_media.html">movies_collected()</a></code>
 </li>
-<li>-&gt; <code>shows_updates</code>
+<li>-&gt; <code><a href="../reference/collected_media.html">shows_collected()</a></code>
+</li>
+</ul>
+</li>
+<li>
+<code>trakt.updates()</code>
+<ul>
+<li>-&gt; <code><a href="../reference/updated_media.html">movies_updates()</a></code>
+</li>
+<li>-&gt; <code><a href="../reference/updated_media.html">shows_updates()</a></code>
 </li>
 </ul>
 </li>
@@ -273,16 +286,16 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <a href="#movies" class="anchor"></a>Movies</h3>
 <ul>
 <li>
-<code>trakt.movies.summary</code> -&gt; <code>movies_summary</code>
+<code>trakt.movies.summary</code> -&gt; <code><a href="../reference/movies_summary.html">movies_summary()</a></code>
 </li>
 <li>
-<code>trakt.movies.boxoffice</code> -&gt; <code>movies_boxoffice</code>
+<code>trakt.movies.boxoffice</code> -&gt; <code><a href="../reference/movies_boxoffice.html">movies_boxoffice()</a></code>
 </li>
 <li>
-<code>trakt.movies.releases</code> -&gt; <code>movies_releases</code>
+<code>trakt.movies.releases</code> -&gt; <code><a href="../reference/movies_releases.html">movies_releases()</a></code>
 </li>
 <li>
-<code>trakt.movies.people</code> -&gt; <code>movies_people</code>
+<code>trakt.movies.people</code> -&gt; <code><a href="../reference/media_people.html">movies_people()</a></code>
 </li>
 </ul>
 </div>
@@ -291,10 +304,10 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <a href="#shows" class="anchor"></a>Shows</h3>
 <ul>
 <li>
-<code>trakt.shows.summary</code> -&gt; <code>shows_summary</code>
+<code>trakt.shows.summary</code> -&gt; <code><a href="../reference/shows_summary.html">shows_summary()</a></code>
 </li>
 <li>
-<code>trakt.shows.people</code> -&gt; <code>shows_people</code>
+<code>trakt.shows.people</code> -&gt; <code><a href="../reference/media_people.html">shows_people()</a></code>
 </li>
 </ul>
 </div>
@@ -303,10 +316,10 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <a href="#seasons" class="anchor"></a>Seasons</h3>
 <ul>
 <li>
-<code>trakt.seasons.summary</code> -&gt; <code>seasons_summary</code>
+<code>trakt.seasons.summary</code> -&gt; <code><a href="../reference/seasons_summary.html">seasons_summary()</a></code>
 </li>
 <li>
-<code>trakt.seasons.season</code> -&gt; <code>seasons_season</code> (It’s silly, I know, but oh well)</li>
+<code>trakt.seasons.season</code> -&gt; <code><a href="../reference/seasons_season.html">seasons_season()</a></code> (It’s silly, I know, but oh well)</li>
 </ul>
 </div>
 <div id="ratings" class="section level3">
@@ -314,16 +327,16 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <a href="#ratings" class="anchor"></a>Ratings</h3>
 <ul>
 <li>
-<code>trakt.movies.ratings</code> -&gt; <code>movies_ratings</code>
+<code>trakt.movies.ratings</code> -&gt; <code><a href="../reference/media_ratings.html">movies_ratings()</a></code>
 </li>
 <li>
-<code>trakt.shows.ratings</code> -&gt; <code>shows_ratings</code>
+<code>trakt.shows.ratings</code> -&gt; <code><a href="../reference/media_ratings.html">shows_ratings()</a></code>
 </li>
 <li>
-<code>trakt.seasons.ratings</code> -&gt; <code>seasons_ratings</code>
+<code>trakt.seasons.ratings</code> -&gt; <code><a href="../reference/media_ratings.html">seasons_ratings()</a></code>
 </li>
 <li>
-<code>trakt.episodes.ratings</code> -&gt; <code>episodes_ratings</code>
+<code>trakt.episodes.ratings</code> -&gt; <code><a href="../reference/media_ratings.html">episodes_ratings()</a></code>
 </li>
 </ul>
 </div>
@@ -332,10 +345,10 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <a href="#related" class="anchor"></a>Related</h3>
 <ul>
 <li>
-<code>trakt.movies.related</code> -&gt; <code>movies_related</code>
+<code>trakt.movies.related</code> -&gt; <code><a href="../reference/movies_related.html">movies_related()</a></code>
 </li>
 <li>
-<code>trakt.shows.related</code> -&gt; <code>shows_related</code>
+<code>trakt.shows.related</code> -&gt; <code><a href="../reference/shows_related.html">shows_related()</a></code>
 </li>
 </ul>
 </div>
@@ -344,16 +357,16 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <a href="#stats" class="anchor"></a>Stats</h3>
 <ul>
 <li>
-<code>trakt.movies.stats</code> -&gt; <code>movies_stats</code>
+<code>trakt.movies.stats</code> -&gt; <code><a href="../reference/media_stats.html">movies_stats()</a></code>
 </li>
 <li>
-<code>trakt.shows.stats</code> -&gt; <code>shows_stats</code>
+<code>trakt.shows.stats</code> -&gt; <code><a href="../reference/media_stats.html">shows_stats()</a></code>
 </li>
 <li>
-<code>trakt.seasons.stats</code> -&gt; <code>seasons_stats</code>
+<code>trakt.seasons.stats</code> -&gt; <code><a href="../reference/media_stats.html">seasons_stats()</a></code>
 </li>
 <li>
-<code>trakt.episodes.stats</code> -&gt; <code>episodes_stats</code>
+<code>trakt.episodes.stats</code> -&gt; <code><a href="../reference/media_stats.html">episodes_stats()</a></code>
 </li>
 </ul>
 </div>
@@ -362,13 +375,13 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <a href="#people" class="anchor"></a>People</h3>
 <ul>
 <li>
-<code>trakt.people.summary</code> -&gt; <code>people_summary</code>
+<code>trakt.people.summary</code> -&gt; <code><a href="../reference/people_summary.html">people_summary()</a></code>
 </li>
 <li>
-<code>trakt.people.movies</code> -&gt; <code>people_movies</code>
+<code>trakt.people.movies</code> -&gt; <code><a href="../reference/people_media.html">people_movies()</a></code>
 </li>
 <li>
-<code>trakt.people.shows</code> -&gt; <code>people_shows</code>
+<code>trakt.people.shows</code> -&gt; <code><a href="../reference/people_media.html">people_shows()</a></code>
 </li>
 </ul>
 </div>
@@ -379,31 +392,31 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <li>
 <code>trakt.user.network</code>
 <ul>
-<li>-&gt; <code>user_followers</code>
+<li>-&gt; <code><a href="../reference/user_network.html">user_followers()</a></code>
 </li>
-<li>-&gt; <code>user_following</code>
+<li>-&gt; <code><a href="../reference/user_network.html">user_following()</a></code>
 </li>
-<li>-&gt; <code>user_friends</code>
+<li>-&gt; <code><a href="../reference/user_network.html">user_friends()</a></code>
 </li>
 </ul>
 </li>
 <li>
-<code>trakt.user.collection</code> -&gt; <code>user_collection</code>
+<code>trakt.user.collection</code> -&gt; <code><a href="../reference/user_collection.html">user_collection()</a></code>
 </li>
 <li>
-<code>trakt.user.history</code> -&gt; <code>user_history</code>
+<code>trakt.user.history</code> -&gt; <code><a href="../reference/user_history.html">user_history()</a></code>
 </li>
 <li>
-<code>trakt.user.ratings</code> -&gt; <code>user_ratings</code>
+<code>trakt.user.ratings</code> -&gt; <code><a href="../reference/user_ratings.html">user_ratings()</a></code>
 </li>
 <li>
-<code>trakt.user.stats</code> -&gt; <code>user_stats</code>
+<code>trakt.user.stats</code> -&gt; <code><a href="../reference/user_stats.html">user_stats()</a></code>
 </li>
 <li>
-<code>trakt.user.watched</code> -&gt; <code>user_watched</code>
+<code>trakt.user.watched</code> -&gt; <code><a href="../reference/user_watched.html">user_watched()</a></code>
 </li>
 <li>
-<code>trakt.user.watchlist</code> -&gt; <code>user_watchlist</code>
+<code>trakt.user.watchlist</code> -&gt; <code><a href="../reference/user_watchlist.html">user_watchlist()</a></code>
 </li>
 </ul>
 </div>
@@ -838,7 +851,7 @@ Not only do most functions return a <code>tibble</code> now, but some additional
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="#trakt-0-15-9000">0.15.9000</a></li>
+        <li><a href="#trakt-development-version">development version</a></li>
         <li><a href="#trakt-0-15-0">0.15.0</a></li>
         <li><a href="#trakt-0-14-0">0.14.0</a></li>
         <li><a href="#trakt-0-13-0">0.13.0</a></li>
