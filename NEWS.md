@@ -14,7 +14,7 @@ See `vignette("Implemented-API-methods", package = "tRakt")` for an overview of 
 
 ## New functions
 
-- `episodes_summary()` [`shows/:id/seasons/:season/episodes/:episode`]: What `seasons_season()` and `seasons_summary()` do, but for a single episode. Only really implemented for completeness' sake. [Wraps this methid]](https://trakt.docs.apiary.io/#reference/episodes/summary).
+- `episodes_summary()` [`shows/:id/seasons/:season/episodes/:episode`]: What `seasons_season()` and `seasons_summary()` do, but for a single episode. Only really implemented for completeness' sake. [Wraps this method](https://trakt.docs.apiary.io/#reference/episodes/summary).
 - `user_profile()` [`user/:id`]: [Get a user's profile](https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile).
 - `user_lists()` [`users/:id/lists`]: Get [all user lists](https://trakt.docs.apiary.io/#reference/users/lists/get-custom-list).
 - `user_list()` [`users/:id/lists/:list_id`]: Get a [single list](https://trakt.docs.apiary.io/#reference/users/list/get-custom-list).
