@@ -1,4 +1,16 @@
-# tRakt 0.15.9000
+# tRakt (development version)
+
+- Add GitHub actions via `usethis::use_github_actions()`
+- Use the tidy CI setup via `usethis::use_tidy_ci()`, this bumps the R dependency to `>= 3.2`.
+
+## Authenticated requests
+
+By default, all requests to the API are now made using authentication _if_ a `trakt_client_secret` is set. See `?trakt_credentials()` for details on how to set your credentials.  
+If now secret is available, unauthenticated requests are made as in previous versions. In this case, you still **need** either the built-in or your own `trakt_client_id`.
+
+OAuth2 supports comes with the need to handle secrets, i.e. `.httr-oauth` files. This can be a pain with headless/automated setups, which is why I am trying to keep "no auth needed" as the default, as most (implemented) endpoints don't strictly require authentication.
+
+See `vignette("Implemented-API-methods", package = "tRakt")` for an overview of implemented methods with an indicator on whether authentication is required (it usually isn't).
 
 ## New functions
 
@@ -16,88 +28,88 @@ e.g. the API endpoint `movies/collected` is handled by function `movies_collecte
 
 ### Search
 
-- `trakt.search` -> `search_query`
-- `trakt.search.byid` -> `search_id`
+- `trakt.search` -> `search_query()`
+- `trakt.search.byid` -> `search_id()`
 
 ### Dynamic Lists
 
 - `trakt.popular`
-  - -> `movies_popular`
-  - -> `shows_popular`
+  - -> `movies_popular()`
+  - -> `shows_popular()`
 - `trakt.trending`
-  - -> `movies_trending`
-  - -> `shows_trending`
+  - -> `movies_trending()`
+  - -> `shows_trending()`
 - `trakt.anticipated`
-  - -> `movies_anticipated`
-  - -> `shows_anticipated`
+  - -> `movies_anticipated()`
+  - -> `shows_anticipated()`
 - `trakt.played`
-  - -> `movies_played`
-  - -> `shows_played`
+  - -> `movies_played()`
+  - -> `shows_played()`
 - `trakt.watched`
-  - -> `movies_watched`
-  - -> `shows_watched`
-- `trakt.collected`
-  - -> `movies_collected`
-  - -> `shows_collected`
-- `trakt.updates`
-  - -> `movies_updates`
-  - -> `shows_updates`
+  - -> `movies_watched()`
+  - -> `shows_watched()`
+- `trakt.collected()`
+  - -> `movies_collected()`
+  - -> `shows_collected()`
+- `trakt.updates()`
+  - -> `movies_updates()`
+  - -> `shows_updates()`
   
 ### Movies
 
-- `trakt.movies.summary` -> `movies_summary`
-- `trakt.movies.boxoffice` -> `movies_boxoffice`
-- `trakt.movies.releases` -> `movies_releases`
-- `trakt.movies.people` -> `movies_people`
+- `trakt.movies.summary` -> `movies_summary()`
+- `trakt.movies.boxoffice` -> `movies_boxoffice()`
+- `trakt.movies.releases` -> `movies_releases()`
+- `trakt.movies.people` -> `movies_people()`
   
 ### Shows
 
-- `trakt.shows.summary` -> `shows_summary`
-- `trakt.shows.people` -> `shows_people`
+- `trakt.shows.summary` -> `shows_summary()`
+- `trakt.shows.people` -> `shows_people()`
 
 ### Seasons
 
-- `trakt.seasons.summary` -> `seasons_summary`
-- `trakt.seasons.season` -> `seasons_season` (It's silly, I know, but oh well)
+- `trakt.seasons.summary` -> `seasons_summary()`
+- `trakt.seasons.season` -> `seasons_season()` (It's silly, I know, but oh well)
 
 ### Ratings
 
-- `trakt.movies.ratings` -> `movies_ratings`
-- `trakt.shows.ratings` -> `shows_ratings`
-- `trakt.seasons.ratings` -> `seasons_ratings`
-- `trakt.episodes.ratings` -> `episodes_ratings`
+- `trakt.movies.ratings` -> `movies_ratings()`
+- `trakt.shows.ratings` -> `shows_ratings()`
+- `trakt.seasons.ratings` -> `seasons_ratings()`
+- `trakt.episodes.ratings` -> `episodes_ratings()`
 
 ### Related
 
-- `trakt.movies.related` -> `movies_related`
-- `trakt.shows.related` -> `shows_related`
+- `trakt.movies.related` -> `movies_related()`
+- `trakt.shows.related` -> `shows_related()`
 
 ### Stats
 
-- `trakt.movies.stats` -> `movies_stats`
-- `trakt.shows.stats` -> `shows_stats`
-- `trakt.seasons.stats` -> `seasons_stats`
-- `trakt.episodes.stats` -> `episodes_stats`
+- `trakt.movies.stats` -> `movies_stats()`
+- `trakt.shows.stats` -> `shows_stats()`
+- `trakt.seasons.stats` -> `seasons_stats()`
+- `trakt.episodes.stats` -> `episodes_stats()`
 
 ### People 
 
-- `trakt.people.summary` -> `people_summary`
-- `trakt.people.movies` -> `people_movies`
-- `trakt.people.shows` -> `people_shows`
+- `trakt.people.summary` -> `people_summary()`
+- `trakt.people.movies` -> `people_movies()`
+- `trakt.people.shows` -> `people_shows()`
 
 
 ### User functions
 
 - `trakt.user.network`
-  - -> `user_followers`
-  - -> `user_following`
-  - -> `user_friends`
-- `trakt.user.collection` -> `user_collection`
-- `trakt.user.history` -> `user_history`
-- `trakt.user.ratings` -> `user_ratings`
-- `trakt.user.stats` -> `user_stats`
-- `trakt.user.watched` -> `user_watched`
-- `trakt.user.watchlist` -> `user_watchlist`
+  - -> `user_followers()`
+  - -> `user_following()`
+  - -> `user_friends()`
+- `trakt.user.collection` -> `user_collection()`
+- `trakt.user.history` -> `user_history()`
+- `trakt.user.ratings` -> `user_ratings()`
+- `trakt.user.stats` -> `user_stats()`
+- `trakt.user.watched` -> `user_watched()`
+- `trakt.user.watchlist` -> `user_watchlist()`
 
 
 # tRakt 0.15.0
