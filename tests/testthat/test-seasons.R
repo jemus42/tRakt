@@ -71,7 +71,7 @@ test_that("seasons_summary works", {
   expect_message(seasons_summary(id = "bvkjqbkqjbf"))
 })
 
-test_that("seasons_summary works for episodes", {
+test_that("seasons_summary works for episodes and matches seasons_season", {
   skip_on_cran()
 
   id <- "utopia"
@@ -86,4 +86,9 @@ test_that("seasons_summary works for episodes", {
     expect_length(16) %>%
     nrow() %>%
     expect_equal(6)
+
+  expect_identical(
+    res$episodes[[1]],
+    seasons_season(id, seasons = 1, extended = "full")
+  )
 })
