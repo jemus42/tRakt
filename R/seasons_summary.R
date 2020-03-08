@@ -74,13 +74,16 @@ seasons_summary <- function(id, episodes = FALSE,
         select(-"ids") %>%
         cbind(fix_ids(episodes$ids)) %>%
         fix_tibble_response() %>%
-        rename(episode = "number")
+        rename(
+          episode = "number",
+          episode_abs = "number_abs"
+        )
     })
 
-    if (has_name(response, "number_abs")) {
-      response <- response %>%
-        rename(episode_abs = "number_abs")
-    }
+    # if (has_name(response, "number_abs")) {
+    #   response <- response %>%
+    #     rename(episode_abs = "number_abs")
+    # }
   }
 
   fix_tibble_response(response)
