@@ -352,20 +352,23 @@ the same additional variables besides the media information: <code>watcher_count
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
-<span class='fu'>shows_anticipated</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 11 x 8
+<span class='fu'>shows_anticipated</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 14 x 8
 #&gt;    list_count title              year trakt  slug             tvdb  imdb   tmdb 
 #&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;
-#&gt;  1        306 The Letter for t…  2020 156182 the-letter-for-… 3734… tt874… 99356
-#&gt;  2        133 Self Made: Inspi…  2020 156916 self-made-inspi… 3748… tt877… &lt;NA&gt; 
-#&gt;  3         59 Hollywood          2020 157270 hollywood-2020   3755… tt982… &lt;NA&gt; 
-#&gt;  4         59 Feel Good          2020 158435 feel-good        3772… tt100… &lt;NA&gt; 
-#&gt;  5         54 Vampires           2020 158412 vampires-2020    3772… &lt;NA&gt;   &lt;NA&gt; 
-#&gt;  6         51 The Eddy           2020 158270 the-eddy-2020    3619… tt732… 86784
-#&gt;  7         36 BNA: Brand New A…  2020 156177 bna-brand-new-a… 3664… &lt;NA&gt;   92592
-#&gt;  8         32 The Victims' Game  2020 158039 the-victims-game 3767… &lt;NA&gt;   &lt;NA&gt; 
-#&gt;  9         17 The Circle Brazil  2020 153249 the-circle-braz… 3699… tt958… 99620
-#&gt; 10          8 Tiger King         2020 158420 tiger-king       3772… tt118… &lt;NA&gt; 
-#&gt; 11          8 100 Humans         2020 158723 100-humans       3777… &lt;NA&gt;   &lt;NA&gt; </div><div class='input'># }
+#&gt;  1        437 The Letter for t…  2020 156182 the-letter-for-… 3734… tt874… 99356
+#&gt;  2        188 Self Made: Inspi…  2020 156916 self-made-inspi… 3748… tt877… &lt;NA&gt; 
+#&gt;  3        130 Hollywood          2020 157270 hollywood-2020   3755… tt982… &lt;NA&gt; 
+#&gt;  4         85 BNA: Brand New A…  2020 156177 bna-brand-new-a… 3664… &lt;NA&gt;   92592
+#&gt;  5         83 The Eddy           2020 158270 the-eddy-2020    3619… tt732… 86784
+#&gt;  6         83 Feel Good          2020 158435 feel-good        3772… tt100… &lt;NA&gt; 
+#&gt;  7         83 Vampires           2020 158412 vampires-2020    3772… &lt;NA&gt;   &lt;NA&gt; 
+#&gt;  8         60 The English Game   2020 158896 the-english-game 3780… tt840… &lt;NA&gt; 
+#&gt;  9         60 Hospital Playlist  2020 153101 hospital-playli… 3670… tt117… 96102
+#&gt; 10         37 The Victims' Game  2020 158039 the-victims-game 3767… &lt;NA&gt;   &lt;NA&gt; 
+#&gt; 11         26 The Circle Brazil  2020 153249 the-circle-braz… 3699… tt958… 99620
+#&gt; 12         24 Tiger King         2020 158420 tiger-king       3772… tt118… &lt;NA&gt; 
+#&gt; 13         18 100 Humans         2020 158723 100-humans       3777… tt118… &lt;NA&gt; 
+#&gt; 14         10 Brews Brothers     2020 158906 brews-brothers   3780… &lt;NA&gt;   &lt;NA&gt; </div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

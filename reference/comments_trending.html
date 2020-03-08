@@ -237,14 +237,14 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
 #&gt;  1 epis… 282334 "EDIT:… TRUE    TRUE           0 2020-02-29 14:02:04
-#&gt;  2 epis… 280658 "[6.8/… TRUE    TRUE           0 2020-02-20 18:23:09
-#&gt;  3 epis… 277576 "Why a… FALSE   TRUE           0 2020-02-06 09:23:15
-#&gt;  4 epis… 228011 "Not t… FALSE   TRUE           0 2019-04-21 21:50:52
-#&gt;  5 epis… 282080 "Well,… FALSE   TRUE           0 2020-02-28 10:36:17
-#&gt;  6 epis… 224567 "Glad … FALSE   TRUE           0 2019-04-02 10:10:01
-#&gt;  7 epis… 281420 "[8.3/… TRUE    TRUE           0 2020-02-24 18:33:36
-#&gt;  8 epis… 278486 "Nice … TRUE    TRUE           0 2020-02-09 20:13:44
-#&gt;  9 epis… 282616 "Well,… FALSE   TRUE           0 2020-03-01 22:16:19
+#&gt;  2 epis… 283530 "[8.0/… TRUE    TRUE           0 2020-03-05 21:05:54
+#&gt;  3 epis… 282616 "Well,… FALSE   TRUE           0 2020-03-01 22:16:19
+#&gt;  4 epis… 280658 "[6.8/… TRUE    TRUE           0 2020-02-20 18:23:09
+#&gt;  5 epis… 277576 "Why a… FALSE   TRUE           0 2020-02-06 09:23:15
+#&gt;  6 epis… 228011 "Not t… FALSE   TRUE           0 2019-04-21 21:50:52
+#&gt;  7 epis… 224567 "Glad … FALSE   TRUE           0 2019-04-02 10:10:01
+#&gt;  8 epis… 283119 "[8.3/… TRUE    TRUE           0 2020-03-03 03:37:20
+#&gt;  9 epis… 278486 "Nice … TRUE    TRUE           0 2020-02-09 20:13:44
 #&gt; 10 movie 268068 "“Do i… FALSE   TRUE           0 2019-12-24 18:44:03
 #&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
@@ -256,20 +256,20 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <span class='fu'>comments_recent</span>(<span class='st'>"shouts"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 31
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 epis… 282766 "Damn,… FALSE   FALSE          0 2020-03-02 19:23:54
-#&gt;  2 epis… 282757 "Endin… FALSE   FALSE          0 2020-03-02 18:47:24
-#&gt;  3 epis… 282749 "How t… FALSE   FALSE          0 2020-03-02 18:01:51
-#&gt;  4 movie 282763 "This … FALSE   FALSE          0 2020-03-02 18:58:35
-#&gt;  5 movie 282761 "A med… FALSE   FALSE          0 2020-03-02 18:55:30
-#&gt;  6 movie 282748 "I tho… FALSE   FALSE          0 2020-03-02 17:42:27
-#&gt;  7 show  282760 "There… FALSE   FALSE          0 2020-03-02 18:53:54
-#&gt;  8 show  282759 "So, 4… FALSE   FALSE          0 2020-03-02 18:48:27
-#&gt;  9 show  282752 "Teen … FALSE   FALSE          0 2020-03-02 18:15:10
-#&gt; 10 show  282746 "One o… FALSE   FALSE          0 2020-03-02 17:28:58
+#&gt;  1 movie 284160 "The m… FALSE   FALSE          0 2020-03-08 21:41:12
+#&gt;  2 movie 284158 "I had… FALSE   FALSE          0 2020-03-08 21:12:22
+#&gt;  3 movie 284157 "John … FALSE   FALSE          0 2020-03-08 21:11:36
+#&gt;  4 movie 284155 "What … FALSE   FALSE          0 2020-03-08 21:04:28
+#&gt;  5 movie 284152 "aweso… FALSE   FALSE          0 2020-03-08 20:48:54
+#&gt;  6 epis… 284159 "Back … FALSE   FALSE          0 2020-03-08 21:30:24
+#&gt;  7 epis… 284156 "OK, n… FALSE   FALSE          0 2020-03-08 21:05:37
+#&gt;  8 epis… 284154 "Begin… FALSE   FALSE          0 2020-03-08 20:58:21
+#&gt;  9 epis… 284151 "Holy … FALSE   FALSE          0 2020-03-08 20:42:35
+#&gt; 10 epis… 284150 "Best … FALSE   FALSE          0 2020-03-08 20:38:43
 #&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
-#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, season &lt;int&gt;,
+#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, tvdb &lt;chr&gt;, season &lt;int&gt;,
 #&gt; #   episode &lt;int&gt;, episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;,
 #&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div><div class='input'># }
 </div></pre>
