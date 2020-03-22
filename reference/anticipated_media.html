@@ -72,14 +72,14 @@
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="https://analytics.tadaa-data.de/";
+    var u="https://matomo.jemu.name/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
+    _paq.push(['setSiteId', '3']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
 
 
@@ -352,23 +352,21 @@ the same additional variables besides the media information: <code>watcher_count
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 <span class='co'># Get 15 the most anticipated upcoming shows on Netflix that air this year</span>
 <span class='no'>current_year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Sys.time.html'>Sys.Date</a></span>(), <span class='st'>"%Y"</span>)
-<span class='fu'>shows_anticipated</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 14 x 8
-#&gt;    list_count title              year trakt  slug             tvdb  imdb   tmdb 
-#&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;
-#&gt;  1        437 The Letter for t…  2020 156182 the-letter-for-… 3734… tt874… 99356
-#&gt;  2        188 Self Made: Inspi…  2020 156916 self-made-inspi… 3748… tt877… &lt;NA&gt; 
-#&gt;  3        130 Hollywood          2020 157270 hollywood-2020   3755… tt982… &lt;NA&gt; 
-#&gt;  4         85 BNA: Brand New A…  2020 156177 bna-brand-new-a… 3664… &lt;NA&gt;   92592
-#&gt;  5         83 The Eddy           2020 158270 the-eddy-2020    3619… tt732… 86784
-#&gt;  6         83 Feel Good          2020 158435 feel-good        3772… tt100… &lt;NA&gt; 
-#&gt;  7         83 Vampires           2020 158412 vampires-2020    3772… &lt;NA&gt;   &lt;NA&gt; 
-#&gt;  8         60 The English Game   2020 158896 the-english-game 3780… tt840… &lt;NA&gt; 
-#&gt;  9         60 Hospital Playlist  2020 153101 hospital-playli… 3670… tt117… 96102
-#&gt; 10         37 The Victims' Game  2020 158039 the-victims-game 3767… &lt;NA&gt;   &lt;NA&gt; 
-#&gt; 11         26 The Circle Brazil  2020 153249 the-circle-braz… 3699… tt958… 99620
-#&gt; 12         24 Tiger King         2020 158420 tiger-king       3772… tt118… &lt;NA&gt; 
-#&gt; 13         18 100 Humans         2020 158723 100-humans       3777… tt118… &lt;NA&gt; 
-#&gt; 14         10 Brews Brothers     2020 158906 brews-brothers   3780… &lt;NA&gt;   &lt;NA&gt; </div><div class='input'># }
+<span class='fu'>shows_anticipated</span>(<span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>15</span>, <span class='kw'>networks</span> <span class='kw'>=</span> <span class='st'>"Netflix"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='no'>current_year</span>)</div><div class='output co'>#&gt; # A tibble: 12 x 8
+#&gt;    list_count title              year trakt  slug            tvdb  imdb    tmdb 
+#&gt;         &lt;int&gt; &lt;chr&gt;             &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;
+#&gt;  1        187 Hollywood          2020 157270 hollywood-2020  3755… tt9827… &lt;NA&gt; 
+#&gt;  2        131 The Eddy           2020 158270 the-eddy-2020   3619… tt7322… 86784
+#&gt;  3        119 Ghost in the She…  2020 154401 ghost-in-the-s… 3712… tt9466… 90293
+#&gt;  4        104 Unorthodox         2020 157592 unorthodox      3761… tt9815… 99581
+#&gt;  5         66 Rugal              2020 155071 rugal           3720… tt1176… 97766
+#&gt;  6         61 The Victims' Game  2020 158039 the-victims-ga… 3767… &lt;NA&gt;    &lt;NA&gt; 
+#&gt;  7         28 The Big Show Show  2020 158430 the-big-show-s… 3772… tt1072… &lt;NA&gt; 
+#&gt;  8         26 Brews Brothers     2020 158906 brews-brothers  3780… &lt;NA&gt;    &lt;NA&gt; 
+#&gt;  9         23 The Midnight Gos…  2020 159310 the-midnight-g… 3785… &lt;NA&gt;    &lt;NA&gt; 
+#&gt; 10         14 The School Nurse…  2020 158718 the-school-nur… 3728… tt1092… 87313
+#&gt; 11          6 The Innocence Fi…  2020 159073 the-innocence-… 3782… &lt;NA&gt;    &lt;NA&gt; 
+#&gt; 12          6 Ladies Up          2020 159378 ladies-up       3786… &lt;NA&gt;    &lt;NA&gt; </div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

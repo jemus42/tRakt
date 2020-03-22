@@ -72,14 +72,14 @@
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="https://analytics.tadaa-data.de/";
+    var u="https://matomo.jemu.name/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
+    _paq.push(['setSiteId', '3']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
 
 
@@ -228,13 +228,13 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>movies_related</span>(<span class='st'>"the-avengers-2012"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 7
-#&gt;   related_to    title               year trakt  slug                imdb   tmdb 
-#&gt;   &lt;chr&gt;         &lt;chr&gt;              &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;               &lt;chr&gt;  &lt;chr&gt;
-#&gt; 1 the-avengers… X-Men: Apocalypse   2016 149999 x-men-apocalypse-2… tt338… 2466…
-#&gt; 2 the-avengers… Captain Marvel      2019 193963 captain-marvel-2019 tt415… 2995…
-#&gt; 3 the-avengers… Captain America: …  2011 1170   captain-america-th… tt045… 1771 
-#&gt; 4 the-avengers… Dark Phoenix        2019 200946 dark-phoenix-2019   tt656… 3202…
-#&gt; 5 the-avengers… Man of Steel        2013 34507  man-of-steel-2013   tt077… 49521</div></pre>
+#&gt;   related_to       title            year trakt  slug              imdb     tmdb 
+#&gt;   &lt;chr&gt;            &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;             &lt;chr&gt;    &lt;chr&gt;
+#&gt; 1 the-avengers-20… Captain Marvel   2019 193963 captain-marvel-2… tt41546… 2995…
+#&gt; 2 the-avengers-20… Superman         1978 1298   superman-1978     tt00783… 1924 
+#&gt; 3 the-avengers-20… X-Men: Apocaly…  2016 149999 x-men-apocalypse… tt33855… 2466…
+#&gt; 4 the-avengers-20… Man of Steel     2013 34507  man-of-steel-2013 tt07708… 49521
+#&gt; 5 the-avengers-20… Justice League   2017 94232  justice-league-2… tt09740… 1410…</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

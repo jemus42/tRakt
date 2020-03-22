@@ -72,14 +72,14 @@
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="https://analytics.tadaa-data.de/";
+    var u="https://matomo.jemu.name/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
+    _paq.push(['setSiteId', '3']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
 
 
@@ -278,27 +278,32 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 6
-#&gt;   username  private user_name vip   vip_ep user_slug
-#&gt;   &lt;chr&gt;     &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
-#&gt; 1 ksharriss TRUE    &lt;NA&gt;      NA    NA     ksharriss
-#&gt; 2 mobba     FALSE   Mobba     FALSE FALSE  mobba    </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 32 x 6
-#&gt;    username          private user_name        vip   vip_ep user_slug        
-#&gt;    &lt;chr&gt;             &lt;lgl&gt;   &lt;chr&gt;            &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;            
-#&gt;  1 hayden1990        FALSE   "Midlands Gamer" FALSE FALSE  hayden1990       
-#&gt;  2 homepryde         FALSE   "Dreaper"        FALSE FALSE  homepryde        
-#&gt;  3 wouter1984        FALSE    &lt;NA&gt;            FALSE FALSE  wouter1984       
-#&gt;  4 ashley4113        FALSE   "ashley barber"  FALSE FALSE  ashley4113       
-#&gt;  5 lmike215          FALSE   ""               FALSE FALSE  lmike215         
-#&gt;  6 spoony101         FALSE   ""               FALSE FALSE  spoony101        
-#&gt;  7 unknownsolarevent FALSE   ""               FALSE FALSE  unknownsolarevent
-#&gt;  8 Shepherd84        FALSE   "DTTB"           FALSE FALSE  shepherd84       
-#&gt;  9 airtimexx2000     TRUE     &lt;NA&gt;            NA    NA     airtimexx2000    
-#&gt; 10 j07               TRUE     &lt;NA&gt;            NA    NA     j07              
-#&gt; # … with 22 more rows</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 6
-#&gt;   username   private user_name vip   vip_ep user_slug 
-#&gt;   &lt;chr&gt;      &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;     
-#&gt; 1 Shepherd84 FALSE   DTTB      FALSE FALSE  shepherd84</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
+<span class='fu'>movies_watching</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 6
+#&gt;   username               private user_name vip   vip_ep user_slug             
+#&gt;   &lt;chr&gt;                  &lt;lgl&gt;   &lt;chr&gt;     &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;                 
+#&gt; 1 roy-rivers@hotmail.com TRUE     &lt;NA&gt;     NA    NA     roy-rivers-hotmail-com
+#&gt; 2 chatarrero2005         TRUE     &lt;NA&gt;     NA    NA     chatarrero2005        
+#&gt; 3 Vdimaio                FALSE    &lt;NA&gt;     FALSE FALSE  vdimaio               
+#&gt; 4 sarah007007            FALSE   ""        FALSE FALSE  sarah007007           
+#&gt; 5 Darxtar                FALSE   "Darxtar" FALSE FALSE  darxtar               </div><div class='input'><span class='fu'>shows_watching</span>(<span class='st'>"the-simpsons"</span>)</div><div class='output co'>#&gt; # A tibble: 50 x 6
+#&gt;    username          private user_name   vip   vip_ep user_slug        
+#&gt;    &lt;chr&gt;             &lt;lgl&gt;   &lt;chr&gt;       &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;            
+#&gt;  1 Daron91           FALSE    &lt;NA&gt;       FALSE FALSE  daron91          
+#&gt;  2 Muty              FALSE   ""          FALSE FALSE  muty             
+#&gt;  3 snoro             TRUE     &lt;NA&gt;       NA    NA     snoro            
+#&gt;  4 bonddan@gmail.com FALSE   ""          FALSE FALSE  bonddan-gmail-com
+#&gt;  5 Ticalie           FALSE   "Ticalie"   FALSE FALSE  ticalie          
+#&gt;  6 redgraffix        FALSE   "Jason"     FALSE FALSE  redgraffix       
+#&gt;  7 junke1990         TRUE     &lt;NA&gt;       NA    NA     junke1990        
+#&gt;  8 getsmart77        FALSE   "Paul"      FALSE FALSE  getsmart77       
+#&gt;  9 sh0xxy            TRUE     &lt;NA&gt;       NA    NA     sh0xxy           
+#&gt; 10 aots74            FALSE   "The Bells" TRUE  FALSE  aots74           
+#&gt; # … with 40 more rows</div><div class='input'><span class='fu'>seasons_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>)</div><div class='output co'>#&gt; # A tibble: 3 x 6
+#&gt;   username  private user_name    vip   vip_ep user_slug
+#&gt;   &lt;chr&gt;     &lt;lgl&gt;   &lt;chr&gt;        &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;    
+#&gt; 1 couling   FALSE   Alex Couling FALSE FALSE  couling  
+#&gt; 2 dman474   FALSE   &lt;NA&gt;         FALSE FALSE  dman474  
+#&gt; 3 Kracheads FALSE   Sukh Gill    TRUE  FALSE  kracheads</div><div class='input'><span class='fu'>episodes_watching</span>(<span class='st'>"the-simpsons"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>6</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>12</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

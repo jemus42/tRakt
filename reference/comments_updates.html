@@ -72,14 +72,14 @@
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="https://analytics.tadaa-data.de/";
+    var u="https://matomo.jemu.name/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
+    _paq.push(['setSiteId', '3']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
 
 
@@ -218,26 +218,25 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Recently updated comments</span>
-<span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 34
+<span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 31
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 movie 273308 "Reall… FALSE   FALSE          0 2020-01-18 11:30:23
-#&gt;  2 movie 284176 "Feel … FALSE   FALSE          0 2020-03-08 23:17:03
-#&gt;  3 movie 284174 "Now t… TRUE    TRUE           0 2020-03-08 23:09:45
-#&gt;  4 movie 284172 "My ra… FALSE   FALSE          0 2020-03-08 23:03:16
-#&gt;  5 seas… 130077 "What … FALSE   FALSE          0 2017-06-10 22:12:18
-#&gt;  6 show  255702 "Much … FALSE   FALSE          0 2019-10-18 04:16:19
-#&gt;  7 epis… 284175 "[spoi… TRUE    FALSE          0 2020-03-08 23:11:04
-#&gt;  8 epis… 284173 "So a … TRUE    FALSE          0 2020-03-08 23:07:57
-#&gt;  9 epis… 106859 "Last … FALSE   FALSE          0 2016-12-17 08:52:36
-#&gt; 10 epis…  93305 "Missi… FALSE   FALSE          0 2016-08-19 07:31:33
-#&gt; # … with 27 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
+#&gt;  1 epis… 246216 "The h… FALSE   FALSE          0 2019-08-15 08:35:38
+#&gt;  2 epis… 286416 "Of co… FALSE   FALSE          0 2020-03-21 03:44:10
+#&gt;  3 epis… 286593 "After… FALSE   FALSE          0 2020-03-21 23:09:52
+#&gt;  4 epis… 286865 "judit… TRUE    FALSE          0 2020-03-22 23:02:24
+#&gt;  5 movie 286866 "My si… FALSE   FALSE          0 2020-03-22 23:13:44
+#&gt;  6 movie 255050 "It tr… FALSE   FALSE          0 2019-10-14 00:09:03
+#&gt;  7 movie 286864 "An in… FALSE   FALSE          0 2020-03-22 22:57:51
+#&gt;  8 movie 262140 "It's … FALSE   FALSE          0 2019-11-22 21:28:50
+#&gt;  9 movie  37422 "A hor… TRUE    FALSE          0 2014-12-26 21:13:46
+#&gt; 10 show   77545 "This … FALSE   FALSE          0 2016-04-05 21:29:03
+#&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
 #&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
 #&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
-#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, tvdb &lt;chr&gt;, season &lt;int&gt;,
-#&gt; #   season_trakt &lt;chr&gt;, season_tvdb &lt;chr&gt;, season_tmdb &lt;chr&gt;, episode &lt;int&gt;,
-#&gt; #   episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;, episode_tvdb &lt;chr&gt;,
-#&gt; #   episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div></pre>
+#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, season &lt;int&gt;,
+#&gt; #   episode &lt;int&gt;, episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;,
+#&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

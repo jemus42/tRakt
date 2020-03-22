@@ -73,14 +73,14 @@ seasons_summary for (potentially) all episodes of a show." />
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="https://analytics.tadaa-data.de/";
+    var u="https://matomo.jemu.name/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '20']);
+    _paq.push(['setSiteId', '3']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="https://analytics.tadaa-data.de/matomo.php?idsite=20&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
 <!-- End Matomo Code -->
 
 
@@ -238,7 +238,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <span class='fu'>episodes_summary</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 17
 #&gt;   id    season episode title number_abs overview rating votes comment_count
 #&gt;   &lt;chr&gt;  &lt;int&gt;   &lt;int&gt; &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;int&gt;         &lt;int&gt;
-#&gt; 1 brea…      1       1 Pilot          1 When an…   8.35  7330            26
+#&gt; 1 brea…      1       1 Pilot          1 When an…   8.35  7347            26
 #&gt; # … with 8 more variables: first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;,
 #&gt; #   available_translations &lt;list&gt;, runtime &lt;int&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;,
 #&gt; #   imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div></pre>
