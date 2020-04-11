@@ -9,12 +9,6 @@ matrix:
   - r: release
     after_success:
     - Rscript -e 'covr::codecov()'
-    before_deploy:
-    - Rscript -e 'install.packages("pkgdown")'
-    deploy:
-      provider: script
-      script: Rscript -e 'pkgdown::deploy_site_github(run_dont_run = TRUE)'
-      skip_cleanup: true
   - r: oldrel
   - r: 3.4
   - r: 3.3
