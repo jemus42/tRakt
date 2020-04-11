@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get similiar(ish) movies</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/media_related.R'><code>R/media_related.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/media_related.R'><code>R/media_related.R</code></a></small>
     <div class="hidden name"><code>movies_related.Rd</code></div>
     </div>
 
@@ -227,25 +227,19 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <code><a href='watched_media.html'>watched_media</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>movies_related</span>(<span class='st'>"the-avengers-2012"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 7
-#&gt;   related_to       title            year trakt  slug              imdb     tmdb 
-#&gt;   &lt;chr&gt;            &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;             &lt;chr&gt;    &lt;chr&gt;
-#&gt; 1 the-avengers-20… Captain Marvel   2019 193963 captain-marvel-2… tt41546… 2995…
-#&gt; 2 the-avengers-20… Superman         1978 1298   superman-1978     tt00783… 1924 
-#&gt; 3 the-avengers-20… X-Men: Apocaly…  2016 149999 x-men-apocalypse… tt33855… 2466…
-#&gt; 4 the-avengers-20… Man of Steel     2013 34507  man-of-steel-2013 tt07708… 49521
-#&gt; 5 the-avengers-20… Justice League   2017 94232  justice-league-2… tt09740… 1410…</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>movies_related</span>(<span class='st'>"the-avengers-2012"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 5 x 7</span><span>
+#&gt;   related_to    title               year trakt  slug                imdb   tmdb 
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>               </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> the-avengers… X-Men: Apocalypse   </span><span style='text-decoration: underline;'>2</span><span>016 149999 x-men-apocalypse-2… tt338… 2466…
+#&gt; </span><span style='color: #555555;'>2</span><span> the-avengers… Captain America: …  </span><span style='text-decoration: underline;'>2</span><span>011 1170   captain-america-th… tt045… 1771 
+#&gt; </span><span style='color: #555555;'>3</span><span> the-avengers… Captain Marvel      </span><span style='text-decoration: underline;'>2</span><span>019 193963 captain-marvel-2019 tt415… 2995…
+#&gt; </span><span style='color: #555555;'>4</span><span> the-avengers… Justice League      </span><span style='text-decoration: underline;'>2</span><span>017 94232  justice-league-2017 tt097… 1410…
+#&gt; </span><span style='color: #555555;'>5</span><span> the-avengers… Blade               </span><span style='text-decoration: underline;'>1</span><span>998 23293  blade-1998          tt012… 36647</div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -256,7 +250,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

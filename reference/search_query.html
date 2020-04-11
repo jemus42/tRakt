@@ -88,7 +88,7 @@ as receiving a quick overview of a show/movie." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -144,7 +144,7 @@ as receiving a quick overview of a show/movie." />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -163,7 +163,7 @@ as receiving a quick overview of a show/movie." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Search trakt.tv via text query or ID</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/search.R'><code>R/search.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/search.R'><code>R/search.R</code></a></small>
     <div class="hidden name"><code>search_query.Rd</code></div>
     </div>
 
@@ -312,49 +312,26 @@ which fields of the item metadata are searched by default.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A show</span>
-<span class='fu'>search_query</span>(<span class='st'>"Breaking Bad"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>3</span>)</div><div class='output co'>#&gt; # A tibble: 3 x 9
+<span class='fu'>search_query</span>(<span class='st'>"Breaking Bad"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>3</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 3 x 9</span><span>
 #&gt;   type   score title           year trakt  slug          tvdb  imdb        tmdb 
-#&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;
-#&gt; 1 show  1000   Breaking Bad    2008 1388   breaking-bad  81189 tt0903747   1396 
-#&gt; 2 show   404.  Breaking Bad:…  2009 140684 breaking-bad… 3564… https://ww… &lt;NA&gt; 
-#&gt; 3 show    12.0 Breaking In     2011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='co'># \dontrun{</span>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> show  </span><span style='text-decoration: underline;'>1</span><span>000   Breaking Bad    </span><span style='text-decoration: underline;'>2</span><span>008 1388   breaking-bad  81189 tt0903747   1396 
+#&gt; </span><span style='color: #555555;'>2</span><span> show   405.  Breaking Bad:…  </span><span style='text-decoration: underline;'>2</span><span>009 140684 breaking-bad… 3564… https://ww… </span><span style='color: #BB0000;'>NA</span><span>   
+#&gt; </span><span style='color: #555555;'>3</span><span> show    12.0 Breaking In     </span><span style='text-decoration: underline;'>2</span><span>011 34392  breaking-in   2067… tt1630574   34541</div><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># A show by its trakt id, and now with more information</span>
-<span class='fu'>search_id</span>(<span class='fl'>1388</span>, <span class='st'>"trakt"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 29
-#&gt;   type  score title  year overview first_aired         runtime certification
-#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;    &lt;dttm&gt;                &lt;int&gt; &lt;chr&gt;        
-#&gt; 1 show   1000 Brea…  2008 Walter … 2008-01-21 02:00:00      45 TV-MA        
-#&gt; # … with 21 more variables: network &lt;chr&gt;, country &lt;chr&gt;, trailer &lt;chr&gt;,
-#&gt; #   homepage &lt;chr&gt;, status &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
-#&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
-#&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, aired_episodes &lt;int&gt;,
-#&gt; #   airs_day &lt;chr&gt;, airs_time &lt;chr&gt;, airs_timezone &lt;chr&gt;, trakt &lt;chr&gt;,
-#&gt; #   slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'>
-<span class='co'># A person</span>
-<span class='fu'>search_query</span>(<span class='st'>"J. K. Simmons"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"person"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 12
-#&gt;   type  score name  biography birthday   death birthplace homepage trakt slug 
-#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;date&gt;     &lt;lgl&gt; &lt;chr&gt;      &lt;lgl&gt;    &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 pers…  1.53 J.K.… "Jonatha… 1955-01-09 NA    Detroit, … NA       15722 j-k-…
-#&gt; # … with 2 more variables: imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'>
-<span class='co'># A movie or a show, two of each</span>
-<span class='fu'>search_query</span>(<span class='st'>"Tron"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"movie"</span>, <span class='st'>"show"</span>), <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; # A tibble: 4 x 9
-#&gt;   type    score title           year trakt slug            imdb      tmdb  tvdb 
-#&gt;   &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 movie 1000    Tron            1982 66    tron-1982       tt0084827 97    &lt;NA&gt; 
-#&gt; 2 movie  701.   TRON: Legacy    2010 12601 tron-legacy-20… tt1104001 20526 &lt;NA&gt; 
-#&gt; 3 show   589.   Tron: Uprising  2012 34209 tron-uprising   tt1812523 34356 2584…
-#&gt; 4 show     8.52 Game of Thron…  2011 1390  game-of-thrones tt0944947 1399  1213…</div><div class='input'># }
-</div></pre>
-  </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+<span class='fu'>search_id</span>(<span class='fl'>1388</span>, <span class='st'>"trakt"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"show"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)
 
+<span class='co'># A person</span>
+<span class='fu'>search_query</span>(<span class='st'>"J. K. Simmons"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"person"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)
+
+<span class='co'># A movie or a show, two of each</span>
+<span class='fu'>search_query</span>(<span class='st'>"Tron"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"movie"</span>, <span class='st'>"show"</span>), <span class='kw'>n_results</span> <span class='kw'>=</span> <span class='fl'>2</span>)
+}</div></span></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -365,7 +342,7 @@ which fields of the item metadata are searched by default.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

@@ -86,7 +86,7 @@ available." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -142,7 +142,7 @@ available." />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -161,7 +161,7 @@ available." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get the cast and crew of a show or movie</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/media_people.R'><code>R/media_people.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/media_people.R'><code>R/media_people.R</code></a></small>
     <div class="hidden name"><code>media_people.Rd</code></div>
     </div>
 
@@ -322,125 +322,17 @@ in shows/movies.</p>
 <code><a href='people_summary.html'>people_summary</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_people</span>(<span class='st'>"deadpool-2016"</span>)</div><div class='output co'>#&gt; $cast
-#&gt; # A tibble: 47 x 7
-#&gt;    character               characters name        trakt  slug       imdb   tmdb 
-#&gt;    &lt;chr&gt;                   &lt;list&gt;     &lt;chr&gt;       &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;  &lt;chr&gt;
-#&gt;  1 Wade Wilson, Deadpool   &lt;chr [2]&gt;  Ryan Reyno… 416707 ryan-reyn… nm000… 10859
-#&gt;  2 Dopinder                &lt;chr [1]&gt;  Karan Soni  203567 karan-soni nm417… 1109…
-#&gt;  3 Francis Freeman, Ajax   &lt;chr [2]&gt;  Ed Skrein   456186 ed-skrein  nm453… 1047…
-#&gt;  4 Warlord                 &lt;chr [1]&gt;  Michael Be… 417888 michael-b… nm007… 27588
-#&gt;  5 Piotr Rasputin, Coloss… &lt;chr [2]&gt;  Stefan Kap… 431218 stefan-ka… nm129… 80507
-#&gt;  6 Ellie Phimister, Negas… &lt;chr [2]&gt;  Brianna Hi… 554869 brianna-h… nm655… 1492…
-#&gt;  7 Jeremy (Pizza Guy)      &lt;chr [1]&gt;  Style Dayne 495632 style-day… nm440… 1417…
-#&gt;  8 Gavin Merchant          &lt;chr [1]&gt;  Kyle Cassie 47532  kyle-cass… nm100… 62915
-#&gt;  9 Meghan Orlovsky         &lt;chr [1]&gt;  Taylor Hic… 554871 taylor-hi… nm688… 1493…
-#&gt; 10 Teen Girl #1            &lt;chr [1]&gt;  Ayzee       710498 ayzee      &lt;NA&gt;   1683…
-#&gt; # … with 37 more rows
-#&gt; 
-#&gt; $crew
-#&gt; # A tibble: 83 x 8
-#&gt;    job          jobs    name          trakt  slug         imdb   tmdb  crew_type
-#&gt;    &lt;chr&gt;        &lt;list&gt;  &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;    
-#&gt;  1 Casting      &lt;chr [… Ronna Kress   638    ronna-kress  nm000… 1720  producti…
-#&gt;  2 Producer     &lt;chr [… Lauren Shule… 5528   lauren-shul… nm079… 7200  producti…
-#&gt;  3 Executive P… &lt;chr [… Stan Lee      16093  stan-lee     nm049… 7624  producti…
-#&gt;  4 Executive P… &lt;chr [… Paul Wernick  78174  paul-wernick nm111… 91269 producti…
-#&gt;  5 Casting      &lt;chr [… Corinne Clark 179298 corinne-cla… nm016… 9862… producti…
-#&gt;  6 Casting      &lt;chr [… Jennifer Page 179299 jennifer-pa… nm065… 1122… producti…
-#&gt;  7 Producer     &lt;chr [… Simon Kinberg 414520 simon-kinbe… nm133… 11092 producti…
-#&gt;  8 Producer     &lt;chr [… Ryan Reynolds 416707 ryan-reynol… nm000… 10859 producti…
-#&gt;  9 Casting Ass… &lt;chr [… Hannah d'Ang… 548376 hannah-d-an… nm378… 1466… producti…
-#&gt; 10 Production … &lt;chr [… Sean Haworth  6957   sean-haworth nm037… 9618  art      
-#&gt; # … with 73 more rows
-#&gt; </div><div class='input'><span class='fu'>shows_people</span>(<span class='st'>"breaking-bad"</span>)</div><div class='output co'>#&gt; $cast
-#&gt; # A tibble: 9 x 8
-#&gt;   character    characters episode_count name     trakt  slug         imdb  tmdb 
-#&gt;   &lt;chr&gt;        &lt;list&gt;             &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 "Walter Whi… &lt;chr [1]&gt;             62 Bryan C… 297737 bryan-crans… nm01… 17419
-#&gt; 2 "Jesse Pink… &lt;chr [1]&gt;             62 Aaron P… 415249 aaron-paul   nm06… 84497
-#&gt; 3 "Skyler Whi… &lt;chr [1]&gt;             62 Anna Gu… 420986 anna-gunn    nm03… 1345…
-#&gt; 4 "Hank Schra… &lt;chr [1]&gt;             62 Dean No… 415192 dean-norris  nm06… 14329
-#&gt; 5 "Marie Schr… &lt;chr [1]&gt;             62 Betsy B… 436547 betsy-brandt nm13… 1217…
-#&gt; 6 "Walter Whi… &lt;chr [1]&gt;             62 RJ Mitte 459150 rj-mitte-06… nm26… 2096…
-#&gt; 7 "Saul Goodm… &lt;chr [1]&gt;             42 Bob Ode… 294857 bob-odenkirk nm06… 59410
-#&gt; 8 "Mike Ehrma… &lt;chr [1]&gt;             42 Jonatha… 411251 jonathan-ba… nm00… 783  
-#&gt; 9 "Gustavo \"… &lt;chr [1]&gt;             26 Giancar… 412546 giancarlo-e… nm00… 4808 
-#&gt; 
-#&gt; $crew
-#&gt; # A tibble: 61 x 9
-#&gt;    job      jobs   episode_count name      trakt  slug     imdb  tmdb  crew_type
-#&gt;    &lt;chr&gt;    &lt;list&gt;         &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    
-#&gt;  1 Executi… &lt;chr …            62 Michelle… 12427  michell… nm05… 29779 producti…
-#&gt;  2 Producer &lt;chr …            62 Peter Go… 20811  peter-g… nm03… 24951 producti…
-#&gt;  3 Producer &lt;chr …            62 Thomas S… 67528  thomas-… nm10… 1030… producti…
-#&gt;  4 Producer &lt;chr …            62 Bryan Cr… 297737 bryan-c… nm01… 17419 producti…
-#&gt;  5 Producer &lt;chr …            62 Stewart … 325805 stewart… nm05… 1223… producti…
-#&gt;  6 Producer &lt;chr …            62 Moira Wa… 325808 moira-w… nm09… 1223… producti…
-#&gt;  7 Producer &lt;chr …            62 Karen Mo… 365840 karen-m… nm10… 1223… producti…
-#&gt;  8 Producer &lt;chr …            62 Patty Lin 398571 patty-l… nm05… 1218… producti…
-#&gt;  9 Producer &lt;chr …            62 Melissa … 400288 melissa… nm22… 1223… producti…
-#&gt; 10 Producer &lt;chr …            62 George M… 400289 george-… nm22… 1223… producti…
-#&gt; # … with 51 more rows
-#&gt; </div><div class='input'><span class='fu'>seasons_people</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt; $cast
-#&gt; # A tibble: 6 x 8
-#&gt;   character   characters episode_count name    trakt  slug           imdb  tmdb 
-#&gt;   &lt;chr&gt;       &lt;list&gt;             &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;
-#&gt; 1 Walter Whi… &lt;chr [1]&gt;              7 Bryan … 297737 bryan-cranston nm01… 17419
-#&gt; 2 Jesse Pink… &lt;chr [1]&gt;              7 Aaron … 415249 aaron-paul     nm06… 84497
-#&gt; 3 Skyler Whi… &lt;chr [1]&gt;              7 Anna G… 420986 anna-gunn      nm03… 1345…
-#&gt; 4 Hank Schra… &lt;chr [1]&gt;              7 Dean N… 415192 dean-norris    nm06… 14329
-#&gt; 5 Marie Schr… &lt;chr [1]&gt;              7 Betsy … 436547 betsy-brandt   nm13… 1217…
-#&gt; 6 Walter Whi… &lt;chr [1]&gt;              7 RJ Mit… 459150 rj-mitte-06c3… nm26… 2096…
-#&gt; 
-#&gt; $crew
-#&gt; # A tibble: 30 x 9
-#&gt;    job      jobs   episode_count name      trakt  slug     imdb  tmdb  crew_type
-#&gt;    &lt;chr&gt;    &lt;list&gt;         &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    
-#&gt;  1 Executi… &lt;chr …             7 Michelle… 12427  michell… nm05… 29779 producti…
-#&gt;  2 Producer &lt;chr …             7 Peter Go… 20811  peter-g… nm03… 24951 producti…
-#&gt;  3 Producer &lt;chr …             7 Thomas S… 67528  thomas-… nm10… 1030… producti…
-#&gt;  4 Producer &lt;chr …             7 Bryan Cr… 297737 bryan-c… nm01… 17419 producti…
-#&gt;  5 Producer &lt;chr …             7 Stewart … 325805 stewart… nm05… 1223… producti…
-#&gt;  6 Producer &lt;chr …             7 Moira Wa… 325808 moira-w… nm09… 1223… producti…
-#&gt;  7 Producer &lt;chr …             7 Karen Mo… 365840 karen-m… nm10… 1223… producti…
-#&gt;  8 Producer &lt;chr …             7 Patty Lin 398571 patty-l… nm05… 1218… producti…
-#&gt;  9 Producer &lt;chr …             7 Melissa … 400288 melissa… nm22… 1223… producti…
-#&gt; 10 Producer &lt;chr …             7 George M… 400289 george-… nm22… 1223… producti…
-#&gt; # … with 20 more rows
-#&gt; </div><div class='input'><span class='fu'>episodes_people</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt; $cast
-#&gt; # A tibble: 6 x 7
-#&gt;   character     characters name      trakt  slug                    imdb   tmdb 
-#&gt;   &lt;chr&gt;         &lt;list&gt;     &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;                   &lt;chr&gt;  &lt;chr&gt;
-#&gt; 1 Walter White  &lt;chr [1]&gt;  Bryan Cr… 297737 bryan-cranston          nm018… 17419
-#&gt; 2 Jesse Pinkman &lt;chr [1]&gt;  Aaron Pa… 415249 aaron-paul              nm066… 84497
-#&gt; 3 Skyler White  &lt;chr [1]&gt;  Anna Gunn 420986 anna-gunn               nm034… 1345…
-#&gt; 4 Hank Schrader &lt;chr [1]&gt;  Dean Nor… 415192 dean-norris             nm060… 14329
-#&gt; 5 Marie Schrad… &lt;chr [1]&gt;  Betsy Br… 436547 betsy-brandt            nm133… 1217…
-#&gt; 6 Walter White… &lt;chr [1]&gt;  RJ Mitte  459150 rj-mitte-06c377f6-88c1… nm266… 2096…
-#&gt; 
-#&gt; $crew
-#&gt; # A tibble: 3 x 8
-#&gt;   job              jobs     name        trakt slug       imdb    tmdb  crew_type
-#&gt;   &lt;chr&gt;            &lt;list&gt;   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;      &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;    
-#&gt; 1 Director         &lt;chr [1… Vince Gill… 4230… vince-gil… nm0319… 66633 directing
-#&gt; 2 Writer           &lt;chr [1… Vince Gill… 4230… vince-gil… nm0319… 66633 writing  
-#&gt; 3 Director of Pho… &lt;chr [1… John Toll   2172  john-toll  nm0001… 2483  camera   
-#&gt; </div><div class='input'># }
-</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>movies_people</span>(<span class='st'>"deadpool-2016"</span>)
+<span class='fu'>shows_people</span>(<span class='st'>"breaking-bad"</span>)
+<span class='fu'>seasons_people</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>)
+<span class='fu'>episodes_people</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>)
+}</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#note">Note</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -451,7 +343,7 @@ in shows/movies.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

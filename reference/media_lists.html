@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get lists containing a movie, show, season, episode or person</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/movies_lists.R'><code>R/movies_lists.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/movies_lists.R'><code>R/movies_lists.R</code></a></small>
     <div class="hidden name"><code>media_lists.Rd</code></div>
     </div>
 
@@ -370,121 +370,28 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <code><a href='people_summary.html'>people_summary</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_lists</span>(<span class='st'>"190430"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"personal"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; # A tibble: 5 x 20
-#&gt;   name  description privacy display_numbers allow_comments sort_by sort_how
-#&gt;   &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
-#&gt; 1 Movi… "Per blu-r… public  FALSE           TRUE           added   desc    
-#&gt; 2 Acti… ""          public  FALSE           FALSE          rank    asc     
-#&gt; 3 Popu… ""          public  FALSE           FALSE          rank    asc     
-#&gt; 4 Imdb… "Daily Ref… public  TRUE            TRUE           rank    asc     
-#&gt; 5 Come… ""          public  FALSE           FALSE          rank    asc     
-#&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
-#&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
-#&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='co'># }</span>
-<span class='co'># \dontrun{</span>
-<span class='fu'>shows_lists</span>(<span class='st'>"46241"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 20
-#&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
-#&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
-#&gt;  1 Imdb… "Daily Ref… public  TRUE            TRUE           rank    asc     
-#&gt;  2 Chan… "Shows on … public  TRUE            TRUE           rank    asc     
-#&gt;  3 All … ""          public  FALSE           TRUE           rank    asc     
-#&gt;  4 All … "List crea… public  FALSE           FALSE          rank    asc     
-#&gt;  5 Cult… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  6 UK    ""          public  TRUE            TRUE           rank    asc     
-#&gt;  7 New … ""          public  FALSE           TRUE           rank    asc     
-#&gt;  8 SciF… "SciFi TV … public  FALSE           TRUE           title   asc     
-#&gt;  9 Brit… "TV series… public  FALSE           TRUE           title   asc     
-#&gt; 10 TV: … "List of a… public  TRUE            TRUE           added   desc    
-#&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
-#&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
-#&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='co'># }</span>
-<span class='co'># \dontrun{</span>
-<span class='fu'>seasons_lists</span>(<span class='st'>"46241"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 20
-#&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
-#&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
-#&gt;  1 Watc… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  2 Watc… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  3 TV W… ""          public  FALSE           TRUE           releas… desc    
-#&gt;  4 OMG!… "My list o… public  FALSE           TRUE           title   desc    
-#&gt;  5 Watc… "Movies, s… &lt;NA&gt;    FALSE           FALSE          rank    asc     
-#&gt;  6 show… ""          public  FALSE           TRUE           runtime desc    
-#&gt;  7 Down… "tv shows"  public  FALSE           TRUE           title   asc     
-#&gt;  8 Watc… "Movies, s… &lt;NA&gt;    FALSE           FALSE          rank    asc     
-#&gt;  9 Watc… "Movies, s… &lt;NA&gt;    FALSE           FALSE          rank    asc     
-#&gt; 10 My O… "==  /!\\ … public  TRUE            TRUE           rank    asc     
-#&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
-#&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
-#&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='co'># }</span>
-<span class='co'># \dontrun{</span>
-<span class='fu'>episodes_lists</span>(<span class='st'>"46241"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 20
-#&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
-#&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
-#&gt;  1 seri… "tg"        public  FALSE           TRUE           rank    asc     
-#&gt;  2 Watc… "Movies, s… &lt;NA&gt;    FALSE           FALSE          rank    asc     
-#&gt;  3 Capí… "Lista de … public  TRUE            TRUE           added   desc    
-#&gt;  4 Watc… "Movies, s… &lt;NA&gt;    FALSE           FALSE          rank    asc     
-#&gt;  5 Watc… "Movies, s… &lt;NA&gt;    FALSE           FALSE          rank    asc     
-#&gt;  6 Watc… ""          public  TRUE            TRUE           rank    asc     
-#&gt;  7 Watc… "Movies, s… &lt;NA&gt;    FALSE           FALSE          rank    asc     
-#&gt;  8 Watc… "Movies, s… &lt;NA&gt;    FALSE           FALSE          rank    asc     
-#&gt;  9 Watc… "Movies, s… &lt;NA&gt;    FALSE           FALSE          rank    asc     
-#&gt; 10 Watc… "Movies, s… &lt;NA&gt;    FALSE           FALSE          rank    asc     
-#&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
-#&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
-#&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='co'># }</span>
-<span class='co'># \dontrun{</span>
-<span class='fu'>people_lists</span>(<span class='st'>"david-tennant"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 20
-#&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
-#&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
-#&gt;  1 Fave… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  2 Acto… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  3 Moni… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  4 Acto… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  5 Faves ""          public  FALSE           FALSE          rank    asc     
-#&gt;  6 favo… ""          public  FALSE           FALSE          added   desc    
-#&gt;  7 Best… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  8 Neve… ""          public  FALSE           TRUE           random  asc     
-#&gt;  9 Peop… "People wh… public  FALSE           FALSE          releas… desc    
-#&gt; 10 Favo… "Acting: I… public  FALSE           TRUE           random  asc     
-#&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
-#&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
-#&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'>
-<span class='fu'>people_lists</span>(<span class='st'>"emilia-clarke"</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"items"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 20
-#&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
-#&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
-#&gt;  1 C---… "C---good … public  TRUE            TRUE           rank    asc     
-#&gt;  2 PGTr… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  3 Moni… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  4 I li… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  5 Peop… "Interesti… public  FALSE           TRUE           rank    asc     
-#&gt;  6 Acto… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  7 Acto… "List of m… public  TRUE            TRUE           rank    asc     
-#&gt;  8 Beau… ""          public  FALSE           FALSE          title   asc     
-#&gt;  9 My F… ""          public  FALSE           TRUE           title   asc     
-#&gt; 10 (*) … "en# SEXY … public  TRUE            TRUE           releas… desc    
-#&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
-#&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
-#&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'># }
-</div></pre>
-  </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#functions">Functions</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>movies_lists</span>(<span class='st'>"190430"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"personal"</span>, <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>5</span>)
+}
+<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>shows_lists</span>(<span class='st'>"46241"</span>)
+}
+<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>seasons_lists</span>(<span class='st'>"46241"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>)
+}
+<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>episodes_lists</span>(<span class='st'>"46241"</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1</span>)
+}
+<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>people_lists</span>(<span class='st'>"david-tennant"</span>)
 
+<span class='fu'>people_lists</span>(<span class='st'>"emilia-clarke"</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"items"</span>)
+}</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -495,7 +402,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

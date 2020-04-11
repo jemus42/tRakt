@@ -86,7 +86,7 @@ a single season, i.e. all the episodes of the season" />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -142,7 +142,7 @@ a single season, i.e. all the episodes of the season" />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -161,7 +161,7 @@ a single season, i.e. all the episodes of the season" />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get a season of a show</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/seasons_season.R'><code>R/seasons_season.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/seasons_season.R'><code>R/seasons_season.R</code></a></small>
     <div class="hidden name"><code>seasons_season.Rd</code></div>
     </div>
 
@@ -230,44 +230,17 @@ see <a href='seasons_summary.html'>seasons_summary</a> and use the <code>episode
 <code><a href='shows_next_episode.html'>shows_next_episode</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>seasons_season</span>(<span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 7
-#&gt;   season episode title                         trakt tvdb   imdb      tmdb 
-#&gt;    &lt;int&gt;   &lt;int&gt; &lt;chr&gt;                         &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;
-#&gt; 1      1       1 Pilot                         73482 349232 tt0959621 62085
-#&gt; 2      1       2 Cat's in the Bag...           73483 349233 tt1054724 62086
-#&gt; 3      1       3 ...And the Bag's in the River 73484 349235 tt1054725 62087
-#&gt; 4      1       4 Cancer Man                    73485 349236 tt1054726 62088
-#&gt; 5      1       5 Gray Matter                   73486 349238 tt1054727 62089
-#&gt; 6      1       6 Crazy Handful of Nothin'      73487 355100 tt1054728 62090
-#&gt; 7      1       7 A No-Rough-Stuff-Type Deal    73488 352534 tt1054729 62091</div><div class='input'>
-<span class='co'># Including all episode data:</span>
-<span class='fu'>seasons_season</span>(<span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 7 x 16
-#&gt;   season episode title episode_abs overview rating votes comment_count
-#&gt;    &lt;int&gt;   &lt;int&gt; &lt;chr&gt;       &lt;int&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;int&gt;         &lt;int&gt;
-#&gt; 1      1       1 Pilot           1 When an…   8.35  7347            26
-#&gt; 2      1       2 Cat'…           2 Walt an…   8.13  5802             3
-#&gt; 3      1       3 ...A…           3 Walter …   8.06  5212             2
-#&gt; 4      1       4 Canc…           4 Walter …   7.99  5042             4
-#&gt; 5      1       5 Gray…           5 Walter …   7.99  4923             3
-#&gt; 6      1       6 Craz…           6 The sid…   8.51  5011             4
-#&gt; 7      1       7 A No…           7 Walter …   8.39  4868             2
-#&gt; # … with 8 more variables: first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   available_translations &lt;list&gt;, runtime &lt;int&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;,
-#&gt; #   imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'># }
-</div></pre>
-  </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#note">Note</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>seasons_season</span>(<span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>)
 
+<span class='co'># Including all episode data:</span>
+<span class='fu'>seasons_season</span>(<span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)
+}</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -278,7 +251,7 @@ see <a href='seasons_summary.html'>seasons_summary</a> and use the <code>episode
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

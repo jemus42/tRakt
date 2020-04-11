@@ -88,7 +88,7 @@ They are unlikely to change often and are therefore included as package datasets
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -144,7 +144,7 @@ They are unlikely to change often and are therefore included as package datasets
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -163,7 +163,7 @@ They are unlikely to change often and are therefore included as package datasets
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Cached filter datasets</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/data-internal.R'><code>R/data-internal.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/data-internal.R'><code>R/data-internal.R</code></a></small>
     <div class="hidden name"><code>trakt_datasets.Rd</code></div>
     </div>
 
@@ -221,63 +221,58 @@ filter arguments of the same name.</p>
     <p>Currently only US certifications are available.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_genres</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 3
+    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_genres</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 6 x 3</span><span>
 #&gt;   name      slug      type  
-#&gt;   &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt; 
-#&gt; 1 Action    action    movies
-#&gt; 2 Action    action    shows 
-#&gt; 3 Adventure adventure movies
-#&gt; 4 Adventure adventure shows 
-#&gt; 5 Animation animation movies
-#&gt; 6 Animation animation shows </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_languages</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 3
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> 
+#&gt; </span><span style='color: #555555;'>1</span><span> Action    action    movies
+#&gt; </span><span style='color: #555555;'>2</span><span> Action    action    shows 
+#&gt; </span><span style='color: #555555;'>3</span><span> Adventure adventure movies
+#&gt; </span><span style='color: #555555;'>4</span><span> Adventure adventure shows 
+#&gt; </span><span style='color: #555555;'>5</span><span> Animation animation movies
+#&gt; </span><span style='color: #555555;'>6</span><span> Animation animation shows </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_languages</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 6 x 3</span><span>
 #&gt;   name      code  type  
-#&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; 
-#&gt; 1 Afar      aa    movies
-#&gt; 2 Abkhazian ab    movies
-#&gt; 3 Abkhazian ab    shows 
-#&gt; 4 Afrikaans af    movies
-#&gt; 5 Akan      ak    movies
-#&gt; 6 Amharic   am    movies</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_networks</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 2
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> 
+#&gt; </span><span style='color: #555555;'>1</span><span> Afar      aa    movies
+#&gt; </span><span style='color: #555555;'>2</span><span> Abkhazian ab    movies
+#&gt; </span><span style='color: #555555;'>3</span><span> Abkhazian ab    shows 
+#&gt; </span><span style='color: #555555;'>4</span><span> Afrikaans af    movies
+#&gt; </span><span style='color: #555555;'>5</span><span> Akan      ak    movies
+#&gt; </span><span style='color: #555555;'>6</span><span> Amharic   am    movies</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_networks</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 6 x 2</span><span>
 #&gt;   name          name_clean 
-#&gt;   &lt;chr&gt;         &lt;chr&gt;      
-#&gt; 1 " VTV "       vtv        
-#&gt; 2 "#0"          #0         
-#&gt; 3 "+Globosat"   +globosat  
-#&gt; 4 "1+1"         1+1        
-#&gt; 5 "13e rue"     13e rue    
-#&gt; 6 "13th Street" 13th street</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_countries</span>)</div><div class='output co'>#&gt; # A tibble: 6 x 3
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      
+#&gt; </span><span style='color: #555555;'>1</span><span> </span><span style='color: #555555;'>"</span><span> VTV </span><span style='color: #555555;'>"</span><span>       vtv        
+#&gt; </span><span style='color: #555555;'>2</span><span> </span><span style='color: #555555;'>"</span><span>#0</span><span style='color: #555555;'>"</span><span>          #0         
+#&gt; </span><span style='color: #555555;'>3</span><span> </span><span style='color: #555555;'>"</span><span>+Globosat</span><span style='color: #555555;'>"</span><span>   +globosat  
+#&gt; </span><span style='color: #555555;'>4</span><span> </span><span style='color: #555555;'>"</span><span>1+1</span><span style='color: #555555;'>"</span><span>         1+1        
+#&gt; </span><span style='color: #555555;'>5</span><span> </span><span style='color: #555555;'>"</span><span>13e rue</span><span style='color: #555555;'>"</span><span>     13e rue    
+#&gt; </span><span style='color: #555555;'>6</span><span> </span><span style='color: #555555;'>"</span><span>13th Street</span><span style='color: #555555;'>"</span><span> 13th street</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>trakt_countries</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 6 x 3</span><span>
 #&gt;   name                 code  type  
-#&gt;   &lt;chr&gt;                &lt;chr&gt; &lt;chr&gt; 
-#&gt; 1 Andorra              ad    movies
-#&gt; 2 Andorra              ad    shows 
-#&gt; 3 United Arab Emirates ae    movies
-#&gt; 4 United Arab Emirates ae    shows 
-#&gt; 5 Afghanistan          af    movies
-#&gt; 6 Antigua and Barbuda  ag    movies</div><div class='input'><span class='no'>trakt_certifications</span></div><div class='output co'>#&gt; # A tibble: 12 x 5
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> 
+#&gt; </span><span style='color: #555555;'>1</span><span> Andorra              ad    movies
+#&gt; </span><span style='color: #555555;'>2</span><span> Andorra              ad    shows 
+#&gt; </span><span style='color: #555555;'>3</span><span> United Arab Emirates ae    movies
+#&gt; </span><span style='color: #555555;'>4</span><span> United Arab Emirates ae    shows 
+#&gt; </span><span style='color: #555555;'>5</span><span> Afghanistan          af    movies
+#&gt; </span><span style='color: #555555;'>6</span><span> Antigua and Barbuda  ag    movies</div><div class='input'><span class='no'>trakt_certifications</span></div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 12 x 5</span><span>
 #&gt;    country name      slug  description                                     type 
-#&gt;    &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;                                           &lt;chr&gt;
-#&gt;  1 us      G         g     All Ages                                        movi…
-#&gt;  2 us      PG        pg    Parental Guidance Suggested                     movi…
-#&gt;  3 us      PG-13     pg-13 Parents Strongly Cautioned - Ages 13+ Recommen… movi…
-#&gt;  4 us      R         r     Mature Audiences - Ages 17+ Recommended         movi…
-#&gt;  5 us      Not Rated nr    Not Rated                                       movi…
-#&gt;  6 us      TV-Y      tv-y  All Children                                    shows
-#&gt;  7 us      TV-Y7     tv-y7 Older Children - Ages 7+ Recommended            shows
-#&gt;  8 us      TV-G      tv-g  All Ages                                        shows
-#&gt;  9 us      TV-PG     tv-pg Parental Guidance Suggested                     shows
-#&gt; 10 us      TV-14     tv-14 Parents Strongly Cautioned - Ages 14+ Recommen… shows
-#&gt; 11 us      TV-MA     tv-ma Mature Audiences - Ages 17+ Recommended         shows
-#&gt; 12 us      Not Rated nr    Not Rated                                       shows</div></pre>
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                           </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; </span><span style='color: #555555;'> 1</span><span> us      G         g     All Ages                                        movi…
+#&gt; </span><span style='color: #555555;'> 2</span><span> us      PG        pg    Parental Guidance Suggested                     movi…
+#&gt; </span><span style='color: #555555;'> 3</span><span> us      PG-13     pg-13 Parents Strongly Cautioned - Ages 13+ Recommen… movi…
+#&gt; </span><span style='color: #555555;'> 4</span><span> us      R         r     Mature Audiences - Ages 17+ Recommended         movi…
+#&gt; </span><span style='color: #555555;'> 5</span><span> us      Not Rated nr    Not Rated                                       movi…
+#&gt; </span><span style='color: #555555;'> 6</span><span> us      TV-Y      tv-y  All Children                                    shows
+#&gt; </span><span style='color: #555555;'> 7</span><span> us      TV-Y7     tv-y7 Older Children - Ages 7+ Recommended            shows
+#&gt; </span><span style='color: #555555;'> 8</span><span> us      TV-G      tv-g  All Ages                                        shows
+#&gt; </span><span style='color: #555555;'> 9</span><span> us      TV-PG     tv-pg Parental Guidance Suggested                     shows
+#&gt; </span><span style='color: #555555;'>10</span><span> us      TV-14     tv-14 Parents Strongly Cautioned - Ages 14+ Recommen… shows
+#&gt; </span><span style='color: #555555;'>11</span><span> us      TV-MA     tv-ma Mature Audiences - Ages 17+ Recommended         shows
+#&gt; </span><span style='color: #555555;'>12</span><span> us      Not Rated nr    Not Rated                                       shows</div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#format">Format</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#note">Note</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -288,7 +283,7 @@ filter arguments of the same name.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

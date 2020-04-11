@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get a single comment</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/comments_comment.R'><code>R/comments_comment.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/comments_comment.R'><code>R/comments_comment.R</code></a></small>
     <div class="hidden name"><code>comments_comment.Rd</code></div>
     </div>
 
@@ -251,116 +251,49 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A single comment</span>
-<span class='fu'>comments_comment</span>(<span class='st'>"236397"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 16
+<span class='fu'>comments_comment</span>(<span class='st'>"236397"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 16</span><span>
 #&gt;       id comment spoiler review parent_id created_at         
-#&gt;    &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt; 1 236397 All th… FALSE   FALSE          0 2019-06-09 21:33:00
-#&gt; # … with 10 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'>
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span>             
+#&gt; </span><span style='color: #555555;'>1</span><span> </span><span style='text-decoration: underline;'>236</span><span>397 All th… FALSE   FALSE          0 2019-06-09 </span><span style='color: #555555;'>21:33:00</span><span>
+#&gt; </span><span style='color: #555555;'># … with 10 more variables: updated_at </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #555555;'>, replies </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, likes </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   user_rating </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, username </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, private </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, user_name </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   vip </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, vip_ep </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, user_slug </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div><div class='input'>
 <span class='co'># Multiple comments</span>
-<span class='fu'>comments_comment</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"236397"</span>, <span class='st'>"112561"</span>))</div><div class='output co'>#&gt; # A tibble: 2 x 16
+<span class='fu'>comments_comment</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"236397"</span>, <span class='st'>"112561"</span>))</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 16</span><span>
 #&gt;       id comment spoiler review parent_id created_at         
-#&gt;    &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt; 1 236397 All th… FALSE   FALSE          0 2019-06-09 21:33:00
-#&gt; 2 112561 Seriou… FALSE   FALSE          0 2017-01-31 17:48:59
-#&gt; # … with 10 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>comments_replies</span>(<span class='st'>"236397"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 16
-#&gt;       id comment spoiler review parent_id created_at         
-#&gt;    &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt; 1 250976 "@jemu… FALSE   FALSE     236397 2019-09-18 02:57:44
-#&gt; # … with 10 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='co'># }</span>
-<span class='co'># \dontrun{</span>
-<span class='fu'>comments_likes</span>(<span class='st'>"236397"</span>)</div><div class='output co'>#&gt; # A tibble: 2 x 7
-#&gt;   liked_at                 username   private user_name  vip   vip_ep user_slug 
-#&gt;   &lt;chr&gt;                    &lt;chr&gt;      &lt;lgl&gt;   &lt;chr&gt;      &lt;lgl&gt; &lt;lgl&gt;  &lt;chr&gt;     
-#&gt; 1 2019-06-29T21:57:36.000Z Khawlah    FALSE   Khawlah    FALSE FALSE  khawlah   
-#&gt; 2 2019-09-15T02:43:31.000Z Outlanders FALSE   Outlanders FALSE FALSE  outlanders</div><div class='input'><span class='co'># }</span>
-<span class='co'># \dontrun{</span>
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span>             
+#&gt; </span><span style='color: #555555;'>1</span><span> </span><span style='text-decoration: underline;'>236</span><span>397 All th… FALSE   FALSE          0 2019-06-09 </span><span style='color: #555555;'>21:33:00</span><span>
+#&gt; </span><span style='color: #555555;'>2</span><span> </span><span style='text-decoration: underline;'>112</span><span>561 Seriou… FALSE   FALSE          0 2017-01-31 </span><span style='color: #555555;'>17:48:59</span><span>
+#&gt; </span><span style='color: #555555;'># … with 10 more variables: updated_at </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #555555;'>, replies </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, likes </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   user_rating </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, username </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, private </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, user_name </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   vip </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, vip_ep </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, user_slug </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>comments_replies</span>(<span class='st'>"236397"</span>)
+}
+<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>comments_likes</span>(<span class='st'>"236397"</span>)
+}
+<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># A movie</span>
-<span class='fu'>comments_item</span>(<span class='st'>"236397"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
-#&gt;   type  title                   year trakt  slug                   imdb    tmdb 
-#&gt;   &lt;chr&gt; &lt;chr&gt;                  &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;                  &lt;chr&gt;   &lt;chr&gt;
-#&gt; 1 movie John Wick: Chapter 3 …  2019 304278 john-wick-chapter-3-p… tt6146… 4581…</div><div class='input'><span class='fu'>comments_item</span>(<span class='st'>"236397"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 23
-#&gt;   type  title  year tagline overview released   runtime country trailer homepage
-#&gt;   &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    &lt;date&gt;       &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   
-#&gt; 1 movie John…  2019 The Gr… Super-a… 2019-05-17     131 us      http:/… https:/…
-#&gt; # … with 13 more variables: status &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,
-#&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;,
-#&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, certification &lt;chr&gt;,
-#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'>
-<span class='co'># A show</span>
-<span class='fu'>comments_item</span>(<span class='st'>"120768"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 8
-#&gt;   type  title           year trakt  slug           tvdb   imdb      tmdb 
-#&gt;   &lt;chr&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;
-#&gt; 1 show  13 Reasons Why  2017 116129 13-reasons-why 323168 tt1837492 66788</div><div class='input'><span class='fu'>comments_item</span>(<span class='st'>"120768"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 28
-#&gt;   type  title  year overview first_aired         runtime certification country
-#&gt;   &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;    &lt;dttm&gt;                &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;  
-#&gt; 1 show  13 R…  2017 Follows… 2017-03-31 16:00:00      57 TV-MA         us     
-#&gt; # … with 20 more variables: trailer &lt;chr&gt;, homepage &lt;chr&gt;, status &lt;chr&gt;,
-#&gt; #   rating &lt;dbl&gt;, votes &lt;int&gt;, comment_count &lt;int&gt;, network &lt;chr&gt;,
-#&gt; #   updated_at &lt;dttm&gt;, language &lt;chr&gt;, available_translations &lt;list&gt;,
-#&gt; #   genres &lt;list&gt;, aired_episodes &lt;int&gt;, airs_day &lt;chr&gt;, airs_time &lt;chr&gt;,
-#&gt; #   airs_timezone &lt;chr&gt;, trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;,
-#&gt; #   tmdb &lt;chr&gt;</div><div class='input'>
-<span class='co'># A season</span>
-<span class='fu'>comments_item</span>(<span class='st'>"140265"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 12
-#&gt;   type  title  year trakt slug  tvdb  imdb  tmdb  season season_trakt
-#&gt;   &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;       
-#&gt; 1 seas… Twin…  1990 1907  twin… 70533 tt00… 1920       3 138350      
-#&gt; # … with 2 more variables: season_tvdb &lt;chr&gt;, season_tmdb &lt;chr&gt;</div><div class='input'><span class='fu'>comments_item</span>(<span class='st'>"140265"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 40
-#&gt;   type  title  year overview first_aired         runtime certification country
-#&gt;   &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;    &lt;dttm&gt;                &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;  
-#&gt; 1 seas… Twin…  1990 The bod… 1990-04-09 00:00:00      46 TV-MA         us     
-#&gt; # … with 32 more variables: trailer &lt;chr&gt;, homepage &lt;chr&gt;, status &lt;chr&gt;,
-#&gt; #   rating &lt;dbl&gt;, votes &lt;int&gt;, comment_count &lt;int&gt;, network &lt;chr&gt;,
-#&gt; #   updated_at &lt;dttm&gt;, language &lt;chr&gt;, available_translations &lt;list&gt;,
-#&gt; #   genres &lt;list&gt;, aired_episodes &lt;int&gt;, airs_day &lt;chr&gt;, airs_time &lt;chr&gt;,
-#&gt; #   airs_timezone &lt;chr&gt;, trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;,
-#&gt; #   tmdb &lt;chr&gt;, season &lt;int&gt;, season_rating &lt;dbl&gt;, season_votes &lt;int&gt;,
-#&gt; #   season_episode_count &lt;int&gt;, season_aired_episodes &lt;int&gt;,
-#&gt; #   season_title &lt;chr&gt;, season_overview &lt;chr&gt;, season_first_aired &lt;chr&gt;,
-#&gt; #   season_network &lt;chr&gt;, season_trakt &lt;chr&gt;, season_tvdb &lt;chr&gt;,
-#&gt; #   season_tmdb &lt;chr&gt;</div><div class='input'>
-<span class='co'># An episode</span>
-<span class='fu'>comments_item</span>(<span class='st'>"136632"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 15
-#&gt;   type  title  year trakt slug  tvdb  imdb  tmdb  season episode episode_title
-#&gt;   &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;int&gt;   &lt;int&gt; &lt;chr&gt;        
-#&gt; 1 epis… Game…  2011 1390  game… 1213… tt09… 1399       7       4 The Spoils o…
-#&gt; # … with 4 more variables: episode_trakt &lt;chr&gt;, episode_tvdb &lt;chr&gt;,
-#&gt; #   episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div><div class='input'><span class='fu'>comments_item</span>(<span class='st'>"136632"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 44
-#&gt;   type  title  year overview first_aired         runtime certification country
-#&gt;   &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;    &lt;dttm&gt;                &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;  
-#&gt; 1 epis… Game…  2011 Seven n… 2011-04-18 01:00:00      60 TV-MA         us     
-#&gt; # … with 36 more variables: trailer &lt;chr&gt;, homepage &lt;chr&gt;, status &lt;chr&gt;,
-#&gt; #   rating &lt;dbl&gt;, votes &lt;int&gt;, comment_count &lt;int&gt;, network &lt;chr&gt;,
-#&gt; #   updated_at &lt;dttm&gt;, language &lt;chr&gt;, available_translations &lt;list&gt;,
-#&gt; #   genres &lt;list&gt;, aired_episodes &lt;int&gt;, airs_day &lt;chr&gt;, airs_time &lt;chr&gt;,
-#&gt; #   airs_timezone &lt;chr&gt;, trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;,
-#&gt; #   tmdb &lt;chr&gt;, season &lt;int&gt;, episode &lt;int&gt;, episode_title &lt;chr&gt;,
-#&gt; #   episode_number_abs &lt;int&gt;, episode_overview &lt;chr&gt;, episode_rating &lt;dbl&gt;,
-#&gt; #   episode_votes &lt;int&gt;, episode_comment_count &lt;int&gt;,
-#&gt; #   episode_first_aired &lt;chr&gt;, episode_updated_at &lt;chr&gt;,
-#&gt; #   episode_available_translations &lt;list&gt;, episode_runtime &lt;int&gt;,
-#&gt; #   episode_trakt &lt;chr&gt;, episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;,
-#&gt; #   episode_tmdb &lt;chr&gt;</div><div class='input'># }
-</div></pre>
-  </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#functions">Functions</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+<span class='fu'>comments_item</span>(<span class='st'>"236397"</span>)
+<span class='fu'>comments_item</span>(<span class='st'>"236397"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)
 
+<span class='co'># A show</span>
+<span class='fu'>comments_item</span>(<span class='st'>"120768"</span>)
+<span class='fu'>comments_item</span>(<span class='st'>"120768"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)
+
+<span class='co'># A season</span>
+<span class='fu'>comments_item</span>(<span class='st'>"140265"</span>)
+<span class='fu'>comments_item</span>(<span class='st'>"140265"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)
+
+<span class='co'># An episode</span>
+<span class='fu'>comments_item</span>(<span class='st'>"136632"</span>)
+<span class='fu'>comments_item</span>(<span class='st'>"136632"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)
+}</div></span></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -371,7 +304,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

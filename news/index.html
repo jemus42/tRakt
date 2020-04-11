@@ -84,7 +84,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -140,7 +140,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -158,12 +158,12 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/jemus42/tRakt/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+      <h1 data-toc-skip>Changelog <small></small></h1>
+      <small>Source: <a href='http://github.com/jemus42/tRakt/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
     <div id="trakt-development-version" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="development version">
 <a href="#trakt-development-version" class="anchor"></a>tRakt (development version)<small> Unreleased </small>
 </h1>
 <ul>
@@ -176,7 +176,7 @@
 <a href="#authenticated-requests" class="anchor"></a>Authenticated requests</h2>
 <p>By default, all requests to the API are now made using authentication <em>if</em> a <code>trakt_client_secret</code> is set. See <code>?trakt_credentials()</code> for details on how to set your credentials.<br>
 If now secret is available, unauthenticated requests are made as in previous versions. In this case, you still <strong>need</strong> either the built-in or your own <code>trakt_client_id</code>.</p>
-<p>OAuth2 supports comes with the need to handle secrets, i.e. <code>.httr-oauth</code> files. This can be a pain with headless/automated setups, which is why I am trying to keep “no auth needed” as the default, as most (implemented) endpoints don’t strictly require authentication.</p>
+<p>OAuth2 supports comes with the need to handle secrets, i.e. <code>.httr-oauth</code> files. This can be a pain with headless/automated setups, which is why I am trying to keep “no auth needed” as the default, as most (implemented) endpoints don’t strictly require authentication.</p>
 <p>See <code><a href="../articles/Implemented-API-methods.html">vignette("Implemented-API-methods", package = "tRakt")</a></code> for an overview of implemented methods with an indicator on whether authentication is required (it usually isn’t).</p>
 </div>
 <div id="new-functions" class="section level2">
@@ -422,9 +422,9 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 </div>
 </div>
 </div>
-    <div id="trakt-0-15-0" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-15-0" class="anchor"></a>tRakt 0.15.0<small> Unreleased </small>
+    <div id="trakt-0150" class="section level1">
+<h1 class="page-header" data-toc-text="0.15.0">
+<a href="#trakt-0150" class="anchor"></a>tRakt 0.15.0<small> Unreleased </small>
 </h1>
 <p>This is a big one, but not 1.0.0 big one I guess.<br>
 This is a consolidation release with lots of internal improvements, but for the 1.0.0 I decided to overhaul the structure of the package <em>again</em>, so before I completely break any kind of backwards compatiblity, I thought I’d get this one out.</p>
@@ -432,13 +432,12 @@ This is a consolidation release with lots of internal improvements, but for the 
 <h2 class="hasAnchor">
 <a href="#consolidation-for-the-people" class="anchor"></a>Consolidation for the people</h2>
 <ul>
-<li>Major refactor of the docs. Sadly, the user will only notice a little more consistency.</li>
-<li>Consolidate related functions into the same Rd page</li>
-<li>Centrally document common parameters and reuse them where needed</li>
-<li>Also consolidate many similar functions by factoring out the relevant bits into more flexible helper functions. In some cases those are exported as well.</li>
+<li><p>Major refactor of the docs. Sadly, the user will only notice a little more consistency.</p></li>
+<li><p>Consolidate related functions into the same Rd page</p></li>
+<li><p>Centrally document common parameters and reuse them where needed</p></li>
+<li><p>Also consolidate many similar functions by factoring out the relevant bits into more flexible helper functions. In some cases those are exported as well.</p></li>
 <li><p>In the process, some functions where partially renamed (<code>.show.</code> -&gt; <code>.shows.</code>, <code>.movie.</code> -&gt; <code>.movies.</code>) for consistency.</p></li>
-<li>Rename <code>get_trakt_credentials</code> -&gt; <code>trakt_credentials</code>
-</li>
+<li><p>Rename <code>get_trakt_credentials</code> -&gt; <code>trakt_credentials</code></p></li>
 <li><p>Many functions now return much flatter output, notably <code>*people*</code> functions. They return a <code>list</code> with <code>cast</code> and <code>crew</code> objects, which in turn are both flat <code>tibbles</code>.</p></li>
 </ul>
 </div>
@@ -456,9 +455,9 @@ This is a consolidation release with lots of internal improvements, but for the 
 </ul>
 </div>
 </div>
-    <div id="trakt-0-14-0" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-14-0" class="anchor"></a>tRakt 0.14.0<small> Unreleased </small>
+    <div id="trakt-0140" class="section level1">
+<h1 class="page-header" data-toc-text="0.14.0">
+<a href="#trakt-0140" class="anchor"></a>tRakt 0.14.0<small> Unreleased </small>
 </h1>
 <p>Many functions were refactored, which in some cases changes the output.<br>
 Not only do most functions return a <code>tibble</code> now, but some additionally computed variables have been removed as well.</p>
@@ -487,9 +486,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 </ul>
 </div>
 </div>
-    <div id="trakt-0-13-0" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-13-0" class="anchor"></a>tRakt 0.13.0<small> 2015-03-12 </small>
+    <div id="trakt-0130" class="section level1">
+<h1 class="page-header" data-toc-text="0.13.0">
+<a href="#trakt-0130" class="anchor"></a>tRakt 0.13.0<small> 2015-03-12 </small>
 </h1>
 <ul>
 <li>
@@ -504,9 +503,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 </li>
 </ul>
 </div>
-    <div id="trakt-0-12-1" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-12-1" class="anchor"></a>tRakt 0.12.1<small> Unreleased </small>
+    <div id="trakt-0121" class="section level1">
+<h1 class="page-header" data-toc-text="0.12.1">
+<a href="#trakt-0121" class="anchor"></a>tRakt 0.12.1<small> Unreleased </small>
 </h1>
 <ul>
 <li>Vectorize <code>trakt.seasons.summary</code>
@@ -515,9 +514,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <li>Improve tests</li>
 </ul>
 </div>
-    <div id="trakt-0-12-0" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-12-0" class="anchor"></a>tRakt 0.12.0<small> Unreleased </small>
+    <div id="trakt-0120" class="section level1">
+<h1 class="page-header" data-toc-text="0.12.0">
+<a href="#trakt-0120" class="anchor"></a>tRakt 0.12.0<small> Unreleased </small>
 </h1>
 <div id="api-changes-functional-fixes" class="section level2">
 <h2 class="hasAnchor">
@@ -577,9 +576,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 </div>
 </div>
 </div>
-    <div id="trakt-0-11-3" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-11-3" class="anchor"></a>tRakt 0.11.3<small> Unreleased </small>
+    <div id="trakt-0113" class="section level1">
+<h1 class="page-header" data-toc-text="0.11.3">
+<a href="#trakt-0113" class="anchor"></a>tRakt 0.11.3<small> Unreleased </small>
 </h1>
 <div id="api-changes-functional-fixes-1" class="section level2">
 <h2 class="hasAnchor">
@@ -601,9 +600,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 </ul>
 </div>
 </div>
-    <div id="trakt-0-11-2" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-11-2" class="anchor"></a>tRakt 0.11.2<small> Unreleased </small>
+    <div id="trakt-0112" class="section level1">
+<h1 class="page-header" data-toc-text="0.11.2">
+<a href="#trakt-0112" class="anchor"></a>tRakt 0.11.2<small> Unreleased </small>
 </h1>
 <div id="api-changes-functional-fixes-2" class="section level2">
 <h2 class="hasAnchor">
@@ -628,9 +627,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 </ul>
 </div>
 </div>
-    <div id="trakt-0-11-1" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-11-1" class="anchor"></a>tRakt 0.11.1<small> Unreleased </small>
+    <div id="trakt-0111" class="section level1">
+<h1 class="page-header" data-toc-text="0.11.1">
+<a href="#trakt-0111" class="anchor"></a>tRakt 0.11.1<small> Unreleased </small>
 </h1>
 <ul>
 <li>Internal restructuring (moving functionally similar functions together)
@@ -653,9 +652,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <strong>Fix</strong> error in <code>trakt.user.watchlist</code> when <code>type = shows</code> was ignored by accident</li>
 </ul>
 </div>
-    <div id="trakt-0-11-0" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-11-0" class="anchor"></a>tRakt 0.11.0<small> Unreleased </small>
+    <div id="trakt-0110" class="section level1">
+<h1 class="page-header" data-toc-text="0.11.0">
+<a href="#trakt-0110" class="anchor"></a>tRakt 0.11.0<small> Unreleased </small>
 </h1>
 <ul>
 <li>
@@ -689,9 +688,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <li>The usual bug fixes</li>
 </ul>
 </div>
-    <div id="trakt-0-10-3" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-10-3" class="anchor"></a>tRakt 0.10.3<small> Unreleased </small>
+    <div id="trakt-0103" class="section level1">
+<h1 class="page-header" data-toc-text="0.10.3">
+<a href="#trakt-0103" class="anchor"></a>tRakt 0.10.3<small> Unreleased </small>
 </h1>
 <ul>
 <li>
@@ -714,9 +713,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <li>Use <code>extended = "min"</code> as default across functions for consistency with the trakt API</li>
 </ul>
 </div>
-    <div id="trakt-0-10-2" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-10-2" class="anchor"></a>tRakt 0.10.2<small> Unreleased </small>
+    <div id="trakt-0102" class="section level1">
+<h1 class="page-header" data-toc-text="0.10.2">
+<a href="#trakt-0102" class="anchor"></a>tRakt 0.10.2<small> Unreleased </small>
 </h1>
 <ul>
 <li>Add <code>year</code> parameter to <code>trakt.search</code>
@@ -726,9 +725,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <li>Minor internal fixes</li>
 </ul>
 </div>
-    <div id="trakt-0-10-1" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-10-1" class="anchor"></a>tRakt 0.10.1<small> Unreleased </small>
+    <div id="trakt-0101" class="section level1">
+<h1 class="page-header" data-toc-text="0.10.1">
+<a href="#trakt-0101" class="anchor"></a>tRakt 0.10.1<small> Unreleased </small>
 </h1>
 <ul>
 <li>Add <code>testthat</code> tests</li>
@@ -740,9 +739,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <li>Various bug fixes</li>
 </ul>
 </div>
-    <div id="trakt-0-10-0" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-10-0" class="anchor"></a>tRakt 0.10.0<small> Unreleased </small>
+    <div id="trakt-0100" class="section level1">
+<h1 class="page-header" data-toc-text="0.10.0">
+<a href="#trakt-0100" class="anchor"></a>tRakt 0.10.0<small> Unreleased </small>
 </h1>
 <ul>
 <li>
@@ -772,9 +771,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <li>Expand allowed <code>target</code> params in accordance with changed trakt API docs</li>
 </ul>
 </div>
-    <div id="trakt-0-9-0" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-9-0" class="anchor"></a>tRakt 0.9.0<small> 2015-02-24 </small>
+    <div id="trakt-090" class="section level1">
+<h1 class="page-header" data-toc-text="0.9.0">
+<a href="#trakt-090" class="anchor"></a>tRakt 0.9.0<small> 2015-02-24 </small>
 </h1>
 <ul>
 <li>Specified more exclusive package version requirements to avoid unforseen errors</li>
@@ -785,9 +784,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <li>Make code in vignette a little more robust</li>
 </ul>
 </div>
-    <div id="trakt-0-8-1" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-8-1" class="anchor"></a>tRakt 0.8.1<small> Unreleased </small>
+    <div id="trakt-081" class="section level1">
+<h1 class="page-header" data-toc-text="0.8.1">
+<a href="#trakt-081" class="anchor"></a>tRakt 0.8.1<small> Unreleased </small>
 </h1>
 <ul>
 <li>Fix a whole bunch of typos I only found <em>after</em> the CRAN release, naturally</li>
@@ -801,9 +800,9 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <li>Update vignette for the above change</li>
 </ul>
 </div>
-    <div id="trakt-0-8-0" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-8-0" class="anchor"></a>tRakt 0.8.0<small> Unreleased </small>
+    <div id="trakt-080" class="section level1">
+<h1 class="page-header" data-toc-text="0.8.0">
+<a href="#trakt-080" class="anchor"></a>tRakt 0.8.0<small> Unreleased </small>
 </h1>
 <ul>
 <li>Added more user-facing functions (<code>trakt.user.following</code> / <code>.followers</code> / <code>.friends</code>) because maybe I want to throw <a href="https://github.com/christophergandrud/networkD3">networkD3</a> at my people</li>
@@ -815,13 +814,13 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 <li>Trying to keep things organized and all I got was this inconsistently header’d NEWS.md</li>
 </ul>
 </div>
-    <div id="trakt-0-0-1" class="section level1">
-<h1 class="page-header">
-<a href="#trakt-0-0-1" class="anchor"></a>tRakt 0.0.1<small> Unreleased </small>
+    <div id="trakt-001" class="section level1">
+<h1 class="page-header" data-toc-text="0.0.1">
+<a href="#trakt-001" class="anchor"></a>tRakt 0.0.1<small> Unreleased </small>
 </h1>
-<div id="section" class="section level2">
+<div id="2015-02-16" class="section level2">
 <h2 class="hasAnchor">
-<a href="#section" class="anchor"></a>2015-02-16</h2>
+<a href="<a href='http://github.com/jemus42/tRakt/issues/2015'>#2015</a>-02-16" class="anchor"></a>2015-02-16</h2>
 <p>I’ve been working on some user-specific methods, so you can now use the <code>trakt.user.*</code> family of functions to get a user’s…</p>
 <ul>
 <li>Collection: <code>trakt.user.collection()</code>
@@ -833,44 +832,24 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 </ul>
 <p>All of them default to the username set in <code><a href="https://rdrr.io/r/base/options.html">getOption("trakt.username")</a></code>, but any publicly viewable user should work. Note that OAuth2 is not implemented, so private users can’t be accessed.</p>
 </div>
-<div id="section-1" class="section level2">
+<div id="2015-02-11" class="section level2">
 <h2 class="hasAnchor">
-<a href="#section-1" class="anchor"></a>2015-02-11</h2>
+<a href="<a href='http://github.com/jemus42/tRakt/issues/2015'>#2015</a>-02-11" class="anchor"></a>2015-02-11</h2>
 <p>As of today, all the functions are updated to use the new APIv2, except for <code>trakt.show.stats</code>, which is currently not yet implemented at trakt.tv, see <a href="http://docs.trakt.apiary.io/reference/shows/stats/get-show-stats">their docs</a></p>
 <p>Now the package is usable again, and I can continue to work on bug fixes and enhancements. Yay.</p>
 </div>
-<div id="section-2" class="section level2">
+<div id="2015-02-10" class="section level2">
 <h2 class="hasAnchor">
-<a href="#section-2" class="anchor"></a>2015-02-10</h2>
+<a href="<a href='http://github.com/jemus42/tRakt/issues/2015'>#2015</a>-02-10" class="anchor"></a>2015-02-10</h2>
 <p>I am now trying to migrate everything to the <a href="http://docs.trakt.apiary.io/">new trakt.tv APIv2</a>. Since I mostly don’t know what I’m doing, I have to make this up as I go along, but oh well. Now the search function <code>trakt.search</code> should be working fine, as it is the only function that is tested/built with the new API in mind. Others to come.</p>
 </div>
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#trakt-development-version">development version</a></li>
-        <li><a href="#trakt-0-15-0">0.15.0</a></li>
-        <li><a href="#trakt-0-14-0">0.14.0</a></li>
-        <li><a href="#trakt-0-13-0">0.13.0</a></li>
-        <li><a href="#trakt-0-12-1">0.12.1</a></li>
-        <li><a href="#trakt-0-12-0">0.12.0</a></li>
-        <li><a href="#trakt-0-11-3">0.11.3</a></li>
-        <li><a href="#trakt-0-11-2">0.11.2</a></li>
-        <li><a href="#trakt-0-11-1">0.11.1</a></li>
-        <li><a href="#trakt-0-11-0">0.11.0</a></li>
-        <li><a href="#trakt-0-10-3">0.10.3</a></li>
-        <li><a href="#trakt-0-10-2">0.10.2</a></li>
-        <li><a href="#trakt-0-10-1">0.10.1</a></li>
-        <li><a href="#trakt-0-10-0">0.10.0</a></li>
-        <li><a href="#trakt-0-9-0">0.9.0</a></li>
-        <li><a href="#trakt-0-8-1">0.8.1</a></li>
-        <li><a href="#trakt-0-8-0">0.8.0</a></li>
-        <li><a href="#trakt-0-0-1">0.0.1</a></li>
-      </ul>
-    </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 
 </div>
@@ -882,7 +861,7 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

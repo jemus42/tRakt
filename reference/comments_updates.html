@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get recently updated/edited comments</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/comments_trending.R'><code>R/comments_trending.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/comments_trending.R'><code>R/comments_trending.R</code></a></small>
     <div class="hidden name"><code>comments_updates.Rd</code></div>
     </div>
 
@@ -218,36 +218,30 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Recently updated comments</span>
-<span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 31
+<span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 10 x 31</span><span>
 #&gt;    type      id comment spoiler review parent_id created_at         
-#&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 epis… 246216 "The h… FALSE   FALSE          0 2019-08-15 08:35:38
-#&gt;  2 epis… 286416 "Of co… FALSE   FALSE          0 2020-03-21 03:44:10
-#&gt;  3 epis… 286593 "After… FALSE   FALSE          0 2020-03-21 23:09:52
-#&gt;  4 epis… 286865 "judit… TRUE    FALSE          0 2020-03-22 23:02:24
-#&gt;  5 movie 286866 "My si… FALSE   FALSE          0 2020-03-22 23:13:44
-#&gt;  6 movie 255050 "It tr… FALSE   FALSE          0 2019-10-14 00:09:03
-#&gt;  7 movie 286864 "An in… FALSE   FALSE          0 2020-03-22 22:57:51
-#&gt;  8 movie 262140 "It's … FALSE   FALSE          0 2019-11-22 21:28:50
-#&gt;  9 movie  37422 "A hor… TRUE    FALSE          0 2014-12-26 21:13:46
-#&gt; 10 show   77545 "This … FALSE   FALSE          0 2016-04-05 21:29:03
-#&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
-#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, season &lt;int&gt;,
-#&gt; #   episode &lt;int&gt;, episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;,
-#&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div></pre>
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span>             
+#&gt; </span><span style='color: #555555;'> 1</span><span> show  </span><span style='text-decoration: underline;'>291</span><span>333 </span><span style='color: #555555;'>"</span><span>India… TRUE    FALSE          0 2020-04-11 </span><span style='color: #555555;'>23:49:15</span><span>
+#&gt; </span><span style='color: #555555;'> 2</span><span> show  </span><span style='text-decoration: underline;'>291</span><span>332 </span><span style='color: #555555;'>"</span><span>This … FALSE   TRUE           0 2020-04-11 </span><span style='color: #555555;'>23:46:33</span><span>
+#&gt; </span><span style='color: #555555;'> 3</span><span> epis… </span><span style='text-decoration: underline;'>260</span><span>314 </span><span style='color: #555555;'>"</span><span>I wis… FALSE   FALSE          0 2019-11-12 </span><span style='color: #555555;'>07:11:32</span><span>
+#&gt; </span><span style='color: #555555;'> 4</span><span> epis… </span><span style='text-decoration: underline;'>291</span><span>330 </span><span style='color: #555555;'>"</span><span>The F… FALSE   FALSE          0 2020-04-11 </span><span style='color: #555555;'>23:44:25</span><span>
+#&gt; </span><span style='color: #555555;'> 5</span><span> epis… </span><span style='text-decoration: underline;'>291</span><span>328 </span><span style='color: #555555;'>"</span><span>Choi … FALSE   FALSE          0 2020-04-11 </span><span style='color: #555555;'>23:34:56</span><span>
+#&gt; </span><span style='color: #555555;'> 6</span><span> epis… </span><span style='text-decoration: underline;'>255</span><span>021 </span><span style='color: #555555;'>"</span><span>OH MY… FALSE   FALSE          0 2019-10-13 </span><span style='color: #555555;'>21:29:57</span><span>
+#&gt; </span><span style='color: #555555;'> 7</span><span> epis… </span><span style='text-decoration: underline;'>254</span><span>646 </span><span style='color: #555555;'>"</span><span>Any T… FALSE   FALSE          0 2019-10-12 </span><span style='color: #555555;'>00:35:26</span><span>
+#&gt; </span><span style='color: #555555;'> 8</span><span> movie   </span><span style='text-decoration: underline;'>6</span><span>966 </span><span style='color: #555555;'>"</span><span>Glad … FALSE   FALSE          0 2011-09-04 </span><span style='color: #555555;'>01:16:39</span><span>
+#&gt; </span><span style='color: #555555;'> 9</span><span> movie </span><span style='text-decoration: underline;'>291</span><span>329 </span><span style='color: #555555;'>"</span><span>cute,… FALSE   FALSE          0 2020-04-11 </span><span style='color: #555555;'>23:37:31</span><span>
+#&gt; </span><span style='color: #555555;'>10</span><span> movie </span><span style='text-decoration: underline;'>272</span><span>904 </span><span style='color: #555555;'>"</span><span>As an… FALSE   FALSE          0 2020-01-16 </span><span style='color: #555555;'>07:31:04</span><span>
+#&gt; </span><span style='color: #555555;'># … with 24 more variables: updated_at </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #555555;'>, replies </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, likes </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   user_rating </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, username </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, private </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, user_name </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   vip </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, vip_ep </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, user_slug </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, title </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, year </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   trakt </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, slug </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, tvdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, imdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, tmdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, season </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   episode </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, episode_title </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, episode_trakt </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   episode_tvdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, episode_imdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, episode_tmdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -258,7 +252,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

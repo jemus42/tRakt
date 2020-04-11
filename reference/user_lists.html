@@ -88,7 +88,7 @@ retrieve the list's items via user_list_items." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -144,7 +144,7 @@ retrieve the list's items via user_list_items." />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -163,7 +163,7 @@ retrieve the list's items via user_list_items." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get a user's lists</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/user_lists.R'><code>R/user_lists.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/user_lists.R'><code>R/user_lists.R</code></a></small>
     <div class="hidden name"><code>user_lists.Rd</code></div>
     </div>
 
@@ -219,22 +219,14 @@ and <code>slug</code> is renamed to <code>user_slug</code> for the same reason.<
 <code><a href='user_list.html'>user_list</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>user_lists</span>(<span class='st'>"jemus42"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/jemus42/lists?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
-</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>user_lists</span>(<span class='st'>"jemus42"</span>)
+}</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#note">Note</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -245,7 +237,7 @@ and <code>slug</code> is renamed to <code>user_slug</code> for the same reason.<
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

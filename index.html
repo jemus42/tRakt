@@ -45,7 +45,7 @@
 </script><noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p></noscript>
 <!-- End Matomo Code -->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -100,7 +100,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -118,12 +118,12 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<div id="trakt" class="section level1">
+<div id="trakt-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#trakt" class="anchor"></a>tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="120">
+<a href="#trakt-" class="anchor"></a>tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="120">
 </h1></div>
 <!-- badges: start -->
-
+<p><a href="https://travis-ci.org/jemus42/tRakt"><img src="https://img.shields.io/travis/jemus42/tRakt.svg?logo=travis" alt="Travis (.org)"></a> <a href="https://ci.appveyor.com/project/jemus42/tRakt"><img src="https://ci.appveyor.com/api/projects/status/github/jemus42/tRakt?branch=master&amp;svg=true" alt="AppVeyor build status"></a> <a href="https://github.com/jemus42/tRakt/actions"><img src="https://github.com/jemus42/tRakt/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://codecov.io/github/jemus42/tRakt?branch=master"><img src="https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg" alt="Coverage status"></a> <!-- [![CRAN status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt) --> <a href="https://github.com/jemus42/tRakt/releases"><img src="https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub" alt="GitHub release"></a> <a href="https://github.com/jemus42/tRakt/commits/master"><img src="https://img.shields.io/github/last-commit/jemus42/tRakt/master.svg?logo=GithUb" alt="GitHub last commit (master)"></a> <a href="https://github.com/jemus42/tRakt/actions"><img src="https://github.com/jemus42/tRakt/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <!-- badges: end --></p>
 <p><code>tRakt</code> helps you to retrieve data from <a href="https://trakt.tv/">trakt.tv</a>, a site similiar to <a href="https://imdb.com">IMDb</a> with a wider focus, yet smaller user base. The site also enables media-center integration, so you can automatically sync your collection and watch progress, as well as scrobble playback and ratings via <a href="https://www.plex.tv/">Plex</a>, <a href="https://kodi.tv/">Kodi</a> and the likes.<br>
 And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a publicly available API</a> – which makes this package possible and allows you to collect all that nice data people have contributed.</p>
 <p>Please note that while this package is <em>basically</em> an API-client, it is a little more opinionated and might deliver results that do not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.</p>
@@ -131,100 +131,100 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>Get it from GitHub:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="cf">if</span> (<span class="op">!</span>(<span class="st">"remotes"</span> <span class="op">%in%</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span>())) {</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">  <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">}</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">remotes<span class="op">::</span><span class="kw"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"jemus42/tRakt"</span>)</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"tRakt"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="r"><span class="kw">if</span> (!(<span class="st">"remotes"</span> <span class="kw">%in%</span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span>())) {
+  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)
+}
+<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"jemus42/tRakt"</span>)
+
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"tRakt"</span>)</pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tibble) <span class="co"># for glimpse()</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tRakt)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tibble</span>) <span class="co"># for glimpse()</span>
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tRakt</span>)</pre></div>
 <p>Search for a show, get basic info:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">show_info &lt;-<span class="st"> </span><span class="kw"><a href="reference/search_query.html">search_query</a></span>(<span class="st">"Utopia"</span>, <span class="dt">type =</span> <span class="st">"show"</span>)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>(show_info)</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt; Observations: 1</span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt; Variables: 9</span></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt; $ type  &lt;chr&gt; "show"</span></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt; $ score &lt;dbl&gt; 1000</span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt; $ title &lt;chr&gt; "Utopia"</span></a>
-<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt; $ year  &lt;int&gt; 2013</span></a>
-<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt; $ trakt &lt;chr&gt; "46241"</span></a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt; $ slug  &lt;chr&gt; "utopia"</span></a>
-<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt; $ tvdb  &lt;chr&gt; "264991"</span></a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt; $ imdb  &lt;chr&gt; "tt2384811"</span></a>
-<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt; $ tmdb  &lt;chr&gt; "46511"</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="r"><span class="no">show_info</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/search_query.html">search_query</a></span>(<span class="st">"Utopia"</span>, <span class="kw">type</span> <span class="kw">=</span> <span class="st">"show"</span>)
+<span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>(<span class="no">show_info</span>)
+<span class="co">#&gt; Observations: 1</span>
+<span class="co">#&gt; Variables: 9</span>
+<span class="co">#&gt; $ type  &lt;chr&gt; "show"</span>
+<span class="co">#&gt; $ score &lt;dbl&gt; 1000</span>
+<span class="co">#&gt; $ title &lt;chr&gt; "Utopia"</span>
+<span class="co">#&gt; $ year  &lt;int&gt; 2013</span>
+<span class="co">#&gt; $ trakt &lt;chr&gt; "46241"</span>
+<span class="co">#&gt; $ slug  &lt;chr&gt; "utopia"</span>
+<span class="co">#&gt; $ tvdb  &lt;chr&gt; "264991"</span>
+<span class="co">#&gt; $ imdb  &lt;chr&gt; "tt2384811"</span>
+<span class="co">#&gt; $ tmdb  &lt;chr&gt; "46511"</span></pre></div>
 <p>Get season information for the show using its trakt ID:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="reference/seasons_summary.html">seasons_summary</a></span>(show_info<span class="op">$</span>trakt, <span class="dt">extended =</span> <span class="st">"full"</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>()</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt; Observations: 2</span></a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="co">#&gt; Variables: 12</span></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; $ season         &lt;int&gt; 1, 2</span></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt; $ rating         &lt;dbl&gt; 8.66471, 8.22131</span></a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt; $ votes          &lt;int&gt; 170, 122</span></a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt; $ episode_count  &lt;int&gt; 6, 6</span></a>
-<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt; $ aired_episodes &lt;int&gt; 6, 6</span></a>
-<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt; $ title          &lt;chr&gt; "Season 1", "Season 2"</span></a>
-<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt; $ overview       &lt;chr&gt; "When a group of strangers find themselves in pos…</span></a>
-<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt; $ first_aired    &lt;dttm&gt; 2013-01-15 21:00:00, 2014-07-14 20:00:00</span></a>
-<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt; $ network        &lt;chr&gt; "Channel 4", "Channel 4"</span></a>
-<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt; $ trakt          &lt;chr&gt; "56008", "56009"</span></a>
-<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt; $ tvdb           &lt;chr&gt; "507598", "524149"</span></a>
-<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt; $ tmdb           &lt;chr&gt; "54695", "54696"</span></a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span>(<span class="no">show_info</span>$<span class="no">trakt</span>, <span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>()
+<span class="co">#&gt; Observations: 2</span>
+<span class="co">#&gt; Variables: 12</span>
+<span class="co">#&gt; $ season         &lt;int&gt; 1, 2</span>
+<span class="co">#&gt; $ rating         &lt;dbl&gt; 8.66471, 8.22131</span>
+<span class="co">#&gt; $ votes          &lt;int&gt; 170, 122</span>
+<span class="co">#&gt; $ episode_count  &lt;int&gt; 6, 6</span>
+<span class="co">#&gt; $ aired_episodes &lt;int&gt; 6, 6</span>
+<span class="co">#&gt; $ title          &lt;chr&gt; "Season 1", "Season 2"</span>
+<span class="co">#&gt; $ overview       &lt;chr&gt; "When a group of strangers find themselves in pos…</span>
+<span class="co">#&gt; $ first_aired    &lt;dttm&gt; 2013-01-15 21:00:00, 2014-07-14 20:00:00</span>
+<span class="co">#&gt; $ network        &lt;chr&gt; "Channel 4", "Channel 4"</span>
+<span class="co">#&gt; $ trakt          &lt;chr&gt; "56008", "56009"</span>
+<span class="co">#&gt; $ tvdb           &lt;chr&gt; "507598", "524149"</span>
+<span class="co">#&gt; $ tmdb           &lt;chr&gt; "54695", "54696"</span></pre></div>
 <p>Get episode data for the first season:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="reference/seasons_season.html">seasons_season</a></span>(show_info<span class="op">$</span>trakt, <span class="dt">seasons =</span> <span class="dv">1</span>, <span class="dt">extended =</span> <span class="st">"full"</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>()</a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt; Observations: 6</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt; Variables: 16</span></a>
-<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1</span></a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6</span></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt; $ title                  &lt;chr&gt; "Episode 1", "Episode 2", "Episode 3", "E…</span></a>
-<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt; $ episode_abs            &lt;int&gt; 1, 2, 3, 4, 5, 6</span></a>
-<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt; $ overview               &lt;chr&gt; "When five strangers from an online comic…</span></a>
-<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.23869, 8.12515, 8.14380, 8.11400, 8.304…</span></a>
-<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt; $ votes                  &lt;int&gt; 1039, 839, 758, 693, 661, 689</span></a>
-<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#&gt; $ comment_count          &lt;int&gt; 3, 0, 1, 1, 1, 1</span></a>
-<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00…</span></a>
-<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2019-10-04 04:49:30, 2019-10-04 12:29:56…</span></a>
-<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt; $ available_translations &lt;list&gt; [&lt;"bs", "de", "el", "en", "es", "fr", "h…</span></a>
-<a class="sourceLine" id="cb5-16" data-line-number="16"><span class="co">#&gt; $ runtime                &lt;int&gt; 60, 60, 60, 60, 60, 60</span></a>
-<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056…</span></a>
-<a class="sourceLine" id="cb5-18" data-line-number="18"><span class="co">#&gt; $ tvdb                   &lt;chr&gt; "4471351", "4477746", "4477747", "4477748…</span></a>
-<a class="sourceLine" id="cb5-19" data-line-number="19"><span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "t…</span></a>
-<a class="sourceLine" id="cb5-20" data-line-number="20"><span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "…</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference/seasons_season.html">seasons_season</a></span>(<span class="no">show_info</span>$<span class="no">trakt</span>, <span class="kw">seasons</span> <span class="kw">=</span> <span class="fl">1</span>, <span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>()
+<span class="co">#&gt; Observations: 6</span>
+<span class="co">#&gt; Variables: 16</span>
+<span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1</span>
+<span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6</span>
+<span class="co">#&gt; $ title                  &lt;chr&gt; "Episode 1", "Episode 2", "Episode 3", "E…</span>
+<span class="co">#&gt; $ episode_abs            &lt;int&gt; 1, 2, 3, 4, 5, 6</span>
+<span class="co">#&gt; $ overview               &lt;chr&gt; "When five strangers from an online comic…</span>
+<span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.23869, 8.12515, 8.14380, 8.11400, 8.304…</span>
+<span class="co">#&gt; $ votes                  &lt;int&gt; 1039, 839, 758, 693, 661, 689</span>
+<span class="co">#&gt; $ comment_count          &lt;int&gt; 3, 0, 1, 1, 1, 1</span>
+<span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00…</span>
+<span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2019-10-04 04:49:30, 2019-10-04 12:29:56…</span>
+<span class="co">#&gt; $ available_translations &lt;list&gt; [&lt;"bs", "de", "el", "en", "es", "fr", "h…</span>
+<span class="co">#&gt; $ runtime                &lt;int&gt; 60, 60, 60, 60, 60, 60</span>
+<span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056…</span>
+<span class="co">#&gt; $ tvdb                   &lt;chr&gt; "4471351", "4477746", "4477747", "4477748…</span>
+<span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "t…</span>
+<span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "…</span></pre></div>
 <p>Or alternatively, get the <a href="https://trakt.tv/shows/trending">trending shows</a>:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="reference/trending_media.html">shows_trending</a></span>()</a>
-<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt; # A tibble: 10 x 8</span></a>
-<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt;    watchers title           year trakt  slug           tvdb  imdb     tmdb </span></a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#&gt;       &lt;int&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;</span></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt;  1      101 Grey's Anatomy  2005 1407   grey-s-anatomy 73762 tt04135… 1416 </span></a>
-<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt;  2       57 Titans          2018 127287 titans-2019    3416… tt10438… 75450</span></a>
-<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt;  3       54 Evil            2019 147814 evil           3639… tt90550… 86848</span></a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;  4       52 Young Sheldon   2017 119172 young-sheldon  3287… tt62262… 71728</span></a>
-<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt;  5       49 Raising Dion    2019 124235 raising-dion   3359… tt78261… 93392</span></a>
-<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;  6       48 The Good Place  2016 107700 the-good-place 3117… tt49556… 66573</span></a>
-<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;  7       44 Chicago Fire    2012 43764  chicago-fire   2585… tt22613… 44006</span></a>
-<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;  8       44 Goliath         2016 110358 goliath        3153… tt46878… 67384</span></a>
-<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt;  9       42 Chicago P.D.    2014 58454  chicago-p-d    2696… tt28050… 58841</span></a>
-<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt; 10       42 SEAL Team       2017 119142 seal-team      3286… tt64733… 71789</span></a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span>()
+<span class="co">#&gt; # A tibble: 10 x 8</span>
+<span class="co">#&gt;    watchers title           year trakt  slug           tvdb  imdb     tmdb </span>
+<span class="co">#&gt;       &lt;int&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;</span>
+<span class="co">#&gt;  1      101 Grey's Anatomy  2005 1407   grey-s-anatomy 73762 tt04135… 1416 </span>
+<span class="co">#&gt;  2       57 Titans          2018 127287 titans-2019    3416… tt10438… 75450</span>
+<span class="co">#&gt;  3       54 Evil            2019 147814 evil           3639… tt90550… 86848</span>
+<span class="co">#&gt;  4       52 Young Sheldon   2017 119172 young-sheldon  3287… tt62262… 71728</span>
+<span class="co">#&gt;  5       49 Raising Dion    2019 124235 raising-dion   3359… tt78261… 93392</span>
+<span class="co">#&gt;  6       48 The Good Place  2016 107700 the-good-place 3117… tt49556… 66573</span>
+<span class="co">#&gt;  7       44 Chicago Fire    2012 43764  chicago-fire   2585… tt22613… 44006</span>
+<span class="co">#&gt;  8       44 Goliath         2016 110358 goliath        3153… tt46878… 67384</span>
+<span class="co">#&gt;  9       42 Chicago P.D.    2014 58454  chicago-p-d    2696… tt28050… 58841</span>
+<span class="co">#&gt; 10       42 SEAL Team       2017 119142 seal-team      3286… tt64733… 71789</span></pre></div>
 <p>Maybe you want to know how long it would take you to binge through these shows:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(dplyr)</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(hms)</a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(glue)</a>
-<a class="sourceLine" id="cb7-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="kw"><a href="reference/trending_media.html">shows_trending</a></span>(<span class="dt">extended =</span> <span class="st">"full"</span>) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="st">  </span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/mutate.html">transmute</a></span>(</a>
-<a class="sourceLine" id="cb7-7" data-line-number="7">    <span class="dt">show =</span> <span class="kw"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span>(<span class="st">"{title} ({year})"</span>),</a>
-<a class="sourceLine" id="cb7-8" data-line-number="8">    <span class="dt">runtime_hms =</span> <span class="kw"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="dt">minutes =</span> runtime),</a>
-<a class="sourceLine" id="cb7-9" data-line-number="9">    <span class="dt">aired_episodes =</span> aired_episodes,</a>
-<a class="sourceLine" id="cb7-10" data-line-number="10">    <span class="dt">runtime_aired =</span> <span class="kw"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="dt">minutes =</span> runtime <span class="op">*</span><span class="st"> </span>aired_episodes)</a>
-<a class="sourceLine" id="cb7-11" data-line-number="11">  ) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb7-12" data-line-number="12"><span class="st">  </span>knitr<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(</a>
-<a class="sourceLine" id="cb7-13" data-line-number="13">    <span class="dt">col.names =</span> <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Show"</span>, <span class="st">"Episode Runtime"</span>, <span class="st">"Aired Episodes"</span>, <span class="st">"Total Runtime (aired)"</span>)</a>
-<a class="sourceLine" id="cb7-14" data-line-number="14">  )</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">hms</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">glue</span>)
+
+<span class="fu"><a href="reference/trending_media.html">shows_trending</a></span>(<span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">transmute</a></span>(
+    <span class="kw">show</span> <span class="kw">=</span> <span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span>(<span class="st">"{title} ({year})"</span>),
+    <span class="kw">runtime_hms</span> <span class="kw">=</span> <span class="fu"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="kw">minutes</span> <span class="kw">=</span> <span class="no">runtime</span>),
+    <span class="kw">aired_episodes</span> <span class="kw">=</span> <span class="no">aired_episodes</span>,
+    <span class="kw">runtime_aired</span> <span class="kw">=</span> <span class="fu"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="kw">minutes</span> <span class="kw">=</span> <span class="no">runtime</span> * <span class="no">aired_episodes</span>)
+  ) <span class="kw">%&gt;%</span>
+  <span class="kw pkg">knitr</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(
+    <span class="kw">col.names</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Show"</span>, <span class="st">"Episode Runtime"</span>, <span class="st">"Aired Episodes"</span>, <span class="st">"Total Runtime (aired)"</span>)
+  )</pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">Show</th>
@@ -301,9 +301,9 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <a href="#credentials" class="anchor"></a>Credentials</h2>
 <p>The API requires at least a <code>client id</code> for the API calls.<br>
 Loading the package (or calling its functions via <code>tRakt::</code> wil automatically set the app’s client id (see <code>?trakt_credentials()</code>) – for extended use you should set your own credentials via enviroment variables in your <code>.Renviron</code> like this:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="co"># tRakt</span></a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="va">trakt_client_id=</span>12fc1de7[<span class="ex">...</span>]3d629afdf2</a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="va">trakt_username=</span>jemus42</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># tRakt</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="va">trakt_client_id=</span>12fc1de7[<span class="ex">...</span>]3d629afdf2</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="va">trakt_username=</span>jemus42</span></code></pre></div>
 <ul>
 <li>
 <code>trakt_client_id</code> <strong>Required</strong>. It’s used in the HTTP headers for the API calls, which is kind of a biggie.</li>
@@ -325,13 +325,13 @@ That would make me a sad panda. As of now, the trakt.tv API does not have any ra
 
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
 <li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=tRakt">https://​cloud.r-project.org/​package=tRakt</a>
 </li>
-<li>Browse source code at <br><a href="https://github.com/jemus42/tRakt">https://​github.com/​jemus42/​tRakt</a>
+<li>Browse source code at <br><a href="http://github.com/jemus42/tRakt/">http://​github.com/​jemus42/​tRakt/​</a>
 </li>
 <li>Report a bug at <br><a href="http://github.com/jemus42/tRakt/issues">http://​github.com/​jemus42/​tRakt/​issues</a>
 </li>
@@ -355,22 +355,11 @@ That would make me a sad panda. As of now, the trakt.tv API does not have any ra
 <h2>Developers</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://jemu.name">Lukas Burk</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-7528-3795" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID"></a> </li>
+<a href="https://jemu.name">Lukas Burk</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-7528-3795" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="https://travis-ci.org/jemus42/tRakt"><img src="https://img.shields.io/travis/jemus42/tRakt.svg?logo=travis" alt="Travis (.org)"></a></li>
-<li><a href="https://ci.appveyor.com/project/jemus42/tRakt"><img src="https://ci.appveyor.com/api/projects/status/github/jemus42/tRakt?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
-<li><a href="https://github.com/jemus42/tRakt/actions"><img src="https://github.com/jemus42/tRakt/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://codecov.io/github/jemus42/tRakt?branch=master"><img src="https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
-<li><a href="https://github.com/jemus42/tRakt/releases"><img src="https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub" alt="GitHub release"></a></li>
-<li><a href="https://github.com/jemus42/tRakt/commits/master"><img src="https://img.shields.io/github/last-commit/jemus42/tRakt/master.svg?logo=GithUb" alt="GitHub last commit (master)"></a></li>
-</ul>
-</div>
-</div>
+  </div>
 </div>
 
 
@@ -379,7 +368,7 @@ That would make me a sad panda. As of now, the trakt.tv API does not have any ra
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

@@ -86,7 +86,7 @@ Updated every Monday morning." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -142,7 +142,7 @@ Updated every Monday morning." />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -161,7 +161,7 @@ Updated every Monday morning." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get the weekend box office</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/movies_boxoffice.R'><code>R/movies_boxoffice.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/movies_boxoffice.R'><code>R/movies_boxoffice.R</code></a></small>
     <div class="hidden name"><code>movies_boxoffice.Rd</code></div>
     </div>
 
@@ -215,30 +215,24 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <code><a href='watched_media.html'>watched_media</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>movies_boxoffice</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 7
+    <pre class="examples"><div class='input'><span class='fu'>movies_boxoffice</span>()</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 10 x 7</span><span>
 #&gt;     revenue title               year trakt  slug                  imdb     tmdb 
-#&gt;       &lt;int&gt; &lt;chr&gt;              &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;                 &lt;chr&gt;    &lt;chr&gt;
-#&gt;  1 10500000 Onward              2020 355892 onward-2020-03-06     tt71468… 5084…
-#&gt;  2  9500000 I Still Believe     2020 432839 i-still-believe-2020  tt97795… 5852…
-#&gt;  3  9300000 Bloodshot           2020 218815 bloodshot-2020        tt16341… 3387…
-#&gt;  4  6000000 The Invisible Man   2020 428130 the-invisible-man-20… tt10519… 5706…
-#&gt;  5  5300000 The Hunt            2020 363240 the-hunt-2020         tt82447… 5148…
-#&gt;  6  2600000 Sonic the Hedgehog  2020 301015 sonic-the-hedgehog-2… tt37943… 4546…
-#&gt;  7  2400000 The Way Back        2020 379254 the-way-back-2020     tt85444… 5294…
-#&gt;  8  2200000 The Call of the W…  2020 329002 the-call-of-the-wild… tt75047… 4818…
-#&gt;  9  1400000 Emma.               2020 407586 emma-2020             tt92148… 5566…
-#&gt; 10  1100000 Bad Boys for Life   2020 25039  bad-boys-for-life-20… tt15023… 38700</div></pre>
+#&gt;       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                 </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; </span><span style='color: #555555;'> 1</span><span> 10</span><span style='text-decoration: underline;'>600</span><span>000 Onward              </span><span style='text-decoration: underline;'>2</span><span>020 355892 onward-2020           tt71468… 5084…
+#&gt; </span><span style='color: #555555;'> 2</span><span>  9</span><span style='text-decoration: underline;'>200</span><span>000 Bloodshot           </span><span style='text-decoration: underline;'>2</span><span>020 218815 bloodshot-2020        tt16341… 3387…
+#&gt; </span><span style='color: #555555;'> 3</span><span>  9</span><span style='text-decoration: underline;'>100</span><span>000 I Still Believe     </span><span style='text-decoration: underline;'>2</span><span>020 432839 i-still-believe-2020  tt97795… 5852…
+#&gt; </span><span style='color: #555555;'> 4</span><span>  5</span><span style='text-decoration: underline;'>900</span><span>000 The Invisible Man   </span><span style='text-decoration: underline;'>2</span><span>020 428130 the-invisible-man-20… tt10519… 5706…
+#&gt; </span><span style='color: #555555;'> 5</span><span>  5</span><span style='text-decoration: underline;'>300</span><span>000 The Hunt            </span><span style='text-decoration: underline;'>2</span><span>020 363240 the-hunt-2020         tt82447… 5148…
+#&gt; </span><span style='color: #555555;'> 6</span><span>  2</span><span style='text-decoration: underline;'>500</span><span>000 Sonic the Hedgehog  </span><span style='text-decoration: underline;'>2</span><span>020 301015 sonic-the-hedgehog-2… tt37943… 4546…
+#&gt; </span><span style='color: #555555;'> 7</span><span>  2</span><span style='text-decoration: underline;'>400</span><span>000 The Way Back        </span><span style='text-decoration: underline;'>2</span><span>020 379254 the-way-back-2020     tt85444… 5294…
+#&gt; </span><span style='color: #555555;'> 8</span><span>  2</span><span style='text-decoration: underline;'>200</span><span>000 The Call of the W…  </span><span style='text-decoration: underline;'>2</span><span>020 329002 the-call-of-the-wild… tt75047… 4818…
+#&gt; </span><span style='color: #555555;'> 9</span><span>  1</span><span style='text-decoration: underline;'>300</span><span>000 Emma.               </span><span style='text-decoration: underline;'>2</span><span>020 407586 emma-2020             tt92148… 5566…
+#&gt; </span><span style='color: #555555;'>10</span><span>  1</span><span style='text-decoration: underline;'>100</span><span>000 Bad Boys for Life   </span><span style='text-decoration: underline;'>2</span><span>020 25039  bad-boys-for-life-20… tt15023… 38700</div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -249,7 +243,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

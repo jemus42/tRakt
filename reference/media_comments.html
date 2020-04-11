@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get all comments of a thing</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/movies_comments.R'><code>R/movies_comments.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/movies_comments.R'><code>R/movies_comments.R</code></a></small>
     <div class="hidden name"><code>media_comments.Rd</code></div>
     </div>
 
@@ -324,51 +324,17 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <code><a href='shows_next_episode.html'>shows_next_episode</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>movies_comments</span>(<span class='fl'>193972</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 16
-#&gt;        id comment spoiler review parent_id created_at         
-#&gt;     &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 281887 "Until… FALSE   FALSE          0 2020-02-27 12:20:26
-#&gt;  2 280572 "I lik… FALSE   FALSE          0 2020-02-20 06:30:54
-#&gt;  3 278981 "[spoi… FALSE   FALSE          0 2020-02-12 13:59:56
-#&gt;  4 278254 "Not a… FALSE   FALSE          0 2020-02-08 18:28:37
-#&gt;  5 277234 "Toy s… FALSE   FALSE          0 2020-02-04 22:56:45
-#&gt;  6 276655 ":cry:… FALSE   FALSE          0 2020-02-02 19:38:12
-#&gt;  7 270565 "This … FALSE   FALSE          0 2020-01-03 17:27:23
-#&gt;  8 270548 "\"Hea… FALSE   FALSE          0 2020-01-03 15:18:56
-#&gt;  9 270463 "I'm h… FALSE   FALSE          0 2020-01-03 01:25:14
-#&gt; 10 269660 "Just … FALSE   FALSE          0 2019-12-31 15:43:21
-#&gt; # … with 10 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='fu'>shows_comments</span>(<span class='fl'>46241</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 16
-#&gt;        id comment spoiler review parent_id created_at         
-#&gt;     &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1   4528 "The b… FALSE   FALSE          0 2014-12-27 21:04:43
-#&gt;  2  11599 "Telev… FALSE   FALSE          0 2013-02-24 18:13:58
-#&gt;  3  39755 "Holy … FALSE   FALSE          0 2015-03-11 07:54:07
-#&gt;  4 143277 "After… FALSE   FALSE          0 2017-10-01 18:42:14
-#&gt;  5  34510 "It's … FALSE   FALSE          0 2014-07-31 22:21:49
-#&gt;  6  42940 "Looke… FALSE   FALSE          0 2015-05-06 17:25:07
-#&gt;  7  11140 "I lik… FALSE   FALSE          0 2014-12-13 17:56:40
-#&gt;  8 185427 "In Fe… FALSE   FALSE          0 2018-08-01 12:50:58
-#&gt;  9  71014 "Watch… FALSE   FALSE          0 2016-02-10 04:16:54
-#&gt; 10  38229 "This … FALSE   FALSE          0 2015-02-09 07:47:51
-#&gt; # … with 10 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='fu'>seasons_comments</span>(<span class='fl'>46241</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'><span class='fu'>episodes_comments</span>(<span class='fl'>46241</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)</div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
-</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>movies_comments</span>(<span class='fl'>193972</span>)
+<span class='fu'>shows_comments</span>(<span class='fl'>46241</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)
+<span class='fu'>seasons_comments</span>(<span class='fl'>46241</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)
+<span class='fu'>episodes_comments</span>(<span class='fl'>46241</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>sort</span> <span class='kw'>=</span> <span class='st'>"likes"</span>)
+}</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#functions">Functions</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -379,7 +345,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

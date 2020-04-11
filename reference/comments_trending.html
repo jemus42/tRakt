@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get trending or recently made comments</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/comments_trending.R'><code>R/comments_trending.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/comments_trending.R'><code>R/comments_trending.R</code></a></small>
     <div class="hidden name"><code>comments_trending.Rd</code></div>
     </div>
 
@@ -231,60 +231,18 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <code><a href='user_list_comments.html'>user_list_comments</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># Trending reviews</span>
-<span class='fu'>comments_trending</span>(<span class='st'>"reviews"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 31
-#&gt;    type      id comment spoiler review parent_id created_at         
-#&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 epis… 277576 "Why a… FALSE   TRUE           0 2020-02-06 09:23:15
-#&gt;  2 epis… 228011 "Not t… FALSE   TRUE           0 2019-04-21 21:50:52
-#&gt;  3 epis… 224567 "Glad … FALSE   TRUE           0 2019-04-02 10:10:01
-#&gt;  4 epis… 226929 "We al… FALSE   TRUE           0 2019-04-15 21:03:56
-#&gt;  5 epis… 283271 "[7.9/… TRUE    TRUE           0 2020-03-04 05:21:20
-#&gt;  6 epis… 233212 "Such … TRUE    TRUE           0 2019-05-20 04:31:31
-#&gt;  7 epis… 279298 "[7.6/… TRUE    TRUE           0 2020-02-14 01:38:48
-#&gt;  8 epis… 285708 "[8.4/… TRUE    TRUE           0 2020-03-17 05:23:18
-#&gt;  9 epis… 227598 "Not a… FALSE   TRUE           0 2019-04-19 18:21:32
-#&gt; 10 epis… 280629 "Yay, … TRUE    TRUE           0 2020-02-20 15:18:25
-#&gt; # … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
-#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, season &lt;int&gt;,
-#&gt; #   episode &lt;int&gt;, episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;,
-#&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;</div><div class='input'>
-<span class='co'># Recent shouts (short comments)</span>
-<span class='fu'>comments_recent</span>(<span class='st'>"shouts"</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 34
-#&gt;    type      id comment spoiler review parent_id created_at         
-#&gt;    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;lgl&gt;   &lt;lgl&gt;      &lt;int&gt; &lt;dttm&gt;             
-#&gt;  1 movie 286866 "My si… FALSE   FALSE          0 2020-03-22 23:13:44
-#&gt;  2 movie 286864 "An in… FALSE   FALSE          0 2020-03-22 22:57:51
-#&gt;  3 movie 286860 "It is… FALSE   FALSE          0 2020-03-22 22:38:15
-#&gt;  4 movie 286859 "Movie… FALSE   FALSE          0 2020-03-22 22:38:47
-#&gt;  5 epis… 286865 "judit… TRUE    FALSE          0 2020-03-22 23:02:24
-#&gt;  6 epis… 286862 "Very … FALSE   FALSE          0 2020-03-22 22:56:43
-#&gt;  7 epis… 286858 "I nev… FALSE   FALSE          0 2020-03-22 22:37:14
-#&gt;  8 seas… 286863 "“Fear… FALSE   FALSE          0 2020-03-22 22:57:20
-#&gt;  9 seas… 286861 "So we… FALSE   FALSE          0 2020-03-22 22:55:25
-#&gt; 10 show  286857 "This … FALSE   FALSE          0 2020-03-22 22:35:24
-#&gt; # … with 27 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,
-#&gt; #   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,
-#&gt; #   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,
-#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, tvdb &lt;chr&gt;, season &lt;int&gt;,
-#&gt; #   episode &lt;int&gt;, episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;,
-#&gt; #   episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;, episode_tmdb &lt;chr&gt;,
-#&gt; #   season_trakt &lt;chr&gt;, season_tvdb &lt;chr&gt;, season_tmdb &lt;chr&gt;</div><div class='input'># }
-</div></pre>
-  </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+<span class='fu'>comments_trending</span>(<span class='st'>"reviews"</span>)
 
+<span class='co'># Recent shouts (short comments)</span>
+<span class='fu'>comments_recent</span>(<span class='st'>"shouts"</span>)
+}</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -295,7 +253,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

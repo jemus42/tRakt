@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get a user's list's items</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/user_list_items.R'><code>R/user_list_items.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/user_list_items.R'><code>R/user_list_items.R</code></a></small>
     <div class="hidden name"><code>user_list_items.Rd</code></div>
     </div>
 
@@ -221,35 +221,28 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <code><a href='user_list.html'>user_list</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># A large list with various media types</span>
 <span class='co'># All items</span>
-<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sp1ti/lists/5615781/items?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'>
-<span class='co'># Movies only</span>
-<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movie"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sp1ti/lists/5615781/items/movie?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'>
-<span class='co'># Shows...</span>
-<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"shows"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sp1ti/lists/5615781/items/show?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'>
-<span class='co'># Only seasons</span>
-<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"season"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sp1ti/lists/5615781/items/season?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'>
-<span class='co'># Only episodes</span>
-<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"episodes"</span>)</div><div class='output co'>#&gt; <span class='message'>Forbidden (HTTP 403). Failed to retrieve data from</span>
-#&gt; <span class='message'>https://api.trakt.tv/users/sp1ti/lists/5615781/items/episode?extended=min.</span></div><div class='output co'>#&gt; # A tibble: 0 x 0</div><div class='input'># }
-</div></pre>
-  </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>)
 
+<span class='co'># Movies only</span>
+<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"movie"</span>)
+
+<span class='co'># Shows...</span>
+<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"shows"</span>)
+
+<span class='co'># Only seasons</span>
+<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"season"</span>)
+
+<span class='co'># Only episodes</span>
+<span class='fu'>user_list_items</span>(<span class='st'>"sp1ti"</span>, <span class='kw'>list_id</span> <span class='kw'>=</span> <span class='st'>"5615781"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"min"</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"episodes"</span>)
+}</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -260,7 +253,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

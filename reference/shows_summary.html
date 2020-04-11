@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get a single show</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/media_summary.R'><code>R/media_summary.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/media_summary.R'><code>R/media_summary.R</code></a></small>
     <div class="hidden name"><code>shows_summary.Rd</code></div>
     </div>
 
@@ -225,32 +225,18 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Minimal info by default</span>
-<span class='fu'>shows_summary</span>(<span class='st'>"breaking-bad"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 7
+<span class='fu'>shows_summary</span>(<span class='st'>"breaking-bad"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 7</span><span>
 #&gt;   title         year trakt slug         tvdb  imdb      tmdb 
-#&gt;   &lt;chr&gt;        &lt;int&gt; &lt;chr&gt; &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;
-#&gt; 1 Breaking Bad  2008 1388  breaking-bad 81189 tt0903747 1396 </div><div class='input'><span class='co'># \dontrun{</span>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>        </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> Breaking Bad  </span><span style='text-decoration: underline;'>2</span><span>008 1388  breaking-bad 81189 tt0903747 1396 </div><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># More information</span>
-<span class='fu'>shows_summary</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)</div><div class='output co'>#&gt; # A tibble: 1 x 27
-#&gt;   title  year overview first_aired         runtime certification network country
-#&gt;   &lt;chr&gt; &lt;int&gt; &lt;chr&gt;    &lt;dttm&gt;                &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;   &lt;chr&gt;  
-#&gt; 1 Brea…  2008 Walter … 2008-01-21 02:00:00      45 TV-MA         AMC     us     
-#&gt; # … with 19 more variables: trailer &lt;chr&gt;, homepage &lt;chr&gt;, status &lt;chr&gt;,
-#&gt; #   rating &lt;dbl&gt;, votes &lt;int&gt;, comment_count &lt;int&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   language &lt;chr&gt;, available_translations &lt;list&gt;, genres &lt;list&gt;,
-#&gt; #   aired_episodes &lt;int&gt;, airs_day &lt;chr&gt;, airs_time &lt;chr&gt;, airs_timezone &lt;chr&gt;,
-#&gt; #   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</div><div class='input'># }
-</div></pre>
+<span class='fu'>shows_summary</span>(<span class='st'>"breaking-bad"</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)
+}</div></span></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -261,7 +247,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get a single person's movie or show credits</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/people_media.R'><code>R/people_media.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/people_media.R'><code>R/people_media.R</code></a></small>
     <div class="hidden name"><code>people_media.Rd</code></div>
     </div>
 
@@ -253,69 +253,16 @@ One is a regular character variable, and the other is a list-column. The singula
 <code><a href='people_summary.html'>people_summary</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>people_movies</span>(<span class='st'>"christopher-nolan"</span>)</div><div class='output co'>#&gt; $cast
-#&gt; # A tibble: 18 x 8
-#&gt;    character characters title            year trakt  slug            imdb  tmdb 
-#&gt;    &lt;chr&gt;     &lt;list&gt;     &lt;chr&gt;           &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;           &lt;chr&gt; &lt;chr&gt;
-#&gt;  1 "Himself" &lt;chr [1]&gt;  Making Waves: …  2019 441872 making-waves-t… tt38… 5958…
-#&gt;  2 "himself" &lt;chr [1]&gt;  The Making of …  2017 399062 the-making-of-… tt77… 5491…
-#&gt;  3 ""        &lt;chr [0]&gt;  Cinema Futures   2016 285889 cinema-futures… tt60… 4168…
-#&gt;  4 ""        &lt;chr [0]&gt;  Inside Interst…  2015 378906 inside-interst… &lt;NA&gt;  5291…
-#&gt;  5 "Himself" &lt;chr [1]&gt;  Interstellar: …  2014 193834 interstellar-n… tt41… 3019…
-#&gt;  6 "Himself" &lt;chr [1]&gt;  Christopher No…  2013 147862 christopher-no… tt31… 2428…
-#&gt;  7 "Himself" &lt;chr [1]&gt;  The Fire Rises…  2013 148113 the-fire-rises… tt31… 2432…
-#&gt;  8 "Himself" &lt;chr [1]&gt;  Tales from the…  2013 139154 tales-from-the… tt25… 2275…
-#&gt;  9 "Himself" &lt;chr [1]&gt;  Stanley Kubric…  2012 196075 stanley-kubric… tt25… 3154…
-#&gt; 10 "Himself" &lt;chr [1]&gt;  Side by Side     2012 77846  side-by-side-2… tt20… 1103…
-#&gt; 11 "Himself" &lt;chr [1]&gt;  The Batmobile    2012 86120  the-batmobile-… tt22… 1252…
-#&gt; 12 "Himself" &lt;chr [1]&gt;  Exploring The …  2011 189583 exploring-the-… tt21… 2927…
-#&gt; 13 "himself" &lt;chr [1]&gt;  These Amazing …  2011 59813  these-amazing-… tt12… 80337
-#&gt; 14 "self"    &lt;chr [1]&gt;  Inception: Jum…  2010 459731 inception-jump… tt52… 6164…
-#&gt; 15 "Himself" &lt;chr [1]&gt;  Batman Tech      2008 116883 batman-tech-20… tt12… 1865…
-#&gt; 16 "himself" &lt;chr [1]&gt;  Batman Unmaske…  2008 18787  batman-unmaske… tt12… 29751
-#&gt; 17 "Himself" &lt;chr [1]&gt;  Gotham Uncover…  2008 116876 gotham-uncover… &lt;NA&gt;  1865…
-#&gt; 18 "Himself" &lt;chr [1]&gt;  Film Noir: Bri…  2006 216490 film-noir-brin… tt08… 3119…
-#&gt; 
-#&gt; $crew
-#&gt; # A tibble: 59 x 9
-#&gt;    job      jobs   title          year trakt slug          imdb  tmdb  crew_type
-#&gt;    &lt;chr&gt;    &lt;list&gt; &lt;chr&gt;         &lt;int&gt; &lt;chr&gt; &lt;chr&gt;         &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;    
-#&gt;  1 Producer &lt;chr … Tenet          2020 4279… tenet-2020    tt67… 5779… producti…
-#&gt;  2 Executi… &lt;chr … Justice Leag…  2017 94232 justice-leag… tt09… 1410… producti…
-#&gt;  3 Producer &lt;chr … Dunkirk        2017 2246… dunkirk-2017  tt50… 3747… producti…
-#&gt;  4 Executi… &lt;chr … Batman v Sup…  2016 2489… batman-v-sup… &lt;NA&gt;  4042… producti…
-#&gt;  5 Executi… &lt;chr … Batman v Sup…  2016 1295… batman-v-sup… tt29… 2091… producti…
-#&gt;  6 Producer &lt;chr … Quay           2015 2470… quay-2015     tt49… 3521… producti…
-#&gt;  7 Producer &lt;chr … Interstellar   2014 1021… interstellar… tt08… 1573… producti…
-#&gt;  8 Executi… &lt;chr … Transcendence  2014 1021… transcendenc… tt22… 1573… producti…
-#&gt;  9 Producer &lt;chr … Man of Steel   2013 34507 man-of-steel… tt07… 49521 producti…
-#&gt; 10 Producer &lt;chr … The Dark Kni…  2012 34073 the-dark-kni… tt13… 49026 producti…
-#&gt; # … with 49 more rows
-#&gt; </div><div class='input'>
-<span class='fu'>people_shows</span>(<span class='st'>"kit-harington"</span>)</div><div class='output co'>#&gt; $cast
-#&gt; # A tibble: 4 x 11
-#&gt;   title  year trakt slug  tvdb  imdb  tmdb  character characters episode_count
-#&gt;   &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;     &lt;list&gt;             &lt;int&gt;
-#&gt; 1 Gunp…  2017 1232… gunp… 3340… tt61… 73550 Robert C… &lt;chr [1]&gt;              3
-#&gt; 2 Game…  2011 1390  game… 1213… tt09… 1399  Jon Snow  &lt;chr [1]&gt;             73
-#&gt; 3 The …  2007 1214  the-… 80660 tt09… 1220  Himself   &lt;chr [1]&gt;              2
-#&gt; 4 Satu…  1975 1656  satu… 76177 tt00… 1667  Himself … &lt;chr [1]&gt;              2
-#&gt; # … with 1 more variable: series_regular &lt;lgl&gt;
-#&gt; </div><div class='input'># }
-</div></pre>
-  </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>people_movies</span>(<span class='st'>"christopher-nolan"</span>)
 
+<span class='fu'>people_shows</span>(<span class='st'>"kit-harington"</span>)
+}</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -326,7 +273,7 @@ One is a regular character variable, and the other is a list-column. The singula
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

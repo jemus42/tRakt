@@ -90,7 +90,7 @@ variable only contains date information." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -146,7 +146,7 @@ variable only contains date information." />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -165,7 +165,7 @@ variable only contains date information." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Make an API call and receive parsed output</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/api.R'><code>R/api.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/api.R'><code>R/api.R</code></a></small>
     <div class="hidden name"><code>trakt_get.Rd</code></div>
     </div>
 
@@ -255,26 +255,29 @@ collection have dedicated functions in this package.</p>
 <span class='co'># A HEAD-only request</span>
 <span class='co'># useful for validating a URL exists or the API is accessible</span>
 <span class='fu'>trakt_get</span>(<span class='st'>"https://api.trakt.tv/users/jemus42"</span>, <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; $status
-#&gt; [1] 403
+#&gt; [1] 200
 #&gt; 
 #&gt; $version
-#&gt; [1] "HTTP/1.1"
+#&gt; [1] "HTTP/2"
 #&gt; 
 #&gt; $headers
 #&gt; $date
-#&gt; [1] "Sun, 22 Mar 2020 23:29:11 GMT"
+#&gt; [1] "Sat, 11 Apr 2020 23:53:12 GMT"
 #&gt; 
 #&gt; $`content-type`
-#&gt; [1] "text/html"
-#&gt; 
-#&gt; $connection
-#&gt; [1] "keep-alive"
+#&gt; [1] "application/json; charset=utf-8"
 #&gt; 
 #&gt; $`cache-control`
-#&gt; [1] "max-age=0, private, no-cache, no-store, must-revalidate"
+#&gt; [1] "max-age=0, private, must-revalidate"
 #&gt; 
 #&gt; $`cf-railgun`
-#&gt; [1] "9ddd1c0b00 stream 0.000000 0200 57da"
+#&gt; [1] "direct (starting new WAN connection)"
+#&gt; 
+#&gt; $`content-encoding`
+#&gt; [1] "gzip"
+#&gt; 
+#&gt; $etag
+#&gt; [1] "W/\"68ae75ea744725a2a209aeaa4816566a\""
 #&gt; 
 #&gt; $vary
 #&gt; [1] "Accept-Encoding"
@@ -285,11 +288,14 @@ collection have dedicated functions in this package.</p>
 #&gt; $`x-frame-options`
 #&gt; [1] "SAMEORIGIN"
 #&gt; 
+#&gt; $`x-private-user`
+#&gt; [1] "false"
+#&gt; 
 #&gt; $`x-request-id`
-#&gt; [1] "93264586-3ef6-497c-a87e-34a37cf7ca3d"
+#&gt; [1] "38349876-3699-4e0d-b121-71716f5c8ce0"
 #&gt; 
 #&gt; $`x-runtime`
-#&gt; [1] "0.003402"
+#&gt; [1] "0.006901"
 #&gt; 
 #&gt; $`x-xss-protection`
 #&gt; [1] "1; mode=block"
@@ -304,10 +310,7 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "cloudflare"
 #&gt; 
 #&gt; $`cf-ray`
-#&gt; [1] "5783b17bca56c883-MIA"
-#&gt; 
-#&gt; $`content-encoding`
-#&gt; [1] "gzip"
+#&gt; [1] "5828a02b48d193f4-SJC"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "insensitive" "list"       
@@ -340,17 +343,10 @@ collection have dedicated functions in this package.</p>
 #&gt; 
 #&gt; </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#note">Note</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -361,7 +357,7 @@ collection have dedicated functions in this package.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

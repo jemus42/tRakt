@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Popular media</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/dynamic-lists.R'><code>R/dynamic-lists.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/dynamic-lists.R'><code>R/dynamic-lists.R</code></a></small>
     <div class="hidden name"><code>popular_media.Rd</code></div>
     </div>
 
@@ -349,34 +349,15 @@ the same additional variables besides the media information: <code>watcher_count
 <code><a href='watched_media.html'>watched_media</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># Get the most popular German-language movies between 2000 and 2010</span>
-<span class='fu'>movies_popular</span>(<span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2000</span>, <span class='fl'>2010</span>))</div><div class='output co'>#&gt; # A tibble: 10 x 6
-#&gt;    title                    year trakt slug                       imdb      tmdb
-#&gt;    &lt;chr&gt;                   &lt;int&gt; &lt;int&gt; &lt;chr&gt;                      &lt;chr&gt;    &lt;int&gt;
-#&gt;  1 Downfall                 2004   489 downfall-2004              tt03631…   613
-#&gt;  2 The Lives of Others      2006   461 the-lives-of-others-2006   tt04050…   582
-#&gt;  3 The Wave                 2008  3954 the-wave-2008              tt10636…  7735
-#&gt;  4 Good Bye Lenin!          2003   285 good-bye-lenin-2003        tt03013…   338
-#&gt;  5 The Experiment           2001   454 the-experiment-2001        tt02502…   575
-#&gt;  6 The White Ribbon         2009 24371 the-white-ribbon-2009      tt11493… 37903
-#&gt;  7 The Baader Meinhof Com…  2008  3789 the-baader-meinhof-comple… tt07654…  6968
-#&gt;  8 Cargo                    2009 21807 cargo-2009                 tt03819… 34069
-#&gt;  9 The Counterfeiters       2007  3967 the-counterfeiters-2007    tt08135…  7862
-#&gt; 10 Manitou's Shoe           2001  4152 manitou-s-shoe-2001        tt02484…  8366</div><div class='input'># }
-</div></pre>
+<span class='fu'>movies_popular</span>(<span class='kw'>languages</span> <span class='kw'>=</span> <span class='st'>"de"</span>, <span class='kw'>years</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2000</span>, <span class='fl'>2010</span>))
+}</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#the-dynamic-lists-on-trakt-tv">The Dynamic Lists on trakt.tv</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -387,7 +368,7 @@ the same additional variables besides the media information: <code>watcher_count
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>

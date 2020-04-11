@@ -85,7 +85,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jemus42/tRakt">
+  <a href="http://github.com/jemus42/tRakt/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -160,7 +160,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get popular / trending lists</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/tRakt/blob/master/R/lists_popular.R'><code>R/lists_popular.R</code></a></small>
+    <small class="dont-index">Source: <a href='http://github.com/jemus42/tRakt/blob/master/R/lists_popular.R'><code>R/lists_popular.R</code></a></small>
     <div class="hidden name"><code>lists_popular.Rd</code></div>
     </div>
 
@@ -222,52 +222,15 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <code><a href='watched_media.html'>watched_media</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-<span class='fu'>lists_popular</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 20
-#&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
-#&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
-#&gt;  1 Late… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  2 MARV… "**Chronol… public  TRUE            TRUE           rank    asc     
-#&gt;  3 Late… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  4 Best… "What’s a … public  FALSE           TRUE           rank    asc     
-#&gt;  5 Late… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  6 Netf… "series, m… public  FALSE           TRUE           rank    asc     
-#&gt;  7 1001… "&gt; 1001 Mo… public  TRUE            TRUE           rank    asc     
-#&gt;  8 Imdb… "Daily Ref… public  TRUE            TRUE           rank    asc     
-#&gt;  9 Worl… ""          public  TRUE            TRUE           rank    asc     
-#&gt; 10 IMDB… "The IMDB … public  TRUE            TRUE           rank    asc     
-#&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
-#&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
-#&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'><span class='fu'>lists_trending</span>()</div><div class='output co'>#&gt; # A tibble: 10 x 20
-#&gt;    name  description privacy display_numbers allow_comments sort_by sort_how
-#&gt;    &lt;chr&gt; &lt;chr&gt;       &lt;chr&gt;   &lt;lgl&gt;           &lt;lgl&gt;          &lt;chr&gt;   &lt;chr&gt;   
-#&gt;  1 TVZi… "This will… public  TRUE            TRUE           rank    asc     
-#&gt;  2 Late… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  3 Late… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  4 Late… ""          public  FALSE           FALSE          rank    asc     
-#&gt;  5 Shut… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  6 It's… ""          public  TRUE            TRUE           rank    asc     
-#&gt;  7 War … ""          public  FALSE           TRUE           rank    asc     
-#&gt;  8 Disn… ""          public  FALSE           TRUE           rank    asc     
-#&gt;  9 Netf… "series, m… public  FALSE           TRUE           rank    asc     
-#&gt; 10 Acad… "From the … public  TRUE            TRUE           rank    asc     
-#&gt; # … with 13 more variables: created_at &lt;dttm&gt;, updated_at &lt;dttm&gt;,
-#&gt; #   item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;, trakt &lt;chr&gt;,
-#&gt; #   slug &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;, vip &lt;lgl&gt;,
-#&gt; #   vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;</div><div class='input'># }
-</div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>lists_popular</span>()
+<span class='fu'>lists_trending</span>()
+}</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#source">Source</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#see-also">See also</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -278,7 +241,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
 </div>
 
       </footer>
