@@ -4,7 +4,8 @@
 \name{gameofthrones}
 \alias{gameofthrones}
 \title{Game of Thrones episodes}
-\format{A \link[tibble:tibble-package]{tibble()} with 67 rows and 17 variables:
+\format{
+A \link[tibble:tibble-package]{tibble()} with 67 rows and 17 variables:
 \describe{
 \item{episode_abs}{Overall episode number}
 \item{episode, season}{Episode within each season and season number}
@@ -20,7 +21,8 @@
 \item{trakt, tvdb, tmdb}{Episode IDs for trakt.tv, TVDb, and TMDb}
 \item{year}{Year of first airing}
 \item{epid}{Episode ID in \code{s00e00} format}
-}}
+}
+}
 \usage{
 gameofthrones
 }

@@ -9,7 +9,8 @@
 \alias{trakt_countries}
 \alias{trakt_certifications}
 \title{Cached filter datasets}
-\format{Every dataset is a \link[tibble:tibble-package]{tibble()}.
+\format{
+Every dataset is a \link[tibble:tibble-package]{tibble()}.
 The following list includes the dataset topic with a link to the API documentation,
 a short description and a list of variables with example values:
 \itemize{
@@ -39,7 +40,18 @@ TV and movie certifications (e.g. "PG-13" and the likes).
 \item 5 Variables: \code{country} ("us" only), \code{name} ("TV-PG"),
 \code{slug} ("tv-pg"), \code{description} ("Parental Guidance Suggested"), \code{type} ("shows")
 }
-}}
+}
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 62 rows and 3 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 208 rows and 3 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 1848 rows and 2 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 310 rows and 3 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 12 rows and 5 columns.
+}
 \usage{
 trakt_genres
 

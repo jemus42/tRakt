@@ -4,7 +4,8 @@
 \name{futurama}
 \alias{futurama}
 \title{Futurama episodes}
-\format{A \link[tibble:tibble-package]{tibble()} with 124 rows and 18 variables:
+\format{
+A \link[tibble:tibble-package]{tibble()} with 124 rows and 18 variables:
 \describe{
 \item{episode, season}{Episode within each season and season number}
 \item{title}{Episode title}
@@ -17,7 +18,8 @@
 \item{runtime}{Runtime in minutes}
 \item{trakt, tvdb, tmdb}{Episode IDs for trakt.tv, TVDb, and TMDb}
 \item{available_translations}{List-column of available translation on trakt.tv}
-}}
+}
+}
 \usage{
 futurama
 }
