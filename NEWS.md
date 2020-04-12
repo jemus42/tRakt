@@ -6,9 +6,9 @@
 ## Authenticated requests
 
 By default, all requests to the API are now made using authentication _if_ a `trakt_client_secret` is set. See `?trakt_credentials()` for details on how to set your credentials.  
-If now secret is available, unauthenticated requests are made as in previous versions. In this case, you still **need** either the built-in or your own `trakt_client_id`.
+If no secret is available, unauthenticated requests are made as in previous versions. In this case, you still **need** either the built-in or your own `trakt_client_id`.
 
-OAuth2 supports comes with the need to handle secrets, i.e. `.httr-oauth` files. This can be a pain with headless/automated setups, which is why I am trying to keep "no auth needed" as the default, as most (implemented) endpoints don't strictly require authentication.
+OAuth2 support comes with the need to handle secrets, i.e. `.httr-oauth` files. This can be a pain with headless/automated setups, which is why I am trying to keep "no auth needed" as the default, as most (implemented) endpoints don't strictly require authentication.
 
 See `vignette("Implemented-API-methods", package = "tRakt")` for an overview of implemented methods with an indicator on whether authentication is required (it usually isn't).
 
