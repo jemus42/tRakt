@@ -1,5 +1,3 @@
-context("Automated Lists")
-
 test_that("popular_media works", {
   skip_on_cran()
 

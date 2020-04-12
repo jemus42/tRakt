@@ -1,5 +1,3 @@
-context("API interaction and credentials")
-
 test_that("Client ID is set without .Renviron", {
   # Save current settings for later
   username_pre <- Sys.getenv("trakt_username")

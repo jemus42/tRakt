@@ -1,5 +1,3 @@
-context("Stats")
-
 test_that("user_stats works", {
   skip_on_cran()
 

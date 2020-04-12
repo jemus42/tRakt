@@ -1,5 +1,3 @@
-context("User / Collection")
-
 test_that("user_collection works", {
   skip_on_cran()
 

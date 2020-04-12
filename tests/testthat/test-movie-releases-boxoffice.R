@@ -1,5 +1,3 @@
-context("Getting movie releases and box office")
-
 test_that("movies_releases works", {
   skip_on_cran()
 

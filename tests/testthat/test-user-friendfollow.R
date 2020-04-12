@@ -1,5 +1,3 @@
-context("User / Network")
-
 test_that("user_network stuff works", {
   skip_on_cran()
 

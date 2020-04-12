@@ -1,5 +1,3 @@
-context("User / Ratings")
-
 test_that("user_ratings works", {
   skip_on_cran()
 

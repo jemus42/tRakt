@@ -1,5 +1,3 @@
-context("User / Watched")
-
 test_that("user_watched works", {
   skip_on_cran()
 

@@ -1,5 +1,3 @@
-context("Seasons")
-
 test_that("seasons_season works", {
   skip_on_cran()
 

@@ -1,4 +1,4 @@
-test_that("comments_comment works", {
+test_that("comments_comment()", {
   nm_min <- c(
     "id", "comment", "spoiler", "review", "parent_id", "created_at",
     "updated_at", "replies", "likes", "user_rating", "username",
@@ -13,7 +13,7 @@ test_that("comments_comment works", {
 })
 
 
-test_that("comments_replies works", {
+test_that("comments_replies()", {
   nm_min <- c(
     "id", "comment", "spoiler", "review", "parent_id", "created_at",
     "updated_at", "replies", "likes", "user_rating", "username",
@@ -28,7 +28,7 @@ test_that("comments_replies works", {
 })
 
 
-test_that("comments_likes works", {
+test_that("comments_likes()", {
   nm_min <- c(
     "liked_at", "username", "private", "user_name", "vip", "vip_ep",
     "user_slug"
@@ -39,7 +39,7 @@ test_that("comments_likes works", {
     expect_named(nm_min)
 })
 
-test_that("comments_item works", {
+test_that("comments_item()", {
   nm_min <- c(
     "type", "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb",
     "season", "episode", "episode_title", "episode_trakt", "episode_tvdb",

@@ -1,5 +1,3 @@
-context("User / History")
-
 test_that("user_history does things", {
   skip_on_cran()
 

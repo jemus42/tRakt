@@ -1,5 +1,3 @@
-context("Summary")
-
 test_that("shows_summary works", {
   skip_on_cran()
 

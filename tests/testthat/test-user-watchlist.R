@@ -1,5 +1,3 @@
-context("User / Watchlist")
-
 test_that("user_watchlist works", {
   skip_on_cran()
 

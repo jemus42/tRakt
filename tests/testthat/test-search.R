@@ -1,5 +1,3 @@
-context("Search")
-
 test_that("search_query works", {
   skip_on_cran()
 

@@ -1,5 +1,3 @@
-context("People methods")
-
 test_that("people_summary works", {
   skip_on_cran()
 
