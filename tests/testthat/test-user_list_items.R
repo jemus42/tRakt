@@ -18,11 +18,11 @@ test_that("user_list_items are correct", {
     expect_is("tbl_df") %>%
     expect_length(21) %>%
     nrow() %>%
-    expect_equal(72)
+    expect_equal(73)
 
   user_list_items("sp1ti", list_id = "anime-winter-season-2018-2019", extended = "full") %>%
     expect_is("tbl_df") %>%
     expect_length(60) %>%
     nrow() %>%
-    expect_equal(72)
+    expect_equal(73)
 })
