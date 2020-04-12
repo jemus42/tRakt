@@ -175,8 +175,8 @@
 <h2 class="hasAnchor">
 <a href="#authenticated-requests" class="anchor"></a>Authenticated requests</h2>
 <p>By default, all requests to the API are now made using authentication <em>if</em> a <code>trakt_client_secret</code> is set. See <code>?trakt_credentials()</code> for details on how to set your credentials.<br>
-If now secret is available, unauthenticated requests are made as in previous versions. In this case, you still <strong>need</strong> either the built-in or your own <code>trakt_client_id</code>.</p>
-<p>OAuth2 supports comes with the need to handle secrets, i.e. <code>.httr-oauth</code> files. This can be a pain with headless/automated setups, which is why I am trying to keep “no auth needed” as the default, as most (implemented) endpoints don’t strictly require authentication.</p>
+If no secret is available, unauthenticated requests are made as in previous versions. In this case, you still <strong>need</strong> either the built-in or your own <code>trakt_client_id</code>.</p>
+<p>OAuth2 support comes with the need to handle secrets, i.e. <code>.httr-oauth</code> files. This can be a pain with headless/automated setups, which is why I am trying to keep “no auth needed” as the default, as most (implemented) endpoints don’t strictly require authentication.</p>
 <p>See <code><a href="../articles/Implemented-API-methods.html">vignette("Implemented-API-methods", package = "tRakt")</a></code> for an overview of implemented methods with an indicator on whether authentication is required (it usually isn’t).</p>
 </div>
 <div id="new-functions" class="section level2">
