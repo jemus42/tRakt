@@ -52,7 +52,7 @@ library("tRakt")
 ## Usage
 
 ``` r
-library(tibble) # for glimpse()
+library(dplyr) # for convenience
 library(tRakt)
 ```
 
@@ -95,29 +95,58 @@ seasons_summary(show_info$trakt, extended = "full") %>%
 #> $ tmdb           <chr> "54695", "54696"
 ```
 
-Get episode data for the first season:
+Get episode data for the first season, this time using the show’s URL
+slug:
 
 ``` r
-seasons_season(show_info$trakt, seasons = 1, extended = "full") %>%
+seasons_season("utopia", seasons = 1, extended = "full") %>%
   glimpse()
-#> Observations: 6
-#> Variables: 16
+#> Rows: 6
+#> Columns: 16
 #> $ season                 <int> 1, 1, 1, 1, 1, 1
 #> $ episode                <int> 1, 2, 3, 4, 5, 6
-#> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "E…
+#> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episod…
 #> $ episode_abs            <int> 1, 2, 3, 4, 5, 6
-#> $ overview               <chr> "When five strangers from an online comic…
-#> $ rating                 <dbl> 8.23869, 8.12515, 8.14380, 8.11400, 8.304…
-#> $ votes                  <int> 1039, 839, 758, 693, 661, 689
+#> $ overview               <chr> "When five strangers from an online comic book…
+#> $ rating                 <dbl> 8.23251, 8.11449, 8.12645, 8.09887, 8.28444, 8…
+#> $ votes                  <int> 1058, 856, 775, 708, 675, 701
 #> $ comment_count          <int> 3, 0, 1, 1, 1, 1
-#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00…
-#> $ updated_at             <dttm> 2019-10-04 04:49:30, 2019-10-04 12:29:56…
-#> $ available_translations <list> [<"bs", "de", "el", "en", "es", "fr", "h…
-#> $ runtime                <int> 60, 60, 60, 60, 60, 60
-#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056…
-#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748…
-#> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "t…
-#> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "…
+#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 201…
+#> $ updated_at             <dttm> 2020-04-16 16:48:01, 2020-04-16 13:35:07, 202…
+#> $ available_translations <list> [<"bs", "de", "el", "en", "es", "fa", "fr", "…
+#> $ runtime                <int> 50, 50, 50, 50, 50, 50
+#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "1…
+#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
+#> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
+#> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "91000…
+```
+
+You cann also get episode data for all seasons, but note that episodes
+will be included as a list-column and need further unpacking:
+
+``` r
+seasons_summary("utopia", episodes = TRUE, extended = "full") %>%
+  pull(episodes) %>%
+  bind_rows() %>%
+  glimpse()
+#> Rows: 12
+#> Columns: 16
+#> $ season                 <int> 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2
+#> $ episode                <int> 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6
+#> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episod…
+#> $ episode_abs            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+#> $ overview               <chr> "When five strangers from an online comic book…
+#> $ rating                 <dbl> 8.23251, 8.11449, 8.12645, 8.09887, 8.28444, 8…
+#> $ votes                  <int> 1058, 856, 775, 708, 675, 701, 715, 629, 597, …
+#> $ comment_count          <int> 3, 0, 1, 1, 1, 1, 1, 1, 0, 1, 2, 1
+#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 201…
+#> $ updated_at             <dttm> 2020-04-16 16:48:01, 2020-04-16 13:35:07, 202…
+#> $ available_translations <list> [<"bs", "de", "el", "en", "es", "fa", "fr", "…
+#> $ runtime                <int> 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50
+#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "1…
+#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
+#> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
+#> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "91000…
 ```
 
 Or alternatively, get the [trending
@@ -126,52 +155,52 @@ shows](https://trakt.tv/shows/trending):
 ``` r
 shows_trending()
 #> # A tibble: 10 x 8
-#>    watchers title           year trakt  slug           tvdb  imdb     tmdb 
-#>       <int> <chr>          <int> <chr>  <chr>          <chr> <chr>    <chr>
-#>  1      101 Grey's Anatomy  2005 1407   grey-s-anatomy 73762 tt04135… 1416 
-#>  2       57 Titans          2018 127287 titans-2019    3416… tt10438… 75450
-#>  3       54 Evil            2019 147814 evil           3639… tt90550… 86848
-#>  4       52 Young Sheldon   2017 119172 young-sheldon  3287… tt62262… 71728
-#>  5       49 Raising Dion    2019 124235 raising-dion   3359… tt78261… 93392
-#>  6       48 The Good Place  2016 107700 the-good-place 3117… tt49556… 66573
-#>  7       44 Chicago Fire    2012 43764  chicago-fire   2585… tt22613… 44006
-#>  8       44 Goliath         2016 110358 goliath        3153… tt46878… 67384
-#>  9       42 Chicago P.D.    2014 58454  chicago-p-d    2696… tt28050… 58841
-#> 10       42 SEAL Team       2017 119142 seal-team      3286… tt64733… 71789
+#>    watchers title             year trakt  slug             tvdb   imdb     tmdb 
+#>       <int> <chr>            <int> <chr>  <chr>            <chr>  <chr>    <chr>
+#>  1       83 Devs              2020 147971 devs             364149 tt81341… 81349
+#>  2       77 Westworld         2016 99718  westworld        296762 tt04757… 63247
+#>  3       74 Chicago Fire      2012 43764  chicago-fire     258541 tt22613… 44006
+#>  4       66 Ozark             2017 119913 ozark            329089 tt50714… 69740
+#>  5       57 Better Call Saul  2015 59660  better-call-saul 273181 tt30324… 60059
+#>  6       57 Chicago P.D.      2014 58454  chicago-p-d      269641 tt28050… 58841
+#>  7       54 Chicago Med       2015 98934  chicago-med      295640 tt46554… 62650
+#>  8       51 Survivor          2000 14594  survivor-2000    76733  tt02391… 14658
+#>  9       44 Brooklyn Nine-N…  2013 48587  brooklyn-nine-n… 269586 tt24673… 48891
+#> 10       40 NCIS              2003 4590   ncis             72108  tt03648… 4614
 ```
 
-Maybe you want to know how long it would take you to binge through these
-shows:
+Maybe you just want to know how long it would take you to binge through
+these shows:
 
 ``` r
-library(dplyr)
-library(hms)
-library(glue)
-
 shows_trending(extended = "full") %>%
   transmute(
-    show = glue("{title} ({year})"),
-    runtime_hms = hms(minutes = runtime),
+    show = glue::glue("{title} ({year})"),
+    runtime_hms = hms::hms(minutes = runtime),
     aired_episodes = aired_episodes,
-    runtime_aired = hms(minutes = runtime * aired_episodes)
+    runtime_aired = hms::hms(minutes = runtime * aired_episodes)
   ) %>%
   knitr::kable(
     col.names = c("Show", "Episode Runtime", "Aired Episodes", "Total Runtime (aired)")
   )
 ```
 
-| Show                  | Episode Runtime | Aired Episodes | Total Runtime (aired) |
-| :-------------------- | :-------------- | -------------: | :-------------------- |
-| Grey’s Anatomy (2005) | 00:43:00        |            343 | 245:49:00             |
-| Titans (2018)         | 00:50:00        |             16 | 13:20:00              |
-| Evil (2019)           | 00:43:00        |              2 | 01:26:00              |
-| Young Sheldon (2017)  | 00:20:00        |             46 | 15:20:00              |
-| Raising Dion (2019)   | 00:45:00        |              9 | 06:45:00              |
-| The Good Place (2016) | 00:22:00        |             39 | 14:18:00              |
-| Chicago Fire (2012)   | 01:00:00        |            161 | 161:00:00             |
-| Goliath (2016)        | 00:55:00        |             24 | 22:00:00              |
-| Chicago P.D. (2014)   | 00:45:00        |            130 | 97:30:00              |
-| SEAL Team (2017)      | 00:45:00        |             45 | 33:45:00              |
+| Show                      | Episode Runtime | Aired Episodes | Total Runtime (aired) |
+| :------------------------ | :-------------- | -------------: | :-------------------- |
+| Devs (2020)               | 00:52:00        |              8 | 06:56:00              |
+| Westworld (2016)          | 01:00:00        |             25 | 25:00:00              |
+| Chicago Fire (2012)       | 01:00:00        |            179 | 179:00:00             |
+| Ozark (2017)              | 00:56:00        |             30 | 28:00:00              |
+| Better Call Saul (2015)   | 00:45:00        |             49 | 36:45:00              |
+| Chicago P.D. (2014)       | 00:42:00        |            148 | 103:36:00             |
+| Chicago Med (2015)        | 00:42:00        |            103 | 72:06:00              |
+| Survivor (2000)           | 00:42:00        |            597 | 417:54:00             |
+| Brooklyn Nine-Nine (2013) | 00:21:00        |            141 | 49:21:00              |
+| NCIS (2003)               | 00:45:00        |            398 | 298:30:00             |
+
+Please note though that episode runtime data may be inaccurate. In my
+experience, recent shows have fairly accurate runtimes, which might not
+be case for older shows.
 
 ## Credentials
 
@@ -184,11 +213,18 @@ variables in your `.Renviron` like this:
 ``` sh
 # tRakt
 trakt_client_id=12fc1de7[...]3d629afdf2
+trakt_client_secret=justabunchofstuffhere
 trakt_username=jemus42
 ```
 
   - `trakt_client_id` **Required**. It’s used in the HTTP headers for
     the API calls, which is kind of a biggie.
+  - `trakt_client_secret`: **Optional**(ish). This is only required if
+    you intend to make an authenticated request, which is only required
+    by a [small number of implemented API
+    methods](http://jemus42.github.io/tRakt/articles/Implemented-API-methods.html).
+    You can use this package perfectly fine for basic data collection
+    without registering an application on trakt.tv.
   - `trakt_username` **Optional**. For functions that retrieve a user’s
     watched shows or stats (`trakt.user.*`), this just sets the default
     value so you don’t have to keep supplying it in individual function

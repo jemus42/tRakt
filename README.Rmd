@@ -47,7 +47,7 @@ library("tRakt")
 ## Usage
 
 ```{r}
-library(tibble) # for glimpse()
+library(dplyr) # for convenience
 library(tRakt)
 ```
 
@@ -65,12 +65,22 @@ seasons_summary(show_info$trakt, extended = "full") %>%
   glimpse()
 ```
 
-Get episode data for the first season:
+Get episode data for the first season, this time using the show's URL slug:
 
 ```{r}
-seasons_season(show_info$trakt, seasons = 1, extended = "full") %>%
+seasons_season("utopia", seasons = 1, extended = "full") %>%
   glimpse()
 ```
+
+You cann also get episode data for all seasons, but note that episodes will be included as a list-column and need further unpacking:
+
+```{r}
+seasons_summary("utopia", episodes = TRUE, extended = "full") %>%
+  pull(episodes) %>%
+  bind_rows() %>%
+  glimpse()
+```
+
 
 Or alternatively, get the [trending shows](https://trakt.tv/shows/trending):
 
@@ -78,27 +88,22 @@ Or alternatively, get the [trending shows](https://trakt.tv/shows/trending):
 shows_trending()
 ```
 
-
-Maybe you want to know how long it would take you to binge through these shows:
+Maybe you just want to know how long it would take you to binge through these shows:
 
 ```{r}
-library(dplyr)
-library(hms)
-library(glue)
-
 shows_trending(extended = "full") %>%
   transmute(
-    show = glue("{title} ({year})"),
-    runtime_hms = hms(minutes = runtime),
+    show = glue::glue("{title} ({year})"),
+    runtime_hms = hms::hms(minutes = runtime),
     aired_episodes = aired_episodes,
-    runtime_aired = hms(minutes = runtime * aired_episodes)
+    runtime_aired = hms::hms(minutes = runtime * aired_episodes)
   ) %>%
   knitr::kable(
     col.names = c("Show", "Episode Runtime", "Aired Episodes", "Total Runtime (aired)")
   )
-
 ```
 
+Please note though that episode runtime data may be inaccurate. In my experience, recent shows have fairly accurate runtimes, which might not be case for older shows.  
 
 ## Credentials
 
@@ -108,10 +113,12 @@ Loading the package (or calling its functions via `tRakt::` wil automatically se
 ```sh
 # tRakt
 trakt_client_id=12fc1de7[...]3d629afdf2
+trakt_client_secret=justabunchofstuffhere
 trakt_username=jemus42
 ```
 
 * `trakt_client_id` **Required**. It's used in the HTTP headers for the API calls, which is kind of a biggie.
+* `trakt_client_secret`: **Optional**(ish). This is only required if you intend to make an authenticated request, which is only required by a [small number of implemented API methods](http://jemus42.github.io/tRakt/articles/Implemented-API-methods.html). You can use this package perfectly fine for basic data collection without registering an application on trakt.tv.
 * `trakt_username` **Optional**. For functions that retrieve a user's watched shows or stats (`trakt.user.*`), this just sets the default value so you don't have to keep supplying it in individual function calls when you're just looking at your own data anyway.
 
 Please not that there's no client secret listed – that's because this package doesn't implement any authenticated methods. Maybe in the future.
