@@ -320,7 +320,7 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <h2 class="hasAnchor">
 <a href="#credentials" class="anchor"></a>Credentials</h2>
 <p>The API requires at least a <code>client id</code> for the API calls.<br>
-Loading the package (or calling its functions via <code>tRakt::</code> wil automatically set the app’s client id (see <code>?trakt_credentials()</code>) – for extended use you should set your own credentials via enviroment variables in your <code>.Renviron</code> like this:</p>
+Loading the package (or calling its functions via <code>tRakt::</code> wil automatically set the app’s client id (see <code>?trakt_credentials()</code>) – for extended use you should set your own credentials via environment variables in your <code>.Renviron</code> like this:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># tRakt</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="va">trakt_client_id=</span>12fc1de7[<span class="ex">...</span>]3d629afdf2</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="va">trakt_client_secret=</span>justabunchofstuffhere</span>
@@ -331,7 +331,7 @@ Loading the package (or calling its functions via <code>tRakt::</code> wil autom
 <li>
 <code>trakt_client_secret</code>: <strong>Optional</strong>(ish). This is only required if you intend to make an authenticated request, which is only required by a <a href="http://jemus42.github.io/tRakt/articles/Implemented-API-methods.html">small number of implemented API methods</a>. You can use this package perfectly fine for basic data collection without registering an application on trakt.tv.</li>
 <li>
-<code>trakt_username</code> <strong>Optional</strong>. For functions that retrieve a user’s watched shows or stats (<code>trakt.user.*</code>), this just sets the default value so you don’t have to keep supplying it in individual function calls when you’re just looking at your own data anyway.</li>
+<code>trakt_username</code> <strong>Optional</strong>. For functions that retrieve a user’s watched shows or stats, this just sets the default value so you don’t have to keep supplying it in individual function calls when you’re just looking at your own data anyway.</li>
 </ul>
 <p>Please not that there’s no client secret listed – that’s because this package doesn’t implement any authenticated methods. Maybe in the future.</p>
 <p>To get your credentials, <a href="http://trakt.tv/oauth/applications">you have to have an (approved) app over at trakt.tv</a>.<br>
