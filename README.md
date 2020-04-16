@@ -207,7 +207,7 @@ be case for older shows.
 The API requires at least a `client id` for the API calls.  
 Loading the package (or calling its functions via `tRakt::` wil
 automatically set the app’s client id (see `?trakt_credentials()`) – for
-extended use you should set your own credentials via enviroment
+extended use you should set your own credentials via environment
 variables in your `.Renviron` like this:
 
 ``` sh
@@ -226,9 +226,9 @@ trakt_username=jemus42
     You can use this package perfectly fine for basic data collection
     without registering an application on trakt.tv.
   - `trakt_username` **Optional**. For functions that retrieve a user’s
-    watched shows or stats (`trakt.user.*`), this just sets the default
-    value so you don’t have to keep supplying it in individual function
-    calls when you’re just looking at your own data anyway.
+    watched shows or stats, this just sets the default value so you
+    don’t have to keep supplying it in individual function calls when
+    you’re just looking at your own data anyway.
 
 Please not that there’s no client secret listed – that’s because this
 package doesn’t implement any authenticated methods. Maybe in the
