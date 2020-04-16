@@ -141,11 +141,11 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tibble</span>) <span class="co"># for glimpse()</span>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>) <span class="co"># for convenience</span>
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tRakt</span>)</pre></div>
 <p>Search for a show, get basic info:</p>
 <div class="sourceCode" id="cb3"><pre class="r"><span class="no">show_info</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/search_query.html">search_query</a></span>(<span class="st">"Utopia"</span>, <span class="kw">type</span> <span class="kw">=</span> <span class="st">"show"</span>)
-<span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>(<span class="no">show_info</span>)
+<span class="fu"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>(<span class="no">show_info</span>)
 <span class="co">#&gt; Observations: 1</span>
 <span class="co">#&gt; Variables: 9</span>
 <span class="co">#&gt; $ type  &lt;chr&gt; "show"</span>
@@ -159,7 +159,7 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt; $ tmdb  &lt;chr&gt; "46511"</span></pre></div>
 <p>Get season information for the show using its trakt ID:</p>
 <div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span>(<span class="no">show_info</span>$<span class="no">trakt</span>, <span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>()
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>()
 <span class="co">#&gt; Observations: 2</span>
 <span class="co">#&gt; Variables: 12</span>
 <span class="co">#&gt; $ season         &lt;int&gt; 1, 2</span>
@@ -174,53 +174,72 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt; $ trakt          &lt;chr&gt; "56008", "56009"</span>
 <span class="co">#&gt; $ tvdb           &lt;chr&gt; "507598", "524149"</span>
 <span class="co">#&gt; $ tmdb           &lt;chr&gt; "54695", "54696"</span></pre></div>
-<p>Get episode data for the first season:</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference/seasons_season.html">seasons_season</a></span>(<span class="no">show_info</span>$<span class="no">trakt</span>, <span class="kw">seasons</span> <span class="kw">=</span> <span class="fl">1</span>, <span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span>()
-<span class="co">#&gt; Observations: 6</span>
-<span class="co">#&gt; Variables: 16</span>
+<p>Get episode data for the first season, this time using the show’s URL slug:</p>
+<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference/seasons_season.html">seasons_season</a></span>(<span class="st">"utopia"</span>, <span class="kw">seasons</span> <span class="kw">=</span> <span class="fl">1</span>, <span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>()
+<span class="co">#&gt; Rows: 6</span>
+<span class="co">#&gt; Columns: 16</span>
 <span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1</span>
 <span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6</span>
-<span class="co">#&gt; $ title                  &lt;chr&gt; "Episode 1", "Episode 2", "Episode 3", "E…</span>
+<span class="co">#&gt; $ title                  &lt;chr&gt; "Episode 1", "Episode 2", "Episode 3", "Episod…</span>
 <span class="co">#&gt; $ episode_abs            &lt;int&gt; 1, 2, 3, 4, 5, 6</span>
-<span class="co">#&gt; $ overview               &lt;chr&gt; "When five strangers from an online comic…</span>
-<span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.23869, 8.12515, 8.14380, 8.11400, 8.304…</span>
-<span class="co">#&gt; $ votes                  &lt;int&gt; 1039, 839, 758, 693, 661, 689</span>
+<span class="co">#&gt; $ overview               &lt;chr&gt; "When five strangers from an online comic book…</span>
+<span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.23251, 8.11449, 8.12645, 8.09887, 8.28444, 8…</span>
+<span class="co">#&gt; $ votes                  &lt;int&gt; 1058, 856, 775, 708, 675, 701</span>
 <span class="co">#&gt; $ comment_count          &lt;int&gt; 3, 0, 1, 1, 1, 1</span>
-<span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00…</span>
-<span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2019-10-04 04:49:30, 2019-10-04 12:29:56…</span>
-<span class="co">#&gt; $ available_translations &lt;list&gt; [&lt;"bs", "de", "el", "en", "es", "fr", "h…</span>
-<span class="co">#&gt; $ runtime                &lt;int&gt; 60, 60, 60, 60, 60, 60</span>
-<span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056…</span>
-<span class="co">#&gt; $ tvdb                   &lt;chr&gt; "4471351", "4477746", "4477747", "4477748…</span>
-<span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "t…</span>
-<span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "…</span></pre></div>
+<span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00, 201…</span>
+<span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2020-04-16 16:48:01, 2020-04-16 13:35:07, 202…</span>
+<span class="co">#&gt; $ available_translations &lt;list&gt; [&lt;"bs", "de", "el", "en", "es", "fa", "fr", "…</span>
+<span class="co">#&gt; $ runtime                &lt;int&gt; 50, 50, 50, 50, 50, 50</span>
+<span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056", "1…</span>
+<span class="co">#&gt; $ tvdb                   &lt;chr&gt; "4471351", "4477746", "4477747", "4477748", "4…</span>
+<span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "tt2618…</span>
+<span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></pre></div>
+<p>You cann also get episode data for all seasons, but note that episodes will be included as a list-column and need further unpacking:</p>
+<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span>(<span class="st">"utopia"</span>, <span class="kw">episodes</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span>(<span class="no">episodes</span>) <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_rows</a></span>() <span class="kw">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>()
+<span class="co">#&gt; Rows: 12</span>
+<span class="co">#&gt; Columns: 16</span>
+<span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2</span>
+<span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6</span>
+<span class="co">#&gt; $ title                  &lt;chr&gt; "Episode 1", "Episode 2", "Episode 3", "Episod…</span>
+<span class="co">#&gt; $ episode_abs            &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12</span>
+<span class="co">#&gt; $ overview               &lt;chr&gt; "When five strangers from an online comic book…</span>
+<span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.23251, 8.11449, 8.12645, 8.09887, 8.28444, 8…</span>
+<span class="co">#&gt; $ votes                  &lt;int&gt; 1058, 856, 775, 708, 675, 701, 715, 629, 597, …</span>
+<span class="co">#&gt; $ comment_count          &lt;int&gt; 3, 0, 1, 1, 1, 1, 1, 1, 0, 1, 2, 1</span>
+<span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00, 201…</span>
+<span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2020-04-16 16:48:01, 2020-04-16 13:35:07, 202…</span>
+<span class="co">#&gt; $ available_translations &lt;list&gt; [&lt;"bs", "de", "el", "en", "es", "fa", "fr", "…</span>
+<span class="co">#&gt; $ runtime                &lt;int&gt; 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50</span>
+<span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056", "1…</span>
+<span class="co">#&gt; $ tvdb                   &lt;chr&gt; "4471351", "4477746", "4477747", "4477748", "4…</span>
+<span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "tt2618…</span>
+<span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></pre></div>
 <p>Or alternatively, get the <a href="https://trakt.tv/shows/trending">trending shows</a>:</p>
-<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span>()
+<div class="sourceCode" id="cb7"><pre class="r"><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span>()
 <span class="co">#&gt; # A tibble: 10 x 8</span>
-<span class="co">#&gt;    watchers title           year trakt  slug           tvdb  imdb     tmdb </span>
-<span class="co">#&gt;       &lt;int&gt; &lt;chr&gt;          &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;          &lt;chr&gt; &lt;chr&gt;    &lt;chr&gt;</span>
-<span class="co">#&gt;  1      101 Grey's Anatomy  2005 1407   grey-s-anatomy 73762 tt04135… 1416 </span>
-<span class="co">#&gt;  2       57 Titans          2018 127287 titans-2019    3416… tt10438… 75450</span>
-<span class="co">#&gt;  3       54 Evil            2019 147814 evil           3639… tt90550… 86848</span>
-<span class="co">#&gt;  4       52 Young Sheldon   2017 119172 young-sheldon  3287… tt62262… 71728</span>
-<span class="co">#&gt;  5       49 Raising Dion    2019 124235 raising-dion   3359… tt78261… 93392</span>
-<span class="co">#&gt;  6       48 The Good Place  2016 107700 the-good-place 3117… tt49556… 66573</span>
-<span class="co">#&gt;  7       44 Chicago Fire    2012 43764  chicago-fire   2585… tt22613… 44006</span>
-<span class="co">#&gt;  8       44 Goliath         2016 110358 goliath        3153… tt46878… 67384</span>
-<span class="co">#&gt;  9       42 Chicago P.D.    2014 58454  chicago-p-d    2696… tt28050… 58841</span>
-<span class="co">#&gt; 10       42 SEAL Team       2017 119142 seal-team      3286… tt64733… 71789</span></pre></div>
-<p>Maybe you want to know how long it would take you to binge through these shows:</p>
-<div class="sourceCode" id="cb7"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">hms</span>)
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">glue</span>)
-
-<span class="fu"><a href="reference/trending_media.html">shows_trending</a></span>(<span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
+<span class="co">#&gt;    watchers title             year trakt  slug             tvdb   imdb     tmdb </span>
+<span class="co">#&gt;       &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span>
+<span class="co">#&gt;  1       83 Devs              2020 147971 devs             364149 tt81341… 81349</span>
+<span class="co">#&gt;  2       77 Westworld         2016 99718  westworld        296762 tt04757… 63247</span>
+<span class="co">#&gt;  3       74 Chicago Fire      2012 43764  chicago-fire     258541 tt22613… 44006</span>
+<span class="co">#&gt;  4       66 Ozark             2017 119913 ozark            329089 tt50714… 69740</span>
+<span class="co">#&gt;  5       57 Better Call Saul  2015 59660  better-call-saul 273181 tt30324… 60059</span>
+<span class="co">#&gt;  6       57 Chicago P.D.      2014 58454  chicago-p-d      269641 tt28050… 58841</span>
+<span class="co">#&gt;  7       54 Chicago Med       2015 98934  chicago-med      295640 tt46554… 62650</span>
+<span class="co">#&gt;  8       51 Survivor          2000 14594  survivor-2000    76733  tt02391… 14658</span>
+<span class="co">#&gt;  9       44 Brooklyn Nine-N…  2013 48587  brooklyn-nine-n… 269586 tt24673… 48891</span>
+<span class="co">#&gt; 10       40 NCIS              2003 4590   ncis             72108  tt03648… 4614</span></pre></div>
+<p>Maybe you just want to know how long it would take you to binge through these shows:</p>
+<div class="sourceCode" id="cb8"><pre class="r"><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span>(<span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">transmute</a></span>(
-    <span class="kw">show</span> <span class="kw">=</span> <span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span>(<span class="st">"{title} ({year})"</span>),
-    <span class="kw">runtime_hms</span> <span class="kw">=</span> <span class="fu"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="kw">minutes</span> <span class="kw">=</span> <span class="no">runtime</span>),
+    <span class="kw">show</span> <span class="kw">=</span> <span class="kw pkg">glue</span><span class="kw ns">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span>(<span class="st">"{title} ({year})"</span>),
+    <span class="kw">runtime_hms</span> <span class="kw">=</span> <span class="kw pkg">hms</span><span class="kw ns">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="kw">minutes</span> <span class="kw">=</span> <span class="no">runtime</span>),
     <span class="kw">aired_episodes</span> <span class="kw">=</span> <span class="no">aired_episodes</span>,
-    <span class="kw">runtime_aired</span> <span class="kw">=</span> <span class="fu"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="kw">minutes</span> <span class="kw">=</span> <span class="no">runtime</span> * <span class="no">aired_episodes</span>)
+    <span class="kw">runtime_aired</span> <span class="kw">=</span> <span class="kw pkg">hms</span><span class="kw ns">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="kw">minutes</span> <span class="kw">=</span> <span class="no">runtime</span> * <span class="no">aired_episodes</span>)
   ) <span class="kw">%&gt;%</span>
   <span class="kw pkg">knitr</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(
     <span class="kw">col.names</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Show"</span>, <span class="st">"Episode Runtime"</span>, <span class="st">"Aired Episodes"</span>, <span class="st">"Total Runtime (aired)"</span>)
@@ -234,79 +253,83 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">Grey’s Anatomy (2005)</td>
-<td align="left">00:43:00</td>
-<td align="right">343</td>
-<td align="left">245:49:00</td>
+<td align="left">Devs (2020)</td>
+<td align="left">00:52:00</td>
+<td align="right">8</td>
+<td align="left">06:56:00</td>
 </tr>
 <tr class="even">
-<td align="left">Titans (2018)</td>
-<td align="left">00:50:00</td>
-<td align="right">16</td>
-<td align="left">13:20:00</td>
-</tr>
-<tr class="odd">
-<td align="left">Evil (2019)</td>
-<td align="left">00:43:00</td>
-<td align="right">2</td>
-<td align="left">01:26:00</td>
-</tr>
-<tr class="even">
-<td align="left">Young Sheldon (2017)</td>
-<td align="left">00:20:00</td>
-<td align="right">46</td>
-<td align="left">15:20:00</td>
-</tr>
-<tr class="odd">
-<td align="left">Raising Dion (2019)</td>
-<td align="left">00:45:00</td>
-<td align="right">9</td>
-<td align="left">06:45:00</td>
-</tr>
-<tr class="even">
-<td align="left">The Good Place (2016)</td>
-<td align="left">00:22:00</td>
-<td align="right">39</td>
-<td align="left">14:18:00</td>
+<td align="left">Westworld (2016)</td>
+<td align="left">01:00:00</td>
+<td align="right">25</td>
+<td align="left">25:00:00</td>
 </tr>
 <tr class="odd">
 <td align="left">Chicago Fire (2012)</td>
 <td align="left">01:00:00</td>
-<td align="right">161</td>
-<td align="left">161:00:00</td>
+<td align="right">179</td>
+<td align="left">179:00:00</td>
 </tr>
 <tr class="even">
-<td align="left">Goliath (2016)</td>
-<td align="left">00:55:00</td>
-<td align="right">24</td>
-<td align="left">22:00:00</td>
+<td align="left">Ozark (2017)</td>
+<td align="left">00:56:00</td>
+<td align="right">30</td>
+<td align="left">28:00:00</td>
 </tr>
 <tr class="odd">
-<td align="left">Chicago P.D. (2014)</td>
+<td align="left">Better Call Saul (2015)</td>
 <td align="left">00:45:00</td>
-<td align="right">130</td>
-<td align="left">97:30:00</td>
+<td align="right">49</td>
+<td align="left">36:45:00</td>
 </tr>
 <tr class="even">
-<td align="left">SEAL Team (2017)</td>
+<td align="left">Chicago P.D. (2014)</td>
+<td align="left">00:42:00</td>
+<td align="right">148</td>
+<td align="left">103:36:00</td>
+</tr>
+<tr class="odd">
+<td align="left">Chicago Med (2015)</td>
+<td align="left">00:42:00</td>
+<td align="right">103</td>
+<td align="left">72:06:00</td>
+</tr>
+<tr class="even">
+<td align="left">Survivor (2000)</td>
+<td align="left">00:42:00</td>
+<td align="right">597</td>
+<td align="left">417:54:00</td>
+</tr>
+<tr class="odd">
+<td align="left">Brooklyn Nine-Nine (2013)</td>
+<td align="left">00:21:00</td>
+<td align="right">141</td>
+<td align="left">49:21:00</td>
+</tr>
+<tr class="even">
+<td align="left">NCIS (2003)</td>
 <td align="left">00:45:00</td>
-<td align="right">45</td>
-<td align="left">33:45:00</td>
+<td align="right">398</td>
+<td align="left">298:30:00</td>
 </tr>
 </tbody>
 </table>
+<p>Please note though that episode runtime data may be inaccurate. In my experience, recent shows have fairly accurate runtimes, which might not be case for older shows.</p>
 </div>
 <div id="credentials" class="section level2">
 <h2 class="hasAnchor">
 <a href="#credentials" class="anchor"></a>Credentials</h2>
 <p>The API requires at least a <code>client id</code> for the API calls.<br>
 Loading the package (or calling its functions via <code>tRakt::</code> wil automatically set the app’s client id (see <code>?trakt_credentials()</code>) – for extended use you should set your own credentials via enviroment variables in your <code>.Renviron</code> like this:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># tRakt</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a><span class="va">trakt_client_id=</span>12fc1de7[<span class="ex">...</span>]3d629afdf2</span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="va">trakt_username=</span>jemus42</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># tRakt</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="va">trakt_client_id=</span>12fc1de7[<span class="ex">...</span>]3d629afdf2</span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="va">trakt_client_secret=</span>justabunchofstuffhere</span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="va">trakt_username=</span>jemus42</span></code></pre></div>
 <ul>
 <li>
 <code>trakt_client_id</code> <strong>Required</strong>. It’s used in the HTTP headers for the API calls, which is kind of a biggie.</li>
+<li>
+<code>trakt_client_secret</code>: <strong>Optional</strong>(ish). This is only required if you intend to make an authenticated request, which is only required by a <a href="http://jemus42.github.io/tRakt/articles/Implemented-API-methods.html">small number of implemented API methods</a>. You can use this package perfectly fine for basic data collection without registering an application on trakt.tv.</li>
 <li>
 <code>trakt_username</code> <strong>Optional</strong>. For functions that retrieve a user’s watched shows or stats (<code>trakt.user.*</code>), this just sets the default value so you don’t have to keep supplying it in individual function calls when you’re just looking at your own data anyway.</li>
 </ul>
