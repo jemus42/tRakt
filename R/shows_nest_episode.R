@@ -9,6 +9,7 @@
 #' @family episode data
 #' @importFrom dplyr bind_cols vars matches
 #' @importFrom purrr discard modify_if modify_at pluck
+#' @importFrom rlang is_empty
 #' @examples
 #' shows_next_episode("one-piece")
 #' shows_last_episode("one-piece")
@@ -17,6 +18,10 @@ shows_next_episode <- function(id, extended = c("min", "full")) {
 
   url <- build_trakt_url("shows", id, "next_episode", extended = extended)
   response <- trakt_get(url)
+
+  if (is_empty(response)) {
+    return(tibble::tibble())
+  }
 
   response %>%
     discard(is.list) %>%

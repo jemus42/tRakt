@@ -1,6 +1,11 @@
 test_that("shows_(next|last)_episode() works", {
-  shows_next_episode("one-piece") %>%
-    expect_is("tbl_df")
+  res <- shows_next_episode("detective-conan")
+
+  if (nrow(res) != 0) {
+    expect_is(res, "tbl_df")
+  } else {
+    message("Test case does not have a next episode")
+  }
 
   shows_last_episode("one-piece") %>%
     expect_is("tbl_df") %>%
