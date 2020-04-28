@@ -1,3 +1,9 @@
+skip_if_no_auth <- function() {
+  if (identical(Sys.getenv("trakt_client_secret"), "")) {
+    skip("No authentication available")
+  }
+}
+
 test_that("Client ID is set without .Renviron", {
   # Save current settings for later
   username_pre <- Sys.getenv("trakt_username")
@@ -22,7 +28,7 @@ test_that("Client ID is set without .Renviron", {
 })
 
 test_that("trakt_get can make API calls", {
-  skip_on_cran()
+  # skip_on_cran()
 
   url <- "https://api.trakt.tv/shows/breaking-bad"
   result <- trakt_get(url)
