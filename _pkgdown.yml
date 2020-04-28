@@ -2,12 +2,27 @@ development:
   mode: auto
   destination: "."
 
+home:
+  title: An R package to get movie and tv data from trakt.tv
+  description: >
+    Provides access to the trakt.tv API to get data about movies and tv shows including
+    detailed season and episode data. Additional methods to get cast and crew are
+    available, or inversely, find a person's movie / tv credits.
+
 template:
   path: pkgdown/templates
   params:
     bootswatch: cosmo
     matomo_siteid: 3
     matomo_site: "https://matomo.jemu.name"
+  opengraph:
+    image:
+      src: man/figures/logo.png
+      alt: "Hex sticker showing the trakt.tv logo"
+    twitter:
+      creator: "@jemus42"
+      # site: "@rstudio"
+      card: summary
 
 authors:
   Lukas Burk:
