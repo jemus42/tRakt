@@ -10,7 +10,7 @@ name: test-coverage
 
 jobs:
   test-coverage:
-    if: !startsWith(github.event.head_commit.message, 'pkgdown')
+    if: "!startsWith(github.event.head_commit.message, 'pkgdown')"
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
