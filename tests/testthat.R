@@ -1,4 +1,4 @@
-library(testthat, warn.conflicts = FALSE)
+library(testthat)
 library(tRakt)
 
 test_check("tRakt")
