@@ -22,7 +22,7 @@ template:
     twitter:
       creator: "@jemus42"
       # site: "@rstudio"
-      card: summary
+      card: summary_large_image # summary
 
 authors:
   Lukas Burk:
@@ -49,6 +49,7 @@ reference:
     contents:
       - search_query
       - search_id
+
   - title: Shows and Movies
   - subtitle: Things that are popular, trending, anticipated, ...
     contents:
@@ -86,19 +87,22 @@ reference:
     contents:
       - movies_related
       - shows_related
-  - title: People
+
+  - title: People – Cast & Crew
     desc: >
       Cast and crew for media items, as well as the reverse; credits for people.
     contents:
       - people_summary
       - starts_with("people_")
       - ends_with("_people")
-  - title: User-specific data
+
+  - title: Users
     desc: >
       Access user-specific data. This is only possible if the user in question
       has a public profile _or_ authentication is available and you are friends.
     contents:
       - starts_with("user_")
+
   - title: Miscellaneous content
   - subtitle: Lists
     desc: >
@@ -123,6 +127,7 @@ reference:
     contents:
       - build_trakt_url
       - pad_episode
+
   - title: Included Data
   - subtitle: Episode datasets
     desc: "For demonstration purposes."
@@ -135,6 +140,7 @@ reference:
        for optional filters.
     contents:
       - trakt_datasets
+
   - title: This package
     contents:
       - tRakt
