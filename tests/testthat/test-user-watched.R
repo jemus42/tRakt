@@ -22,7 +22,7 @@ test_that("user_watched works", {
   # movies ----
   user_watched(user = user, type = "movies") %>%
     expect_is("tbl_df") %>%
-    expect_length(10)
+    expect_length(9)
 
 
   # Multiples
