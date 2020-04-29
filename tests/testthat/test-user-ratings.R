@@ -6,7 +6,7 @@ test_that("user_ratings works", {
   # A single user ----
   user_ratings(user = user, type = "shows") %>%
     expect_is("tbl") %>%
-    expect_length(11)
+    expect_length(10)
   user_ratings(user = user, type = "seasons") %>%
     expect_is("tbl") %>%
     expect_length(5)
@@ -15,15 +15,15 @@ test_that("user_ratings works", {
     expect_length(5)
   user_ratings(user = user, type = "movies") %>%
     expect_is("tbl") %>%
-    expect_length(10)
+    expect_length(9)
 
   # Multiple users ----
   user_ratings(c(user, user), type = "shows") %>%
     expect_is("tbl_df") %>%
-    expect_length(11)
+    expect_length(10)
   user_ratings(c(user, user), type = "movies") %>%
     expect_is("tbl_df") %>%
-    expect_length(10)
+    expect_length(9)
 
   # TODO: Make this actually work maybe?
   # user_ratings(c(user, user), type = "seasons") %>%
