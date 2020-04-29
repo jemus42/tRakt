@@ -17,7 +17,7 @@ template:
     matomo_site: "https://matomo.jemu.name"
   opengraph:
     image:
-      src: reference/figures/logo.png
+      src: "man/figures/logo.png"
       alt: "Hex sticker showing the trakt.tv logo"
     twitter:
       creator: "@jemus42"
