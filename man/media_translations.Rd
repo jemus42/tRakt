@@ -26,7 +26,7 @@ episodes_translations(id, season = 1L, episode = 1L, languages = NULL)
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things", package = "tRakt")} for more details.}
+\code{vignette("finding-things")} for more details.}
 
 \item{languages}{\code{character(n)}: Two-letter language code(s).
 Also see \code{\link{trakt_languages}} for available languages (code and name).}

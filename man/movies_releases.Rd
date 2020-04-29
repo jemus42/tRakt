@@ -15,7 +15,7 @@ movies_releases(id, country = NULL)
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things", package = "tRakt")} for more details.}
+\code{vignette("finding-things")} for more details.}
 
 \item{country}{Optional two letter country code to filter by. See \link{trakt_countries}
 for a table of country codes.}

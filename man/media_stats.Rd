@@ -31,7 +31,7 @@ episodes_stats(id, season = 1L, episode = 1L)
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things", package = "tRakt")} for more details.}
+\code{vignette("finding-things")} for more details.}
 
 \item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be

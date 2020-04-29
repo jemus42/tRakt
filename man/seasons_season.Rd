@@ -15,13 +15,13 @@ seasons_season(id, seasons = 1L, extended = c("min", "full"))
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things", package = "tRakt")} for more details.}
+\code{vignette("finding-things")} for more details.}
 
 \item{seasons}{\code{integer(1) [1L]}: The season(s) to get. Use \code{0} for specials.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things", package = "tRakt")} for more details.}
+See \code{vignette("finding-things")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

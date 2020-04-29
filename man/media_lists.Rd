@@ -67,7 +67,7 @@ people_lists(
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things", package = "tRakt")} for more details.}
+\code{vignette("finding-things")} for more details.}
 
 \item{type}{\code{character(1) ["all"]}: The type of list, one of "all", "personal",
 "official" or "watchlists".}
@@ -80,7 +80,7 @@ than \code{0} and will be coerced via \code{as.integer()}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things", package = "tRakt")} for more details.}
+See \code{vignette("finding-things")} for more details.}
 
 \item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
