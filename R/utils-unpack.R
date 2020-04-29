@@ -193,6 +193,21 @@ unpack_people <- function(response) {
     })
   }
 
+  if (has_name(response, "guest_stars") & !is_empty(response$guest_stars)) {
+    response$guest_stars$person[["images"]] <- NULL
+
+    response$guest_stars$person <- response$guest_stars$person %>%
+      select(-"ids") %>%
+      cbind(fix_ids(response$guest_stars$person$ids)) %>%
+      fix_datetime() %>%
+      as_tibble()
+
+    response$guest_stars <- response$guest_stars %>%
+      select(-"person") %>%
+      cbind(response$guest_stars$person) %>%
+      as_tibble()
+  }
+
   response
 }
 
