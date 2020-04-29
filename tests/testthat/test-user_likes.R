@@ -1,9 +1,3 @@
-skip_if_no_auth <- function() {
-  if (identical(Sys.getenv("trakt_client_secret"), "")) {
-    skip("No authentication available")
-  }
-}
-
 test_that("user_likes works", {
   skip_if_no_auth()
 
