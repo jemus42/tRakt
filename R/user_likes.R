@@ -1,3 +1,4 @@
+# nocov start
 #' Get items (comments, lists) a user likes
 #'
 #' @param type `character(1) ["comments"]`: One of "comments", "lists".
@@ -37,3 +38,4 @@ user_likes <- function(type = c("comments", "lists")) {
       fix_tibble_response()
   }
 }
+# nocov end
