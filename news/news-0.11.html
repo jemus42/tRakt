@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>News • tRakt</title>
+<title>Version 0.11 • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,7 +46,7 @@
 
 
 
-<meta property="og:title" content="News" />
+<meta property="og:title" content="Version 0.11" />
 <meta property="og:image" content="/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary" />
@@ -92,7 +92,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news-index">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -163,25 +163,133 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Release notes</h1>
+      <h1 data-toc-skip>Changelog <small>0.11</small></h1>
+      
     </div>
-    <ul>
-    <li><a href="news-dev.html">Version dev</a></li>
-    <li><a href="news-0.15.html">Version 0.15</a></li>
-    <li><a href="news-0.14.html">Version 0.14</a></li>
-    <li><a href="news-0.13.html">Version 0.13</a></li>
-    <li><a href="news-0.12.html">Version 0.12</a></li>
-    <li><a href="news-0.11.html">Version 0.11</a></li>
-    <li><a href="news-0.10.html">Version 0.10</a></li>
-    <li><a href="news-0.9.html">Version 0.9</a></li>
-    <li><a href="news-0.8.html">Version 0.8</a></li>
-    <li><a href="news-0.0.html">Version 0.0</a></li>
-    </ul>
-  </div>
-</div>
 
+    <div id="trakt-0110" class="section level1">
+<h1 class="page-header" data-toc-text="0.11.0">
+<a href="#trakt-0110" class="anchor"></a>tRakt 0.11.0<small> Unreleased </small>
+</h1>
+<ul>
+<li>
+<strong>Rename</strong> <code>trakt.getSeasons  -&gt; trakt.seasons.summary</code> for consistency with the trakt API.</li>
+<li>
+<strong>Rename</strong> <code>trakt.show.season -&gt; trakt.seasons.season</code> for consistency with the trakt API.</li>
+<li>
+<strong>Rename</strong> <code>getNameFromUrl    -&gt; parse_trakt_url</code> to be more descriptive. Also, de-camelCasezation.</li>
+<li>Update vignette to reflect the above changes</li>
+<li>
+<strong>Add</strong> some <code>people</code> functions:
+<ul>
+<li><code>trakt.people.summary</code></li>
+<li><code>trakt.people.movies</code></li>
+<li><code>trakt.people.shows</code></li>
+</ul>
+</li>
+<li>Unify output of <code>trakt.show.people</code> and <code>trakt.movie.people</code>
+</li>
+<li>
+<strong>Add</strong> <code>extended</code> argument to <code>trakt.movies.related</code> and <code>trakt.shows.related</code> (defaults to <code>min</code>)</li>
+<li>
+<strong>Add</strong> <code>page</code> param to <a href="http://docs.trakt.apiary.io/#introduction/pagination">paginated</a> functions:
+<ul>
+<li><code>trakt.shows.popular</code></li>
+<li><code>trakt.shows.trending</code></li>
+<li><code>trakt.movies.popular</code></li>
+<li><code>trakt.movies.trending</code></li>
+</ul>
+</li>
+<li>The usual bug fixes</li>
+</ul>
+</div>
+    <div id="trakt-0111" class="section level1">
+<h1 class="page-header" data-toc-text="0.11.1">
+<a href="#trakt-0111" class="anchor"></a>tRakt 0.11.1<small> Unreleased </small>
+</h1>
+<ul>
+<li>Internal restructuring (moving functionally similar functions together)
+<ul>
+<li>
+<strong>TODO</strong>: Create generic functions for both movie and show functions to reduce duplicate code</li>
+</ul>
+</li>
+<li>
+<strong>Add</strong> <code>extended</code> param to <code>trakt.user.watchlist</code>
+</li>
+<li>Improve consistency between <code>trakt.user.watched</code> and <code>trakt.user.collection</code>
+<ul>
+<li>Rename <code>slug</code> to <code>id.slug</code>
+</li>
+<li>Ensure proper datetime conversion</li>
+</ul>
+</li>
+<li>
+<strong>Fix</strong> error in <code>trakt.user.watchlist</code> when <code>type = shows</code> was ignored by accident</li>
+</ul>
+</div>
+    <div id="trakt-0112" class="section level1">
+<h1 class="page-header" data-toc-text="0.11.2">
+<a href="#trakt-0112" class="anchor"></a>tRakt 0.11.2<small> Unreleased </small>
+</h1>
+<div id="api-changes-functional-fixes-2" class="section level2">
+<h2 class="hasAnchor">
+<a href="#api-changes-functional-fixes-2" class="anchor"></a>API changes, functional fixes</h2>
+<ul>
+<li>
+<strong>Add</strong> <code>trakt.movie.watching</code> and <code>trakt.show.watching</code>: Get trakt.tv users watching.</li>
+<li>
+<strong>Add</strong> <code>trakt.movie.releases</code>: Gets release dates &amp; certifications per movie.</li>
+<li>
+<strong>Fix</strong> <code>trakt.search.byid</code>: Used to only work on shows, now actually works on movies.</li>
+<li>
+<strong>Fix</strong> <code>fix_datetime</code> (internal): improve reliability.</li>
+</ul>
+</div>
+<div id="minor-changes-1" class="section level2">
+<h2 class="hasAnchor">
+<a href="#minor-changes-1" class="anchor"></a>Minor changes</h2>
+<ul>
+<li>Fix documentation error in <code>*.movie.*</code> functions.</li>
+<li>Added tests for new functions</li>
+</ul>
+</div>
+</div>
+    <div id="trakt-0113" class="section level1">
+<h1 class="page-header" data-toc-text="0.11.3">
+<a href="#trakt-0113" class="anchor"></a>tRakt 0.11.3<small> Unreleased </small>
+</h1>
+<div id="api-changes-functional-fixes-1" class="section level2">
+<h2 class="hasAnchor">
+<a href="#api-changes-functional-fixes-1" class="anchor"></a>API changes, functional fixes</h2>
+<ul>
+<li>
+<strong>Add</strong> <code>build_trakt_url</code> to ease trakt API URL assembly and reduce duplicate code.</li>
+<li>
+<strong>Add</strong> <code>force_data_frame</code> option to <code>trakt.*.summary</code>: Forces unnesting.</li>
+<li>
+<strong>Rename</strong> <code>trakt.show.stats</code> to <code>trakt.stats</code>, will work with both movies and shows as soon as the API endpoint actually works.</li>
+</ul>
+</div>
+<div id="minor-changes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#minor-changes" class="anchor"></a>Minor changes</h2>
+<ul>
+<li>Expand <code>@family</code> tags in docs a little</li>
+</ul>
+</div>
+</div>
+  </div>
+
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
+  </div>
+
+</div>
 
 
       <footer>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>News • tRakt</title>
+<title>Version 0.9 • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,7 +46,7 @@
 
 
 
-<meta property="og:title" content="News" />
+<meta property="og:title" content="Version 0.9" />
 <meta property="og:image" content="/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary" />
@@ -92,7 +92,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news-index">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -163,25 +163,34 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Release notes</h1>
+      <h1 data-toc-skip>Changelog <small>0.9</small></h1>
+      
     </div>
-    <ul>
-    <li><a href="news-dev.html">Version dev</a></li>
-    <li><a href="news-0.15.html">Version 0.15</a></li>
-    <li><a href="news-0.14.html">Version 0.14</a></li>
-    <li><a href="news-0.13.html">Version 0.13</a></li>
-    <li><a href="news-0.12.html">Version 0.12</a></li>
-    <li><a href="news-0.11.html">Version 0.11</a></li>
-    <li><a href="news-0.10.html">Version 0.10</a></li>
-    <li><a href="news-0.9.html">Version 0.9</a></li>
-    <li><a href="news-0.8.html">Version 0.8</a></li>
-    <li><a href="news-0.0.html">Version 0.0</a></li>
-    </ul>
-  </div>
-</div>
 
+    <div id="trakt-090" class="section level1">
+<h1 class="page-header" data-toc-text="0.9.0">
+<a href="#trakt-090" class="anchor"></a>tRakt 0.9.0<small> 2015-02-24 </small>
+</h1>
+<ul>
+<li>Specified more exclusive package version requirements to avoid unforseen errors</li>
+<li>Add <code>trakt.user.ratings</code>: Currently supported types: <code>shows</code>, <code>movies</code>, <code>episodes</code>
+</li>
+<li>Add <code>extended</code> option to <code>trakt.shows.popular</code> and <code>.trending</code>
+</li>
+<li>Make code in vignette a little more robust</li>
+</ul>
+</div>
+  </div>
+
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
+  </div>
+
+</div>
 
 
       <footer>

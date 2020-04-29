@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>News • tRakt</title>
+<title>Version 0.13 • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,7 +46,7 @@
 
 
 
-<meta property="og:title" content="News" />
+<meta property="og:title" content="Version 0.13" />
 <meta property="og:image" content="/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary" />
@@ -92,7 +92,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news-index">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -163,25 +163,38 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Release notes</h1>
+      <h1 data-toc-skip>Changelog <small>0.13</small></h1>
+      
     </div>
-    <ul>
-    <li><a href="news-dev.html">Version dev</a></li>
-    <li><a href="news-0.15.html">Version 0.15</a></li>
-    <li><a href="news-0.14.html">Version 0.14</a></li>
-    <li><a href="news-0.13.html">Version 0.13</a></li>
-    <li><a href="news-0.12.html">Version 0.12</a></li>
-    <li><a href="news-0.11.html">Version 0.11</a></li>
-    <li><a href="news-0.10.html">Version 0.10</a></li>
-    <li><a href="news-0.9.html">Version 0.9</a></li>
-    <li><a href="news-0.8.html">Version 0.8</a></li>
-    <li><a href="news-0.0.html">Version 0.0</a></li>
-    </ul>
-  </div>
-</div>
 
+    <div id="trakt-0130" class="section level1">
+<h1 class="page-header" data-toc-text="0.13.0">
+<a href="#trakt-0130" class="anchor"></a>tRakt 0.13.0<small> 2015-03-12 </small>
+</h1>
+<ul>
+<li>
+<strong>Rename</strong> <code>trakt.getEpisodeData</code> -&gt; <code>trakt.get_all_episodes</code>
+<ul>
+<li>Expand handling of <code>season_nums</code> argument to make it easier to get all episodes of a show.</li>
+<li>Vectorize to enable multiple target input</li>
+</ul>
+</li>
+<li>
+<strong>Rename</strong> <code>trakt.getFullShowData</code> -&gt; <code>trakt.get_full_showdata</code>
+</li>
+</ul>
+</div>
+  </div>
+
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
+  </div>
+
+</div>
 
 
       <footer>

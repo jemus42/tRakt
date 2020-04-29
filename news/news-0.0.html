@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>News • tRakt</title>
+<title>Version 0.0 • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,7 +46,7 @@
 
 
 
-<meta property="og:title" content="News" />
+<meta property="og:title" content="Version 0.0" />
 <meta property="og:image" content="/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary" />
@@ -92,7 +92,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news-index">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -163,25 +163,51 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Release notes</h1>
+      <h1 data-toc-skip>Changelog <small>0.0</small></h1>
+      
     </div>
-    <ul>
-    <li><a href="news-dev.html">Version dev</a></li>
-    <li><a href="news-0.15.html">Version 0.15</a></li>
-    <li><a href="news-0.14.html">Version 0.14</a></li>
-    <li><a href="news-0.13.html">Version 0.13</a></li>
-    <li><a href="news-0.12.html">Version 0.12</a></li>
-    <li><a href="news-0.11.html">Version 0.11</a></li>
-    <li><a href="news-0.10.html">Version 0.10</a></li>
-    <li><a href="news-0.9.html">Version 0.9</a></li>
-    <li><a href="news-0.8.html">Version 0.8</a></li>
-    <li><a href="news-0.0.html">Version 0.0</a></li>
-    </ul>
-  </div>
-</div>
 
+    <div id="trakt-001" class="section level1">
+<h1 class="page-header" data-toc-text="0.0.1">
+<a href="#trakt-001" class="anchor"></a>tRakt 0.0.1<small> Unreleased </small>
+</h1>
+<div id="2015-02-16" class="section level2">
+<h2 class="hasAnchor">
+<a href="<a href='http://github.com/jemus42/tRakt/issues/2015'>#2015</a>-02-16" class="anchor"></a>2015-02-16</h2>
+<p>I’ve been working on some user-specific methods, so you can now use the <code>trakt.user.*</code> family of functions to get a user’s…</p>
+<ul>
+<li>Collection: <code>trakt.user.collection()</code>
+</li>
+<li>Watched items: <code>trakt.user.watched()</code>
+</li>
+<li>Stats: <code>trakt.user.stats()</code>
+</li>
+</ul>
+<p>All of them default to the username set in <code><a href="https://rdrr.io/r/base/options.html">getOption("trakt.username")</a></code>, but any publicly viewable user should work. Note that OAuth2 is not implemented, so private users can’t be accessed.</p>
+</div>
+<div id="2015-02-11" class="section level2">
+<h2 class="hasAnchor">
+<a href="<a href='http://github.com/jemus42/tRakt/issues/2015'>#2015</a>-02-11" class="anchor"></a>2015-02-11</h2>
+<p>As of today, all the functions are updated to use the new APIv2, except for <code>trakt.show.stats</code>, which is currently not yet implemented at trakt.tv, see <a href="http://docs.trakt.apiary.io/reference/shows/stats/get-show-stats">their docs</a></p>
+<p>Now the package is usable again, and I can continue to work on bug fixes and enhancements. Yay.</p>
+</div>
+<div id="2015-02-10" class="section level2">
+<h2 class="hasAnchor">
+<a href="<a href='http://github.com/jemus42/tRakt/issues/2015'>#2015</a>-02-10" class="anchor"></a>2015-02-10</h2>
+<p>I am now trying to migrate everything to the <a href="http://docs.trakt.apiary.io/">new trakt.tv APIv2</a>. Since I mostly don’t know what I’m doing, I have to make this up as I go along, but oh well. Now the search function <code>trakt.search</code> should be working fine, as it is the only function that is tested/built with the new API in mind. Others to come.</p>
+</div>
+</div>
+  </div>
+
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
+  </div>
+
+</div>
 
 
       <footer>

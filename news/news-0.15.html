@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>News • tRakt</title>
+<title>Version 0.15 • tRakt</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,7 +46,7 @@
 
 
 
-<meta property="og:title" content="News" />
+<meta property="og:title" content="Version 0.15" />
 <meta property="og:image" content="/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary" />
@@ -92,7 +92,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-news-index">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -163,25 +163,54 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Release notes</h1>
+      <h1 data-toc-skip>Changelog <small>0.15</small></h1>
+      
     </div>
-    <ul>
-    <li><a href="news-dev.html">Version dev</a></li>
-    <li><a href="news-0.15.html">Version 0.15</a></li>
-    <li><a href="news-0.14.html">Version 0.14</a></li>
-    <li><a href="news-0.13.html">Version 0.13</a></li>
-    <li><a href="news-0.12.html">Version 0.12</a></li>
-    <li><a href="news-0.11.html">Version 0.11</a></li>
-    <li><a href="news-0.10.html">Version 0.10</a></li>
-    <li><a href="news-0.9.html">Version 0.9</a></li>
-    <li><a href="news-0.8.html">Version 0.8</a></li>
-    <li><a href="news-0.0.html">Version 0.0</a></li>
-    </ul>
-  </div>
-</div>
 
+    <div id="trakt-0150" class="section level1">
+<h1 class="page-header" data-toc-text="0.15.0">
+<a href="#trakt-0150" class="anchor"></a>tRakt 0.15.0<small> Unreleased </small>
+</h1>
+<p>This is a big one, but not 1.0.0 big one I guess.<br>
+This is a consolidation release with lots of internal improvements, but for the 1.0.0 I decided to overhaul the structure of the package <em>again</em>, so before I completely break any kind of backwards compatiblity, I thought I’d get this one out.</p>
+<div id="consolidation-for-the-people" class="section level2">
+<h2 class="hasAnchor">
+<a href="#consolidation-for-the-people" class="anchor"></a>Consolidation for the people</h2>
+<ul>
+<li><p>Major refactor of the docs. Sadly, the user will only notice a little more consistency.</p></li>
+<li><p>Consolidate related functions into the same Rd page</p></li>
+<li><p>Centrally document common parameters and reuse them where needed</p></li>
+<li><p>Also consolidate many similar functions by factoring out the relevant bits into more flexible helper functions. In some cases those are exported as well.</p></li>
+<li><p>In the process, some functions where partially renamed (<code>.show.</code> -&gt; <code>.shows.</code>, <code>.movie.</code> -&gt; <code>.movies.</code>) for consistency.</p></li>
+<li><p>Rename <code>get_trakt_credentials</code> -&gt; <code>trakt_credentials</code></p></li>
+<li><p>Many functions now return much flatter output, notably <code>*people*</code> functions. They return a <code>list</code> with <code>cast</code> and <code>crew</code> objects, which in turn are both flat <code>tibbles</code>.</p></li>
+</ul>
+</div>
+<div id="features" class="section level2">
+<h2 class="hasAnchor">
+<a href="#features" class="anchor"></a>Features</h2>
+<ul>
+<li>Improved search function (<code>trakt.search</code>).
+<ul>
+<li>If the result has a <code>year</code> that is <code>NA</code> but a search <code>score == 1000</code>, that’s probably bad and dropped.</li>
+</ul>
+</li>
+<li>Added more of the automated list methods, like most anticipated, most played and most watched items.</li>
+<li>Added <code>trakt.user.history</code> for user/:id/history methods</li>
+</ul>
+</div>
+</div>
+  </div>
+
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
+  </div>
+
+</div>
 
 
       <footer>
