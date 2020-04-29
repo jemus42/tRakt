@@ -3,9 +3,9 @@ development:
   destination: "."
 
 home:
-  title: An R package to get movie and tv data from trakt.tv
+  title: Get movie and tv data from trakt.tv
   description: >
-    Provides access to the trakt.tv API to get data about movies and tv shows including
+    Access the trakt.tv API to get data about movies and tv shows including
     detailed season and episode data. Additional methods to get cast and crew are
     available, or inversely, find a person's movie / tv credits.
 
@@ -17,7 +17,7 @@ template:
     matomo_site: "https://matomo.jemu.name"
   opengraph:
     image:
-      src: man/figures/logo.png
+      src: reference/figures/logo.png
       alt: "Hex sticker showing the trakt.tv logo"
     twitter:
       creator: "@jemus42"
@@ -28,6 +28,13 @@ authors:
   Lukas Burk:
     href: https://jemu.name
 
+news:
+  one_page: false
+  cran_dates: false
+  # releases:
+  # - text: "tRakt 1.0"
+  #   href: link
+
 reference:
   - title: Basic API interaction
     desc: >
@@ -35,82 +42,94 @@ reference:
     contents:
       - trakt_get
       - trakt_credentials
-  - title: Finding media
+  - subtitle: Search – Finding media
     desc: >
       Searching for items is usually required to retrieve some kind of ID, like the `slug`,
       which is required for use of item-specific functions.
     contents:
       - search_query
       - search_id
-  - title: Shows & movies that are popular, trending, anticipated, ...
+  - title: Shows and Movies
+  - subtitle: Things that are popular, trending, anticipated, ...
     contents:
-      - ends_with("(popular|trending|anticipated|watched|played|collected)")
+      - ends_with("(popular|trending|anticipated|watched|watching|played|collected)")
       - -starts_with("user_")
-  - title: Simple summary data
+  - subtitle: Single-item summary data
     contents:
       - ends_with("_summary")
       - -starts_with("user_")
-  - title: Seasons and episodes
+  - subtitle: Seasons and episodes
     contents:
       - seasons_summary
       - seasons_season
       - matches("shows_.*_episode")
-  - title: Movie-specific data
+  - subtitle: Movie-specific data
     contents:
       - movies_boxoffice
       - movies_releases
-  - title: Media ratings
+  - subtitle: Media ratings
     desc: >
       These functions return the full rating distribution for an item, in contrast to
       the `_summary`-methods, which return the average rating of an item.
     contents:
       - ends_with("_ratings")
       - -starts_with("user_")
-  - title: Media stats
+  - subtitle: Media stats
     desc: >
-      These functions return the number of watchers, plays, collectors, comments, lists and votes of an item.
+      These functions return the number of watchers, plays, collectors, comments,
+      lists and votes of an item.
     contents:
       - ends_with("_stats")
       - -starts_with("user_")
-  - title: Related media
-    desc: Media related to media.
+  - subtitle: Related media
+    desc: "Media related to media."
     contents:
       - movies_related
       - shows_related
-  - title: User-specific data
-    contents:
-      - starts_with("user_")
-  - title: Data relating to people
+  - title: People
     desc: >
       Cast and crew for media items, as well as the reverse; credits for people.
     contents:
       - people_summary
       - starts_with("people_")
       - ends_with("_people")
-  - title: Recently updated items
+  - title: User-specific data
+    desc: >
+      Access user-specific data. This is only possible if the user in question
+      has a public profile _or_ authentication is available and you are friends.
     contents:
-      - shows_updates
-      - movies_updates
-  - title: List methods
+      - starts_with("user_")
+  - title: Miscellaneous content
+  - subtitle: Lists
+    desc: >
+      Watchlists or topical lists created by trakt.tv users. These can contain
+      all kinds of media types, from movies to episodes to people.
     contents:
       - starts_with("list")
       - contains("list")
-  - title: Comments
+  - subtitle: Comments
     contents:
       - contains("comment")
-  - title: Localization
+  - subtitle: Localization
     contents:
       - ends_with("aliases")
       - ends_with("translations")
-  - title: Utilities
+  - subtitle: Recently updated items
+    contents:
+      - shows_updates
+      - movies_updates
+  - subtitle: Utilities
+    desc: "Included for convenience."
     contents:
       - build_trakt_url
       - pad_episode
-  - title: Episode datasets
+  - title: Included Data
+  - subtitle: Episode datasets
+    desc: "For demonstration purposes."
     contents:
       - futurama
       - gameofthrones
-  - title: Internal datasets
+  - subtitle: Internal datasets
     desc: >
        These are unlikely to be useful on their own, but they are useful as a reference
        for optional filters.
