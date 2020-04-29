@@ -14,10 +14,21 @@ test_that("user_watched works", {
 
   expect_equal(setdiff(names(watched_shows_full), names(watched_shows)), "seasons")
 
-  # movies ----
-  watched_movies <- user_watched(user = user, type = "movies")
+  # Multiples
+  user_watched(user = c(user, user), type = "shows", noseasons = TRUE) %>%
+    expect_is("tbl_df") %>%
+    expect_length(12)
 
-  expect_is(watched_movies, "tbl")
+  # movies ----
+  user_watched(user = user, type = "movies") %>%
+    expect_is("tbl_df") %>%
+    expect_length(10)
+
+
+  # Multiples
+  user_watched(user = c(user, user), type = "movies") %>%
+    expect_is("tbl_df") %>%
+    expect_length(10)
 
   # error conditions ----
   expect_error(user_watched(user = user, type = "schnitzel"))

@@ -11,6 +11,11 @@ test_that("user_watchlist works", {
   expect_is(res_shows, "tbl")
   expect_is(res_movies, "tbl")
 
+
+  user_watchlist(user = c(user, user)) %>%
+    expect_is("tbl_df") %>%
+    expect_length(11)
+
   # no shows
   expect_identical(
     tibble::tibble(),

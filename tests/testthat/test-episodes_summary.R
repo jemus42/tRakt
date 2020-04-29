@@ -9,6 +9,14 @@ test_that("episodes_summary works", {
     nrow() %>%
     expect_equal(1)
 
+  # Multiple shows
+  episodes_summary(c("breaking-bad", "futurama")) %>%
+    expect_is("tbl_df") %>%
+    expect_length(8) %>%
+    expect_named(episode_summary_names_min) %>%
+    nrow() %>%
+    expect_equal(2)
+
   # Multiple seasons
   res <- episodes_summary("breaking-bad", season = 1:2) %>%
     expect_length(8) %>%
