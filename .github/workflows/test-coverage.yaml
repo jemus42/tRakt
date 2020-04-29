@@ -4,13 +4,13 @@ on:
       - master
     paths:
       - "R/*"
-      - "tests*/"
+      - "tests/**"
   pull_request:
     branches:
       - master
     paths:
       - "R/*"
-      - "tests*/"
+      - "tests/**"
 
 name: test-coverage
 

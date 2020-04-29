@@ -5,7 +5,7 @@ on:
     paths:
       - "R/*"
       - "NAMESPACE"
-      - "tests/*"
+      - "tests/**"
   pull_request:
     branches:
       - master
