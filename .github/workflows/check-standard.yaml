@@ -2,6 +2,10 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "R/*"
+      - "NAMESPACE"
+      - "tests/*"
   pull_request:
     branches:
       - master

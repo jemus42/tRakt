@@ -2,9 +2,13 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "R/*"
   pull_request:
     branches:
       - master
+    paths:
+      - "R/*"
 
 name: test-coverage
 
