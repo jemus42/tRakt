@@ -2,6 +2,8 @@ development:
   mode: auto
   destination: "."
 
+url: https://jemus42.github.io/tRakt
+
 home:
   title: Get movie and tv data from trakt.tv
   description: >

@@ -15,7 +15,7 @@ Description: A wrapper for the <https://trakt.tv> API to
     API reference is available at <https://trakt.docs.apiary.io>.
 License: MIT + file LICENSE
 URL: https://jemus42.github.io/tRakt,
-    http://github.com/jemus42/tRakt
+    https://github.com/jemus42/tRakt
 BugReports: http://github.com/jemus42/tRakt/issues
 Depends:
     R (>= 3.2)
