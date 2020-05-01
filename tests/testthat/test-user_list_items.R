@@ -2,27 +2,27 @@ test_that("user_list_items are correct", {
   skip_on_cran()
 
   # Can't think of anything better than reference cases :/
-  user_list_items("jemus42", list_id = 2171659, extended = "min") %>%
+  user_list_items(
+    user = "jemus42", list_id = 2171659, extended = "min"
+    ) %>%
     expect_is("tbl_df") %>%
-    expect_length(11) %>%
-    nrow() %>%
-    expect_equal(7)
+    expect_length(11)
 
-  user_list_items("jemus42", list_id = 2171659, extended = "full") %>%
+  user_list_items(
+    user = "jemus42", list_id = 2171659, extended = "full"
+    ) %>%
     expect_is("tbl_df") %>%
-    expect_length(33) %>%
-    nrow() %>%
-    expect_equal(7)
+    expect_length(33)
 
-  user_list_items("sp1ti", list_id = "anime-winter-season-2018-2019", extended = "min") %>%
+  user_list_items(
+    user = "sp1ti", list_id = "anime-winter-season-2018-2019", extended = "min"
+    ) %>%
     expect_is("tbl_df") %>%
-    expect_length(21) %>%
-    nrow() %>%
-    expect_equal(73)
+    expect_length(22)
 
-  user_list_items("sp1ti", list_id = "anime-winter-season-2018-2019", extended = "full") %>%
+  user_list_items(
+    user = "sp1ti", list_id = "anime-winter-season-2018-2019", extended = "full"
+    ) %>%
     expect_is("tbl_df") %>%
-    expect_length(60) %>%
-    nrow() %>%
-    expect_equal(73)
+    expect_length(61)
 })

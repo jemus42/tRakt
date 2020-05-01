@@ -18,7 +18,7 @@ A wrapper for the <https://trakt.tv> API to
 Useful links:
 \itemize{
   \item \url{https://jemus42.github.io/tRakt}
-  \item \url{http://github.com/jemus42/tRakt}
+  \item \url{https://github.com/jemus42/tRakt}
   \item Report bugs at \url{http://github.com/jemus42/tRakt/issues}
 }
 

@@ -59,7 +59,7 @@ user_list_items <- function(user = getOption("trakt_username"),
   list_base <- response %>%
     select(-one_of(list_types), -matches("^show$"))
 
-  # Row-bind the list base to the unpackaed media items
+  # Row-bind the list base to the unpacked media items
   map_df(list_types, ~ {
     bind_cols(
       list_base %>%
