@@ -28,3 +28,4 @@ vignettes/\.httr-oauth$
 ^README_cache$
 ^\.covrignore$
 ^\.github/workflows/R-CMD-check\.yaml$
+^codemeta\.json$
