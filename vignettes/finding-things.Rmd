@@ -21,16 +21,16 @@ In each of these cases, the value of the parameter must be a valid ID of one of 
 following kinds:
 
 - **Trakt ID** (`trakt`): A numeric ID used by trakt.tv, which is included
-as a variable named `trakt` by every function for the output item. These
-IDs are unique for their respective category (or `type`, e.g. shows, movies, people)
-and can be expected to have full coverage, meaning that every item will have a
+as a variable named `trakt` by every function for an output item. These
+IDs are unique for their respective category (or `type`, e.g. shows, movies, people, ...)
+and can be expected to have full coverage, meaning that every item will have a category-specific
 Trakt ID.
 - **Slug** (`slug`): A human-readable identifier used on the trakt.tv site,
 e.g. `the-wire`. While these are easy to remember, they have the risk of
 clashing with numeric IDs. One example is the show "24", which has the slug `24`.
 However, the show "Presidio Med" has the **Trakt ID** `24`, so if you supply
 `id = 24` the API assumes you meant the Trakt ID instead of the slug.
-This is... suboptimal. Use `trakt` ID's whenever possible.
+This is... suboptimal. Use `trakt` ID's whenever possible in any sort of user-facing application or batch-processing.
 - **IMDb ID** (`imdb`): Relatively self-explanatory. You can retrieve them easily
 via most functions or by searching on [IMDb.com](https://www.imdb.com/). Since
 IMDb is an external service, these IDs should be used for linking with other
@@ -55,10 +55,7 @@ standard set of IDs (see section above). This is the fastest option as it requir
 less content to be sent from the API and less post-processing work to produce tabular
 output.
 - `"full"`: The maximum amount of information. This option is required if you are
-interested in the `votes` and `rating` variables, as well as additional metadata
-like air dates, plot summaries, and a plethora of other variables depending on
-the `type`. If you intend on retrieving data for a large number of items,
-e.g. via [popular_media], it is highly recommend to cache the output locally when
-using `extended = "full"` and subsequently only use `extended = "min"`.
-Then you can merge or [left_join()][dplyr::left_join] the minimal data with your
+interested in the `votes` and `rating` variables, as well as additional metadata like air dates, plot summaries, and a plethora of other variables depending on the `type`. 
+If you intend on retrieving data for a large number of items, e.g. via [popular_media], it is highly recommend to cache the output locally when using `extended = "full"` and subsequently only use `extended = "min"`. 
+Then you can merge or [`dplyr::left_join()`] the minimal data with your
 cached data.
