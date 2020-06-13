@@ -29,3 +29,4 @@ vignettes/\.httr-oauth$
 ^\.covrignore$
 ^\.github/workflows/R-CMD-check\.yaml$
 ^codemeta\.json$
+^tests/testthat/\.httr-oauth$

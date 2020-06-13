@@ -20,5 +20,5 @@ test_that("movies_boxoffice works", {
     expect_is("tbl") %>%
     expect_length(7) %>%
     nrow() %>%
-    expect_equal(10)
+    expect_gt(3)
 })
