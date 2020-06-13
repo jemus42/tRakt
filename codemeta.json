@@ -1,5 +1,8 @@
 {
-  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "tRakt",
   "description": "A wrapper for the <https://trakt.tv> API to\n    retrieve data about shows and movies, including user ratings, credits\n    and related metadata. Additional functions retrieve user-specific\n    information including collections and history of watched items. A full\n    API reference is available at <https://trakt.docs.apiary.io>.",
@@ -299,6 +302,16 @@
   ],
   "releaseNotes": "https://github.com/jemus42/tRakt/blob/master/NEWS.md",
   "readme": "https://github.com/jemus42/tRakt/blob/master/README.md",
-  "contIntegration": ["https://travis-ci.org/jemus42/tRakt", "https://codecov.io/github/jemus42/tRakt?branch=master"],
-  "keywords": ["trakt-api", "trakttv", "r", "rstats", "r-package", "trakt"]
+  "contIntegration": [
+    "https://travis-ci.org/jemus42/tRakt",
+    "https://codecov.io/github/jemus42/tRakt?branch=master"
+  ],
+  "keywords": [
+    "trakt-api",
+    "trakttv",
+    "r",
+    "rstats",
+    "r-package",
+    "trakt"
+  ]
 }
