@@ -48,7 +48,7 @@
 
 <meta property="og:title" content="Get all movie / show aliases — media_aliases" />
 <meta property="og:description" content="Get all movie / show aliases" />
-<meta property="og:image" content="/reference/figures/logo.png" />
+<meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@jemus42" />
@@ -175,9 +175,9 @@
     <p>Get all movie / show aliases</p>
     </div>
 
-    <pre class="usage"><span class='fu'>movies_aliases</span>(<span class='no'>id</span>)
+    <pre class="usage"><span class='fu'>movies_aliases</span><span class='op'>(</span><span class='va'>id</span><span class='op'>)</span>
 
-<span class='fu'>shows_aliases</span>(<span class='no'>id</span>)</pre>
+<span class='fu'>shows_aliases</span><span class='op'>(</span><span class='va'>id</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -201,7 +201,7 @@ Can also be of length greater than 1, in which case the function is called on al
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
 (defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
-If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
+If there are no results (or the API is unreachable), an empty <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble()</a></code> is returned.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other movie data: 
@@ -241,7 +241,8 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 <code><a href='updated_media.html'>updated_media</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>movies_aliases</span>(<span class='fl'>190430</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 14 x 2</span><span>
+    <pre class="examples"><div class='input'><span class='fu'>movies_aliases</span><span class='op'>(</span><span class='fl'>190430</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 16 x 2</span><span>
 #&gt;    title                   country
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
 #&gt; </span><span style='color: #555555;'> 1</span><span> X-Men Origins: Deadpool us     
@@ -257,15 +258,23 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 #&gt; </span><span style='color: #555555;'>11</span><span> Masacre                 es     
 #&gt; </span><span style='color: #555555;'>12</span><span> 데드풀                  kr     
 #&gt; </span><span style='color: #555555;'>13</span><span> 死侍                    cn     
-#&gt; </span><span style='color: #555555;'>14</span><span> 08 Deadpool             cz     </div><div class='input'><span class='fu'>shows_aliases</span>(<span class='fl'>104439</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 6 x 2</span><span>
-#&gt;   title                   country
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
-#&gt; </span><span style='color: #555555;'>1</span><span> Очень странные дела     us     
-#&gt; </span><span style='color: #555555;'>2</span><span> Странные вещи           us     
-#&gt; </span><span style='color: #555555;'>3</span><span> Загадкові справи        ua     
-#&gt; </span><span style='color: #555555;'>4</span><span> Keisti dalykai          lt     
-#&gt; </span><span style='color: #555555;'>5</span><span> Крайне странные события ru     
-#&gt; </span><span style='color: #555555;'>6</span><span> უცნაური საქმეები        ge     </div></span></pre>
+#&gt; </span><span style='color: #555555;'>14</span><span> 08 Deadpool             cz     
+#&gt; </span><span style='color: #555555;'>15</span><span> Deadpool 01 Deadpool    us     
+#&gt; </span><span style='color: #555555;'>16</span><span> เดดพูล                   th     </div><div class='input'><span class='fu'>shows_aliases</span><span class='op'>(</span><span class='fl'>104439</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 43 x 2</span><span>
+#&gt;    title                   country
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  
+#&gt; </span><span style='color: #555555;'> 1</span><span> Очень странные дела     us     
+#&gt; </span><span style='color: #555555;'> 2</span><span> Странные вещи           us     
+#&gt; </span><span style='color: #555555;'> 3</span><span> Загадкові справи        ua     
+#&gt; </span><span style='color: #555555;'> 4</span><span> Keisti dalykai          lt     
+#&gt; </span><span style='color: #555555;'> 5</span><span> Крайне странные события ru     
+#&gt; </span><span style='color: #555555;'> 6</span><span> უცნაური საქმეები        ge     
+#&gt; </span><span style='color: #555555;'> 7</span><span> Stranger Things (2016)  cn     
+#&gt; </span><span style='color: #555555;'> 8</span><span> Stranger Things         cn     
+#&gt; </span><span style='color: #555555;'> 9</span><span> Странные вещи           ru     
+#&gt; </span><span style='color: #555555;'>10</span><span> Крайне странные события ru     
+#&gt; </span><span style='color: #555555;'># … with 33 more rows</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -281,7 +290,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

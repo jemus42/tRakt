@@ -53,7 +53,7 @@ tibble(), and if there are date-time variables
 present in the response, they are converted to POSIXct via
 lubridate::ymd_hms() or to Date via lubridate::as_date() if the
 variable only contains date information." />
-<meta property="og:image" content="/reference/figures/logo.png" />
+<meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@jemus42" />
@@ -185,7 +185,7 @@ present in the response, they are converted to <code>POSIXct</code> via
 variable only contains date information.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>trakt_get</span>(<span class='no'>url</span>, <span class='kw'>client_id</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.getenv.html'>Sys.getenv</a></span>(<span class='st'>"trakt_client_id"</span>), <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>trakt_get</span><span class='op'>(</span><span class='va'>url</span>, client_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.getenv.html'>Sys.getenv</a></span><span class='op'>(</span><span class='st'>"trakt_client_id"</span><span class='op'>)</span>, HEAD <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -213,7 +213,7 @@ resources/bandwidth on the response body.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>The parsed (<code><a href='https://jeroen.cran.dev/jsonlite/reference/fromJSON.html'>jsonlite::fromJSON()</a></code>) content of the API response.
+    <p>The parsed (<code><a href='https://rdrr.io/pkg/jsonlite/man/fromJSON.html'>jsonlite::fromJSON()</a></code>) content of the API response.
 An empty <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> if the response is an empty
 <code>JSON</code> array.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
@@ -233,7 +233,8 @@ collection have dedicated functions in this package.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># A simple request to a direct URL</span>
-<span class='fu'>trakt_get</span>(<span class='st'>"https://api.trakt.tv/shows/breaking-bad"</span>)</div><div class='output co'>#&gt; $title
+<span class='fu'>trakt_get</span><span class='op'>(</span><span class='st'>"https://api.trakt.tv/shows/breaking-bad"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $title
 #&gt; [1] "Breaking Bad"
 #&gt; 
 #&gt; $year
@@ -261,7 +262,8 @@ collection have dedicated functions in this package.</p>
 #&gt; </div><div class='input'>
 <span class='co'># A HEAD-only request</span>
 <span class='co'># useful for validating a URL exists or the API is accessible</span>
-<span class='fu'>trakt_get</span>(<span class='st'>"https://api.trakt.tv/users/jemus42"</span>, <span class='kw'>HEAD</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; $status
+<span class='fu'>trakt_get</span><span class='op'>(</span><span class='st'>"https://api.trakt.tv/users/jemus42"</span>, HEAD <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $status
 #&gt; [1] 200
 #&gt; 
 #&gt; $version
@@ -269,7 +271,7 @@ collection have dedicated functions in this package.</p>
 #&gt; 
 #&gt; $headers
 #&gt; $date
-#&gt; [1] "Wed, 29 Apr 2020 01:50:09 GMT"
+#&gt; [1] "Sun, 11 Oct 2020 12:35:16 GMT"
 #&gt; 
 #&gt; $`content-type`
 #&gt; [1] "application/json; charset=utf-8"
@@ -278,13 +280,16 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "max-age=0, private, must-revalidate"
 #&gt; 
 #&gt; $`cf-railgun`
-#&gt; [1] "cef2b26b55 stream 0.000000 0200 57da"
+#&gt; [1] "6ee6a924b8 stream 0.000000 0200 57da"
 #&gt; 
 #&gt; $`content-encoding`
 #&gt; [1] "gzip"
 #&gt; 
 #&gt; $etag
-#&gt; [1] "W/\"6f991255bdf4602531c2077ab4d52c7b\""
+#&gt; [1] "W/\"b8274067249707fc30f6422f5155cb77\""
+#&gt; 
+#&gt; $`referrer-policy`
+#&gt; [1] "strict-origin-when-cross-origin"
 #&gt; 
 #&gt; $vary
 #&gt; [1] "Accept-Encoding"
@@ -292,23 +297,32 @@ collection have dedicated functions in this package.</p>
 #&gt; $`x-content-type-options`
 #&gt; [1] "nosniff"
 #&gt; 
+#&gt; $`x-download-options`
+#&gt; [1] "noopen"
+#&gt; 
 #&gt; $`x-frame-options`
 #&gt; [1] "SAMEORIGIN"
+#&gt; 
+#&gt; $`x-permitted-cross-domain-policies`
+#&gt; [1] "none"
 #&gt; 
 #&gt; $`x-private-user`
 #&gt; [1] "false"
 #&gt; 
 #&gt; $`x-request-id`
-#&gt; [1] "064e71ba-7ac3-4678-b8f3-fe5fa4665fd9"
+#&gt; [1] "b8d28c43-cd8b-4867-bf61-8feb04b07e6d"
 #&gt; 
 #&gt; $`x-runtime`
-#&gt; [1] "0.006343"
+#&gt; [1] "0.037426"
 #&gt; 
 #&gt; $`x-xss-protection`
 #&gt; [1] "1; mode=block"
 #&gt; 
 #&gt; $`cf-cache-status`
 #&gt; [1] "DYNAMIC"
+#&gt; 
+#&gt; $`cf-request-id`
+#&gt; [1] "05b9418ab500000def20b23200000001"
 #&gt; 
 #&gt; $`expect-ct`
 #&gt; [1] "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
@@ -317,16 +331,14 @@ collection have dedicated functions in this package.</p>
 #&gt; [1] "cloudflare"
 #&gt; 
 #&gt; $`cf-ray`
-#&gt; [1] "58b55edb4cd6f1aa-ATL"
-#&gt; 
-#&gt; $`cf-request-id`
-#&gt; [1] "0265399d080000f1aadc87a200000001"
+#&gt; [1] "5e089ebdece20def-IAD"
 #&gt; 
 #&gt; attr(,"class")
 #&gt; [1] "insensitive" "list"       
 #&gt; </div><div class='input'>
 <span class='co'># Optionally be lazy about URL specification by dropping the hostname:</span>
-<span class='fu'>trakt_get</span>(<span class='st'>"shows/game-of-thrones"</span>)</div><div class='output co'>#&gt; $title
+<span class='fu'>trakt_get</span><span class='op'>(</span><span class='st'>"shows/game-of-thrones"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $title
 #&gt; [1] "Game of Thrones"
 #&gt; 
 #&gt; $year
@@ -367,7 +379,7 @@ collection have dedicated functions in this package.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

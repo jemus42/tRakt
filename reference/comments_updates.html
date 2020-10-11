@@ -48,7 +48,7 @@
 
 <meta property="og:title" content="Get recently updated/edited comments — comments_updates" />
 <meta property="og:description" content="Get recently updated/edited comments" />
-<meta property="og:image" content="/reference/figures/logo.png" />
+<meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@jemus42" />
@@ -175,12 +175,12 @@
     <p>Get recently updated/edited comments</p>
     </div>
 
-    <pre class="usage"><span class='fu'>comments_updates</span>(
-  <span class='kw'>comment_type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"all"</span>, <span class='st'>"reviews"</span>, <span class='st'>"shouts"</span>),
-  <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"all"</span>, <span class='st'>"movies"</span>, <span class='st'>"shows"</span>, <span class='st'>"seasons"</span>, <span class='st'>"episodes"</span>, <span class='st'>"lists"</span>),
-  <span class='kw'>include_replies</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>limit</span> <span class='kw'>=</span> <span class='fl'>10L</span>
-)</pre>
+    <pre class="usage"><span class='fu'>comments_updates</span><span class='op'>(</span>
+  comment_type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"all"</span>, <span class='st'>"reviews"</span>, <span class='st'>"shouts"</span><span class='op'>)</span>,
+  type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"all"</span>, <span class='st'>"movies"</span>, <span class='st'>"shows"</span>, <span class='st'>"seasons"</span>, <span class='st'>"episodes"</span>, <span class='st'>"lists"</span><span class='op'>)</span>,
+  include_replies <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  limit <span class='op'>=</span> <span class='fl'>10L</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -213,7 +213,7 @@ than <code>0</code> and will be coerced via <code><a href='https://rdrr.io/r/bas
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
 (defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
-If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
+If there are no results (or the API is unreachable), an empty <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble()</a></code> is returned.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other comment methods: 
@@ -225,26 +225,27 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Recently updated comments</span>
-<span class='fu'>comments_updates</span>()</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 10 x 34</span><span>
+<span class='fu'>comments_updates</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 10 x 31</span><span>
 #&gt;    type      id comment spoiler review parent_id created_at         
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span>             
-#&gt; </span><span style='color: #555555;'> 1</span><span> epis… </span><span style='text-decoration: underline;'>295</span><span>561 </span><span style='color: #555555;'>"</span><span>Seaso… FALSE   FALSE          0 2020-04-29 </span><span style='color: #555555;'>01:44:35</span><span>
-#&gt; </span><span style='color: #555555;'> 2</span><span> epis… </span><span style='text-decoration: underline;'>290</span><span>003 </span><span style='color: #555555;'>"</span><span>the d… FALSE   FALSE          0 2020-04-06 </span><span style='color: #555555;'>01:23:43</span><span>
-#&gt; </span><span style='color: #555555;'> 3</span><span> epis… </span><span style='text-decoration: underline;'>295</span><span>116 </span><span style='color: #555555;'>"</span><span>Episo… FALSE   FALSE          0 2020-04-27 </span><span style='color: #555555;'>20:21:10</span><span>
-#&gt; </span><span style='color: #555555;'> 4</span><span> epis… </span><span style='text-decoration: underline;'>295</span><span>558 </span><span style='color: #555555;'>"</span><span>First… TRUE    FALSE          0 2020-04-29 </span><span style='color: #555555;'>01:32:31</span><span>
-#&gt; </span><span style='color: #555555;'> 5</span><span> epis… </span><span style='text-decoration: underline;'>295</span><span>557 </span><span style='color: #555555;'>"</span><span>The e… FALSE   FALSE          0 2020-04-29 </span><span style='color: #555555;'>01:31:49</span><span>
-#&gt; </span><span style='color: #555555;'> 6</span><span> epis… </span><span style='text-decoration: underline;'>293</span><span>663 </span><span style='color: #555555;'>"</span><span>This … FALSE   FALSE          0 2020-04-21 </span><span style='color: #555555;'>16:29:55</span><span>
-#&gt; </span><span style='color: #555555;'> 7</span><span> epis… </span><span style='text-decoration: underline;'>295</span><span>552 </span><span style='color: #555555;'>"</span><span>I rea… TRUE    FALSE          0 2020-04-29 </span><span style='color: #555555;'>01:05:47</span><span>
-#&gt; </span><span style='color: #555555;'> 8</span><span> show  </span><span style='text-decoration: underline;'>181</span><span>547 </span><span style='color: #555555;'>"</span><span>Great… FALSE   FALSE          0 2018-07-03 </span><span style='color: #555555;'>00:50:35</span><span>
-#&gt; </span><span style='color: #555555;'> 9</span><span> seas… </span><span style='text-decoration: underline;'>283</span><span>984 </span><span style='color: #555555;'>"</span><span>Fair … FALSE   FALSE          0 2020-03-07 </span><span style='color: #555555;'>22:38:09</span><span>
-#&gt; </span><span style='color: #555555;'>10</span><span> movie </span><span style='text-decoration: underline;'>295</span><span>559 </span><span style='color: #555555;'>"</span><span>This … FALSE   FALSE          0 2020-04-29 </span><span style='color: #555555;'>01:39:39</span><span>
-#&gt; </span><span style='color: #555555;'># … with 27 more variables: updated_at </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #555555;'>, replies </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, likes </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'> 1</span><span> epis… </span><span style='text-decoration: underline;'>328</span><span>673 </span><span style='color: #555555;'>"</span><span>‘But … FALSE   FALSE          0 2020-10-09 </span><span style='color: #555555;'>14:06:24</span><span>
+#&gt; </span><span style='color: #555555;'> 2</span><span> epis… </span><span style='text-decoration: underline;'>328</span><span>598 </span><span style='color: #555555;'>"</span><span>This … FALSE   FALSE          0 2020-10-09 </span><span style='color: #555555;'>04:16:22</span><span>
+#&gt; </span><span style='color: #555555;'> 3</span><span> epis… </span><span style='text-decoration: underline;'>328</span><span>730 </span><span style='color: #555555;'>"</span><span>When … TRUE    FALSE          0 2020-10-09 </span><span style='color: #555555;'>20:41:53</span><span>
+#&gt; </span><span style='color: #555555;'> 4</span><span> epis… </span><span style='text-decoration: underline;'>225</span><span>342 </span><span style='color: #555555;'>"</span><span>Baile… FALSE   FALSE          0 2019-04-07 </span><span style='color: #555555;'>10:08:32</span><span>
+#&gt; </span><span style='color: #555555;'> 5</span><span> epis… </span><span style='text-decoration: underline;'>319</span><span>694 </span><span style='color: #555555;'>"</span><span>DECKE… TRUE    FALSE          0 2020-08-23 </span><span style='color: #555555;'>15:34:40</span><span>
+#&gt; </span><span style='color: #555555;'> 6</span><span> epis… </span><span style='text-decoration: underline;'>329</span><span>042 </span><span style='color: #555555;'>"</span><span>This … FALSE   FALSE          0 2020-10-11 </span><span style='color: #555555;'>12:11:26</span><span>
+#&gt; </span><span style='color: #555555;'> 7</span><span> epis… </span><span style='text-decoration: underline;'>328</span><span>753 </span><span style='color: #555555;'>"</span><span>Wow a… TRUE    FALSE          0 2020-10-09 </span><span style='color: #555555;'>21:21:58</span><span>
+#&gt; </span><span style='color: #555555;'> 8</span><span> movie </span><span style='text-decoration: underline;'>329</span><span>040 </span><span style='color: #555555;'>"</span><span>Utter… FALSE   FALSE          0 2020-10-11 </span><span style='color: #555555;'>11:57:15</span><span>
+#&gt; </span><span style='color: #555555;'> 9</span><span> movie </span><span style='text-decoration: underline;'>329</span><span>043 </span><span style='color: #555555;'>"</span><span>Like … FALSE   FALSE          0 2020-10-11 </span><span style='color: #555555;'>12:29:56</span><span>
+#&gt; </span><span style='color: #555555;'>10</span><span> show  </span><span style='text-decoration: underline;'>317</span><span>632 </span><span style='color: #555555;'>"</span><span>Overa… TRUE    FALSE          0 2020-08-13 </span><span style='color: #555555;'>12:39:36</span><span>
+#&gt; </span><span style='color: #555555;'># … with 24 more variables: updated_at </span><span style='color: #555555;font-style: italic;'>&lt;dttm&gt;</span><span style='color: #555555;'>, replies </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, likes </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   user_rating </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, username </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, private </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, user_name </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
 #&gt; </span><span style='color: #555555;'>#   vip </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, vip_ep </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span style='color: #555555;'>, user_slug </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, title </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, year </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   trakt </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, slug </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, tvdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, imdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, tmdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, season </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   episode </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, episode_title </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, episode_trakt </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   episode_tvdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, episode_imdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, episode_tmdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
-#&gt; </span><span style='color: #555555;'>#   season_trakt </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, season_tvdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, season_tmdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div></span></pre>
+#&gt; </span><span style='color: #555555;'>#   trakt </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, slug </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, tvdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, imdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, tmdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   episode_season </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, episode_number </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span style='color: #555555;'>, episode_title </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   episode_trakt </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, episode_tvdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>, episode_imdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span style='color: #555555;'>,</span><span>
+#&gt; </span><span style='color: #555555;'>#   episode_tmdb </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -260,7 +261,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

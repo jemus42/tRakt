@@ -49,7 +49,7 @@
 <meta property="og:title" content="Get a season of a show — seasons_season" />
 <meta property="og:description" content="Similar to seasons_summary, but this function returns full data for
 a single season, i.e. all the episodes of the season" />
-<meta property="og:image" content="/reference/figures/logo.png" />
+<meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@jemus42" />
@@ -177,7 +177,7 @@ a single season, i.e. all the episodes of the season" />
 a single season, i.e. all the episodes of the season</p>
     </div>
 
-    <pre class="usage"><span class='fu'>seasons_season</span>(<span class='no'>id</span>, <span class='kw'>seasons</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"min"</span>, <span class='st'>"full"</span>))</pre>
+    <pre class="usage"><span class='fu'>seasons_season</span><span class='op'>(</span><span class='va'>id</span>, seasons <span class='op'>=</span> <span class='fl'>1L</span>, extended <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"min"</span>, <span class='st'>"full"</span><span class='op'>)</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -210,7 +210,7 @@ See <code><a href='../articles/finding-things.html'>vignette("finding-things")</
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
 (defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
-If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
+If there are no results (or the API is unreachable), an empty <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble()</a></code> is returned.</p>
     <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
 
     <p>If you want to quickly gather episode data of all available seasons,
@@ -237,12 +237,13 @@ see <a href='seasons_summary.html'>seasons_summary</a> and use the <code>episode
 <code><a href='shows_next_episode.html'>shows_next_episode</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'>seasons_season</span>(<span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>)
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'>seasons_season</span><span class='op'>(</span><span class='st'>"breaking-bad"</span>, <span class='fl'>1</span><span class='op'>)</span>
 
 <span class='co'># Including all episode data:</span>
-<span class='fu'>seasons_season</span>(<span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>, <span class='kw'>extended</span> <span class='kw'>=</span> <span class='st'>"full"</span>)
-}</div></pre>
+<span class='fu'>seasons_season</span><span class='op'>(</span><span class='st'>"breaking-bad"</span>, <span class='fl'>1</span>, extended <span class='op'>=</span> <span class='st'>"full"</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -258,7 +259,7 @@ see <a href='seasons_summary.html'>seasons_summary</a> and use the <code>episode
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -48,7 +48,7 @@
 
 <meta property="og:title" content="Futurama episodes — futurama" />
 <meta property="og:description" content="This data comes from https://trakt.tv and serves as an example of episode data output." />
-<meta property="og:image" content="/reference/figures/logo.png" />
+<meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@jemus42" />
@@ -175,12 +175,12 @@
     <p>This data comes from <a href='https://trakt.tv'>https://trakt.tv</a> and serves as an example of episode data output.</p>
     </div>
 
-    <pre class="usage"><span class='no'>futurama</span></pre>
+    <pre class="usage"><span class='va'>futurama</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> with 124 rows and 18 variables:</p><dl'>
+    <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a> with 124 rows and 18 variables:</p><dl>
 <dt>episode, season</dt><dd><p>Episode within each season and season number</p></dd>
 <dt>title</dt><dd><p>Episode title</p></dd>
 <dt>episode_abs</dt><dd><p>Overall episode number</p></dd>
@@ -201,7 +201,8 @@
 <code><a href='gameofthrones.html'>gameofthrones</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>futurama</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 124 x 16</span><span>
+    <pre class="examples"><div class='input'><span class='va'>futurama</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 124 x 16</span><span>
 #&gt;    season episode title episode_abs overview rating votes comment_count
 #&gt;     </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>       </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
 #&gt; </span><span style='color: #555555;'> 1</span><span>      1       1 Spac…           1 </span><span style='color: #555555;'>"</span><span>Fry, a…   8.11  </span><span style='text-decoration: underline;'>2</span><span>119             2
@@ -232,7 +233,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

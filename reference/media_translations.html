@@ -48,7 +48,7 @@
 
 <meta property="og:title" content="Get translations for a movie, show or episode — media_translations" />
 <meta property="og:description" content="Get translations for a movie, show or episode" />
-<meta property="og:image" content="/reference/figures/logo.png" />
+<meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@jemus42" />
@@ -175,11 +175,11 @@
     <p>Get translations for a movie, show or episode</p>
     </div>
 
-    <pre class="usage"><span class='fu'>movies_translations</span>(<span class='no'>id</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
+    <pre class="usage"><span class='fu'>movies_translations</span><span class='op'>(</span><span class='va'>id</span>, languages <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
-<span class='fu'>shows_translations</span>(<span class='no'>id</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
+<span class='fu'>shows_translations</span><span class='op'>(</span><span class='va'>id</span>, languages <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
-<span class='fu'>episodes_translations</span>(<span class='no'>id</span>, <span class='kw'>season</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>episode</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>languages</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+<span class='fu'>episodes_translations</span><span class='op'>(</span><span class='va'>id</span>, season <span class='op'>=</span> <span class='fl'>1L</span>, episode <span class='op'>=</span> <span class='fl'>1L</span>, languages <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -221,7 +221,7 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
 
     <p>A <a href='https://tibble.tidyverse.org/reference/tibble-package.html'>tibble()</a>. If the function has a <code>limit</code> parameter
 (defaulting to <code>10</code>), this will be the (maximum) number of rows of the <code>tibble</code>.
-If there are no results (or the API is unreachable), an empty <code>tibble()</code> is returned.</p>
+If there are no results (or the API is unreachable), an empty <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble()</a></code> is returned.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other movie data: 
@@ -273,7 +273,8 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Get all translations</span>
-<span class='fu'>movies_translations</span>(<span class='st'>"193972"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 39 x 4</span><span>
+<span class='fu'>movies_translations</span><span class='op'>(</span><span class='st'>"193972"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 40 x 4</span><span>
 #&gt;    title               overview                         tagline         language
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>               </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                            </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>           </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   
 #&gt; </span><span style='color: #555555;'> 1</span><span> حكاية لعبة 4        </span><span style='color: #555555;'>"</span><span>كان وودي دائمًا واثقًا من مكان…   </span><span style='color: #555555;'>""</span><span>              ar      
@@ -285,10 +286,11 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 #&gt; </span><span style='color: #555555;'> 7</span><span> Η Ιστορία των Παιχ… </span><span style='color: #555555;'>"</span><span>Ο Woody ήταν πάντα σίγουρος γι… </span><span style='color: #555555;'>"</span><span>Η περιπέτεια … el      
 #&gt; </span><span style='color: #555555;'> 8</span><span> Toy Story 4         </span><span style='color: #555555;'>"</span><span>Woody has always been confiden… </span><span style='color: #555555;'>"</span><span>Get Ready to … en      
 #&gt; </span><span style='color: #555555;'> 9</span><span> Toy Story 4         </span><span style='color: #555555;'>"</span><span>Woody siempre ha tenido claro … </span><span style='color: #555555;'>"</span><span>La aventura d… es      
-#&gt; </span><span style='color: #555555;'>10</span><span> داستان اسباب‌بازی ۴  </span><span style='color: #555555;'>"</span><span>وودی، باز لایتیر و دوستانشان پ… </span><span style='color: #555555;'>""</span><span>              fa      
-#&gt; </span><span style='color: #555555;'># … with 29 more rows</span><span></div><div class='input'>
+#&gt; </span><span style='color: #555555;'>10</span><span> Lelulugu 4          </span><span style='color: #555555;'>"</span><span>Kauboi Woody on teadnud alati … </span><span style='color: #555555;'>""</span><span>              et      
+#&gt; </span><span style='color: #555555;'># … with 30 more rows</span><span></div><div class='input'>
 <span class='co'># Only get a specific language</span>
-<span class='fu'>movies_translations</span>(<span class='st'>"193972"</span>, <span class='st'>"de"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 4</span><span>
+<span class='fu'>movies_translations</span><span class='op'>(</span><span class='st'>"193972"</span>, <span class='st'>"de"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 1 x 4</span><span>
 #&gt;   title                  overview                               tagline language
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   
 #&gt; </span><span style='color: #555555;'>1</span><span> Toy Story 4 – Alles h… Die Cowboy-Puppe Woody und sein Freun… </span><span style='color: #555555;'>""</span><span>      de      </div></span></pre>
@@ -307,7 +309,7 @@ If there are no results (or the API is unreachable), an empty <code>tibble()</co
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

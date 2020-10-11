@@ -19,7 +19,7 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="The Basics">
 <meta property="og:description" content="tRakt">
-<meta property="og:image" content="/reference/figures/logo.png">
+<meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png">
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@jemus42">
@@ -115,13 +115,13 @@
 
       
 
-      </header><div class="row">
+      </header><script src="tRakt_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>The Basics</h1>
                         <h4 class="author">Lukas Burk</h4>
             
-            <h4 class="date">2020-04-29</h4>
+            <h4 class="date">2020-10-11</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/master/vignettes/tRakt.Rmd"><code>vignettes/tRakt.Rmd</code></a></small>
       <div class="hidden name"><code>tRakt.Rmd</code></div>
@@ -130,7 +130,8 @@
 
     
     
-<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tRakt</span>)</pre></body></html></div>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jemus42.github.io/tRakt">tRakt</a></span><span class="op">)</span></pre></div>
 <p>That’s all you need to to for basic things. If you’re planning a larger project with lots and lots of data retrieval, you might want to create your own API app <a href="https://trakt.tv/oauth/applications">on trakt.tv</a> and use <code><a href="../reference/trakt_credentials.html">trakt_credentials()</a></code> to set your <code>client id</code>.</p>
 <div id="getting-data-from-trakt-tv" class="section level1">
 <h1 class="hasAnchor">
@@ -140,21 +141,24 @@
 <h1 class="hasAnchor">
 <a href="#find-things" class="anchor"></a>1. Find things</h1>
 <p>Using a text query:</p>
-<div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/search_query.html">search_query</a></span>(<span class="st">"Game of Thrones"</span>, <span class="kw">type</span> <span class="kw">=</span> <span class="st">"show"</span>)
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"Game of Thrones"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 9</span>
 <span class="co">#&gt;   type  score title            year trakt slug            tvdb   imdb      tmdb </span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;</span>
-<span class="co">#&gt; 1 show   1000 Game of Thrones  2011 1390  game-of-thrones 121361 tt0944947 1399</span></pre></body></html></div>
+<span class="co">#&gt; 1 show   1000 Game of Thrones  2011 1390  game-of-thrones 121361 tt0944947 1399</span></pre></div>
 <p>Search by explicit ID:</p>
-<div class="sourceCode" id="cb3"><html><body><pre class="r"><span class="fu"><a href="../reference/search_query.html">search_id</a></span>(<span class="st">"121361"</span>, <span class="kw">id_type</span> <span class="kw">=</span> <span class="st">"tvdb"</span>, <span class="kw">type</span> <span class="kw">=</span> <span class="st">"show"</span>)
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="../reference/search_query.html">search_id</a></span><span class="op">(</span><span class="st">"121361"</span>, id_type <span class="op">=</span> <span class="st">"tvdb"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 1 x 9</span>
 <span class="co">#&gt;   type  score title            year trakt slug            tvdb   imdb      tmdb </span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;</span>
-<span class="co">#&gt; 1 show   1000 Game of Thrones  2011 1390  game-of-thrones 121361 tt0944947 1399</span></pre></body></html></div>
+<span class="co">#&gt; 1 show   1000 Game of Thrones  2011 1390  game-of-thrones 121361 tt0944947 1399</span></pre></div>
 <p>Or via whatever’s popular(ish):</p>
 <p>Another scenario would be that you’re not necessarily interested in some specific media item, but rather a collection of items that fulfill certain criteria, like being popular on trakt.tv and maybe being from a specific period or genre and whatnot. While you can also filter <code>search_query</code> by other criteria, it’s maybe more useful to filter, let’s say, the most watched movies of the past week by the release year of the movie.</p>
 <p>The 5 most popular shows:</p>
-<div class="sourceCode" id="cb4"><html><body><pre class="r"><span class="fu"><a href="../reference/popular_media.html">shows_popular</a></span>(<span class="kw">limit</span> <span class="kw">=</span> <span class="fl">5</span>)
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="../reference/popular_media.html">shows_popular</a></span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 5 x 7</span>
 <span class="co">#&gt;   title                year trakt slug                tvdb   imdb      tmdb </span>
 <span class="co">#&gt;   &lt;chr&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;               &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;</span>
@@ -162,25 +166,26 @@
 <span class="co">#&gt; 2 Breaking Bad         2008 1388  breaking-bad        81189  tt0903747 1396 </span>
 <span class="co">#&gt; 3 The Walking Dead     2010 1393  the-walking-dead    153021 tt1520211 1402 </span>
 <span class="co">#&gt; 4 The Big Bang Theory  2007 1409  the-big-bang-theory 80379  tt0898266 1418 </span>
-<span class="co">#&gt; 5 Sherlock             2010 19792 sherlock            176941 tt1475582 19885</span></pre></body></html></div>
+<span class="co">#&gt; 5 Sherlock             2010 19792 sherlock            176941 tt1475582 19885</span></pre></div>
 <p>The 10 most watched (during the past year) movies from 1990-2000:</p>
-<div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>)
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
 
-<span class="fu"><a href="../reference/watched_media.html">movies_watched</a></span>(<span class="kw">period</span> <span class="kw">=</span> <span class="st">"yearly"</span>, <span class="kw">years</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="fl">1990</span>, <span class="fl">2000</span>)) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(<span class="no">watcher_count</span>, <span class="no">title</span>, <span class="no">year</span>)
+<span class="fu"><a href="../reference/watched_media.html">movies_watched</a></span><span class="op">(</span>period <span class="op">=</span> <span class="st">"yearly"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span>, <span class="fl">2000</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">watcher_count</span>, <span class="va">title</span>, <span class="va">year</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 10 x 3</span>
 <span class="co">#&gt;    watcher_count title                                      year</span>
 <span class="co">#&gt;            &lt;int&gt; &lt;chr&gt;                                     &lt;int&gt;</span>
-<span class="co">#&gt;  1         54470 The Lion King                              1994</span>
-<span class="co">#&gt;  2         53985 Toy Story                                  1995</span>
-<span class="co">#&gt;  3         47933 The Matrix                                 1999</span>
-<span class="co">#&gt;  4         47250 Beauty and the Beast                       1991</span>
-<span class="co">#&gt;  5         46451 Aladdin                                    1992</span>
-<span class="co">#&gt;  6         38742 Toy Story 2                                1999</span>
-<span class="co">#&gt;  7         37118 Home Alone                                 1990</span>
-<span class="co">#&gt;  8         31155 Star Wars: Episode I - The Phantom Menace  1999</span>
-<span class="co">#&gt;  9         30468 Home Alone 2: Lost in New York             1992</span>
-<span class="co">#&gt; 10         27643 Forrest Gump                               1994</span></pre></body></html></div>
+<span class="co">#&gt;  1         53771 Beauty and the Beast                       1991</span>
+<span class="co">#&gt;  2         48207 The Matrix                                 1999</span>
+<span class="co">#&gt;  3         46965 The Lion King                              1994</span>
+<span class="co">#&gt;  4         44327 Toy Story                                  1995</span>
+<span class="co">#&gt;  5         35142 Home Alone                                 1990</span>
+<span class="co">#&gt;  6         33055 Forrest Gump                               1994</span>
+<span class="co">#&gt;  7         32670 Star Wars: Episode I - The Phantom Menace  1999</span>
+<span class="co">#&gt;  8         32386 Home Alone 2: Lost in New York             1992</span>
+<span class="co">#&gt;  9         29308 Aladdin                                    1992</span>
+<span class="co">#&gt; 10         28819 Terminator 2: Judgment Day                 1991</span></pre></div>
 </div>
   </div>
 
@@ -199,7 +204,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

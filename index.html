@@ -20,7 +20,7 @@
 <script src="pkgdown.js"></script><meta property="og:title" content="Get movie and tv data from trakt.tv">
 <meta property="og:description" content="Access the trakt.tv API to get data about movies and tv shows including detailed season and episode data. Additional methods to get cast and crew are available, or inversely, find a person's movie / tv credits.
 ">
-<meta property="og:image" content="/reference/figures/logo.png">
+<meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png">
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@jemus42">
@@ -132,21 +132,24 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>Get it from GitHub:</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="kw">if</span> (!(<span class="st">"remotes"</span> <span class="kw">%in%</span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span>())) {
-  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"remotes"</span>)
-}
-<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"jemus42/tRakt"</span>)
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="op">(</span><span class="st">"remotes"</span> <span class="op">%in%</span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
+  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
+<span class="op">}</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"jemus42/tRakt"</span><span class="op">)</span>
 
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"tRakt"</span>)</pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://jemus42.github.io/tRakt">"tRakt"</a></span><span class="op">)</span></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">dplyr</span>) <span class="co"># for convenience</span>
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tRakt</span>)</pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span> <span class="co"># for convenience</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jemus42.github.io/tRakt">tRakt</a></span><span class="op">)</span></pre></div>
 <p>Search for a show, get basic info:</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="no">show_info</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/search_query.html">search_query</a></span>(<span class="st">"Utopia"</span>, <span class="kw">type</span> <span class="kw">=</span> <span class="st">"show"</span>)
-<span class="fu"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>(<span class="no">show_info</span>)
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="va">show_info</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"Utopia"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
+<span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">)</span>
 <span class="co">#&gt; Observations: 1</span>
 <span class="co">#&gt; Variables: 9</span>
 <span class="co">#&gt; $ type  &lt;chr&gt; "show"</span>
@@ -159,8 +162,9 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt; $ imdb  &lt;chr&gt; "tt2384811"</span>
 <span class="co">#&gt; $ tmdb  &lt;chr&gt; "46511"</span></pre></div>
 <p>Get season information for the show using its trakt ID:</p>
-<div class="sourceCode" id="cb4"><pre class="r"><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span>(<span class="no">show_info</span>$<span class="no">trakt</span>, <span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>()
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; Observations: 2</span>
 <span class="co">#&gt; Variables: 12</span>
 <span class="co">#&gt; $ season         &lt;int&gt; 1, 2</span>
@@ -176,8 +180,9 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt; $ tvdb           &lt;chr&gt; "507598", "524149"</span>
 <span class="co">#&gt; $ tmdb           &lt;chr&gt; "54695", "54696"</span></pre></div>
 <p>Get episode data for the first season, this time using the show’s URL slug:</p>
-<div class="sourceCode" id="cb5"><pre class="r"><span class="fu"><a href="reference/seasons_season.html">seasons_season</a></span>(<span class="st">"utopia"</span>, <span class="kw">seasons</span> <span class="kw">=</span> <span class="fl">1</span>, <span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>()
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="fu"><a href="reference/seasons_season.html">seasons_season</a></span><span class="op">(</span><span class="st">"utopia"</span>, seasons <span class="op">=</span> <span class="fl">1</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 6</span>
 <span class="co">#&gt; Columns: 16</span>
 <span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1</span>
@@ -197,10 +202,11 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "tt2618…</span>
 <span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></pre></div>
 <p>You cann also get episode data for all seasons, but note that episodes will be included as a list-column and need further unpacking:</p>
-<div class="sourceCode" id="cb6"><pre class="r"><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span>(<span class="st">"utopia"</span>, <span class="kw">episodes</span> <span class="kw">=</span> <span class="fl">TRUE</span>, <span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span>(<span class="no">episodes</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_rows</a></span>() <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/reexports.html">glimpse</a></span>()
+<div class="sourceCode" id="cb6"><pre class="downlit">
+<span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="st">"utopia"</span>, episodes <span class="op">=</span> <span class="cn">TRUE</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">episodes</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_rows</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 12</span>
 <span class="co">#&gt; Columns: 16</span>
 <span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2</span>
@@ -220,7 +226,8 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "tt2618…</span>
 <span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></pre></div>
 <p>Or alternatively, get the <a href="https://trakt.tv/shows/trending">trending shows</a>:</p>
-<div class="sourceCode" id="cb7"><pre class="r"><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span>()
+<div class="sourceCode" id="cb7"><pre class="downlit">
+<span class="fu"><a href="reference/trending_media.html">shows_trending</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 10 x 8</span>
 <span class="co">#&gt;    watchers title             year trakt  slug             tvdb   imdb     tmdb </span>
 <span class="co">#&gt;       &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span>
@@ -235,16 +242,17 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt;  9       44 Brooklyn Nine-N…  2013 48587  brooklyn-nine-n… 269586 tt24673… 48891</span>
 <span class="co">#&gt; 10       40 NCIS              2003 4590   ncis             72108  tt03648… 4614</span></pre></div>
 <p>Maybe you just want to know how long it would take you to binge through these shows:</p>
-<div class="sourceCode" id="cb8"><pre class="r"><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span>(<span class="kw">extended</span> <span class="kw">=</span> <span class="st">"full"</span>) <span class="kw">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">transmute</a></span>(
-    <span class="kw">show</span> <span class="kw">=</span> <span class="kw pkg">glue</span><span class="kw ns">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span>(<span class="st">"{title} ({year})"</span>),
-    <span class="kw">runtime_hms</span> <span class="kw">=</span> <span class="kw pkg">hms</span><span class="kw ns">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="kw">minutes</span> <span class="kw">=</span> <span class="no">runtime</span>),
-    <span class="kw">aired_episodes</span> <span class="kw">=</span> <span class="no">aired_episodes</span>,
-    <span class="kw">runtime_aired</span> <span class="kw">=</span> <span class="kw pkg">hms</span><span class="kw ns">::</span><span class="fu"><a href="https://hms.tidyverse.org/reference/hms.html">hms</a></span>(<span class="kw">minutes</span> <span class="kw">=</span> <span class="no">runtime</span> * <span class="no">aired_episodes</span>)
-  ) <span class="kw">%&gt;%</span>
-  <span class="kw pkg">knitr</span><span class="kw ns">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span>(
-    <span class="kw">col.names</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Show"</span>, <span class="st">"Episode Runtime"</span>, <span class="st">"Aired Episodes"</span>, <span class="st">"Total Runtime (aired)"</span>)
-  )</pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit">
+<span class="fu"><a href="reference/trending_media.html">shows_trending</a></span><span class="op">(</span>extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">transmute</a></span><span class="op">(</span>
+    show <span class="op">=</span> <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"{title} ({year})"</span><span class="op">)</span>,
+    runtime_hms <span class="op">=</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu">hms</span><span class="op">(</span>minutes <span class="op">=</span> <span class="va">runtime</span><span class="op">)</span>,
+    aired_episodes <span class="op">=</span> <span class="va">aired_episodes</span>,
+    runtime_aired <span class="op">=</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu">hms</span><span class="op">(</span>minutes <span class="op">=</span> <span class="va">runtime</span> <span class="op">*</span> <span class="va">aired_episodes</span><span class="op">)</span>
+  <span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>
+    col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Show"</span>, <span class="st">"Episode Runtime"</span>, <span class="st">"Aired Episodes"</span>, <span class="st">"Total Runtime (aired)"</span><span class="op">)</span>
+  <span class="op">)</span></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">Show</th>
@@ -392,7 +400,7 @@ That would make me a sad panda. As of now, the trakt.tv API does not have any ra
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

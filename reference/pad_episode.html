@@ -49,7 +49,7 @@
 <meta property="og:title" content="Easy episode number padding — pad_episode" />
 <meta property="og:description" content="Simple function to ease the creation of sXXeYY episode ids.
 Note that s and e must have the same length." />
-<meta property="og:image" content="/reference/figures/logo.png" />
+<meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png" />
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:creator" content="@jemus42" />
@@ -177,7 +177,7 @@ Note that s and e must have the same length." />
 Note that <code>s</code> and <code>e</code> must have the same length.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>pad_episode</span>(<span class='kw'>s</span> <span class='kw'>=</span> <span class='st'>"0"</span>, <span class='kw'>e</span> <span class='kw'>=</span> <span class='st'>"0"</span>, <span class='kw'>s_width</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>e_width</span> <span class='kw'>=</span> <span class='fl'>2</span>)</pre>
+    <pre class="usage"><span class='fu'>pad_episode</span><span class='op'>(</span>s <span class='op'>=</span> <span class='st'>"0"</span>, e <span class='op'>=</span> <span class='st'>"0"</span>, s_width <span class='op'>=</span> <span class='fl'>2</span>, e_width <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -213,7 +213,9 @@ Note that <code>s</code> and <code>e</code> must have the same length.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Season 2, episode 4</span>
-<span class='fu'>pad_episode</span>(<span class='fl'>2</span>, <span class='fl'>4</span>)</div><div class='output co'>#&gt; [1] "s02e04"</div><div class='input'><span class='fu'>pad_episode</span>(<span class='fl'>1</span>, <span class='fl'>85</span>, <span class='kw'>e_width</span> <span class='kw'>=</span> <span class='fl'>3</span>)</div><div class='output co'>#&gt; [1] "s01e085"</div></pre>
+<span class='fu'>pad_episode</span><span class='op'>(</span><span class='fl'>2</span>, <span class='fl'>4</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "s02e04"</div><div class='input'><span class='fu'>pad_episode</span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>85</span>, e_width <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "s01e085"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -229,7 +231,7 @@ Note that <code>s</code> and <code>e</code> must have the same length.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
