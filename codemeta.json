@@ -15,10 +15,9 @@
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "4.0.0",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.0.0 Patched (2020-04-27 r78309)",
+  "runtimePlatform": "R version 4.0.2 Patched (2020-09-17 r79226)",
   "author": [
     {
       "@type": "Person",
@@ -302,10 +301,7 @@
   ],
   "releaseNotes": "https://github.com/jemus42/tRakt/blob/master/NEWS.md",
   "readme": "https://github.com/jemus42/tRakt/blob/master/README.md",
-  "contIntegration": [
-    "https://travis-ci.org/jemus42/tRakt",
-    "https://codecov.io/github/jemus42/tRakt?branch=master"
-  ],
+  "contIntegration": ["https://travis-ci.org/jemus42/tRakt", "https://codecov.io/github/jemus42/tRakt?branch=master"],
   "keywords": [
     "trakt-api",
     "trakttv",
@@ -313,5 +309,6 @@
     "rstats",
     "r-package",
     "trakt"
-  ]
+  ],
+  "fileSize": "3565.444KB"
 }

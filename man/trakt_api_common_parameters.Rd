@@ -37,7 +37,7 @@ combined. This may result in \emph{a lot} of API calls. Use wisely.}
 on to count updates. If no date is supplied, the default is to
 use yesterday relative to the current date. Value must either
 be standard \code{YYYY-MM-DD} format or an object of class \link[base:Dates]{Date},
-which will then be coerced via \link[base:as.character]{as.character()}.}
+which will then be coerced via \link[base:character]{as.character()}.}
 
 \item{sort}{\code{character(1) ["newest"]}: Comment sort order, one of
 "newest", "oldest", "likes" or "replies".}

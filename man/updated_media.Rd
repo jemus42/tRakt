@@ -35,7 +35,7 @@ See \code{vignette("finding-things")} for more details.}
 on to count updates. If no date is supplied, the default is to
 use yesterday relative to the current date. Value must either
 be standard \code{YYYY-MM-DD} format or an object of class \link[base:Dates]{Date},
-which will then be coerced via \link[base:as.character]{as.character()}.}
+which will then be coerced via \link[base:character]{as.character()}.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
