@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 [![R build status](https://github.com/jemus42/tRakt/workflows/R-CMD-check/badge.svg)](https://github.com/jemus42/tRakt/actions) 
 [![Coverage status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master) 
 [![CRAN status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
-[![GitHub release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](https://github.com/jemus42/tRakt/releases) 
+[![GitHub release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](https://github.com/jemus42/tRakt/releases)
 <!-- badges: end -->
 
 `tRakt` helps you to retrieve data from [trakt.tv](https://trakt.tv/), a site similiar to [IMDb](https://imdb.com) with a wider focus, yet smaller user base. The site also enables media-center integration, so you can automatically sync your collection and watch progress, as well as scrobble playback and ratings via [Plex](https://www.plex.tv/), [Kodi](https://kodi.tv/) and the likes.  
