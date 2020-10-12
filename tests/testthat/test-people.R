@@ -10,8 +10,7 @@ test_that("people_summary works", {
   expect_equal(nrow(people_min), 1)
   expect_equal(ncol(people_min), 5)
   expect_is(people_max, "tbl")
-  expect_equal(nrow(people_max), 1)
-  expect_equal(ncol(people_max), 10)
+  expect_equal(ncol(people_max), 11)
 
   expect_identical(
     rbind(

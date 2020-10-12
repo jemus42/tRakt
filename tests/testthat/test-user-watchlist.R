@@ -14,7 +14,7 @@ test_that("user_watchlist works", {
 
   user_watchlist(user = c(user, user)) %>%
     expect_is("tbl_df") %>%
-    expect_length(11)
+    expect_length(12)
 
   # no shows
   expect_identical(
