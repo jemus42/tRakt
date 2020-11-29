@@ -57,7 +57,8 @@ test_that("comments_item works", {
     "airs_day", "airs_time", "airs_timezone", "trakt", "slug", "tvdb",
     "imdb", "tmdb", "season", "season_rating", "season_votes", "season_episode_count",
     "season_aired_episodes", "season_title", "season_overview", "season_first_aired",
-    "season_network", "season_trakt", "season_tvdb", "season_tmdb"
+    "season_updated_at", "season_network", "season_trakt", "season_tvdb",
+    "season_tmdb"
   )
 
   comments_item("140265") %>%
