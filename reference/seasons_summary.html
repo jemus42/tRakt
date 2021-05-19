@@ -117,7 +117,7 @@ just a single API call." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -152,7 +152,7 @@ just a single API call." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="http://github.com/jemus42/tRakt/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -262,14 +262,14 @@ If there are no results (or the API is unreachable), an empty <code><a href='htt
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Get just the season numbers and their IDs</span>
 <span class='fu'>seasons_summary</span><span class='op'>(</span><span class='st'>"breaking-bad"</span>, extended <span class='op'>=</span> <span class='st'>"min"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 5 x 4</span><span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 5 x 4</span><span>
 #&gt;   season trakt tvdb   tmdb 
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span>      1 3950  30272  3572 
-#&gt; </span><span style='color: #555555;'>2</span><span>      2 3951  40719  3573 
-#&gt; </span><span style='color: #555555;'>3</span><span>      3 3952  171641 3575 
-#&gt; </span><span style='color: #555555;'>4</span><span>      4 3953  297361 3576 
-#&gt; </span><span style='color: #555555;'>5</span><span>      5 3954  490110 3578 </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+#&gt;    </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #949494;font-style: italic;'>&lt;chr&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'>1</span><span>      1 3950  30272  3572 
+#&gt; </span><span style='color: #BCBCBC;'>2</span><span>      2 3951  40719  3573 
+#&gt; </span><span style='color: #BCBCBC;'>3</span><span>      3 3952  171641 3575 
+#&gt; </span><span style='color: #BCBCBC;'>4</span><span>      4 3953  297361 3576 
+#&gt; </span><span style='color: #BCBCBC;'>5</span><span>      5 3954  490110 3578 </div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='co'># Get season numbers, ratings, votes, titles and other metadata as well as</span>
 <span class='co'># a list-column containing all episode data</span>
 <span class='fu'>seasons_summary</span><span class='op'>(</span><span class='st'>"utopia"</span>, extended <span class='op'>=</span> <span class='st'>"full"</span>, episodes <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>

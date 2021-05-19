@@ -67,7 +67,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -102,7 +102,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="http://github.com/jemus42/tRakt/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -124,7 +124,7 @@
 <a href="#trakt-" class="anchor"></a>tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="120">
 </h1></div>
 <!-- badges: start -->
-<p><a href="https://travis-ci.org/jemus42/tRakt"><img src="https://img.shields.io/travis/jemus42/tRakt.svg?logo=travis" alt="Travis (.org)"></a> <a href="https://github.com/jemus42/tRakt/actions"><img src="https://github.com/jemus42/tRakt/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://codecov.io/github/jemus42/tRakt?branch=master"><img src="https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg" alt="Coverage status"></a> <a href="https://cran.r-project.org/package=tRakt"><img src="https://www.r-pkg.org/badges/version/tRakt" alt="CRAN status"></a> <a href="https://github.com/jemus42/tRakt/releases"><img src="https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub" alt="GitHub release"></a> <a href="https://github.com/jemus42/tRakt/commits/master"><img src="https://img.shields.io/github/last-commit/jemus42/tRakt/master.svg?logo=GithUb" alt="GitHub last commit (master)"></a> <!-- badges: end --></p>
+<p><a href="https://github.com/jemus42/tRakt/actions"><img src="https://github.com/jemus42/tRakt/workflows/R-CMD-check/badge.svg" alt="R build status"></a> <a href="https://codecov.io/github/jemus42/tRakt?branch=master"><img src="https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg" alt="Coverage status"></a> <a href="https://cran.r-project.org/package=tRakt"><img src="https://www.r-pkg.org/badges/version/tRakt" alt="CRAN status"></a> <a href="https://github.com/jemus42/tRakt/releases"><img src="https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub" alt="GitHub release"></a> <!-- badges: end --></p>
 <p><code>tRakt</code> helps you to retrieve data from <a href="https://trakt.tv/">trakt.tv</a>, a site similiar to <a href="https://imdb.com">IMDb</a> with a wider focus, yet smaller user base. The site also enables media-center integration, so you can automatically sync your collection and watch progress, as well as scrobble playback and ratings via <a href="https://www.plex.tv/">Plex</a>, <a href="https://kodi.tv/">Kodi</a> and the likes.<br>
 And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a publicly available API</a> – which makes this package possible and allows you to collect all that nice data people have contributed.</p>
 <p>Please note that while this package is <em>basically</em> an API-client, it is a little more opinionated and might deliver results that do not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.</p>
@@ -132,24 +132,24 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>Get it from GitHub:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="op">(</span><span class="st">"remotes"</span> <span class="op">%in%</span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="op">(</span><span class="st">"remotes"</span> <span class="op">%in%</span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span>
   <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
 <span class="op">}</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"jemus42/tRakt"</span><span class="op">)</span>
 
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://jemus42.github.io/tRakt">"tRakt"</a></span><span class="op">)</span></pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://jemus42.github.io/tRakt">"tRakt"</a></span><span class="op">)</span></code></pre></div>
 </div>
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span> <span class="co"># for convenience</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jemus42.github.io/tRakt">tRakt</a></span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span> <span class="co"># for convenience</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jemus42.github.io/tRakt">tRakt</a></span><span class="op">)</span></code></pre></div>
 <p>Search for a show, get basic info:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="va">show_info</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"Utopia"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
-<span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">)</span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">show_info</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"Utopia"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
+<span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">)</span>
 <span class="co">#&gt; Observations: 1</span>
 <span class="co">#&gt; Variables: 9</span>
 <span class="co">#&gt; $ type  &lt;chr&gt; "show"</span>
@@ -160,11 +160,11 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt; $ slug  &lt;chr&gt; "utopia"</span>
 <span class="co">#&gt; $ tvdb  &lt;chr&gt; "264991"</span>
 <span class="co">#&gt; $ imdb  &lt;chr&gt; "tt2384811"</span>
-<span class="co">#&gt; $ tmdb  &lt;chr&gt; "46511"</span></pre></div>
+<span class="co">#&gt; $ tmdb  &lt;chr&gt; "46511"</span></code></pre></div>
 <p>Get season information for the show using its trakt ID:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; Observations: 2</span>
 <span class="co">#&gt; Variables: 12</span>
 <span class="co">#&gt; $ season         &lt;int&gt; 1, 2</span>
@@ -178,11 +178,11 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt; $ network        &lt;chr&gt; "Channel 4", "Channel 4"</span>
 <span class="co">#&gt; $ trakt          &lt;chr&gt; "56008", "56009"</span>
 <span class="co">#&gt; $ tvdb           &lt;chr&gt; "507598", "524149"</span>
-<span class="co">#&gt; $ tmdb           &lt;chr&gt; "54695", "54696"</span></pre></div>
+<span class="co">#&gt; $ tmdb           &lt;chr&gt; "54695", "54696"</span></code></pre></div>
 <p>Get episode data for the first season, this time using the show’s URL slug:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="reference/seasons_season.html">seasons_season</a></span><span class="op">(</span><span class="st">"utopia"</span>, seasons <span class="op">=</span> <span class="fl">1</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/seasons_season.html">seasons_season</a></span><span class="op">(</span><span class="st">"utopia"</span>, seasons <span class="op">=</span> <span class="fl">1</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 6</span>
 <span class="co">#&gt; Columns: 16</span>
 <span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1</span>
@@ -200,13 +200,13 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056", "1…</span>
 <span class="co">#&gt; $ tvdb                   &lt;chr&gt; "4471351", "4477746", "4477747", "4477748", "4…</span>
 <span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "tt2618…</span>
-<span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></pre></div>
+<span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></code></pre></div>
 <p>You cann also get episode data for all seasons, but note that episodes will be included as a list-column and need further unpacking:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="st">"utopia"</span>, episodes <span class="op">=</span> <span class="cn">TRUE</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="st">"utopia"</span>, episodes <span class="op">=</span> <span class="cn">TRUE</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html">pull</a></span><span class="op">(</span><span class="va">episodes</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_rows</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
+  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 12</span>
 <span class="co">#&gt; Columns: 16</span>
 <span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2</span>
@@ -224,10 +224,10 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056", "1…</span>
 <span class="co">#&gt; $ tvdb                   &lt;chr&gt; "4471351", "4477746", "4477747", "4477748", "4…</span>
 <span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "tt2618…</span>
-<span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></pre></div>
+<span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></code></pre></div>
 <p>Or alternatively, get the <a href="https://trakt.tv/shows/trending">trending shows</a>:</p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="fu"><a href="reference/trending_media.html">shows_trending</a></span><span class="op">(</span><span class="op">)</span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 10 x 8</span>
 <span class="co">#&gt;    watchers title             year trakt  slug             tvdb   imdb     tmdb </span>
 <span class="co">#&gt;       &lt;int&gt; &lt;chr&gt;            &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;            &lt;chr&gt;  &lt;chr&gt;    &lt;chr&gt;</span>
@@ -240,10 +240,10 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
 <span class="co">#&gt;  7       54 Chicago Med       2015 98934  chicago-med      295640 tt46554… 62650</span>
 <span class="co">#&gt;  8       51 Survivor          2000 14594  survivor-2000    76733  tt02391… 14658</span>
 <span class="co">#&gt;  9       44 Brooklyn Nine-N…  2013 48587  brooklyn-nine-n… 269586 tt24673… 48891</span>
-<span class="co">#&gt; 10       40 NCIS              2003 4590   ncis             72108  tt03648… 4614</span></pre></div>
+<span class="co">#&gt; 10       40 NCIS              2003 4590   ncis             72108  tt03648… 4614</span></code></pre></div>
 <p>Maybe you just want to know how long it would take you to binge through these shows:</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="fu"><a href="reference/trending_media.html">shows_trending</a></span><span class="op">(</span>extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span><span class="op">(</span>extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">transmute</a></span><span class="op">(</span>
     show <span class="op">=</span> <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html">glue</a></span><span class="op">(</span><span class="st">"{title} ({year})"</span><span class="op">)</span>,
     runtime_hms <span class="op">=</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu">hms</span><span class="op">(</span>minutes <span class="op">=</span> <span class="va">runtime</span><span class="op">)</span>,
@@ -252,7 +252,7 @@ And, most importantly, <a href="https://trakt.docs.apiary.io">trakt.tv has a pub
   <span class="op">)</span> <span class="op">%&gt;%</span>
   <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span>
     col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Show"</span>, <span class="st">"Episode Runtime"</span>, <span class="st">"Aired Episodes"</span>, <span class="st">"Total Runtime (aired)"</span><span class="op">)</span>
-  <span class="op">)</span></pre></div>
+  <span class="op">)</span></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="left">Show</th>

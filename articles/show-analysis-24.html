@@ -66,7 +66,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -101,7 +101,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="http://github.com/jemus42/tRakt/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -121,7 +121,7 @@
       <h1 data-toc-skip>Show Analysis: 24</h1>
                         <h4 class="author">Lukas Burk</h4>
             
-            <h4 class="date">2020-10-12</h4>
+            <h4 class="date">2021-05-19</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/master/vignettes/show-analysis-24.Rmd"><code>vignettes/show-analysis-24.Rmd</code></a></small>
       <div class="hidden name"><code>show-analysis-24.Rmd</code></div>
@@ -130,84 +130,85 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jemus42.github.io/tRakt">tRakt</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span> <span class="co"># For glimpse()</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jemus42.github.io/tRakt">tRakt</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span> <span class="co"># For glimpse()</span></code></pre></div>
 <div id="step-1-search" class="section level2">
 <h2 class="hasAnchor">
 <a href="#step-1-search" class="anchor"></a>Step 1: Search</h2>
 <p>Use the search function to find the show you’re looking for.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="va">show_info</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"24"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">show_info</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"24"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
 <span class="va">show_info</span>
 <span class="co">#&gt; # A tibble: 1 x 9</span>
 <span class="co">#&gt;   type  score title  year trakt slug  tvdb  imdb      tmdb </span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt;</span>
-<span class="co">#&gt; 1 show   1000 24     2001 1960  24    76290 tt0285331 1973</span></pre></div>
+<span class="co">#&gt; 1 show   1000 24     2001 1960  24    76290 tt0285331 1973</span></code></pre></div>
 </div>
 <div id="step-2-use-the-id" class="section level2">
 <h2 class="hasAnchor">
 <a href="#step-2-use-the-id" class="anchor"></a>Step 2: Use the ID</h2>
 <p>Use the <code>trakt</code> ID (recommended over other IDs) for subsequent API calls.<br>
 In this case, we’ll use <code><a href="../reference/seasons_summary.html">seasons_summary()</a></code> to get data for all seasons of the show, while also getting an additional list-column containing all episode data, which includes user ratings.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="va">seasons</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, extended <span class="op">=</span> <span class="st">"full"</span>, episodes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
-<span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">seasons</span><span class="op">)</span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">seasons</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, extended <span class="op">=</span> <span class="st">"full"</span>, episodes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+<span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">seasons</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 9</span>
-<span class="co">#&gt; Columns: 13</span>
+<span class="co">#&gt; Columns: 14</span>
 <span class="co">#&gt; $ season         &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9</span>
-<span class="co">#&gt; $ rating         &lt;dbl&gt; 8.33779, 8.37379, 8.32620, 8.39490, 8.51724, 7.45528, …</span>
-<span class="co">#&gt; $ votes          &lt;int&gt; 299, 206, 187, 157, 145, 123, 112, 103, 138</span>
+<span class="co">#&gt; $ rating         &lt;dbl&gt; 8.30838, 8.32609, 8.35749, 8.38286, 8.57669, 7.44928, 7…</span>
+<span class="co">#&gt; $ votes          &lt;int&gt; 334, 230, 207, 175, 163, 138, 129, 117, 150</span>
 <span class="co">#&gt; $ episode_count  &lt;int&gt; 24, 24, 24, 24, 24, 24, 24, 24, 12</span>
 <span class="co">#&gt; $ aired_episodes &lt;int&gt; 24, 24, 24, 24, 24, 24, 24, 24, 12</span>
-<span class="co">#&gt; $ title          &lt;chr&gt; "Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", …</span>
-<span class="co">#&gt; $ overview       &lt;chr&gt; "The first season of the television series 24, titled …</span>
-<span class="co">#&gt; $ first_aired    &lt;dttm&gt; 2001-11-07 02:00:00, 2002-10-30 02:00:00, 2003-10-29 …</span>
-<span class="co">#&gt; $ network        &lt;chr&gt; "FOX", "FOX", "FOX", "FOX", "FOX", "FOX", "FOX", "FOX"…</span>
-<span class="co">#&gt; $ episodes       &lt;list&gt; [&lt;tbl_df[24 x 16]&gt;, &lt;tbl_df[24 x 16]&gt;, &lt;tbl_df[24 x 1…</span>
+<span class="co">#&gt; $ title          &lt;chr&gt; "Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "…</span>
+<span class="co">#&gt; $ overview       &lt;chr&gt; "The first season of the television series 24, titled D…</span>
+<span class="co">#&gt; $ first_aired    &lt;dttm&gt; 2001-11-07 02:00:00, 2002-10-30 02:00:00, 2003-10-29 02…</span>
+<span class="co">#&gt; $ updated_at     &lt;dttm&gt; 2021-05-19 06:49:27, 2021-05-19 07:01:25, 2021-05-19 03…</span>
+<span class="co">#&gt; $ network        &lt;chr&gt; "FOX", "FOX", "FOX", "FOX", "FOX", "FOX", "FOX", "FOX",…</span>
+<span class="co">#&gt; $ episodes       &lt;list&gt; [&lt;tbl_df[24 x 16]&gt;], [&lt;tbl_df[24 x 16]&gt;], [&lt;tbl_df[24 x…</span>
 <span class="co">#&gt; $ trakt          &lt;chr&gt; "6262", "6263", "6264", "6265", "6266", "6267", "6268"…</span>
 <span class="co">#&gt; $ tvdb           &lt;chr&gt; "10063", "10064", "10065", "10066", "10067", "16794", …</span>
-<span class="co">#&gt; $ tmdb           &lt;chr&gt; "5845", "5846", "5847", "5848", "5849", "5850", "5851"…</span></pre></div>
+<span class="co">#&gt; $ tmdb           &lt;chr&gt; "5845", "5846", "5847", "5848", "5849", "5850", "5851",…</span></code></pre></div>
 </div>
 <div id="step-3-tidying-up" class="section level2">
 <h2 class="hasAnchor">
 <a href="#step-3-tidying-up" class="anchor"></a>Step 3: Tidying up</h2>
 <p>We’re interested in the <code>episodes</code> list-column, which needs unnesting. In this case we can simply use <code><a href="https://dplyr.tidyverse.org/reference/bind.html">dplyr::bind_rows</a></code> to take the list of <code>tbls</code> that is <code>seasons$episodes</code> and basically <code>rbind</code> them all together, meaning the result is a <code>tibble</code> of the episode data we care about.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span> 
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span> 
 
 <span class="va">episodes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html">bind_rows</a></span><span class="op">(</span><span class="va">seasons</span><span class="op">$</span><span class="va">episodes</span><span class="op">)</span>
-<span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">episodes</span><span class="op">)</span>
+<span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">episodes</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 204</span>
 <span class="co">#&gt; Columns: 16</span>
-<span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…</span>
-<span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,…</span>
-<span class="co">#&gt; $ title                  &lt;chr&gt; "12:00 A.M. - 1:00 A.M.", "1:00 A.M. - 2:00 A.…</span>
-<span class="co">#&gt; $ episode_abs            &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…</span>
-<span class="co">#&gt; $ overview               &lt;chr&gt; "It is California Presidential Primary Day in …</span>
-<span class="co">#&gt; $ rating                 &lt;dbl&gt; 7.76291, 7.79438, 7.78265, 7.77354, 7.76577, 7…</span>
-<span class="co">#&gt; $ votes                  &lt;int&gt; 1510, 1138, 980, 945, 888, 854, 834, 832, 813,…</span>
-<span class="co">#&gt; $ comment_count          &lt;int&gt; 6, 2, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 3, 2…</span>
-<span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2001-11-07 02:00:00, 2001-11-14 02:00:00, 200…</span>
-<span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2020-10-12 13:35:42, 2020-10-12 13:35:42, 202…</span>
-<span class="co">#&gt; $ available_translations &lt;list&gt; [&lt;"ar", "bg", "bs", "cs", "da", "de", "el", "…</span>
-<span class="co">#&gt; $ runtime                &lt;int&gt; 42, 43, 44, 43, 43, 44, 44, 44, 44, 44, 44, 44…</span>
-<span class="co">#&gt; $ trakt                  &lt;chr&gt; "146247", "146248", "146249", "146250", "14625…</span>
-<span class="co">#&gt; $ tvdb                   &lt;chr&gt; "189255", "189256", "189257", "189258", "18925…</span>
-<span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt0502165", "tt0502167", "tt0502169", "tt0502…</span>
-<span class="co">#&gt; $ tmdb                   &lt;chr&gt; "972745", "972752", "972753", "134397", "13439…</span></pre></div>
+<span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span>
+<span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, …</span>
+<span class="co">#&gt; $ title                  &lt;chr&gt; "12:00 A.M.-1:00 A.M.", "1:00 A.M.-2:00 A.M.", …</span>
+<span class="co">#&gt; $ episode_abs            &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…</span>
+<span class="co">#&gt; $ overview               &lt;chr&gt; "Counter Terrorist Unit agent Jack Bauer is ass…</span>
+<span class="co">#&gt; $ rating                 &lt;dbl&gt; 7.75253, 7.78453, 7.78131, 7.77468, 7.75584, 7.…</span>
+<span class="co">#&gt; $ votes                  &lt;int&gt; 1580, 1202, 1038, 1003, 942, 900, 883, 880, 856…</span>
+<span class="co">#&gt; $ comment_count          &lt;int&gt; 6, 2, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 3, 2,…</span>
+<span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2001-11-07 02:00:00, 2001-11-14 02:00:00, 2001…</span>
+<span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2021-05-19 07:45:13, 2021-05-19 06:42:54, 2021…</span>
+<span class="co">#&gt; $ available_translations &lt;list&gt; &lt;"ar", "bg", "bs", "cs", "da", "de", "el", "en…</span>
+<span class="co">#&gt; $ runtime                &lt;int&gt; 42, 43, 44, 43, 43, 44, 44, 44, 44, 44, 44, 44,…</span>
+<span class="co">#&gt; $ trakt                  &lt;chr&gt; "146247", "146248", "146249", "146250", "146251…</span>
+<span class="co">#&gt; $ tvdb                   &lt;chr&gt; "189255", "189256", "189257", "189258", "189259…</span>
+<span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt0502165", "tt0502167", "tt0502169", "tt05021…</span>
+<span class="co">#&gt; $ tmdb                   &lt;chr&gt; "972745", "972752", "972753", "134397", "134398…</span></code></pre></div>
 </div>
 <div id="step-4-graph" class="section level2">
 <h2 class="hasAnchor">
 <a href="#step-4-graph" class="anchor"></a>Step 4: Graph!</h2>
 <p>Now we have our episode data in a tidy form, might as well look at it.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
 
 <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">episodes</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">episode</span>, y <span class="op">=</span> <span class="va">rating</span>, color <span class="op">=</span> <span class="va">votes</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">season</span>, nrow <span class="op">=</span> <span class="fl">1</span>, labeller <span class="op">=</span> <span class="va">label_both</span>, scales <span class="op">=</span> <span class="st">"free_x"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/breaks_pretty.html">pretty_breaks</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org/reference/breaks_pretty.html">pretty_breaks</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">10</span>, <span class="fl">.5</span><span class="op">)</span>, minor_breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">10</span>, <span class="fl">.25</span><span class="op">)</span>, limits <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fl">9</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_color_viridis_c</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"24: Episode Ratings on trakt.tv"</span>,
@@ -216,7 +217,7 @@ In this case, we’ll use <code><a href="../reference/seasons_summary.html">seas
        caption <span class="op">=</span> <span class="st">"jemus42.github.io/tRakt"</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span>,
-        axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">rel</a></span><span class="op">(</span><span class="fl">.6</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></pre></div>
+        axis.text.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">rel</a></span><span class="op">(</span><span class="fl">.6</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p><img src="show-analysis-24_files/figure-html/24_episodes_plot-1.png" width="100%"></p>
 </div>
   </div>
