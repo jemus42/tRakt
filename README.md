@@ -13,6 +13,10 @@ status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](http
 status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
 [![GitHub
 release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](https://github.com/jemus42/tRakt/releases)
+[![Project Status: WIP – Initial development is in progress, but there
+has not yet been a stable, usable release suitable for the
+public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+
 <!-- badges: end -->
 
 `tRakt` helps you to retrieve data from [trakt.tv](https://trakt.tv/), a
@@ -58,8 +62,8 @@ Search for a show, get basic info:
 ``` r
 show_info <- search_query("Utopia", type = "show")
 glimpse(show_info)
-#> Observations: 1
-#> Variables: 9
+#> Rows: 1
+#> Columns: 9
 #> $ type  <chr> "show"
 #> $ score <dbl> 1000
 #> $ title <chr> "Utopia"
@@ -76,19 +80,20 @@ Get season information for the show using its trakt ID:
 ``` r
 seasons_summary(show_info$trakt, extended = "full") %>%
   glimpse()
-#> Observations: 2
-#> Variables: 12
+#> Rows: 2
+#> Columns: 13
 #> $ season         <int> 1, 2
-#> $ rating         <dbl> 8.66471, 8.22131
-#> $ votes          <int> 170, 122
+#> $ rating         <dbl> 8.64126, 8.10000
+#> $ votes          <int> 223, 160
 #> $ episode_count  <int> 6, 6
 #> $ aired_episodes <int> 6, 6
 #> $ title          <chr> "Season 1", "Season 2"
-#> $ overview       <chr> "When a group of strangers find themselves in pos…
+#> $ overview       <chr> "When a group of strangers find themselves in possessio…
 #> $ first_aired    <dttm> 2013-01-15 21:00:00, 2014-07-14 20:00:00
+#> $ updated_at     <dttm> 2021-06-02 12:27:53, 2021-06-02 11:45:24
 #> $ network        <chr> "Channel 4", "Channel 4"
 #> $ trakt          <chr> "56008", "56009"
-#> $ tvdb           <chr> "507598", "524149"
+#> $ tvdb           <chr> "507598", "571814"
 #> $ tmdb           <chr> "54695", "54696"
 ```
 
@@ -102,18 +107,18 @@ seasons_season("utopia", seasons = 1, extended = "full") %>%
 #> Columns: 16
 #> $ season                 <int> 1, 1, 1, 1, 1, 1
 #> $ episode                <int> 1, 2, 3, 4, 5, 6
-#> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episod…
+#> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episode…
 #> $ episode_abs            <int> 1, 2, 3, 4, 5, 6
-#> $ overview               <chr> "When five strangers from an online comic book…
-#> $ rating                 <dbl> 8.23251, 8.11449, 8.12645, 8.09887, 8.28444, 8…
-#> $ votes                  <int> 1058, 856, 775, 708, 675, 701
-#> $ comment_count          <int> 3, 0, 1, 1, 1, 1
-#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 201…
-#> $ updated_at             <dttm> 2020-04-16 16:48:01, 2020-04-16 13:35:07, 202…
-#> $ available_translations <list> [<"bs", "de", "el", "en", "es", "fa", "fr", "…
-#> $ runtime                <int> 50, 50, 50, 50, 50, 50
-#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "1…
-#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
+#> $ overview               <chr> "When five strangers from an online comic book …
+#> $ rating                 <dbl> 8.20791, 8.09573, 8.09546, 8.06281, 8.22715, 8.…
+#> $ votes                  <int> 1188, 961, 859, 796, 766, 788
+#> $ comment_count          <int> 4, 0, 1, 1, 1, 1
+#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
+#> $ updated_at             <dttm> 2021-06-02 13:23:05, 2021-06-01 21:25:30, 2021-…
+#> $ available_translations <list> <"bs", "de", "el", "en", "es", "fa", "fr", "he"…
+#> $ runtime                <int> 60, 60, 60, 60, 60, 60
+#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
+#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "44…
 #> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
 #> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "91000…
 ```
@@ -130,17 +135,17 @@ seasons_summary("utopia", episodes = TRUE, extended = "full") %>%
 #> Columns: 16
 #> $ season                 <int> 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2
 #> $ episode                <int> 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6
-#> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episod…
+#> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episode…
 #> $ episode_abs            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
-#> $ overview               <chr> "When five strangers from an online comic book…
-#> $ rating                 <dbl> 8.23251, 8.11449, 8.12645, 8.09887, 8.28444, 8…
-#> $ votes                  <int> 1058, 856, 775, 708, 675, 701, 715, 629, 597, …
-#> $ comment_count          <int> 3, 0, 1, 1, 1, 1, 1, 1, 0, 1, 2, 1
-#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 201…
-#> $ updated_at             <dttm> 2020-04-16 16:48:01, 2020-04-16 13:35:07, 202…
-#> $ available_translations <list> [<"bs", "de", "el", "en", "es", "fa", "fr", "…
-#> $ runtime                <int> 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50
-#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "1…
+#> $ overview               <chr> "When five strangers from an online comic book …
+#> $ rating                 <dbl> 8.20791, 8.09573, 8.09546, 8.06281, 8.22715, 8.…
+#> $ votes                  <int> 1188, 961, 859, 796, 766, 788, 779, 686, 654, 6…
+#> $ comment_count          <int> 4, 0, 1, 1, 1, 1, 2, 1, 1, 1, 2, 3
+#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
+#> $ updated_at             <dttm> 2021-06-02 13:23:05, 2021-06-01 21:25:30, 2021-…
+#> $ available_translations <list> <"bs", "de", "el", "en", "es", "fa", "fr", "he"…
+#> $ runtime                <int> 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
+#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
 #> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
 #> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
 #> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "91000…
@@ -154,16 +159,16 @@ shows_trending()
 #> # A tibble: 10 x 8
 #>    watchers title             year trakt  slug             tvdb   imdb     tmdb 
 #>       <int> <chr>            <int> <chr>  <chr>            <chr>  <chr>    <chr>
-#>  1       83 Devs              2020 147971 devs             364149 tt81341… 81349
-#>  2       77 Westworld         2016 99718  westworld        296762 tt04757… 63247
-#>  3       74 Chicago Fire      2012 43764  chicago-fire     258541 tt22613… 44006
-#>  4       66 Ozark             2017 119913 ozark            329089 tt50714… 69740
-#>  5       57 Better Call Saul  2015 59660  better-call-saul 273181 tt30324… 60059
-#>  6       57 Chicago P.D.      2014 58454  chicago-p-d      269641 tt28050… 58841
-#>  7       54 Chicago Med       2015 98934  chicago-med      295640 tt46554… 62650
-#>  8       51 Survivor          2000 14594  survivor-2000    76733  tt02391… 14658
-#>  9       44 Brooklyn Nine-N…  2013 48587  brooklyn-nine-n… 269586 tt24673… 48891
-#> 10       40 NCIS              2003 4590   ncis             72108  tt03648… 4614
+#>  1       59 The Handmaid's …  2017 113938 the-handmaid-s-… 321239 tt58342… 69478
+#>  2       51 Lucifer           2016 98990  lucifer          295685 tt40528… 63174
+#>  3       43 Mare of Easttown  2021 153275 mare-of-easttown 370112 tt10155… 1150…
+#>  4       39 Superman & Lois   2021 162205 superman-lois    375655 tt11192… 95057
+#>  5       35 The Simpsons      1989 455    the-simpsons     71663  tt00966… 456  
+#>  6       33 Friends           1994 1657   friends          79168  tt01087… 1668 
+#>  7       32 The Big Bang Th…  2007 1409   the-big-bang-th… 80379  tt08982… 1418 
+#>  8       28 The Good Doctor   2017 119095 the-good-doctor  328634 tt64704… 71712
+#>  9       23 The Blacklist     2013 46676  the-blacklist    266189 tt27416… 46952
+#> 10       22 New Amsterdam     2018 133258 new-amsterdam-2… 349272 tt78173… 80350
 ```
 
 Maybe you just want to know how long it would take you to binge through
@@ -182,18 +187,18 @@ shows_trending(extended = "full") %>%
   )
 ```
 
-| Show                      | Episode Runtime | Aired Episodes | Total Runtime (aired) |
-|:--------------------------|:----------------|---------------:|:----------------------|
-| Devs (2020)               | 00:52:00        |              8 | 06:56:00              |
-| Westworld (2016)          | 01:00:00        |             25 | 25:00:00              |
-| Chicago Fire (2012)       | 01:00:00        |            179 | 179:00:00             |
-| Ozark (2017)              | 00:56:00        |             30 | 28:00:00              |
-| Better Call Saul (2015)   | 00:45:00        |             49 | 36:45:00              |
-| Chicago P.D. (2014)       | 00:42:00        |            148 | 103:36:00             |
-| Chicago Med (2015)        | 00:42:00        |            103 | 72:06:00              |
-| Survivor (2000)           | 00:42:00        |            597 | 417:54:00             |
-| Brooklyn Nine-Nine (2013) | 00:21:00        |            141 | 49:21:00              |
-| NCIS (2003)               | 00:45:00        |            398 | 298:30:00             |
+| Show                       | Episode Runtime | Aired Episodes | Total Runtime (aired) |
+|:---------------------------|:----------------|---------------:|:----------------------|
+| The Handmaid’s Tale (2017) | 00:50:00        |             44 | 36:40:00              |
+| Lucifer (2016)             | 00:45:00        |             83 | 62:15:00              |
+| Mare of Easttown (2021)    | 00:57:00        |              7 | 06:39:00              |
+| Superman & Lois (2021)     | 00:44:00        |              8 | 05:52:00              |
+| The Simpsons (1989)        | 00:22:00        |            706 | 258:52:00             |
+| Friends (1994)             | 00:25:00        |            236 | 98:20:00              |
+| The Big Bang Theory (2007) | 00:22:00        |            279 | 102:18:00             |
+| The Good Doctor (2017)     | 00:43:00        |             75 | 53:45:00              |
+| The Blacklist (2013)       | 00:43:00        |            171 | 122:33:00             |
+| New Amsterdam (2018)       | 00:43:00        |             53 | 37:59:00              |
 
 Please note though that episode runtime data may be inaccurate. In my
 experience, recent shows have fairly accurate runtimes, which might not
