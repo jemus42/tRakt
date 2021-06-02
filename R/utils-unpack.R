@@ -284,7 +284,7 @@ unpack_comments_multitype <- function(response) {
   # in this case only a type column
   list_base <- response %>% select("type")
 
-  # Row-bind the list base to the unpackaed media items
+  # Row-bind the list base to the unpacked media items
   map_df(list_types, ~ {
     bind_cols(
       list_base %>%
@@ -366,6 +366,11 @@ flatten_media_object <- function(x, type) {
     res <- bind_cols(
       pluck(x, "person") %>% select(-"ids"),
       pluck(x, "person", "ids") %>% fix_ids()
+    )
+  } else if (type == "list") {
+    res <- bind_cols(
+      pluck(x, "list") %>% select(-"ids"),
+      pluck(x, "list", "ids") %>% fix_ids()
     )
   }
 
