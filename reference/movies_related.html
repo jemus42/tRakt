@@ -236,13 +236,13 @@ If there are no results (or the API is unreachable), an empty <code><a href='htt
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>movies_related</span><span class='op'>(</span><span class='st'>"the-avengers-2012"</span>, limit <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 5 x 7</span>
-#&gt;   related_to    title               year trakt  slug                imdb   tmdb 
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>              <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>               <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>
-#&gt; <span style='color: #BCBCBC;'>1</span> the-avengers… X-Men: Apocalypse   <span style='text-decoration: underline;'>2</span>016 149999 x-men-apocalypse-2… tt338… 2466…
-#&gt; <span style='color: #BCBCBC;'>2</span> the-avengers… Fantastic Four      <span style='text-decoration: underline;'>2</span>005 5004   fantastic-four-2005 tt012… 9738 
-#&gt; <span style='color: #BCBCBC;'>3</span> the-avengers… Superman            <span style='text-decoration: underline;'>1</span>978 1298   superman-1978       tt007… 1924 
-#&gt; <span style='color: #BCBCBC;'>4</span> the-avengers… Fantastic Four: R…  <span style='text-decoration: underline;'>2</span>007 1343   fantastic-four-ris… tt048… 1979 
-#&gt; <span style='color: #BCBCBC;'>5</span> the-avengers… Superman: Doomsday  <span style='text-decoration: underline;'>2</span>007 8071   superman-doomsday-… tt093… 13640</div></pre>
+#&gt;   related_to       title            year trakt  slug               imdb    tmdb 
+#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>           <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>              <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>
+#&gt; <span style='color: #BCBCBC;'>1</span> the-avengers-20… X-Men: Apocaly…  <span style='text-decoration: underline;'>2</span>016 149999 x-men-apocalypse-… tt3385… 2466…
+#&gt; <span style='color: #BCBCBC;'>2</span> the-avengers-20… Fantastic Four   <span style='text-decoration: underline;'>2</span>005 5004   fantastic-four-20… tt0120… 9738 
+#&gt; <span style='color: #BCBCBC;'>3</span> the-avengers-20… Superman: Doom…  <span style='text-decoration: underline;'>2</span>007 8071   superman-doomsday… tt0934… 13640
+#&gt; <span style='color: #BCBCBC;'>4</span> the-avengers-20… Superman II      <span style='text-decoration: underline;'>1</span>980 4231   superman-ii-1980   tt0081… 8536 
+#&gt; <span style='color: #BCBCBC;'>5</span> the-avengers-20… Blade            <span style='text-decoration: underline;'>1</span>998 23293  blade-1998         tt0120… 36647</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
