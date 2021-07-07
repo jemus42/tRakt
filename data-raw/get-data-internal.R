@@ -14,7 +14,7 @@ trakt_networks <- trakt_get("networks") %>%
   ) %>%
   as_tibble()
 
-use_data(trakt_networks, overwrite = TRUE)
+use_data(trakt_networks, overwrite = TRUE, compress = "xz")
 
 # Languages ----
 trakt_languages <- bind_rows(
@@ -24,7 +24,7 @@ trakt_languages <- bind_rows(
   arrange(code) %>%
   as_tibble()
 
-use_data(trakt_languages, overwrite = TRUE)
+use_data(trakt_languages, overwrite = TRUE, compress = "xz")
 
 # Genres ----
 trakt_genres <- bind_rows(
@@ -34,7 +34,7 @@ trakt_genres <- bind_rows(
   arrange(slug) %>%
   as_tibble()
 
-use_data(trakt_genres, overwrite = TRUE)
+use_data(trakt_genres, overwrite = TRUE, compress = "xz")
 
 # Countries ----
 trakt_countries <- bind_rows(
@@ -44,7 +44,7 @@ trakt_countries <- bind_rows(
   arrange(code) %>%
   as_tibble()
 
-use_data(trakt_countries, overwrite = TRUE)
+use_data(trakt_countries, overwrite = TRUE, compress = "xz")
 
 # Certifications ----
 trakt_certifications <- purrr::map_df(c("movies", "shows"), ~ {
@@ -53,4 +53,4 @@ trakt_certifications <- purrr::map_df(c("movies", "shows"), ~ {
     mutate(type = .x)
 })
 
-use_data(trakt_certifications, overwrite = TRUE)
+use_data(trakt_certifications, overwrite = TRUE, compress = "xz")
