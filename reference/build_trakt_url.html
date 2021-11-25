@@ -186,7 +186,7 @@ function was created for.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>...</th>
-      <td><p>Unnamed arguments will be concatenated with <code><a href='https://rdrr.io/r/base/Arithmetic.html'>/</a></code> as separators to
+      <td><p>Unnamed arguments will be concatenated with <code>/</code> as separators to
 form the path of the API URL, e.g. the arguments <code>movies</code>,
 <code>tron-legacy-2012</code> and <code>releases</code> will be concatenated to
 <code>movies/tron-legacy-2012/releases</code>. Additional <strong>named</strong> arguments will be
@@ -215,15 +215,19 @@ returned status code the validity of the URL can be inferred.</p>
 <code><a href='pad_episode.html'>pad_episode</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>build_trakt_url</span><span class='op'>(</span><span class='st'>"shows"</span>, <span class='st'>"breaking-bad"</span>, extended <span class='op'>=</span> <span class='st'>"full"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "https://api.trakt.tv/shows/breaking-bad?extended=full"</div><div class='input'><span class='fu'>build_trakt_url</span><span class='op'>(</span><span class='st'>"shows"</span>, <span class='st'>"popular"</span>, page <span class='op'>=</span> <span class='fl'>3</span>, limit <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "https://api.trakt.tv/shows/popular?page=3&amp;limit=5"</div><div class='input'>
-<span class='co'># Path can also be partially assembled already</span>
-<span class='fu'>build_trakt_url</span><span class='op'>(</span><span class='st'>"users/jemus42"</span>, <span class='st'>"ratings"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "https://api.trakt.tv/users/jemus42/ratings"</div><div class='input'>
-<span class='co'># Validate a URL works</span>
-<span class='fu'>build_trakt_url</span><span class='op'>(</span><span class='st'>"shows"</span>, <span class='st'>"popular"</span>, page <span class='op'>=</span> <span class='fl'>1</span>, limit <span class='op'>=</span> <span class='fl'>5</span>, validate <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] "https://api.trakt.tv/shows/popular?page=1&amp;limit=5"</div></pre>
+    <pre class="examples"><span class='r-in'><span class='fu'>build_trakt_url</span><span class='op'>(</span><span class='st'>"shows"</span>, <span class='st'>"breaking-bad"</span>, extended <span class='op'>=</span> <span class='st'>"full"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "https://api.trakt.tv/shows/breaking-bad?extended=full"</span>
+<span class='r-in'><span class='fu'>build_trakt_url</span><span class='op'>(</span><span class='st'>"shows"</span>, <span class='st'>"popular"</span>, page <span class='op'>=</span> <span class='fl'>3</span>, limit <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "https://api.trakt.tv/shows/popular?page=3&amp;limit=5"</span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Path can also be partially assembled already</span></span>
+<span class='r-in'><span class='fu'>build_trakt_url</span><span class='op'>(</span><span class='st'>"users/jemus42"</span>, <span class='st'>"ratings"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "https://api.trakt.tv/users/jemus42/ratings"</span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># Validate a URL works</span></span>
+<span class='r-in'><span class='fu'>build_trakt_url</span><span class='op'>(</span><span class='st'>"shows"</span>, <span class='st'>"popular"</span>, page <span class='op'>=</span> <span class='fl'>1</span>, limit <span class='op'>=</span> <span class='fl'>5</span>, validate <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> [1] "https://api.trakt.tv/shows/popular?page=1&amp;limit=5"</span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

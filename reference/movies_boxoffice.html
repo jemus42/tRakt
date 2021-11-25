@@ -184,7 +184,7 @@ Updated every Monday morning.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
 See <code><a href='../articles/finding-things.html'>vignette("finding-things")</a></code> for more details.</p></td>
     </tr>
@@ -222,20 +222,21 @@ If there are no results (or the API is unreachable), an empty <code><a href='htt
 <code><a href='watched_media.html'>watched_media</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>movies_boxoffice</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 10 x 7</span>
-#&gt;     revenue title                 year trakt slug                  imdb    tmdb 
-#&gt;       <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                 <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>
-#&gt; <span style='color: #BCBCBC;'> 1</span> 24<span style='text-decoration: underline;'>000</span>000 F9                    <span style='text-decoration: underline;'>2</span>021 2262… f9-2021               tt5433… 3851…
-#&gt; <span style='color: #BCBCBC;'> 2</span> 17<span style='text-decoration: underline;'>300</span>000 The Boss Baby: Fami…  <span style='text-decoration: underline;'>2</span>021 3063… the-boss-baby-family… tt6932… 4591…
-#&gt; <span style='color: #BCBCBC;'> 3</span> 12<span style='text-decoration: underline;'>800</span>000 The Forever Purge     <span style='text-decoration: underline;'>2</span>021 4475… the-forever-purge-20… tt1032… 6022…
-#&gt; <span style='color: #BCBCBC;'> 4</span>  4<span style='text-decoration: underline;'>200</span>000 A Quiet Place Part …  <span style='text-decoration: underline;'>2</span>021 3690… a-quiet-place-part-i… tt8332… 5207…
-#&gt; <span style='color: #BCBCBC;'> 5</span>  3<span style='text-decoration: underline;'>000</span>000 Hitman's Wife's Bod…  <span style='text-decoration: underline;'>2</span>021 3710… hitman-s-wife-s-body… tt8385… 5229…
-#&gt; <span style='color: #BCBCBC;'> 6</span>  2<span style='text-decoration: underline;'>600</span>000 Cruella               <span style='text-decoration: underline;'>2</span>021 2180… cruella-2021          tt3228… 3374…
-#&gt; <span style='color: #BCBCBC;'> 7</span>  2<span style='text-decoration: underline;'>300</span>000 Peter Rabbit 2: The…  <span style='text-decoration: underline;'>2</span>021 3706… peter-rabbit-2-the-r… tt8376… 5224…
-#&gt; <span style='color: #BCBCBC;'> 8</span>  1<span style='text-decoration: underline;'>300</span>000 The Conjuring: The …  <span style='text-decoration: underline;'>2</span>021 2686… the-conjuring-the-de… tt7069… 4231…
-#&gt; <span style='color: #BCBCBC;'> 9</span>  1<span style='text-decoration: underline;'>300</span>000 In the Heights        <span style='text-decoration: underline;'>2</span>021 3151… in-the-heights-2021   tt1321… 4679…
-#&gt; <span style='color: #BCBCBC;'>10</span>  1<span style='text-decoration: underline;'>200</span>000 Zola                  <span style='text-decoration: underline;'>2</span>020 3907… zola-2020             tt5439… 5395…</div></pre>
+    <pre class="examples"><span class='r-in'><span class='fu'>movies_boxoffice</span><span class='op'>(</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 10 × 7</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>      revenue title                        year trakt  slug          imdb   tmdb </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>        <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                       <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 1</span>  44<span style='text-decoration: underline;'>000</span>000 Ghostbusters: Afterlife      <span style='text-decoration: underline;'>2</span>021 270182 ghostbusters… tt451… 4259…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 2</span>  10<span style='text-decoration: underline;'>800</span>000 Eternals                     <span style='text-decoration: underline;'>2</span>021 372798 eternals-2021 tt903… 5244…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 3</span>   8<span style='text-decoration: underline;'>100</span>000 Clifford the Big Red Dog     <span style='text-decoration: underline;'>2</span>021 432842 clifford-the… tt239… 5852…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 4</span>   5<span style='text-decoration: underline;'>700</span>000 King Richard                 <span style='text-decoration: underline;'>2</span>021 458405 king-richard… tt962… 6149…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 5</span>   3<span style='text-decoration: underline;'>100</span>000 Dune                         <span style='text-decoration: underline;'>2</span>021 287071 dune-2021     tt116… 4386…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 6</span>   2<span style='text-decoration: underline;'>800</span>000 Venom: Let There Be Carnage  <span style='text-decoration: underline;'>2</span>021 429764 venom-let-th… tt709… 5804…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 7</span>   2<span style='text-decoration: underline;'>700</span>000 No Time to Die               <span style='text-decoration: underline;'>2</span>021 254935 no-time-to-d… tt238… 3701…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 8</span> 970<span style='text-decoration: underline;'>000</span>000 The French Dispatch          <span style='text-decoration: underline;'>2</span>021 393126 the-french-d… tt884… 5421…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 9</span> 940<span style='text-decoration: underline;'>000</span>000 Belfast                      <span style='text-decoration: underline;'>2</span>021 614420 belfast-2021  tt127… 7772…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>10</span> 888<span style='text-decoration: underline;'>000</span>000 Ron's Gone Wrong             <span style='text-decoration: underline;'>2</span>021 329543 ron-s-gone-w… tt750… 4823…</span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -121,7 +121,7 @@
       <h1 data-toc-skip>The Basics</h1>
                         <h4 class="author">Lukas Burk</h4>
             
-            <h4 class="date">2021-07-07</h4>
+            <h4 class="date">2021-11-25</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/master/vignettes/tRakt.Rmd"><code>vignettes/tRakt.Rmd</code></a></small>
       <div class="hidden name"><code>tRakt.Rmd</code></div>
@@ -143,14 +143,14 @@
 <p>Using a text query:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"Game of Thrones"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 9</span>
+<span class="co">#&gt; # A tibble: 1 × 9</span>
 <span class="co">#&gt;   type  score title            year trakt slug            tvdb   imdb      tmdb </span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;</span>
 <span class="co">#&gt; 1 show   1000 Game of Thrones  2011 1390  game-of-thrones 121361 tt0944947 1399</span></code></pre></div>
 <p>Search by explicit ID:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/search_query.html">search_id</a></span><span class="op">(</span><span class="st">"121361"</span>, id_type <span class="op">=</span> <span class="st">"tvdb"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 x 9</span>
+<span class="co">#&gt; # A tibble: 1 × 9</span>
 <span class="co">#&gt;   type  score title            year trakt slug            tvdb   imdb      tmdb </span>
 <span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;</span>
 <span class="co">#&gt; 1 show   1000 Game of Thrones  2011 1390  game-of-thrones 121361 tt0944947 1399</span></code></pre></div>
@@ -159,7 +159,7 @@
 <p>The 5 most popular shows:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/popular_media.html">shows_popular</a></span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 5 x 7</span>
+<span class="co">#&gt; # A tibble: 5 × 7</span>
 <span class="co">#&gt;   title                year trakt slug                tvdb   imdb      tmdb </span>
 <span class="co">#&gt;   &lt;chr&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;               &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;</span>
 <span class="co">#&gt; 1 Game of Thrones      2011 1390  game-of-thrones     121361 tt0944947 1399 </span>
@@ -171,21 +171,21 @@
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
 
-<span class="fu"><a href="../reference/watched_media.html">movies_watched</a></span><span class="op">(</span>period <span class="op">=</span> <span class="st">"yearly"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span>, <span class="fl">2000</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
+<span class="fu"><a href="../reference/watched_media.html">movies_watched</a></span><span class="op">(</span>period <span class="op">=</span> <span class="st">"yearly"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span>, <span class="fl">2000</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/%&gt;%.html">%&gt;%</a></span>
   <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">watcher_count</span>, <span class="va">title</span>, <span class="va">year</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 10 x 3</span>
+<span class="co">#&gt; # A tibble: 10 × 3</span>
 <span class="co">#&gt;    watcher_count title                           year</span>
 <span class="co">#&gt;            &lt;int&gt; &lt;chr&gt;                          &lt;int&gt;</span>
-<span class="co">#&gt;  1         43036 The Matrix                      1999</span>
-<span class="co">#&gt;  2         29232 Home Alone                      1990</span>
-<span class="co">#&gt;  3         27960 The Lion King                   1994</span>
-<span class="co">#&gt;  4         26863 Toy Story                       1995</span>
-<span class="co">#&gt;  5         26732 Forrest Gump                    1994</span>
-<span class="co">#&gt;  6         25471 Home Alone 2: Lost in New York  1992</span>
-<span class="co">#&gt;  7         25464 Fight Club                      1999</span>
-<span class="co">#&gt;  8         25106 Beauty and the Beast            1991</span>
-<span class="co">#&gt;  9         23742 Pulp Fiction                    1994</span>
-<span class="co">#&gt; 10         23434 Jurassic Park                   1993</span></code></pre></div>
+<span class="co">#&gt;  1         47162 The Matrix                      1999</span>
+<span class="co">#&gt;  2         28542 Home Alone                      1990</span>
+<span class="co">#&gt;  3         25942 Forrest Gump                    1994</span>
+<span class="co">#&gt;  4         25065 Pulp Fiction                    1994</span>
+<span class="co">#&gt;  5         24828 Toy Story                       1995</span>
+<span class="co">#&gt;  6         24297 Fight Club                      1999</span>
+<span class="co">#&gt;  7         23966 Jurassic Park                   1993</span>
+<span class="co">#&gt;  8         23229 The Lion King                   1994</span>
+<span class="co">#&gt;  9         22373 The Shawshank Redemption        1994</span>
+<span class="co">#&gt; 10         22076 Home Alone 2: Lost in New York  1992</span></code></pre></div>
 </div>
   </div>
 

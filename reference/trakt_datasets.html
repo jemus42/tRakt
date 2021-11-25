@@ -234,58 +234,63 @@ filter arguments of the same name.</p>
     <p>Currently only US certifications are available.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>trakt_genres</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 6 x 3</span>
-#&gt;   name      slug      type  
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> 
-#&gt; <span style='color: #BCBCBC;'>1</span> Action    action    movies
-#&gt; <span style='color: #BCBCBC;'>2</span> Action    action    shows 
-#&gt; <span style='color: #BCBCBC;'>3</span> Adventure adventure movies
-#&gt; <span style='color: #BCBCBC;'>4</span> Adventure adventure shows 
-#&gt; <span style='color: #BCBCBC;'>5</span> Animation animation movies
-#&gt; <span style='color: #BCBCBC;'>6</span> Animation animation shows </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>trakt_languages</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 6 x 3</span>
-#&gt;   name      code  type  
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> 
-#&gt; <span style='color: #BCBCBC;'>1</span> Afar      aa    movies
-#&gt; <span style='color: #BCBCBC;'>2</span> Abkhazian ab    movies
-#&gt; <span style='color: #BCBCBC;'>3</span> Abkhazian ab    shows 
-#&gt; <span style='color: #BCBCBC;'>4</span> Afrikaans af    movies
-#&gt; <span style='color: #BCBCBC;'>5</span> Afrikaans af    shows 
-#&gt; <span style='color: #BCBCBC;'>6</span> Akan      ak    movies</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>trakt_networks</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 6 x 2</span>
-#&gt;   name        name_clean
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>       <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     
-#&gt; <span style='color: #BCBCBC;'>1</span> <span style='color: #949494;'>"</span> - None<span style='color: #949494;'>"</span>   - none    
-#&gt; <span style='color: #BCBCBC;'>2</span> <span style='color: #949494;'>"</span> VTV <span style='color: #949494;'>"</span>     vtv       
-#&gt; <span style='color: #BCBCBC;'>3</span> <span style='color: #949494;'>"</span>#0<span style='color: #949494;'>"</span>        #0        
-#&gt; <span style='color: #BCBCBC;'>4</span> <span style='color: #949494;'>"</span>&amp;TV<span style='color: #949494;'>"</span>       &amp;tv       
-#&gt; <span style='color: #BCBCBC;'>5</span> <span style='color: #949494;'>"</span>+Globosat<span style='color: #949494;'>"</span> +globosat 
-#&gt; <span style='color: #BCBCBC;'>6</span> <span style='color: #949494;'>"</span>1+1<span style='color: #949494;'>"</span>       1+1       </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>trakt_countries</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 6 x 3</span>
-#&gt;   name                 code  type  
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> 
-#&gt; <span style='color: #BCBCBC;'>1</span> Andorra              ad    movies
-#&gt; <span style='color: #BCBCBC;'>2</span> Andorra              ad    shows 
-#&gt; <span style='color: #BCBCBC;'>3</span> United Arab Emirates ae    movies
-#&gt; <span style='color: #BCBCBC;'>4</span> United Arab Emirates ae    shows 
-#&gt; <span style='color: #BCBCBC;'>5</span> Afghanistan          af    movies
-#&gt; <span style='color: #BCBCBC;'>6</span> Afghanistan          af    shows </div><div class='input'><span class='va'>trakt_certifications</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 12 x 5</span>
-#&gt;    country name      slug  description                                     type 
-#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                                           <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>
-#&gt; <span style='color: #BCBCBC;'> 1</span> us      G         g     All Ages                                        movi…
-#&gt; <span style='color: #BCBCBC;'> 2</span> us      PG        pg    Parental Guidance Suggested                     movi…
-#&gt; <span style='color: #BCBCBC;'> 3</span> us      PG-13     pg-13 Parents Strongly Cautioned - Ages 13+ Recommen… movi…
-#&gt; <span style='color: #BCBCBC;'> 4</span> us      R         r     Mature Audiences - Ages 17+ Recommended         movi…
-#&gt; <span style='color: #BCBCBC;'> 5</span> us      Not Rated nr    Not Rated                                       movi…
-#&gt; <span style='color: #BCBCBC;'> 6</span> us      TV-Y      tv-y  All Children                                    shows
-#&gt; <span style='color: #BCBCBC;'> 7</span> us      TV-Y7     tv-y7 Older Children - Ages 7+ Recommended            shows
-#&gt; <span style='color: #BCBCBC;'> 8</span> us      TV-G      tv-g  All Ages                                        shows
-#&gt; <span style='color: #BCBCBC;'> 9</span> us      TV-PG     tv-pg Parental Guidance Suggested                     shows
-#&gt; <span style='color: #BCBCBC;'>10</span> us      TV-14     tv-14 Parents Strongly Cautioned - Ages 14+ Recommen… shows
-#&gt; <span style='color: #BCBCBC;'>11</span> us      TV-MA     tv-ma Mature Audiences - Ages 17+ Recommended         shows
-#&gt; <span style='color: #BCBCBC;'>12</span> us      Not Rated nr    Not Rated                                       shows</div></pre>
+    <pre class="examples"><span class='r-in'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>trakt_genres</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 6 × 3</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   name      slug      type  </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> Action    action    movies</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> Action    action    shows </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>3</span> Adventure adventure movies</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>4</span> Adventure adventure shows </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>5</span> Animation animation movies</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>6</span> Animation animation shows </span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>trakt_languages</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 6 × 3</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   name      code  type  </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> Afar      aa    movies</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> Abkhazian ab    movies</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>3</span> Abkhazian ab    shows </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>4</span> Afrikaans af    movies</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>5</span> Afrikaans af    shows </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>6</span> Akan      ak    movies</span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>trakt_networks</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 6 × 2</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   name        name_clean</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>       <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> <span style='color: #949494;'>"</span> - None<span style='color: #949494;'>"</span>   - none    </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> <span style='color: #949494;'>"</span> VTV <span style='color: #949494;'>"</span>     vtv       </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>3</span> <span style='color: #949494;'>"</span>#0<span style='color: #949494;'>"</span>        #0        </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>4</span> <span style='color: #949494;'>"</span>&amp;TV<span style='color: #949494;'>"</span>       &amp;tv       </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>5</span> <span style='color: #949494;'>"</span>+Globosat<span style='color: #949494;'>"</span> +globosat </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>6</span> <span style='color: #949494;'>"</span>1+1<span style='color: #949494;'>"</span>       1+1       </span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>trakt_countries</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 6 × 3</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   name                 code  type  </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> Andorra              ad    movies</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> Andorra              ad    shows </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>3</span> United Arab Emirates ae    movies</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>4</span> United Arab Emirates ae    shows </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>5</span> Afghanistan          af    movies</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>6</span> Afghanistan          af    shows </span>
+<span class='r-in'><span class='va'>trakt_certifications</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 12 × 5</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    country name      slug  description                                     type </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>     <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                                           <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 1</span> us      G         g     All Ages                                        movi…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 2</span> us      PG        pg    Parental Guidance Suggested                     movi…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 3</span> us      PG-13     pg-13 Parents Strongly Cautioned - Ages 13+ Recommen… movi…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 4</span> us      R         r     Mature Audiences - Ages 17+ Recommended         movi…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 5</span> us      Not Rated nr    Not Rated                                       movi…</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 6</span> us      TV-Y      tv-y  All Children                                    shows</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 7</span> us      TV-Y7     tv-y7 Older Children - Ages 7+ Recommended            shows</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 8</span> us      TV-G      tv-g  All Ages                                        shows</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 9</span> us      TV-PG     tv-pg Parental Guidance Suggested                     shows</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>10</span> us      TV-14     tv-14 Parents Strongly Cautioned - Ages 14+ Recommen… shows</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>11</span> us      TV-MA     tv-ma Mature Audiences - Ages 17+ Recommended         shows</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>12</span> us      Not Rated nr    Not Rated                                       shows</span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

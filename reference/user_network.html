@@ -186,14 +186,14 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>user</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Target username (or <code>slug</code>). Defaults to
-<code><a href='https://rdrr.io/r/base/options.html'>getOption("trakt_username")</a></code>.
+      <td><p><code>character(1)</code>: Target username (or <code>slug</code>). Defaults to
+<code>getOption("trakt_username")</code>.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></td>
     </tr>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
 See <code><a href='../articles/finding-things.html'>vignette("finding-things")</a></code> for more details.</p></td>
     </tr>
@@ -226,16 +226,16 @@ If there are no results (or the API is unreachable), an empty <code><a href='htt
 <code><a href='user_watchlist.html'>user_watchlist</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='fu'>user_followers</span><span class='op'>(</span>user <span class='op'>=</span> <span class='st'>"sean"</span><span class='op'>)</span>
-<span class='op'>}</span>
-<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='fu'>user_following</span><span class='op'>(</span>user <span class='op'>=</span> <span class='st'>"sean"</span><span class='op'>)</span>
-<span class='op'>}</span>
-<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='fu'>user_friends</span><span class='op'>(</span>user <span class='op'>=</span> <span class='st'>"sean"</span><span class='op'>)</span>
-<span class='op'>}</span>
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span class='r-in'><span class='fu'>user_followers</span><span class='op'>(</span>user <span class='op'>=</span> <span class='st'>"sean"</span><span class='op'>)</span></span>
+<span class='r-in'><span class='op'>}</span></span>
+<span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span class='r-in'><span class='fu'>user_following</span><span class='op'>(</span>user <span class='op'>=</span> <span class='st'>"sean"</span><span class='op'>)</span></span>
+<span class='r-in'><span class='op'>}</span></span>
+<span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span class='r-in'><span class='fu'>user_friends</span><span class='op'>(</span>user <span class='op'>=</span> <span class='st'>"sean"</span><span class='op'>)</span></span>
+<span class='r-in'><span class='op'>}</span></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

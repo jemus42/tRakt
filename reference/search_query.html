@@ -210,7 +210,7 @@ as receiving a quick overview of a show/movie.</p>
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>query</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Search string for titles and descriptions.
+      <td><p><code>character(1)</code>: Search string for titles and descriptions.
 For <code>search_query()</code> other fields are searched depending on the <code>type</code> of media.
 See <a href='https://trakt.docs.apiary.io/#reference/search/text-query'>the API docs</a> for a
 full reference.</p></td>
@@ -219,8 +219,8 @@ full reference.</p></td>
       <th>type</th>
       <td><p><code>character(1) ["show"]</code>: The type of data you're looking for.
 One of <code>show</code>, <code>movie</code>, <code>episode</code>, <code>person</code> or <code>list</code> or a character vector
-with those elements, e.g. <code><a href='https://rdrr.io/r/base/c.html'>c("show", "movie")</a></code>. Note that not every
-combination is reasonably combinable, e.g. <code><a href='https://rdrr.io/r/base/c.html'>c("movie", "list")</a></code>. Use
+with those elements, e.g. <code>c("show", "movie")</code>. Note that not every
+combination is reasonably combinable, e.g. <code>c("movie", "list")</code>. Use
 separate function calls in that case.</p></td>
     </tr>
     <tr>
@@ -229,7 +229,7 @@ separate function calls in that case.</p></td>
     </tr>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
 See <code><a href='../articles/finding-things.html'>vignette("finding-things")</a></code> for more details.</p></td>
     </tr>
@@ -237,22 +237,22 @@ See <code><a href='../articles/finding-things.html'>vignette("finding-things")</
       <th>years</th>
       <td><p><code>character | integer</code>: 4-digit year (<code>2010</code>) <strong>or</strong> range,
 e.g. <code>"2010-2020"</code>. Can also be an integer vector of length two which will be
-coerced appropriately, e.g. <code><a href='https://rdrr.io/r/base/c.html'>c(2010, 2020)</a></code>.</p></td>
+coerced appropriately, e.g. <code>c(2010, 2020)</code>.</p></td>
     </tr>
     <tr>
       <th>genres</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Genre  slug(s).
+      <td><p><code>character(n)</code>: Genre  slug(s).
 See <code><a href='trakt_datasets.html'>trakt_genres</a></code> for a table of genres.
 Multiple values are allowed and will be concatenated.</p></td>
     </tr>
     <tr>
       <th>languages</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-letter language code(s).
+      <td><p><code>character(n)</code>: Two-letter language code(s).
 Also see <code><a href='trakt_datasets.html'>trakt_languages</a></code> for available languages (code and name).</p></td>
     </tr>
     <tr>
       <th>countries</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-letter country code(s).
+      <td><p><code>character(n)</code>: Two-letter country code(s).
 See <code><a href='trakt_datasets.html'>trakt_countries</a></code>.</p></td>
     </tr>
     <tr>
@@ -269,24 +269,24 @@ on the site itself are scaled to the range of 1 to 100.</p></td>
     </tr>
     <tr>
       <th>certifications</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Certification(s) like <code>pg-13</code>.
+      <td><p><code>character(n)</code>: Certification(s) like <code>pg-13</code>.
 Multiple values are allowed. Use <code><a href='trakt_datasets.html'>trakt_certifications</a></code> for reference.
 Note that there are different certifications for shows and movies.</p></td>
     </tr>
     <tr>
       <th>networks</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) Network name like <code>HBO</code>.
+      <td><p><code>character(n)</code>: (Shows only) Network name like <code>HBO</code>.
 See <code><a href='trakt_datasets.html'>trakt_networks</a></code> for a list of known networks.</p></td>
     </tr>
     <tr>
       <th>status</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) The status of the shows.
+      <td><p><code>character(n)</code>: (Shows only) The status of the shows.
 One of <code>"returning series"</code>, <code>"in production"</code>, <code>"planned"</code>,
 <code>"canceled"</code>, or <code>"ended"</code>.</p></td>
     </tr>
     <tr>
       <th>id</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The id used for the search, e.g. <code>14701</code> for
+      <td><p><code>character(1)</code>: The id used for the search, e.g. <code>14701</code> for
 a <code>Trakt ID</code>.</p></td>
     </tr>
     <tr>
@@ -307,7 +307,7 @@ Variable <code>type</code> is equivalent to the value of the <code>type</code> a
 variable <code>score</code> indicates the search match, where <code>1000</code> is a perfect
 match.
 If no results are found, the <code>tibble</code> has 0 rows.
-If more than one <code>type</code> is specified, e.g. <code><a href='https://rdrr.io/r/base/c.html'>c("movie", "show")</a></code>,
+If more than one <code>type</code> is specified, e.g. <code>c("movie", "show")</code>,
 there will be <code>n_results</code> results <em>per type</em>.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
@@ -318,24 +318,25 @@ See also the
 which fields of the item metadata are searched by default.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># A show</span>
-<span class='fu'>search_query</span><span class='op'>(</span><span class='st'>"Breaking Bad"</span>, type <span class='op'>=</span> <span class='st'>"show"</span>, n_results <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 3 x 9</span>
-#&gt;   type    score title             year trakt  slug            tvdb  imdb   tmdb 
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>           <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>
-#&gt; <span style='color: #BCBCBC;'>1</span> show  <span style='text-decoration: underline;'>1</span>000    Breaking Bad      <span style='text-decoration: underline;'>2</span>008 1388   breaking-bad    81189 tt090… 1396 
-#&gt; <span style='color: #BCBCBC;'>2</span> show   427.   Breaking Bad: O…  <span style='text-decoration: underline;'>2</span>009 140684 breaking-bad-o… 3564… tt238… <span style='color: #BB0000;'>NA</span>   
-#&gt; <span style='color: #BCBCBC;'>3</span> show     8.42 Talking Bad       <span style='text-decoration: underline;'>2</span>013 72145  talking-bad     2722… tt311… 64902</div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
-<span class='co'># A show by its trakt id, and now with more information</span>
-<span class='fu'>search_id</span><span class='op'>(</span><span class='fl'>1388</span>, <span class='st'>"trakt"</span>, type <span class='op'>=</span> <span class='st'>"show"</span>, extended <span class='op'>=</span> <span class='st'>"full"</span><span class='op'>)</span>
-
-<span class='co'># A person</span>
-<span class='fu'>search_query</span><span class='op'>(</span><span class='st'>"J. K. Simmons"</span>, type <span class='op'>=</span> <span class='st'>"person"</span>, extended <span class='op'>=</span> <span class='st'>"full"</span><span class='op'>)</span>
-
-<span class='co'># A movie or a show, two of each</span>
-<span class='fu'>search_query</span><span class='op'>(</span><span class='st'>"Tron"</span>, type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"movie"</span>, <span class='st'>"show"</span><span class='op'>)</span>, n_results <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span>
-<span class='op'>}</span>
-</div></pre>
+    <pre class="examples"><span class='r-in'><span class='co'># A show</span></span>
+<span class='r-in'><span class='fu'>search_query</span><span class='op'>(</span><span class='st'>"Breaking Bad"</span>, type <span class='op'>=</span> <span class='st'>"show"</span>, n_results <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 3 × 9</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   type    score title             year trakt  slug            tvdb  imdb   tmdb </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>           <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> show  <span style='text-decoration: underline;'>1</span>000    Breaking Bad      <span style='text-decoration: underline;'>2</span>008 1388   breaking-bad    81189 tt090… 1396 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> show   394.   Breaking Bad: O…  <span style='text-decoration: underline;'>2</span>009 140684 breaking-bad-o… 3564… tt238… <span style='color: #BB0000;'>NA</span>   </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>3</span> show     7.89 Talking Bad       <span style='text-decoration: underline;'>2</span>013 72145  talking-bad     2722… tt311… 64902</span>
+<span class='r-in'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span class='r-in'><span class='co'># A show by its trakt id, and now with more information</span></span>
+<span class='r-in'><span class='fu'>search_id</span><span class='op'>(</span><span class='fl'>1388</span>, <span class='st'>"trakt"</span>, type <span class='op'>=</span> <span class='st'>"show"</span>, extended <span class='op'>=</span> <span class='st'>"full"</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># A person</span></span>
+<span class='r-in'><span class='fu'>search_query</span><span class='op'>(</span><span class='st'>"J. K. Simmons"</span>, type <span class='op'>=</span> <span class='st'>"person"</span>, extended <span class='op'>=</span> <span class='st'>"full"</span><span class='op'>)</span></span>
+<span class='r-in'></span>
+<span class='r-in'><span class='co'># A movie or a show, two of each</span></span>
+<span class='r-in'><span class='fu'>search_query</span><span class='op'>(</span><span class='st'>"Tron"</span>, type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"movie"</span>, <span class='st'>"show"</span><span class='op'>)</span>, n_results <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span></span>
+<span class='r-in'><span class='op'>}</span></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

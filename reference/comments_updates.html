@@ -224,28 +224,29 @@ If there are no results (or the API is unreachable), an empty <code><a href='htt
 <code><a href='user_list_comments.html'>user_list_comments</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Recently updated comments</span>
-<span class='fu'>comments_updates</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 10 x 31</span>
-#&gt;    type       id comment            spoiler review parent_id created_at         
-#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>              <span style='color: #949494; font-style: italic;'>&lt;lgl&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;lgl&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;dttm&gt;</span>             
-#&gt; <span style='color: #BCBCBC;'> 1</span> episo… <span style='text-decoration: underline;'>388</span>773 <span style='color: #949494;'>"</span>This show feels … FALSE   FALSE          0 2021-07-07 <span style='color: #949494;'>11:32:30</span>
-#&gt; <span style='color: #BCBCBC;'> 2</span> episo… <span style='text-decoration: underline;'>388</span>743 <span style='color: #949494;'>"</span>GLORIOUS!!!!! PU… FALSE   FALSE          0 2021-07-07 <span style='color: #949494;'>07:57:43</span>
-#&gt; <span style='color: #BCBCBC;'> 3</span> episo… <span style='text-decoration: underline;'>388</span>750 <span style='color: #949494;'>"</span>Classic Loki FTW… FALSE   FALSE          0 2021-07-07 <span style='color: #949494;'>08:33:32</span>
-#&gt; <span style='color: #BCBCBC;'> 4</span> episo… <span style='text-decoration: underline;'>388</span>753 <span style='color: #949494;'>"</span>natalie holt's s… FALSE   FALSE          0 2021-07-07 <span style='color: #949494;'>09:27:30</span>
-#&gt; <span style='color: #BCBCBC;'> 5</span> episo… <span style='text-decoration: underline;'>388</span>744 <span style='color: #949494;'>"</span>Can't believe a … TRUE    FALSE          0 2021-07-07 <span style='color: #949494;'>08:01:28</span>
-#&gt; <span style='color: #BCBCBC;'> 6</span> episo… <span style='text-decoration: underline;'>340</span>489 <span style='color: #949494;'>"</span>God I love Keele… FALSE   FALSE          0 2020-12-09 <span style='color: #949494;'>20:12:45</span>
-#&gt; <span style='color: #BCBCBC;'> 7</span> episo… <span style='text-decoration: underline;'>388</span>772 <span style='color: #949494;'>"</span>Best Episode so … FALSE   FALSE          0 2021-07-07 <span style='color: #949494;'>11:18:08</span>
-#&gt; <span style='color: #BCBCBC;'> 8</span> episo… <span style='text-decoration: underline;'>387</span>744 <span style='color: #949494;'>"</span>Great action! Th… TRUE    FALSE          0 2021-07-02 <span style='color: #949494;'>20:38:30</span>
-#&gt; <span style='color: #BCBCBC;'> 9</span> show   <span style='text-decoration: underline;'>388</span>768 <span style='color: #949494;'>"</span>The lip syncing … FALSE   FALSE          0 2021-07-07 <span style='color: #949494;'>10:57:58</span>
-#&gt; <span style='color: #BCBCBC;'>10</span> movie  <span style='text-decoration: underline;'>388</span>771 <span style='color: #949494;'>"</span>Pros:\r\n- Scarl… FALSE   FALSE          0 2021-07-07 <span style='color: #949494;'>11:07:21</span>
-#&gt; <span style='color: #949494;'># … with 24 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,</span>
-#&gt; <span style='color: #949494;'>#   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,</span>
-#&gt; <span style='color: #949494;'>#   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   episode_season &lt;int&gt;, episode_number &lt;int&gt;, episode_title &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   episode_trakt &lt;chr&gt;, episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   episode_tmdb &lt;chr&gt;</span></div></pre>
+    <pre class="examples"><span class='r-in'><span class='co'># Recently updated comments</span></span>
+<span class='r-in'><span class='fu'>comments_updates</span><span class='op'>(</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 10 × 35</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    type        id comment           spoiler review parent_id created_at         </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>    <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             <span style='color: #949494; font-style: italic;'>&lt;lgl&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;lgl&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;dttm&gt;</span>             </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 1</span> season  <span style='text-decoration: underline;'>311</span>594 <span style='color: #949494;'>"</span>I guess it was … FALSE   TRUE           0 2020-07-13 <span style='color: #949494;'>02:06:48</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 2</span> episode <span style='text-decoration: underline;'>348</span>940 <span style='color: #949494;'>"</span>good references… TRUE    FALSE          0 2021-01-15 <span style='color: #949494;'>01:57:27</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 3</span> episode <span style='text-decoration: underline;'>297</span>936 <span style='color: #949494;'>"</span>This episode is… TRUE    FALSE          0 2020-05-08 <span style='color: #949494;'>23:46:14</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 4</span> episode <span style='text-decoration: underline;'>422</span>713 <span style='color: #949494;'>"</span>Most unrealisti… FALSE   FALSE          0 2021-11-25 <span style='color: #949494;'>10:33:27</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 5</span> episode <span style='text-decoration: underline;'>347</span>005 <span style='color: #949494;'>"</span>[spoiler] sad t… TRUE    FALSE          0 2021-01-06 <span style='color: #949494;'>23:35:41</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 6</span> episode <span style='text-decoration: underline;'>196</span>382 <span style='color: #949494;'>"</span>This season was… FALSE   FALSE          0 2018-10-19 <span style='color: #949494;'>20:24:43</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 7</span> episode <span style='text-decoration: underline;'>422</span>712 <span style='color: #949494;'>"</span>Change the stor… FALSE   FALSE          0 2021-11-25 <span style='color: #949494;'>10:22:49</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 8</span> movie   <span style='text-decoration: underline;'>422</span>601 <span style='color: #949494;'>"</span>Feel like the m… FALSE   FALSE          0 2021-11-24 <span style='color: #949494;'>22:45:33</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'> 9</span> show    <span style='text-decoration: underline;'>421</span>147 <span style='color: #949494;'>"</span>This really hur… FALSE   FALSE          0 2021-11-19 <span style='color: #949494;'>13:46:27</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>10</span> show    <span style='text-decoration: underline;'>421</span>249 <span style='color: #949494;'>"</span>This is an awfu… FALSE   FALSE          0 2021-11-19 <span style='color: #949494;'>21:00:08</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># … with 28 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, user_name &lt;chr&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;, year &lt;int&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   season_number &lt;int&gt;, season_trakt &lt;chr&gt;, season_tvdb &lt;chr&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   season_tmdb &lt;chr&gt;, episode_season &lt;int&gt;, episode_number &lt;int&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   episode_title &lt;chr&gt;, episode_trakt &lt;chr&gt;, episode_tvdb &lt;chr&gt;, …</span></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

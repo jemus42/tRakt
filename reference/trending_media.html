@@ -213,13 +213,13 @@ than <code>0</code> and will be coerced via <code><a href='https://rdrr.io/r/bas
     </tr>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
 See <code><a href='../articles/finding-things.html'>vignette("finding-things")</a></code> for more details.</p></td>
     </tr>
     <tr>
       <th>query</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Search string for titles and descriptions.
+      <td><p><code>character(1)</code>: Search string for titles and descriptions.
 For <code><a href='search_query.html'>search_query()</a></code> other fields are searched depending on the <code>type</code> of media.
 See <a href='https://trakt.docs.apiary.io/#reference/search/text-query'>the API docs</a> for a
 full reference.</p></td>
@@ -228,22 +228,22 @@ full reference.</p></td>
       <th>years</th>
       <td><p><code>character | integer</code>: 4-digit year (<code>2010</code>) <strong>or</strong> range,
 e.g. <code>"2010-2020"</code>. Can also be an integer vector of length two which will be
-coerced appropriately, e.g. <code><a href='https://rdrr.io/r/base/c.html'>c(2010, 2020)</a></code>.</p></td>
+coerced appropriately, e.g. <code>c(2010, 2020)</code>.</p></td>
     </tr>
     <tr>
       <th>genres</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Genre  slug(s).
+      <td><p><code>character(n)</code>: Genre  slug(s).
 See <code><a href='trakt_datasets.html'>trakt_genres</a></code> for a table of genres.
 Multiple values are allowed and will be concatenated.</p></td>
     </tr>
     <tr>
       <th>languages</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-letter language code(s).
+      <td><p><code>character(n)</code>: Two-letter language code(s).
 Also see <code><a href='trakt_datasets.html'>trakt_languages</a></code> for available languages (code and name).</p></td>
     </tr>
     <tr>
       <th>countries</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Two-letter country code(s).
+      <td><p><code>character(n)</code>: Two-letter country code(s).
 See <code><a href='trakt_datasets.html'>trakt_countries</a></code>.</p></td>
     </tr>
     <tr>
@@ -260,18 +260,18 @@ on the site itself are scaled to the range of 1 to 100.</p></td>
     </tr>
     <tr>
       <th>certifications</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: Certification(s) like <code>pg-13</code>.
+      <td><p><code>character(n)</code>: Certification(s) like <code>pg-13</code>.
 Multiple values are allowed. Use <code><a href='trakt_datasets.html'>trakt_certifications</a></code> for reference.
 Note that there are different certifications for shows and movies.</p></td>
     </tr>
     <tr>
       <th>networks</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) Network name like <code>HBO</code>.
+      <td><p><code>character(n)</code>: (Shows only) Network name like <code>HBO</code>.
 See <code><a href='trakt_datasets.html'>trakt_networks</a></code> for a list of known networks.</p></td>
     </tr>
     <tr>
       <th>status</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(n)</a></code>: (Shows only) The status of the shows.
+      <td><p><code>character(n)</code>: (Shows only) The status of the shows.
 One of <code>"returning series"</code>, <code>"in production"</code>, <code>"planned"</code>,
 <code>"canceled"</code>, or <code>"ended"</code>.</p></td>
     </tr>

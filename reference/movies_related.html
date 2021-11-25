@@ -182,7 +182,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>id</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
+      <td><p><code>character(1)</code>: The ID of the item requested. Preferably the
 <code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
 or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
 Can also be of length greater than 1, in which case the function is called on all
@@ -196,7 +196,7 @@ than <code>0</code> and will be coerced via <code><a href='https://rdrr.io/r/bas
     </tr>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
 See <code><a href='../articles/finding-things.html'>vignette("finding-things")</a></code> for more details.</p></td>
     </tr>
@@ -234,15 +234,16 @@ If there are no results (or the API is unreachable), an empty <code><a href='htt
 <code><a href='watched_media.html'>watched_media</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>movies_related</span><span class='op'>(</span><span class='st'>"the-avengers-2012"</span>, limit <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 5 x 7</span>
-#&gt;   related_to       title            year trakt  slug               imdb    tmdb 
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>           <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>              <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>
-#&gt; <span style='color: #BCBCBC;'>1</span> the-avengers-20… X-Men: Apocaly…  <span style='text-decoration: underline;'>2</span>016 149999 x-men-apocalypse-… tt3385… 2466…
-#&gt; <span style='color: #BCBCBC;'>2</span> the-avengers-20… Fantastic Four   <span style='text-decoration: underline;'>2</span>005 5004   fantastic-four-20… tt0120… 9738 
-#&gt; <span style='color: #BCBCBC;'>3</span> the-avengers-20… Superman: Doom…  <span style='text-decoration: underline;'>2</span>007 8071   superman-doomsday… tt0934… 13640
-#&gt; <span style='color: #BCBCBC;'>4</span> the-avengers-20… Superman II      <span style='text-decoration: underline;'>1</span>980 4231   superman-ii-1980   tt0081… 8536 
-#&gt; <span style='color: #BCBCBC;'>5</span> the-avengers-20… Blade            <span style='text-decoration: underline;'>1</span>998 23293  blade-1998         tt0120… 36647</div></pre>
+    <pre class="examples"><span class='r-in'><span class='fu'>movies_related</span><span class='op'>(</span><span class='st'>"the-avengers-2012"</span>, limit <span class='op'>=</span> <span class='fl'>5</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 5 × 7</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   related_to        title             year trakt slug               imdb   tmdb </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>             <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>              <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> the-avengers-2012 Batman: Year One  <span style='text-decoration: underline;'>2</span>011 50979 batman-year-one-2… tt167… 69735</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>2</span> the-avengers-2012 Piranha 3DD       <span style='text-decoration: underline;'>2</span>012 52583 piranha-3dd-2012   tt171… 71668</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>3</span> the-avengers-2012 Ghost Rider: Sp…  <span style='text-decoration: underline;'>2</span>011 52591 ghost-rider-spiri… tt107… 71676</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>4</span> the-avengers-2012 21 Jump Street    <span style='text-decoration: underline;'>2</span>012 46734 21-jump-street-20… tt123… 64688</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>5</span> the-avengers-2012 Now You See Me    <span style='text-decoration: underline;'>2</span>013 55786 now-you-see-me-20… tt167… 75656</span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

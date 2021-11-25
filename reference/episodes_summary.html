@@ -184,7 +184,7 @@ seasons_summary for (potentially) all episodes of a show." />
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>id</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: The ID of the item requested. Preferably the
+      <td><p><code>character(1)</code>: The ID of the item requested. Preferably the
 <code>trakt</code> ID (e.g. <code>1429</code>). Other options are the trakt.tv <code>slug</code> (e.g. <code>"the-wire"</code>)
 or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
 Can also be of length greater than 1, in which case the function is called on all
@@ -205,7 +205,7 @@ combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></td>
     </tr>
     <tr>
       <th>extended</th>
-      <td><p><code><a href='https://rdrr.io/r/base/character.html'>character(1)</a></code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
+      <td><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
 See <code><a href='../articles/finding-things.html'>vignette("finding-things")</a></code> for more details.</p></td>
     </tr>
@@ -241,15 +241,16 @@ If there are no results (or the API is unreachable), an empty <code><a href='htt
 <code><a href='user_profile.html'>user_profile</a>()</code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Get just this one episode with its ratings, votes, etc.</span>
-<span class='fu'>episodes_summary</span><span class='op'>(</span><span class='st'>"breaking-bad"</span>, season <span class='op'>=</span> <span class='fl'>1</span>, episode <span class='op'>=</span> <span class='fl'>1</span>, extended <span class='op'>=</span> <span class='st'>"full"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 1 x 17</span>
-#&gt;   id     season episode title number_abs overview     rating votes comment_count
-#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>         <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>
-#&gt; <span style='color: #BCBCBC;'>1</span> break…      1       1 Pilot          1 When an una…   8.34  <span style='text-decoration: underline;'>7</span>865             6
-#&gt; <span style='color: #949494;'># … with 8 more variables: first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;,</span>
-#&gt; <span style='color: #949494;'>#   available_translations &lt;list&gt;, runtime &lt;int&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;,</span>
-#&gt; <span style='color: #949494;'>#   imdb &lt;chr&gt;, tmdb &lt;chr&gt;</span></div></pre>
+    <pre class="examples"><span class='r-in'><span class='co'># Get just this one episode with its ratings, votes, etc.</span></span>
+<span class='r-in'><span class='fu'>episodes_summary</span><span class='op'>(</span><span class='st'>"breaking-bad"</span>, season <span class='op'>=</span> <span class='fl'>1</span>, episode <span class='op'>=</span> <span class='fl'>1</span>, extended <span class='op'>=</span> <span class='st'>"full"</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># A tibble: 1 × 17</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   id     season episode title number_abs overview     rating votes comment_count</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>         <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span>         <span style='color: #949494; font-style: italic;'>&lt;int&gt;</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #BCBCBC;'>1</span> break…      1       1 Pilot          1 When an una…   8.34  <span style='text-decoration: underline;'>8</span>020             8</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'># … with 8 more variables: first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   available_translations &lt;list&gt;, runtime &lt;int&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;,</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> <span style='color: #949494;'>#   imdb &lt;chr&gt;, tmdb &lt;chr&gt;</span></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
