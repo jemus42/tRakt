@@ -38,7 +38,7 @@ Additionally, for regular (non-authenticated) API interaction, you do not have t
 set any credentials at all because the package's \code{client_secret} is used as a fallback,
 which allows you to use most functions out of the box.
 
-Set appropriate values in your \verb{~/.Renviron} like this:\if{html}{\out{<div class="sh">}}\preformatted{# tRakt
+Set appropriate values in your \verb{~/.Renviron} like this:\if{html}{\out{<div class="sourceCode sh">}}\preformatted{# tRakt
 trakt_username=jemus42
 trakt_client_id=12[...]f2
 trakt_client_secret=f23[...]2nkjb

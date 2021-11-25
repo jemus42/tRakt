@@ -5,7 +5,7 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "tRakt",
-  "description": "A wrapper for the <https://trakt.tv> API to retrieve data\n    about shows and movies, including user ratings, credits and related\n    metadata. Additional functions retrieve user-specific information\n    including collections and history of watched items. A full API\n    reference is available at <https://trakt.docs.apiary.io>.",
+  "description": "A wrapper for the <https://trakt.tv> API to retrieve data about shows and movies, including user ratings, credits and related metadata. Additional functions retrieve user-specific information including collections and history of watched items. A full API reference is available at <https://trakt.docs.apiary.io>.",
   "name": "tRakt: Get Data from 'trakt.tv'",
   "codeRepository": "https://github.com/jemus42/tRakt",
   "relatedLink": "https://jemus42.github.io/tRakt",
@@ -17,7 +17,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.1.0 Patched (2021-05-29 r80415)",
+  "runtimePlatform": "R version 4.1.2 Patched (2021-11-16 r81206)",
   "author": [
     {
       "@type": "Person",
@@ -300,8 +300,8 @@
     }
   ],
   "releaseNotes": "https://github.com/jemus42/tRakt/blob/master/NEWS.md",
-  "readme": "https://github.com/jemus42/tRakt/blob/master/README.md",
-  "contIntegration": "https://codecov.io/github/jemus42/tRakt?branch=master",
+  "readme": "https://github.com/jemus42/tRakt/blob/main/README.md",
+  "contIntegration": ["https://github.com/jemus42/tRakt/actions", "https://codecov.io/github/jemus42/tRakt?branch=master"],
   "keywords": [
     "trakt-api",
     "trakttv",
@@ -310,5 +310,6 @@
     "r-package",
     "trakt"
   ],
-  "fileSize": "513.097KB"
+  "fileSize": "506.814KB",
+  "developmentStatus": "https://www.repostatus.org/#wip"
 }
