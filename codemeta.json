@@ -294,7 +294,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "507.598KB",
+  "fileSize": "507.61KB",
   "releaseNotes": "https://github.com/jemus42/tRakt/blob/master/NEWS.md",
   "readme": "https://github.com/jemus42/tRakt/blob/main/README.md",
   "contIntegration": ["https://github.com/jemus42/tRakt/actions", "https://codecov.io/github/jemus42/tRakt?branch=master"],

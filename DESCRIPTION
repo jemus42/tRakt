@@ -3,10 +3,7 @@ Package: tRakt
 Title: Get Data from 'trakt.tv'
 Version: 0.15.0.9000
 Authors@R: 
-    person(given = "Lukas",
-           family = "Burk",
-           role = c("aut", "cre"),
-           email = "lukas@quantenbrot.de",
+    person("Lukas", "Burk", , "lukas@quantenbrot.de", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-7528-3795"))
 Description: A wrapper for the <https://trakt.tv> API to retrieve data
     about shows and movies, including user ratings, credits and related
