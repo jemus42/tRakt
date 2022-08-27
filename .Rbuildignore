@@ -30,3 +30,4 @@ vignettes/\.httr-oauth$
 ^\.github/workflows/R-CMD-check\.yaml$
 ^codemeta\.json$
 ^tests/testthat/\.httr-oauth$
+^attic$

@@ -82,11 +82,7 @@ than \code{0} and will be coerced via \code{as.integer()}.}
 returns more variables and should generally only be used if required.
 See \code{vignette("finding-things")} for more details.}
 
-\item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
-e.g. \code{1:5}, the function is vectorized and the output will be
-combined. This may result in \emph{a lot} of API calls. Use wisely.}
-
-\item{episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+\item{season, episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
 combined. This may result in \emph{a lot} of API calls. Use wisely.}
 }
@@ -100,17 +96,17 @@ Get lists containing a movie, show, season, episode or person
 }
 \section{Functions}{
 \itemize{
-\item \code{movies_lists}: Lists containing a movie.
+\item \code{movies_lists()}: Lists containing a movie.
 
-\item \code{shows_lists}: Lists containing a show.
+\item \code{shows_lists()}: Lists containing a show.
 
-\item \code{seasons_lists}: Lists containing a season.
+\item \code{seasons_lists()}: Lists containing a season.
 
-\item \code{episodes_lists}: Lists containing an episode.
+\item \code{episodes_lists()}: Lists containing an episode.
 
-\item \code{people_lists}: Lists containing a person.
+\item \code{people_lists()}: Lists containing a person.
+
 }}
-
 \examples{
 \dontrun{
 movies_lists("190430", type = "personal", limit = 5)

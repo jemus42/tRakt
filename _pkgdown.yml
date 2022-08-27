@@ -12,7 +12,8 @@ home:
     available, or inversely, find a person's movie / tv credits.
 
 template:
-  path: pkgdown/templates
+  bootstrap: 5
+  # path: pkgdown/templates
   params:
     bootswatch: cosmo
     matomo_siteid: 3
@@ -28,10 +29,10 @@ template:
 
 authors:
   Lukas Burk:
-    href: https://jemu.name
+    href: https://blog.jemu.name
 
 news:
-  one_page: false
+  one_page: true
   cran_dates: false
   # releases:
   # - text: "tRakt 1.0"

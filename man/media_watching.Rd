@@ -35,11 +35,7 @@ Can also be of length greater than 1, in which case the function is called on al
 returns more variables and should generally only be used if required.
 See \code{vignette("finding-things")} for more details.}
 
-\item{season}{\code{integer(1) [1L]}: The season and eisode number. If longer,
-e.g. \code{1:5}, the function is vectorized and the output will be
-combined. This may result in \emph{a lot} of API calls. Use wisely.}
-
-\item{episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+\item{season, episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
 combined. This may result in \emph{a lot} of API calls. Use wisely.}
 }
@@ -53,15 +49,15 @@ Get who's watching a thing right now
 }
 \section{Functions}{
 \itemize{
-\item \code{movies_watching}: Who's watching a movie.
+\item \code{movies_watching()}: Who's watching a movie.
 
-\item \code{shows_watching}: Who's watching a show.
+\item \code{shows_watching()}: Who's watching a show.
 
-\item \code{seasons_watching}: Who's watching a season.
+\item \code{seasons_watching()}: Who's watching a season.
 
-\item \code{episodes_watching}: Who's watching an episode.
+\item \code{episodes_watching()}: Who's watching an episode.
+
 }}
-
 \examples{
 \dontrun{
 movies_watching("deadpool-2016")

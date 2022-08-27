@@ -83,17 +83,17 @@ seasons_summary(show_info$trakt, extended = "full") %>%
 #> Rows: 2
 #> Columns: 13
 #> $ season         <int> 1, 2
-#> $ rating         <dbl> 8.64126, 8.10000
-#> $ votes          <int> 223, 160
+#> $ rating         <dbl> 8.56154, 8.01047
+#> $ votes          <int> 260, 191
 #> $ episode_count  <int> 6, 6
 #> $ aired_episodes <int> 6, 6
 #> $ title          <chr> "Season 1", "Season 2"
 #> $ overview       <chr> "When a group of strangers find themselves in possessio…
 #> $ first_aired    <dttm> 2013-01-15 21:00:00, 2014-07-14 20:00:00
-#> $ updated_at     <dttm> 2021-06-02 12:27:53, 2021-06-02 11:45:24
+#> $ updated_at     <dttm> 2022-08-27 07:06:12, 2022-08-27 07:07:14
 #> $ network        <chr> "Channel 4", "Channel 4"
 #> $ trakt          <chr> "56008", "56009"
-#> $ tvdb           <chr> "507598", "571814"
+#> $ tvdb           <chr> "507598", "524149"
 #> $ tmdb           <chr> "54695", "54696"
 ```
 
@@ -109,14 +109,14 @@ seasons_season("utopia", seasons = 1, extended = "full") %>%
 #> $ episode                <int> 1, 2, 3, 4, 5, 6
 #> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episode…
 #> $ episode_abs            <int> 1, 2, 3, 4, 5, 6
-#> $ overview               <chr> "When five strangers from an online comic book …
-#> $ rating                 <dbl> 8.20791, 8.09573, 8.09546, 8.06281, 8.22715, 8.…
-#> $ votes                  <int> 1188, 961, 859, 796, 766, 788
-#> $ comment_count          <int> 4, 0, 1, 1, 1, 1
+#> $ overview               <chr> "When  five strangers from an online comic book…
+#> $ rating                 <dbl> 8.19613, 8.07093, 8.07795, 8.05150, 8.21902, 8.…
+#> $ votes                  <int> 1239, 1001, 898, 835, 799, 825
+#> $ comment_count          <int> 7, 0, 1, 1, 1, 1
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
-#> $ updated_at             <dttm> 2021-06-02 13:23:05, 2021-06-01 21:25:30, 2021-…
-#> $ available_translations <list> <"bs", "de", "el", "en", "es", "fa", "fr", "he"…
-#> $ runtime                <int> 60, 60, 60, 60, 60, 60
+#> $ updated_at             <dttm> 2022-08-27 07:05:03, 2022-08-27 05:18:33, 2022-…
+#> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
+#> $ runtime                <int> 50, 50, 50, 50, 50, 50
 #> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
 #> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "44…
 #> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
@@ -137,14 +137,14 @@ seasons_summary("utopia", episodes = TRUE, extended = "full") %>%
 #> $ episode                <int> 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6
 #> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episode…
 #> $ episode_abs            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
-#> $ overview               <chr> "When five strangers from an online comic book …
-#> $ rating                 <dbl> 8.20791, 8.09573, 8.09546, 8.06281, 8.22715, 8.…
-#> $ votes                  <int> 1188, 961, 859, 796, 766, 788, 779, 686, 654, 6…
-#> $ comment_count          <int> 4, 0, 1, 1, 1, 1, 2, 1, 1, 1, 2, 3
+#> $ overview               <chr> "When  five strangers from an online comic book…
+#> $ rating                 <dbl> 8.19613, 8.07093, 8.07795, 8.05150, 8.21902, 8.…
+#> $ votes                  <int> 1239, 1001, 898, 835, 799, 825, 822, 723, 692, …
+#> $ comment_count          <int> 7, 0, 1, 1, 1, 1, 3, 1, 1, 1, 2, 4
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
-#> $ updated_at             <dttm> 2021-06-02 13:23:05, 2021-06-01 21:25:30, 2021-…
-#> $ available_translations <list> <"bs", "de", "el", "en", "es", "fa", "fr", "he"…
-#> $ runtime                <int> 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60
+#> $ updated_at             <dttm> 2022-08-27 07:05:03, 2022-08-27 05:18:33, 2022-…
+#> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
+#> $ runtime                <int> 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50
 #> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
 #> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
 #> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
@@ -156,19 +156,19 @@ shows](https://trakt.tv/shows/trending):
 
 ``` r
 shows_trending()
-#> # A tibble: 10 x 8
-#>    watchers title             year trakt  slug             tvdb   imdb     tmdb 
-#>       <int> <chr>            <int> <chr>  <chr>            <chr>  <chr>    <chr>
-#>  1       59 The Handmaid's …  2017 113938 the-handmaid-s-… 321239 tt58342… 69478
-#>  2       51 Lucifer           2016 98990  lucifer          295685 tt40528… 63174
-#>  3       43 Mare of Easttown  2021 153275 mare-of-easttown 370112 tt10155… 1150…
-#>  4       39 Superman & Lois   2021 162205 superman-lois    375655 tt11192… 95057
-#>  5       35 The Simpsons      1989 455    the-simpsons     71663  tt00966… 456  
-#>  6       33 Friends           1994 1657   friends          79168  tt01087… 1668 
-#>  7       32 The Big Bang Th…  2007 1409   the-big-bang-th… 80379  tt08982… 1418 
-#>  8       28 The Good Doctor   2017 119095 the-good-doctor  328634 tt64704… 71712
-#>  9       23 The Blacklist     2013 46676  the-blacklist    266189 tt27416… 46952
-#> 10       22 New Amsterdam     2018 133258 new-amsterdam-2… 349272 tt78173… 80350
+#> # A tibble: 10 × 8
+#>    watchers title                         year trakt  slug     tvdb  imdb  tmdb 
+#>       <int> <chr>                        <int> <chr>  <chr>    <chr> <chr> <chr>
+#>  1       47 Better Call Saul              2015 59660  better-… 2731… tt30… 60059
+#>  2       41 Game of Thrones               2011 1390   game-of… 1213… tt09… 1399 
+#>  3       40 The Sandman                   2022 149786 the-san… 3662… tt17… 90802
+#>  4       31 House of the Dragon           2022 154574 house-o… 3715… tt11… 94997
+#>  5       30 Breaking Bad                  2008 1388   breakin… 81189 tt09… 1396 
+#>  6       28 See                           2019 145781 see      3615… tt79… 80752
+#>  7       27 Westworld                     2016 99718  westwor… 2967… tt04… 63247
+#>  8       22 She-Hulk: Attorney at Law     2022 151854 she-hul… 3686… tt10… 92783
+#>  9       21 The Orville                   2017 119017 the-orv… 3284… tt56… 71738
+#> 10       21 Only Murders in the Building  2021 165314 only-mu… 3999… tt12… 1071…
 ```
 
 Maybe you just want to know how long it would take you to binge through
@@ -187,18 +187,18 @@ shows_trending(extended = "full") %>%
   )
 ```
 
-| Show                       | Episode Runtime | Aired Episodes | Total Runtime (aired) |
-|:---------------------------|:----------------|---------------:|:----------------------|
-| The Handmaid’s Tale (2017) | 00:50:00        |             44 | 36:40:00              |
-| Lucifer (2016)             | 00:45:00        |             83 | 62:15:00              |
-| Mare of Easttown (2021)    | 00:57:00        |              7 | 06:39:00              |
-| Superman & Lois (2021)     | 00:44:00        |              8 | 05:52:00              |
-| The Simpsons (1989)        | 00:22:00        |            706 | 258:52:00             |
-| Friends (1994)             | 00:25:00        |            236 | 98:20:00              |
-| The Big Bang Theory (2007) | 00:22:00        |            279 | 102:18:00             |
-| The Good Doctor (2017)     | 00:43:00        |             75 | 53:45:00              |
-| The Blacklist (2013)       | 00:43:00        |            171 | 122:33:00             |
-| New Amsterdam (2018)       | 00:43:00        |             53 | 37:59:00              |
+| Show                                | Episode Runtime | Aired Episodes | Total Runtime (aired) |
+|:------------------------------------|:----------------|---------------:|:----------------------|
+| Better Call Saul (2015)             | 00:45:00        |             63 | 47:15:00              |
+| Game of Thrones (2011)              | 01:00:00        |             73 | 73:00:00              |
+| The Sandman (2022)                  | 00:48:00        |             11 | 08:48:00              |
+| House of the Dragon (2022)          | 01:00:00        |              1 | 01:00:00              |
+| Breaking Bad (2008)                 | 00:45:00        |             62 | 46:30:00              |
+| See (2019)                          | 01:00:00        |             17 | 17:00:00              |
+| Westworld (2016)                    | 01:00:00        |             36 | 36:00:00              |
+| She-Hulk: Attorney at Law (2022)    | 00:35:00        |              2 | 01:10:00              |
+| The Orville (2017)                  | 00:42:00        |             36 | 25:12:00              |
+| Only Murders in the Building (2021) | 00:33:00        |             20 | 11:00:00              |
 
 Please note though that episode runtime data may be inaccurate. In my
 experience, recent shows have fairly accurate runtimes, which might not
@@ -219,18 +219,18 @@ trakt_client_secret=justabunchofstuffhere
 trakt_username=jemus42
 ```
 
--   `trakt_client_id` **Required**. It’s used in the HTTP headers for
-    the API calls, which is kind of a biggie.
--   `trakt_client_secret`: **Optional**(ish). This is only required if
-    you intend to make an authenticated request, which is only required
-    by a [small number of implemented API
-    methods](http://jemus42.github.io/tRakt/articles/Implemented-API-methods.html).
-    You can use this package perfectly fine for basic data collection
-    without registering an application on trakt.tv.
--   `trakt_username` **Optional**. For functions that retrieve a user’s
-    watched shows or stats, this just sets the default value so you
-    don’t have to keep supplying it in individual function calls when
-    you’re just looking at your own data anyway.
+- `trakt_client_id` **Required**. It’s used in the HTTP headers for the
+  API calls, which is kind of a biggie.
+- `trakt_client_secret`: **Optional**(ish). This is only required if you
+  intend to make an authenticated request, which is only required by a
+  [small number of implemented API
+  methods](http://jemus42.github.io/tRakt/articles/Implemented-API-methods.html).
+  You can use this package perfectly fine for basic data collection
+  without registering an application on trakt.tv.
+- `trakt_username` **Optional**. For functions that retrieve a user’s
+  watched shows or stats, this just sets the default value so you don’t
+  have to keep supplying it in individual function calls when you’re
+  just looking at your own data anyway.
 
 Please not that there’s no client secret listed – that’s because this
 package doesn’t implement any authenticated methods. Maybe in the

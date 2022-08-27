@@ -6,9 +6,9 @@
 \alias{tRakt-package}
 \title{tRakt: Get Data from 'trakt.tv'}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-A wrapper for the <https://trakt.tv> API to retrieve data about shows and movies, including user ratings, credits and related metadata. Additional functions retrieve user-specific information including collections and history of watched items. A full API reference is available at <https://trakt.docs.apiary.io>.
+A wrapper for the \url{https://trakt.tv} API to retrieve data about shows and movies, including user ratings, credits and related metadata. Additional functions retrieve user-specific information including collections and history of watched items. A full API reference is available at \url{https://trakt.docs.apiary.io}.
 }
 \seealso{
 Useful links:

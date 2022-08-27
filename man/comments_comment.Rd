@@ -46,13 +46,13 @@ Get a single comment
 }
 \section{Functions}{
 \itemize{
-\item \code{comments_replies}: Get a comment's replies
+\item \code{comments_replies()}: Get a comment's replies
 
-\item \code{comments_likes}: Get users who liked a comment.
+\item \code{comments_likes()}: Get users who liked a comment.
 
-\item \code{comments_item}: Get the media item attached to the comment.
+\item \code{comments_item()}: Get the media item attached to the comment.
+
 }}
-
 \examples{
 # A single comment
 comments_comment("236397")
