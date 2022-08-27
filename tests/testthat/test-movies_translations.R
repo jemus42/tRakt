@@ -1,11 +1,11 @@
 test_that("media translations work", {
-  nm_movie <- c("title", "overview", "tagline", "language")
+  nm_movie <- c("title", "overview", "tagline", "language", "country")
 
   movies_translations("193972") %>%
     expect_is("tbl_df") %>%
     expect_named(nm_movie)
 
-  nm_show <- c("title", "overview", "language")
+  nm_show <- c("title", "overview", "language", "country")
 
   shows_translations("breaking-bad") %>%
     expect_is("tbl_df") %>%

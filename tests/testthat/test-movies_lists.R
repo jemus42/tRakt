@@ -1,10 +1,8 @@
 test_that("media lists work", {
-  media_list_names <- c(
-    "name", "description", "privacy", "display_numbers", "allow_comments",
-    "sort_by", "sort_how", "created_at", "updated_at", "item_count",
-    "comment_count", "likes", "trakt", "slug", "username", "private",
-    "user_name", "vip", "vip_ep", "user_slug"
-  )
+  media_list_names <- c("name", "description", "privacy", "type", "display_numbers",
+                        "allow_comments", "sort_by", "sort_how", "created_at", "updated_at",
+                        "item_count", "comment_count", "likes", "trakt", "slug", "username",
+                        "private", "user_name", "vip", "vip_ep", "user_slug")
 
   movies_lists("190430", type = "personal", limit = 5) %>%
     expect_is("tbl_df") %>%

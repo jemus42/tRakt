@@ -7,5 +7,5 @@ test_that("user_likes works", {
 
   user_likes(type = "lists") %>%
     expect_is("tbl_df") %>%
-    expect_length(22)
+    expect_length(23)
 })

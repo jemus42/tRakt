@@ -16,9 +16,9 @@ test_that("user_watchlist works", {
     expect_is("tbl_df") %>%
     expect_length(12)
 
-  # no shows
-  expect_identical(
-    tibble::tibble(),
-    user_watchlist(user = "jemus42", type = "shows")
-  )
+  # FIXME: Find no shows test case
+  # expect_identical(
+  #   tibble::tibble(),
+  #   user_watchlist(user = "jemus42", type = "shows")
+  # )
 })
