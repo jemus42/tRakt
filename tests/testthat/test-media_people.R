@@ -40,5 +40,4 @@ test_that("media_people works", {
     purrr::walk(~ {
       expect_is(.x, "tbl_df")
     })
-
 })

@@ -28,8 +28,8 @@ library(stringr)
 ```{r api-list}
 api <- system.file("api-methods.yml", package = "tRakt") %>%
   yaml::read_yaml() %>%
-  map_dfr(~{
-    map_dfr(.x, ~{
+  map_dfr(~ {
+    map_dfr(.x, ~ {
       modify_if(.x, is.null, NA_character_) %>%
         as_tibble()
     }, .id = "Method")
@@ -39,41 +39,41 @@ pkg_funs <- getNamespaceExports("tRakt") %>%
   str_subset("%>%|trakt_get|build_trakt_url|trakt_credentials", negate = TRUE)
 
 unmentioned <- pkg_funs[!(pkg_funs %in% str_remove_all(api$implementation, pattern = "\\(\\)"))]
-  
+
 
 format_api_table <- function(xdf) {
   xdf %>%
-  mutate(
-    endpoint = cell_spec(endpoint, link = url),
-    # Section = stringr::str_to_title(Section),
-    # Section = cell_spec(Section, bold = TRUE),
-    Method = str_to_title(Method),
-    Method = str_replace_all(Method, "^Id\\s", "ID "),
-    implementation = if_else(is.na(implementation), "N/A", implementation),
-    implementation = if_else(
-      str_detect(implementation, "^N\\/A"),
-      implementation,
-      paste0("<code>", implementation, "</code>")
-    ),
-    authentication = if_else(
-      !is.na(authentication), 
-      cell_spec("Required", bold = TRUE, color = "white", background = "red"), 
-      cell_spec("Optional", bold = FALSE, color = "white", background = "green")
-    ),
-  ) %>%
-  select(
-    -url, 
-    Endpoint = endpoint, 
-    Auth = authentication,
-    Implementation = implementation
-  )
+    mutate(
+      endpoint = cell_spec(endpoint, link = url),
+      # Section = stringr::str_to_title(Section),
+      # Section = cell_spec(Section, bold = TRUE),
+      Method = str_to_title(Method),
+      Method = str_replace_all(Method, "^Id\\s", "ID "),
+      implementation = if_else(is.na(implementation), "N/A", implementation),
+      implementation = if_else(
+        str_detect(implementation, "^N\\/A"),
+        implementation,
+        paste0("<code>", implementation, "</code>")
+      ),
+      authentication = if_else(
+        !is.na(authentication),
+        cell_spec("Required", bold = TRUE, color = "white", background = "red"),
+        cell_spec("Optional", bold = FALSE, color = "white", background = "green")
+      ),
+    ) %>%
+    select(
+      -url,
+      Endpoint = endpoint,
+      Auth = authentication,
+      Implementation = implementation
+    )
 }
 
 print_api_table <- function(xdf) {
   xdf %>%
     kable(escape = FALSE) %>%
     kable_styling(
-      position = "center", 
+      position = "center",
       bootstrap_options = c("striped", "hover"),
       full_width = TRUE
     )
@@ -182,8 +182,10 @@ format as package datasets.
 
 ```{r api-misc}
 api %>%
-  filter(Section %in% c("certifications", "countries", 
-                        "genres", "languages", "networks")) %>%
+  filter(Section %in% c(
+    "certifications", "countries",
+    "genres", "languages", "networks"
+  )) %>%
   format_api_table() %>%
   select(-Auth) %>%
   print_api_table()

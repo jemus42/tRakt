@@ -55,7 +55,6 @@ trakt_credentials <- function(username,
                               client_id,
                               client_secret,
                               silent = TRUE) {
-
   # Check username ----
   if (!missing(username)) {
     Sys.setenv("trakt_username" = username)

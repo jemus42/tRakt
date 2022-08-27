@@ -138,7 +138,6 @@ search_id <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
 #' @importFrom tibble remove_rownames
 #' @noRd
 search_result_cleanup <- function(response, type, n_results, extended) {
-
   # Just to be really safe it's always a numeric
   response$score <- as.numeric(response$score)
 

@@ -47,7 +47,7 @@ glimpse(seasons)
 We're interested in the `episodes` list-column, which needs unnesting. In this case we can simply use `dplyr::bind_rows` to take the list of `tbls` that is `seasons$episodes` and basically `rbind` them all together, meaning the result is a `tibble` of the episode data we care about.
 
 ```{r 24_episodes_unnesting}
-library(dplyr) 
+library(dplyr)
 
 episodes <- bind_rows(seasons$episodes)
 glimpse(episodes)
@@ -66,12 +66,16 @@ ggplot(data = episodes, aes(x = episode, y = rating, color = votes)) +
   scale_x_continuous(breaks = scales::pretty_breaks()) +
   scale_y_continuous(breaks = seq(0, 10, .5), minor_breaks = seq(0, 10, .25), limits = c(7, 9)) +
   scale_color_viridis_c() +
-  labs(title = "24: Episode Ratings on trakt.tv",
-       subtitle = "Episode ratings by trakt.tv users by season",
-       x = "Episode Number", y = "Rating (0-10)", color = "# of Votes",
-       caption = "jemus42.github.io/tRakt") +
+  labs(
+    title = "24: Episode Ratings on trakt.tv",
+    subtitle = "Episode ratings by trakt.tv users by season",
+    x = "Episode Number", y = "Rating (0-10)", color = "# of Votes",
+    caption = "jemus42.github.io/tRakt"
+  ) +
   theme_minimal() +
-  theme(legend.position = "bottom",
-        axis.text.x = element_text(size = rel(.6)))
+  theme(
+    legend.position = "bottom",
+    axis.text.x = element_text(size = rel(.6))
+  )
 ```
 

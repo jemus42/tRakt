@@ -77,7 +77,6 @@ test_that("anticipated_media works", {
 })
 
 test_that("played_media and watched_media also do things", {
-
   # Both have the same variables, the difference is just sorting
   nm_shows <- c(
     "watcher_count", "play_count", "collected_count", "collector_count",
