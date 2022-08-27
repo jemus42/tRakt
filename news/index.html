@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.15.0.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.16.0</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,19 +56,19 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="development version" id="trakt-development-version">tRakt (development version)<a class="anchor" aria-label="anchor" href="#trakt-development-version"></a></h2>
+<h2 class="pkg-version" data-toc-text="0.16.0" id="trakt-0160">tRakt 0.16.0<a class="anchor" aria-label="anchor" href="#trakt-0160"></a></h2>
 <ul><li>Add GitHub actions via <code>usethis::use_github_actions()</code>
 </li>
 <li>Use the tidy CI setup via <code>usethis::use_tidy_ci()</code>, this bumps the R dependency to <code>&gt;= 3.2</code>.</li>
 </ul><div class="section level3">
-<h3 id="authenticated-requests-development-version">Authenticated requests<a class="anchor" aria-label="anchor" href="#authenticated-requests-development-version"></a></h3>
+<h3 id="authenticated-requests-0-16-0">Authenticated requests<a class="anchor" aria-label="anchor" href="#authenticated-requests-0-16-0"></a></h3>
 <p>By default, all requests to the API are now made using authentication <em>if</em> a <code>trakt_client_secret</code> is set. See <code>?trakt_credentials()</code> for details on how to set your credentials.<br>
 If no secret is available, unauthenticated requests are made as in previous versions. In this case, you still <strong>need</strong> either the built-in or your own <code>trakt_client_id</code>.</p>
 <p>OAuth2 support comes with the need to handle secrets, i.e. <code>.httr-oauth</code> files. This can be a pain with headless/automated setups, which is why I am trying to keep “no auth needed” as the default, as most (implemented) endpoints don’t strictly require authentication.</p>
 <p>See <code><a href="../articles/Implemented-API-methods.html">vignette("Implemented-API-methods", package = "tRakt")</a></code> for an overview of implemented methods with an indicator on whether authentication is required (it usually isn’t).</p>
 </div>
 <div class="section level3">
-<h3 id="new-functions-development-version">New functions<a class="anchor" aria-label="anchor" href="#new-functions-development-version"></a></h3>
+<h3 id="new-functions-0-16-0">New functions<a class="anchor" aria-label="anchor" href="#new-functions-0-16-0"></a></h3>
 <ul><li>
 <code><a href="../reference/episodes_summary.html">episodes_summary()</a></code> [<code>shows/:id/seasons/:season/episodes/:episode</code>]: What <code><a href="../reference/seasons_season.html">seasons_season()</a></code> and <code><a href="../reference/seasons_summary.html">seasons_summary()</a></code> do, but for a single episode. Only really implemented for completeness’ sake. <a href="https://trakt.docs.apiary.io/#reference/episodes/summary" class="external-link">Wraps this method</a>.</li>
 <li>
@@ -81,11 +81,11 @@ If no secret is available, unauthenticated requests are made as in previous vers
 <code><a href="../reference/user_list_items.html">user_list_items()</a></code> [<code>users/:id/lists/:list_id/items/:type</code>]: Get the <a href="https://trakt.docs.apiary.io/#reference/users/list-items/get-custom-list" class="external-link">items in said lists</a>.</li>
 </ul></div>
 <div class="section level3">
-<h3 id="the-renamingering-development-version">The Renamingering<a class="anchor" aria-label="anchor" href="#the-renamingering-development-version"></a></h3>
+<h3 id="the-renamingering-0-16-0">The Renamingering<a class="anchor" aria-label="anchor" href="#the-renamingering-0-16-0"></a></h3>
 <p>Rename <em>all the things</em> to snake_case and drop the <code>trakt.</code> prefix.<br>
 This results in (most) functions mapping directly to <a href="https://trakt.docs.apiary.io/" class="external-link">API endpoints</a> in the form <code>section_method</code>, e.g. the API endpoint <code>movies/collected</code> is handled by function <code><a href="../reference/collected_media.html">movies_collected()</a></code>.</p>
 <div class="section level4">
-<h4 id="search-development-version">Search<a class="anchor" aria-label="anchor" href="#search-development-version"></a></h4>
+<h4 id="search-0-16-0">Search<a class="anchor" aria-label="anchor" href="#search-0-16-0"></a></h4>
 <ul><li>
 <code>trakt.search</code> -&gt; <code><a href="../reference/search_query.html">search_query()</a></code>
 </li>
@@ -94,7 +94,7 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 </li>
 </ul></div>
 <div class="section level4">
-<h4 id="dynamic-lists-development-version">Dynamic Lists<a class="anchor" aria-label="anchor" href="#dynamic-lists-development-version"></a></h4>
+<h4 id="dynamic-lists-0-16-0">Dynamic Lists<a class="anchor" aria-label="anchor" href="#dynamic-lists-0-16-0"></a></h4>
 <ul><li>
 <code>trakt.popular</code><ul><li>-&gt; <code><a href="../reference/popular_media.html">movies_popular()</a></code>
 </li>
@@ -139,7 +139,7 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 </ul></li>
 </ul></div>
 <div class="section level4">
-<h4 id="movies-development-version">Movies<a class="anchor" aria-label="anchor" href="#movies-development-version"></a></h4>
+<h4 id="movies-0-16-0">Movies<a class="anchor" aria-label="anchor" href="#movies-0-16-0"></a></h4>
 <ul><li>
 <code>trakt.movies.summary</code> -&gt; <code><a href="../reference/movies_summary.html">movies_summary()</a></code>
 </li>
@@ -154,7 +154,7 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 </li>
 </ul></div>
 <div class="section level4">
-<h4 id="shows-development-version">Shows<a class="anchor" aria-label="anchor" href="#shows-development-version"></a></h4>
+<h4 id="shows-0-16-0">Shows<a class="anchor" aria-label="anchor" href="#shows-0-16-0"></a></h4>
 <ul><li>
 <code>trakt.shows.summary</code> -&gt; <code><a href="../reference/shows_summary.html">shows_summary()</a></code>
 </li>
@@ -163,7 +163,7 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 </li>
 </ul></div>
 <div class="section level4">
-<h4 id="seasons-development-version">Seasons<a class="anchor" aria-label="anchor" href="#seasons-development-version"></a></h4>
+<h4 id="seasons-0-16-0">Seasons<a class="anchor" aria-label="anchor" href="#seasons-0-16-0"></a></h4>
 <ul><li>
 <code>trakt.seasons.summary</code> -&gt; <code><a href="../reference/seasons_summary.html">seasons_summary()</a></code>
 </li>
@@ -171,7 +171,7 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 <code>trakt.seasons.season</code> -&gt; <code><a href="../reference/seasons_season.html">seasons_season()</a></code> (It’s silly, I know, but oh well)</li>
 </ul></div>
 <div class="section level4">
-<h4 id="ratings-development-version">Ratings<a class="anchor" aria-label="anchor" href="#ratings-development-version"></a></h4>
+<h4 id="ratings-0-16-0">Ratings<a class="anchor" aria-label="anchor" href="#ratings-0-16-0"></a></h4>
 <ul><li>
 <code>trakt.movies.ratings</code> -&gt; <code><a href="../reference/media_ratings.html">movies_ratings()</a></code>
 </li>
@@ -186,7 +186,7 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 </li>
 </ul></div>
 <div class="section level4">
-<h4 id="related-development-version">Related<a class="anchor" aria-label="anchor" href="#related-development-version"></a></h4>
+<h4 id="related-0-16-0">Related<a class="anchor" aria-label="anchor" href="#related-0-16-0"></a></h4>
 <ul><li>
 <code>trakt.movies.related</code> -&gt; <code><a href="../reference/movies_related.html">movies_related()</a></code>
 </li>
@@ -195,7 +195,7 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 </li>
 </ul></div>
 <div class="section level4">
-<h4 id="stats-development-version">Stats<a class="anchor" aria-label="anchor" href="#stats-development-version"></a></h4>
+<h4 id="stats-0-16-0">Stats<a class="anchor" aria-label="anchor" href="#stats-0-16-0"></a></h4>
 <ul><li>
 <code>trakt.movies.stats</code> -&gt; <code><a href="../reference/media_stats.html">movies_stats()</a></code>
 </li>
@@ -210,7 +210,7 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 </li>
 </ul></div>
 <div class="section level4">
-<h4 id="people-development-version">People<a class="anchor" aria-label="anchor" href="#people-development-version"></a></h4>
+<h4 id="people-0-16-0">People<a class="anchor" aria-label="anchor" href="#people-0-16-0"></a></h4>
 <ul><li>
 <code>trakt.people.summary</code> -&gt; <code><a href="../reference/people_summary.html">people_summary()</a></code>
 </li>
@@ -222,7 +222,7 @@ This results in (most) functions mapping directly to <a href="https://trakt.docs
 </li>
 </ul></div>
 <div class="section level4">
-<h4 id="user-functions-development-version">User functions<a class="anchor" aria-label="anchor" href="#user-functions-development-version"></a></h4>
+<h4 id="user-functions-0-16-0">User functions<a class="anchor" aria-label="anchor" href="#user-functions-0-16-0"></a></h4>
 <ul><li>
 <code>trakt.user.network</code><ul><li>-&gt; <code><a href="../reference/user_network.html">user_followers()</a></code>
 </li>
