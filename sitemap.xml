@@ -1,222 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jemus42.github.io/tRakt/./CODE_OF_CONDUCT.html</loc>
+    <loc>https://jemus42.github.io/tRakt/404.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./LICENSE-text.html</loc>
+    <loc>https://jemus42.github.io/tRakt/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./articles/Implemented-API-methods.html</loc>
+    <loc>https://jemus42.github.io/tRakt/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./articles/finding-things.html</loc>
+    <loc>https://jemus42.github.io/tRakt/articles/Implemented-API-methods.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./articles/index.html</loc>
+    <loc>https://jemus42.github.io/tRakt/articles/finding-things.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./articles/show-analysis-24.html</loc>
+    <loc>https://jemus42.github.io/tRakt/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./articles/tRakt.html</loc>
+    <loc>https://jemus42.github.io/tRakt/articles/show-analysis-24.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./authors.html</loc>
+    <loc>https://jemus42.github.io/tRakt/articles/tRakt.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./index.html</loc>
+    <loc>https://jemus42.github.io/tRakt/authors.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./news/index.html</loc>
+    <loc>https://jemus42.github.io/tRakt/index.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/anticipated_media.html</loc>
+    <loc>https://jemus42.github.io/tRakt/news/index.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/apidoc.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/anticipated_media.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/apiurl.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/apidoc.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/build_trakt_url.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/apiurl.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/check_username.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/build_trakt_url.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/collected_media.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/check_username.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/comments_comment.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/collected_media.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/comments_trending.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/comments_comment.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/comments_updates.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/comments_trending.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/dynamic_lists.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/comments_updates.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/episodes_summary.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/dynamic_lists.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/futurama.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/episodes_summary.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/gameofthrones.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/futurama.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/index.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/gameofthrones.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/lists_popular.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/media_aliases.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/lists_popular.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/media_comments.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/media_aliases.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/media_lists.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/media_comments.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/media_people.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/media_lists.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/media_ratings.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/media_people.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/media_stats.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/media_ratings.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/media_translations.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/media_stats.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/media_watching.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/media_translations.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/movies_boxoffice.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/media_watching.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/movies_related.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/movies_boxoffice.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/movies_releases.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/movies_related.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/movies_summary.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/movies_releases.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/pad_episode.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/movies_summary.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/people_media.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/pad_episode.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/people_summary.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/people_media.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/pipe.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/people_summary.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/played_media.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/pipe.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/popular_media.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/played_media.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/search_query.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/popular_media.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/seasons_season.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/search_query.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/seasons_summary.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/seasons_season.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/shows_next_episode.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/seasons_summary.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/shows_related.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/shows_next_episode.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/shows_summary.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/shows_related.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/tRakt-package.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/shows_summary.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/tidyeval.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/tRakt-package.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/trakt_api_common_parameters.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/tidyeval.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/trakt_credentials.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/trakt_api_common_parameters.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/trakt_datasets.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/trakt_credentials.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/trakt_get.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/trakt_datasets.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/trakt_get_token.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/trakt_get.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/trending_media.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/trakt_get_token.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/updated_media.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/trending_media.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_collection.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/updated_media.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_comments.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_collection.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_history.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_comments.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_likes.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_history.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_list.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_likes.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_list_comments.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_list.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_list_items.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_list_comments.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_lists.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_list_items.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_network.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_lists.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_profile.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_network.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_ratings.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_profile.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_stats.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_ratings.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_watched.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_stats.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/user_watchlist.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_watched.html</loc>
   </url>
   <url>
-    <loc>https://jemus42.github.io/tRakt/./reference/watched_media.html</loc>
+    <loc>https://jemus42.github.io/tRakt/reference/user_watchlist.html</loc>
+  </url>
+  <url>
+    <loc>https://jemus42.github.io/tRakt/reference/watched_media.html</loc>
   </url>
 </urlset>
