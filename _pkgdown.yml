@@ -1,6 +1,5 @@
 development:
-  mode: auto
-  destination: "."
+  mode: release
 
 url: https://jemus42.github.io/tRakt
 
