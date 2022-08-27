@@ -1,4 +1,4 @@
-# tRakt (development version)
+# tRakt 0.16.0
 
 - Add GitHub actions via `usethis::use_github_actions()`
 - Use the tidy CI setup via `usethis::use_tidy_ci()`, this bumps the R dependency to `>= 3.2`.

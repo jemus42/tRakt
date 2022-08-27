@@ -8,7 +8,7 @@
   "codeRepository": "https://github.com/jemus42/tRakt",
   "issueTracker": "http://github.com/jemus42/tRakt/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.15.0.9000",
+  "version": "0.16.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -294,7 +294,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "507.61KB",
+  "fileSize": "507.59KB",
   "releaseNotes": "https://github.com/jemus42/tRakt/blob/master/NEWS.md",
   "readme": "https://github.com/jemus42/tRakt/blob/main/README.md",
   "contIntegration": ["https://github.com/jemus42/tRakt/actions", "https://codecov.io/github/jemus42/tRakt?branch=master"],
