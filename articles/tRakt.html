@@ -45,173 +45,153 @@
 </script><noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p></noscript>
 <!-- End Matomo Code -->
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">tRakt</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.15.0.9000</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-primary"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">tRakt</a>
+
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">0.15.0.9000</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="active nav-item">
+  <a class="nav-link" href="../articles/tRakt.html">Get started</a>
 </li>
-<li>
-  <a href="../articles/tRakt.html">Get started</a>
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../reference/index.html">Reference</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/Implemented-API-methods.html">Implemented API methods</a>
-    </li>
-    <li>
-      <a href="../articles/finding-things.html">Finding things (and the right amount)</a>
-    </li>
-    <li>
-      <a href="../articles/show-analysis-24.html">Show Analysis: 24</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
-      </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="http://github.com/jemus42/tRakt/">
-    <span class="fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
-</div>
-<!--/.nav-collapse -->
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a>
+    <a class="dropdown-item" href="../articles/finding-things.html">Finding things (and the right amount)</a>
+    <a class="dropdown-item" href="../articles/show-analysis-24.html">Show Analysis: 24</a>
   </div>
-<!--/.container -->
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
+</li>
+      </ul>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="http://github.com/jemus42/tRakt/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
-<!--/.navbar -->
 
-      
+    
+  </div>
+</nav><div class="container template-article">
 
-      </header><script src="tRakt_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>The Basics</h1>
-                        <h4 class="author">Lukas Burk</h4>
+
+
+<script src="tRakt_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+  <main id="main" class="col-md-9"><div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>The Basics</h1>
+                        <h4 data-toc-skip class="author">Lukas Burk</h4>
             
-            <h4 class="date">2021-11-25</h4>
+            <h4 data-toc-skip class="date">2022-08-27</h4>
       
-      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/master/vignettes/tRakt.Rmd"><code>vignettes/tRakt.Rmd</code></a></small>
-      <div class="hidden name"><code>tRakt.Rmd</code></div>
-
+      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/HEAD/vignettes/tRakt.Rmd" class="external-link"><code>vignettes/tRakt.Rmd</code></a></small>
+      <div class="d-none name"><code>tRakt.Rmd</code></div>
     </div>
 
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://jemus42.github.io/tRakt">tRakt</a></span><span class="op">)</span></code></pre></div>
-<p>That’s all you need to to for basic things. If you’re planning a larger project with lots and lots of data retrieval, you might want to create your own API app <a href="https://trakt.tv/oauth/applications">on trakt.tv</a> and use <code><a href="../reference/trakt_credentials.html">trakt_credentials()</a></code> to set your <code>client id</code>.</p>
-<div id="getting-data-from-trakt-tv" class="section level1">
-<h1 class="hasAnchor">
-<a href="#getting-data-from-trakt-tv" class="anchor"></a>Getting data from trakt.tv</h1>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://jemus42.github.io/tRakt">tRakt</a></span><span class="op">)</span></span></code></pre></div>
+<p>That’s all you need to to for basic things. If you’re planning a larger project with lots and lots of data retrieval, you might want to create your own API app <a href="https://trakt.tv/oauth/applications" class="external-link">on trakt.tv</a> and use <code><a href="../reference/trakt_credentials.html">trakt_credentials()</a></code> to set your <code>client id</code>.</p>
+<div class="section level2">
+<h2 id="getting-data-from-trakt-tv">Getting data from trakt.tv<a class="anchor" aria-label="anchor" href="#getting-data-from-trakt-tv"></a>
+</h2>
 </div>
-<div id="find-things" class="section level1">
-<h1 class="hasAnchor">
-<a href="#find-things" class="anchor"></a>1. Find things</h1>
+<div class="section level2">
+<h2 id="find-things">1. Find things<a class="anchor" aria-label="anchor" href="#find-things"></a>
+</h2>
 <p>Using a text query:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"Game of Thrones"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 × 9</span>
-<span class="co">#&gt;   type  score title            year trakt slug            tvdb   imdb      tmdb </span>
-<span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;</span>
-<span class="co">#&gt; 1 show   1000 Game of Thrones  2011 1390  game-of-thrones 121361 tt0944947 1399</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"Game of Thrones"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 9</span></span></span>
+<span><span class="co">#&gt;   type  score title            year trakt slug            tvdb   imdb      tmdb </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   <span style="text-decoration: underline;">1</span>000 Game of Thrones  <span style="text-decoration: underline;">2</span>011 1390  game-of-thrones 121361 tt0944947 1399</span></span></code></pre></div>
 <p>Search by explicit ID:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/search_query.html">search_id</a></span><span class="op">(</span><span class="st">"121361"</span>, id_type <span class="op">=</span> <span class="st">"tvdb"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 1 × 9</span>
-<span class="co">#&gt;   type  score title            year trakt slug            tvdb   imdb      tmdb </span>
-<span class="co">#&gt;   &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;           &lt;int&gt; &lt;chr&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;</span>
-<span class="co">#&gt; 1 show   1000 Game of Thrones  2011 1390  game-of-thrones 121361 tt0944947 1399</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/search_query.html">search_id</a></span><span class="op">(</span><span class="st">"121361"</span>, id_type <span class="op">=</span> <span class="st">"tvdb"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 9</span></span></span>
+<span><span class="co">#&gt;   type  score title            year trakt slug            tvdb   imdb      tmdb </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   <span style="text-decoration: underline;">1</span>000 Game of Thrones  <span style="text-decoration: underline;">2</span>011 1390  game-of-thrones 121361 tt0944947 1399</span></span></code></pre></div>
 <p>Or via whatever’s popular(ish):</p>
 <p>Another scenario would be that you’re not necessarily interested in some specific media item, but rather a collection of items that fulfill certain criteria, like being popular on trakt.tv and maybe being from a specific period or genre and whatnot. While you can also filter <code>search_query</code> by other criteria, it’s maybe more useful to filter, let’s say, the most watched movies of the past week by the release year of the movie.</p>
 <p>The 5 most popular shows:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/popular_media.html">shows_popular</a></span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 5 × 7</span>
-<span class="co">#&gt;   title                year trakt slug                tvdb   imdb      tmdb </span>
-<span class="co">#&gt;   &lt;chr&gt;               &lt;int&gt; &lt;chr&gt; &lt;chr&gt;               &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;</span>
-<span class="co">#&gt; 1 Game of Thrones      2011 1390  game-of-thrones     121361 tt0944947 1399 </span>
-<span class="co">#&gt; 2 Breaking Bad         2008 1388  breaking-bad        81189  tt0903747 1396 </span>
-<span class="co">#&gt; 3 The Walking Dead     2010 1393  the-walking-dead    153021 tt1520211 1402 </span>
-<span class="co">#&gt; 4 The Big Bang Theory  2007 1409  the-big-bang-theory 80379  tt0898266 1418 </span>
-<span class="co">#&gt; 5 Sherlock             2010 19792 sherlock            176941 tt1475582 19885</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/popular_media.html">shows_popular</a></span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 7</span></span></span>
+<span><span class="co">#&gt;   title                year trakt slug                tvdb   imdb      tmdb </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Game of Thrones      <span style="text-decoration: underline;">2</span>011 1390  game-of-thrones     121361 tt0944947 1399 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> Breaking Bad         <span style="text-decoration: underline;">2</span>008 1388  breaking-bad        81189  tt0903747 1396 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> The Walking Dead     <span style="text-decoration: underline;">2</span>010 1393  the-walking-dead    153021 tt1520211 1402 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> The Big Bang Theory  <span style="text-decoration: underline;">2</span>007 1409  the-big-bang-theory 80379  tt0898266 1418 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> Sherlock             <span style="text-decoration: underline;">2</span>010 19792 sherlock            176941 tt1475582 19885</span></span></code></pre></div>
 <p>The 10 most watched (during the past year) movies from 1990-2000:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
-
-<span class="fu"><a href="../reference/watched_media.html">movies_watched</a></span><span class="op">(</span>period <span class="op">=</span> <span class="st">"yearly"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1990</span>, <span class="fl">2000</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/%&gt;%.html">%&gt;%</a></span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">watcher_count</span>, <span class="va">title</span>, <span class="va">year</span><span class="op">)</span>
-<span class="co">#&gt; # A tibble: 10 × 3</span>
-<span class="co">#&gt;    watcher_count title                           year</span>
-<span class="co">#&gt;            &lt;int&gt; &lt;chr&gt;                          &lt;int&gt;</span>
-<span class="co">#&gt;  1         47162 The Matrix                      1999</span>
-<span class="co">#&gt;  2         28542 Home Alone                      1990</span>
-<span class="co">#&gt;  3         25942 Forrest Gump                    1994</span>
-<span class="co">#&gt;  4         25065 Pulp Fiction                    1994</span>
-<span class="co">#&gt;  5         24828 Toy Story                       1995</span>
-<span class="co">#&gt;  6         24297 Fight Club                      1999</span>
-<span class="co">#&gt;  7         23966 Jurassic Park                   1993</span>
-<span class="co">#&gt;  8         23229 The Lion King                   1994</span>
-<span class="co">#&gt;  9         22373 The Shawshank Redemption        1994</span>
-<span class="co">#&gt; 10         22076 Home Alone 2: Lost in New York  1992</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="../reference/watched_media.html">movies_watched</a></span><span class="op">(</span>period <span class="op">=</span> <span class="st">"yearly"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1990</span>, <span class="fl">2000</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">watcher_count</span>, <span class="va">title</span>, <span class="va">year</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 3</span></span></span>
+<span><span class="co">#&gt;    watcher_count title                     year</span></span>
+<span><span class="co">#&gt;            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>         <span style="text-decoration: underline;">59</span>632 The Matrix                <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>         <span style="text-decoration: underline;">28</span>274 Home Alone                <span style="text-decoration: underline;">1</span>990</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>         <span style="text-decoration: underline;">24</span>200 Jurassic Park             <span style="text-decoration: underline;">1</span>993</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>         <span style="text-decoration: underline;">23</span>016 Toy Story                 <span style="text-decoration: underline;">1</span>995</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>         <span style="text-decoration: underline;">21</span>811 The Shawshank Redemption  <span style="text-decoration: underline;">1</span>994</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>         <span style="text-decoration: underline;">21</span>771 Forrest Gump              <span style="text-decoration: underline;">1</span>994</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>         <span style="text-decoration: underline;">20</span>430 Fight Club                <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>         <span style="text-decoration: underline;">20</span>097 Pulp Fiction              <span style="text-decoration: underline;">1</span>994</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>         <span style="text-decoration: underline;">19</span>425 Titanic                   <span style="text-decoration: underline;">1</span>997</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>         <span style="text-decoration: underline;">19</span>121 The Lion King             <span style="text-decoration: underline;">1</span>994</span></span></code></pre></div>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p>Developed by <a href="https://jemu.name">Lukas Burk</a>.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by <a href="https://blog.jemu.name" class="external-link">Lukas Burk</a>.</p>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
 
+  
 
   </body>
 </html>
