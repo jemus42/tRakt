@@ -12,12 +12,17 @@ home:
     available, or inversely, find a person's movie / tv credits.
 
 template:
+  includes:
+    in_header: |
+      <noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
   bootstrap: 5
-  # path: pkgdown/templates
-  params:
-    bootswatch: cosmo
-    matomo_siteid: 3
-    matomo_site: "https://matomo.jemu.name"
+  bootswatch: litera
+  theme: kate
+  bslib:
+    # pkgdown-nav-height: 70px
+    # base_font: {google: "Source Serif Pro"}
+    # heading_font: {google: "Source Sans Pro"}
+    # code_font: {google: "Source Code Pro"}
   opengraph:
     image:
       src: "man/figures/logo.png"
@@ -26,6 +31,12 @@ template:
       creator: "@jemus42"
       # site: "@rstudio"
       card: summary_large_image # summary
+
+# Default ordering. Would like changelog to the left of search but order isn't preserved based on YAML
+navbar:
+  structure:
+    left:  [intro, reference, articles, tutorials, news]
+    right: [search, github]
 
 authors:
   Lukas Burk:
