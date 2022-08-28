@@ -20,10 +20,10 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 <!-- badges: end -->
 
 `tRakt` helps you to retrieve data from [trakt.tv](https://trakt.tv/), a
-site similiar to [IMDb](https://imdb.com) with a wider focus, yet
-smaller user base. The site also enables media-center integration, so
-you can automatically sync your collection and watch progress, as well
-as scrobble playback and ratings via [Plex](https://www.plex.tv/),
+site similar to [IMDb](https://imdb.com) with a wider focus, yet smaller
+user base. The site also enables media-center integration, so you can
+automatically sync your collection and watch progress, as well as
+scrobble playback and ratings via [Plex](https://www.plex.tv/),
 [Kodi](https://kodi.tv/) and the likes.  
 And, most importantly, [trakt.tv has a publicly available
 API](https://trakt.docs.apiary.io) – which makes this package possible
@@ -78,7 +78,7 @@ glimpse(show_info)
 Get season information for the show using its trakt ID:
 
 ``` r
-seasons_summary(show_info$trakt, extended = "full") %>%
+seasons_summary(show_info$trakt, extended = "full") |>
   glimpse()
 #> Rows: 2
 #> Columns: 13
@@ -90,7 +90,7 @@ seasons_summary(show_info$trakt, extended = "full") %>%
 #> $ title          <chr> "Season 1", "Season 2"
 #> $ overview       <chr> "When a group of strangers find themselves in possessio…
 #> $ first_aired    <dttm> 2013-01-15 21:00:00, 2014-07-14 20:00:00
-#> $ updated_at     <dttm> 2022-08-27 07:06:12, 2022-08-27 07:07:14
+#> $ updated_at     <dttm> 2022-08-28 14:32:07, 2022-08-28 14:31:03
 #> $ network        <chr> "Channel 4", "Channel 4"
 #> $ trakt          <chr> "56008", "56009"
 #> $ tvdb           <chr> "507598", "524149"
@@ -101,7 +101,7 @@ Get episode data for the first season, this time using the show’s URL
 slug:
 
 ``` r
-seasons_season("utopia", seasons = 1, extended = "full") %>%
+seasons_season("utopia", seasons = 1, extended = "full") |>
   glimpse()
 #> Rows: 6
 #> Columns: 16
@@ -114,7 +114,7 @@ seasons_season("utopia", seasons = 1, extended = "full") %>%
 #> $ votes                  <int> 1239, 1001, 898, 835, 799, 825
 #> $ comment_count          <int> 7, 0, 1, 1, 1, 1
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
-#> $ updated_at             <dttm> 2022-08-27 07:05:03, 2022-08-27 05:18:33, 2022-…
+#> $ updated_at             <dttm> 2022-08-28 12:29:01, 2022-08-28 07:29:46, 2022-…
 #> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
 #> $ runtime                <int> 50, 50, 50, 50, 50, 50
 #> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
@@ -127,9 +127,9 @@ You cann also get episode data for all seasons, but note that episodes
 will be included as a list-column and need further unpacking:
 
 ``` r
-seasons_summary("utopia", episodes = TRUE, extended = "full") %>%
-  pull(episodes) %>%
-  bind_rows() %>%
+seasons_summary("utopia", episodes = TRUE, extended = "full") |>
+  pull(episodes) |>
+  bind_rows() |>
   glimpse()
 #> Rows: 12
 #> Columns: 16
@@ -142,7 +142,7 @@ seasons_summary("utopia", episodes = TRUE, extended = "full") %>%
 #> $ votes                  <int> 1239, 1001, 898, 835, 799, 825, 822, 723, 692, …
 #> $ comment_count          <int> 7, 0, 1, 1, 1, 1, 3, 1, 1, 1, 2, 4
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
-#> $ updated_at             <dttm> 2022-08-27 07:05:03, 2022-08-27 05:18:33, 2022-…
+#> $ updated_at             <dttm> 2022-08-28 12:29:01, 2022-08-28 07:29:46, 2022-…
 #> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
 #> $ runtime                <int> 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50
 #> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
@@ -175,40 +175,40 @@ Maybe you just want to know how long it would take you to binge through
 these shows:
 
 ``` r
-shows_trending(extended = "full") %>%
+shows_trending(extended = "full") |>
   transmute(
     show = glue::glue("{title} ({year})"),
     runtime_hms = hms::hms(minutes = runtime),
     aired_episodes = aired_episodes,
     runtime_aired = hms::hms(minutes = runtime * aired_episodes)
-  ) %>%
+  ) |>
   knitr::kable(
     col.names = c("Show", "Episode Runtime", "Aired Episodes", "Total Runtime (aired)")
   )
 ```
 
-| Show                                | Episode Runtime | Aired Episodes | Total Runtime (aired) |
-|:------------------------------------|:----------------|---------------:|:----------------------|
-| Better Call Saul (2015)             | 00:45:00        |             63 | 47:15:00              |
-| Game of Thrones (2011)              | 01:00:00        |             73 | 73:00:00              |
-| The Sandman (2022)                  | 00:48:00        |             11 | 08:48:00              |
-| House of the Dragon (2022)          | 01:00:00        |              1 | 01:00:00              |
-| Breaking Bad (2008)                 | 00:45:00        |             62 | 46:30:00              |
-| See (2019)                          | 01:00:00        |             17 | 17:00:00              |
-| Westworld (2016)                    | 01:00:00        |             36 | 36:00:00              |
-| She-Hulk: Attorney at Law (2022)    | 00:35:00        |              2 | 01:10:00              |
-| The Orville (2017)                  | 00:42:00        |             36 | 25:12:00              |
-| Only Murders in the Building (2021) | 00:33:00        |             20 | 11:00:00              |
+| Show                       | Episode Runtime | Aired Episodes | Total Runtime (aired) |
+|:---------------------------|:----------------|---------------:|:----------------------|
+| House of the Dragon (2022) | 01:00:00        |              1 | 01:00:00              |
+| Better Call Saul (2015)    | 00:45:00        |             63 | 47:15:00              |
+| Game of Thrones (2011)     | 01:00:00        |             73 | 73:00:00              |
+| The Sandman (2022)         | 00:48:00        |             11 | 08:48:00              |
+| See (2019)                 | 01:00:00        |             17 | 17:00:00              |
+| Westworld (2016)           | 01:00:00        |             36 | 36:00:00              |
+| For All Mankind (2019)     | 01:00:00        |             30 | 30:00:00              |
+| Stranger Things (2016)     | 00:50:00        |             34 | 28:20:00              |
+| Breaking Bad (2008)        | 00:45:00        |             62 | 46:30:00              |
+| The Big Bang Theory (2007) | 00:22:00        |            279 | 102:18:00             |
 
 Please note though that episode runtime data may be inaccurate. In my
-experience, recent shows have fairly accurate runtimes, which might not
-be case for older shows.
+experience, recent shows have fairly accurate runtime data, which is
+often not the case for older shows.
 
 ## Credentials
 
 The API requires at least a `client id` for the API calls.  
 Loading the package (or calling its functions via `tRakt::` wil
-automatically set the app’s client id (see `?trakt_credentials()`) – for
+automatically set the app’s client id (see `trakt_credentials()`) – for
 extended use you should set your own credentials via environment
 variables in your `.Renviron` like this:
 
@@ -223,10 +223,10 @@ trakt_username=jemus42
   API calls, which is kind of a biggie.
 - `trakt_client_secret`: **Optional**(ish). This is only required if you
   intend to make an authenticated request, which is only required by a
-  [small number of implemented API
-  methods](http://jemus42.github.io/tRakt/articles/Implemented-API-methods.html).
-  You can use this package perfectly fine for basic data collection
-  without registering an application on trakt.tv.
+  small number of implemented API methods\] (see
+  `vignette("Implemented-API-methods")`). You can use this package
+  perfectly fine for basic data collection without registering an
+  application on trakt.tv.
 - `trakt_username` **Optional**. For functions that retrieve a user’s
   watched shows or stats, this just sets the default value so you don’t
   have to keep supplying it in individual function calls when you’re
@@ -237,15 +237,14 @@ package doesn’t implement any authenticated methods. Maybe in the
 future.
 
 To get your credentials, [you have to have an (approved) app over at
-trakt.tv](http://trakt.tv/oauth/applications).  
-Don’t worry, it’s really easy to set up. Even I did it.
+trakt.tv](http://trakt.tv/oauth/applications).
 
 You theoretically never need to supply your own credentials. However, if
 you want to actually use this package for some project, I do not
 recommend relying on my credentials.  
 That would make me a sad panda. As of now, the trakt.tv API does not
 have any rate-limiting, but it’s not guaranteed to stay like this in the
-future.
+future. Be nice to their servers.
 
 # Code of Conduct
 
