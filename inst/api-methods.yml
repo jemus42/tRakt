@@ -235,7 +235,7 @@ shows:
 seasons:
   summary:
     url: https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show
-    endpoint: shows/:id/seasons/seasons
+    endpoint: shows/:id/seasons
     implementation: seasons_summary()
   season:
     url: https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show
