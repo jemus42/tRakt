@@ -90,7 +90,7 @@
 </h1>
 </div>
 <!-- badges: start -->
-<!-- badges: end --><p><code>tRakt</code> helps you to retrieve data from <a href="https://trakt.tv/" class="external-link">trakt.tv</a>, a site similiar to <a href="https://imdb.com" class="external-link">IMDb</a> with a wider focus, yet smaller user base. The site also enables media-center integration, so you can automatically sync your collection and watch progress, as well as scrobble playback and ratings via <a href="https://www.plex.tv/" class="external-link">Plex</a>, <a href="https://kodi.tv/" class="external-link">Kodi</a> and the likes.<br>
+<!-- badges: end --><p><code>tRakt</code> helps you to retrieve data from <a href="https://trakt.tv/" class="external-link">trakt.tv</a>, a site similar to <a href="https://imdb.com" class="external-link">IMDb</a> with a wider focus, yet smaller user base. The site also enables media-center integration, so you can automatically sync your collection and watch progress, as well as scrobble playback and ratings via <a href="https://www.plex.tv/" class="external-link">Plex</a>, <a href="https://kodi.tv/" class="external-link">Kodi</a> and the likes.<br>
 And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-link">trakt.tv has a publicly available API</a> – which makes this package possible and allows you to collect all that nice data people have contributed.</p>
 <p>Please note that while this package is <em>basically</em> an API-client, it is a little more opinionated and might deliver results that do not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.</p>
 <div class="section level2">
@@ -128,7 +128,7 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <span><span class="co">#&gt; $ tmdb  &lt;chr&gt; "46511"</span></span></code></pre></div>
 <p>Get season information for the show using its trakt ID:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 2</span></span>
 <span><span class="co">#&gt; Columns: 13</span></span>
@@ -140,14 +140,14 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <span><span class="co">#&gt; $ title          &lt;chr&gt; "Season 1", "Season 2"</span></span>
 <span><span class="co">#&gt; $ overview       &lt;chr&gt; "When a group of strangers find themselves in possessio…</span></span>
 <span><span class="co">#&gt; $ first_aired    &lt;dttm&gt; 2013-01-15 21:00:00, 2014-07-14 20:00:00</span></span>
-<span><span class="co">#&gt; $ updated_at     &lt;dttm&gt; 2022-08-27 07:06:12, 2022-08-27 07:07:14</span></span>
+<span><span class="co">#&gt; $ updated_at     &lt;dttm&gt; 2022-08-28 14:32:07, 2022-08-28 14:31:03</span></span>
 <span><span class="co">#&gt; $ network        &lt;chr&gt; "Channel 4", "Channel 4"</span></span>
 <span><span class="co">#&gt; $ trakt          &lt;chr&gt; "56008", "56009"</span></span>
 <span><span class="co">#&gt; $ tvdb           &lt;chr&gt; "507598", "524149"</span></span>
 <span><span class="co">#&gt; $ tmdb           &lt;chr&gt; "54695", "54696"</span></span></code></pre></div>
 <p>Get episode data for the first season, this time using the show’s URL slug:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_season.html">seasons_season</a></span><span class="op">(</span><span class="st">"utopia"</span>, seasons <span class="op">=</span> <span class="fl">1</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_season.html">seasons_season</a></span><span class="op">(</span><span class="st">"utopia"</span>, seasons <span class="op">=</span> <span class="fl">1</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 6</span></span>
 <span><span class="co">#&gt; Columns: 16</span></span>
@@ -160,7 +160,7 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <span><span class="co">#&gt; $ votes                  &lt;int&gt; 1239, 1001, 898, 835, 799, 825</span></span>
 <span><span class="co">#&gt; $ comment_count          &lt;int&gt; 7, 0, 1, 1, 1, 1</span></span>
 <span><span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…</span></span>
-<span><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2022-08-27 07:05:03, 2022-08-27 05:18:33, 2022-…</span></span>
+<span><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2022-08-28 12:29:01, 2022-08-28 07:29:46, 2022-…</span></span>
 <span><span class="co">#&gt; $ available_translations &lt;list&gt; &lt;"de", "en", "es", "fr", "he", "nl", "pl", "ru"…</span></span>
 <span><span class="co">#&gt; $ runtime                &lt;int&gt; 50, 50, 50, 50, 50, 50</span></span>
 <span><span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056", "14…</span></span>
@@ -169,9 +169,9 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <span><span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></span></code></pre></div>
 <p>You cann also get episode data for all seasons, but note that episodes will be included as a list-column and need further unpacking:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="st">"utopia"</span>, episodes <span class="op">=</span> <span class="cn">TRUE</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html" class="external-link">pull</a></span><span class="op">(</span><span class="va">episodes</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="st">"utopia"</span>, episodes <span class="op">=</span> <span class="cn">TRUE</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html" class="external-link">pull</a></span><span class="op">(</span><span class="va">episodes</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 12</span></span>
 <span><span class="co">#&gt; Columns: 16</span></span>
@@ -184,7 +184,7 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <span><span class="co">#&gt; $ votes                  &lt;int&gt; 1239, 1001, 898, 835, 799, 825, 822, 723, 692, …</span></span>
 <span><span class="co">#&gt; $ comment_count          &lt;int&gt; 7, 0, 1, 1, 1, 1, 3, 1, 1, 1, 2, 4</span></span>
 <span><span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…</span></span>
-<span><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2022-08-27 07:05:03, 2022-08-27 05:18:33, 2022-…</span></span>
+<span><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2022-08-28 12:29:01, 2022-08-28 07:29:46, 2022-…</span></span>
 <span><span class="co">#&gt; $ available_translations &lt;list&gt; &lt;"de", "en", "es", "fr", "he", "nl", "pl", "ru"…</span></span>
 <span><span class="co">#&gt; $ runtime                &lt;int&gt; 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50</span></span>
 <span><span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056", "14…</span></span>
@@ -209,13 +209,13 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <span><span class="co">#&gt; 10       21 Only Murders in the Building  2021 165314 only-mu… 3999… tt12… 1071…</span></span></code></pre></div>
 <p>Maybe you just want to know how long it would take you to binge through these shows:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span><span class="op">(</span>extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span><span class="op">(</span>extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">transmute</a></span><span class="op">(</span></span>
 <span>    show <span class="op">=</span> <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html" class="external-link">glue</a></span><span class="op">(</span><span class="st">"{title} ({year})"</span><span class="op">)</span>,</span>
 <span>    runtime_hms <span class="op">=</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu">hms</span><span class="op">(</span>minutes <span class="op">=</span> <span class="va">runtime</span><span class="op">)</span>,</span>
 <span>    aired_episodes <span class="op">=</span> <span class="va">aired_episodes</span>,</span>
 <span>    runtime_aired <span class="op">=</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu">hms</span><span class="op">(</span>minutes <span class="op">=</span> <span class="va">runtime</span> <span class="op">*</span> <span class="va">aired_episodes</span><span class="op">)</span></span>
-<span>  <span class="op">)</span> <span class="op"><a href="reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span></span>
 <span>    col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Show"</span>, <span class="st">"Episode Runtime"</span>, <span class="st">"Aired Episodes"</span>, <span class="st">"Total Runtime (aired)"</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code></pre></div>
@@ -228,28 +228,52 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 </tr></thead>
 <tbody>
 <tr class="odd">
+<td align="left">House of the Dragon (2022)</td>
+<td align="left">01:00:00</td>
+<td align="right">1</td>
+<td align="left">01:00:00</td>
+</tr>
+<tr class="even">
 <td align="left">Better Call Saul (2015)</td>
 <td align="left">00:45:00</td>
 <td align="right">63</td>
 <td align="left">47:15:00</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Game of Thrones (2011)</td>
 <td align="left">01:00:00</td>
 <td align="right">73</td>
 <td align="left">73:00:00</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">The Sandman (2022)</td>
 <td align="left">00:48:00</td>
 <td align="right">11</td>
 <td align="left">08:48:00</td>
 </tr>
+<tr class="odd">
+<td align="left">See (2019)</td>
+<td align="left">01:00:00</td>
+<td align="right">17</td>
+<td align="left">17:00:00</td>
+</tr>
 <tr class="even">
-<td align="left">House of the Dragon (2022)</td>
+<td align="left">Westworld (2016)</td>
 <td align="left">01:00:00</td>
-<td align="right">1</td>
+<td align="right">36</td>
+<td align="left">36:00:00</td>
+</tr>
+<tr class="odd">
+<td align="left">For All Mankind (2019)</td>
 <td align="left">01:00:00</td>
+<td align="right">30</td>
+<td align="left">30:00:00</td>
+</tr>
+<tr class="even">
+<td align="left">Stranger Things (2016)</td>
+<td align="left">00:50:00</td>
+<td align="right">34</td>
+<td align="left">28:20:00</td>
 </tr>
 <tr class="odd">
 <td align="left">Breaking Bad (2008)</td>
@@ -258,44 +282,20 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <td align="left">46:30:00</td>
 </tr>
 <tr class="even">
-<td align="left">See (2019)</td>
-<td align="left">01:00:00</td>
-<td align="right">17</td>
-<td align="left">17:00:00</td>
-</tr>
-<tr class="odd">
-<td align="left">Westworld (2016)</td>
-<td align="left">01:00:00</td>
-<td align="right">36</td>
-<td align="left">36:00:00</td>
-</tr>
-<tr class="even">
-<td align="left">She-Hulk: Attorney at Law (2022)</td>
-<td align="left">00:35:00</td>
-<td align="right">2</td>
-<td align="left">01:10:00</td>
-</tr>
-<tr class="odd">
-<td align="left">The Orville (2017)</td>
-<td align="left">00:42:00</td>
-<td align="right">36</td>
-<td align="left">25:12:00</td>
-</tr>
-<tr class="even">
-<td align="left">Only Murders in the Building (2021)</td>
-<td align="left">00:33:00</td>
-<td align="right">20</td>
-<td align="left">11:00:00</td>
+<td align="left">The Big Bang Theory (2007)</td>
+<td align="left">00:22:00</td>
+<td align="right">279</td>
+<td align="left">102:18:00</td>
 </tr>
 </tbody>
 </table>
-<p>Please note though that episode runtime data may be inaccurate. In my experience, recent shows have fairly accurate runtimes, which might not be case for older shows.</p>
+<p>Please note though that episode runtime data may be inaccurate. In my experience, recent shows have fairly accurate runtime data, which is often not the case for older shows.</p>
 </div>
 <div class="section level2">
 <h2 id="credentials">Credentials<a class="anchor" aria-label="anchor" href="#credentials"></a>
 </h2>
 <p>The API requires at least a <code>client id</code> for the API calls.<br>
-Loading the package (or calling its functions via <code>tRakt::</code> wil automatically set the app’s client id (see <code>?trakt_credentials()</code>) – for extended use you should set your own credentials via environment variables in your <code>.Renviron</code> like this:</p>
+Loading the package (or calling its functions via <code>tRakt::</code> wil automatically set the app’s client id (see <code><a href="reference/trakt_credentials.html">trakt_credentials()</a></code>) – for extended use you should set your own credentials via environment variables in your <code>.Renviron</code> like this:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># tRakt</span></span>
 <span id="cb9-2"><a href="#cb9-2"></a><span class="va">trakt_client_id=</span>12fc1de7[<span class="ex">...</span>]3d629afdf2</span>
 <span id="cb9-3"><a href="#cb9-3"></a><span class="va">trakt_client_secret=</span>justabunchofstuffhere</span>
@@ -304,15 +304,14 @@ Loading the package (or calling its functions via <code>tRakt::</code> wil autom
 <li>
 <code>trakt_client_id</code> <strong>Required</strong>. It’s used in the HTTP headers for the API calls, which is kind of a biggie.</li>
 <li>
-<code>trakt_client_secret</code>: <strong>Optional</strong>(ish). This is only required if you intend to make an authenticated request, which is only required by a <a href="http://jemus42.github.io/tRakt/articles/Implemented-API-methods.html" class="external-link">small number of implemented API methods</a>. You can use this package perfectly fine for basic data collection without registering an application on trakt.tv.</li>
+<code>trakt_client_secret</code>: <strong>Optional</strong>(ish). This is only required if you intend to make an authenticated request, which is only required by a small number of implemented API methods] (see <code><a href="articles/Implemented-API-methods.html">vignette("Implemented-API-methods")</a></code>). You can use this package perfectly fine for basic data collection without registering an application on trakt.tv.</li>
 <li>
 <code>trakt_username</code> <strong>Optional</strong>. For functions that retrieve a user’s watched shows or stats, this just sets the default value so you don’t have to keep supplying it in individual function calls when you’re just looking at your own data anyway.</li>
 </ul>
 <p>Please not that there’s no client secret listed – that’s because this package doesn’t implement any authenticated methods. Maybe in the future.</p>
-<p>To get your credentials, <a href="http://trakt.tv/oauth/applications" class="external-link">you have to have an (approved) app over at trakt.tv</a>.<br>
-Don’t worry, it’s really easy to set up. Even I did it.</p>
+<p>To get your credentials, <a href="http://trakt.tv/oauth/applications" class="external-link">you have to have an (approved) app over at trakt.tv</a>.</p>
 <p>You theoretically never need to supply your own credentials. However, if you want to actually use this package for some project, I do not recommend relying on my credentials.<br>
-That would make me a sad panda. As of now, the trakt.tv API does not have any rate-limiting, but it’s not guaranteed to stay like this in the future.</p>
+That would make me a sad panda. As of now, the trakt.tv API does not have any rate-limiting, but it’s not guaranteed to stay like this in the future. Be nice to their servers.</p>
 </div>
 </div>
 <div class="section level1">
