@@ -31,7 +31,7 @@ user_watched <- function(user = getOption("trakt_username"),
     extended <- ""
   }
 
-  if (type == "shows" & noseasons) {
+  if (type == "shows" && noseasons) {
     extended <- paste0(extended, ",noseasons")
   }
 

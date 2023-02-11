@@ -50,3 +50,4 @@ test_that("comments_item()", {
     expect_is("tbl_df") %>%
     expect_named(nm_min)
 })
+

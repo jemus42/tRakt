@@ -59,7 +59,7 @@ seasons_summary <- function(id, episodes = FALSE,
   if (drop_specials) {
     response <- response[response$number != 0, ]
   }
-  if (drop_unaired & has_name(response, "aired_episodes")) {
+  if (drop_unaired && has_name(response, "aired_episodes")) {
     response <- response[response$aired_episodes > 0, ]
   }
   # Reorganization

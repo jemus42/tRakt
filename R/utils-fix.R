@@ -4,7 +4,7 @@
 #' @importFrom rlang has_name
 #' @noRd
 fix_ratings <- function(response) {
-  if (!(has_name(response, "rating") & has_name(response, "votes"))) {
+  if (!(has_name(response, "rating") && has_name(response, "votes"))) {
     # Robustness towards usage in extended = "min" context, means less if'ing
     return(response)
   }
@@ -39,8 +39,9 @@ fix_ids <- function(ids) {
 #' @return The same object with converted datetimes
 #' @importFrom lubridate ymd_hms
 #' @importFrom lubridate as_date
-#' @importFrom dplyr mutate_at
-#' @importFrom dplyr vars
+#' @importFrom dplyr mutate
+#' @importFrom dplyr across
+#' @importFrom tidyselect any_of
 #' @importFrom purrr map_at
 #' @importFrom rlang has_name
 #' @keywords internal
@@ -67,14 +68,14 @@ fix_datetime <- function(response) {
 
   if (inherits(response, "data.frame")) {
     response %>%
-      mutate_at(.vars = vars(datevars), ~ {
+      mutate(across(any_of(datevars), ~ {
         # Don't convert already POSIXct vars
         if (!(inherits(.x, "POSIXct"))) {
           ymd_hms(.x)
         } else {
           .x
         }
-      })
+      }))
   } else {
     map_at(response, datevars, ymd_hms)
   }

@@ -157,7 +157,7 @@ unpack_people <- function(response) {
   }
 
   # Flatten the data.frame
-  if (has_name(response, "cast") & !is_empty(response$cast)) {
+  if (has_name(response, "cast") && !is_empty(response$cast)) {
     response$cast$person[["images"]] <- NULL
 
     response$cast$person <- response$cast$person %>%
@@ -172,7 +172,7 @@ unpack_people <- function(response) {
       as_tibble()
   }
 
-  if (has_name(response, "crew") & !is_empty(response$crew)) {
+  if (has_name(response, "crew") && !is_empty(response$crew)) {
     response$crew <- map_df(trakt_people_crew_sections, function(section) {
       response$crew[[section]]$person[["images"]] <- NULL
 
@@ -193,7 +193,7 @@ unpack_people <- function(response) {
     })
   }
 
-  if (has_name(response, "guest_stars") & !is_empty(response$guest_stars)) {
+  if (has_name(response, "guest_stars") && !is_empty(response$guest_stars)) {
     response$guest_stars$person[["images"]] <- NULL
 
     response$guest_stars$person <- response$guest_stars$person %>%
@@ -227,7 +227,7 @@ unpack_lists <- function(response) {
   }
 
   response %>%
-    select(-"ids", -"user") %>%
+    select(-any_of(c("ids", "user"))) %>%
     bind_cols(
       pluck(response, "ids") %>% fix_ids(),
       pluck(response, "user") %>% unpack_user()
@@ -337,13 +337,7 @@ flatten_media_object <- function(x, type) {
       pluck(x, "season", "ids") %>%
         fix_ids() %>%
         rename_all(~ paste0("season_", .x))
-    ) # %>%
-    # rename(season = "number") %>%
-    # rename_at(vars(ends_with("1")), ~ {
-    #   .x %>%
-    #     str_remove("1$") %>%
-    #     str_c("season_", .)
-    # })
+    )
   } else if (type == "episode") {
     res <- bind_cols(
       pluck(x, "show") %>% unpack_show(),
@@ -353,15 +347,7 @@ flatten_media_object <- function(x, type) {
       pluck(x, "episode", "ids") %>%
         fix_ids() %>%
         rename_all(~ paste0("episode_", .x))
-    ) # %>%
-    # rename_at(vars(matches("number")), ~ {
-    #   str_replace(.x, "number", "episode")
-    # }) %>%
-    # rename_at(vars(ends_with("1")), ~ {
-    #   .x %>%
-    #     str_remove("1$") %>%
-    #     str_c("episode_", .)
-    # })
+    )
   } else if (type == "person") {
     res <- bind_cols(
       pluck(x, "person") %>% select(-"ids"),
@@ -477,7 +463,7 @@ flatten_single_media_object <- function(response, type) {
   # might not be a list already
   res %>%
     modify_at(
-      vars(matches("^genres$|^available_translations$")),
+      grepl("^genres$|^available_translations$", names(res)),
       ~ {
         if (!is.list(.x)) list(.x) else .x
       }

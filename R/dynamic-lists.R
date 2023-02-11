@@ -51,7 +51,7 @@ trakt_auto_lists <- function(list_type = c(
   response <- as_tibble(response)
 
   # For this case we *only* get show objects, so we handle that first
-  if (type == "shows" & list_type == "popular") {
+  if (type == "shows" && list_type == "popular") {
     response <- unpack_show(response)
   }
 

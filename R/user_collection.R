@@ -33,7 +33,7 @@ user_collection <- function(user = getOption("trakt_username"),
   type <- match.arg(type)
   extended <- match.arg(extended)
 
-  if (type == "movie" & unnest_episodes) {
+  if (type == "movie" && unnest_episodes) {
     warning("'unnest_episodes' only applies to type = 'shows'")
   }
 

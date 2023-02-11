@@ -47,7 +47,7 @@ episodes_summary <- function(id, season = 1L, episode = 1L,
     as_tibble(fix_ids(response$ids))
   ) %>%
     rename(episode = "number") %>%
-    mutate(id = id) %>%
+    mutate(id = .env$id) %>%
     select(id, everything())
 
   fix_tibble_response(response)

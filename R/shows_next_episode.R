@@ -7,12 +7,12 @@
 #' @eval apiurl("shows", "next episode")
 #' @family show data
 #' @family episode data
-#' @importFrom dplyr bind_cols vars matches
+#' @importFrom dplyr bind_cols
 #' @importFrom purrr discard modify_if modify_at pluck
 #' @importFrom rlang is_empty
 #' @examples
 #' shows_next_episode("one-piece")
-#' shows_last_episode("one-piece")
+#' shows_last_episode("one-piece", extended = "full")
 shows_next_episode <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
@@ -26,7 +26,7 @@ shows_next_episode <- function(id, extended = c("min", "full")) {
   response %>%
     discard(is.list) %>%
     modify_if(is.null, ~NA_character_) %>%
-    modify_at(vars(matches("^available_translations$"), matches("^genres$")), list) %>%
+    modify_at(~grepl("(^available_translations$)|(^genres$)", .x), list) %>%
     as_tibble() %>%
     bind_cols(
       pluck(response, "ids") %>% fix_ids()
@@ -47,7 +47,7 @@ shows_last_episode <- function(id, extended = c("min", "full")) {
   response %>%
     discard(is.list) %>%
     modify_if(is.null, ~NA_character_) %>%
-    modify_at(vars(matches("^available_translations$"), matches("^genres$")), list) %>%
+    modify_at(~grepl("(^available_translations$)|(^genres$)", .x), list) %>%
     as_tibble() %>%
     bind_cols(
       pluck(response, "ids") %>% fix_ids()

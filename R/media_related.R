@@ -31,7 +31,7 @@ media_related <- function(id, type = c("shows", "movies"),
     response <- unpack_movie(response)
   }
 
-  if (extended == "min" & type == "movies") {
+  if (extended == "min" && type == "movies") {
     response <- response %>%
       select(-"ids") %>%
       bind_cols(fix_ids(response$ids))

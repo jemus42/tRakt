@@ -41,7 +41,7 @@ people_media <- function(type = c("shows", "movies"), id,
   }
 
   if (type == "shows") {
-    if (has_name(response, "cast") & !is_empty(response$cast)) {
+    if (has_name(response, "cast") && !is_empty(response$cast)) {
       response$cast <- response$cast$show %>%
         unpack_show() %>%
         bind_cols(
@@ -50,17 +50,17 @@ people_media <- function(type = c("shows", "movies"), id,
         ) %>%
         as_tibble()
     }
-    if (has_name(response, "crew") & !is_empty(response$crew)) {
+    if (has_name(response, "crew") && !is_empty(response$crew)) {
       response$crew <- unpack_crew_sections(response$crew, type = "shows")
     }
   }
   if (type == "movies") {
-    if (has_name(response, "cast") & !is_empty(response$cast)) {
+    if (has_name(response, "cast") && !is_empty(response$cast)) {
       response$cast <- response$cast %>%
         unpack_movie() %>%
         as_tibble()
     }
-    if (has_name(response, "crew") & !is_empty(response$crew)) {
+    if (has_name(response, "crew") && !is_empty(response$crew)) {
       response$crew <- unpack_crew_sections(response$crew, type = "movies")
     }
   }

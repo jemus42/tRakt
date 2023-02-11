@@ -10,7 +10,7 @@ test_that("people_summary works", {
   expect_equal(nrow(people_min), 1)
   expect_equal(ncol(people_min), 5)
   expect_is(people_max, "tbl")
-  expect_equal(ncol(people_max), 13)
+  expect_equal(ncol(people_max), 14)
 
   expect_identical(
     rbind(
@@ -42,3 +42,4 @@ test_that("people_media works", {
   expect_is(sho_min$cast, "tbl")
   expect_is(sho_min$crew, "tbl")
 })
+
