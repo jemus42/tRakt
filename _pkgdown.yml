@@ -131,10 +131,10 @@ reference:
     contents:
       - ends_with("aliases")
       - ends_with("translations")
-  - subtitle: Recently updated items
-    contents:
-      - shows_updates
-      - movies_updates
+  # - subtitle: Recently updated items
+  #   contents:
+  #     - shows_updates
+  #     - movies_updates
   - subtitle: Utilities
     desc: "Included for convenience."
     contents:
