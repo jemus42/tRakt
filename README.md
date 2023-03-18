@@ -5,8 +5,7 @@
 
 <!-- badges: start -->
 
-[![R build
-status](https://github.com/jemus42/tRakt/workflows/R-CMD-check/badge.svg)](https://github.com/jemus42/tRakt/actions)
+[![R-CMD-check](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml)
 [![Coverage
 status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)
 [![CRAN
@@ -231,10 +230,6 @@ trakt_username=jemus42
   watched shows or stats, this just sets the default value so you don’t
   have to keep supplying it in individual function calls when you’re
   just looking at your own data anyway.
-
-Please not that there’s no client secret listed – that’s because this
-package doesn’t implement any authenticated methods. Maybe in the
-future.
 
 To get your credentials, [you have to have an (approved) app over at
 trakt.tv](http://trakt.tv/oauth/applications).

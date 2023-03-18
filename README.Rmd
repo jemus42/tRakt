@@ -1,5 +1,7 @@
 ---
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -18,7 +20,7 @@ knitr::opts_chunk$set(
 # tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="120"/>
 
 <!-- badges: start -->
-[![R build status](https://github.com/jemus42/tRakt/workflows/R-CMD-check/badge.svg)](https://github.com/jemus42/tRakt/actions) 
+[![R-CMD-check](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml)
 [![Coverage status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master) 
 [![CRAN status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
 [![GitHub release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](https://github.com/jemus42/tRakt/releases)
@@ -120,8 +122,6 @@ trakt_username=jemus42
 * `trakt_client_id` **Required**. It's used in the HTTP headers for the API calls, which is kind of a biggie.
 * `trakt_client_secret`: **Optional**(ish). This is only required if you intend to make an authenticated request, which is only required by a small number of implemented API methods] (see `vignette("Implemented-API-methods")`). You can use this package perfectly fine for basic data collection without registering an application on trakt.tv.
 * `trakt_username` **Optional**. For functions that retrieve a user's watched shows or stats, this just sets the default value so you don't have to keep supplying it in individual function calls when you're just looking at your own data anyway.
-
-Please not that there's no client secret listed – that's because this package doesn't implement any authenticated methods. Maybe in the future.
 
 To get your credentials, [you have to have an (approved) app over at trakt.tv](http://trakt.tv/oauth/applications).
 
