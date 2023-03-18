@@ -70,8 +70,7 @@ Other show data:
 \code{\link{played_media}},
 \code{\link{shows_next_episode}()},
 \code{\link{shows_related}()},
-\code{\link{shows_summary}()},
-\code{\link{updated_media}}
+\code{\link{shows_summary}()}
 
 Other movie data: 
 \code{\link{anticipated_media}},
@@ -91,7 +90,6 @@ Other movie data:
 \code{\link{played_media}},
 \code{\link{popular_media}},
 \code{\link{trending_media}},
-\code{\link{updated_media}},
 \code{\link{watched_media}}
 
 Other season data: 

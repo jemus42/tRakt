@@ -51,8 +51,7 @@ Other show data:
 \code{\link{people_media}()},
 \code{\link{played_media}},
 \code{\link{shows_next_episode}()},
-\code{\link{shows_related}()},
-\code{\link{updated_media}}
+\code{\link{shows_related}()}
 
 Other summary methods: 
 \code{\link{comments_comment}()},

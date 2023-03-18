@@ -415,39 +415,39 @@ shows_collected <- function(limit = 10, extended = c("min", "full"),
 
 # Updates ----
 
-#' Recently updated media
-#'
-#' These functions return recently updated movies/shows on trakt.tv.
-#' @name updated_media
-#' @inheritParams trakt_api_common_parameters
-#' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
-#' @inherit trakt_api_common_parameters return
-#' @export
-#' @eval apiurl("movies", "updates")
-#' @family movie data
-#' @note `shows_updates()` and `movies_updates()` do not support filters.
-movies_updates <- function(limit = 10, extended = c("min", "full"),
-                           start_date = Sys.Date() - 1) {
-  start_date <- as.character(as.Date(start_date))
-
-  trakt_auto_lists(
-    list_type = "updates", type = "movies",
-    limit = limit,
-    extended = extended, start_date = start_date
-  )
-}
-
-#' @rdname updated_media
-#' @eval apiurl("shows", "updates")
-#' @family show data
-#' @export
-shows_updates <- function(limit = 10, extended = c("min", "full"),
-                          start_date = Sys.Date() - 1) {
-  start_date <- as.character(as.Date(start_date))
-
-  trakt_auto_lists(
-    list_type = "updates", type = "shows",
-    limit = limit,
-    extended = extended, start_date = start_date
-  )
-}
+# #' Recently updated media
+# #'
+# #' These functions return recently updated movies/shows on trakt.tv.
+# #' @name updated_media
+# #' @inheritParams trakt_api_common_parameters
+# #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
+# #' @inherit trakt_api_common_parameters return
+# #' @export
+# #' @eval apiurl("movies", "updates")
+# #' @family movie data
+# #' @note `shows_updates()` and `movies_updates()` do not support filters.
+# movies_updates <- function(limit = 10, extended = c("min", "full"),
+#                            start_date = Sys.Date() - 1) {
+#   start_date <- as.character(as.Date(start_date))
+#
+#   trakt_auto_lists(
+#     list_type = "updates", type = "movies",
+#     limit = limit,
+#     extended = extended, start_date = start_date
+#   )
+# }
+#
+# #' @rdname updated_media
+# #' @eval apiurl("shows", "updates")
+# #' @family show data
+# #' @export
+# shows_updates <- function(limit = 10, extended = c("min", "full"),
+#                           start_date = Sys.Date() - 1) {
+#   start_date <- as.character(as.Date(start_date))
+#
+#   trakt_auto_lists(
+#     list_type = "updates", type = "shows",
+#     limit = limit,
+#     extended = extended, start_date = start_date
+#   )
+# }

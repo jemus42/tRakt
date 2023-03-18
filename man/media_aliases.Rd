@@ -54,7 +54,6 @@ Other movie data:
 \code{\link{played_media}},
 \code{\link{popular_media}},
 \code{\link{trending_media}},
-\code{\link{updated_media}},
 \code{\link{watched_media}}
 
 Other show data: 
@@ -70,8 +69,7 @@ Other show data:
 \code{\link{played_media}},
 \code{\link{shows_next_episode}()},
 \code{\link{shows_related}()},
-\code{\link{shows_summary}()},
-\code{\link{updated_media}}
+\code{\link{shows_summary}()}
 }
 \concept{movie data}
 \concept{show data}

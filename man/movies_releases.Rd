@@ -54,7 +54,6 @@ Other movie data:
 \code{\link{played_media}},
 \code{\link{popular_media}},
 \code{\link{trending_media}},
-\code{\link{updated_media}},
 \code{\link{watched_media}}
 }
 \concept{movie data}

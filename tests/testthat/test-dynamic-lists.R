@@ -126,17 +126,17 @@ test_that("collected_media does its thing", {
     nrow() %>%
     expect_equal(5)
 })
-
-test_that("updated_media works", {
-  shows_updates() %>%
-    expect_is("tbl") %>%
-    expect_length(8) %>%
-    nrow() %>%
-    expect_equal(10)
-
-  movies_updates() %>%
-    expect_is("tbl") %>%
-    expect_length(7) %>%
-    nrow() %>%
-    expect_equal(10)
-})
+#
+# test_that("updated_media works", {
+#   shows_updates() %>%
+#     expect_is("tbl") %>%
+#     expect_length(8) %>%
+#     nrow() %>%
+#     expect_equal(10)
+#
+#   movies_updates() %>%
+#     expect_is("tbl") %>%
+#     expect_length(7) %>%
+#     nrow() %>%
+#     expect_equal(10)
+# })
