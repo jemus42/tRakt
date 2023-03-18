@@ -6,13 +6,13 @@ test_that("user_list_items are correct", {
     user = "jemus42", list_id = 2171659, extended = "min"
   ) %>%
     expect_is("tbl_df") %>%
-    expect_length(12)
+    expect_length(19)
 
   user_list_items(
     user = "jemus42", list_id = 2171659, extended = "full"
   ) %>%
     expect_is("tbl_df") %>%
-    expect_length(34)
+    expect_length(50)
 
   user_list_items(
     user = "sp1ti", list_id = "anime-winter-season-2018-2019", extended = "min"
