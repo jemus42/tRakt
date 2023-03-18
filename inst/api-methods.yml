@@ -196,12 +196,12 @@ shows:
   collection progress:
     url: https://trakt.docs.apiary.io/#reference/shows/collection-progress/get-show-collection-progress
     endpoint: shows/:id/progress/collection
-    implementation:
+    implementation: none
     authentication: yes
   watched progress:
     url: https://trakt.docs.apiary.io/#reference/shows/watched-progress/get-show-watched-progress
     endpoint: shows/:id/progress/watched
-    implementation: N/A
+    implementation: none
     authentication: yes
   people:
     url: https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show
