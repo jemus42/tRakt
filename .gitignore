@@ -1,10 +1,10 @@
+attic
 docs
 CRAN-RELEASE
 Meta
 cache
 doc
 inst/doc
-meta.R
 # History files
 .Rhistory
 # Example code in package build process
