@@ -8,4 +8,5 @@
 #' @importFrom tibble as_tibble
 ## usethis namespace: end
 #' @importFrom rlang .data
+#' @importFrom rlang .env
 NULL

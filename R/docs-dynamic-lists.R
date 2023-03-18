@@ -28,9 +28,9 @@
 #' specified time `period`.
 #' - [Anticipated][anticipated_media]: Returns the most anticipated movies/shows based on the number of
 #' lists a movie/show appears on.
-#' - [Updates][updated_media]: Returns all movies/shows updated since the specified UTC `start_date`.
-#' In this case, the upper bound for `limit` is 100.
-#'
+# - [Updates][updated_media]: Returns all movies/shows updated since the specified UTC `start_date`.
+# In this case, the upper bound for `limit` is 100.
+#
 #' The functions for **Played**, **Watched**, **Collected** and **Played** each return
 #' the same additional variables besides the media information: `watcher_count`,
 #' `play_count`, `collected_count`, `collector_count`.

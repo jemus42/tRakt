@@ -113,13 +113,10 @@ time \code{period}.
 specified time \code{period}.
 \item \link[=anticipated_media]{Anticipated}: Returns the most anticipated movies/shows based on the number of
 lists a movie/show appears on.
-\item \link[=updated_media]{Updates}: Returns all movies/shows updated since the specified UTC \code{start_date}.
-In this case, the upper bound for \code{limit} is 100.
-}
-
 The functions for \strong{Played}, \strong{Watched}, \strong{Collected} and \strong{Played} each return
 the same additional variables besides the media information: \code{watcher_count},
 \code{play_count}, \code{collected_count}, \code{collector_count}.
+}
 }
 
 \seealso{
