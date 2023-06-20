@@ -39,8 +39,9 @@ test_that("seasons_season works", {
 test_that("seasons_summary works", {
   skip_on_cran()
 
-  id <- "futurama"
+  id <- "breaking-bad"
 
+  # Note that dropping unaired only workes if extended = full so this is weird
   result_min <- seasons_summary(
     id = id, extended = "min",
     drop_specials = TRUE, drop_unaired = TRUE
