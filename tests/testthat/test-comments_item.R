@@ -24,13 +24,20 @@ test_that("comments_item works", {
   # A show
   nm_show_min <- c("type", "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb")
   nm_show_full <- c(
-    "type", "title", "year", "overview", "first_aired", "runtime",
+    "type", "title", "year", "tagline", "overview", "first_aired", "runtime",
     "certification", "country", "trailer", "homepage", "status",
     "rating", "votes", "comment_count", "network", "updated_at",
     "language", "available_translations", "genres", "aired_episodes",
     "airs_day", "airs_time", "airs_timezone", "trakt", "slug", "tvdb",
     "imdb", "tmdb"
   )
+
+  have <- c("type", "title", "year", "tagline", "overview", "first_aired",
+            "runtime", "certification", "country", "trailer", "homepage",
+            "status", "rating", "votes", "comment_count", "network", "updated_at",
+            "language", "available_translations", "genres", "aired_episodes",
+            "airs_day", "airs_time", "airs_timezone", "trakt", "slug", "tvdb",
+            "imdb", "tmdb")
 
   comments_item("120768") %>%
     expect_is("tbl_df") %>%
@@ -50,7 +57,7 @@ test_that("comments_item works", {
     "season", "season_trakt", "season_tvdb", "season_tmdb"
   )
   nm_season_full <- c(
-    "type", "title", "year", "overview", "first_aired", "runtime",
+    "type", "title", "year", "tagline", "overview", "first_aired", "runtime",
     "certification", "country", "trailer", "homepage", "status",
     "rating", "votes", "comment_count", "network", "updated_at",
     "language", "available_translations", "genres", "aired_episodes",
@@ -80,7 +87,7 @@ test_that("comments_item works", {
     "episode_imdb", "episode_tmdb"
   )
   nm_episode_full <- c(
-    "type", "title", "year", "overview", "first_aired", "runtime",
+    "type", "title", "year", "tagline", "overview", "first_aired", "runtime",
     "certification", "country", "trailer", "homepage", "status",
     "rating", "votes", "comment_count", "network", "updated_at",
     "language", "available_translations", "genres", "aired_episodes",

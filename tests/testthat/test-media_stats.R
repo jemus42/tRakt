@@ -25,14 +25,14 @@ test_that("media_stats does things", {
 
   shows_stats(id = "futurama") %>%
     expect_is("tbl") %>%
-    expect_length(10) %>%
+    expect_length(11) %>%
     nrow() %>%
     expect_equal(1)
 
 
   stats_mov <- movies_stats(id = "deadpool-2016") %>%
     expect_is("tbl") %>%
-    expect_length(9) %>%
+    expect_length(10) %>%
     nrow() %>%
     expect_equal(1)
 
