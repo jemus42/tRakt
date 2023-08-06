@@ -16,4 +16,21 @@ trakt_people_crew_sections <- c(
   "production", "art", "crew", "directing", "writing",
   "sound", "camera", "costume & make-up", "visual effects"
 )
+
+#' Trakt's rating label
+#' @keywords internal
+#' @noRd
+trakt_rating_labels <- c(
+  `1` = "Weak Sauce :(",
+  `2` = "Terrible",
+  `3` = "Bad",
+  `4` = "Poor",
+  `5` = "Meh",
+  `6` = "Fair",
+  `7` = "Good",
+  `8` = "Great",
+  `9` = "Superb",
+  `10` = "Totally Ninja!"
+)
+
 # nocov end
