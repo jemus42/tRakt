@@ -26,7 +26,7 @@ movies_releases <- function(id, country = NULL) {
   url <- build_trakt_url("movies", id, "releases", country = country)
   response <- trakt_get(url = url)
 
-  response %>%
-    mutate(movie = id) %>%
+  response |>
+    mutate(movie = id) |>
     fix_tibble_response()
 }

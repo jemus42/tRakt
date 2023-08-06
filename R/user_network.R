@@ -48,8 +48,8 @@ user_network <- function(relationship = c("friends", "followers", "following"),
   }
 
   # Consistency: "", NA, NULL, they should all be NA_character_
-  response %>%
-    mutate_if(is.character, fix_missing) %>%
+  response |>
+    mutate_if(is.character, fix_missing) |>
     fix_tibble_response()
 }
 

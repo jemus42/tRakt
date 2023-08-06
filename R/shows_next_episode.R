@@ -23,13 +23,13 @@ shows_next_episode <- function(id, extended = c("min", "full")) {
     return(tibble::tibble())
   }
 
-  response %>%
-    discard(is.list) %>%
-    modify_if(is.null, ~NA_character_) %>%
-    modify_at(~grepl("(^available_translations$)|(^genres$)", .x), list) %>%
-    as_tibble() %>%
+  response |>
+    discard(is.list) |>
+    modify_if(is.null, ~NA_character_) |>
+    modify_at(~grepl("(^available_translations$)|(^genres$)", .x), list) |>
+    as_tibble() |>
     bind_cols(
-      pluck(response, "ids") %>% fix_ids()
+      pluck(response, "ids") |> fix_ids()
     )
 }
 
@@ -44,12 +44,12 @@ shows_last_episode <- function(id, extended = c("min", "full")) {
   url <- build_trakt_url("shows", id, "last_episode", extended = extended)
   response <- trakt_get(url)
 
-  response %>%
-    discard(is.list) %>%
-    modify_if(is.null, ~NA_character_) %>%
-    modify_at(~grepl("(^available_translations$)|(^genres$)", .x), list) %>%
-    as_tibble() %>%
+  response |>
+    discard(is.list) |>
+    modify_if(is.null, ~NA_character_) |>
+    modify_at(~grepl("(^available_translations$)|(^genres$)", .x), list) |>
+    as_tibble() |>
     bind_cols(
-      pluck(response, "ids") %>% fix_ids()
+      pluck(response, "ids") |> fix_ids()
     )
 }

@@ -31,15 +31,15 @@ user_lists <- function(user = getOption("trakt_username"), extended = c("min", "
     return(tibble())
   }
 
-  response %>%
-    select(-"user", -"ids") %>%
+  response |>
+    select(-"user", -"ids") |>
     bind_cols(
-      response %>%
+      response |>
         pull(.data[["ids"]]),
-      response %>%
-        pull(.data[["user"]]) %>%
+      response |>
+        pull(.data[["user"]]) |>
         unpack_user()
-    ) %>%
+    ) |>
     fix_tibble_response()
 }
 
@@ -79,15 +79,15 @@ user_list <- function(user = getOption("trakt_username"), list_id,
     return(tibble())
   }
 
-  response %>%
-    discard(is.list) %>%
-    as_tibble() %>%
+  response |>
+    discard(is.list) |>
+    as_tibble() |>
     bind_cols(
-      response$ids %>%
+      response$ids |>
         as_tibble(),
-      response$user %>%
-        as_tibble() %>%
+      response$user |>
+        as_tibble() |>
         unpack_user()
-    ) %>%
+    ) |>
     fix_tibble_response()
 }

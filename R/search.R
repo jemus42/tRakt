@@ -160,6 +160,6 @@ search_result_cleanup <- function(response, type, n_results, extended) {
     response <- response[order(response$score, decreasing = TRUE), ]
   }
 
-  head(response, n_results) %>%
+  head(response, n_results) |>
     fix_tibble_response()
 }

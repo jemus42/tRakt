@@ -38,9 +38,9 @@ media_ratings <- function(type = c("shows", "movies"), id) {
   url <- build_trakt_url(type, id, "ratings")
   response <- trakt_get(url = url)
 
-  response %>%
-    fix_ratings_distribution() %>%
-    as_tibble() %>%
+  response |>
+    fix_ratings_distribution() |>
+    as_tibble() |>
     mutate(
       id = id,
       type = type
@@ -86,9 +86,9 @@ seasons_ratings <- function(id, season = 1L) {
   url <- build_trakt_url("shows", id, "seasons", season, "ratings")
   response <- trakt_get(url = url)
 
-  response %>%
-    fix_ratings_distribution() %>%
-    as_tibble() %>%
+  response |>
+    fix_ratings_distribution() |>
+    as_tibble() |>
     mutate(
       id = id,
       season = season
@@ -123,9 +123,9 @@ episodes_ratings <- function(id, season = 1L, episode = 1L) {
   )
   response <- trakt_get(url = url)
 
-  response %>%
-    fix_ratings_distribution() %>%
-    as_tibble() %>%
+  response |>
+    fix_ratings_distribution() |>
+    as_tibble() |>
     mutate(
       id = id,
       season = as.integer(season),

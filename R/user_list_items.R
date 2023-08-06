@@ -56,17 +56,17 @@ user_list_items <- function(user = getOption("trakt_username"),
   # Get the list "base" without media items
   # If type == "seasons" or "episode"; there will be a "show" object,
   # which needs removal from list_base, but isn't present in response$type
-  list_base <- response %>%
+  list_base <- response |>
     select(-one_of(list_types), -matches("^show$"))
 
   # Row-bind the list base to the unpacked media items
   map_df(list_types, ~ {
     bind_cols(
-      list_base %>%
+      list_base |>
         filter(type == .x),
       flatten_media_object(response, .x)
     )
-  }) %>%
-    arrange(rank) %>%
+  }) |>
+    arrange(rank) |>
     fix_tibble_response()
 }

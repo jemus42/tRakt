@@ -21,20 +21,20 @@ user_likes <- function(type = c("comments", "lists")) {
   response <- trakt_get(url)
 
   if (type == "comments") {
-    response %>%
-      discard(is.list) %>%
+    response |>
+      discard(is.list) |>
       bind_cols(
-        pluck(response, "comment") %>%
+        pluck(response, "comment") |>
           unpack_comments()
-      ) %>%
+      ) |>
       fix_tibble_response()
   } else if (type == "lists") {
-    response %>%
-      discard(is.list) %>%
+    response |>
+      discard(is.list) |>
       bind_cols(
-        pluck(response, "list") %>%
+        pluck(response, "list") |>
           unpack_lists()
-      ) %>%
+      ) |>
       fix_tibble_response()
   }
 }

@@ -42,12 +42,12 @@ people_media <- function(type = c("shows", "movies"), id,
 
   if (type == "shows") {
     if (has_name(response, "cast") && !is_empty(response$cast)) {
-      response$cast <- response$cast$show %>%
-        unpack_show() %>%
+      response$cast <- response$cast$show |>
+        unpack_show() |>
         bind_cols(
-          response$cast %>%
+          response$cast |>
             select(-"show")
-        ) %>%
+        ) |>
         as_tibble()
     }
     if (has_name(response, "crew") && !is_empty(response$crew)) {
@@ -56,8 +56,8 @@ people_media <- function(type = c("shows", "movies"), id,
   }
   if (type == "movies") {
     if (has_name(response, "cast") && !is_empty(response$cast)) {
-      response$cast <- response$cast %>%
-        unpack_movie() %>%
+      response$cast <- response$cast |>
+        unpack_movie() |>
         as_tibble()
     }
     if (has_name(response, "crew") && !is_empty(response$crew)) {

@@ -32,7 +32,7 @@ people_summary <- function(id, extended = c("min", "full")) {
   response$ids <- as_tibble(fix_ids(response$ids))
   response <- modify_if(response, is.null, ~ return(NA_character_))
   response <- fix_datetime(response)
-  response[names(response) != "ids"] %>%
-    as_tibble() %>%
+  response[names(response) != "ids"] |>
+    as_tibble() |>
     bind_cols(response$ids)
 }

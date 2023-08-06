@@ -29,13 +29,13 @@ unpack_user <- function(response_user) {
 
   # Private users don't have a "name" field
   if (has_name(response_user, "name")) {
-    response_user <- response_user %>%
+    response_user <- response_user |>
       rename(user_name = "name")
   }
 
-  response_user %>%
-    rename(user_slug = "slug") %>%
-    mutate_if(is.factor, as.character) %>%
+  response_user |>
+    rename(user_slug = "slug") |>
+    mutate_if(is.factor, as.character) |>
     fix_tibble_response()
 }
 
@@ -66,18 +66,18 @@ unpack_show <- function(show) {
 
     names(show$airs) <- paste0("airs_", names(show$airs))
 
-    show <- show %>%
-      select(-"airs") %>%
-      cbind(show$airs) %>%
+    show <- show |>
+      select(-"airs") |>
+      cbind(show$airs) |>
       as_tibble()
     # Note: Use cbind() over dplyr::bind_cols(): The latter complains about columns
     # that are data.frames. cbind() might be ever so slightly slower, but less picky.
   }
 
-  show <- show %>%
-    select(-"ids") %>%
-    bind_cols(fix_ids(show$ids)) %>%
-    as_tibble() %>%
+  show <- show |>
+    select(-"ids") |>
+    bind_cols(fix_ids(show$ids)) |>
+    as_tibble() |>
     fix_datetime()
 
   show
@@ -95,10 +95,10 @@ unpack_movie <- function(response) {
   }
 
   bind_cols(
-    response %>% select(-"movie"),
-    response$movie %>% select(-"ids"),
-    response$movie$ids %>% fix_ids()
-  ) %>%
+    response |> select(-"movie"),
+    response$movie |> select(-"ids"),
+    response$movie$ids |> fix_ids()
+  ) |>
     fix_tibble_response()
 }
 
@@ -117,13 +117,13 @@ unpack_crew_sections <- function(crew, type) {
   if (type == "shows") {
     map_df(trakt_people_crew_sections, function(section) {
       if (has_name(crew, section)) {
-        crew[[section]] <- crew[[section]]$show %>%
-          unpack_show() %>%
+        crew[[section]] <- crew[[section]]$show |>
+          unpack_show() |>
           bind_cols(
-            crew[[section]] %>%
+            crew[[section]] |>
               select(-"show")
-          ) %>%
-          as_tibble() %>%
+          ) |>
+          as_tibble() |>
           mutate(crew_type = section)
       }
 
@@ -132,9 +132,9 @@ unpack_crew_sections <- function(crew, type) {
   } else if (type == "movies") {
     map_df(trakt_people_crew_sections, function(section) {
       if (has_name(crew, section)) {
-        crew[[section]] <- crew[[section]] %>%
-          unpack_movie() %>%
-          as_tibble() %>%
+        crew[[section]] <- crew[[section]] |>
+          unpack_movie() |>
+          as_tibble() |>
           mutate(crew_type = section)
       }
 
@@ -160,15 +160,15 @@ unpack_people <- function(response) {
   if (has_name(response, "cast") && !is_empty(response$cast)) {
     response$cast$person[["images"]] <- NULL
 
-    response$cast$person <- response$cast$person %>%
-      select(-"ids") %>%
-      cbind(fix_ids(response$cast$person$ids)) %>%
-      fix_datetime() %>%
+    response$cast$person <- response$cast$person |>
+      select(-"ids") |>
+      cbind(fix_ids(response$cast$person$ids)) |>
+      fix_datetime() |>
       as_tibble()
 
-    response$cast <- response$cast %>%
-      select(-"person") %>%
-      cbind(response$cast$person) %>%
+    response$cast <- response$cast |>
+      select(-"person") |>
+      cbind(response$cast$person) |>
       as_tibble()
   }
 
@@ -180,15 +180,15 @@ unpack_people <- function(response) {
         return(tibble())
       }
 
-      response$crew[[section]]$person <- response$crew[[section]]$person %>%
-        select(-"ids") %>%
+      response$crew[[section]]$person <- response$crew[[section]]$person |>
+        select(-"ids") |>
         cbind(fix_ids(response$crew[[section]]$person$ids))
 
-      response$crew[[section]] <- response$crew[[section]] %>%
-        select(-"person") %>%
-        cbind(response$crew[[section]]$person) %>%
-        mutate(crew_type = section) %>%
-        as_tibble() %>%
+      response$crew[[section]] <- response$crew[[section]] |>
+        select(-"person") |>
+        cbind(response$crew[[section]]$person) |>
+        mutate(crew_type = section) |>
+        as_tibble() |>
         fix_datetime()
     })
   }
@@ -196,15 +196,15 @@ unpack_people <- function(response) {
   if (has_name(response, "guest_stars") && !is_empty(response$guest_stars)) {
     response$guest_stars$person[["images"]] <- NULL
 
-    response$guest_stars$person <- response$guest_stars$person %>%
-      select(-"ids") %>%
-      cbind(fix_ids(response$guest_stars$person$ids)) %>%
-      fix_datetime() %>%
+    response$guest_stars$person <- response$guest_stars$person |>
+      select(-"ids") |>
+      cbind(fix_ids(response$guest_stars$person$ids)) |>
+      fix_datetime() |>
       as_tibble()
 
-    response$guest_stars <- response$guest_stars %>%
-      select(-"person") %>%
-      cbind(response$guest_stars$person) %>%
+    response$guest_stars <- response$guest_stars |>
+      select(-"person") |>
+      cbind(response$guest_stars$person) |>
       as_tibble()
   }
 
@@ -226,12 +226,12 @@ unpack_lists <- function(response) {
     return(tibble())
   }
 
-  response %>%
-    select(-any_of(c("ids", "user"))) %>%
+  response |>
+    select(-any_of(c("ids", "user"))) |>
     bind_cols(
-      pluck(response, "ids") %>% fix_ids(),
-      pluck(response, "user") %>% unpack_user()
-    ) %>%
+      pluck(response, "ids") |> fix_ids(),
+      pluck(response, "user") |> unpack_user()
+    ) |>
     fix_tibble_response()
 }
 
@@ -250,15 +250,15 @@ unpack_comments <- function(response) {
     return(tibble())
   }
 
-  response %>%
-    discard(is.list) %>%
-    as_tibble() %>%
+  response |>
+    discard(is.list) |>
+    as_tibble() |>
     bind_cols(
-      pluck(response, "user") %>%
-        as_tibble() %>%
+      pluck(response, "user") |>
+        as_tibble() |>
         unpack_user()
-    ) %>%
-    mutate(user_rating = as.integer(.data[["user_rating"]])) %>%
+    ) |>
+    mutate(user_rating = as.integer(.data[["user_rating"]])) |>
     fix_tibble_response()
 }
 
@@ -282,20 +282,20 @@ unpack_comments_multitype <- function(response) {
 
   # Get the list "base" without media items
   # in this case only a type column
-  list_base <- response %>% select("type")
+  list_base <- response |> select("type")
 
   # Row-bind the list base to the unpacked media items
   map_df(list_types, ~ {
     bind_cols(
-      list_base %>%
+      list_base |>
         filter(type == .x),
-      response %>%
-        filter(type == .x) %>%
-        pull("comment") %>%
+      response |>
+        filter(type == .x) |>
+        pull("comment") |>
         unpack_comments(),
       flatten_media_object(response, .x)
     )
-  }) %>%
+  }) |>
     fix_tibble_response()
 }
 
@@ -311,8 +311,8 @@ unpack_comments_multitype <- function(response) {
 #' @importFrom stringr str_c str_remove str_replace
 #' @importFrom purrr pluck
 flatten_media_object <- function(x, type) {
-  x <- x %>%
-    as_tibble() %>%
+  x <- x |>
+    as_tibble() |>
     filter(type == !!type)
 
   if (nrow(x) == 0) {
@@ -320,49 +320,49 @@ flatten_media_object <- function(x, type) {
   }
 
   if (type == "show") {
-    res <- pluck(x, "show") %>%
+    res <- pluck(x, "show") |>
       unpack_show()
   } else if (type == "movie") {
     res <- bind_cols(
-      pluck(x, "movie") %>% select(-"ids"),
-      pluck(x, "movie", "ids") %>% fix_ids()
+      pluck(x, "movie") |> select(-"ids"),
+      pluck(x, "movie", "ids") |> fix_ids()
     )
   } else if (type == "season") {
     res <- bind_cols(
-      pluck(x, "show") %>%
+      pluck(x, "show") |>
         unpack_show(),
-      pluck(x, "season") %>%
-        select(-"ids") %>%
+      pluck(x, "season") |>
+        select(-"ids") |>
         rename_all(~ paste0("season_", .x)),
-      pluck(x, "season", "ids") %>%
-        fix_ids() %>%
+      pluck(x, "season", "ids") |>
+        fix_ids() |>
         rename_all(~ paste0("season_", .x))
     )
   } else if (type == "episode") {
     res <- bind_cols(
-      pluck(x, "show") %>% unpack_show(),
-      pluck(x, "episode") %>%
-        select(-"ids") %>%
+      pluck(x, "show") |> unpack_show(),
+      pluck(x, "episode") |>
+        select(-"ids") |>
         rename_all(~ paste0("episode_", .x)),
-      pluck(x, "episode", "ids") %>%
-        fix_ids() %>%
+      pluck(x, "episode", "ids") |>
+        fix_ids() |>
         rename_all(~ paste0("episode_", .x))
     )
   } else if (type == "person") {
     res <- bind_cols(
-      pluck(x, "person") %>% select(-"ids"),
-      pluck(x, "person", "ids") %>% fix_ids()
+      pluck(x, "person") |> select(-"ids"),
+      pluck(x, "person", "ids") |> fix_ids()
     )
   } else if (type == "list") {
     res <- bind_cols(
-      pluck(x, "list") %>% select(-"ids"),
-      pluck(x, "list", "ids") %>% fix_ids()
+      pluck(x, "list") |> select(-"ids"),
+      pluck(x, "list", "ids") |> fix_ids()
     )
   }
 
-  res %>%
-    fix_datetime() %>%
-    filter(!is.na(.data[["trakt"]])) %>%
+  res |>
+    fix_datetime() |>
+    filter(!is.na(.data[["trakt"]])) |>
     as_tibble()
 }
 
@@ -387,12 +387,12 @@ flatten_single_media_object <- function(response, type) {
       response <- pluck(response, "movie")
     }
 
-    res <- response %>%
-      modify_if(is.null, ~NA_character_) %>%
-      discard(is.list) %>%
+    res <- response |>
+      modify_if(is.null, ~NA_character_) |>
+      discard(is.list) |>
       list_merge(
-        !!!(pluck(response, "ids") %>% fix_ids())
-      ) %>%
+        !!!(pluck(response, "ids") |> fix_ids())
+      ) |>
       modify_if(~ length(.x) > 1, list)
   }
 
@@ -401,35 +401,35 @@ flatten_single_media_object <- function(response, type) {
       response <- pluck(response, "show")
     }
 
-    res <- response %>%
-      modify_if(is.null, ~NA_character_) %>%
-      discard(is.list) %>%
+    res <- response |>
+      modify_if(is.null, ~NA_character_) |>
+      discard(is.list) |>
       modify_if(~ length(.x) > 1, list)
 
     if (has_name(response, "airs")) {
-      airs <- response %>%
-        pluck("airs", .default = NULL) %>%
+      airs <- response |>
+        pluck("airs", .default = NULL) |>
         set_names(~ paste0("airs_", .x))
 
       res <- list_merge(res, !!!airs)
     }
 
-    res <- res %>% list_merge(
-      !!!(pluck(response, "ids") %>% fix_ids())
+    res <- res |> list_merge(
+      !!!(pluck(response, "ids") |> fix_ids())
     )
   }
 
   if (type %in% c("episode", "episodes")) {
-    res <- response %>%
-      pluck("episode") %>%
-      modify_if(is.null, ~NA_character_) %>%
-      discard(is.list) %>%
-      modify_if(~ length(.x) > 1, list) %>%
+    res <- response |>
+      pluck("episode") |>
+      modify_if(is.null, ~NA_character_) |>
+      discard(is.list) |>
+      modify_if(~ length(.x) > 1, list) |>
       list_merge(
-        !!!(pluck(response, "episode", "ids") %>% fix_ids())
-      ) %>%
-      as_tibble() %>%
-      rename(episode = "number") %>%
+        !!!(pluck(response, "episode", "ids") |> fix_ids())
+      ) |>
+      as_tibble() |>
+      rename(episode = "number") |>
       rename_at(vars(-"season", -"episode"), ~ paste0("episode_", .x))
 
     res <- bind_cols(
@@ -439,16 +439,16 @@ flatten_single_media_object <- function(response, type) {
   }
 
   if (type %in% c("season", "seasons")) {
-    res <- response %>%
-      pluck("season") %>%
-      modify_if(is.null, ~NA_character_) %>%
-      discard(is.list) %>%
-      modify_if(~ length(.x) > 1, list) %>%
+    res <- response |>
+      pluck("season") |>
+      modify_if(is.null, ~NA_character_) |>
+      discard(is.list) |>
+      modify_if(~ length(.x) > 1, list) |>
       list_merge(
-        !!!(pluck(response, "season", "ids") %>% fix_ids())
-      ) %>%
-      as_tibble() %>%
-      rename(season = "number") %>%
+        !!!(pluck(response, "season", "ids") |> fix_ids())
+      ) |>
+      as_tibble() |>
+      rename(season = "number") |>
       rename_at(vars(-"season"), ~ paste0("season_", .x))
 
     res <- bind_cols(
@@ -461,12 +461,12 @@ flatten_single_media_object <- function(response, type) {
   # Take possible list-columns (genres etc.) and make them lists if not already
   # Required to be able to bind_row() them to other results where the column
   # might not be a list already
-  res %>%
+  res |>
     modify_at(
       grepl("^genres$|^available_translations$", names(res)),
       ~ {
         if (!is.list(.x)) list(.x) else .x
       }
-    ) %>%
+    ) |>
     fix_tibble_response()
 }

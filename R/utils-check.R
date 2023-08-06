@@ -188,10 +188,10 @@ check_filter_arg <- function(filter,
 check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
   filter <- as.vector(str_split(filter, ",", simplify = TRUE))
 
-  clean_filter <- str_to_lower(filter) %>%
+  clean_filter <- str_to_lower(filter) |>
     str_trim("both")
 
-  clean_filter_ok <- str_trim(filter_ok, "both") %>%
+  clean_filter_ok <- str_trim(filter_ok, "both") |>
     str_to_lower()
 
   filter <- map_chr(clean_filter, ~ {
@@ -204,7 +204,7 @@ check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
       )
       ""
     } else {
-      filter_ok[.x == clean_filter_ok] %>%
+      filter_ok[.x == clean_filter_ok] |>
         unique()
     }
   })

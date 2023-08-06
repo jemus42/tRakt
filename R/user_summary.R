@@ -25,7 +25,7 @@ user_profile <- function(user = getOption("trakt_username"),
   url <- build_trakt_url("users", user, extended = extended)
   response <- trakt_get(url = url)
 
-  response %>%
-    as_tibble() %>%
+  response |>
+    as_tibble() |>
     unpack_user()
 }

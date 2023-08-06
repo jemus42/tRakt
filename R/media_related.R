@@ -32,14 +32,14 @@ media_related <- function(id, type = c("shows", "movies"),
   }
 
   if (extended == "min" && type == "movies") {
-    response <- response %>%
-      select(-"ids") %>%
+    response <- response |>
+      select(-"ids") |>
       bind_cols(fix_ids(response$ids))
   }
 
-  response %>%
-    mutate(related_to = id) %>%
-    select("related_to", everything()) %>%
+  response |>
+    mutate(related_to = id) |>
+    select("related_to", everything()) |>
     fix_tibble_response()
 }
 

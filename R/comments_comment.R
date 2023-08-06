@@ -75,12 +75,12 @@ comments_likes <- function(id, extended = c("min", "full")) {
   url <- build_trakt_url("comments", id, "likes", extended = extended)
   response <- trakt_get(url)
 
-  response %>%
-    discard(is.list) %>%
+  response |>
+    discard(is.list) |>
     bind_cols(
-      pluck(response, "user") %>%
+      pluck(response, "user") |>
         unpack_user()
-    ) %>%
+    ) |>
     fix_tibble_response()
 }
 
@@ -123,8 +123,8 @@ comments_item <- function(id, extended = c("min", "full")) {
 
   item_type <- pluck(response, "type")
 
-  response %>%
-    flatten_single_media_object(type = item_type) %>%
-    mutate(type = item_type) %>%
+  response |>
+    flatten_single_media_object(type = item_type) |>
+    mutate(type = item_type) |>
     select("type", everything())
 }

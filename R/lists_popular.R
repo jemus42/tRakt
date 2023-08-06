@@ -23,13 +23,13 @@ lists_popular <- function(limit = 10) {
     return(tibble())
   }
 
-  response %>%
-    pull("list") %>%
-    select_if(~ !is.data.frame(.x)) %>%
+  response |>
+    pull("list") |>
+    select_if(~ !is.data.frame(.x)) |>
     bind_cols(
-      pluck(response, "list", "ids") %>% fix_ids(),
-      pluck(response, "list", "user") %>% unpack_user()
-    ) %>%
+      pluck(response, "list", "ids") |> fix_ids(),
+      pluck(response, "list", "user") |> unpack_user()
+    ) |>
     fix_tibble_response()
 }
 
@@ -49,12 +49,12 @@ lists_trending <- function(limit = 10) {
     return(tibble())
   }
 
-  response %>%
-    pull("list") %>%
-    select_if(~ !is.data.frame(.x)) %>%
+  response |>
+    pull("list") |>
+    select_if(~ !is.data.frame(.x)) |>
     bind_cols(
-      pluck(response, "list", "ids") %>% fix_ids(),
-      pluck(response, "list", "user") %>% unpack_user()
-    ) %>%
+      pluck(response, "list", "ids") |> fix_ids(),
+      pluck(response, "list", "user") |> unpack_user()
+    ) |>
     fix_tibble_response()
 }

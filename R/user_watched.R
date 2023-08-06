@@ -50,11 +50,11 @@ user_watched <- function(user = getOption("trakt_username"),
 
   if (type == "shows") {
     # Unpack the show media object and bind it to the base tbl
-    response <- response %>%
-      select(-"show") %>%
+    response <- response |>
+      select(-"show") |>
       bind_cols(
-        pluck(response, "show") %>% unpack_show()
-      ) %>%
+        pluck(response, "show") |> unpack_show()
+      ) |>
       select(
         -matches("^seasons$"),
         everything(),

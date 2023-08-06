@@ -67,7 +67,7 @@ fix_datetime <- function(response) {
   }
 
   if (inherits(response, "data.frame")) {
-    response %>%
+    response |>
       mutate(across(any_of(datevars), ~ {
         # Don't convert already POSIXct vars
         if (!(inherits(.x, "POSIXct"))) {
@@ -104,10 +104,10 @@ fix_ratings_distribution <- function(response) {
 #' @importFrom tibble as_tibble
 #' @importFrom tibble remove_rownames
 fix_tibble_response <- function(response) {
-  response %>%
-    as_tibble() %>%
-    fix_datetime() %>%
-    fix_ratings() %>%
+  response |>
+    as_tibble() |>
+    fix_datetime() |>
+    fix_ratings() |>
     remove_rownames()
 }
 

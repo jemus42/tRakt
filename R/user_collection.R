@@ -60,14 +60,14 @@ user_collection <- function(user = getOption("trakt_username"),
   }
 
   if (type == "shows") {
-    response <- response %>%
-      select(-"show") %>%
+    response <- response |>
+      select(-"show") |>
       bind_cols(
-        pluck(response, "show") %>%
+        pluck(response, "show") |>
           unpack_show()
-      ) %>%
-      as_tibble() %>%
-      select(-"seasons", everything(), "seasons") %>%
+      ) |>
+      as_tibble() |>
+      select(-"seasons", everything(), "seasons") |>
       mutate(seasons = map(.data[["seasons"]], as_tibble))
 
     # I think importing tidyr for this alone is worth it, because
@@ -79,11 +79,11 @@ user_collection <- function(user = getOption("trakt_username"),
         stop("This functionality requires the tidyr package")
       }
 
-      response <- as_tibble(response) %>%
-        tidyr::unnest(cols = "seasons") %>%
-        rename(season = "number") %>%
-        tidyr::unnest(cols = "episodes") %>%
-        rename(episode = "number") %>%
+      response <- as_tibble(response) |>
+        tidyr::unnest(cols = "seasons") |>
+        rename(season = "number") |>
+        tidyr::unnest(cols = "episodes") |>
+        rename(episode = "number") |>
         mutate(collected_at = ymd_hms(.data[["collected_at"]]))
     }
   } else if (type == "movies") {

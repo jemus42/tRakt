@@ -18,7 +18,7 @@ movies_boxoffice <- function(extended = c("min", "full")) {
   url <- build_trakt_url("movies/boxoffice", extended = extended)
   response <- trakt_get(url = url)
 
-  response %>%
-    unpack_movie() %>%
+  response |>
+    unpack_movie() |>
     fix_tibble_response()
 }

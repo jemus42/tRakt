@@ -58,15 +58,15 @@ trakt_auto_lists <- function(list_type = c(
   # Unnest show or movie object present only in some methods
   if (has_name(response, "show")) {
     response <- bind_cols(
-      response %>% select(-"show"),
+      response |> select(-"show"),
       unpack_show(response$show)
     )
   }
 
   if (has_name(response, "movie")) {
     response <- bind_cols(
-      response %>% select(-"movie"),
-      response$movie %>% select(-"ids"),
+      response |> select(-"movie"),
+      response$movie |> select(-"ids"),
       response$movie$ids
     )
   }
@@ -76,7 +76,7 @@ trakt_auto_lists <- function(list_type = c(
   # reasonably certain there's no other problematic list/df columns
   if (has_name(response, "ids")) {
     response <- bind_cols(
-      response %>% select(-"ids"),
+      response |> select(-"ids"),
       response$ids
     )
   }

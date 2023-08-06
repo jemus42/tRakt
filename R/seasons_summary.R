@@ -67,21 +67,23 @@ seasons_summary <- function(id, episodes = FALSE,
   # Flattening
   response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
 
+  # which(sapply(response$episodes, nrow) > 0)
+
   # If episodes are included, clean them up as a tidy list-column
   if (has_name(response, "episodes")) {
     response$episodes <- map(response$episodes, function(episodes) {
-      episodes %>%
-        select(-"ids") %>%
-        cbind(fix_ids(episodes$ids)) %>%
-        fix_tibble_response() %>%
-        rename(
-          episode = "number",
-          episode_abs = "number_abs"
-        )
+      if (nrow(episodes) == 0) return(tibble())
+      ret <- episodes |>
+        select(-"ids") |>
+        cbind(fix_ids(episodes$ids)) |>
+        fix_tibble_response()
+
+      names(ret) <- sub("^number", "episode", names(ret))
+      ret
     })
 
     # if (has_name(response, "number_abs")) {
-    #   response <- response %>%
+    #   response <- response |>
     #     rename(episode_abs = "number_abs")
     # }
   }

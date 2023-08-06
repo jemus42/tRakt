@@ -106,8 +106,8 @@ apidoc <- function(section, method, key) {
     stop("Please install the 'yaml' package")
   }
 
-  system.file("api-methods.yml", package = "tRakt") %>%
-    yaml::read_yaml() %>%
+  system.file("api-methods.yml", package = "tRakt") |>
+    yaml::read_yaml() |>
     pluck(section, method, key)
 }
 

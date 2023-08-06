@@ -60,16 +60,16 @@ user_history <- function(user = getOption("trakt_username"),
   if (type == "shows") {
     response <- bind_cols(
       # History metadata
-      response %>%
+      response |>
         select(-"show", -"episode"),
       # Unpacked show data
       unpack_show(response$show),
       # Unpacked episode data
-      response$episode %>%
-        select(-"ids") %>%
-        bind_cols(fix_ids(response$episode$ids)) %>%
-        rename(episode = "number") %>%
-        fix_tibble_response() %>%
+      response$episode |>
+        select(-"ids") |>
+        bind_cols(fix_ids(response$episode$ids)) |>
+        rename(episode = "number") |>
+        fix_tibble_response() |>
         rename_all(~ paste0("episode_", .x))
     )
   }
