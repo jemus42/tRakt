@@ -37,7 +37,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.16.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.16.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,7 +90,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Getting Started</h1>
                         <h4 data-toc-skip class="author">Lukas Burk</h4>
             
-            <h4 data-toc-skip class="date">2023-08-06</h4>
+            <h4 data-toc-skip class="date">2023-08-07</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/HEAD/vignettes/tRakt.Rmd" class="external-link"><code>vignettes/tRakt.Rmd</code></a></small>
       <div class="d-none name"><code>tRakt.Rmd</code></div>
@@ -149,17 +149,17 @@ release year of the movie.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="../reference/watched_media.html">movies_watched</a></span><span class="op">(</span>period <span class="op">=</span> <span class="st">"yearly"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1990</span>, <span class="fl">2000</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span><span class="fu"><a href="../reference/watched_media.html">movies_watched</a></span><span class="op">(</span>period <span class="op">=</span> <span class="st">"yearly"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1990</span>, <span class="fl">2000</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">watcher_count</span>, <span class="va">title</span>, <span class="va">year</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 3</span></span></span>
 <span><span class="co">#&gt;    watcher_count title                     year</span></span>
 <span><span class="co">#&gt;            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>         <span style="text-decoration: underline;">33</span>441 The Matrix                <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>         <span style="text-decoration: underline;">33</span>480 The Matrix                <span style="text-decoration: underline;">1</span>999</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>         <span style="text-decoration: underline;">25</span>072 Fight Club                <span style="text-decoration: underline;">1</span>999</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>         <span style="text-decoration: underline;">22</span>545 Home Alone                <span style="text-decoration: underline;">1</span>990</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>         <span style="text-decoration: underline;">22</span>580 Home Alone                <span style="text-decoration: underline;">1</span>990</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>         <span style="text-decoration: underline;">21</span>924 The Shawshank Redemption  <span style="text-decoration: underline;">1</span>994</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>         <span style="text-decoration: underline;">21</span>342 Toy Story                 <span style="text-decoration: underline;">1</span>995</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>         <span style="text-decoration: underline;">20</span>859 Titanic                   <span style="text-decoration: underline;">1</span>997</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>         <span style="text-decoration: underline;">20</span>874 Titanic                   <span style="text-decoration: underline;">1</span>997</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>         <span style="text-decoration: underline;">20</span>041 Forrest Gump              <span style="text-decoration: underline;">1</span>994</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>         <span style="text-decoration: underline;">19</span>563 Pulp Fiction              <span style="text-decoration: underline;">1</span>994</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>         <span style="text-decoration: underline;">16</span>940 The Lion King             <span style="text-decoration: underline;">1</span>994</span></span>
