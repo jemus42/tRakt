@@ -5,15 +5,17 @@ test_that("shows_(next|last)_episode() works", {
 
   expect_is(res, "tbl_df")
 
-  shows_last_episode("one-piece") %>%
-    expect_is("tbl_df") %>%
-    expect_length(7) %>%
-    nrow() %>%
+  shows_last_episode("one-piece") |>
+    expect_is("tbl_df") |>
+    expect_named(c("season", "number", "title", "trakt", "tvdb", "imdb", "tmdb")) |>
+    nrow() |>
     expect_equal(1)
 
-  shows_last_episode("one-piece", extended = "full") %>%
-    expect_is("tbl_df") %>%
-    expect_length(16) %>%
-    nrow() %>%
+  shows_last_episode("one-piece", extended = "full") |>
+    expect_is("tbl_df") |>
+    expect_named(c("season", "number", "title", "number_abs", "overview", "rating",
+                   "votes", "comment_count", "first_aired", "updated_at", "runtime",
+                   "trakt", "tvdb", "imdb", "tmdb")) |>
+    nrow() |>
     expect_equal(1)
 })

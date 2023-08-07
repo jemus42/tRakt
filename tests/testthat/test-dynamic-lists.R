@@ -88,55 +88,55 @@ test_that("played_media and watched_media also do things", {
     "year", "trakt", "slug", "imdb", "tmdb"
   )
 
-  shows_watched(extended = "min", period = "weekly") %>%
-    expect_is("tbl") %>%
-    expect_named(nm_shows) %>%
-    nrow() %>%
+  shows_watched(extended = "min", period = "weekly") |>
+    expect_is("tbl") |>
+    expect_named(nm_shows) |>
+    nrow() |>
     expect_equal(10)
 
-  movies_watched(extended = "min", period = "weekly") %>%
-    expect_is("tbl") %>%
-    expect_named(nm_movies) %>%
-    nrow() %>%
+  movies_watched(extended = "min", period = "weekly") |>
+    expect_is("tbl") |>
+    expect_named(nm_movies) |>
+    nrow() |>
     expect_equal(10)
 
-  shows_played(extended = "min", period = "weekly") %>%
-    expect_is("tbl") %>%
-    expect_named(nm_shows) %>%
-    nrow() %>%
+  shows_played(extended = "min", period = "weekly") |>
+    expect_is("tbl") |>
+    expect_named(nm_shows) |>
+    nrow() |>
     expect_equal(10)
 
-  movies_played(extended = "min", period = "weekly") %>%
-    expect_is("tbl") %>%
-    expect_named(nm_movies) %>%
-    nrow() %>%
+  movies_played(extended = "min", period = "weekly") |>
+    expect_is("tbl") |>
+    expect_named(nm_movies) |>
+    nrow() |>
     expect_equal(10)
 })
 
 test_that("collected_media does its thing", {
-  shows_collected(limit = 5) %>%
-    expect_is("tbl") %>%
-    expect_length(11) %>%
-    nrow() %>%
+  shows_collected(limit = 5) |>
+    expect_is("tbl") |>
+    expect_length(11) |>
+    nrow() |>
     expect_equal(5)
 
-  movies_collected(limit = 5) %>%
-    expect_is("tbl") %>%
-    expect_length(9) %>%
-    nrow() %>%
+  movies_collected(limit = 5) |>
+    expect_is("tbl") |>
+    expect_length(9) |>
+    nrow() |>
     expect_equal(5)
 })
 #
 # test_that("updated_media works", {
-#   shows_updates() %>%
-#     expect_is("tbl") %>%
-#     expect_length(8) %>%
-#     nrow() %>%
+#   shows_updates() |>
+#     expect_is("tbl") |>
+#     expect_length(8) |>
+#     nrow() |>
 #     expect_equal(10)
 #
-#   movies_updates() %>%
-#     expect_is("tbl") %>%
-#     expect_length(7) %>%
-#     nrow() %>%
+#   movies_updates() |>
+#     expect_is("tbl") |>
+#     expect_length(7) |>
+#     nrow() |>
 #     expect_equal(10)
 # })

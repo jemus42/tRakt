@@ -9,10 +9,10 @@ test_that("user_comments", {
     "season_tvdb", "season_tmdb"
   )
 
-  user_comments("jemus42") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm) %>%
-    nrow() %>%
+  user_comments("jemus42") |>
+    expect_is("tbl_df") |>
+    expect_named(nm) |>
+    nrow() |>
     expect_gte(10)
 
   nm_movies <- c(
@@ -22,13 +22,13 @@ test_that("user_comments", {
     "title", "year", "trakt", "slug", "imdb", "tmdb"
   )
 
-  user_comments("jemus42", type = "movie") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_movies) %>%
-    pluck("type") %>%
-    unique() %>%
+  user_comments("jemus42", type = "movie") |>
+    expect_is("tbl_df") |>
+    expect_named(nm_movies) |>
+    pluck("type") |>
+    unique() |>
     expect_equal("movie")
 
-  user_comments("sofakissen") %>%
+  user_comments("sofakissen") |>
     expect_is("tbl_df")
 })

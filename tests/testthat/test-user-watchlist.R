@@ -12,8 +12,8 @@ test_that("user_watchlist works", {
   expect_is(res_movies, "tbl")
 
 
-  user_watchlist(user = c(user, user)) %>%
-    expect_is("tbl_df") %>%
+  user_watchlist(user = c(user, user)) |>
+    expect_is("tbl_df") |>
     expect_length(12)
 
   # FIXME: Find no shows test case

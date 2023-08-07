@@ -9,16 +9,16 @@ test_that("comments_item works", {
     "genres", "certification", "trakt", "slug", "imdb", "tmdb"
   )
 
-  comments_item("236397") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_movie_min) %>%
-    nrow() %>%
+  comments_item("236397") |>
+    expect_is("tbl_df") |>
+    expect_named(nm_movie_min) |>
+    nrow() |>
     expect_equal(1)
 
-  comments_item("236397", extended = "full") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_movie_full) %>%
-    nrow() %>%
+  comments_item("236397", extended = "full") |>
+    expect_is("tbl_df") |>
+    expect_named(nm_movie_full) |>
+    nrow() |>
     expect_equal(1)
 
   # A show
@@ -39,16 +39,16 @@ test_that("comments_item works", {
             "airs_day", "airs_time", "airs_timezone", "trakt", "slug", "tvdb",
             "imdb", "tmdb")
 
-  comments_item("120768") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_show_min) %>%
-    nrow() %>%
+  comments_item("120768") |>
+    expect_is("tbl_df") |>
+    expect_named(nm_show_min) |>
+    nrow() |>
     expect_equal(1)
 
-  comments_item("120768", extended = "full") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_show_full) %>%
-    nrow() %>%
+  comments_item("120768", extended = "full") |>
+    expect_is("tbl_df") |>
+    expect_named(nm_show_full) |>
+    nrow() |>
     expect_equal(1)
 
   # A season
@@ -68,16 +68,16 @@ test_that("comments_item works", {
     "season_tmdb"
   )
 
-  comments_item("140265") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_season_min) %>%
-    nrow() %>%
+  comments_item("140265") |>
+    expect_is("tbl_df") |>
+    expect_named(nm_season_min) |>
+    nrow() |>
     expect_equal(1)
 
-  comments_item("140265", extended = "full") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_season_full) %>%
-    nrow() %>%
+  comments_item("140265", extended = "full") |>
+    expect_is("tbl_df") |>
+    expect_named(nm_season_full) |>
+    nrow() |>
     expect_equal(1)
 
   # An episode
@@ -99,15 +99,15 @@ test_that("comments_item works", {
     "episode_tmdb"
   )
 
-  comments_item("136632") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_episode_min) %>%
-    nrow() %>%
+  comments_item("136632") |>
+    expect_is("tbl_df") |>
+    expect_named(nm_episode_min) |>
+    nrow() |>
     expect_equal(1)
 
-  comments_item("136632", extended = "full") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_episode_full) %>%
-    nrow() %>%
+  comments_item("136632", extended = "full") |>
+    expect_is("tbl_df") |>
+    expect_named(nm_episode_full) |>
+    nrow() |>
     expect_equal(1)
 })

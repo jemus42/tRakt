@@ -6,7 +6,7 @@ test_that("pad_episode() pads", {
       "s01e07", "s01e08", "s01e09", "s01e10"
     )
   )
-  expect_warning(pad_episode(1, 1:10)) %>%
+  expect_warning(pad_episode(1, 1:10)) |>
     expect_equal(character(10))
 })
 

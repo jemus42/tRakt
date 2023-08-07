@@ -5,15 +5,15 @@ test_that("Popular/trending lists work", {
     "item_count", "comment_count", "likes", "trakt", "slug", "username",
     "private", "user_name", "vip", "vip_ep", "user_slug")
 
-  lists_popular() %>%
-    expect_is("tbl_df") %>%
-    expect_named(list_names) %>%
-    nrow() %>%
+  lists_popular() |>
+    expect_is("tbl_df") |>
+    expect_named(list_names) |>
+    nrow() |>
     expect_equal(10)
 
-  lists_trending() %>%
-    expect_is("tbl_df") %>%
-    expect_named(list_names) %>%
-    nrow() %>%
+  lists_trending() |>
+    expect_is("tbl_df") |>
+    expect_named(list_names) |>
+    nrow() |>
     expect_equal(10)
 })

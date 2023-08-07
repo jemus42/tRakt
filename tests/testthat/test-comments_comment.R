@@ -5,10 +5,10 @@ test_that("comments_comment()", {
     "private", "user_name", "vip", "vip_ep", "user_slug"
   )
 
-  comments_comment(c("236397", "112561")) %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_min) %>%
-    nrow() %>%
+  comments_comment(c("236397", "112561")) |>
+    expect_is("tbl_df") |>
+    expect_named(nm_min) |>
+    nrow() |>
     expect_equal(2)
 })
 
@@ -20,10 +20,10 @@ test_that("comments_replies()", {
     "private", "user_name", "vip", "vip_ep", "user_slug"
   )
 
-  comments_replies(c("236397", "236397")) %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm_min) %>%
-    nrow() %>%
+  comments_replies(c("236397", "236397")) |>
+    expect_is("tbl_df") |>
+    expect_named(nm_min) |>
+    nrow() |>
     expect_equal(2)
 })
 
@@ -34,8 +34,8 @@ test_that("comments_likes()", {
     "user_slug"
   )
 
-  comments_likes(c("236397", "236397")) %>%
-    expect_is("tbl_df") %>%
+  comments_likes(c("236397", "236397")) |>
+    expect_is("tbl_df") |>
     expect_named(nm_min)
 })
 
@@ -46,8 +46,8 @@ test_that("comments_item()", {
     "episode_imdb", "episode_tmdb"
   )
 
-  comments_item(c("136632", "236397")) %>%
-    expect_is("tbl_df") %>%
+  comments_item(c("136632", "236397")) |>
+    expect_is("tbl_df") |>
     expect_named(nm_min)
 })
 

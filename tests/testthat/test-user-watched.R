@@ -15,19 +15,19 @@ test_that("user_watched works", {
   expect_equal(setdiff(names(watched_shows_full), names(watched_shows)), "seasons")
 
   # Multiples
-  user_watched(user = c(user, user), type = "shows", noseasons = TRUE) %>%
-    expect_is("tbl_df") %>%
+  user_watched(user = c(user, user), type = "shows", noseasons = TRUE) |>
+    expect_is("tbl_df") |>
     expect_length(12)
 
   # movies ----
-  user_watched(user = user, type = "movies") %>%
-    expect_is("tbl_df") %>%
+  user_watched(user = user, type = "movies") |>
+    expect_is("tbl_df") |>
     expect_length(9)
 
 
   # Multiples
-  user_watched(user = c(user, user), type = "movies") %>%
-    expect_is("tbl_df") %>%
+  user_watched(user = c(user, user), type = "movies") |>
+    expect_is("tbl_df") |>
     expect_length(10)
 
   # error conditions ----

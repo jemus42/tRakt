@@ -5,9 +5,9 @@ test_that("user_list_comments works", {
     "private", "user_name", "vip", "vip_ep", "user_slug"
   )
 
-  user_list_comments("donxy", "1248149") %>%
-    expect_is("tbl_df") %>%
-    expect_named(nm) %>%
-    nrow() %>%
+  user_list_comments("donxy", "1248149") |>
+    expect_is("tbl_df") |>
+    expect_named(nm) |>
+    nrow() |>
     expect_equal(10)
 })

@@ -18,10 +18,10 @@ test_that("search_query works", {
   expect_warning(search_query("nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb", type = "movie", years = 1100))
 
 
-  search_query("russian doll", type = c("show", "movie")) %>%
-    expect_is("tbl_df") %>%
-    expect_length(9) %>%
-    nrow() %>%
+  search_query("russian doll", type = c("show", "movie")) |>
+    expect_is("tbl_df") |>
+    expect_length(9) |>
+    nrow() |>
     expect_equal(2)
 })
 

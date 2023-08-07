@@ -16,9 +16,9 @@ test_that("movies_releases works", {
 test_that("movies_boxoffice works", {
   skip_on_cran()
 
-  movies_boxoffice() %>%
-    expect_is("tbl") %>%
-    expect_length(7) %>%
-    nrow() %>%
+  movies_boxoffice() |>
+    expect_is("tbl") |>
+    expect_length(7) |>
+    nrow() |>
     expect_gt(3)
 })

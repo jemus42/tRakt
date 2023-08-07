@@ -23,12 +23,12 @@ test_that("user_network stuff works", {
   expect_error(user_followers(user = NA))
   expect_error(user_followers(user = 4))
 
-  user_following(user) %>%
-    expect_is("tbl_df") %>%
+  user_following(user) |>
+    expect_is("tbl_df") |>
     expect_length(7)
 
-  user_friends(user) %>%
-    expect_is("tbl_df") %>%
+  user_friends(user) |>
+    expect_is("tbl_df") |>
     expect_length(7)
 })
 

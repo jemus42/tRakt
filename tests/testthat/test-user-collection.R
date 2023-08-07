@@ -8,16 +8,16 @@ test_that("user_collection works", {
 
   expect_identical(col_sho, col_sho2)
 
-  col_sho %>%
-    expect_is("tbl") %>%
+  col_sho |>
+    expect_is("tbl") |>
     expect_length(10)
 
-  user_collection(user = user, type = "movies") %>%
-    expect_is("tbl") %>%
+  user_collection(user = user, type = "movies") |>
+    expect_is("tbl") |>
     expect_length(8)
 
-  user_collection(user = c("jemus42", "sean"), type = "movies") %>%
-    expect_is("tbl") %>%
+  user_collection(user = c("jemus42", "sean"), type = "movies") |>
+    expect_is("tbl") |>
     expect_length(9)
 
   # Error conditions ----
