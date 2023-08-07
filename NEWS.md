@@ -1,3 +1,7 @@
+# tRakt 0.16.9000 (development version)
+
+- Remove `magrittr` import and use `|>` internally, hence bumping the R dependency to `>= 4.1`.
+
 # tRakt 0.16.0
 
 - Add GitHub actions via `usethis::use_github_actions()`

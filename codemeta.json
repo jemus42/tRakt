@@ -8,13 +8,13 @@
   "codeRepository": "https://github.com/jemus42/tRakt",
   "issueTracker": "http://github.com/jemus42/tRakt/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.16.0",
+  "version": "0.16.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.2.2 (2022-10-31)",
+  "runtimePlatform": "R version 4.3.0 (2023-04-21)",
   "author": [
     {
       "@type": "Person",
@@ -173,7 +173,7 @@
       "@type": "SoftwareApplication",
       "identifier": "R",
       "name": "R",
-      "version": ">= 3.2"
+      "version": ">= 4.1"
     },
     "2": {
       "@type": "SoftwareApplication",
@@ -227,18 +227,6 @@
     },
     "6": {
       "@type": "SoftwareApplication",
-      "identifier": "magrittr",
-      "name": "magrittr",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=magrittr"
-    },
-    "7": {
-      "@type": "SoftwareApplication",
       "identifier": "purrr",
       "name": "purrr",
       "version": ">= 0.2.3",
@@ -250,7 +238,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=purrr"
     },
-    "8": {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "rlang",
       "name": "rlang",
@@ -263,7 +251,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=rlang"
     },
-    "9": {
+    "8": {
       "@type": "SoftwareApplication",
       "identifier": "stringr",
       "name": "stringr",
@@ -275,7 +263,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=stringr"
     },
-    "10": {
+    "9": {
       "@type": "SoftwareApplication",
       "identifier": "tibble",
       "name": "tibble",
@@ -287,7 +275,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=tibble"
     },
-    "11": {
+    "10": {
       "@type": "SoftwareApplication",
       "identifier": "tidyselect",
       "name": "tidyselect",
@@ -299,17 +287,17 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=tidyselect"
     },
-    "12": {
+    "11": {
       "@type": "SoftwareApplication",
       "identifier": "utils",
       "name": "utils"
     },
     "SystemRequirements": null
   },
-  "fileSize": "509.387KB",
+  "fileSize": "503.331KB",
   "releaseNotes": "https://github.com/jemus42/tRakt/blob/master/NEWS.md",
   "readme": "https://github.com/jemus42/tRakt/blob/main/README.md",
-  "contIntegration": ["https://github.com/jemus42/tRakt/actions", "https://codecov.io/github/jemus42/tRakt?branch=master"],
+  "contIntegration": ["https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml", "https://codecov.io/github/jemus42/tRakt?branch=master"],
   "developmentStatus": "https://www.repostatus.org/#wip",
   "keywords": ["trakt-api", "trakttv", "r", "rstats", "r-package", "trakt"]
 }
