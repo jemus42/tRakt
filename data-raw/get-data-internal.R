@@ -10,9 +10,10 @@ library(stringr)
 trakt_networks <- trakt_get("networks") %>%
   mutate(
     name_clean = str_to_lower(name) %>%
-      str_trim("both")
+      str_trim("both"),
+    .after = "name"
   ) %>%
-  as_tibble()
+  tidyr::unnest("ids")
 
 use_data(trakt_networks, overwrite = TRUE, compress = "xz")
 
