@@ -25,7 +25,7 @@
 #' user_collection(user = "sean", type = "movies")
 #' user_collection(user = "sean", type = "shows")
 #' }
-user_collection <- function(user = getOption("trakt_username"),
+user_collection <- function(user = "me",
                             type = c("shows", "movies"),
                             unnest_episodes = FALSE,
                             extended = c("min", "full")) {

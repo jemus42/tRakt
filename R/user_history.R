@@ -28,7 +28,7 @@
 #'   start_at = "2015-12-24", end_at = "2015-12-28"
 #' )
 #' }
-user_history <- function(user = getOption("trakt_username"),
+user_history <- function(user = "me",
                          type = c("shows", "movies"),
                          limit = 10L, start_at = NULL, end_at = NULL,
                          extended = c("min", "full")) {

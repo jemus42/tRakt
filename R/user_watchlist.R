@@ -13,7 +13,7 @@
 #' # Defaults to movie watchlist and minimal info
 #' user_watchlist(user = "sean")
 #' }
-user_watchlist <- function(user = getOption("trakt_username"),
+user_watchlist <- function(user = "me",
                            type = c("movies", "shows"),
                            extended = c("min", "full")) {
   check_username(user)

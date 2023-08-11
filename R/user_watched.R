@@ -18,7 +18,7 @@
 #' # Use noseasons = TRUE to avoid receiving detailed season/episode data
 #' user_watched(user = "sean", noseasons = TRUE)
 #' }
-user_watched <- function(user = getOption("trakt_username"),
+user_watched <- function(user = "me",
                          type = c("shows", "movies"),
                          noseasons = TRUE,
                          extended = c("min", "full")) {
