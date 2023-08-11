@@ -18,14 +18,14 @@
 #' @param type `character(1)`: Either `"shows"` or `"movies"`. For season/episode-specific
 #'   functions, values `seasons` or `episodes` are also allowed.
 #' @param user `character(1)`: Target username (or `slug`). Defaults to
-#'   `getOption("trakt_username")`.
+#'   `"me"`, the OAuth user.
 #'   Can also be of length greater than 1, in which case the function is called on all
 #'   `user` values separately and the result is combined.
 #' @param period `character(1) ["weekly"]`: Which period to filter by. Possible values
 #'   are `"weekly"`, `"monthly"`, `"yearly"`, `"all"`.
 #' @param limit `integer(1) [10L]`: Number of items to return. Must be greater
 #'   than `0` and will be coerced via `as.integer()`.
-#' @param season,episode `integer(1) [1L]`: The season and eisode number. If longer,
+#' @param season,episode `integer(1) [1L]`: The season and episode number. If longer,
 #'   e.g. `1:5`, the function is vectorized and the output will be
 #'   combined. This may result in *a lot* of API calls. Use wisely.
 #' @param start_date `character(1)`: A date in the past from which

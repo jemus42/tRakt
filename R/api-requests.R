@@ -44,6 +44,18 @@ trakt_get <- function(url) {
 
   token <- get_token()
 
+  # Software versions for user agent
+  versions <- c(
+    tRakt = paste(utils::packageVersion("tRakt"), "(https://github.com/jemus42/tRakt)"),
+    httr2 = as.character(utils::packageVersion("httr2")),
+    `r-curl` = as.character(utils::packageVersion("curl")),
+    libcurl = curl::curl_version()$version
+  )
+  versions <- paste0(names(versions), "/", versions, collapse = " ")
+
+  # Cache directory for responses
+  cache_dir <- file.path(getOption("tRakt_cache_dir"), "data")
+
   req <- httr2::request(url) |>
     httr2::req_headers(
       # Additional headers required by the API
@@ -53,16 +65,15 @@ trakt_get <- function(url) {
     ) |>
     httr2::req_auth_bearer_token(token = token$access_token) |>
     httr2::req_retry(max_tries = 3) |>
-    httr2::req_cache(path = tempdir()) |>
-    httr2::req_user_agent(
-      paste0("tRakt (https://github.com/jemus42/tRakt)",
-             "via httr2 (https://github.com/r-lib/httr2)"))
+    httr2::req_cache(path = cache_dir, use_on_error = TRUE, debug = getOption("tRakt_debug")) |>
+    httr2::req_user_agent(versions)
 
   resp <- httr2::req_perform(req)
 
   httr2::resp_check_status(resp, info = url)
 
-  resp <- httr2::resp_body_json(resp, simplifyVector = TRUE)
+  #resp <- httr2::resp_body_json(resp, simplifyVector = TRUE)
+  resp <- httr2::resp_body_json(resp, simplifyVector = TRUE, check_type = FALSE)
 
   # Kept from previous version, should be refactored at some point
   if (identical(resp, "") | is_empty(resp)) {

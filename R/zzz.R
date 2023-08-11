@@ -1,7 +1,8 @@
 # nocov start
-# .onLoad <- function(...) {
-#   trakt_credentials()
-# }
+.onLoad <- function(...) {
+  options("tRakt_cache_dir" = rappdirs::user_cache_dir("tRakt"))
+  options("tRakt_debug" = FALSE)
+}
 
 #' The tRakt client ID for this particular app
 #' @keywords internal

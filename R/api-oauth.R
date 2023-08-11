@@ -133,7 +133,7 @@ get_client_secret <- function() {
 
 get_client_id <- function() {
   env_var <- Sys.getenv("trakt_client_id", unset = "")
-  if (env_var != "") return(env_var)
+  if (nchar(env_var) == 64) return(env_var)
 
   tRakt_client_id
 }
@@ -143,8 +143,7 @@ token_expired <- function(token) {
 }
 
 cache_token <- function(token) {
-  cache_dir <- rappdirs::user_cache_dir("tRakt")
-  cache_loc <- file.path(cache_dir, "token.rds")
+  cache_loc <- file.path(getOption("tRakt_cache_dir"), "token.rds")
 
   if (!dir.exists(cache_dir)) dir.create(cache_dir)
 
@@ -155,8 +154,7 @@ cache_token <- function(token) {
 }
 
 clear_cached_token <- function() {
-  cache_dir <- rappdirs::user_cache_dir("tRakt")
-  cache_loc <- file.path(cache_dir, "token.rds")
+  cache_loc <- file.path(getOption("tRakt_cache_dir"), "token.rds")
   file.remove(cache_loc)
 }
 
