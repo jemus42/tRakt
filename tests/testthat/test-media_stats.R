@@ -1,20 +1,24 @@
-test_that("user_stats works", {
+test_that("user_stats works for 1 user", {
   skip_on_cran()
 
-  user <- "jemus42"
-
-  userstats <- user_stats(user = user)
+  userstats <- user_stats(user = "jemus42")
 
   expect_is(userstats, "list")
   expect_named(userstats, c(
     "movies", "shows", "seasons", "episodes",
     "network", "ratings"
   ))
+})
 
-  userstats <- user_stats(user = c(user, "sean"))
+test_that("user_stats works for multiple users", {
+  skip_on_cran()
+
+  users <- c("jemus42", "sean")
+
+  userstats <- user_stats(user = users)
   expect_is(userstats, "list")
-  expect_named(userstats, c(user, "sean"))
-  expect_named(userstats[[user]], c(
+  expect_named(userstats, users)
+  expect_named(userstats[[users[[1]]]], c(
     "movies", "shows", "seasons", "episodes",
     "network", "ratings"
   ))

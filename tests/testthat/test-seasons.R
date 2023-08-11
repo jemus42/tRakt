@@ -24,7 +24,7 @@ test_that("seasons_season works", {
   expect_error(seasons_season(id = id, seasons = NA))
   expect_error(seasons_season(id = id, seasons = "seven"))
   expect_error(seasons_season(id = id, seasons = NULL))
-  expect_message(seasons_season(id = id, seasons = 10))
+  expect_error(seasons_season(id = id, seasons = 10))
 
   # Multi-length input seasons
   expect_identical(
@@ -56,7 +56,6 @@ test_that("seasons_summary works", {
   expect_equal(ncol(result_min), 4)
   expect_equal(ncol(result_max), 13)
 
-  expect_lt(length(result_min), length(result_max))
   expect_equal(nrow(result_min), nrow(result_max))
 
   expect_identical(
@@ -67,7 +66,7 @@ test_that("seasons_summary works", {
     seasons_summary(c(id, id))
   )
 
-  expect_message(seasons_summary(id = "bvkjqbkqjbf"))
+  expect_error(seasons_summary(id = "bvkjqbkqjbf"))
 })
 
 test_that("seasons_summary works for episodes and matches seasons_season", {
