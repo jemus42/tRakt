@@ -29,7 +29,8 @@
 #' )
 #' }
 user_history <- function(user = "me",
-                         type = c("shows", "movies"),
+                         type = c("shows", "movies", "seasons", "episodes"),
+                         item_id = NULL,
                          limit = 10L, start_at = NULL, end_at = NULL,
                          extended = c("min", "full")) {
   check_username(user)
@@ -41,13 +42,14 @@ user_history <- function(user = "me",
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map_df(user, ~ user_history(user = .x, type, limit, start_at, end_at, extended),
+    return(map_df(user, ~ user_history(user = .x, type, item_id = item_id,
+                                       limit, start_at, end_at, extended),
       .id = "user"
     ))
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url("users", user, "history", type,
+  url <- build_trakt_url("users", user, "history", type, item_id = item_id,
     extended = extended, limit = limit, start_at = start_at, end_at = end_at
   )
   response <- trakt_get(url = url)

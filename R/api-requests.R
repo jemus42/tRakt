@@ -76,7 +76,7 @@ trakt_get <- function(url) {
   resp <- httr2::resp_body_json(resp, simplifyVector = TRUE, check_type = FALSE)
 
   # Kept from previous version, should be refactored at some point
-  if (identical(resp, "") | is_empty(resp)) {
+  if (identical(resp, "") | length(resp) == 0) {
     return(tibble())
   }
 
