@@ -20,7 +20,7 @@
 #' \dontrun{
 #' user_lists("jemus42")
 #' }
-user_lists <- function(user = getOption("trakt_username"), extended = c("min", "full")) {
+user_lists <- function(user = "me", extended = c("min", "full")) {
   check_username(user)
   extended <- match.arg(extended)
 
@@ -67,7 +67,7 @@ user_lists <- function(user = getOption("trakt_username"), extended = c("min", "
 #' \dontrun{
 #' user_list("jemus42", list_id = 2121308)
 #' }
-user_list <- function(user = getOption("trakt_username"), list_id,
+user_list <- function(user = "me", list_id,
                       extended = c("min", "full")) {
   check_username(user)
   extended <- match.arg(extended)

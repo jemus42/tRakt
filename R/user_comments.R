@@ -19,7 +19,7 @@
 #' \dontrun{
 #' user_comments("jemus42")
 #' }
-user_comments <- function(user = getOption("trakt_username"),
+user_comments <- function(user = "me",
                           comment_type = c("all", "reviews", "shouts"),
                           type = c(
                             "all", "movies", "shows", "seasons",

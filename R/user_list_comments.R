@@ -12,7 +12,7 @@
 #' \dontrun{
 #' user_list_comments("donxy", "1248149")
 #' }
-user_list_comments <- function(user = getOption("trakt_username"),
+user_list_comments <- function(user = "me",
                                list_id,
                                sort = c("newest", "oldest", "likes", "replies"),
                                extended = c("min", "full")) {

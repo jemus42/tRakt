@@ -6,19 +6,24 @@ library(stringr)
 library(tidyr)
 
 # Futurama ----
-futurama <- seasons_season("futurama", seasons = 1:7, extended = "full")
-usethis::use_data(futurama, overwrite = TRUE)
+n_seasons <- nrow(seasons_summary("futurama"))
+futurama <- seasons_season("futurama", seasons = seq_len(n_seasons), extended = "full")
+
+# Only update this if we're not mid-season or something.
+if (max(futurama$first_aired) < Sys.time()) {
+  usethis::use_data(futurama, overwrite = TRUE)
+}
 
 
 # Game of Thrones ----
 got_trakt <- seasons_season("game-of-thrones", seasons = 1:8, extended = "full")
 
 # Wiki
-got_wiki <- read_html("https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes") %>%
-  html_table(fill = TRUE) %>%
+got_wiki <- rvest::read_html("https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes") %>%
+  rvest::html_table(fill = TRUE) %>%
   magrittr::extract(c(2:9)) %>%
   bind_rows() %>%
-  set_colnames(c(
+  setNames(c(
     "episode_abs", "episode", "title", "director",
     "writer", "firstaired", "viewers"
   )) %>%

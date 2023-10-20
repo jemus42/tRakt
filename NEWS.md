@@ -1,6 +1,7 @@
 # tRakt 0.16.9000 (development version)
 
 - Remove `magrittr` import and use `|>` internally, hence bumping the R dependency to `>= 4.1`.
+- Switch from `{httr}` to `{httr2}`. This should have been a small under the hood change, but it also enabled major changes in the way I'm handling API secrets, allowing me to include my encrypted client secret with the package directly. THis should make it more convenient for users to make authenticated requests without having to register their own app on trakt.tv.
 
 # tRakt 0.16.0
 

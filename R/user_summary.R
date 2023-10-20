@@ -12,7 +12,7 @@
 #' \dontrun{
 #' user_profile("sean")
 #' }
-user_profile <- function(user = getOption("trakt_username"),
+user_profile <- function(user = "me",
                          extended = c("min", "full")) {
   check_username(user)
   extended <- match.arg(extended)

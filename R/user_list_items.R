@@ -31,7 +31,7 @@
 #' # Only episodes
 #' user_list_items("sp1ti", list_id = "5615781", extended = "min", type = "episodes")
 #' }
-user_list_items <- function(user = getOption("trakt_username"),
+user_list_items <- function(user = "me",
                             list_id, type = NULL,
                             extended = c("min", "full")) {
   check_username(user)
