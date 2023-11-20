@@ -95,7 +95,7 @@ test_that("comments_item works", {
     "imdb", "tmdb", "season", "episode", "episode_title", "episode_number_abs",
     "episode_overview", "episode_rating", "episode_votes", "episode_comment_count",
     "episode_first_aired", "episode_updated_at", "episode_available_translations",
-    "episode_runtime", "episode_trakt", "episode_tvdb", "episode_imdb",
+    "episode_runtime", "episode_episode_type", "episode_trakt", "episode_tvdb", "episode_imdb",
     "episode_tmdb"
   )
 

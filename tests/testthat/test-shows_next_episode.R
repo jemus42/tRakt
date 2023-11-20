@@ -15,7 +15,7 @@ test_that("shows_(next|last)_episode() works", {
     expect_is("tbl_df") |>
     expect_named(c("season", "number", "title", "number_abs", "overview", "rating",
                    "votes", "comment_count", "first_aired", "updated_at", "runtime",
-                   "trakt", "tvdb", "imdb", "tmdb")) |>
+                  "episode_type", "trakt", "tvdb", "imdb", "tmdb")) |>
     nrow() |>
     expect_equal(1)
 })
