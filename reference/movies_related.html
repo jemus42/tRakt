@@ -6,7 +6,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light" data-bs-theme="light"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
@@ -27,8 +27,8 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a>
     <a class="dropdown-item" href="../articles/finding-things.html">Finding things (and the right amount)</a>
+    <a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a>
     <a class="dropdown-item" href="../articles/show-analysis-24.html">Show Analysis: 24</a>
   </div>
 </li>
@@ -126,13 +126,13 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">movies_related</span><span class="op">(</span><span class="st">"the-avengers-2012"</span>, limit <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 5 × 7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   related_to        title               year trakt slug              imdb  tmdb </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> the-avengers-2012 The Dark Knight     <span style="text-decoration: underline;">2</span>008 120   the-dark-knight-… tt04… 155  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> the-avengers-2012 Sin City            <span style="text-decoration: underline;">2</span>005 151   sin-city-2005     tt04… 187  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> the-avengers-2012 North by Northwest  <span style="text-decoration: underline;">1</span>959 172   north-by-northwe… tt00… 213  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> the-avengers-2012 King Kong           <span style="text-decoration: underline;">1</span>933 202   king-kong-1933    tt00… 244  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> the-avengers-2012 Live and Let Die    <span style="text-decoration: underline;">1</span>973 211   live-and-let-die… tt00… 253  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   related_to        title                year trakt slug             imdb  tmdb </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> the-avengers-2012 The Horse Whisperer  <span style="text-decoration: underline;">1</span>998 429   the-horse-whisp… tt01… 547  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> the-avengers-2012 Spider-Man           <span style="text-decoration: underline;">2</span>002 438   spider-man-2002  tt01… 557  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> the-avengers-2012 Spider-Man 2         <span style="text-decoration: underline;">2</span>004 439   spider-man-2-20… tt03… 558  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> the-avengers-2012 Spider-Man 3         <span style="text-decoration: underline;">2</span>007 440   spider-man-3-20… tt04… 559  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> the-avengers-2012 Constantine          <span style="text-decoration: underline;">2</span>005 442   constantine-2005 tt03… 561  </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -144,7 +144,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.8.</p>
 </div>
 
     </footer></div>

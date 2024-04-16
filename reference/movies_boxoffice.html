@@ -8,7 +8,7 @@ Updated every Monday morning."><meta property="og:image" content="https://jemus4
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light" data-bs-theme="light"><div class="container">
     
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
@@ -29,8 +29,8 @@ Updated every Monday morning."><meta property="og:image" content="https://jemus4
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a>
     <a class="dropdown-item" href="../articles/finding-things.html">Finding things (and the right amount)</a>
+    <a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a>
     <a class="dropdown-item" href="../articles/show-analysis-24.html">Show Analysis: 24</a>
   </div>
 </li>
@@ -115,18 +115,18 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">movies_boxoffice</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    revenue title                         year trakt  slug            imdb  tmdb </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 7<span style="text-decoration: underline;">400</span>000 The Beekeeper                 <span style="text-decoration: underline;">2</span>024 692878 the-beekeeper-… tt15… 8663…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 7<span style="text-decoration: underline;">300</span>000 Mean Girls                    <span style="text-decoration: underline;">2</span>024 506803 mean-girls-2024 tt11… 6735…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 5<span style="text-decoration: underline;">900</span>000 Wonka                         <span style="text-decoration: underline;">2</span>023 624003 wonka-2023      tt61… 7876…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 5<span style="text-decoration: underline;">200</span>000 Migration                     <span style="text-decoration: underline;">2</span>023 754968 migration-2023  tt64… 9405…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 4<span style="text-decoration: underline;">800</span>000 Anyone But You                <span style="text-decoration: underline;">2</span>023 862395 anyone-but-you… tt26… 1072…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 3<span style="text-decoration: underline;">000</span>000 Poor Things                   <span style="text-decoration: underline;">2</span>023 628026 poor-things-20… tt14… 7923…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 2<span style="text-decoration: underline;">900</span>000 American Fiction              <span style="text-decoration: underline;">2</span>023 849767 american-ficti… tt23… 1056…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 2<span style="text-decoration: underline;">800</span>000 Aquaman and the Lost Kingdom  <span style="text-decoration: underline;">2</span>023 423775 aquaman-and-th… tt96… 5728…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 2<span style="text-decoration: underline;">600</span>000 Godzilla Minus One            <span style="text-decoration: underline;">2</span>023 755432 godzilla-minus… tt23… 9407…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 2<span style="text-decoration: underline;">200</span>000 The Boys in the Boat          <span style="text-decoration: underline;">2</span>023 656299 the-boys-in-th… tt18… 8234…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     revenue title                                  year trakt  slug  imdb  tmdb </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 26<span style="text-decoration: underline;">000</span>000 Civil War                              <span style="text-decoration: underline;">2</span>024 745438 civi… tt17… 9295…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 15<span style="text-decoration: underline;">000</span>000 Godzilla x Kong: The New Empire        <span style="text-decoration: underline;">2</span>024 656266 godz… tt14… 8234…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>  5<span style="text-decoration: underline;">800</span>000 Ghostbusters: Frozen Empire            <span style="text-decoration: underline;">2</span>024 778125 ghos… tt21… 9678…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>  5<span style="text-decoration: underline;">500</span>000 Kung Fu Panda 4                        <span style="text-decoration: underline;">2</span>024 813333 kung… tt21… 1011…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>  4<span style="text-decoration: underline;">300</span>000 Dune: Part Two                         <span style="text-decoration: underline;">2</span>024 537449 dune… tt15… 6931…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>  4<span style="text-decoration: underline;">099</span>999 Monkey Man                             <span style="text-decoration: underline;">2</span>024 525826 monk… tt92… 5600…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>  3<span style="text-decoration: underline;">800</span>000 The First Omen                         <span style="text-decoration: underline;">2</span>024 304347 the-… tt56… 4373…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>  1<span style="text-decoration: underline;">400</span>000 The Long Game                          <span style="text-decoration: underline;">2</span>024 868029 the-… tt77… 1079…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>  1<span style="text-decoration: underline;">400</span>000 Shrek 2                                <span style="text-decoration: underline;">2</span>004 652    shre… tt02… 809  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>   <span style="text-decoration: underline;">991</span>000 SUGA | Agust D TOUR ‘D-DAY’ THE MOVIE  <span style="text-decoration: underline;">2</span>024 10171… suga… tt31… 1254…</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -138,7 +138,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.8.</p>
 </div>
 
     </footer></div>

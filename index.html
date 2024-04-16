@@ -35,7 +35,7 @@
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light" data-bs-theme="light"><div class="container">
     
     <a class="navbar-brand me-2" href="index.html">tRakt</a>
 
@@ -57,8 +57,8 @@
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="articles/Implemented-API-methods.html">Implemented API methods</a>
     <a class="dropdown-item" href="articles/finding-things.html">Finding things (and the right amount)</a>
+    <a class="dropdown-item" href="articles/Implemented-API-methods.html">Implemented API methods</a>
     <a class="dropdown-item" href="articles/show-analysis-24.html">Show Analysis: 24</a>
   </div>
 </li>
@@ -304,10 +304,10 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 </h2>
 <p>The API requires at least a <code>client id</code> for the API calls.<br>
 Loading the package (or calling its functions via <code>tRakt::</code> wil automatically set the app’s client id (see <code><a href="reference/trakt_credentials.html">trakt_credentials()</a></code>) – for extended use you should set your own credentials via environment variables in your <code>.Renviron</code> like this:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># tRakt</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="va">trakt_client_id</span><span class="op">=</span>12fc1de7[...]3d629afdf2</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="va">trakt_client_secret</span><span class="op">=</span>justabunchofstuffhere</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="va">trakt_username</span><span class="op">=</span>jemus42</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># tRakt</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="va">trakt_client_id</span><span class="op">=</span>12fc1de7<span class="pp">[</span><span class="ss">...</span><span class="pp">]</span>3d629afdf2</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="va">trakt_client_secret</span><span class="op">=</span>justabunchofstuffhere</span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="va">trakt_username</span><span class="op">=</span>jemus42</span></code></pre></div>
 <ul>
 <li>
 <code>trakt_client_id</code> <strong>Required</strong>. It’s used in the HTTP headers for the API calls, which is kind of a biggie.</li>
@@ -380,7 +380,7 @@ That would make me a sad panda. As of now, the trakt.tv API does not have any ra
 
 <div class="pkgdown-footer-right">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.8.</p>
 </div>
 
     </footer>
