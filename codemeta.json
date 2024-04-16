@@ -14,13 +14,13 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.3.0 (2023-04-21)",
+  "runtimePlatform": "R version 4.3.2 (2023-10-31)",
   "author": [
     {
       "@type": "Person",
       "givenName": "Lukas",
       "familyName": "Burk",
-      "email": "lukas@quantenbrot.de",
+      "email": "github@quantenbrot.de",
       "@id": "https://orcid.org/0000-0001-7528-3795"
     }
   ],
@@ -29,7 +29,7 @@
       "@type": "Person",
       "givenName": "Lukas",
       "familyName": "Burk",
-      "email": "lukas@quantenbrot.de",
+      "email": "github@quantenbrot.de",
       "@id": "https://orcid.org/0000-0001-7528-3795"
     }
   ],
@@ -294,7 +294,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "503.331KB",
+  "fileSize": "503.29KB",
   "releaseNotes": "https://github.com/jemus42/tRakt/blob/master/NEWS.md",
   "readme": "https://github.com/jemus42/tRakt/blob/main/README.md",
   "contIntegration": ["https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml", "https://codecov.io/github/jemus42/tRakt?branch=master"],

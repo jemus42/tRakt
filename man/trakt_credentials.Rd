@@ -65,7 +65,7 @@ trakt_credentials(
 }
 \seealso{
 Other API-basics: 
-\code{\link{trakt_get_token}()},
-\code{\link{trakt_get}()}
+\code{\link{trakt_get}()},
+\code{\link{trakt_get_token}()}
 }
 \concept{API-basics}
