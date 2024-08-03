@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.3.2 (2023-10-31)",
+  "runtimePlatform": "R version 4.4.1 (2024-06-14)",
   "author": [
     {
       "@type": "Person",
@@ -294,8 +294,8 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "503.29KB",
-  "releaseNotes": "https://github.com/jemus42/tRakt/blob/master/NEWS.md",
+  "fileSize": "503.407KB",
+  "releaseNotes": "https://github.com/jemus42/tRakt/blob/main/NEWS.md",
   "readme": "https://github.com/jemus42/tRakt/blob/main/README.md",
   "contIntegration": ["https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml", "https://codecov.io/github/jemus42/tRakt?branch=master"],
   "developmentStatus": "https://www.repostatus.org/#wip",
