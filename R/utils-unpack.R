@@ -463,7 +463,7 @@ flatten_single_media_object <- function(response, type) {
   # might not be a list already
   res |>
     modify_at(
-      grepl("^genres$|^available_translations$", names(res)),
+      grepl("^genres$|^available_translations$|^languages$", names(res)),
       ~ {
         if (!is.list(.x)) list(.x) else .x
       }
