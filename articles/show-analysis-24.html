@@ -14,8 +14,8 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
-<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><script src="../extra.js"></script><meta property="og:title" content="Show Analysis: 24">
 <noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p></noscript>
 </head>
@@ -68,7 +68,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Show Analysis: 24</h1>
                         <h4 data-toc-skip class="author">Lukas Burk</h4>
             
-            <h4 data-toc-skip class="date">2024-10-01</h4>
+            <h4 data-toc-skip class="date">2024-12-01</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/vignettes/show-analysis-24.Rmd" class="external-link"><code>vignettes/show-analysis-24.Rmd</code></a></small>
       <div class="d-none name"><code>show-analysis-24.Rmd</code></div>
@@ -89,7 +89,7 @@
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 9</span></span></span>
 <span><span class="co">#&gt;   type  score title          year trakt  slug          tvdb   imdb       tmdb  </span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   221. Yakamoz S-245  <span style="text-decoration: underline;">2</span>022 194241 yakamoz-s-245 394252 tt13317454 195930</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   219. Yakamoz S-245  <span style="text-decoration: underline;">2</span>022 194241 yakamoz-s-245 394252 tt13317454 195930</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="step-2-use-the-id">Step 2: Use the ID<a class="anchor" aria-label="anchor" href="#step-2-use-the-id"></a>
@@ -105,14 +105,14 @@ containing all episode data, which includes user ratings.</p>
 <span><span class="co">#&gt; Rows: 1</span></span>
 <span><span class="co">#&gt; Columns: 14</span></span>
 <span><span class="co">#&gt; $ season         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1</span></span>
-<span><span class="co">#&gt; $ rating         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 6.30303</span></span>
-<span><span class="co">#&gt; $ votes          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 33</span></span>
+<span><span class="co">#&gt; $ rating         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 6.41176</span></span>
+<span><span class="co">#&gt; $ votes          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 34</span></span>
 <span><span class="co">#&gt; $ episode_count  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 7</span></span>
 <span><span class="co">#&gt; $ aired_episodes <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 7</span></span>
 <span><span class="co">#&gt; $ title          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Season 1"</span></span>
 <span><span class="co">#&gt; $ overview       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "After disaster strikes Earth, a marine biologist on a …</span></span>
 <span><span class="co">#&gt; $ first_aired    <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2022-04-20 07:00:00</span></span>
-<span><span class="co">#&gt; $ updated_at     <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2024-10-01 08:41:43</span></span>
+<span><span class="co">#&gt; $ updated_at     <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2024-12-01 04:15:21</span></span>
 <span><span class="co">#&gt; $ network        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Netflix"</span></span>
 <span><span class="co">#&gt; $ episodes       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[7 x 17]&gt;]</span></span>
 <span><span class="co">#&gt; $ trakt          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "290166"</span></span>
@@ -140,11 +140,11 @@ data we care about.</p>
 <span><span class="co">#&gt; $ title                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Episode 1", "Episode 2", "Episode 3", "Episode…</span></span>
 <span><span class="co">#&gt; $ episode_abs            <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> NA, NA, NA, NA, NA, NA, NA</span></span>
 <span><span class="co">#&gt; $ overview               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Arman reluctantly embarks on a submarine resea…</span></span>
-<span><span class="co">#&gt; $ rating                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 6.88722, 6.95238, 7.02000, 7.24419, 7.07143, 7.…</span></span>
-<span><span class="co">#&gt; $ votes                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 133, 105, 100, 86, 84, 80, 84</span></span>
+<span><span class="co">#&gt; $ rating                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 6.90441, 6.97222, 7.03884, 7.25843, 7.09195, 7.…</span></span>
+<span><span class="co">#&gt; $ votes                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 136, 108, 103, 89, 87, 84, 87</span></span>
 <span><span class="co">#&gt; $ comment_count          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 0, 1, 0, 1, 1, 1</span></span>
 <span><span class="co">#&gt; $ first_aired            <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2022-04-20 07:00:00, 2022-04-20 07:00:00, 2022-…</span></span>
-<span><span class="co">#&gt; $ updated_at             <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2024-09-30 03:39:05, 2024-10-01 00:47:48, 2024-…</span></span>
+<span><span class="co">#&gt; $ updated_at             <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2024-12-01 01:15:45, 2024-12-01 01:15:45, 2024-…</span></span>
 <span><span class="co">#&gt; $ available_translations <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"cs", "de", "el", "en", "fr", "it", "ko", "pl"…</span></span>
 <span><span class="co">#&gt; $ runtime                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 46, 44, 41, 51, 50, 54, 50</span></span>
 <span><span class="co">#&gt; $ episode_type           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "series_premiere", "standard", "standard", "sta…</span></span>
