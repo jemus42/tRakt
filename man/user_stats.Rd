@@ -8,11 +8,11 @@ collected, and rated.}
 \code{user_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/stats/get-stats}{users/:id/stats}.
 }
 \usage{
-user_stats(user = getOption("trakt_username"))
+user_stats(user = "me")
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
-\code{getOption("trakt_username")}.
+\code{"me"}, the OAuth user.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 }

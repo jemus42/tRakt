@@ -4,7 +4,7 @@
 \alias{build_trakt_url}
 \title{Assemble a trakt.tv API URL}
 \usage{
-build_trakt_url(..., validate = FALSE)
+build_trakt_url(...)
 }
 \arguments{
 \item{...}{Unnamed arguments will be concatenated with \code{/} as separators to
@@ -12,9 +12,6 @@ form the path of the API URL, e.g. the arguments \code{movies},
 \code{tron-legacy-2012} and \code{releases} will be concatenated to
 \code{movies/tron-legacy-2012/releases}. Additional \strong{named} arguments will be
 used as query parameters, usually \code{extended = "full"} or others.}
-
-\item{validate}{\code{logical(1) [TRUE]}: Whether to check the URL via
-\code{httr::HEAD} request.}
 }
 \value{
 A URL: \code{character} of length 1. If \code{validate = TRUE}, also a message

@@ -10,7 +10,7 @@ get_token(cache = TRUE)
 \item{cache}{\code{\link{TRUE}}: Cache the token to the OS-specific cache directory. See \code{\link[rappdirs:user_cache_dir]{rappdirs::user_cache_dir()}}.}
 }
 \description{
-This is an unfortunately home-brewed version of what \emph{should} be a simple call to \code{\link[httr2:oauth_flow_device]{httr2::oauth_flow_device()}},
+This is an unfortunately home-brewed version of what \emph{should} be a simple call to \code{\link[httr2:req_oauth_device]{httr2::oauth_flow_device()}},
 but since the <trakt.tv> API plays ever so slightly fast and mildly loose with RFC 8628, that's not possible.
 }
 \note{

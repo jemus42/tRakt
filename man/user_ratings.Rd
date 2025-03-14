@@ -8,7 +8,7 @@
 }
 \usage{
 user_ratings(
-  user = getOption("trakt_username"),
+  user = "me",
   type = c("movies", "seasons", "shows", "episodes"),
   rating = NULL,
   extended = c("min", "full")
@@ -16,7 +16,7 @@ user_ratings(
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
-\code{getOption("trakt_username")}.
+\code{"me"}, the OAuth user.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 

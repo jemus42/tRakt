@@ -8,8 +8,9 @@
 }
 \usage{
 user_history(
-  user = getOption("trakt_username"),
-  type = c("shows", "movies"),
+  user = "me",
+  type = c("shows", "movies", "seasons", "episodes"),
+  item_id = NULL,
   limit = 10L,
   start_at = NULL,
   end_at = NULL,
@@ -18,7 +19,7 @@ user_history(
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
-\code{getOption("trakt_username")}.
+\code{"me"}, the OAuth user.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 

@@ -19,7 +19,7 @@ See \code{vignette("finding-things")} for more details.}
 functions, values \code{seasons} or \code{episodes} are also allowed.}
 
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
-\code{getOption("trakt_username")}.
+\code{"me"}, the OAuth user.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 
@@ -29,7 +29,7 @@ are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced via \code{as.integer()}.}
 
-\item{season, episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+\item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
 combined. This may result in \emph{a lot} of API calls. Use wisely.}
 
