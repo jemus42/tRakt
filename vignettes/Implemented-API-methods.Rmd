@@ -42,7 +42,7 @@ unmentioned <- pkg_funs[!(pkg_funs %in% str_remove_all(api$implementation, patte
 format_api_table <- function(xdf) {
   xdf |>
     mutate(
-      endpoint = cell_spec(endpoint, link = url),
+      endpoint = glue::glue("<a href = '{url}'>{endpoint}</a>"),
       # Section = stringr::str_to_title(Section),
       # Section = cell_spec(Section, bold = TRUE),
       Method = str_to_title(Method),
@@ -51,7 +51,7 @@ format_api_table <- function(xdf) {
       implementation = if_else(
         implementation == "none",
         "",
-        paste0("<code>", implementation, "</code>")
+        glue::glue("<code>{implementation}</code>")
       ),
       authentication = if_else(
         !is.na(authentication),
@@ -69,10 +69,10 @@ format_api_table <- function(xdf) {
 
 print_api_table <- function(xdf) {
   xdf |>
-    knitr::kable(escape = TRUE) |>
+    kbl(escape = FALSE) |>
     kable_styling(
       position = "center",
-      bootstrap_options = c("striped", "hover")#,
+      bootstrap_options = c("striped", "hover"),
       full_width = TRUE
     )
 }
