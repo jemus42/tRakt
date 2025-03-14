@@ -43,6 +43,8 @@ Suggests:
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
+Config/Needs/website:
+    pkgdown
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

@@ -14,19 +14,12 @@ form the path of the API URL, e.g. the arguments \code{movies},
 used as query parameters, usually \code{extended = "full"} or others.}
 }
 \value{
-A URL: \code{character} of length 1. If \code{validate = TRUE}, also a message
-including the HTTP status code return by a \code{HEAD} request.
+A URL: \code{character} of length 1.
 }
 \description{
 \code{build_trakt_url} assembles a trakt.tv API URL from different arguments.
 The result should be fine for use with \link{trakt_get}, since that's what this
 function was created for.
-}
-\note{
-Please be aware that the result of this function is not verified to be
-a working trakt.tv API URL unless \code{validate = TRUE}, in which case a \code{HEAD}
-request is performed that does not actually receive any data, but from its
-returned status code the validity of the URL can be inferred.
 }
 \examples{
 build_trakt_url("shows", "breaking-bad", extended = "full")

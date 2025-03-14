@@ -20,9 +20,6 @@
 #'   `JSON` array.
 #' @export
 #' @import httr2
-#' @importFrom jsonlite fromJSON
-#' @importFrom purrr flatten
-#' @importFrom purrr is_empty
 #' @family API-basics
 #' @examples
 #' # A simple request to a direct URL

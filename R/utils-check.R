@@ -2,7 +2,7 @@
 #'
 #' @param user The username input.
 #' @param validate `logical(1) [TRUE]`: Retrieve user profile to check if it exists.
-#' @return An error if the checks fail or else `TRUE` invisibly. If `validate`, the
+#' @return An HTTP error if the checks fail or else `TRUE` invisibly. If `validate`, the
 #' user profile is returned as a `list`.
 #' @keywords internal
 #' @importFrom rlang is_empty is_character

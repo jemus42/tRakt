@@ -42,17 +42,9 @@ pad_episode <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
 #' `tron-legacy-2012` and `releases` will be concatenated to
 #' `movies/tron-legacy-2012/releases`. Additional **named** arguments will be
 #' used as query parameters, usually `extended = "full"` or others.
-# @param validate `logical(1) [TRUE]`: Whether to check the URL via
-#   `httr::HEAD` request.
-#' @return A URL: `character` of length 1. If `validate = TRUE`, also a message
-#'   including the HTTP status code return by a `HEAD` request.
+#' @return A URL: `character` of length 1.
 #' @family utility functions
-#' @importFrom httr stop_for_status modify_url
 #' @export
-#' @note Please be aware that the result of this function is not verified to be
-#' a working trakt.tv API URL unless `validate = TRUE`, in which case a `HEAD`
-#' request is performed that does not actually receive any data, but from its
-#' returned status code the validity of the URL can be inferred.
 #' @examples
 #' build_trakt_url("shows", "breaking-bad", extended = "full")
 #' build_trakt_url("shows", "popular", page = 3, limit = 5)
@@ -80,19 +72,10 @@ build_trakt_url <- function(...) {
     path <- paste0("/", path)
   }
 
-  # url <- modify_url(url = "https://api.trakt.tv", path = path, query = queries)
   url <- httr2::url_parse(url = "https://api.trakt.tv/")
   url$path <- path
   url$query <- queries
   url <- httr2::url_build(url)
-
-  # Validate
-  # if (validate) {
-  #   response <- trakt_get(url, HEAD = TRUE)
-  #   if (!identical(response$status, 200L)) {
-  #     stop_for_status(response$status)
-  #   }
-  # }
 
   url
 }

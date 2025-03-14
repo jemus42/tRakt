@@ -19,14 +19,12 @@ test_that("pad_episode() pads", {
 })
 
 test_that("build_trakt_url builds a url", {
-  x <- build_trakt_url("shows", "breaking-bad", extended = "min", validate = TRUE)
+  x <- build_trakt_url("shows", "breaking-bad", extended = "min")
   expect_is(x, "character")
 
   y <- trakt_get(x)
   expect_length(y, 3)
   expect_named(y, c("title", "year", "ids"))
-
-  expect_error(build_trakt_url("3o2bkf", "qkfb23vf", validate = TRUE))
 })
 
 test_that("apidoc helpers work", {
