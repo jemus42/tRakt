@@ -5,7 +5,6 @@
 #' @return An error if the checks fail or else `TRUE` invisibly. If `validate`, the
 #' user profile is returned as a `list`.
 #' @keywords internal
-#' @importFrom httr stop_for_status
 #' @importFrom rlang is_empty is_character
 check_username <- function(user, validate = FALSE) {
   if (is_empty(user) || identical(user, "") || !is_character(user)) {
@@ -20,10 +19,7 @@ check_username <- function(user, validate = FALSE) {
 
   if (validate) {
     url <- build_trakt_url("users", user)
-    response <- trakt_get(url, HEAD = TRUE)
-    if (!identical(response$status, 200L)) {
-      stop_for_status(response$status)
-    }
+    trakt_get(url)
   }
   # Return TRUE if and only if everything else did not fail
   invisible(TRUE)
