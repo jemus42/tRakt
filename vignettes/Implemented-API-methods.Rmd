@@ -26,21 +26,21 @@ library(stringr)
 ```
 
 ```{r api-list}
-api <- system.file("api-methods.yml", package = "tRakt") %>%
+api <- system.file("api-methods.yml", package = "tRakt") |>
   yaml::read_yaml() 
 
-api <- api %>%
+api <- api |>
   map_dfr(~ {
     map_dfr(.x, as_tibble, .id = "Method")
   }, .id = "Section")
 
-pkg_funs <- getNamespaceExports("tRakt") %>%
-  str_subset("%>%|trakt_get|build_trakt_url|trakt_credentials", negate = TRUE)
+pkg_funs <- getNamespaceExports("tRakt") |>
+  str_subset("trakt_get|build_trakt_url|trakt_credentials", negate = TRUE)
 
 unmentioned <- pkg_funs[!(pkg_funs %in% str_remove_all(api$implementation, pattern = "\\(\\)"))]
 
 format_api_table <- function(xdf) {
-  xdf %>%
+  xdf |>
     mutate(
       endpoint = cell_spec(endpoint, link = url),
       # Section = stringr::str_to_title(Section),
@@ -58,7 +58,7 @@ format_api_table <- function(xdf) {
         cell_spec("Required", bold = TRUE, color = "white", background = "red"),
         cell_spec("Optional", bold = FALSE, color = "white", background = "green")
       ),
-    ) %>%
+    ) |>
     select(
       -url,
       Endpoint = endpoint,
@@ -68,11 +68,11 @@ format_api_table <- function(xdf) {
 }
 
 print_api_table <- function(xdf) {
-  xdf %>%
-    kable(escape = FALSE) %>%
+  xdf |>
+    knitr::kable(escape = TRUE) |>
     kable_styling(
       position = "center",
-      bootstrap_options = c("striped", "hover"),
+      bootstrap_options = c("striped", "hover")#,
       full_width = TRUE
     )
 }
@@ -86,90 +86,90 @@ Note that not all available methods are listed here, especially those geared tow
 # Search
 
 ```{r api-search}
-api %>%
-  filter(Section == "search") %>%
-  select(-Section) %>%
-  format_api_table() %>%
+api |>
+  filter(Section == "search") |>
+  select(-Section) |>
+  format_api_table() |>
   print_api_table()
 ```
 
 # Movies
 
 ```{r api-movies}
-api %>%
-  filter(Section == "movies") %>%
-  select(-Section) %>%
-  format_api_table() %>%
+api |>
+  filter(Section == "movies") |>
+  select(-Section) |>
+  format_api_table() |>
   print_api_table()
 ```
 
 # Shows
 
 ```{r api-shows}
-api %>%
-  filter(Section == "shows") %>%
-  select(-Section) %>%
-  format_api_table() %>%
+api |>
+  filter(Section == "shows") |>
+  select(-Section) |>
+  format_api_table() |>
   print_api_table()
 ```
 
 ## Seasons
 
 ```{r api-shows-seasons}
-api %>%
-  filter(Section == "seasons") %>%
-  select(-Section) %>%
-  format_api_table() %>%
+api |>
+  filter(Section == "seasons") |>
+  select(-Section) |>
+  format_api_table() |>
   print_api_table()
 ```
 
 ## Episodes
 
 ```{r api-shows-episodes}
-api %>%
-  filter(Section == "episodes") %>%
-  select(-Section) %>%
-  format_api_table() %>%
+api |>
+  filter(Section == "episodes") |>
+  select(-Section) |>
+  format_api_table() |>
   print_api_table()
 ```
 
 # People
 
 ```{r api-people}
-api %>%
-  filter(Section == "people") %>%
-  select(-Section) %>%
-  format_api_table() %>%
+api |>
+  filter(Section == "people") |>
+  select(-Section) |>
+  format_api_table() |>
   print_api_table()
 ```
 
 # Users
 
 ```{r api-users}
-api %>%
-  filter(Section == "users") %>%
-  select(-Section) %>%
-  format_api_table() %>%
+api |>
+  filter(Section == "users") |>
+  select(-Section) |>
+  format_api_table() |>
   print_api_table()
 ```
 
 # Comments
 
 ```{r api-comments}
-api %>%
-  filter(Section == "comments") %>%
-  select(-Section) %>%
-  format_api_table() %>%
+api |>
+  filter(Section == "comments") |>
+  select(-Section) |>
+  format_api_table() |>
   print_api_table()
 ```
 
 # Lists
 
 ```{r api-lists}
-api %>%
-  filter(Section == "lists") %>%
-  select(-Section) %>%
-  format_api_table() %>%
+api |>
+  filter(Section == "lists") |>
+  select(-Section) |>
+  format_api_table() |>
   print_api_table()
 ```
 
@@ -179,12 +179,12 @@ These endpoints are used to check filter arguments. The output is cached in tidi
 format as package datasets.
 
 ```{r api-misc}
-api %>%
+api |>
   filter(Section %in% c(
     "certifications", "countries",
     "genres", "languages", "networks"
-  )) %>%
-  format_api_table() %>%
-  select(-Auth) %>%
+  )) |>
+  format_api_table() |>
+  select(-Auth) |>
   print_api_table()
 ```
