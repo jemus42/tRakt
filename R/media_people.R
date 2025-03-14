@@ -48,9 +48,7 @@ movies_people <- function(id, extended = c("min", "full")) {
 #' @family show data
 #' @family people data
 #' @export
-shows_people <- function(id,
-                         guest_stars = FALSE,
-                         extended = c("min", "full")) {
+shows_people <- function(id, guest_stars = FALSE, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (guest_stars) {
@@ -69,10 +67,7 @@ shows_people <- function(id,
 #' @family season data
 #' @family people data
 #' @export
-seasons_people <- function(id,
-                           season = 1L,
-                           guest_stars = FALSE,
-                           extended = c("min", "full")) {
+seasons_people <- function(id, season = 1L, guest_stars = FALSE, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (guest_stars) {
@@ -81,7 +76,11 @@ seasons_people <- function(id,
 
   # Construct URL, make API call
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "people",
+    "shows",
+    id,
+    "seasons",
+    season,
+    "people",
     extended = extended
   )
   response <- trakt_get(url = url)
@@ -94,10 +93,7 @@ seasons_people <- function(id,
 #' @family episode data
 #' @family people data
 #' @export
-episodes_people <- function(id,
-                            season = 1L, episode = 1L,
-                            guest_stars = FALSE,
-                            extended = c("min", "full")) {
+episodes_people <- function(id, season = 1L, episode = 1L, guest_stars = FALSE, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (guest_stars) {
@@ -106,7 +102,13 @@ episodes_people <- function(id,
 
   # Construct URL, make API call
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "episodes", episode, "people",
+    "shows",
+    id,
+    "seasons",
+    season,
+    "episodes",
+    episode,
+    "people",
     extended = extended
   )
   response <- trakt_get(url = url)

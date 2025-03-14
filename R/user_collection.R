@@ -25,10 +25,12 @@
 #' user_collection(user = "sean", type = "movies")
 #' user_collection(user = "sean", type = "shows")
 #' }
-user_collection <- function(user = "me",
-                            type = c("shows", "movies"),
-                            unnest_episodes = FALSE,
-                            extended = c("min", "full")) {
+user_collection <- function(
+  user = "me",
+  type = c("shows", "movies"),
+  unnest_episodes = FALSE,
+  extended = c("min", "full")
+) {
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)
@@ -39,10 +41,15 @@ user_collection <- function(user = "me",
 
   if (length(user) > 1) {
     names(user) <- user
-    return(map_df(user, ~ user_collection(
-      user = .x, type = type, unnest_episodes = unnest_episodes, extended = extended
-    ),
-    .id = "user"
+    return(map_df(
+      user,
+      ~ user_collection(
+        user = .x,
+        type = type,
+        unnest_episodes = unnest_episodes,
+        extended = extended
+      ),
+      .id = "user"
     ))
   }
 

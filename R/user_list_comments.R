@@ -12,15 +12,22 @@
 #' \dontrun{
 #' user_list_comments("donxy", "1248149")
 #' }
-user_list_comments <- function(user = "me",
-                               list_id,
-                               sort = c("newest", "oldest", "likes", "replies"),
-                               extended = c("min", "full")) {
+user_list_comments <- function(
+  user = "me",
+  list_id,
+  sort = c("newest", "oldest", "likes", "replies"),
+  extended = c("min", "full")
+) {
   sort <- match.arg(sort)
   extended <- match.arg(extended)
 
   url <- build_trakt_url(
-    "users", user, "lists", list_id, "comments", sort,
+    "users",
+    user,
+    "lists",
+    list_id,
+    "comments",
+    sort,
     extended = extended
   )
 

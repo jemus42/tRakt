@@ -47,24 +47,40 @@
 #' # A movie or a show, two of each
 #' search_query("Tron", type = c("movie", "show"), n_results = 2)
 #' }
-search_query <- function(query, type = "show",
-                         n_results = 1L,
-                         extended = c("min", "full"),
-                         years = NULL,
-                         genres = NULL, languages = NULL,
-                         countries = NULL, runtimes = NULL,
-                         ratings = NULL, certifications = NULL,
-                         networks = NULL, status = NULL) {
+search_query <- function(
+  query,
+  type = "show",
+  n_results = 1L,
+  extended = c("min", "full"),
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL,
+  networks = NULL,
+  status = NULL
+) {
   if (length(type) > 1) {
-    res <- map_df(type, ~ search_query(
-      query,
-      type = .x,
-      n_results = n_results,
-      years = years,
-      extended = extended, genres = genres, languages = languages,
-      countries = countries, runtimes = runtimes, ratings = ratings,
-      certifications = certifications, networks = networks, status = status
-    ))
+    res <- map_df(
+      type,
+      ~ search_query(
+        query,
+        type = .x,
+        n_results = n_results,
+        years = years,
+        extended = extended,
+        genres = genres,
+        languages = languages,
+        countries = countries,
+        runtimes = runtimes,
+        ratings = ratings,
+        certifications = certifications,
+        networks = networks,
+        status = status
+      )
+    )
     return(res)
   }
   ok_types <- c("movie", "show", "episode", "person", "list")
@@ -85,11 +101,20 @@ search_query <- function(query, type = "show",
   status <- check_filter_arg(status, "status")
 
   # Construct URL, make API call
-  url <- build_trakt_url("search", type,
-    query = query, years = years,
-    extended = extended, genres = genres, languages = languages,
-    countries = countries, runtimes = runtimes, ratings = ratings,
-    certifications = certifications, networks = networks, status = status
+  url <- build_trakt_url(
+    "search",
+    type,
+    query = query,
+    years = years,
+    extended = extended,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications,
+    networks = networks,
+    status = status
   )
   response <- trakt_get(url = url)
 
@@ -105,9 +130,13 @@ search_query <- function(query, type = "show",
 #' @family search functions
 #' @eval apiurl("search", "ID lookup")
 #' @export
-search_id <- function(id, id_type = c("trakt", "imdb", "tmdb", "tvdb"),
-                      type = "show",
-                      n_results = 1L, extended = c("min", "full")) {
+search_id <- function(
+  id,
+  id_type = c("trakt", "imdb", "tmdb", "tvdb"),
+  type = "show",
+  n_results = 1L,
+  extended = c("min", "full")
+) {
   if (length(type) > 1) {
     return(map_df(type, ~ search_id(id, id_type, type = .x, n_results, extended)))
   }

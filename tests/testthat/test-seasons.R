@@ -4,8 +4,13 @@ test_that("seasons_season works", {
   id <- "futurama"
 
   min_names <- c(
-    "season", "episode", "title", "trakt", "tvdb",
-    "imdb", "tmdb"
+    "season",
+    "episode",
+    "title",
+    "trakt",
+    "tvdb",
+    "imdb",
+    "tmdb"
   )
 
   min_s1_single <- seasons_season(id = id, seasons = 1, extended = "min")
@@ -43,12 +48,16 @@ test_that("seasons_summary works", {
 
   # Note that dropping unaired only workes if extended = full so this is weird
   result_min <- seasons_summary(
-    id = id, extended = "min",
-    drop_specials = TRUE, drop_unaired = TRUE
+    id = id,
+    extended = "min",
+    drop_specials = TRUE,
+    drop_unaired = TRUE
   )
   result_max <- seasons_summary(
-    id = id, extended = "full",
-    drop_specials = TRUE, drop_unaired = TRUE
+    id = id,
+    extended = "full",
+    drop_specials = TRUE,
+    drop_unaired = TRUE
   )
 
   expect_is(result_min, "tbl")

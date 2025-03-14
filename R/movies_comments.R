@@ -16,10 +16,12 @@ NULL
 #' @eval apiurl("movies", "comments")
 #' @family movie data
 #' @export
-movies_comments <- function(id,
-                            sort = c("newest", "oldest", "likes", "replies"),
-                            extended = c("min", "full"),
-                            limit = 10L) {
+movies_comments <- function(
+  id,
+  sort = c("newest", "oldest", "likes", "replies"),
+  extended = c("min", "full"),
+  limit = 10L
+) {
   sort <- match.arg(sort)
   extended <- match.arg(extended)
   url <- build_trakt_url("movies", id, "comments", sort, extended = extended)
@@ -31,10 +33,12 @@ movies_comments <- function(id,
 #' @eval apiurl("shows", "comments")
 #' @family show data
 #' @export
-shows_comments <- function(id,
-                           sort = c("newest", "oldest", "likes", "replies"),
-                           extended = c("min", "full"),
-                           limit = 10L) {
+shows_comments <- function(
+  id,
+  sort = c("newest", "oldest", "likes", "replies"),
+  extended = c("min", "full"),
+  limit = 10L
+) {
   sort <- match.arg(sort)
   extended <- match.arg(extended)
   url <- build_trakt_url("shows", id, "comments", sort, extended = extended)
@@ -46,14 +50,22 @@ shows_comments <- function(id,
 #' @eval apiurl("seasons", "comments")
 #' @family season data
 #' @export
-seasons_comments <- function(id, season = 1L,
-                             sort = c("newest", "oldest", "likes", "replies"),
-                             extended = c("min", "full"),
-                             limit = 10L) {
+seasons_comments <- function(
+  id,
+  season = 1L,
+  sort = c("newest", "oldest", "likes", "replies"),
+  extended = c("min", "full"),
+  limit = 10L
+) {
   sort <- match.arg(sort)
   extended <- match.arg(extended)
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "comments", sort,
+    "shows",
+    id,
+    "seasons",
+    season,
+    "comments",
+    sort,
     extended = extended
   )
   response <- trakt_get(url)
@@ -64,15 +76,25 @@ seasons_comments <- function(id, season = 1L,
 #' @eval apiurl("episodes", "comments")
 #' @family episode data
 #' @export
-episodes_comments <- function(id, season = 1L, episode = 1L,
-                              sort = c("newest", "oldest", "likes", "replies"),
-                              extended = c("min", "full"),
-                              limit = 10L) {
+episodes_comments <- function(
+  id,
+  season = 1L,
+  episode = 1L,
+  sort = c("newest", "oldest", "likes", "replies"),
+  extended = c("min", "full"),
+  limit = 10L
+) {
   sort <- match.arg(sort)
   extended <- match.arg(extended)
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "episodes", episode,
-    "comments", sort,
+    "shows",
+    id,
+    "seasons",
+    season,
+    "episodes",
+    episode,
+    "comments",
+    sort,
     extended = extended
   )
   response <- trakt_get(url)

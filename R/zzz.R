@@ -22,8 +22,15 @@ tRakt_client_secret_scrambled <- "3WPkxM7csJKm_a4MP4NdDA1jhzQv6N91bNv4JhUXuDTSjq
 #' @keywords internal
 #' @noRd
 trakt_people_crew_sections <- c(
-  "production", "art", "crew", "directing", "writing",
-  "sound", "camera", "costume & make-up", "visual effects"
+  "production",
+  "art",
+  "crew",
+  "directing",
+  "writing",
+  "sound",
+  "camera",
+  "costume & make-up",
+  "visual effects"
 )
 
 #' Trakt's rating label

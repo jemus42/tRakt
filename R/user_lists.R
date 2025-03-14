@@ -67,8 +67,7 @@ user_lists <- function(user = "me", extended = c("min", "full")) {
 #' \dontrun{
 #' user_list("jemus42", list_id = 2121308)
 #' }
-user_list <- function(user = "me", list_id,
-                      extended = c("min", "full")) {
+user_list <- function(user = "me", list_id, extended = c("min", "full")) {
   check_username(user)
   extended <- match.arg(extended)
 

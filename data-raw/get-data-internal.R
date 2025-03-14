@@ -48,10 +48,13 @@ trakt_countries <- bind_rows(
 use_data(trakt_countries, overwrite = TRUE, compress = "xz")
 
 # Certifications ----
-trakt_certifications <- purrr::map_df(c("movies", "shows"), ~ {
-  trakt_get(build_trakt_url("certifications", .x)) %>%
-    purrr::map_df(as_tibble, .id = "country") %>%
-    mutate(type = .x)
-})
+trakt_certifications <- purrr::map_df(
+  c("movies", "shows"),
+  ~ {
+    trakt_get(build_trakt_url("certifications", .x)) %>%
+      purrr::map_df(as_tibble, .id = "country") %>%
+      mutate(type = .x)
+  }
+)
 
 use_data(trakt_certifications, overwrite = TRUE, compress = "xz")

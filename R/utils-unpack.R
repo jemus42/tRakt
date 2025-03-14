@@ -59,7 +59,8 @@ unpack_show <- function(show) {
   # Flatten "airs" (not present in minimal output)
   if (has_name(show, "airs")) {
     show <- modify_in(
-      show, "airs",
+      show,
+      "airs",
       ~ modify_if(.x, is.null, ~ return(NA_character_))
     )
     show$airs <- as_tibble(show$airs)
@@ -285,17 +286,20 @@ unpack_comments_multitype <- function(response) {
   list_base <- response |> select("type")
 
   # Row-bind the list base to the unpacked media items
-  map_df(list_types, ~ {
-    bind_cols(
-      list_base |>
-        filter(type == .x),
-      response |>
-        filter(type == .x) |>
-        pull("comment") |>
-        unpack_comments(),
-      flatten_media_object(response, .x)
-    )
-  }) |>
+  map_df(
+    list_types,
+    ~ {
+      bind_cols(
+        list_base |>
+          filter(type == .x),
+        response |>
+          filter(type == .x) |>
+          pull("comment") |>
+          unpack_comments(),
+        flatten_media_object(response, .x)
+      )
+    }
+  ) |>
     fix_tibble_response()
 }
 
@@ -414,9 +418,10 @@ flatten_single_media_object <- function(response, type) {
       res <- list_merge(res, !!!airs)
     }
 
-    res <- res |> list_merge(
-      !!!(pluck(response, "ids") |> fix_ids())
-    )
+    res <- res |>
+      list_merge(
+        !!!(pluck(response, "ids") |> fix_ids())
+      )
   }
 
   if (type %in% c("episode", "episodes")) {
@@ -456,7 +461,6 @@ flatten_single_media_object <- function(response, type) {
       res
     )
   }
-
 
   # Take possible list-columns (genres etc.) and make them lists if not already
   # Required to be able to bind_row() them to other results where the column

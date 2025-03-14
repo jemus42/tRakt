@@ -26,10 +26,19 @@ test_that("season and episode ratings work", {
   episode <- 3:4
 
   ratings_season_names <- c(
-    "rating", "votes", "distribution", "id", "season"
+    "rating",
+    "votes",
+    "distribution",
+    "id",
+    "season"
   )
   ratings_episode_names <- c(
-    "rating", "votes", "distribution", "id", "season", "episode"
+    "rating",
+    "votes",
+    "distribution",
+    "id",
+    "season",
+    "episode"
   )
 
   seasons_ratings(id, season) |>

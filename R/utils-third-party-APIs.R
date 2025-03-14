@@ -62,7 +62,6 @@ omdb_get <- function(imdb) {
 #' fanarttv_get(tvdb = "81189")
 #' }
 fanarttv_get <- function(tvdb) {
-
   res <- httr2::request("http://webservice.fanart.tv") |>
     httr2::req_url_path_append("v3/tv", tvdb) |>
     httr2::req_url_query(api_key = Sys.getenv("fanarttv_api_key")) |>

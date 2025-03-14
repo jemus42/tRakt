@@ -4,10 +4,17 @@ test_that("user_stats works for 1 user", {
   userstats <- user_stats(user = "jemus42")
 
   expect_is(userstats, "list")
-  expect_named(userstats, c(
-    "movies", "shows", "seasons", "episodes",
-    "network", "ratings"
-  ))
+  expect_named(
+    userstats,
+    c(
+      "movies",
+      "shows",
+      "seasons",
+      "episodes",
+      "network",
+      "ratings"
+    )
+  )
 })
 
 test_that("user_stats works for multiple users", {
@@ -18,10 +25,17 @@ test_that("user_stats works for multiple users", {
   userstats <- user_stats(user = users)
   expect_is(userstats, "list")
   expect_named(userstats, users)
-  expect_named(userstats[[users[[1]]]], c(
-    "movies", "shows", "seasons", "episodes",
-    "network", "ratings"
-  ))
+  expect_named(
+    userstats[[users[[1]]]],
+    c(
+      "movies",
+      "shows",
+      "seasons",
+      "episodes",
+      "network",
+      "ratings"
+    )
+  )
 })
 
 test_that("media_stats does things", {
@@ -32,7 +46,6 @@ test_that("media_stats does things", {
     expect_length(11) |>
     nrow() |>
     expect_equal(1)
-
 
   stats_mov <- movies_stats(id = "deadpool-2016") |>
     expect_is("tbl") |>
