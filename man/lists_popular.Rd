@@ -37,10 +37,10 @@ lists_trending()
 
 Other list methods: 
 \code{\link{media_lists}},
+\code{\link{user_list}()},
 \code{\link{user_list_comments}()},
 \code{\link{user_list_items}()},
-\code{\link{user_lists}()},
-\code{\link{user_list}()}
+\code{\link{user_lists}()}
 
 Other dynamic lists: 
 \code{\link{anticipated_media}},
@@ -52,10 +52,10 @@ Other dynamic lists:
 
 Other list methods: 
 \code{\link{media_lists}},
+\code{\link{user_list}()},
 \code{\link{user_list_comments}()},
 \code{\link{user_list_items}()},
-\code{\link{user_lists}()},
-\code{\link{user_list}()}
+\code{\link{user_lists}()}
 
 Other dynamic lists: 
 \code{\link{anticipated_media}},

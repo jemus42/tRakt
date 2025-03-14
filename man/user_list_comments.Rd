@@ -54,9 +54,9 @@ Other comment methods:
 Other list methods: 
 \code{\link{lists_popular}()},
 \code{\link{media_lists}},
+\code{\link{user_list}()},
 \code{\link{user_list_items}()},
-\code{\link{user_lists}()},
-\code{\link{user_list}()}
+\code{\link{user_lists}()}
 }
 \concept{comment methods}
 \concept{list methods}

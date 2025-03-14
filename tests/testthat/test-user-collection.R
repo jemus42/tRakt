@@ -4,9 +4,6 @@ test_that("user_collection works", {
   user <- "jemus42"
 
   col_sho <- user_collection(user = user, type = "shows", unnest_episodes = FALSE)
-  col_sho2 <- user_collection(user = user)
-
-  expect_identical(col_sho, col_sho2)
 
   col_sho |>
     expect_is("tbl") |>

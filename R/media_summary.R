@@ -13,7 +13,8 @@ media_summary <- function(type = c("movies", "shows"), id, extended = c("min", "
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    return(map_df(id, ~ media_summary(type, id = .x, extended)))
+    res <- map_df(id, ~ media_summary(type, id = .x, extended))
+    return(res)
   }
 
   # Construct URL, make API call

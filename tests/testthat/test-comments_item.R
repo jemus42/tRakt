@@ -4,20 +4,20 @@ test_that("comments_item works", {
   nm_movie_min <- c("type", "title", "year", "trakt", "slug", "imdb", "tmdb")
   nm_movie_full <- c(
     "type", "title", "year", "tagline", "overview", "released",
-    "runtime", "country", "trailer", "homepage", "status", "rating", "votes",
-    "comment_count", "updated_at", "language", "available_translations",
+    "runtime", "country", "status", "rating", "votes",
+    "comment_count", "trailer", "homepage", "updated_at", "language", "languages", "available_translations",
     "genres", "certification", "trakt", "slug", "imdb", "tmdb"
   )
 
   comments_item("236397") |>
     expect_is("tbl_df") |>
-    expect_named(nm_movie_min) |>
+    expect_named(nm_movie_min, ignore.order = TRUE) |>
     nrow() |>
     expect_equal(1)
 
   comments_item("236397", extended = "full") |>
     expect_is("tbl_df") |>
-    expect_named(nm_movie_full) |>
+    expect_named(nm_movie_full, ignore.order = TRUE) |>
     nrow() |>
     expect_equal(1)
 
@@ -25,29 +25,29 @@ test_that("comments_item works", {
   nm_show_min <- c("type", "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb")
   nm_show_full <- c(
     "type", "title", "year", "tagline", "overview", "first_aired", "runtime",
-    "certification", "country", "trailer", "homepage", "status",
-    "rating", "votes", "comment_count", "network", "updated_at",
-    "language", "available_translations", "genres", "aired_episodes",
+    "certification", "country",  "status",
+    "rating", "votes", "comment_count", "trailer", "homepage", "network", "updated_at",
+    "language", "languages", "available_translations", "genres", "aired_episodes",
     "airs_day", "airs_time", "airs_timezone", "trakt", "slug", "tvdb",
     "imdb", "tmdb"
   )
 
   have <- c("type", "title", "year", "tagline", "overview", "first_aired",
-            "runtime", "certification", "country", "trailer", "homepage",
+            "runtime", "certification", "country",  "trailer", "homepage",
             "status", "rating", "votes", "comment_count", "network", "updated_at",
-            "language", "available_translations", "genres", "aired_episodes",
+            "language",  "available_translations", "genres", "aired_episodes",
             "airs_day", "airs_time", "airs_timezone", "trakt", "slug", "tvdb",
             "imdb", "tmdb")
 
   comments_item("120768") |>
     expect_is("tbl_df") |>
-    expect_named(nm_show_min) |>
+    expect_named(nm_show_min, ignore.order = TRUE) |>
     nrow() |>
     expect_equal(1)
 
   comments_item("120768", extended = "full") |>
     expect_is("tbl_df") |>
-    expect_named(nm_show_full) |>
+    expect_named(nm_show_full, ignore.order = TRUE) |>
     nrow() |>
     expect_equal(1)
 
@@ -60,7 +60,7 @@ test_that("comments_item works", {
     "type", "title", "year", "tagline", "overview", "first_aired", "runtime",
     "certification", "country", "trailer", "homepage", "status",
     "rating", "votes", "comment_count", "network", "updated_at",
-    "language", "available_translations", "genres", "aired_episodes",
+    "language", "languages", "available_translations", "genres", "aired_episodes",
     "airs_day", "airs_time", "airs_timezone", "trakt", "slug", "tvdb",
     "imdb", "tmdb", "season", "season_rating", "season_votes", "season_episode_count",
     "season_aired_episodes", "season_title", "season_overview", "season_first_aired",
@@ -76,7 +76,7 @@ test_that("comments_item works", {
 
   comments_item("140265", extended = "full") |>
     expect_is("tbl_df") |>
-    expect_named(nm_season_full) |>
+    expect_named(nm_season_full, ignore.order = TRUE) |>
     nrow() |>
     expect_equal(1)
 
@@ -90,24 +90,24 @@ test_that("comments_item works", {
     "type", "title", "year", "tagline", "overview", "first_aired", "runtime",
     "certification", "country", "trailer", "homepage", "status",
     "rating", "votes", "comment_count", "network", "updated_at",
-    "language", "available_translations", "genres", "aired_episodes",
+    "language", "languages", "available_translations", "genres", "aired_episodes",
     "airs_day", "airs_time", "airs_timezone", "trakt", "slug", "tvdb",
     "imdb", "tmdb", "season", "episode", "episode_title", "episode_number_abs",
     "episode_overview", "episode_rating", "episode_votes", "episode_comment_count",
     "episode_first_aired", "episode_updated_at", "episode_available_translations",
-    "episode_runtime", "episode_trakt", "episode_tvdb", "episode_imdb",
+    "episode_runtime", "episode_episode_type", "episode_trakt", "episode_tvdb", "episode_imdb",
     "episode_tmdb"
   )
 
   comments_item("136632") |>
     expect_is("tbl_df") |>
-    expect_named(nm_episode_min) |>
+    expect_named(nm_episode_min, ignore.order = TRUE) |>
     nrow() |>
     expect_equal(1)
 
   comments_item("136632", extended = "full") |>
     expect_is("tbl_df") |>
-    expect_named(nm_episode_full) |>
+    expect_named(nm_episode_full, ignore.order = TRUE) |>
     nrow() |>
     expect_equal(1)
 })

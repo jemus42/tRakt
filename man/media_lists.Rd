@@ -129,10 +129,10 @@ people_lists("emilia-clarke", sort = "items")
 \seealso{
 Other list methods: 
 \code{\link{lists_popular}()},
+\code{\link{user_list}()},
 \code{\link{user_list_comments}()},
 \code{\link{user_list_items}()},
-\code{\link{user_lists}()},
-\code{\link{user_list}()}
+\code{\link{user_lists}()}
 
 Other movie data: 
 \code{\link{anticipated_media}},
@@ -156,10 +156,10 @@ Other movie data:
 
 Other list methods: 
 \code{\link{lists_popular}()},
+\code{\link{user_list}()},
 \code{\link{user_list_comments}()},
 \code{\link{user_list_items}()},
-\code{\link{user_lists}()},
-\code{\link{user_list}()}
+\code{\link{user_lists}()}
 
 Other show data: 
 \code{\link{collected_media}},
@@ -178,10 +178,10 @@ Other show data:
 
 Other list methods: 
 \code{\link{lists_popular}()},
+\code{\link{user_list}()},
 \code{\link{user_list_comments}()},
 \code{\link{user_list_items}()},
-\code{\link{user_lists}()},
-\code{\link{user_list}()}
+\code{\link{user_lists}()}
 
 Other season data: 
 \code{\link{media_comments}},
@@ -193,10 +193,10 @@ Other season data:
 
 Other list methods: 
 \code{\link{lists_popular}()},
+\code{\link{user_list}()},
 \code{\link{user_list_comments}()},
 \code{\link{user_list_items}()},
-\code{\link{user_lists}()},
-\code{\link{user_list}()}
+\code{\link{user_lists}()}
 
 Other episode data: 
 \code{\link{episodes_summary}()},
@@ -212,10 +212,10 @@ Other episode data:
 
 Other list methods: 
 \code{\link{lists_popular}()},
+\code{\link{user_list}()},
 \code{\link{user_list_comments}()},
 \code{\link{user_list_items}()},
-\code{\link{user_lists}()},
-\code{\link{user_list}()}
+\code{\link{user_lists}()}
 
 Other people data: 
 \code{\link{media_people}},

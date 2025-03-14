@@ -12,7 +12,7 @@ test_that("user_list_items are correct", {
     user = "jemus42", list_id = 2171659, extended = "full"
   ) |>
     expect_is("tbl_df") |>
-    expect_length(50)
+    expect_length(52)
 
   user_list_items(
     user = "sp1ti", list_id = "anime-winter-season-2018-2019", extended = "min"
@@ -24,5 +24,5 @@ test_that("user_list_items are correct", {
     user = "sp1ti", list_id = "anime-winter-season-2018-2019", extended = "full"
   ) |>
     expect_is("tbl_df") |>
-    expect_length(63)
+    expect_length(65)
 })

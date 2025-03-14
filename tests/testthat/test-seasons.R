@@ -81,7 +81,7 @@ test_that("seasons_summary works for episodes and matches seasons_season", {
 
   res$episodes[[1]] |>
     expect_is("tbl") |>
-    expect_length(16) |>
+    expect_length(17) |>
     nrow() |>
     expect_equal(6)
 

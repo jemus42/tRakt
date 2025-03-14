@@ -48,8 +48,8 @@ user_lists("jemus42")
 Other list methods: 
 \code{\link{lists_popular}()},
 \code{\link{media_lists}},
+\code{\link{user_list}()},
 \code{\link{user_list_comments}()},
-\code{\link{user_list_items}()},
-\code{\link{user_list}()}
+\code{\link{user_list_items}()}
 }
 \concept{list methods}
