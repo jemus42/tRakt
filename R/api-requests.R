@@ -39,8 +39,6 @@ trakt_get <- function(url) {
     rlang::abort("URL does not appear to be a valid trakt.tv API url")
   }
 
-  token <- get_token()
-
   # Software versions for user agent
   versions <- c(
     tRakt = paste(
