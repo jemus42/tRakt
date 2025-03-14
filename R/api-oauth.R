@@ -20,9 +20,8 @@
 #' }
 #'
 get_token <- function(cache = TRUE) {
-
   # Checking cache for a token first
-  cache_loc <- file.path(rappdirs::user_cache_dir("tRakt"), "token.rds")
+  cache_loc <- token_cache_loc()
   if (file.exists(cache_loc)) {
     token <- readRDS(cache_loc)
 
@@ -41,7 +40,9 @@ get_token <- function(cache = TRUE) {
     httr2::req_perform() |>
     httr2::resp_body_json()
 
-  cli::cli_alert_info("Navigate to {.url {device_response$verification_url}} and enter {.strong {device_response$user_code}}")
+  cli::cli_alert_info(
+    "Navigate to {.url {device_response$verification_url}} and enter {.strong {device_response$user_code}}"
+  )
 
   if (interactive()) {
     utils::browseURL(device_response$verification_url)
@@ -69,12 +70,14 @@ oauth_device_token_poll <- function(request) {
 
     token <- httr2::request("https://api.trakt.tv/oauth/device/token") |>
       httr2::req_headers("Content-Type" = "application/json") |>
-      httr2::req_body_json(data = list(
-        code = request$device_code,
-        client_id = get_client_id(),
-        client_secret = get_client_secret(),
-        grant_type = "urn:ietf:params:oauth:grant-type:device_code"
-      )) |>
+      httr2::req_body_json(
+        data = list(
+          code = request$device_code,
+          client_id = get_client_id(),
+          client_secret = get_client_secret(),
+          grant_type = "urn:ietf:params:oauth:grant-type:device_code"
+        )
+      ) |>
       httr2::req_error(is_error = \(x) FALSE) |>
       httr2::req_perform()
 
@@ -88,7 +91,8 @@ oauth_device_token_poll <- function(request) {
 
     # Everything else: Various failure modes
     # This feels inelegant but I think it gets the job down alright so meh
-    reason <- switch(as.character(httr2::resp_status(token)),
+    reason <- switch(
+      as.character(httr2::resp_status(token)),
       "404" = "Invalid device code, please check your credentials and try again",
       "409" = "Code was already used for authentication",
       "410" = "Token has expired, please try again (and maybe hurry up a little)",
@@ -97,7 +101,6 @@ oauth_device_token_poll <- function(request) {
     )
 
     if (!is.null(reason)) rlang::abort(reason)
-
   }
   cli::cli_progress_done()
 
@@ -117,7 +120,6 @@ oauth_device_token_poll <- function(request) {
 
 
 get_client_secret <- function() {
-
   env_var <- Sys.getenv("trakt_client_secret", unset = "")
   key_var <- Sys.getenv("tRakt_key", unset = "")
 
@@ -128,7 +130,6 @@ get_client_secret <- function() {
   }
 
   httr2::secret_decrypt(tRakt_client_secret_scrambled, "tRakt_key")
-
 }
 
 get_client_id <- function() {
@@ -143,40 +144,42 @@ token_expired <- function(token) {
 }
 
 cache_token <- function(token) {
-  cache_loc <- file.path(getOption("tRakt_cache_dir"), "token.rds")
-
+  cache_dir <- getOption("tRakt_cache_dir")
   if (!dir.exists(cache_dir)) dir.create(cache_dir)
 
   class(token) <- "trakt_token"
 
-  saveRDS(token, file = cache_loc)
+  saveRDS(token, file = token_cache_loc())
   invisible(token)
 }
 
 clear_cached_token <- function() {
-  cache_loc <- file.path(getOption("tRakt_cache_dir"), "token.rds")
-  file.remove(cache_loc)
+  file.remove(token_cache_loc())
+}
+
+token_cache_loc <- function() {
+  file.path(getOption("tRakt_cache_dir"), "token.rds")
 }
 
 #' @keywords internal
 refresh_token <- function(token, cache = TRUE) {
   token <- httr2::request("https://api.trakt.tv/oauth/token") |>
     httr2::req_headers("Content-Type" = "application/json") |>
-    httr2::req_body_json(data = list(
-      refresh_token = token$refresh_token,
-      client_id = get_client_id(),
-      client_secret = get_client_secret(),
-      grant_type = "refresh_token",
-      redirect_uri = "urn:ietf:wg:oauth:2.0:oob"
-    )) |>
+    httr2::req_body_json(
+      data = list(
+        refresh_token = token$refresh_token,
+        client_id = get_client_id(),
+        client_secret = get_client_secret(),
+        grant_type = "refresh_token",
+        redirect_uri = "urn:ietf:wg:oauth:2.0:oob"
+      )
+    ) |>
     httr2::req_perform() |>
     httr2::resp_body_json()
 
   if (cache) cache_token(token)
   token
 }
-
-
 
 
 #' @importFrom cli cli_inform cli_alert_success cli_alert_danger

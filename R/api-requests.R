@@ -19,10 +19,7 @@
 #'   An empty [tibble()][tibble::tibble-package] if the response is an empty
 #'   `JSON` array.
 #' @export
-#' @importFrom httr user_agent config add_headers
-#' @importFrom httr HEAD GET
-#' @importFrom httr message_for_status status_code
-#' @importFrom httr content
+#' @import httr2
 #' @importFrom jsonlite fromJSON
 #' @importFrom purrr flatten
 #' @importFrom purrr is_empty
@@ -46,7 +43,10 @@ trakt_get <- function(url) {
 
   # Software versions for user agent
   versions <- c(
-    tRakt = paste(utils::packageVersion("tRakt"), "(https://github.com/jemus42/tRakt)"),
+    tRakt = paste(
+      utils::packageVersion("tRakt"),
+      "(https://github.com/jemus42/tRakt)"
+    ),
     httr2 = as.character(utils::packageVersion("httr2")),
     `r-curl` = as.character(utils::packageVersion("curl")),
     libcurl = curl::curl_version()$version
@@ -55,17 +55,22 @@ trakt_get <- function(url) {
 
   # Cache directory for responses
   cache_dir <- file.path(getOption("tRakt_cache_dir"), "data")
+  token <- get_token()
 
   req <- httr2::request(url) |>
     httr2::req_headers(
       # Additional headers required by the API
       "trakt-api-key" = get_client_id(),
       "Content-Type" = "application/json",
-      "trakt-api-version" = 2
+      "trakt-api-version" = "2"
     ) |>
     httr2::req_auth_bearer_token(token = token$access_token) |>
     httr2::req_retry(max_tries = 3) |>
-    httr2::req_cache(path = cache_dir, use_on_error = TRUE, debug = getOption("tRakt_debug")) |>
+    httr2::req_cache(
+      path = cache_dir,
+      use_on_error = TRUE,
+      debug = getOption("tRakt_debug")
+    ) |>
     httr2::req_user_agent(versions)
 
   resp <- httr2::req_perform(req)
