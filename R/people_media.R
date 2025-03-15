@@ -27,8 +27,7 @@ NULL
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
 #' @importFrom purrr is_empty
-people_media <- function(type = c("shows", "movies"), id,
-                         extended = c("min", "full")) {
+people_media <- function(type = c("shows", "movies"), id, extended = c("min", "full")) {
   extended <- match.arg(extended)
   type <- match.arg(type)
 

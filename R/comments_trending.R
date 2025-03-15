@@ -20,19 +20,28 @@ NULL
 
 #' @name comments_trending
 #' @export
-comments_trending <- function(comment_type = c("all", "reviews", "shouts"),
-                              type = c(
-                                "all", "movies", "shows", "seasons",
-                                "episodes", "lists"
-                              ),
-                              include_replies = FALSE,
-                              limit = 10L) {
+comments_trending <- function(
+  comment_type = c("all", "reviews", "shouts"),
+  type = c(
+    "all",
+    "movies",
+    "shows",
+    "seasons",
+    "episodes",
+    "lists"
+  ),
+  include_replies = FALSE,
+  limit = 10L
+) {
   comment_type <- match.arg(comment_type)
   type <- match.arg(type)
 
   url <- build_trakt_url(
-    "comments/trending", comment_type, type,
-    include_replies = include_replies, limit = limit
+    "comments/trending",
+    comment_type,
+    type,
+    include_replies = include_replies,
+    limit = limit
   )
   response <- trakt_get(url = url)
 
@@ -43,19 +52,28 @@ comments_trending <- function(comment_type = c("all", "reviews", "shouts"),
 #' @eval apiurl("comments", "recent")
 #' @family comment methods
 #' @export
-comments_recent <- function(comment_type = c("all", "reviews", "shouts"),
-                            type = c(
-                              "all", "movies", "shows", "seasons",
-                              "episodes", "lists"
-                            ),
-                            include_replies = FALSE,
-                            limit = 10L) {
+comments_recent <- function(
+  comment_type = c("all", "reviews", "shouts"),
+  type = c(
+    "all",
+    "movies",
+    "shows",
+    "seasons",
+    "episodes",
+    "lists"
+  ),
+  include_replies = FALSE,
+  limit = 10L
+) {
   comment_type <- match.arg(comment_type)
   type <- match.arg(type)
 
   url <- build_trakt_url(
-    "comments/recent", comment_type, type,
-    include_replies = include_replies, limit = limit
+    "comments/recent",
+    comment_type,
+    type,
+    include_replies = include_replies,
+    limit = limit
   )
   response <- trakt_get(url = url)
 
@@ -74,19 +92,28 @@ comments_recent <- function(comment_type = c("all", "reviews", "shouts"),
 #' @examples
 #' # Recently updated comments
 #' comments_updates()
-comments_updates <- function(comment_type = c("all", "reviews", "shouts"),
-                             type = c(
-                               "all", "movies", "shows", "seasons",
-                               "episodes", "lists"
-                             ),
-                             include_replies = FALSE,
-                             limit = 10L) {
+comments_updates <- function(
+  comment_type = c("all", "reviews", "shouts"),
+  type = c(
+    "all",
+    "movies",
+    "shows",
+    "seasons",
+    "episodes",
+    "lists"
+  ),
+  include_replies = FALSE,
+  limit = 10L
+) {
   comment_type <- match.arg(comment_type)
   type <- match.arg(type)
 
   url <- build_trakt_url(
-    "comments/updates", comment_type, type,
-    include_replies = include_replies, limit = limit
+    "comments/updates",
+    comment_type,
+    type,
+    include_replies = include_replies,
+    limit = limit
   )
   response <- trakt_get(url = url)
 

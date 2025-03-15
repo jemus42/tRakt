@@ -6,7 +6,8 @@ test_that("check_user throws errors when it should", {
   expect_error(check_username(user = 4))
   expect_error(check_username(user = ""))
   expect_failure(expect_error(
-    check_username(user = "jemus42", validate = TRUE), "list"
+    check_username(user = "jemus42", validate = TRUE),
+    "list"
   ))
 })
 

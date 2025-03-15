@@ -1,8 +1,21 @@
 test_that("media comments work", {
   media_comments_names_min <- c(
-    "id", "comment", "spoiler", "review", "parent_id", "created_at",
-    "updated_at", "replies", "likes", "user_rating", "username",
-    "private", "user_name", "vip", "vip_ep", "user_slug"
+    "id",
+    "comment",
+    "spoiler",
+    "review",
+    "parent_id",
+    "created_at",
+    "updated_at",
+    "replies",
+    "likes",
+    "user_rating",
+    "username",
+    "private",
+    "user_name",
+    "vip",
+    "vip_ep",
+    "user_slug"
   )
 
   movies_comments(193972) |>

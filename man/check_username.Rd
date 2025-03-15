@@ -12,7 +12,7 @@ check_username(user, validate = FALSE)
 \item{validate}{\code{logical(1) [TRUE]}: Retrieve user profile to check if it exists.}
 }
 \value{
-An error if the checks fail or else \code{TRUE} invisibly. If \code{validate}, the
+An HTTP error if the checks fail or else \code{TRUE} invisibly. If \code{validate}, the
 user profile is returned as a \code{list}.
 }
 \description{

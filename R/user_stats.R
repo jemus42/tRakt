@@ -20,7 +20,7 @@
 #' \dontrun{
 #' user_stats(user = "sean")
 #' }
-user_stats <- function(user = getOption("trakt_username")) {
+user_stats <- function(user = "me") {
   check_username(user)
 
   if (length(user) > 1) {

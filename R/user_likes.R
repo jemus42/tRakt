@@ -8,12 +8,9 @@
 #' @eval apiurl("users", "likes")
 #' @importFrom purrr discard pluck
 #' @importFrom dplyr bind_cols
-#' @examples
+#' @examplesIf FALSE
 #' # Get liked lists (only if there's a client secret set)
-#' # See ?trakt_credentials
-#' if (trakt_credentials()[["client_secret"]]) {
-#'   user_likes("lists")
-#' }
+#' user_likes("lists")
 user_likes <- function(type = c("comments", "lists")) {
   type <- check_types(type, several.ok = FALSE, possible_types = c("comments", "lists"))
 

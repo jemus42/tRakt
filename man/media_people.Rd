@@ -51,7 +51,7 @@ See \code{vignette("finding-things")} for more details.}
 \item{guest_stars}{\code{logical(1) ["FALSE"]}: Also include guest stars. This returns
 a lot of data, so use with care.}
 
-\item{season, episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+\item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
 combined. This may result in \emph{a lot} of API calls. Use wisely.}
 }

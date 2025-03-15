@@ -7,9 +7,7 @@
 #' @importFrom dplyr everything
 #' @importFrom dplyr mutate
 #' @noRd
-media_related <- function(id, type = c("shows", "movies"),
-                          limit = 10L,
-                          extended = c("min", "full")) {
+media_related <- function(id, type = c("shows", "movies"), limit = 10L, extended = c("min", "full")) {
   type <- match.arg(type)
   extended <- match.arg(extended)
 
@@ -18,10 +16,7 @@ media_related <- function(id, type = c("shows", "movies"),
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, id, "related",
-    extended = extended,
-    limit = limit
-  )
+  url <- build_trakt_url(type, id, "related", extended = extended, limit = limit)
   response <- trakt_get(url = url)
 
   # Flattening
@@ -53,9 +48,7 @@ media_related <- function(id, type = c("shows", "movies"),
 #' @export
 #' @examples
 #' movies_related("the-avengers-2012", limit = 5)
-movies_related <- function(id,
-                           limit = 10L,
-                           extended = c("min", "full")) {
+movies_related <- function(id, limit = 10L, extended = c("min", "full")) {
   media_related(id, type = "movies", extended = extended, limit = limit)
 }
 
@@ -67,8 +60,6 @@ movies_related <- function(id,
 #' @export
 #' @examples
 #' shows_related("breaking-bad", limit = 5)
-shows_related <- function(id,
-                          limit = 10L,
-                          extended = c("min", "full")) {
+shows_related <- function(id, limit = 10L, extended = c("min", "full")) {
   media_related(id, type = "shows", extended = extended, limit = limit)
 }

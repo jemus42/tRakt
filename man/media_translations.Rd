@@ -31,7 +31,7 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{languages}{\code{character(n)}: Two-letter language code(s).
 Also see \code{\link{trakt_languages}} for available languages (code and name).}
 
-\item{season, episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+\item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
 combined. This may result in \emph{a lot} of API calls. Use wisely.}
 }

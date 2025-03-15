@@ -16,11 +16,13 @@ BugReports: http://github.com/jemus42/tRakt/issues
 Depends:
     R (>= 4.1)
 Imports:
+    cli,
     dplyr (>= 0.7.0),
-    httr,
+    httr2,
     jsonlite (>= 0.9.14),
     lubridate,
     purrr (>= 0.2.3),
+    rappdirs,
     rlang (>= 0.1.2),
     stringr,
     tibble,
@@ -41,6 +43,8 @@ Suggests:
 VignetteBuilder: 
     knitr
 Encoding: UTF-8
+Config/Needs/website:
+    pkgdown
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

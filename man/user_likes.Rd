@@ -21,11 +21,10 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get items (comments, lists) a user likes
 }
 \examples{
+\dontshow{if (FALSE) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 # Get liked lists (only if there's a client secret set)
-# See ?trakt_credentials
-if (trakt_credentials()[["client_secret"]]) {
-  user_likes("lists")
-}
+user_likes("lists")
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other user data: 

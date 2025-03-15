@@ -42,7 +42,14 @@ episodes_translations <- function(id, season = 1L, episode = 1L, languages = NUL
   languages <- check_filter_arg(languages, "languages")
 
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "episodes", episode, "translations", languages
+    "shows",
+    id,
+    "seasons",
+    season,
+    "episodes",
+    episode,
+    "translations",
+    languages
   )
   response <- trakt_get(url)
 

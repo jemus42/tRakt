@@ -42,4 +42,3 @@ test_that("people_media works", {
   expect_is(sho_min$cast, "tbl")
   expect_is(sho_min$crew, "tbl")
 })
-

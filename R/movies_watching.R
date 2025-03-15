@@ -42,12 +42,15 @@ shows_watching <- function(id, extended = c("min", "full")) {
 #' @eval apiurl("episodes", "watching")
 #' @family episode data
 #' @export
-seasons_watching <- function(id, season = 1L,
-                             extended = c("min", "full")) {
+seasons_watching <- function(id, season = 1L, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "watching",
+    "shows",
+    id,
+    "seasons",
+    season,
+    "watching",
     extended = extended
   )
   response <- trakt_get(url)
@@ -58,12 +61,17 @@ seasons_watching <- function(id, season = 1L,
 
 #' @describeIn media_watching Who's watching an episode.
 #' @export
-episodes_watching <- function(id, season = 1L, episode = 1L,
-                              extended = c("min", "full")) {
+episodes_watching <- function(id, season = 1L, episode = 1L, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   url <- build_trakt_url(
-    "shows", id, "seasons", season, "episodes", episode, "watching",
+    "shows",
+    id,
+    "seasons",
+    season,
+    "episodes",
+    episode,
+    "watching",
     extended = extended
   )
   response <- trakt_get(url)

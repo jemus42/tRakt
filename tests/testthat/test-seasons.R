@@ -4,8 +4,13 @@ test_that("seasons_season works", {
   id <- "futurama"
 
   min_names <- c(
-    "season", "episode", "title", "trakt", "tvdb",
-    "imdb", "tmdb"
+    "season",
+    "episode",
+    "title",
+    "trakt",
+    "tvdb",
+    "imdb",
+    "tmdb"
   )
 
   min_s1_single <- seasons_season(id = id, seasons = 1, extended = "min")
@@ -24,7 +29,7 @@ test_that("seasons_season works", {
   expect_error(seasons_season(id = id, seasons = NA))
   expect_error(seasons_season(id = id, seasons = "seven"))
   expect_error(seasons_season(id = id, seasons = NULL))
-  expect_message(seasons_season(id = id, seasons = 10))
+  expect_error(seasons_season(id = id, seasons = 10))
 
   # Multi-length input seasons
   expect_identical(
@@ -43,12 +48,16 @@ test_that("seasons_summary works", {
 
   # Note that dropping unaired only workes if extended = full so this is weird
   result_min <- seasons_summary(
-    id = id, extended = "min",
-    drop_specials = TRUE, drop_unaired = TRUE
+    id = id,
+    extended = "min",
+    drop_specials = TRUE,
+    drop_unaired = TRUE
   )
   result_max <- seasons_summary(
-    id = id, extended = "full",
-    drop_specials = TRUE, drop_unaired = TRUE
+    id = id,
+    extended = "full",
+    drop_specials = TRUE,
+    drop_unaired = TRUE
   )
 
   expect_is(result_min, "tbl")
@@ -56,7 +65,6 @@ test_that("seasons_summary works", {
   expect_equal(ncol(result_min), 4)
   expect_equal(ncol(result_max), 13)
 
-  expect_lt(length(result_min), length(result_max))
   expect_equal(nrow(result_min), nrow(result_max))
 
   expect_identical(
@@ -67,7 +75,7 @@ test_that("seasons_summary works", {
     seasons_summary(c(id, id))
   )
 
-  expect_message(seasons_summary(id = "bvkjqbkqjbf"))
+  expect_error(seasons_summary(id = "bvkjqbkqjbf"))
 })
 
 test_that("seasons_summary works for episodes and matches seasons_season", {

@@ -17,7 +17,7 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{id} values separately and the result is combined. See
 \code{vignette("finding-things")} for more details.}
 
-\item{season, episode}{\code{integer(1) [1L]}: The season and eisode number. If longer,
+\item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
 combined. This may result in \emph{a lot} of API calls. Use wisely.}
 
@@ -31,8 +31,8 @@ A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} par
 If there are no results (or the API is unreachable), an empty \code{tibble()} is returned.
 }
 \description{
-This retrieves a single episode. See \link{seasons_season} for a whole season, and
-\link{seasons_summary} for (potentially) all episodes of a show.
+This retrieves a single episode. See \code{\link[=seasons_season]{seasons_season()}} for a whole season, and
+\code{\link[=seasons_summary]{seasons_summary()}} for (potentially) all episodes of a show.
 }
 \examples{
 # Get just this one episode with its ratings, votes, etc.

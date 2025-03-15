@@ -8,8 +8,9 @@
 }
 \usage{
 user_history(
-  user = getOption("trakt_username"),
-  type = c("shows", "movies"),
+  user = "me",
+  type = c("shows", "movies", "seasons", "episodes"),
+  item_id = NULL,
   limit = 10L,
   start_at = NULL,
   end_at = NULL,
@@ -18,12 +19,14 @@ user_history(
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
-\code{getOption("trakt_username")}.
+\code{"me"}, the OAuth user.
 Can also be of length greater than 1, in which case the function is called on all
 \code{user} values separately and the result is combined.}
 
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
 functions, values \code{seasons} or \code{episodes} are also allowed.}
+
+\item{item_id}{\code{character(1)}: The ID of the item you're looking for.}
 
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced via \code{as.integer()}.}
