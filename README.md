@@ -1,13 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="120"/>
+# tRakt <a href="https://jemus42.github.io/tRakt"><img src="man/figures/logo.png" align="right" height="139" alt="tRakt website" /></a>
 
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml)
-[![Coverage
-status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
 [![GitHub
@@ -15,7 +13,6 @@ release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](h
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
-
 [![Codecov test
 coverage](https://codecov.io/gh/jemus42/tRakt/graph/badge.svg)](https://app.codecov.io/gh/jemus42/tRakt)
 <!-- badges: end -->
