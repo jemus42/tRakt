@@ -1,7 +1,11 @@
 # nocov start
-.onLoad <- function(...) {
-  options("tRakt_cache_dir" = rappdirs::user_cache_dir("tRakt"))
-  options("tRakt_debug" = FALSE)
+.onLoad <- function(libname, pkgname) {
+  if (getOption("tRakt_cache_dir", default = "") == "") {
+    options("tRakt_cache_dir" = rappdirs::user_cache_dir("tRakt"))
+  }
+  if (getOption("tRakt_debug", default = "") == "") {
+    options("tRakt_debug" = FALSE)
+  }
 }
 
 #' The tRakt client ID for this particular app
@@ -12,6 +16,7 @@ tRakt_client_id <- "12fc1de7671c7f2fb4a8ac08ba7c9f45b447f4d5bad5e11e3490823d629a
 #' The tRakt client secret for this particular app
 #'
 #' Decrypt with `httr2::secret_decrypt(client_secret_scrambled, "tRakt_key")`
+#' Check availability of the key with with `httr2::secret_has_key("tRakt_key")`
 #' @keywords internal
 #' @noRd
 tRakt_client_secret_scrambled <- "3WPkxM7csJKm_a4MP4NdDA1jhzQv6N91bNv4JhUXuDTSjqwXR9kZvg12rKtu6qqIuG2-pHfyYWFUGOTxSjiee08UVfhtswL7EdiFSwUTBI0"
