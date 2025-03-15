@@ -1,3 +1,23 @@
+#' trakt.tv credentials
+#'
+#' Authentication has changed with the migration to [httr2], so this function is just a
+#' placeholder that shows information about available credentials.
+#'
+#'
+#'
+#' @export
+trakt_credentials <- function() {
+  cli::cli_inform("Client ID: {.val {get_client_id()}}")
+
+  if (httr2::secret_has_key("tRakt_key")) {
+    get_token()
+  } else {
+    cli::cli_inform(
+      "Environment variable {.val tRakt_key} is not set, can't decrypt client secret."
+    )
+  }
+}
+
 #' Get a trakt.tv API OAuth token
 #'
 #' This is an unfortunately home-brewed version of what _should_ be a simple call to [`httr2::oauth_flow_device()`],
@@ -127,7 +147,7 @@ get_client_secret <- function() {
 
   if (env_var != "") return(env_var)
 
-  if (key_var == "") {
+  if (!httr2::secret_has_key("tRakt_key")) {
     return(NULL)
   }
 

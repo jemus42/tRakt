@@ -13,23 +13,15 @@ home:
 template:
   includes:
     in_header: |
-      <noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+      <script defer src="https://umami.jemu.name/script.js" data-website-id="5bfd0409-fce3-470f-a81d-ef881cda44a3"></script>
   bootstrap: 5
-  bootswatch: litera
+  bootswatch: simplex
   theme: kate
-  bslib:
-    # pkgdown-nav-height: 70px
-    # base_font: {google: "Source Serif Pro"}
-    # heading_font: {google: "Source Sans Pro"}
-    # code_font: {google: "Source Code Pro"}
   opengraph:
     image:
       src: "man/figures/logo.png"
       alt: "Hex sticker showing the trakt.tv logo"
-    twitter:
-      creator: "@jemus42"
-      # site: "@rstudio"
-      card: summary_large_image # summary
+
 
 # Default ordering. Would like changelog to the left of search but order isn't preserved based on YAML
 navbar:
