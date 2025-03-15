@@ -13,6 +13,7 @@ test_that("user_comments", {
     "user_rating",
     "username",
     "private",
+    "deleted",
     "user_name",
     "vip",
     "vip_ep",
@@ -77,5 +78,5 @@ test_that("user_comments", {
     expect_equal("movie")
 
   user_comments("sofakissen") |>
-    expect_is("tbl_df")
+    expect_error()
 })

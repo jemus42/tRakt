@@ -1,5 +1,5 @@
 test_that("shows_(next|last)_episode() works", {
-  res <- shows_next_episode("detective-conan")
+  res <- shows_next_episode("one-piece")
 
   skip_if(nrow(res) == 0, "Test case does not have a next episode")
 
@@ -7,15 +7,7 @@ test_that("shows_(next|last)_episode() works", {
 
   shows_last_episode("one-piece") |>
     expect_is("tbl_df") |>
-    expect_named(c(
-      "season",
-      "number",
-      "title",
-      "trakt",
-      "tvdb",
-      "imdb",
-      "tmdb"
-    )) |>
+    expect_named(c("season", "number", "title", "trakt", "tvdb", "imdb", "tmdb")) |>
     nrow() |>
     expect_equal(1)
 
@@ -32,6 +24,7 @@ test_that("shows_(next|last)_episode() works", {
       "comment_count",
       "first_aired",
       "updated_at",
+      "available_translations",
       "runtime",
       "episode_type",
       "trakt",

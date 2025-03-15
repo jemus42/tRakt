@@ -19,7 +19,7 @@ test_that("user_collection works", {
 
   # Error conditions ----
   expect_error(user_collection(user = -1))
-  expect_message(user_collection(user = c("jemus42", "totallynotarealuser")))
+  expect_error(user_collection(user = c("jemus42", "totallynotarealuser")))
   expect_error(user_collection(user = user, type = "wurst"))
 })
 

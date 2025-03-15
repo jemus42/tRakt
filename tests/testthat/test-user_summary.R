@@ -1,8 +1,9 @@
 test_that("user_profile", {
-  nm_min <- c("username", "private", "user_name", "vip", "vip_ep", "user_slug")
+  nm_min <- c("username", "private", "deleted", "user_name", "vip", "vip_ep", "user_slug")
   nm_full <- c(
     "username",
     "private",
+    "deleted",
     "user_name",
     "vip",
     "vip_ep",

@@ -3,9 +3,9 @@ test_that("user_likes works", {
 
   user_likes(type = "comments") |>
     expect_is("tbl_df") |>
-    expect_length(18)
+    expect_length(19)
 
   user_likes(type = "lists") |>
     expect_is("tbl_df") |>
-    expect_length(24)
+    expect_length(25)
 })

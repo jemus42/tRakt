@@ -12,6 +12,7 @@ test_that("media comments work", {
     "user_rating",
     "username",
     "private",
+    "deleted",
     "user_name",
     "vip",
     "vip_ep",

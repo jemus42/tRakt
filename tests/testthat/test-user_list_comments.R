@@ -12,6 +12,7 @@ test_that("user_list_comments works", {
     "user_rating",
     "username",
     "private",
+    "deleted",
     "user_name",
     "vip",
     "vip_ep",

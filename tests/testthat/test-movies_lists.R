@@ -18,6 +18,7 @@ test_that("media lists work", {
     "slug",
     "username",
     "private",
+    "deleted",
     "user_name",
     "vip",
     "vip_ep",

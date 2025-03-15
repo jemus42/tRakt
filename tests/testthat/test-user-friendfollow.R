@@ -25,11 +25,11 @@ test_that("user_network stuff works", {
 
   user_following(user) |>
     expect_is("tbl_df") |>
-    expect_length(7)
+    expect_length(8)
 
   user_friends(user) |>
     expect_is("tbl_df") |>
-    expect_length(7)
+    expect_length(8)
 })
 
 test_that("No NULLs or \"\" in user_network", {
