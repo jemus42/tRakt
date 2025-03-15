@@ -42,6 +42,8 @@ which will then be coerced via \link[base:character]{as.character()}.}
 \item{sort}{\code{character(1) ["newest"]}: Comment sort order, one of
 "newest", "oldest", "likes" or "replies".}
 
+\item{item_id}{\code{character(1)}: The ID of the item you're looking for.}
+
 \item{query}{\code{character(1)}: Search string for titles and descriptions.
 For \code{search_query()} other fields are searched depending on the \code{type} of media.
 See \href{https://trakt.docs.apiary.io/#reference/search/text-query}{the API docs} for a

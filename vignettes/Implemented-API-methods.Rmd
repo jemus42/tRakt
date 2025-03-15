@@ -35,7 +35,7 @@ api <- api |>
   }, .id = "Section")
 
 pkg_funs <- getNamespaceExports("tRakt") |>
-  str_subset("trakt_get|build_trakt_url|trakt_credentials", negate = TRUE)
+  str_subset("trakt_get|build_trakt_url", negate = TRUE)
 
 unmentioned <- pkg_funs[!(pkg_funs %in% str_remove_all(api$implementation, pattern = "\\(\\)"))]
 

@@ -20,6 +20,7 @@
 #'   `JSON` array.
 #' @export
 #' @import httr2
+#' @importFrom curl curl_version
 #' @family API-basics
 #' @examples
 #' # A simple request to a direct URL
@@ -72,7 +73,6 @@ trakt_get <- function(url) {
 
   httr2::resp_check_status(resp, info = url)
 
-  #resp <- httr2::resp_body_json(resp, simplifyVector = TRUE)
   resp <- httr2::resp_body_json(resp, simplifyVector = TRUE, check_type = FALSE)
 
   # Kept from previous version, should be refactored at some point

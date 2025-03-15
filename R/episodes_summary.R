@@ -1,16 +1,15 @@
 #' Get a single episode's details
 #'
-#' This retrieves a single episode. See [seasons_season] for a whole season, and
-#' [seasons_summary] for (potentially) all episodes of a show.
+#' This retrieves a single episode. See [seasons_season()] for a whole season, and
+#' [seasons_summary()] for (potentially) all episodes of a show.
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @family episode data
 #' @family summary methods
 #' @eval apiurl("episodes", "summary")
-#' @importFrom dplyr select rename bind_cols mutate everything
+#' @importFrom dplyr select rename bind_cols mutate
 #' @importFrom rlang has_name
-#' @importFrom tibble as_tibble
 #' @importFrom purrr map
 #' @examples
 #' # Get just this one episode with its ratings, votes, etc.
@@ -51,8 +50,7 @@ episodes_summary <- function(id, season = 1L, episode = 1L, extended = c("min", 
     as_tibble(fix_ids(response$ids))
   ) |>
     rename(episode = "number") |>
-    mutate(id = .env$id) |>
-    select(id, everything())
+    mutate(id = id, .before = "season")
 
   fix_tibble_response(response)
 }

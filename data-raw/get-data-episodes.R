@@ -19,10 +19,10 @@ if (max(futurama$first_aired) < Sys.time()) {
 got_trakt <- seasons_season("game-of-thrones", seasons = 1:8, extended = "full")
 
 # Wiki
-got_wiki <- rvest::read_html("https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes") %>%
-  rvest::html_table(fill = TRUE) %>%
-  magrittr::extract(c(2:9)) %>%
-  bind_rows() %>%
+got_wiki <- rvest::read_html("https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes") |>
+  rvest::html_table(fill = TRUE) |>
+  magrittr::extract(c(2:9)) |>
+  bind_rows() |>
   setNames(c(
     "episode_abs",
     "episode",
@@ -31,13 +31,13 @@ got_wiki <- rvest::read_html("https://en.wikipedia.org/wiki/List_of_Game_of_Thro
     "writer",
     "firstaired",
     "viewers"
-  )) %>%
-  select(-firstaired) %>%
+  )) |>
+  select(-firstaired) |>
   mutate(
     viewers = str_replace_all(viewers, "\\[\\d+\\]", ""),
     viewers = as.numeric(viewers)
-  ) %>%
-  select(-episode, -title) %>%
+  ) |>
+  select(-episode, -title) |>
   as_tibble()
 
 
@@ -46,7 +46,7 @@ gameofthrones <- left_join(
   got_trakt,
   got_wiki,
   by = "episode_abs"
-) %>%
+) |>
   select(
     episode_abs,
     episode,
@@ -66,8 +66,8 @@ gameofthrones <- left_join(
     tvdb,
     tmdb,
     updated_at
-  ) %>%
-  arrange(episode_abs) %>%
+  ) |>
+  arrange(episode_abs) |>
   as_tibble()
 
 usethis::use_data(gameofthrones, overwrite = TRUE)

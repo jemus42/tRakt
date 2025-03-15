@@ -9,16 +9,12 @@
 #' @param cache [`TRUE`]: Cache the token to the OS-specific cache directory. See [rappdirs::user_cache_dir()].
 #'
 #' @export
+#' @keywords internal
 #' @importFrom rappdirs user_cache_dir
 #' @importFrom cli cli_alert_info
 #' @importFrom utils browseURL
-#' @examples
-#' if (FALSE) {
-#'
-#' get_token(cache = TRUE)
-#'
-#' }
-#'
+#' @examplesIf FALSE
+#' get_token()
 get_token <- function(cache = TRUE) {
   # Checking cache for a token first
   cache_loc <- token_cache_loc()
@@ -118,7 +114,13 @@ oauth_device_token_poll <- function(request) {
   token
 }
 
-
+#' Get the client secret from the environment
+#'
+#' Get's the client secrete either from the environment variable
+#' `trakt_client_secret`, or from the environment variable `tRakt_key`,
+#' which holds an encryption key to decrypt the packaged encrypted secret.
+#' @keywords internal
+#' @note See <https://httr2.r-lib.org/articles/wrapping-apis.html#package-keys-and-secrets>
 get_client_secret <- function() {
   env_var <- Sys.getenv("trakt_client_secret", unset = "")
   key_var <- Sys.getenv("tRakt_key", unset = "")
@@ -132,6 +134,11 @@ get_client_secret <- function() {
   httr2::secret_decrypt(tRakt_client_secret_scrambled, "tRakt_key")
 }
 
+#' Get client ID
+#'
+#' Either get ID from env var `trakt_client_id`
+#' or return stored client ID for package.
+#' @keywords internal
 get_client_id <- function() {
   env_var <- Sys.getenv("trakt_client_id", unset = "")
   if (nchar(env_var) == 64) return(env_var)

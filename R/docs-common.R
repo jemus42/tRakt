@@ -35,7 +35,7 @@
 #'   which will then be coerced via [as.character()][base::as.character].
 #' @param sort `character(1) ["newest"]`: Comment sort order, one of
 #'   "newest", "oldest", "likes" or "replies".
-#
+#' @param item_id `character(1)`: The ID of the item you're looking for.
 #' @param query `character(1)`: Search string for titles and descriptions.
 #'   For `search_query()` other fields are searched depending on the `type` of media.
 #'   See [the API docs](https://trakt.docs.apiary.io/#reference/search/text-query) for a

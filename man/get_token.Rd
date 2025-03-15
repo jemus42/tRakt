@@ -18,10 +18,8 @@ RFC 8628 expects the device token request to have the field "device_code",
 but the trakt.tv API expects a field named "code". That's it. It's kind of silly.
 }
 \examples{
-if (FALSE) {
-
-get_token(cache = TRUE)
-
+\dontshow{if (FALSE) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+get_token()
+\dontshow{\}) # examplesIf}
 }
-
-}
+\keyword{internal}
