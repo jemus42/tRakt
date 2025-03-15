@@ -16,3 +16,4 @@ update-workflows:
 
 README.md: README.Rmd
 	Rscript -e "rmarkdown::render('README.Rmd', output_file = 'README.md')"
+	-rm README.html
