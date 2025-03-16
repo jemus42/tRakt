@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.16.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,35 +100,26 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Recently updated comments</span></span></span>
 <span class="r-in"><span><span class="fu">comments_updates</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> New names:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> `type` -&gt; `type...1`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> `created_at` -&gt; `created_at...7`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> `updated_at` -&gt; `updated_at...8`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> `likes` -&gt; `likes...10`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> `type` -&gt; `type...23`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> `created_at` -&gt; `created_at...28`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> `updated_at` -&gt; `updated_at...29`</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> `likes` -&gt; `likes...32`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 51</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 32</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    type        id comment           spoiler review parent_id created_at         </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span>             </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> episode <span style="text-decoration: underline;">786</span>016 <span style="color: #949494;">"</span>Will Forte expl… FALSE   FALSE          0 2025-03-16 <span style="color: #949494;">13:24:21</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> episode <span style="text-decoration: underline;">531</span>565 <span style="color: #949494;">"</span>This show has p… FALSE   FALSE          0 2023-01-07 <span style="color: #949494;">20:56:18</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> episode <span style="text-decoration: underline;">772</span>603 <span style="color: #949494;">"</span>Loving agent ha… FALSE   FALSE          0 2025-02-12 <span style="color: #949494;">03:49:14</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> episode <span style="text-decoration: underline;">779</span>197 <span style="color: #949494;">"</span>Wow. What an ep… TRUE    FALSE          0 2025-02-28 <span style="color: #949494;">04:40:27</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> episode <span style="text-decoration: underline;">786</span>014 <span style="color: #949494;">"</span>Good episode, b… FALSE   FALSE          0 2025-03-16 <span style="color: #949494;">13:18:48</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> episode <span style="text-decoration: underline;">528</span>583 <span style="color: #949494;">"</span>Great action se… TRUE    FALSE          0 2022-12-29 <span style="color: #949494;">01:38:43</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> episode <span style="text-decoration: underline;">786</span>013 <span style="color: #949494;">"</span>Again, I'm prob… FALSE   FALSE          0 2025-03-16 <span style="color: #949494;">13:15:01</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> <span style="color: #BB0000;">NA</span>      <span style="text-decoration: underline;">779</span>693 <span style="color: #949494;">"</span>Hi,\r\n\r\nI'm … FALSE   FALSE          0 <span style="color: #BB0000;">NA</span>                 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> show    <span style="text-decoration: underline;">543</span>044 <span style="color: #949494;">"</span>Crappy script c… FALSE   FALSE          0 2023-02-20 <span style="color: #949494;">03:32:00</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> show    <span style="text-decoration: underline;">687</span>390 <span style="color: #949494;">"</span>Best show on Fo… FALSE   FALSE          0 2024-06-24 <span style="color: #949494;">08:03:43</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 44 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> episode <span style="text-decoration: underline;">785</span>826 <span style="color: #949494;">"</span>Look, this Epis… FALSE   TRUE           0 2025-03-16 <span style="color: #949494;">00:53:02</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> episode <span style="text-decoration: underline;">463</span>945 <span style="color: #949494;">"</span>boring as chuck… FALSE   FALSE          0 2022-04-27 <span style="color: #949494;">09:01:13</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> episode <span style="text-decoration: underline;">463</span>947 <span style="color: #949494;">"</span>That was one of… FALSE   FALSE          0 2022-04-27 <span style="color: #949494;">09:10:14</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> show    <span style="text-decoration: underline;">781</span>741 <span style="color: #949494;">"</span>Why is this sho… FALSE   FALSE          0 2025-03-06 <span style="color: #949494;">15:15:00</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> show    <span style="text-decoration: underline;">504</span>910 <span style="color: #949494;">"</span>Easily the best… FALSE   TRUE           0 2022-09-25 <span style="color: #949494;">19:20:26</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> show    <span style="text-decoration: underline;">465</span>874 <span style="color: #949494;">"</span>Rather boring a… FALSE   FALSE          0 2022-05-04 <span style="color: #949494;">16:54:50</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> show    <span style="text-decoration: underline;">468</span>566 <span style="color: #949494;">"</span>I love me a goo… FALSE   FALSE          0 2022-05-14 <span style="color: #949494;">21:41:14</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> show    <span style="text-decoration: underline;">465</span>914 <span style="color: #949494;">"</span>I can’t fault O… FALSE   FALSE          0 2022-05-04 <span style="color: #949494;">19:32:50</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> show    <span style="text-decoration: underline;">786</span>051 <span style="color: #949494;">"</span>After a (mostly… FALSE   FALSE          0 2025-03-16 <span style="color: #949494;">15:49:41</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> movie   <span style="text-decoration: underline;">775</span>702 <span style="color: #949494;">"</span>Went into this … FALSE   FALSE          0 2025-02-19 <span style="color: #949494;">17:25:34</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 25 more variables: updated_at &lt;dttm&gt;, replies &lt;int&gt;, likes &lt;int&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   user_rating &lt;int&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, deleted &lt;lgl&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   user_name &lt;chr&gt;, vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, user_slug &lt;chr&gt;, title &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   year &lt;int&gt;, trakt &lt;chr&gt;, slug &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   episode_season &lt;int&gt;, episode_number &lt;int&gt;, episode_title &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   episode_trakt &lt;chr&gt;, episode_tvdb &lt;chr&gt;, episode_imdb &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   episode_tmdb &lt;chr&gt;, type...1 &lt;chr&gt;, created_at...7 &lt;dttm&gt;, …</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   episode_tmdb &lt;chr&gt;</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
