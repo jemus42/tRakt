@@ -17,13 +17,14 @@ Depends:
     R (>= 4.1)
 Imports:
     cli,
+    curl,
     dplyr (>= 0.7.0),
     httr2,
     jsonlite (>= 0.9.14),
     lubridate,
     purrr (>= 0.2.3),
     rappdirs,
-    rlang (>= 0.1.2),
+    rlang,
     stringr,
     tibble,
     tidyselect,
@@ -42,9 +43,8 @@ Suggests:
     yaml
 VignetteBuilder: 
     knitr
+Config/Needs/website: pkgdown
 Encoding: UTF-8
-Config/Needs/website:
-    pkgdown
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

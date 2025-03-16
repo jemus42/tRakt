@@ -49,21 +49,25 @@ trakt_get <- function(url) {
   )
   versions <- paste0(names(versions), "/", versions, collapse = " ")
 
-  # Cache directory for responses
-  cache_dir <- file.path(getOption("tRakt_cache_dir"), "data")
-  token <- get_token()
-
   req <- httr2::request(url) |>
     httr2::req_headers(
       # Additional headers required by the API
       "trakt-api-key" = get_client_id(),
       "Content-Type" = "application/json",
       "trakt-api-version" = "2"
-    ) |>
-    httr2::req_auth_bearer_token(token = token$access_token) |>
+    )
+
+  token <- get_token()
+
+  if (inherits(token, "trakt_token")) {
+    req <- req |>
+      httr2::req_auth_bearer_token(token = token$access_token)
+  }
+
+  req <- req |>
     httr2::req_retry(max_tries = 3) |>
     httr2::req_cache(
-      path = cache_dir,
+      path = file.path(getOption("tRakt_cache_dir"), "data"),
       use_on_error = TRUE,
       debug = getOption("tRakt_debug")
     ) |>

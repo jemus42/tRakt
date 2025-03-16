@@ -32,3 +32,4 @@ vignettes/\.httr-oauth$
 ^tests/testthat/\.httr-oauth$
 ^attic$
 ^air\.toml$
+^Makefile$

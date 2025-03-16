@@ -38,9 +38,11 @@ trakt_people_crew_sections <- c(
   "visual effects"
 )
 
-#' Trakt's rating label
+#' Trakt's rating labels
+#'
+#' These can be useful for labeling the numeric scale.
 #' @keywords internal
-#' @noRd
+#' @export
 trakt_rating_labels <- c(
   `1` = "Weak Sauce :(",
   `2` = "Terrible",
