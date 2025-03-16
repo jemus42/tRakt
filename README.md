@@ -1,13 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# tRakt <img src="https://jemus42.github.io/tRakt/reference/figures/logo.png" align="right" height="120"/>
+# tRakt <a href="https://jemus42.github.io/tRakt"><img src="man/figures/logo.png" align="right" height="139" alt="tRakt website" /></a>
 
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml)
-[![Coverage
-status](https://codecov.io/gh/jemus42/tRakt/branch/master/graph/badge.svg)](https://codecov.io/github/jemus42/tRakt?branch=master)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
 [![GitHub
@@ -15,7 +13,8 @@ release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](h
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
-
+[![Codecov test
+coverage](https://codecov.io/gh/jemus42/tRakt/graph/badge.svg)](https://app.codecov.io/gh/jemus42/tRakt)
 <!-- badges: end -->
 
 `tRakt` helps you to retrieve data from [trakt.tv](https://trakt.tv/), a
@@ -186,18 +185,18 @@ shows_trending(extended = "full") |>
   )
 ```
 
-| Show                       | Episode Runtime | Aired Episodes | Total Runtime (aired) |
-|:---------------------------|:----------------|---------------:|:----------------------|
-| House of the Dragon (2022) | 01:00:00        |              1 | 01:00:00              |
-| Better Call Saul (2015)    | 00:45:00        |             63 | 47:15:00              |
-| Game of Thrones (2011)     | 01:00:00        |             73 | 73:00:00              |
-| The Sandman (2022)         | 00:48:00        |             11 | 08:48:00              |
-| See (2019)                 | 01:00:00        |             17 | 17:00:00              |
-| Westworld (2016)           | 01:00:00        |             36 | 36:00:00              |
-| For All Mankind (2019)     | 01:00:00        |             30 | 30:00:00              |
-| Stranger Things (2016)     | 00:50:00        |             34 | 28:20:00              |
-| Breaking Bad (2008)        | 00:45:00        |             62 | 46:30:00              |
-| The Big Bang Theory (2007) | 00:22:00        |            279 | 102:18:00             |
+| Show | Episode Runtime | Aired Episodes | Total Runtime (aired) |
+|:---|:---|---:|:---|
+| House of the Dragon (2022) | 01:00:00 | 1 | 01:00:00 |
+| Better Call Saul (2015) | 00:45:00 | 63 | 47:15:00 |
+| Game of Thrones (2011) | 01:00:00 | 73 | 73:00:00 |
+| The Sandman (2022) | 00:48:00 | 11 | 08:48:00 |
+| See (2019) | 01:00:00 | 17 | 17:00:00 |
+| Westworld (2016) | 01:00:00 | 36 | 36:00:00 |
+| For All Mankind (2019) | 01:00:00 | 30 | 30:00:00 |
+| Stranger Things (2016) | 00:50:00 | 34 | 28:20:00 |
+| Breaking Bad (2008) | 00:45:00 | 62 | 46:30:00 |
+| The Big Bang Theory (2007) | 00:22:00 | 279 | 102:18:00 |
 
 Please note though that episode runtime data may be inaccurate. In my
 experience, recent shows have fairly accurate runtime data, which is
@@ -207,9 +206,9 @@ often not the case for older shows.
 
 The API requires at least a `client id` for the API calls.  
 Loading the package (or calling its functions via `tRakt::` wil
-automatically set the app’s client id (see `trakt_credentials()`) – for
-extended use you should set your own credentials via environment
-variables in your `.Renviron` like this:
+automatically set the app’s client id – for extended use you should set
+your own credentials via environment variables in your `.Renviron` like
+this:
 
 ``` sh
 # tRakt

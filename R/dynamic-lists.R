@@ -3,19 +3,32 @@
 #' @importFrom rlang has_name
 #' @importFrom dplyr select bind_rows
 #' @noRd
-trakt_auto_lists <- function(list_type = c(
-                               "popular", "trending", "anticipated",
-                               "played", "watched", "collected", "updates"
-                             ),
-                             type = c("shows", "movies"),
-                             limit = 10L,
-                             extended = c("min", "full"),
-                             period = NULL, start_date = NULL,
-                             query = NULL, years = NULL,
-                             genres = NULL, languages = NULL,
-                             countries = NULL, runtimes = NULL,
-                             ratings = NULL, certifications = NULL,
-                             networks = NULL, status = NULL) {
+trakt_auto_lists <- function(
+  list_type = c(
+    "popular",
+    "trending",
+    "anticipated",
+    "played",
+    "watched",
+    "collected",
+    "updates"
+  ),
+  type = c("shows", "movies"),
+  limit = 10L,
+  extended = c("min", "full"),
+  period = NULL,
+  start_date = NULL,
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL,
+  networks = NULL,
+  status = NULL
+) {
   # Check arguments
   list_type <- match.arg(list_type)
 
@@ -40,11 +53,22 @@ trakt_auto_lists <- function(list_type = c(
   }
 
   # Construct URL, make API call
-  url <- build_trakt_url(type, list_type, start_date, period,
-    limit = limit, extended = extended,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
+  url <- build_trakt_url(
+    type,
+    list_type,
+    start_date,
+    period,
+    limit = limit,
+    extended = extended,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications,
+    networks = networks,
     status = status
   )
   response <- trakt_get(url)
@@ -102,18 +126,31 @@ trakt_auto_lists <- function(list_type = c(
 #' # Get the most popular German-language movies between 2000 and 2010
 #' movies_popular(languages = "de", years = c(2000, 2010))
 #' }
-movies_popular <- function(limit = 10,
-                           extended = c("min", "full"),
-                           query = NULL, years = NULL,
-                           genres = NULL, languages = NULL,
-                           countries = NULL, runtimes = NULL,
-                           ratings = NULL, certifications = NULL) {
+movies_popular <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL
+) {
   trakt_auto_lists(
-    list_type = "popular", type = "movies",
-    limit = limit, extended = extended,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications
+    list_type = "popular",
+    type = "movies",
+    limit = limit,
+    extended = extended,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications
   )
 }
 
@@ -122,19 +159,34 @@ movies_popular <- function(limit = 10,
 #' @family shows data
 #' @family dynamic lists
 #' @export
-shows_popular <- function(limit = 10,
-                          extended = c("min", "full"),
-                          query = NULL, years = NULL,
-                          genres = NULL, languages = NULL,
-                          countries = NULL, runtimes = NULL,
-                          ratings = NULL, certifications = NULL,
-                          networks = NULL, status = NULL) {
+shows_popular <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL,
+  networks = NULL,
+  status = NULL
+) {
   trakt_auto_lists(
-    list_type = "popular", type = "shows",
-    limit = limit, extended = extended,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
+    list_type = "popular",
+    type = "shows",
+    limit = limit,
+    extended = extended,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications,
+    networks = networks,
     status = status
   )
 }
@@ -152,18 +204,31 @@ shows_popular <- function(limit = 10,
 #' @eval apiurl("movies", "trending")
 #' @family movie data
 #' @family dynamic lists
-movies_trending <- function(limit = 10,
-                            extended = c("min", "full"),
-                            query = NULL, years = NULL,
-                            genres = NULL, languages = NULL,
-                            countries = NULL, runtimes = NULL,
-                            ratings = NULL, certifications = NULL) {
+movies_trending <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL
+) {
   trakt_auto_lists(
-    list_type = "trending", type = "movies",
-    limit = limit, extended = extended,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications
+    list_type = "trending",
+    type = "movies",
+    limit = limit,
+    extended = extended,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications
   )
 }
 
@@ -172,19 +237,34 @@ movies_trending <- function(limit = 10,
 #' @family shows data
 #' @family dynamic lists
 #' @export
-shows_trending <- function(limit = 10,
-                           extended = c("min", "full"),
-                           query = NULL, years = NULL,
-                           genres = NULL, languages = NULL,
-                           countries = NULL, runtimes = NULL,
-                           ratings = NULL, certifications = NULL,
-                           networks = NULL, status = NULL) {
+shows_trending <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL,
+  networks = NULL,
+  status = NULL
+) {
   trakt_auto_lists(
-    list_type = "trending", type = "shows",
-    limit = limit, extended = extended,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
+    list_type = "trending",
+    type = "shows",
+    limit = limit,
+    extended = extended,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications,
+    networks = networks,
     status = status
   )
 }
@@ -202,18 +282,31 @@ shows_trending <- function(limit = 10,
 #' @eval apiurl("movies", "anticipated")
 #' @family movie data
 #' @family dynamic lists
-movies_anticipated <- function(limit = 10,
-                               extended = c("min", "full"),
-                               query = NULL, years = NULL,
-                               genres = NULL, languages = NULL,
-                               countries = NULL, runtimes = NULL,
-                               ratings = NULL, certifications = NULL) {
+movies_anticipated <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL
+) {
   trakt_auto_lists(
-    list_type = "anticipated", type = "movies",
-    limit = limit, extended = extended,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications
+    list_type = "anticipated",
+    type = "movies",
+    limit = limit,
+    extended = extended,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications
   )
 }
 
@@ -228,19 +321,34 @@ movies_anticipated <- function(limit = 10,
 #' current_year <- format(Sys.Date(), "%Y")
 #' shows_anticipated(limit = 15, networks = "Netflix", years = current_year)
 #' }
-shows_anticipated <- function(limit = 10,
-                              extended = c("min", "full"),
-                              query = NULL, years = NULL,
-                              genres = NULL, languages = NULL,
-                              countries = NULL, runtimes = NULL,
-                              ratings = NULL, certifications = NULL,
-                              networks = NULL, status = NULL) {
+shows_anticipated <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL,
+  networks = NULL,
+  status = NULL
+) {
   trakt_auto_lists(
-    list_type = "anticipated", type = "shows",
-    limit = limit, extended = extended,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
+    list_type = "anticipated",
+    type = "shows",
+    limit = limit,
+    extended = extended,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications,
+    networks = networks,
     status = status
   )
 }
@@ -258,21 +366,35 @@ shows_anticipated <- function(limit = 10,
 #' @eval apiurl("movies", "played")
 #' @family movie data
 #' @family dynamic lists
-movies_played <- function(limit = 10, extended = c("min", "full"),
-                          period = c("weekly", "monthly", "yearly", "all"),
-                          query = NULL, years = NULL,
-                          genres = NULL, languages = NULL,
-                          countries = NULL, runtimes = NULL,
-                          ratings = NULL, certifications = NULL) {
+movies_played <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  period = c("weekly", "monthly", "yearly", "all"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL
+) {
   period <- match.arg(period)
 
   trakt_auto_lists(
-    list_type = "played", type = "movies",
+    list_type = "played",
+    type = "movies",
     limit = limit,
-    extended = extended, period = period,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications
+    extended = extended,
+    period = period,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications
   )
 }
 
@@ -281,22 +403,38 @@ movies_played <- function(limit = 10, extended = c("min", "full"),
 #' @family show data
 #' @family dynamic lists
 #' @export
-shows_played <- function(limit = 10, extended = c("min", "full"),
-                         period = c("weekly", "monthly", "yearly", "all"),
-                         query = NULL, years = NULL,
-                         genres = NULL, languages = NULL,
-                         countries = NULL, runtimes = NULL,
-                         ratings = NULL, certifications = NULL,
-                         networks = NULL, status = NULL) {
+shows_played <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  period = c("weekly", "monthly", "yearly", "all"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL,
+  networks = NULL,
+  status = NULL
+) {
   period <- match.arg(period)
 
   trakt_auto_lists(
-    list_type = "played", type = "shows",
+    list_type = "played",
+    type = "shows",
     limit = limit,
-    extended = extended, period = period,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
+    extended = extended,
+    period = period,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications,
+    networks = networks,
     status = status
   )
 }
@@ -314,21 +452,35 @@ shows_played <- function(limit = 10, extended = c("min", "full"),
 #' @eval apiurl("movies", "watched")
 #' @family movie data
 #' @family dynamic lists
-movies_watched <- function(limit = 10, extended = c("min", "full"),
-                           period = c("weekly", "monthly", "yearly", "all"),
-                           query = NULL, years = NULL,
-                           genres = NULL, languages = NULL,
-                           countries = NULL, runtimes = NULL,
-                           ratings = NULL, certifications = NULL) {
+movies_watched <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  period = c("weekly", "monthly", "yearly", "all"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL
+) {
   period <- match.arg(period)
 
   trakt_auto_lists(
-    list_type = "watched", type = "movies",
+    list_type = "watched",
+    type = "movies",
     limit = limit,
-    extended = extended, period = period,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications
+    extended = extended,
+    period = period,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications
   )
 }
 
@@ -337,22 +489,38 @@ movies_watched <- function(limit = 10, extended = c("min", "full"),
 #' @family shows data
 #' @family dynamic lists
 #' @export
-shows_watched <- function(limit = 10, extended = c("min", "full"),
-                          period = c("weekly", "monthly", "yearly", "all"),
-                          query = NULL, years = NULL,
-                          genres = NULL, languages = NULL,
-                          countries = NULL, runtimes = NULL,
-                          ratings = NULL, certifications = NULL,
-                          networks = NULL, status = NULL) {
+shows_watched <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  period = c("weekly", "monthly", "yearly", "all"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL,
+  networks = NULL,
+  status = NULL
+) {
   period <- match.arg(period)
 
   trakt_auto_lists(
-    list_type = "watched", type = "shows",
+    list_type = "watched",
+    type = "shows",
     limit = limit,
-    extended = extended, period = period,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
+    extended = extended,
+    period = period,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications,
+    networks = networks,
     status = status
   )
 }
@@ -370,21 +538,35 @@ shows_watched <- function(limit = 10, extended = c("min", "full"),
 #' @eval apiurl("movies", "collected")
 #' @family movie data
 #' @family dynamic lists
-movies_collected <- function(limit = 10, extended = c("min", "full"),
-                             period = c("weekly", "monthly", "yearly", "all"),
-                             query = NULL, years = NULL,
-                             genres = NULL, languages = NULL,
-                             countries = NULL, runtimes = NULL,
-                             ratings = NULL, certifications = NULL) {
+movies_collected <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  period = c("weekly", "monthly", "yearly", "all"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL
+) {
   period <- match.arg(period)
 
   trakt_auto_lists(
-    list_type = "collected", type = "movies",
+    list_type = "collected",
+    type = "movies",
     limit = limit,
-    extended = extended, period = period,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications
+    extended = extended,
+    period = period,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications
   )
 }
 
@@ -393,22 +575,38 @@ movies_collected <- function(limit = 10, extended = c("min", "full"),
 #' @family show data
 #' @family dynamic lists
 #' @export
-shows_collected <- function(limit = 10, extended = c("min", "full"),
-                            period = c("weekly", "monthly", "yearly", "all"),
-                            query = NULL, years = NULL,
-                            genres = NULL, languages = NULL,
-                            countries = NULL, runtimes = NULL,
-                            ratings = NULL, certifications = NULL,
-                            networks = NULL, status = NULL) {
+shows_collected <- function(
+  limit = 10,
+  extended = c("min", "full"),
+  period = c("weekly", "monthly", "yearly", "all"),
+  query = NULL,
+  years = NULL,
+  genres = NULL,
+  languages = NULL,
+  countries = NULL,
+  runtimes = NULL,
+  ratings = NULL,
+  certifications = NULL,
+  networks = NULL,
+  status = NULL
+) {
   period <- match.arg(period)
 
   trakt_auto_lists(
-    list_type = "collected", type = "shows",
+    list_type = "collected",
+    type = "shows",
     limit = limit,
-    extended = extended, period = period,
-    query = query, years = years, genres = genres,
-    languages = languages, countries = countries, runtimes = runtimes,
-    ratings = ratings, certifications = certifications, networks = networks,
+    extended = extended,
+    period = period,
+    query = query,
+    years = years,
+    genres = genres,
+    languages = languages,
+    countries = countries,
+    runtimes = runtimes,
+    ratings = ratings,
+    certifications = certifications,
+    networks = networks,
     status = status
   )
 }

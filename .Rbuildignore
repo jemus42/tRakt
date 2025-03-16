@@ -31,3 +31,5 @@ vignettes/\.httr-oauth$
 ^codemeta\.json$
 ^tests/testthat/\.httr-oauth$
 ^attic$
+^air\.toml$
+^Makefile$

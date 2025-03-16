@@ -14,7 +14,6 @@
 #' @noRd
 #' @inherit trakt_api_common_parameters return
 #' @keywords internal
-#' @importFrom httr modify_url GET content stop_for_status
 #' @importFrom jsonlite fromJSON
 #' @importFrom tibble as_tibble tibble
 #' @examples
@@ -22,25 +21,22 @@
 #' omdb_get("tt0903747")
 #' }
 omdb_get <- function(imdb) {
-  base_url <- modify_url("https://www.omdbapi.com/",
-    query = list(apikey = Sys.getenv("OMDB_API_KEY"))
-  )
-
-  url <- modify_url(base_url, query = list(i = imdb))
-
-  res <- GET(url)
-  stop_for_status(res, "Getting data from OMDBapi")
-
-  res <- content(res, as = "text")
-  res <- fromJSON(res)
+  res <- httr2::request("https://www.omdbapi.com/") |>
+    httr2::req_url_query(i = imdb, apikey = Sys.getenv("OMDB_API_KEY")) |>
+    httr2::req_perform() |>
+    httr2::resp_body_json(simplifyVector = TRUE)
 
   if (identical(res$Response, "False")) {
     warning(imdb, ": ", res$Error)
     return(tibble())
   }
 
-  res <- as_tibble(res)
-  res <- res[names(res) != "Ratings"]
+  res <- dplyr::bind_cols(
+    res[which(names(res) != "Ratings")],
+    rating_rotten_tomatoes = res$Ratings$Value[[1]],
+    rating_imdb = res$Ratings$Value[[2]]
+  )
+
   res$imdbRating <- as.numeric(res$imdbRating)
   res$imdbVotes <- as.numeric(gsub(",", "", res$imdbVotes))
 
@@ -57,7 +53,6 @@ omdb_get <- function(imdb) {
 #' @return A [tibble()][tibble::tibble-package] with multiple list-columns.
 #' @keywords internal
 #' @noRd
-#' @importFrom httr modify_url GET content
 #' @importFrom purrr map
 #' @importFrom tibble tibble as_tibble
 #' @importFrom jsonlite fromJSON
@@ -67,15 +62,13 @@ omdb_get <- function(imdb) {
 #' fanarttv_get(tvdb = "81189")
 #' }
 fanarttv_get <- function(tvdb) {
-  url <- modify_url(
-    url = "http://webservice.fanart.tv",
-    path = paste0("v3/tv/", tvdb),
-    query = list(api_key = Sys.getenv("fanarttv_api_key"))
-  )
+  res <- httr2::request("http://webservice.fanart.tv") |>
+    httr2::req_url_path_append("v3/tv", tvdb) |>
+    httr2::req_url_query(api_key = Sys.getenv("fanarttv_api_key")) |>
+    httr2::req_perform()
 
-  res <- GET(url)
-  res <- fromJSON(content(res, as = "text"))
-  res <- map(res, as_tibble)
+  res <- httr2::resp_body_json(res, simplifyVector = TRUE)
+  res <- lapply(res, as_tibble)
 
   res_x <- tibble(
     name = res$name$value,

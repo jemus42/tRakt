@@ -24,7 +24,6 @@ test_that("user_watched works", {
     expect_is("tbl_df") |>
     expect_length(9)
 
-
   # Multiples
   user_watched(user = c(user, user), type = "movies") |>
     expect_is("tbl_df") |>

@@ -18,9 +18,11 @@ NULL
 #' User network worker function
 #' @keywords internal
 #' @noRd
-user_network <- function(relationship = c("friends", "followers", "following"),
-                         user = getOption("trakt_username"),
-                         extended = c("min", "full")) {
+user_network <- function(
+  relationship = c("friends", "followers", "following"),
+  user = "me",
+  extended = c("min", "full")
+) {
   check_username(user)
   extended <- match.arg(extended)
   relationship <- match.arg(relationship)

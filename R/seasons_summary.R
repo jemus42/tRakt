@@ -28,18 +28,28 @@
 #' # a list-column containing all episode data
 #' seasons_summary("utopia", extended = "full", episodes = TRUE)
 #' }
-seasons_summary <- function(id, episodes = FALSE,
-                            drop_specials = TRUE, drop_unaired = TRUE,
-                            extended = c("min", "full")) {
+seasons_summary <- function(
+  id,
+  episodes = FALSE,
+  drop_specials = TRUE,
+  drop_unaired = TRUE,
+  extended = c("min", "full")
+) {
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    response <- map_df(id, ~ {
-      seasons_summary(
-        id = .x, extended = extended, episodes = episodes,
-        drop_specials = drop_specials, drop_unaired = drop_unaired
-      )
-    })
+    response <- map_df(
+      id,
+      ~ {
+        seasons_summary(
+          id = .x,
+          extended = extended,
+          episodes = episodes,
+          drop_specials = drop_specials,
+          drop_unaired = drop_unaired
+        )
+      }
+    )
     return(response)
   }
 

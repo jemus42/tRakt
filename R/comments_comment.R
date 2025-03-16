@@ -16,9 +16,12 @@ comments_comment <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    res <- map_df(id, ~ {
-      comments_comment(.x, extended = extended)
-    })
+    res <- map_df(
+      id,
+      ~ {
+        comments_comment(.x, extended = extended)
+      }
+    )
     return(res)
   }
 
@@ -40,9 +43,12 @@ comments_replies <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    res <- map_df(id, ~ {
-      comments_replies(.x, extended = extended)
-    })
+    res <- map_df(
+      id,
+      ~ {
+        comments_replies(.x, extended = extended)
+      }
+    )
     return(res)
   }
 
@@ -66,9 +72,12 @@ comments_likes <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    res <- map_df(id, ~ {
-      comments_likes(.x, extended = extended)
-    })
+    res <- map_df(
+      id,
+      ~ {
+        comments_likes(.x, extended = extended)
+      }
+    )
     return(res)
   }
 
@@ -112,9 +121,12 @@ comments_item <- function(id, extended = c("min", "full")) {
   extended <- match.arg(extended)
 
   if (length(id) > 1) {
-    res <- map_df(id, ~ {
-      comments_item(.x, extended = extended)
-    })
+    res <- map_df(
+      id,
+      ~ {
+        comments_item(.x, extended = extended)
+      }
+    )
     return(res)
   }
 

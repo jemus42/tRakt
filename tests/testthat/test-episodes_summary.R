@@ -1,6 +1,13 @@
 test_that("episodes_summary works", {
   episode_summary_names_min <- c(
-    "id", "season", "episode", "title", "trakt", "tvdb", "imdb", "tmdb"
+    "id",
+    "season",
+    "episode",
+    "title",
+    "trakt",
+    "tvdb",
+    "imdb",
+    "tmdb"
   )
 
   episodes_summary("breaking-bad") |>

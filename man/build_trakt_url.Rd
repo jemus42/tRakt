@@ -4,7 +4,7 @@
 \alias{build_trakt_url}
 \title{Assemble a trakt.tv API URL}
 \usage{
-build_trakt_url(..., validate = FALSE)
+build_trakt_url(...)
 }
 \arguments{
 \item{...}{Unnamed arguments will be concatenated with \code{/} as separators to
@@ -12,24 +12,14 @@ form the path of the API URL, e.g. the arguments \code{movies},
 \code{tron-legacy-2012} and \code{releases} will be concatenated to
 \code{movies/tron-legacy-2012/releases}. Additional \strong{named} arguments will be
 used as query parameters, usually \code{extended = "full"} or others.}
-
-\item{validate}{\code{logical(1) [TRUE]}: Whether to check the URL via
-\code{httr::HEAD} request.}
 }
 \value{
-A URL: \code{character} of length 1. If \code{validate = TRUE}, also a message
-including the HTTP status code return by a \code{HEAD} request.
+A URL: \code{character} of length 1.
 }
 \description{
 \code{build_trakt_url} assembles a trakt.tv API URL from different arguments.
 The result should be fine for use with \link{trakt_get}, since that's what this
 function was created for.
-}
-\note{
-Please be aware that the result of this function is not verified to be
-a working trakt.tv API URL unless \code{validate = TRUE}, in which case a \code{HEAD}
-request is performed that does not actually receive any data, but from its
-returned status code the validity of the URL can be inferred.
 }
 \examples{
 build_trakt_url("shows", "breaking-bad", extended = "full")
@@ -38,8 +28,7 @@ build_trakt_url("shows", "popular", page = 3, limit = 5)
 # Path can also be partially assembled already
 build_trakt_url("users/jemus42", "ratings")
 
-# Validate a URL works
-build_trakt_url("shows", "popular", page = 1, limit = 5, validate = TRUE)
+build_trakt_url("shows", "popular", page = 1, limit = 5)
 }
 \seealso{
 Other utility functions: 

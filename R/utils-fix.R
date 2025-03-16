@@ -51,9 +51,18 @@ fix_datetime <- function(response) {
     stop("Object type not supported, must inherit from data.frame or list")
   }
   datevars <- c(
-    "first_aired", "updated_at", "listed_at", "last_watched_at", "last_updated_at",
-    "last_collected_at", "rated_at", "friends_at", "followed_at", "collected_at",
-    "joined_at", "watched_at",
+    "first_aired",
+    "updated_at",
+    "listed_at",
+    "last_watched_at",
+    "last_updated_at",
+    "last_collected_at",
+    "rated_at",
+    "friends_at",
+    "followed_at",
+    "collected_at",
+    "joined_at",
+    "watched_at",
     "created_at"
   )
 
@@ -68,14 +77,17 @@ fix_datetime <- function(response) {
 
   if (inherits(response, "data.frame")) {
     response |>
-      mutate(across(any_of(datevars), ~ {
-        # Don't convert already POSIXct vars
-        if (!(inherits(.x, "POSIXct"))) {
-          ymd_hms(.x)
-        } else {
-          .x
+      mutate(across(
+        any_of(datevars),
+        ~ {
+          # Don't convert already POSIXct vars
+          if (!(inherits(.x, "POSIXct"))) {
+            ymd_hms(.x)
+          } else {
+            .x
+          }
         }
-      }))
+      ))
   } else {
     map_at(response, datevars, ymd_hms)
   }
@@ -90,9 +102,7 @@ fix_ratings_distribution <- function(response) {
     return(response)
   }
 
-  response$distribution <- enframe(unlist(response$distribution),
-    name = "rating", value = "n"
-  )
+  response$distribution <- enframe(unlist(response$distribution), name = "rating", value = "n")
   response$distribution$rating <- as.integer(response$distribution$rating)
   response$distribution <- list(response$distribution)
   response

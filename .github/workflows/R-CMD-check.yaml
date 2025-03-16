@@ -1,6 +1,15 @@
 # Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
+  # Allow manually triggering the workflow via GitHub website, gh CLI tool etc.
+  # Also adds parameter to enable tmate (inetractive tmux session for debugging)
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        type: boolean
+        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        required: false
+        default: false
   push:
     branches: [main, master]
   pull_request:
@@ -27,6 +36,7 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_KEEP_PKG_SOURCE: yes
+      tRakt_KEY: ${{ secrets.TRAKT_KEY }}
 
     steps:
       - uses: actions/checkout@v4
@@ -43,6 +53,13 @@ jobs:
         with:
           extra-packages: any::rcmdcheck
           needs: check
+
+      # Get a tmux ssh session for interactive debugging
+      # Controlled via inputs from GitHub webinterface
+      # See https://github.com/mxschmitt/action-tmate
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.debug_enabled }}
 
       - uses: r-lib/actions/check-r-package@v2
         with:

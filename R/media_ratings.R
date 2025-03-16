@@ -116,9 +116,12 @@ episodes_ratings <- function(id, season = 1L, episode = 1L) {
 
   # Construct URL, make API call
   url <- build_trakt_url(
-    "shows", id,
-    "seasons", season,
-    "episodes", episode,
+    "shows",
+    id,
+    "seasons",
+    season,
+    "episodes",
+    episode,
     "ratings"
   )
   response <- trakt_get(url = url)

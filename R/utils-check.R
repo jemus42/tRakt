@@ -2,25 +2,24 @@
 #'
 #' @param user The username input.
 #' @param validate `logical(1) [TRUE]`: Retrieve user profile to check if it exists.
-#' @return An error if the checks fail or else `TRUE` invisibly. If `validate`, the
+#' @return An HTTP error if the checks fail or else `TRUE` invisibly. If `validate`, the
 #' user profile is returned as a `list`.
 #' @keywords internal
-#' @importFrom httr stop_for_status
 #' @importFrom rlang is_empty is_character
 check_username <- function(user, validate = FALSE) {
   if (is_empty(user) || identical(user, "") || !is_character(user)) {
     stop(
       "Supplied user must be a non-empty character string, you provided <",
-      user, "> of class '", class(user), "'"
+      user,
+      "> of class '",
+      class(user),
+      "'"
     )
   }
 
   if (validate) {
     url <- build_trakt_url("users", user)
-    response <- trakt_get(url, HEAD = TRUE)
-    if (!identical(response$status, 200L)) {
-      stop_for_status(response$status)
-    }
+    trakt_get(url)
   }
   # Return TRUE if and only if everything else did not fail
   invisible(TRUE)
@@ -39,11 +38,17 @@ check_username <- function(user, validate = FALSE) {
 #' @keywords internal
 #' @noRd
 #' @importFrom dplyr case_when
-check_types <- function(type, several.ok = TRUE,
-                        possible_types = c(
-                          "movie", "show", "season",
-                          "episode", "person"
-                        )) {
+check_types <- function(
+  type,
+  several.ok = TRUE,
+  possible_types = c(
+    "movie",
+    "show",
+    "season",
+    "episode",
+    "person"
+  )
+) {
   if (is.null(type)) {
     return(NULL)
   }
@@ -77,12 +82,21 @@ check_types <- function(type, several.ok = TRUE,
 #' @importFrom purrr map_lgl
 #' @importFrom purrr is_empty
 #' @keywords internal
-check_filter_arg <- function(filter,
-                             filter_type = c(
-                               "query", "years", "genres", "languages", "countries",
-                               "runtimes", "ratings", "certifications", "networks",
-                               "status"
-                             )) {
+check_filter_arg <- function(
+  filter,
+  filter_type = c(
+    "query",
+    "years",
+    "genres",
+    "languages",
+    "countries",
+    "runtimes",
+    "ratings",
+    "certifications",
+    "networks",
+    "status"
+  )
+) {
   filter_type <- match.arg(filter_type)
 
   # Empty in, empty out. Can't explain that.
@@ -149,27 +163,37 @@ check_filter_arg <- function(filter,
   }
   if (filter_type == "genres") {
     filter <- check_filter_arg_fixed(
-      filter, filter_type, tRakt::trakt_genres$slug
+      filter,
+      filter_type,
+      tRakt::trakt_genres$slug
     )
   }
   if (filter_type == "languages") {
     filter <- check_filter_arg_fixed(
-      filter, filter_type, tRakt::trakt_languages$code
+      filter,
+      filter_type,
+      tRakt::trakt_languages$code
     )
   }
   if (filter_type == "countries") {
     filter <- check_filter_arg_fixed(
-      filter, filter_type, tRakt::trakt_countries$code
+      filter,
+      filter_type,
+      tRakt::trakt_countries$code
     )
   }
   if (filter_type == "certifications") {
     filter <- check_filter_arg_fixed(
-      filter, filter_type, tRakt::trakt_certifications$slug
+      filter,
+      filter_type,
+      tRakt::trakt_certifications$slug
     )
   }
   if (filter_type == "networks") {
     filter <- check_filter_arg_fixed(
-      filter, filter_type, tRakt::trakt_networks$name
+      filter,
+      filter_type,
+      tRakt::trakt_networks$name
     )
   }
   if (filter_type == "status") {
@@ -194,20 +218,27 @@ check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
   clean_filter_ok <- str_trim(filter_ok, "both") |>
     str_to_lower()
 
-  filter <- map_chr(clean_filter, ~ {
-    matches <- .x %in% clean_filter_ok
+  filter <- map_chr(
+    clean_filter,
+    ~ {
+      matches <- .x %in% clean_filter_ok
 
-    if (!matches) {
-      warning(
-        call. = FALSE,
-        "'", filter_type, "' includes unknown value, ignoring: '", .x, "'"
-      )
-      ""
-    } else {
-      filter_ok[.x == clean_filter_ok] |>
-        unique()
+      if (!matches) {
+        warning(
+          call. = FALSE,
+          "'",
+          filter_type,
+          "' includes unknown value, ignoring: '",
+          .x,
+          "'"
+        )
+        ""
+      } else {
+        filter_ok[.x == clean_filter_ok] |>
+          unique()
+      }
     }
-  })
+  )
 
   paste0(unique(filter), collapse = ",")
 }

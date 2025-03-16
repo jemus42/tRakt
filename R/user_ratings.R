@@ -13,9 +13,12 @@
 #' user_ratings(user = "jemus42", "shows")
 #' user_ratings(user = "sean", type = "movies")
 #' }
-user_ratings <- function(user = getOption("trakt_username"),
-                         type = c("movies", "seasons", "shows", "episodes"),
-                         rating = NULL, extended = c("min", "full")) {
+user_ratings <- function(
+  user = "me",
+  type = c("movies", "seasons", "shows", "episodes"),
+  rating = NULL,
+  extended = c("min", "full")
+) {
   check_username(user)
   type <- match.arg(type)
   extended <- match.arg(extended)

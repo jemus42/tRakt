@@ -22,35 +22,39 @@ knitr::opts_chunk$set(
 
 ```{r startup}
 library(tRakt)
-library(tibble) # For glimpse()
+library(dplyr)
+library(ggplot2)
 ```
 
 ## Step 1: Search
 
-Use the search function to find the show you're looking for.
+Use the search function to find the show you're looking for. 
+THe show "24" is a particularly good example for a show with a bad name. If we just search for "24", we'll get a completely different show.  
+To nudge the search function to find the show we're looking for, we can specify the year of release:
 
-```{r 24_search}
-show_info <- search_query("24", type = "show")
+```{r 24-search}
+show_info <- search_query("24", years = 2001, type = "show")
 show_info
 ```
 
+Now we have the basic show info to work with, including the `title` and various IDs.
+
+
 ## Step 2: Use the ID
 
-Use the `trakt` ID (recommended over other IDs) for subsequent API calls.  
-In this case, we'll use `seasons_summary()` to get data for all seasons of the show, while also getting an additional list-column containing all episode data, which includes user ratings.
+Use the `trakt` ID for subsequent API calls, which is guaranteed to be always available and unique on trakt.tv.  
+Now we'll use `seasons_summary()` to get data for all seasons of the show, while also getting an additional list-column containing all episode data, which includes user ratings.
 
-```{r 24_getting_seasons}
+```{r 24-getting-seasons}
 seasons <- seasons_summary(show_info$trakt, extended = "full", episodes = TRUE)
 glimpse(seasons)
 ```
 
 ## Step 3: Tidying up
 
-We're interested in the `episodes` list-column, which needs unnesting. In this case we can simply use `dplyr::bind_rows` to take the list of `tbls` that is `seasons$episodes` and basically `rbind` them all together, meaning the result is a `tibble` of the episode data we care about.
+We're interested in the `$episodes` list-column, which needs unnesting. In this case we can use `dplyr::bind_rows()` to take the list of `tibble`s and `rbind` them all together, meaning the result is a `tibble` of the episode data we care about.
 
-```{r 24_episodes_unnesting}
-library(dplyr)
-
+```{r 24-episodes-unnesting}
 episodes <- bind_rows(seasons$episodes)
 glimpse(episodes)
 ```
@@ -59,9 +63,7 @@ glimpse(episodes)
 
 Now we have our episode data in a tidy form, might as well look at it.
 
-```{r 24_episodes_plot}
-library(ggplot2)
-
+```{r 24-episodes-plot}
 ggplot(data = episodes, aes(x = episode, y = rating, color = votes)) +
   geom_point(size = 3, alpha = 2 / 3) +
   facet_wrap(~season, nrow = 1, scales = "free_x") +
@@ -77,7 +79,7 @@ ggplot(data = episodes, aes(x = episode, y = rating, color = votes)) +
   ) +
   theme_minimal() +
   theme(
+    plot.title.position = "plot",
     legend.position = "bottom"
   )
 ```
-
