@@ -129,7 +129,7 @@ test_that("seasons_season works", {
       "trakt",
       "tvdb",
       "tmdb"
-    )))
+    ))
 
   expect_identical(
     seasons_season(id, seasons = 1:2, extended = "min"),
