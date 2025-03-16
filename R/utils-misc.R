@@ -16,7 +16,7 @@
 #' pad_episode(1, 85, e_width = 3)
 pad_episode <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
   if (length(s) != length(e)) {
-    warning("pad() called with wrong argument sizes")
+    cli::cli_warn("called with wrong argument sizes: s = {length(s)}, e = {length(e)}")
     return(rep("", max(length(s), length(e))))
   }
 

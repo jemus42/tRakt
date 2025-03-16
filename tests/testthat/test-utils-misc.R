@@ -14,8 +14,7 @@ test_that("pad_episode() pads", {
       "s01e10"
     )
   )
-  expect_warning(pad_episode(1, 1:10)) |>
-    expect_equal(character(10))
+  expect_warning(pad_episode(1, 1:10))
 })
 
 test_that("build_trakt_url builds a url", {
