@@ -58,6 +58,7 @@ test_that("user_comments", {
     "user_rating",
     "username",
     "private",
+    "deleted",
     "user_name",
     "vip",
     "vip_ep",

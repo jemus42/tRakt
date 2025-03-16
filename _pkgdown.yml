@@ -43,9 +43,10 @@ news:
 reference:
   - title: Basic API interaction
     desc: >
-      These functions are basic building blocks – you don't have to use them directly.
+      These functions are basic building blocks, you don't have to use them directly.
     contents:
       - trakt_get
+      - trakt_credentials
   - subtitle: Search – Finding media
     desc: >
       Searching for items is usually required to retrieve some kind of ID, like the `slug`,
