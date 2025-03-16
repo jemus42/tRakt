@@ -23,6 +23,9 @@
 <url><loc>https://jemus42.github.io/tRakt/reference/episodes_summary.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/futurama.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/gameofthrones.html</loc></url>
+<url><loc>https://jemus42.github.io/tRakt/reference/get_client_id.html</loc></url>
+<url><loc>https://jemus42.github.io/tRakt/reference/get_client_secret.html</loc></url>
+<url><loc>https://jemus42.github.io/tRakt/reference/get_token.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/index.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/lists_popular.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/media_aliases.html</loc></url>
@@ -49,12 +52,11 @@
 <url><loc>https://jemus42.github.io/tRakt/reference/shows_related.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/shows_summary.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/tRakt-package.html</loc></url>
-<url><loc>https://jemus42.github.io/tRakt/reference/tidyeval.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/trakt_api_common_parameters.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/trakt_credentials.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/trakt_datasets.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/trakt_get.html</loc></url>
-<url><loc>https://jemus42.github.io/tRakt/reference/trakt_get_token.html</loc></url>
+<url><loc>https://jemus42.github.io/tRakt/reference/trakt_rating_labels.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/trending_media.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/user_collection.html</loc></url>
 <url><loc>https://jemus42.github.io/tRakt/reference/user_comments.html</loc></url>

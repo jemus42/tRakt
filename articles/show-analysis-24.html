@@ -17,7 +17,7 @@
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><script src="../extra.js"></script><meta property="og:title" content="Show Analysis: 24">
-<noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p></noscript>
+<script defer src="https://umami.jemu.name/script.js" data-website-id="5bfd0409-fce3-470f-a81d-ef881cda44a3"></script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -68,7 +68,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Show Analysis: 24</h1>
                         <h4 data-toc-skip class="author">Lukas Burk</h4>
             
-            <h4 data-toc-skip class="date">2025-03-14</h4>
+            <h4 data-toc-skip class="date">2025-03-16</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/vignettes/show-analysis-24.Rmd" class="external-link"><code>vignettes/show-analysis-24.Rmd</code></a></small>
       <div class="d-none name"><code>show-analysis-24.Rmd</code></div>
@@ -78,80 +78,84 @@
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://jemus42.github.io/tRakt">tRakt</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/" class="external-link">tibble</a></span><span class="op">)</span> <span class="co"># For glimpse()</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="step-1-search">Step 1: Search<a class="anchor" aria-label="anchor" href="#step-1-search"></a>
 </h2>
-<p>Use the search function to find the show you’re looking for.</p>
+<p>Use the search function to find the show you’re looking for. THe show
+“24” is a particularly good example for a show with a bad name. If we
+just search for “24”, we’ll get a completely different show.<br>
+To nudge the search function to find the show we’re looking for, we can
+specify the year of release:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">show_info</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"24"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">show_info</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"24"</span>, years <span class="op">=</span> <span class="fl">2001</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span></span>
 <span><span class="va">show_info</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 9</span></span></span>
-<span><span class="co">#&gt;   type  score title          year trakt  slug          tvdb   imdb       tmdb  </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   234. Yakamoz S-245  <span style="text-decoration: underline;">2</span>022 194241 yakamoz-s-245 394252 tt13317454 195930</span></span></code></pre></div>
+<span><span class="co">#&gt;   type  score title  year trakt slug  tvdb  imdb      tmdb </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   88.0 24     <span style="text-decoration: underline;">2</span>001 1960  24    76290 tt0285331 1973</span></span></code></pre></div>
+<p>Now we have the basic show info to work with, including the
+<code>title</code> and various IDs.</p>
 </div>
 <div class="section level2">
 <h2 id="step-2-use-the-id">Step 2: Use the ID<a class="anchor" aria-label="anchor" href="#step-2-use-the-id"></a>
 </h2>
-<p>Use the <code>trakt</code> ID (recommended over other IDs) for
-subsequent API calls.<br>
-In this case, we’ll use <code><a href="../reference/seasons_summary.html">seasons_summary()</a></code> to get data for
-all seasons of the show, while also getting an additional list-column
-containing all episode data, which includes user ratings.</p>
+<p>Use the <code>trakt</code> ID for subsequent API calls, which is
+guaranteed to be always available and unique on trakt.tv.<br>
+Now we’ll use <code><a href="../reference/seasons_summary.html">seasons_summary()</a></code> to get data for all seasons
+of the show, while also getting an additional list-column containing all
+episode data, which includes user ratings.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">seasons</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, extended <span class="op">=</span> <span class="st">"full"</span>, episodes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">seasons</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 1</span></span>
+<span><span class="co">#&gt; Rows: 9</span></span>
 <span><span class="co">#&gt; Columns: 14</span></span>
-<span><span class="co">#&gt; $ season         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1</span></span>
-<span><span class="co">#&gt; $ rating         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 6.51429</span></span>
-<span><span class="co">#&gt; $ votes          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 35</span></span>
-<span><span class="co">#&gt; $ episode_count  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 7</span></span>
-<span><span class="co">#&gt; $ aired_episodes <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 7</span></span>
-<span><span class="co">#&gt; $ title          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Season 1"</span></span>
-<span><span class="co">#&gt; $ overview       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "After disaster strikes Earth, a marine biologist on a …</span></span>
-<span><span class="co">#&gt; $ first_aired    <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2022-04-20 07:00:00</span></span>
-<span><span class="co">#&gt; $ updated_at     <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2025-03-13 05:59:22</span></span>
-<span><span class="co">#&gt; $ network        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Netflix"</span></span>
-<span><span class="co">#&gt; $ episodes       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[7 x 17]&gt;]</span></span>
-<span><span class="co">#&gt; $ trakt          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "290166"</span></span>
-<span><span class="co">#&gt; $ tvdb           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span></span></span>
-<span><span class="co">#&gt; $ tmdb           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "284769"</span></span></code></pre></div>
+<span><span class="co">#&gt; $ season         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 2, 3, 4, 5, 6, 7, 8, 9</span></span>
+<span><span class="co">#&gt; $ rating         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 8.18590, 8.19814, 8.14022, 8.23967, 8.49091, 7.45918, 7…</span></span>
+<span><span class="co">#&gt; $ votes          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 468, 323, 271, 242, 220, 196, 184, 176, 196</span></span>
+<span><span class="co">#&gt; $ episode_count  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 24, 24, 24, 24, 24, 24, 24, 24, 12</span></span>
+<span><span class="co">#&gt; $ aired_episodes <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 24, 24, 24, 24, 24, 24, 24, 24, 12</span></span>
+<span><span class="co">#&gt; $ title          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Season 1", "Season 2", "Season 3", "Season 4", "Season…</span></span>
+<span><span class="co">#&gt; $ overview       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Counter-terrorism agent Jack Bauer attempts to stop th…</span></span>
+<span><span class="co">#&gt; $ first_aired    <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2001-11-07 02:00:00, 2002-10-30 02:00:00, 2003-10-29 02…</span></span>
+<span><span class="co">#&gt; $ updated_at     <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2025-03-16 08:31:59, 2025-03-16 08:09:52, 2025-03-16 08…</span></span>
+<span><span class="co">#&gt; $ network        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "FOX", "FOX", "FOX", "FOX", "FOX", "FOX", "FOX", "FOX",…</span></span>
+<span><span class="co">#&gt; $ episodes       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[24 x 17]&gt;], [&lt;tbl_df[24 x 17]&gt;], [&lt;tbl_df[24 x…</span></span>
+<span><span class="co">#&gt; $ trakt          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "6262", "6263", "6264", "6265", "6266", "6267", "6268"…</span></span>
+<span><span class="co">#&gt; $ tvdb           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "10063", "10064", "10065", "10066", "10067", "16794", …</span></span>
+<span><span class="co">#&gt; $ tmdb           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "5845", "5846", "5847", "5848", "5849", "5850", "5851",…</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="step-3-tidying-up">Step 3: Tidying up<a class="anchor" aria-label="anchor" href="#step-3-tidying-up"></a>
 </h2>
-<p>We’re interested in the <code>episodes</code> list-column, which
-needs unnesting. In this case we can simply use
-<code><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">dplyr::bind_rows</a></code> to take the list of <code>tbls</code> that
-is <code>seasons$episodes</code> and basically <code>rbind</code> them
-all together, meaning the result is a <code>tibble</code> of the episode
+<p>We’re interested in the <code>$episodes</code> list-column, which
+needs unnesting. In this case we can use <code><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">dplyr::bind_rows()</a></code>
+to take the list of <code>tibble</code>s and <code>rbind</code> them all
+together, meaning the result is a <code>tibble</code> of the episode
 data we care about.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">episodes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="va">seasons</span><span class="op">$</span><span class="va">episodes</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">episodes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="va">seasons</span><span class="op">$</span><span class="va">episodes</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">episodes</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 7</span></span>
+<span><span class="co">#&gt; Rows: 204</span></span>
 <span><span class="co">#&gt; Columns: 17</span></span>
-<span><span class="co">#&gt; $ season                 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1</span></span>
-<span><span class="co">#&gt; $ episode                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 2, 3, 4, 5, 6, 7</span></span>
-<span><span class="co">#&gt; $ title                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Episode 1", "Episode 2", "Episode 3", "Episode…</span></span>
-<span><span class="co">#&gt; $ episode_abs            <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span></span></span>
-<span><span class="co">#&gt; $ overview               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Arman reluctantly embarks on a submarine resea…</span></span>
-<span><span class="co">#&gt; $ rating                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 6.95714, 7.05405, 7.08571, 7.29670, 7.13483, 7.…</span></span>
-<span><span class="co">#&gt; $ votes                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 140, 111, 105, 91, 89, 86, 90</span></span>
-<span><span class="co">#&gt; $ comment_count          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 0, 1, 0, 1, 1, 1</span></span>
-<span><span class="co">#&gt; $ first_aired            <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2022-04-20 07:00:00, 2022-04-20 07:00:00, 2022-…</span></span>
-<span><span class="co">#&gt; $ updated_at             <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2025-03-12 19:57:27, 2025-03-12 19:57:27, 2025-…</span></span>
-<span><span class="co">#&gt; $ available_translations <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"cs", "de", "el", "en", "fr", "it", "ko", "pl"…</span></span>
-<span><span class="co">#&gt; $ runtime                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 46, 44, 41, 51, 50, 54, 50</span></span>
+<span><span class="co">#&gt; $ season                 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span></span>
+<span><span class="co">#&gt; $ episode                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, …</span></span>
+<span><span class="co">#&gt; $ title                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "12:00 A.M.-1:00 A.M.", "1:00 A.M.-2:00 A.M.", …</span></span>
+<span><span class="co">#&gt; $ episode_abs            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…</span></span>
+<span><span class="co">#&gt; $ overview               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Counter Terrorist Unit agent Jack Bauer is ass…</span></span>
+<span><span class="co">#&gt; $ rating                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 7.66959, 7.75383, 7.74122, 7.71659, 7.72020, 7.…</span></span>
+<span><span class="co">#&gt; $ votes                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1598, 1239, 1082, 1055, 990, 947, 926, 921, 904…</span></span>
+<span><span class="co">#&gt; $ comment_count          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 9, 4, 4, 3, 3, 4, 4, 2, 2, 3, 1, 3, 1, 2, 4, 5,…</span></span>
+<span><span class="co">#&gt; $ first_aired            <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2001-11-07 02:00:00, 2001-11-14 02:00:00, 2001…</span></span>
+<span><span class="co">#&gt; $ updated_at             <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2025-03-16 03:31:13, 2025-03-16 03:31:13, 2025…</span></span>
+<span><span class="co">#&gt; $ available_translations <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> &lt;"cs", "da", "de", "en", "es", "fr", "he", "hu…</span></span>
+<span><span class="co">#&gt; $ runtime                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 43, 41, 43, 42, 42, 43, 43, 43, 43, 43, 43, 43,…</span></span>
 <span><span class="co">#&gt; $ episode_type           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "series_premiere", "standard", "standard", "sta…</span></span>
-<span><span class="co">#&gt; $ trakt                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "5990234", "6014174", "6014175", "6014176", "60…</span></span>
-<span><span class="co">#&gt; $ tvdb                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "8209034", "8209035", "8209036", "8209037", "8…</span></span>
-<span><span class="co">#&gt; $ imdb                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "tt13840052", "tt13840054", "tt13840058", "tt1…</span></span>
-<span><span class="co">#&gt; $ tmdb                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "3617839", "3640494", "3640495", "3640496", "3…</span></span></code></pre></div>
+<span><span class="co">#&gt; $ trakt                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "146247", "146248", "146249", "146250", "146251…</span></span>
+<span><span class="co">#&gt; $ tvdb                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "189255", "189256", "189257", "189258", "189259…</span></span>
+<span><span class="co">#&gt; $ imdb                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "tt0502165", "tt0502167", "tt0502169", "tt05021…</span></span>
+<span><span class="co">#&gt; $ tmdb                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "972745", "972752", "972753", "134397", "134398…</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="step-4-graph">Step 4: Graph!<a class="anchor" aria-label="anchor" href="#step-4-graph"></a>
@@ -159,9 +163,7 @@ data we care about.</p>
 <p>Now we have our episode data in a tidy form, might as well look at
 it.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">episodes</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">episode</span>, y <span class="op">=</span> <span class="va">rating</span>, color <span class="op">=</span> <span class="va">votes</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">episodes</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">episode</span>, y <span class="op">=</span> <span class="va">rating</span>, color <span class="op">=</span> <span class="va">votes</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">3</span>, alpha <span class="op">=</span> <span class="fl">2</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="external-link">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">season</span>, nrow <span class="op">=</span> <span class="fl">1</span>, scales <span class="op">=</span> <span class="st">"free_x"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html" class="external-link">scale_x_continuous</a></span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">10</span>, <span class="fl">20</span><span class="op">)</span>, expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -176,9 +178,10 @@ it.</p>
 <span>  <span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span></span>
+<span>    plot.title.position <span class="op">=</span> <span class="st">"plot"</span>,</span>
 <span>    legend.position <span class="op">=</span> <span class="st">"bottom"</span></span>
 <span>  <span class="op">)</span></span></code></pre></div>
-<p><img src="show-analysis-24_files/figure-html/24_episodes_plot-1.png" width="100%"></p>
+<p><img src="show-analysis-24_files/figure-html/24-episodes-plot-1.png" width="100%"></p>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

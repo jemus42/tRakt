@@ -3,7 +3,7 @@
 The result should be fine for use with trakt_get, since that's what this
 function was created for."><meta property="og:description" content="build_trakt_url assembles a trakt.tv API URL from different arguments.
 The result should be fine for use with trakt_get, since that's what this
-function was created for."><meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png"><meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@jemus42"><meta name="twitter:site" content="@jemus42"><noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p></noscript></head><body>
+function was created for."><meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png"><meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo"><script defer src="https://umami.jemu.name/script.js" data-website-id="5bfd0409-fce3-470f-a81d-ef881cda44a3"></script></head><body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
@@ -51,7 +51,7 @@ function was created for.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">build_trakt_url</span><span class="op">(</span><span class="va">...</span>, validate <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">build_trakt_url</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -65,23 +65,10 @@ form the path of the API URL, e.g. the arguments <code>movies</code>,
 <code>movies/tron-legacy-2012/releases</code>. Additional <strong>named</strong> arguments will be
 used as query parameters, usually <code>extended = "full"</code> or others.</p></dd>
 
-
-<dt id="arg-validate">validate<a class="anchor" aria-label="anchor" href="#arg-validate"></a></dt>
-<dd><p><code>logical(1) [TRUE]</code>: Whether to check the URL via
-<code><a href="https://httr.r-lib.org/reference/HEAD.html" class="external-link">httr::HEAD</a></code> request.</p></dd>
-
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>A URL: <code>character</code> of length 1. If <code>validate = TRUE</code>, also a message
-including the HTTP status code return by a <code>HEAD</code> request.</p>
-    </div>
-    <div class="section level2">
-    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p>Please be aware that the result of this function is not verified to be
-a working trakt.tv API URL unless <code>validate = TRUE</code>, in which case a <code>HEAD</code>
-request is performed that does not actually receive any data, but from its
-returned status code the validity of the URL can be inferred.</p>
+    <p>A URL: <code>character</code> of length 1.</p>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
@@ -100,8 +87,7 @@ returned status code the validity of the URL can be inferred.</p>
 <span class="r-in"><span><span class="fu">build_trakt_url</span><span class="op">(</span><span class="st">"users/jemus42"</span>, <span class="st">"ratings"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://api.trakt.tv/users/jemus42/ratings"</span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co"># Validate a URL works</span></span></span>
-<span class="r-in"><span><span class="fu">build_trakt_url</span><span class="op">(</span><span class="st">"shows"</span>, <span class="st">"popular"</span>, page <span class="op">=</span> <span class="fl">1</span>, limit <span class="op">=</span> <span class="fl">5</span>, validate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">build_trakt_url</span><span class="op">(</span><span class="st">"shows"</span>, <span class="st">"popular"</span>, page <span class="op">=</span> <span class="fl">1</span>, limit <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://api.trakt.tv/shows/popular?page=1&amp;limit=5"</span>
 </code></pre></div>
     </div>

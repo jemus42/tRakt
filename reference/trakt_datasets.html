@@ -5,7 +5,7 @@ functions (see search_query or the dynamic lists like shows_popular).
 They are unlikely to change often and are therefore included as package datasets."><meta property="og:description" content="These datasets are used internally to check the optional
 filter parameters for certain
 functions (see search_query or the dynamic lists like shows_popular).
-They are unlikely to change often and are therefore included as package datasets."><meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png"><meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@jemus42"><meta name="twitter:site" content="@jemus42"><noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p></noscript></head><body>
+They are unlikely to change often and are therefore included as package datasets."><meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png"><meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo"><script defer src="https://umami.jemu.name/script.js" data-website-id="5bfd0409-fce3-470f-a81d-ef881cda44a3"></script></head><body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
@@ -86,9 +86,9 @@ TV and movie certifications (e.g. "PG-13" and the likes).</p><ul><li><p>5 Variab
 <code>slug</code> ("tv-pg"), <code>description</code> ("Parental Guidance Suggested"), <code>type</code> ("shows")</p></li>
 </ul></li>
 </ul><p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 64 rows and 3 columns.</p>
-<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 244 rows and 3 columns.</p>
-<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 3081 rows and 2 columns.</p>
-<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 350 rows and 3 columns.</p>
+<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 249 rows and 3 columns.</p>
+<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 3070 rows and 5 columns.</p>
+<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 352 rows and 3 columns.</p>
 <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 12 rows and 5 columns.</p>
     </div>
     <div class="section level2">
@@ -124,15 +124,15 @@ filter arguments of the same name.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> Afrikaans af    shows </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> Akan      ak    movies</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">trakt_networks</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 2</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   name       name_clean</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> <span style="color: #949494;">"</span> - None<span style="color: #949494;">"</span>  - none    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> <span style="color: #949494;">"</span> 10 Play<span style="color: #949494;">"</span> 10 play   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> <span style="color: #949494;">"</span> Inc.<span style="color: #949494;">"</span>    inc.      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> <span style="color: #949494;">"</span> VTV <span style="color: #949494;">"</span>    vtv       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> <span style="color: #949494;">"</span>#0<span style="color: #949494;">"</span>       #0        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> <span style="color: #949494;">"</span>&amp;TV<span style="color: #949494;">"</span>      &amp;tv       </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 5</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   name       name_clean country trakt  tmdb</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> <span style="color: #949494;">""</span>         <span style="color: #949494;">""</span>         <span style="color: #BB0000;">NA</span>        869  <span style="text-decoration: underline;">1</span>446</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> <span style="color: #949494;">"</span> 10 Play<span style="color: #949494;">"</span> <span style="color: #949494;">"</span>10 play<span style="color: #949494;">"</span>  au       <span style="text-decoration: underline;">1</span>287  <span style="text-decoration: underline;">3</span>466</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> <span style="color: #949494;">"</span> VTV <span style="color: #949494;">"</span>    <span style="color: #949494;">"</span>vtv<span style="color: #949494;">"</span>      vn        481  <span style="text-decoration: underline;">2</span>863</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> <span style="color: #949494;">"</span>&amp;TV<span style="color: #949494;">"</span>      <span style="color: #949494;">"</span>&amp;tv<span style="color: #949494;">"</span>      in       <span style="text-decoration: underline;">1</span>489  <span style="text-decoration: underline;">1</span>566</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> <span style="color: #949494;">"</span>#0<span style="color: #949494;">"</span>       <span style="color: #949494;">"</span>#0<span style="color: #949494;">"</span>       es         79  <span style="text-decoration: underline;">2</span>140</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> <span style="color: #949494;">"</span>1 TV<span style="color: #949494;">"</span>     <span style="color: #949494;">"</span>1 tv<span style="color: #949494;">"</span>     ge       <span style="text-decoration: underline;">2</span>771  <span style="text-decoration: underline;">3</span>014</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">trakt_countries</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 3</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   name                 code  type  </span>
@@ -142,7 +142,7 @@ filter arguments of the same name.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> United Arab Emirates ae    movies</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> United Arab Emirates ae    shows </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> Afghanistan          af    movies</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> Afghanistan          af    shows </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> Antigua and Barbuda  ag    movies</span>
 <span class="r-in"><span><span class="va">trakt_certifications</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 12 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    country name      slug  description                                     type </span>

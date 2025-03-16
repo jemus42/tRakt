@@ -5,7 +5,7 @@ The returned variables trakt (list ID) or slug (list slug) can be used to
 retrieve the list's items via user_list_items."><meta property="og:description" content="Retrieve a single list a user has created together with information about the user.
 Use extended = &quot;full&quot; to retrieve all user profile data, similiar to user_profile.
 The returned variables trakt (list ID) or slug (list slug) can be used to
-retrieve the list's items via user_list_items."><meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png"><meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@jemus42"><meta name="twitter:site" content="@jemus42"><noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p></noscript></head><body>
+retrieve the list's items via user_list_items."><meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png"><meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo"><script defer src="https://umami.jemu.name/script.js" data-website-id="5bfd0409-fce3-470f-a81d-ef881cda44a3"></script></head><body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
@@ -54,11 +54,7 @@ retrieve the list's items via <a href="user_list_items.html">user_list_items</a>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">user_list</span><span class="op">(</span></span>
-<span>  user <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">getOption</a></span><span class="op">(</span><span class="st">"trakt_username"</span><span class="op">)</span>,</span>
-<span>  <span class="va">list_id</span>,</span>
-<span>  extended <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"min"</span>, <span class="st">"full"</span><span class="op">)</span></span>
-<span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">user_list</span><span class="op">(</span>user <span class="op">=</span> <span class="st">"me"</span>, <span class="va">list_id</span>, extended <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"min"</span>, <span class="st">"full"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -67,7 +63,7 @@ retrieve the list's items via <a href="user_list_items.html">user_list_items</a>
 
 <dl><dt id="arg-user">user<a class="anchor" aria-label="anchor" href="#arg-user"></a></dt>
 <dd><p><code>character(1)</code>: Target username (or <code>slug</code>). Defaults to
-<code>getOption("trakt_username")</code>.
+<code>"me"</code>, the OAuth user.
 Can also be of length greater than 1, in which case the function is called on all
 <code>user</code> values separately and the result is combined.</p></dd>
 

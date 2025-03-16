@@ -9,7 +9,7 @@ its parsed result. If the response is empty, the function returns an empty
 tibble(), and if there are date-time variables
 present in the response, they are converted to POSIXct via
 lubridate::ymd_hms() or to Date via lubridate::as_date() if the
-variable only contains date information."><meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png"><meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@jemus42"><meta name="twitter:site" content="@jemus42"><noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p></noscript></head><body>
+variable only contains date information."><meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png"><meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo"><script defer src="https://umami.jemu.name/script.js" data-website-id="5bfd0409-fce3-470f-a81d-ef881cda44a3"></script></head><body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
@@ -45,7 +45,7 @@ variable only contains date information."><meta property="og:image" content="htt
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Make an API call and receive parsed output</h1>
-      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/R/api.R" class="external-link"><code>R/api.R</code></a></small>
+      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/R/api-requests.R" class="external-link"><code>R/api-requests.R</code></a></small>
       <div class="d-none name"><code>trakt_get.Rd</code></div>
     </div>
 
@@ -60,7 +60,7 @@ variable only contains date information.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">trakt_get</span><span class="op">(</span><span class="va">url</span>, client_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.getenv.html" class="external-link">Sys.getenv</a></span><span class="op">(</span><span class="st">"trakt_client_id"</span><span class="op">)</span>, HEAD <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">trakt_get</span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -71,19 +71,6 @@ variable only contains date information.</p>
 <dd><p><code>character(1)</code>: The API endpoint. Either a full URL like
 <code>"https://api.trakt.tv/shows/breaking-bad"</code> or just the endpoint like
 <code>shows/breaking-bad</code>.</p></dd>
-
-
-<dt id="arg-client-id">client_id<a class="anchor" aria-label="anchor" href="#arg-client-id"></a></dt>
-<dd><p><code>character(1)</code>: API client ID. If no value is set,
-this defaults to the package's client ID. See <a href="trakt_credentials.html">trakt_credentials</a> for
-further information.</p></dd>
-
-
-<dt id="arg-head">HEAD<a class="anchor" aria-label="anchor" href="#arg-head"></a></dt>
-<dd><p><code>logical(1) [FALSE]</code>: If <code>TRUE</code>, only a HTTP <code>HEAD</code> request is
-performed and its content returned. This is useful if you are only
-interested in status codes or other headers, and don't want to waste
-resources/bandwidth on the response body.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -97,17 +84,6 @@ An empty <a href="https://tibble.tidyverse.org/reference/tibble-package.html" cl
     <p>See <a href="https://trakt.docs.apiary.io" class="external-link">the official API reference</a> for a detailed
 overview of available methods. Most methods of potential interest for data
 collection have dedicated functions in this package.</p>
-    </div>
-    <div class="section level2">
-    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
-    <p>No OAuth2 methods are supported yet, meaning you don't have access to
-<code>POST</code> methods or user information of non-public profiles.</p>
-    </div>
-    <div class="section level2">
-    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p>Other API-basics:
-<code><a href="trakt_credentials.html">trakt_credentials</a>()</code>,
-<code><a href="trakt_get_token.html">trakt_get_token</a>()</code></p></div>
     </div>
 
     <div class="section level2">
@@ -139,80 +115,6 @@ collection have dedicated functions in this package.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $ids$tvrage</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="co"># A HEAD-only request</span></span></span>
-<span class="r-in"><span><span class="co"># useful for validating a URL exists or the API is accessible</span></span></span>
-<span class="r-in"><span><span class="fu">trakt_get</span><span class="op">(</span><span class="st">"https://api.trakt.tv/users/jemus42"</span>, HEAD <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $status</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 200</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $version</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "HTTP/2"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $headers</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $date</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Fri, 14 Mar 2025 11:10:34 GMT"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`content-type`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "application/json; charset=utf-8"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`x-frame-options`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "SAMEORIGIN"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`x-xss-protection`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`x-content-type-options`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "nosniff"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`x-download-options`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "noopen"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`x-permitted-cross-domain-policies`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "none"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`referrer-policy`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "strict-origin-when-cross-origin"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`x-private-user`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "false"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $vary</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Accept-Encoding"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`content-encoding`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "gzip"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $etag</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "W/\"57d1105a10f4fe65bad7623019f1f026\""</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`cache-control`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "max-age=0, private, must-revalidate"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`x-request-id`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "35e473a4-a53b-40fb-9d15-eafda31981f3"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`x-runtime`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0.007632"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`cf-cache-status`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "DYNAMIC"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`speculation-rules`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "\"/cdn-cgi/speculation\""</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $server</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "cloudflare"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`cf-ray`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "92035346eca65a03-IAD"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $`alt-svc`</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "h3=\":443\"; ma=86400"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "insensitive" "list"       </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Optionally be lazy about URL specification by dropping the hostname:</span></span></span>

@@ -23,10 +23,7 @@
 ">
 <meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png">
 <meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@jemus42">
-<meta name="twitter:site" content="@jemus42">
-<noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p></noscript>
+<script defer src="https://umami.jemu.name/script.js" data-website-id="5bfd0409-fce3-470f-a81d-ef881cda44a3"></script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -71,12 +68,12 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.png" class="logo" alt=""><h1 id="trakt-">tRakt <a class="anchor" aria-label="anchor" href="#trakt-"></a>
+<img src="logo.png" class="logo" alt=""><h1 id="trakt-">tRakt 
+<a class="anchor" aria-label="anchor" href="#trakt-"></a>
 </h1>
 </div>
 <!-- badges: start -->
 
-<!-- badges: end -->
 <p><code>tRakt</code> helps you to retrieve data from <a href="https://trakt.tv/" class="external-link">trakt.tv</a>, a site similar to <a href="https://imdb.com" class="external-link">IMDb</a> with a wider focus, yet smaller user base. The site also enables media-center integration, so you can automatically sync your collection and watch progress, as well as scrobble playback and ratings via <a href="https://www.plex.tv/" class="external-link">Plex</a>, <a href="https://kodi.tv/" class="external-link">Kodi</a> and the likes.<br>
 And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-link">trakt.tv has a publicly available API</a> – which makes this package possible and allows you to collect all that nice data people have contributed.</p>
 <p>Please note that while this package is <em>basically</em> an API-client, it is a little more opinionated and might deliver results that do not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.</p>
@@ -207,12 +204,6 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <span>    col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Show"</span>, <span class="st">"Episode Runtime"</span>, <span class="st">"Aired Episodes"</span>, <span class="st">"Total Runtime (aired)"</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span></code></pre></div>
 <table class="table">
-<colgroup>
-<col width="33%">
-<col width="20%">
-<col width="19%">
-<col width="27%">
-</colgroup>
 <thead><tr class="header">
 <th align="left">Show</th>
 <th align="left">Episode Runtime</th>
@@ -288,7 +279,7 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <h2 id="credentials">Credentials<a class="anchor" aria-label="anchor" href="#credentials"></a>
 </h2>
 <p>The API requires at least a <code>client id</code> for the API calls.<br>
-Loading the package (or calling its functions via <code>tRakt::</code> wil automatically set the app’s client id (see <code><a href="reference/trakt_credentials.html">trakt_credentials()</a></code>) – for extended use you should set your own credentials via environment variables in your <code>.Renviron</code> like this:</p>
+Loading the package (or calling its functions via <code>tRakt::</code> wil automatically set the app’s client id – for extended use you should set your own credentials via environment variables in your <code>.Renviron</code> like this:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># tRakt</span></span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="va">trakt_client_id</span><span class="op">=</span>12fc1de7<span class="pp">[</span><span class="ss">...</span><span class="pp">]</span>3d629afdf2</span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="va">trakt_client_secret</span><span class="op">=</span>justabunchofstuffhere</span>

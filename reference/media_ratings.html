@@ -3,7 +3,7 @@
 If you do not want the full ratings distribution, it is highly advised to
 just use *_summary functions or seasons_season for episode ratings."><meta property="og:description" content="Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
 If you do not want the full ratings distribution, it is highly advised to
-just use *_summary functions or seasons_season for episode ratings."><meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png"><meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:creator" content="@jemus42"><meta name="twitter:site" content="@jemus42"><noscript><p><img src="https://matomo.jemu.name/matomo.php?idsite=3&amp;rec=1" style="border:0;" alt=""></p></noscript></head><body>
+just use *_summary functions or seasons_season for episode ratings."><meta property="og:image" content="https://jemus42.github.io/tRakt/reference/figures/logo.png"><meta property="og:image:alt" content="Hex sticker showing the trakt.tv logo"><script defer src="https://umami.jemu.name/script.js" data-website-id="5bfd0409-fce3-470f-a81d-ef881cda44a3"></script></head><body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
@@ -81,7 +81,7 @@ Can also be of length greater than 1, in which case the function is called on al
 
 
 <dt id="arg-season-episode">season, episode<a class="anchor" aria-label="anchor" href="#arg-season-episode"></a></dt>
-<dd><p><code>integer(1) [1L]</code>: The season and eisode number. If longer,
+<dd><p><code>integer(1) [1L]</code>: The season and episode number. If longer,
 e.g. <code>1:5</code>, the function is vectorized and the output will be
 combined. This may result in <em>a lot</em> of API calls. Use wisely.</p></dd>
 
@@ -160,14 +160,14 @@ of one API call <em>per element in each argument</em>. Please be kind to the API
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   rating votes distribution      id               type  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>   7.17 <span style="text-decoration: underline;">17</span>999 <span style="color: #949494;">&lt;tibble [10 × 2]&gt;</span> tron-legacy-2010 movies</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>   7.17 <span style="text-decoration: underline;">18</span>016 <span style="color: #949494;">&lt;tibble [10 × 2]&gt;</span> tron-legacy-2010 movies</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># A show's ratings</span></span></span>
 <span class="r-in"><span><span class="fu">shows_ratings</span><span class="op">(</span><span class="st">"game-of-thrones"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   rating  votes distribution      id              type </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>   8.91 <span style="text-decoration: underline;">141</span>109 <span style="color: #949494;">&lt;tibble [10 × 2]&gt;</span> game-of-thrones shows</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>   8.91 <span style="text-decoration: underline;">141</span>197 <span style="color: #949494;">&lt;tibble [10 × 2]&gt;</span> game-of-thrones shows</span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="co"># Ratings for seasons 1 through 5</span></span></span>
 <span class="r-in"><span><span class="fu">seasons_ratings</span><span class="op">(</span><span class="st">"futurama"</span>, season <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span></span>
