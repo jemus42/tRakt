@@ -98,7 +98,7 @@ apidoc <- function(section, method, key) {
 
   system.file("api-methods.yml", package = "tRakt") |>
     yaml::read_yaml() |>
-    pluck(section, method, key)
+    purrr::pluck(section, method, key)
 }
 
 #' Get a formatted API url for an endpoint

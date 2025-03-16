@@ -107,7 +107,7 @@ Get episode data for the first season, this time using the show’s URL
 slug:
 
 ``` r
-seasons_season(show_info$trakt, seasons = 1, extended = "full") |>
+seasons_episodes(show_info$trakt, seasons = 1, extended = "full") |>
   glimpse()
 #> Rows: 6
 #> Columns: 17

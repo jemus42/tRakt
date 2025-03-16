@@ -69,6 +69,7 @@ reference:
     contents:
       - seasons_summary
       - seasons_season
+      - seasons_episodes
       - matches("shows_.*_episode")
   - subtitle: Movie-specific data
     contents:

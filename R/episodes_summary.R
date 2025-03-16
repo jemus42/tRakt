@@ -1,6 +1,6 @@
 #' Get a single episode's details
 #'
-#' This retrieves a single episode. See [seasons_season()] for a whole season, and
+#' This retrieves a single episode. See [seasons_episodes()] for a whole season, and
 #' [seasons_summary()] for (potentially) all episodes of a show.
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return

@@ -195,12 +195,12 @@ shows:
     implementation: shows_lists()
   collection progress:
     url: https://trakt.docs.apiary.io/#reference/shows/collection-progress/get-show-collection-progress
-    endpoint: shows/:id/progress/collection
+    endpoint: shows/:id/progress/collection?hidden,specials,count_specials,last_activity
     implementation: none
     authentication: yes
   watched progress:
     url: https://trakt.docs.apiary.io/#reference/shows/watched-progress/get-show-watched-progress
-    endpoint: shows/:id/progress/watched
+    endpoint: shows/:id/progress/watched?hidden,specials,count_specials,last_activity
     implementation: none
     authentication: yes
   people:
@@ -209,7 +209,7 @@ shows:
     implementation: shows_people()
   ratings:
     url: https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings
-    endpoint: shows/:ids/ratings
+    endpoint: shows/:id/ratings
     implementation: shows_ratings()
   related:
     url: https://trakt.docs.apiary.io/#reference/shows/related/get-related-shows
@@ -235,12 +235,16 @@ shows:
 seasons:
   summary:
     url: https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show
-    endpoint: shows/:id/seasons
+    endpoint: shows/:id/seasons/:season
     implementation: seasons_summary()
   season:
-    url: https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show
-    endpoint: shows/id/seasons/season
+    url: https://trakt.docs.apiary.io/#reference/seasons/season/get-single-seasons-for-a-show
+    endpoint: shows/:id/seasons/:season/info
     implementation: seasons_season()
+  episodes:
+    url: https://trakt.docs.apiary.io/#reference/seasons/episodes/get-all-episodes-for-a-single-season
+    endpoint: shows/:id/seasons/:season?translations=
+    implementation: seasons_episodes()
   comments:
     url: https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments
     endpoint: shows/:id/seasons/:season/comments/:sort
@@ -303,7 +307,7 @@ episodes:
 users:
   likes:
     url: https://trakt.docs.apiary.io/#reference/users/likes/get-likes
-    endpoint: users/likes/:type
+    endpoint: users/:id/likes/:type
     implementation: user_likes()
     authentication: yes
   profile:
@@ -348,7 +352,7 @@ users:
     implementation: user_friends()
   history:
     url: https://trakt.docs.apiary.io/#reference/users/history/get-watched-history
-    endpoint: users/:id/history/:type/:item_id?start_at=&end_at=
+    endpoint: users/:id/history/:type/:item_id?start_at=,end_at=
     implementation: user_history()
   ratings:
     url: https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings
@@ -356,7 +360,7 @@ users:
     implementation: user_ratings()
   watchlist:
     url: https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist
-    endpoint: users/:id/watchlist/:type
+    endpoint: users/:id/watchlist/:type/:sort
     implementation: user_watchlist()
   watched:
     url: https://trakt.docs.apiary.io/#reference/users/watched/get-watched
