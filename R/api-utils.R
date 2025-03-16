@@ -60,15 +60,26 @@ token_cache_loc <- function() {
 get_cached_token <- function() {
   cache_loc <- token_cache_loc()
   if (file.exists(cache_loc)) {
+    if (getOption("tRakt_debug")) {
+      cli::cli_alert_success("Found cached token at {.val {cache_loc}}!")
+    }
     token <- readRDS(cache_loc)
 
     if (token_expired(token)) {
       token <- refresh_token(token)
       cache_token(token)
+    } else {
+      if (getOption("tRakt_debug")) {
+        cli::cli_alert_success("Returning cached token.")
+      }
     }
 
     return(token)
   }
+  if (getOption("tRakt_debug")) {
+    cli::cli_alert_info("No cached token found")
+  }
+  FALSE
 }
 
 #' @importFrom cli cli_inform cli_alert_success cli_alert_danger
@@ -89,14 +100,33 @@ print.trakt_token <- function(x, ...) {
 }
 
 can_device_auth <- function() {
-  has_key = (httr2::secret_has_key("tRakt_key") ||
-    Sys.getenv("trakt_client_secret", unset = "") != "")
+  has_pkg_key <- httr2::secret_has_key("tRakt_key")
+  has_env_secret <- Sys.getenv("trakt_client_secret", unset = "") != ""
+  has_secret = has_pkg_key | has_env_secret
 
-  result <- has_key && interactive()
+  result <- has_secret && interactive()
   if (getOption("tRakt_debug", default = FALSE)) {
-    cli::cli_inform("Can't perform device authentication.")
-    if (!has_key) cli::cli_inform("Missing client secret.")
-    if (!interactive()) cli::cli_inform("Not interactive.")
+    if (!result) {
+      cli::cli_alert_success("Can't perform device authentication.")
+      if (!has_secret) cli::cli_inform("Missing client secret.")
+      if (!interactive()) cli::cli_inform("Not interactive.")
+    } else {
+      cli::cli_alert_success("Can perform device authentication.")
+    }
   }
-  result
+  invisible(result)
+}
+
+tRakt_user_agent <- function() {
+  # Software versions for user agent
+  versions <- c(
+    tRakt = paste(
+      utils::packageVersion("tRakt"),
+      "(https://github.com/jemus42/tRakt)"
+    ),
+    httr2 = as.character(utils::packageVersion("httr2")),
+    `r-curl` = as.character(utils::packageVersion("curl")),
+    libcurl = curl::curl_version()$version
+  )
+  paste0(names(versions), "/", versions, collapse = " ")
 }

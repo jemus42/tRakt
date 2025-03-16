@@ -15,7 +15,7 @@
 #' @param url `character(1)`: The API endpoint. Either a full URL like
 #'   `"https://api.trakt.tv/shows/breaking-bad"` or just the endpoint like
 #'   `shows/breaking-bad`.
-#' @return The parsed ([jsonlite::fromJSON()]) content of the API response.
+#' @return The parsed content of the API response.
 #'   An empty [tibble()][tibble::tibble-package] if the response is an empty
 #'   `JSON` array.
 #' @export
@@ -34,20 +34,8 @@ trakt_get <- function(url) {
   }
 
   if (!grepl(pattern = "^https://api.trakt.tv/\\w+", url)) {
-    rlang::abort("URL does not appear to be a valid trakt.tv API url")
+    cli::cli_abort("Does not appear to be a valid trakt.tv API url: {.val {url}}")
   }
-
-  # Software versions for user agent
-  versions <- c(
-    tRakt = paste(
-      utils::packageVersion("tRakt"),
-      "(https://github.com/jemus42/tRakt)"
-    ),
-    httr2 = as.character(utils::packageVersion("httr2")),
-    `r-curl` = as.character(utils::packageVersion("curl")),
-    libcurl = curl::curl_version()$version
-  )
-  versions <- paste0(names(versions), "/", versions, collapse = " ")
 
   req <- httr2::request(url) |>
     httr2::req_headers(
@@ -69,20 +57,21 @@ trakt_get <- function(url) {
     httr2::req_cache(
       path = file.path(getOption("tRakt_cache_dir"), "data"),
       use_on_error = TRUE,
+      max_age = getOption("tRakt_cache_max_age"),
+      max_size = getOption("tRakt_cache_max_size"),
       debug = getOption("tRakt_debug")
     ) |>
-    httr2::req_user_agent(versions)
+    httr2::req_user_agent(tRakt_user_agent())
 
   resp <- httr2::req_perform(req)
 
   httr2::resp_check_status(resp, info = url)
-
-  resp <- httr2::resp_body_json(resp, simplifyVector = TRUE, check_type = FALSE)
-
   # Kept from previous version, should be refactored at some point
-  if (identical(resp, "") | length(resp) == 0) {
+  if (identical(resp$body, "") | length(resp$body) == 0) {
     return(tibble())
   }
+
+  resp <- httr2::resp_body_json(resp, simplifyVector = TRUE, check_type = FALSE)
 
   # Do it in every other function or do it here once
   if (!is.null(names(resp))) {

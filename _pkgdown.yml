@@ -47,6 +47,7 @@ reference:
     contents:
       - trakt_get
       - trakt_credentials
+      - tRakt_sitrep
   - subtitle: Search – Finding media
     desc: >
       Searching for items is usually required to retrieve some kind of ID, like the `slug`,

@@ -4,7 +4,27 @@
     options("tRakt_cache_dir" = rappdirs::user_cache_dir("tRakt"))
   }
   if (getOption("tRakt_debug", default = "") == "") {
-    options("tRakt_debug" = FALSE)
+    options("tRakt_debug" = as.logical(Sys.getenv("tRakt_debug", unset = FALSE)))
+  }
+
+  # Default cache age limit in seconds: 1 week
+  if (getOption("tRakt_cache_max_age", default = "") == "") {
+    options(
+      "tRakt_cache_max_age" = as.numeric(Sys.getenv(
+        "tRakt_cache_max_age",
+        unset = 60^2 * 24 * 7
+      ))
+    )
+  }
+
+  # Default cache size limit in bytes: 100 MB
+  if (getOption("tRakt_cache_max_size", default = "") == "") {
+    options(
+      "tRakt_cache_max_size" = as.numeric(Sys.getenv(
+        "tRakt_cache_max_size",
+        unset = 100 * 1000^2
+      ))
+    )
   }
 }
 

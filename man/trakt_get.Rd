@@ -12,7 +12,7 @@ trakt_get(url)
 \code{shows/breaking-bad}.}
 }
 \value{
-The parsed (\code{\link[jsonlite:fromJSON]{jsonlite::fromJSON()}}) content of the API response.
+The parsed content of the API response.
 An empty \link[tibble:tibble-package]{tibble()} if the response is an empty
 \code{JSON} array.
 }

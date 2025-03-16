@@ -1,7 +1,7 @@
 Type: Package
 Package: tRakt
 Title: Get Data from 'trakt.tv'
-Version: 0.16.9000
+Version: 0.17.0
 Authors@R: 
     person("Lukas", "Burk", , "github@quantenbrot.de", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-7528-3795"))
@@ -18,16 +18,14 @@ Depends:
 Imports:
     cli,
     curl,
-    dplyr (>= 0.7.0),
+    dplyr (>= 1.0.0),
     httr2,
-    jsonlite (>= 0.9.14),
     lubridate,
     purrr (>= 0.2.3),
     rappdirs,
     rlang,
     stringr,
     tibble,
-    tidyselect,
     utils
 Suggests:
     covr,

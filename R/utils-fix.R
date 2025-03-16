@@ -41,7 +41,7 @@ fix_ids <- function(ids) {
 #' @importFrom lubridate as_date
 #' @importFrom dplyr mutate
 #' @importFrom dplyr across
-#' @importFrom tidyselect any_of
+#' @importFrom dplyr any_of
 #' @importFrom purrr map_at
 #' @importFrom rlang has_name
 #' @keywords internal

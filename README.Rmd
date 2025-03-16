@@ -27,8 +27,8 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/jemus42/tRakt/graph/badge.svg)](https://app.codecov.io/gh/jemus42/tRakt)
 <!-- badges: end -->
 
-`tRakt` helps you to retrieve data from [trakt.tv](https://trakt.tv/), a site similar to [IMDb](https://imdb.com) with a wider focus, yet smaller user base. The site also enables media-center integration, so you can automatically sync your collection and watch progress, as well as scrobble playback and ratings via [Plex](https://www.plex.tv/), [Kodi](https://kodi.tv/) and the likes.  
-And, most importantly, [trakt.tv has a publicly available API](https://trakt.docs.apiary.io) – which makes this package possible and allows you to collect all that nice data people have contributed.
+`tRakt` lets you retrieve data from [trakt.tv](https://trakt.tv/), a site similar to [IMDb](https://imdb.com) with a wider focus, yet smaller user base. The site also enables media-center integration, so you can automatically sync your collection and watch progress, as well as scrobble playback and ratings via [Plex](https://www.plex.tv/), [Kodi](https://kodi.tv/) and streaming services like Netflix and AppleTV+.  
+And, most importantly, [trakt.tv has a publicly available API](https://trakt.docs.apiary.io), which makes this package possible and allows you to collect all that nice data people have contributed.
 
 Please note that while this package is *basically* an API-client, it is a little more opinionated and might deliver results that do not exactly match the data delivered by the API. The primary motivation for this package is to retrieve data that is easily processable for data analysis and display, which is why it tries hard to coerce most data into tabular form instead of using nested lists, which is what the direct translation of the API results would look like.
 
@@ -37,27 +37,34 @@ Please note that while this package is *basically* an API-client, it is a little
 Get it from GitHub:
 
 ```r
-if (!("remotes" %in% installed.packages())) {
-  install.packages("remotes")
+if (!("pak" %in% installed.packages())) {
+  install.packages("pak")
 }
-remotes::install_github("jemus42/tRakt")
+pak::pak("jemus42/tRakt")
 
-library("tRakt")
+```
+
+...or from [r-universe](https://jemus42.r-universe.dev/tRakt):
+
+```r
+install.packages("tRakt", repos = "https://jemus42.r-universe.dev")
 ```
 
 ## Usage
 
 ```{r}
-library(dplyr) # for convenience
 library(tRakt)
+library(dplyr) # for convenience
 ```
 
-Search for a show, get basic info:
+Search for a specific show from 2013 (and not the US adaptation) and get basic info:
 
 ```{r}
-show_info <- search_query("Utopia", type = "show")
+show_info <- search_query("Utopia", year = "2013", type = "show")
 glimpse(show_info)
 ```
+
+We'll use the `$trakt` ID for subsequent requests.
 
 Get season information for the show using its trakt ID:
 
@@ -69,19 +76,18 @@ seasons_summary(show_info$trakt, extended = "full") |>
 Get episode data for the first season, this time using the show's URL slug:
 
 ```{r}
-seasons_season("utopia", seasons = 1, extended = "full") |>
+seasons_season(show_info$trakt, seasons = 1, extended = "full") |>
   glimpse()
 ```
 
 You cann also get episode data for all seasons, but note that episodes will be included as a list-column and need further unpacking:
 
 ```{r}
-seasons_summary("utopia", episodes = TRUE, extended = "full") |>
+seasons_summary(show_info$trakt, episodes = TRUE, extended = "full") |>
   pull(episodes) |>
   bind_rows() |>
   glimpse()
 ```
-
 
 Or alternatively, get the [trending shows](https://trakt.tv/shows/trending):
 
@@ -109,24 +115,21 @@ Please note though that episode runtime data may be inaccurate. In my experience
 ## Credentials
 
 The API requires at least a `client id` for the API calls.  
-Loading the package (or calling its functions via `tRakt::` wil automatically set the app's client id – for extended use you should set your own credentials via environment variables in your `.Renviron` like this:
+Loading the package (or calling its functions via `tRakt::` wil automatically set the app's credentials for authentication, but for extended use you should set your own credentials via environment variables in your `.Renviron` like this:
 
 ```sh
 # tRakt
 trakt_client_id=12fc1de7[...]3d629afdf2
 trakt_client_secret=justabunchofstuffhere
-trakt_username=jemus42
 ```
 
 * `trakt_client_id` **Required**. It's used in the HTTP headers for the API calls, which is kind of a biggie.
-* `trakt_client_secret`: **Optional**(ish). This is only required if you intend to make an authenticated request, which is only required by a small number of implemented API methods] (see `vignette("Implemented-API-methods")`). You can use this package perfectly fine for basic data collection without registering an application on trakt.tv.
-* `trakt_username` **Optional**. For functions that retrieve a user's watched shows or stats, this just sets the default value so you don't have to keep supplying it in individual function calls when you're just looking at your own data anyway.
+* `trakt_client_secret`: **Optional**(ish). This is only required if you intend to make an authenticated request, which is only required by a small number of implemented API methods (see `vignette("Implemented-API-methods")`). You can use this package perfectly fine for basic data collection and you can authenticate using the package's credentials without registering an application on trakt.tv.
 
 To get your credentials, [you have to have an (approved) app over at trakt.tv](http://trakt.tv/oauth/applications).
 
-You theoretically never need to supply your own credentials. However, if you want to actually use this package for some project, I do not recommend relying on my credentials.  
-That would make me a sad panda. 
-As of now, the trakt.tv API does not have any rate-limiting, but it's not guaranteed to stay like this in the future.
+You theoretically never need to supply your own credentials. However, if you want to actually use this package for some project, I do not recommend relying on the package's credentials due to API rate limits.
+In any case, trakt.tv is free.  
 Be nice to their servers.
 
 # Code of Conduct

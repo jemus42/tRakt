@@ -17,14 +17,15 @@ public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostat
 coverage](https://codecov.io/gh/jemus42/tRakt/graph/badge.svg)](https://app.codecov.io/gh/jemus42/tRakt)
 <!-- badges: end -->
 
-`tRakt` helps you to retrieve data from [trakt.tv](https://trakt.tv/), a
+`tRakt` lets you retrieve data from [trakt.tv](https://trakt.tv/), a
 site similar to [IMDb](https://imdb.com) with a wider focus, yet smaller
 user base. The site also enables media-center integration, so you can
 automatically sync your collection and watch progress, as well as
 scrobble playback and ratings via [Plex](https://www.plex.tv/),
-[Kodi](https://kodi.tv/) and the likes.  
+[Kodi](https://kodi.tv/) and streaming services like Netflix and
+AppleTV+.  
 And, most importantly, [trakt.tv has a publicly available
-API](https://trakt.docs.apiary.io) – which makes this package possible
+API](https://trakt.docs.apiary.io), which makes this package possible
 and allows you to collect all that nice data people have contributed.
 
 Please note that while this package is *basically* an API-client, it is
@@ -40,30 +41,35 @@ of the API results would look like.
 Get it from GitHub:
 
 ``` r
-if (!("remotes" %in% installed.packages())) {
-  install.packages("remotes")
+if (!("pak" %in% installed.packages())) {
+  install.packages("pak")
 }
-remotes::install_github("jemus42/tRakt")
+pak::pak("jemus42/tRakt")
+```
 
-library("tRakt")
+…or from [r-universe](https://jemus42.r-universe.dev/tRakt):
+
+``` r
+install.packages("tRakt", repos = "https://jemus42.r-universe.dev")
 ```
 
 ## Usage
 
 ``` r
-library(dplyr) # for convenience
 library(tRakt)
+library(dplyr) # for convenience
 ```
 
-Search for a show, get basic info:
+Search for a specific show from 2013 (and not the US adaptation) and get
+basic info:
 
 ``` r
-show_info <- search_query("Utopia", type = "show")
+show_info <- search_query("Utopia", year = "2013", type = "show")
 glimpse(show_info)
 #> Rows: 1
 #> Columns: 9
 #> $ type  <chr> "show"
-#> $ score <dbl> 1000
+#> $ score <dbl> 98.53947
 #> $ title <chr> "Utopia"
 #> $ year  <int> 2013
 #> $ trakt <chr> "46241"
@@ -73,6 +79,8 @@ glimpse(show_info)
 #> $ tmdb  <chr> "46511"
 ```
 
+We’ll use the `$trakt` ID for subsequent requests.
+
 Get season information for the show using its trakt ID:
 
 ``` r
@@ -81,14 +89,14 @@ seasons_summary(show_info$trakt, extended = "full") |>
 #> Rows: 2
 #> Columns: 13
 #> $ season         <int> 1, 2
-#> $ rating         <dbl> 8.56154, 8.01047
-#> $ votes          <int> 260, 191
+#> $ rating         <dbl> 8.45536, 8.06542
+#> $ votes          <int> 336, 214
 #> $ episode_count  <int> 6, 6
 #> $ aired_episodes <int> 6, 6
 #> $ title          <chr> "Season 1", "Season 2"
 #> $ overview       <chr> "When a group of strangers find themselves in possessio…
 #> $ first_aired    <dttm> 2013-01-15 21:00:00, 2014-07-14 20:00:00
-#> $ updated_at     <dttm> 2022-08-28 14:32:07, 2022-08-28 14:31:03
+#> $ updated_at     <dttm> 2025-03-16 04:14:25, 2025-03-16 04:14:25
 #> $ network        <chr> "Channel 4", "Channel 4"
 #> $ trakt          <chr> "56008", "56009"
 #> $ tvdb           <chr> "507598", "524149"
@@ -99,24 +107,25 @@ Get episode data for the first season, this time using the show’s URL
 slug:
 
 ``` r
-seasons_season("utopia", seasons = 1, extended = "full") |>
+seasons_season(show_info$trakt, seasons = 1, extended = "full") |>
   glimpse()
 #> Rows: 6
-#> Columns: 16
+#> Columns: 17
 #> $ season                 <int> 1, 1, 1, 1, 1, 1
 #> $ episode                <int> 1, 2, 3, 4, 5, 6
 #> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episode…
 #> $ episode_abs            <int> 1, 2, 3, 4, 5, 6
 #> $ overview               <chr> "When  five strangers from an online comic book…
-#> $ rating                 <dbl> 8.19613, 8.07093, 8.07795, 8.05150, 8.21902, 8.…
-#> $ votes                  <int> 1239, 1001, 898, 835, 799, 825
-#> $ comment_count          <int> 7, 0, 1, 1, 1, 1
+#> $ rating                 <dbl> 8.15410, 8.04485, 8.03160, 8.00973, 8.14578, 8.…
+#> $ votes                  <int> 1220, 981, 886, 822, 782, 806
+#> $ comment_count          <int> 9, 0, 1, 2, 1, 2
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
-#> $ updated_at             <dttm> 2022-08-28 12:29:01, 2022-08-28 07:29:46, 2022-…
+#> $ updated_at             <dttm> 2025-03-16 07:11:31, 2025-03-15 11:14:59, 2025-…
 #> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
-#> $ runtime                <int> 50, 50, 50, 50, 50, 50
+#> $ runtime                <int> 60, 49, 51, 48, 49, 62
+#> $ episode_type           <chr> "series_premiere", "standard", "standard", "sta…
 #> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
-#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "44…
+#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
 #> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
 #> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "91000…
 ```
@@ -125,28 +134,29 @@ You cann also get episode data for all seasons, but note that episodes
 will be included as a list-column and need further unpacking:
 
 ``` r
-seasons_summary("utopia", episodes = TRUE, extended = "full") |>
+seasons_summary(show_info$trakt, episodes = TRUE, extended = "full") |>
   pull(episodes) |>
   bind_rows() |>
   glimpse()
 #> Rows: 12
-#> Columns: 16
+#> Columns: 17
 #> $ season                 <int> 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2
 #> $ episode                <int> 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6
 #> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episode…
 #> $ episode_abs            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 #> $ overview               <chr> "When  five strangers from an online comic book…
-#> $ rating                 <dbl> 8.19613, 8.07093, 8.07795, 8.05150, 8.21902, 8.…
-#> $ votes                  <int> 1239, 1001, 898, 835, 799, 825, 822, 723, 692, …
-#> $ comment_count          <int> 7, 0, 1, 1, 1, 1, 3, 1, 1, 1, 2, 4
+#> $ rating                 <dbl> 8.15410, 8.04485, 8.03160, 8.00973, 8.14578, 8.…
+#> $ votes                  <int> 1220, 981, 886, 822, 782, 806, 804, 700, 674, 6…
+#> $ comment_count          <int> 9, 0, 1, 2, 1, 2, 5, 1, 2, 2, 2, 6
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
-#> $ updated_at             <dttm> 2022-08-28 12:29:01, 2022-08-28 07:29:46, 2022-…
+#> $ updated_at             <dttm> 2025-03-16 07:11:31, 2025-03-15 11:14:59, 2025-…
 #> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
-#> $ runtime                <int> 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50
-#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
+#> $ runtime                <int> 60, 49, 51, 48, 49, 62, 54, 51, 50, 50, 50, 53
+#> $ episode_type           <chr> "series_premiere", "standard", "standard", "sta…
+#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "1…
 #> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
 #> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
-#> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "91000…
+#> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "910007…
 ```
 
 Or alternatively, get the [trending
@@ -155,18 +165,18 @@ shows](https://trakt.tv/shows/trending):
 ``` r
 shows_trending()
 #> # A tibble: 10 × 8
-#>    watchers title                         year trakt  slug     tvdb  imdb  tmdb 
-#>       <int> <chr>                        <int> <chr>  <chr>    <chr> <chr> <chr>
-#>  1       47 Better Call Saul              2015 59660  better-… 2731… tt30… 60059
-#>  2       41 Game of Thrones               2011 1390   game-of… 1213… tt09… 1399 
-#>  3       40 The Sandman                   2022 149786 the-san… 3662… tt17… 90802
-#>  4       31 House of the Dragon           2022 154574 house-o… 3715… tt11… 94997
-#>  5       30 Breaking Bad                  2008 1388   breakin… 81189 tt09… 1396 
-#>  6       28 See                           2019 145781 see      3615… tt79… 80752
-#>  7       27 Westworld                     2016 99718  westwor… 2967… tt04… 63247
-#>  8       22 She-Hulk: Attorney at Law     2022 151854 she-hul… 3686… tt10… 92783
-#>  9       21 The Orville                   2017 119017 the-orv… 3284… tt56… 71738
-#> 10       21 Only Murders in the Building  2021 165314 only-mu… 3999… tt12… 1071…
+#>    watchers title                  year trakt  slug            tvdb  imdb  tmdb 
+#>       <int> <chr>                 <int> <chr>  <chr>           <chr> <chr> <chr>
+#>  1    13850 Severance              2022 154997 severance       3719… tt11… 95396
+#>  2     7361 Reacher                2022 155536 reacher         3669… tt92… 1089…
+#>  3     4956 Invincible             2021 172648 invincible-2021 3682… tt67… 95557
+#>  4     4713 Solo Leveling          2024 193023 solo-leveling   3895… tt21… 1275…
+#>  5     4168 The Pitt               2025 232884 the-pitt        4481… tt31… 2503…
+#>  6     3936 The White Lotus        2021 168471 the-white-lotus 3904… tt13… 1118…
+#>  7     3601 The Wheel of Time      2021 140100 the-wheel-of-t… 3557… tt74… 71914
+#>  8     3356 Daredevil: Born Again  2025 195845 daredevil-born… 4227… tt18… 2025…
+#>  9     2631 S.W.A.T.               2017 119137 s-w-a-t-2017    3286… tt61… 71790
+#> 10     2509 Adolescence            2025 230892 adolescence     4524… tt31… 2490…
 ```
 
 Maybe you just want to know how long it would take you to binge through
@@ -187,16 +197,16 @@ shows_trending(extended = "full") |>
 
 | Show | Episode Runtime | Aired Episodes | Total Runtime (aired) |
 |:---|:---|---:|:---|
-| House of the Dragon (2022) | 01:00:00 | 1 | 01:00:00 |
-| Better Call Saul (2015) | 00:45:00 | 63 | 47:15:00 |
-| Game of Thrones (2011) | 01:00:00 | 73 | 73:00:00 |
-| The Sandman (2022) | 00:48:00 | 11 | 08:48:00 |
-| See (2019) | 01:00:00 | 17 | 17:00:00 |
-| Westworld (2016) | 01:00:00 | 36 | 36:00:00 |
-| For All Mankind (2019) | 01:00:00 | 30 | 30:00:00 |
-| Stranger Things (2016) | 00:50:00 | 34 | 28:20:00 |
-| Breaking Bad (2008) | 00:45:00 | 62 | 46:30:00 |
-| The Big Bang Theory (2007) | 00:22:00 | 279 | 102:18:00 |
+| Severance (2022) | 00:42:00 | 18 | 12:36:00 |
+| Reacher (2022) | 00:49:00 | 22 | 17:58:00 |
+| Invincible (2021) | 00:42:00 | 24 | 16:48:00 |
+| Solo Leveling (2024) | 00:24:00 | 23 | 09:12:00 |
+| The Pitt (2025) | 00:42:00 | 11 | 07:42:00 |
+| The White Lotus (2021) | 00:42:00 | 17 | 11:54:00 |
+| The Wheel of Time (2021) | 01:05:00 | 19 | 20:35:00 |
+| Daredevil: Born Again (2025) | 00:42:00 | 3 | 02:06:00 |
+| S.W.A.T. (2017) | 00:43:00 | 156 | 111:48:00 |
+| Adolescence (2025) | 00:42:00 | 4 | 02:48:00 |
 
 Please note though that episode runtime data may be inaccurate. In my
 experience, recent shows have fairly accurate runtime data, which is
@@ -206,39 +216,34 @@ often not the case for older shows.
 
 The API requires at least a `client id` for the API calls.  
 Loading the package (or calling its functions via `tRakt::` wil
-automatically set the app’s client id – for extended use you should set
-your own credentials via environment variables in your `.Renviron` like
-this:
+automatically set the app’s credentials for authentication, but for
+extended use you should set your own credentials via environment
+variables in your `.Renviron` like this:
 
 ``` sh
 # tRakt
 trakt_client_id=12fc1de7[...]3d629afdf2
 trakt_client_secret=justabunchofstuffhere
-trakt_username=jemus42
 ```
 
 - `trakt_client_id` **Required**. It’s used in the HTTP headers for the
   API calls, which is kind of a biggie.
 - `trakt_client_secret`: **Optional**(ish). This is only required if you
   intend to make an authenticated request, which is only required by a
-  small number of implemented API methods\] (see
+  small number of implemented API methods (see
   `vignette("Implemented-API-methods")`). You can use this package
-  perfectly fine for basic data collection without registering an
-  application on trakt.tv.
-- `trakt_username` **Optional**. For functions that retrieve a user’s
-  watched shows or stats, this just sets the default value so you don’t
-  have to keep supplying it in individual function calls when you’re
-  just looking at your own data anyway.
+  perfectly fine for basic data collection and you can authenticate
+  using the package’s credentials without registering an application on
+  trakt.tv.
 
 To get your credentials, [you have to have an (approved) app over at
 trakt.tv](http://trakt.tv/oauth/applications).
 
 You theoretically never need to supply your own credentials. However, if
 you want to actually use this package for some project, I do not
-recommend relying on my credentials.  
-That would make me a sad panda. As of now, the trakt.tv API does not
-have any rate-limiting, but it’s not guaranteed to stay like this in the
-future. Be nice to their servers.
+recommend relying on the package’s credentials due to API rate limits.
+In any case, trakt.tv is free.  
+Be nice to their servers.
 
 # Code of Conduct
 

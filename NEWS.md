@@ -1,7 +1,21 @@
-# tRakt 0.16.9000 (development version)
+# tRakt 0.17.0
+
+## Switch from `{httr}` to `{httr2}`
+
+This should have been a small under the hood change, but it also enabled major changes in the way I'm handling API secrets, allowing me to include my encrypted client secret with the package directly. This should make it more convenient for users to make authenticated requests without having to register their own app on trakt.tv.
+
+The main user-facing highlight however should probably be more stable API interactions including
+
+- Automatic retries in case of errors (up to 3, currently not cofnigurable)
+- Caching of API results to `getOption("tRakt_cache_dir")`, which is pruned
+  - after 1 week by default (option `tRakt_cache_max_age`)
+  - after exceeding a total of 100MB (option `tRakt_cache_max_size`)
+
+## Minor changes
 
 - Remove `magrittr` import and use `|>` internally, hence bumping the R dependency to `>= 4.1`.
-- Switch from `{httr}` to `{httr2}`. This should have been a small under the hood change, but it also enabled major changes in the way I'm handling API secrets, allowing me to include my encrypted client secret with the package directly. This should make it more convenient for users to make authenticated requests without having to register their own app on trakt.tv.
+- Clean up unused package imports
+- `tRakt_sitrep()` is now available to check general settings and API credentials.
 
 # tRakt 0.16.0
 

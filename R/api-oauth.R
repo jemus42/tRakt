@@ -37,7 +37,7 @@ trakt_credentials <- function() {
 #' get_token()
 get_token <- function(cache = TRUE) {
   token <- get_cached_token()
-  if (inherits(cache_token, "trakt_token")) {
+  if (inherits(token, "trakt_token")) {
     return(token)
   }
 

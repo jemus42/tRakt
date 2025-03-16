@@ -14,7 +14,6 @@
 #' @noRd
 #' @inherit trakt_api_common_parameters return
 #' @keywords internal
-#' @importFrom jsonlite fromJSON
 #' @importFrom tibble as_tibble tibble
 #' @examples
 #' \dontrun{
@@ -54,8 +53,6 @@ omdb_get <- function(imdb) {
 #' @keywords internal
 #' @noRd
 #' @importFrom purrr map
-#' @importFrom tibble tibble as_tibble
-#' @importFrom jsonlite fromJSON
 #' @importFrom dplyr bind_cols
 #' @examples
 #' \dontrun{
