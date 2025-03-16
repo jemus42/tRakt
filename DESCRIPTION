@@ -1,7 +1,7 @@
 Type: Package
 Package: tRakt
 Title: Get Data from 'trakt.tv'
-Version: 0.17.0
+Version: 0.17.0.9000
 Authors@R: 
     person("Lukas", "Burk", , "github@quantenbrot.de", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-7528-3795"))
