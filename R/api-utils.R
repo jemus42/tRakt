@@ -49,7 +49,12 @@ clear_cached_token <- function() {
 }
 
 token_cache_loc <- function() {
-  file.path(getOption("tRakt_cache_dir"), "token.rds")
+  file <- paste0(
+    "token",
+    get_client_id(),
+    ".rds"
+  )
+  file.path(getOption("tRakt_cache_dir"), file)
 }
 
 get_cached_token <- function() {
