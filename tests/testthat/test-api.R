@@ -27,7 +27,7 @@ test_that("trakt_get can make API calls", {
   url <- "https://api.trakt.tv/shows/breaking-bad"
   result <- trakt_get(url)
 
-  expect_is(result, "list")
+  expect_type(result, "list")
   expect_error(trakt_get("https://example.com"))
 })
 
@@ -35,5 +35,5 @@ test_that("authenticated requests work", {
   skip_if_no_auth()
 
   # Authenticated method, should return a list
-  expect_is(trakt_get("users/settings"), class = "list")
+  expect_type(trakt_get("users/settings"), "list")
 })

@@ -20,7 +20,7 @@ test_that("comments_comment()", {
   )
 
   comments_comment(c("236397", "112561")) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(nm_min) |>
     nrow() |>
     expect_equal(2)
@@ -49,7 +49,7 @@ test_that("comments_replies()", {
   )
 
   comments_replies(c("236397", "236397")) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(nm_min) |>
     nrow() |>
     expect_equal(2)
@@ -69,7 +69,7 @@ test_that("comments_likes()", {
   )
 
   comments_likes(c("236397", "236397")) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(nm_min)
 })
 
@@ -93,6 +93,6 @@ test_that("comments_item()", {
   )
 
   comments_item(c("136632", "236397")) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(nm_min)
 })

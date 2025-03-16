@@ -39,7 +39,7 @@ test_that("user_comments", {
   )
 
   user_comments("jemus42") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(nm) |>
     nrow() |>
     expect_gte(10)
@@ -72,7 +72,7 @@ test_that("user_comments", {
   )
 
   user_comments("jemus42", type = "movie") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(nm_movies) |>
     pluck("type") |>
     unique() |>

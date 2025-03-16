@@ -20,7 +20,7 @@ test_that("user_list_comments works", {
   )
 
   user_list_comments("donxy", "1248149") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(nm) |>
     nrow() |>
     expect_equal(10)

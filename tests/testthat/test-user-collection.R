@@ -6,15 +6,15 @@ test_that("user_collection works", {
   col_sho <- user_collection(user = user, type = "shows", unnest_episodes = FALSE)
 
   col_sho |>
-    expect_is("tbl") |>
+    expect_s3_class("tbl") |>
     expect_length(10)
 
   user_collection(user = user, type = "movies") |>
-    expect_is("tbl") |>
+    expect_s3_class("tbl") |>
     expect_length(8)
 
   user_collection(user = c("jemus42", "sean"), type = "movies") |>
-    expect_is("tbl") |>
+    expect_s3_class("tbl") |>
     expect_length(9)
 
   # Error conditions ----
@@ -32,8 +32,8 @@ test_that("user_collection works with episode unnesting", {
   user <- "jemus42"
   col_eps <- user_collection(user = user, type = "shows", unnest_episodes = TRUE)
 
-  expect_is(col_eps, "tbl")
+  expect_s3_class(col_eps, "tbl")
   expect_equal(ncol(col_eps), 12)
   expect_gt(nrow(col_eps), 10)
-  expect_is(col_eps$collected_at, "POSIXct")
+  expect_s3_class(col_eps$collected_at, "POSIXct")
 })

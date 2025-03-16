@@ -3,7 +3,7 @@ test_that("media_people works", {
     expect_named(c("cast", "crew")) |>
     purrr::walk(
       ~ {
-        expect_is(.x, "tbl_df")
+        expect_s3_class(.x, "tbl_df")
       }
     )
 
@@ -11,7 +11,7 @@ test_that("media_people works", {
     expect_named(c("cast", "crew")) |>
     purrr::walk(
       ~ {
-        expect_is(.x, "tbl_df")
+        expect_s3_class(.x, "tbl_df")
       }
     )
 
@@ -19,7 +19,7 @@ test_that("media_people works", {
     expect_named(c("cast", "guest_stars", "crew")) |>
     purrr::walk(
       ~ {
-        expect_is(.x, "tbl_df")
+        expect_s3_class(.x, "tbl_df")
       }
     )
 
@@ -27,7 +27,7 @@ test_that("media_people works", {
     expect_named(c("cast", "crew")) |>
     purrr::walk(
       ~ {
-        expect_is(.x, "tbl_df")
+        expect_s3_class(.x, "tbl_df")
       }
     )
 
@@ -35,7 +35,7 @@ test_that("media_people works", {
     expect_named(c("cast", "guest_stars", "crew")) |>
     purrr::walk(
       ~ {
-        expect_is(.x, "tbl_df")
+        expect_s3_class(.x, "tbl_df")
       }
     )
 
@@ -43,7 +43,7 @@ test_that("media_people works", {
     expect_named(c("cast", "crew")) |>
     purrr::walk(
       ~ {
-        expect_is(.x, "tbl_df")
+        expect_s3_class(.x, "tbl_df")
       }
     )
 
@@ -51,7 +51,7 @@ test_that("media_people works", {
     expect_named(c("cast", "guest_stars", "crew")) |>
     purrr::walk(
       ~ {
-        expect_is(.x, "tbl_df")
+        expect_s3_class(.x, "tbl_df")
       }
     )
 })

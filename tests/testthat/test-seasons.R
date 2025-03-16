@@ -17,8 +17,8 @@ test_that("seasons_season works", {
   full_s1_single <- seasons_season(id = id, seasons = 1, extended = "full")
 
   # Structural integrity
-  expect_is(min_s1_single, "tbl")
-  expect_is(full_s1_single, "tbl")
+  expect_s3_class(min_s1_single, "tbl")
+  expect_s3_class(full_s1_single, "tbl")
 
   expect_named(min_s1_single, min_names)
   expect_equal(nrow(min_s1_single), nrow(full_s1_single))
@@ -60,8 +60,8 @@ test_that("seasons_summary works", {
     drop_unaired = TRUE
   )
 
-  expect_is(result_min, "tbl")
-  expect_is(result_max, "tbl")
+  expect_s3_class(result_min, "tbl")
+  expect_s3_class(result_max, "tbl")
   expect_equal(ncol(result_min), 4)
   expect_equal(ncol(result_max), 13)
 
@@ -84,12 +84,12 @@ test_that("seasons_summary works for episodes and matches seasons_season", {
   id <- "utopia"
   res <- seasons_summary(id, extended = "full", episodes = TRUE)
 
-  expect_is(res, "tbl")
-  expect_is(res$episodes, "list")
+  expect_s3_class(res, "tbl_df")
+  expect_type(res$episodes, "list")
   expect_length(res$episodes, 2)
 
   res$episodes[[1]] |>
-    expect_is("tbl") |>
+    expect_s3_class("tbl") |>
     expect_length(17) |>
     nrow() |>
     expect_equal(6)

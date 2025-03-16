@@ -14,8 +14,9 @@ The main user-facing highlight however should probably be more stable API intera
 ## Minor changes
 
 - Remove `magrittr` import and use `|>` internally, hence bumping the R dependency to `>= 4.1`.
-- Clean up unused package imports
+- Clean up unused package imports.
 - `tRakt_sitrep()` is now available to check general settings and API credentials.
+- Switch to `{testthat}` 3e.
 
 # tRakt 0.16.0
 

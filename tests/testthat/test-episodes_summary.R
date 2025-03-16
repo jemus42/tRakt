@@ -18,7 +18,7 @@ test_that("episodes_summary works", {
 
   # Multiple shows
   episodes_summary(c("breaking-bad", "futurama")) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_length(8) |>
     expect_named(episode_summary_names_min) |>
     nrow() |>

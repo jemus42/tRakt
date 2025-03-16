@@ -8,11 +8,11 @@ test_that("user_watchlist works", {
   res_movies <- user_watchlist(user = user, type = "movies")
 
   expect_identical(res_default, res_movies)
-  expect_is(res_shows, "tbl")
-  expect_is(res_movies, "tbl")
+  expect_s3_class(res_shows, "tbl")
+  expect_s3_class(res_movies, "tbl")
 
   user_watchlist(user = c(user, user)) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_length(12)
 
   # FIXME: Find no shows test case

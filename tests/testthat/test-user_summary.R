@@ -19,18 +19,18 @@ test_that("user_profile", {
   user <- "jemus42"
 
   user_profile(user) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(nm_min) |>
     nrow() |>
     expect_equal(1)
 
   user_profile(user, extended = "full") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(nm_full) |>
     nrow() |>
     expect_equal(1)
 
   user_profile(c("sean", user)) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(nm_min)
 })

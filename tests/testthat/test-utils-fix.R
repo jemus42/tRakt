@@ -4,7 +4,7 @@ test_that("fix_datetime converts datetime", {
   res <- tibble::tibble(updated_at = as.character(lubridate::now()))
 
   res <- fix_datetime(res)
-  expect_is(res$updated_at, "POSIXct")
+  expect_s3_class(res$updated_at, "POSIXct")
   expect_equal(attr(res$updated_at, "tzone"), "UTC")
   expect_error(fix_datetime("not_a_df_or_list"))
 })

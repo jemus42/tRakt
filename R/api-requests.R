@@ -64,15 +64,13 @@ trakt_get <- function(url) {
     httr2::req_user_agent(tRakt_user_agent())
 
   resp <- httr2::req_perform(req)
-
   httr2::resp_check_status(resp, info = url)
-  # Kept from previous version, should be refactored at some point
-  if (identical(resp$body, "") | length(resp$body) == 0) {
-    return(tibble())
-  }
-
   resp <- httr2::resp_body_json(resp, simplifyVector = TRUE, check_type = FALSE)
 
+  # Kept from previous version, should be refactored at some point
+  if (identical(resp, "") | length(resp) == 0) {
+    return(tibble())
+  }
   # Do it in every other function or do it here once
   if (!is.null(names(resp))) {
     resp <- fix_datetime(resp)

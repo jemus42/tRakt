@@ -26,7 +26,7 @@ test_that("user_lists does stuff", {
   )
 
   user_lists("jemus42") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(expected = list_names_min)
 
   list_names_full <- c(
@@ -62,7 +62,7 @@ test_that("user_lists does stuff", {
   )
 
   user_lists("jemus42", extended = "full") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(expected = list_names_full)
 })
 
@@ -94,7 +94,7 @@ test_that("user_list gets stuff", {
   )
 
   user_list("jemus42", list_id = 2121308) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(expected = list_names_min)
 
   list_names_full <- c(
@@ -130,6 +130,6 @@ test_that("user_list gets stuff", {
   )
 
   user_list("jemus42", list_id = 2121308, extended = "full") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_named(expected = list_names_full)
 })

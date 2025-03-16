@@ -6,8 +6,8 @@ test_that("user_network stuff works", {
   fol_min <- user_followers(user = user, extended = "min")
   fol_max <- user_followers(user = user, extended = "full")
 
-  expect_is(fol_min, "tbl")
-  expect_is(fol_max, "tbl")
+  expect_s3_class(fol_min, "tbl")
+  expect_s3_class(fol_max, "tbl")
   expect_gt(ncol(fol_max), ncol(fol_min))
 
   expect_identical(
@@ -24,11 +24,11 @@ test_that("user_network stuff works", {
   expect_error(user_followers(user = 4))
 
   user_following(user) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_length(8)
 
   user_friends(user) |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_length(8)
 })
 

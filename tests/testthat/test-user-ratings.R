@@ -5,33 +5,33 @@ test_that("user_ratings works", {
 
   # A single user ----
   user_ratings(user = user, type = "shows") |>
-    expect_is("tbl") |>
+    expect_s3_class("tbl") |>
     expect_length(10)
   user_ratings(user = user, type = "seasons") |>
-    expect_is("tbl") |>
+    expect_s3_class("tbl") |>
     expect_length(5)
   user_ratings(user = user, type = "episodes") |>
-    expect_is("tbl") |>
+    expect_s3_class("tbl") |>
     expect_length(5)
   user_ratings(user = user, type = "movies") |>
-    expect_is("tbl") |>
+    expect_s3_class("tbl") |>
     expect_length(9)
 
   # Multiple users ----
   user_ratings(c(user, user), type = "shows") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_length(11)
   user_ratings(c(user, user), type = "movies") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_length(10)
 
   # These are very slow :/
   user_ratings(c(user, user), type = "seasons") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_length(6)
 
   user_ratings(c(user, user), type = "episodes") |>
-    expect_is("tbl_df") |>
+    expect_s3_class("tbl_df") |>
     expect_length(6)
 
   # Error conditions ----

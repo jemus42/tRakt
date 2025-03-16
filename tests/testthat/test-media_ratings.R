@@ -42,10 +42,10 @@ test_that("season and episode ratings work", {
   )
 
   seasons_ratings(id, season) |>
-    expect_is("tbl") |>
+    expect_s3_class("tbl") |>
     expect_named(ratings_season_names)
 
   episodes_ratings(id, season, episode) |>
-    expect_is("tbl") |>
+    expect_s3_class("tbl") |>
     expect_named(ratings_episode_names)
 })

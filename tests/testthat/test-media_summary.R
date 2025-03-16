@@ -5,8 +5,8 @@ test_that("shows_summary works", {
   show_min_df <- shows_summary(id)
   show_full_df <- shows_summary(id, extended = "full")
 
-  expect_is(show_min_df, "tbl")
-  expect_is(show_full_df, "tbl")
+  expect_s3_class(show_min_df, "tbl")
+  expect_s3_class(show_full_df, "tbl")
 
   expect_true(length(show_min_df) < length(show_full_df))
 
@@ -24,8 +24,8 @@ test_that("movies_summary works", {
 
   movie_full_df <- movies_summary(id, extended = "full")
 
-  expect_is(movie_min_df, "tbl")
-  expect_is(movie_full_df, "tbl")
+  expect_s3_class(movie_min_df, "tbl")
+  expect_s3_class(movie_full_df, "tbl")
 
   expect_true(length(movie_min_df) < length(movie_full_df))
 
