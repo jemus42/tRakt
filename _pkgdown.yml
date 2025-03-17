@@ -41,6 +41,10 @@ news:
   #   href: link
 
 reference:
+  - title: This package
+    contents:
+      - tRakt
+
   - title: Basic API interaction
     desc: >
       These functions are basic building blocks, you don't have to use them directly.
@@ -125,10 +129,6 @@ reference:
     contents:
       - ends_with("aliases")
       - ends_with("translations")
-  # - subtitle: Recently updated items
-  #   contents:
-  #     - shows_updates
-  #     - movies_updates
   - subtitle: Utilities
     desc: "Included for convenience."
     contents:
@@ -147,7 +147,3 @@ reference:
        for optional filters.
     contents:
       - trakt_datasets
-
-  - title: This package
-    contents:
-      - tRakt

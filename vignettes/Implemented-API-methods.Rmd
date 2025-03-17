@@ -74,7 +74,8 @@ print_api_table <- function(xdf) {
       position = "center",
       bootstrap_options = c("striped", "hover"),
       full_width = TRUE
-    )
+    ) |>
+    column_spec(column = 3, width_min = "20%")
 }
 ```
 
