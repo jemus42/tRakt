@@ -20,7 +20,6 @@
 #'   `JSON` array.
 #' @export
 #' @import httr2
-#' @importFrom curl curl_version
 #' @family API-basics
 #' @examples
 #' # A simple request to a direct URL

@@ -99,6 +99,7 @@ print.trakt_token <- function(x, ...) {
   }
 }
 
+#' @keywords internal
 can_device_auth <- function() {
   has_pkg_key <- httr2::secret_has_key("tRakt_key")
   has_env_secret <- Sys.getenv("trakt_client_secret", unset = "") != ""
@@ -117,6 +118,8 @@ can_device_auth <- function() {
   invisible(result)
 }
 
+#' @importFrom curl curl_version
+#' @keywords internal
 tRakt_user_agent <- function() {
   # Software versions for user agent
   versions <- c(
