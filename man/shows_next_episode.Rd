@@ -63,7 +63,7 @@ Other episode data:
 \code{\link{media_stats}()},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_season}()},
+\code{\link{seasons_episodes}()},
 \code{\link{seasons_summary}()}
 
 Other show data: 
@@ -90,7 +90,7 @@ Other episode data:
 \code{\link{media_stats}()},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_season}()},
+\code{\link{seasons_episodes}()},
 \code{\link{seasons_summary}()}
 }
 \concept{episode data}

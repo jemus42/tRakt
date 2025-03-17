@@ -1,4 +1,4 @@
-test_that("seasons_season works", {
+test_that("seasons_episodes works", {
   skip_on_cran()
 
   id <- "futurama"
@@ -13,8 +13,8 @@ test_that("seasons_season works", {
     "tmdb"
   )
 
-  min_s1_single <- seasons_season(id = id, seasons = 1, extended = "min")
-  full_s1_single <- seasons_season(id = id, seasons = 1, extended = "full")
+  min_s1_single <- seasons_episodes(id = id, seasons = 1, extended = "min")
+  full_s1_single <- seasons_episodes(id = id, seasons = 1, extended = "full")
 
   # Structural integrity
   expect_s3_class(min_s1_single, "tbl")
@@ -26,18 +26,18 @@ test_that("seasons_season works", {
   expect_lt(length(min_s1_single), length(full_s1_single))
 
   # Error conditions
-  expect_error(seasons_season(id = id, seasons = NA))
-  expect_error(seasons_season(id = id, seasons = "seven"))
-  expect_error(seasons_season(id = id, seasons = NULL))
-  expect_error(seasons_season(id = id, seasons = 10))
+  expect_error(seasons_episodes(id = id, seasons = NA))
+  expect_error(seasons_episodes(id = id, seasons = "seven"))
+  expect_error(seasons_episodes(id = id, seasons = NULL))
+  expect_error(seasons_episodes(id = id, seasons = 10))
 
   # Multi-length input seasons
   expect_identical(
     rbind(
-      seasons_season(id = id, seasons = 1),
-      seasons_season(id = id, seasons = 2)
+      seasons_episodes(id = id, seasons = 1),
+      seasons_episodes(id = id, seasons = 2)
     ),
-    seasons_season(id = id, seasons = 1:2)
+    seasons_episodes(id = id, seasons = 1:2)
   )
 })
 
@@ -78,7 +78,7 @@ test_that("seasons_summary works", {
   expect_error(seasons_summary(id = "bvkjqbkqjbf"))
 })
 
-test_that("seasons_summary works for episodes and matches seasons_season", {
+test_that("seasons_summary works for episodes and matches seasons_episodes", {
   skip_on_cran()
 
   id <- "utopia"
@@ -96,6 +96,47 @@ test_that("seasons_summary works for episodes and matches seasons_season", {
 
   expect_identical(
     res$episodes[[1]],
-    seasons_season(id, seasons = 1, extended = "full")
+    seasons_episodes(id, seasons = 1, extended = "full")
   )
+})
+
+test_that("seasons_season works", {
+  skip_on_cran()
+
+  id <- "utopia"
+
+  res_min <- seasons_season(id, seasons = 1, extended = "min")
+
+  res_min |>
+    expect_s3_class("tbl_df") |>
+    expect_named(c("number", "trakt", "tvdb", "tmdb"))
+
+  res_full <- seasons_season(id, seasons = 2, extended = "full") 
+
+  res_full |>
+    expect_s3_class("tbl_df") |>
+    expect_named(c(
+      "number",
+      "rating",
+      "votes",
+      "episode_count",
+      "aired_episodes",
+      "title",
+      "overview",
+      "first_aired",
+      "updated_at",
+      "network",
+      "trakt",
+      "tvdb",
+      "tmdb"
+    ))
+
+  expect_identical(
+    seasons_season(id, seasons = 1:2, extended = "min"),
+    rbind(
+      seasons_season(id, seasons = 1, extended = "min"),
+      seasons_season(id, seasons = 2, extended = "min")
+    )
+  )
+
 })

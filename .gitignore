@@ -23,3 +23,5 @@ tRakt*.tar.gz
 tRakt*.tgz
 README.html
 README_cache
+
+/.quarto/

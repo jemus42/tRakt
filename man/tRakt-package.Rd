@@ -10,6 +10,19 @@
 
 A wrapper for the \url{https://trakt.tv} API to retrieve data about shows and movies, including user ratings, credits and related metadata. Additional functions retrieve user-specific information including collections and history of watched items. A full API reference is available at \url{https://trakt.docs.apiary.io}.
 }
+\section{Package options}{
+
+\itemize{
+\item \code{tRakt_debug}: \code{logical(1)}: Should debug output be enabled? Default is \code{FALSE}.
+\item \code{tRakt_cache_dir}: \code{character(1)}: Where should the cache be stored?
+\item \code{tRakt_cache_max_age}: \code{numeric(1)}: How long should the cache be kept, in seconds? Default is one week (604800 seconds).
+\item \code{tRakt_cache_max_size}: \code{numeric(1)}: How big should the cache be, in bytes? Default is 100MB (100 * 1000^2 bytes).
+}
+
+All options can be overriden with environment variables of the same name.
+See \code{\link[=tRakt_sitrep]{tRakt_sitrep()}} to view the current value of all options.
+}
+
 \seealso{
 Useful links:
 \itemize{

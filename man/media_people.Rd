@@ -137,6 +137,7 @@ Other season data:
 \code{\link{media_lists}},
 \code{\link{media_ratings}()},
 \code{\link{media_stats}()},
+\code{\link{seasons_episodes}()},
 \code{\link{seasons_season}()},
 \code{\link{seasons_summary}()}
 
@@ -153,7 +154,7 @@ Other episode data:
 \code{\link{media_stats}()},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_season}()},
+\code{\link{seasons_episodes}()},
 \code{\link{seasons_summary}()},
 \code{\link{shows_next_episode}()}
 

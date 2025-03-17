@@ -2,7 +2,7 @@
 #'
 #' Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
 #' If you *do not* want the full ratings distribution, it is highly advised to
-#' just use `*_summary` functions or [seasons_season] for episode ratings.
+#' just use `*_summary` functions or [seasons_episodes] for episode ratings.
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @name media_ratings

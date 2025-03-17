@@ -12,8 +12,12 @@ check: doc
 build: doc
 	Rscript -e "devtools::build()"
 
+.PHONY: install
+install:
+	Rescript -e "pak::local_install(upgrade = FALSE)"
+
 .PHONY: test
-check:
+test:
 	Rscript -e "devtools::test()"
 
 .PHONY: update-workflows
@@ -29,3 +33,9 @@ README.md: README.Rmd
 .PHONY: site
 site: doc
 	Rscript -e "pkgdown::build_site()"
+
+clean:
+	-rm README.md
+	-rm -r README_cache
+	-rm man/*.rd
+	-rm NAMESPACE

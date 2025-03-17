@@ -31,7 +31,7 @@ A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} par
 If there are no results (or the API is unreachable), an empty \code{tibble()} is returned.
 }
 \description{
-This retrieves a single episode. See \code{\link[=seasons_season]{seasons_season()}} for a whole season, and
+This retrieves a single episode. See \code{\link[=seasons_episodes]{seasons_episodes()}} for a whole season, and
 \code{\link[=seasons_summary]{seasons_summary()}} for (potentially) all episodes of a show.
 }
 \examples{
@@ -47,7 +47,7 @@ Other episode data:
 \code{\link{media_stats}()},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_season}()},
+\code{\link{seasons_episodes}()},
 \code{\link{seasons_summary}()},
 \code{\link{shows_next_episode}()}
 

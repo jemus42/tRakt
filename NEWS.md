@@ -1,3 +1,10 @@
+# tRakt 0.17.0.9000 (development version)
+
+- Catch up with inconsistent API endpoints:
+  - `seasons_season()` was renamed to `seasons_episodes()`, wrapping endpoint [shows/:id/seasons/:season?translations=](https://trakt.docs.apiary.io/#reference/seasons/episodes/get-all-episodes-for-a-single-season).
+  - `seasons_season()` now wraps new(?) endpoint [shows/:id/seasons/:season/info](https://trakt.docs.apiary.io/#reference/seasons/season/get-single-seasons-for-a-show).
+
+
 # tRakt 0.17.0
 
 ## Switch from `{httr}` to `{httr2}`

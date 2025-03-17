@@ -7,7 +7,7 @@ library(tidyr)
 
 # Futurama ----
 n_seasons <- nrow(seasons_summary("futurama"))
-futurama <- seasons_season("futurama", seasons = seq_len(n_seasons), extended = "full")
+futurama <- seasons_episodes("futurama", seasons = seq_len(n_seasons), extended = "full")
 
 # Only update this if we're not mid-season or something.
 if (max(futurama$first_aired) < Sys.time()) {
@@ -16,7 +16,7 @@ if (max(futurama$first_aired) < Sys.time()) {
 
 
 # Game of Thrones ----
-got_trakt <- seasons_season("game-of-thrones", seasons = 1:8, extended = "full")
+got_trakt <- seasons_episodes("game-of-thrones", seasons = 1:8, extended = "full")
 
 # Wiki
 got_wiki <- rvest::read_html("https://en.wikipedia.org/wiki/List_of_Game_of_Thrones_episodes") |>

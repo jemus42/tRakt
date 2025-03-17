@@ -4,7 +4,7 @@
 \alias{seasons_summary}
 \title{Get a show's seasons}
 \source{
-\code{seasons_summary()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show}{shows/:id/seasons}.
+\code{seasons_summary()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show}{shows/:id/seasons/:season}.
 }
 \usage{
 seasons_summary(
@@ -62,6 +62,7 @@ Other season data:
 \code{\link{media_people}},
 \code{\link{media_ratings}()},
 \code{\link{media_stats}()},
+\code{\link{seasons_episodes}()},
 \code{\link{seasons_season}()}
 
 Other episode data: 
@@ -73,7 +74,7 @@ Other episode data:
 \code{\link{media_stats}()},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_season}()},
+\code{\link{seasons_episodes}()},
 \code{\link{shows_next_episode}()}
 
 Other summary methods: 

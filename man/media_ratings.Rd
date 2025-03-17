@@ -8,7 +8,7 @@
 \alias{episodes_ratings}
 \title{Media user ratings}
 \source{
-\code{shows_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings}{shows/:ids/ratings}.
+\code{shows_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings}{shows/:id/ratings}.
 
 \code{movies_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings}{movies/:id/ratings}.
 
@@ -45,7 +45,7 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 \description{
 Returns a movie's or show's (or season's, or episode's) rating and ratings distribution.
 If you \emph{do not} want the full ratings distribution, it is highly advised to
-just use \verb{*_summary} functions or \link{seasons_season} for episode ratings.
+just use \verb{*_summary} functions or \link{seasons_episodes} for episode ratings.
 }
 \note{
 Since this function is able to work on multi-length inputs for
@@ -107,6 +107,7 @@ Other season data:
 \code{\link{media_lists}},
 \code{\link{media_people}},
 \code{\link{media_stats}()},
+\code{\link{seasons_episodes}()},
 \code{\link{seasons_season}()},
 \code{\link{seasons_summary}()}
 
@@ -118,7 +119,7 @@ Other episode data:
 \code{\link{media_stats}()},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_season}()},
+\code{\link{seasons_episodes}()},
 \code{\link{seasons_summary}()},
 \code{\link{shows_next_episode}()}
 }

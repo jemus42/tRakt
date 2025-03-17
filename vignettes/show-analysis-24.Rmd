@@ -29,7 +29,7 @@ library(ggplot2)
 ## Step 1: Search
 
 Use the search function to find the show you're looking for. 
-THe show "24" is a particularly good example for a show with a bad name. If we just search for "24", we'll get a completely different show.  
+The show "24" is a particularly good example for a show with a bad name, because If we just search for "24", we'll get a wrong result due to ambiguity.  
 To nudge the search function to find the show we're looking for, we can specify the year of release:
 
 ```{r 24-search}
