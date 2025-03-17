@@ -13,7 +13,7 @@ just a single API call."><meta property="og:image" content="https://jemus42.gith
 
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@ just a single API call."><meta property="og:image" content="https://jemus42.gith
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Get a show's seasons</h1>
-      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/v0.17.0/R/seasons_summary.R" class="external-link"><code>R/seasons_summary.R</code></a></small>
+      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/R/seasons_summary.R" class="external-link"><code>R/seasons_summary.R</code></a></small>
       <div class="d-none name"><code>seasons_summary.Rd</code></div>
     </div>
 
@@ -65,7 +65,7 @@ just a single API call.</p>
 
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p><code>seasons_summary()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show" class="external-link">shows/:id/seasons</a>.</p>
+    <p><code>seasons_summary()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show" class="external-link">shows/:id/seasons/:season</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
@@ -114,6 +114,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="media_people.html">media_people</a></code>,
 <code><a href="media_ratings.html">media_ratings</a>()</code>,
 <code><a href="media_stats.html">media_stats</a>()</code>,
+<code><a href="seasons_episodes.html">seasons_episodes</a>()</code>,
 <code><a href="seasons_season.html">seasons_season</a>()</code></p>
 <p>Other episode data:
 <code><a href="episodes_summary.html">episodes_summary</a>()</code>,
@@ -124,7 +125,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="media_stats.html">media_stats</a>()</code>,
 <code><a href="media_translations.html">media_translations</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="seasons_season.html">seasons_season</a>()</code>,
+<code><a href="seasons_episodes.html">seasons_episodes</a>()</code>,
 <code><a href="shows_next_episode.html">shows_next_episode</a>()</code></p>
 <p>Other summary methods:
 <code><a href="comments_comment.html">comments_comment</a>()</code>,

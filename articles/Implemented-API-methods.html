@@ -27,7 +27,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,9 +68,9 @@
       <img src="../logo.png" class="logo" alt=""><h1>Implemented API methods</h1>
                         <h4 data-toc-skip class="author">Lukas Burk</h4>
             
-            <h4 data-toc-skip class="date">2025-03-16</h4>
+            <h4 data-toc-skip class="date">2025-03-17</h4>
       
-      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/v0.17.0/vignettes/Implemented-API-methods.Rmd" class="external-link"><code>vignettes/Implemented-API-methods.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/vignettes/Implemented-API-methods.Rmd" class="external-link"><code>vignettes/Implemented-API-methods.Rmd</code></a></small>
       <div class="d-none name"><code>Implemented-API-methods.Rmd</code></div>
     </div>
 
@@ -614,7 +614,7 @@ Lists
 Collection Progress
 </td>
 <td style="text-align:left;">
-<a href="https://trakt.docs.apiary.io/#reference/shows/collection-progress/get-show-collection-progress" class="external-link">shows/:id/progress/collection</a>
+<a href="https://trakt.docs.apiary.io/#reference/shows/collection-progress/get-show-collection-progress" class="external-link">shows/:id/progress/collection?hidden,specials,count_specials,last_activity</a>
 </td>
 <td style="text-align:left;">
 </td>
@@ -627,7 +627,7 @@ Collection Progress
 Watched Progress
 </td>
 <td style="text-align:left;">
-<a href="https://trakt.docs.apiary.io/#reference/shows/watched-progress/get-show-watched-progress" class="external-link">shows/:id/progress/watched</a>
+<a href="https://trakt.docs.apiary.io/#reference/shows/watched-progress/get-show-watched-progress" class="external-link">shows/:id/progress/watched?hidden,specials,count_specials,last_activity</a>
 </td>
 <td style="text-align:left;">
 </td>
@@ -654,7 +654,7 @@ People
 Ratings
 </td>
 <td style="text-align:left;">
-<a href="https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings" class="external-link">shows/:ids/ratings</a>
+<a href="https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings" class="external-link">shows/:id/ratings</a>
 </td>
 <td style="text-align:left;">
 <code><a href="../reference/media_ratings.html">shows_ratings()</a></code>
@@ -759,7 +759,7 @@ Auth
 Summary
 </td>
 <td style="text-align:left;">
-<a href="https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show" class="external-link">shows/:id/seasons</a>
+<a href="https://trakt.docs.apiary.io/#reference/seasons/summary/get-all-seasons-for-a-show" class="external-link">shows/:id/seasons/:season</a>
 </td>
 <td style="text-align:left;">
 <code><a href="../reference/seasons_summary.html">seasons_summary()</a></code>
@@ -773,10 +773,24 @@ Summary
 Season
 </td>
 <td style="text-align:left;">
-<a href="https://trakt.docs.apiary.io/#reference/seasons/season/get-single-season-for-a-show" class="external-link">shows/id/seasons/season</a>
+<a href="https://trakt.docs.apiary.io/#reference/seasons/season/get-single-seasons-for-a-show" class="external-link">shows/:id/seasons/:season/info</a>
 </td>
 <td style="text-align:left;">
 <code><a href="../reference/seasons_season.html">seasons_season()</a></code>
+</td>
+<td style="text-align:left;">
+<span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;">Optional</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Episodes
+</td>
+<td style="text-align:left;">
+<a href="https://trakt.docs.apiary.io/#reference/seasons/episodes/get-all-episodes-for-a-single-season" class="external-link">shows/:id/seasons/:season?translations=</a>
+</td>
+<td style="text-align:left;">
+<code><a href="../reference/seasons_episodes.html">seasons_episodes()</a></code>
 </td>
 <td style="text-align:left;">
 <span style="     color: white !important;border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: green !important;">Optional</span>
@@ -1106,7 +1120,7 @@ Auth
 Likes
 </td>
 <td style="text-align:left;">
-<a href="https://trakt.docs.apiary.io/#reference/users/likes/get-likes" class="external-link">users/likes/:type</a>
+<a href="https://trakt.docs.apiary.io/#reference/users/likes/get-likes" class="external-link">users/:id/likes/:type</a>
 </td>
 <td style="text-align:left;">
 <code><a href="../reference/user_likes.html">user_likes()</a></code>
@@ -1260,7 +1274,7 @@ Friends
 History
 </td>
 <td style="text-align:left;">
-<a href="https://trakt.docs.apiary.io/#reference/users/history/get-watched-history" class="external-link">users/:id/history/:type/:item_id?start_at=&amp;end_at=</a>
+<a href="https://trakt.docs.apiary.io/#reference/users/history/get-watched-history" class="external-link">users/:id/history/:type/:item_id?start_at=,end_at=</a>
 </td>
 <td style="text-align:left;">
 <code><a href="../reference/user_history.html">user_history()</a></code>
@@ -1288,7 +1302,7 @@ Ratings
 Watchlist
 </td>
 <td style="text-align:left;">
-<a href="https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist" class="external-link">users/:id/watchlist/:type</a>
+<a href="https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist" class="external-link">users/:id/watchlist/:type/:sort</a>
 </td>
 <td style="text-align:left;">
 <code><a href="../reference/user_watchlist.html">user_watchlist()</a></code>

@@ -9,7 +9,7 @@ A wrapper for the https://trakt.tv API to retrieve data about shows and movies, 
 
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@ A wrapper for the https://trakt.tv API to retrieve data about shows and movies, 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>tRakt: Get Data from 'trakt.tv'</h1>
-      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/v0.17.0/R/tRakt-package.R" class="external-link"><code>R/tRakt-package.R</code></a></small>
+      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/R/tRakt-package.R" class="external-link"><code>R/tRakt-package.R</code></a></small>
       <div class="d-none name"><code>tRakt-package.Rd</code></div>
     </div>
 
@@ -47,6 +47,17 @@ A wrapper for the https://trakt.tv API to retrieve data about shows and movies, 
     </div>
 
 
+    <div class="section level2">
+    <h2 id="package-options">Package options<a class="anchor" aria-label="anchor" href="#package-options"></a></h2>
+
+
+<ul><li><p><code>tRakt_debug</code>: <code>logical(1)</code>: Should debug output be enabled? Default is <code>FALSE</code>.</p></li>
+<li><p><code>tRakt_cache_dir</code>: <code>character(1)</code>: Where should the cache be stored?</p></li>
+<li><p><code>tRakt_cache_max_age</code>: <code>numeric(1)</code>: How long should the cache be kept, in seconds? Default is one week (604800 seconds).</p></li>
+<li><p><code>tRakt_cache_max_size</code>: <code>numeric(1)</code>: How big should the cache be, in bytes? Default is 100MB (100 * 1000^2 bytes).</p></li>
+</ul><p>All options can be overriden with environment variables of the same name.
+See <code><a href="tRakt_sitrep.html">tRakt_sitrep()</a></code> to view the current value of all options.</p>
+    </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Useful links:</p><ul><li><p><a href="https://jemus42.github.io/tRakt">https://jemus42.github.io/tRakt</a></p></li>

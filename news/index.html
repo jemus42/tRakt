@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,9 +35,18 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Changelog</h1>
-      <small>Source: <a href="http://github.com/jemus42/tRakt/blob/v0.17.0/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
+      <small>Source: <a href="http://github.com/jemus42/tRakt/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.17.0.9000" id="trakt-01709000-development-version">tRakt 0.17.0.9000 (development version)<a class="anchor" aria-label="anchor" href="#trakt-01709000-development-version"></a></h2>
+<ul><li>Catch up with inconsistent API endpoints:
+<ul><li>
+<code><a href="../reference/seasons_season.html">seasons_season()</a></code> was renamed to <code><a href="../reference/seasons_episodes.html">seasons_episodes()</a></code>, wrapping endpoint <a href="https://trakt.docs.apiary.io/#reference/seasons/episodes/get-all-episodes-for-a-single-season" class="external-link">shows/:id/seasons/:season?translations=</a>.</li>
+<li>
+<code><a href="../reference/seasons_season.html">seasons_season()</a></code> now wraps new(?) endpoint <a href="https://trakt.docs.apiary.io/#reference/seasons/season/get-single-seasons-for-a-show" class="external-link">shows/:id/seasons/:season/info</a>.</li>
+</ul></li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.17.0" id="trakt-0170">tRakt 0.17.0<a class="anchor" aria-label="anchor" href="#trakt-0170"></a></h2>
 <div class="section level3">

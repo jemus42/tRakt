@@ -33,7 +33,7 @@
 
     <a class="navbar-brand me-2" href="index.html">tRakt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -133,7 +133,7 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <span><span class="co">#&gt; $ tmdb           &lt;chr&gt; "54695", "54696"</span></span></code></pre></div>
 <p>Get episode data for the first season, this time using the show’s URL slug:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_season.html">seasons_season</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, seasons <span class="op">=</span> <span class="fl">1</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_episodes.html">seasons_episodes</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, seasons <span class="op">=</span> <span class="fl">1</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 6</span></span>
 <span><span class="co">#&gt; Columns: 17</span></span>

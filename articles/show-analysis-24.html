@@ -27,7 +27,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.17.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,9 +68,9 @@
       <img src="../logo.png" class="logo" alt=""><h1>Show Analysis: 24</h1>
                         <h4 data-toc-skip class="author">Lukas Burk</h4>
             
-            <h4 data-toc-skip class="date">2025-03-16</h4>
+            <h4 data-toc-skip class="date">2025-03-17</h4>
       
-      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/v0.17.0/vignettes/show-analysis-24.Rmd" class="external-link"><code>vignettes/show-analysis-24.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/vignettes/show-analysis-24.Rmd" class="external-link"><code>vignettes/show-analysis-24.Rmd</code></a></small>
       <div class="d-none name"><code>show-analysis-24.Rmd</code></div>
     </div>
 
@@ -83,9 +83,10 @@
 <div class="section level2">
 <h2 id="step-1-search">Step 1: Search<a class="anchor" aria-label="anchor" href="#step-1-search"></a>
 </h2>
-<p>Use the search function to find the show you’re looking for. THe show
-“24” is a particularly good example for a show with a bad name. If we
-just search for “24”, we’ll get a completely different show.<br>
+<p>Use the search function to find the show you’re looking for. The show
+“24” is a particularly good example for a show with a bad name, because
+If we just search for “24”, we’ll get a wrong result due to
+ambiguity.<br>
 To nudge the search function to find the show we’re looking for, we can
 specify the year of release:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
@@ -94,7 +95,7 @@ specify the year of release:</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 9</span></span></span>
 <span><span class="co">#&gt;   type  score title  year trakt slug  tvdb  imdb      tmdb </span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   88.0 24     <span style="text-decoration: underline;">2</span>001 1960  24    76290 tt0285331 1973</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   87.9 24     <span style="text-decoration: underline;">2</span>001 1960  24    76290 tt0285331 1973</span></span></code></pre></div>
 <p>Now we have the basic show info to work with, including the
 <code>title</code> and various IDs.</p>
 </div>
@@ -119,7 +120,7 @@ episode data, which includes user ratings.</p>
 <span><span class="co">#&gt; $ title          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Season 1", "Season 2", "Season 3", "Season 4", "Season…</span></span>
 <span><span class="co">#&gt; $ overview       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Counter-terrorism agent Jack Bauer attempts to stop th…</span></span>
 <span><span class="co">#&gt; $ first_aired    <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2001-11-07 02:00:00, 2002-10-30 02:00:00, 2003-10-29 02…</span></span>
-<span><span class="co">#&gt; $ updated_at     <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2025-03-16 08:31:59, 2025-03-16 08:09:52, 2025-03-16 08…</span></span>
+<span><span class="co">#&gt; $ updated_at     <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2025-03-16 18:06:42, 2025-03-16 18:24:14, 2025-03-16 16…</span></span>
 <span><span class="co">#&gt; $ network        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "FOX", "FOX", "FOX", "FOX", "FOX", "FOX", "FOX", "FOX",…</span></span>
 <span><span class="co">#&gt; $ episodes       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[24 x 17]&gt;], [&lt;tbl_df[24 x 17]&gt;], [&lt;tbl_df[24 x…</span></span>
 <span><span class="co">#&gt; $ trakt          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "6262", "6263", "6264", "6265", "6266", "6267", "6268"…</span></span>
