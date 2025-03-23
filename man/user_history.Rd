@@ -4,7 +4,7 @@
 \alias{user_history}
 \title{Get a user's watch history}
 \source{
-\code{user_history()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/history/get-watched-history}{users/:id/history/:type/:item_id?start_at=,end_at=}.
+\code{user_history()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/history/get-watched-history}{/users/:id/history/:type/:item_id?start_at=,end_at=}.
 }
 \usage{
 user_history(
@@ -36,7 +36,7 @@ to a datetime object of class \code{POSIXct}. See \link{ISOdate} for further inf
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

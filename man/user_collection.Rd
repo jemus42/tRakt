@@ -4,7 +4,7 @@
 \alias{user_collection}
 \title{Get a user's collected shows or movies}
 \source{
-\code{user_collection()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{users/:id/collection/:type}.
+\code{user_collection()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{/users/:id/collection/:type}.
 }
 \usage{
 user_collection(
@@ -28,7 +28,7 @@ functions, values \code{seasons} or \code{episodes} are also allowed.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

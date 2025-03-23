@@ -7,11 +7,11 @@
 \alias{episodes_translations}
 \title{Get translations for a movie, show or episode}
 \source{
-\code{movies_translations()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/translations/get-all-movie-translations}{movies/:id/translations/:language}.
+\code{movies_translations()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/translations/get-all-movie-translations}{/movies/:id/translations/:language}.
 
-\code{shows_translations()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/translations/get-all-show-translations}{shows/:id/translations/:language}.
+\code{shows_translations()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/translations/get-all-show-translations}{/shows/:id/translations/:language}.
 
-\code{episodes_translations()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/translations/get-all-episode-translations}{shows/:id/seasons/:season/episodes/:episode/translations/:language}.
+\code{episodes_translations()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/translations/get-all-episode-translations}{/shows/:id/seasons/:season/episodes/:episode/translations/:language}.
 }
 \usage{
 movies_translations(id, languages = NULL)
@@ -26,7 +26,7 @@ episodes_translations(id, season = 1L, episode = 1L, languages = NULL)
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things")} for more details.}
+\code{vignette("tRakt")} for more details.}
 
 \item{languages}{\code{character(n)}: Two-letter language code(s).
 Also see \code{\link{trakt_languages}} for available languages (code and name).}

@@ -4,7 +4,7 @@
 \alias{user_ratings}
 \title{Get a user's ratings}
 \source{
-\code{user_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings}{users/:id/ratings/:type/:rating}.
+\code{user_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/ratings/get-ratings}{/users/:id/ratings/:type/:rating}.
 }
 \usage{
 user_ratings(
@@ -27,7 +27,7 @@ functions, values \code{seasons} or \code{episodes} are also allowed.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

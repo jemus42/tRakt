@@ -4,7 +4,7 @@
 \alias{user_list_comments}
 \title{Get comments on a user-created list}
 \source{
-\code{user_list_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-comments/get-all-list-comments}{users/:id/lists/:list_id/comments/:sort}.
+\code{user_list_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-comments/get-all-list-comments}{/users/:id/lists/:list_id/comments/:sort}.
 }
 \usage{
 user_list_comments(
@@ -28,7 +28,7 @@ Can be optained via the website (URL \code{slug}) or e.g. \link{user_lists}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

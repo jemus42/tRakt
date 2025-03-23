@@ -8,13 +8,13 @@
 \alias{episodes_people}
 \title{Get the cast and crew of a show or movie}
 \source{
-\code{movies_people()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{movies/:id/people}.
+\code{movies_people()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/people/get-all-people-for-a-movie}{/movies/:id/people}.
 
-\code{shows_people()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show}{shows/:id/people}.
+\code{shows_people()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/people/get-all-people-for-a-show}{/shows/:id/people}.
 
-\code{seasons_people()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/people/get-all-people-for-a-season}{shows/:id/seasons/:season/people}.
+\code{seasons_people()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/people/get-all-people-for-a-season}{/shows/:id/seasons/:season/people}.
 
-\code{episodes_people()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/people/get-all-people-for-an-episode}{shows/:id/seasons/:season/episodes/:episode/people}.
+\code{episodes_people()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/people/get-all-people-for-an-episode}{/shows/:id/seasons/:season/episodes/:episode/people}.
 }
 \usage{
 movies_people(id, extended = c("min", "full"))
@@ -42,11 +42,11 @@ episodes_people(
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things")} for more details.}
+\code{vignette("tRakt")} for more details.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 
 \item{guest_stars}{\code{logical(1) ["FALSE"]}: Also include guest stars. This returns
 a lot of data, so use with care.}

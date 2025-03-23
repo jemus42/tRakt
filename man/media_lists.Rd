@@ -9,13 +9,13 @@
 \alias{people_lists}
 \title{Get lists containing a movie, show, season, episode or person}
 \source{
-\code{movies_lists()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/lists/get-lists-containing-this-movie}{movies/:id/lists/:type/:sort}.
+\code{movies_lists()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/lists/get-lists-containing-this-movie}{/movies/:id/lists/:type/:sort}.
 
-\code{shows_lists()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/lists/get-lists-containing-this-show}{shows/:id/lists/:type/:sort}.
+\code{shows_lists()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/lists/get-lists-containing-this-show}{/shows/:id/lists/:type/:sort}.
 
-\code{seasons_lists()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/lists/get-lists-containing-this-season}{shows/:id/seasons/:season/lists/:type/:sort}.
+\code{seasons_lists()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/lists/get-lists-containing-this-season}{/shows/:id/seasons/:season/lists/:type/:sort}.
 
-\code{episodes_lists()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/lists/get-lists-containing-this-episode}{shows/:id/seasons/:season/episodes/:episode/lists/:type/:sort}.
+\code{episodes_lists()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/lists/get-lists-containing-this-episode}{/shows/:id/seasons/:season/episodes/:episode/lists/:type/:sort}.
 }
 \usage{
 movies_lists(
@@ -67,7 +67,7 @@ people_lists(
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things")} for more details.}
+\code{vignette("tRakt")} for more details.}
 
 \item{type}{\code{character(1) ["all"]}: The type of list, one of "all", "personal",
 "official" or "watchlists".}
@@ -80,7 +80,7 @@ than \code{0} and will be coerced via \code{as.integer()}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 
 \item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be

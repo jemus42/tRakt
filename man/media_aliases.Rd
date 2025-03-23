@@ -6,9 +6,9 @@
 \alias{shows_aliases}
 \title{Get all movie / show aliases}
 \source{
-\code{movies_aliases()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases}{movies/:id/aliases}.
+\code{movies_aliases()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases}{/movies/:id/aliases}.
 
-\code{shows_aliases()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases}{shows/:id/aliases}.
+\code{shows_aliases()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases}{/shows/:id/aliases}.
 }
 \usage{
 movies_aliases(id)
@@ -21,7 +21,7 @@ shows_aliases(id)
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things")} for more details.}
+\code{vignette("tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

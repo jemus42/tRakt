@@ -8,13 +8,13 @@
 \alias{episodes_ratings}
 \title{Media user ratings}
 \source{
-\code{shows_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings}{shows/:id/ratings}.
+\code{shows_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings}{/shows/:id/ratings}.
 
-\code{movies_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings}{movies/:id/ratings}.
+\code{movies_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings}{/movies/:id/ratings}.
 
-\code{seasons_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings}{shows/:id/seasons/:season/ratings}.
+\code{seasons_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings}{/shows/:id/seasons/:season/ratings}.
 
-\code{episodes_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings}{shows/:id/seasons/:season/episodes/:episode/ratings}.
+\code{episodes_ratings()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings}{/shows/:id/seasons/:season/episodes/:episode/ratings}.
 }
 \usage{
 shows_ratings(id)
@@ -31,7 +31,7 @@ episodes_ratings(id, season = 1L, episode = 1L)
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things")} for more details.}
+\code{vignette("tRakt")} for more details.}
 
 \item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be

@@ -4,7 +4,7 @@
 \alias{user_watched}
 \title{Get a user's watched shows or movies}
 \source{
-\code{user_watched()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/watched/get-watched}{users/:id/watched/:type}.
+\code{user_watched()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/watched/get-watched}{/users/:id/watched/:type}.
 }
 \usage{
 user_watched(
@@ -29,7 +29,7 @@ be nice to the API.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

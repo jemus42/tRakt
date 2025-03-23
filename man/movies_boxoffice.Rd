@@ -4,7 +4,7 @@
 \alias{movies_boxoffice}
 \title{Get the weekend box office}
 \source{
-\code{movies_boxoffice()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office}{movies/boxoffice}.
+\code{movies_boxoffice()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office}{/movies/boxoffice}.
 }
 \usage{
 movies_boxoffice(extended = c("min", "full"))
@@ -12,7 +12,7 @@ movies_boxoffice(extended = c("min", "full"))
 \arguments{
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

@@ -4,7 +4,7 @@
 \alias{movies_releases}
 \title{Get a movie's release details}
 \source{
-\code{movies_releases()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/releases/get-all-movie-releases}{movies/:id/releases/:country}.
+\code{movies_releases()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/releases/get-all-movie-releases}{/movies/:id/releases/:country}.
 }
 \usage{
 movies_releases(id, country = NULL)
@@ -15,7 +15,7 @@ movies_releases(id, country = NULL)
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things")} for more details.}
+\code{vignette("tRakt")} for more details.}
 
 \item{country}{Optional two letter country code to filter by. See \link{trakt_countries}
 for a table of country codes.}

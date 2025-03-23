@@ -4,7 +4,7 @@
 \alias{user_profile}
 \title{Get a user's profile}
 \source{
-\code{user_profile()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile}{users/:id}.
+\code{user_profile()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/profile/get-user-profile}{/users/:id}.
 }
 \usage{
 user_profile(user = "me", extended = c("min", "full"))
@@ -17,7 +17,7 @@ Can also be of length greater than 1, in which case the function is called on al
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

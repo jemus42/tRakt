@@ -4,7 +4,7 @@
 \alias{user_list_items}
 \title{Get a user's list's items}
 \source{
-\code{user_list_items()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-items/get-items-on-a-custom-list}{users/:id/lists/:list_id/items/:type}.
+\code{user_list_items()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-items/get-items-on-a-custom-list}{/users/:id/lists/:list_id/items/:type}.
 }
 \usage{
 user_list_items(user = "me", list_id, type = NULL, extended = c("min", "full"))
@@ -23,7 +23,7 @@ returned. Possible values are \code{"movie"}, \code{"show"}, \code{"season"}, \c
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

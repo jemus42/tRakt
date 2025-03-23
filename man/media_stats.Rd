@@ -8,13 +8,13 @@
 \alias{episodes_stats}
 \title{Get a show or movie's (or season's or episode's) stats}
 \source{
-\code{shows_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats}{shows/:id/stats}.
+\code{shows_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats}{/shows/:id/stats}.
 
-\code{movies_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats}{movies/:id/stats}.
+\code{movies_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats}{/movies/:id/stats}.
 
-\code{seasons_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats}{shows/:id/seasons/:season/stats}.
+\code{seasons_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/stats/get-season-stats}{/shows/:id/seasons/:season/stats}.
 
-\code{episodes_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats}{shows/:id/seasons/:season/episodes/:episode/stats}.
+\code{episodes_stats()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/stats/get-episode-stats}{/shows/:id/seasons/:season/episodes/:episode/stats}.
 }
 \usage{
 shows_stats(id)
@@ -31,7 +31,7 @@ episodes_stats(id, season = 1L, episode = 1L)
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things")} for more details.}
+\code{vignette("tRakt")} for more details.}
 
 \item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be

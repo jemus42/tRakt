@@ -6,9 +6,9 @@
 \alias{shows_trending}
 \title{Trending media}
 \source{
-\code{movies_trending()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/trending/get-trending-movies}{movies/trending}.
+\code{movies_trending()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/trending/get-trending-movies}{/movies/trending}.
 
-\code{shows_trending()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/trending/get-trending-shows}{shows/trending}.
+\code{shows_trending()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/trending/get-trending-shows}{/shows/trending}.
 }
 \usage{
 movies_trending(
@@ -45,7 +45,7 @@ than \code{0} and will be coerced via \code{as.integer()}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 
 \item{query}{\code{character(1)}: Search string for titles and descriptions.
 For \code{search_query()} other fields are searched depending on the \code{type} of media.

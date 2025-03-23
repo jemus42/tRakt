@@ -8,13 +8,13 @@
 \alias{episodes_comments}
 \title{Get all comments of a thing}
 \source{
-\code{movies_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/comments/get-all-movie-comments}{movies/:id/comments/:sort}.
+\code{movies_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/comments/get-all-movie-comments}{/movies/:id/comments/:sort}.
 
-\code{shows_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/comments/get-all-show-comments}{shows/:id/comments/:sort}.
+\code{shows_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/comments/get-all-show-comments}{/shows/:id/comments/:sort}.
 
-\code{seasons_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments}{shows/:id/seasons/:season/comments/:sort}.
+\code{seasons_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments}{/shows/:id/seasons/:season/comments/:sort}.
 
-\code{episodes_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/comments/get-all-episode-comments}{shows/:id/seasons/:season/episodes/:episode/comments/:sort}.
+\code{episodes_comments()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/comments/get-all-episode-comments}{/shows/:id/seasons/:season/episodes/:episode/comments/:sort}.
 }
 \usage{
 movies_comments(
@@ -54,14 +54,14 @@ episodes_comments(
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things")} for more details.}
+\code{vignette("tRakt")} for more details.}
 
 \item{sort}{\code{character(1) ["newest"]}: Comment sort order, one of
 "newest", "oldest", "likes" or "replies".}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced via \code{as.integer()}.}

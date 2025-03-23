@@ -6,9 +6,9 @@
 \alias{shows_popular}
 \title{Popular media}
 \source{
-\code{movies_popular()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies}{movies/popular}.
+\code{movies_popular()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies}{/movies/popular}.
 
-\code{shows_popular()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/popular/get-popular-shows}{shows/popular}.
+\code{shows_popular()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/popular/get-popular-shows}{/shows/popular}.
 }
 \usage{
 movies_popular(
@@ -45,7 +45,7 @@ than \code{0} and will be coerced via \code{as.integer()}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 
 \item{query}{\code{character(1)}: Search string for titles and descriptions.
 For \code{search_query()} other fields are searched depending on the \code{type} of media.

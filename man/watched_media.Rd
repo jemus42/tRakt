@@ -6,9 +6,9 @@
 \alias{shows_watched}
 \title{Most watched media}
 \source{
-\code{movies_watched()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/watched/get-the-most-watched-movies}{movies/watched/:period}.
+\code{movies_watched()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/watched/get-the-most-watched-movies}{/movies/watched/:period}.
 
-\code{shows_watched()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/watched/get-the-most-watched-shows}{shows/watched/:period}.
+\code{shows_watched()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/watched/get-the-most-watched-shows}{/shows/watched/:period}.
 }
 \usage{
 movies_watched(
@@ -47,7 +47,7 @@ than \code{0} and will be coerced via \code{as.integer()}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}

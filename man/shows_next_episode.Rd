@@ -5,9 +5,9 @@
 \alias{shows_last_episode}
 \title{Get a shows next or latest episode}
 \source{
-\code{shows_next_episode()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/next-episode/get-next-episode}{shows/:id/next_episode}.
+\code{shows_next_episode()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/next-episode/get-next-episode}{/shows/:id/next_episode}.
 
-\code{shows_last_episode()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/last-episode/get-last-episode}{shows/:id/last_episode}.
+\code{shows_last_episode()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/last-episode/get-last-episode}{/shows/:id/last_episode}.
 }
 \usage{
 shows_next_episode(id, extended = c("min", "full"))
@@ -20,11 +20,11 @@ shows_last_episode(id, extended = c("min", "full"))
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things")} for more details.}
+\code{vignette("tRakt")} for more details.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

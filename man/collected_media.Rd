@@ -6,9 +6,9 @@
 \alias{shows_collected}
 \title{Most collected media}
 \source{
-\code{movies_collected()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/collected/get-the-most-collected-movies}{movies/collected/:period}.
+\code{movies_collected()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/collected/get-the-most-collected-movies}{/movies/collected/:period}.
 
-\code{shows_collected()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/collected/get-the-most-collected-shows}{shows/collected/:period}.
+\code{shows_collected()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/collected/get-the-most-collected-shows}{/shows/collected/:period}.
 }
 \usage{
 movies_collected(
@@ -47,7 +47,7 @@ than \code{0} and will be coerced via \code{as.integer()}.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}

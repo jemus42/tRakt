@@ -8,11 +8,11 @@
 \alias{episodes_watching}
 \title{Get who's watching a thing right now}
 \source{
-\code{movies_watching()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now}{movies/:id/watching}.
+\code{movies_watching()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now}{/movies/:id/watching}.
 
-\code{shows_watching()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/watching/get-users-watching-right-now}{shows/:id/watching}.
+\code{shows_watching()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/watching/get-users-watching-right-now}{/shows/:id/watching}.
 
-\code{episodes_watching()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/watching/get-users-watching-right-now}{shows/:id/seasons/:season/episodes/:episode/watching}.
+\code{episodes_watching()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/watching/get-users-watching-right-now}{/shows/:id/seasons/:season/episodes/:episode/watching}.
 }
 \usage{
 movies_watching(id, extended = c("min", "full"))
@@ -29,11 +29,11 @@ episodes_watching(id, season = 1L, episode = 1L, extended = c("min", "full"))
 or \code{imdb} ID (e.g. \code{"tt0306414"}).
 Can also be of length greater than 1, in which case the function is called on all
 \code{id} values separately and the result is combined. See
-\code{vignette("finding-things")} for more details.}
+\code{vignette("tRakt")} for more details.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 
 \item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be

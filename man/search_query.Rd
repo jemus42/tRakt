@@ -5,9 +5,9 @@
 \alias{search_id}
 \title{Search trakt.tv via text query or ID}
 \source{
-\code{search_query()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results}{search/:type?query=}.
+\code{search_query()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results}{/search/:type?query=}.
 
-\code{search_id()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results}{search/:id_type/:id?type=}.
+\code{search_id()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results}{/search/:id_type/:id?type=}.
 }
 \usage{
 search_query(
@@ -50,7 +50,7 @@ separate function calls in that case.}
 
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
-See \code{vignette("finding-things")} for more details.}
+See \code{vignette("tRakt")} for more details.}
 
 \item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range,
 e.g. \code{"2010-2020"}. Can also be an integer vector of length two which will be
