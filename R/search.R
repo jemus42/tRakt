@@ -186,7 +186,6 @@ search_result_cleanup <- function(response, type, n_results, extended) {
   response <- as_tibble(response)
   if (has_name(response, "year")) {
     response[is.na(response$year) & response$score == 1000, "score"] <- 20
-    response <- response[order(response$score, decreasing = TRUE), ]
   }
 
   head(response, n_results) |>
