@@ -22,22 +22,21 @@ knitr::opts_chunk$set(
 library(tRakt)
 ```
 
-That's all you need to to for basic things. If you're planning a larger project with lots and lots of data retrieval, you might want to create your own API app [on trakt.tv](https://trakt.tv/oauth/applications) and use `trakt_credentials()` to set your `client id`.
+That's all you need to to for basic things. If you're planning a larger project with lots and lots of data retrieval, you might want to create your own API app [on trakt.tv](https://trakt.tv/oauth/applications).
 
-# Getting data from trakt.tv
 
 ## 1. Find things
 
 Using a text query:
 
 ```{r search}
-search_query("Game of Thrones", type = "show")
+search_query("Utopia", type = "show")
 ```
 
-Search by explicit ID:
+Search using an ID:
 
 ```{r search_id}
-search_id("121361", id_type = "tvdb", type = "show")
+search_id("tt2384811", id_type = "imdb", type = "show")
 ```
 
 Or via whatever's popular(ish):

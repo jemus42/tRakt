@@ -152,7 +152,7 @@ search_id <- function(
 
   # Check if response is empty (nothing found)
   if (identical(response, tibble())) {
-    warning("No results for id '", id, "' (", id_type, ")")
+    cli::cli_warn("No results for {.val {id_type}} ID {.val {id}}")
     return(tibble())
   }
 
@@ -163,8 +163,6 @@ search_id <- function(
 #' @keywords internal
 #' @importFrom utils head
 #' @importFrom rlang has_name
-#' @importFrom tibble as_tibble
-#' @importFrom tibble remove_rownames
 #' @noRd
 search_result_cleanup <- function(response, type, n_results, extended) {
   # Just to be really safe it's always a numeric
