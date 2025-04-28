@@ -25,8 +25,7 @@ as receiving a quick overview of a show/movie."><meta property="og:image" conten
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/finding-things.html">Finding things (and the right amount)</a></li>
-    <li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
     <li><a class="dropdown-item" href="../articles/show-analysis-24.html">Show Analysis: 24</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -81,8 +80,8 @@ as receiving a quick overview of a show/movie.</p>
 
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p><code>search_query()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results" class="external-link">search/:type?query=</a>.</p>
-<p><code>search_id()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results" class="external-link">search/:id_type/:id?type=</a>.</p>
+    <p><code>search_query()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/search/text-query/get-text-query-results" class="external-link">/search/:type?query=</a>.</p>
+<p><code>search_id()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/search/id-lookup/get-text-query-results" class="external-link">/search/:id_type/:id?type=</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
@@ -110,7 +109,7 @@ separate function calls in that case.</p></dd>
 <dt id="arg-extended">extended<a class="anchor" aria-label="anchor" href="#arg-extended"></a></dt>
 <dd><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
-See <code><a href="../articles/finding-things.html">vignette("finding-things")</a></code> for more details.</p></dd>
+See <code><a href="../articles/tRakt.html">vignette("tRakt")</a></code> for more details.</p></dd>
 
 
 <dt id="arg-years">years<a class="anchor" aria-label="anchor" href="#arg-years"></a></dt>
@@ -198,11 +197,11 @@ which fields of the item metadata are searched by default.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># A show</span></span></span>
 <span class="r-in"><span><span class="fu">search_query</span><span class="op">(</span><span class="st">"Breaking Bad"</span>, type <span class="op">=</span> <span class="st">"show"</span>, n_results <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 3 × 9</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   type  score title           year trakt  slug                tvdb   imdb  tmdb </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> show  <span style="text-decoration: underline;">1</span>387. GLOW            <span style="text-decoration: underline;">2</span>017 116959 glow                324835 tt57… 70573</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> show  <span style="text-decoration: underline;">1</span>337. The Langoliers  <span style="text-decoration: underline;">1</span>995 164166 the-langoliers-1995 211741 tt01… 18197</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> show  <span style="text-decoration: underline;">1</span>274. Gargoyles       <span style="text-decoration: underline;">1</span>994 1707   gargoyles           72885  tt01… 1719 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   type  score title         year trakt  slug         tvdb   imdb      tmdb </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> show   106. Breaking Bad  <span style="text-decoration: underline;">2</span>008 1388   breaking-bad 81189  tt0903747 1396 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> show  <span style="text-decoration: underline;">1</span>539. Stargirl      <span style="text-decoration: underline;">2</span>020 138096 stargirl     361868 tt8722888 80986</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> show  <span style="text-decoration: underline;">1</span>398. GLOW          <span style="text-decoration: underline;">2</span>017 116959 glow         324835 tt5770786 70573</span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="co"># A show by its trakt id, and now with more information</span></span></span>
 <span class="r-in"><span><span class="fu">search_id</span><span class="op">(</span><span class="fl">1388</span>, <span class="st">"trakt"</span>, type <span class="op">=</span> <span class="st">"show"</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span></span></span>

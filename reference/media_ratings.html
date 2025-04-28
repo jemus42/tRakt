@@ -23,8 +23,7 @@ just use *_summary functions or seasons_episodes for episode ratings."><meta pro
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/finding-things.html">Finding things (and the right amount)</a></li>
-    <li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
     <li><a class="dropdown-item" href="../articles/show-analysis-24.html">Show Analysis: 24</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -62,10 +61,10 @@ just use <code>*_summary</code> functions or <a href="seasons_episodes.html">sea
 
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p><code>shows_ratings()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings" class="external-link">shows/:id/ratings</a>.</p>
-<p><code>movies_ratings()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings" class="external-link">movies/:id/ratings</a>.</p>
-<p><code>seasons_ratings()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings" class="external-link">shows/:id/seasons/:season/ratings</a>.</p>
-<p><code>episodes_ratings()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings" class="external-link">shows/:id/seasons/:season/episodes/:episode/ratings</a>.</p>
+    <p><code>shows_ratings()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/shows/ratings/get-show-ratings" class="external-link">/shows/:id/ratings</a>.</p>
+<p><code>movies_ratings()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/movies/ratings/get-movie-ratings" class="external-link">/movies/:id/ratings</a>.</p>
+<p><code>seasons_ratings()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/seasons/ratings/get-season-ratings" class="external-link">/shows/:id/seasons/:season/ratings</a>.</p>
+<p><code>episodes_ratings()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/episodes/ratings/get-episode-ratings" class="external-link">/shows/:id/seasons/:season/episodes/:episode/ratings</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
@@ -77,7 +76,7 @@ just use <code>*_summary</code> functions or <a href="seasons_episodes.html">sea
 or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
 Can also be of length greater than 1, in which case the function is called on all
 <code>id</code> values separately and the result is combined. See
-<code><a href="../articles/finding-things.html">vignette("finding-things")</a></code> for more details.</p></dd>
+<code><a href="../articles/tRakt.html">vignette("tRakt")</a></code> for more details.</p></dd>
 
 
 <dt id="arg-season-episode">season, episode<a class="anchor" aria-label="anchor" href="#arg-season-episode"></a></dt>
@@ -161,14 +160,14 @@ of one API call <em>per element in each argument</em>. Please be kind to the API
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   rating votes distribution      id               type  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>   7.17 <span style="text-decoration: underline;">18</span>019 <span style="color: #949494;">&lt;tibble [10 × 2]&gt;</span> tron-legacy-2010 movies</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>   7.17 <span style="text-decoration: underline;">18</span>391 <span style="color: #949494;">&lt;tibble [10 × 2]&gt;</span> tron-legacy-2010 movies</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># A show's ratings</span></span></span>
 <span class="r-in"><span><span class="fu">shows_ratings</span><span class="op">(</span><span class="st">"game-of-thrones"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   rating  votes distribution      id              type </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>   8.91 <span style="text-decoration: underline;">141</span>219 <span style="color: #949494;">&lt;tibble [10 × 2]&gt;</span> game-of-thrones shows</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>   8.91 <span style="text-decoration: underline;">142</span>415 <span style="color: #949494;">&lt;tibble [10 × 2]&gt;</span> game-of-thrones shows</span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="co"># Ratings for seasons 1 through 5</span></span></span>
 <span class="r-in"><span><span class="fu">seasons_ratings</span><span class="op">(</span><span class="st">"futurama"</span>, season <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span></span>

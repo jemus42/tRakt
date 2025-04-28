@@ -19,8 +19,7 @@
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/finding-things.html">Finding things (and the right amount)</a></li>
-    <li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
     <li><a class="dropdown-item" href="../articles/show-analysis-24.html">Show Analysis: 24</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -52,8 +51,8 @@
 
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p><code>shows_next_episode()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/shows/next-episode/get-next-episode" class="external-link">shows/:id/next_episode</a>.</p>
-<p><code>shows_last_episode()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/shows/last-episode/get-last-episode" class="external-link">shows/:id/last_episode</a>.</p>
+    <p><code>shows_next_episode()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/shows/next-episode/get-next-episode" class="external-link">/shows/:id/next_episode</a>.</p>
+<p><code>shows_last_episode()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/shows/last-episode/get-last-episode" class="external-link">/shows/:id/last_episode</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
@@ -65,13 +64,13 @@
 or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
 Can also be of length greater than 1, in which case the function is called on all
 <code>id</code> values separately and the result is combined. See
-<code><a href="../articles/finding-things.html">vignette("finding-things")</a></code> for more details.</p></dd>
+<code><a href="../articles/tRakt.html">vignette("tRakt")</a></code> for more details.</p></dd>
 
 
 <dt id="arg-extended">extended<a class="anchor" aria-label="anchor" href="#arg-extended"></a></dt>
 <dd><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
-See <code><a href="../articles/finding-things.html">vignette("finding-things")</a></code> for more details.</p></dd>
+See <code><a href="../articles/tRakt.html">vignette("tRakt")</a></code> for more details.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -138,17 +137,17 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">shows_next_episode</span><span class="op">(</span><span class="st">"one-piece"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   season number title        trakt    tvdb  imdb  tmdb   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>     22   <span style="text-decoration: underline;">1</span>123 Episode 1123 12642700 <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    5852518</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   season number title        trakt    tvdb     imdb  tmdb   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>     22   <span style="text-decoration: underline;">1</span>128 Episode 1128 13000613 11069451 <span style="color: #BB0000;">NA</span>    6129610</span>
 <span class="r-in"><span><span class="fu">shows_last_episode</span><span class="op">(</span><span class="st">"one-piece"</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 17</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 18</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   season number title             number_abs overview rating votes comment_count</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>     22   <span style="text-decoration: underline;">1</span>122 The Last Lesson!…       <span style="text-decoration: underline;">1</span>122 Avalo P…   8.91   129             7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 9 more variables: first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>     22   <span style="text-decoration: underline;">1</span>127 Luffy vs. Kizaru…       <span style="text-decoration: underline;">1</span>127 <span style="color: #BB0000;">NA</span>          8.5    48             0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 10 more variables: first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   available_translations &lt;list&gt;, runtime &lt;int&gt;, episode_type &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   trakt &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   original_title &lt;chr&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

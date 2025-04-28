@@ -41,8 +41,7 @@
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/finding-things.html">Finding things (and the right amount)</a></li>
-    <li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
+<li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
     <li><a class="dropdown-item" href="../articles/show-analysis-24.html">Show Analysis: 24</a></li>
   </ul>
 </li>
@@ -68,7 +67,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Getting Started</h1>
                         <h4 data-toc-skip class="author">Lukas Burk</h4>
             
-            <h4 data-toc-skip class="date">2025-03-17</h4>
+            <h4 data-toc-skip class="date">2025-04-28</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/vignettes/tRakt.Rmd" class="external-link"><code>vignettes/tRakt.Rmd</code></a></small>
       <div class="d-none name"><code>tRakt.Rmd</code></div>
@@ -81,29 +80,24 @@
 <p>That’s all you need to to for basic things. If you’re planning a
 larger project with lots and lots of data retrieval, you might want to
 create your own API app <a href="https://trakt.tv/oauth/applications" class="external-link">on
-trakt.tv</a> and use <code><a href="../reference/trakt_credentials.html">trakt_credentials()</a></code> to set your
-<code>client id</code>.</p>
-<div class="section level2">
-<h2 id="getting-data-from-trakt-tv">Getting data from trakt.tv<a class="anchor" aria-label="anchor" href="#getting-data-from-trakt-tv"></a>
-</h2>
-</div>
+trakt.tv</a>.</p>
 <div class="section level2">
 <h2 id="find-things">1. Find things<a class="anchor" aria-label="anchor" href="#find-things"></a>
 </h2>
 <p>Using a text query:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"Game of Thrones"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"Utopia"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 9</span></span></span>
-<span><span class="co">#&gt;   type  score title                         year trakt  slug   tvdb  imdb  tmdb </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show  <span style="text-decoration: underline;">1</span>252. Game of Throws: Inside Darts  <span style="text-decoration: underline;">2</span>024 265754 game-… 4569… tt34… 2430…</span></span></code></pre></div>
-<p>Search by explicit ID:</p>
+<span><span class="co">#&gt;   type  score title   year trakt slug   tvdb   imdb      tmdb </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   98.6 Utopia  <span style="text-decoration: underline;">2</span>013 46241 utopia 264991 tt2384811 46511</span></span></code></pre></div>
+<p>Search using an ID:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="../reference/search_query.html">search_id</a></span><span class="op">(</span><span class="st">"121361"</span>, id_type <span class="op">=</span> <span class="st">"tvdb"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/search_query.html">search_id</a></span><span class="op">(</span><span class="st">"tt2384811"</span>, id_type <span class="op">=</span> <span class="st">"imdb"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 9</span></span></span>
-<span><span class="co">#&gt;   type  score title            year trakt slug            tvdb   imdb      tmdb </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   <span style="text-decoration: underline;">1</span>000 Game of Thrones  <span style="text-decoration: underline;">2</span>011 1390  game-of-thrones 121361 tt0944947 1399</span></span></code></pre></div>
+<span><span class="co">#&gt;   type  score title   year trakt slug   tvdb   imdb      tmdb </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show   <span style="text-decoration: underline;">1</span>000 Utopia  <span style="text-decoration: underline;">2</span>013 46241 utopia 264991 tt2384811 46511</span></span></code></pre></div>
 <p>Or via whatever’s popular(ish):</p>
 <p>Another scenario would be that you’re not necessarily interested in
 some specific media item, but rather a collection of items that fulfill
@@ -130,18 +124,95 @@ release year of the movie.</p>
 <span><span class="fu"><a href="../reference/watched_media.html">movies_watched</a></span><span class="op">(</span>period <span class="op">=</span> <span class="st">"yearly"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1990</span>, <span class="fl">2000</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">watcher_count</span>, <span class="va">title</span>, <span class="va">year</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 3</span></span></span>
-<span><span class="co">#&gt;    watcher_count title                     year</span></span>
-<span><span class="co">#&gt;            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>          <span style="text-decoration: underline;">1</span>019 The Matrix                <span style="text-decoration: underline;">1</span>999</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>           699 Fight Club                <span style="text-decoration: underline;">1</span>999</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>           635 Forrest Gump              <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>           612 Toy Story                 <span style="text-decoration: underline;">1</span>995</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>           597 Pulp Fiction              <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>           587 Gladiator                 <span style="text-decoration: underline;">2</span>000</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>           582 The Shawshank Redemption  <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>           554 The Truman Show           <span style="text-decoration: underline;">1</span>998</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>           536 The Lion King             <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>           493 Jurassic Park             <span style="text-decoration: underline;">1</span>993</span></span></code></pre></div>
+<span><span class="co">#&gt;    watcher_count title                                      year</span></span>
+<span><span class="co">#&gt;            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>          <span style="text-decoration: underline;">1</span>012 The Matrix                                 <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>           681 Fight Club                                 <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>           601 Toy Story                                  <span style="text-decoration: underline;">1</span>995</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>           590 Forrest Gump                               <span style="text-decoration: underline;">1</span>994</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>           573 The Lion King                              <span style="text-decoration: underline;">1</span>994</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>           568 Jurassic Park                              <span style="text-decoration: underline;">1</span>993</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>           564 The Shawshank Redemption                   <span style="text-decoration: underline;">1</span>994</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>           512 Star Wars: Episode I - The Phantom Menace  <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>           494 The Truman Show                            <span style="text-decoration: underline;">1</span>998</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>           478 Gladiator                                  <span style="text-decoration: underline;">2</span>000</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="finding-things-and-the-right-amount">Finding Things (and the right amount)<a class="anchor" aria-label="anchor" href="#finding-things-and-the-right-amount"></a>
+</h2>
+<div class="section level3">
+<h3 id="item-identifiers">Item identifiers<a class="anchor" aria-label="anchor" href="#item-identifiers"></a>
+</h3>
+<p>The <code>id</code> parameter is used to identify shows, movies or
+people. In each of these cases, the value of the parameter must be a
+valid ID of one of the following kinds:</p>
+<ul>
+<li>
+<strong>Trakt ID</strong> (<code>trakt</code>): A numeric ID used by
+trakt.tv, which is included as a variable named <code>trakt</code> by
+every function for an output item. These IDs are unique for their
+respective category (or <code>type</code>, e.g. shows, movies, people,
+…) and can be expected to have full coverage, meaning that every item
+will have a category-specific Trakt ID.</li>
+<li>
+<strong>Slug</strong> (<code>slug</code>): A human-readable
+identifier used on the trakt.tv site, e.g. <code>the-wire</code>. While
+these are easy to remember, they have the risk of clashing with numeric
+IDs. One example is the show “24”, which has the slug <code>24</code>.
+However, the show “Presidio Med” has the <strong>Trakt ID</strong>
+<code>24</code>, so if you supply <code>id = 24</code> the API assumes
+you meant the Trakt ID instead of the slug. This is… suboptimal. Use
+<code>trakt</code> ID’s whenever possible in any sort of user-facing
+application or batch-processing.</li>
+<li>
+<strong>IMDb ID</strong> (<code>imdb</code>): Relatively
+self-explanatory. You can retrieve them easily via most functions or by
+searching on <a href="https://www.imdb.com/" class="external-link">IMDb.com</a>. Since IMDb is
+an external service, these IDs should be used for linking with other
+data sources rather than as search parameters for the trakt API, as it
+can not be guaranteed that every item on trakt.tv does have an IMDb
+ID.</li>
+</ul>
+<p>The API also returns additional IDs for <a href="https://www.themoviedb.org/" class="external-link">TMDB</a> and <a href="https://www.thetvdb.com" class="external-link">TheTVDB</a>. These are useful for linking
+with other data sources like <a href="https://fanart.tv/" class="external-link">fanart.tv</a>,
+but can’t be used for search with the trakt API as they are not
+guaranteed full coverage. The API also includes a TVRage ID, but since
+this site seems to not exist anymore (and therefore newer items don’t
+have this ID) this ID is removed from all output whether it is missing
+or not.</p>
+</div>
+<div class="section level3">
+<h3 id="extended-information">Extended Information:<a class="anchor" aria-label="anchor" href="#extended-information"></a>
+</h3>
+<p>The <code>extended</code> parameter controls the amount of
+information (i.e. the number of variables) included in the output.</p>
+<ul>
+<li><p><code>"min"</code>: The default option returns minimal
+information. For shows, movies, episodes and people, the result will
+only include a title or name, possibly a year, and the standard set of
+IDs (<code>trakt</code>, <code>imdb</code>, …). This is the fastest
+option as it requires less data to be sent from the API and less
+post-processing work to produce tabular output.</p></li>
+<li><p><code>"full"</code>: The maximum amount of information. This
+option is required if you are interested in the <code>votes</code> and
+<code>rating</code> variables, as well as additional metadata like air
+dates, plot summaries, and a plethora of other variables depending on
+the <code>type</code>. If you intend on retrieving data for a large
+number of items, e.g. via <code><a href="../reference/popular_media.html">shows_popular()</a></code> and other list
+functions, it is highly recommend to cache the output locally when using
+<code>extended = "full"</code> and subsequently only use
+<code>extended = "min"</code>, so you can merge/join the minimal data
+with your cached data. <a href="https://httr2.r-lib.org" class="external-link">httr2</a> automatically caches
+requests under the hood, so you don’t need to do anything special there
+for regular usage.</p></li>
+<li><p><code>images</code>: Images such as posters <em>used to</em> be
+available via the trakt API some years ago but where discontinued due to
+the associated bandwidth and storage costs. As of early 2025, images are
+once again <a href="https://trakt.docs.apiary.io/#introduction/images" class="external-link">available with
+the API</a> but requesting them is not implemented here (yet?). If you
+need posters, I recommend taking a detour over to <a href="https://fanart.tv/" class="external-link">fanart.tv</a></p></li>
+</ul>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

@@ -19,8 +19,7 @@
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/finding-things.html">Finding things (and the right amount)</a></li>
-    <li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
     <li><a class="dropdown-item" href="../articles/show-analysis-24.html">Show Analysis: 24</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -52,8 +51,8 @@
 
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p><code>movies_aliases()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases" class="external-link">movies/:id/aliases</a>.</p>
-<p><code>shows_aliases()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases" class="external-link">shows/:id/aliases</a>.</p>
+    <p><code>movies_aliases()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases" class="external-link">/movies/:id/aliases</a>.</p>
+<p><code>shows_aliases()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases" class="external-link">/shows/:id/aliases</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
@@ -65,7 +64,7 @@
 or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
 Can also be of length greater than 1, in which case the function is called on all
 <code>id</code> values separately and the result is combined. See
-<code><a href="../articles/finding-things.html">vignette("finding-things")</a></code> for more details.</p></dd>
+<code><a href="../articles/tRakt.html">vignette("tRakt")</a></code> for more details.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -129,7 +128,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> Deadpool 1              us     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 20 more rows</span></span>
 <span class="r-in"><span><span class="fu">shows_aliases</span><span class="op">(</span><span class="fl">104439</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 710 × 2</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 711 × 2</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    title                   country</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> Очень странные дела     us     </span>
@@ -142,7 +141,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Stranger Things         cn     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> Странные вещи           ru     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> Крайне странные события ru     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 700 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 701 more rows</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

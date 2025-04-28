@@ -21,8 +21,7 @@ Updated every Monday morning."><meta property="og:image" content="https://jemus4
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/finding-things.html">Finding things (and the right amount)</a></li>
-    <li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
     <li><a class="dropdown-item" href="../articles/show-analysis-24.html">Show Analysis: 24</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -53,7 +52,7 @@ Updated every Monday morning.</p>
 
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p><code>movies_boxoffice()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office" class="external-link">movies/boxoffice</a>.</p>
+    <p><code>movies_boxoffice()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office" class="external-link">/movies/boxoffice</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
@@ -62,7 +61,7 @@ Updated every Monday morning.</p>
 <dl><dt id="arg-extended">extended<a class="anchor" aria-label="anchor" href="#arg-extended"></a></dt>
 <dd><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
-See <code><a href="../articles/finding-things.html">vignette("finding-things")</a></code> for more details.</p></dd>
+See <code><a href="../articles/tRakt.html">vignette("tRakt")</a></code> for more details.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -98,18 +97,18 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">movies_boxoffice</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     revenue title                             year trakt   slug      imdb  tmdb </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 19<span style="text-decoration: underline;">000</span>000 Mickey 17                         <span style="text-decoration: underline;">2</span>025 540151  mickey-1… tt12… 6965…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span>  8<span style="text-decoration: underline;">500</span>000 Captain America: Brave New World  <span style="text-decoration: underline;">2</span>025 655031  captain-… tt14… 8221…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>  4<span style="text-decoration: underline;">200</span>000 Last Breath                       <span style="text-decoration: underline;">2</span>025 781338  last-bre… tt14… 9725…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>  3<span style="text-decoration: underline;">900</span>000 The Monkey                        <span style="text-decoration: underline;">2</span>025 904978  the-monk… tt27… 1124…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>  3<span style="text-decoration: underline;">900</span>000 Paddington in Peru                <span style="text-decoration: underline;">2</span>024 365073  paddingt… tt58… 5167…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>  3<span style="text-decoration: underline;">500</span>000 Dog Man                           <span style="text-decoration: underline;">2</span>025 611948  dog-man-… tt10… 7743…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>  1<span style="text-decoration: underline;">900</span>000 Anora                             <span style="text-decoration: underline;">2</span>024 856080  anora-20… tt28… 1064…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>  1<span style="text-decoration: underline;">700</span>000 Mufasa: The Lion King             <span style="text-decoration: underline;">2</span>024 600937  mufasa-t… tt13… 7625…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>  1<span style="text-decoration: underline;">600</span>000 Rule Breakers                     <span style="text-decoration: underline;">2</span>025 1127179 rule-bre… tt23… 1379…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>  1<span style="text-decoration: underline;">100</span>000 Night of the Zoopocalypse         <span style="text-decoration: underline;">2</span>025 996400  night-of… tt29… 1205…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     revenue title                                   year trakt slug  imdb  tmdb </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 45<span style="text-decoration: underline;">000</span>000 Sinners                                 <span style="text-decoration: underline;">2</span>025 9975… sinn… tt31… 1233…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 25<span style="text-decoration: underline;">000</span>000 Star Wars: Episode III - Revenge of t…  <span style="text-decoration: underline;">2</span>005 1270  star… tt01… 1895 </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 24<span style="text-decoration: underline;">000</span>000 The Accountant 2                        <span style="text-decoration: underline;">2</span>025 6960… the-… tt70… 8700…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 23<span style="text-decoration: underline;">000</span>000 A Minecraft Movie                       <span style="text-decoration: underline;">2</span>025 7639… a-mi… tt35… 9503…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>  8<span style="text-decoration: underline;">000</span>000 Until Dawn                              <span style="text-decoration: underline;">2</span>025 9968… unti… tt30… 1232…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>  4<span style="text-decoration: underline;">000</span>000 The King of Kings                       <span style="text-decoration: underline;">2</span>025 9523… the-… tt79… 1181…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>  3<span style="text-decoration: underline;">800</span>000 The Amateur                             <span style="text-decoration: underline;">2</span>025 8741… the-… tt08… 1087…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>  2<span style="text-decoration: underline;">700</span>000 Warfare                                 <span style="text-decoration: underline;">2</span>025 1004… warf… tt31… 1241…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>  2<span style="text-decoration: underline;">600</span>000 Pink Floyd: Live at Pompeii             <span style="text-decoration: underline;">1</span>972 15615 pink… tt00… 25771</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>  1<span style="text-decoration: underline;">400</span>000 The Legend of Ochi                      <span style="text-decoration: underline;">2</span>025 7193… the-… tt88… 8965…</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

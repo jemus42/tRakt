@@ -19,8 +19,7 @@
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/finding-things.html">Finding things (and the right amount)</a></li>
-    <li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/Implemented-API-methods.html">Implemented API methods</a></li>
     <li><a class="dropdown-item" href="../articles/show-analysis-24.html">Show Analysis: 24</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -54,9 +53,9 @@
 
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p><code>movies_translations()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/movies/translations/get-all-movie-translations" class="external-link">movies/:id/translations/:language</a>.</p>
-<p><code>shows_translations()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/shows/translations/get-all-show-translations" class="external-link">shows/:id/translations/:language</a>.</p>
-<p><code>episodes_translations()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/episodes/translations/get-all-episode-translations" class="external-link">shows/:id/seasons/:season/episodes/:episode/translations/:language</a>.</p>
+    <p><code>movies_translations()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/movies/translations/get-all-movie-translations" class="external-link">/movies/:id/translations/:language</a>.</p>
+<p><code>shows_translations()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/shows/translations/get-all-show-translations" class="external-link">/shows/:id/translations/:language</a>.</p>
+<p><code>episodes_translations()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/episodes/translations/get-all-episode-translations" class="external-link">/shows/:id/seasons/:season/episodes/:episode/translations/:language</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
@@ -68,7 +67,7 @@
 or <code>imdb</code> ID (e.g. <code>"tt0306414"</code>).
 Can also be of length greater than 1, in which case the function is called on all
 <code>id</code> values separately and the result is combined. See
-<code><a href="../articles/finding-things.html">vignette("finding-things")</a></code> for more details.</p></dd>
+<code><a href="../articles/tRakt.html">vignette("tRakt")</a></code> for more details.</p></dd>
 
 
 <dt id="arg-languages">languages<a class="anchor" aria-label="anchor" href="#arg-languages"></a></dt>
