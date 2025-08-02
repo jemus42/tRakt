@@ -21,23 +21,23 @@
 #' user_stats(user = "sean")
 #' }
 user_stats <- function(user = "me") {
-  check_username(user)
+	check_username(user)
 
-  if (length(user) > 1) {
-    names(user) <- user
-    return(map(user, ~ user_stats(user = .x)))
-  }
+	if (length(user) > 1) {
+		names(user) <- user
+		return(map(user, ~ user_stats(user = .x)))
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url("users", user, "stats")
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("users", user, "stats")
+	response <- trakt_get(url = url)
 
-  if (identical(response, tibble())) {
-    return(response)
-  }
+	if (identical(response, tibble())) {
+		return(response)
+	}
 
-  # Flattening/list-columnifying the distribution a little
-  response$ratings <- fix_ratings_distribution(response$ratings)
+	# Flattening/list-columnifying the distribution a little
+	response$ratings <- fix_ratings_distribution(response$ratings)
 
-  map(response, as_tibble)
+	map(response, as_tibble)
 }

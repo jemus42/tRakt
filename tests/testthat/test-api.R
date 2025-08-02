@@ -22,18 +22,18 @@
 # })
 
 test_that("trakt_get can make API calls", {
-  # skip_on_cran()
+	# skip_on_cran()
 
-  url <- "https://api.trakt.tv/shows/breaking-bad"
-  result <- trakt_get(url)
+	url <- "https://api.trakt.tv/shows/breaking-bad"
+	result <- trakt_get(url)
 
-  expect_type(result, "list")
-  expect_error(trakt_get("https://example.com"))
+	expect_type(result, "list")
+	expect_error(trakt_get("https://example.com"))
 })
 
 test_that("authenticated requests work", {
-  skip_if_no_auth()
+	skip_if_no_auth()
 
-  # Authenticated method, should return a list
-  expect_type(trakt_get("users/settings"), "list")
+	# Authenticated method, should return a list
+	expect_type(trakt_get("users/settings"), "list")
 })

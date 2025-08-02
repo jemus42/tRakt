@@ -17,16 +17,16 @@ NULL
 #' @family movie data
 #' @export
 movies_comments <- function(
-  id,
-  sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full"),
-  limit = 10L
+	id,
+	sort = c("newest", "oldest", "likes", "replies"),
+	extended = c("min", "full"),
+	limit = 10L
 ) {
-  sort <- match.arg(sort)
-  extended <- match.arg(extended)
-  url <- build_trakt_url("movies", id, "comments", sort, extended = extended)
-  response <- trakt_get(url)
-  unpack_comments(response)
+	sort <- match.arg(sort)
+	extended <- match.arg(extended)
+	url <- build_trakt_url("movies", id, "comments", sort, extended = extended)
+	response <- trakt_get(url)
+	unpack_comments(response)
 }
 
 #' @describeIn media_comments Get comments for a movie
@@ -34,16 +34,16 @@ movies_comments <- function(
 #' @family show data
 #' @export
 shows_comments <- function(
-  id,
-  sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full"),
-  limit = 10L
+	id,
+	sort = c("newest", "oldest", "likes", "replies"),
+	extended = c("min", "full"),
+	limit = 10L
 ) {
-  sort <- match.arg(sort)
-  extended <- match.arg(extended)
-  url <- build_trakt_url("shows", id, "comments", sort, extended = extended)
-  response <- trakt_get(url)
-  unpack_comments(response)
+	sort <- match.arg(sort)
+	extended <- match.arg(extended)
+	url <- build_trakt_url("shows", id, "comments", sort, extended = extended)
+	response <- trakt_get(url)
+	unpack_comments(response)
 }
 
 #' @describeIn media_comments Get comments for a season
@@ -51,25 +51,25 @@ shows_comments <- function(
 #' @family season data
 #' @export
 seasons_comments <- function(
-  id,
-  season = 1L,
-  sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full"),
-  limit = 10L
+	id,
+	season = 1L,
+	sort = c("newest", "oldest", "likes", "replies"),
+	extended = c("min", "full"),
+	limit = 10L
 ) {
-  sort <- match.arg(sort)
-  extended <- match.arg(extended)
-  url <- build_trakt_url(
-    "shows",
-    id,
-    "seasons",
-    season,
-    "comments",
-    sort,
-    extended = extended
-  )
-  response <- trakt_get(url)
-  unpack_comments(response)
+	sort <- match.arg(sort)
+	extended <- match.arg(extended)
+	url <- build_trakt_url(
+		"shows",
+		id,
+		"seasons",
+		season,
+		"comments",
+		sort,
+		extended = extended
+	)
+	response <- trakt_get(url)
+	unpack_comments(response)
 }
 
 #' @describeIn media_comments Get comments for an episode
@@ -77,26 +77,26 @@ seasons_comments <- function(
 #' @family episode data
 #' @export
 episodes_comments <- function(
-  id,
-  season = 1L,
-  episode = 1L,
-  sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full"),
-  limit = 10L
+	id,
+	season = 1L,
+	episode = 1L,
+	sort = c("newest", "oldest", "likes", "replies"),
+	extended = c("min", "full"),
+	limit = 10L
 ) {
-  sort <- match.arg(sort)
-  extended <- match.arg(extended)
-  url <- build_trakt_url(
-    "shows",
-    id,
-    "seasons",
-    season,
-    "episodes",
-    episode,
-    "comments",
-    sort,
-    extended = extended
-  )
-  response <- trakt_get(url)
-  unpack_comments(response)
+	sort <- match.arg(sort)
+	extended <- match.arg(extended)
+	url <- build_trakt_url(
+		"shows",
+		id,
+		"seasons",
+		season,
+		"episodes",
+		episode,
+		"comments",
+		sort,
+		extended = extended
+	)
+	response <- trakt_get(url)
+	unpack_comments(response)
 }

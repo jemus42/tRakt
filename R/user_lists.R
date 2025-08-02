@@ -21,26 +21,26 @@
 #' user_lists("jemus42")
 #' }
 user_lists <- function(user = "me", extended = c("min", "full")) {
-  check_username(user)
-  extended <- match.arg(extended)
+	check_username(user)
+	extended <- match.arg(extended)
 
-  url <- build_trakt_url("users", user, "lists", extended = extended)
-  response <- trakt_get(url)
+	url <- build_trakt_url("users", user, "lists", extended = extended)
+	response <- trakt_get(url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
+	if (is_empty(response)) {
+		return(tibble())
+	}
 
-  response |>
-    select(-"user", -"ids") |>
-    bind_cols(
-      response |>
-        pull(.data[["ids"]]),
-      response |>
-        pull(.data[["user"]]) |>
-        unpack_user()
-    ) |>
-    fix_tibble_response()
+	response |>
+		select(-"user", -"ids") |>
+		bind_cols(
+			response |>
+				pull(.data[["ids"]]),
+			response |>
+				pull(.data[["user"]]) |>
+				unpack_user()
+		) |>
+		fix_tibble_response()
 }
 
 
@@ -68,25 +68,25 @@ user_lists <- function(user = "me", extended = c("min", "full")) {
 #' user_list("jemus42", list_id = 2121308)
 #' }
 user_list <- function(user = "me", list_id, extended = c("min", "full")) {
-  check_username(user)
-  extended <- match.arg(extended)
+	check_username(user)
+	extended <- match.arg(extended)
 
-  url <- build_trakt_url("users", user, "lists", list_id, extended = extended)
-  response <- trakt_get(url)
+	url <- build_trakt_url("users", user, "lists", list_id, extended = extended)
+	response <- trakt_get(url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
+	if (is_empty(response)) {
+		return(tibble())
+	}
 
-  response |>
-    discard(is.list) |>
-    as_tibble() |>
-    bind_cols(
-      response$ids |>
-        as_tibble(),
-      response$user |>
-        as_tibble() |>
-        unpack_user()
-    ) |>
-    fix_tibble_response()
+	response |>
+		discard(is.list) |>
+		as_tibble() |>
+		bind_cols(
+			response$ids |>
+				as_tibble(),
+			response$user |>
+				as_tibble() |>
+				unpack_user()
+		) |>
+		fix_tibble_response()
 }

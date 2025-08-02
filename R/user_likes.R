@@ -12,27 +12,27 @@
 #' # Get liked lists (only if there's a client secret set)
 #' user_likes("lists")
 user_likes <- function(type = c("comments", "lists")) {
-  type <- check_types(type, several.ok = FALSE, possible_types = c("comments", "lists"))
+	type <- check_types(type, several.ok = FALSE, possible_types = c("comments", "lists"))
 
-  url <- build_trakt_url("users", "likes", type)
-  response <- trakt_get(url)
+	url <- build_trakt_url("users", "likes", type)
+	response <- trakt_get(url)
 
-  if (type == "comments") {
-    response |>
-      discard(is.list) |>
-      bind_cols(
-        pluck(response, "comment") |>
-          unpack_comments()
-      ) |>
-      fix_tibble_response()
-  } else if (type == "lists") {
-    response |>
-      discard(is.list) |>
-      bind_cols(
-        pluck(response, "list") |>
-          unpack_lists()
-      ) |>
-      fix_tibble_response()
-  }
+	if (type == "comments") {
+		response |>
+			discard(is.list) |>
+			bind_cols(
+				pluck(response, "comment") |>
+					unpack_comments()
+			) |>
+			fix_tibble_response()
+	} else if (type == "lists") {
+		response |>
+			discard(is.list) |>
+			bind_cols(
+				pluck(response, "list") |>
+					unpack_lists()
+			) |>
+			fix_tibble_response()
+	}
 }
 # nocov end

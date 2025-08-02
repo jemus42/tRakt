@@ -25,37 +25,37 @@
 #' seasons_episodes("breaking-bad", 1, extended = "full")
 #' }
 seasons_episodes <- function(id, seasons = 1L, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  # Vectorize
-  if (length(seasons) > 1) {
-    return(map_df(seasons, ~ seasons_episodes(id, .x, extended)))
-  }
+	# Vectorize
+	if (length(seasons) > 1) {
+		return(map_df(seasons, ~ seasons_episodes(id, .x, extended)))
+	}
 
-  # Basic sanity check
-  # Do this after vectorization due to scalar ifs
-  if (!rlang::is_integerish(seasons)) {
-    stop("'seasons' cannot be coerced to integer: '", seasons, "'")
-  }
+	# Basic sanity check
+	# Do this after vectorization due to scalar ifs
+	if (!rlang::is_integerish(seasons)) {
+		stop("'seasons' cannot be coerced to integer: '", seasons, "'")
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url("shows", id, "seasons", seasons, extended = extended)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("shows", id, "seasons", seasons, extended = extended)
+	response <- trakt_get(url = url)
 
-  if (identical(response, tibble())) {
-    return(tibble())
-  }
+	if (identical(response, tibble())) {
+		return(tibble())
+	}
 
-  response <- response |>
-    select(-"ids") |>
-    cbind(fix_ids(response$ids)) |>
-    fix_tibble_response() |>
-    rename(episode = "number")
+	response <- response |>
+		select(-"ids") |>
+		cbind(fix_ids(response$ids)) |>
+		fix_tibble_response() |>
+		rename(episode = "number")
 
-  if (has_name(response, "number_abs")) {
-    response <- response |>
-      rename(episode_abs = "number_abs")
-  }
+	if (has_name(response, "number_abs")) {
+		response <- response |>
+			rename(episode_abs = "number_abs")
+	}
 
-  response
+	response
 }

@@ -15,21 +15,21 @@
 #' pad_episode(2, 4)
 #' pad_episode(1, 85, e_width = 3)
 pad_episode <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
-  if (length(s) != length(e)) {
-    cli::cli_warn("called with wrong argument sizes: s = {length(s)}, e = {length(e)}")
-    return(rep("", max(length(s), length(e))))
-  }
+	if (length(s) != length(e)) {
+		cli::cli_warn("called with wrong argument sizes: s = {length(s)}, e = {length(e)}")
+		return(rep("", max(length(s), length(e))))
+	}
 
-  s <- as.numeric(s)
-  e <- as.numeric(e)
+	s <- as.numeric(s)
+	e <- as.numeric(e)
 
-  s_fmt <- paste0("%0", s_width, "d")
-  e_fmt <- paste0("%0", e_width, "d")
+	s_fmt <- paste0("%0", s_width, "d")
+	e_fmt <- paste0("%0", e_width, "d")
 
-  s <- sprintf(s_fmt, s)
-  e <- sprintf(e_fmt, e)
+	s <- sprintf(s_fmt, s)
+	e <- sprintf(e_fmt, e)
 
-  paste0("s", s, "e", e)
+	paste0("s", s, "e", e)
 }
 
 #' Assemble a trakt.tv API URL
@@ -54,30 +54,30 @@ pad_episode <- function(s = "0", e = "0", s_width = 2, e_width = 2) {
 #'
 #' build_trakt_url("shows", "popular", page = 1, limit = 5)
 build_trakt_url <- function(...) {
-  dots <- list(...)
+	dots <- list(...)
 
-  # Nuke NULL elements
-  dots <- dots[purrr::map_lgl(dots, ~ !is.null(.x))]
+	# Nuke NULL elements
+	dots <- dots[purrr::map_lgl(dots, ~ !is.null(.x))]
 
-  # If there are no named elements, names() will return NULL
-  if (!is.null(names(dots))) {
-    path <- paste0(dots[names(dots) == ""], collapse = "/")
-    queries <- dots[names(dots) != ""]
-  } else {
-    path <- paste0(dots, collapse = "/")
-    queries <- NULL
-  }
+	# If there are no named elements, names() will return NULL
+	if (!is.null(names(dots))) {
+		path <- paste0(dots[names(dots) == ""], collapse = "/")
+		queries <- dots[names(dots) != ""]
+	} else {
+		path <- paste0(dots, collapse = "/")
+		queries <- NULL
+	}
 
-  if (!grepl(pattern = "^\\/", path)) {
-    path <- paste0("/", path)
-  }
+	if (!grepl(pattern = "^\\/", path)) {
+		path <- paste0("/", path)
+	}
 
-  url <- httr2::url_parse(url = "https://api.trakt.tv/")
-  url$path <- path
-  url$query <- queries
-  url <- httr2::url_build(url)
+	url <- httr2::url_parse(url = "https://api.trakt.tv/")
+	url$path <- path
+	url$query <- queries
+	url <- httr2::url_build(url)
 
-  url
+	url
 }
 
 # API docs helpers -----
@@ -92,13 +92,13 @@ build_trakt_url <- function(...) {
 #' @keywords internal
 #' @importFrom purrr pluck
 apidoc <- function(section, method, key) {
-  if (!requireNamespace("yaml", quietly = TRUE)) {
-    stop("Please install the 'yaml' package")
-  }
+	if (!requireNamespace("yaml", quietly = TRUE)) {
+		stop("Please install the 'yaml' package")
+	}
 
-  system.file("api-methods.yml", package = "tRakt") |>
-    yaml::read_yaml() |>
-    purrr::pluck(section, method, key)
+	system.file("api-methods.yml", package = "tRakt") |>
+		yaml::read_yaml() |>
+		purrr::pluck(section, method, key)
 }
 
 #' Get a formatted API url for an endpoint
@@ -109,15 +109,15 @@ apidoc <- function(section, method, key) {
 #' @return Markdown-formatted url
 #' @keywords internal
 apiurl <- function(section, method, prefix = "@source ") {
-  if (!requireNamespace("glue", quietly = TRUE)) {
-    stop("Please install the 'glue' package")
-  }
+	if (!requireNamespace("glue", quietly = TRUE)) {
+		stop("Please install the 'glue' package")
+	}
 
-  func <- apidoc(section, method, "implementation")
-  endpoint <- apidoc(section, method, "endpoint")
-  url <- apidoc(section, method, "url")
-  authenticated <- isTRUE(apidoc(section, method, "authentication"))
-  authenticated <- ifelse(authenticated, " (Authentication required).", ".")
+	func <- apidoc(section, method, "implementation")
+	endpoint <- apidoc(section, method, "endpoint")
+	url <- apidoc(section, method, "url")
+	authenticated <- isTRUE(apidoc(section, method, "authentication"))
+	authenticated <- ifelse(authenticated, " (Authentication required).", ".")
 
-  glue::glue("{prefix} `{func}` wraps endpoint [{endpoint}]({url}){authenticated}")
+	glue::glue("{prefix} `{func}` wraps endpoint [{endpoint}]({url}){authenticated}")
 }

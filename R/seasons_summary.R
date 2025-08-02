@@ -29,74 +29,76 @@
 #' seasons_summary("utopia", extended = "full", episodes = TRUE)
 #' }
 seasons_summary <- function(
-  id,
-  episodes = FALSE,
-  drop_specials = TRUE,
-  drop_unaired = TRUE,
-  extended = c("min", "full")
+	id,
+	episodes = FALSE,
+	drop_specials = TRUE,
+	drop_unaired = TRUE,
+	extended = c("min", "full")
 ) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  if (length(id) > 1) {
-    response <- map_df(
-      id,
-      ~ {
-        seasons_summary(
-          id = .x,
-          extended = extended,
-          episodes = episodes,
-          drop_specials = drop_specials,
-          drop_unaired = drop_unaired
-        )
-      }
-    )
-    return(response)
-  }
+	if (length(id) > 1) {
+		response <- map_df(
+			id,
+			~ {
+				seasons_summary(
+					id = .x,
+					extended = extended,
+					episodes = episodes,
+					drop_specials = drop_specials,
+					drop_unaired = drop_unaired
+				)
+			}
+		)
+		return(response)
+	}
 
-  if (episodes) {
-    extended <- paste0(extended, ",episodes")
-  }
+	if (episodes) {
+		extended <- paste0(extended, ",episodes")
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url("shows", id, "seasons", extended = extended)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("shows", id, "seasons", extended = extended)
+	response <- trakt_get(url = url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
+	if (is_empty(response)) {
+		return(tibble())
+	}
 
-  # Data cleanup
-  if (drop_specials) {
-    response <- response[response$number != 0, ]
-  }
-  if (drop_unaired && has_name(response, "aired_episodes")) {
-    response <- response[response$aired_episodes > 0, ]
-  }
-  # Reorganization
-  names(response) <- sub("number", "season", names(response))
-  # Flattening
-  response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
+	# Data cleanup
+	if (drop_specials) {
+		response <- response[response$number != 0, ]
+	}
+	if (drop_unaired && has_name(response, "aired_episodes")) {
+		response <- response[response$aired_episodes > 0, ]
+	}
+	# Reorganization
+	names(response) <- sub("number", "season", names(response))
+	# Flattening
+	response <- cbind(response[names(response) != "ids"], fix_ids(response$ids))
 
-  # which(sapply(response$episodes, nrow) > 0)
+	# which(sapply(response$episodes, nrow) > 0)
 
-  # If episodes are included, clean them up as a tidy list-column
-  if (has_name(response, "episodes")) {
-    response$episodes <- map(response$episodes, function(episodes) {
-      if (nrow(episodes) == 0) return(tibble())
-      ret <- episodes |>
-        select(-"ids") |>
-        cbind(fix_ids(episodes$ids)) |>
-        fix_tibble_response()
+	# If episodes are included, clean them up as a tidy list-column
+	if (has_name(response, "episodes")) {
+		response$episodes <- map(response$episodes, function(episodes) {
+			if (nrow(episodes) == 0) {
+				return(tibble())
+			}
+			ret <- episodes |>
+				select(-"ids") |>
+				cbind(fix_ids(episodes$ids)) |>
+				fix_tibble_response()
 
-      names(ret) <- sub("^number", "episode", names(ret))
-      ret
-    })
+			names(ret) <- sub("^number", "episode", names(ret))
+			ret
+		})
 
-    # if (has_name(response, "number_abs")) {
-    #   response <- response |>
-    #     rename(episode_abs = "number_abs")
-    # }
-  }
+		# if (has_name(response, "number_abs")) {
+		#   response <- response |>
+		#     rename(episode_abs = "number_abs")
+		# }
+	}
 
-  fix_tibble_response(response)
+	fix_tibble_response(response)
 }

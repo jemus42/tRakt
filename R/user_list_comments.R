@@ -13,24 +13,24 @@
 #' user_list_comments("donxy", "1248149")
 #' }
 user_list_comments <- function(
-  user = "me",
-  list_id,
-  sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full")
+	user = "me",
+	list_id,
+	sort = c("newest", "oldest", "likes", "replies"),
+	extended = c("min", "full")
 ) {
-  sort <- match.arg(sort)
-  extended <- match.arg(extended)
+	sort <- match.arg(sort)
+	extended <- match.arg(extended)
 
-  url <- build_trakt_url(
-    "users",
-    user,
-    "lists",
-    list_id,
-    "comments",
-    sort,
-    extended = extended
-  )
+	url <- build_trakt_url(
+		"users",
+		user,
+		"lists",
+		list_id,
+		"comments",
+		sort,
+		extended = extended
+	)
 
-  response <- trakt_get(url)
-  unpack_comments(response)
+	response <- trakt_get(url)
+	unpack_comments(response)
 }

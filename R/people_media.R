@@ -28,43 +28,43 @@ NULL
 #' @importFrom dplyr select
 #' @importFrom purrr is_empty
 people_media <- function(type = c("shows", "movies"), id, extended = c("min", "full")) {
-  extended <- match.arg(extended)
-  type <- match.arg(type)
+	extended <- match.arg(extended)
+	type <- match.arg(type)
 
-  # Construct URL, make API call
-  url <- build_trakt_url("people", id, type, extended = extended)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("people", id, type, extended = extended)
+	response <- trakt_get(url = url)
 
-  if (identical(response, list(cast = list()))) {
-    return(tibble())
-  }
+	if (identical(response, list(cast = list()))) {
+		return(tibble())
+	}
 
-  if (type == "shows") {
-    if (has_name(response, "cast") && !is_empty(response$cast)) {
-      response$cast <- response$cast$show |>
-        unpack_show() |>
-        bind_cols(
-          response$cast |>
-            select(-"show")
-        ) |>
-        as_tibble()
-    }
-    if (has_name(response, "crew") && !is_empty(response$crew)) {
-      response$crew <- unpack_crew_sections(response$crew, type = "shows")
-    }
-  }
-  if (type == "movies") {
-    if (has_name(response, "cast") && !is_empty(response$cast)) {
-      response$cast <- response$cast |>
-        unpack_movie() |>
-        as_tibble()
-    }
-    if (has_name(response, "crew") && !is_empty(response$crew)) {
-      response$crew <- unpack_crew_sections(response$crew, type = "movies")
-    }
-  }
+	if (type == "shows") {
+		if (has_name(response, "cast") && !is_empty(response$cast)) {
+			response$cast <- response$cast$show |>
+				unpack_show() |>
+				bind_cols(
+					response$cast |>
+						select(-"show")
+				) |>
+				as_tibble()
+		}
+		if (has_name(response, "crew") && !is_empty(response$crew)) {
+			response$crew <- unpack_crew_sections(response$crew, type = "shows")
+		}
+	}
+	if (type == "movies") {
+		if (has_name(response, "cast") && !is_empty(response$cast)) {
+			response$cast <- response$cast |>
+				unpack_movie() |>
+				as_tibble()
+		}
+		if (has_name(response, "crew") && !is_empty(response$crew)) {
+			response$crew <- unpack_crew_sections(response$crew, type = "movies")
+		}
+	}
 
-  response
+	response
 }
 
 
@@ -74,7 +74,7 @@ people_media <- function(type = c("shows", "movies"), id, extended = c("min", "f
 #' @family people data
 #' @export
 people_movies <- function(id, extended = c("min", "full")) {
-  people_media(type = "movies", id = id, extended = extended)
+	people_media(type = "movies", id = id, extended = extended)
 }
 
 #' @rdname people_media
@@ -83,5 +83,5 @@ people_movies <- function(id, extended = c("min", "full")) {
 #' @family people data
 #' @export
 people_shows <- function(id, extended = c("min", "full")) {
-  people_media(type = "shows", id = id, extended = extended)
+	people_media(type = "shows", id = id, extended = extended)
 }

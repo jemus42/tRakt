@@ -16,17 +16,17 @@
 #' movies_releases("tron-legacy-2010")
 #' }
 movies_releases <- function(id, country = NULL) {
-  if (length(id) > 1) {
-    return(map_df(id, ~ movies_releases(id = .x, country = country)))
-  }
+	if (length(id) > 1) {
+		return(map_df(id, ~ movies_releases(id = .x, country = country)))
+	}
 
-  country <- check_filter_arg(country, filter_type = "countries")
+	country <- check_filter_arg(country, filter_type = "countries")
 
-  # Construct URL, make API call
-  url <- build_trakt_url("movies", id, "releases", country = country)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("movies", id, "releases", country = country)
+	response <- trakt_get(url = url)
 
-  response |>
-    mutate(movie = id) |>
-    fix_tibble_response()
+	response |>
+		mutate(movie = id) |>
+		fix_tibble_response()
 }

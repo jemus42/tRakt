@@ -34,13 +34,13 @@ NULL
 #' @family people data
 #' @export
 movies_people <- function(id, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  # Construct URL, make API call
-  url <- build_trakt_url("movies", id, "people", extended = extended)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("movies", id, "people", extended = extended)
+	response <- trakt_get(url = url)
 
-  unpack_people(response)
+	unpack_people(response)
 }
 
 #' @rdname media_people
@@ -49,17 +49,17 @@ movies_people <- function(id, extended = c("min", "full")) {
 #' @family people data
 #' @export
 shows_people <- function(id, guest_stars = FALSE, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  if (guest_stars) {
-    extended <- paste0(extended, ",guest_stars")
-  }
+	if (guest_stars) {
+		extended <- paste0(extended, ",guest_stars")
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url("shows", id, "people", extended = extended)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("shows", id, "people", extended = extended)
+	response <- trakt_get(url = url)
 
-  unpack_people(response)
+	unpack_people(response)
 }
 
 #' @rdname media_people
@@ -68,24 +68,24 @@ shows_people <- function(id, guest_stars = FALSE, extended = c("min", "full")) {
 #' @family people data
 #' @export
 seasons_people <- function(id, season = 1L, guest_stars = FALSE, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  if (guest_stars) {
-    extended <- paste0(extended, ",guest_stars")
-  }
+	if (guest_stars) {
+		extended <- paste0(extended, ",guest_stars")
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url(
-    "shows",
-    id,
-    "seasons",
-    season,
-    "people",
-    extended = extended
-  )
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url(
+		"shows",
+		id,
+		"seasons",
+		season,
+		"people",
+		extended = extended
+	)
+	response <- trakt_get(url = url)
 
-  unpack_people(response)
+	unpack_people(response)
 }
 
 #' @rdname media_people
@@ -93,25 +93,31 @@ seasons_people <- function(id, season = 1L, guest_stars = FALSE, extended = c("m
 #' @family episode data
 #' @family people data
 #' @export
-episodes_people <- function(id, season = 1L, episode = 1L, guest_stars = FALSE, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+episodes_people <- function(
+	id,
+	season = 1L,
+	episode = 1L,
+	guest_stars = FALSE,
+	extended = c("min", "full")
+) {
+	extended <- match.arg(extended)
 
-  if (guest_stars) {
-    extended <- paste0(extended, ",guest_stars")
-  }
+	if (guest_stars) {
+		extended <- paste0(extended, ",guest_stars")
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url(
-    "shows",
-    id,
-    "seasons",
-    season,
-    "episodes",
-    episode,
-    "people",
-    extended = extended
-  )
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url(
+		"shows",
+		id,
+		"seasons",
+		season,
+		"episodes",
+		episode,
+		"people",
+		extended = extended
+	)
+	response <- trakt_get(url = url)
 
-  unpack_people(response)
+	unpack_people(response)
 }

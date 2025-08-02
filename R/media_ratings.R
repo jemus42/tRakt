@@ -28,23 +28,23 @@ NULL
 #' @importFrom dplyr mutate
 #' @importFrom purrr map_df
 media_ratings <- function(type = c("shows", "movies"), id) {
-  type <- match.arg(type)
+	type <- match.arg(type)
 
-  if (length(id) > 1) {
-    return(map_df(id, ~ media_ratings(type = type, id = .x)))
-  }
+	if (length(id) > 1) {
+		return(map_df(id, ~ media_ratings(type = type, id = .x)))
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url(type, id, "ratings")
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url(type, id, "ratings")
+	response <- trakt_get(url = url)
 
-  response |>
-    fix_ratings_distribution() |>
-    as_tibble() |>
-    mutate(
-      id = id,
-      type = type
-    )
+	response |>
+		fix_ratings_distribution() |>
+		as_tibble() |>
+		mutate(
+			id = id,
+			type = type
+		)
 }
 
 # Aliases for show/movie ratings ----
@@ -54,7 +54,7 @@ media_ratings <- function(type = c("shows", "movies"), id) {
 #' @eval apiurl("shows", "ratings")
 #' @export
 shows_ratings <- function(id) {
-  media_ratings(type = "shows", id)
+	media_ratings(type = "shows", id)
 }
 
 #' @rdname media_ratings
@@ -62,7 +62,7 @@ shows_ratings <- function(id) {
 #' @eval apiurl("movies", "ratings")
 #' @export
 movies_ratings <- function(id) {
-  media_ratings(type = "movies", id)
+	media_ratings(type = "movies", id)
 }
 
 # Seasons and episodes ratings ----
@@ -74,25 +74,25 @@ movies_ratings <- function(id) {
 #' @importFrom dplyr mutate
 #' @importFrom purrr map_df
 seasons_ratings <- function(id, season = 1L) {
-  if (length(id) > 1) {
-    return(map_df(id, ~ seasons_ratings(.x, season)))
-  }
+	if (length(id) > 1) {
+		return(map_df(id, ~ seasons_ratings(.x, season)))
+	}
 
-  if (length(season) > 1) {
-    return(map_df(season, ~ seasons_ratings(id, .x)))
-  }
+	if (length(season) > 1) {
+		return(map_df(season, ~ seasons_ratings(id, .x)))
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url("shows", id, "seasons", season, "ratings")
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("shows", id, "seasons", season, "ratings")
+	response <- trakt_get(url = url)
 
-  response |>
-    fix_ratings_distribution() |>
-    as_tibble() |>
-    mutate(
-      id = id,
-      season = season
-    )
+	response |>
+		fix_ratings_distribution() |>
+		as_tibble() |>
+		mutate(
+			id = id,
+			season = season
+		)
 }
 
 #' @rdname media_ratings
@@ -102,36 +102,36 @@ seasons_ratings <- function(id, season = 1L) {
 #' @importFrom dplyr mutate
 #' @importFrom purrr map_df
 episodes_ratings <- function(id, season = 1L, episode = 1L) {
-  if (length(id) > 1) {
-    return(map_df(id, ~ episodes_ratings(.x, season, episode)))
-  }
+	if (length(id) > 1) {
+		return(map_df(id, ~ episodes_ratings(.x, season, episode)))
+	}
 
-  if (length(season) > 1) {
-    return(map_df(season, ~ episodes_ratings(id, .x, episode)))
-  }
+	if (length(season) > 1) {
+		return(map_df(season, ~ episodes_ratings(id, .x, episode)))
+	}
 
-  if (length(episode) > 1) {
-    return(map_df(episode, ~ episodes_ratings(id, season, .x)))
-  }
+	if (length(episode) > 1) {
+		return(map_df(episode, ~ episodes_ratings(id, season, .x)))
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url(
-    "shows",
-    id,
-    "seasons",
-    season,
-    "episodes",
-    episode,
-    "ratings"
-  )
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url(
+		"shows",
+		id,
+		"seasons",
+		season,
+		"episodes",
+		episode,
+		"ratings"
+	)
+	response <- trakt_get(url = url)
 
-  response |>
-    fix_ratings_distribution() |>
-    as_tibble() |>
-    mutate(
-      id = id,
-      season = as.integer(season),
-      episode = as.integer(episode)
-    )
+	response |>
+		fix_ratings_distribution() |>
+		as_tibble() |>
+		mutate(
+			id = id,
+			season = as.integer(season),
+			episode = as.integer(episode)
+		)
 }

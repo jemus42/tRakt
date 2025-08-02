@@ -17,12 +17,12 @@ NULL
 #' @family movie data
 #' @export
 movies_watching <- function(id, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  url <- build_trakt_url("movies", id, "watching", extended = extended)
-  response <- trakt_get(url)
+	url <- build_trakt_url("movies", id, "watching", extended = extended)
+	response <- trakt_get(url)
 
-  unpack_user(response)
+	unpack_user(response)
 }
 
 #' @describeIn media_watching Who's watching a show.
@@ -30,12 +30,12 @@ movies_watching <- function(id, extended = c("min", "full")) {
 #' @family show data
 #' @export
 shows_watching <- function(id, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  url <- build_trakt_url("shows", id, "watching", extended = extended)
-  response <- trakt_get(url)
+	url <- build_trakt_url("shows", id, "watching", extended = extended)
+	response <- trakt_get(url)
 
-  unpack_user(response)
+	unpack_user(response)
 }
 
 #' @describeIn media_watching Who's watching a season.
@@ -43,38 +43,38 @@ shows_watching <- function(id, extended = c("min", "full")) {
 #' @family episode data
 #' @export
 seasons_watching <- function(id, season = 1L, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  url <- build_trakt_url(
-    "shows",
-    id,
-    "seasons",
-    season,
-    "watching",
-    extended = extended
-  )
-  response <- trakt_get(url)
+	url <- build_trakt_url(
+		"shows",
+		id,
+		"seasons",
+		season,
+		"watching",
+		extended = extended
+	)
+	response <- trakt_get(url)
 
-  unpack_user(response)
+	unpack_user(response)
 }
 
 
 #' @describeIn media_watching Who's watching an episode.
 #' @export
 episodes_watching <- function(id, season = 1L, episode = 1L, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  url <- build_trakt_url(
-    "shows",
-    id,
-    "seasons",
-    season,
-    "episodes",
-    episode,
-    "watching",
-    extended = extended
-  )
-  response <- trakt_get(url)
+	url <- build_trakt_url(
+		"shows",
+		id,
+		"seasons",
+		season,
+		"episodes",
+		episode,
+		"watching",
+		extended = extended
+	)
+	response <- trakt_get(url)
 
-  unpack_user(response)
+	unpack_user(response)
 }

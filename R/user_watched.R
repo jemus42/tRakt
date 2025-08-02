@@ -18,50 +18,55 @@
 #' # Use noseasons = TRUE to avoid receiving detailed season/episode data
 #' user_watched(user = "sean", noseasons = TRUE)
 #' }
-user_watched <- function(user = "me", type = c("shows", "movies"), noseasons = TRUE, extended = c("min", "full")) {
-  check_username(user)
-  type <- match.arg(type)
-  extended <- match.arg(extended)
+user_watched <- function(
+	user = "me",
+	type = c("shows", "movies"),
+	noseasons = TRUE,
+	extended = c("min", "full")
+) {
+	check_username(user)
+	type <- match.arg(type)
+	extended <- match.arg(extended)
 
-  if (extended == "min") {
-    # extended = "min" causes weird output, expected result without param though
-    extended <- ""
-  }
+	if (extended == "min") {
+		# extended = "min" causes weird output, expected result without param though
+		extended <- ""
+	}
 
-  if (type == "shows" && noseasons) {
-    extended <- paste0(extended, ",noseasons")
-  }
+	if (type == "shows" && noseasons) {
+		extended <- paste0(extended, ",noseasons")
+	}
 
-  if (length(user) > 1) {
-    names(user) <- user
-    return(map_df(user, ~ user_watched(user = .x, type, noseasons), .id = "user"))
-  }
+	if (length(user) > 1) {
+		names(user) <- user
+		return(map_df(user, ~ user_watched(user = .x, type, noseasons), .id = "user"))
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url("users", user, "watched", type, extended = extended)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("users", user, "watched", type, extended = extended)
+	response <- trakt_get(url = url)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
+	if (is_empty(response)) {
+		return(tibble())
+	}
 
-  if (type == "shows") {
-    # Unpack the show media object and bind it to the base tbl
-    response <- response |>
-      select(-"show") |>
-      bind_cols(
-        pluck(response, "show") |> unpack_show()
-      ) |>
-      select(
-        -matches("^seasons$"),
-        everything(),
-        matches("^seasons$")
-      )
-    # This uses contains() because the seasons column might not exist
-    # and this way I don't have to use an extra if-statement to check "noseasons == TRUE"
-  } else if (type == "movies") {
-    response <- unpack_movie(response)
-  }
+	if (type == "shows") {
+		# Unpack the show media object and bind it to the base tbl
+		response <- response |>
+			select(-"show") |>
+			bind_cols(
+				pluck(response, "show") |> unpack_show()
+			) |>
+			select(
+				-matches("^seasons$"),
+				everything(),
+				matches("^seasons$")
+			)
+		# This uses contains() because the seasons column might not exist
+		# and this way I don't have to use an extra if-statement to check "noseasons == TRUE"
+	} else if (type == "movies") {
+		response <- unpack_movie(response)
+	}
 
-  fix_tibble_response(response)
+	fix_tibble_response(response)
 }

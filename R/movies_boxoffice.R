@@ -12,13 +12,13 @@
 #' @examples
 #' movies_boxoffice()
 movies_boxoffice <- function(extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  # Construct URL, make API call
-  url <- build_trakt_url("movies/boxoffice", extended = extended)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("movies/boxoffice", extended = extended)
+	response <- trakt_get(url = url)
 
-  response |>
-    unpack_movie() |>
-    fix_tibble_response()
+	response |>
+		unpack_movie() |>
+		fix_tibble_response()
 }

@@ -4,12 +4,12 @@
 #' @importFrom rlang has_name
 #' @noRd
 fix_ratings <- function(response) {
-  if (!(has_name(response, "rating") && has_name(response, "votes"))) {
-    # Robustness towards usage in extended = "min" context, means less if'ing
-    return(response)
-  }
-  response$rating <- if_else(response$votes == 0, NA_real_, response$rating)
-  response
+	if (!(has_name(response, "rating") && has_name(response, "votes"))) {
+		# Robustness towards usage in extended = "min" context, means less if'ing
+		return(response)
+	}
+	response$rating <- if_else(response$votes == 0, NA_real_, response$rating)
+	response
 }
 
 #' Fix IDs object
@@ -19,17 +19,17 @@ fix_ratings <- function(response) {
 #' @importFrom rlang has_name
 #' @noRd
 fix_ids <- function(ids) {
-  if (!inherits(ids, c("data.frame", "list"))) {
-    stop("IDs must be list or data.frame")
-  }
+	if (!inherits(ids, c("data.frame", "list"))) {
+		stop("IDs must be list or data.frame")
+	}
 
-  # Since tvrage is dead and tvrage IDs tend to be NA/0,
-  # I decided to drop them in general as they are basically just junk
-  if (has_name(ids, "tvrage")) {
-    ids["tvrage"] <- NULL
-  }
+	# Since tvrage is dead and tvrage IDs tend to be NA/0,
+	# I decided to drop them in general as they are basically just junk
+	if (has_name(ids, "tvrage")) {
+		ids["tvrage"] <- NULL
+	}
 
-  modify_if(ids, is.null, ~NA_character_, .else = as.character)
+	modify_if(ids, is.null, ~NA_character_, .else = as.character)
 }
 
 #' Quick datetime conversion
@@ -47,50 +47,50 @@ fix_ids <- function(ids) {
 #' @keywords internal
 #' @noRd
 fix_datetime <- function(response) {
-  if (!inherits(response, c("data.frame", "list"))) {
-    stop("Object type not supported, must inherit from data.frame or list")
-  }
-  datevars <- c(
-    "first_aired",
-    "updated_at",
-    "listed_at",
-    "last_watched_at",
-    "last_updated_at",
-    "last_collected_at",
-    "rated_at",
-    "friends_at",
-    "followed_at",
-    "collected_at",
-    "joined_at",
-    "watched_at",
-    "created_at"
-  )
+	if (!inherits(response, c("data.frame", "list"))) {
+		stop("Object type not supported, must inherit from data.frame or list")
+	}
+	datevars <- c(
+		"first_aired",
+		"updated_at",
+		"listed_at",
+		"last_watched_at",
+		"last_updated_at",
+		"last_collected_at",
+		"rated_at",
+		"friends_at",
+		"followed_at",
+		"collected_at",
+		"joined_at",
+		"watched_at",
+		"created_at"
+	)
 
-  datevars <- datevars[datevars %in% names(response)]
+	datevars <- datevars[datevars %in% names(response)]
 
-  if (has_name(response, "released")) {
-    response$released <- as_date(response$released)
-  }
-  if (has_name(response, "birthday")) {
-    response$birthday <- as_date(response$birthday)
-  }
+	if (has_name(response, "released")) {
+		response$released <- as_date(response$released)
+	}
+	if (has_name(response, "birthday")) {
+		response$birthday <- as_date(response$birthday)
+	}
 
-  if (inherits(response, "data.frame")) {
-    response |>
-      mutate(across(
-        any_of(datevars),
-        ~ {
-          # Don't convert already POSIXct vars
-          if (!(inherits(.x, "POSIXct"))) {
-            ymd_hms(.x)
-          } else {
-            .x
-          }
-        }
-      ))
-  } else {
-    map_at(response, datevars, ymd_hms)
-  }
+	if (inherits(response, "data.frame")) {
+		response |>
+			mutate(across(
+				any_of(datevars),
+				~ {
+					# Don't convert already POSIXct vars
+					if (!(inherits(.x, "POSIXct"))) {
+						ymd_hms(.x)
+					} else {
+						.x
+					}
+				}
+			))
+	} else {
+		map_at(response, datevars, ymd_hms)
+	}
 }
 
 # Unpack the ratings distribution my tibblurazing them
@@ -98,14 +98,14 @@ fix_datetime <- function(response) {
 #' @importFrom tibble enframe
 #' @importFrom rlang has_name
 fix_ratings_distribution <- function(response) {
-  if (!has_name(response, "distribution")) {
-    return(response)
-  }
+	if (!has_name(response, "distribution")) {
+		return(response)
+	}
 
-  response$distribution <- enframe(unlist(response$distribution), name = "rating", value = "n")
-  response$distribution$rating <- as.integer(response$distribution$rating)
-  response$distribution <- list(response$distribution)
-  response
+	response$distribution <- enframe(unlist(response$distribution), name = "rating", value = "n")
+	response$distribution$rating <- as.integer(response$distribution$rating)
+	response$distribution <- list(response$distribution)
+	response
 }
 
 #' Fix a tibble for final output
@@ -114,11 +114,11 @@ fix_ratings_distribution <- function(response) {
 #' @importFrom tibble as_tibble
 #' @importFrom tibble remove_rownames
 fix_tibble_response <- function(response) {
-  response |>
-    as_tibble() |>
-    fix_datetime() |>
-    fix_ratings() |>
-    remove_rownames()
+	response |>
+		as_tibble() |>
+		fix_datetime() |>
+		fix_ratings() |>
+		remove_rownames()
 }
 
 #' Replace "" and NULL with explicit NAs
@@ -128,8 +128,8 @@ fix_tibble_response <- function(response) {
 #' @noRd
 #' @note Currently only for [character()] variables. Because this might nuke classes.
 fix_missing <- function(x) {
-  if (inherits(x, "character")) {
-    x <- map_chr(x, ~ if_else(identical(.x, ""), NA_character_, .x))
-  }
-  x
+	if (inherits(x, "character")) {
+		x <- map_chr(x, ~ if_else(identical(.x, ""), NA_character_, .x))
+	}
+	x
 }

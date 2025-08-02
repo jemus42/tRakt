@@ -20,26 +20,26 @@
 #' omdb_get("tt0903747")
 #' }
 omdb_get <- function(imdb) {
-  res <- httr2::request("https://www.omdbapi.com/") |>
-    httr2::req_url_query(i = imdb, apikey = Sys.getenv("OMDB_API_KEY")) |>
-    httr2::req_perform() |>
-    httr2::resp_body_json(simplifyVector = TRUE)
+	res <- httr2::request("https://www.omdbapi.com/") |>
+		httr2::req_url_query(i = imdb, apikey = Sys.getenv("OMDB_API_KEY")) |>
+		httr2::req_perform() |>
+		httr2::resp_body_json(simplifyVector = TRUE)
 
-  if (identical(res$Response, "False")) {
-    warning(imdb, ": ", res$Error)
-    return(tibble())
-  }
+	if (identical(res$Response, "False")) {
+		warning(imdb, ": ", res$Error)
+		return(tibble())
+	}
 
-  res <- dplyr::bind_cols(
-    res[which(names(res) != "Ratings")],
-    rating_rotten_tomatoes = res$Ratings$Value[[1]],
-    rating_imdb = res$Ratings$Value[[2]]
-  )
+	res <- dplyr::bind_cols(
+		res[which(names(res) != "Ratings")],
+		rating_rotten_tomatoes = res$Ratings$Value[[1]],
+		rating_imdb = res$Ratings$Value[[2]]
+	)
 
-  res$imdbRating <- as.numeric(res$imdbRating)
-  res$imdbVotes <- as.numeric(gsub(",", "", res$imdbVotes))
+	res$imdbRating <- as.numeric(res$imdbRating)
+	res$imdbVotes <- as.numeric(gsub(",", "", res$imdbVotes))
 
-  res
+	res
 }
 
 #' Get items from fanart.tv
@@ -59,23 +59,23 @@ omdb_get <- function(imdb) {
 #' fanarttv_get(tvdb = "81189")
 #' }
 fanarttv_get <- function(tvdb) {
-  res <- httr2::request("http://webservice.fanart.tv") |>
-    httr2::req_url_path_append("v3/tv", tvdb) |>
-    httr2::req_url_query(api_key = Sys.getenv("fanarttv_api_key")) |>
-    httr2::req_perform()
+	res <- httr2::request("http://webservice.fanart.tv") |>
+		httr2::req_url_path_append("v3/tv", tvdb) |>
+		httr2::req_url_query(api_key = Sys.getenv("fanarttv_api_key")) |>
+		httr2::req_perform()
 
-  res <- httr2::resp_body_json(res, simplifyVector = TRUE)
-  res <- lapply(res, as_tibble)
+	res <- httr2::resp_body_json(res, simplifyVector = TRUE)
+	res <- lapply(res, as_tibble)
 
-  res_x <- tibble(
-    name = res$name$value,
-    tvdb = res$thetvdb_id$value
-  )
+	res_x <- tibble(
+		name = res$name$value,
+		tvdb = res$thetvdb_id$value
+	)
 
-  res_y <- res[!(names(res) %in% c("name", "thetvdb_id"))] |>
-    map(~ list(.x)) |>
-    as_tibble()
+	res_y <- res[!(names(res) %in% c("name", "thetvdb_id"))] |>
+		map(~ list(.x)) |>
+		as_tibble()
 
-  bind_cols(res_x, res_y)
+	bind_cols(res_x, res_y)
 }
 # nocov end

@@ -23,32 +23,32 @@
 #' seasons_season("breaking-bad", 1, extended = "full")
 #' }
 seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  # Vectorize
-  if (length(seasons) > 1) {
-    return(map_df(seasons, ~ seasons_season(id, .x, extended)))
-  }
+	# Vectorize
+	if (length(seasons) > 1) {
+		return(map_df(seasons, ~ seasons_season(id, .x, extended)))
+	}
 
-  # Basic sanity check
-  # Do this after vectorization due to scalar ifs
-  if (!rlang::is_integerish(seasons)) {
-    stop("'seasons' cannot be coerced to integer: '", seasons, "'")
-  }
+	# Basic sanity check
+	# Do this after vectorization due to scalar ifs
+	if (!rlang::is_integerish(seasons)) {
+		stop("'seasons' cannot be coerced to integer: '", seasons, "'")
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url("shows", id, "seasons", seasons, "info", extended = extended)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("shows", id, "seasons", seasons, "info", extended = extended)
+	response <- trakt_get(url = url)
 
-  if (identical(response, tibble())) {
-    return(tibble())
-  }
+	if (identical(response, tibble())) {
+		return(tibble())
+	}
 
-  if (extended == "min") {
-    tibble(number = response$number, as_tibble(fix_ids(response$ids)))
-  } else {
-    discard(response, is.list) |>
-      as_tibble() |>
-      bind_cols(fix_ids(response$ids))
-  }
+	if (extended == "min") {
+		tibble(number = response$number, as_tibble(fix_ids(response$ids)))
+	} else {
+		discard(response, is.list) |>
+			as_tibble() |>
+			bind_cols(fix_ids(response$ids))
+	}
 }

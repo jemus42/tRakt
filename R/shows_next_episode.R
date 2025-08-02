@@ -14,23 +14,23 @@
 #' shows_next_episode("one-piece")
 #' shows_last_episode("one-piece", extended = "full")
 shows_next_episode <- function(id, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  url <- build_trakt_url("shows", id, "next_episode", extended = extended)
-  response <- trakt_get(url)
+	url <- build_trakt_url("shows", id, "next_episode", extended = extended)
+	response <- trakt_get(url)
 
-  if (is_empty(response)) {
-    return(tibble::tibble())
-  }
+	if (is_empty(response)) {
+		return(tibble::tibble())
+	}
 
-  response |>
-    discard(is.list) |>
-    modify_if(is.null, ~NA_character_) |>
-    modify_at(~ grepl("(^available_translations$)|(^genres$)", .x), list) |>
-    as_tibble() |>
-    bind_cols(
-      pluck(response, "ids") |> fix_ids()
-    )
+	response |>
+		discard(is.list) |>
+		modify_if(is.null, ~NA_character_) |>
+		modify_at(~ grepl("(^available_translations$)|(^genres$)", .x), list) |>
+		as_tibble() |>
+		bind_cols(
+			pluck(response, "ids") |> fix_ids()
+		)
 }
 
 #' @rdname shows_next_episode
@@ -39,17 +39,17 @@ shows_next_episode <- function(id, extended = c("min", "full")) {
 #' @family episode data
 #' @export
 shows_last_episode <- function(id, extended = c("min", "full")) {
-  extended <- match.arg(extended)
+	extended <- match.arg(extended)
 
-  url <- build_trakt_url("shows", id, "last_episode", extended = extended)
-  response <- trakt_get(url)
+	url <- build_trakt_url("shows", id, "last_episode", extended = extended)
+	response <- trakt_get(url)
 
-  response |>
-    discard(is.list) |>
-    modify_if(is.null, ~NA_character_) |>
-    modify_at(~ grepl("(^available_translations$)|(^genres$)", .x), list) |>
-    as_tibble() |>
-    bind_cols(
-      pluck(response, "ids") |> fix_ids()
-    )
+	response |>
+		discard(is.list) |>
+		modify_if(is.null, ~NA_character_) |>
+		modify_at(~ grepl("(^available_translations$)|(^genres$)", .x), list) |>
+		as_tibble() |>
+		bind_cols(
+			pluck(response, "ids") |> fix_ids()
+		)
 }

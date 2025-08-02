@@ -19,40 +19,40 @@ NULL
 #' @keywords internal
 #' @noRd
 user_network <- function(
-  relationship = c("friends", "followers", "following"),
-  user = "me",
-  extended = c("min", "full")
+	relationship = c("friends", "followers", "following"),
+	user = "me",
+	extended = c("min", "full")
 ) {
-  check_username(user)
-  extended <- match.arg(extended)
-  relationship <- match.arg(relationship)
+	check_username(user)
+	extended <- match.arg(extended)
+	relationship <- match.arg(relationship)
 
-  if (length(user) > 1) {
-    return(map_df(user, ~ user_network(relationship, user = .x, extended)))
-  }
+	if (length(user) > 1) {
+		return(map_df(user, ~ user_network(relationship, user = .x, extended)))
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url("users", user, relationship, extended = extended)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("users", user, relationship, extended = extended)
+	response <- trakt_get(url = url)
 
-  if (identical(response, tibble())) {
-    return(response)
-  }
+	if (identical(response, tibble())) {
+		return(response)
+	}
 
-  # Flatten the tbl
-  response <- cbind(response[names(response) != "user"], response$user)
-  response <- cbind(response[names(response) != "ids"], response$ids)
+	# Flatten the tbl
+	response <- cbind(response[names(response) != "user"], response$user)
+	response <- cbind(response[names(response) != "ids"], response$ids)
 
-  #  Extract avatars
-  if (has_name(response, "images")) {
-    response$avatar <- response$images$avatar$full
-    response <- response[names(response) != "images"]
-  }
+	#  Extract avatars
+	if (has_name(response, "images")) {
+		response$avatar <- response$images$avatar$full
+		response <- response[names(response) != "images"]
+	}
 
-  # Consistency: "", NA, NULL, they should all be NA_character_
-  response |>
-    mutate_if(is.character, fix_missing) |>
-    fix_tibble_response()
+	# Consistency: "", NA, NULL, they should all be NA_character_
+	response |>
+		mutate_if(is.character, fix_missing) |>
+		fix_tibble_response()
 }
 
 #' Get a user's followers
@@ -64,7 +64,7 @@ user_network <- function(
 #' user_followers(user = "sean")
 #' }
 user_followers <- function(user = getOption("trakt_user"), extended = "min") {
-  user_network(relationship = "followers", user = user, extended = extended)
+	user_network(relationship = "followers", user = user, extended = extended)
 }
 
 #' Get a user's followings
@@ -76,7 +76,7 @@ user_followers <- function(user = getOption("trakt_user"), extended = "min") {
 #' user_following(user = "sean")
 #' }
 user_following <- function(user = getOption("trakt_user"), extended = "min") {
-  user_network(relationship = "following", user = user, extended = extended)
+	user_network(relationship = "following", user = user, extended = extended)
 }
 
 #' Get a user's friends
@@ -88,5 +88,5 @@ user_following <- function(user = getOption("trakt_user"), extended = "min") {
 #' user_friends(user = "sean")
 #' }
 user_friends <- function(user = getOption("trakt_user"), extended = "min") {
-  user_network(relationship = "friends", user = user, extended = extended)
+	user_network(relationship = "friends", user = user, extended = extended)
 }

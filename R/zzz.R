@@ -1,31 +1,31 @@
 # nocov start
 .onLoad <- function(libname, pkgname) {
-  if (getOption("tRakt_cache_dir", default = "") == "") {
-    options("tRakt_cache_dir" = rappdirs::user_cache_dir("tRakt"))
-  }
-  if (getOption("tRakt_debug", default = "") == "") {
-    options("tRakt_debug" = as.logical(Sys.getenv("tRakt_debug", unset = FALSE)))
-  }
+	if (getOption("tRakt_cache_dir", default = "") == "") {
+		options("tRakt_cache_dir" = rappdirs::user_cache_dir("tRakt"))
+	}
+	if (getOption("tRakt_debug", default = "") == "") {
+		options("tRakt_debug" = as.logical(Sys.getenv("tRakt_debug", unset = FALSE)))
+	}
 
-  # Default cache age limit in seconds: 1 week
-  if (getOption("tRakt_cache_max_age", default = "") == "") {
-    options(
-      "tRakt_cache_max_age" = as.numeric(Sys.getenv(
-        "tRakt_cache_max_age",
-        unset = 60^2 * 24 * 7
-      ))
-    )
-  }
+	# Default cache age limit in seconds: 1 week
+	if (getOption("tRakt_cache_max_age", default = "") == "") {
+		options(
+			"tRakt_cache_max_age" = as.numeric(Sys.getenv(
+				"tRakt_cache_max_age",
+				unset = 60^2 * 24 * 7
+			))
+		)
+	}
 
-  # Default cache size limit in bytes: 100 MB
-  if (getOption("tRakt_cache_max_size", default = "") == "") {
-    options(
-      "tRakt_cache_max_size" = as.numeric(Sys.getenv(
-        "tRakt_cache_max_size",
-        unset = 100 * 1000^2
-      ))
-    )
-  }
+	# Default cache size limit in bytes: 100 MB
+	if (getOption("tRakt_cache_max_size", default = "") == "") {
+		options(
+			"tRakt_cache_max_size" = as.numeric(Sys.getenv(
+				"tRakt_cache_max_size",
+				unset = 100 * 1000^2
+			))
+		)
+	}
 }
 
 #' The tRakt client ID for this particular app
@@ -47,15 +47,15 @@ tRakt_client_secret_scrambled <- "3WPkxM7csJKm_a4MP4NdDA1jhzQv6N91bNv4JhUXuDTSjq
 #' @keywords internal
 #' @noRd
 trakt_people_crew_sections <- c(
-  "production",
-  "art",
-  "crew",
-  "directing",
-  "writing",
-  "sound",
-  "camera",
-  "costume & make-up",
-  "visual effects"
+	"production",
+	"art",
+	"crew",
+	"directing",
+	"writing",
+	"sound",
+	"camera",
+	"costume & make-up",
+	"visual effects"
 )
 
 #' Trakt's rating labels
@@ -64,16 +64,16 @@ trakt_people_crew_sections <- c(
 #' @keywords internal
 #' @export
 trakt_rating_labels <- c(
-  `1` = "Weak Sauce :(",
-  `2` = "Terrible",
-  `3` = "Bad",
-  `4` = "Poor",
-  `5` = "Meh",
-  `6` = "Fair",
-  `7` = "Good",
-  `8` = "Great",
-  `9` = "Superb",
-  `10` = "Totally Ninja!"
+	`1` = "Weak Sauce :(",
+	`2` = "Terrible",
+	`3` = "Bad",
+	`4` = "Poor",
+	`5` = "Meh",
+	`6` = "Fair",
+	`7` = "Good",
+	`8` = "Great",
+	`9` = "Superb",
+	`10` = "Totally Ninja!"
 )
 
 # nocov end

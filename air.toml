@@ -1,7 +1,7 @@
 [format]
 line-width = 100
 indent-width = 2
-indent-style = "space"
+indent-style = "tab"
 line-ending = "auto"
 persistent-line-breaks = true
 exclude = []

@@ -13,18 +13,18 @@
 #' user_profile("sean")
 #' }
 user_profile <- function(user = "me", extended = c("min", "full")) {
-  check_username(user)
-  extended <- match.arg(extended)
+	check_username(user)
+	extended <- match.arg(extended)
 
-  if (length(user) > 1) {
-    return(map_df(user, ~ user_profile(user = .x, extended)))
-  }
+	if (length(user) > 1) {
+		return(map_df(user, ~ user_profile(user = .x, extended)))
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url("users", user, extended = extended)
-  response <- trakt_get(url = url)
+	# Construct URL, make API call
+	url <- build_trakt_url("users", user, extended = extended)
+	response <- trakt_get(url = url)
 
-  response |>
-    as_tibble() |>
-    unpack_user()
+	response |>
+		as_tibble() |>
+		unpack_user()
 }

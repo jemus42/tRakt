@@ -29,68 +29,68 @@
 #' )
 #' }
 user_history <- function(
-  user = "me",
-  type = c("shows", "movies", "seasons", "episodes"),
-  item_id = NULL,
-  limit = 10L,
-  start_at = NULL,
-  end_at = NULL,
-  extended = c("min", "full")
+	user = "me",
+	type = c("shows", "movies", "seasons", "episodes"),
+	item_id = NULL,
+	limit = 10L,
+	start_at = NULL,
+	end_at = NULL,
+	extended = c("min", "full")
 ) {
-  check_username(user)
-  type <- match.arg(type)
-  extended <- match.arg(extended)
+	check_username(user)
+	type <- match.arg(type)
+	extended <- match.arg(extended)
 
-  start_at <- if (!is.null(start_at)) format(as.POSIXct(start_at), "%FT%T.000Z", tz = "UTC")
-  end_at <- if (!is.null(end_at)) format(as.POSIXct(end_at), "%FT%T.000Z", tz = "UTC")
+	start_at <- if (!is.null(start_at)) format(as.POSIXct(start_at), "%FT%T.000Z", tz = "UTC")
+	end_at <- if (!is.null(end_at)) format(as.POSIXct(end_at), "%FT%T.000Z", tz = "UTC")
 
-  if (length(user) > 1) {
-    names(user) <- user
-    return(map_df(
-      user,
-      ~ user_history(user = .x, type, item_id = item_id, limit, start_at, end_at, extended),
-      .id = "user"
-    ))
-  }
+	if (length(user) > 1) {
+		names(user) <- user
+		return(map_df(
+			user,
+			~ user_history(user = .x, type, item_id = item_id, limit, start_at, end_at, extended),
+			.id = "user"
+		))
+	}
 
-  # Construct URL, make API call
-  url <- build_trakt_url(
-    "users",
-    user,
-    "history",
-    type,
-    item_id = item_id,
-    extended = extended,
-    limit = limit,
-    start_at = start_at,
-    end_at = end_at
-  )
-  response <- trakt_get(url = url)
-  response <- as_tibble(response)
+	# Construct URL, make API call
+	url <- build_trakt_url(
+		"users",
+		user,
+		"history",
+		type,
+		item_id = item_id,
+		extended = extended,
+		limit = limit,
+		start_at = start_at,
+		end_at = end_at
+	)
+	response <- trakt_get(url = url)
+	response <- as_tibble(response)
 
-  if (is_empty(response)) {
-    return(tibble())
-  }
+	if (is_empty(response)) {
+		return(tibble())
+	}
 
-  if (type == "shows") {
-    response <- bind_cols(
-      # History metadata
-      response |>
-        select(-"show", -"episode"),
-      # Unpacked show data
-      unpack_show(response$show),
-      # Unpacked episode data
-      response$episode |>
-        select(-"ids") |>
-        bind_cols(fix_ids(response$episode$ids)) |>
-        rename(episode = "number") |>
-        fix_tibble_response() |>
-        rename_all(~ paste0("episode_", .x))
-    )
-  }
-  if (type == "movies") {
-    response <- unpack_movie(response)
-  }
+	if (type == "shows") {
+		response <- bind_cols(
+			# History metadata
+			response |>
+				select(-"show", -"episode"),
+			# Unpacked show data
+			unpack_show(response$show),
+			# Unpacked episode data
+			response$episode |>
+				select(-"ids") |>
+				bind_cols(fix_ids(response$episode$ids)) |>
+				rename(episode = "number") |>
+				fix_tibble_response() |>
+				rename_all(~ paste0("episode_", .x))
+		)
+	}
+	if (type == "movies") {
+		response <- unpack_movie(response)
+	}
 
-  fix_tibble_response(response)
+	fix_tibble_response(response)
 }
