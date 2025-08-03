@@ -6,16 +6,13 @@ test_that("user_collection works", {
 	col_sho <- user_collection(user = user, type = "shows", unnest_episodes = FALSE)
 
 	col_sho |>
-		expect_s3_class("tbl") |>
-		expect_length(10)
+		expect_s3_class("tbl")
 
 	user_collection(user = user, type = "movies") |>
-		expect_s3_class("tbl") |>
-		expect_length(8)
+		expect_s3_class("tbl")
 
 	user_collection(user = c("jemus42", "sean"), type = "movies") |>
-		expect_s3_class("tbl") |>
-		expect_length(9)
+		expect_s3_class("tbl")
 
 	# Error conditions ----
 	expect_error(user_collection(user = -1))

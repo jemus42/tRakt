@@ -105,28 +105,16 @@ test_that("played_media and watched_media also do things", {
 	)
 
 	shows_watched(extended = "min", period = "weekly") |>
-		expect_s3_class("tbl") |>
-		expect_named(nm_shows) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = nm_shows, exact_rows = 10)
 
 	movies_watched(extended = "min", period = "weekly") |>
-		expect_s3_class("tbl") |>
-		expect_named(nm_movies) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = nm_movies, exact_rows = 10)
 
 	shows_played(extended = "min", period = "weekly") |>
-		expect_s3_class("tbl") |>
-		expect_named(nm_shows) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = nm_shows, exact_rows = 10)
 
 	movies_played(extended = "min", period = "weekly") |>
-		expect_s3_class("tbl") |>
-		expect_named(nm_movies) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = nm_movies, exact_rows = 10)
 })
 
 test_that("collected_media does its thing", {

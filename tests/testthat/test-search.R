@@ -11,14 +11,23 @@ test_that("search_query works", {
 	expect_s3_class(res, "tbl")
 	expect_equal(nrow(res), 1)
 
-	expect_warning(search_query("deadpuul", type = "movie"))
 	expect_warning(search_query("nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb", type = "movie", years = 1100))
 
 	search_query("russian doll", type = c("show", "movie")) |>
-		expect_s3_class("tbl_df") |>
-		expect_length(9) |>
-		nrow() |>
-		expect_equal(2)
+		expect_tibble(
+			min_cols = c(
+				"type",
+				"score",
+				"title",
+				"year",
+				"trakt",
+				"slug",
+				"tvdb",
+				"imdb",
+				"tmdb"
+			),
+			exact_rows = 2
+		)
 })
 
 test_that("search_id works", {

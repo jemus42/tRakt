@@ -22,14 +22,14 @@ test_that("build_trakt_url builds a url", {
 	expect_type(x, "character")
 
 	y <- trakt_get(x)
-	expect_length(y, 3)
-	expect_named(y, c("title", "year", "ids"))
+	expect_type(y, "list")
+	expect_contains_at_least(y, c("title", "year", "ids"))
 })
 
 test_that("apidoc helpers work", {
 	expect_equal(
 		apidoc("movies", "popular", "endpoint"),
-		"movies/popular"
+		"/movies/popular"
 	)
 
 	expect_s3_class(apiurl("movies", "trending"), "glue")

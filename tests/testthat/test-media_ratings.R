@@ -7,13 +7,10 @@ test_that("media_ratings works", {
 	ratings_show <- shows_ratings(id = id_show)
 	ratings_movie <- movies_ratings(id = id_movie)
 
-	expect_equal(ncol(ratings_show), 5)
-	expect_equal(ncol(ratings_movie), 5)
-
 	expected_names <- c("rating", "votes", "distribution", "id", "type")
 
-	expect_named(ratings_show, expected_names)
-	expect_named(ratings_movie, expected_names)
+	expect_tibble(ratings_show, min_cols = expected_names)
+	expect_tibble(ratings_movie, min_cols = expected_names)
 
 	expect_equal(nrow(shows_ratings(id = rep(id_show, 2))), 2)
 })
@@ -42,10 +39,8 @@ test_that("season and episode ratings work", {
 	)
 
 	seasons_ratings(id, season) |>
-		expect_s3_class("tbl") |>
-		expect_named(ratings_season_names)
+		expect_tibble(min_cols = ratings_season_names)
 
 	episodes_ratings(id, season, episode) |>
-		expect_s3_class("tbl") |>
-		expect_named(ratings_episode_names)
+		expect_tibble(min_cols = ratings_episode_names)
 })

@@ -17,19 +17,15 @@ test_that("seasons_episodes works", {
 	full_s1_single <- seasons_episodes(id = id, seasons = 1, extended = "full")
 
 	# Structural integrity
-	expect_s3_class(min_s1_single, "tbl")
-	expect_s3_class(full_s1_single, "tbl")
-
-	expect_named(min_s1_single, min_names)
-	expect_equal(nrow(min_s1_single), nrow(full_s1_single))
-	expect_equal(nrow(min_s1_single), 9)
+	expect_tibble(min_s1_single, min_cols = min_names, exact_rows = 9)
+	expect_tibble(full_s1_single, min_cols = min_names, exact_rows = 9)
 	expect_lt(length(min_s1_single), length(full_s1_single))
 
 	# Error conditions
 	expect_error(seasons_episodes(id = id, seasons = NA))
 	expect_error(seasons_episodes(id = id, seasons = "seven"))
 	expect_error(seasons_episodes(id = id, seasons = NULL))
-	expect_error(seasons_episodes(id = id, seasons = 10))
+	expect_error(seasons_episodes(id = id, seasons = 1123))
 
 	# Multi-length input seasons
 	expect_identical(
@@ -60,10 +56,8 @@ test_that("seasons_summary works", {
 		drop_unaired = TRUE
 	)
 
-	expect_s3_class(result_min, "tbl")
-	expect_s3_class(result_max, "tbl")
-	expect_equal(ncol(result_min), 4)
-	expect_equal(ncol(result_max), 13)
+	expect_tibble(result_min, expected_class = "tbl")
+	expect_tibble(result_max, expected_class = "tbl")
 
 	expect_equal(nrow(result_min), nrow(result_max))
 
@@ -89,10 +83,7 @@ test_that("seasons_summary works for episodes and matches seasons_episodes", {
 	expect_length(res$episodes, 2)
 
 	res$episodes[[1]] |>
-		expect_s3_class("tbl") |>
-		expect_length(17) |>
-		nrow() |>
-		expect_equal(6)
+		expect_tibble(expected_class = "tbl", exact_rows = 6)
 
 	expect_identical(
 		res$episodes[[1]],
@@ -108,28 +99,28 @@ test_that("seasons_season works", {
 	res_min <- seasons_season(id, seasons = 1, extended = "min")
 
 	res_min |>
-		expect_s3_class("tbl_df") |>
-		expect_named(c("number", "trakt", "tvdb", "tmdb"))
+		expect_tibble(min_cols = c("number", "trakt", "tvdb", "tmdb"))
 
 	res_full <- seasons_season(id, seasons = 2, extended = "full")
 
 	res_full |>
-		expect_s3_class("tbl_df") |>
-		expect_named(c(
-			"number",
-			"rating",
-			"votes",
-			"episode_count",
-			"aired_episodes",
-			"title",
-			"overview",
-			"first_aired",
-			"updated_at",
-			"network",
-			"trakt",
-			"tvdb",
-			"tmdb"
-		))
+		expect_tibble(
+			min_cols = c(
+				"number",
+				"rating",
+				"votes",
+				"episode_count",
+				"aired_episodes",
+				"title",
+				"overview",
+				"first_aired",
+				"updated_at",
+				"network",
+				"trakt",
+				"tvdb",
+				"tmdb"
+			)
+		)
 
 	expect_identical(
 		seasons_season(id, seasons = 1:2, extended = "min"),

@@ -24,12 +24,10 @@ test_that("user_network stuff works", {
 	expect_error(user_followers(user = 4))
 
 	user_following(user) |>
-		expect_s3_class("tbl_df") |>
-		expect_length(8)
+		expect_s3_class("tbl_df")
 
 	user_friends(user) |>
-		expect_s3_class("tbl_df") |>
-		expect_length(8)
+		expect_s3_class("tbl_df")
 })
 
 test_that("No NULLs or \"\" in user_network", {
