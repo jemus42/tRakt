@@ -48,6 +48,7 @@ seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
 		tibble(number = response$number, as_tibble(fix_ids(response$ids)))
 	} else {
 		discard(response, is.list) |>
+			map(\(x) if (is.null(x)) NA else x) |>
 			as_tibble() |>
 			bind_cols(fix_ids(response$ids))
 	}
