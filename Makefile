@@ -14,7 +14,7 @@ build: doc
 
 .PHONY: install
 install:
-	Rescript -e "pak::local_install(upgrade = FALSE)"
+	Rscript -e "pak::local_install(upgrade = FALSE)"
 
 .PHONY: test
 test:
@@ -33,6 +33,12 @@ README.md: README.Rmd
 .PHONY: site
 site: doc
 	Rscript -e "pkgdown::build_site()"
+
+codemeta.json: DESCRIPTION
+	Rscript -e "codemetar::write_codemeta()"
+
+.PHONY:
+release: doc site codemeta.json
 
 clean:
 	-rm README.md
