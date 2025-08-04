@@ -1,0 +1,340 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9d487cb238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"472094c59e9fb85471a178a6cd4f1b0d"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":939,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 5dfd0431-6e8b-43c8-ac56-91d5c62a5eb7
+      x-runtime: '0.016856'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"season":1,"number":1,"title":"Space Pilot 3000","ids":{"trakt":38803,"tvdb":131174,"imdb":"tt0584449","tmdb":35006,"tvrage":null}},{"season":1,"number":2,"title":"The
+        Series Has Landed","ids":{"trakt":38804,"tvdb":131175,"imdb":"tt0756891","tmdb":35007,"tvrage":null}},{"season":1,"number":3,"title":"I,
+        Roommate","ids":{"trakt":38805,"tvdb":131176,"imdb":"tt0756882","tmdb":35008,"tvrage":null}},{"season":1,"number":4,"title":"Love''s
+        Labours Lost in Space","ids":{"trakt":38806,"tvdb":131177,"imdb":"tt0756885","tmdb":35009,"tvrage":null}},{"season":1,"number":5,"title":"Fear
+        of a Bot Planet","ids":{"trakt":38807,"tvdb":131178,"imdb":"tt0584438","tmdb":35010,"tvrage":null}},{"season":1,"number":6,"title":"A
+        Fishful of Dollars","ids":{"trakt":38808,"tvdb":131179,"imdb":"tt0584425","tmdb":35011,"tvrage":null}},{"season":1,"number":7,"title":"My
+        Three Suns","ids":{"trakt":38809,"tvdb":131180,"imdb":"tt0756887","tmdb":35012,"tvrage":null}},{"season":1,"number":8,"title":"A
+        Big Piece of Garbage","ids":{"trakt":38810,"tvdb":131181,"imdb":"tt0584423","tmdb":35013,"tvrage":null}},{"season":1,"number":9,"title":"Hell
+        Is Other Robots","ids":{"trakt":38811,"tvdb":131182,"imdb":"tt0584441","tmdb":35014,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9e5a75b238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"472094c59e9fb85471a178a6cd4f1b0d"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":932,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 216eff3e-407a-4fc4-936e-55ebb99a0989
+      x-runtime: '0.037618'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"season":1,"number":1,"title":"Space Pilot 3000","ids":{"trakt":38803,"tvdb":131174,"imdb":"tt0584449","tmdb":35006,"tvrage":null},"number_abs":1,"overview":"On
+        New Year''s Eve 1999, Pizza Delivery boy Philip J. Fry accidentally falls
+        into a cryogenic chamber and is frozen for 1,000 years. Finally unfrozen,
+        he explores New New York, meets his new best friend (a kleptomaniacal robot
+        named Bender) and goes to work for his great-great-great-great-grand-nephew''s
+        space delivery business.","rating":8.11274,"votes":2599,"comment_count":5,"first_aired":"1999-03-28T07:00:00.000Z","updated_at":"2025-08-03T19:52:17.000Z","available_translations":["be","cs","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ro","ru","sk","sv","uk","zh"],"runtime":22,"episode_type":"series_premiere","original_title":"Space
+        Pilot 3000","after_credits":false,"during_credits":false},{"season":1,"number":2,"title":"The
+        Series Has Landed","ids":{"trakt":38804,"tvdb":131175,"imdb":"tt0756891","tmdb":35007,"tvrage":null},"number_abs":2,"overview":"For
+        the crew''s first mission, they must deliver a crate full of toys for an arcade
+        game to the moon. Fry is very excited, while it is not really a big deal in
+        the year 3000. Fry tries to persuade Leela to go exploring on the moon, while
+        Amy tries to recover the keys to the Planet Express Ship.","rating":7.81265,"votes":2103,"comment_count":4,"first_aired":"1999-04-04T07:00:00.000Z","updated_at":"2025-08-03T19:51:32.000Z","available_translations":["be","cs","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ro","ru","sk","sv","uk","zh"],"runtime":22,"episode_type":"standard","original_title":"The
+        Series Has Landed","after_credits":false,"during_credits":false},{"season":1,"number":3,"title":"I,
+        Roommate","ids":{"trakt":38805,"tvdb":131176,"imdb":"tt0756882","tmdb":35008,"tvrage":null},"number_abs":3,"overview":"When
+        it is discovered that Philip has been living in the Planet Express office,
+        he is forced to move out. Trying to sleep standing up in Bender''s closet-sized
+        apartment doesn''t work, so they go looking for a place both can be comfortable.
+        Unfortunately, Bender is incompatible with the ideal apartment they do find
+        until he has a radical... modification which makes him less than happy.","rating":7.84411,"votes":1918,"comment_count":2,"first_aired":"1999-04-06T06:00:00.000Z","updated_at":"2025-08-03T19:51:32.000Z","available_translations":["be","cs","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ro","ru","sk","sv","uk","zh"],"runtime":22,"episode_type":"standard","original_title":"I,
+        Roommate","after_credits":false,"during_credits":false},{"season":1,"number":4,"title":"Love''s
+        Labours Lost in Space","ids":{"trakt":38806,"tvdb":131177,"imdb":"tt0756885","tmdb":35009,"tvrage":null},"number_abs":4,"overview":"On
+        a mission intended to save endangered animals on a collapsing planet, Leela
+        and the crew run into legendary starship captain Zapp Brannigan. A self-proclaimed
+        ladies man, Zapp sees Leela as a potential new conquest. When the captain
+        refuses to aid the animal rescue, Leela and her crew try to leave Zapp''s
+        starship. But Zapp throws Fry and Bender in jail, and summons Leela to his
+        \"Lovenasium\". They ultimately escape and arrive on the doomed planet, where
+        Leela finally finds love - with a cute, and very useful, creature named Nibbler.","rating":7.7379,"votes":1736,"comment_count":5,"first_aired":"1999-04-13T06:00:00.000Z","updated_at":"2025-08-04T04:05:53.000Z","available_translations":["be","cs","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ro","ru","sk","sv","uk","zh"],"runtime":22,"episode_type":"standard","original_title":"Love''s
+        Labours Lost in Space","after_credits":false,"during_credits":false},{"season":1,"number":5,"title":"Fear
+        of a Bot Planet","ids":{"trakt":38807,"tvdb":131178,"imdb":"tt0584438","tmdb":35010,"tvrage":null},"number_abs":5,"overview":"Fry
+        and Leela disguise themselves as robots to find Bender after he fails to return
+        from a delivery to a robot planet, only to learn that he has become a celebrity
+        in a culture which fears humans.","rating":7.66487,"votes":1665,"comment_count":2,"first_aired":"1999-04-20T06:00:00.000Z","updated_at":"2025-08-03T19:53:48.000Z","available_translations":["be","cs","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ro","ru","sk","sv","uk","zh"],"runtime":22,"episode_type":"standard","original_title":"Fear
+        of a Bot Planet","after_credits":false,"during_credits":false},{"season":1,"number":6,"title":"A
+        Fishful of Dollars","ids":{"trakt":38808,"tvdb":131179,"imdb":"tt0584425","tmdb":35011,"tvrage":null},"number_abs":6,"overview":"Fry
+        discovers his bank account interest has made him a billionaire and buys the
+        one thing the year 3000 doesn''t have, anchovies.","rating":7.7411,"votes":1657,"comment_count":3,"first_aired":"1999-04-27T06:00:00.000Z","updated_at":"2025-08-03T20:52:47.000Z","available_translations":["be","cs","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ro","ru","sk","sv","uk","zh"],"runtime":22,"episode_type":"standard","original_title":"A
+        Fishful of Dollars","after_credits":false,"during_credits":false},{"season":1,"number":7,"title":"My
+        Three Suns","ids":{"trakt":38809,"tvdb":131180,"imdb":"tt0756887","tmdb":35012,"tvrage":null},"number_abs":7,"overview":"Delivery
+        Boy Philip J. Fry is promoted to Emperor after accidentally drinking his fluid-based
+        predecessor.","rating":7.63264,"votes":1538,"comment_count":2,"first_aired":"1999-05-04T06:00:00.000Z","updated_at":"2025-08-03T20:52:47.000Z","available_translations":["be","cs","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ro","ru","sk","sv","uk","zh"],"runtime":22,"episode_type":"standard","original_title":"My
+        Three Suns","after_credits":false,"during_credits":false},{"season":1,"number":8,"title":"A
+        Big Piece of Garbage","ids":{"trakt":38810,"tvdb":131181,"imdb":"tt0584423","tmdb":35013,"tvrage":null},"number_abs":8,"overview":"A
+        big piece of garbage that was released a thousand years ago is now on the
+        way to Earth to destroy it. After Fry, Leela and Bender fail on placing a
+        bomb on it, the city has to build another big piece of garbage, yet that may
+        be a problem since trash doesn''t exist in year 3000.","rating":7.74901,"votes":1518,"comment_count":1,"first_aired":"1999-05-11T06:00:00.000Z","updated_at":"2025-08-03T21:41:03.000Z","available_translations":["be","cs","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ro","ru","sk","sv","uk","zh"],"runtime":22,"episode_type":"standard","original_title":"A
+        Big Piece of Garbage","after_credits":false,"during_credits":false},{"season":1,"number":9,"title":"Hell
+        Is Other Robots","ids":{"trakt":38811,"tvdb":131182,"imdb":"tt0584441","tmdb":35014,"tvrage":null},"number_abs":9,"overview":"During
+        a Beastie Boys concert, Bender runs into a high school buddy, Fender. He invites
+        him to a party, which turns out to be robots getting high off of electricity,
+        or \"jacking on\". After one try, Bender is hooked.","rating":7.83109,"votes":1486,"comment_count":2,"first_aired":"1999-05-18T06:00:00.000Z","updated_at":"2025-08-03T21:41:03.000Z","available_translations":["be","cs","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ro","ru","sk","sv","uk","zh"],"runtime":22,"episode_type":"season_finale","original_title":"Hell
+        Is Other Robots","after_credits":false,"during_credits":false}]'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1123?extended=min
+  response:
+    status: 404
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: text/html
+      content-encoding: gzip
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      cache-control: max-age=0, private, must-revalidate, no_store=true, no_cache=true
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":928,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: b5e84f65-2d8d-48da-b6c1-c104157e6297
+      x-runtime: '0.011649'
+      cf-cache-status: BYPASS
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      cf-ray: 969c8ea0ef2bb238-DUS
+      alt-svc: h3=":443"; ma=86400
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9d487cb238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"472094c59e9fb85471a178a6cd4f1b0d"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":939,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 5dfd0431-6e8b-43c8-ac56-91d5c62a5eb7
+      x-runtime: '0.016856'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"season":1,"number":1,"title":"Space Pilot 3000","ids":{"trakt":38803,"tvdb":131174,"imdb":"tt0584449","tmdb":35006,"tvrage":null}},{"season":1,"number":2,"title":"The
+        Series Has Landed","ids":{"trakt":38804,"tvdb":131175,"imdb":"tt0756891","tmdb":35007,"tvrage":null}},{"season":1,"number":3,"title":"I,
+        Roommate","ids":{"trakt":38805,"tvdb":131176,"imdb":"tt0756882","tmdb":35008,"tvrage":null}},{"season":1,"number":4,"title":"Love''s
+        Labours Lost in Space","ids":{"trakt":38806,"tvdb":131177,"imdb":"tt0756885","tmdb":35009,"tvrage":null}},{"season":1,"number":5,"title":"Fear
+        of a Bot Planet","ids":{"trakt":38807,"tvdb":131178,"imdb":"tt0584438","tmdb":35010,"tvrage":null}},{"season":1,"number":6,"title":"A
+        Fishful of Dollars","ids":{"trakt":38808,"tvdb":131179,"imdb":"tt0584425","tmdb":35011,"tvrage":null}},{"season":1,"number":7,"title":"My
+        Three Suns","ids":{"trakt":38809,"tvdb":131180,"imdb":"tt0756887","tmdb":35012,"tvrage":null}},{"season":1,"number":8,"title":"A
+        Big Piece of Garbage","ids":{"trakt":38810,"tvdb":131181,"imdb":"tt0584423","tmdb":35013,"tvrage":null}},{"season":1,"number":9,"title":"Hell
+        Is Other Robots","ids":{"trakt":38811,"tvdb":131182,"imdb":"tt0584441","tmdb":35014,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea25a48b238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"a46261600e3bd082c67a31ddad8b070e"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":926,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 3346bc51-43aa-487b-aa5d-e2098e01fc13
+      x-runtime: '0.018199'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"season":2,"number":1,"title":"A Flight to Remember","ids":{"trakt":38816,"tvdb":131183,"imdb":"tt0584426","tmdb":1285653,"tvrage":null}},{"season":2,"number":2,"title":"Mars
+        University","ids":{"trakt":38817,"tvdb":131184,"imdb":"tt0756886","tmdb":1285654,"tvrage":null}},{"season":2,"number":3,"title":"When
+        Aliens Attack","ids":{"trakt":38818,"tvdb":131185,"imdb":"tt0756892","tmdb":1285655,"tvrage":null}},{"season":2,"number":4,"title":"Fry
+        \u0026 the Slurm Factory","ids":{"trakt":38819,"tvdb":131186,"imdb":"tt0584439","tmdb":1285656,"tvrage":null}},{"season":2,"number":5,"title":"I
+        Second That Emotion","ids":{"trakt":38820,"tvdb":131187,"imdb":"tt0756881","tmdb":35019,"tvrage":null}},{"season":2,"number":6,"title":"Brannigan,
+        Begin Again","ids":{"trakt":38821,"tvdb":131188,"imdb":"tt0766796","tmdb":35020,"tvrage":null}},{"season":2,"number":7,"title":"A
+        Head in the Polls","ids":{"trakt":38822,"tvdb":131189,"imdb":"tt0584427","tmdb":35021,"tvrage":null}},{"season":2,"number":8,"title":"Xmas
+        Story","ids":{"trakt":38823,"tvdb":131190,"imdb":"tt0584465","tmdb":35022,"tvrage":null}},{"season":2,"number":9,"title":"Why
+        Must I Be a Crustacean in Love?","ids":{"trakt":38824,"tvdb":131191,"imdb":"tt0766798","tmdb":35023,"tvrage":null}},{"season":2,"number":10,"title":"Put
+        Your Head on My Shoulders","ids":{"trakt":38825,"tvdb":131192,"imdb":"tt0772479","tmdb":35024,"tvrage":null}},{"season":2,"number":11,"title":"Lesser
+        of Two Evils","ids":{"trakt":38826,"tvdb":131193,"imdb":"tt0584445","tmdb":35034,"tvrage":null}},{"season":2,"number":12,"title":"Raging
+        Bender","ids":{"trakt":38827,"tvdb":131194,"imdb":"tt0584448","tmdb":35025,"tvrage":null}},{"season":2,"number":13,"title":"A
+        Bicyclops Built For Two","ids":{"trakt":38828,"tvdb":131195,"imdb":"tt0766129","tmdb":35026,"tvrage":null}},{"season":2,"number":14,"title":"How
+        Hermes Requisitioned His Groove Back","ids":{"trakt":38829,"tvdb":131196,"imdb":"tt0584442","tmdb":35029,"tvrage":null}},{"season":2,"number":15,"title":"A
+        Clone of My Own","ids":{"trakt":38830,"tvdb":131197,"imdb":"tt0584424","tmdb":35027,"tvrage":null}},{"season":2,"number":16,"title":"The
+        Deep South","ids":{"trakt":38831,"tvdb":131198,"imdb":"tt0584455","tmdb":35028,"tvrage":null}},{"season":2,"number":17,"title":"Bender
+        Gets Made","ids":{"trakt":1394789,"tvdb":131199,"imdb":"tt0766130","tmdb":35030,"tvrage":null}},{"season":2,"number":18,"title":"The
+        Problem with Popplers","ids":{"trakt":1394791,"tvdb":131200,"imdb":"tt0584457","tmdb":35033,"tvrage":null}},{"season":2,"number":19,"title":"Mother''s
+        Day","ids":{"trakt":1394792,"tvdb":131201,"imdb":"tt0584447","tmdb":35031,"tvrage":null}},{"season":2,"number":20,"title":"Anthology
+        of Interest I","ids":{"trakt":1685110,"tvdb":131202,"imdb":"tt0584432","tmdb":1089973,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9d487cb238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"472094c59e9fb85471a178a6cd4f1b0d"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":939,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 5dfd0431-6e8b-43c8-ac56-91d5c62a5eb7
+      x-runtime: '0.016856'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"season":1,"number":1,"title":"Space Pilot 3000","ids":{"trakt":38803,"tvdb":131174,"imdb":"tt0584449","tmdb":35006,"tvrage":null}},{"season":1,"number":2,"title":"The
+        Series Has Landed","ids":{"trakt":38804,"tvdb":131175,"imdb":"tt0756891","tmdb":35007,"tvrage":null}},{"season":1,"number":3,"title":"I,
+        Roommate","ids":{"trakt":38805,"tvdb":131176,"imdb":"tt0756882","tmdb":35008,"tvrage":null}},{"season":1,"number":4,"title":"Love''s
+        Labours Lost in Space","ids":{"trakt":38806,"tvdb":131177,"imdb":"tt0756885","tmdb":35009,"tvrage":null}},{"season":1,"number":5,"title":"Fear
+        of a Bot Planet","ids":{"trakt":38807,"tvdb":131178,"imdb":"tt0584438","tmdb":35010,"tvrage":null}},{"season":1,"number":6,"title":"A
+        Fishful of Dollars","ids":{"trakt":38808,"tvdb":131179,"imdb":"tt0584425","tmdb":35011,"tvrage":null}},{"season":1,"number":7,"title":"My
+        Three Suns","ids":{"trakt":38809,"tvdb":131180,"imdb":"tt0756887","tmdb":35012,"tvrage":null}},{"season":1,"number":8,"title":"A
+        Big Piece of Garbage","ids":{"trakt":38810,"tvdb":131181,"imdb":"tt0584423","tmdb":35013,"tvrage":null}},{"season":1,"number":9,"title":"Hell
+        Is Other Robots","ids":{"trakt":38811,"tvdb":131182,"imdb":"tt0584441","tmdb":35014,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea25a48b238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"a46261600e3bd082c67a31ddad8b070e"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":926,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 3346bc51-43aa-487b-aa5d-e2098e01fc13
+      x-runtime: '0.018199'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"season":2,"number":1,"title":"A Flight to Remember","ids":{"trakt":38816,"tvdb":131183,"imdb":"tt0584426","tmdb":1285653,"tvrage":null}},{"season":2,"number":2,"title":"Mars
+        University","ids":{"trakt":38817,"tvdb":131184,"imdb":"tt0756886","tmdb":1285654,"tvrage":null}},{"season":2,"number":3,"title":"When
+        Aliens Attack","ids":{"trakt":38818,"tvdb":131185,"imdb":"tt0756892","tmdb":1285655,"tvrage":null}},{"season":2,"number":4,"title":"Fry
+        \u0026 the Slurm Factory","ids":{"trakt":38819,"tvdb":131186,"imdb":"tt0584439","tmdb":1285656,"tvrage":null}},{"season":2,"number":5,"title":"I
+        Second That Emotion","ids":{"trakt":38820,"tvdb":131187,"imdb":"tt0756881","tmdb":35019,"tvrage":null}},{"season":2,"number":6,"title":"Brannigan,
+        Begin Again","ids":{"trakt":38821,"tvdb":131188,"imdb":"tt0766796","tmdb":35020,"tvrage":null}},{"season":2,"number":7,"title":"A
+        Head in the Polls","ids":{"trakt":38822,"tvdb":131189,"imdb":"tt0584427","tmdb":35021,"tvrage":null}},{"season":2,"number":8,"title":"Xmas
+        Story","ids":{"trakt":38823,"tvdb":131190,"imdb":"tt0584465","tmdb":35022,"tvrage":null}},{"season":2,"number":9,"title":"Why
+        Must I Be a Crustacean in Love?","ids":{"trakt":38824,"tvdb":131191,"imdb":"tt0766798","tmdb":35023,"tvrage":null}},{"season":2,"number":10,"title":"Put
+        Your Head on My Shoulders","ids":{"trakt":38825,"tvdb":131192,"imdb":"tt0772479","tmdb":35024,"tvrage":null}},{"season":2,"number":11,"title":"Lesser
+        of Two Evils","ids":{"trakt":38826,"tvdb":131193,"imdb":"tt0584445","tmdb":35034,"tvrage":null}},{"season":2,"number":12,"title":"Raging
+        Bender","ids":{"trakt":38827,"tvdb":131194,"imdb":"tt0584448","tmdb":35025,"tvrage":null}},{"season":2,"number":13,"title":"A
+        Bicyclops Built For Two","ids":{"trakt":38828,"tvdb":131195,"imdb":"tt0766129","tmdb":35026,"tvrage":null}},{"season":2,"number":14,"title":"How
+        Hermes Requisitioned His Groove Back","ids":{"trakt":38829,"tvdb":131196,"imdb":"tt0584442","tmdb":35029,"tvrage":null}},{"season":2,"number":15,"title":"A
+        Clone of My Own","ids":{"trakt":38830,"tvdb":131197,"imdb":"tt0584424","tmdb":35027,"tvrage":null}},{"season":2,"number":16,"title":"The
+        Deep South","ids":{"trakt":38831,"tvdb":131198,"imdb":"tt0584455","tmdb":35028,"tvrage":null}},{"season":2,"number":17,"title":"Bender
+        Gets Made","ids":{"trakt":1394789,"tvdb":131199,"imdb":"tt0766130","tmdb":35030,"tvrage":null}},{"season":2,"number":18,"title":"The
+        Problem with Popplers","ids":{"trakt":1394791,"tvdb":131200,"imdb":"tt0584457","tmdb":35033,"tvrage":null}},{"season":2,"number":19,"title":"Mother''s
+        Day","ids":{"trakt":1394792,"tvdb":131201,"imdb":"tt0584447","tmdb":35031,"tvrage":null}},{"season":2,"number":20,"title":"Anthology
+        of Interest I","ids":{"trakt":1685110,"tvdb":131202,"imdb":"tt0584432","tmdb":1089973,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:45
+recorded_with: VCR-vcr/2.0.0

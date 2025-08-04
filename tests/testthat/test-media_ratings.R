@@ -1,5 +1,8 @@
 test_that("media_ratings works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("media_ratings_basic")
 
 	id_show <- "futurama"
 	id_movie <- "inception-2010"
@@ -17,6 +20,9 @@ test_that("media_ratings works", {
 
 test_that("season and episode ratings work", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("media_ratings_season_episode")
 
 	id <- c("futurama", "the-simpsons")
 	season <- 1:2

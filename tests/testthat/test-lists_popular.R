@@ -1,4 +1,8 @@
 test_that("Popular/trending lists work", {
+	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("lists_popular_and_trending")
 	list_names <- c(
 		"name",
 		"description",

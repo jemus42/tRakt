@@ -1,0 +1,135 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/deadpool-2016?extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:56 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c248d21bb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Sun, 03 Aug 2025 21:30:56 GMT
+      x-movie-updated-at: '2025-08-03T08:09:47.000Z'
+      etag: W/"2087746f7c0b539f0ddb7c199d8bae35"
+      last-modified: Sun, 03 Aug 2025 08:09:47 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":947,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: b7a965d7-203a-4bb8-ab5b-eafe6741a490
+      x-runtime: '0.015701'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"title":"Deadpool","year":2016,"ids":{"trakt":190430,"slug":"deadpool-2016","imdb":"tt1431045","tmdb":293660}}'
+  recorded_at: 2025-08-03 17:07:32
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/deadpool-2016?extended=full
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:56 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c258de4bb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Sun, 03 Aug 2025 19:40:06 GMT
+      x-movie-updated-at: '2025-08-03T08:09:47.000Z'
+      etag: W/"2087746f7c0b539f0ddb7c199d8bae35"
+      last-modified: Sun, 03 Aug 2025 08:09:47 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":998,"until":"2025-08-03T11:45:00Z"}'
+      x-request-id: 2ab313c5-98a6-4fda-8d24-799a80d29c44
+      x-runtime: '0.018181'
+      cf-cache-status: HIT
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"title":"Deadpool","year":2016,"ids":{"trakt":190430,"slug":"deadpool-2016","imdb":"tt1431045","tmdb":293660},"tagline":"Feel
+        the love.","overview":"The origin story of former Special Forces operative
+        turned mercenary Wade Wilson, who, after being subjected to a rogue experiment
+        that leaves him with accelerated healing powers, adopts the alter ego Deadpool.
+        Armed with his new abilities and a dark, twisted sense of humor, Deadpool
+        hunts down the man who nearly destroyed his life.","released":"2016-02-12","runtime":108,"country":"us","trailer":"https://youtube.com/watch?v=9vN6DHB6bJc","homepage":"http://www.20thcenturystudios.com/movies/deadpool","status":"released","rating":8.26412,"votes":119734,"comment_count":245,"updated_at":"2025-08-03T08:09:47.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","mk","ml","nb","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["action","adventure","comedy","superhero"],"subgenres":["superhero"],"certification":"R","original_title":"Deadpool","after_credits":true,"during_credits":true}'
+  recorded_at: 2025-08-03 17:07:32
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/deadpool-2016?extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:56 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c248d21bb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Sun, 03 Aug 2025 21:30:56 GMT
+      x-movie-updated-at: '2025-08-03T08:09:47.000Z'
+      etag: W/"2087746f7c0b539f0ddb7c199d8bae35"
+      last-modified: Sun, 03 Aug 2025 08:09:47 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":947,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: b7a965d7-203a-4bb8-ab5b-eafe6741a490
+      x-runtime: '0.015701'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"title":"Deadpool","year":2016,"ids":{"trakt":190430,"slug":"deadpool-2016","imdb":"tt1431045","tmdb":293660}}'
+  recorded_at: 2025-08-03 17:07:32
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/deadpool-2016?extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:56 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c248d21bb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Sun, 03 Aug 2025 21:30:56 GMT
+      x-movie-updated-at: '2025-08-03T08:09:47.000Z'
+      etag: W/"2087746f7c0b539f0ddb7c199d8bae35"
+      last-modified: Sun, 03 Aug 2025 08:09:47 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":947,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: b7a965d7-203a-4bb8-ab5b-eafe6741a490
+      x-runtime: '0.015701'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"title":"Deadpool","year":2016,"ids":{"trakt":190430,"slug":"deadpool-2016","imdb":"tt1431045","tmdb":293660}}'
+  recorded_at: 2025-08-03 17:07:32
+recorded_with: VCR-vcr/2.0.0

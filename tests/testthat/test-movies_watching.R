@@ -1,4 +1,8 @@
 test_that("_watching works", {
+	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("media_watching")
 	movies_watching("deadpool-2016") |>
 		expect_s3_class("tbl_df")
 

@@ -1,0 +1,134 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/deadpool-2016/releases
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      cf-ray: 969c8e92dfcd4e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 08:47:45 GMT
+      x-movie-updated-at: '2025-07-26T16:27:06.000Z'
+      etag: W/"b4fd917e9df273762f09d4bba9505567"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":997,"until":"2025-07-27T00:35:00Z"}'
+      x-request-id: d26472fb-6703-43dd-be50-41337befd707
+      x-runtime: '0.053983'
+      cf-cache-status: HIT
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"country":"fr","certification":"16","release_date":"2016-02-08","release_type":"premiere","note":"Paris"},{"country":"hk","certification":null,"release_date":"2016-02-09","release_type":"theatrical","note":null},{"country":"tw","certification":"15+","release_date":"2016-02-09","release_type":"theatrical","note":null},{"country":"fr","certification":"16","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"gb","certification":"15","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"be","certification":"18","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"ie","certification":"16","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"ph","certification":"R-16","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"id","certification":null,"release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"ch","certification":"18","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"my","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"kz","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"ua","certification":"18+","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"il","certification":"הותר
+        לבני 16 ומעלה","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"th","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"cl","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"br","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"nz","certification":"R16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"sk","certification":"15","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"cz","certification":"15+","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"mx","certification":"B-15","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"ar","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"nl","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"au","certification":"MA
+        15+","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"az","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"co","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"de","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"dk","certification":"15","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"pt","certification":"M/14","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"ru","certification":"18+","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"sg","certification":"M18","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"ca","certification":"14A","release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"se","certification":"15","release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"tr","certification":"16+","release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"us","certification":"R","release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"ee","certification":null,"release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"lt","certification":"N-16","release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"pl","certification":"18","release_date":"2016-02-12","release_type":"digital","note":null},{"country":"vn","certification":null,"release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"ro","certification":"18","release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"bg","certification":"D","release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"no","certification":"15","release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"by","certification":null,"release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"fi","certification":"K-16","release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"at","certification":null,"release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"in","certification":null,"release_date":"2016-02-12","release_type":"theatrical","note":null},{"country":"it","certification":"T","release_date":"2016-02-15","release_type":"premiere","note":null},{"country":"kr","certification":"19","release_date":"2016-02-17","release_type":"theatrical","note":null},{"country":"gr","certification":"K18","release_date":"2016-02-18","release_type":"theatrical","note":null},{"country":"it","certification":"T","release_date":"2016-02-18","release_type":"theatrical","note":null},{"country":"es","certification":"18","release_date":"2016-02-19","release_type":"theatrical","note":null},{"country":"hu","certification":"16","release_date":"2016-02-21","release_type":"theatrical","note":null},{"country":"gb","certification":"15","release_date":"2016-04-25","release_type":"digital","note":null},{"country":"us","certification":"R","release_date":"2016-05-10","release_type":"physical","note":null},{"country":"gr","certification":null,"release_date":"2016-05-12","release_type":"physical","note":"DVD"},{"country":"nl","certification":"16","release_date":"2016-06-08","release_type":"physical","note":"DVD,
+        Blu ray"},{"country":"gb","certification":"15","release_date":"2016-06-13","release_type":"physical","note":null},{"country":"cz","certification":null,"release_date":"2016-06-15","release_type":"physical","note":null},{"country":"fr","certification":"16","release_date":"2016-06-17","release_type":"physical","note":"DVD
+        + Blu-Ray + 4K UHD"},{"country":"de","certification":"16","release_date":"2016-06-23","release_type":"physical","note":null},{"country":"se","certification":"15","release_date":"2016-06-27","release_type":"physical","note":null},{"country":"jp","certification":null,"release_date":"2016-08-12","release_type":"theatrical","note":null},{"country":"il","certification":"הותר
+        לבני 16 ומעלה","release_date":"2016-12-30","release_type":"tv","note":null},{"country":"fr","certification":"16","release_date":"2018-04-24","release_type":"tv","note":"Ciné+
+        Frisson"},{"country":"nl","certification":"16","release_date":"2018-05-21","release_type":"tv","note":"Veronica"},{"country":"fr","certification":"16","release_date":"2020-09-30","release_type":"digital","note":"Prime
+        Video"},{"country":"fr","certification":"16","release_date":"2021-02-23","release_type":"digital","note":"Disney+"},{"country":"es","certification":"18","release_date":"2021-02-23","release_type":"digital","note":"Disney
+        + (Star)"}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/deadpool-2016/releases?country=de
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      cf-ray: 969c8e9409ca4e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-movie-updated-at: '2025-08-02T06:31:27.000Z'
+      etag: W/"f70884e844afc5eaa8e917cac56ba662"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":911,"until":"2025-08-02T15:40:00Z"}'
+      x-request-id: 0775ab30-7a37-43fe-9663-68df00cb8316
+      x-runtime: '0.016860'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"country":"de","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"de","certification":"16","release_date":"2016-06-23","release_type":"physical","note":null}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/deadpool-2016/releases?country=de
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      cf-ray: 969c8e9409ca4e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-movie-updated-at: '2025-08-02T06:31:27.000Z'
+      etag: W/"f70884e844afc5eaa8e917cac56ba662"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":911,"until":"2025-08-02T15:40:00Z"}'
+      x-request-id: 0775ab30-7a37-43fe-9663-68df00cb8316
+      x-runtime: '0.016860'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"country":"de","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"de","certification":"16","release_date":"2016-06-23","release_type":"physical","note":null}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/inception-2010/releases?country=de
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      cf-ray: 969c8e962dfb4e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-movie-updated-at: '2025-08-02T15:30:43.000Z'
+      etag: W/"d9b8733c0c30a5c01a4f03fe244ebdc2"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":908,"until":"2025-08-02T15:40:00Z"}'
+      x-request-id: c83c76d3-59ca-4c43-914a-fcf1ee5f6d92
+      x-runtime: '0.034820'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"country":"de","certification":"12","release_date":"2010-07-29","release_type":"theatrical","note":null},{"country":"de","certification":"12","release_date":"2010-12-03","release_type":"physical","note":null}]'
+  recorded_at: 2025-08-04 08:06:43
+recorded_with: VCR-vcr/2.0.0

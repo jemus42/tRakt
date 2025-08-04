@@ -18,6 +18,9 @@ test_that("pad_episode() pads", {
 })
 
 test_that("build_trakt_url builds a url", {
+	skip_on_cran()
+	skip_if_not_installed("vcr")
+
 	x <- build_trakt_url("shows", "breaking-bad", extended = "min")
 	expect_type(x, "character")
 

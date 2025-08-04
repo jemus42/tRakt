@@ -1,0 +1,59 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:41 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e8c4bf64e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:41 GMT
+      x-show-updated-at: '2025-08-04T06:54:29.000Z'
+      etag: W/"c996be0a6b1653eb74bf95b0ce13b82b"
+      last-modified: Mon, 04 Aug 2025 06:54:29 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":992,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 1dceb2bb-4e8d-4531-b431-e5cf4e52494f
+      x-runtime: '0.028962'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"title":"Breaking Bad","year":2008,"ids":{"trakt":1388,"slug":"breaking-bad","tvdb":81189,"imdb":"tt0903747","tmdb":1396,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:06:41
+- request:
+    method: GET
+    uri: https://api.trakt.tv/https://example.com
+  response:
+    status: 405
+    headers:
+      date: Mon, 04 Aug 2025 08:06:41 GMT
+      content-type: text/html
+      cf-ray: 969c8e8ec80d4e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":988,"until":"2025-08-04T08:10:00Z"}'
+      cache-control: no-cache
+      x-request-id: 1ac3cffd-b1b8-4d82-ac4b-bbc9bd3b40fd
+      x-runtime: '0.002808'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+  recorded_at: 2025-08-04 08:06:41
+recorded_with: VCR-vcr/2.0.0

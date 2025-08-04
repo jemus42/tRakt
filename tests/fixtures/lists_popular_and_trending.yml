@@ -1,0 +1,186 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/lists/popular?limit=10
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:41 GMT
+      cf-ray: 969c8e8c5e4c1811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 09:30:51 GMT
+      x-pagination-page-count: '4418'
+      x-pagination-item-count: '44177'
+      etag: W/"fcab52a17baf7786253abb18829ff815"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"UNAUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":998,"until":"2025-07-28T07:55:00Z"}'
+      x-request-id: c3402f7b-0b79-4cbd-807e-ed34488102ac
+      x-runtime: '0.188710'
+      cf-cache-status: HIT
+      age: '5277'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"like_count":9785,"comment_count":0,"list":{"name":"Latest Releases","description":"","privacy":"public","share_link":"https://trakt.tv/lists/3837211","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"added","sort_how":"desc","created_at":"2017-06-07T13:22:46.000Z","updated_at":"2025-07-28T06:26:18.000Z","item_count":100,"comment_count":0,"likes":9785,"ids":{"trakt":3837211,"slug":"latest-releases"},"user":{"username":"giladg","private":false,"deleted":false,"name":"G\u0026A","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"giladg"}}}},{"like_count":4924,"comment_count":35,"list":{"name":"MARVEL
+        Cinematic Universe","description":"**UPDATED** _2024-01-19_\n**Chronological
+        order**                                                                                                             \n\n_(If
+        you are new to MCU, then you should start with; Iron Man, The Incredible Hulk,\n                                                                                                                    Iron
+        Man 2, Thor, Captain America and then Agent Carter.)_                                                                                                                                                                                                                                                                            \n\n\n-----------------------------------------------------------------------------\n\n**Includes:**
+        \n\n- **All Movies**\n- **Marvel One-Shots**\n -  _Agent Carter_\n -  _A Funny
+        Thing Happened on the Way to Thor''s Hammer_\n -  _The Consultant_\n -  _Item
+        47_\n -  _All Hail the King_\n- **Specials/Shorts**\n -  _WHIH World News_\n
+        -  _Slingshot_ \n- **Netflix Series**\n -  _**Marvel''s** Daredevil_ \n -  _**Marvel''s**
+        Jessica Jones_\n -  _**Marvel''s** Luke Cage_\n -  _**Marvel''s** Iron Fist_\n
+        -  _**Marvel''s** Defenders_\n  -  _**Marvel''s** The Punisher_\n- **ABC**\n
+        - _**Marvel''s** Inhumans_\n -  _**Marvel''s** Agent Carter_\n - _**Marvel''s**
+        Agents of S.H.I.E.L.D._\n- **Hulu**\n - _**Marvel''s** Runaways_\n- **Freeform**\n
+        - _**Marvel''s** Cloak \u0026 Dagger_\n\n-----------------------------------------------------------------------------\n\n**Stark
+        Expo 1974** - commercial for Stark Expo 1974 in Flushing Meadows in New York.\nThere
+        are four different **Stark Expo 2010** videos:\n\n -  Stark Expo 2010 - CordCo\n
+        -  Stark Expo 2010 - Fujikawa\n -  Stark Expo 2010 - Better Living Through
+        Technology\n -  Stark Expo 2010 - Accutech\n\nThey take place during Iron
+        Man 2 and you can easily find them by googling for them.\n\n**Peggy Carter’s**
+        1953 Smithsonian Interview - Where Carter is being interviewed about Steve
+        Rogers (can be found at youtube)\n\n**S.H.I.E.L.D** spin-off mini-series **Slingshot**
+        can be found at ABC''s youtube channel. \n\n**Peter''s To-Do List** (Short
+        Film - Spider-Man: Far From Home - Blu-Ray) - short extra clip when Peter
+        is picking up his passport.\n\n**Novels**:\n\n- **Captain Marvel Vol. 1:**
+        Higher, Further, Faster, More\n- **Marvel''s Captain Marvel:** Starforce on
+        the Rise\n- **Marvel''s Avengers: Infinity War:** The Heroes'' Journey\n-
+        **Ant-Man and the Wasp** - The Heroes'' Journey\n- **Marvel''s Avengers: Infinity
+        War:** The Cosmic Quest Vol. 1: Beginning\n- **Marvel''s Avengers: Endgame:**
+        The Pirate Angel, the Talking Tree, and Captain Rabbit\n- **Avengers - Infinity
+        War:** The Cosmic Quest - Volume Two: Aftermath\n- **Spider-Man - Far From
+        Home:** Peter and Ned''s Ultimate Travel Journal\n\n-----------------------------------------------------------------------------\n_(haven''t
+        updated the tie-in comics)_\n_**Marvel Cinematic Universe** (#1-4) tie-in
+        comics_ :\n\n- **Avengers: Road to Marvel''s The Avengers**:\n - Iron Man:
+        I Am Iron Man! #1-2\n - Iron Man 2: Public Identity #1-3\n - Iron Man 2: Agents
+        of S.H.I.E.L.D. #1\n - Captain America: First Vengeance #1-4\n- **Marvel''s
+        The Avengers Prelude: Fury''s Big Week**:\n - The Avengers - Prelude: Fury''s
+        Big Week #1-4\n- **Marvel''s The Avengers Prelude: Black Widow Strikes**:\n
+        - The Avengers - Prelude: Black Widow Strikes #1-3\n- **Marvel''s Iron Man
+        3 Prelude**:\n - Iron Man 2 Adaptation #1-2\n - Iron Man 3 Prelude #1-2\n-
+        **Marvel''s Thor: The Dark World Prelude**:\n - Thor Adaptation #1-2\n - Thor:
+        The Dark World Prelude #1-2\n- **Marvel''s Captain America: The Winter Soldier
+        Prelude**:\n - Captain America: The First Avenger Adaptation #1-2\n - Captain
+        America: The Winter Soldier Infinite #1\n- **Marvel''s Guardians of the Galaxy
+        Prelude**:\n - Guardians of the Galaxy – _Dangerous Prey Infinite #1_\n -
+        Guardians of the Galaxy Prelude #1-2\n- **Marvel''s Avengers: Age of Ultron
+        Prelude**:\n - The Avengers Adaptation #1-2\n - Avengers: Age of Ultron –
+        _This Sceptre''d Isle Infinite #1_\n- **Marvel''s Ant-Man Prelude**:\n - Ant-Man
+        Prelude #1-2\n - Ant-Man – Scott Lang: Small Time Infinite #1\n- **Marvel''s
+        Jessica Jones Prelude**:\n - Marvel''s Jessica Jones #1\n- **Captain America:
+        Civil War Prelude**:\n - Captain America: Civil War Prelude #1-4\n - Captain
+        America: Civil War Prelude Infinite #1\n- **Doctor Strange Prelude**:\n -
+        Marvel''s Doctor Strange Prelude #1-2\n - Marvel''s Doctor Strange Prelude
+        Infinite Comic – The Zealot #1\n- **Guardians of the Galaxy Vol. 2 Prelude**:\n
+        - Marvel''s Guardians of the Galaxy Vol. 2 Prelude #1-2\n- **Spider-Man: Homecoming
+        Prelude**:\n - Spider-Man: Homecoming Prelude #1-2\n- **Thor: Ragnarok Prelude**:\n
+        - Marvel''s Thor: Ragnarok Prelude #1-4\n- **Marvel''s Black Panther Prelude**:\n
+        - Marvel''s Black Panther Prelude #1-2\n- **Marvel''s Avengers: Infinity War
+        Prelude**:\n - Avengers - Infinity War: Prelude #1-2\n- **Ant-Man and the
+        Wasp Prelude**:\n - Ant-Man and the Wasp - Prelude #1-2\n- **Captain Marvel
+        Prelude**:\n - Marvel''s Captain Marvel Prelude #1\n- **Avengers: Endgame
+        Prelude **:\n - Avengers: Endgame Prelude #1-3\n- **Spider-Man: Far From Home
+        Prelude**:\n - Spider-Man: Far From Home Prelude #1-2\n- **Black Widow: Prelude**:\n
+        - Black Widow: Prelude #1-2\n\n\n-----------------------------------------------------------------------------","privacy":"public","share_link":"https://trakt.tv/lists/1248149","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-16T14:59:57.000Z","updated_at":"2025-07-28T00:13:28.000Z","item_count":216,"comment_count":35,"likes":4924,"ids":{"trakt":1248149,"slug":"marvel-cinematic-universe"},"user":{"username":"Donxy","private":false,"deleted":false,"name":"Donxy","vip":false,"vip_ep":true,"director":false,"ids":{"slug":"donxy"}}}},{"like_count":4793,"comment_count":5,"list":{"name":"Latest
+        releases","description":"","privacy":"public","share_link":"https://trakt.tv/lists/5308818","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"added","sort_how":"desc","created_at":"2018-07-29T10:16:22.000Z","updated_at":"2025-07-28T02:31:51.000Z","item_count":424,"comment_count":5,"likes":4793,"ids":{"trakt":5308818,"slug":"latest-releases"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":4328,"comment_count":0,"list":{"name":"Latest
+        4K Releases","description":"","privacy":"public","share_link":"https://trakt.tv/lists/6639877","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"added","sort_how":"desc","created_at":"2019-05-05T23:33:35.000Z","updated_at":"2025-07-26T16:45:50.000Z","item_count":100,"comment_count":0,"likes":4328,"ids":{"trakt":6639877,"slug":"latest-4k-releases"},"user":{"username":"giladg","private":false,"deleted":false,"name":"G\u0026A","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"giladg"}}}},{"like_count":4100,"comment_count":5,"list":{"name":"IMDB:
+        Top Rated Movies","description":"Top 250 movies, as rated by regular IMDB
+        voters. List updated daily.","privacy":"public","share_link":"https://trakt.tv/lists/2142753","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T20:13:18.000Z","updated_at":"2025-07-28T02:02:33.000Z","item_count":250,"comment_count":5,"likes":4100,"ids":{"trakt":2142753,"slug":"imdb-top-rated-movies"},"user":{"username":"justin","private":false,"deleted":false,"name":"Justin
+        Nemeth","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}},{"like_count":3243,"comment_count":1,"list":{"name":"Latest
+        TV Shows","description":"This list is maintained by mdblist.com\nCreate your
+        own: https://mdblist.com/lists/garycrawfordgc/latest-tv-shows\nUpdated at
+        2025-07-28 03:26:12","privacy":"public","share_link":"https://trakt.tv/lists/20370350","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2020-12-12T22:50:52.000Z","updated_at":"2025-07-28T07:27:09.000Z","item_count":300,"comment_count":1,"likes":3243,"ids":{"trakt":20370350,"slug":"latest-tv-shows"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":3175,"comment_count":69,"list":{"name":"Best
+        Mindfucks","description":"What’s a mindfuck? A movie that plays with your
+        mind, confuses you, and leads you on. It’s not just a movie with a twist ending.
+        Mindfucks are borderline-incoherent, dreamlike, and surreal.","privacy":"public","share_link":"https://trakt.tv/lists/800238","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2012-06-30T23:29:30.000Z","updated_at":"2025-07-28T06:26:17.000Z","item_count":116,"comment_count":69,"likes":3175,"ids":{"trakt":800238,"slug":"best-mindfucks"},"user":{"username":"BenFranklin","private":false,"deleted":false,"name":"Ben","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"benfranklin"}}}},{"like_count":3116,"comment_count":0,"list":{"name":"IMDB:
+        Top Rated TV Shows","description":"Top 250 TV shows, as rated by IMDB members.  List
+        updated daily.","privacy":"public","share_link":"https://trakt.tv/lists/2143363","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T23:10:50.000Z","updated_at":"2025-07-27T09:10:20.000Z","item_count":243,"comment_count":0,"likes":3116,"ids":{"trakt":2143363,"slug":"imdb-top-rated-tv-shows"},"user":{"username":"justin","private":false,"deleted":false,"name":"Justin
+        Nemeth","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}},{"like_count":2546,"comment_count":7,"list":{"name":"Netflix","description":"series,
+        movies \u0026 stuff produced by Netflix / sorted by release date (from newest
+        to oldest release)\n(based on https://www.netflix.com/browse/originals and
+        various other sources, if needed)\n\nlast update: March/15/2021\n\nnote: some
+        database-entries are missing on trakt, so that the list is imho as complete
+        as it could be atm. if you find something i missed, feel free to leave a comment.","privacy":"public","share_link":"https://trakt.tv/lists/2703641","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2016-09-22T23:51:06.000Z","updated_at":"2025-07-28T00:15:17.000Z","item_count":956,"comment_count":7,"likes":2546,"ids":{"trakt":2703641,"slug":"netflix"},"user":{"username":"disgusteDGuy","private":false,"deleted":false,"name":"Dennis","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"disgustedguy"}}}},{"like_count":2428,"comment_count":8,"list":{"name":"1001
+        Movies You Must See Before You Die","description":"\u003e 1001 Movies You
+        Must See Before You Die is a film reference book edited by Steven Jay Schneider
+        with original essays on each film contributed by over 70 film critics. \n\nSource:
+        `http://en.wikipedia.org/wiki/1001_Movies_You_Must_See_Before_You_Die`\n\nEdit
+        2024: I''ve added this list in years ago but it got surprisingly popular on
+        trakt. For prosperity sake: I don''t remember the edition of the book... it
+        is an inconsistent mix up to the 5th edition which was published in 2008.","privacy":"public","share_link":"https://trakt.tv/lists/805405","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2013-01-06T20:11:36.000Z","updated_at":"2025-07-28T06:25:40.000Z","item_count":1002,"comment_count":8,"likes":2428,"ids":{"trakt":805405,"slug":"1001-movies-you-must-see-before-you-die"},"user":{"username":"sp1ti","private":false,"deleted":false,"name":"sp1ti","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"sp1ti"}}}}]'
+  recorded_at: 2025-08-04 08:06:41
+- request:
+    method: GET
+    uri: https://api.trakt.tv/lists/trending?limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e8d1fac1811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 08:11:41 GMT
+      x-pagination-page-count: '2308'
+      x-pagination-item-count: '23080'
+      etag: W/"8e1a519eaf73cd6cf608f5aaaf3eb7cc"
+      cache-control: max-age=300, public
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":993,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 8554e255-3a05-47e9-a1fa-ce54df304ee8
+      x-runtime: '0.495055'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"like_count":39,"comment_count":0,"list":{"name":"Latest releases","description":"","privacy":"public","share_link":"https://trakt.tv/lists/5308818","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"added","sort_how":"desc","created_at":"2018-07-29T10:16:22.000Z","updated_at":"2025-08-04T03:14:53.000Z","item_count":429,"comment_count":5,"likes":4824,"ids":{"trakt":5308818,"slug":"latest-releases"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":37,"comment_count":0,"list":{"name":"Latest
+        TV Shows","description":"This list is maintained by mdblist.com\nCreate your
+        own: https://mdblist.com/lists/garycrawfordgc/latest-tv-shows\nUpdated at
+        2025-08-04 10:00:14","privacy":"public","share_link":"https://trakt.tv/lists/20370350","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2020-12-12T22:50:52.000Z","updated_at":"2025-08-04T07:00:14.000Z","item_count":300,"comment_count":1,"likes":3275,"ids":{"trakt":20370350,"slug":"latest-tv-shows"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":26,"comment_count":0,"list":{"name":"Netflix
+        Movies","description":"This list is maintained by mdblist.com\nCreate your
+        own: https://mdblist.com/lists/garycrawfordgc/netflix-movies\nUpdated at 2025-08-04
+        07:46:22","privacy":"public","share_link":"https://trakt.tv/lists/20764770","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2021-01-28T23:24:17.000Z","updated_at":"2025-08-04T04:46:23.000Z","item_count":200,"comment_count":1,"likes":1440,"ids":{"trakt":20764770,"slug":"netflix-movies"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":25,"comment_count":0,"list":{"name":"Top
+        Movies of the week","description":"This list is maintained by mdblist.com\nCreate
+        your own: https://mdblist.com/lists/garycrawfordgc/top-movies-of-the-week\nUpdated
+        at 2025-08-04 10:32:13","privacy":"public","share_link":"https://trakt.tv/lists/20388873","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2020-12-15T10:02:24.000Z","updated_at":"2025-08-04T07:32:14.000Z","item_count":9,"comment_count":0,"likes":1627,"ids":{"trakt":20388873,"slug":"top-movies-of-the-week"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":22,"comment_count":0,"list":{"name":"Netflix
+        Shows","description":"This list is maintained by mdblist.com\nCreate your
+        own: https://mdblist.com/lists/garycrawfordgc/netflix-shows\nUpdated at 2025-08-04
+        03:06:21","privacy":"public","share_link":"https://trakt.tv/lists/20764471","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2021-01-28T22:23:30.000Z","updated_at":"2025-08-04T03:29:03.000Z","item_count":300,"comment_count":0,"likes":1752,"ids":{"trakt":20764471,"slug":"netflix-shows"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":20,"comment_count":0,"list":{"name":"Hulu
+        Shows","description":"This list is maintained by mdblist.com\nCreate your
+        own: https://mdblist.com/lists/garycrawfordgc/hulu-shows\nUpdated at 2025-08-04
+        07:30:35","privacy":"public","share_link":"https://trakt.tv/lists/20764580","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2021-01-28T22:44:05.000Z","updated_at":"2025-08-04T04:30:35.000Z","item_count":300,"comment_count":0,"likes":1263,"ids":{"trakt":20764580,"slug":"hulu-shows"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":19,"comment_count":0,"list":{"name":"BBC
+        Shows","description":"This list is maintained by mdblist.com\nCreate your
+        own: https://mdblist.com/lists/garycrawfordgc/bbc-shows\nUpdated at 2025-08-04
+        06:30:30","privacy":"public","share_link":"https://trakt.tv/lists/20764522","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2021-01-28T22:34:11.000Z","updated_at":"2025-08-04T03:41:24.000Z","item_count":300,"comment_count":0,"likes":903,"ids":{"trakt":20764522,"slug":"bbc-shows"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":19,"comment_count":0,"list":{"name":"Disney+
+        Shows","description":"This list is maintained by mdblist.com\nCreate your
+        own: https://mdblist.com/lists/garycrawfordgc/disney-shows\nUpdated at 2025-08-04
+        03:48:25","privacy":"public","share_link":"https://trakt.tv/lists/20764592","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2021-01-28T22:46:18.000Z","updated_at":"2025-08-04T00:48:26.000Z","item_count":300,"comment_count":1,"likes":1213,"ids":{"trakt":20764592,"slug":"disney-shows"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":19,"comment_count":0,"list":{"name":"Amazon
+        Prime Shows","description":"This list is maintained by mdblist.com\nCreate
+        your own: https://mdblist.com/lists/garycrawfordgc/amazon-prime-shows\nUpdated
+        at 2025-08-04 06:38:16","privacy":"public","share_link":"https://trakt.tv/lists/20764575","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2021-01-28T22:42:22.000Z","updated_at":"2025-08-04T03:41:38.000Z","item_count":300,"comment_count":0,"likes":1346,"ids":{"trakt":20764575,"slug":"amazon-prime-shows"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":18,"comment_count":0,"list":{"name":"Top
+        Movies","description":"This list is maintained by mdblist.com\nCreate your
+        own: https://mdblist.com/lists/garycrawfordgc/top-movies\nUpdated at 2025-08-04
+        02:36:10","privacy":"public","share_link":"https://trakt.tv/lists/20579314","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2021-01-06T15:51:13.000Z","updated_at":"2025-08-04T03:11:47.000Z","item_count":300,"comment_count":0,"likes":635,"ids":{"trakt":20579314,"slug":"top-movies"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}}]'
+  recorded_at: 2025-08-04 08:06:42
+recorded_with: VCR-vcr/2.0.0

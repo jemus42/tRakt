@@ -1,0 +1,178 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/history/shows?extended=min&limit=10
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      cf-ray: 969c8eabaef94e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      x-pagination-page-count: '2150'
+      x-pagination-item-count: '21497'
+      etag: W/"37de5088f30b84c3b276fd5564bf37e8"
+      last-modified: Thu, 31 Jul 2025 21:33:36 GMT
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":891,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 4679422c-bc72-4f05-8f46-7c5cc36d704f
+      x-runtime: '0.014486'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":11101809981,"watched_at":"2025-07-31T21:33:36.000Z","action":"scrobble","type":"episode","episode":{"season":17,"number":5,"title":"The
+        Gang Goes to a Dog Track","ids":{"trakt":13272363,"tvdb":11200017,"imdb":"tt35252527","tmdb":6352226,"tvrage":null}},"show":{"title":"It''s
+        Always Sunny in Philadelphia","year":2005,"ids":{"trakt":2692,"slug":"it-s-always-sunny-in-philadelphia","tvdb":75805,"imdb":"tt0472954","tmdb":2710,"tvrage":null}}},{"id":11101286446,"watched_at":"2025-07-31T19:41:30.000Z","action":"checkin","type":"episode","episode":{"season":7,"number":9,"title":"Who
+        Wants to Be...?","ids":{"trakt":12936902,"tvdb":null,"imdb":null,"tmdb":6071739,"tvrage":null}},"show":{"title":"Game
+        Changer","year":2019,"ids":{"trakt":153142,"slug":"game-changer","tvdb":369988,"imdb":"tt11011104","tmdb":129412,"tvrage":null}}},{"id":11091691403,"watched_at":"2025-07-29T00:15:09.000Z","action":"scrobble","type":"episode","episode":{"season":10,"number":5,"title":"Stephen
+        Mangan, Mark Watson, Daniel Sloss and Vanessa Feltz","ids":{"trakt":288277,"tvdb":2870781,"imdb":null,"tmdb":279283,"tvrage":null}},"show":{"title":"8
+        Out of 10 Cats","year":2005,"ids":{"trakt":3996,"slug":"8-out-of-10-cats","tvdb":79556,"imdb":"tt0465315","tmdb":4020,"tvrage":null}}},{"id":11091609112,"watched_at":"2025-07-28T23:38:24.000Z","action":"scrobble","type":"episode","episode":{"season":10,"number":4,"title":"Louie
+        Spence,  Johnny Vaughan, Sarah Millican and Jon Richardson.","ids":{"trakt":288276,"tvdb":2834361,"imdb":null,"tmdb":279279,"tvrage":null}},"show":{"title":"8
+        Out of 10 Cats","year":2005,"ids":{"trakt":3996,"slug":"8-out-of-10-cats","tvdb":79556,"imdb":"tt0465315","tmdb":4020,"tvrage":null}}},{"id":11091548113,"watched_at":"2025-07-28T23:05:24.000Z","action":"scrobble","type":"episode","episode":{"season":10,"number":3,"title":"Christmas
+        Special - Jack Dee, Dr Christian Jessen, Jack Whitehall, Jamelia","ids":{"trakt":288275,"tvdb":2804991,"imdb":null,"tmdb":279280,"tvrage":null}},"show":{"title":"8
+        Out of 10 Cats","year":2005,"ids":{"trakt":3996,"slug":"8-out-of-10-cats","tvdb":79556,"imdb":"tt0465315","tmdb":4020,"tvrage":null}}},{"id":11091490652,"watched_at":"2025-07-28T22:40:14.000Z","action":"scrobble","type":"episode","episode":{"season":10,"number":3,"title":"Christmas
+        Special - Jack Dee, Dr Christian Jessen, Jack Whitehall, Jamelia","ids":{"trakt":288275,"tvdb":2804991,"imdb":null,"tmdb":279280,"tvrage":null}},"show":{"title":"8
+        Out of 10 Cats","year":2005,"ids":{"trakt":3996,"slug":"8-out-of-10-cats","tvdb":79556,"imdb":"tt0465315","tmdb":4020,"tvrage":null}}},{"id":11091333681,"watched_at":"2025-07-28T21:34:47.000Z","action":"scrobble","type":"episode","episode":{"season":10,"number":1,"title":"World
+        Cup Special - Peter Shilton, Helen Chamberlain, Jack Whitehall, Paddy McGuinness","ids":{"trakt":288273,"tvdb":2354031,"imdb":null,"tmdb":279281,"tvrage":null}},"show":{"title":"8
+        Out of 10 Cats","year":2005,"ids":{"trakt":3996,"slug":"8-out-of-10-cats","tvdb":79556,"imdb":"tt0465315","tmdb":4020,"tvrage":null}}},{"id":11091224545,"watched_at":"2025-07-28T20:48:22.000Z","action":"scrobble","type":"episode","episode":{"season":15,"number":18,"title":"Don''t
+        Worry, Be Hoopy","ids":{"trakt":13260112,"tvdb":11190751,"imdb":"tt37468577","tmdb":6342697,"tvrage":null}},"show":{"title":"Bob''s
+        Burgers","year":2011,"ids":{"trakt":32585,"slug":"bob-s-burgers","tvdb":194031,"imdb":"tt1561755","tmdb":32726,"tvrage":null}}},{"id":11091083897,"watched_at":"2025-07-28T20:11:29.000Z","action":"scrobble","type":"episode","episode":{"season":12,"number":18,"title":"July
+        27, 2025: Gang Databases","ids":{"trakt":13228726,"tvdb":11229775,"imdb":"tt37484258","tmdb":6318967,"tvrage":null}},"show":{"title":"Last
+        Week Tonight with John Oliver","year":2014,"ids":{"trakt":60267,"slug":"last-week-tonight-with-john-oliver","tvdb":278518,"imdb":"tt3530232","tmdb":60694,"tvrage":null}}},{"id":11087754404,"watched_at":"2025-07-28T01:06:37.000Z","action":"scrobble","type":"episode","episode":{"season":9,"number":5,"title":"David
+        Walliams, Fern Britton, Holly Walsh, Greg Davies","ids":{"trakt":288269,"tvdb":1687741,"imdb":null,"tmdb":279294,"tvrage":null}},"show":{"title":"8
+        Out of 10 Cats","year":2005,"ids":{"trakt":3996,"slug":"8-out-of-10-cats","tvdb":79556,"imdb":"tt0465315","tmdb":4020,"tvrage":null}}}]'
+  recorded_at: 2025-08-04 08:06:46
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/history/movies?extended=min&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eace98c4e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      x-pagination-page-count: '77'
+      x-pagination-item-count: '770'
+      etag: W/"283ffe5a4526fea2872ded4fb026b4e0"
+      last-modified: Sun, 03 Aug 2025 22:54:25 GMT
+      cache-control: max-age=0, private, must-revalidate
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":889,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 275a70fa-c582-4853-bfd0-61ff938e0c99
+      x-runtime: '0.191118'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":11112019031,"watched_at":"2025-08-03T22:54:25.000Z","action":"scrobble","type":"movie","movie":{"title":"Vulcanizadora","year":2024,"ids":{"trakt":909630,"slug":"vulcanizadora-2024","imdb":"tt28226888","tmdb":1130188}}},{"id":11111629790,"watched_at":"2025-08-03T21:08:02.000Z","action":"scrobble","type":"movie","movie":{"title":"The
+        Death of Dick Long","year":2019,"ids":{"trakt":415278,"slug":"the-death-of-dick-long-2019","imdb":"tt9356952","tmdb":565383}}},{"id":11067385959,"watched_at":"2025-07-20T22:06:06.000Z","action":"scrobble","type":"movie","movie":{"title":"The
+        Phoenician Scheme","year":2025,"ids":{"trakt":915617,"slug":"the-phoenician-scheme-2025","imdb":"tt30840798","tmdb":1137350}}},{"id":11067091044,"watched_at":"2025-07-20T20:18:16.000Z","action":"scrobble","type":"movie","movie":{"title":"Neighborhood
+        Watch","year":2025,"ids":{"trakt":974420,"slug":"neighborhood-watch-2025","imdb":"tt1714918","tmdb":1208983}}},{"id":11063960014,"watched_at":"2025-07-19T21:45:52.000Z","action":"scrobble","type":"movie","movie":{"title":"Novocaine","year":2025,"ids":{"trakt":964679,"slug":"novocaine-2025","imdb":"tt29603959","tmdb":1195506}}},{"id":11018211448,"watched_at":"2025-07-05T22:31:17.000Z","action":"watch","type":"movie","movie":{"title":"The
+        Beach","year":2000,"ids":{"trakt":1281,"slug":"the-beach-2000","imdb":"tt0163978","tmdb":1907}}},{"id":11017781654,"watched_at":"2025-07-05T20:32:57.000Z","action":"scrobble","type":"movie","movie":{"title":"The
+        Monkey","year":2025,"ids":{"trakt":904978,"slug":"the-monkey-2025","imdb":"tt27714946","tmdb":1124620}}},{"id":11017571068,"watched_at":"2025-07-05T19:00:47.000Z","action":"scrobble","type":"movie","movie":{"title":"Predator:
+        Killer of Killers","year":2025,"ids":{"trakt":1124448,"slug":"predator-killer-of-killers-2025","imdb":"tt36463894","tmdb":1376434}}},{"id":11008714030,"watched_at":"2025-07-02T20:30:03.000Z","action":"watch","type":"movie","movie":{"title":"28
+        Years Later","year":2025,"ids":{"trakt":885672,"slug":"28-years-later-2025","imdb":"tt10548174","tmdb":1100988}}},{"id":11005585213,"watched_at":"2025-07-01T21:32:03.000Z","action":"scrobble","type":"movie","movie":{"title":"28
+        Days Later","year":2002,"ids":{"trakt":135,"slug":"28-days-later-2002","imdb":"tt0289043","tmdb":170}}}]'
+  recorded_at: 2025-08-04 08:06:46
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/history/shows?extended=min&limit=2
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:47 GMT
+      cf-ray: 969c8eaf2e3c4e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '2'
+      x-pagination-page-count: '10749'
+      x-pagination-item-count: '21497'
+      etag: W/"a0ab70b35cae424d7e2cff0fd67b6455"
+      last-modified: Thu, 31 Jul 2025 21:33:36 GMT
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":882,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 2543e7fb-d3ba-4322-b4c9-38e4bf2c5c04
+      x-runtime: '0.012963'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":11101809981,"watched_at":"2025-07-31T21:33:36.000Z","action":"scrobble","type":"episode","episode":{"season":17,"number":5,"title":"The
+        Gang Goes to a Dog Track","ids":{"trakt":13272363,"tvdb":11200017,"imdb":"tt35252527","tmdb":6352226,"tvrage":null}},"show":{"title":"It''s
+        Always Sunny in Philadelphia","year":2005,"ids":{"trakt":2692,"slug":"it-s-always-sunny-in-philadelphia","tvdb":75805,"imdb":"tt0472954","tmdb":2710,"tvrage":null}}},{"id":11101286446,"watched_at":"2025-07-31T19:41:30.000Z","action":"checkin","type":"episode","episode":{"season":7,"number":9,"title":"Who
+        Wants to Be...?","ids":{"trakt":12936902,"tvdb":null,"imdb":null,"tmdb":6071739,"tvrage":null}},"show":{"title":"Game
+        Changer","year":2019,"ids":{"trakt":153142,"slug":"game-changer","tvdb":369988,"imdb":"tt11011104","tmdb":129412,"tvrage":null}}}]'
+  recorded_at: 2025-08-04 08:06:47
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/history/shows?extended=min&limit=2
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:47 GMT
+      cf-ray: 969c8eb038124e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '2'
+      x-pagination-page-count: '32109'
+      x-pagination-item-count: '64218'
+      etag: W/"02cb8449bf02c26e59b094e345ea631f"
+      last-modified: Sat, 02 Aug 2025 05:02:31 GMT
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":879,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 6cc29dcb-fa89-4414-8a25-9c9a43688932
+      x-runtime: '0.019995'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":11106424600,"watched_at":"2025-08-02T05:02:31.000Z","action":"scrobble","type":"episode","episode":{"season":1,"number":5,"title":"Murder
+        Horny","ids":{"trakt":12853595,"tvdb":11148584,"imdb":"tt36351470","tmdb":6201595,"tvrage":null}},"show":{"title":"Dexter:
+        Resurrection","year":2025,"ids":{"trakt":249647,"slug":"dexter-resurrection","tvdb":452595,"imdb":"tt33043892","tmdb":259909,"tvrage":null}}},{"id":11099421463,"watched_at":"2025-07-31T06:37:08.000Z","action":"scrobble","type":"episode","episode":{"season":8,"number":10,"title":"Hot
+        Rick","ids":{"trakt":12993653,"tvdb":11077165,"imdb":"tt36329671","tmdb":6122210,"tvrage":null}},"show":{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}}}]'
+  recorded_at: 2025-08-04 08:06:47
+recorded_with: VCR-vcr/2.0.0

@@ -1,5 +1,8 @@
 test_that("user_collection works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("user_collection_basic")
 
 	user <- "jemus42"
 
@@ -25,6 +28,9 @@ test_that("user_collection works", {
 test_that("user_collection works with episode unnesting", {
 	skip_if_not_installed("tidyr")
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("user_collection_unnest_episodes")
 
 	user <- "jemus42"
 	col_eps <- user_collection(user = user, type = "shows", unnest_episodes = TRUE)

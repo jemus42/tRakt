@@ -1,0 +1,53 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/donxy/lists/1248149/comments/newest?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      cf-ray: 969c8ea6284bbf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      x-pagination-page-count: '4'
+      x-pagination-item-count: '34'
+      x-list-id: '1248149'
+      etag: W/"61acecb683987de5d00bbb042d4bf584"
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":912,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 92ddecf6-00b1-4eb7-a312-816e8149c9ab
+      x-runtime: '0.019730'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":775285,"comment":"Thanks for the list mate. Appreciate it. Cheers.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-02-18T15:53:18.000Z","updated_at":"2025-02-18T15:53:18.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"YourFiore","private":false,"deleted":false,"name":"Fiona
+        Rose","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"yourfiore"}}},{"id":731108,"comment":"Does
+        anybody know any in-universe explanation for Thor Ragnarok to be placed alongside
+        Season 5 of Agents of Shield? Thank you!","spoiler":false,"review":false,"parent_id":0,"created_at":"2024-11-02T12:24:14.000Z","updated_at":"2024-11-02T12:24:14.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"Alsidsds","private":false,"deleted":false,"name":"Alsidsds","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"alsidsds"}}},{"id":701813,"comment":"Commenting
+        on this to bookmark the list!","spoiler":true,"review":false,"parent_id":0,"created_at":"2024-08-07T22:38:32.000Z","updated_at":"2024-08-07T22:38:32.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"zawsm","private":false,"deleted":false,"name":"Zawsm","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"zawsm"}}},{"id":625198,"comment":"The
+        upcoming Echo spotlight series is missing","spoiler":false,"review":false,"parent_id":0,"created_at":"2023-12-15T20:37:10.000Z","updated_at":"2023-12-15T20:37:10.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"Watch_n_rant","private":false,"deleted":false,"name":"Nerd","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"watch_n_rant"}}},{"id":615875,"comment":"Are
+        you going to add Loki Season 2?","spoiler":false,"review":false,"parent_id":0,"created_at":"2023-11-12T01:03:51.000Z","updated_at":"2023-11-12T01:03:51.000Z","replies":0,"likes":2,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"Bullfrogies","private":false,"deleted":false,"name":"Brendon","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"bullfrogies"}}},{"id":581720,"comment":"I
+        comment this to save it for later","spoiler":false,"review":false,"parent_id":0,"created_at":"2023-07-17T13:17:50.000Z","updated_at":"2023-07-17T13:17:50.000Z","replies":0,"likes":1,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"|ArIπ|","private":false,"deleted":false,"name":"Arin
+        Anwar","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ari-73f28d89-ae1e-4395-a32f-e2c673a16f1e"}}},{"id":574260,"comment":"Thank
+        you for the list and maintaining it!","spoiler":false,"review":false,"parent_id":0,"created_at":"2023-06-20T01:40:00.000Z","updated_at":"2023-06-20T01:40:00.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"itsavonell","private":false,"deleted":false,"name":"Avonell","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"itsavonell"}}},{"id":547029,"comment":"Huge
+        thanks for maintaining the list!\r\nThis is the beginning of my long journey
+        into the Marvel Universe. :)","spoiler":false,"review":false,"parent_id":0,"created_at":"2023-03-07T12:35:04.000Z","updated_at":"2023-03-07T12:35:04.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"AlecTrias","private":false,"deleted":false,"name":"AlecTrias","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"alectrias"}}},{"id":516695,"comment":"Thank
+        you for maintaining this list! I think \"Werewolf by Night\" should be added
+        to it since it''s confirmed to be MCU canon.","spoiler":false,"review":false,"parent_id":0,"created_at":"2022-11-08T17:04:42.000Z","updated_at":"2022-11-08T17:04:42.000Z","replies":1,"likes":3,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"syphon0928@gmail.com","private":false,"deleted":false,"name":"Steve
+        Toribio","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"syphon0928-gmail-com"}}},{"id":496675,"comment":"techradar
+        does a pretty good job outlining the timeline of MCU as it runs. I''m sure
+        keeping this popular trakt list in order is taxing, hope this helps a bit.\r\nhttps://www.techradar.com/how-to/how-to-watch-the-marvel-movies-in-order#section-marvel-movies-in-order-how-to-watch-chronologically","spoiler":false,"review":false,"parent_id":0,"created_at":"2022-08-24T16:10:02.000Z","updated_at":"2022-08-24T16:10:02.000Z","replies":0,"likes":1,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"wrorser","private":false,"deleted":false,"name":"","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"wrorser"}}}]'
+  recorded_at: 2025-08-04 08:06:45
+recorded_with: VCR-vcr/2.0.0

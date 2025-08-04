@@ -1,4 +1,8 @@
 test_that("media_people works", {
+	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("media_people")
 	movies_people("deadpool-2016") |>
 		expect_named(c("cast", "crew")) |>
 		purrr::walk(

@@ -1,0 +1,74 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/lists/2121308?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      cf-ray: 969c8ea8fcd2cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-sort-by: rank
+      x-sort-how: asc
+      x-list-id: '2121308'
+      etag: W/"0457c771129a5d1a53edd8f2764bb557"
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":900,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: da4aba1c-54c5-42b0-8e45-ed666098977d
+      x-runtime: '0.013687'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"name":"Anime of 2016","description":"Ranked list of 2016 anime.\r\n\r\nThis
+        is not a complete list of 2016 anime, but rather a list for myself to keep
+        track of anime I want to keep track of.\r\n\r\nI *tried* to rank it, but since
+        I can''t do that without having seen the full thing, ranks are obviously incomplete.","privacy":"public","share_link":"https://trakt.tv/lists/2121308","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-06T16:03:31.000Z","updated_at":"2019-09-01T21:16:16.000Z","item_count":23,"comment_count":0,"likes":3,"ids":{"trakt":2121308,"slug":"anime-of-2016"},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}'
+  recorded_at: 2025-08-04 08:06:46
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/lists/2121308?extended=full
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      cf-ray: 969c8ea9fe56cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-sort-by: rank
+      x-sort-how: asc
+      x-list-id: '2121308'
+      etag: W/"0457c771129a5d1a53edd8f2764bb557"
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":896,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 4506727c-9b04-4c06-afb5-495529070fa4
+      x-runtime: '0.012321'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"name":"Anime of 2016","description":"Ranked list of 2016 anime.\r\n\r\nThis
+        is not a complete list of 2016 anime, but rather a list for myself to keep
+        track of anime I want to keep track of.\r\n\r\nI *tried* to rank it, but since
+        I can''t do that without having seen the full thing, ranks are obviously incomplete.","privacy":"public","share_link":"https://trakt.tv/lists/2121308","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-06T16:03:31.000Z","updated_at":"2019-09-01T21:16:16.000Z","item_count":23,"comment_count":0,"likes":3,"ids":{"trakt":2121308,"slug":"anime-of-2016"},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"},"joined_at":"2012-08-01T18:28:30.000Z","location":"Germany","about":"","gender":"male","age":34,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/d7e7de7b124101ee2285ca6fcc426a9a?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}}}'
+  recorded_at: 2025-08-04 08:06:46
+recorded_with: VCR-vcr/2.0.0

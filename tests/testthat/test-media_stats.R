@@ -1,5 +1,8 @@
 test_that("user_stats works for 1 user", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("user_stats_single")
 
 	userstats <- user_stats(user = "jemus42")
 
@@ -19,6 +22,9 @@ test_that("user_stats works for 1 user", {
 
 test_that("user_stats works for multiple users", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("user_stats_multiple")
 
 	users <- c("jemus42", "sean")
 
@@ -40,6 +46,9 @@ test_that("user_stats works for multiple users", {
 
 test_that("media_stats does things", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("media_stats_basic")
 
 	shows_stats(id = "futurama") |>
 		expect_tibble(exact_rows = 1)
@@ -52,6 +61,10 @@ test_that("media_stats does things", {
 })
 
 test_that("seasons_stats works", {
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("seasons_stats_futurama")
+
 	seasons_stats("futurama", 1:2) |>
 		expect_tibble() -> res
 
@@ -59,6 +72,10 @@ test_that("seasons_stats works", {
 })
 
 test_that("episodes_stats works", {
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("episodes_stats_futurama")
+
 	episodes_stats("futurama", 1:2, 3:4) |>
 		expect_tibble() -> res
 

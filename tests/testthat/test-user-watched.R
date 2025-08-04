@@ -1,5 +1,8 @@
 test_that("user_watched works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("user-user-watched_basic")
 
 	user <- "jemus42"
 

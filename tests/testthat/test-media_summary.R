@@ -1,5 +1,8 @@
 test_that("shows_summary works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("shows_summary_multiple")
 
 	id <- c("breaking-bad", "dexter")
 	show_min_df <- shows_summary(id)
@@ -18,6 +21,9 @@ test_that("shows_summary works", {
 
 test_that("movies_summary works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("movies_summary_deadpool")
 
 	id <- "deadpool-2016"
 	movie_min_df <- movies_summary(id)

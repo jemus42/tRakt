@@ -1,5 +1,8 @@
 test_that("user_list_items are correct", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("user-user-list-items_basic")
 
 	# Can't think of anything better than reference cases :/
 	user_list_items(

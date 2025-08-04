@@ -1,0 +1,126 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:49 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec0c8211811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 08:49:35 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"8fd9e6a03429749552e9cd7510664fe1"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"UNAUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":999,"until":"2025-08-04T00:50:00Z"}'
+      x-request-id: fecbd27c-95fc-4ab3-82dc-ad3431a8ded8
+      x-runtime: '0.010577'
+      cf-cache-status: HIT
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":108119,"plays":144125,"collectors":338131,"collected_episodes":361009,"comments":67,"lists":66429,"votes":21330,"favorited":2359,"recommended":2359}'
+  recorded_at: 2025-08-04 08:06:49
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/deadpool-2016/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:50 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec1da4e1811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:49 GMT
+      x-movie-updated-at: '2025-08-03T17:13:04.000Z'
+      etag: W/"5e44b95f8db4cbe22bbab3730107aab2"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":840,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 98f30a3f-4a05-425c-b2b1-9db31e4eb3dc
+      x-runtime: '0.012071'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":373424,"plays":475547,"collectors":523627,"comments":245,"lists":103664,"votes":119760,"favorited":3239,"recommended":3239}'
+  recorded_at: 2025-08-04 08:06:50
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:49 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec0c8211811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 08:49:35 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"8fd9e6a03429749552e9cd7510664fe1"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"UNAUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":999,"until":"2025-08-04T00:50:00Z"}'
+      x-request-id: fecbd27c-95fc-4ab3-82dc-ad3431a8ded8
+      x-runtime: '0.010577'
+      cf-cache-status: HIT
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":108119,"plays":144125,"collectors":338131,"collected_episodes":361009,"comments":67,"lists":66429,"votes":21330,"favorited":2359,"recommended":2359}'
+  recorded_at: 2025-08-04 08:06:50
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:50 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec2ec1d1811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:50 GMT
+      x-show-updated-at: '2025-08-04T06:54:29.000Z'
+      etag: W/"05fbd07e7696961249c593bb16224950"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":837,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: bcbfc62f-8111-4da4-a73b-64ccba1b4f7f
+      x-runtime: '0.013245'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":349237,"plays":195746,"collectors":769574,"collected_episodes":824835,"comments":499,"lists":222335,"votes":109814,"favorited":13088,"recommended":13088}'
+  recorded_at: 2025-08-04 08:06:50
+recorded_with: VCR-vcr/2.0.0

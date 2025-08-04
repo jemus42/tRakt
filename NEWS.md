@@ -3,7 +3,8 @@
 - Catch up with inconsistent API endpoints:
   - `seasons_season()` was renamed to `seasons_episodes()`, wrapping endpoint [shows/:id/seasons/:season?translations=](https://trakt.docs.apiary.io/#reference/seasons/episodes/get-all-episodes-for-a-single-season).
   - `seasons_season()` now wraps new(?) endpoint [shows/:id/seasons/:season/info](https://trakt.docs.apiary.io/#reference/seasons/season/get-single-seasons-for-a-show).
-
+- Start using [{vcr}](https://docs.ropensci.org/vcr/articles/vcr.html#what-happens-if-the-api-changes) for recording API responses.
+- Bump `{testthat}` dependency to `>=3.0.0`, which had been necessary since adopting 3e.
 
 # tRakt 0.17.0
 

@@ -1,5 +1,8 @@
 test_that("search_query works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("search_query_basic")
 
 	res <- search_query("russian doll 2019", type = "show")
 	# res <- search_query("russian doll", type = "show", years = "2019")
@@ -32,6 +35,9 @@ test_that("search_query works", {
 
 test_that("search_id works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("search_id_basic")
 
 	# Oddly enough, 614 matches Home Alone oO
 	res <- search_id(id = 614, id_type = "trakt", type = "show")

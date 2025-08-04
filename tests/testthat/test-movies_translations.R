@@ -1,4 +1,8 @@
 test_that("media translations work", {
+	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("media_translations")
 	nm_movie <- c("title", "overview", "tagline", "language", "country")
 	movies_translations("193972") |>
 		expect_tibble(min_cols = nm_movie)

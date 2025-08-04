@@ -1,5 +1,8 @@
 test_that("popular_media works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("popular_media")
 
 	# movies
 	pop_mov_min <- movies_popular(limit = 5, extended = "min")
@@ -26,6 +29,9 @@ test_that("popular_media works", {
 
 test_that("trending_media works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("trending_media")
 
 	# movies
 	tre_mov_min <- movies_trending(limit = 5, extended = "min")
@@ -52,6 +58,9 @@ test_that("trending_media works", {
 
 test_that("anticipated_media works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("anticipated_media")
 
 	# movies
 	tre_mov_min <- movies_anticipated(limit = 5, extended = "min")
@@ -77,6 +86,11 @@ test_that("anticipated_media works", {
 })
 
 test_that("played_media and watched_media also do things", {
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("played_watched_media")
+
+	
 	# Both have the same variables, the difference is just sorting
 	nm_shows <- c(
 		"watcher_count",
@@ -118,6 +132,11 @@ test_that("played_media and watched_media also do things", {
 })
 
 test_that("collected_media does its thing", {
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("collected_media")
+
+	
 	shows_collected(limit = 5) |>
 		expect_s3_class("tbl") |>
 		expect_length(11) |>

@@ -1,0 +1,79 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/collected/weekly?limit=5&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:51 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec939f37552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '5'
+      expires: Mon, 04 Aug 2025 16:06:51 GMT
+      x-pagination-page-count: '4743'
+      x-pagination-item-count: '23711'
+      etag: W/"a187c5e1bf50c7295d445d946e15377c"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":830,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: f0681ea5-9976-4dd7-a5c2-6de743fc3aed
+      x-runtime: '0.359916'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watcher_count":25,"play_count":7511,"collected_count":15,"collector_count":7015,"show":{"title":"Jimmy
+        Kimmel Live","year":2003,"ids":{"trakt":1480,"slug":"jimmy-kimmel-live","tvdb":71998,"imdb":"tt0320037","tmdb":1489,"tvrage":null}}},{"watcher_count":1120,"play_count":8866,"collected_count":88,"collector_count":6861,"show":{"title":"Silo","year":2023,"ids":{"trakt":180770,"slug":"silo","tvdb":403245,"imdb":"tt14688458","tmdb":125988,"tvrage":null}}},{"watcher_count":345,"play_count":4213,"collected_count":21,"collector_count":3777,"show":{"title":"Superman
+        \u0026 Lois","year":2021,"ids":{"trakt":162205,"slug":"superman-lois","tvdb":375655,"imdb":"tt11192306","tmdb":95057,"tvrage":null}}},{"watcher_count":870,"play_count":29840,"collected_count":52,"collector_count":3698,"show":{"title":"The
+        Blacklist","year":2013,"ids":{"trakt":46676,"slug":"the-blacklist","tvdb":266189,"imdb":"tt2741602","tmdb":46952,"tvrage":null}}},{"watcher_count":11177,"play_count":58125,"collected_count":3867,"collector_count":3204,"show":{"title":"It''s
+        Always Sunny in Philadelphia","year":2005,"ids":{"trakt":2692,"slug":"it-s-always-sunny-in-philadelphia","tvdb":75805,"imdb":"tt0472954","tmdb":2710,"tvrage":null}}}]'
+  recorded_at: 2025-08-04 08:06:51
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/collected/weekly?limit=5&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:52 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ecc9fa67552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '5'
+      expires: Mon, 04 Aug 2025 16:06:51 GMT
+      x-pagination-page-count: '13368'
+      x-pagination-item-count: '66840'
+      etag: W/"3218824e6b740085f9b1ea15985df402"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":827,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: b11f3171-c103-428d-bfd0-53785f7f325f
+      x-runtime: '0.439265'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watcher_count":18079,"play_count":20402,"collected_count":6620,"movie":{"title":"28
+        Years Later","year":2025,"ids":{"trakt":885672,"slug":"28-years-later-2025","imdb":"tt10548174","tmdb":1100988}}},{"watcher_count":2739,"play_count":2997,"collected_count":3134,"movie":{"title":"The
+        Life of Chuck","year":2025,"ids":{"trakt":673173,"slug":"the-life-of-chuck-2025","imdb":"tt12908150","tmdb":842924}}},{"watcher_count":5705,"play_count":6402,"collected_count":1842,"movie":{"title":"War
+        of the Worlds","year":2025,"ids":{"trakt":595350,"slug":"war-of-the-worlds-2025-07-30","imdb":"tt13186306","tmdb":755898}}},{"watcher_count":13496,"play_count":15594,"collected_count":1474,"movie":{"title":"Happy
+        Gilmore 2","year":2025,"ids":{"trakt":1024811,"slug":"happy-gilmore-2-2025","imdb":"tt31868189","tmdb":1263256}}},{"watcher_count":1579,"play_count":1680,"collected_count":867,"movie":{"title":"My
+        Oxford Year","year":2025,"ids":{"trakt":1066508,"slug":"my-oxford-year-2025","imdb":"tt4978342","tmdb":1307078}}}]'
+  recorded_at: 2025-08-04 08:06:52
+recorded_with: VCR-vcr/2.0.0

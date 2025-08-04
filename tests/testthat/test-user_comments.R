@@ -1,4 +1,8 @@
 test_that("user_comments", {
+	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("user_comments_basic")
 	nm <- c(
 		"type",
 		"id",

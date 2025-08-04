@@ -1,5 +1,8 @@
 test_that("user_network stuff works", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("user-user-friendfollow_basic")
 
 	user <- "jemus42"
 

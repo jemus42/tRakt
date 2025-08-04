@@ -1,0 +1,122 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea6cd804e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":909,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"ea40fe2b6c336e50389b6974c6c51d75"
+      cache-control: max-age=0, private, must-revalidate
+      x-request-id: 80f786c6-9f7c-44f4-ba92-2ae49a4d4c0c
+      x-runtime: '0.012630'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea7efd84e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":903,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"16dafb6617a99c674716457cd3a67ec7"
+      cache-control: max-age=0, private, must-revalidate
+      x-request-id: 6c44b2da-a5ab-4c6d-b52d-d52da5f2ae1c
+      x-runtime: '0.009798'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"},"joined_at":"2012-08-01T18:28:30.000Z","location":"Germany","about":"","gender":"male","age":34,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/d7e7de7b124101ee2285ca6fcc426a9a?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}}'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea93a0a4e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":898,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"9a47e61ef9eee62bf18692f287032ab4"
+      cache-control: max-age=0, private, must-revalidate
+      x-request-id: 6885eb9e-d8be-4f79-b9bd-572b82e3e23b
+      x-runtime: '0.011803'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"username":"sean","private":false,"deleted":false,"name":"Sean Rudford","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"sean"}}'
+  recorded_at: 2025-08-04 08:06:46
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eaa3bc94e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":895,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"e6a6274c2e16fc8f40e8392d832725c3"
+      cache-control: max-age=0, private, must-revalidate
+      x-request-id: 5329477e-5879-4b78-96fb-01e967151212
+      x-runtime: '0.009273'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}'
+  recorded_at: 2025-08-04 08:06:46
+recorded_with: VCR-vcr/2.0.0

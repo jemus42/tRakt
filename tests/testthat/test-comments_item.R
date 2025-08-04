@@ -1,4 +1,8 @@
 test_that("comments_item works", {
+	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("comments_item_works")
 	# A movie
 
 	nm_movie_min <- c("type", "title", "year", "trakt", "slug", "imdb", "tmdb")

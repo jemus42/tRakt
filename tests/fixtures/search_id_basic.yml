@@ -1,0 +1,138 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/trakt/614?type=show&extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:58 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c307d24d2a5-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Sun, 03 Aug 2025 21:30:58 GMT
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '1'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":892,"until":"2025-08-03T13:35:00Z"}'
+      etag: W/"d05ade2017d71c2c60ccdfe120c9d67e"
+      x-request-id: 4054e759-436a-4fca-8a23-2ed639504b7a
+      x-runtime: '0.015271'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"type":"show","score":100,"show":{"title":"Futurama","year":1999,"ids":{"trakt":614,"slug":"futurama","tvdb":73871,"imdb":"tt0149460","tmdb":615,"tvrage":null}}}]'
+  recorded_at: 2025-08-03 17:07:36
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/show?query=futurama&extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:58 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c318f6dd2a5-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Sun, 03 Aug 2025 21:30:58 GMT
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '1'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":890,"until":"2025-08-03T13:35:00Z"}'
+      etag: W/"fc88c18382718b9565cf236e37a3d35d"
+      x-request-id: b33b74e0-1b28-4b3e-94db-be9de4a4bc2c
+      x-runtime: '0.019775'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"type":"show","score":578730123365711996,"show":{"title":"Futurama","year":1999,"ids":{"trakt":614,"slug":"futurama","tvdb":73871,"imdb":"tt0149460","tmdb":615,"tvrage":null}}}]'
+  recorded_at: 2025-08-03 17:07:36
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/imdb/1?type=show&extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:58 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c32c9d9d2a5-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Sun, 03 Aug 2025 21:30:58 GMT
+      x-pagination-page-count: '0'
+      x-pagination-item-count: '0'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":884,"until":"2025-08-03T13:35:00Z"}'
+      etag: W/"dc58d43555333968a19335ec7dfb2fb1"
+      x-request-id: c19fb23c-af6f-419e-8516-8521d9968e2b
+      x-runtime: '0.016879'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2025-08-03 17:07:36
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/trakt/nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb?type=show&extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:58 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c33fc63d2a5-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Sun, 03 Aug 2025 21:30:58 GMT
+      x-pagination-page-count: '0'
+      x-pagination-item-count: '0'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":880,"until":"2025-08-03T13:35:00Z"}'
+      etag: W/"dc58d43555333968a19335ec7dfb2fb1"
+      x-request-id: da3a9f66-bfe2-4ed5-81a9-794bda438315
+      x-runtime: '0.015250'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2025-08-03 17:07:37
+recorded_with: VCR-vcr/2.0.0

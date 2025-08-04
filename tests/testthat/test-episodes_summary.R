@@ -1,4 +1,8 @@
 test_that("episodes_summary works", {
+	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("episodes_summary_basic")
 	episode_summary_names_min <- c(
 		"id",
 		"season",

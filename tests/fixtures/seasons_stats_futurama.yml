@@ -1,0 +1,68 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:50 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec40e3f1811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Mon, 04 Aug 2025 16:06:50 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      last-modified: Mon, 04 Aug 2025 05:30:01 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":836,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: c9c2a2de-a715-457c-98a4-a102a5a9e99f
+      x-runtime: '0.019088'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":87226,"plays":891906,"collectors":327646,"collected_episodes":351080,"comments":5,"lists":190,"votes":680}'
+  recorded_at: 2025-08-04 08:06:50
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:50 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec629fe1811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      expires: Mon, 04 Aug 2025 16:06:50 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      last-modified: Mon, 04 Aug 2025 03:56:31 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":832,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 25fc92eb-b003-46a6-928d-44b138044bb9
+      x-runtime: '0.019085'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":79069,"plays":1818522,"collectors":338131,"collected_episodes":360884,"comments":2,"lists":144,"votes":478}'
+  recorded_at: 2025-08-04 08:06:50
+recorded_with: VCR-vcr/2.0.0

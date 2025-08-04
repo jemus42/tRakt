@@ -1,0 +1,197 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/popular?limit=5&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e8c4bbb7552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '5'
+      expires: Mon, 04 Aug 2025 16:06:41 GMT
+      x-pagination-page-count: '99920'
+      x-pagination-item-count: '499596'
+      etag: W/"4d44628d0672372c3e0fd0bfa9e2c1dd"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":991,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 95e76070-fce3-4920-a52e-dbdc66f93942
+      x-runtime: '0.448246'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"Deadpool","year":2016,"ids":{"trakt":190430,"slug":"deadpool-2016","imdb":"tt1431045","tmdb":293660}},{"title":"Guardians
+        of the Galaxy","year":2014,"ids":{"trakt":82405,"slug":"guardians-of-the-galaxy-2014","imdb":"tt2015381","tmdb":118340}},{"title":"Interstellar","year":2014,"ids":{"trakt":102156,"slug":"interstellar-2014","imdb":"tt0816692","tmdb":157336}},{"title":"The
+        Dark Knight","year":2008,"ids":{"trakt":120,"slug":"the-dark-knight-2008","imdb":"tt0468569","tmdb":155}},{"title":"Inception","year":2010,"ids":{"trakt":16662,"slug":"inception-2010","imdb":"tt1375666","tmdb":27205}}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/popular?limit=5&extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e919c137552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '5'
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-pagination-page-count: '99920'
+      x-pagination-item-count: '499596'
+      etag: W/"4d44628d0672372c3e0fd0bfa9e2c1dd"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":977,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: d8ec7319-cbee-4c49-93f1-664a747606b2
+      x-runtime: '0.677971'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"Deadpool","year":2016,"ids":{"trakt":190430,"slug":"deadpool-2016","imdb":"tt1431045","tmdb":293660},"tagline":"Feel
+        the love.","overview":"The origin story of former Special Forces operative
+        turned mercenary Wade Wilson, who, after being subjected to a rogue experiment
+        that leaves him with accelerated healing powers, adopts the alter ego Deadpool.
+        Armed with his new abilities and a dark, twisted sense of humor, Deadpool
+        hunts down the man who nearly destroyed his life.","released":"2016-02-12","runtime":108,"country":"us","trailer":"https://youtube.com/watch?v=9vN6DHB6bJc","homepage":"http://www.20thcenturystudios.com/movies/deadpool","status":"released","rating":8.26400915156019,"votes":119761,"comment_count":245,"updated_at":"2025-08-03T17:13:04.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","mk","ml","nb","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["action","adventure","comedy","superhero"],"subgenres":["superhero"],"certification":"R","original_title":"Deadpool","after_credits":true,"during_credits":true},{"title":"Guardians
+        of the Galaxy","year":2014,"ids":{"trakt":82405,"slug":"guardians-of-the-galaxy-2014","imdb":"tt2015381","tmdb":118340},"tagline":"When
+        things get bad, they''ll do their worst.","overview":"Light years from Earth,
+        26 years after being abducted, Peter Quill finds himself the prime target
+        of a manhunt after discovering an orb wanted by Ronan the Accuser.","released":"2014-08-01","runtime":121,"country":"us","trailer":"https://youtube.com/watch?v=3CqymRQ1uUU","homepage":"http://www.marvel.com/movies/guardians-of-the-galaxy","status":"released","rating":8.276917778075429,"votes":104522,"comment_count":171,"updated_at":"2025-08-03T17:14:20.000Z","language":"en","languages":["en"],"available_translations":["ar","az","be","bg","bs","ca","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","is","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["adventure","science-fiction","action"],"subgenres":[],"certification":"PG-13","original_title":"Guardians
+        of the Galaxy","after_credits":true,"during_credits":true},{"title":"Interstellar","year":2014,"ids":{"trakt":102156,"slug":"interstellar-2014","imdb":"tt0816692","tmdb":157336},"tagline":"Mankind
+        was born on Earth. It was never meant to die here.","overview":"The adventures
+        of a group of explorers who make use of a newly discovered wormhole to surpass
+        the limitations on human space travel and conquer the vast distances involved
+        in an interstellar voyage.","released":"2014-11-05","runtime":169,"country":"us","trailer":"https://youtube.com/watch?v=LY19rHKAaAg","homepage":"http://www.interstellarmovie.net/","status":"released","rating":8.62650024565426,"votes":85486,"comment_count":296,"updated_at":"2025-08-03T17:16:57.000Z","language":"en","languages":["en"],"available_translations":["ar","az","be","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","tw","uk","uz","vi","zh"],"genres":["science-fiction","drama","adventure"],"subgenres":["expedition"],"certification":"PG-13","original_title":"Interstellar","after_credits":false,"during_credits":false},{"title":"The
+        Dark Knight","year":2008,"ids":{"trakt":120,"slug":"the-dark-knight-2008","imdb":"tt0468569","tmdb":155},"tagline":"Welcome
+        to a world without rules.","overview":"Batman raises the stakes in his war
+        on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent,
+        Batman sets out to dismantle the remaining criminal organizations that plague
+        the streets. The partnership proves to be effective, but they soon find themselves
+        prey to a reign of chaos unleashed by a rising criminal mastermind known to
+        the terrified citizens of Gotham as the Joker.","released":"2008-07-18","runtime":152,"country":"us","trailer":"https://youtube.com/watch?v=_PZpmTj1Q8Q","homepage":"http://www.warnerbros.com/movies/dark-knight/","status":"released","rating":8.872458212295824,"votes":83996,"comment_count":177,"updated_at":"2025-08-03T17:07:51.000Z","language":"en","languages":["en","zh"],"available_translations":["ar","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","gl","he","hi","hr","hu","it","ja","ka","ko","lt","lv","ml","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["action","crime","drama","thriller","superhero"],"subgenres":["vigilante","organized-crime","neo-noir","superhero"],"certification":"PG-13","original_title":"The
+        Dark Knight","after_credits":false,"during_credits":false},{"title":"Inception","year":2010,"ids":{"trakt":16662,"slug":"inception-2010","imdb":"tt1375666","tmdb":27205},"tagline":"Your
+        mind is the scene of the crime.","overview":"Cobb, a skilled thief who commits
+        corporate espionage by infiltrating the subconscious of his targets is offered
+        a chance to regain his old life as payment for a task considered to be impossible:
+        \"inception\", the implantation of another person''s idea into a target''s
+        subconscious.","released":"2010-07-16","runtime":148,"country":"us","trailer":"https://youtube.com/watch?v=cdx31ak4KbQ","homepage":"http://www.warnerbros.com/movies/inception","status":"released","rating":8.635030187794007,"votes":80993,"comment_count":189,"updated_at":"2025-08-03T17:10:45.000Z","language":"en","languages":["en","fr","ja","sw"],"available_translations":["ar","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["action","adventure","science-fiction"],"subgenres":["heist","virtual-reality"],"certification":"PG-13","original_title":"Inception","after_credits":false,"during_credits":false}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/popular?limit=5&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e96fc9a7552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '5'
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-pagination-page-count: '26174'
+      x-pagination-item-count: '130870'
+      etag: W/"91d1f0f28ca9368eff27db46a754ec38"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":957,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 41dc5895-a102-40db-9c39-22b6e2d564b3
+      x-runtime: '0.433000'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"Game of Thrones","year":2011,"ids":{"trakt":1390,"slug":"game-of-thrones","tvdb":121361,"imdb":"tt0944947","tmdb":1399,"tvrage":null}},{"title":"Breaking
+        Bad","year":2008,"ids":{"trakt":1388,"slug":"breaking-bad","tvdb":81189,"imdb":"tt0903747","tmdb":1396,"tvrage":null}},{"title":"The
+        Walking Dead","year":2010,"ids":{"trakt":1393,"slug":"the-walking-dead","tvdb":153021,"imdb":"tt1520211","tmdb":1402,"tvrage":null}},{"title":"The
+        Big Bang Theory","year":2007,"ids":{"trakt":1409,"slug":"the-big-bang-theory","tvdb":80379,"imdb":"tt0898266","tmdb":1418,"tvrage":null}},{"title":"Stranger
+        Things","year":2016,"ids":{"trakt":104439,"slug":"stranger-things","tvdb":305288,"imdb":"tt4574334","tmdb":66732,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:43
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/popular?limit=5&extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9aab797552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '5'
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-pagination-page-count: '26174'
+      x-pagination-item-count: '130870'
+      etag: W/"91d1f0f28ca9368eff27db46a754ec38"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":946,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 37c67df7-e14b-457c-aeda-ee284b144039
+      x-runtime: '0.569363'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"Game of Thrones","year":2011,"ids":{"trakt":1390,"slug":"game-of-thrones","tvdb":121361,"imdb":"tt0944947","tmdb":1399,"tvrage":null},"tagline":"Winter
+        is coming.","overview":"Seven noble families fight for control of the mythical
+        land of Westeros. Friction between the houses leads to full-scale war. All
+        while a very ancient evil awakens in the farthest north. Amidst the war, a
+        neglected military order of misfits, the Night''s Watch, is all that stands
+        between the realms of men and icy horrors beyond.","first_aired":"2011-04-18T01:00:00.000Z","airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"runtime":57,"certification":"TV-MA","network":"HBO","country":"us","trailer":"https://youtube.com/watch?v=KPLWWIOCOOQ","homepage":"http://www.hbo.com/game-of-thrones","status":"ended","rating":8.904821265413954,"votes":141187,"comment_count":444,"updated_at":"2025-08-04T06:54:01.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","bs","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hr","hu","id","is","it","ja","ka","ko","lb","lt","lv","ml","nl","no","pl","pt","ro","ru","sk","sl","so","sr","sv","ta","th","tr","tw","uk","uz","vi","zh"],"genres":["fantasy","drama","action","adventure"],"subgenres":[],"aired_episodes":73,"original_title":"Game
+        of Thrones"},{"title":"Breaking Bad","year":2008,"ids":{"trakt":1388,"slug":"breaking-bad","tvdb":81189,"imdb":"tt0903747","tmdb":1396,"tvrage":null},"tagline":"Change
+        the equation.","overview":"Walter White, a New Mexico chemistry teacher, is
+        diagnosed with Stage III cancer and given a prognosis of only two years left
+        to live. He becomes filled with a sense of fearlessness and an unrelenting
+        desire to secure his family''s financial future at any cost as he enters the
+        dangerous world of drugs and crime.","first_aired":"2008-01-21T02:00:00.000Z","airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"runtime":49,"certification":"TV-MA","network":"AMC","country":"us","trailer":"https://youtube.com/watch?v=XZ8daibM3AE","homepage":"http://www.sonypictures.com/tv/breakingbad","status":"ended","rating":9.2489,"votes":109814,"comment_count":499,"updated_at":"2025-08-04T06:54:29.000Z","language":"en","languages":["en","de","es"],"available_translations":["ar","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["drama","crime","thriller"],"subgenres":["dark-comedy","tragedy","outlaw"],"aired_episodes":62,"original_title":"Breaking
+        Bad"},{"title":"The Walking Dead","year":2010,"ids":{"trakt":1393,"slug":"the-walking-dead","tvdb":153021,"imdb":"tt1520211","tmdb":1402,"tvrage":null},"tagline":"Fight
+        the dead. Fear the living.","overview":"Sheriff''s deputy Rick Grimes awakens
+        from a coma to find a post-apocalyptic world dominated by flesh-eating zombies.
+        He sets out to find his family and encounters many other survivors along the
+        way.","first_aired":"2010-11-01T01:00:00.000Z","airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"runtime":44,"certification":"TV-MA","network":"AMC","country":"us","trailer":null,"homepage":"http://www.amc.com/shows/the-walking-dead--1002293","status":"ended","rating":7.91572,"votes":70066,"comment_count":366,"updated_at":"2025-08-04T06:58:04.000Z","language":"en","languages":["en"],"available_translations":["ar","az","bg","bs","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","mk","ms","nl","no","pl","pt","ro","ru","sk","sl","sq","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["drama","adventure","horror","thriller","action"],"subgenres":["survival","zombie"],"aired_episodes":177,"original_title":"The
+        Walking Dead"},{"title":"The Big Bang Theory","year":2007,"ids":{"trakt":1409,"slug":"the-big-bang-theory","tvdb":80379,"imdb":"tt0898266","tmdb":1418,"tvrage":null},"tagline":"Smart
+        is the new sexy.","overview":"Physicists Leonard and Sheldon find their nerd-centric
+        social circle with pals Howard and Raj expanding when aspiring actress Penny
+        moves in next door.","first_aired":"2007-09-25T00:00:00.000Z","airs":{"day":"Thursday","time":"20:00","timezone":"America/New_York"},"runtime":22,"certification":"TV-14","network":"CBS","country":"us","trailer":null,"homepage":"http://www.cbs.com/shows/big_bang_theory/","status":"ended","rating":7.89567,"votes":64699,"comment_count":265,"updated_at":"2025-08-04T07:32:17.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","bs","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","is","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["comedy"],"subgenres":[],"aired_episodes":279,"original_title":"The
+        Big Bang Theory"},{"title":"Stranger Things","year":2016,"ids":{"trakt":104439,"slug":"stranger-things","tvdb":305288,"imdb":"tt4574334","tmdb":66732,"tvrage":null},"tagline":"One
+        last adventure.","overview":"When a young boy vanishes, a small town uncovers
+        a mystery involving secret experiments, terrifying supernatural forces, and
+        one strange little girl.","first_aired":"2016-07-15T07:00:00.000Z","airs":{"day":"Friday","time":"03:00","timezone":"America/New_York"},"runtime":51,"certification":"TV-14","network":"Netflix","country":"us","trailer":"https://youtube.com/watch?v=mnd7sFt5c3A","homepage":"http://www.netflix.com/title/80057281","status":"returning
+        series","rating":8.466338180120124,"votes":62103,"comment_count":193,"updated_at":"2025-08-03T16:49:37.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","cs","da","de","el","en","es","eu","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nl","no","pl","pt","ro","ru","sk","sl","so","sr","sv","th","tl","tr","uk","uz","vi","zh"],"genres":["drama","fantasy","science-fiction","mystery","horror"],"subgenres":["coming-of-age","superhero-kids","teen-drama","supernatural","halloween","supernatural-horror","psychological-thriller"],"aired_episodes":34,"original_title":"Stranger
+        Things"}]'
+  recorded_at: 2025-08-04 08:06:44
+recorded_with: VCR-vcr/2.0.0

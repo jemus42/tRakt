@@ -1,0 +1,563 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?extended=min&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:41 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e8ccea7bf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:41 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '20'
+      etag: W/"63cc3c4989019b9e95554264f490767b"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":994,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 936be4de-f895-43c8-a842-7ad33498ded2
+      x-runtime: '0.019594'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:41
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?extended=min&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:41 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e8ccea7bf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:41 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '20'
+      etag: W/"63cc3c4989019b9e95554264f490767b"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":994,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 936be4de-f895-43c8-a842-7ad33498ded2
+      x-runtime: '0.019594'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:41
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?extended=full&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:41 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e8e08fabf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:41 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '20'
+      etag: W/"63cc3c4989019b9e95554264f490767b"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":985,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: d662b99d-8c34-4fea-b32c-06b85ee67b0f
+      x-runtime: '0.038912'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null},"tagline":"","overview":"Set
+        in Springfield, the average American town, the show focuses on the antics
+        and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and
+        Maggie, as well as a virtual cast of thousands. Since the beginning, the series
+        has been a pop culture icon, attracting hundreds of celebrities to guest star.
+        The show has also made name for itself in its fearless satirical take on politics,
+        media and American life in general.","first_aired":"1989-12-18T01:00:00.000Z","airs":{"day":"Sunday","time":"20:00","timezone":"America/New_York"},"runtime":22,"certification":"TV-PG","country":"us","status":"returning
+        series","rating":8.26793,"votes":24163,"comment_count":78,"trailer":"https://youtube.com/watch?v=_jgYEYERYFQ","homepage":"http://www.thesimpsons.com/","network":"FOX","updated_at":"2025-08-03T07:31:30.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lb","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","ta","th","tr","uk","uz","vi","zh"],"genres":["animation","comedy","family"],"subgenres":["adult-animation","parody","satire"],"aired_episodes":786,"original_title":"The
+        Simpsons"},{"title":"Rick and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null},"tagline":"Science
+        makes sense, family doesn''t.","overview":"Rick is a mentally-unbalanced but
+        scientifically gifted old man who has recently reconnected with his family.
+        He spends most of his time involving his young grandson Morty in dangerous,
+        outlandish adventures throughout space and alternate universes. Compounded
+        with Morty''s already unstable family life, these events cause Morty much
+        distress at home and school.","first_aired":"2013-12-03T04:00:00.000Z","airs":{"day":"Sunday","time":"23:00","timezone":"America/New_York"},"runtime":22,"certification":"TV-14","country":"us","status":"returning
+        series","rating":8.70113,"votes":34584,"comment_count":89,"trailer":"https://youtube.com/watch?v=WNhH00OIPP0","homepage":"http://www.adultswim.com/videos/rick-and-morty","network":"Adult
+        Swim","updated_at":"2025-08-03T16:55:27.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["animation","comedy","fantasy","science-fiction","action","adventure"],"subgenres":["adult-animation","time-travel"],"aired_episodes":81,"original_title":"Rick
+        and Morty"},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null},"tagline":"Her
+        throne is calling.","overview":"Set in a ruined medieval city called Dreamland,
+        Disenchantment follows the grubby adventures of a hard-drinking princess,
+        her feisty elf companion and her personal demon.","first_aired":"2018-08-17T07:00:00.000Z","airs":{"day":"Wednesday","time":"03:00","timezone":"America/New_York"},"runtime":27,"certification":"TV-MA","country":"us","status":"ended","rating":7.21411,"votes":6492,"comment_count":48,"trailer":null,"homepage":"http://www.netflix.com/title/80095697","network":"Netflix","updated_at":"2025-08-03T08:19:17.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fi","fr","he","hr","hu","it","ja","ko","lt","nl","no","pl","pt","ru","sk","sr","sv","th","tr","uk","zh"],"genres":["animation","comedy","action","adventure","fantasy","science-fiction"],"subgenres":["adult-animation","fairy-tale"],"aired_episodes":50,"original_title":"Disenchantment"},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null},"tagline":"","overview":"An
+        astronaut named Gary and his planet-destroying sidekick Mooncake embark on
+        serialized journeys through space in order to unlock the mystery of “Final
+        Space,” the last point in the universe, if it actually does exist.","first_aired":"2018-02-26T05:30:00.000Z","airs":{"day":"Monday","time":"00:30","timezone":"America/New_York"},"runtime":22,"certification":"TV-14","country":"us","status":"canceled","rating":8.02958,"votes":3381,"comment_count":39,"trailer":"https://youtube.com/watch?v=KTXIIOzyyE8","homepage":"http://www.adultswim.com/videos/final-space","network":"Adult
+        Swim","updated_at":"2025-08-03T08:20:17.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fi","fr","he","hi","hu","id","it","ja","ko","lt","nb","nl","nn","no","pl","pt","ro","ru","sk","sv","th","tr","uk","vi","zh"],"genres":["animation","adventure","action","fantasy","science-fiction","comedy"],"subgenres":[],"aired_episodes":36,"original_title":"Final
+        Space"},{"title":"South Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null},"tagline":"Four
+        boys. One f**ked-up town.","overview":"Follow the misadventures of four irreverent
+        grade-schoolers in the quiet, dysfunctional town of South Park, Colorado.","first_aired":"1997-08-14T02:00:00.000Z","airs":{"day":"Wednesday","time":"22:00","timezone":"America/New_York"},"runtime":22,"certification":"TV-MA","country":"us","status":"returning
+        series","rating":8.45433,"votes":21634,"comment_count":48,"trailer":null,"homepage":"http://southpark.cc.com/","network":"Comedy
+        Central","updated_at":"2025-08-03T16:55:48.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nb","nl","nn","no","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["animation","comedy"],"subgenres":["adult-animation","parody","satire"],"aired_episodes":322,"original_title":"South
+        Park"},{"title":"Family Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null},"tagline":"Parental
+        Discretion Advised, that''s how you know it''s good.","overview":"Sick, twisted,
+        politically incorrect and Freakin'' Sweet animated series featuring the adventures
+        of the dysfunctional Griffin family. Bumbling Peter and long-suffering Lois
+        have three kids. Stewie (a brilliant but sadistic baby bent on killing his
+        mother and taking over the world), Meg (the oldest, and is the most unpopular
+        girl in town) and Chris (the middle kid, he''s not very bright but has a passion
+        for movies). The final member of the family is Brian - a talking dog and much
+        more than a pet, he keeps Stewie in check whilst sipping Martinis and sorting
+        through his own life issues.","first_aired":"1999-02-01T01:30:00.000Z","airs":{"day":"Sunday","time":"20:30","timezone":"America/New_York"},"runtime":22,"certification":"TV-14","country":"us","status":"returning
+        series","rating":7.76526,"votes":21287,"comment_count":59,"trailer":"https://youtube.com/watch?v=J32iwo65RMc","homepage":"http://www.fox.com/family-guy","network":"FOX","updated_at":"2025-08-04T07:00:01.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","zh"],"genres":["animation","comedy"],"subgenres":["adult-animation","parody","satire"],"aired_episodes":441,"original_title":"Family
+        Guy"},{"title":"BoJack Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null},"tagline":"Don''t
+        look back. You''re not going that way.","overview":"Meet the most beloved
+        sitcom horse of the ''90s , 20 years later. He''s a curmudgeon with a heart
+        of...not quite gold...but something like gold. Copper?","first_aired":"2014-08-22T07:00:00.000Z","airs":{"day":"Friday","time":"03:00","timezone":"America/New_York"},"runtime":25,"certification":"TV-MA","country":"us","status":"ended","rating":8.62442,"votes":12181,"comment_count":68,"trailer":"https://youtube.com/watch?v=i1eJMig5Ik4","homepage":"http://www.netflix.com/title/70300800","network":"Netflix","updated_at":"2025-08-03T15:42:34.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","et","fa","fi","fr","he","hu","id","it","ja","ka","ko","lt","nl","no","pl","pt","ro","ru","sk","sv","th","tr","uk","vi","zh"],"genres":["animation","comedy","drama"],"subgenres":["adult-animation","satire"],"aired_episodes":76,"original_title":"BoJack
+        Horseman"},{"title":"Solar Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null},"tagline":"Buckle
+        up for another crazy ride.","overview":"A family of aliens from a much better
+        world must take refuge in middle America after the destruction of their planet.
+        Their mission: protect the Pupa, a living super computer that will one day
+        evolve into its true form, consume them and terraform the Earth.","first_aired":"2020-05-08T07:00:00.000Z","airs":{"day":"Monday","time":"03:00","timezone":"America/New_York"},"runtime":23,"certification":"TV-MA","country":"us","status":"returning
+        series","rating":7.57951,"votes":2616,"comment_count":35,"trailer":"https://youtube.com/watch?v=sMDb4ewturw","homepage":"http://www.hulu.com/series/solar-opposites-f089664b-1a87-433b-86a5-24e7da5a246a","network":"Hulu","updated_at":"2025-08-03T16:53:52.000Z","language":"en","languages":["en"],"available_translations":["bg","cs","da","de","el","en","es","fi","fr","he","hu","it","ja","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sv","th","tr","uk","zh"],"genres":["animation","comedy","fantasy","science-fiction"],"subgenres":["adult-animation"],"aired_episodes":49,"original_title":"Solar
+        Opposites"},{"title":"Gravity Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null},"tagline":"Just
+        west of weird.","overview":"Twin brother and sister Dipper and Mabel Pines
+        are in for an unexpected adventure when they spend the summer helping their
+        great uncle Stan run a tourist trap in the mysterious town of Gravity Falls,
+        Oregon.","first_aired":"2012-06-16T01:30:00.000Z","airs":{"day":"Friday","time":"21:30","timezone":"America/New_York"},"runtime":22,"certification":"TV-Y7","country":"us","status":"ended","rating":8.84428,"votes":9395,"comment_count":33,"trailer":"https://youtube.com/watch?v=yfUDIPUETUg","homepage":"http://disneyxd.disney.com/gravity-falls","network":"Disney
+        Channel","updated_at":"2025-08-03T16:49:28.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","cs","da","de","el","en","es","fa","fi","fr","he","hu","it","ja","ka","ko","lt","nl","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["animation","comedy","mystery","fantasy","science-fiction","children","action","adventure","family"],"subgenres":["coming-of-age","magic","time-travel"],"aired_episodes":40,"original_title":"Gravity
+        Falls"},{"title":"Adventure Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null},"tagline":"They’re
+        not righteous, they’re wrongteous!","overview":"Unlikely heroes Finn and Jake
+        are buddies who traverse the mystical Land of Ooo. The best of friends, our
+        heroes always find themselves in the middle of escapades. Finn and Jake depend
+        on each other through thick and thin.","first_aired":"2010-04-05T07:00:00.000Z","airs":{"day":"Thursday","time":"03:00","timezone":"America/New_York"},"runtime":11,"certification":"TV-PG","country":"us","status":"ended","rating":8.71658,"votes":8168,"comment_count":35,"trailer":"https://youtube.com/watch?v=dQX4tS9JSj8","homepage":"http://www.cartoonnetwork.com/video/adventuretime/","network":"Cartoon
+        Network","updated_at":"2025-08-04T07:28:32.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","de","el","en","es","fi","fr","he","hu","it","ja","ka","ko","lt","nl","no","pl","pt","ro","ru","sk","sv","th","tr","uk","uz","vi","zh"],"genres":["animation","comedy","fantasy","science-fiction"],"subgenres":["talking-animal","magic","vampire"],"aired_episodes":279,"original_title":"Adventure
+        Time"}]'
+  recorded_at: 2025-08-04 08:06:41
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?extended=min&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:41 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e8ccea7bf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:41 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '20'
+      etag: W/"63cc3c4989019b9e95554264f490767b"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":994,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 936be4de-f895-43c8-a842-7ad33498ded2
+      x-runtime: '0.019594'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:41
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?extended=min&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:41 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e8ccea7bf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:41 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '20'
+      etag: W/"63cc3c4989019b9e95554264f490767b"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":994,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 936be4de-f895-43c8-a842-7ad33498ded2
+      x-runtime: '0.019594'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:41
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?extended=min&limit=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e909d17bf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '20'
+      etag: W/"63cc3c4989019b9e95554264f490767b"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":980,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: fca7f5f7-f7cc-4a8b-ae25-3fc3a80d2047
+      x-runtime: '0.016649'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?extended=min&limit=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e909d17bf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '20'
+      etag: W/"63cc3c4989019b9e95554264f490767b"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":980,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: fca7f5f7-f7cc-4a8b-ae25-3fc3a80d2047
+      x-runtime: '0.016649'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/inception-2010/related?extended=min&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e91cee4bf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-movie-updated-at: '2025-08-03T17:10:45.000Z'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '20'
+      etag: W/"96b7dd766602e211d2646e73fe432ff9"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":976,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: c5b3ebee-a565-4bd2-8f75-65cfc9f4dab8
+      x-runtime: '0.016384'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Matrix","year":1999,"ids":{"trakt":481,"slug":"the-matrix-1999","imdb":"tt0133093","tmdb":603}},{"title":"Interstellar","year":2014,"ids":{"trakt":102156,"slug":"interstellar-2014","imdb":"tt0816692","tmdb":157336}},{"title":"Memento","year":2000,"ids":{"trakt":47,"slug":"memento-2000","imdb":"tt0209144","tmdb":77}},{"title":"Source
+        Code","year":2011,"ids":{"trakt":31151,"slug":"source-code-2011","imdb":"tt0945513","tmdb":45612}},{"title":"Shutter
+        Island","year":2010,"ids":{"trakt":6422,"slug":"shutter-island-2010","imdb":"tt1130884","tmdb":11324}},{"title":"Minority
+        Report","year":2002,"ids":{"trakt":145,"slug":"minority-report-2002","imdb":"tt0181689","tmdb":180}},{"title":"The
+        Prestige","year":2006,"ids":{"trakt":851,"slug":"the-prestige-2006","imdb":"tt0482571","tmdb":1124}},{"title":"Blade
+        Runner 2049","year":2017,"ids":{"trakt":216716,"slug":"blade-runner-2049-2017","imdb":"tt1856101","tmdb":335984}},{"title":"Tenet","year":2020,"ids":{"trakt":427989,"slug":"tenet-2020","imdb":"tt6723592","tmdb":577922}},{"title":"Edge
+        of Tomorrow","year":2014,"ids":{"trakt":92230,"slug":"edge-of-tomorrow-2014","imdb":"tt1631867","tmdb":137113}}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/inception-2010/related?extended=min&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e91cee4bf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-movie-updated-at: '2025-08-03T17:10:45.000Z'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '20'
+      etag: W/"96b7dd766602e211d2646e73fe432ff9"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":976,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: c5b3ebee-a565-4bd2-8f75-65cfc9f4dab8
+      x-runtime: '0.016384'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Matrix","year":1999,"ids":{"trakt":481,"slug":"the-matrix-1999","imdb":"tt0133093","tmdb":603}},{"title":"Interstellar","year":2014,"ids":{"trakt":102156,"slug":"interstellar-2014","imdb":"tt0816692","tmdb":157336}},{"title":"Memento","year":2000,"ids":{"trakt":47,"slug":"memento-2000","imdb":"tt0209144","tmdb":77}},{"title":"Source
+        Code","year":2011,"ids":{"trakt":31151,"slug":"source-code-2011","imdb":"tt0945513","tmdb":45612}},{"title":"Shutter
+        Island","year":2010,"ids":{"trakt":6422,"slug":"shutter-island-2010","imdb":"tt1130884","tmdb":11324}},{"title":"Minority
+        Report","year":2002,"ids":{"trakt":145,"slug":"minority-report-2002","imdb":"tt0181689","tmdb":180}},{"title":"The
+        Prestige","year":2006,"ids":{"trakt":851,"slug":"the-prestige-2006","imdb":"tt0482571","tmdb":1124}},{"title":"Blade
+        Runner 2049","year":2017,"ids":{"trakt":216716,"slug":"blade-runner-2049-2017","imdb":"tt1856101","tmdb":335984}},{"title":"Tenet","year":2020,"ids":{"trakt":427989,"slug":"tenet-2020","imdb":"tt6723592","tmdb":577922}},{"title":"Edge
+        of Tomorrow","year":2014,"ids":{"trakt":92230,"slug":"edge-of-tomorrow-2014","imdb":"tt1631867","tmdb":137113}}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/inception-2010/related?extended=full&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e92e878bf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-movie-updated-at: '2025-08-03T17:10:45.000Z'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '20'
+      etag: W/"96b7dd766602e211d2646e73fe432ff9"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":971,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: c6c7bbf2-802a-4259-83e2-10c720e29e32
+      x-runtime: '0.043563'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Matrix","year":1999,"ids":{"trakt":481,"slug":"the-matrix-1999","imdb":"tt0133093","tmdb":603},"tagline":"Believe
+        the unbelievable.","overview":"Set in the 22nd century, The Matrix tells the
+        story of a computer hacker who joins a group of underground insurgents fighting
+        the vast and powerful computers who now rule the earth.","released":"1999-03-31","runtime":136,"country":"us","status":"released","rating":8.74579,"votes":69996,"comment_count":144,"trailer":"https://youtube.com/watch?v=d0XTFAMmhrE","homepage":"http://www.warnerbros.com/matrix","updated_at":"2025-08-03T16:56:57.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","gl","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","mk","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["action","science-fiction"],"subgenres":["martial-arts","cyberpunk","virtual-reality"],"certification":"R","original_title":"The
+        Matrix","after_credits":false,"during_credits":false},{"title":"Interstellar","year":2014,"ids":{"trakt":102156,"slug":"interstellar-2014","imdb":"tt0816692","tmdb":157336},"tagline":"Mankind
+        was born on Earth. It was never meant to die here.","overview":"The adventures
+        of a group of explorers who make use of a newly discovered wormhole to surpass
+        the limitations on human space travel and conquer the vast distances involved
+        in an interstellar voyage.","released":"2014-11-05","runtime":169,"country":"us","status":"released","rating":8.6265,"votes":85486,"comment_count":296,"trailer":"https://youtube.com/watch?v=LY19rHKAaAg","homepage":"http://www.interstellarmovie.net/","updated_at":"2025-08-03T17:16:57.000Z","language":"en","languages":["en"],"available_translations":["ar","az","be","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","tw","uk","uz","vi","zh"],"genres":["science-fiction","drama","adventure"],"subgenres":["expedition"],"certification":"PG-13","original_title":"Interstellar","after_credits":false,"during_credits":false},{"title":"Memento","year":2000,"ids":{"trakt":47,"slug":"memento-2000","imdb":"tt0209144","tmdb":77},"tagline":"Some
+        memories are best forgotten.","overview":"Leonard Shelby is tracking down
+        the man who raped and murdered his wife. The difficulty of locating his wife''s
+        killer, however, is compounded by the fact that he suffers from a rare, untreatable
+        form of short-term memory loss. Although he can recall details of life before
+        his accident, Leonard cannot remember what happened fifteen minutes ago, where
+        he''s going, or why.","released":"2001-03-16","runtime":113,"country":"us","status":"released","rating":8.34975,"votes":30293,"comment_count":83,"trailer":"https://youtube.com/watch?v=Rq9eM4ZXRgs","homepage":null,"updated_at":"2025-08-03T16:59:47.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["mystery","thriller"],"subgenres":["revenge","neo-noir","whodunit","psychological-thriller"],"certification":"R","original_title":"Memento","after_credits":false,"during_credits":false},{"title":"Source
+        Code","year":2011,"ids":{"trakt":31151,"slug":"source-code-2011","imdb":"tt0945513","tmdb":45612},"tagline":"Make
+        every second count.","overview":"When decorated soldier Captain Colter Stevens
+        wakes up in the body of an unknown man, he discovers he''s part of a mission
+        to find the bomber of a Chicago commuter train.","released":"2011-04-01","runtime":93,"country":"us","status":"released","rating":7.53588,"votes":18870,"comment_count":73,"trailer":"https://youtube.com/watch?v=fAp0dzFXL6k","homepage":"http://www.enterthesourcecode.com","updated_at":"2025-08-03T17:18:27.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","vi","zh"],"genres":["mystery","science-fiction","thriller"],"subgenres":["virtual-reality"],"certification":"PG-13","original_title":"Source
+        Code","after_credits":false,"during_credits":false},{"title":"Shutter Island","year":2010,"ids":{"trakt":6422,"slug":"shutter-island-2010","imdb":"tt1130884","tmdb":11324},"tagline":"Some
+        places never let you go.","overview":"World War II soldier-turned-U.S. Marshal
+        Teddy Daniels investigates the disappearance of a patient from a hospital
+        for the criminally insane, but his efforts are compromised by troubling visions
+        and a mysterious doctor.","released":"2010-02-19","runtime":138,"country":"us","status":"released","rating":8.1954,"votes":38643,"comment_count":73,"trailer":"https://youtube.com/watch?v=qdPw9x9h5CY","homepage":"http://www.shutterisland.com/","updated_at":"2025-08-03T17:11:19.000Z","language":"en","languages":["en","de"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["drama","mystery","thriller"],"subgenres":["neo-noir","whodunit","psychological-thriller"],"certification":"R","original_title":"Shutter
+        Island","after_credits":false,"during_credits":false},{"title":"Minority Report","year":2002,"ids":{"trakt":145,"slug":"minority-report-2002","imdb":"tt0181689","tmdb":180},"tagline":"Everybody
+        runs.","overview":"John Anderton is a top ''Precrime'' cop in the late-21st
+        century, when technology can predict crimes before they''re committed. But
+        Anderton becomes the quarry when another investigator targets him for a murder
+        charge.","released":"2002-06-21","runtime":145,"country":"us","status":"released","rating":7.71183,"votes":20634,"comment_count":42,"trailer":"https://youtube.com/watch?v=3JNsNp2DVSE","homepage":null,"updated_at":"2025-08-03T17:12:19.000Z","language":"en","languages":["en","sv"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["action","science-fiction","thriller"],"subgenres":["conspiracy","conspiracy-thriller"],"certification":"PG-13","original_title":"Minority
+        Report","after_credits":false,"during_credits":false},{"title":"The Prestige","year":2006,"ids":{"trakt":851,"slug":"the-prestige-2006","imdb":"tt0482571","tmdb":1124},"tagline":"Are
+        You Watching Closely?","overview":"A mysterious story of two magicians whose
+        intense rivalry leads them on a life-long battle for supremacy -- full of
+        obsession, deceit and jealousy with dangerous and deadly consequences.","released":"2006-10-17","runtime":130,"country":"us","status":"released","rating":8.38743,"votes":34060,"comment_count":86,"trailer":"https://youtube.com/watch?v=ObGVA1WOqyE","homepage":"http://wwws.warnerbros.de/theprestige/","updated_at":"2025-08-03T17:00:12.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["drama","mystery","science-fiction"],"subgenres":["magic","competition","steampunk"],"certification":"PG-13","original_title":"The
+        Prestige","after_credits":false,"during_credits":false},{"title":"Blade Runner
+        2049","year":2017,"ids":{"trakt":216716,"slug":"blade-runner-2049-2017","imdb":"tt1856101","tmdb":335984},"tagline":"The
+        key to the future is finally unearthed.","overview":"Thirty years after the
+        events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried
+        secret that has the potential to plunge what''s left of society into chaos.
+        K''s discovery leads him on a quest to find Rick Deckard, a former LAPD blade
+        runner who has been missing for 30 years.","released":"2017-10-06","runtime":164,"country":"us","status":"released","rating":7.79432,"votes":36805,"comment_count":155,"trailer":"https://youtube.com/watch?v=geFtxCSz8xI","homepage":"http://bladerunnermovie.com/","updated_at":"2025-08-03T17:22:14.000Z","language":"en","languages":["en","fi","hu","ja","ru","so","es"],"available_translations":["ar","be","bg","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["science-fiction","drama"],"subgenres":["bounty-hunter","cyberpunk","android"],"certification":"R","original_title":"Blade
+        Runner 2049","after_credits":false,"during_credits":false},{"title":"Tenet","year":2020,"ids":{"trakt":427989,"slug":"tenet-2020","imdb":"tt6723592","tmdb":577922},"tagline":"Time
+        runs out.","overview":"Armed with only one word - Tenet - and fighting for
+        the survival of the entire world, the Protagonist journeys through a twilight
+        world of international espionage on a mission that will unfold in something
+        beyond real time.","released":"2020-09-03","runtime":150,"country":"us","status":"released","rating":7.27727,"votes":29552,"comment_count":283,"trailer":"https://youtube.com/watch?v=KJP5RunZUKk","homepage":"http://www.tenetfilm.com/","updated_at":"2025-08-03T17:28:07.000Z","language":"en","languages":["en","et"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","my","nl","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["action","thriller","science-fiction"],"subgenres":["assassin","time-travel"],"certification":"PG-13","original_title":"Tenet","after_credits":false,"during_credits":false},{"title":"Edge
+        of Tomorrow","year":2014,"ids":{"trakt":92230,"slug":"edge-of-tomorrow-2014","imdb":"tt1631867","tmdb":137113},"tagline":"Live.
+        Die. Repeat.","overview":"Major Bill Cage is an officer who has never seen
+        a day of combat when he is unceremoniously demoted and dropped into combat.
+        Cage is killed within minutes, managing to take an alpha alien down with him.
+        He awakens back at the beginning of the same day and is forced to fight and
+        die again... and again - as physical contact with the alien has thrown him
+        into a time loop.","released":"2014-06-06","runtime":114,"country":"us","status":"released","rating":7.93136,"votes":43314,"comment_count":126,"trailer":"https://youtube.com/watch?v=eb8wTIcGLgQ","homepage":"http://www.warnerbros.com/movies/edge-tomorrow","updated_at":"2025-08-03T17:14:00.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["action","science-fiction"],"subgenres":["alien-invasion","war-hero"],"certification":"PG-13","original_title":"Edge
+        of Tomorrow","after_credits":false,"during_credits":false}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/NA/related?extended=min&limit=10
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      cf-ray: 969c8e946a9ebf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-movie-updated-at: '2025-04-08T19:25:05.000Z'
+      x-pagination-page-count: '0'
+      x-pagination-item-count: '0'
+      etag: W/"236f423846c17cd73fe069ba9c771d55"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":915,"until":"2025-08-02T15:40:00Z"}'
+      x-request-id: 9b51f715-3677-49f2-afd1-a0220c981053
+      x-runtime: '0.019087'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2025-08-04 08:06:42
+recorded_with: VCR-vcr/2.0.0

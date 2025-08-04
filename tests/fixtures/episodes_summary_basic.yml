@@ -1,0 +1,233 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:54 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c1a9e04bb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '1388'
+      x-show-season-id: '3950'
+      expires: Sun, 03 Aug 2025 21:30:54 GMT
+      x-show-updated-at: '2025-08-03T06:28:12.000Z'
+      last-modified: Sun, 03 Aug 2025 04:08:51 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":993,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: ba69553e-3805-43f5-aa99-5ab9b8efcd2c
+      x-runtime: '0.017201'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"season":1,"number":1,"title":"Pilot","ids":{"trakt":73482,"tvdb":349232,"imdb":"tt0959621","tmdb":62085,"tvrage":null}}'
+  recorded_at: 2025-08-03 18:16:22
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:54 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c1a9e04bb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '1388'
+      x-show-season-id: '3950'
+      expires: Sun, 03 Aug 2025 21:30:54 GMT
+      x-show-updated-at: '2025-08-03T06:28:12.000Z'
+      last-modified: Sun, 03 Aug 2025 04:08:51 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":993,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: ba69553e-3805-43f5-aa99-5ab9b8efcd2c
+      x-runtime: '0.017201'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"season":1,"number":1,"title":"Pilot","ids":{"trakt":73482,"tvdb":349232,"imdb":"tt0959621","tmdb":62085,"tvrage":null}}'
+  recorded_at: 2025-08-03 18:16:23
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/episodes/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:55 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c1c3f02bb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Sun, 03 Aug 2025 21:30:55 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      last-modified: Sun, 03 Aug 2025 04:50:11 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":982,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: 5dd2938b-8baa-40be-9af9-1ab57fa0f871
+      x-runtime: '0.027763'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"season":1,"number":1,"title":"Space Pilot 3000","ids":{"trakt":38803,"tvdb":131174,"imdb":"tt0584449","tmdb":35006,"tvrage":null}}'
+  recorded_at: 2025-08-03 18:16:23
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:54 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c1a9e04bb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '1388'
+      x-show-season-id: '3950'
+      expires: Sun, 03 Aug 2025 21:30:54 GMT
+      x-show-updated-at: '2025-08-03T06:28:12.000Z'
+      last-modified: Sun, 03 Aug 2025 04:08:51 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":993,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: ba69553e-3805-43f5-aa99-5ab9b8efcd2c
+      x-runtime: '0.017201'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"season":1,"number":1,"title":"Pilot","ids":{"trakt":73482,"tvdb":349232,"imdb":"tt0959621","tmdb":62085,"tvrage":null}}'
+  recorded_at: 2025-08-03 18:16:23
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/2/episodes/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:55 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c1ee8d5bb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '1388'
+      x-show-season-id: '3951'
+      expires: Sun, 03 Aug 2025 21:30:55 GMT
+      x-show-updated-at: '2025-08-03T06:28:12.000Z'
+      last-modified: Sun, 03 Aug 2025 04:08:51 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":976,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: f6c4319d-b382-4291-a358-f7aa017fcaa6
+      x-runtime: '0.014228'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"season":2,"number":1,"title":"Seven Thirty-Seven","ids":{"trakt":73489,"tvdb":438912,"imdb":"tt1232244","tmdb":972873,"tvrage":null}}'
+  recorded_at: 2025-08-03 18:16:23
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:54 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c1a9e04bb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '1388'
+      x-show-season-id: '3950'
+      expires: Sun, 03 Aug 2025 21:30:54 GMT
+      x-show-updated-at: '2025-08-03T06:28:12.000Z'
+      last-modified: Sun, 03 Aug 2025 04:08:51 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":993,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: ba69553e-3805-43f5-aa99-5ab9b8efcd2c
+      x-runtime: '0.017201'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"season":1,"number":1,"title":"Pilot","ids":{"trakt":73482,"tvdb":349232,"imdb":"tt0959621","tmdb":62085,"tvrage":null}}'
+  recorded_at: 2025-08-03 18:16:23
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/2?extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:55 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c2009afbb5f-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '1388'
+      x-show-season-id: '3950'
+      expires: Sun, 03 Aug 2025 21:30:55 GMT
+      x-show-updated-at: '2025-08-03T06:28:12.000Z'
+      last-modified: Sun, 03 Aug 2025 09:32:08 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":970,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: b7976ab1-f344-48da-b0a3-ea47a2ed4b48
+      x-runtime: '0.011429'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"season":1,"number":2,"title":"Cat''s in the Bag...","ids":{"trakt":73483,"tvdb":349233,"imdb":"tt1054724","tmdb":62086,"tvrage":null}}'
+  recorded_at: 2025-08-03 18:16:23
+recorded_with: VCR-vcr/2.0.0

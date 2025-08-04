@@ -1,4 +1,8 @@
 test_that("user_list_comments works", {
+	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("user_list_comments")
 	nm <- c(
 		"id",
 		"comment",

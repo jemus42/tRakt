@@ -1,0 +1,428 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/190430/aliases
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      cf-ray: 969c8e9428ab7f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-movie-updated-at: '2025-08-02T06:31:27.000Z'
+      etag: W/"e8c3b38060e82205390e8de086c2a7eb"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":992,"until":"2025-08-02T15:40:00Z"}'
+      x-request-id: e9ddf2b9-bf47-4c5f-895d-6c67e504cebf
+      x-runtime: '0.015182'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"X-Men Origins: Deadpool","country":"us"},{"title":"X-Men:
+        Deadpool","country":"us"},{"title":"Deadpool","country":"br"},{"title":"Дедпул","country":"bg"},{"title":"Dedpul","country":"rs"},{"title":"Дэдпул","country":"ru"},{"title":"惡棍英雄：死侍","country":"tw"},{"title":"死侍：不死现身","country":"cn"},{"title":"X战警：死侍","country":"cn"},{"title":"Deadpool
+        1","country":"us"},{"title":"Masacre","country":"es"},{"title":"데드풀","country":"kr"},{"title":"死侍","country":"cn"},{"title":"08
+        Deadpool","country":"cz"},{"title":"Deadpool 01 Deadpool","country":"us"},{"title":"เดดพูล","country":"th"},{"title":"Deadpool
+        1 Erase una vez Deadpool","country":"es"},{"title":"X-Men 8 - Deadpool","country":"us"},{"title":"Deadpool
+        1","country":"es"},{"title":"Marvel - Deadpool 1","country":"fr"},{"title":"Deadpool
+        I","country":"us"},{"title":"X-Men 8: Deadpool","country":"us"},{"title":"Deadpool
+        1","country":"de"},{"title":"Deadpool 2016","country":"jp"},{"title":"Quái
+        Nhân Deadpool","country":"vn"},{"title":"死侍：不死現身","country":"hk"},{"title":"死侍：不死現身","country":"tw"},{"title":"デッドプール：2016","country":"jp"},{"title":"Deadpool:
+        1","country":"es"},{"title":"死侍1","country":"cn"}]'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/104439/aliases
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      age: '9059'
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      cf-ray: 969c8e953a487f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-show-updated-at: '2025-07-12T06:35:06.000Z'
+      etag: W/"873758797f2ed694c1b13088699df284"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":980,"until":"2025-07-12T13:15:00Z"}'
+      x-request-id: 17e9d329-9b33-455f-9ee9-cee464a80f00
+      x-runtime: '0.033646'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"Очень странные дела","country":"us"},{"title":"Странные
+        вещи","country":"us"},{"title":"Загадкові справи","country":"ua"},{"title":"Keisti
+        dalykai","country":"lt"},{"title":"Крайне странные события","country":"ru"},{"title":"უცნაური
+        საქმეები","country":"ge"},{"title":"Stranger Things (2016)","country":"cn"},{"title":"Stranger
+        Things","country":"cn"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Странные вещи","country":"ru"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Дивні дива 3","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Дивні дива 2","country":"ua"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Дивні дива 2","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Дивні дива 2","country":"ua"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Дивні дива 2","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Дивні дива 2","country":"ua"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Дивні дива 2","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Дивні дива 2","country":"ua"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Дивні дива 2","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"기묘한
+        이야기","country":"kr"},{"title":"Крайне странные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 3","country":"ua"},{"title":"Stranger
+        Things 3","country":"us"},{"title":"Крайне странные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 3","country":"ua"},{"title":"Stranger
+        Things 3","country":"us"},{"title":"Крайне странные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 3","country":"ua"},{"title":"Stranger
+        Things 3","country":"us"},{"title":"Крайне странные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 3","country":"ua"},{"title":"Stranger
+        Things 3","country":"us"},{"title":"Крайне странные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 3","country":"ua"},{"title":"Stranger
+        Things 3","country":"us"},{"title":"Крайне странные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 3","country":"ua"},{"title":"Stranger
+        Things 3","country":"us"},{"title":"Крайне странные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 3","country":"ua"},{"title":"Stranger
+        Things 3","country":"us"},{"title":"Крайне странные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 3","country":"ua"},{"title":"Stranger
+        Things 3","country":"us"},{"title":"Крайне странные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 3","country":"ua"},{"title":"Stranger
+        Things 3","country":"us"},{"title":"Крайне странные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Különös dolgok","country":"hu"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 2","country":"ua"},{"title":"Stranger Things 2","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Странные вещи","country":"ru"},{"title":"Крайне
+        странные события","country":"ru"},{"title":"Загадкові справи","country":"ua"},{"title":"Дивні
+        дива 3","country":"ua"},{"title":"Stranger Things 3","country":"us"},{"title":"Странные
+        вещи","country":"ru"},{"title":"Загадочные события","country":"ru"},{"title":"Загадкові
+        справи","country":"ua"},{"title":"Дивні дива 2","country":"ua"},{"title":"Stranger
+        Things 2","country":"us"},{"title":"Cậu Bé Mất Tích","country":"vn"},{"title":"Bagulhos
+        Sinistros","country":"br"},{"title":"怪奇物语","country":"cn"},{"title":"ストレンジャー・シングス","country":"jp"},{"title":"Чудни
+        Нешта","country":"mk"},{"title":"Zvláštne veci","country":"sk"},{"title":"Tuhaf
+        Şeyler","country":"tr"},{"title":"Lakeridge","country":"us"},{"title":"Montauk","country":"us"},{"title":"Stranger
+        Things 4","country":"us"},{"title":"اتفاقات عجیب","country":"ir"},{"title":"Παράξενα
+        Πράγματα","country":"gr"},{"title":"Stranger Things: Keményebb leckék","country":"hu"},{"title":"Stranger
+        Things","country":"us"},{"title":"Coisas Estranhas","country":"br"},{"title":"Stranger
+        Things","country":"pt"},{"title":"Extraño al revés","country":"cu"},{"title":"Cosas
+        Extrañas","country":"mx"},{"title":"осд","country":"ru"},{"title":"ОСД","country":"ru"},{"title":"Странные
+        дела","country":"ru"},{"title":"Stranger Things 5","country":"us"},{"title":"أشياء
+        غريبة","country":"sa"}]'
+  recorded_at: 2025-08-04 08:06:43
+recorded_with: VCR-vcr/2.0.0

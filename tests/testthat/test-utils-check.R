@@ -1,5 +1,8 @@
 test_that("check_user throws errors when it should", {
 	skip_on_cran()
+	skip_if_not_installed("vcr")
+
+	vcr::local_cassette("utils_check_username")
 
 	expect_error(check_username(user = NULL))
 	expect_error(check_username(user = NA))
