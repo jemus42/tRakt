@@ -60,8 +60,8 @@ test_that("media_stats does things", {
 test_that("seasons_stats works", {
 	vcr::local_cassette("seasons_stats_futurama")
 
-	seasons_stats("futurama", 1:2) |>
-		expect_tibble() -> res
+	res <- seasons_stats("futurama", 1:2) |>
+		expect_tibble()
 
 	res$season |> expect_equal(1:2)
 })
@@ -69,8 +69,8 @@ test_that("seasons_stats works", {
 test_that("episodes_stats works", {
 	vcr::local_cassette("episodes_stats_futurama")
 
-	episodes_stats("futurama", 1:2, 3:4) |>
-		expect_tibble() -> res
+	res <- episodes_stats("futurama", 1:2, 3:4) |>
+		expect_tibble()
 
 	res$season |> expect_equal(c(1, 1, 2, 2))
 	res$episode |> expect_equal(c(3, 4, 3, 4))
