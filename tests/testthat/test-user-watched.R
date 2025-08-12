@@ -1,14 +1,21 @@
 test_that("user_watched works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("user-user-watched_basic")
 
 	# Use real user with smaller collection for more manageable test data
 	user <- "sean"
-	
+
 	# Define minimum expected columns
-	shows_base_cols <- c("plays", "last_watched_at", "last_updated_at", "title", "year", "trakt", "slug")
+	shows_base_cols <- c(
+		"plays",
+		"last_watched_at",
+		"last_updated_at",
+		"title",
+		"year",
+		"trakt",
+		"slug"
+	)
 	movies_cols <- c("plays", "last_watched_at", "last_updated_at", "title", "year", "trakt", "slug")
 
 	# shows ----

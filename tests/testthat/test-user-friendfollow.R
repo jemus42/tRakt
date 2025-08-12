@@ -1,6 +1,5 @@
 test_that("user_network stuff works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("user-user-friendfollow_basic")
 

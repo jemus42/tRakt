@@ -1,6 +1,5 @@
 test_that("user_ratings works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("user-user-ratings_basic")
 
@@ -11,12 +10,12 @@ test_that("user_ratings works", {
 	shows_cols <- c("rated_at", "rating", "type", "title", "year", "trakt", "slug")
 	movies_cols <- c("rated_at", "rating", "type", "title", "year", "trakt", "slug")
 	episodes_cols <- c("rated_at", "rating", "type", "episode", "show")
-	
+
 	# A single user with limited results ----
 	user_ratings(user = user, type = "shows", limit = 3) |>
 		expect_tibble(min_cols = shows_cols)
 	user_ratings(user = user, type = "seasons", limit = 2) |>
-		expect_tibble()  # May be empty for this user
+		expect_tibble() # May be empty for this user
 	user_ratings(user = user, type = "episodes", limit = 2) |>
 		expect_tibble(min_cols = episodes_cols)
 	user_ratings(user = user, type = "movies", limit = 3) |>

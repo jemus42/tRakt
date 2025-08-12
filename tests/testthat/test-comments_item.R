@@ -1,6 +1,5 @@
 test_that("comments_item works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("comments_item_works")
 	# A movie

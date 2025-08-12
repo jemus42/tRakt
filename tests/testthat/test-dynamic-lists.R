@@ -1,6 +1,5 @@
 test_that("popular_media works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("popular_media")
 
@@ -29,7 +28,6 @@ test_that("popular_media works", {
 
 test_that("trending_media works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("trending_media")
 
@@ -58,7 +56,6 @@ test_that("trending_media works", {
 
 test_that("anticipated_media works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("anticipated_media")
 
@@ -86,11 +83,8 @@ test_that("anticipated_media works", {
 })
 
 test_that("played_media and watched_media also do things", {
-	)
-
 	vcr::local_cassette("played_watched_media")
 
-	
 	# Both have the same variables, the difference is just sorting
 	nm_shows <- c(
 		"watcher_count",
@@ -132,11 +126,8 @@ test_that("played_media and watched_media also do things", {
 })
 
 test_that("collected_media does its thing", {
-	)
-
 	vcr::local_cassette("collected_media")
 
-	
 	shows_collected(limit = 5) |>
 		expect_s3_class("tbl") |>
 		expect_length(11) |>
@@ -149,17 +140,3 @@ test_that("collected_media does its thing", {
 		nrow() |>
 		expect_equal(5)
 })
-#
-# test_that("updated_media works", {
-#   shows_updates() |>
-#     expect_s3_class("tbl") |>
-#     expect_length(8) |>
-#     nrow() |>
-#     expect_equal(10)
-#
-#   movies_updates() |>
-#     expect_s3_class("tbl") |>
-#     expect_length(7) |>
-#     nrow() |>
-#     expect_equal(10)
-# })

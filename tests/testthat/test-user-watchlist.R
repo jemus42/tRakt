@@ -1,6 +1,5 @@
 test_that("user_watchlist works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("user-user-watchlist_basic")
 

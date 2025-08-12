@@ -1,6 +1,5 @@
 test_that("search_query works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("search_query_basic")
 
@@ -35,7 +34,6 @@ test_that("search_query works", {
 
 test_that("search_id works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("search_id_basic")
 

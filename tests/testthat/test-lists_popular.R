@@ -1,6 +1,5 @@
 test_that("Popular/trending lists work", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("lists_popular_and_trending")
 	list_names <- c(

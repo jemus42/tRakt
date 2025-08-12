@@ -1,6 +1,5 @@
 test_that("user_list_comments works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("user_list_comments")
 	nm <- c(

@@ -1,6 +1,5 @@
 test_that("user_list_items are correct", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("user-user-list-items_basic")
 

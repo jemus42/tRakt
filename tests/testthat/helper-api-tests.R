@@ -1,20 +1,20 @@
 # Helper functions for robust API response testing
 
 #' Check that a data frame contains at least the expected columns
-#' 
+#'
 #' This function tests that all expected columns are present in the data frame,
 #' but allows for additional columns that the API may add in the future.
 #' Following testthat best practices for custom expectations.
-#' 
+#'
 #' @param object The data frame to test
 #' @param expected_cols Character vector of expected column names
 #' @param label Optional label for the test
 #' @param info Extra information to be printed on failure
 expect_contains_at_least <- function(object, expected_cols, label = NULL, info = NULL) {
 	act <- testthat::quasi_label(rlang::enquo(object), label)
-	
+
 	missing_cols <- setdiff(expected_cols, names(act$val))
-	
+
 	testthat::expect(
 		length(missing_cols) == 0,
 		sprintf(
@@ -24,7 +24,7 @@ expect_contains_at_least <- function(object, expected_cols, label = NULL, info =
 			if (!is.null(info)) info else ""
 		)
 	)
-	
+
 	invisible(act$val)
 }
 

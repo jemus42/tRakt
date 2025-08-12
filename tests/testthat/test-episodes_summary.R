@@ -1,6 +1,5 @@
 test_that("episodes_summary works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("episodes_summary_basic")
 	episode_summary_names_min <- c(

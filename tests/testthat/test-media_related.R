@@ -1,6 +1,5 @@
 test_that("media_related works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("media_related_shows_movies")
 

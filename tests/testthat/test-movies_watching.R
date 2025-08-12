@@ -1,9 +1,8 @@
 test_that("media_watching works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("media_watching")
-	
+
 	# Define minimum expected columns for watching functions
 	nm_min <- c(
 		"username",
@@ -15,7 +14,7 @@ test_that("media_watching works", {
 		"director",
 		"user_slug"
 	)
-	
+
 	nm_extended <- c(
 		nm_min,
 		"joined_at",
@@ -25,7 +24,7 @@ test_that("media_watching works", {
 		"age",
 		"avatar"
 	)
-	
+
 	movies_watching("deadpool-2016") |>
 		expect_tibble(min_cols = nm_min)
 

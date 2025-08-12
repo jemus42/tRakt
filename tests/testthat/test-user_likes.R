@@ -1,6 +1,5 @@
 test_that("user_likes works", {
 	skip_if_no_auth()
-	)
 
 	vcr::local_cassette("user-likes_auth")
 

@@ -1,6 +1,5 @@
 test_that("media translations work", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("media_translations")
 	nm_movie <- c("title", "overview", "tagline", "language", "country")

@@ -1,6 +1,5 @@
 test_that("comments_comment()", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("comments_comment")
 	nm_min <- c(
@@ -30,7 +29,6 @@ test_that("comments_comment()", {
 
 test_that("comments_replies()", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("comments_replies")
 	nm_min <- c(
@@ -60,7 +58,6 @@ test_that("comments_replies()", {
 
 test_that("comments_likes()", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("comments_likes")
 	nm_min <- c(
@@ -80,7 +77,6 @@ test_that("comments_likes()", {
 
 test_that("comments_item()", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("comments_item")
 	nm_min <- c(

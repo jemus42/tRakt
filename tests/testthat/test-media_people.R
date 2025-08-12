@@ -1,6 +1,5 @@
 test_that("media_people works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("media_people")
 	movies_people("deadpool-2016") |>

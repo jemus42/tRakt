@@ -1,6 +1,5 @@
 test_that("user_history does things", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("user-user-history_basic")
 

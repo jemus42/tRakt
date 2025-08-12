@@ -1,6 +1,5 @@
 test_that("shows_(next|last)_episode() works", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("shows_next_last_episode_one_piece")
 

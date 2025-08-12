@@ -1,6 +1,5 @@
 test_that("media lists work", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("media_lists_basic")
 	media_list_names <- c(

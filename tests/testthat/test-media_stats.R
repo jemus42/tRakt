@@ -1,6 +1,5 @@
 test_that("user_stats works for 1 user", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("user_stats_single")
 
@@ -22,7 +21,6 @@ test_that("user_stats works for 1 user", {
 
 test_that("user_stats works for multiple users", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("user_stats_multiple")
 
@@ -46,7 +44,6 @@ test_that("user_stats works for multiple users", {
 
 test_that("media_stats does things", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("media_stats_basic")
 
@@ -61,8 +58,6 @@ test_that("media_stats does things", {
 })
 
 test_that("seasons_stats works", {
-	)
-
 	vcr::local_cassette("seasons_stats_futurama")
 
 	seasons_stats("futurama", 1:2) |>
@@ -72,8 +67,6 @@ test_that("seasons_stats works", {
 })
 
 test_that("episodes_stats works", {
-	)
-
 	vcr::local_cassette("episodes_stats_futurama")
 
 	episodes_stats("futurama", 1:2, 3:4) |>

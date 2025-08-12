@@ -1,6 +1,5 @@
 test_that("aliases work", {
 	skip_on_cran()
-	)
 
 	vcr::local_cassette("movies_aliases_and_shows_aliases")
 	movies_aliases(190430) |>
