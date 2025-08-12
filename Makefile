@@ -1,7 +1,12 @@
-all: doc README.md
+all: format doc README.md
+
+.PHONY: format
+format:
+	air format .
 
 .PHONY: doc
 doc:
+	Rscript -e "usethis::use_tidy_description()"
 	Rscript -e "devtools::document()"
 
 .PHONY: check
@@ -13,8 +18,8 @@ build: doc
 	Rscript -e "devtools::build()"
 
 .PHONY: install
-install:
-	Rescript -e "pak::local_install(upgrade = FALSE)"
+install: doc
+	Rscript -e "pak::local_install(upgrade = FALSE)"
 
 .PHONY: test
 test:
@@ -31,11 +36,18 @@ README.md: README.Rmd
 	-rm README.html
 
 .PHONY: site
-site: doc
+site: doc README.md
 	Rscript -e "pkgdown::build_site()"
+
+codemeta.json: DESCRIPTION
+	Rscript -e "codemetar::write_codemeta()"
+
+.PHONY:
+release: clean doc site codemeta.json
 
 clean:
 	-rm README.md
 	-rm -r README_cache
 	-rm man/*.rd
 	-rm NAMESPACE
+	$(MAKE) doc

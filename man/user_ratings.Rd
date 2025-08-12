@@ -11,7 +11,8 @@ user_ratings(
   user = "me",
   type = c("movies", "seasons", "shows", "episodes"),
   rating = NULL,
-  extended = c("min", "full")
+  extended = c("min", "full"),
+  limit = NULL
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ functions, values \code{seasons} or \code{episodes} are also allowed.}
 \item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
 returns more variables and should generally only be used if required.
 See \code{vignette("tRakt")} for more details.}
+
+\item{limit}{\code{integer(1) [NULL]}: Number of items to return. If \code{NULL} (default), all items are returned.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

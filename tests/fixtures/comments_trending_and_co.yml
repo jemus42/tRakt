@@ -1,0 +1,601 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/trending/reviews/all?include_replies=FALSE&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:47 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e8c5beacaf9-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 09:06:41 GMT
+      x-pagination-page-count: '3992'
+      x-pagination-item-count: '39917'
+      cache-control: max-age=3600, public
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":997,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"62a00727ca0e31c84ea17f3701089f90"
+      x-request-id: 5eaf8f11-30e8-4e9f-ba50-4241654f670f
+      x-runtime: '6.395216'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: "[{\"type\":\"episode\",\"episode\":{\"season\":27,\"number\":1,\"title\":\"Sermon
+        on the 'Mount\",\"ids\":{\"trakt\":12960822,\"tvdb\":11064797,\"imdb\":\"tt26764413\",\"tmdb\":6090091,\"tvrage\":null}},\"show\":{\"title\":\"South
+        Park\",\"year\":1997,\"ids\":{\"trakt\":2177,\"slug\":\"south-park\",\"tvdb\":75897,\"imdb\":\"tt0121955\",\"tmdb\":2190,\"tvrage\":null}},\"comment\":{\"id\":840252,\"comment\":\"[9.0/10]
+        It’s been a long time since *South Park* was bold and biting. The show is
+        still topical sometimes, and has the occasional barb to throw at some unwitting
+        target despite being in the middle of its third decade on air. But it’s been
+        quite some time since the series felt challenging, daring, even a little dangerous.\\r\\n\\r\\nThat
+        changed with “Sermon on the Mount”.\\r\\n\\r\\nSuddenly, *South Park* is taking
+        direct aim at power again. Suddenly, *South Park* is calling out the President’s
+        rank hypocrisy directly again. Suddenly, *South Park* is willing to call out
+        its own parent company for knuckling under to censorship and corruption again.
+        It’s a fucking breath of fresh air.\\r\\n\\r\\nLet’s start with the easiest
+        point. It’s refreshing and funny to see Matt and Trey set their sights on
+        Trump directly with the trademark *South Park* approach. Don’t get me wrong,
+        I appreciated the sideways creativity of using Mr. Garrison as the show’s
+        vehicle to comment on Donald’s dumbassery. It made the show’s take on Trump
+        different than everyone else’s, and occasionally led to [legitimately cutting
+        commentary](https://trakt.tv/comments/150894). But different times call for
+        different measures, and it’s nice to see the creative changing up their approach
+        given the even more blatant bullshit happening in his second term. (Plus hey,
+        it’s genuinely nice to see that Garrison’s reformed after the events of [“Spring
+        Break”](https://trakt.tv/comments/556773).)\\r\\n\\r\\nIt’s one thing to have
+        characters simply declare that Donald has turned into a tin-pot dictator straight
+        out of the Middle East. It’s quite another for the show to give him the Saddam
+        Hussein treatment: the same voice, the same approach to character design,
+        the same “gay lovers with Satan” conceit. Reimagining Trump as a modern day
+        Saddam is a great way to (a.) pull from the show’s history (b.) demean the
+        guy, and (c.) make the commentary that Trump’s a shameless wannabe dictator
+        that much more plain.\\r\\n\\r\\nThe schtick’s still funny, and for once,
+        it feels like the gloves are truly off with the series striking back at Trump.
+        Some of that is the show’s usual vulgar touch. The constant references to
+        Trump having a tiny penis -- a dig the series previously reserved for Osama
+        Bin Laden -- are superficial. (Then again, so is the subject matter.) But
+        it’s done in such a direct, constant, and ridiculous manner that it wraps
+        back around to being hilarious. Some of it is pointing out the rank hypocrisy
+        of Trump claiming the mantle of Christianity and imposing religion everywhere
+        he can, while surrounding himself with slags and lechers and acting about
+        as ungodly as a person can. Some of it is calling out the bullshit his administration
+        is inflicting and promoting directly.\\r\\n\\r\\n*South Park* takes a broad
+        approach to that. It’s telling that the denizens of the town all object to
+        Trump for different reasons. Randy doesn’t like having religion established
+        in his son’s school. Butters’ parents bristle at the idea that you shouldn't
+        care about the environment at all. Even the representative of the “Dey took
+        er jerbs!” crowd is mad at Trump for just enriching himself instead of doing
+        their handiwork. The fact that the citizens of South Park voice complaints
+        about Donald’s failing from across the spectrum helps give their criticisms
+        power.\\r\\n\\r\\nBut few things are more damning than the show making the
+        point that Trump has tried to remake the world in the image of no less a graven
+        idol than Eric Cartman.\\r\\n\\r\\nMy god, pointing out the way the way Trump
+        has normalized antisemitism, slurs, general hatred, to where Cartman doesn’t
+        even know what to do with himself anymore is about as searing a commentary
+        on Donald as *South Park* can offer. There’s some genuine pathos in Cartman
+        himself feeling lost and listless now that everyone’s acting like him. (Shades
+        of [a different episode](https://trakt.tv/comments/829892) from [his old pal](https://trakt.tv/comments/713077)
+        Bart Simpson). And there’s plenty of laughs in Eric trying to force his fatalism
+        on Butters, replete with a futile attempt at suicide by electric car. But
+        the most cutting part of the critique is in the idea that Trump has created
+        the kind of country that would give *South Park*’s resident mouthpiece for
+        every selfish, harsh, and hateful perspective there is everything he’s ever
+        wanted.\\r\\n\\r\\nThat's not all the series has in bags of tricks, though.
+        *South Park* has offered political commentary, with various degrees of sting,
+        for decades at this point. What stands out, and gives the sense that the show
+        is back to its roots, is in its willingness to both bite the hand that feeds
+        and thumb its nose (or other appendages) at the powers that be.\\r\\n\\r\\nThe
+        title of “The Sermon on the ‘Mount” is not just an homage to Christ’s famous
+        homily, or an extension of the MAGA crowd strong-arming even the likes of
+        PC Principal into forcing Jesus into public schools. It’s a thinly-veiled
+        reference to Paramount, *South Park*’s corporate parent, and the way it kowtowed
+        to Donald’s bullshit legal claims in order to facilitate a merger. More than
+        offering a wide-ranging takedown of Trump, Trey Parker and Matt Stone rail
+        against their own corporate bedfellows for censoring, bribing, and capitulating
+        to a corrupt President, with a wink and a nod for how it might affect their
+        own show.\\r\\n\\r\\nIt’s one thing to depict *60 Minutes* anchors walking
+        on eggshells not to offend dear leader. It’s one thing to depict Trump himself
+        that he’ll frivolously bring lawsuits against anyone and everyone for any
+        perceived slight, no matter how minor. But it’s quite another to have Jesus
+        himself warn the citizens of the town that, the President is suing anyone
+        he doesn’t like, accepting bribes in return to mollify him, and wielding the
+        power of the state to punish those who won’t.\\r\\n\\r\\nGood lord, it is
+        nice to see *South Park* be that transgressive again. It’s nice to see the
+        show spoiling for a fight again. It’s nice to see Trey and Matt calling out
+        the hypocrisy of those in power and the abject cowardice of the people who
+        sign their checks again. It’s nice to see the show itself refusing to back
+        down, laying their damning critiques of the President and his enabler bare
+        and practically daring Donald or Paramount to do something about it.\\r\\n\\r\\nContrary
+        to popular belief, *South Park* didn’t sit on the sidelines for the past decade.
+        The show’s boldest and most introspective stretch to date came with season
+        20 in 2016, when the show’s creators confronted the role that their work played
+        in emboldening trolls and creating a world where someone like Donald could
+        be venerated for his mean-spirited cruelty (so long as it was directed at
+        the “right people”) rather than summarily rejected. But in the years since,
+        its potshots have been haphazard, and its willingness to confront the monster
+        it helped create has been sporadic at best, in spite, or because of, the number
+        of easy targets he offered.\\r\\n\\r\\nNow, finally, it feels like *South
+        Park* isn’t pulling its punches anymore. This is the show that took a stand
+        against censorship in the face of violent threats. This is the show that challenged
+        the famously litigious Church of Scientology to sue over its criticisms. This
+        is the show that caused headaches for its network and called the suits out
+        directly in its most controversial episodes.\\r\\n\\r\\nIn an era when everyone
+        else seems to be giving into a nakedly corrupt shitstain of a president, when
+        the people who speak up like Stephen Colbert get shut down by their corporate
+        masters, this series is stepping up. The show’s using its bullhorn to tell
+        the world, in more ways than one, that this thin-skinned wannabe emperor has
+        no clothes, and doesn’t seem to care about the consequences. For the first
+        time in forever, *South Park* feels daring, dangerous, and undaunted again.
+        And Jesus Christ, it’s about time.\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2025-07-25T06:13:24.000Z\",\"updated_at\":\"2025-07-25T06:13:24.000Z\",\"replies\":4,\"likes\":27,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"AndrewBloom\",\"private\":false,\"deleted\":false,\"name\":\"Andrew
+        Bloom\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"andrewbloom\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"The
+        Fantastic 4: First Steps\",\"year\":2025,\"ids\":{\"trakt\":460087,\"slug\":\"the-fantastic-4-first-steps-2025\",\"imdb\":\"tt10676052\",\"tmdb\":617126}},\"comment\":{\"id\":839970,\"comment\":\"I
+        genuinely think this is one of the best marvel movies they’ve made and the
+        best adaptation of the Fantastic four, it’s a surprisingly grounded story
+        despite the stakes that centres on the family. It has a really nice use of
+        ‘show don’t tell’ with the first five minutes, it gives you a view of who
+        the characters are, their backstory’s, relationships, personalities and how
+        they got their powers in a quick and easily digestible way that feels organic
+        to the story!\\n\\nThe use of music in this movie is also incredible I really
+        love how it’s done, this along with the visuals and very thought out world
+        building of Earth-828 gives this movie an aesthetic I don’t think other marvel
+        movies will be able to top\\n\\nMy only criticism honestly is that it could
+        have been a good 20-30 minutes longer which in all honestly is more a compliment
+        to the writing , there were scenes in the trailer not in the final movie that
+        I was bummed to find out were not because we were missing action or important
+        story plot points but just because I wanted to see more of the characters
+        and how they interact, the actors did brilliantly, in fact everyone who worked
+        on this movie did brilliantly \\n\\nI can’t wait to see more of them in doomsday
+        and Secret wars and honestly hopefully after those two because I honestly
+        love these guys they could make ten more stories of just them hanging out
+        and I would be thrilled!\\n\\n10/10 hope they release an extended cut because
+        I need more of this!!\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2025-07-24T15:37:18.000Z\",\"updated_at\":\"2025-07-24T15:37:18.000Z\",\"replies\":2,\"likes\":27,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"WhoLetMothHyperfix\",\"private\":false,\"deleted\":false,\"name\":\"WhoLetMothHyperfix\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"wholetmothhyperfix\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"28
+        Years Later\",\"year\":2025,\"ids\":{\"trakt\":885672,\"slug\":\"28-years-later-2025\",\"imdb\":\"tt10548174\",\"tmdb\":1100988}},\"comment\":{\"id\":826245,\"comment\":\"There
+        are few films that have had as much of an impact on me as “28 Days Later.”
+        I watched it several times in my youth, sometimes three times in a row, and
+        I was always thrilled. The film was also instrumental in breathing new life
+        into the zombie genre in the early 2000s. The sequel, “28 Weeks Later,” this
+        time without director Danny Boyle and screenwriter Alex Garland, was decent,
+        but it was also a very conventional take on the genre.\\r\\n\\r\\nThe question
+        that most intrigued me before watching “28 Years Later” was definitely what
+        prompted Boyle and Garland to return to this world after more than two decades.
+        And it quickly becomes clear that they had no interest in retelling the same
+        story.\\r\\n\\r\\nOn the contrary, “28 Years Later” is refreshingly unpredictable.
+        It is primarily a coming-of-age film set in a fascinating world where the
+        apocalypse has affected a small part of the globe while the rest of the world
+        simply carries on. In 28 years, the infected have evolved, and the survivors
+        have developed their own unique structures.\\r\\n\\r\\nBoyle's direction makes
+        for a thoroughly captivating film to watch. The editing takes some getting
+        used to, but it is also extremely creative, and the landscapes are skillfully
+        showcased. The screenplay is also worthy of praise. There is suspense and
+        horror as well as a surprising amount of humor, with the plot clearly divided
+        into two parts. Alfie Williams plays the lead role in both sections, and the
+        young actor delivers an impressive performance. Jodie Comer and Aaron Taylor-Johnson
+        are also good, and it should come as no surprise that Ralph Fiennes does a
+        great job in his minor role.\\r\\n\\r\\nThat leaves the ending to mention,
+        which is sure to divide viewers. The sequel is already reportedly in the can,
+        and after this ending, it is likely to take on a very different tone. This
+        would be true to the spirit of “28 Years Later,” because the unpredictability
+        is what sets the film apart. Ultimately, I am thrilled that a blockbuster
+        in 2025 is willing to take such risks.\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2025-06-20T17:48:32.000Z\",\"updated_at\":\"2025-06-20T17:48:32.000Z\",\"replies\":1,\"likes\":26,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"AlfieSGD\",\"private\":false,\"deleted\":false,\"name\":\"Toralf\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"alfiesgd\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Happy
+        Gilmore 2\",\"year\":2025,\"ids\":{\"trakt\":1024811,\"slug\":\"happy-gilmore-2-2025\",\"imdb\":\"tt31868189\",\"tmdb\":1263256}},\"comment\":{\"id\":840462,\"comment\":\"Sandler’s
+        return as Happy feels like catching up with an old mate. He is 60 now, a little
+        slower and more serious, and that shift gives the comedy an extra kick for
+        those of us who grew up with films like Billy Madison, Waterboy and Big Daddy.
+        It is a mix of sharp gags and a touch of melancholy, watching a legend try
+        to prove he is still got it.\\r\\n\\r\\nThe family angle lands well. His sons
+        mirror his old rage and wit, which sparks some of the funniest moments. Julie
+        Bowen slips back in seamlessly, now carrying the kind of presence she earned
+        through Modern Family. The soundtrack leans on Skynyrd, Tom Petty and other
+        rock staples, giving every montage a jolt of energy.\\r\\n\\r\\nThen come
+        the cameos. Eminem is a riot, Margaret Qualley, Post Malone, Becky Lynch,
+        Ben Stiller and Benny Safdie all show up, and golf icons make surprise appearances
+        that had the crowd laughing. Shooter McGavin’s reintroduction is a highlight,
+        played with gleeful absurdity. The final championship goes completely off
+        the rails, think Space Jam chaos, but the film’s heart keeps it grounded enough
+        to work.\\r\\n\\r\\nIt is a love letter to a kind of comedy that barely exists
+        now. If you loved the first, you will be grinning start to finish. \\r\\nIf
+        you never liked Sandler’s 90s madness, this will not be the one to win you
+        over.\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2025-07-25T19:42:44.000Z\",\"updated_at\":\"2025-07-25T19:42:44.000Z\",\"replies\":1,\"likes\":9,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"threespoons\",\"private\":false,\"deleted\":false,\"name\":\"ThreeSpoons\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"threespoons\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":4,\"title\":\"Call
+        Me Red\",\"ids\":{\"trakt\":12853594,\"tvdb\":11088744,\"imdb\":\"tt36351467\",\"tmdb\":6201594,\"tvrage\":null}},\"show\":{\"title\":\"Dexter:
+        Resurrection\",\"year\":2025,\"ids\":{\"trakt\":249647,\"slug\":\"dexter-resurrection\",\"tvdb\":452595,\"imdb\":\"tt33043892\",\"tmdb\":259909,\"tvrage\":null}},\"comment\":{\"id\":840324,\"comment\":\"Finally
+        a really really good episode in this “Dexter: Resurrection“ show. From this
+        first four episodes, this one had a good balance, had good twists and turns,
+        got some nice motivations, dialogue and scenes.\\n\\nThe first three eposodes
+        are kind of very rushed reset and exposition to things to come. The whole
+        Dark Passenger serial killer arc was just for the build up to get to Leon
+        Prater (Peter Dinklage), the real antagonist of this show. Well, it took three
+        episodes and lazy, convenient writing to get here. A pity, but now I can say:\\n\\nDexter
+        is back and feels now in episode four really good. I hope they keep the good
+        flow.\\n\\nAngel Batistas arc is nice and I like that he got more and good
+        screentime. \\nThe dialogues between Dexter and Harry are also well written
+        and even Harrison with his dilemma and his scenes with Batista and Det. Wallace
+        are convincing. \\n\\nNice seeing some known faces as serial killer characters
+        in supporting roles: Krysten Ritter, Neil Patrick Harris, David Dastmalchian,
+        Eric Stonestreet.\\n\\nFingers crossed that the show keeps now this level
+        and quality.\\n\\nThe trophy scene and all the lovely details, foremost: Dexter
+        sees his trophies that he lost in season two of the original Dexter show and
+        his reaction to it. Well done, dear show host and writers.\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2025-07-25T11:51:53.000Z\",\"updated_at\":\"2025-07-26T19:42:44.000Z\",\"replies\":0,\"likes\":12,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Monsieur
+        FU\",\"private\":false,\"deleted\":false,\"name\":\"Monsieur FU\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"monsieur-fu\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"28
+        Years Later\",\"year\":2025,\"ids\":{\"trakt\":885672,\"slug\":\"28-years-later-2025\",\"imdb\":\"tt10548174\",\"tmdb\":1100988}},\"comment\":{\"id\":825795,\"comment\":\"This
+        is probably the worst movie I’ve seen in a decade and it’s especially bad
+        because it has almost no connection to the tone of the previous films. If
+        you're expecting, like I was, something similar to the other two movies, forget
+        it. The first half of the film feels somewhat consistent with the previous
+        ones (and to be fair, it’s actually pretty interesting), but the second half
+        takes a completely different direction and not in a good way.\\r\\n\\r\\nThe
+        tone shifts drastically, and the interactions become forced, awkward, and
+        completely unnatural. Just when I thought it couldn’t get any worse, the movie
+        hit me with the final scene. That last scene was the most cringe-worthy and
+        completely random thing I’ve ever witnessed. It was so absurd that it instantly
+        turned the film into a trash movie and I hate trash movies.\\r\\n\\r\\nThat
+        wouldn’t be a problem if I had been expecting it, but guess what the two previous
+        movies weren’t trash movies. So it’s completely natural to go in and not expect
+        a fucking trash movie scene. It honestly felt like the director was playing
+        some kind of joke on the audience and we were the punchline for expecting
+        anything meaningful from this film.\\r\\n\\r\\nAnd the worst part: there wasn't
+        John Murphy's music (In The House - In a Heart Beat), it should be considered
+        a crime and should outrage any sane person.\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2025-06-19T03:46:31.000Z\",\"updated_at\":\"2025-06-24T18:48:52.000Z\",\"replies\":5,\"likes\":12,\"user_rating\":1,\"language\":\"en\",\"user_stats\":{\"rating\":1,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"ramosesh\",\"private\":false,\"deleted\":false,\"name\":\"Ramoses
+        Hofmeister Ferreira\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"ramosesh\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Causeway\",\"year\":2022,\"ids\":{\"trakt\":441649,\"slug\":\"causeway-2022\",\"imdb\":\"tt10192406\",\"tmdb\":595586}},\"comment\":{\"id\":515783,\"comment\":\"A
+        slow-burn, slice-of-life drama about the lasting effects of trauma and the
+        agonisingly slow road to recovery. A delightful bit of introspective cinema
+        that highlights friendship and platonic intimacy over the usual cliche'd romance
+        as the ailment to all our problems. Causeway does the delightful thing of
+        slowly opening these characters lives through passing dialogue and insightful
+        conversation, highlighting what has lead these two characters to their respective
+        places that aren't so different, even if the path to get there was wildly
+        far apart. Great piece of contemporary drama with stellar performances from
+        Lawrence and Henry, so much is conveyed with so little and really helps the
+        delivery of this sensitive movie. Some will probably bemoan that \\\"nothing
+        happens\\\" upon completion of this movie, but I'd argue that is the entire
+        point; these characters are contemplating and stewing on what has lead them
+        here and how to move on. It is a character first drama, and if you're not
+        prepared to sit back and understand the nuances of these people, you'll probably
+        have a bad time. For me, this was some stellar drama with a fresh angle highlighting
+        friendship instead of romance as the crutch that can keep us going in the
+        darkest times in life. It possibly lacks a layer of depth to make it truly
+        great, but what there is here is very good stuff for the right audience. Really
+        good stuff indeed.\\r\\n\\r\\n--- Spoiler filled musings beyond this point
+        that might be off-base ---\\r\\n\\r\\n[spoiler]I'm still trying to fully place
+        the metaphor of pools and large bodies of water throughout the movie. I assumed
+        they were representive of the brain/mind; gunking up and filling with moss/trash/rubbish
+        that life throws in that we must continually clear ourselves of to stay functional
+        and clear. Only then, much like at the end of the movie when Lynsey dives
+        into the public pool, are we able to dive in amongst everyone else and lead
+        a stable life? [/spoiler]\\r\\n\\r\\n[spoiler]The truck is also symbolic of
+        Lynsey I suppose, giving herself over to James to work on her while she's
+        broken down. The parts to fix her might not be in the town she grew up in,
+        but the people can find them from else where to get her back up and running?
+        Maybe a stretch but I like it as an allegory. [/spoiler]\\r\\n\\r\\n[spoiler]I
+        liked the constant reminder of \\\"matching pairs\\\", with Lynsey playing
+        Memory a few times throughout. Lynsey and James obviously being the main matching
+        pair, but also their parents, Lynsey and her brother being equally ruined
+        by their upbringing, both of them having crutches to deal with everything
+        etc. I'd be intrigued to see if there are any other dualities throughout the
+        movie to pull out. [/spoiler]\\r\\n\\r\\n[spoiler]It's very obvious but I
+        enjoyed how, while Afghanistan and the bombing were obviously the main catalyst
+        for Lynsey's issues, it's heavily implied that the unstable, rocky upbringing
+        probably had more of a hand in her instability than the IED. While it was
+        probably the bomb that demolished the camels back (so to speak), the uneven
+        foundation of her childhood clearly made it much harder for her to get back
+        on equal footing with no support system in place. As someone with very \\\"hands
+        off\\\" parents, this resonated with me more than I expected and made my stomach
+        drop a few times during the scenes with her Mom. [/spoiler]\\r\\n\\r\\n[spoiler]Unlike
+        other movies, I was also happy to see that the movie was critical of Lynsey
+        and her coping mechanism for her trauma too. Many of these drama films only
+        navigate the trauma from the perspective of the main character and never usually
+        question if their actions are justified or correct. While running away is
+        a very easy fix, staying and being compassionate is the harder, but ultimately
+        righteous choice that will probably lead to sustained stability and growth.
+        We assume Lynsey will run after she/her truck have been fixed, but she finally
+        sees that she cannot keep running and must stay to fix the wounds that are
+        there. [/spoiler]\\r\\n\\r\\n[spoiler]I look forward to reading all the Reddit
+        analysis and essays that come from this movie that prove me wrong or highlight
+        things that I missed \U0001F604 [/spoiler]\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2022-11-05T12:34:06.000Z\",\"updated_at\":\"2022-11-05T12:36:17.000Z\",\"replies\":3,\"likes\":5,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Xiofire\",\"private\":false,\"deleted\":false,\"name\":\"Xiofire\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"xiofire\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":3,\"number\":9,\"title\":\"Present
+        Tense\",\"ids\":{\"trakt\":12565719,\"tvdb\":11086962,\"imdb\":\"tt36587109\",\"tmdb\":6135827,\"tvrage\":null}},\"show\":{\"title\":\"And
+        Just Like That…\",\"year\":2021,\"ids\":{\"trakt\":172093,\"slug\":\"and-just-like-that\",\"tvdb\":394924,\"imdb\":\"tt13819960\",\"tmdb\":116450,\"tvrage\":null}},\"comment\":{\"id\":840372,\"comment\":\"There’s
+        something bittersweet—but also very necessary—about the final breakup between
+        Carrie and Aidan in this episode of “And Just Like That...,” and the use of
+        Taylor Swift’s “How Did It End?” as the soundtrack to that moment is the emotional
+        cherry on top: delicate, painful, and ironic. This season built up to that
+        ending through some shaky steps and questionable choices, but the resolution
+        finally arrives with a kind of honesty that felt lost somewhere between empty
+        promises and the couple’s endless cycles. For the first time in a long while,
+        Carrie doesn’t just feel frustrated with Aidan—she actually confronts him
+        with the strength that had been missing, calling out the absurdity of the
+        whole “five-year” plan, the controlling behavior dressed up as love, and all
+        his underlying hypocrisy. The confrontation is anthology-worthy, as the series
+        purposefully recycles its own memories—from “tense presents” to unresolved
+        pasts—finally letting Carrie turn the page for real.\\r\\n\\r\\nThis break
+        isn’t sudden; it’s built out of small cracks, and the episode does a great
+        job of revealing them bit by bit. The scene where Aidan comments on the smell
+        of smoke on Carrie and tells her to take a shower with the coldest contempt
+        he’s ever shown? Brutal. Not just because of how he physically repels her,
+        but because of everything that cigarette represents—it’s been a symbol of
+        her autonomy since “Sex and the City,” and also a tool he’s used to manipulate
+        her. The episode lays bare how much resentment Aidan is still holding onto,
+        how much control he still tries to wield, and how unwilling he is to fully
+        forgive something he claims to have moved past. Carrie, on her end, finally
+        realizes she’s been living on his terms, in his timing, making constant compromises.
+        She’s not that woman anymore—the one who used to bend herself to make him
+        comfortable. When she yells “I was” during the fight, it hits like a punch—because
+        she was in it, fully, and he never deserved it.\\r\\n\\r\\nMeanwhile, the
+        episode smartly and subtly brings back that ensemble vibe the show’s always
+        done well, giving meaningful little moments to the supporting cast. The conversation
+        between Miranda and Joy about alcoholism is uncomfortable, but real—it doesn’t
+        sugarcoat or oversimplify what it’s like to live with relapses or personal
+        limits. It’s rare to see the show handle addiction with that kind of raw tenderness,
+        and it really lands. Seema brings in some comic relief with that ridiculous
+        crystal deodorant, a silly little bit that shows how she’s still figuring
+        out how to live with someone. And of course, Patti LuPone’s brief but iconic
+        return as Gia is a total scene-stealer, with blackmail and a fake accent twist
+        that’s both fun and unexpected. Too bad it was so short, though—the potential
+        there was huge. Charlotte and Harry’s storyline still has that “geriatric
+        domestic chaos” energy, but the affection between them holds up, grounding
+        even the more slapstick moments.\\r\\n\\r\\nThe episode is full of callbacks
+        that, rather than feeling cheap or nostalgic for nostalgia’s sake, actually
+        add emotional depth. From the cobbler played by Andy Cohen (a cute nod for
+        longtime fans) to the déjà vu argument about who should go cool off outside,
+        the script is loaded with winks to those who’ve been around since the very
+        beginning. But its biggest win is giving Carrie back to herself. That final
+        scene, with her glowing in a white dress, back in her element with the girls,
+        is too symbolic to ignore: she’s alive again, vibrant, and finally reconnecting
+        with the woman she was before she tried to fit into someone else’s mold. The
+        episode is shorter than usual, but it gets that less is more—and that sometimes,
+        you need to cut off what’s gone rotten so something healthy can grow again.
+        It’s a relief that this cycle with Aidan is finally done—and thank God Carrie,
+        like the rest of us, won’t be wasting any more tears on the past.\",\"spoiler\":true,\"review\":true,\"parent_id\":0,\"created_at\":\"2025-07-25T15:02:05.000Z\",\"updated_at\":\"2025-07-25T15:02:05.000Z\",\"replies\":2,\"likes\":5,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"heyflp\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"heyflp\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":3,\"number\":5,\"title\":\"Tribal\",\"ids\":{\"trakt\":1002079,\"tvdb\":4874873,\"imdb\":\"tt3842948\",\"tmdb\":1016902,\"tvrage\":null}},\"show\":{\"title\":\"Banshee\",\"year\":2013,\"ids\":{\"trakt\":41522,\"slug\":\"banshee\",\"tvdb\":259765,\"imdb\":\"tt2017109\",\"tmdb\":41727,\"tvrage\":null}},\"comment\":{\"id\":716309,\"comment\":\"Random
+        thoughts as I watched this episode:\\n\\nHoly shit! They finally changed the
+        sad chords! It only took them 25 episodes to finally play a different 4 notes
+        when they want the audience to feel sad. I literally said last episode that
+        I would stop watching the show if they played the sad chords one more god
+        damn time.\\n\\nI've now accepted that this show is 100% satire and can't
+        be taken seriously. Sadly, I know that's probably not true, but if it's going
+        to be this stupid then at least I can find entertainment in how stupid it
+        is. It's equally entertaining to read reviews by people who are truly captivated
+        and think this is unironically a great show.\\n\\nAlso, if anyone reads this,
+        please watch a minute of any interview or footage of the actor playing Chayton
+        (the tribal chief) speaking in his normal voice. It's hilarious. Like, some
+        actors are able to pull off fake accents convincingly. But dropping his voice
+        several octaves to sound tough? Holy shit, it's just so dumb. His character
+        is basically what a three year old imagines as a \\\"bad guy\\\".\\n\\nLastly,
+        why Siobhan? Raven was the obvious choice, and/or the former nazi. As other
+        reviewers mentioned, Siobhan was the only likable woman in the entire show.
+        There were so many other angles they could have taken for the inevitable loss
+        in this episode. With that said, I was half expecting her eyes to pop open
+        at the end with how absolutely stupid this show is.\",\"spoiler\":true,\"review\":true,\"parent_id\":0,\"created_at\":\"2024-09-25T00:17:11.000Z\",\"updated_at\":\"2024-09-25T00:18:30.000Z\",\"replies\":7,\"likes\":1,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"DNAXIII\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"dnaxiii\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":6,\"title\":\"Part
+        VI\",\"ids\":{\"trakt\":6010070,\"tvdb\":9083891,\"imdb\":\"tt13841824\",\"tmdb\":3635495,\"tvrage\":null}},\"show\":{\"title\":\"Obi-Wan
+        Kenobi\",\"year\":2022,\"ids\":{\"trakt\":169967,\"slug\":\"obi-wan-kenobi\",\"tvdb\":393199,\"imdb\":\"tt8466564\",\"tmdb\":92830,\"tvrage\":null}},\"comment\":{\"id\":479340,\"comment\":\"The
+        best episode of the season? I think so. More emotion and less bad writing
+        made for a great episode. The inevitable battle surpassed my expectations.
+        Going into it I thought it'd be a silly unbelievable battle, and the ending
+        did live up to that, but overall it was great. The FX and dialogue was perfect
+        for once and delivered and left me wanting for more which is a good thing.\\r\\n\\r\\nI'm
+        still left confused with The Third Sister and the point in her [spoiler]attacking
+        only to just leave everyone traumatised and everyone being ok with that[/spoiler].
+        I did think she had much more depth to her this episode and the last, which
+        is great for her and the character but more was needed to salvage the character.
+        I feel that actress has a lot more to give but I guess the script didn't offer
+        it which reflects bad on her even though it shouldn't.\\r\\n\\r\\nLia was
+        in this far less but when on screen it meant something unlike the last episode.
+        Great interactions and good acting made her moments very emotional and perfectly
+        acted and directed. \\r\\n\\r\\nBefore this episode I was ok with it being
+        over but now I'm left wanting more which is great. Hopefully they have learnt
+        from this season and if they make more it'll be good and better than this
+        season.\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2022-06-22T08:29:43.000Z\",\"updated_at\":\"2022-06-22T10:06:31.000Z\",\"replies\":0,\"likes\":7,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"Walgeon\",\"private\":false,\"deleted\":false,\"name\":\"C\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"walgeon\"}}}}]"
+  recorded_at: 2025-08-04 08:06:47
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/recent/shouts/all?include_replies=FALSE&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:55 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eb5ee93caf9-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 09:06:48 GMT
+      x-pagination-page-count: '66061'
+      x-pagination-item-count: '660601'
+      cache-control: public, max-age=3600
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":860,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"f5120f50a2b57f0c5a06566171569a87"
+      x-request-id: 0693a9e9-5bdf-4449-85fa-addd2b588217
+      x-runtime: '7.006319'
+      cf-cache-status: MISS
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"type":"show","show":{"title":"Star Trek: Strange New Worlds","year":2022,"ids":{"trakt":162206,"slug":"star-trek-strange-new-worlds","tvdb":382389,"imdb":"tt12327578","tmdb":103516,"tvrage":null}},"comment":{"id":844615,"comment":"The
+        cringe is strong in this one. Not a single memorable character, stupid memberberries
+        and fan service for retarded idiots that never watched the original Trek.\r\nFU
+        Kurtzman. Suck on something.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-08-04T07:57:06.000Z","updated_at":"2025-08-04T07:57:29.000Z","replies":0,"likes":0,"user_rating":1,"language":"en","user_stats":{"rating":1,"play_count":0,"completed_count":0},"user":{"username":"jarvis-12406694","private":false,"deleted":false,"name":"Killface69","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"jarvis-12406694"}}}},{"type":"movie","movie":{"title":"War
+        of the Worlds","year":2025,"ids":{"trakt":595350,"slug":"war-of-the-worlds-2025-07-30","imdb":"tt13186306","tmdb":755898}},"comment":{"id":844614,"comment":"Well
+        I enjoyed it. Okay, it''s not the best movie ever made but I thought it was
+        original and definitely worth a watch (probably only once though).","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-08-04T07:56:53.000Z","updated_at":"2025-08-04T07:56:53.000Z","replies":0,"likes":0,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":1,"completed_count":1},"user":{"username":"paulrobson666@duck.com","private":false,"deleted":false,"name":"DryNosedDog","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"paulrobson666-duck-com"}}}},{"type":"movie","movie":{"title":"The
+        Fantastic 4: First Steps","year":2025,"ids":{"trakt":460087,"slug":"the-fantastic-4-first-steps-2025","imdb":"tt10676052","tmdb":617126}},"comment":{"id":844613,"comment":"Well,
+        four boring people, some galactic thread, a creepy CGI baby straight from
+        the cast of Twilight and some minor action scenes.\r\nI have no idea what
+        kind of retarded demographic likes this boring crap.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-08-04T07:51:16.000Z","updated_at":"2025-08-04T07:51:16.000Z","replies":0,"likes":0,"user_rating":5,"language":"en","user_stats":{"rating":5,"play_count":1,"completed_count":1},"user":{"username":"jarvis-12406694","private":false,"deleted":false,"name":"Killface69","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"jarvis-12406694"}}}},{"type":"episode","episode":{"season":0,"number":1,"title":"Farewell
+        to Steven Universe","ids":{"trakt":7350136,"tvdb":null,"imdb":null,"tmdb":4227418,"tvrage":null}},"show":{"title":"Steven
+        Universe Future","year":2019,"ids":{"trakt":153635,"slug":"steven-universe-future","tvdb":370471,"imdb":"tt13714610","tmdb":94280,"tvrage":null}},"comment":{"id":844612,"comment":"It''s
+        just a compilation of random clips from the show with a basic voiceover.\n\nI
+        guess it was meant to go with some kind of other promotional material that
+        isn''t listed here or something.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-08-04T07:49:13.000Z","updated_at":"2025-08-04T07:49:30.000Z","replies":0,"likes":0,"user_rating":5,"language":"en","user_stats":{"rating":5,"play_count":1,"completed_count":1},"user":{"username":"Caleb
+        P.","private":false,"deleted":false,"name":"Caleb Peters","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"caleb-p-a46bc3b5-e62b-451e-be32-7a7dbd4058b1"}}}},{"type":"episode","episode":{"season":1,"number":20,"title":"The
+        Future","ids":{"trakt":4013758,"tvdb":7601426,"imdb":"tt12004394","tmdb":2203542,"tvrage":null}},"show":{"title":"Steven
+        Universe Future","year":2019,"ids":{"trakt":153635,"slug":"steven-universe-future","tvdb":370471,"imdb":"tt13714610","tmdb":94280,"tvrage":null}},"comment":{"id":844611,"comment":"Great
+        callback to the first episode of the original series with the cookie cat scene
+        at the start, and the Gems just kinda immediately accepting it was great (whilst
+        the secondary characters have their own breakdowns lol).\n\nI think it shows
+        how well they know and want to support him, whilst the others were more emotional
+        since they don''t know him as well and aren''t as ready for him to leave.\n\nI
+        also like how he gave everyone a sentimental gift that he knows will mean
+        something to each of them, and finally having the main trio crack at the end
+        \u0026amp; show how much they really care about him.\n\nIt''s a much better
+        conclusion to the franchise than the original''s ending imo, but it still
+        lets them bring everyone back if needed (e.g. he gets homesick and comes to
+        visit or wants to have his wedding in Beach City of something).\n\nBut anyway,
+        I''m finally done watching all of Steven Universe on a whim. It''s not bad.","spoiler":true,"review":false,"parent_id":0,"created_at":"2025-08-04T07:43:22.000Z","updated_at":"2025-08-04T07:43:22.000Z","replies":0,"likes":0,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":1,"completed_count":1},"user":{"username":"Caleb
+        P.","private":false,"deleted":false,"name":"Caleb Peters","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"caleb-p-a46bc3b5-e62b-451e-be32-7a7dbd4058b1"}}}},{"type":"movie","movie":{"title":"My
+        Oxford Year","year":2025,"ids":{"trakt":1066508,"slug":"my-oxford-year-2025","imdb":"tt4978342","tmdb":1307078}},"comment":{"id":844609,"comment":"It
+        was good and I loved both actors but I did not sign up for a tear jerker and
+        they should not have marketed this movie as a romantic comedy! Sometimes you
+        need a pick me up and I was looking to watch a fun, cute romantic comedy and
+        THIS was NOT that!\nDon’t watch this if you’re already down.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-08-04T07:40:05.000Z","updated_at":"2025-08-04T07:40:05.000Z","replies":0,"likes":0,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":1,"completed_count":1},"user":{"username":"MyLife4Me79","private":false,"deleted":false,"name":"Survivor
+        Always","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"mylife4me79"}}}},{"type":"episode","episode":{"season":1,"number":18,"title":"On
+        the Case","ids":{"trakt":3198139,"tvdb":6865692,"imdb":"tt9015036","tmdb":1605724,"tvrage":null}},"show":{"title":"The
+        Bureau of Magical Things","year":2018,"ids":{"trakt":125252,"slug":"the-bureau-of-magical-things","tvdb":337787,"imdb":"tt7153034","tmdb":82791,"tvrage":null}},"comment":{"id":844608,"comment":"A
+        little predictable in how it draws things out, but another pretty good episode.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-08-04T07:33:54.000Z","updated_at":"2025-08-04T07:34:25.000Z","replies":0,"likes":0,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":1,"completed_count":1},"user":{"username":"wpafbo79","private":true,"deleted":false,"ids":{"slug":"wpafbo79"}}}},{"type":"episode","episode":{"season":1,"number":19,"title":"I
+        Am My Monster","ids":{"trakt":4013757,"tvdb":7601425,"imdb":"tt12032306","tmdb":2203541,"tvrage":null}},"show":{"title":"Steven
+        Universe Future","year":2019,"ids":{"trakt":153635,"slug":"steven-universe-future","tvdb":370471,"imdb":"tt13714610","tmdb":94280,"tvrage":null}},"comment":{"id":844607,"comment":"This
+        is a great conclusion to the \"Steven''s Mental Breakdown\" arc, showing how
+        all of his friends still care about him even when he''s too afraid to tell
+        them about it.","spoiler":true,"review":false,"parent_id":0,"created_at":"2025-08-04T07:31:14.000Z","updated_at":"2025-08-04T07:31:14.000Z","replies":0,"likes":0,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":1,"completed_count":1},"user":{"username":"Caleb
+        P.","private":false,"deleted":false,"name":"Caleb Peters","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"caleb-p-a46bc3b5-e62b-451e-be32-7a7dbd4058b1"}}}},{"type":"movie","movie":{"title":"The
+        Inhabitant","year":2022,"ids":{"trakt":610682,"slug":"the-inhabitant-2022","imdb":"tt13635702","tmdb":772973}},"comment":{"id":844606,"comment":"Ooooo
+        ok this one had a little kick to it omg this was fun and exciting and not
+        that bad","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-08-04T07:29:55.000Z","updated_at":"2025-08-04T07:29:55.000Z","replies":0,"likes":0,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":1,"completed_count":1},"user":{"username":"Wolfspirit13748","private":false,"deleted":false,"name":"TØP
+        (Spiritwolf13748)","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"wolfspirit13748"}}}},{"type":"movie","movie":{"title":"Thunderbolts*","year":2025,"ids":{"trakt":792299,"slug":"thunderbolts-2025","imdb":"tt20969586","tmdb":986056}},"comment":{"id":844605,"comment":"What
+        a boring movie. I''m done with superheroes.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-08-04T07:25:11.000Z","updated_at":"2025-08-04T07:25:11.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"namecapsdxb","private":false,"deleted":false,"name":"namecaps","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"namecapsdxb"}}}}]'
+  recorded_at: 2025-08-04 08:06:55
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/updates/all/all?include_replies=FALSE&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:07:02 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ee4380ccaf9-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 09:06:55 GMT
+      x-pagination-page-count: '70052'
+      x-pagination-item-count: '700518'
+      cache-control: public, max-age=3600
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":824,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"2fe16ea94b8fa7dbd580a2c72637f28f"
+      x-request-id: 18bf7a3f-cc12-463f-ac2d-6eafbb3e4d39
+      x-runtime: '6.855756'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: "[{\"type\":\"show\",\"show\":{\"title\":\"Last Week Tonight with John
+        Oliver\",\"year\":2014,\"ids\":{\"trakt\":60267,\"slug\":\"last-week-tonight-with-john-oliver\",\"tvdb\":278518,\"imdb\":\"tt3530232\",\"tmdb\":60694,\"tvrage\":null}},\"comment\":{\"id\":220668,\"comment\":\"One
+        of the best shows on TV. Well researched and gives a realistic look at a sad
+        country.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2019-03-11T14:41:26.000Z\",\"updated_at\":\"2019-03-11T14:41:26.000Z\",\"replies\":0,\"likes\":7,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":568,\"completed_count\":336},\"user\":{\"username\":\"pcliff069\",\"private\":false,\"deleted\":false,\"name\":\"Paul
+        Vincent\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"pcliff069\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Star
+        Trek: Strange New Worlds\",\"year\":2022,\"ids\":{\"trakt\":162206,\"slug\":\"star-trek-strange-new-worlds\",\"tvdb\":382389,\"imdb\":\"tt12327578\",\"tmdb\":103516,\"tvrage\":null}},\"comment\":{\"id\":844615,\"comment\":\"The
+        cringe is strong in this one. Not a single memorable character, stupid memberberries
+        and fan service for retarded idiots that never watched the original Trek.\\r\\nFU
+        Kurtzman. Suck on something.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-08-04T07:57:06.000Z\",\"updated_at\":\"2025-08-04T07:57:29.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":1,\"language\":\"en\",\"user_stats\":{\"rating\":1,\"play_count\":0,\"completed_count\":0},\"user\":{\"username\":\"jarvis-12406694\",\"private\":false,\"deleted\":false,\"name\":\"Killface69\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"jarvis-12406694\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"War
+        of the Worlds\",\"year\":2025,\"ids\":{\"trakt\":595350,\"slug\":\"war-of-the-worlds-2025-07-30\",\"imdb\":\"tt13186306\",\"tmdb\":755898}},\"comment\":{\"id\":844614,\"comment\":\"Well
+        I enjoyed it. Okay, it's not the best movie ever made but I thought it was
+        original and definitely worth a watch (probably only once though).\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-08-04T07:56:53.000Z\",\"updated_at\":\"2025-08-04T07:56:53.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":6,\"language\":\"en\",\"user_stats\":{\"rating\":6,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"paulrobson666@duck.com\",\"private\":false,\"deleted\":false,\"name\":\"DryNosedDog\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"paulrobson666-duck-com\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":3,\"number\":10,\"title\":\"Better
+        Than Sex\",\"ids\":{\"trakt\":12565720,\"tvdb\":11086964,\"imdb\":\"tt36587105\",\"tmdb\":6135828,\"tvrage\":null}},\"show\":{\"title\":\"And
+        Just Like That…\",\"year\":2021,\"ids\":{\"trakt\":172093,\"slug\":\"and-just-like-that\",\"tvdb\":394924,\"imdb\":\"tt13819960\",\"tmdb\":116450,\"tvrage\":null}},\"comment\":{\"id\":843788,\"comment\":\"Despite
+        what producers said officially this week, this show has been cancelled obviously
+        prematurely. Can't say I'm surprised. Can't say I'm sad that they now have
+        to stop destroying this once beloved franchise.\\n\\nCan this English writer
+        please go away? I mean, Carrie sometimes had a very strange taste in men (among
+        them one very strange  author of I remember this correctly and another guy
+        with an exotic accent). I hope that banter and [spoiler]one-night stand[/spoiler]
+        isn't turning into more. This guy isn't funny. This guy isn't witty. He isn't
+        nice. He isn't respectful (remember what an arse he was in the first couple
+        of episodes?). An English accent doesn't convince me otherwise. He's totally
+        annoying.\\n\\nNow she has furniture? After she got rid of her furniture boyfriend?
+        While a deadline for her book is looming she found the time to buy stuff?
+        And while the interior design isn't terrible it looks exactly like a generic
+        American home of that price range. Her fashion taste is much more progressive
+        and, tbh, I expected something spectacular given how much time it took for
+        her to decorate her home. (and if that all was a token for her current state
+        in life [something along the lines that she needed to find a new place in
+        life and needed time to fill a void left by her late husband] it was an idea
+        they never really capitalized on). PS: the garden design is a disappointment
+        too. It also tells you a lot about the show's actual plots. I'm thinking about
+        her interior and garden design much more than I'm supposed to. Nothing of
+        interest happens otherwise.\\n\\nSteve used to be such a nice guy. He probably
+        still is. What happened to him? I know what happened: He was thrown under
+        the bus by bad script writers who entirely killed his decent character! \\n\\nThe
+        show also continues to be boring and tell uninspired stories. Zoom call issues?
+        A mouse at large? A political subplot prepared over the course of several
+        seasons  ends JUST LIKE THAT? Why did they bother us with this lame story
+        (with this lame family) in the first place then?\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2025-08-02T13:59:09.000Z\",\"updated_at\":\"2025-08-04T07:54:04.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":4,\"language\":\"en\",\"user_stats\":{\"rating\":4,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"alexlimberg\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"alexlimberg\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"The
+        Fantastic 4: First Steps\",\"year\":2025,\"ids\":{\"trakt\":460087,\"slug\":\"the-fantastic-4-first-steps-2025\",\"imdb\":\"tt10676052\",\"tmdb\":617126}},\"comment\":{\"id\":844613,\"comment\":\"Well,
+        four boring people, some galactic thread, a creepy CGI baby straight from
+        the cast of Twilight and some minor action scenes.\\r\\nI have no idea what
+        kind of retarded demographic likes this boring crap.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-08-04T07:51:16.000Z\",\"updated_at\":\"2025-08-04T07:51:16.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":5,\"language\":\"en\",\"user_stats\":{\"rating\":5,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"jarvis-12406694\",\"private\":false,\"deleted\":false,\"name\":\"Killface69\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"jarvis-12406694\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":0,\"number\":1,\"title\":\"Farewell
+        to Steven Universe\",\"ids\":{\"trakt\":7350136,\"tvdb\":null,\"imdb\":null,\"tmdb\":4227418,\"tvrage\":null}},\"show\":{\"title\":\"Steven
+        Universe Future\",\"year\":2019,\"ids\":{\"trakt\":153635,\"slug\":\"steven-universe-future\",\"tvdb\":370471,\"imdb\":\"tt13714610\",\"tmdb\":94280,\"tvrage\":null}},\"comment\":{\"id\":844612,\"comment\":\"It's
+        just a compilation of random clips from the show with a basic voiceover.\\n\\nI
+        guess it was meant to go with some kind of other promotional material that
+        isn't listed here or something.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-08-04T07:49:13.000Z\",\"updated_at\":\"2025-08-04T07:49:30.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":5,\"language\":\"en\",\"user_stats\":{\"rating\":5,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Caleb
+        P.\",\"private\":false,\"deleted\":false,\"name\":\"Caleb Peters\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"caleb-p-a46bc3b5-e62b-451e-be32-7a7dbd4058b1\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":3,\"number\":19,\"title\":\"The
+        Basement\",\"ids\":{\"trakt\":2977247,\"tvdb\":6667879,\"imdb\":\"tt10023452\",\"tmdb\":1762615,\"tvrage\":null}},\"show\":{\"title\":\"Attack
+        on Titan\",\"year\":2013,\"ids\":{\"trakt\":1420,\"slug\":\"attack-on-titan\",\"tvdb\":267440,\"imdb\":\"tt2560140\",\"tmdb\":1429,\"tvrage\":null}},\"comment\":{\"id\":492266,\"comment\":\"My
+        theory from what we've seen so far is: The people outside is the world WE
+        know IRL, Jäger is a German name, it means Hunter; Judging from the band Grisha
+        and his sister wore, and the fact that they're in a walled zone. I can only
+        presume they're Jews in WW2 Germany.\\r\\n\\r\\nLittle by little. It feels
+        like the first king is the true villain. I think the power of Titans is known
+        IRL, but the first king wanted to play dictator and have his own little kingdom.
+        So he created the walls and all we know. That's why the War Chief told Eren
+        that he'll \\\"save\\\" him another time. Which means, all the people inside
+        the walls live an imaginary and secluded life inside the walls.\\r\\n\\r\\nWhat
+        I still don't know, is why Betrolt and Reiner said their first motive was
+        to exterminate everyone inside the walls, and not actually \\\"save\\\" them?\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2022-08-08T18:03:08.000Z\",\"updated_at\":\"2022-08-08T18:03:08.000Z\",\"replies\":0,\"likes\":2,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"BaSsOo7\",\"private\":false,\"deleted\":false,\"name\":\"BaSsOo7\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"bassoo7\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Bob's
+        Burgers\",\"year\":2011,\"ids\":{\"trakt\":32585,\"slug\":\"bob-s-burgers\",\"tvdb\":194031,\"imdb\":\"tt1561755\",\"tmdb\":32726,\"tvrage\":null}},\"comment\":{\"id\":687390,\"comment\":\"Best
+        show on Fox, move over Simpsons\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2024-06-24T08:03:43.000Z\",\"updated_at\":\"2024-06-24T08:03:43.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":18746,\"completed_count\":294},\"user\":{\"username\":\"OutlierForLife\",\"private\":false,\"deleted\":false,\"name\":\"OutlierForLife\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"outlierforlife\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":4,\"title\":\"Call
+        Me Red\",\"ids\":{\"trakt\":12853594,\"tvdb\":11088744,\"imdb\":\"tt36351467\",\"tmdb\":6201594,\"tvrage\":null}},\"show\":{\"title\":\"Dexter:
+        Resurrection\",\"year\":2025,\"ids\":{\"trakt\":249647,\"slug\":\"dexter-resurrection\",\"tvdb\":452595,\"imdb\":\"tt33043892\",\"tmdb\":259909,\"tvrage\":null}},\"comment\":{\"id\":840312,\"comment\":\"Holy,
+        best episode of Dexter I’ve seen in decades. Felt lengthy which I appreciated.
+        All the new characters/actors are great. Batista, Ritter and Dinklage are
+        standouts. \\n\\nAnd that ending \U0001F640\U0001F631\U0001F62D\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-07-25T10:58:31.000Z\",\"updated_at\":\"2025-07-25T11:05:06.000Z\",\"replies\":2,\"likes\":23,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"ButterMilkHoney\",\"private\":false,\"deleted\":false,\"name\":\"Max
+        Caulfield\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"buttermilkhoney\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":20,\"title\":\"The
+        Future\",\"ids\":{\"trakt\":4013758,\"tvdb\":7601426,\"imdb\":\"tt12004394\",\"tmdb\":2203542,\"tvrage\":null}},\"show\":{\"title\":\"Steven
+        Universe Future\",\"year\":2019,\"ids\":{\"trakt\":153635,\"slug\":\"steven-universe-future\",\"tvdb\":370471,\"imdb\":\"tt13714610\",\"tmdb\":94280,\"tvrage\":null}},\"comment\":{\"id\":844611,\"comment\":\"Great
+        callback to the first episode of the original series with the cookie cat scene
+        at the start, and the Gems just kinda immediately accepting it was great (whilst
+        the secondary characters have their own breakdowns lol).\\n\\nI think it shows
+        how well they know and want to support him, whilst the others were more emotional
+        since they don't know him as well and aren't as ready for him to leave.\\n\\nI
+        also like how he gave everyone a sentimental gift that he knows will mean
+        something to each of them, and finally having the main trio crack at the end
+        \\u0026amp; show how much they really care about him.\\n\\nIt's a much better
+        conclusion to the franchise than the original's ending imo, but it still lets
+        them bring everyone back if needed (e.g. he gets homesick and comes to visit
+        or wants to have his wedding in Beach City of something).\\n\\nBut anyway,
+        I'm finally done watching all of Steven Universe on a whim. It's not bad.\",\"spoiler\":true,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-08-04T07:43:22.000Z\",\"updated_at\":\"2025-08-04T07:43:22.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Caleb
+        P.\",\"private\":false,\"deleted\":false,\"name\":\"Caleb Peters\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"caleb-p-a46bc3b5-e62b-451e-be32-7a7dbd4058b1\"}}}}]"
+  recorded_at: 2025-08-04 08:07:02
+recorded_with: VCR-vcr/2.0.0

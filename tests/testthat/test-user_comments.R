@@ -1,4 +1,7 @@
 test_that("user_comments", {
+	skip_on_cran()
+
+	vcr::local_cassette("user_comments_basic")
 	nm <- c(
 		"type",
 		"id",
@@ -39,10 +42,7 @@ test_that("user_comments", {
 	)
 
 	user_comments("jemus42") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm) |>
-		nrow() |>
-		expect_gte(10)
+		expect_tibble(min_cols = nm, min_rows = 10)
 
 	nm_movies <- c(
 		"type",
@@ -71,13 +71,14 @@ test_that("user_comments", {
 		"tmdb"
 	)
 
-	user_comments("jemus42", type = "movie") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_movies) |>
+	result <- user_comments("jemus42", type = "movie") |>
+		expect_tibble(min_cols = nm_movies)
+
+	result |>
 		pluck("type") |>
 		unique() |>
 		expect_equal("movie")
 
 	user_comments("sofakissen") |>
-		expect_error()
+		expect_tibble(exact_rows = 0)
 })

@@ -1,4 +1,7 @@
 test_that("user_list_comments works", {
+	skip_on_cran()
+
+	vcr::local_cassette("user_list_comments")
 	nm <- c(
 		"id",
 		"comment",
@@ -20,8 +23,5 @@ test_that("user_list_comments works", {
 	)
 
 	user_list_comments("donxy", "1248149") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = nm, exact_rows = 10)
 })

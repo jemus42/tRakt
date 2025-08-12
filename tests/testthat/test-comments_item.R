@@ -1,4 +1,7 @@
 test_that("comments_item works", {
+	skip_on_cran()
+
+	vcr::local_cassette("comments_item_works")
 	# A movie
 
 	nm_movie_min <- c("type", "title", "year", "trakt", "slug", "imdb", "tmdb")
@@ -30,16 +33,10 @@ test_that("comments_item works", {
 	)
 
 	comments_item("236397") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_movie_min, ignore.order = TRUE) |>
-		nrow() |>
-		expect_equal(1)
+		expect_tibble(min_cols = nm_movie_min, exact_rows = 1)
 
 	comments_item("236397", extended = "full") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_movie_full, ignore.order = TRUE) |>
-		nrow() |>
-		expect_equal(1)
+		expect_tibble(min_cols = nm_movie_full, exact_rows = 1)
 
 	# A show
 	nm_show_min <- c("type", "title", "year", "trakt", "slug", "tvdb", "imdb", "tmdb")
@@ -109,16 +106,10 @@ test_that("comments_item works", {
 	)
 
 	comments_item("120768") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_show_min, ignore.order = TRUE) |>
-		nrow() |>
-		expect_equal(1)
+		expect_tibble(min_cols = nm_show_min, exact_rows = 1)
 
 	comments_item("120768", extended = "full") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_show_full, ignore.order = TRUE) |>
-		nrow() |>
-		expect_equal(1)
+		expect_tibble(min_cols = nm_show_full, exact_rows = 1)
 
 	# A season
 	nm_season_min <- c(
@@ -182,16 +173,10 @@ test_that("comments_item works", {
 	)
 
 	comments_item("140265") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_season_min) |>
-		nrow() |>
-		expect_equal(1)
+		expect_tibble(min_cols = nm_season_min, exact_rows = 1)
 
 	comments_item("140265", extended = "full") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_season_full, ignore.order = TRUE) |>
-		nrow() |>
-		expect_equal(1)
+		expect_tibble(min_cols = nm_season_full, exact_rows = 1)
 
 	# An episode
 	nm_episode_min <- c(
@@ -262,14 +247,8 @@ test_that("comments_item works", {
 	)
 
 	comments_item("136632") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_episode_min, ignore.order = TRUE) |>
-		nrow() |>
-		expect_equal(1)
+		expect_tibble(min_cols = nm_episode_min, exact_rows = 1)
 
 	comments_item("136632", extended = "full") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_episode_full, ignore.order = TRUE) |>
-		nrow() |>
-		expect_equal(1)
+		expect_tibble(min_cols = nm_episode_full, exact_rows = 1)
 })

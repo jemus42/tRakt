@@ -1,0 +1,803 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/lists/2171659/items?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      cf-ray: 969c8ea6aaba7f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '6'
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '6'
+      x-sort-by: rank
+      x-sort-how: asc
+      x-applied-sort-by: rank
+      x-applied-sort-how: asc
+      x-list-id: '2171659'
+      etag: W/"d390244d86282029a6c6dbababfa34d8"
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":911,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: ee148b03-1179-4e72-a2df-0b8dae9a15ce
+      x-runtime: '0.024881'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rank":1,"id":91784778,"listed_at":"2016-04-19T16:54:46.000Z","notes":null,"type":"movie","movie":{"title":"Perfect
+        Blue","year":1998,"ids":{"trakt":5677,"slug":"perfect-blue-1998","imdb":"tt0156887","tmdb":10494}}},{"rank":2,"id":91784783,"listed_at":"2016-04-19T16:54:54.000Z","notes":null,"type":"movie","movie":{"title":"Millennium
+        Actress","year":2002,"ids":{"trakt":21330,"slug":"millennium-actress-2002","imdb":"tt0291350","tmdb":33320}}},{"rank":3,"id":91784793,"listed_at":"2016-04-19T16:55:03.000Z","notes":null,"type":"movie","movie":{"title":"Tokyo
+        Godfathers","year":2003,"ids":{"trakt":7877,"slug":"tokyo-godfathers-2003","imdb":"tt0388473","tmdb":13398}}},{"rank":4,"id":91784805,"listed_at":"2016-04-19T16:55:12.000Z","notes":null,"type":"movie","movie":{"title":"Paprika","year":2006,"ids":{"trakt":2909,"slug":"paprika-2006","imdb":"tt0851578","tmdb":4977}}},{"rank":5,"id":91784810,"listed_at":"2016-04-19T16:55:18.000Z","notes":null,"type":"show","show":{"title":"Paranoia
+        Agent","year":2004,"ids":{"trakt":9295,"slug":"paranoia-agent","tvdb":75092,"imdb":"tt0433722","tmdb":9343,"tvrage":null}}},{"rank":6,"id":91788751,"listed_at":"2016-04-19T17:52:19.000Z","notes":null,"type":"movie","movie":{"title":"Memories","year":1995,"ids":{"trakt":838805,"slug":"memories-1995","imdb":"tt0113799","tmdb":42994}}}]'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/lists/2171659/items?extended=full
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      cf-ray: 969c8ea7dcd77f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '6'
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '6'
+      x-sort-by: rank
+      x-sort-how: asc
+      x-applied-sort-by: rank
+      x-applied-sort-how: asc
+      x-list-id: '2171659'
+      etag: W/"d390244d86282029a6c6dbababfa34d8"
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":904,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 64b1e8b0-b87e-4e04-ab13-34eb69699067
+      x-runtime: '0.017688'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rank":1,"id":91784778,"listed_at":"2016-04-19T16:54:46.000Z","notes":null,"type":"movie","movie":{"title":"Perfect
+        Blue","year":1998,"ids":{"trakt":5677,"slug":"perfect-blue-1998","imdb":"tt0156887","tmdb":10494},"tagline":"The
+        color of illusion is Perfect Blue.","overview":"Encouraged by her managers,
+        rising pop star Mima takes on a recurring role on a popular TV show, when
+        suddenly her handlers and collaborators begin turning up murdered.","released":"1998-02-28","runtime":82,"country":"jp","status":"released","rating":8.26688,"votes":5392,"comment_count":45,"trailer":"https://youtube.com/watch?v=0AgD1uocfk0","homepage":"http://gkids.com/films/perfect-blue","updated_at":"2025-08-02T06:35:50.000Z","language":"ja","languages":["ja"],"available_translations":["cs","da","de","el","en","es","et","fa","fi","fr","he","hu","it","ja","ka","ko","lt","nl","pl","pt","ru","sr","th","tr","uk","vi","zh"],"genres":["thriller","anime","horror","suspense"],"subgenres":["adult-animation","psychological-thriller","suspense","paranoia"],"certification":"R","original_title":"PERFECT
+        BLUE","after_credits":false,"during_credits":false}},{"rank":2,"id":91784783,"listed_at":"2016-04-19T16:54:54.000Z","notes":null,"type":"movie","movie":{"title":"Millennium
+        Actress","year":2002,"ids":{"trakt":21330,"slug":"millennium-actress-2002","imdb":"tt0291350","tmdb":33320},"tagline":"The
+        magic of movies, the mystery of memory.","overview":"Documentary filmmaker
+        Genya Tachibana has tracked down the legendary actress Chiyoko Fujiwara, who
+        mysteriously vanished at the height of her career. When he presents her with
+        a key she had lost and thought was gone forever, the filmmaker could not have
+        imagined that it would not only unlock the long-held secrets of Chiyoko’s
+        life... but also his own.","released":"2002-09-14","runtime":87,"country":"jp","status":"released","rating":7.97079,"votes":1438,"comment_count":11,"trailer":"https://youtube.com/watch?v=2u5Ee1_jUCY","homepage":null,"updated_at":"2025-08-02T15:32:31.000Z","language":"ja","languages":["ja"],"available_translations":["ca","cs","da","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ru","th","tr","uk","vi","zh"],"genres":["drama","romance","anime","fantasy"],"subgenres":["adult-animation"],"certification":"PG","original_title":"千年女優","after_credits":false,"during_credits":false}},{"rank":3,"id":91784793,"listed_at":"2016-04-19T16:55:03.000Z","notes":null,"type":"movie","movie":{"title":"Tokyo
+        Godfathers","year":2003,"ids":{"trakt":7877,"slug":"tokyo-godfathers-2003","imdb":"tt0388473","tmdb":13398},"tagline":"Meet
+        the ultimate dysfunctional family.","overview":"On Christmas Eve, three homeless
+        people living on the streets of Tokyo discover a newborn baby among the trash
+        and set out to find its parents.","released":"2003-12-29","runtime":92,"country":"jp","status":"released","rating":8.00943,"votes":2227,"comment_count":17,"trailer":"https://youtube.com/watch?v=ZL_2E-HfIZY","homepage":"http://www.sonypictures.com/movies/tokyogodfathers","updated_at":"2025-08-02T15:34:06.000Z","language":"ja","languages":["en","ja","es"],"available_translations":["bg","cs","da","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ru","sr","sv","th","tr","uk","vi","zh"],"genres":["drama","anime","holiday","comedy"],"subgenres":["adult-animation","christmas"],"certification":"PG-13","original_title":"東京ゴッドファーザーズ","after_credits":false,"during_credits":false}},{"rank":4,"id":91784805,"listed_at":"2016-04-19T16:55:12.000Z","notes":null,"type":"movie","movie":{"title":"Paprika","year":2006,"ids":{"trakt":2909,"slug":"paprika-2006","imdb":"tt0851578","tmdb":4977},"tagline":"Dreams
+        are being violated.","overview":"When a machine that allows therapists to
+        enter their patient''s dreams is stolen, all hell breaks loose. Only a young
+        female therapist can stop it and recover it before damage is done: Paprika.","released":"2006-10-21","runtime":90,"country":"jp","status":"released","rating":7.84417,"votes":4935,"comment_count":30,"trailer":"https://youtube.com/watch?v=a6avI9oPgnw","homepage":"http://www.sonypictures.com/movies/paprika","updated_at":"2025-08-02T15:24:32.000Z","language":"ja","languages":["en","ja"],"available_translations":["ar","bg","cs","da","de","el","en","es","et","fi","fr","he","hr","hu","it","ja","ko","nl","no","pl","pt","ro","ru","sr","sv","th","tr","uk","vi","zh"],"genres":["science-fiction","anime","thriller"],"subgenres":["adult-animation"],"certification":"R","original_title":"パプリカ","after_credits":false,"during_credits":false}},{"rank":5,"id":91784810,"listed_at":"2016-04-19T16:55:18.000Z","notes":null,"type":"show","show":{"title":"Paranoia
+        Agent","year":2004,"ids":{"trakt":9295,"slug":"paranoia-agent","tvdb":75092,"imdb":"tt0433722","tmdb":9343,"tvrage":null},"tagline":"When
+        darkness overcomes the heart... Lil'' Slugger appears...","overview":"Musashino,
+        Tokyo. An elementary schooler repeatedly attacks people in the streets. Known
+        only to the public as \"Lil Slugger\", none of the victims can recall the
+        young boy''s face and only three distinct details are left in their memories:
+        golden inline skates, a baseball cap, and the weapon: a bent golden baseball
+        bat. Detectives Ikari and Maniwa set out to track down the perpetrator and
+        put an end to his crimes.","first_aired":"2004-02-03T03:00:00.000Z","airs":{"day":"Sunday","time":"12:00","timezone":"Asia/Tokyo"},"runtime":25,"certification":"TV-MA","country":"jp","status":"ended","rating":7.79412,"votes":884,"comment_count":6,"trailer":"https://youtube.com/watch?v=fQHwetifss4","homepage":"http://mousou.asmik-ace.co.jp/","network":"WOWOW
+        Prime","updated_at":"2025-08-02T07:09:44.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","nl","pl","pt","ru","sv","uk","zh"],"genres":["mystery","fantasy","science-fiction","anime","suspense"],"subgenres":["suspense"],"aired_episodes":13,"original_title":"妄想代理人"}},{"rank":6,"id":91788751,"listed_at":"2016-04-19T17:52:19.000Z","notes":null,"type":"movie","movie":{"title":"Memories","year":1995,"ids":{"trakt":838805,"slug":"memories-1995","imdb":"tt0113799","tmdb":42994},"tagline":"Three
+        Unforgettable Tales From The Masters of Anime.","overview":"In this anime
+        anthology, a salvage ship crew happens upon a haunted vessel in \"Magnetic
+        Rose\"; a cold tablet turns a lab worker into a biological weapon in \"Stink
+        Bomb\"; and an urban populace carries on an endless war with an unseen foe
+        in \"Cannon Fodder.\"","released":"1995-12-23","runtime":113,"country":"jp","status":"released","rating":7.48439,"votes":1313,"comment_count":7,"trailer":"https://youtube.com/watch?v=NTyRMfdDfc8","homepage":"http://www.studio4c.co.jp/works/pages/01.html","updated_at":"2025-08-02T15:23:24.000Z","language":"ja","languages":["ja"],"available_translations":["bg","ca","cs","de","en","es","fa","fi","fr","it","ja","ko","nl","pt","ru","sv","tr","uk","zh"],"genres":["anime","fantasy","science-fiction","horror"],"subgenres":["anthology"],"certification":"PG-13","original_title":"MEMORIES","after_credits":false,"during_credits":false}}]'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sp1ti/lists/anime-winter-season-2018-2019/items?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      cf-ray: 969c8ea92f757f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '71'
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '71'
+      x-sort-by: rank
+      x-sort-how: asc
+      x-applied-sort-by: rank
+      x-applied-sort-how: asc
+      x-list-id: '5615781'
+      etag: W/"ba5e1adadf1097a574caea4fee420fad"
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":899,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 286da9f3-5ca1-4d42-9cce-64c0084dd098
+      x-runtime: '0.117759'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rank":1,"id":371672009,"listed_at":"2018-12-29T20:18:20.000Z","notes":null,"type":"show","show":{"title":"Boogiepop
+        and Others","year":2019,"ids":{"trakt":140009,"slug":"boogiepop-and-others","tvdb":355624,"imdb":"tt9458372","tmdb":84163,"tvrage":null}}},{"rank":2,"id":362149389,"listed_at":"2018-10-14T00:41:23.000Z","notes":null,"type":"show","show":{"title":"Dororo","year":2019,"ids":{"trakt":138218,"slug":"dororo-2019","tvdb":354167,"imdb":"tt9458304","tmdb":83100,"tvrage":null}}},{"rank":3,"id":363924531,"listed_at":"2018-10-27T00:36:05.000Z","notes":null,"type":"show","show":{"title":"The
+        Magnificent KOTOBUKI","year":2019,"ids":{"trakt":138636,"slug":"the-magnificent-kotobuki","tvdb":354636,"imdb":"tt9314454","tmdb":83454,"tvrage":null}}},{"rank":4,"id":362139545,"listed_at":"2018-10-13T23:45:49.000Z","notes":null,"type":"show","show":{"title":"The
+        Rising of the Shield Hero","year":2019,"ids":{"trakt":137154,"slug":"the-rising-of-the-shield-hero","tvdb":353712,"imdb":"tt9529546","tmdb":83095,"tvrage":null}}},{"rank":5,"id":362153717,"listed_at":"2018-10-14T01:26:36.000Z","notes":null,"type":"show","show":{"title":"Magical
+        Girl Spec-Ops Asuka","year":2019,"ids":{"trakt":138221,"slug":"magical-girl-spec-ops-asuka","tvdb":354171,"imdb":"tt8731478","tmdb":83104,"tvrage":null}}},{"rank":6,"id":362152286,"listed_at":"2018-10-14T01:26:26.000Z","notes":null,"type":"show","show":{"title":"Domestic
+        Girlfriend","year":2019,"ids":{"trakt":138220,"slug":"domestic-girlfriend","tvdb":354170,"imdb":"tt9817980","tmdb":83103,"tvrage":null}}},{"rank":7,"id":362139715,"listed_at":"2018-10-13T23:46:10.000Z","notes":null,"type":"show","show":{"title":"The
+        Promised Neverland","year":2019,"ids":{"trakt":131158,"slug":"the-promised-neverland","tvdb":348002,"imdb":"tt8788458","tmdb":83097,"tvrage":null}}},{"rank":8,"id":368392244,"listed_at":"2018-12-04T19:07:15.000Z","notes":null,"type":"show","show":{"title":"My
+        Roommate is a Cat","year":2019,"ids":{"trakt":140294,"slug":"my-roommate-is-a-cat","tvdb":355968,"imdb":"tt9522316","tmdb":84660,"tvrage":null}}},{"rank":9,"id":368392062,"listed_at":"2018-12-04T19:04:14.000Z","notes":null,"type":"show","show":{"title":"Grimms
+        Notes: The Animation","year":2019,"ids":{"trakt":140295,"slug":"grimms-notes-the-animation","tvdb":355970,"imdb":"tt9585568","tmdb":84665,"tvrage":null}}},{"rank":10,"id":368392012,"listed_at":"2018-12-04T19:03:10.000Z","notes":null,"type":"show","show":{"title":"WATATEN!:
+        an Angel Flew Down to Me","year":2019,"ids":{"trakt":140292,"slug":"wataten-an-angel-flew-down-to-me","tvdb":355969,"imdb":"tt9622614","tmdb":84666,"tvrage":null}}},{"rank":11,"id":362220930,"listed_at":"2018-10-14T15:08:12.000Z","notes":null,"type":"show","show":{"title":"Kaguya-sama:
+        Love is War","year":2019,"ids":{"trakt":138254,"slug":"kaguya-sama-love-is-war","tvdb":354198,"imdb":"tt9522300","tmdb":83121,"tvrage":null}}},{"rank":12,"id":362220988,"listed_at":"2018-10-14T15:09:03.000Z","notes":null,"type":"show","show":{"title":"Rinshi!!
+        Ekoda-chan","year":2019,"ids":{"trakt":138256,"slug":"rinshi-ekoda-chan","tvdb":354194,"imdb":"tt14068416","tmdb":83117,"tvrage":null}}},{"rank":13,"id":363983979,"listed_at":"2018-10-27T12:21:08.000Z","notes":null,"type":"show","show":{"title":"The
+        Price of Smiles","year":2019,"ids":{"trakt":138680,"slug":"the-price-of-smiles","tvdb":354675,"imdb":"tt9553076","tmdb":83477,"tvrage":null}}},{"rank":14,"id":363924397,"listed_at":"2018-10-27T00:35:01.000Z","notes":null,"type":"show","show":{"title":"Hulaing
+        Babies","year":2019,"ids":{"trakt":138637,"slug":"hulaing-babies","tvdb":354637,"imdb":"tt10623650","tmdb":83455,"tvrage":null}}},{"rank":15,"id":362221032,"listed_at":"2018-10-14T15:09:59.000Z","notes":null,"type":"show","show":{"title":"How
+        Clumsy you are, Miss Ueno.","year":2019,"ids":{"trakt":138257,"slug":"how-clumsy-you-are-miss-ueno","tvdb":354193,"imdb":"tt9567240","tmdb":83116,"tvrage":null}}},{"rank":16,"id":368392075,"listed_at":"2018-12-04T19:04:49.000Z","notes":null,"type":"show","show":{"title":"Circlet
+        Princess","year":2019,"ids":{"trakt":140296,"slug":"circlet-princess","tvdb":355971,"imdb":"tt7906926","tmdb":84664,"tvrage":null}}},{"rank":17,"id":362153737,"listed_at":"2018-10-14T01:26:54.000Z","notes":null,"type":"show","show":{"title":"revisions","year":2019,"ids":{"trakt":133963,"slug":"revisions","tvdb":350084,"imdb":"tt9522354","tmdb":83105,"tvrage":null}}},{"rank":18,"id":362149375,"listed_at":"2018-10-14T00:41:08.000Z","notes":null,"type":"show","show":{"title":"W''z","year":2019,"ids":{"trakt":138217,"slug":"w-z","tvdb":354164,"imdb":"tt12052708","tmdb":83099,"tvrage":null}}},{"rank":19,"id":362152266,"listed_at":"2018-10-14T01:26:09.000Z","notes":null,"type":"show","show":{"title":"Girly
+        Air Force","year":2019,"ids":{"trakt":138219,"slug":"girly-air-force","tvdb":354168,"imdb":"tt9575040","tmdb":83102,"tvrage":null}}},{"rank":20,"id":362220907,"listed_at":"2018-10-14T15:07:54.000Z","notes":null,"type":"show","show":{"title":"Kemurikusa","year":2019,"ids":{"trakt":138253,"slug":"kemurikusa","tvdb":354199,"imdb":"tt9573902","tmdb":83122,"tvrage":null}}},{"rank":21,"id":370761033,"listed_at":"2018-12-23T12:46:57.000Z","notes":null,"type":"show","show":{"title":"Mysteria
+        Friends","year":2019,"ids":{"trakt":104796,"slug":"mysteria-friends","tvdb":306111,"imdb":"tt9203780","tmdb":84869,"tvrage":null}}},{"rank":22,"id":368389300,"listed_at":"2018-12-04T19:01:16.000Z","notes":null,"type":"show","show":{"title":"The
+        Quintessential Quintuplets","year":2019,"ids":{"trakt":140293,"slug":"the-quintessential-quintuplets","tvdb":355966,"imdb":"tt9584920","tmdb":84669,"tvrage":null}}},{"rank":23,"id":362220954,"listed_at":"2018-10-14T15:08:21.000Z","notes":null,"type":"show","show":{"title":"Pastel
+        Memories","year":2019,"ids":{"trakt":138255,"slug":"pastel-memories","tvdb":354197,"imdb":"tt9520752","tmdb":83120,"tvrage":null}}},{"rank":24,"id":368390822,"listed_at":"2018-12-04T19:02:07.000Z","notes":null,"type":"show","show":{"title":"Endro!","year":2019,"ids":{"trakt":138346,"slug":"endro","tvdb":354298,"imdb":"tt9510780","tmdb":84667,"tvrage":null}}},{"rank":25,"id":370763292,"listed_at":"2018-12-23T13:23:03.000Z","notes":null,"type":"show","show":{"title":"Katana
+        Maidens ~ Mini Toji","year":2019,"ids":{"trakt":141922,"slug":"katana-maidens-mini-toji","tvdb":356777,"imdb":"tt32141547","tmdb":85177,"tvrage":null}}},{"rank":26,"id":372492951,"listed_at":"2019-01-04T15:01:05.000Z","notes":null,"type":"show","show":{"title":"Virtualsan
+        - Looking","year":2019,"ids":{"trakt":142077,"slug":"virtualsan-looking","tvdb":357277,"imdb":"tt12887816","tmdb":85480,"tvrage":null}}},{"rank":27,"id":371787573,"listed_at":"2018-12-30T11:30:27.000Z","notes":null,"type":"show","show":{"title":"Star☆Twinkle
+        PreCure","year":2019,"ids":{"trakt":142216,"slug":"star-twinkle-precure","tvdb":357448,"imdb":"tt13620226","tmdb":85322,"tvrage":null}}},{"rank":28,"id":368392109,"listed_at":"2018-12-04T19:05:44.000Z","notes":null,"type":"show","show":{"title":"Bermuda
+        Triangle ~ Colorful Pastorale","year":2019,"ids":{"trakt":140567,"slug":"bermuda-triangle-colorful-pastorale","tvdb":356311,"imdb":"tt13758844","tmdb":84663,"tvrage":null}}},{"rank":29,"id":370765043,"listed_at":"2018-12-23T13:26:28.000Z","notes":null,"type":"show","show":{"title":"Meiji
+        Tokyo Renka","year":2019,"ids":{"trakt":139966,"slug":"meiji-tokyo-renka","tvdb":355576,"imdb":"tt10223702","tmdb":84141,"tvrage":null}}},{"rank":30,"id":368392150,"listed_at":"2018-12-04T19:06:18.000Z","notes":null,"type":"show","show":{"title":"Dimension
+        High School","year":2019,"ids":{"trakt":140568,"slug":"dimension-high-school","tvdb":356310,"imdb":null,"tmdb":84662,"tvrage":null}}},{"rank":31,"id":374794637,"listed_at":"2019-01-21T19:11:34.000Z","notes":null,"type":"show","show":{"title":"IDOLiSH7
+        Vibrato","year":2018,"ids":{"trakt":143106,"slug":"idolish7-vibrato","tvdb":358425,"imdb":"tt9001710","tmdb":117534,"tvrage":null}}},{"rank":32,"id":362104837,"listed_at":"2018-10-13T20:43:26.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":161025,"tvdb":771985,"tmdb":110805,"tvrage":null}},"show":{"title":"Mob
+        Psycho 100","year":2016,"ids":{"trakt":105481,"slug":"mob-psycho-100","tvdb":307375,"imdb":"tt5897304","tmdb":67075,"tvrage":null}}},{"rank":33,"id":362107758,"listed_at":"2018-10-13T21:19:09.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":156997,"tvdb":788416,"tmdb":110806,"tvrage":null}},"show":{"title":"Kakegurui","year":2017,"ids":{"trakt":118556,"slug":"kakegurui","tvdb":327572,"imdb":"tt7131720","tmdb":72305,"tvrage":null}}},{"rank":34,"id":362116338,"listed_at":"2018-10-13T22:27:35.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":166766,"tvdb":782543,"tmdb":110808,"tvrage":null}},"show":{"title":"Real
+        Girl","year":2018,"ids":{"trakt":127460,"slug":"real-girl","tvdb":342010,"imdb":"tt7112156","tmdb":77721,"tvrage":null}}},{"rank":35,"id":368392208,"listed_at":"2018-12-04T19:06:35.000Z","notes":null,"type":"season","season":{"number":3,"ids":{"trakt":170833,"tvdb":784014,"tmdb":113759,"tvrage":null}},"show":{"title":"Date
+        A Live","year":2013,"ids":{"trakt":70005,"slug":"date-a-live","tvdb":264663,"imdb":"tt2575684","tmdb":46004,"tvrage":null}}},{"rank":36,"id":362117132,"listed_at":"2018-10-13T22:40:43.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":164683,"tvdb":765530,"tmdb":110809,"tvrage":null}},"show":{"title":"BanG
+        Dream!","year":2017,"ids":{"trakt":113267,"slug":"bang-dream","tvdb":320002,"imdb":"tt6460600","tmdb":69236,"tvrage":null}}},{"rank":37,"id":362117542,"listed_at":"2018-10-13T22:47:34.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":174028,"tvdb":782551,"tmdb":110810,"tvrage":null}},"show":{"title":"The
+        Morose Mononokean","year":2016,"ids":{"trakt":106527,"slug":"the-morose-mononokean","tvdb":309208,"imdb":"tt5839698","tmdb":65956,"tvrage":null}}},{"rank":38,"id":362117553,"listed_at":"2018-10-13T22:47:54.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":167362,"tvdb":782552,"tmdb":115459,"tvrage":null}},"show":{"title":"The
+        Piano Forest","year":2018,"ids":{"trakt":127602,"slug":"the-piano-forest","tvdb":342181,"imdb":"tt8043492","tmdb":78471,"tvrage":null}}},{"rank":39,"id":370757098,"listed_at":"2018-12-23T12:15:43.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":177727,"tvdb":789224,"tmdb":114815,"tvrage":null}},"show":{"title":"B-PROJECT","year":2016,"ids":{"trakt":108674,"slug":"b-project","tvdb":313487,"imdb":"tt5915166","tmdb":67628,"tvrage":null}}},{"rank":40,"id":370765055,"listed_at":"2018-12-23T13:28:44.000Z","notes":null,"type":"season","season":{"number":5,"ids":{"trakt":174728,"tvdb":783940,"tmdb":115413,"tvrage":null}},"show":{"title":"Rainy
+        Cocoa","year":2015,"ids":{"trakt":97432,"slug":"rainy-cocoa","tvdb":293647,"imdb":"tt5821698","tmdb":68482,"tvrage":null}}},{"rank":41,"id":362117740,"listed_at":"2018-10-13T22:51:18.000Z","notes":null,"type":"movie","movie":{"title":"Psycho-Pass:
+        Sinners of the System - Case.1 Crime and Punishment","year":2019,"ids":{"trakt":393191,"slug":"psycho-pass-sinners-of-the-system-case-1-crime-and-punishment-2019","imdb":"tt10443844","tmdb":510242}}},{"rank":42,"id":366009196,"listed_at":"2018-11-14T00:31:09.000Z","notes":null,"type":"movie","movie":{"title":"Psycho-Pass:
+        Sinners of the System - Case.2 First Guardian","year":2019,"ids":{"trakt":410086,"slug":"psycho-pass-sinners-of-the-system-case-2-first-guardian-2019","imdb":"tt11078434","tmdb":559562}}},{"rank":43,"id":366009215,"listed_at":"2018-11-14T00:32:36.000Z","notes":null,"type":"movie","movie":{"title":"Psycho-Pass:
+        Sinners of the System - Case.3 On the Other Side of Love and Hate","year":2019,"ids":{"trakt":410491,"slug":"psycho-pass-sinners-of-the-system-case-3-on-the-other-side-of-love-and-hate-2019","imdb":"tt11078522","tmdb":559566}}},{"rank":44,"id":362125183,"listed_at":"2018-10-13T23:16:15.000Z","notes":null,"type":"movie","movie":{"title":"Saga
+        of Tanya the Evil: The Movie","year":2019,"ids":{"trakt":404783,"slug":"saga-of-tanya-the-evil-the-movie-2019","imdb":"tt9507276","tmdb":553839}}},{"rank":45,"id":362125296,"listed_at":"2018-10-13T23:16:58.000Z","notes":null,"type":"movie","movie":{"title":"Fate/stay
+        night: Heaven''s Feel II. Lost Butterfly","year":2019,"ids":{"trakt":232827,"slug":"fate-stay-night-heaven-s-feel-ii-lost-butterfly-2019","imdb":"tt8091892","tmdb":390634}}},{"rank":46,"id":366006274,"listed_at":"2018-11-13T23:39:02.000Z","notes":null,"type":"movie","movie":{"title":"Mr.
+        Osomatsu the Movie","year":2019,"ids":{"trakt":410242,"slug":"mr-osomatsu-the-movie-2019","imdb":"tt8866460","tmdb":559519}}},{"rank":47,"id":362119668,"listed_at":"2018-10-13T23:03:08.000Z","notes":null,"type":"movie","movie":{"title":"The
+        Relative Worlds","year":2019,"ids":{"trakt":404782,"slug":"the-relative-worlds-2019","imdb":"tt9648078","tmdb":553833}}},{"rank":48,"id":362117645,"listed_at":"2018-10-13T22:49:57.000Z","notes":null,"type":"movie","movie":{"title":"City
+        Hunter: Shinjuku Private Eyes","year":2019,"ids":{"trakt":391258,"slug":"city-hunter-shinjuku-private-eyes-2019","imdb":"tt8161914","tmdb":540141}}},{"rank":49,"id":362125580,"listed_at":"2018-10-13T23:17:13.000Z","notes":null,"type":"movie","movie":{"title":"Made
+        in Abyss: Journey''s Dawn","year":2019,"ids":{"trakt":404774,"slug":"made-in-abyss-journey-s-dawn-2019","imdb":"tt10068158","tmdb":526426}}},{"rank":50,"id":362125675,"listed_at":"2018-10-13T23:17:38.000Z","notes":null,"type":"movie","movie":{"title":"Made
+        in Abyss: Wandering Twilight","year":2019,"ids":{"trakt":404624,"slug":"made-in-abyss-wandering-twilight-2019","imdb":"tt10068544","tmdb":526429}}},{"rank":51,"id":362119478,"listed_at":"2018-10-13T23:02:43.000Z","notes":null,"type":"movie","movie":{"title":"Is
+        It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion","year":2019,"ids":{"trakt":404781,"slug":"is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-arrow-of-the-orion-2019","imdb":"tt9526152","tmdb":553835}}},{"rank":52,"id":362124890,"listed_at":"2018-10-13T23:16:07.000Z","notes":null,"type":"movie","movie":{"title":"Love
+        Live! Sunshine!! The School Idol Movie: Over the Rainbow","year":2019,"ids":{"trakt":379546,"slug":"love-live-sunshine-the-school-idol-movie-over-the-rainbow-2019","imdb":"tt8659948","tmdb":529589}}},{"rank":53,"id":362125278,"listed_at":"2018-10-13T23:16:15.000Z","notes":null,"type":"movie","movie":{"title":"Code
+        Geass: Lelouch of the Re;Surrection","year":2019,"ids":{"trakt":404784,"slug":"code-geass-lelouch-of-the-re-surrection-2019","imdb":"tt6344664","tmdb":553837}}},{"rank":54,"id":371674317,"listed_at":"2018-12-29T20:34:40.000Z","notes":null,"type":"movie","movie":{"title":"Zip!
+        Shimezo","year":2019,"ids":{"trakt":421584,"slug":"zip-shimezo-2019","imdb":"tt11315024","tmdb":570576}}},{"rank":55,"id":371674267,"listed_at":"2018-12-29T20:34:26.000Z","notes":null,"type":"movie","movie":{"title":"Space
+        Attendant Aoi","year":2019,"ids":{"trakt":421772,"slug":"space-attendant-aoi-2019","imdb":"tt31942059","tmdb":570580}}},{"rank":56,"id":371674010,"listed_at":"2018-12-29T20:32:02.000Z","notes":null,"type":"movie","movie":{"title":"Captain
+        Bal","year":2019,"ids":{"trakt":421583,"slug":"captain-bal-2019","imdb":"tt31942101","tmdb":570579}}},{"rank":57,"id":371748279,"listed_at":"2018-12-30T01:50:31.000Z","notes":null,"type":"movie","movie":{"title":"Hello
+        WeGo!","year":2019,"ids":{"trakt":422438,"slug":"hello-wego-2019","imdb":"tt31942025","tmdb":571570}}},{"rank":58,"id":362221078,"listed_at":"2018-10-14T15:10:29.000Z","notes":null,"type":"movie","movie":{"title":"The
+        Royal Tutor Movie","year":2019,"ids":{"trakt":404942,"slug":"the-royal-tutor-movie-2019","imdb":"tt9255718","tmdb":553932}}},{"rank":59,"id":370761086,"listed_at":"2018-12-23T12:48:07.000Z","notes":null,"type":"movie","movie":{"title":"Trinity
+        Seven: Heaven''s Library \u0026 Crimson Lord","year":2019,"ids":{"trakt":421426,"slug":"trinity-seven-heaven-s-library-crimson-lord-2019","imdb":"tt9826484","tmdb":570269}}},{"rank":60,"id":371786992,"listed_at":"2018-12-30T11:30:00.000Z","notes":null,"type":"movie","movie":{"title":"Pretty
+        Cure Miracle Universe","year":2019,"ids":{"trakt":422583,"slug":"pretty-cure-miracle-universe-2019","imdb":"tt10037700","tmdb":571573}}},{"rank":61,"id":371748467,"listed_at":"2018-12-30T01:55:48.000Z","notes":null,"type":"movie","movie":{"title":"King
+        of Prism: Shiny Seven Stars I - Prologue x Yukinojou x Taiga","year":2019,"ids":{"trakt":421615,"slug":"king-of-prism-shiny-seven-stars-i-prologue-x-yukinojou-x-taiga-2019","imdb":"tt9882750","tmdb":570581}}},{"rank":62,"id":371748481,"listed_at":"2018-12-30T01:56:08.000Z","notes":null,"type":"movie","movie":{"title":"King
+        of Prism: Shiny Seven Stars II - Kakeru x George x Minato","year":2019,"ids":{"trakt":421579,"slug":"king-of-prism-shiny-seven-stars-ii-kakeru-x-george-x-minato-2019","imdb":"tt10168876","tmdb":570582}}},{"rank":63,"id":371748510,"listed_at":"2018-12-30T01:56:38.000Z","notes":null,"type":"movie","movie":{"title":"It''s
+        My Life","year":2019,"ids":{"trakt":421636,"slug":"it-s-my-life-2019","imdb":null,"tmdb":570575}}},{"rank":64,"id":370763383,"listed_at":"2018-12-23T13:25:24.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":176218,"tvdb":786502,"tmdb":112814,"tvrage":null}},"show":{"title":"Kemono
+        Friends","year":2017,"ids":{"trakt":113271,"slug":"kemono-friends","tvdb":319997,"imdb":"tt6562940","tmdb":69288,"tvrage":null}}},{"rank":65,"id":370765079,"listed_at":"2018-12-23T13:27:30.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":172242,"tvdb":779328,"tmdb":110201,"tvrage":null}},"show":{"title":"Run
+        with the Wind","year":2018,"ids":{"trakt":136400,"slug":"run-with-the-wind","tvdb":352853,"imdb":"tt9402026","tmdb":82766,"tvrage":null}}},{"rank":66,"id":370765184,"listed_at":"2018-12-23T13:29:32.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":161878,"tvdb":758767,"tmdb":101742,"tvrage":null}},"show":{"title":"Kiratto
+        Pri☆chan","year":2018,"ids":{"trakt":129397,"slug":"kiratto-pri-chan","tvdb":345381,"imdb":"tt12209234","tmdb":78482,"tvrage":null}}},{"rank":67,"id":370789161,"listed_at":"2018-12-23T16:57:43.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":158198,"tvdb":749402,"tmdb":98659,"tvrage":null}},"show":{"title":"GeGeGe
+        no Kitaro","year":2018,"ids":{"trakt":127454,"slug":"gegege-no-kitaro-2018","tvdb":341996,"imdb":"tt7899522","tmdb":76759,"tvrage":null}}},{"rank":68,"id":371748329,"listed_at":"2018-12-30T01:53:09.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":138371,"tvdb":696381,"tmdb":86520,"tvrage":null}},"show":{"title":"Boruto:
+        Naruto Next Generations","year":2017,"ids":{"trakt":113946,"slug":"boruto-naruto-next-generations","tvdb":321285,"imdb":"tt6342474","tmdb":70881,"tvrage":null}}},{"rank":69,"id":372285025,"listed_at":"2019-01-03T00:19:03.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":170164,"tvdb":775669,"tmdb":110707,"tvrage":null}},"show":{"title":"Karakuri
+        Circus","year":2018,"ids":{"trakt":135353,"slug":"karakuri-circus","tvdb":351743,"imdb":"tt9050366","tmdb":83054,"tvrage":null}}},{"rank":70,"id":372568153,"listed_at":"2019-01-05T02:26:58.000Z","notes":null,"type":"episode","episode":{"season":0,"number":1,"title":"A
+        Grave Keeper, a Cat, and a Mage","ids":{"trakt":3299893,"tvdb":6970803,"imdb":"tt10137016","tmdb":1657829,"tvrage":null}},"show":{"title":"Lord
+        El-Melloi II''s Case Files {Rail Zeppelin} Grace note","year":2019,"ids":{"trakt":142250,"slug":"lord-el-melloi-ii-s-case-files-rail-zeppelin-grace-note","tvdb":357492,"imdb":"tt9573854","tmdb":85368,"tvrage":null}}},{"rank":71,"id":501444494,"listed_at":"2020-04-10T12:39:05.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":147446,"tvdb":720595,"tmdb":91272,"tvrage":null}},"show":{"title":"Black
+        Clover","year":2017,"ids":{"trakt":121959,"slug":"black-clover","tvdb":331753,"imdb":"tt7441658","tmdb":73223,"tvrage":null}}}]'
+  recorded_at: 2025-08-04 08:06:46
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sp1ti/lists/anime-winter-season-2018-2019/items?extended=full
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      cf-ray: 969c8eaafa917f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '71'
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '71'
+      x-sort-by: rank
+      x-sort-how: asc
+      x-applied-sort-by: rank
+      x-applied-sort-how: asc
+      x-list-id: '5615781'
+      etag: W/"ba5e1adadf1097a574caea4fee420fad"
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":894,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 0c47e355-1c47-4d8e-a457-248089c03c7c
+      x-runtime: '0.045464'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rank":1,"id":371672009,"listed_at":"2018-12-29T20:18:20.000Z","notes":null,"type":"show","show":{"title":"Boogiepop
+        and Others","year":2019,"ids":{"trakt":140009,"slug":"boogiepop-and-others","tvdb":355624,"imdb":"tt9458372","tmdb":84163,"tvrage":null},"tagline":"","overview":"There
+        is an urban legend that tells of a shinigami that can release people from
+        the pain they are suffering. This \"Angel of Death\" has a name—Boogiepop.
+        And the legends are true. Boogiepop is real. When a rash of disappearances
+        involving female students breaks out at Shinyo Academy, the police and faculty
+        assume they just have a bunch of runaways on their hands. Yet some students
+        know better. Something mysterious and foul is afoot. Is it Boogiepop or something
+        even more sinister...?","first_aired":"2019-01-04T12:00:00.000Z","airs":{"day":"Friday","time":"21:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-MA","country":"jp","status":"ended","rating":6.50394,"votes":127,"comment_count":2,"trailer":"https://youtube.com/watch?v=J9tu253SOas","homepage":"http://boogiepop-anime.com/","network":"AT-X","updated_at":"2025-07-31T09:35:12.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","pl","pt","ru","uk","zh"],"genres":["mystery","anime","drama","horror"],"subgenres":["seinen","supernatural"],"aired_episodes":18,"original_title":"ブギーポップは笑わない"}},{"rank":2,"id":362149389,"listed_at":"2018-10-14T00:41:23.000Z","notes":null,"type":"show","show":{"title":"Dororo","year":2019,"ids":{"trakt":138218,"slug":"dororo-2019","tvdb":354167,"imdb":"tt9458304","tmdb":83100,"tvrage":null},"tagline":"","overview":"A
+        samurai lord has bartered away his newborn son''s organs to forty-eight demons
+        in exchange for dominance on the battlefield. Yet, the abandoned infant survives
+        thanks to a medicine man who equips him with primitive prosthetics—lethal
+        ones with which the wronged son will use to hunt down the multitude of demons
+        to reclaim his body one piece at a time, before confronting his father. On
+        his journeys the young hero encounters an orphan who claims to be the greatest
+        thief in Japan.","first_aired":"2019-01-07T13:00:00.000Z","airs":{"day":"Monday","time":"22:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-MA","country":"jp","status":"ended","rating":8.0983,"votes":1587,"comment_count":13,"trailer":"https://youtube.com/watch?v=YgHPBwLu0BA","homepage":"http://dororo-anime.com/","network":"TV
+        Tokyo","updated_at":"2025-07-31T09:34:55.000Z","language":"ja","languages":["ja"],"available_translations":["ar","bg","cs","de","en","es","fa","fi","fr","he","id","it","ja","ko","nl","pl","pt","ru","th","tr","uk","vi","zh"],"genres":["action","adventure","anime"],"subgenres":["shounen","dark-fantasy","mythology","supernatural"],"aired_episodes":24,"original_title":"どろろ"}},{"rank":3,"id":363924531,"listed_at":"2018-10-27T00:36:05.000Z","notes":null,"type":"show","show":{"title":"The
+        Magnificent KOTOBUKI","year":2019,"ids":{"trakt":138636,"slug":"the-magnificent-kotobuki","tvdb":354636,"imdb":"tt9314454","tmdb":83454,"tvrage":null},"tagline":"","overview":"The
+        story will take place in a barren frontier where people trade goods with each
+        other in order to help each other survive. The Kotobuki Squadron are bodyguards
+        for hire, led by a strict but beautiful squadron leader, an unreliable commanding
+        officer, and a true artisan of a crew chief. Alongside pilots who don''t lack
+        for personality, they take to the air in dogfights, letting the engine noise
+        of their Hayabusa fighters ring out in the skies.","first_aired":"2019-01-13T13:30:00.000Z","airs":{"day":"Sunday","time":"22:30","timezone":"Asia/Tokyo"},"runtime":23,"certification":null,"country":"jp","status":"ended","rating":6.0,"votes":36,"comment_count":0,"trailer":null,"homepage":"http://kotobuki-anime.com","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:34:40.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","ja","ko","pl","pt","ru","uk","zh"],"genres":["anime","action","adventure"],"subgenres":[],"aired_episodes":12,"original_title":"荒野のコトブキ飛行隊"}},{"rank":4,"id":362139545,"listed_at":"2018-10-13T23:45:49.000Z","notes":null,"type":"show","show":{"title":"The
+        Rising of the Shield Hero","year":2019,"ids":{"trakt":137154,"slug":"the-rising-of-the-shield-hero","tvdb":353712,"imdb":"tt9529546","tmdb":83095,"tvrage":null},"tagline":"Our
+        regrets make us stronger.","overview":"Iwatani Naofumi, a run-of-the-mill
+        otaku, finds a book in the library that summons him to another world. He is
+        tasked with joining the sword, spear, and bow as one of the Four Cardinal
+        Heroes and fighting the Waves of Catastrophe as the Shield Hero. Excited by
+        the prospect of a grand adventure, Naofumi sets off with his party. However,
+        merely a few days later, he is betrayed and loses all his money, dignity,
+        and respect. Unable to trust anyone anymore, he employs a slave named Raphtalia
+        and takes on the Waves and the world. But will he really find a way to overturn
+        this desperate situation?","first_aired":"2019-01-09T12:00:00.000Z","airs":{"day":"Wednesday","time":"21:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-14","country":"jp","status":"returning
+        series","rating":7.76696,"votes":1931,"comment_count":12,"trailer":"https://youtube.com/watch?v=rKnyi3TRznA","homepage":"http://shieldhero-anime.jp","network":"AT-X","updated_at":"2025-07-31T22:00:50.000Z","language":"ja","languages":["ja"],"available_translations":["ar","bg","cs","da","de","en","es","fi","fr","he","it","ja","ko","my","nl","pl","pt","ru","th","tr","uk","vi","zh"],"genres":["anime","action","drama","fantasy"],"subgenres":["isekai","seinen","sibling-rivalry","dark-fantasy","magic"],"aired_episodes":54,"original_title":"盾の勇者の成り上がり"}},{"rank":5,"id":362153717,"listed_at":"2018-10-14T01:26:36.000Z","notes":null,"type":"show","show":{"title":"Magical
+        Girl Spec-Ops Asuka","year":2019,"ids":{"trakt":138221,"slug":"magical-girl-spec-ops-asuka","tvdb":354171,"imdb":"tt8731478","tmdb":83104,"tvrage":null},"tagline":"","overview":"Due
+        to the invasion of Disas—enigmatic creatures of soil from the land of the
+        dead—mankind, who was on the verge of crisis, was saved by the efforts of
+        magical girls who had obtained a mysterious magical power...\n\nThree years
+        later, new incidents suddenly occur, tearing apart the normalcy of the girls
+        who had each returned to their normal lives. The saviours of humanity, those
+        magical girls called \"The Magical Five\" now live each day fighting for their
+        lives, even as they are trifled with by fate...","first_aired":"2019-01-10T17:30:00.000Z","airs":{"day":"Saturday","time":"02:30","timezone":"Asia/Tokyo"},"runtime":22,"certification":null,"country":"jp","status":"ended","rating":6.30435,"votes":69,"comment_count":0,"trailer":"https://youtube.com/watch?v=Gp-IpQA4jmg","homepage":"http://magical-five.jp/","network":"AT-X","updated_at":"2025-07-31T09:34:34.000Z","language":"ja","languages":["en","ja"],"available_translations":["de","en","es","fr","it","ja","ko","pl","pt","ru","uk","zh"],"genres":["anime","action","drama","fantasy","science-fiction","adventure"],"subgenres":[],"aired_episodes":12,"original_title":"魔法少女特殊戦あすか"}},{"rank":6,"id":362152286,"listed_at":"2018-10-14T01:26:26.000Z","notes":null,"type":"show","show":{"title":"Domestic
+        Girlfriend","year":2019,"ids":{"trakt":138220,"slug":"domestic-girlfriend","tvdb":354170,"imdb":"tt9817980","tmdb":83103,"tvrage":null},"tagline":"","overview":"Natsuo
+        is a high school boy who is experiencing the crushing despair of unrequited
+        love. To make matters worse, the person he is in love with is his teacher,
+        Hina. In an attempt to lift his spirits, he attends a mixer where he meets
+        a girl named Rui. The two sleep together, expecting never to see one another
+        again, but fate has other plans. His life suddenly becomes more complicated
+        when his father comes home and announces he has remarried a woman with two
+        daughters whom Natsuo has met before: Hina and Rui!","first_aired":"2019-01-11T17:00:00.000Z","airs":{"day":"Saturday","time":"02:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-MA","country":"jp","status":"ended","rating":6.82966,"votes":499,"comment_count":7,"trailer":"https://youtube.com/watch?v=5-rDQW4JYd4","homepage":"http://domekano-anime.com/","network":"TBS","updated_at":"2025-07-31T09:34:26.000Z","language":"ja","languages":["ja"],"available_translations":["ar","cs","de","en","es","fr","he","hu","it","ja","ko","pl","pt","ru","th","tr","uk","zh"],"genres":["anime","drama","romance"],"subgenres":[],"aired_episodes":12,"original_title":"ドメスティックな彼女"}},{"rank":7,"id":362139715,"listed_at":"2018-10-13T23:46:10.000Z","notes":null,"type":"show","show":{"title":"The
+        Promised Neverland","year":2019,"ids":{"trakt":131158,"slug":"the-promised-neverland","tvdb":348002,"imdb":"tt8788458","tmdb":83097,"tvrage":null},"tagline":"","overview":"Surrounded
+        by a forest and a gated entrance, the Grace Field House is inhabited by orphans
+        happily living together as one big family, looked after by their \"Mama,\"
+        Isabella. Although they are required to take tests daily, the children are
+        free to spend their time as they see fit, usually playing outside, as long
+        as they do not venture too far from the orphanage — a rule they are expected
+        to follow no matter what. However, all good times must come to an end, as
+        every few months, a child is adopted and sent to live with their new family...
+        never to be heard from again.\n\nHowever, the three oldest siblings have their
+        suspicions about what is actually happening at the orphanage, and they are
+        about to discover the cruel fate that awaits the children living at Grace
+        Field, including the twisted nature of their beloved Mama.","first_aired":"2019-01-10T15:00:00.000Z","airs":{"day":"","time":"","timezone":"Asia/Tokyo"},"runtime":23,"certification":"TV-MA","country":"jp","status":"ended","rating":7.82847,"votes":2810,"comment_count":31,"trailer":"https://youtube.com/watch?v=JIcjo7XVlOY","homepage":"http://neverland-anime.com","network":"Fuji
+        TV","updated_at":"2025-07-31T09:34:47.000Z","language":"ja","languages":["en","ja"],"available_translations":["ar","cs","de","el","en","es","fr","he","it","ja","ko","nl","pl","pt","ru","sv","th","tr","uk","vi","zh"],"genres":["anime","horror","mystery","science-fiction","suspense"],"subgenres":["revenge","survival","shounen","coming-of-age","tragedy","dark-fantasy","suspense"],"aired_episodes":23,"original_title":"約束のネバーランド"}},{"rank":8,"id":368392244,"listed_at":"2018-12-04T19:07:15.000Z","notes":null,"type":"show","show":{"title":"My
+        Roommate is a Cat","year":2019,"ids":{"trakt":140294,"slug":"my-roommate-is-a-cat","tvdb":355968,"imdb":"tt9522316","tmdb":84660,"tvrage":null},"tagline":"","overview":"Getting
+        a roommate is the last thing an eccentric author like Mikazuki would do, until
+        a stray cat sparks an idea for his next novel. After plucking the little killer
+        off the streets, Mikazuki is inspired in ways he would have never expected","first_aired":"2019-01-09T14:30:00.000Z","airs":{"day":"Wednesday","time":"23:30","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-14","country":"jp","status":"ended","rating":7.81731,"votes":208,"comment_count":4,"trailer":"https://youtube.com/watch?v=6EMUrG4SMto","homepage":"http://hizaue.com","network":"AT-X","updated_at":"2025-07-31T09:35:17.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","nl","pl","pt","ru","uk","vi","zh"],"genres":["anime","comedy","drama"],"subgenres":[],"aired_episodes":12,"original_title":"同居人はひざ、時々、頭のうえ。"}},{"rank":9,"id":368392062,"listed_at":"2018-12-04T19:04:14.000Z","notes":null,"type":"show","show":{"title":"Grimms
+        Notes: The Animation","year":2019,"ids":{"trakt":140295,"slug":"grimms-notes-the-animation","tvdb":355970,"imdb":"tt9585568","tmdb":84665,"tvrage":null},"tagline":"","overview":"The
+        story takes place in a world created by a beings known as \"Story Tellers.\"
+        At birth, all inhabitants of this world are bestowed with a \"book of fate\"
+        where all their lives are written in advance. However, rogue Story Tellers
+        known as Chaos Tellers are writing bad events into people''s books without
+        them knowing. It is up to the holders of blank books of fate to seek out the
+        Chaos Tellers and restore the world.","first_aired":"2019-01-10T17:00:00.000Z","airs":{"day":"Friday","time":"02:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":null,"country":"jp","status":"ended","rating":5.71429,"votes":28,"comment_count":0,"trailer":null,"homepage":"http://www.tbs.co.jp/anime/grimmsnotes/","network":"TBS","updated_at":"2025-07-31T09:35:09.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","nl","pl","pt","ru","zh"],"genres":["anime","action","adventure"],"subgenres":[],"aired_episodes":12,"original_title":"グリムノーツ
+        The Animation"}},{"rank":10,"id":368392012,"listed_at":"2018-12-04T19:03:10.000Z","notes":null,"type":"show","show":{"title":"WATATEN!:
+        an Angel Flew Down to Me","year":2019,"ids":{"trakt":140292,"slug":"wataten-an-angel-flew-down-to-me","tvdb":355969,"imdb":"tt9622614","tmdb":84666,"tvrage":null},"tagline":"","overview":"Miyako
+        is a shy college student who is also an otaku. One day she happens to meet
+        some angelic grade school kids! When Miyako sees her little sister''s new
+        friend Hana-chan, Miyako''s heart won''t stop racing! Miyako tries to get
+        along with them but struggles... A sketch comedy all about trying to get along
+        with the super cute girl is about to begin!","first_aired":"2019-01-08T13:00:00.000Z","airs":{"day":"Tuesday","time":"22:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-14","country":"jp","status":"ended","rating":6.86076,"votes":79,"comment_count":0,"trailer":"https://youtube.com/watch?v=5tS0IFdOGyA","homepage":"http://watatentv.com/","network":"AT-X","updated_at":"2025-07-31T09:35:15.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","pl","pt","ru","uk","vi","zh"],"genres":["anime","comedy"],"subgenres":["slice-of-life"],"aired_episodes":12,"original_title":"私に天使が舞い降りた！"}},{"rank":11,"id":362220930,"listed_at":"2018-10-14T15:08:12.000Z","notes":null,"type":"show","show":{"title":"Kaguya-sama:
+        Love is War","year":2019,"ids":{"trakt":138254,"slug":"kaguya-sama-love-is-war","tvdb":354198,"imdb":"tt9522300","tmdb":83121,"tvrage":null},"tagline":"","overview":"Considered
+        a genius due to having the highest grades in the country, Miyuki Shirogane
+        leads the prestigious Shuchiin Academy''s student council as its president,
+        working alongside the beautiful and wealthy vice president Kaguya Shinomiya.
+        The two are often regarded as the perfect couple by students despite them
+        not being in any sort of romantic relationship.","first_aired":"2019-01-11T15:00:00.000Z","airs":{"day":"Saturday","time":"00:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-14","country":"jp","status":"ended","rating":8.45869,"votes":1622,"comment_count":15,"trailer":"https://youtube.com/watch?v=IwpJJiQkZzI","homepage":"http://kaguya.love/","network":"Tochigi
+        TV","updated_at":"2025-07-31T09:35:19.000Z","language":"ja","languages":["ja"],"available_translations":["ar","cs","de","en","es","fr","he","hu","it","ja","ko","nl","pl","pt","ru","sk","th","tr","uk","vi","zh"],"genres":["anime","comedy","romance"],"subgenres":["seinen"],"aired_episodes":37,"original_title":"かぐや様は告らせたい～天才たちの恋愛頭脳戦～"}},{"rank":12,"id":362220988,"listed_at":"2018-10-14T15:09:03.000Z","notes":null,"type":"show","show":{"title":"Rinshi!!
+        Ekoda-chan","year":2019,"ids":{"trakt":138256,"slug":"rinshi-ekoda-chan","tvdb":354194,"imdb":"tt14068416","tmdb":83117,"tvrage":null},"tagline":"","overview":"Ekoda-chan
+        is from the countryside, living alone in the city. She''s a temp worker and
+        a strong, carefree soul, with no solid plan for the future, who doesn''t care
+        much about guys. She talks about how she lives her life and provides support
+        to all those women trying to survive in the real life society.","first_aired":"2019-01-08T16:00:00.000Z","airs":{"day":"Wednesday","time":"01:00","timezone":"Asia/Tokyo"},"runtime":5,"certification":null,"country":"jp","status":"ended","rating":4.0,"votes":14,"comment_count":0,"trailer":null,"homepage":"http://ekodachan.com/","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:34:37.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","it","ja","ko","nl","pl","pt","ru","zh"],"genres":["anime"],"subgenres":[],"aired_episodes":12,"original_title":"臨死!!江古田ちゃん"}},{"rank":13,"id":363983979,"listed_at":"2018-10-27T12:21:08.000Z","notes":null,"type":"show","show":{"title":"The
+        Price of Smiles","year":2019,"ids":{"trakt":138680,"slug":"the-price-of-smiles","tvdb":354675,"imdb":"tt9553076","tmdb":83477,"tvrage":null},"tagline":"","overview":"On
+        a planet far from Earth, there is a kingdom full of smiling faces. Princess
+        Yuuki is 12 years old, and about to enter a sensitive age in a person''s life.
+        Everyday, she cries, laughs, and sometimes, her heart throbs with excitement.
+        All the while, she lives merrily in the royal palace. Filling her days with
+        color are her loyal vassals: her tutor Reira, Izana who assists in political
+        affairs, the leader of the chivalry Harold and then, there is her childhood
+        friend and aide Joshua. Stella is 17 years old and a capable, reserved soldier.
+        However, she is always smiling for smiling is essential to living.","first_aired":"2019-01-04T12:30:00.000Z","airs":{"day":"Friday","time":"21:30","timezone":"Asia/Tokyo"},"runtime":25,"certification":"TV-PG","country":"jp","status":"ended","rating":4.87097,"votes":31,"comment_count":0,"trailer":"https://youtube.com/watch?v=cy8Pz2LB0tU","homepage":"http://tatsunoko.co.jp/egaonodaika/","network":"WOWOW
+        Prime","updated_at":"2025-07-31T09:34:44.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","pl","pt","ru","zh"],"genres":["anime","drama","fantasy","science-fiction"],"subgenres":[],"aired_episodes":12,"original_title":"エガオノダイカ"}},{"rank":14,"id":363924397,"listed_at":"2018-10-27T00:35:01.000Z","notes":null,"type":"show","show":{"title":"Hulaing
+        Babies","year":2019,"ids":{"trakt":138637,"slug":"hulaing-babies","tvdb":354637,"imdb":"tt10623650","tmdb":83455,"tvrage":null},"tagline":"","overview":"The
+        anime will center on a group of young girls and their struggle as they aim
+        to become Hula Girls.","first_aired":"2019-01-10T15:00:00.000Z","airs":{"day":null,"time":null,"timezone":"Asia/Tokyo"},"runtime":5,"certification":null,"country":"jp","status":"ended","rating":4.6,"votes":5,"comment_count":0,"trailer":null,"homepage":"http://hulaingbabies.com","network":"FCT","updated_at":"2025-07-31T09:34:39.000Z","language":"ja","languages":["ja"],"available_translations":["en","es","it","ja","ru","uk","zh"],"genres":["anime","comedy"],"subgenres":[],"aired_episodes":12,"original_title":"フライングベイビーズ"}},{"rank":15,"id":362221032,"listed_at":"2018-10-14T15:09:59.000Z","notes":null,"type":"show","show":{"title":"How
+        Clumsy you are, Miss Ueno.","year":2019,"ids":{"trakt":138257,"slug":"how-clumsy-you-are-miss-ueno","tvdb":354193,"imdb":"tt9567240","tmdb":83116,"tvrage":null},"tagline":"","overview":"Ueno
+        may be the president of the science club at her junior high and a genius inventor,
+        but she still can’t figure out how to confess to her crush, Tanaka! Can she
+        find a way to give her heart what it truly yearns for?","first_aired":"2019-01-07T03:30:00.000Z","airs":{"day":"Monday","time":"12:30","timezone":"Asia/Tokyo"},"runtime":12,"certification":null,"country":"jp","status":"ended","rating":5.5,"votes":72,"comment_count":1,"trailer":null,"homepage":"http://www.miss-ueno.com/","network":"BS11","updated_at":"2025-07-31T09:34:29.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","nl","pl","pt","ru","zh"],"genres":["anime","comedy","romance"],"subgenres":[],"aired_episodes":12,"original_title":"上野さんは不器用"}},{"rank":16,"id":368392075,"listed_at":"2018-12-04T19:04:49.000Z","notes":null,"type":"show","show":{"title":"Circlet
+        Princess","year":2019,"ids":{"trakt":140296,"slug":"circlet-princess","tvdb":355971,"imdb":"tt7906926","tmdb":84664,"tvrage":null},"tagline":"","overview":"People''s
+        lives have changed because of VR and AR, and an competitive sport has born
+        from these technologies called CB (Circlet Bout). CB can be competed between
+        two schools and became an e-sport that decides the wealth of the schools.
+        It also became the real ability of the school, which depends on not just the
+        students'' academic skills, but also on the data based on the sport ability,
+        art, skills, etc.","first_aired":"2019-01-08T14:00:00.000Z","airs":{"day":"Tuesday","time":"23:00","timezone":"Asia/Tokyo"},"runtime":23,"certification":null,"country":"jp","status":"ended","rating":6.18182,"votes":11,"comment_count":0,"trailer":null,"homepage":"http://cirpri-anime.jp/","network":"Tokyo
+        MX","updated_at":"2025-07-29T08:28:32.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","pl","pt","ru","zh"],"genres":["anime","fantasy","science-fiction","action","adventure"],"subgenres":[],"aired_episodes":12,"original_title":"サークレット・プリンセス"}},{"rank":17,"id":362153737,"listed_at":"2018-10-14T01:26:54.000Z","notes":null,"type":"show","show":{"title":"revisions","year":2019,"ids":{"trakt":133963,"slug":"revisions","tvdb":350084,"imdb":"tt9522354","tmdb":83105,"tvrage":null},"tagline":"","overview":"When
+        Shibuya time-warps to 2388, high schooler Daisuke and his friends are conscripted
+        by AHRV agent Milo to fight the hostile cyborg race, revisions.","first_aired":"2019-01-09T16:00:00.000Z","airs":{"day":"Thursday","time":"01:00","timezone":"Asia/Tokyo"},"runtime":23,"certification":"TV-14","country":"jp","status":"ended","rating":6.18056,"votes":144,"comment_count":2,"trailer":"https://youtube.com/watch?v=UEgEaWoZdJ0","homepage":"http://revisions.jp/anime","network":"Fuji
+        TV","updated_at":"2025-07-31T09:34:31.000Z","language":"ja","languages":["ja"],"available_translations":["de","el","en","es","fi","fr","he","it","ja","ko","pl","pt","ru","th","zh"],"genres":["anime","action","science-fiction"],"subgenres":[],"aired_episodes":12,"original_title":"revisions
+        リヴィジョンズ"}},{"rank":18,"id":362149375,"listed_at":"2018-10-14T00:41:08.000Z","notes":null,"type":"show","show":{"title":"W''z","year":2019,"ids":{"trakt":138217,"slug":"w-z","tvdb":354164,"imdb":"tt12052708","tmdb":83099,"tvrage":null},"tagline":"","overview":"Inspired
+        by house music from a young age, Yukiya spends his free time as a DJ for a
+        crowd of one and uploads his videos online. Like any young teenager, he yearns
+        for something greater than his current life. He wants recognition and importance,
+        but breaking out of his comfort zone means he runs the risk of getting hurt,
+        so the cycle continues. That is, until the day he finally crosses the line
+        of no return and live streams a performance that will change his world forever.","first_aired":"2019-01-05T16:30:00.000Z","airs":{"day":"Sunday","time":"01:30","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-14","country":"jp","status":"ended","rating":5.46154,"votes":13,"comment_count":0,"trailer":null,"homepage":"http://wz-anime.net","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:34:34.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","pl","pt","ru","zh"],"genres":["anime","action","adventure"],"subgenres":[],"aired_episodes":13,"original_title":"W''z"}},{"rank":19,"id":362152266,"listed_at":"2018-10-14T01:26:09.000Z","notes":null,"type":"show","show":{"title":"Girly
+        Air Force","year":2019,"ids":{"trakt":138219,"slug":"girly-air-force","tvdb":354168,"imdb":"tt9575040","tmdb":83102,"tvrage":null},"tagline":"","overview":"The
+        mysterious flying creatures known as Zai suddenly appear, and in order to
+        fight the creatures, mankind creates fighter aircraft called \"Daughters,\"
+        as well as the automatic fighting mechanism \"Anima,\" which are shaped like
+        human girls. The story centers on a young man named Narutani Kei, who yearns
+        to fly in the sky, and an Anima considered to be humanity''s trump card, a
+        girl name Guripen.","first_aired":"2019-01-10T14:00:00.000Z","airs":{"day":"Thursday","time":"23:00","timezone":"Asia/Tokyo"},"runtime":23,"certification":null,"country":"jp","status":"ended","rating":5.94118,"votes":34,"comment_count":1,"trailer":"https://youtube.com/watch?v=lIoecLM5QSQ","homepage":"http://gaf-anime.jp","network":"AT-X","updated_at":"2025-07-31T09:34:32.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","pl","pt","ru","zh"],"genres":["anime","action","adventure","fantasy","science-fiction","drama"],"subgenres":[],"aired_episodes":12,"original_title":"ガーリー・エアフォース"}},{"rank":20,"id":362220907,"listed_at":"2018-10-14T15:07:54.000Z","notes":null,"type":"show","show":{"title":"Kemurikusa","year":2019,"ids":{"trakt":138253,"slug":"kemurikusa","tvdb":354199,"imdb":"tt9573902","tmdb":83122,"tvrage":null},"tagline":"","overview":"A
+        story about three sisters struggling to survive in a desolate world surrounded
+        by decaying buildings and red fog. The story revolves around Rin, a girl with
+        an updo. There''s also Ritsu, the big sister who has cat ears and is always
+        calm, and Rina, the innocent, cheerful one dressed in a maid''s costume. Just
+        what is it that these sisters are after in this mysterious world?","first_aired":"2019-01-09T02:15:00.000Z","airs":{"day":"Wednesday","time":"11:15","timezone":"Asia/Tokyo"},"runtime":23,"certification":null,"country":"jp","status":"ended","rating":5.52941,"votes":34,"comment_count":0,"trailer":null,"homepage":"http://kemurikusa.com/","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:34:25.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","pl","pt","ru","uk","zh"],"genres":["anime","adventure","fantasy","science-fiction","action"],"subgenres":[],"aired_episodes":12,"original_title":"ケムリクサ"}},{"rank":21,"id":370761033,"listed_at":"2018-12-23T12:46:57.000Z","notes":null,"type":"show","show":{"title":"Mysteria
+        Friends","year":2019,"ids":{"trakt":104796,"slug":"mysteria-friends","tvdb":306111,"imdb":"tt9203780","tmdb":84869,"tvrage":null},"tagline":"","overview":"Anne,
+        the honor student princess, and Grea, a princess born from a dragon and a
+        human are students at the Mysteria Academy, a prestigious magic school that
+        teaches magic without discrimination to the three factions (men, gods, demons),
+        who usually are engaged in battle with each other.","first_aired":"2019-01-21T03:30:00.000Z","airs":{"day":"Monday","time":"12:30","timezone":"Asia/Tokyo"},"runtime":14,"certification":null,"country":"jp","status":"ended","rating":6.18182,"votes":88,"comment_count":3,"trailer":null,"homepage":"http://manaria.jp","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:35:17.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","nl","pl","pt","ru","th","uk","vi","zh"],"genres":["fantasy","science-fiction","anime","action","adventure"],"subgenres":[],"aired_episodes":10,"original_title":"マナリアフレンズ"}},{"rank":22,"id":368389300,"listed_at":"2018-12-04T19:01:16.000Z","notes":null,"type":"show","show":{"title":"The
+        Quintessential Quintuplets","year":2019,"ids":{"trakt":140293,"slug":"the-quintessential-quintuplets","tvdb":355966,"imdb":"tt9584920","tmdb":84669,"tvrage":null},"tagline":"","overview":"Fuutarou
+        Uesugi is a poor, antisocial ace student who one day meets the rich transfer
+        student Itsuki Nakano. They argue but when Uesugi realizes he is to be her
+        tutor, he tries to get on better terms. While trying to do so he meets four
+        other girls.","first_aired":"2019-01-10T16:30:00.000Z","airs":{"day":"Friday","time":"01:30","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-14","country":"jp","status":"ended","rating":7.62776,"votes":634,"comment_count":4,"trailer":"https://youtube.com/watch?v=cYhQRTmU0aA","homepage":"http://www.tbs.co.jp/anime/5hanayome","network":"TBS","updated_at":"2025-07-31T09:41:08.000Z","language":"ja","languages":["ja"],"available_translations":["cs","de","en","es","fr","he","it","ja","ko","nl","pl","pt","ro","ru","th","tr","uk","vi","zh"],"genres":["anime","comedy","drama","romance"],"subgenres":["slice-of-life"],"aired_episodes":24,"original_title":"五等分の花嫁"}},{"rank":23,"id":362220954,"listed_at":"2018-10-14T15:08:21.000Z","notes":null,"type":"show","show":{"title":"Pastel
+        Memories","year":2019,"ids":{"trakt":138255,"slug":"pastel-memories","tvdb":354197,"imdb":"tt9520752","tmdb":83120,"tvrage":null},"tagline":"","overview":"Akihabara
+        is known as a shining beacon for otaku culture everywhere. But in a not-to-distant
+        future, that culture is on the decline due to a mysterious affliction causing
+        widespread memory loss. As a result, Akihabara has lost its luster. However,
+        in one of the few remaining otaku shops, Izumi and a handful of comrades hatch
+        a plan to restore lost memories and return “Akiba” to its former glory.","first_aired":"2019-01-07T03:30:00.000Z","airs":{"day":"Tuesday","time":"12:30","timezone":"Asia/Tokyo"},"runtime":24,"certification":null,"country":"jp","status":"ended","rating":4.28571,"votes":14,"comment_count":0,"trailer":null,"homepage":"http://pasumemotv.com/","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:34:26.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","pt","ru","zh"],"genres":["anime","action","adventure","fantasy","science-fiction"],"subgenres":[],"aired_episodes":12,"original_title":"ぱすてるメモリーズ"}},{"rank":24,"id":368390822,"listed_at":"2018-12-04T19:02:07.000Z","notes":null,"type":"show","show":{"title":"Endro!","year":2019,"ids":{"trakt":138346,"slug":"endro","tvdb":354298,"imdb":"tt9510780","tmdb":84667,"tvrage":null},"tagline":"","overview":"Naral
+        Island, a continent with swords and magic in which humans and monsters coexist.
+        The terrible Demon King lives there. In ancient times, the first-generation
+        hero defeated the Demon King. Over the many successive generations since then,
+        the Demon King has been resurrected, and the hero who opposes him has likewise
+        reappeared. Girls attend a school for adventurers in order to defeat the Demon
+        King when he appears again.\n\nThough a bit absent-minded, Yusha has the body
+        of a hero. The holy elf Seyla''s trouble never ends because she is too serious.
+        The cheerful warrior Fai loves to eat. Mei is a quiet otaku magician. As the
+        four girls aim to be in the hero party, they live relaxed fantasy lives and
+        show no sign of defeating the Demon King no matter how much time passes.","first_aired":"2019-01-12T16:00:00.000Z","airs":{"day":"Sunday","time":"01:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-14","country":"jp","status":"ended","rating":6.5,"votes":48,"comment_count":0,"trailer":null,"homepage":"http://www.endro.jp/","network":"BS11","updated_at":"2025-07-31T15:31:10.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","nl","pl","pt","ru","th","tr","uk","zh"],"genres":["fantasy","anime","science-fiction","comedy"],"subgenres":["slice-of-life","magic"],"aired_episodes":12,"original_title":"えんどろ～！"}},{"rank":25,"id":370763292,"listed_at":"2018-12-23T13:23:03.000Z","notes":null,"type":"show","show":{"title":"Katana
+        Maidens ~ Mini Toji","year":2019,"ids":{"trakt":141922,"slug":"katana-maidens-mini-toji","tvdb":356777,"imdb":"tt32141547","tmdb":85177,"tvrage":null},"tagline":"","overview":"Does
+        the girls'' daily life include fighting and not fighting?\n\nAll the characters
+        from the TV animated series \"Katana Maidens\" and the smartphone game \"Katana
+        Maidens Kizamishi Issen no Tomoshibi\" are gathered together in smaller form!","first_aired":"2019-01-11T17:00:00.000Z","airs":{"day":"Sunday","time":"02:00","timezone":"Asia/Tokyo"},"runtime":4,"certification":null,"country":"jp","status":"ended","rating":3.8,"votes":5,"comment_count":0,"trailer":null,"homepage":"http://minitoji.jp","network":"AT-X","updated_at":"2025-07-31T09:35:28.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","nl","pl","pt","ru","zh"],"genres":["anime","comedy","action","adventure"],"subgenres":[],"aired_episodes":10,"original_title":"みにとじ"}},{"rank":26,"id":372492951,"listed_at":"2019-01-04T15:01:05.000Z","notes":null,"type":"show","show":{"title":"Virtualsan
+        - Looking","year":2019,"ids":{"trakt":142077,"slug":"virtualsan-looking","tvdb":357277,"imdb":"tt12887816","tmdb":85480,"tvrage":null},"tagline":"","overview":"The
+        series features over 30 virtual YouTubers or VTubers — characters popularized
+        via videos on streaming services and user-generated content sites.\n\nEach
+        episode will be an omnibus of segments, each highlighting different VTubers.
+        The series will stream on Niconico Live and Periscope simultaneously with
+        the television broadcast.","first_aired":"2019-01-10T03:00:00.000Z","airs":{"day":"Thursday","time":"12:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":null,"country":"jp","status":"ended","rating":2.85714,"votes":7,"comment_count":0,"trailer":null,"homepage":"http://virtualsan-looking.jp","network":"Niconico","updated_at":"2025-07-31T09:35:36.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","pl","pt","zh"],"genres":["anime","comedy"],"subgenres":[],"aired_episodes":12,"original_title":"バーチャルさんはみている"}},{"rank":27,"id":371787573,"listed_at":"2018-12-30T11:30:27.000Z","notes":null,"type":"show","show":{"title":"Star☆Twinkle
+        PreCure","year":2019,"ids":{"trakt":142216,"slug":"star-twinkle-precure","tvdb":357448,"imdb":"tt13620226","tmdb":85322,"tvrage":null},"tagline":"","overview":"When
+        Hikaru Hoshina transforms into Cure Star, she embarks on an outer space adventure
+        to find the rest of the Star Twinkle Cures and save the universe!","first_aired":"2019-01-18T23:30:00.000Z","airs":{"day":"Sunday","time":"08:30","timezone":"Asia/Tokyo"},"runtime":24,"certification":null,"country":"jp","status":"ended","rating":7.0,"votes":9,"comment_count":0,"trailer":null,"homepage":"http://www.toei-anim.co.jp/tv/startwinkle_precure/","network":"Ryu-Q
+        Asahi Broadcasting","updated_at":"2025-07-31T09:35:28.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","pl","pt","ru","tr","zh"],"genres":["anime","fantasy","action","adventure","science-fiction","comedy","superhero","family","children"],"subgenres":["magical-girl","magic","superhero","supervillain","superhero-team"],"aired_episodes":49,"original_title":"スター☆トゥインクルプリキュア"}},{"rank":28,"id":368392109,"listed_at":"2018-12-04T19:05:44.000Z","notes":null,"type":"show","show":{"title":"Bermuda
+        Triangle ~ Colorful Pastorale","year":2019,"ids":{"trakt":140567,"slug":"bermuda-triangle-colorful-pastorale","tvdb":356311,"imdb":"tt13758844","tmdb":84663,"tvrage":null},"tagline":"","overview":"Mermaids
+        are known worldwide as bewitching mythological creatures of the sea. Despite
+        their charms and otherworldly powers, daily life for these beings comes with
+        everyday problems. But there’s nothing that can’t be overcome with the support
+        of friends. Follow the adventures of five young mermaids as they explore their
+        town and the world around them in this delightful slice-of-life series that
+        takes viewers to an enchanting world beneath the waves.","first_aired":"2019-01-12T13:00:00.000Z","airs":{"day":"Saturday","time":"22:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":null,"country":"jp","status":"ended","rating":5.0,"votes":8,"comment_count":0,"trailer":null,"homepage":"http://colorful-pastrale.com/","network":"Sun
+        TV","updated_at":"2025-07-31T09:35:05.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","it","ja","ko","pl","pt","ru","zh"],"genres":["anime","fantasy","comedy"],"subgenres":[],"aired_episodes":12,"original_title":"バミューダトライアングル
+        ～カラフル・パストラーレ～"}},{"rank":29,"id":370765043,"listed_at":"2018-12-23T13:26:28.000Z","notes":null,"type":"show","show":{"title":"Meiji
+        Tokyo Renka","year":2019,"ids":{"trakt":139966,"slug":"meiji-tokyo-renka","tvdb":355576,"imdb":"tt10223702","tmdb":84141,"tvrage":null},"tagline":"","overview":"Mei
+        Ayazuki, an ordinary high school girl, becomes the object of affection for
+        a bunch of handsome historical figures when she accidentally time-travels
+        back to Tokyo during the Meiji Era.","first_aired":"2019-01-09T14:30:00.000Z","airs":{"day":"Wednesday","time":"23:30","timezone":"Asia/Tokyo"},"runtime":24,"certification":null,"country":"jp","status":"ended","rating":6.97959,"votes":49,"comment_count":1,"trailer":"https://youtube.com/watch?v=F1LDCFKTbqU","homepage":"http://meikoi.com/tv-anime","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:35:06.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","he","it","ja","ko","pl","pt","ru","zh"],"genres":["anime","fantasy","science-fiction","romance"],"subgenres":[],"aired_episodes":12,"original_title":"明治東亰恋伽"}},{"rank":30,"id":368392150,"listed_at":"2018-12-04T19:06:18.000Z","notes":null,"type":"show","show":{"title":"Dimension
+        High School","year":2019,"ids":{"trakt":140568,"slug":"dimension-high-school","tvdb":356310,"imdb":null,"tmdb":84662,"tvrage":null},"tagline":"","overview":"One
+        day, on his way to high school, student Junpei picks up an unusual looking
+        rock. Thinking nothing of it, he heads to class. While in the middle of a
+        session, the rock comes to life and transports him and four others to an animated
+        world! To make matters more interesting, the group is introduced to a giant
+        sphinx who is determined to take over the world! Now, to protect their world
+        from invasion, the group must work together as anime characters and real-world
+        humans!","first_aired":"2019-01-10T13:00:00.000Z","airs":{"day":"Thursday","time":"22:00","timezone":"Asia/Tokyo"},"runtime":25,"certification":null,"country":"jp","status":"ended","rating":3.4,"votes":10,"comment_count":0,"trailer":null,"homepage":"http://dimension-hs.com/","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:35:07.000Z","language":"ja","languages":["ja"],"available_translations":["en","es","ja","pl","pt","ru"],"genres":["anime"],"subgenres":["live-action-and-animation"],"aired_episodes":12,"original_title":"Dimensionハイスクール"}},{"rank":31,"id":374794637,"listed_at":"2019-01-21T19:11:34.000Z","notes":null,"type":"show","show":{"title":"IDOLiSH7
+        Vibrato","year":2018,"ids":{"trakt":143106,"slug":"idolish7-vibrato","tvdb":358425,"imdb":"tt9001710","tmdb":117534,"tvrage":null},"tagline":"","overview":"Introducing
+        IDOLiSH7 Vibrato! Based on the popular music game, this YouTube original series
+        features new stories depicting the lives of the namesake idol group IDOLiSH7
+        and their journey to becoming superstars in Japan.","first_aired":"2018-02-17T10:00:00.000Z","airs":{"day":"Friday","time":"19:00","timezone":"Asia/Tokyo"},"runtime":15,"certification":null,"country":"jp","status":"ended","rating":6.90909,"votes":11,"comment_count":0,"trailer":null,"homepage":"http://www.youtube.com/playlist?list=PLKPsuBIKuejPW5LhKsMO287VuM-p11lPM","network":"YouTube","updated_at":"2025-06-06T16:26:33.000Z","language":"ja","languages":["ja"],"available_translations":["en","it","ja","nl","zh"],"genres":["anime"],"subgenres":[],"aired_episodes":8,"original_title":"アイドリッシュセブン
+        Vibrato"}},{"rank":32,"id":362104837,"listed_at":"2018-10-13T20:43:26.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":161025,"tvdb":771985,"tmdb":110805,"tvrage":null},"rating":8.62582,"votes":457,"episode_count":13,"aired_episodes":13,"title":"Mob
+        Psycho II","overview":null,"first_aired":"2019-01-06T15:00:00.000Z","updated_at":"2025-08-02T01:54:55.000Z","network":"Tokyo
+        MX","original_title":null},"show":{"title":"Mob Psycho 100","year":2016,"ids":{"trakt":105481,"slug":"mob-psycho-100","tvdb":307375,"imdb":"tt5897304","tmdb":67075,"tvrage":null},"tagline":"","overview":"Shigeo
+        Kageyama, a.k.a. \"Mob,\" is a boy who has trouble expressing himself, but
+        who happens to be a powerful esper. Mob is determined to live a normal life
+        and keeps his ESP suppressed, but when his emotions surge to a level of 100%,
+        something terrible happens to him! As he''s surrounded by false espers, evil
+        spirits, and mysterious organizations, what will Mob think? What choices will
+        he make?","first_aired":"2016-07-11T15:00:00.000Z","airs":{"day":"Thursday","time":"00:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-14","country":"jp","status":"ended","rating":8.55509,"votes":3585,"comment_count":19,"trailer":"https://youtube.com/watch?v=hUKC0fZ6Phw","homepage":"http://mobpsycho100.com","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:20:43.000Z","language":"ja","languages":["ja"],"available_translations":["ar","bg","cs","de","en","es","fr","he","it","ja","ko","lt","nl","pl","pt","ru","th","uk","vi","zh"],"genres":["action","comedy","anime","fantasy"],"subgenres":["shounen","slice-of-life","coming-of-age","sibling-rivalry","supernatural"],"aired_episodes":37,"original_title":"モブサイコ100"}},{"rank":33,"id":362107758,"listed_at":"2018-10-13T21:19:09.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":156997,"tvdb":788416,"tmdb":110806,"tvrage":null},"rating":7.18301,"votes":153,"episode_count":12,"aired_episodes":12,"title":"Kakegurui
+        × ×","overview":null,"first_aired":"2019-01-08T17:30:00.000Z","updated_at":"2025-08-01T17:23:24.000Z","network":"MBS","original_title":"賭ケグルイ××"},"show":{"title":"Kakegurui","year":2017,"ids":{"trakt":118556,"slug":"kakegurui","tvdb":327572,"imdb":"tt7131720","tmdb":72305,"tvrage":null},"tagline":"","overview":"Hyakkaou
+        Private Academy. An institution for the privileged with a very peculiar curriculum.
+        You see, when you''re the sons and daughters of the wealthiest of the wealthy,
+        it''s not athletic prowess or book smarts that keep you ahead. It''s reading
+        your opponent, the art of the deal. What better way to hone those skills than
+        with a rigorous curriculum of gambling? At Hyakkaou Private Academy, the winners
+        live like kings, and the losers are put through the wringer. But when Yumeko
+        Jabami enrolls, she''s gonna teach these kids what a high roller really looks
+        like!","first_aired":"2017-06-30T17:30:00.000Z","airs":{"day":"Wednesday","time":"02:30","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-14","country":"jp","status":"ended","rating":7.29955,"votes":1549,"comment_count":10,"trailer":"https://youtube.com/watch?v=cTlHQiRNVl0","homepage":"http://kakegurui-anime.com/","network":"MBS","updated_at":"2025-07-31T09:26:54.000Z","language":"ja","languages":["ja"],"available_translations":["ar","cs","de","el","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ru","th","tr","uk","vi","zh"],"genres":["mystery","anime","crime","suspense"],"subgenres":[],"aired_episodes":24,"original_title":"賭ケグルイ"}},{"rank":34,"id":362116338,"listed_at":"2018-10-13T22:27:35.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":166766,"tvdb":782543,"tmdb":110808,"tvrage":null},"rating":7.48,"votes":25,"episode_count":12,"aired_episodes":12,"title":"Season
+        2","overview":null,"first_aired":"2019-01-08T17:00:00.000Z","updated_at":"2025-08-01T18:33:10.000Z","network":"NTV","original_title":null},"show":{"title":"Real
+        Girl","year":2018,"ids":{"trakt":127460,"slug":"real-girl","tvdb":342010,"imdb":"tt7112156","tmdb":77721,"tvrage":null},"tagline":"","overview":"Tsutsui
+        Hikari (a.k.a \"Tsuttsun\") is a high school student who is content with his
+        virtual life of anime and video games. One day, he gets stuck cleaning the
+        pool with Iroha, a real live girl who is stylish, sassy and known to be easy
+        with boys ... and she aggressively approaches him! Tsuttsun, who has few friends
+        and lives in his own world, finds himself smitten by the confident and wild
+        Iroha ... and his whole world is turned upside down!! It''s the awkward and
+        pure love story of a boy who experiences relationship for the first time.","first_aired":"2018-04-03T17:00:00.000Z","airs":{"day":"Wednesday","time":"02:00","timezone":"Asia/Tokyo"},"runtime":23,"certification":null,"country":"jp","status":"ended","rating":7.1,"votes":170,"comment_count":2,"trailer":"https://youtube.com/watch?v=Kmn9xEA6nhI","homepage":"http://www.3dkanojo-anime.com/","network":"NTV","updated_at":"2025-07-31T09:31:22.000Z","language":"ja","languages":["ja"],"available_translations":["cs","de","en","es","fr","he","it","ja","ko","pl","pt","ru","uk","zh"],"genres":["anime","comedy","drama","romance"],"subgenres":["slice-of-life"],"aired_episodes":24,"original_title":"３Ｄ彼女　リアルガール"}},{"rank":35,"id":368392208,"listed_at":"2018-12-04T19:06:35.000Z","notes":null,"type":"season","season":{"number":3,"ids":{"trakt":170833,"tvdb":784014,"tmdb":113759,"tvrage":null},"rating":7.04878,"votes":41,"episode_count":12,"aired_episodes":12,"title":"Date
+        A Live III","overview":"Life has settled down into a calm state for Shido
+        – or at least as calm as he can be when he''s juggling the romantic interests
+        of a half-dozen sealed Spirits and one aggressive classmate. Another spatial
+        quake warning sends him out to a ruined amusement park to meet the newest
+        Spirit, the green-haired Natsume, who dresses like a witch and uses magical
+        powers to render AST attackers comically ineffective. Although things go well
+        at first, he inadvertently offends her, and her retribution comes by pretending
+        to be him and trying to ruin his reputation at school. When that effort ultimately
+        gets thwarted by Origami and Tohka, she resorts to a much more involved plan
+        that could result in one of the people around him disappearing.","first_aired":"2019-01-11T14:30:00.000Z","updated_at":"2025-08-01T18:31:41.000Z","network":"AT-X","original_title":"デート・ア・ライブⅢ"},"show":{"title":"Date
+        A Live","year":2013,"ids":{"trakt":70005,"slug":"date-a-live","tvdb":264663,"imdb":"tt2575684","tmdb":46004,"tvrage":null},"tagline":"Kiss
+        the girls. Save the world.","overview":"Thirty years ago a strange phenomenon
+        called a \"spacequake\" devastated the center of Eurasia, claiming the lives
+        of at least 150 million people. Since then, smaller spacequakes plague the
+        world on an irregular basis. Shido Itsuka, a seemingly ordinary high schooler
+        comes across a mysterious girl at the ground zero of a spacequake and learns
+        she is one of the \"Spirits\" who are the real cause of the spacequakes that
+        occur when they manifest themselves in the world. He is recruited to make
+        use of his mysterious ability to seal the Spirits'' powers thus stopping them
+        from being a threat to mankind. However, there is a catch: to seal a Spirit''s
+        power, he must make her fall in love with him and kiss him.","first_aired":"2013-04-06T14:30:00.000Z","airs":{"day":"Wednesday","time":"23:30","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-14","country":"jp","status":"ended","rating":7.14575,"votes":494,"comment_count":0,"trailer":"https://youtube.com/watch?v=iz_sAWpBNrI","homepage":"http://date-a-live5th-anime.com/","network":"AT-X","updated_at":"2025-07-31T15:52:32.000Z","language":"ja","languages":["ja"],"available_translations":["cs","de","en","es","fr","he","hu","it","ja","ko","nl","pl","pt","ru","th","uk","vi","zh"],"genres":["comedy","fantasy","science-fiction","anime","action","adventure","romance"],"subgenres":["mecha"],"aired_episodes":58,"original_title":"デート・ア・ライブ"}},{"rank":36,"id":362117132,"listed_at":"2018-10-13T22:40:43.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":164683,"tvdb":765530,"tmdb":110809,"tvrage":null},"rating":6.8,"votes":10,"episode_count":13,"aired_episodes":13,"title":"Season
+        2","overview":"It''s a new school year and Kasumi, Arisa, Saaya, Tae, and
+        Rimi are thrilled to finally be second-year students. Even more exciting than
+        becoming upperclassmen, however, is the fun they have while performing in
+        their band Poppin'' Party… until things get out of control when the girls
+        publicly announce that they''re going to do their own concert before they''ve
+        really studied the issue.\n\nSuddenly they''re committed to doing something
+        that''s a lot more difficult than it seemed, and the pressure is doubled since
+        their musical rivals in Roselia, who''ve also announced a live concert, are
+        way ahead of them in planning! But you can''t stop the music, and with a little
+        hard work and help from other groups and some talented newcomers, Poppin''
+        Party fever will soon be popping up all over!","first_aired":"2019-01-03T14:00:00.000Z","updated_at":"2025-07-31T09:23:55.000Z","network":"Tokyo
+        MX","original_title":null},"show":{"title":"BanG Dream!","year":2017,"ids":{"trakt":113267,"slug":"bang-dream","tvdb":320002,"imdb":"tt6460600","tmdb":69236,"tvrage":null},"tagline":"","overview":"Since
+        she was very young, Kasumi Toyama has always been searching for the \"Star
+        Beat\", a sparkling and exciting sound she heard while looking up at the night
+        sky. Just after getting into high school, Kasumi comes across a \"star-shaped
+        guitar\" in the storage area of an old pawn shop. Feeling a rush and excitement
+        she has never felt before, Kasumi teams up with four other girls and embarks
+        on a journey to seek out the shiny place. We promise to perform a live here!","first_aired":"2017-01-21T14:00:00.000Z","airs":{"day":"Thursday","time":"23:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-PG","country":"jp","status":"ended","rating":6.45455,"votes":44,"comment_count":1,"trailer":"https://youtube.com/watch?v=msPbP1EzPpI","homepage":"http://anime.bang-dream.com/1st/","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:23:58.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","id","it","ja","ko","pl","pt","ru","zh"],"genres":["anime","comedy"],"subgenres":[],"aired_episodes":39,"original_title":"BanG
+        Dream!"}},{"rank":37,"id":362117542,"listed_at":"2018-10-13T22:47:34.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":174028,"tvdb":782551,"tmdb":110810,"tvrage":null},"rating":6.5,"votes":12,"episode_count":13,"aired_episodes":13,"title":"Season
+        2","overview":null,"first_aired":"2019-01-05T12:00:00.000Z","updated_at":"2025-07-31T09:19:52.000Z","network":"AT-X","original_title":"不機嫌なモノノケ庵
+        續"},"show":{"title":"The Morose Mononokean","year":2016,"ids":{"trakt":106527,"slug":"the-morose-mononokean","tvdb":309208,"imdb":"tt5839698","tmdb":65956,"tvrage":null},"tagline":"","overview":"Ashiya
+        has spent the first seven days of high school stuck in the infirmary because
+        of a youkai attaching itself to him. He ends up asking the owner of a small
+        tea room called the \"Mononokean\" for help. This is a tale involving the
+        very morose owner of Mononokean guiding the youkai that happened to wander
+        into this world go to the next world.","first_aired":"2016-06-28T12:00:00.000Z","airs":{"day":"Saturday","time":"21:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":null,"country":"jp","status":"ended","rating":7.19588,"votes":97,"comment_count":0,"trailer":null,"homepage":"http://www.mononokean.tv/","network":"AT-X","updated_at":"2025-07-31T09:19:51.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","pl","pt","ru","uk","zh"],"genres":["comedy","fantasy","anime"],"subgenres":[],"aired_episodes":26,"original_title":"不機嫌なモノノケ庵"}},{"rank":38,"id":362117553,"listed_at":"2018-10-13T22:47:54.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":167362,"tvdb":782552,"tmdb":115459,"tvrage":null},"rating":7.47059,"votes":17,"episode_count":12,"aired_episodes":12,"title":"Season
+        2","overview":null,"first_aired":"2019-01-27T03:15:00.000Z","updated_at":"2025-08-01T19:42:35.000Z","network":"NHK
+        G\t","original_title":null},"show":{"title":"The Piano Forest","year":2018,"ids":{"trakt":127602,"slug":"the-piano-forest","tvdb":342181,"imdb":"tt8043492","tmdb":78471,"tvrage":null},"tagline":"","overview":"A
+        tranquil tale about two boys from very different upbringings. On one hand
+        you have Kai, born as the son of a prostitute, who''s been playing the abandoned
+        piano in the forest near his home ever since he was young. And on the other
+        you have Syuhei, practically breast-fed by the piano as the son of a family
+        of prestigious pianists. Yet it is their common bond with the piano that eventually
+        intertwines their paths in life.","first_aired":"2018-04-09T03:15:00.000Z","airs":{"day":"Monday","time":"12:15","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-PG","country":"jp","status":"ended","rating":7.3662,"votes":142,"comment_count":4,"trailer":null,"homepage":"http://piano-anime.jp","network":"NHK
+        G\t","updated_at":"2025-07-31T09:31:58.000Z","language":"ja","languages":["ja"],"available_translations":["cs","de","el","en","es","fi","fr","it","ja","ko","nl","pl","pt","ru","th","uk","zh"],"genres":["comedy","drama","anime","music"],"subgenres":[],"aired_episodes":24,"original_title":"ピアノの森"}},{"rank":39,"id":370757098,"listed_at":"2018-12-23T12:15:43.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":177727,"tvdb":789224,"tmdb":114815,"tvrage":null},"rating":8.5,"votes":2,"episode_count":12,"aired_episodes":12,"title":"Zeccho*Emotion","overview":null,"first_aired":"2019-01-11T12:30:00.000Z","updated_at":"2025-07-31T09:22:53.000Z","network":"AT-X","original_title":"B－PROJECT～絶頂＊エモーション～"},"show":{"title":"B-PROJECT","year":2016,"ids":{"trakt":108674,"slug":"b-project","tvdb":313487,"imdb":"tt5915166","tmdb":67628,"tvrage":null},"tagline":"","overview":"Tsubasa
+        is a new hire in the A\u0026R department of the major recording company Gandala
+        Music. Tsubasa is immediately assigned to oversee the idol unit \"B-PROJECT,\"
+        which is made up of three idol groups: Kitakore, Thrive, and MooNs. This is
+        Tsubasa''s first job, and she gets involved in various incidents and accidents
+        as she deals with this group of young men who each have their own differing
+        personalities.","first_aired":"2016-07-03T12:30:00.000Z","airs":{"day":"Monday","time":"21:30","timezone":"Asia/Tokyo"},"runtime":24,"certification":null,"country":"jp","status":"ended","rating":6.14815,"votes":27,"comment_count":1,"trailer":null,"homepage":"http://bpro-anime.com/","network":"AT-X","updated_at":"2025-07-31T09:22:52.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","nl","pl","pt","ru","zh"],"genres":["anime","music"],"subgenres":[],"aired_episodes":36,"original_title":"B-PROJECT～鼓動＊アンビシャス～"}},{"rank":40,"id":370765055,"listed_at":"2018-12-23T13:28:44.000Z","notes":null,"type":"season","season":{"number":5,"ids":{"trakt":174728,"tvdb":783940,"tmdb":115413,"tvrage":null},"rating":4.0,"votes":2,"episode_count":12,"aired_episodes":12,"title":"Season
+        5","overview":null,"first_aired":"2019-01-07T16:30:00.000Z","updated_at":"2025-07-31T09:28:51.000Z","network":"Tokyo
+        MX","original_title":"雨色ココア sideG"},"show":{"title":"Rainy Cocoa","year":2015,"ids":{"trakt":97432,"slug":"rainy-cocoa","tvdb":293647,"imdb":"tt5821698","tmdb":68482,"tvrage":null},"tagline":"","overview":"Aoi’s
+        soaked by a sudden rainstorm and takes shelter at Rainy Color, a cozy café
+        where the warmth of the staff compliments the sweet hot cocoa he’s served.
+        When he falls into a job at the café he feels like things are finally looking
+        up— until Keiichi Iwase, the man he couldn’t help but stare at on the train,
+        shows up.","first_aired":"2015-04-04T16:30:00.000Z","airs":{"day":"Wednesday","time":"01:30","timezone":"Asia/Tokyo"},"runtime":2,"certification":null,"country":"jp","status":"ended","rating":4.27586,"votes":29,"comment_count":0,"trailer":null,"homepage":"http://rainycocoa.jp/anime/","network":"Tokyo
+        MX","updated_at":"2025-07-31T09:28:47.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","he","it","ja","ko","pl","pt","ru","tr","zh"],"genres":["comedy","anime"],"subgenres":[],"aired_episodes":60,"original_title":"雨色ココア"}},{"rank":41,"id":362117740,"listed_at":"2018-10-13T22:51:18.000Z","notes":null,"type":"movie","movie":{"title":"Psycho-Pass:
+        Sinners of the System - Case.1 Crime and Punishment","year":2019,"ids":{"trakt":393191,"slug":"psycho-pass-sinners-of-the-system-case-1-crime-and-punishment-2019","imdb":"tt10443844","tmdb":510242},"tagline":"","overview":"In
+        the winter of 2117, a runaway vehicle crashes into the Public Safety Bureau
+        Building. The driver is identified as Izumi Yasaka, a psychological counselor
+        at the Sanctuary, a Latent Criminal Isolation Facility in Aomori Prefecture.
+        But right before her interrogation, Inspector Mika Shimotsuki and Enforcer
+        Nobuchika Ginoza are tasked with promptly escorting Yasaka back to Aomori.
+        What awaits them there is a False Paradise.","released":"2019-01-25","runtime":60,"country":"jp","status":"released","rating":6.88942,"votes":208,"comment_count":0,"trailer":null,"homepage":"http://psycho-pass.com/ss/","updated_at":"2025-07-31T17:32:13.000Z","language":"ja","languages":["ja"],"available_translations":["de","el","en","es","fr","it","ja","ko","nl","pt","ru","th","uk","zh"],"genres":["anime","science-fiction","crime"],"subgenres":[],"certification":"R","original_title":"PSYCHO-PASS
+        サイコパス Sinners of the System Case.1「罪と罰」","after_credits":false,"during_credits":false}},{"rank":42,"id":366009196,"listed_at":"2018-11-14T00:31:09.000Z","notes":null,"type":"movie","movie":{"title":"Psycho-Pass:
+        Sinners of the System - Case.2 First Guardian","year":2019,"ids":{"trakt":410086,"slug":"psycho-pass-sinners-of-the-system-case-2-first-guardian-2019","imdb":"tt11078434","tmdb":559562},"tagline":"","overview":"2112;
+        the summer before Akane Tsunemori was assigned to Division One of the Public
+        Safety Bureau''s Criminal Investigation Department. Teppei Sugo, an accomplished
+        pilot of the Defense Army''s 15th Integrated Task Force, joins the military
+        operation in Okinawa. Three months later, an unmanned combat drone opens fire
+        on the Ministry of Defense in Tokyo. Enforcer Tomomi Masaoka of CID Division
+        One is dispatched to Sugo''s military base to investigate the truth behind
+        this case.","released":"2019-02-15","runtime":60,"country":"jp","status":"released","rating":7.11351,"votes":185,"comment_count":0,"trailer":null,"homepage":"http://psycho-pass.com/","updated_at":"2025-07-31T17:33:31.000Z","language":"ja","languages":["ja"],"available_translations":["de","el","en","es","fr","ja","ko","nl","pt","ru","th","uk","zh"],"genres":["anime","science-fiction","crime"],"subgenres":[],"certification":"R","original_title":"PSYCHO-PASS
+        サイコパス Sinners of the System Case.2「First Guardian」","after_credits":false,"during_credits":false}},{"rank":43,"id":366009215,"listed_at":"2018-11-14T00:32:36.000Z","notes":null,"type":"movie","movie":{"title":"Psycho-Pass:
+        Sinners of the System - Case.3 On the Other Side of Love and Hate","year":2019,"ids":{"trakt":410491,"slug":"psycho-pass-sinners-of-the-system-case-3-on-the-other-side-of-love-and-hate-2019","imdb":"tt11078522","tmdb":559566},"tagline":"","overview":"Following
+        the incident in the Southeast Asia Union in 2116, Shinya Kogami resumes his
+        vagrant journey. In a small South Asian nation, Kogami rescues a bus of refugees
+        under attack by armed guerrilla forces. Among the refugees is a young lady
+        by the name of Tenzin, who begs Kogami to teach her how to retaliate against
+        the enemy. Just what does the girl who wishes for revenge and the man who
+        has exacted revenge see as they gaze upon the edge of a world from which there
+        is no escape?","released":"2019-03-18","runtime":70,"country":"jp","status":"released","rating":7.33708,"votes":178,"comment_count":0,"trailer":null,"homepage":"http://psycho-pass.com/ss/","updated_at":"2025-07-31T17:33:32.000Z","language":"ja","languages":["ja"],"available_translations":["de","el","en","es","fr","ja","ko","nl","pt","ru","th","uk","zh"],"genres":["anime","science-fiction","crime"],"subgenres":[],"certification":"R","original_title":"PSYCHO-PASS
+        サイコパス Sinners of the System Case.3「恩讐の彼方に＿＿」","after_credits":false,"during_credits":false}},{"rank":44,"id":362125183,"listed_at":"2018-10-13T23:16:15.000Z","notes":null,"type":"movie","movie":{"title":"Saga
+        of Tanya the Evil: The Movie","year":2019,"ids":{"trakt":404783,"slug":"saga-of-tanya-the-evil-the-movie-2019","imdb":"tt9507276","tmdb":553839},"tagline":"","overview":"With
+        its armies sweeping across the continent, the Empire seems unstoppable. After
+        securing victory over the remnants of the Republic''s army, the Empire''s
+        ultimate victory is finally within reach. However, dark clouds are gathering
+        in the East. The communist-led Russy Federation is mustering troops on its
+        western border, preparing to enter the war. Supported by a detachment of Allied
+        volunteer magicians—among whom is Mary Sioux, the daughter of a soldier killed
+        by Tanya—the Federation is determined to spread the communist creed and bring
+        the Empire to its knees.\r Meanwhile, Tanya and her battalion return to the
+        imperial capital from the southern front. Upon their arrival, they are tasked
+        with investigating troop movements on the border with the Federation. Any
+        escalation of violence at this point may lead to new conflicts, plunging the
+        world into a global war.\r Will the Empire eventually emerge victorious from
+        its struggle, or will it crumble in the face radically different ideologies?","released":"2019-02-08","runtime":98,"country":"jp","status":"released","rating":7.85816,"votes":282,"comment_count":5,"trailer":"https://youtube.com/watch?v=jTWkeiIMncI","homepage":"http://youjo-senki.jp/","updated_at":"2025-07-31T17:33:25.000Z","language":"ja","languages":["ja"],"available_translations":["ar","cs","de","en","es","fr","he","it","ja","ko","nl","pl","pt","ru","th","uk","vi","zh"],"genres":["anime","action","war","fantasy"],"subgenres":["revenge","isekai","magic"],"certification":null,"original_title":"劇場版
+        幼女戦記","after_credits":false,"during_credits":false}},{"rank":45,"id":362125296,"listed_at":"2018-10-13T23:16:58.000Z","notes":null,"type":"movie","movie":{"title":"Fate/stay
+        night: Heaven''s Feel II. Lost Butterfly","year":2019,"ids":{"trakt":232827,"slug":"fate-stay-night-heaven-s-feel-ii-lost-butterfly-2019","imdb":"tt8091892","tmdb":390634},"tagline":"","overview":"The
+        Fifth Holy Grail War continues, and the ensuing chaos results in higher stakes
+        for all participants. Shirou Emiya continues to participate in the war, aspiring
+        to be a hero of justice who saves everyone. He sets out in search of the truth
+        behind a mysterious dark shadow and its murder spree, determined to defeat
+        it.  Meanwhile, Shinji Matou sets his own plans into motion, threatening Shirou
+        through his sister Sakura Matou. Shirou and Rin Tohsaka battle Shinji, hoping
+        to relieve Sakura from the abuses of her brother. But the ugly truth of the
+        Matou siblings begins to surface, and many dark secrets are exposed.","released":"2019-01-12","runtime":117,"country":"jp","status":"released","rating":7.89461,"votes":427,"comment_count":5,"trailer":"https://youtube.com/watch?v=NcWtQbYYsRM","homepage":"http://www.fate-sn.com/2nd/","updated_at":"2025-07-31T17:32:02.000Z","language":"ja","languages":["ja"],"available_translations":["ar","cs","de","el","en","es","fr","he","hu","it","ja","ko","nl","pl","pt","ru","th","uk","vi","zh"],"genres":["anime","action","fantasy","drama","romance"],"subgenres":["adult-animation","supernatural","magic"],"certification":"R","original_title":"劇場版「Fate/stay
+        night [Heaven’s Feel]」Ⅱ.lost butterfly","after_credits":false,"during_credits":false}},{"rank":46,"id":366006274,"listed_at":"2018-11-13T23:39:02.000Z","notes":null,"type":"movie","movie":{"title":"Mr.
+        Osomatsu the Movie","year":2019,"ids":{"trakt":410242,"slug":"mr-osomatsu-the-movie-2019","imdb":"tt8866460","tmdb":559519},"tagline":"","overview":"The
+        sextuplets attend a high school class reunion. There, they see all their former
+        classmates who have become \"proper\" adults with company jobs.  The sextuplets
+        sulk about this and go home and drink until they fall asleep. But when they
+        wake up, a certain scene awaits them.","released":"2019-03-15","runtime":108,"country":"jp","status":"released","rating":8.04545,"votes":22,"comment_count":1,"trailer":"https://youtube.com/watch?v=c4pczlQMDD4","homepage":"http://www.osomatsusan-movie.com/","updated_at":"2025-07-31T17:33:32.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","ja","ko","zh"],"genres":["comedy","anime"],"subgenres":[],"certification":null,"original_title":"えいがのおそ松さん","after_credits":false,"during_credits":false}},{"rank":47,"id":362119668,"listed_at":"2018-10-13T23:03:08.000Z","notes":null,"type":"movie","movie":{"title":"The
+        Relative Worlds","year":2019,"ids":{"trakt":404782,"slug":"the-relative-worlds-2019","imdb":"tt9648078","tmdb":553833},"tagline":"","overview":"Shin
+        has shut his heart ever since his mother died when he was young. His childhood
+        friend Kotori has been looking after him ever since. Now that they are in
+        the third year of high school, and it seems like they can finally move forward,
+        another Shin from another Japan has suddenly appeared in front of them.","released":"2019-01-25","runtime":93,"country":"jp","status":"released","rating":6.05195,"votes":77,"comment_count":1,"trailer":"https://youtube.com/watch?v=6ibT1yGReP4","homepage":"http://www.ashitasekaiga.jp/","updated_at":"2025-07-31T17:33:25.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","it","ja","ko","pt","ru","tr","uk","zh"],"genres":["anime","drama","romance","science-fiction","fantasy","action"],"subgenres":[],"certification":null,"original_title":"あした世界が終わるとしても","after_credits":false,"during_credits":false}},{"rank":48,"id":362117645,"listed_at":"2018-10-13T22:49:57.000Z","notes":null,"type":"movie","movie":{"title":"City
+        Hunter: Shinjuku Private Eyes","year":2019,"ids":{"trakt":391258,"slug":"city-hunter-shinjuku-private-eyes-2019","imdb":"tt8161914","tmdb":540141},"tagline":"","overview":"Ryo
+        Saeba works the streets of Tokyo as the City Hunter. He''s a \"sweeper\" and
+        with his sidekick Kaori Makimura, he keeps the city clean. People hire the
+        City Hunter to solve their dangerous problems, which he does with a Colt Python.
+        When Ryo''s not working on a case, he''s working on getting the ladies, and
+        Kaori must keep him in check with her trusty 10 kg hammer.","released":"2019-02-08","runtime":95,"country":"jp","status":"released","rating":6.9434,"votes":106,"comment_count":0,"trailer":null,"homepage":null,"updated_at":"2025-07-31T17:33:05.000Z","language":"ja","languages":["ja"],"available_translations":["de","el","en","es","fr","it","ja","ko","nl","pt","ru","th","vi","zh"],"genres":["anime","action","comedy","crime","mystery"],"subgenres":[],"certification":"NR","original_title":"劇場版シティーハンター
+        ＜新宿プライベート・アイズ＞","after_credits":false,"during_credits":false}},{"rank":49,"id":362125580,"listed_at":"2018-10-13T23:17:13.000Z","notes":null,"type":"movie","movie":{"title":"Made
+        in Abyss: Journey''s Dawn","year":2019,"ids":{"trakt":404774,"slug":"made-in-abyss-journey-s-dawn-2019","imdb":"tt10068158","tmdb":526426},"tagline":"","overview":"First
+        compilation movie of the TV series which covers episodes 1-8 with new scenes
+        added for the introduction. It covers the period from when Riko descends into
+        the Abyss with her robot companion Reg, reaching the second layer where they
+        meet the White Whistle Ozen who reveals information about Riko''s mother.","released":"2019-01-04","runtime":119,"country":"jp","status":"released","rating":7.82979,"votes":235,"comment_count":2,"trailer":"https://youtube.com/watch?v=a46KEIVmdv4","homepage":"http://miabyss.com","updated_at":"2025-07-31T17:32:46.000Z","language":"ja","languages":["ja"],"available_translations":["de","el","en","es","fr","he","it","ja","ko","nl","pl","pt","ru","uk","zh"],"genres":["anime","adventure","mystery","fantasy","family","science-fiction"],"subgenres":[],"certification":"NC-17","original_title":"劇場版総集編【前編】メイドインアビス
+        旅立ちの夜明け","after_credits":false,"during_credits":false}},{"rank":50,"id":362125675,"listed_at":"2018-10-13T23:17:38.000Z","notes":null,"type":"movie","movie":{"title":"Made
+        in Abyss: Wandering Twilight","year":2019,"ids":{"trakt":404624,"slug":"made-in-abyss-wandering-twilight-2019","imdb":"tt10068544","tmdb":526429},"tagline":"","overview":"Second
+        compilation movie of the TV series which covers episodes 9-13. Riko and Reg
+        descend to the third and fourth layer where Riko has her first experience
+        of the Curse.","released":"2019-01-18","runtime":105,"country":"jp","status":"released","rating":7.89604,"votes":202,"comment_count":1,"trailer":"https://youtube.com/watch?v=BdRiv8EYbgM","homepage":"http://miabyss.com","updated_at":"2025-07-31T17:32:46.000Z","language":"ja","languages":["ja"],"available_translations":["de","el","en","es","fr","he","it","ja","ko","nl","pl","pt","ru","uk","zh"],"genres":["anime","adventure","fantasy","mystery","science-fiction"],"subgenres":[],"certification":"NC-17","original_title":"劇場版総集編【後編】メイドインアビス
+        放浪する黄昏","after_credits":false,"during_credits":false}},{"rank":51,"id":362119478,"listed_at":"2018-10-13T23:02:43.000Z","notes":null,"type":"movie","movie":{"title":"Is
+        It Wrong to Try to Pick Up Girls in a Dungeon?: Arrow of the Orion","year":2019,"ids":{"trakt":404781,"slug":"is-it-wrong-to-try-to-pick-up-girls-in-a-dungeon-arrow-of-the-orion-2019","imdb":"tt9526152","tmdb":553835},"tagline":"","overview":"In
+        the city of Orario, beneath an impossibly tall tower, lies the dungeon. Only
+        adventurers who form partnerships with the gods themselves have any hope of
+        defeating the monsters that lie within. But the dungeon is not the only place
+        where monsters exist. Far from Orario, in the ruins of an ancient city, a
+        new threat arises. To counter this threat, the goddess Artemis has come to
+        Orario in search of a champion—but it’s not Ais Wallenstein (the legendary
+        Sword Princess) nor Ottar (the strongest warrior to ever enter the dungeon)
+        that she chooses. Rather it is Bell Cranel, a newbie adventurer partnered
+        with a low-tier goddess.","released":"2019-02-15","runtime":82,"country":"jp","status":"released","rating":7.12185,"votes":238,"comment_count":1,"trailer":"https://youtube.com/watch?v=1uNSqOdcwQI","homepage":"http://www.danmachi.com/movie/","updated_at":"2025-07-31T17:33:24.000Z","language":"ja","languages":["ja"],"available_translations":["ar","cs","de","en","es","fr","he","hu","it","ja","ko","nl","pl","pt","ru","th","uk","zh"],"genres":["action","adventure","comedy","fantasy","romance","anime"],"subgenres":[],"certification":null,"original_title":"劇場版
+        ダンジョンに出会いを求めるのは間違っているだろうか -オリオンの矢-","after_credits":false,"during_credits":false}},{"rank":52,"id":362124890,"listed_at":"2018-10-13T23:16:07.000Z","notes":null,"type":"movie","movie":{"title":"Love
+        Live! Sunshine!! The School Idol Movie: Over the Rainbow","year":2019,"ids":{"trakt":379546,"slug":"love-live-sunshine-the-school-idol-movie-over-the-rainbow-2019","imdb":"tt8659948","tmdb":529589},"tagline":"","overview":"After
+        the idol group Aqours has won the final Love Live! contest, its remaining
+        members prepare to enroll at a new school only to run into some unexpected
+        trouble while the former members go missing on the way to their graduation
+        trip. Separated, the girls begin to realize the value of their friendships
+        as they attempt to find a solution to their various crises.","released":"2019-01-04","runtime":100,"country":"jp","status":"released","rating":8.22807,"votes":57,"comment_count":2,"trailer":"https://youtube.com/watch?v=DAz6Gy3DVKU","homepage":"http://www.lovelive-anime.jp/uranohoshi/","updated_at":"2025-07-31T17:32:54.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","id","it","ja","ko","pt","zh"],"genres":["anime","music","comedy"],"subgenres":[],"certification":null,"original_title":"ラブライブ!
+        サンシャイン!! The School Idol Movie Over The Rainbow","after_credits":false,"during_credits":false}},{"rank":53,"id":362125278,"listed_at":"2018-10-13T23:16:15.000Z","notes":null,"type":"movie","movie":{"title":"Code
+        Geass: Lelouch of the Re;Surrection","year":2019,"ids":{"trakt":404784,"slug":"code-geass-lelouch-of-the-re-surrection-2019","imdb":"tt6344664","tmdb":553837},"tagline":"","overview":"The
+        story takes place several years after Lelouch''s \"Zero Requiem\" plan. He
+        gave up his life to save the world and protect the ones he loved. The day
+        Lelouch vi Brittannia fell was the day this war-torn world found peace. Now,
+        as his friends work to keep the peace, a terrorist attack could risk everything.
+        Can the brilliant tactician outwit death and save them all? Or will Lelouch’s
+        legacy fall here?","released":"2019-02-09","runtime":112,"country":"jp","status":"released","rating":7.16026,"votes":312,"comment_count":4,"trailer":"https://youtube.com/watch?v=HyDqROvRDVM","homepage":"http://www.geass.jp/R-geass/","updated_at":"2025-07-31T17:33:25.000Z","language":"ja","languages":["ja"],"available_translations":["ar","de","en","es","fr","he","it","ja","ko","nl","pl","pt","ru","vi","zh"],"genres":["anime","science-fiction","crime","mystery","war"],"subgenres":["mecha"],"certification":null,"original_title":"コードギアス
+        復活のルルーシュ","after_credits":false,"during_credits":false}},{"rank":54,"id":371674317,"listed_at":"2018-12-29T20:34:40.000Z","notes":null,"type":"movie","movie":{"title":"Zip!
+        Shimezo","year":2019,"ids":{"trakt":421584,"slug":"zip-shimezo-2019","imdb":"tt11315024","tmdb":570576},"tagline":"","overview":"This
+        whimsical tale tells the story of minute creatures called Zipper Yokai, whose
+        job is close any open zipper they encounter","released":"2019-03-01","runtime":23,"country":"jp","status":"released","rating":6.0,"votes":2,"comment_count":0,"trailer":null,"homepage":"http://animetamago.jp/title.php?id=3","updated_at":"2025-07-19T08:06:30.000Z","language":"ja","languages":["ja"],"available_translations":["en","ja"],"genres":["anime","drama","fantasy"],"subgenres":[],"certification":null,"original_title":"チャックシメゾウ","after_credits":false,"during_credits":false}},{"rank":55,"id":371674267,"listed_at":"2018-12-29T20:34:26.000Z","notes":null,"type":"movie","movie":{"title":"Space
+        Attendant Aoi","year":2019,"ids":{"trakt":421772,"slug":"space-attendant-aoi-2019","imdb":"tt31942059","tmdb":570580},"tagline":"","overview":"","released":"2019-03-01","runtime":24,"country":"jp","status":"released","rating":7.0,"votes":3,"comment_count":0,"trailer":null,"homepage":null,"updated_at":"2025-07-19T08:06:52.000Z","language":"ja","languages":["ja"],"available_translations":["en"],"genres":["anime"],"subgenres":[],"certification":null,"original_title":"スペースアテンダントアオイ","after_credits":false,"during_credits":false}},{"rank":56,"id":371674010,"listed_at":"2018-12-29T20:32:02.000Z","notes":null,"type":"movie","movie":{"title":"Captain
+        Bal","year":2019,"ids":{"trakt":421583,"slug":"captain-bal-2019","imdb":"tt31942101","tmdb":570579},"tagline":"","overview":"","released":"2019-03-01","runtime":22,"country":"jp","status":"released","rating":6.0,"votes":2,"comment_count":0,"trailer":null,"homepage":"http://animetamago.jp/title.php?id=4","updated_at":"2025-07-19T08:06:29.000Z","language":"ja","languages":["ja"],"available_translations":["en"],"genres":["anime","adventure","comedy"],"subgenres":[],"certification":null,"original_title":"キャプテン・バル","after_credits":false,"during_credits":false}},{"rank":57,"id":371748279,"listed_at":"2018-12-30T01:50:31.000Z","notes":null,"type":"movie","movie":{"title":"Hello
+        WeGo!","year":2019,"ids":{"trakt":422438,"slug":"hello-wego-2019","imdb":"tt31942025","tmdb":571570},"tagline":"","overview":"MechatroWeGo
+        are robots that kids can pilot and operate. Satoru pilots an old WeGo that
+        his grandmother gave to him as a gift. When the kids gather in their secret
+        base to race their WeGos, Satoru can''t take the first step. Satoru''s classmate
+        Akira invites him to race again. This is a story of a boy and his robot, set
+        in a seaside town in the near future.","released":"2019-03-01","runtime":23,"country":"jp","status":"released","rating":5.0,"votes":1,"comment_count":0,"trailer":null,"homepage":"http://animetamago.jp/title.php?id=1","updated_at":"2025-07-19T08:06:31.000Z","language":"ja","languages":["ja"],"available_translations":["en"],"genres":["anime"],"subgenres":[],"certification":null,"original_title":"ハローウィーゴ!","after_credits":false,"during_credits":false}},{"rank":58,"id":362221078,"listed_at":"2018-10-14T15:10:29.000Z","notes":null,"type":"movie","movie":{"title":"The
+        Royal Tutor Movie","year":2019,"ids":{"trakt":404942,"slug":"the-royal-tutor-movie-2019","imdb":"tt9255718","tmdb":553932},"tagline":"","overview":"The
+        four princes of the Kingdom of Granzreich are aiming to become the next king.
+        Under the guidance of the royal tutor Heine Wittgenstein, while overcoming
+        various obstacles and sometimes hesitating, they grow little by little.  Appearing
+        before them are twin princes from the Kingdom of Romano. Even though these
+        princes look cute on the surface, they are actually extremely sadistic...!
+        Towards such an unprecedented crisis, Heine and the four princes perform \"educational
+        guidance\"!?","released":"2019-02-16","runtime":60,"country":"jp","status":"released","rating":6.5,"votes":10,"comment_count":0,"trailer":null,"homepage":"http://heine-movie.com/","updated_at":"2025-07-31T17:34:31.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","ja","ko","pl","pt","zh"],"genres":["anime","comedy"],"subgenres":[],"certification":null,"original_title":"劇場版
+        王室教師ハイネ","after_credits":false,"during_credits":false}},{"rank":59,"id":370761086,"listed_at":"2018-12-23T12:48:07.000Z","notes":null,"type":"movie","movie":{"title":"Trinity
+        Seven: Heaven''s Library \u0026 Crimson Lord","year":2019,"ids":{"trakt":421426,"slug":"trinity-seven-heaven-s-library-crimson-lord-2019","imdb":"tt9826484","tmdb":570269},"tagline":"","overview":"The
+        series focuses on the adventures of Arata Kasuga, a high school student, who
+        is targeted by Lilith, a teacher at a mystical school. Given three choices
+        in an effort to help save the breakdown phenomenon of the world by evil forces
+        and while attempting to solve the mystery of his beloved cousin and childhood
+        friend, Hijiri, who disappeared to a difference space.","released":"2019-03-29","runtime":63,"country":"jp","status":"released","rating":6.8125,"votes":48,"comment_count":0,"trailer":"https://youtube.com/watch?v=Fk1iGpUFcjY","homepage":"http://movie.trinity-7.com","updated_at":"2025-07-31T17:33:46.000Z","language":"ja","languages":["ja"],"available_translations":["ar","de","en","es","fr","he","it","ja","ko","pl","pt","uk","zh"],"genres":["anime","action","fantasy","comedy"],"subgenres":["shounen","magic"],"certification":"R","original_title":"劇場版
+        トリニティセブン -天空図書館と真紅の魔王-","after_credits":false,"during_credits":false}},{"rank":60,"id":371786992,"listed_at":"2018-12-30T11:30:00.000Z","notes":null,"type":"movie","movie":{"title":"Pretty
+        Cure Miracle Universe","year":2019,"ids":{"trakt":422583,"slug":"pretty-cure-miracle-universe-2019","imdb":"tt10037700","tmdb":571573},"tagline":"","overview":"Hoshina
+        Hikaru and three other Star Twinkle Precures gaze at the sky and end up warping
+        into the Miracle Planet.","released":"2019-03-16","runtime":70,"country":"jp","status":"released","rating":7.33333,"votes":6,"comment_count":0,"trailer":null,"homepage":"http://www.precure-miracleuniverse.com/","updated_at":"2025-07-31T17:33:47.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","ja","ko","nl","pt","tr","zh"],"genres":["anime","science-fiction","fantasy","action","comedy","superhero","adventure","family"],"subgenres":[],"certification":null,"original_title":"映画
+        プリキュアミラクルユニバース","after_credits":false,"during_credits":false}},{"rank":61,"id":371748467,"listed_at":"2018-12-30T01:55:48.000Z","notes":null,"type":"movie","movie":{"title":"King
+        of Prism: Shiny Seven Stars I - Prologue x Yukinojou x Taiga","year":2019,"ids":{"trakt":421615,"slug":"king-of-prism-shiny-seven-stars-i-prologue-x-yukinojou-x-taiga-2019","imdb":"tt9882750","tmdb":570581},"tagline":"","overview":"The
+        first movie in the four-part King of Prism: Shiny Seven Stars movie series.","released":"2019-03-02","runtime":70,"country":"jp","status":"released","rating":0.0,"votes":0,"comment_count":0,"trailer":null,"homepage":"http://www.kinpri.com/","updated_at":"2025-07-13T08:08:18.000Z","language":"ja","languages":["ja"],"available_translations":["en","es","fr","ko"],"genres":["anime","music"],"subgenres":[],"certification":null,"original_title":"KING
+        OF PRISM -Shiny Seven Stars- I プロローグxユキノジョウ×タイガ","after_credits":false,"during_credits":false}},{"rank":62,"id":371748481,"listed_at":"2018-12-30T01:56:08.000Z","notes":null,"type":"movie","movie":{"title":"King
+        of Prism: Shiny Seven Stars II - Kakeru x George x Minato","year":2019,"ids":{"trakt":421579,"slug":"king-of-prism-shiny-seven-stars-ii-kakeru-x-george-x-minato-2019","imdb":"tt10168876","tmdb":570582},"tagline":"","overview":"The
+        second movie in the four-part King of Prism: Shiny Seven Stars movie series.","released":"2019-03-23","runtime":71,"country":"jp","status":"released","rating":0.0,"votes":0,"comment_count":0,"trailer":null,"homepage":"http://www.kinpri.com/","updated_at":"2025-06-21T16:59:34.000Z","language":"ja","languages":["ja"],"available_translations":["en","ko"],"genres":["anime","music"],"subgenres":[],"certification":null,"original_title":null,"after_credits":false,"during_credits":false}},{"rank":63,"id":371748510,"listed_at":"2018-12-30T01:56:38.000Z","notes":null,"type":"movie","movie":{"title":"It''s
+        My Life","year":2019,"ids":{"trakt":421636,"slug":"it-s-my-life-2019","imdb":null,"tmdb":570575},"tagline":"","overview":"Astra
+        Ludger Doomsday, former captain of the royal knights has finally achieved
+        his dearest wish: To retire and use his savings to get his very own house.
+        But not long after finally arriving at his sanctuary, a young girl crash-lands
+        into his house. The girl is an apprentice witch and seems to mistake Astra
+        for someone else.","released":"2019-01-19","runtime":14,"country":"jp","status":"released","rating":6.0,"votes":6,"comment_count":0,"trailer":null,"homepage":"http://www.urasunday.com/iml_anime/","updated_at":"2025-07-03T17:49:17.000Z","language":"ja","languages":["ja"],"available_translations":["en","fr","it","pt","uk"],"genres":["anime","comedy","fantasy"],"subgenres":[],"certification":null,"original_title":null,"after_credits":false,"during_credits":false}},{"rank":64,"id":370763383,"listed_at":"2018-12-23T13:25:24.000Z","notes":null,"type":"season","season":{"number":2,"ids":{"trakt":176218,"tvdb":786502,"tmdb":112814,"tvrage":null},"rating":6.0,"votes":3,"episode_count":12,"aired_episodes":12,"title":"Season
+        2","overview":null,"first_aired":"2019-01-06T17:05:00.000Z","updated_at":"2025-07-31T09:24:11.000Z","network":"TV
+        Osaka","original_title":null},"show":{"title":"Kemono Friends","year":2017,"ids":{"trakt":113271,"slug":"kemono-friends","tvdb":319997,"imdb":"tt6562940","tmdb":69288,"tvrage":null},"tagline":"","overview":"Japari
+        Park is an enormous integrated zoo built somewhere in this world. A mysterious
+        substance found there, called \"Sand Star,\" causes the animals to turn into
+        humanoid beings called \"Animal Girls\"! These new creatures spend every day
+        peacefully with the zoo''s visitors... but after some time, a lost child turns
+        up in the park. The child''s attempt to find the way home turns into a great
+        adventure with the Animal Girls!","first_aired":"2017-01-10T17:05:00.000Z","airs":{"day":"Monday","time":"02:05","timezone":"Asia/Tokyo"},"runtime":24,"certification":null,"country":"jp","status":"ended","rating":6.29167,"votes":48,"comment_count":0,"trailer":null,"homepage":"http://kemono-friends-20170110.jp","network":"TV
+        Osaka","updated_at":"2025-07-31T09:24:09.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","he","it","ja","ko","pl","pt","ru","zh"],"genres":["comedy","anime"],"subgenres":[],"aired_episodes":24,"original_title":"けものフレンズ"}},{"rank":65,"id":370765079,"listed_at":"2018-12-23T13:27:30.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":172242,"tvdb":779328,"tmdb":110201,"tvrage":null},"rating":8.68421,"votes":38,"episode_count":23,"aired_episodes":23,"title":"Season
+        1","overview":"Former ace runner Kakeru grudgingly returns to the sport when
+        college senior Haiji recruits him to an unlikely team with one goal: the Hakoden
+        relay.","first_aired":"2018-10-02T16:30:00.000Z","updated_at":"2025-08-01T23:19:11.000Z","network":"NTV","original_title":null},"show":{"title":"Run
+        with the Wind","year":2018,"ids":{"trakt":136400,"slug":"run-with-the-wind","tvdb":352853,"imdb":"tt9402026","tmdb":82766,"tvrage":null},"tagline":"","overview":"Kakeru,
+        a former elite runner at high school, is chased for stealing food. He is saved
+        by Kansei University student Haiji, who is also a runner. Haiji persuades
+        Kakeru to live in the old apartment \"Chikuseisou\" where he plans to team
+        up with fellow residents to enter Hakone Ekiden Marathon, one of the most
+        prominent university races in Japan. Kakeru soon finds out that all of the
+        residents except for Haiji and himself are complete novices.","first_aired":"2018-10-02T16:30:00.000Z","airs":{"day":"Wednesday","time":"01:30","timezone":"Asia/Tokyo"},"runtime":23,"certification":"TV-14","country":"jp","status":"ended","rating":8.20902,"votes":244,"comment_count":2,"trailer":null,"homepage":"http://www.kazetsuyo-anime.com/","network":"NTV","updated_at":"2025-07-31T09:34:25.000Z","language":"ja","languages":["ja"],"available_translations":["ar","de","en","es","fr","it","ja","ko","pl","pt","ru","uk","zh"],"genres":["drama","anime","comedy"],"subgenres":[],"aired_episodes":23,"original_title":"風が強く吹いている"}},{"rank":66,"id":370765184,"listed_at":"2018-12-23T13:29:32.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":161878,"tvdb":758767,"tmdb":101742,"tvrage":null},"rating":10.0,"votes":1,"episode_count":51,"aired_episodes":51,"title":"Season
+        1","overview":null,"first_aired":"2018-04-08T01:00:00.000Z","updated_at":"2025-08-01T17:15:40.000Z","network":"TV
+        Setouchi","original_title":null},"show":{"title":"Kiratto Pri☆chan","year":2018,"ids":{"trakt":129397,"slug":"kiratto-pri-chan","tvdb":345381,"imdb":"tt12209234","tmdb":78482,"tvrage":null},"tagline":"","overview":"First-year
+        middle school girls Mirai Momoyama and Emo Moegi are two aspiring idols who
+        decide to use the \"Pri☆Chan System,\" a system used by famous people and
+        companies to broadcast content. Like many girls starting their own channels
+        and uploading content, the pair decide to become their own producers, starting
+        their own channel in an attempt to become Pri☆Chan idols.","first_aired":"2018-04-08T01:00:00.000Z","airs":{"day":"Sunday","time":"10:00","timezone":"Asia/Tokyo"},"runtime":25,"certification":null,"country":"jp","status":"ended","rating":5.4,"votes":5,"comment_count":0,"trailer":null,"homepage":"http://www.tv-tokyo.co.jp/anime/prichan/","network":"TV
+        Setouchi","updated_at":"2025-07-31T09:32:11.000Z","language":"ja","languages":["ja"],"available_translations":["de","en","es","fr","ja","ko","pl","pt","zh"],"genres":["anime"],"subgenres":[],"aired_episodes":153,"original_title":"キラッとプリ☆チャン"}},{"rank":67,"id":370789161,"listed_at":"2018-12-23T16:57:43.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":158198,"tvdb":749402,"tmdb":98659,"tvrage":null},"rating":7.2,"votes":5,"episode_count":97,"aired_episodes":97,"title":"Season
+        1","overview":"After a vlogger inadvertently unseals dangers from the spirit
+        world, normal Tokyo girl Mana seeks help from yokai boy Kitaro and his eyeball
+        father.","first_aired":"2018-04-01T00:00:00.000Z","updated_at":"2025-07-31T21:18:32.000Z","network":"Fuji
+        TV","original_title":null},"show":{"title":"GeGeGe no Kitaro","year":2018,"ids":{"trakt":127454,"slug":"gegege-no-kitaro-2018","tvdb":341996,"imdb":"tt7899522","tmdb":76759,"tvrage":null},"tagline":"","overview":"Nearly
+        twenty years into the 21st century, people have forgotten the existence of
+        Yokai. When a number of unexplainable phenomena plague adults of the human
+        world with confusion and chaos, thirteen-year-old Mana writes a letter to
+        the Yokai Post in search of answers, only to be greeted by GeGeGe no Kitaro...","first_aired":"2018-04-01T00:00:00.000Z","airs":{"day":"Sunday","time":"09:00","timezone":"Asia/Tokyo"},"runtime":23,"certification":null,"country":"jp","status":"ended","rating":6.59524,"votes":42,"comment_count":0,"trailer":null,"homepage":"http://www.toei-anim.co.jp/kitaro/","network":"Fuji
+        TV","updated_at":"2025-07-31T09:31:40.000Z","language":"ja","languages":["ja"],"available_translations":["ar","de","en","es","fr","it","ja","ko","pl","pt","ru","uk","zh"],"genres":["comedy","fantasy","anime"],"subgenres":["shounen","supernatural"],"aired_episodes":97,"original_title":"ゲゲゲの鬼太郎"}},{"rank":68,"id":371748329,"listed_at":"2018-12-30T01:53:09.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":138371,"tvdb":696381,"tmdb":86520,"tvrage":null},"rating":7.23148,"votes":108,"episode_count":293,"aired_episodes":293,"title":"Season
+        1","overview":null,"first_aired":"2017-04-05T08:30:00.000Z","updated_at":"2025-08-01T21:15:43.000Z","network":"TV
+        Tokyo","original_title":null},"show":{"title":"Boruto: Naruto Next Generations","year":2017,"ids":{"trakt":113946,"slug":"boruto-naruto-next-generations","tvdb":321285,"imdb":"tt6342474","tmdb":70881,"tvrage":null},"tagline":"","overview":"The
+        life of the shinobi is beginning to change. Boruto Uzumaki, son of Seventh
+        Hokage Naruto Uzumaki, has enrolled in the Ninja Academy to learn the ways
+        of the ninja. Now, as a series of mysterious events unfolds, Boruto’s story
+        is about to begin!","first_aired":"2017-04-05T08:30:00.000Z","airs":{"day":"Sunday","time":"17:30","timezone":"Asia/Tokyo"},"runtime":25,"certification":"TV-14","country":"jp","status":"returning
+        series","rating":6.90128,"votes":1327,"comment_count":12,"trailer":null,"homepage":"http://www.tv-tokyo.co.jp/anime/boruto/","network":"TV
+        Tokyo","updated_at":"2025-07-31T09:30:13.000Z","language":"ja","languages":["ja","es","pt"],"available_translations":["ar","cs","de","en","es","fr","he","hu","id","it","ja","ko","nl","pl","pt","ro","ru","sk","th","tr","uk","vi","zh"],"genres":["action","adventure","anime","fantasy"],"subgenres":["martial-arts","shounen","supernatural"],"aired_episodes":293,"original_title":"BORUTO-ボルト-
+        NARUTO NEXT GENERATIONS"}},{"rank":69,"id":372285025,"listed_at":"2019-01-03T00:19:03.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":170164,"tvdb":775669,"tmdb":110707,"tvrage":null},"rating":6.5,"votes":10,"episode_count":36,"aired_episodes":36,"title":"Season
+        1","overview":null,"first_aired":"2018-10-11T13:30:00.000Z","updated_at":"2025-08-01T18:38:04.000Z","network":"BS11","original_title":null},"show":{"title":"Karakuri
+        Circus","year":2018,"ids":{"trakt":135353,"slug":"karakuri-circus","tvdb":351743,"imdb":"tt9050366","tmdb":83054,"tvrage":null},"tagline":"","overview":"Narumi
+        Katou is a middle-aged man who suffers from the bizarre ZONAPHA Syndrome:
+        a rare and inexplicable disease that causes its victims to endure severe seizures
+        at random, with the only cure being to watch someone laugh. One day, during
+        Narumi''s part time job, a young boy with a giant suitcase fleeing from three
+        adults runs into him. The boy introduces himself as Masaru Saiga, the new
+        owner of the famous Saiga Enterprises following his father''s recent death.
+        However, other members of his family are trying to assassinate him and claim
+        the fortune for themselves.","first_aired":"2018-10-11T13:30:00.000Z","airs":{"day":"Thursday","time":"22:30","timezone":"Asia/Tokyo"},"runtime":24,"certification":null,"country":"jp","status":"ended","rating":6.18889,"votes":90,"comment_count":0,"trailer":null,"homepage":"http://karakuri-anime.com/","network":"BS11","updated_at":"2025-07-31T15:31:20.000Z","language":"ja","languages":["ja"],"available_translations":["ar","de","en","es","fi","fr","he","hu","it","ja","ko","pl","pt","ru","th","uk","zh"],"genres":["adventure","mystery","action","crime","anime","drama"],"subgenres":["martial-arts","bounty-hunter","shounen","dark-fantasy"],"aired_episodes":36,"original_title":"からくりサーカス"}},{"rank":70,"id":372568153,"listed_at":"2019-01-05T02:26:58.000Z","notes":null,"type":"episode","episode":{"season":0,"number":1,"title":"A
+        Grave Keeper, a Cat, and a Mage","ids":{"trakt":3299893,"tvdb":6970803,"imdb":"tt10137016","tmdb":1657829,"tvrage":null},"number_abs":0,"overview":"As
+        one of the Lords of the Clock Tower as well as the department head of the
+        Modern Magecraft Theories department, Lord El-Melloi II holds yet another
+        lecture for his diverse array of students. After the post-lecture meeting
+        with other Clock Tower nobility, he throws out a few insults at the fellow
+        Lords that are interested only in their internal power struggle, but he quickly
+        receives a counter-curse in retaliation. On the following day, while in transit
+        with his apprentice Gray, he notices a cat ran over by a car. It''s the stray
+        cat that frequently visited his room as of late. Lord El-Melloi II realizes
+        that this was an attempt to take his own life, and commences a perpetrator
+        hunt along with Gray, Flat and Svin.","rating":7.15385,"votes":26,"comment_count":0,"first_aired":"2018-12-31T03:00:00.000Z","updated_at":"2025-07-29T22:05:15.000Z","available_translations":["ar","de","en","es","fr","ja","ko","uk","zh"],"runtime":25,"episode_type":"standard","original_title":"墓守と猫と魔術師","after_credits":false,"during_credits":false},"show":{"title":"Lord
+        El-Melloi II''s Case Files {Rail Zeppelin} Grace note","year":2019,"ids":{"trakt":142250,"slug":"lord-el-melloi-ii-s-case-files-rail-zeppelin-grace-note","tvdb":357492,"imdb":"tt9573854","tmdb":85368,"tvrage":null},"tagline":"","overview":"Waver
+        Velvet – The boy who fought side by side with the King of Conquerors - Iskandar
+        - during the Fourth Holy Grail War in Fate/Zero. Time has passed, and the
+        mature Waver has now adopted the name of Lord El-Melloi. As Lord El-Melloi
+        II, he challenges numerous magical and mystical cases in the Clock Tower,
+        the mecca of all mages...","first_aired":"2019-07-07T03:00:00.000Z","airs":{"day":"Sunday","time":"12:00","timezone":"Asia/Tokyo"},"runtime":23,"certification":null,"country":"jp","status":"ended","rating":6.55172,"votes":116,"comment_count":2,"trailer":"https://youtube.com/watch?v=GWc4ugCCo5I","homepage":"http://anime.elmelloi.com/","network":"Tochigi
+        TV","updated_at":"2025-07-31T09:35:27.000Z","language":"ja","languages":["ja"],"available_translations":["ar","de","en","es","fr","it","ja","ko","nl","pl","pt","ru","th","uk","zh"],"genres":["fantasy","mystery","science-fiction","action","adventure","anime"],"subgenres":["detective","supernatural","magic"],"aired_episodes":13,"original_title":"ロード・エルメロイⅡ世の事件簿
+        -魔眼蒐集列車 Grace note-"}},{"rank":71,"id":501444494,"listed_at":"2020-04-10T12:39:05.000Z","notes":null,"type":"season","season":{"number":1,"ids":{"trakt":147446,"tvdb":720595,"tmdb":91272,"tvrage":null},"rating":7.76256,"votes":219,"episode_count":170,"aired_episodes":170,"title":"Season
+        1","overview":null,"first_aired":"2017-10-03T10:00:00.000Z","updated_at":"2025-08-02T01:51:38.000Z","network":"TV
+        Setouchi","original_title":null},"show":{"title":"Black Clover","year":2017,"ids":{"trakt":121959,"slug":"black-clover","tvdb":331753,"imdb":"tt7441658","tmdb":73223,"tvrage":null},"tagline":"Surpass
+        your limits. Right here. Right now.","overview":"Asta and Yuno are two orphans
+        who want the same thing: to become the Wizard King. Locked in a friendly rivalry,
+        they work hard towards their goal. While Yuno excels at magic, Asta has a
+        problem uncommon in this world: he has no powers! But, on the day they receive
+        their grimoires, they surprise everyone. To reach their goal, they’ll each
+        find their own path to greatness—with or without magic.","first_aired":"2017-10-03T10:00:00.000Z","airs":{"day":"Tuesday","time":"19:00","timezone":"Asia/Tokyo"},"runtime":24,"certification":"TV-MA","country":"jp","status":"returning
+        series","rating":8.04632,"votes":2245,"comment_count":24,"trailer":"https://youtube.com/watch?v=QwNWY6z93O4","homepage":"http://bclover.jp","network":"TV
+        Setouchi","updated_at":"2025-07-31T10:01:58.000Z","language":"ja","languages":["ja"],"available_translations":["ar","bg","ca","cs","de","el","en","es","fr","he","hu","id","it","ja","ka","ko","nl","pl","pt","ro","ru","sk","th","tr","uk","vi","zh"],"genres":["action","anime","adventure","comedy"],"subgenres":["shounen","magic"],"aired_episodes":170,"original_title":"ブラッククローバー"}}]'
+  recorded_at: 2025-08-04 08:06:46
+recorded_with: VCR-vcr/2.0.0

@@ -1,0 +1,72 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/236397/replies?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:41 GMT
+      cf-ray: 969c8e8efdfd7f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 09:06:41 GMT
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '1'
+      etag: W/"5c3ceab68243bf8785e1639f9b99ca0b"
+      cache-control: max-age=3600, public
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":986,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: cddaadac-e6e3-4e0c-bee5-dc987c7af61e
+      x-runtime: '0.020372'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":250976,"comment":"@jemus42  That scene is honestly the only
+        thing in the film that actually made me say \"Wtf...?\"","spoiler":false,"review":false,"parent_id":236397,"created_at":"2019-09-18T02:57:44.000Z","updated_at":"2019-09-18T02:57:44.000Z","replies":0,"likes":0,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":3,"completed_count":1},"user":{"username":"MisterX867","private":false,"deleted":false,"name":"","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"misterx867"}}}]'
+  recorded_at: 2025-08-04 08:06:41
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/236397/replies?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:41 GMT
+      cf-ray: 969c8e8efdfd7f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 09:06:41 GMT
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '1'
+      etag: W/"5c3ceab68243bf8785e1639f9b99ca0b"
+      cache-control: max-age=3600, public
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":986,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: cddaadac-e6e3-4e0c-bee5-dc987c7af61e
+      x-runtime: '0.020372'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":250976,"comment":"@jemus42  That scene is honestly the only
+        thing in the film that actually made me say \"Wtf...?\"","spoiler":false,"review":false,"parent_id":236397,"created_at":"2019-09-18T02:57:44.000Z","updated_at":"2019-09-18T02:57:44.000Z","replies":0,"likes":0,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":3,"completed_count":1},"user":{"username":"MisterX867","private":false,"deleted":false,"name":"","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"misterx867"}}}]'
+  recorded_at: 2025-08-04 08:06:41
+recorded_with: VCR-vcr/2.0.0

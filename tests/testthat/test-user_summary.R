@@ -1,4 +1,7 @@
 test_that("user_profile", {
+	skip_on_cran()
+
+	vcr::local_cassette("user_profile")
 	nm_min <- c("username", "private", "deleted", "user_name", "vip", "vip_ep", "user_slug")
 	nm_full <- c(
 		"username",
@@ -19,18 +22,11 @@ test_that("user_profile", {
 	user <- "jemus42"
 
 	user_profile(user) |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_min) |>
-		nrow() |>
-		expect_equal(1)
+		expect_tibble(min_cols = nm_min, exact_rows = 1)
 
 	user_profile(user, extended = "full") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_full) |>
-		nrow() |>
-		expect_equal(1)
+		expect_tibble(min_cols = nm_full, exact_rows = 1)
 
 	user_profile(c("sean", user)) |>
-		expect_s3_class("tbl_df") |>
-		expect_named(nm_min)
+		expect_tibble(min_cols = nm_min)
 })

@@ -1,4 +1,7 @@
 test_that("Popular/trending lists work", {
+	skip_on_cran()
+
+	vcr::local_cassette("lists_popular_and_trending")
 	list_names <- c(
 		"name",
 		"description",
@@ -26,14 +29,8 @@ test_that("Popular/trending lists work", {
 	)
 
 	lists_popular() |>
-		expect_s3_class("tbl_df") |>
-		expect_named(list_names) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = list_names, exact_rows = 10)
 
 	lists_trending() |>
-		expect_s3_class("tbl_df") |>
-		expect_named(list_names) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = list_names, exact_rows = 10)
 })

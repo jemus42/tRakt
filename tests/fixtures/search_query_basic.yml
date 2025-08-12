@@ -1,0 +1,194 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/show?query=russian+doll+2019&extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:57 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c2a4a1bd2a5-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Sun, 03 Aug 2025 21:30:57 GMT
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '1'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":920,"until":"2025-08-03T13:35:00Z"}'
+      etag: W/"f5f0dbf3b126ebaaa4b2a913b5b40fd8"
+      x-request-id: 52215f88-0b5d-43be-8967-16c89cf285e0
+      x-runtime: '0.026056'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"type":"show","score":1157451471441625211,"show":{"title":"Russian
+        Doll","year":2019,"ids":{"trakt":141548,"slug":"russian-doll","tvdb":356640,"imdb":"tt7520794","tmdb":84977,"tvrage":null}}}]'
+  recorded_at: 2025-08-03 17:07:36
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/movie?query=russian+doll&extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:57 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c2b8c50d2a5-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Sun, 03 Aug 2025 21:30:57 GMT
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '9'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":915,"until":"2025-08-03T13:35:00Z"}'
+      etag: W/"17c4a77885368e4f628e6b92f48048a8"
+      x-request-id: 20081785-e6da-461b-8728-0cb38e9a186e
+      x-runtime: '0.062646'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"type":"movie","score":1157451471441625211,"movie":{"title":"Russian
+        Doll","year":2016,"ids":{"trakt":359123,"slug":"russian-doll-2016","imdb":"tt5138866","tmdb":511336}}},{"type":"movie","score":1157451471441625211,"movie":{"title":"Russian
+        Doll","year":2001,"ids":{"trakt":169443,"slug":"russian-doll-2001","imdb":"tt0215139","tmdb":271462}}},{"type":"movie","score":1157451471441625211,"movie":{"title":"Russian
+        Doll","year":2023,"ids":{"trakt":888673,"slug":"russian-doll-2023","imdb":null,"tmdb":1104655}}},{"type":"movie","score":1157451471441625210,"movie":{"title":"Russian
+        Doll","year":2021,"ids":{"trakt":730529,"slug":"russian-doll-2021","imdb":null,"tmdb":912098}}},{"type":"movie","score":1157451471441100923,"movie":{"title":"The
+        Russian Doll","year":2019,"ids":{"trakt":906230,"slug":"the-russian-doll-2019","imdb":null,"tmdb":1126090}}},{"type":"movie","score":1157451471441100921,"movie":{"title":"Matryoshka.
+        Russian Doll","year":2023,"ids":{"trakt":1062750,"slug":"matryoshka-russian-doll-2023","imdb":null,"tmdb":1303103}}},{"type":"movie","score":1157451471441100897,"movie":{"title":"Love
+        Deal","year":1995,"ids":{"trakt":193673,"slug":"love-deal-1995","imdb":"tt0164188","tmdb":314140}}},{"type":"movie","score":1157451437081886842,"movie":{"title":"Russian
+        Dolls","year":2005,"ids":{"trakt":1208,"slug":"russian-dolls-2005","imdb":"tt0409184","tmdb":1826}}},{"type":"movie","score":1157451437081886842,"movie":{"title":"Russian
+        Dolls","year":2014,"ids":{"trakt":595135,"slug":"russian-dolls-2014","imdb":"tt4121318","tmdb":584653}}}]'
+  recorded_at: 2025-08-03 17:07:36
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/movie?query=nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb&years=1100&extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:57 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c2e38e7d2a5-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Sun, 03 Aug 2025 21:30:57 GMT
+      x-pagination-page-count: '0'
+      x-pagination-item-count: '0'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":903,"until":"2025-08-03T13:35:00Z"}'
+      etag: W/"f70851d43fce2456c2e8a6b22ffc97b5"
+      x-request-id: 069ba6e9-96f6-4690-98b2-4ff721b528ee
+      x-runtime: '0.016643'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2025-08-03 17:07:36
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/show?query=russian+doll&extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:57 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c2f4af0d2a5-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Sun, 03 Aug 2025 21:30:57 GMT
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '3'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":897,"until":"2025-08-03T13:35:00Z"}'
+      etag: W/"71b8718aa04dd81c931a2cf78b3b92e5"
+      x-request-id: 8407d96b-030a-4a8f-adc3-16fc780b88ab
+      x-runtime: '0.018351'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"type":"show","score":1157451471441625211,"show":{"title":"Russian
+        Doll","year":2019,"ids":{"trakt":141548,"slug":"russian-doll","tvdb":356640,"imdb":"tt7520794","tmdb":84977,"tvrage":null}}},{"type":"show","score":1157451437081886841,"show":{"title":"Russian
+        Dolls","year":2011,"ids":{"trakt":63958,"slug":"russian-dolls","tvdb":250959,"imdb":"tt2006560","tmdb":null,"tvrage":null}}},{"type":"show","score":1157451437081362555,"show":{"title":"Russian
+        Dolls: Sex Trade","year":2005,"ids":{"trakt":62287,"slug":"russian-dolls-sex-trade","tvdb":79648,"imdb":"tt0320882","tmdb":20790,"tvrage":null}}}]'
+  recorded_at: 2025-08-03 17:07:36
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/movie?query=russian+doll&extended=min
+  response:
+    status: 200
+    headers:
+      date: Sun, 03 Aug 2025 13:30:57 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96962c2b8c50d2a5-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Sun, 03 Aug 2025 21:30:57 GMT
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '9'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":915,"until":"2025-08-03T13:35:00Z"}'
+      etag: W/"17c4a77885368e4f628e6b92f48048a8"
+      x-request-id: 20081785-e6da-461b-8728-0cb38e9a186e
+      x-runtime: '0.062646'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"type":"movie","score":1157451471441625211,"movie":{"title":"Russian
+        Doll","year":2016,"ids":{"trakt":359123,"slug":"russian-doll-2016","imdb":"tt5138866","tmdb":511336}}},{"type":"movie","score":1157451471441625211,"movie":{"title":"Russian
+        Doll","year":2001,"ids":{"trakt":169443,"slug":"russian-doll-2001","imdb":"tt0215139","tmdb":271462}}},{"type":"movie","score":1157451471441625211,"movie":{"title":"Russian
+        Doll","year":2023,"ids":{"trakt":888673,"slug":"russian-doll-2023","imdb":null,"tmdb":1104655}}},{"type":"movie","score":1157451471441625210,"movie":{"title":"Russian
+        Doll","year":2021,"ids":{"trakt":730529,"slug":"russian-doll-2021","imdb":null,"tmdb":912098}}},{"type":"movie","score":1157451471441100923,"movie":{"title":"The
+        Russian Doll","year":2019,"ids":{"trakt":906230,"slug":"the-russian-doll-2019","imdb":null,"tmdb":1126090}}},{"type":"movie","score":1157451471441100921,"movie":{"title":"Matryoshka.
+        Russian Doll","year":2023,"ids":{"trakt":1062750,"slug":"matryoshka-russian-doll-2023","imdb":null,"tmdb":1303103}}},{"type":"movie","score":1157451471441100897,"movie":{"title":"Love
+        Deal","year":1995,"ids":{"trakt":193673,"slug":"love-deal-1995","imdb":"tt0164188","tmdb":314140}}},{"type":"movie","score":1157451437081886842,"movie":{"title":"Russian
+        Dolls","year":2005,"ids":{"trakt":1208,"slug":"russian-dolls-2005","imdb":"tt0409184","tmdb":1826}}},{"type":"movie","score":1157451437081886842,"movie":{"title":"Russian
+        Dolls","year":2014,"ids":{"trakt":595135,"slug":"russian-dolls-2014","imdb":"tt4121318","tmdb":584653}}}]'
+  recorded_at: 2025-08-03 17:07:36
+recorded_with: VCR-vcr/2.0.0

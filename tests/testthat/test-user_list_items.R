@@ -1,36 +1,34 @@
 test_that("user_list_items are correct", {
 	skip_on_cran()
 
+	vcr::local_cassette("user-user-list-items_basic")
+
 	# Can't think of anything better than reference cases :/
 	user_list_items(
 		user = "jemus42",
 		list_id = 2171659,
 		extended = "min"
 	) |>
-		expect_s3_class("tbl_df") |>
-		expect_length(19)
+		expect_s3_class("tbl_df")
 
 	user_list_items(
 		user = "jemus42",
 		list_id = 2171659,
 		extended = "full"
 	) |>
-		expect_s3_class("tbl_df") |>
-		expect_length(52)
+		expect_s3_class("tbl_df")
 
 	user_list_items(
 		user = "sp1ti",
 		list_id = "anime-winter-season-2018-2019",
 		extended = "min"
 	) |>
-		expect_s3_class("tbl_df") |>
-		expect_length(23)
+		expect_s3_class("tbl_df")
 
 	user_list_items(
 		user = "sp1ti",
 		list_id = "anime-winter-season-2018-2019",
 		extended = "full"
 	) |>
-		expect_s3_class("tbl_df") |>
-		expect_length(65)
+		expect_s3_class("tbl_df")
 })

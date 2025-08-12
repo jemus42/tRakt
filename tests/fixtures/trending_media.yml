@@ -1,0 +1,215 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/trending?limit=5&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9f6b947552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '5'
+      expires: Mon, 04 Aug 2025 08:11:44 GMT
+      x-pagination-page-count: '372'
+      x-pagination-item-count: '1856'
+      x-trending-user-count: '78826'
+      cache-control: max-age=300, public
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":933,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"001c64978237d1a6044d53569cf626f8"
+      x-request-id: c9c22ec0-4b04-4832-a94f-ebece1a305b2
+      x-runtime: '0.418113'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watchers":3001,"movie":{"title":"28 Years Later","year":2025,"ids":{"trakt":885672,"slug":"28-years-later-2025","imdb":"tt10548174","tmdb":1100988}}},{"watchers":1826,"movie":{"title":"Happy
+        Gilmore 2","year":2025,"ids":{"trakt":1024811,"slug":"happy-gilmore-2-2025","imdb":"tt31868189","tmdb":1263256}}},{"watchers":1316,"movie":{"title":"War
+        of the Worlds","year":2025,"ids":{"trakt":595350,"slug":"war-of-the-worlds-2025-07-30","imdb":"tt13186306","tmdb":755898}}},{"watchers":1078,"movie":{"title":"How
+        to Train Your Dragon","year":2025,"ids":{"trakt":873974,"slug":"how-to-train-your-dragon-2025","imdb":"tt26743210","tmdb":1087192}}},{"watchers":1055,"movie":{"title":"Superman","year":2025,"ids":{"trakt":853702,"slug":"superman-2025","imdb":"tt5950044","tmdb":1061474}}}]'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/trending?limit=5&extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea2d9287552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '5'
+      expires: Mon, 04 Aug 2025 08:11:44 GMT
+      x-pagination-page-count: '372'
+      x-pagination-item-count: '1856'
+      x-trending-user-count: '78826'
+      cache-control: max-age=300, public
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":924,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"4e695aea7834444cec0f4fb388206827"
+      x-request-id: e99cae42-2b14-437a-aad8-104c5dad9a77
+      x-runtime: '0.244965'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watchers":3001,"movie":{"title":"28 Years Later","year":2025,"ids":{"trakt":885672,"slug":"28-years-later-2025","imdb":"tt10548174","tmdb":1100988},"tagline":"In
+        28 days it began. In 28 weeks it spread. In 28 years it evolved.","overview":"Twenty-eight
+        years since the rage virus escaped a biological weapons laboratory, now, still
+        in a ruthlessly enforced quarantine, some have found ways to exist amidst
+        the infected. One such group lives on a small island connected to the mainland
+        by a single, heavily-defended causeway. When one member departs on a mission
+        into the dark heart of the mainland, he discovers secrets, wonders, and horrors
+        that have mutated not only the infected but other survivors as well.","released":"2025-06-19","runtime":115,"country":"gb","trailer":"https://youtube.com/watch?v=IYGG55qwQZQ","homepage":"http://28yearslater.movie","status":"released","rating":6.62512077294686,"votes":4140,"comment_count":108,"updated_at":"2025-08-03T08:06:11.000Z","language":"en","languages":["en","sv"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["horror","science-fiction","thriller"],"subgenres":["survival","zombie"],"certification":"R","original_title":"28
+        Years Later","after_credits":false,"during_credits":false}},{"watchers":1826,"movie":{"title":"Happy
+        Gilmore 2","year":2025,"ids":{"trakt":1024811,"slug":"happy-gilmore-2-2025","imdb":"tt31868189","tmdb":1263256},"tagline":"Happy
+        Gilmore returns!","overview":"Happy Gilmore isn''t done with golf — not by
+        a long shot. Since his retirement after his first Tour Championship win, Gilmore
+        returns to finance his daughter''s ballet classes.","released":"2025-07-25","runtime":118,"country":"us","trailer":"https://youtube.com/watch?v=YKzRPFvky9Y","homepage":"http://www.netflix.com/title/81696722","status":"released","rating":6.797831409583771,"votes":2859,"comment_count":72,"updated_at":"2025-08-03T17:45:17.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fi","fr","he","hi","hr","hu","id","it","ja","ko","ms","nl","no","pl","pt","ro","ru","sl","sv","th","tl","tr","uk","vi","zh"],"genres":["comedy"],"subgenres":[],"certification":"PG-13","original_title":"Happy
+        Gilmore 2","after_credits":false,"during_credits":true}},{"watchers":1316,"movie":{"title":"War
+        of the Worlds","year":2025,"ids":{"trakt":595350,"slug":"war-of-the-worlds-2025-07-30","imdb":"tt13186306","tmdb":755898},"tagline":"Your
+        data is deadly.","overview":"Will Radford is a top cyber-security analyst
+        for Homeland Security who tracks potential threats to national security through
+        a mass surveillance program, until one day an attack by an unknown entity
+        leads him to question whether the government is hiding something from him...
+        and from the rest of the world.","released":"2025-07-30","runtime":91,"country":"us","trailer":"https://youtube.com/watch?v=d9erkpdh5o0","homepage":"http://www.amazon.com/gp/video/detail/B0DMF7MXKT","status":"released","rating":5.189127972819932,"votes":883,"comment_count":37,"updated_at":"2025-08-03T17:46:08.000Z","language":"en","languages":["en"],"available_translations":["cs","da","de","el","en","es","fi","fr","he","hi","hu","id","it","ja","kn","ko","ml","ms","nl","no","pl","pt","ro","ru","ta","th","tr","zh"],"genres":["science-fiction","thriller"],"subgenres":[],"certification":"PG-13","original_title":"War
+        of the Worlds","after_credits":false,"during_credits":false}},{"watchers":1078,"movie":{"title":"How
+        to Train Your Dragon","year":2025,"ids":{"trakt":873974,"slug":"how-to-train-your-dragon-2025","imdb":"tt26743210","tmdb":1087192},"tagline":"The
+        legend is real.","overview":"On the rugged isle of Berk, where Vikings and
+        dragons have been bitter enemies for generations, Hiccup stands apart, defying
+        centuries of tradition when he befriends Toothless, a feared Night Fury dragon.
+        Their unlikely bond reveals the true nature of dragons, challenging the very
+        foundations of Viking society.","released":"2025-06-13","runtime":125,"country":"us","trailer":"https://youtube.com/watch?v=OWEq2Pf8qpk","homepage":"http://www.welcometoberk.com/","status":"released","rating":8.006121968448316,"votes":4247,"comment_count":81,"updated_at":"2025-08-03T17:40:09.000Z","language":"en","languages":["en","ru"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","mk","nb","nl","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["fantasy","family","action"],"subgenres":[],"certification":"PG","original_title":"How
+        to Train Your Dragon","after_credits":false,"during_credits":false}},{"watchers":1055,"movie":{"title":"Superman","year":2025,"ids":{"trakt":853702,"slug":"superman-2025","imdb":"tt5950044","tmdb":1061474},"tagline":"Look
+        up.","overview":"Superman, a journalist in Metropolis, embarks on a journey
+        to reconcile his Kryptonian heritage with his human upbringing as Clark Kent.","released":"2025-07-11","runtime":130,"country":"us","trailer":"https://youtube.com/watch?v=nZTgJy8ym34","homepage":"http://www.superman.com","status":"released","rating":7.635036496350365,"votes":5891,"comment_count":193,"updated_at":"2025-08-03T08:06:10.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","de","el","en","es","fa","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["superhero","science-fiction","action","adventure"],"subgenres":["superhero","supervillain"],"certification":"PG-13","original_title":"Superman","after_credits":true,"during_credits":true}}]'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/trending?limit=5&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea56d807552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '5'
+      expires: Mon, 04 Aug 2025 08:11:45 GMT
+      x-pagination-page-count: '444'
+      x-pagination-item-count: '2216'
+      x-trending-user-count: '182630'
+      cache-control: max-age=300, public
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":913,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"3fa5155a3ae9bdfe1cc64947642f17e6"
+      x-request-id: c3fcf0aa-9a6a-45d8-acd2-42a5b351da91
+      x-runtime: '0.224686'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watchers":4784,"show":{"title":"Dexter: Resurrection","year":2025,"ids":{"trakt":249647,"slug":"dexter-resurrection","tvdb":452595,"imdb":"tt33043892","tmdb":259909,"tvrage":null}}},{"watchers":3411,"show":{"title":"Foundation","year":2021,"ids":{"trakt":150469,"slug":"foundation-2021","tvdb":366972,"imdb":"tt0804484","tmdb":93740,"tvrage":null}}},{"watchers":3102,"show":{"title":"The
+        Sandman","year":2022,"ids":{"trakt":149786,"slug":"the-sandman","tvdb":366211,"imdb":"tt1751634","tmdb":90802,"tvrage":null}}},{"watchers":2721,"show":{"title":"The
+        Institute","year":2025,"ids":{"trakt":238108,"slug":"the-institute","tvdb":451177,"imdb":"tt10946316","tmdb":253372,"tvrage":null}}},{"watchers":2560,"show":{"title":"Resident
+        Alien","year":2021,"ids":{"trakt":153575,"slug":"resident-alien","tvdb":368166,"imdb":"tt8690918","tmdb":96580,"tvrage":null}}}]'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/trending?limit=5&extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea7b99d7552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '5'
+      expires: Mon, 04 Aug 2025 08:11:45 GMT
+      x-pagination-page-count: '444'
+      x-pagination-item-count: '2216'
+      x-trending-user-count: '182630'
+      cache-control: max-age=300, public
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":907,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"22b343e76bbceb238775decdf62d838b"
+      x-request-id: 3c36f826-fa21-47c1-956b-8b6e2e14ef43
+      x-runtime: '0.164954'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watchers":4784,"show":{"title":"Dexter: Resurrection","year":2025,"ids":{"trakt":249647,"slug":"dexter-resurrection","tvdb":452595,"imdb":"tt33043892","tmdb":259909,"tvrage":null},"tagline":"He''s
+        alive \u0026 killing it.","overview":"Dexter Morgan awakens from a coma to
+        find Harrison gone without a trace. Realizing the weight of what he put his
+        son through, Dexter sets out for New York City, determined to find him and
+        make things right. But closure won''t come easy. When Miami Metro''s Angel
+        Batista arrives with questions, Dexter realizes his past is catching up to
+        him fast. As father and son navigate their own darkness in the city that never
+        sleeps, they soon find themselves deeper than they ever imagined - and that
+        the only way out is together.","first_aired":"2025-07-14T00:00:00.000Z","airs":{"day":"Sunday","time":"20:00","timezone":"America/New_York"},"runtime":50,"certification":"TV-MA","network":"Paramount+
+        with Showtime","country":"us","trailer":"https://youtube.com/watch?v=84o1Q6fB20k","homepage":"http://www.paramountplus.com/shows/dexter-resurrection/","status":"returning
+        series","rating":8.572602739726028,"votes":365,"comment_count":22,"updated_at":"2025-08-03T16:55:35.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","de","en","es","fa","fr","he","hu","it","ko","nl","pl","pt","ru","sk","sv","tr","uk","vi","zh"],"genres":["crime","drama"],"subgenres":[],"aired_episodes":5,"original_title":"Dexter:
+        Resurrection"}},{"watchers":3411,"show":{"title":"Foundation","year":2021,"ids":{"trakt":150469,"slug":"foundation-2021","tvdb":366972,"imdb":"tt0804484","tmdb":93740,"tvrage":null},"tagline":"No
+        future lasts forever.","overview":"Follow a band of exiles on their monumental
+        journey to save humanity and rebuild civilization amid the fall of the Galactic
+        Empire.","first_aired":"2021-09-24T01:00:00.000Z","airs":{"day":"Thursday","time":"21:00","timezone":"America/New_York"},"runtime":42,"certification":"TV-MA","network":"Apple
+        TV+","country":"us","trailer":"https://youtube.com/watch?v=X4QYV5GTz7c","homepage":"http://tv.apple.com/show/umc.cmc.5983fipzqbicvrve6jdfep4x3","status":"returning
+        series","rating":7.75929,"votes":6730,"comment_count":115,"updated_at":"2025-08-03T16:54:28.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["science-fiction","drama","fantasy"],"subgenres":["space-opera"],"aired_episodes":24,"original_title":"Foundation"}},{"watchers":3102,"show":{"title":"The
+        Sandman","year":2022,"ids":{"trakt":149786,"slug":"the-sandman","tvdb":366211,"imdb":"tt1751634","tmdb":90802,"tvrage":null},"tagline":"Dream
+        the world anew.","overview":"After years of imprisonment, Morpheus — the King
+        of Dreams — embarks on a journey across worlds to find what was stolen from
+        him and restore his power.","first_aired":"2022-08-05T04:00:00.000Z","airs":{"day":"","time":"","timezone":"America/New_York"},"runtime":54,"certification":"TV-MA","network":"Netflix","country":"us","trailer":"https://youtube.com/watch?v=ZJXamnPUm0I","homepage":"http://thesandman.com","status":"ended","rating":7.7327316486161255,"votes":8310,"comment_count":102,"updated_at":"2025-08-03T16:56:03.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","ms","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tl","tr","uk","vi","zh"],"genres":["fantasy","drama"],"subgenres":["dark-fantasy","mythology","superhero"],"aired_episodes":23,"original_title":"The
+        Sandman"}},{"watchers":2721,"show":{"title":"The Institute","year":2025,"ids":{"trakt":238108,"slug":"the-institute","tvdb":451177,"imdb":"tt10946316","tmdb":253372,"tvrage":null},"tagline":"","overview":"When
+        14 year old genius Luke Ellis is kidnapped, he awakens at The Institute, a
+        facility full of children who all got there the same way he did, and who are
+        all possessed of unusual abilities. In a nearby town, haunted former police
+        officer Tim Jamieson has come looking to start a new life, but the peace and
+        quiet won’t last, as his story and Luke’s are destined to collide.","first_aired":"2025-07-14T00:00:00.000Z","airs":{"day":"Sunday","time":"20:00","timezone":"America/New_York"},"runtime":58,"certification":"TV-MA","network":"MGM+","country":"us","trailer":"https://youtube.com/watch?v=1BcvAdfyL5Y","homepage":"http://www.mgmplus.com/series/the-institute","status":"returning
+        series","rating":6.833333333333333,"votes":126,"comment_count":9,"updated_at":"2025-08-03T16:54:38.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","en","es","fa","fi","fr","he","it","ko","lt","nl","pl","pt","ru","sl","sv","uk","zh"],"genres":["mystery","thriller","fantasy","science-fiction"],"subgenres":["psychological-horror"],"aired_episodes":5,"original_title":"The
+        Institute"}},{"watchers":2560,"show":{"title":"Resident Alien","year":2021,"ids":{"trakt":153575,"slug":"resident-alien","tvdb":368166,"imdb":"tt8690918","tmdb":96580,"tvrage":null},"tagline":"Beam
+        this up.","overview":"Crash-landed alien Harry takes on the identity of a
+        small-town Colorado doctor. Arriving with a secret mission, he starts off
+        living a simple life…but things get a bit rocky when he’s roped into solving
+        a local murder and realizes he needs to assimilate into his new world. As
+        he does, he begins to wrestle with the moral dilemma of his mission and asking
+        the big life questions like: “Are human beings worth saving?” and “Why do
+        they fold their pizza before eating it?”","first_aired":"2021-01-28T04:00:00.000Z","airs":{"day":"Friday","time":"23:00","timezone":"America/New_York"},"runtime":45,"certification":"TV-14","network":"USA
+        Network","country":"us","trailer":"https://youtube.com/watch?v=T4J7QjGNTs4","homepage":"http://www.syfy.com/resident-alien","status":"returning
+        series","rating":7.787771377935313,"votes":4514,"comment_count":72,"updated_at":"2025-08-03T16:49:11.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ko","lt","nl","no","pl","pt","ru","sr","sv","th","tr","uk","vi","zh"],"genres":["comedy","drama","mystery","science-fiction"],"subgenres":[],"aired_episodes":43,"original_title":"Resident
+        Alien"}}]'
+  recorded_at: 2025-08-04 08:06:45
+recorded_with: VCR-vcr/2.0.0

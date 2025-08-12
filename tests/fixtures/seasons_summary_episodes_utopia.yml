@@ -1,0 +1,142 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons?extended=full%2Cepisodes
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea8df2cb238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:45 GMT
+      x-show-updated-at: '2025-08-03T07:38:12.000Z'
+      etag: W/"46f3441dc80b139f718f16b0655924c4"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":901,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 9208bdc2-e6e0-4009-9347-680cc8bd24f8
+      x-runtime: '0.047952'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"number":1,"ids":{"trakt":56008,"tvdb":507598,"tmdb":54695,"tvrage":null},"rating":8.41714,"votes":350,"episode_count":6,"aired_episodes":6,"title":"Season
+        1","overview":"When a group of strangers find themselves in possession of
+        the manuscript for a legendary graphic novel, their lives brutally implode
+        as they are pursued by a shadowy and murderous organisation...","first_aired":"2013-01-15T21:00:00.000Z","updated_at":"2025-08-03T23:48:37.000Z","network":"Channel
+        4","original_title":null,"episodes":[{"season":1,"number":1,"title":"Episode
+        1","ids":{"trakt":1405053,"tvdb":4471351,"imdb":"tt2618234","tmdb":910003,"tvrage":null},"number_abs":1,"overview":"When  five
+        strangers from an online comic book forum gain possession of a  cult graphic
+        novel, they find themselves pursued by a shadowy  organisation who are prepared
+        to kill to track it down.","rating":8.1438,"votes":1210,"comment_count":9,"first_aired":"2013-01-15T21:00:00.000Z","updated_at":"2025-08-04T01:35:12.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":60,"episode_type":"series_premiere","original_title":null,"after_credits":false,"during_credits":false},{"season":1,"number":2,"title":"Episode
+        2","ids":{"trakt":1405054,"tvdb":4477746,"imdb":"tt2618232","tmdb":910004,"tvrage":null},"number_abs":2,"overview":"Ian  and
+        Becky are forced to face the terrifying reality of life on the run.  Meanwhile,
+        Dugdale is drawn deeper and deeper into a plot that  threatens to have fatal
+        consequences.","rating":8.0348,"votes":977,"comment_count":0,"first_aired":"2013-01-22T21:00:00.000Z","updated_at":"2025-08-03T07:37:42.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":49,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":1,"number":3,"title":"Episode
+        3","ids":{"trakt":1405055,"tvdb":4477747,"imdb":"tt2618236","tmdb":910005,"tvrage":null},"number_abs":3,"overview":"The
+        gang feel the full weight of The Network''s power as Grant is framed  for
+        a shocking crime. With nowhere else to turn, they are forced to make  a new
+        ally - but can she really be trusted?","rating":8.02721,"votes":882,"comment_count":1,"first_aired":"2013-01-29T21:00:00.000Z","updated_at":"2025-08-03T21:27:04.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":51,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":1,"number":4,"title":"Episode
+        4","ids":{"trakt":1405056,"tvdb":4477748,"imdb":"tt2618238","tmdb":910006,"tvrage":null},"number_abs":4,"overview":"Hidden
+        away in a derelict manor house, the group attempt to decipher the  secret
+        meaning of the manuscript. Will uncovering the identity of Mr  Rabbit really
+        allow them to return to their former lives?","rating":7.99512,"votes":820,"comment_count":2,"first_aired":"2013-02-05T21:00:00.000Z","updated_at":"2025-08-03T23:45:22.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":48,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":1,"number":5,"title":"Episode
+        5","ids":{"trakt":1405057,"tvdb":4477749,"imdb":"tt2618240","tmdb":910007,"tvrage":null},"number_abs":5,"overview":"The
+        gang''s attempt to disrupt The Network''s plans backfires leaving one of them
+        in danger. Arby''s confession to Jessica has damaging repercussions while
+        Becky is left with an impossible choice.","rating":8.12932,"votes":781,"comment_count":1,"first_aired":"2013-02-12T21:00:00.000Z","updated_at":"2025-08-04T01:21:48.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":49,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":1,"number":6,"title":"Episode
+        6","ids":{"trakt":1405058,"tvdb":4477750,"imdb":"tt2618242","tmdb":910008,"tvrage":null},"number_abs":6,"overview":"The  final
+        episode sees time running out. As a daring plan is formed, only  one question
+        remains - will the true secrets of Utopia finally be  revealed?","rating":8.55431,"votes":801,"comment_count":2,"first_aired":"2013-02-19T21:00:00.000Z","updated_at":"2025-08-04T03:40:12.000Z","available_translations":["de","el","en","es","fr","he","nl","pl","ru"],"runtime":62,"episode_type":"season_finale","original_title":null,"after_credits":false,"during_credits":false}]},{"number":2,"ids":{"trakt":56009,"tvdb":524149,"tmdb":54696,"tvrage":null},"rating":8.08333,"votes":216,"episode_count":6,"aired_episodes":6,"title":"Season
+        2","overview":"It has been three months since the destruction of the Utopia
+        manuscript, and things have been quiet for Ian, Becky and co. Believing the
+        Network to be finished, they each try to get back to some semblance of normality.  But
+        far from being over, the Network are only just beginning...","first_aired":"2014-07-14T20:00:00.000Z","updated_at":"2025-08-03T23:48:29.000Z","network":"Channel
+        4","original_title":null,"episodes":[{"season":2,"number":1,"title":"Episode
+        1","ids":{"trakt":1405059,"tvdb":4756838,"imdb":"tt3371724","tmdb":994956,"tvrage":null},"number_abs":7,"overview":"In
+        1974, genius Philip Carvel meets an idealistic security services agent, Milner,
+        at a secret forum of political, industrial, financial and academic leaders...
+        by 1979, Carvel''s losing his mind.","rating":8.42965,"votes":796,"comment_count":5,"first_aired":"2014-07-14T20:00:00.000Z","updated_at":"2025-08-04T03:48:02.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":54,"episode_type":"season_premiere","original_title":null,"after_credits":false,"during_credits":false},{"season":2,"number":2,"title":"Episode
+        2","ids":{"trakt":1405060,"tvdb":4922909,"imdb":"tt3850852","tmdb":993741,"tvrage":null},"number_abs":8,"overview":"In  the
+        present day, Jessica has been held captive by Milner who has  tortured her
+        in a desperate attempt to find out just what adjustment  Carvel made to Janus","rating":8.21541,"votes":701,"comment_count":1,"first_aired":"2014-07-15T20:00:00.000Z","updated_at":"2025-08-03T21:26:43.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":51,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":2,"number":3,"title":"Episode
+        3","ids":{"trakt":1405061,"tvdb":4924678,"imdb":"tt3867850","tmdb":1000628,"tvrage":null},"number_abs":9,"overview":"The  gang
+        are on the run and find a precocious young hacker, who uncovers  the key to
+        The Network''s new plan: a real global outbreak of weaponised  Russian flu.","rating":8.17788,"votes":669,"comment_count":2,"first_aired":"2014-07-22T20:00:00.000Z","updated_at":"2025-08-03T22:15:42.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":50,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":2,"number":4,"title":"Episode
+        4","ids":{"trakt":1405062,"tvdb":4924679,"imdb":"tt3892828","tmdb":1000629,"tvrage":null},"number_abs":10,"overview":"A  shocked
+        Dugdale reluctantly agrees to harbour Jessica, but who should  be scared of
+        who? When Dugdale visits Jen and Alice in a secret prison  it''s clear he
+        will do whatever The Network asks.","rating":8.16085,"votes":659,"comment_count":2,"first_aired":"2014-07-29T20:00:00.000Z","updated_at":"2025-08-04T03:48:02.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":50,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":2,"number":5,"title":"Episode
+        5","ids":{"trakt":1405063,"tvdb":4924680,"imdb":"tt3902654","tmdb":1001533,"tvrage":null},"number_abs":11,"overview":"Following  the
+        revelation that her father''s alive, Jessica sets off to find him,  with hostage
+        Milner in tow. Wilson and Leah analyse their information  and discover a far
+        darker, more terrifying secret.","rating":8.18056,"votes":648,"comment_count":2,"first_aired":"2014-08-05T20:00:00.000Z","updated_at":"2025-08-04T03:48:02.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":50,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":2,"number":6,"title":"Episode
+        6","ids":{"trakt":1405064,"tvdb":4924681,"imdb":"tt3916922","tmdb":1003290,"tvrage":null},"number_abs":12,"overview":"In  the
+        final episode the race is on to find out who is going to release  the flu.
+        The gang track down Dobri Gorski, where he tells them the names  of the three
+        people he trained to release the flu.","rating":8.13713,"votes":649,"comment_count":6,"first_aired":"2014-08-12T20:00:00.000Z","updated_at":"2025-08-04T02:05:16.000Z","available_translations":["de","el","en","es","fr","he","nl","pl","ru"],"runtime":53,"episode_type":"season_finale","original_title":null,"after_credits":false,"during_credits":false}]}]'
+  recorded_at: 2025-08-04 08:19:27
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/1?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eaa5a3cb238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '46241'
+      x-show-season-id: '56008'
+      expires: Mon, 04 Aug 2025 16:06:46 GMT
+      x-show-updated-at: '2025-08-03T07:38:12.000Z'
+      etag: W/"32901b821801a5c7fc6b981fb53623d3"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":892,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: f7e65ae1-166a-4ef2-8e18-bfe27cd38c60
+      x-runtime: '0.031640'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"season":1,"number":1,"title":"Episode 1","ids":{"trakt":1405053,"tvdb":4471351,"imdb":"tt2618234","tmdb":910003,"tvrage":null},"number_abs":1,"overview":"When  five
+        strangers from an online comic book forum gain possession of a  cult graphic
+        novel, they find themselves pursued by a shadowy  organisation who are prepared
+        to kill to track it down.","rating":8.1438,"votes":1210,"comment_count":9,"first_aired":"2013-01-15T21:00:00.000Z","updated_at":"2025-08-04T01:35:12.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":60,"episode_type":"series_premiere","original_title":null,"after_credits":false,"during_credits":false},{"season":1,"number":2,"title":"Episode
+        2","ids":{"trakt":1405054,"tvdb":4477746,"imdb":"tt2618232","tmdb":910004,"tvrage":null},"number_abs":2,"overview":"Ian  and
+        Becky are forced to face the terrifying reality of life on the run.  Meanwhile,
+        Dugdale is drawn deeper and deeper into a plot that  threatens to have fatal
+        consequences.","rating":8.0348,"votes":977,"comment_count":0,"first_aired":"2013-01-22T21:00:00.000Z","updated_at":"2025-08-03T07:37:42.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":49,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":1,"number":3,"title":"Episode
+        3","ids":{"trakt":1405055,"tvdb":4477747,"imdb":"tt2618236","tmdb":910005,"tvrage":null},"number_abs":3,"overview":"The
+        gang feel the full weight of The Network''s power as Grant is framed  for
+        a shocking crime. With nowhere else to turn, they are forced to make  a new
+        ally - but can she really be trusted?","rating":8.02721,"votes":882,"comment_count":1,"first_aired":"2013-01-29T21:00:00.000Z","updated_at":"2025-08-03T21:27:04.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":51,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":1,"number":4,"title":"Episode
+        4","ids":{"trakt":1405056,"tvdb":4477748,"imdb":"tt2618238","tmdb":910006,"tvrage":null},"number_abs":4,"overview":"Hidden
+        away in a derelict manor house, the group attempt to decipher the  secret
+        meaning of the manuscript. Will uncovering the identity of Mr  Rabbit really
+        allow them to return to their former lives?","rating":7.99512,"votes":820,"comment_count":2,"first_aired":"2013-02-05T21:00:00.000Z","updated_at":"2025-08-03T23:45:22.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":48,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":1,"number":5,"title":"Episode
+        5","ids":{"trakt":1405057,"tvdb":4477749,"imdb":"tt2618240","tmdb":910007,"tvrage":null},"number_abs":5,"overview":"The
+        gang''s attempt to disrupt The Network''s plans backfires leaving one of them
+        in danger. Arby''s confession to Jessica has damaging repercussions while
+        Becky is left with an impossible choice.","rating":8.12932,"votes":781,"comment_count":1,"first_aired":"2013-02-12T21:00:00.000Z","updated_at":"2025-08-04T01:21:48.000Z","available_translations":["de","en","es","fr","he","nl","pl","ru"],"runtime":49,"episode_type":"standard","original_title":null,"after_credits":false,"during_credits":false},{"season":1,"number":6,"title":"Episode
+        6","ids":{"trakt":1405058,"tvdb":4477750,"imdb":"tt2618242","tmdb":910008,"tvrage":null},"number_abs":6,"overview":"The  final
+        episode sees time running out. As a daring plan is formed, only  one question
+        remains - will the true secrets of Utopia finally be  revealed?","rating":8.55431,"votes":801,"comment_count":2,"first_aired":"2013-02-19T21:00:00.000Z","updated_at":"2025-08-04T03:40:12.000Z","available_translations":["de","el","en","es","fr","he","nl","pl","ru"],"runtime":62,"episode_type":"season_finale","original_title":null,"after_credits":false,"during_credits":false}]'
+  recorded_at: 2025-08-04 08:19:27
+recorded_with: VCR-vcr/2.0.0

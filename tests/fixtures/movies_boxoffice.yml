@@ -1,0 +1,37 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/boxoffice?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e988a3a4e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":949,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"660a8b4d3e662c22db2bc278bff0b824"
+      x-request-id: 2e8afe29-32f2-44fb-b362-952b624e8e5e
+      x-runtime: '0.018297'
+      cf-cache-status: MISS
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"revenue":118000000,"movie":{"title":"The Fantastic 4: First Steps","year":2025,"ids":{"trakt":460087,"slug":"the-fantastic-4-first-steps-2025","imdb":"tt10676052","tmdb":617126}}},{"revenue":25000000,"movie":{"title":"Superman","year":2025,"ids":{"trakt":853702,"slug":"superman-2025","imdb":"tt5950044","tmdb":1061474}}},{"revenue":13000000,"movie":{"title":"Jurassic
+        World Rebirth","year":2025,"ids":{"trakt":998800,"slug":"jurassic-world-rebirth-2025","imdb":"tt31036941","tmdb":1234821}}},{"revenue":6200000,"movie":{"title":"F1","year":2025,"ids":{"trakt":729817,"slug":"f1-2025","imdb":"tt16311594","tmdb":911430}}},{"revenue":5400000,"movie":{"title":"Smurfs","year":2025,"ids":{"trakt":750881,"slug":"smurfs-2025","imdb":"tt18069420","tmdb":936108}}},{"revenue":5100000,"movie":{"title":"I
+        Know What You Did Last Summer","year":2025,"ids":{"trakt":871105,"slug":"i-know-what-you-did-last-summer-2025","imdb":"tt4045450","tmdb":1083433}}},{"revenue":2800000,"movie":{"title":"How
+        to Train Your Dragon","year":2025,"ids":{"trakt":873974,"slug":"how-to-train-your-dragon-2025","imdb":"tt26743210","tmdb":1087192}}},{"revenue":1700000,"movie":{"title":"Eddington","year":2025,"ids":{"trakt":485271,"slug":"eddington-2025","imdb":"tt31176520","tmdb":648878}}},{"revenue":1100000,"movie":{"title":"Oh,
+        Hi!","year":2025,"ids":{"trakt":1095828,"slug":"oh-hi-2025","imdb":"tt33292655","tmdb":1339658}}},{"revenue":1000000,"movie":{"title":"The
+        Home","year":2025,"ids":{"trakt":742747,"slug":"the-home-2025-07-25","imdb":"tt17023012","tmdb":926606}}}]'
+  recorded_at: 2025-08-04 08:06:43
+recorded_with: VCR-vcr/2.0.0

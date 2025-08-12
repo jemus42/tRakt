@@ -1,0 +1,34 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:48 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eb70cd2cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:48 GMT
+      x-show-updated-at: '2025-08-04T06:54:29.000Z'
+      etag: W/"c996be0a6b1653eb74bf95b0ce13b82b"
+      last-modified: Mon, 04 Aug 2025 06:54:29 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":861,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: da4dd220-4e30-491b-a5a2-d06786de6292
+      x-runtime: '0.015254'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"title":"Breaking Bad","year":2008,"ids":{"trakt":1388,"slug":"breaking-bad","tvdb":81189,"imdb":"tt0903747","tmdb":1396,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:06:48
+recorded_with: VCR-vcr/2.0.0

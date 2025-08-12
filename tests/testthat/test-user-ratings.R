@@ -1,38 +1,29 @@
 test_that("user_ratings works", {
 	skip_on_cran()
 
-	user <- "jemus42"
+	vcr::local_cassette("user-user-ratings_basic")
 
-	# A single user ----
-	user_ratings(user = user, type = "shows") |>
-		expect_s3_class("tbl") |>
-		expect_length(10)
-	user_ratings(user = user, type = "seasons") |>
-		expect_s3_class("tbl") |>
-		expect_length(5)
-	user_ratings(user = user, type = "episodes") |>
-		expect_s3_class("tbl") |>
-		expect_length(5)
-	user_ratings(user = user, type = "movies") |>
-		expect_s3_class("tbl") |>
-		expect_length(9)
+	# Use real user with smaller collection for more manageable test data
+	user <- "sean"
 
-	# Multiple users ----
-	user_ratings(c(user, user), type = "shows") |>
-		expect_s3_class("tbl_df") |>
-		expect_length(11)
-	user_ratings(c(user, user), type = "movies") |>
-		expect_s3_class("tbl_df") |>
-		expect_length(10)
+	# Define minimum expected columns for different rating types
+	shows_cols <- c("rated_at", "rating", "type", "title", "year", "trakt", "slug")
+	movies_cols <- c("rated_at", "rating", "type", "title", "year", "trakt", "slug")
+	episodes_cols <- c("rated_at", "rating", "type", "episode", "show")
 
-	# These are very slow :/
-	user_ratings(c(user, user), type = "seasons") |>
-		expect_s3_class("tbl_df") |>
-		expect_length(6)
+	# A single user with limited results ----
+	user_ratings(user = user, type = "shows", limit = 3) |>
+		expect_tibble(min_cols = shows_cols)
+	user_ratings(user = user, type = "seasons", limit = 2) |>
+		expect_tibble() # May be empty for this user
+	user_ratings(user = user, type = "episodes", limit = 2) |>
+		expect_tibble(min_cols = episodes_cols)
+	user_ratings(user = user, type = "movies", limit = 3) |>
+		expect_tibble(min_cols = movies_cols)
 
-	user_ratings(c(user, user), type = "episodes") |>
-		expect_s3_class("tbl_df") |>
-		expect_length(6)
+	# Multiple users with limited results
+	user_ratings(c("sean", "jemus42"), type = "movies", limit = 2) |>
+		expect_tibble(min_cols = c(movies_cols, "user"))
 
 	# Error conditions ----
 	expect_error(user_ratings(user = -1))

@@ -1,0 +1,238 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/likes/comments
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      cf-ray: 969c8ea37b93bf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '10'
+      etag: W/"3e6cf078f757fd8497789eb41a2d5909"
+      last-modified: Mon, 13 Jan 2025 22:52:57 GMT
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":922,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 2d4a4f2a-8b13-405f-b549-ebcc372c2ad9
+      x-runtime: '0.016067'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"liked_at":"2025-01-13T22:52:57.000Z","type":"comment","comment":{"id":140586,"comment":"Headcanon:
+        Lady Christina de Souza is _actually_ [spoiler]an earlier regeneration of
+        River Song[/spoiler]","spoiler":true,"review":false,"parent_id":0,"created_at":"2017-09-09T01:47:03.000Z","updated_at":"2017-09-09T01:47:03.000Z","replies":0,"likes":8,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":2,"completed_count":1},"user":{"username":"morphinapg","private":false,"deleted":false,"name":"Andy
+        Gilleand","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"morphinapg"}}}},{"liked_at":"2024-09-08T23:10:24.000Z","type":"comment","comment":{"id":676228,"comment":"Never
+        been read harder than when my little brother saw this and said ‘I really liked
+        it but YOU’LL love it’. This must be how some trans people felt seeing the
+        Matrix, feeling seen, feeling called out, a generational disillusionment and
+        a deep dysphoria acknowledged. But The Matrix is a power fantasy by directors
+        who love to ape black aesthetics but hold a disdain for us, blame us. This
+        is a cautionary tale, one full of empathy but good god I cannot be this.\n\n
+        I thought I had scheduled an appointment for this morning to talk to a provider
+        about HRT. I spent the previous night wrapped in anxiety about what if things
+        go wrong, what if they change for the worse, what if it won’t ’fix’ me, what
+        if I talk to these people and they call me out, I’m not trans enough, I’m
+        confused. It didn’t go through, I guess. They never called. I scheduled another
+        in two weeks, got the email confirmation. And a part of me was relieved. Passed
+        the buck down. A misunderstanding I can wash my hands of, a perfect excuse
+        I could not be faulted for. \n\nAnd then I saw this. As if to wash the doubt
+        away. This hollowed me out. I feel raw and exposed and empty like it dug my
+        heart out. I’ve been Owen. I am Owen. I don’t talk right, it’s hard to look
+        people in the eyes, my skin doesn’t fit right, I feel hollow and I look in
+        the mirror and often I see something disgusting and rotting. Owen in the ending
+        is like my biggest nightmare put on screen. I got chicken tenders at the theater,
+        I know, I’m a weirdo, and they asked for the name of the order and I used
+        my birth name. Here. At no risk to me, nobody who knows me, I still couldn’t
+        use Jaycee. I don’t use it at drive throughs. The name I chose, that the people
+        I love and trust call me across the internet, that I use on the dating apps,
+        I couldn’t use. Why? Because I don’t feel like I’ve earned it? Because it
+        doesn’t feel time? There is still time.\n\nI could say more about how this
+        hits as someone who grew up on Buffy and Whedon shows for better and worse
+        in high school despite being born a year before the show premiered, how it
+        hits a nostalgia of a time I knew from behind the screen and then how time
+        skips into now, like a shattering of the escape. I could talk about the attachment
+        formed to a show before the Internet showed you all the fans who loved it
+        like you, seeing yourself in it, projecting onto it what may not be there
+        and reckoning with that as you grow. I could talk about Smith’s aching wound
+        of a performance or Liddy-Paine’s killer monologue, or the breathtaking lighting
+        and cinematography, but all I need to say is what I needed to hear. \n\nThere
+        is still time. But that doesn’t mean there’s time to waste. I’m going to do
+        that appointment. I’m going to use my name. I’m going to claw to who I want
+        to be and who I am inch by inch. And like Owen, I may be alone when I take
+        that path but I will be so relieved to be on it, I will know who I am, and
+        that will be in part due to seeing the TV glow.","spoiler":false,"review":true,"parent_id":0,"created_at":"2024-05-19T23:27:22.000Z","updated_at":"2024-05-19T23:27:22.000Z","replies":5,"likes":61,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":1,"completed_count":1},"user":{"username":"JC230","private":false,"deleted":false,"name":"JC","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jc230"}}}},{"liked_at":"2023-01-30T20:31:36.000Z","type":"comment","comment":{"id":537743,"comment":"This
+        is it folks, this is peak television. What we have here is one of the most
+        gut wrenching and masterfully crafted episodes ever brought to screen. Absolutely
+        fucking phenomenal with career best performances from Murray Bartlett and
+        Nick Oferman. Holy shit this will stick with me.","spoiler":false,"review":false,"parent_id":0,"created_at":"2023-01-30T03:34:08.000Z","updated_at":"2023-01-30T03:34:08.000Z","replies":6,"likes":271,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"BraylonMitch07","private":false,"deleted":false,"name":"BraylonMitch07","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"braylonmitch07"}}}},{"liked_at":"2021-12-19T22:31:59.000Z","type":"comment","comment":{"id":252708,"comment":"some
+        exquisite cringe in tonights episode","spoiler":false,"review":false,"parent_id":0,"created_at":"2019-09-30T09:05:36.000Z","updated_at":"2019-10-04T14:41:54.000Z","replies":0,"likes":27,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"dobata","private":false,"deleted":false,"name":"dobata","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"dobata"}}}},{"liked_at":"2021-07-13T20:35:14.000Z","type":"comment","comment":{"id":338107,"comment":"wai,
+        why y''all haitn on Kaley?","spoiler":false,"review":false,"parent_id":0,"created_at":"2020-11-27T21:34:26.000Z","updated_at":"2020-11-27T21:34:26.000Z","replies":6,"likes":34,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":8,"completed_count":8},"user":{"username":"Goutham3113","private":false,"deleted":false,"name":"Goutham","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"goutham3113"}}}},{"liked_at":"2020-04-19T02:37:25.000Z","type":"comment","comment":{"id":283636,"comment":"Alex
+        Garland, the man behind Ex Machina and Annihilation has done it again. Floored
+        by the first two episodes. The man creates art.","spoiler":false,"review":false,"parent_id":0,"created_at":"2020-03-06T06:25:18.000Z","updated_at":"2020-03-06T06:25:18.000Z","replies":4,"likes":31,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":8,"completed_count":8},"user":{"username":"ReclaimerCube","private":false,"deleted":false,"name":"Trace
+        Eliot Anderson","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"reclaimercube"}}}},{"liked_at":"2019-04-22T19:09:39.000Z","type":"comment","comment":{"id":226794,"comment":"Best
+        lines\r\n**I’m waiting for an old friend** - Bran\r\n**You left me for dead**
+        - Hound\r\n**I also robbed you** - Arya\r\n**I’ve always had blue eyes!**
+        - Tormund\r\n**Whatever they want** - Dany\r\n*but*\r\n**It had its moments**
+        - Sansa\r\n\r\nThey need wheelchair ramps in Winterfell. They left Bran in
+        the courtyard overnight!\r\n\r\n==**Parallelism between Season 1 Episode 1
+        and Season 8 Episode 1**==\r\n\r\n01. **S01E01** Winter Is Coming. **S08E01**
+        Winterfell.\r\n02. **Opening shot** of the **King and Queen arriving** with
+        the **same soundtrack** called \"The King''s Arrival.\"\r\n03. **S01E01**
+        Winterfell showed grass but **S08E01** it’s covered in snow.\r\n04. The kid
+        from the beginning was climbing on trees to get a good view, similar to Bran
+        climbing the castle to get a good view. He was made to look similar to Bran
+        in the Pilot.\r\n05. Arya being a kid watching the King coming, compare to
+        her letting a kid get a good view of the Queen coming.\r\n06. **S01E01** Jamie
+        is arriving at Winterfell taking off his Golden Lannister Helmet and showing
+        his blond hair, clean shave, and everyone staring at him. **S08E01** Jamie
+        arriving in Gray cloaks and taking a hood off to show darker hair and a beard
+        and no one except Bran noticing him.\r\n07. Both episodes ending with Bran
+        and Jamie, except this time Jamie looks terrified.\r\n08. Both episodes have
+        amputated limbs from the white walkers spread out in a gory way to send a
+        message.\r\n09. Scenes in the Winterfell crypt except instead of visiting
+        Lyanna Stark they are seeing Ned Stark.\r\n10. **S01E01** Cersi and Catelyn
+        Stark talk about their kids possibly getting married while looking at them
+        from a distance. **S08E01** Varys, Tyrion, and Davos talk about Dany and Jon
+        while looking at them from a distance.\r\n11. **S08E01** The reunion of Jon
+        and Arya at the Godswood (weirwood tree) is similar to **S01E01** Ned and
+        Catelyn at the Godswood.\r\n12. Incest between visiting monarchs and Bran
+        watched both lewd acts. Bran controlled the staring scene from Drogon. Another
+        interpretation is,\r\n13. Dragon and riders can have personality. Drogon’s
+        emotional expression is essentially warning Jon that this is all smoke and
+        mirrors (as Varys noted earlier, nothing lasts). The “real” Daenerys is not
+        the flirty kissy-face girlfriend joking about eloping; Daenerys’s true nature,
+        underneath the playfulness, is reflected in Drogon’s intensity and focus.
+        That’s who she is, and Jon shouldn''t forget that.\r\n14. **S08E01** brothel
+        scene with Bron is similar to **S01E01** Tyrion’s scene and it is both interrupted
+        with someone walking in.\r\n15. **S01E01** Catelyn: \"Where''s Arya?\" \"Sansa,
+        where''s your sister?\". Sansa: `¯\\_(ツ)_/¯` **S08E01** Jon: \"Where''s Arya?\"
+        Sansa: \"Lurking somewhere.\"\r\n16. **S08E01** Sansa (Current Ruler of Winterfell)
+        saying **“Winterfell is yours, Your Grace.”** to the arriving monarch (Daenerys
+        Targaryen). **S01E01** Ned (Former Ruler of Winterfell) **“Guarding the North
+        for you, Your Grace. Winterfell is yours.”** to Robert Baratheon.\r\n17. **S01E01**
+        Robert Baratheon to Ned \"I have a son, you have a daughter, we shall join
+        our houses.\" **S08E01** Arya (Stark) and Gendry (Baratheon).\r\n18. **S08E01**
+        Sansa being more than wary of Daenerys, similar to Catelyn in **S01E01** was
+        of Cersei. She is exactly like her mother (Catelyn) in the greeting.\r\n19.
+        **S01E01** Robert asking Ned to be his Hand of the King in the crypts is similar
+        to Sam in **S08E01** telling Jon he is the king in the crypts (Hinting Sam
+        might become Jon''s Hand of the King).\r\n20. Sam and Ned both share a few
+        similarities; Sam is the smarter one in their duo, Sam and Ned''s fathers/brothers
+        were burned alive by Targaryens.\r\n21. Jon/Robert - great warriors, “brothers”
+        to Sam/Ned, and both seeking for the iron throne but also both doing it for
+        reasons beyond wanting the throne (protecting the realm / saving Lyanna and
+        removing the mad king).\r\n22. **S01E01** Ned’s farewell to Jon he says **“the
+        next time we see each other, we will talk about your mother. I promise.”**
+        In **S08E01** Jon is staring at Ned''s tomb while Sam tells him about his
+        real parents (Lyanna Stark and Rhaegar Targaryen).\r\n23. **S01E01** Jon is
+        distraught over his identity crisis as a bastard. In **S08E01** Jon is distraught
+        over his identity crisis as a king.\r\n24. In **S01E01** Cerci tells Jamie
+        to kill Bran. In **S08E01** Cersei tells Bron to kill Jamie.\r\n25. In **S01E01**/**S08E01**
+        Arya is jumping into Jon''s arms as he lifts her!\r\n26. **S01E01** A child
+        is “dead” and crucified to a tree. Child attacks brothers of the nights watch.
+        A brother goes south (then executed by Ned Stark). In **S08E01** a child is
+        crucified to a wall. Eddison Tollett (Edd) witnesses, and he goes south to
+        warn others. Side note: Opposite of what brother of the Night''s Watch did
+        from **S01E01**: safe to say he won’t be executed by Lord of Winterfell considering
+        he was one of the reasons the current Lord of Winterfell is alive after himself
+        being executed.\r\n27. **S08E01** Daenerys \"The North is as beautiful as
+        your brother claimed, as are you.\" Similar to **S01E01** when Cersei said
+        \"Hello, little dove.\" \"But you are a beauty\".\r\n28. **S01E01** The last
+        time Jon and Arya spoke, she was given her sword Needle and jumped up on Jon
+        to hug his neck. **S08E01** Arya jumps up to hug his neck, then shows Jon
+        that she still has Needle.\r\n29. If Cersei taught Sansa anything, it''s not
+        to blindly trust a beautiful queen coming into Winterfell and promising to
+        protect her and fulfill her wildest dreams.\r\n30. **S01E01** The whole family
+        standing in line for the king. **S08E01** The remaining Starks and their advisers
+        waiting for the queen and Jon\r\n31. In **S01E01** Jon Snow gets a pet Direwolf
+        (Stark), in **S08E01** Jon Snow gets a pet Dragon (Targaryen).\r\n32. **S01E01**
+        Surprising return of and the existence of dire wolves south of the wall shocking
+        the northerners. In **S08E01** The return of and existence of dragons also
+        shocking the northerners.\r\n33. The arrival at Winterfell, the only person
+        that rode in both caravans, was The Hound. In **S01E01** the hound wore his
+        trademark dog helm, but in **S08E01** he wore nothing. It seems to symbolize
+        his transition away from The Hound and to being himself, Sandor Clegane.\r\n34.
+        In **S01E01** Ned kills the deserter and tells Bran \"the white walkers been
+        gone for thousands of years.\" Bran in **S08E01** says we don''t have time;
+        the white walkers are coming.\r\n35. **S01E01** Robert and Ned are standing
+        in front of Lyanna Stark''s tomb. In **S08E01** Sam and Jon are standing in
+        front of Lyanna Stark’s tomb.\r\n36. **S01E01** lady of Winterfell (Catelyn)
+        reading a letter by candlelight. **S08E01** The lady of Winterfell (Sansa)
+        reading a letter by candlelight.\r\n37. In **S08E01** When Sansa and Tyrion
+        were discussing the wedding at Joffrey. Tyrion said \"Last time we spoke was
+        at Joffrey''s wedding\" \"Miserable affair\" Sansa said \"It had its moments\"
+        recalling Joffrey''s gruesome death and being satisfied by how it went down.
+        Recalling \"fondly\" in this instance would be sarcasm.\r\nIn **S01E01**,
+        Sansa thinks of Joffrey fondly because she wants to be queen.\r\n38. **S01E01**
+        Sandor Clegane comes to Winterfell with the Bastard Joffrey Baratheon. **S08E01**
+        Sandor Clegane comes to Winterfell with the Bastard Gendry Baratheon.\r\n\r\n==**Foreshadowing**==
+        (from different Seasons/Episodes.)\r\n\r\n`01.` **S03E05**“ “Let’s not go
+        back. Let’s stay here a while longer,” Ygritte tells Jon. “I don’t ever want
+        to leave this cave, Jon Snow.” **S08E01** “We could stay a thousand years.
+        No one would find us,” Daenerys says to Jon.\r\n`02.` Sam is suggesting **rebelling
+        against the Targaryen** because they burned his father and brother alive.
+        Similar to when **Robert''s Rebellion, began** when **Rhaegar Targaryen**,
+        allegedly **abducted** Robert''s betrothed, **Lyanna Stark.**","spoiler":true,"review":true,"parent_id":0,"created_at":"2019-04-15T03:49:07.000Z","updated_at":"2019-04-16T17:07:57.000Z","replies":7,"likes":158,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":4,"completed_count":1},"user":{"username":"Cadrieldur","private":false,"deleted":false,"name":"Cadrieldur","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"cadrieldur"}}}},{"liked_at":"2016-07-17T23:51:57.000Z","type":"comment","comment":{"id":89569,"comment":"If
+        Stephen King and Steven Spielberg had a baby, this is EXACTLY what it would
+        look it.","spoiler":false,"review":false,"parent_id":0,"created_at":"2016-07-15T20:29:36.000Z","updated_at":"2016-07-15T21:28:50.000Z","replies":13,"likes":261,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":8,"completed_count":8},"user":{"username":"KrystalGoderitch","private":false,"deleted":false,"name":"RoxieVelma","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"krystalgoderitch"}}}},{"liked_at":"2015-03-08T04:19:21.000Z","type":"comment","comment":{"id":34406,"comment":"It''s
+        based on an existing comic, so somehow I don''t think that''s how that went
+        down.","spoiler":false,"review":false,"parent_id":0,"created_at":"2014-07-23T22:09:37.000Z","updated_at":"2014-07-23T22:09:37.000Z","replies":0,"likes":24,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":71,"completed_count":71},"user":{"username":"rfrancis","private":false,"deleted":false,"name":"R.
+        Francis Smith","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"rfrancis"}}}}]'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/likes/lists
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      cf-ray: 969c8ea49d4ebf14-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '3'
+      etag: W/"1a51c591a6fad594f2a9506102d68f1e"
+      last-modified: Fri, 13 Oct 2023 22:51:43 GMT
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":918,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: e4d819e1-238c-411b-9278-e035b4225bfc
+      x-runtime: '0.020343'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"liked_at":"2023-10-13T22:51:43.000Z","type":"list","list":{"name":"Treehouse
+        of Horror","description":"All the Simpsons Halloween specials.","privacy":"public","share_link":"https://trakt.tv/lists/19842305","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2020-10-02T17:55:46.000Z","updated_at":"2025-07-22T14:04:17.000Z","item_count":35,"comment_count":0,"likes":73,"ids":{"trakt":19842305,"slug":"treehouse-of-horror"},"user":{"username":"christhebaker","private":false,"deleted":false,"name":"Chris
+        Baker","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"christhebaker"}}}},{"liked_at":"2019-10-10T19:00:23.000Z","type":"list","list":{"name":"Rotten
+        Tomatoes: Top 100 Movies Of All Time","description":"https://www.rottentomatoes.com/top/bestofrt/?cmp=FBRT_Top100Films\r\n\r\nUPDATED:
+        3/28/22\r\n\r\nNOTE: It appears Rotten Tomatoes has removed this list. There
+        will not be any future updates to this list.","privacy":"public","share_link":"https://trakt.tv/lists/3785062","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2017-05-23T18:06:05.000Z","updated_at":"2025-08-02T10:33:39.000Z","item_count":100,"comment_count":0,"likes":546,"ids":{"trakt":3785062,"slug":"rotten-tomatoes-top-100-movies-of-all-time"},"user":{"username":"lish408","private":false,"deleted":false,"name":"LISH","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"lish408"}}}},{"liked_at":"2019-10-10T18:59:40.000Z","type":"list","list":{"name":"IMDB
+        Most Popular TV Series","description":"Most Popular TV Series With At Least
+        5,000 Votes","privacy":"public","share_link":"https://trakt.tv/lists/851496","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2014-09-11T21:05:08.000Z","updated_at":"2023-12-15T10:17:55.000Z","item_count":50,"comment_count":0,"likes":24,"ids":{"trakt":851496,"slug":"imdb-most-popular-tv-series"},"user":{"username":"hulkhorgen","private":false,"deleted":false,"name":null,"vip":false,"vip_ep":false,"director":false,"ids":{"slug":"hulkhorgen"}}}}]'
+  recorded_at: 2025-08-04 08:06:45
+recorded_with: VCR-vcr/2.0.0

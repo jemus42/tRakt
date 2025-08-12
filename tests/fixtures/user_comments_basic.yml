@@ -1,0 +1,164 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/comments/all/all?include_replies=FALSE
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      cf-ray: 969c8ea2ab027f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      x-pagination-page-count: '2'
+      x-pagination-item-count: '17'
+      etag: W/"571b177e072de4e39f7eaf79b2cb14f0"
+      last-modified: Mon, 21 Jul 2025 15:33:49 GMT
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":925,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 65043c5b-b106-481b-a903-0b93fe049a03
+      x-runtime: '0.037699'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"type":"episode","episode":{"season":2,"number":6,"title":"Episode
+        6","ids":{"trakt":3871261,"tvdb":7488861,"imdb":"tt9699196","tmdb":1997016,"tvrage":null}},"show":{"title":"Sex
+        Education","year":2019,"ids":{"trakt":140590,"slug":"sex-education","tvdb":356317,"imdb":"tt7767422","tmdb":81356,"tvrage":null}},"comment":{"id":278788,"comment":"[spoiler]As
+        someone who has a hard time watching awkward stuff, this was excruciatingly
+        painful to watch. \r\nIf someone is wondering about the definition of the
+        German word \"Fremdscham\" – this is it.[/spoiler]","spoiler":false,"review":false,"parent_id":0,"created_at":"2020-02-11T14:44:22.000Z","updated_at":"2020-02-11T14:44:22.000Z","replies":0,"likes":4,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"movie","movie":{"title":"John
+        Wick: Chapter 3 - Parabellum","year":2019,"ids":{"trakt":304278,"slug":"john-wick-chapter-3-parabellum-2019","imdb":"tt6146586","tmdb":458156}},"comment":{"id":236397,"comment":"All
+        the gun inflicted deaths in the world and the scene that got me was [spoiler]a
+        casually torn-off ballet dancer''s toe nail.[/spoiler]","spoiler":false,"review":false,"parent_id":0,"created_at":"2019-06-09T21:33:00.000Z","updated_at":"2019-06-09T21:33:00.000Z","replies":1,"likes":2,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"episode","episode":{"season":1,"number":6,"title":"WHEN
+        THE YOGURT TOOK OVER","ids":{"trakt":3313359,"tvdb":6983266,"imdb":"tt9788494","tmdb":1727727,"tvrage":null}},"show":{"title":"Love,
+        Death \u0026 Robots","year":2019,"ids":{"trakt":142611,"slug":"love-death-robots","tvdb":357888,"imdb":"tt9561862","tmdb":86831,"tvrage":null}},"comment":{"id":228343,"comment":"Apparently
+        the most polarising one so far? I absolutely loved it because I''m into absurd
+        humour, others hated it, presumably because episodes like  1 and 3 set a wholly
+        different tone.","spoiler":false,"review":false,"parent_id":0,"created_at":"2019-04-23T19:23:29.000Z","updated_at":"2019-04-23T19:23:29.000Z","replies":0,"likes":5,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"season","season":{"number":3,"ids":{"trakt":138350,"tvdb":696307,"tmdb":83866,"tvrage":null}},"show":{"title":"Twin
+        Peaks","year":1990,"ids":{"trakt":1907,"slug":"twin-peaks","tvdb":70533,"imdb":"tt0098936","tmdb":1920,"tvrage":null}},"comment":{"id":140265,"comment":"Thefuck
+        did I just watch,","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-09-06T02:14:14.000Z","updated_at":"2017-09-06T02:14:14.000Z","replies":1,"likes":12,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":18,"completed_count":18},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"season","season":{"number":3,"ids":{"trakt":138350,"tvdb":696307,"tmdb":83866,"tvrage":null}},"show":{"title":"Twin
+        Peaks","year":1990,"ids":{"trakt":1907,"slug":"twin-peaks","tvdb":70533,"imdb":"tt0098936","tmdb":1920,"tvrage":null}},"comment":{"id":140264,"comment":"Thefuck
+        did I just watch.","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-09-06T02:13:43.000Z","updated_at":"2017-09-06T02:13:43.000Z","replies":0,"likes":1,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":18,"completed_count":18},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"movie","movie":{"title":"It
+        Comes at Night","year":2017,"ids":{"trakt":262061,"slug":"it-comes-at-night-2017","imdb":"tt4695012","tmdb":418078}},"comment":{"id":139841,"comment":"I
+        don''t remember why/that I watchlisted this one, but boy is it a downer. If
+        you prefer slow phsychological horror over PEW PEW KILLER MURDERFACE horror,
+        then I''d probably recommend it for the beatutful shots alone.","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-09-02T21:16:00.000Z","updated_at":"2017-09-02T21:16:00.000Z","replies":0,"likes":0,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"episode","episode":{"season":7,"number":4,"title":"The
+        Spoils of War","ids":{"trakt":2610969,"tvdb":6235145,"imdb":"tt5775846","tmdb":1340524,"tvrage":null}},"show":{"title":"Game
+        of Thrones","year":2011,"ids":{"trakt":1390,"slug":"game-of-thrones","tvdb":121361,"imdb":"tt0944947","tmdb":1399,"tvrage":null}},"comment":{"id":136632,"comment":"This
+        episode ticked _all_ the boxes.\r\n\r\n- Stark kid reunions\r\n- Foreshadowing\r\n-
+        Callbacks\r\n- Dany + Missandei being girlfriends\r\n- Dany + Jon entering
+        a cave of implied incestuous romance\r\n- Just Tyrion things\r\n- Arya being
+        the best\r\n- Hey Meera, talk to your dad, we need him for plot stuff\r\n-
+        Fucking dracarys\r\n- Bronn","spoiler":true,"review":false,"parent_id":0,"created_at":"2017-08-07T08:04:26.000Z","updated_at":"2017-08-07T08:04:26.000Z","replies":0,"likes":21,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"show","show":{"title":"13
+        Reasons Why","year":2017,"ids":{"trakt":116129,"slug":"13-reasons-why","tvdb":323168,"imdb":"tt1837492","tmdb":66788,"tvrage":null}},"comment":{"id":120768,"comment":"So
+        fucking painful to watch.\r\n\r\nAlmost done with it as I''m writing this,
+        and I _want_ to finish it, but shit, it''s really hard.\r\n\r\nAnd good. Very
+        good.","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-04-01T23:43:45.000Z","updated_at":"2017-04-01T23:43:45.000Z","replies":2,"likes":78,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":14,"completed_count":13},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"movie","movie":{"title":"In
+        Time","year":2011,"ids":{"trakt":34516,"slug":"in-time-2011","imdb":"tt1637688","tmdb":49530}},"comment":{"id":119806,"comment":"I
+        watched it because I was interest in the premise, and because of Olivia Wilde.  \r\nI
+        was disappointed by the underutilization of both, unfortunately :/","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-03-25T21:00:38.000Z","updated_at":"2017-03-25T21:00:38.000Z","replies":0,"likes":0,"user_rating":5,"language":"en","user_stats":{"rating":5,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"episode","episode":{"season":8,"number":4,"title":"Lady
+        Rainicorn of the Crystal Dimension","ids":{"trakt":2441489,"tvdb":5599916,"imdb":"tt5709708","tmdb":2312843,"tvrage":null}},"show":{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}},"comment":{"id":112561,"comment":"Seriously
+        though what the f**k, Adventure Time.","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-01-31T17:48:59.000Z","updated_at":"2017-01-31T17:48:59.000Z","replies":0,"likes":5,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}}]'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/comments/all/movies?include_replies=FALSE
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      cf-ray: 969c8ea44e0c7f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      x-pagination-page-count: '1'
+      x-pagination-item-count: '5'
+      etag: W/"b8155d805183bea45d09bb33292500b9"
+      last-modified: Mon, 05 Jun 2023 02:30:49 GMT
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":919,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: e66df057-0d37-4a90-b96d-0e51b8e29a69
+      x-runtime: '0.013522'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"type":"movie","movie":{"title":"John Wick: Chapter 3 - Parabellum","year":2019,"ids":{"trakt":304278,"slug":"john-wick-chapter-3-parabellum-2019","imdb":"tt6146586","tmdb":458156}},"comment":{"id":236397,"comment":"All
+        the gun inflicted deaths in the world and the scene that got me was [spoiler]a
+        casually torn-off ballet dancer''s toe nail.[/spoiler]","spoiler":false,"review":false,"parent_id":0,"created_at":"2019-06-09T21:33:00.000Z","updated_at":"2019-06-09T21:33:00.000Z","replies":1,"likes":2,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"movie","movie":{"title":"It
+        Comes at Night","year":2017,"ids":{"trakt":262061,"slug":"it-comes-at-night-2017","imdb":"tt4695012","tmdb":418078}},"comment":{"id":139841,"comment":"I
+        don''t remember why/that I watchlisted this one, but boy is it a downer. If
+        you prefer slow phsychological horror over PEW PEW KILLER MURDERFACE horror,
+        then I''d probably recommend it for the beatutful shots alone.","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-09-02T21:16:00.000Z","updated_at":"2017-09-02T21:16:00.000Z","replies":0,"likes":0,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"movie","movie":{"title":"In
+        Time","year":2011,"ids":{"trakt":34516,"slug":"in-time-2011","imdb":"tt1637688","tmdb":49530}},"comment":{"id":119806,"comment":"I
+        watched it because I was interest in the premise, and because of Olivia Wilde.  \r\nI
+        was disappointed by the underutilization of both, unfortunately :/","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-03-25T21:00:38.000Z","updated_at":"2017-03-25T21:00:38.000Z","replies":0,"likes":0,"user_rating":5,"language":"en","user_stats":{"rating":5,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"movie","movie":{"title":"The
+        Purge","year":2013,"ids":{"trakt":102526,"slug":"the-purge-2013","imdb":"tt2184339","tmdb":158015}},"comment":{"id":99443,"comment":"Well
+        to be honest, I only watched this movie because I saw that one Rick \u0026amp;
+        Morty episode I now have to rewatch because there were probably references
+        to this movie.\r\n\r\nAs for the movie itself: Interesting idea, kinda meh
+        though.","spoiler":false,"review":false,"parent_id":0,"created_at":"2016-10-14T23:17:18.000Z","updated_at":"2016-10-14T23:17:18.000Z","replies":0,"likes":2,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"movie","movie":{"title":"The
+        Maze Runner","year":2014,"ids":{"trakt":124008,"slug":"the-maze-runner-2014","imdb":"tt1790864","tmdb":198663}},"comment":{"id":97419,"comment":"I
+        watched this knowing nothing about the story, and it felt like the script
+        was put out by the NerdGarbageBot (https://twitter.com/nerdgarbagebot).\r\n\r\nPitch:\r\n\r\n\u0026gt;
+        Imagine if the Hunger games were set in the third trial of the Triwizard Tournament,
+        but set in a dystopian future\r\n\r\nI think that about covers it.  \r\nWas
+        mildly entertained, though.","spoiler":false,"review":false,"parent_id":0,"created_at":"2016-09-27T21:47:36.000Z","updated_at":"2016-09-27T21:47:36.000Z","replies":0,"likes":2,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}}]'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sofakissen/comments/all/all?include_replies=FALSE
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea558357f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      x-pagination-page-count: '0'
+      x-pagination-item-count: '0'
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":914,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"07f1649006f4e9b15a14e1f4b669b4a4"
+      cache-control: max-age=0, private, must-revalidate
+      x-request-id: 4e8e6e53-71ba-4f42-91d8-a0a100a7170b
+      x-runtime: '0.022354'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2025-08-04 08:06:45
+recorded_with: VCR-vcr/2.0.0

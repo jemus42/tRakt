@@ -1,0 +1,104 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/one-piece/next_episode?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9dbaa77f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T21:15:32.000Z'
+      etag: W/"e915930c483f9579c0d57dd4a8c09b77"
+      last-modified: Sun, 03 Aug 2025 21:27:33 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":937,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 02391910-ef2a-4112-a834-bcb0998b9bae
+      x-runtime: '0.014462'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"season":22,"number":1139,"title":"Episode 1139","ids":{"trakt":13323319,"tvdb":null,"imdb":null,"tmdb":6382600,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/one-piece/last_episode?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9eccab7f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T21:15:32.000Z'
+      etag: W/"b1611743335502611c34097357baf1f6"
+      last-modified: Mon, 04 Aug 2025 07:55:40 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":934,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 2314f6f1-2d39-420b-93ac-708dbe0bc114
+      x-runtime: '0.045972'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"season":22,"number":1138,"title":"Thank You, Dad - Bonney and Kuma''s
+        Warm Embrace","ids":{"trakt":13284690,"tvdb":11262448,"imdb":null,"tmdb":6363234,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/one-piece/last_episode?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea00eae7f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 08:45:35 GMT
+      x-show-updated-at: '2025-08-03T21:15:32.000Z'
+      etag: W/"25a6a78f2c01cf420b7da5bd007f2580"
+      last-modified: Mon, 04 Aug 2025 00:20:37 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"UNAUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":952,"until":"2025-08-04T00:50:00Z"}'
+      x-request-id: 6c281b85-0ffa-4e7b-ba29-90d210ff8462
+      x-runtime: '0.045834'
+      cf-cache-status: HIT
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"season":22,"number":1138,"title":"Thank You, Dad - Bonney and Kuma''s
+        Warm Embrace","ids":{"trakt":13284690,"tvdb":11262448,"imdb":null,"tmdb":6363234,"tvrage":null},"number_abs":null,"overview":"Kuma,
+        battered and without free will, approaches Bonney. Overcome with emotion,
+        she tells him she saw all his memories and learned everything that he did
+        for her. Watching the scene, Vegapunk wonders what compelled Kuma to come
+        to Egghead.","rating":7.03448,"votes":29,"comment_count":0,"first_aired":"2025-08-03T14:15:00.000Z","updated_at":"2025-08-04T00:20:37.000Z","available_translations":["en","es","fr","it","ja","pt"],"runtime":24,"episode_type":"standard","original_title":"ありがとう、お父さん　ボニーとくまの熱き抱擁","after_credits":false,"during_credits":false}'
+  recorded_at: 2025-08-04 08:06:44
+recorded_with: VCR-vcr/2.0.0

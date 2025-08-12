@@ -1,0 +1,629 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/193972/translations
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      cf-ray: 969c8e97cfc37f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-movie-updated-at: '2025-07-31T16:55:44.000Z'
+      etag: W/"45837033648df03010d19b353da7f63d"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"UNAUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":832,"until":"2025-08-01T08:15:00Z"}'
+      x-request-id: 5c7a2490-dfe9-4f33-a836-1fcb942d828b
+      x-runtime: '0.020775'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"حكاية لعبة 4","overview":"لطالما كان وودي واثقا من مكانته
+        في العالم وأن أولويته هي رعاية طفله ، سواء كان ذلك آندي أو بوني. ولكن عندما
+        تضيف بوني لعبة جديدة مترددة تسمى \"فوركي\" إلى غرفتها ، فإن مغامرة رحلة على
+        الطريق جنبا إلى جنب مع الأصدقاء القدامى والجدد ستظهر لوودي مدى ضخامة العالم
+        بالنسبة للعبة.","tagline":"مغامرة العمر.","language":"ar","country":"sa"},{"title":"Играта
+        на играчките: Пътешествието","overview":"Уди винаги е бил сигурен в своето
+        място на този свят и в това, че негов приоритет е да се грижи за детето, на
+        което принадлежи, независимо дали това е Анди или Бони. Един ден Бони донася
+        нова играчка в стаята си – направеният от нея Виличко, който определя себе
+        си като „боклук“, а не като играчка. Уди се нагърбва с отговорната задача
+        да му покаже защо трябва да приеме това, че е играчка.","tagline":"Приключението
+        на живота им","language":"bg","country":"bg"},{"title":null,"overview":"Compte!
+        Ha arribat una nova joguina a la vida de l’Andy i la Bonnie. Es diu Forky.
+        És nova, lluent...","tagline":"Torna a jugar-hi","language":"ca","country":"es"},{"title":"Toy
+        Story 4: Příběh hraček","overview":"Kovboj Woody vždycky dobře věděl, co je
+        smyslem jeho života. A tím bylo starat se a chránit jeho dítě, ať už to byl
+        chlapeček Andy nebo holčička Bonnie. Když však Bonnie přinese do svého pokojíku
+        novou hračku, které říká „Vidlík“, otevře se Woodymu a jeho věrným kamarádům
+        docela nový velký svět","tagline":"Připravte se na cestu","language":"cs","country":"cz"},{"title":null,"overview":"Siden
+        Anders forærede sit legetøj til den lille pige Bolette, har Woody taget sig
+        pligtskyldigt af hende på trods af, at han ikke er hendes yndlingslegetøj.
+        Da Bolette og hendes forældre tager på udflugt, og Bolettes nye, hjemmelavede
+        legetøj ved navn Gafli stikker af, agter Woody at finde ham, hvilket fører
+        ham ud på en rejse, hvor hans opfattelse af, hvad legetøj bør være, bliver
+        sat på prøve.","tagline":null,"language":"da","country":"dk"},{"title":"A
+        Toy Story: Alles hört auf kein Kommando","overview":"Die Cowboy-Puppe Woody
+        und sein Freund Buzz Lightyear haben sich mit den anderen Spielsachen gut
+        im Kinderzimmer ihrer neuen Besitzerin, Bonnie, eingerichtet. Als das Mädchen
+        aus einem Göffel (Gabel + Löffel) ein neues Spielzeug namens Forky bastelt
+        und es ins Herz schließt, nehmen sie den ungewöhnlichen Zuwachs mit offenen
+        Armen in ihre Mitte auf. Doch Forky sieht sich selbst eher als Abfall an und
+        flüchtet, woraufhin Woody sich auf die Suche nach ihm macht, um ihn zurückzubringen.  Auf
+        dem Ausflug im Wohnwagen mit Bonnies Familie nimmt Woody außerdem einen unerwarteten
+        Umweg und trifft so in einem Antiquitätenladen seine verlorene Freundin, die
+        Schäferin Bo Peep, wieder. Und dann taucht auch noch ein Freizeitpark am Horizont
+        auf, der das Leben der Spielzeuge zusätzlich ins Chaos stürzt.","tagline":"Hier
+        spielen doch alle verrückt!","language":"de","country":"de"},{"title":"Η Ιστορία
+        των Παιχνιδιών 4","overview":"Στη διάρκεια μιας εκδρομής το αγαπημένο παιχνίδι
+        της Μπόνι δραπετεύει... και ο Γούντι αναλαμβάνει να το βρει και να το φέρει
+        πίσω. Η περιπέτειά του αυτή θα τον φέρει σε επαφή με παλιούς και νέους φίλους...","tagline":"Η
+        περιπέτεια μιας ζωής","language":"el","country":"gr"},{"title":"Toy Story
+        4","overview":"Woody has always been confident about his place in the world
+        and that his priority is taking care of his kid, whether that''s Andy or Bonnie.
+        But when Bonnie adds a reluctant new toy called \"Forky\" to her room, a road
+        trip adventure alongside old and new friends will show Woody how big the world
+        can be for a toy.","tagline":"Get ready to hit the road!","language":"en","country":"us"},{"title":null,"overview":"Cuando
+        un nuevo juguete llamado «Forky» se une a Woody y a la pandilla, un viaje
+        por carretera junto a viejos y nuevos amigos revela lo grande que puede ser
+        el mundo para un juguete.","tagline":"Woody termina en un inesperado reencuentro
+        con su vieja amiga perdida Bo Peep.","language":"es","country":"mx"},{"title":null,"overview":"Woody
+        siempre ha tenido claro cuál es su labor en el mundo y cuál es su prioridad:
+        cuidar a su dueño, ya sea Andy o Bonnie. Sin embargo, Woody descubrirá lo
+        grande que puede ser el mundo para un juguete cuando Forky se convierta en
+        su nuevo compañero de habitación. Los juguetes se embarcarán en una aventura
+        de la que no se olvidarán jamás.","tagline":"La aventura de toda una vida.","language":"es","country":"es"},{"title":"Lelulugu
+        4","overview":"Kauboi Woody on teadnud alati oma kohta selles maailmas ning
+        et tema põhiliseks ülesandeks on hoolitseda oma lapse eest, olgu selleks siis
+        Andy või uus omanik Bonnie. Kui Bonnie poolt käsitöötunnis loodud uus lelu
+        Luhvik kuulutab, et ta on rämps ja mitte mänguasi, võtab Woody endale südameasjaks,
+        et näidata uustulnukale, mida tähendab olla tõeline lelu.","tagline":null,"language":"et","country":"ee"},{"title":"داستان
+        اسباب‌بازی ۴","overview":"وودی، باز لایتیر و دوستانشان پس از آنکه مالک سابقشان
+        اندی آنها را به کودکی به نام بانی تحویل می‌دهد، با یک اسباب‌بازی جدید آشنا
+        شده و وارد یک سفر ماجراجویی دیگر می‌شوند. اما…","tagline":null,"language":"fa","country":"ir"},{"title":null,"overview":"Woody
+        on aina ollut varma paikastaan maailmassa ja siitä, että hänen tärkein tehtävänsä
+        on pitää huolta lapsestaan, oli sitten kyseessä Andy tai Bonnie. Joten kun
+        Bonnien itse askartelema uusi rakas leluhahmo Kahveli julistautuu lelun sijaan
+        “roskaksi”, Woody päättää näyttää Kahvelille, miksi sen olisi syytä nauttia
+        leluna olemisesta. Mutta Woody tajuaa itsekin vasta vanhojen ja uusien ystävien
+        seurassa tehtävällä autolomaseikkailulla, jonka varrelle osuu yllättävä jälleennäkeminen
+        hänen vanhan ystävänsä Bo Peepin kanssa, miten suuri maailma voikaan pienelle
+        lelulle olla.","tagline":null,"language":"fi","country":"fi"},{"title":null,"overview":"Woody
+        a toujours privilégié la joie et le bien‐être de ses jeunes propriétaires
+        – Andy puis Bonnie – et de ses compagnons, n’hésitant pas à prendre tous les
+        risques pour eux, aussi inconsidérés soient‐ils. L’arrivée de Forky, un nouveau
+        jouet qui ne veut pas en être un dans la chambre de Bonnie, met toute la petite
+        bande en émoi. C’est le début d’une grande aventure et d’un extraordinaire
+        voyage pour Woody et ses amis. Le cowboy va découvrir à quel point le monde
+        peut être vaste pour un jouet…","tagline":"Que la fête commence !","language":"fr","country":"fr"},{"title":"Histoire
+        de jouets 4","overview":"Woody, Buzz et les autres jouets d''Andy appartiennent
+        maintenant à la petite Bonnie. La jeune fille, très timide, doit affronter
+        une épreuve difficile : l''entrée à la maternelle. Lors de sa journée d''intégration,
+        elle fabrique Fourchette avec un ustensile en plastique. Dès lors, il devient
+        un jouet. Malgré les efforts de Woody pour intégrer Fourchette au groupe,
+        ce dernier retourne continuellement dans la poubelle, là où, croit-il, est
+        sa vraie place. Quand il disparaîtra lors d''un voyage sur la route, le cowboy
+        partira à sa recherche. Sur son chemin, il retrouvera Bo Peep dans un magasin
+        d''antiquités et son amour pour elle sera ravivé.","tagline":"Préparez-vous
+        à prendre la route","language":"fr","country":"ca"},{"title":"צעצוע של סיפור
+        4","overview":"וודי תמיד היה בטוח במקומו בעולם והאמין שתפקידו המרכזי בחיים
+        הללו הוא לשמור על הילד שהוא בבעלותו בין אם זה אנדי או בוני. אך כאשר בוני מצרפת
+        צעצוע בר מזל חדש לחבורה בשם \"פורקי\", וודי יוצא למסע הרפתקני יחד עם חברים
+        חדשים וישנים, דרך מסע זה יבין וודי עד כמה גדול עולמנו בעבור צעצוע.","tagline":null,"language":"he","country":"il"},{"title":"Priča
+        o igračkama 4","overview":"Glavni junak Woody oduvijek je bio uvjeren u svoje
+        mjesto na svijetu i da mu je prioritet brinuti se za svoju djecu (Andy ili
+        Bonnie). Kada se Bonniejeva omiljena igračka Forky proglašava  \"smećem\",
+        Woody uzima stvari u svoje ruke te pokazuje Forkyju zašto bi trebao prihvatiti
+        tko on zapravo je. Kada Bonnie okupi cijelu bandu na izlet na obiteljskom
+        putu, Woody završava na neočekivanoj avanturi koje uključuje ponovno druženje
+        s njegovom davno izgubljenom prijateljicom Bo Peepom. Nakon višegodišnjeg
+        lutanja, Bo-ov avanturistički duh i život na cesti kvari njenu nježnu porculansku
+        vanjštinu. Kada Woody i Bo shvate da su svjetovi odvojeni kada se oživi kao
+        igračka, tada i otkrivaju da im je to najmanje briga.","tagline":"Krenimo
+        na putovanje!","language":"hr","country":"hr"},{"title":null,"overview":"Woody
+        mindig is magabiztosan töltötte be helyét a világban, s jól tudta, első számú
+        feladata vigyázni gazdájára, legyen az akár Andy, akár Bonnie. Ám miután Bonnie
+        egy vonakodó új játékot hoz szobájába, egy nagy kaland régi és új barátok
+        oldalán rádöbbenti Woodyt, mily nagy hely is lehet a világ egy játék számára.","tagline":"Egy
+        életre szóló kaland","language":"hu","country":"hu"},{"title":null,"overview":"Woody
+        selalu yakin tentang tempatnya di dunia dan bahwa prioritasnya adalah merawat
+        anaknya, apakah itu Andy atau Bonnie. Tetapi ketika Bonnie menambahkan mainan
+        baru yang enggan disebut \"Forky\" ke kamarnya, petualangan perjalanan bersama
+        teman-teman lama dan baru akan menunjukkan kepada Woody seberapa besar dunia
+        untuk sebuah mainan.","tagline":null,"language":"id","country":"id"},{"title":"Leikfangasaga
+        4","overview":null,"tagline":"Þegar þú ert leikfang, þá er ekkert sem sýnist.","language":"is","country":"is"},{"title":null,"overview":"Woody,
+        Buzz e compagni sono ora i giocattoli di Bonnie, una bambina dolcissima che
+        sta per affrontare un passo importante della sua giovane vita: l''inizio della
+        scuola. C''è fermento tra i giocattoli per questo passo e in particolare è
+        Woody quello più in apprensione per la bambina, che dimostra di saper gestire
+        la situazione, trovando riparo alle avversità nella propria immaginazione
+        e costruendosi un piccolo nuovo giocattolo attingendo a ciò che trova nella
+        spazzatura. È Forky, una nuova aggiunta al gruppo che non mancherà di creare
+        problemi quando Bonnie e i suoi genitori, con giocattoli al seguito, si metteranno
+        in viaggio in camper per una vacanza.","tagline":"Verso l''amicizia e oltre","language":"it","country":"it"},{"title":"トイ・ストーリー4","overview":"おもちゃの世界を舞台に、人とおもちゃの絆をドラマティックに描き、世界中の観客を感動の渦で包み込んだディズニー
+        / ピクサーの大傑作『トイ・ストーリー』シリーズの第4弾。ウッディやバズら仲間たちの新たな旅立ちと冒険を描く感動アドベンチャー。","tagline":"あなたはまだ――本当の「トイ・ストーリー」を知らない。","language":"ja","country":"jp"},{"title":"სათამაშოების
+        ისტორია 4","overview":null,"tagline":null,"language":"ka","country":"ge"},{"title":"Oıynshyqtar
+        hıkaıasy 4","overview":null,"tagline":null,"language":"kk","country":"kz"},{"title":"토이
+        스토리 4","overview":"앤디와 작별한 우디는 새로운 주인 보니와의 생활에 적응 중이다. 보니는 처음 간 유치원에서 불안한
+        마음을 달래고자 포크를 가지고 새 장난감 포키를 만든다. 쓰레기에서 장난감으로 거듭난 포키는 자꾸 쓰레기통으로 도망치려 하지만 우디는
+        보니를 위해 포키를 돌봐주기로 한다. 어느 날 가족여행으로 함께 떠난 놀이공원에서 포키가 납치되고, 포키를 구하기 위한 모험을 하던
+        중 우디는 우연히 오래 전 헤어진 친구 보핍을 만난다. 우디는 주인 없이 자유로운 삶을 살고 있는 보핍을 보며 마음이 흔들리기 시작하는데...","tagline":"우리의
+        여행은 아직 끝나지 않았다","language":"ko","country":"kr"},{"title":"Žaislų istorija
+        4","overview":"Praėjus daugiau nei 20 metų po pirmosios „Žaislų istorijos“
+        (orig. „Toy Story“), mylimi žaislai grįžta į didųjį kiną pristatydami jau
+        ketvirtosios animacinės nuotykių komedijos visai šeimai anonsą, kuriame kaubojus-medinukas
+        Vudis bei superherojus-astronautas Bazas kartu su draugais linksmai sukasi
+        ratu, fone grojant atlikėjos Judy Collins dainai „Both Sides Now“, kol naujasis
+        personažas nesukelia visiško chaoso.  Dabar priklausantys mažai mergaitei
+        Bonei, kuri kino juostoje „Žaislų istorija 3“ paveldėjo žaislus iš pradinio
+        savininko Endžio, trumpame vaizdo klipe nuotykių ieškotojai pristato savo
+        naująjį draugą – Forkį (orig. Forky).","tagline":null,"language":"lt","country":"lt"},{"title":"Rotaļlietu
+        stāsts 4","overview":null,"tagline":null,"language":"lv","country":"lv"},{"title":null,"overview":"Woody
+        en Bo Peep zijn stapelverliefd op elkaar en leven gelukkig samen. Dit maakt
+        het des te meer pijnlijk wanneer zij plotseling wordt weggegeven. Hierop start
+        Woody samen met zijn kameraad Buzz Lightyear een zoektocht om haar terug te
+        krijgen.","tagline":null,"language":"nl","country":"nl"},{"title":null,"overview":"Woody
+        har alltid vært trygg på sin plass i verden og sin oppgave – å ta vare på
+        sitt barn, enten det er Andy eller Bonnie. Så når Bonnies nye hjemmelagde
+        leke, Gaffen, erklærer seg selv som søppel og ingen leke, tar Woody på seg
+        å vise Gaffen hvorfor han burde omfavne det å være en leke. Men når Bonnie
+        tar med seg hele gjengen på familiens campingutflukt, ender Woody opp på en
+        omvei som inkluderer gjensyn med hans gamle venninne Bo Peep. Bak hennes skjøre
+        porselens ytre skjuler det seg en eventyrlysten jente som er vant med å klare
+        seg selv. Mens Woody og Bo innser at de nå lever veldig ulike liv som leker,
+        skjønner de snart at det er større utfordringer som venter.","tagline":null,"language":"no","country":"no"},{"title":null,"overview":"Chudy
+        zawsze znał swoje miejsce na świecie. Jego życie, jak na prawdziwego szeryfa
+        przystało, kręciło się wokół opieki nad Andym, a później Bonni. Gdy pewnego
+        dnia w pokoju Bonni pojawia się nowa zabawka, Sztuciek, nikt nawet nie przypuszcza,
+        że to początek zaskakującej podróży. Nieoczekiwana wyprawa pozwoli Chudemu
+        przekonać się, jak wielki może być świat dla zwykłej zabawki…","tagline":null,"language":"pl","country":"pl"},{"title":null,"overview":"Agora
+        morando na casa da pequena Bonnie, Woody apresenta aos amigos o novo brinquedo
+        construído por ela: Garfinho, baseado em um garfo de verdade. O novo posto
+        de brinquedo não o agrada nem um pouco, o que faz com que Garfinho fuja de
+        casa. Decidido a trazer de volta o atual brinquedo favorito de Bonnie, Woody
+        parte em seu encalço e, no caminho, reencontra Bo Peep, que agora vive em
+        um parque de diversões.","tagline":"Prepare-se para pegar a estrada.","language":"pt","country":"br"},{"title":null,"overview":"Woody
+        sempre se sentiu confiante em relação ao seu lugar no mundo e que a sua prioridade
+        era tomar conta da sua criança, quer fosse Andy ou Bonnie. Mas, quando Forky,
+        o novo boneco favorito criado por Bonnie se declara como lixo e não um brinquedo,
+        Woody assume a responsabilidade de mostrar a Forky porque se deve considerar
+        um brinquedo. Quando Bonnie leva todo o grupo para a viagem com a sua família,
+        Woody acaba num inesperado desvio, que inclui um encontro com a sua amiga
+        há muito tempo desaparecida, Bo Peep. Depois de anos por sua conta, o espírito
+        aventureiro de Bo e a vida na estrada contrastam com o seu delicado exterior
+        de porcelana. Woody e Bo percebem que são de mundos diferentes quando se trata
+        da vida de um brinquedo, mas logo descobrem que essa é a menor das suas preocupações.","tagline":"Com
+        um novo dono, vem uma nova aventura.","language":"pt","country":"pt"},{"title":"Povestea
+        Jucăriilor 4","overview":"Woody și gașca veselă sunt, de data aceasta, jucăriile
+        lui Bonnie, o fetiță care se pregătește să meargă la grădiniță și se luptă
+        cu temerile specifice acestei tranziții. Iar când o nouă jucărie, pe nume
+        Forky, se alătură găștii lui Woody, o călătorie alături de prieteni dezvăluie
+        cât de mare și necunoscută poate fi lumea pentru o jucărie. La finalul ei,
+        pe Woody îl așteaptă o întâlnire surpriză.  Filmul este despre călătoria lui
+        Woody și despre felul în care acesta face față geloziei pe care o simte și
+        cum învață să fie cu adevărat alături de copilul căruia îi aparține.  Călătoria
+        plină de aventuri se transformă într-o reuniune neașteptată, atunci când Woody
+        o întâlnește din întâmplare pe vechia lui prietenă pierdută Bo Peep. Pe măsură
+        ce Woody și Bo își aduc aminte de zilele bune, încep să își dea seama că între
+        ei este o prăpastie uriașă când vine vorba despre așteptările de la viața
+        lor ca jucării. Este inimaginabil cât de mare poate fi lumea pentru o jucărie!","tagline":"Pregătește-te
+        să pornești la drum","language":"ro","country":"ro"},{"title":"История Игрушек
+        4","overview":"Космический рейнджер Баз Лайтер, ковбой Вуди, собака Спиралька,
+        тиранозавр Рекс и вся команда игрушек снова вместе, и они как никогда готовы
+        к приключениям. С тех пор как Энди поступил в колледж, игрушки поселились
+        в доме своей новой хозяйки Бонни. В свой первый день в школе Бонни смастерила
+        себе из отходов новую игрушку Вилкинса, что положит начало череде событий,
+        в которой найдётся место и путешествиям с погонями, и знакомству с новыми
+        игрушками, и встречам с некоторыми из старых друзей, и даже романтической
+        истории.","tagline":"«Собирайтесь в Дорогу»","language":"ru","country":"ru"},{"title":"Toy
+        Story 4: Príbeh hračiek","overview":"Hračkársky kovboj Woody si bol vždy istý
+        zmyslom svojho života. Vedel, že na prvom mieste je dávať pozor na dieťa,
+        či už to bol chlapček Andy alebo dievčatko Bonnie.   Problém však nastane,
+        keď si Bonnie v škôlke vlastnoručne vyrobí Vidlíka - figúrku z plastovej vidličky.
+        Ostatné hračky ho doma radostne privítajú, Vidlík je však vydesený a tvrdohlavo
+        trvá na tom, že patrí medzi odpadky. Woodyho čaká neľahká úloha presvedčiť
+        ho o opaku. Navyše sa rodina vyberie na výlet a našej partii hračiek hrozí
+        rozdelenie, možno dokonca navždy.","tagline":"Ich životné dobrodružstvo.","language":"sk","country":"sk"},{"title":"Svet
+        igrač 4","overview":null,"tagline":null,"language":"sl","country":"si"},{"title":"Прича
+        о играчкама 4","overview":"Вуди је увек био сигуран у то које је његово место
+        у свету и да је његов главни задатак да чува своје дете, без обзира да ли
+        је у питању Енди или је то Бони!","tagline":null,"language":"sr","country":"rs"},{"title":null,"overview":"Woody
+        har alltid känt sig säker på var han hör hemma och att hans viktigaste uppgift
+        är att ta hand om sitt barn, vare sig det är Andy eller Bonnie. Men när Bonnie
+        skaffar sig en ny, mycket motvillig leksak som kallas Gaffe, börjar en äventyrsresa
+        tillsammans med gamla och nya vänner som kommer att visa Woody hur stor världen
+        kan vara för en leksak.","tagline":"Det största äventyret","language":"sv","country":"se"},{"title":"ทอย
+        สตอรี่ 4","overview":"เรื่องราวการผจญภัยครั้งใหม่ของวู้ดดี้ ที่เริ่มต้นชีวิตในบ้านของเจ้าของคนใหม่
+        คือ บอนนี่ ซึ่งเธอได้ใช้ช้อนกึ่งส้อม ประดิษฐ์ออกมาเป็นของเล่นใหม่ที่ตั้งชื่อว่า
+        ฟอร์คกี้ แต่เจ้าฟอร์คกี้ รู้ว่าแท้จริงเขาไม่ใช่ของเล่นแต่เป็นขยะ จึงอยากกลับไปสู่ชีวิตที่แท้จริง
+        เดือดร้อนถึงวู้ดดี้ต้องตามกลับมา กลายเป็นการผจญภัยของเหล่าของเล่นครั้งใหม่
+        รวมถึงการกลับมาของโบ ของเล่นหวานใจของวู้ดดี้ที่เธอกลับมาในมาดใหม่เป็นสาวสุดแกร่งด้วย","tagline":null,"language":"th","country":"th"},{"title":"Oyuncak
+        Hikayesi 4","overview":"Bir geri dönüşüm projesi ile yaratılan Forky, oyuncak
+        olduğunu asla kabul etmez. Tek kullanımlık bir kaşıktan yapılma bir oyuncak
+        olsa da o oyuncak olmadığı konusunda ısrarcıdır. Kendisini Bonnie’nin odasına
+        ait hissetmeyen Forky, dünyadaki amacının ne olduğunu düşünmeye başlar. Kendisini
+        oyuncaklardan biri olarak görmediği için Bonnie’nin yanında kalmak zorunda
+        hissetmeyen Forky, dünyadaki amacını kaşık olarak yerine getirmeye karar verir.
+        Ancak onun oyuncak olarak üstesinden gelmesi gereken bambaşka bir görevi vardır.","tagline":"Hayatınızın
+        macerasına hazır olun.","language":"tr","country":"tr"},{"title":"Історія
+        іграшок 4","overview":"З переїздом у новий дім, життя ковбоя Вуді і космічного
+        рейнджера Базза перевертається з ніг на голову. Залишивши турботи, герої змушені
+        об’єднатися, щоб вирушити у захопливу і небезпечну мандрівку, рівної якій
+        ще не було у світі Іграшок.","tagline":null,"language":"uk","country":"ua"},{"title":"Oʻyinchoqlar
+        Tarixi 4","overview":null,"tagline":null,"language":"uz","country":"uz"},{"title":"Câu
+        Chuyện Đồ Chơi 4","overview":"Woody luôn tự tin vào vị trí của bản thân mình,
+        và luôn cho rằng sứ mệnh của anh ấy là chăm sóc cho những đứa trẻ, cho dù
+        đó là Andy hay Bonnie. Vậy nên khi đồ chơi mới của Bonnie, Forky khẳng định
+        bản thân là đồ bỏ đi, Woody đã cố gắng cho Forky thấy rằng cậu ấy sinh ra
+        để thuộc về thế giới đồ chơi. Nhưng khi những món đồ chơi tham gia chuyến
+        đi dã ngoại của Bonnie và gia đình cô, Woody đã vô tình có cuộc gặp mặt với
+        người bạn lâu năm mất tích Bo Peep. Sau nhiều năm sống một mình, Bo Peep tin
+        rằng mình có thể có một cuộc sống phiêu lưu thú vị hơn là làm một món đồ chơi
+        bằng sứ. Khi Woody và Bo Peep nhận ra họ là những món đồ chơi thuộc về hai
+        thế giới khác nhau, họ đã sớm cảm nhận được những mối lo lắng của mình.","tagline":"Chuẩn
+        bị lên đường đi.","language":"vi","country":"vn"},{"title":"玩具总动员4","overview":"自从与小主人安迪告别后，胡迪（汤姆·汉克斯
+        Tom Hanks 配音）和他的伙伴们在小女孩邦妮家安顿下来，不仅成为了邦妮（玛德琳·麦格劳 Madeleine McGraw 配音）的心爱之物，还结识了一批新伙伴。转眼之间，邦妮也要进入幼儿园啦，她用灵巧的小手把一个餐叉做成了玩具带了回来，并且热爱有加。胡迪虽然稍感失落，却还能欣然接受。只不过叉叉（托尼·海尔
+        Tony Hale 配音）似乎认定自己只是垃圾，一次次逃走跳进垃圾桶里，这可给胡迪找了不少麻烦。不久，邦妮一家外出旅行。叉叉故技重施，想方设法逃走，结果在追逐他的过程中，胡迪和叉叉便与邦妮家失散了。在流浪途中，胡迪意外重逢久未谋面的牧羊女（安妮·波茨
+        Annie Potts 配音），与此同时，新的冒险也就此展开……","tagline":"再遇玩伴 邂逅无限可能","language":"zh","country":"cn"},{"title":"反斗奇兵
+        4","overview":"寶妮帶著一眾玩具穿州過省展開家庭旅行，格格不入的新玩具「小叉」乘機走佬，胡迪立即展開追蹤，巴斯光年亦率領一眾玩具出手相助，由此踏上一段意想不到的全新歷險！","tagline":"新舊玩具大哂冷
+        爆笑爆喊爆好玩","language":"zh","country":"hk"},{"title":"玩具總動員4","overview":"胡迪的首要任務是照顧他的孩子，無論是安弟還是邦妮。但是當邦妮製造了一個不情願的玩具「叉奇」後，胡迪一行人再度面臨「新生玩具來臨」的議題。叉奇是邦妮現在最愛的玩具，但他卻不願意正視自己莫名而得的身分，試圖逃離並結束自己身為「玩具」的生命。在與胡迪一行人隨著邦妮一家踏上公路旅行中，叉奇成功地逃離並使胡迪不得不跳車找回叉奇。在兩人開始展開一段迷失的旅途期間，卻在一間古董店裡與曾經的舊愛牧羊女寶貝重逢，並引發一連串的麻煩，最後胡迪離開了邦妮。","tagline":null,"language":"zh","country":"tw"}]'
+  recorded_at: 2025-08-04 08:06:43
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad/translations
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      cf-ray: 969c8e98e9eb7f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-show-updated-at: '2025-08-02T15:05:19.000Z'
+      etag: W/"f89ebf5de5b556a42bd9b0d8799c5b08"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":895,"until":"2025-08-02T15:40:00Z"}'
+      x-request-id: fb047a23-d252-4a07-9e9a-31edc2357549
+      x-runtime: '0.146267'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":null,"overview":"مدرس كيمياء في مدرسة ثانوية على وشك الوفاة
+        بسبب السرطان، يشترك مع طالب سابق في صناعة وبيع عقار \"الميث\" لتأمين مستقبل
+        أسرته.","tagline":null,"language":"ar","country":"ae"},{"title":"اختلال ضال","overview":"مدرس
+        كيمياء في مدرسة ثانوية على وشك الوفاة بسبب السرطان، يشترك مع طالب سابق في
+        صناعة وبيع عقار \"الميث\" لتأمين مستقبل أسرته.","tagline":"هايزنبرغ","language":"ar","country":"sa"},{"title":"В
+        обувките на Сатаната","overview":"Обикновения и нехаризматичен учител по химия
+        – Уолтър открива нова страст в живота си, след като разбира, че е болен от
+        рак в последен стадий. Освен че е пожънал множество успехи в химията, Уолтър
+        обучава апатични гимназисти и работи на непълен работен ден в една автомивка,
+        за да издържа семейството си. Доходите на жена му са съвсем скромни, а синът
+        им Уолтър младши - твърдоглав 17-годишен тийнейджър, страда от церебрална
+        парализа. За да осигури прехраната на любимите си хора Уолтър си поставя нови
+        цели и се отдава на вълнуващ престъпен живот.","tagline":"Запомнете името
+        ми","language":"bg","country":"bg"},{"title":null,"overview":"Walter White
+        je srednjovječni profesor kemije koji jednog dana doznaje da boluje od neizlječivog
+        raka pluća, a prognoze nisu sjajne. Uz sve to, ima hendikepirano dijete i
+        trudnu ženu. Prije nego umre, odlučuje da će se pobrinuti za svoju obitelj
+        pa u podrumu stvori laboratorij za proizvodnju droge. Seriju je stvorio Vince
+        Gilligan koji je radio i na „Dosjeima X“, omiljenoj seriji svih zaljubljenika
+        u mistično i natprirodno. Mnogi kritičari pohvalili su odličnu glumu, a serija
+        je općenito dobro prihvaćena i spada među favorite svih fanova pomaknutog
+        humora.","tagline":null,"language":"bs","country":"bs"},{"title":"Breaking
+        Bad","overview":"Walter White és un aplicat professor d''institut, pare de
+        Walter White Jr, un jove discapacitat i marit de Skyler White qui està embarassada.
+        Quan la vida ja era prou complicada per a Walter, li diagnostiquen un càncer
+        de pulmó terminal, i això el porta a infringir la llei tot instal·lant un
+        laboratori de metamfetamina amb el seu antic estudiant Jesse Pinkman per així
+        assegurar el benestar econòmic de la seva família quan ell ja no hi sigui.","tagline":null,"language":"ca","country":"es"},{"title":"Perníkový
+        táta","overview":"Co se stane, když u středoškolského oceňovaného učitele
+        chemie diagnostikují rakovinu plic v pokročilém stádiu? Dá se na kriminální
+        dráhu jako drogový dealer, aby stihl vydělat co nejvíce peněz pro svou těhotnou
+        ženu...","tagline":null,"language":"cs","country":"cz"},{"title":null,"overview":"Efter
+        at være blevet diagnosticeret med kræft og givet blot to år tilbage at leve
+        i forsøger kemilæreren Walter at sikre sin families fremtidige økonomiske
+        situation ved at slå sig sammen med en tidligere studerende, Jesse, for at
+        producere og sælge det ulovlige stof amfetamin. Mens Walter langsomt bygger
+        sit imperium op, begynder hans kone Skyler at undre sig over hans uregelmæssige
+        adfærd, og politiet sætter jagten ind på kvarterets nye bagmand.","tagline":null,"language":"da","country":"dk"},{"title":null,"overview":"Ein
+        krebskranker Chemielehrer tut sich mit einem ehemaligen Schüler zusammen,
+        um die Zukunft seiner Familie durch die Herstellung und den Verkauf von Meth
+        zu sichern.","tagline":null,"language":"de","country":"de"},{"title":null,"overview":"Ένας
+        καθηγητής που πάσχει από καρκίνο συνεργάζεται με έναν πρώην μαθητή για να
+        εξασφαλίσει το μέλλον της οικογένειάς του, παρασκευάζοντας και πουλώντας μεθαμφεταμίνη.","tagline":"Να
+        θυμάσαι το όνομά μου","language":"el","country":"gr"},{"title":"Breaking Bad","overview":"Walter
+        White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer
+        and given a prognosis of only two years left to live. He becomes filled with
+        a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","tagline":"Change the equation.","language":"en","country":"us"},{"title":null,"overview":"Un
+        profesor de química con cáncer terminal se asocia con un exalumno suyo para
+        fabricar y vender metanfetamina a fin de que su familia no pase apuros económicos.","tagline":"Recuerda
+        mi nombre","language":"es","country":"es"},{"title":null,"overview":"Un profesor
+        de Química de secundaria con cáncer terminal se asocia a un exestudiante para
+        asegurar el futuro de su familia al fabricar y vender metanfetamina.","tagline":null,"language":"es","country":"mx"},{"title":"Halvale
+        teele","overview":"\"Halvale teele\" on huumorivarjundiga draamasari keemiaõpetaja
+        Walter White''ist (rolli eest Emmy auhinna võitnud Bryan Cranston), keda on
+        tabanud pingeline keskeakriis. Lisaks erivajadustega teismelisele pojale ja
+        naisele, kes temasse külmalt suhtub, diagnoositakse tal ravimatu kopsuvähk.
+        Jõudnud otsusele, et tema elu väärtus on äärmiselt kaheldav, otsustab ta oma
+        endise õpilase, narkomaanist eluheidiku Jesse Pinkmaniga (Aaron Paul) hakata
+        keetma metamfetamiini, ja kus oleks seda parem teha, kui keset kõrbe ja vagunelamus?","tagline":null,"language":"et","country":"ee"},{"title":"بریکینگ
+        بد","overview":"داستان سریال درباره یک معلم شیمی میانسال است که متوجه می‌شود
+        که دارای سرطان ریه است و ۲ سال بیشتر وقت برای زندگی ندارد. او که وضع مالی
+        خوبی ندارد و دارای همسر و پسری معلول می‌باشد، به این فکر می‌افتد که باید قبل
+        از مردن زندگی خانواده خود را تامین کند. پس با توجه به آشناییش به علم شیمی،
+        همراه با یکی از شاگردان سابقش شروع به ساخت و فروش مواد مخدر می‌کند…","tagline":"نام
+        من را به خاطر بسپار","language":"fa","country":"ir"},{"title":null,"overview":"Parhaan
+        miespuolisen draamanäyttelijän Emmyn voittanut Bryan Cranston esittää Walter
+        Whitea, taitavaa kemistiä, joka on päätynyt kohtalon oikuista opettajaksi
+        ja osa-aikaiseksi autopesulatyöntekijäksi. Kaikki muuttuu, kun Walter kuulee
+        sairastavansa parantumatonta syöpää. Hän miettii keinoja turvata perheensä
+        toimeentulo jatkossakin ja keksii yllättävän ratkaisun: huumekaupan. Walter
+        ottaa kemistintaitonsa käyttöön ja lähtee rikoksen poluille johtoajatuksenaan,
+        ettei hänellä ole mitään hävittävää. Vaarallisiin huumekuvioihin sekaantuminen
+        ei kuitenkaan tee kiltistä Walterista hirviötä, päinvastoin.","tagline":null,"language":"fi","country":"fi"},{"title":null,"overview":"Un
+        professeur de chimie atteint d''un cancer s''associe à un ancien élève pour
+        fabriquer et vendre de la méthamphétamine afin d''assurer l''avenir financier
+        de sa famille.","tagline":"Souviens-toi de mon nom.","language":"fr","country":"fr"},{"title":"Breaking
+        Bad : Le chimiste","overview":"En phase terminale d''un cancer, un professeur
+        de chimie s''allie à un ancien élève pour assurer l''avenir de sa famille
+        en fabriquant et en vendant de la méthamphétamine.","tagline":null,"language":"fr","country":"ca"},{"title":"שובר
+        שורות","overview":"סדרת דרמה המתמקדת בוולטר וויט, מורה לכימיה בתיכון שסובל
+        ממקרה חמור של משבר אמצע החיים, בנוסף הוא מתבשר שהינו גוסס ממחלה קשה. על מנת
+        לממן את הטיפולים היקרים ולדאוג לעתיד משפחתו הוא חובר לתלמיד לשעבר והופך ליצרן
+        וסוחר במתאמפטמין.","tagline":null,"language":"he","country":"il"},{"title":null,"overview":"मौत
+        की कगार पर खड़े हाईस्कूल के कैंसरग्रस्त केमिस्ट्री शिक्षक को अपने परिवार का
+        भविष्य सुरक्षित करना है. वह नशीली दवा बनाने और बेचने के लिए एक पूर्व छात्र
+        को साथ लेता है.","tagline":null,"language":"hi","country":"in"},{"title":"Na
+        putu prema dolje","overview":"''Na putu prema dolje'' prati neobičan i opasan
+        životni put nimalo karizmatičnog i isprva vrlo prosječnog profesora kemije,
+        Waltera Whitea, čiji život se potpuno preokrene kada sazna da je obolio od
+        karcinoma.","tagline":"Upamti moje ime.","language":"hr","country":"hr"},{"title":"Totál
+        szívás","overview":"Egy középiskolai kémiatanárnál rákot állapítanak meg.
+        Családja jövőjének biztosítása érdekében összefog volt diákjával, hogy metamfetamint
+        állítsanak elő és adjanak el.","tagline":null,"language":"hu","country":"hu"},{"title":null,"overview":"Ketika
+        Walter White, seorang guru kimia New Mexico, didiagnosis dengan kanker stadium
+        III dan diberi prognosis hanya dua tahun lagi untuk hidup. Dia dipenuhi dengan
+        rasa tidak takut dan keinginan yang tak henti-hentinya untuk mengamankan masa
+        depan keuangan keluarganya dengan biaya berapa pun ketika dia memasuki dunia
+        narkoba dan kejahatan yang berbahaya.","tagline":null,"language":"id","country":"id"},{"title":"Breaking
+        Bad","overview":"Un insegnante di chimica con un cancro allo stadio terminale
+        comincia a produrre e spacciare metanfetamina con un suo ex studente per assicurare
+        un futuro alla famiglia.","tagline":null,"language":"it","country":"it"},{"title":"ブレイキング・バッド","overview":"家族に金を残したい―。ガンで余命宣告された冴えない高校の化学教師が、元教え子と組みドラッグ精製と売買に手を染める。","tagline":"私の名は…","language":"ja","country":"jp"},{"title":"მძიმე
+        დანაშაული","overview":"უოლტერ უაიტი ქიმიის მასწავლებელია სკოლაში, რომელსაც
+        ფილტვის სიმსივნე აღმოაჩნდა. იმ მიზნით რომ სიკვდილის შემდეგ ოჯახს კარგი ფინანსურ
+        მდგომარეობა დაუტოვოს, იგი ცვლის საკუთარ ცხოვრებას - იწყებს მეტამფეტამინის
+        წარმოებას და გაყიდვას, რაშიც მისი ყოფილი მოწაფე ჯესი პინკმენი ეხმარება.","tagline":null,"language":"ka","country":"ge"},{"title":"브레이킹
+        배드","overview":"2008년 1월 AMC에서 방영을 시작한 범죄 스릴러. Breaking Bad는 막가기를 뜻하는 미국 남부
+        지방의 속어이다. 한때 노벨화학상까지 바라 볼 정도로 뛰어난 과학자였던 고등학교 화학 교사 월터 화이트는 자신의 50세 생일 날에 폐암
+        3기 진단을 받는다. 어느 날 동서와 함께 마약 단속 현장을 참관한 그는 현장에서 달아나는 옛 제자 제시를 발견한다. 뇌성마비에 걸린
+        고등학생 아들과 임신한 아내를 위해 제시에게 동업을 제의한 월터는 자신의 화학지식을 이용해 전례없는 고순도 고품질의 메스암페타민을 제조한다.","tagline":null,"language":"ko","country":"kr"},{"title":"Bręstantis
+        blogis","overview":"Chemijos mokytojas su žmona ir neįgaliu paaugliu sūnumi
+        gyvena Naujojoje Meksikoje. Netikėtai jam nustatomas trečios stadijos vėžys,
+        medikai teigia, kad gyventi beliko metai. Ši žinia ramų vyriškį išlaisvina
+        iš bet kokių baimių ir visuomenės normų. Norėdamas užtikrinti šeimai gerą
+        materialinę ateitį, jis pradeda gaminti aukščiausios kokybės amfetaminą. Mirtina
+        diagnozė tykų namisėdą paverčia narkotikų pasaulio karaliuku.","tagline":null,"language":"lt","country":"lt"},{"title":"Pārkāpt
+        robežu","overview":"Valteram Vaitam, Ņūmeksikas štata ķīmijas skolotājam,
+        tiek diagnosticēts III stadijas vēzis, un viņam tiek prognozēti tikai divi
+        gadi līdz mūža beigām. Viņu pārņem bezbailības sajūta un nerimstoša vēlme
+        par katru cenu nodrošināt ģimenes finansiālo nākotni, kas ved viņu iesaistīties
+        bīstamajā narkotiku un noziedzības pasaulē.","tagline":null,"language":"lv","country":"lv"},{"title":null,"overview":"Walter
+        White is scheikundeleraar. Op het moment dat zijn vrouw zwanger is van hun
+        tweede kind, stort Walters wereld in. De dokter heeft namelijk vastgesteld
+        dat hij terminaal ziek is. Walter heeft longkanker en lijkt niet lang meer
+        te zullen leven. Om ervoor te zorgen dat zijn gezin na zijn dood niet in een
+        financiële crisis belandt, besluit Walter over te schakelen naar een leven
+        als crimineel. Met de hulp van Jesse Pinkman, een uitgevallen leerling die
+        in zijn klas heeft gezeten, maakt en verkoopt hij de drug crystal meth.","tagline":null,"language":"nl","country":"nl"},{"title":"Breaking
+        Bad","overview":"En kreftsyk kjemilærer slår seg sammen med en tidligere elev
+        for å produsere og selge metamfetamin slik at han kan sikre familiens framtid.","tagline":null,"language":"no","country":"no"},{"title":null,"overview":"Głównym
+        bohaterem jest Walter White, nauczyciel chemii mieszkający w Nowym Meksyku
+        wraz z żoną oraz nastoletnim synem cierpiącym na porażenie mózgowe. Kiedy
+        u Waltera zostaje zdiagnozowany rak w trzecim stadium, lekarze rokują, że
+        pozostały mu dwa lata życia. Dzięki tym prognozom Walter wyzbywa się wszelkich
+        lęków i pragnąc zabezpieczyć swoją rodzinę finansowo decyduje się wkroczyć
+        do niebezpiecznego świata narkotyków i zbrodni.","tagline":null,"language":"pl","country":"pl"},{"title":"Ruptura
+        Total","overview":"Um professor do secundário com cancro do pulmão terminal
+        junta-se a um ex-aluno para fabricar e vender metanfetaminas como forma de
+        garantir o futuro da sua família.","tagline":null,"language":"pt","country":"pt"},{"title":null,"overview":"Ao
+        saber que tem câncer, um professor passa a fabricar metanfetamina pelo futuro
+        da família, mudando o destino de todos.","tagline":"Se Lembre do meu Nome","language":"pt","country":"br"},{"title":null,"overview":"Dramă
+        premiată cu două statuete Emmy de mare audiență, serialul spune povestea lui
+        Walter, un profesor de chimie care, lovit în plin de criza de la mijlocul
+        vieții - cea mai gravă criză din câte s-au văzut vreodată -, începe să încalce
+        legea prin fapte de o gravitate din ce în ce mai mare.","tagline":"Amintește-ți
+        numele meu.","language":"ro","country":"ro"},{"title":"Во все тяжкие","overview":"Вся
+        жизнь немолодого школьного учителя химии Уолтера Уайта — это борьба. Его зарплаты
+        не хватает на содержание беременной жены и сына-инвалида, поэтому учитель
+        вынужден подрабатывать на автомойке. Но всё меняется, когда Уолтеру ставят
+        страшный диагноз — неоперабельный рак лёгких.","tagline":"«Запомните Моё Имя»","language":"ru","country":"ru"},{"title":"Perníkový
+        tatko","overview":"Stredoškolskému učiteľovi chémie je diagnostikovaná rakovina
+        a tak sa rozhodne pred svojou smrťou zaopatriť výrobou metam­fetamínu svoju
+        rodinu. Seriál vyniká úplne famóznou premenou hlavnej postavy z obyčajného
+        človeka na kľúčovú postavu drogového obchodu a skutočného bossa.","tagline":null,"language":"sk","country":"sk"},{"title":"Kriva
+        pota","overview":"Serija nam prikaže kako lahko usodna diagnoza vpliva na
+        povsem običajnega, pridnega človeka in na njegovo moralo ter ga spremeni v
+        glavnega akterja trgovine z mamili. Učitelj kemije Walter White živi s sinom
+        najstnikom, ki ima cerebralno paralizo in ženo povsem običajno življenje v
+        Novi Mehiki. Ko mu postavijo diagnozo 3. stopnje raka in napovejo le še dve
+        leti življenja spozna, da nima več kaj za izgubiti. Odloči se, da bo pred
+        smrtjo svoji družini zagotovil varno prihodnost, zato se Walt poda na pot
+        drog in kriminala. Začne proizvajati in prodajati metamfetamin z enim od svojih
+        nekdanjih študentov in kmalu se izkaže, da je v tem zanj novem svetu izjemno
+        vešč...","tagline":"Spremenite enačbo.","language":"sl","country":"si"},{"title":"Чиста
+        хемија","overview":"Волтер Вајт је професор хемије у средњој школи, који се
+        окреће другој страни закона да би прехранио трудну жену и сина са парализом,
+        након што му је постављена дијагноза рака плућа у поодмаклој фази.","tagline":"Упамти
+        моје име.","language":"sr","country":"rs"},{"title":null,"overview":"Walter
+        White, en alldaglig high school-kemilärare i 50-årsåldern som även extraknäcker
+        på en biltvätt lever ett stillsamt liv, i ett oengagerat äktenskap med sin
+        gravida, TV-shoppande fru Skyler och deras tonårige son Walter Jr., som lider
+        av en lätt CP-skada När Walt Senior blir diagnostiserad med lungcancer, bestämmer
+        han sig för att slå sig in på den brottsliga banan, för att kunna få ihop
+        ett kapital att lämna efter sig vid sin kommande död. Han sätter upp ett \"meth
+        lab\" och kokar metamfetamin tillsammans med sin tidigare elev, Jesse Pinkman.","tagline":null,"language":"sv","country":"se"},{"title":"ดับเครื่องชน
+        คนดีแตก","overview":"ครูสอนเคมีในโรงเรียนมัธยมซึ่งกำลังใกล้ตายด้วยโรคมะเร็งต้องมาร่วมมือกับอดีตนักเรียน
+        เพื่อสร้างความมั่นคงให้กับครอบครัวก่อนที่เขาจะตายด้วยการผลิตยาไอซ์ขาย","tagline":null,"language":"th","country":"th"},{"title":null,"overview":"Kanserden
+        öleceğini öğrenen bir kimya öğretmeni, ailesinin geleceğini garanti altına
+        almak için metamfetamin üretip satmak üzere eski bir öğrencisiyle kafa kafaya
+        verir.","tagline":"Tehlike benim!","language":"tr","country":"tr"},{"title":"Пуститися
+        берега","overview":"Шкільний учитель хімії Волтер Вайт дізнається, що хворий
+        на рак легенів. З огляду на складний фінансовий стан справ сім''ї, а також
+        перспективи, Волтер вирішує зайнятися виготовленням метамфетаміну. Для цього
+        він залучає свого колишнього учня Джессі Пінкмана, колись виключеного зі школи
+        за активного сприяння Вайта. Пінкман сам займався «варінням мету», але напередодні,
+        в ході рейду УБН, він позбувся напарника і лабораторії.","tagline":"Як далеко
+        ти готовий зайти заради родини?","language":"uk","country":"ua"},{"title":"Tập
+        làm người xấu","overview":"Một giáo viên dạy hóa ở trường trung học mắc bệnh
+        ung thư bắt tay với một cựu học sinh để bảo vệ tương lai của gia đình bằng
+        cách sản xuất và bán ma túy đá.","tagline":null,"language":"vi","country":"vn"},{"title":"絕命毒師","overview":"一名即將死於癌症的高中化學老師與他過去的學生一起合作，透過製造及販賣冰毒保障他家人的未來。","tagline":"改變方程式。","language":"zh","country":"tw"},{"title":"絕命毒師","overview":"該劇講述了一比特普通的高中化學老師在得知自己身患絕症之後，為了給家人留下財產，而利用自己超凡的化學知識製造毒品，並成為世界頂級毒王的傳奇犯罪故事。","tagline":null,"language":"zh","country":"hk"},{"title":"绝命毒师","overview":"新墨西哥州的高中化学老师沃尔特·H·怀特是拮据家庭的唯一经济来源。他大半生安分守己，兢兢业业，却在50岁生日之际突然得知自己罹患肺癌晚期的噩耗，原本便不甚顺意的人生顿时雪上加霜。为了保障怀孕的妻子斯凯勒和残疾的儿子小沃特能在自己死后衣食无忧，沃尔特决意铤而走险。他主动找到曾经的学生、而今的毒贩小混混杰西·平克曼谈合作，并运用娴熟高超的化学技术提炼出高纯度冰毒交给后者贩售。孰料事态的发展却在平克曼带回毒品供销商疯狂小八及其表弟后急转直下，沃尔特的人生也由此彻底步向失控。他被迫开始了教书与制毒的双重生活，逐渐坠落至万劫不复的深渊。","tagline":null,"language":"zh","country":"cn"},{"title":"绝命毒师","overview":"一位患有晚期肺癌的高中化学老师为了保证家人未来的生计，决定和以前的学生联手制作并贩卖冰毒。","tagline":null,"language":"zh","country":"sg"}]'
+  recorded_at: 2025-08-04 08:06:43
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/3/translations
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      cf-ray: 969c8e9b1dca7f29-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '1388'
+      x-show-season-id: '3950'
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-show-updated-at: '2025-08-02T15:05:19.000Z'
+      etag: W/"c65df98eb591b5204a0eee8d45c741b2"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":894,"until":"2025-08-02T15:40:00Z"}'
+      x-request-id: dd947e00-25b4-4231-bb00-90e05ab9e218
+      x-runtime: '0.018892'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"والحقيبة في النهر","overview":"يحارب والتر مع جيسي بسبب
+        تعاطيه للمخدرات ، مما جعله يترك والتر بمفرده مع أسيرهما ، كريزي 8. في هذه
+        الأثناء ، يمر هانك بلحظة خائفة على التوالي مع والتر جونيور بعد أن اكتشفت عمته
+        أنه كان يدخن القدر. أيضًا ، تنزعج سكايلر عندما يبقى والتر بعيدًا عن المنزل.","language":"ar","country":"sa"},{"title":"والحقيبة
+        في النهر","overview":"ينظف \"والت\" الفوضى التي حدثت بعد صفقة المخدرات الأولى
+        له، تقترب \"سكايلر\" جدًا من حقيقة حياته المزدوجة.","language":"ar","country":"ae"},{"title":"...and
+        the Bag''s in the River","overview":"Walter se svađa sa Jesse_om u vezi njegovog
+        konzumiranja droga, Walter ostaje sam sa zarobljenim doušnikom Krazy-8.","language":"bs","country":"bs"},{"title":"...i
+        el sac és al riu","overview":null,"language":"ca","country":"es"},{"title":"...
+        a pytel je v řece","overview":"Walt dává do pořádku binec po prvním drogovém
+        kšeftu. Skyler se nebezpečně blíží pravdě o manželově dvojím životě.","language":"cs","country":"cz"},{"title":"...And
+        the Bag''s in the River","overview":"Mens Walt forsøger at rydde op i det
+        kaos, der fulgte efter den første narkohandel, er konen, Skyler, ved at komme
+        lidt for tæt på sandheden om hans dobbeltliv.","language":"da","country":"dk"},{"title":"...
+        und der Sack ist im Fluss","overview":"Walt beseitigt das Chaos nach seinem
+        ersten Drogengeschäft, als Skyler dem Doppelleben Ihres Mannes auf die Schliche
+        kommt.","language":"de","country":"de"},{"title":"Και το πήρε το ποτάμι","overview":"Ο
+        Γουόλτ προσπαθεί να συμμαζέψει το χαμό που προκάλεσε το πρώτο του \"σπρώξιμο\",
+        καθώς η Σκάιλερ ανακαλύπτει σιγά-σιγά τη διπλή ζωή του.","language":"el","country":"gr"},{"title":"...And
+        the Bag''s in the River","overview":"Walter fights with Jesse over his drug
+        use, causing him to leave Walter alone with their captive, Krazy-8. Meanwhile,
+        Hank has a scared straight moment with Walter Jr. after his aunt discovers
+        he has been smoking pot. Also, Skylar is upset when Walter stays away from
+        home.","language":"en","country":"us"},{"title":"...Y la bolsa está en el
+        río","overview":"Walter pelea con Jesse debido a su adicción a las drogas
+        y Jesse se va, dejándole solo con su cautivo, Krazy-8; Hank lleva a Walter
+        Jr. a dar un paseo para hablarle acerca de la marihuana; a Skyler no le gusta
+        que Walt esté tan ausente de casa.","language":"es","country":"es"},{"title":"Episodio
+        3 - Y la bolsa está en el río","overview":"Walter no sabe si matar o no a
+        Krazy-8. Mientras, Marie cree que su hijo está enganchado a la marihuana y
+        le pide a Hank que le de algún susto para que lo deje.\n\nWalter decide invitar
+        a comer a Krazy-8, pero las cosas se tuercen cuando se marea mientras baja
+        unos escalones. ¿Le contará lo que pasa?","language":"es","country":"mx"},{"title":"...و
+        کیسه در رودخانه است","overview":null,"language":"fa","country":"ir"},{"title":"Ja
+        säkki jokeen","overview":"Skylerin oudot kysymykset saavat Marien vetämään
+        vääriä johtopäätöksiä. Walt ja Jesse yrittävät päättää mitä Krazy-8:n kanssa
+        pitäisi tehdä. Hank pääsee liikkuvan metalaboratorion jäljille.","language":"fi","country":"fi"},{"title":"Dérapage","overview":"Alors
+        que Walt tente de remettre de l''ordre après son premier deal, Skyler est
+        à deux doigts de la vérité au sujet de la double vie de son mari.","language":"fr","country":"ca"},{"title":"Dérapage","overview":"Alors
+        que Walt tente de remettre de l''ordre après son premier deal, Skyler est
+        à deux doigts de la vérité au sujet de la double vie de son mari.","language":"fr","country":"fr"},{"title":"והשק
+        בנהר","overview":"כשוולט מנקה את הבלגן שנותר לאחר עסקת הסמים הראשונה, סקיילר
+        עומדת לגלות את האמת על חייו הכפולים.","language":"he","country":"il"},{"title":"And
+        the Bag''s in the River","overview":null,"language":"hi","country":"in"},{"title":null,"overview":"Walt
+        i Jesse čiste nered koji je nekoć bio Emilio, a Skyler pitanjima navodi Marie
+        da Walt Jr. puši travu. Pitanja su za priču koju piše, no sestra joj ne vjeruje
+        i traži Hanka da razgovara s Waltom Jr-om. Dok se čisti, Krazy-8 kaže Waltu
+        da je Jesse otkrio neke potankosti o njegovu životu. Walt se požali na nedostatak
+        diskrecije, a Jesse mu kaže da je odgovoran što je Krazy-8 zauvijek nestao.","language":"hr","country":"hr"},{"title":"A
+        felfedezés","overview":"Miközben Walt megpróbálja feltakarítani az első drogüzlete
+        utáni mocskot, Skyler veszélyesen közel kerül az igazsághoz férje kettős életét
+        illetően.","language":"hu","country":"hu"},{"title":"Conseguenze radicali","overview":"Mentre
+        Walt rimette le cose a posto dopo il primo traffico di droga, Skyler è vicinissima
+        a scoprire la verità sulla sua doppia vita.","language":"it","country":"it"},{"title":"人間の成分","overview":"初めてのドラッグ取引の後に残った面倒を処理しなければならないウォルター。スカイラーは夫の二重生活の真実に肉迫していた。","language":"ja","country":"jp"},{"title":"흔들리는
+        마음","overview":"월터는 자신의 첫 마약 거래가 끝난 후 뒤처리를 하고, 스카일러는 그의 이중생활에 대한 진실에 너무 가깝게
+        다가간다.","language":"ko","country":"kr"},{"title":"And the Bag''s in the River","overview":null,"language":"ms","country":"my"},{"title":"...and
+        the Bag''s in the River","overview":"Terwijl Walt de ellende oplost die is
+        voortgekomen uit zijn eerste drugsdeal, komt Skyler te dicht bij de waarheid
+        over zijn dubbelleven.","language":"nl","country":"nl"},{"title":"And the
+        Bag''s in the River","overview":"Mens Walt rydder opp i rotet fra den første
+        stoffhandelen, kommer Skyler litt for nær sannheten om dobbeltlivet hans.","language":"no","country":"no"},{"title":"I
+        nie ma ptaszka","overview":"Gdy Walt sprząta po tym, co nabroił podczas pierwszej
+        próby sprzedaży narkotyków, Skyler zbliża się do poznania prawdy o jego podwójnym
+        życiu.","language":"pl","country":"pl"},{"title":"E o saco está no rio","overview":"Enquanto
+        tenta limpar os estragos provocados pela sua primeira venda, Walt pondera
+        contar a Skyler a verdade sobre a sua doença.","language":"pt","country":"pt"},{"title":"And
+        the Bag''s in the River","overview":"Enquanto Walt limpa a bagunça que foi
+        deixada após a primeira venda de drogas, ele pensa em contar a Skyler o segredo
+        sobre a sua doença.","language":"pt","country":"br"},{"title":"Derapaj","overview":"Walt
+        curăță mizeria rămasă în urma primei lui tranzacții cu droguri. Skyler se
+        apropie prea mult de adevărul despre viața dublă a soțului ei.","language":"ro","country":"ro"},{"title":"...и
+        мешок в реке","overview":"Уайт оказывается перед нелёгким выбором, связанным
+        с их случайным спутником, однако попытки привлечь Пинкмана к решению этого
+        вопроса оказываются тщетными. Тем временем внезапная заинтересованность Скайлер
+        наркотиками наталкивает её сестру на подозрения о проблемах у Уолтера младшего,
+        для помощи с которыми та обращается к своему мужу Хэнку. Последний же тем
+        временем получает наводку по новому делу, что приводит их с напарником в пустыню,
+        а Скайлер между тем уличает мужа во лжи насчёт его работы.","language":"ru","country":"ru"},{"title":null,"overview":"Док
+        се он и Џеси суочавају са последицама својих поступака, Волтер је приморан
+        да донесе одлуку која ће му променити живот. У међувремену, Скајлерина сумња
+        је све већа, а и Хенк почиње да примећује Волтерово необично понашање.","language":"sr","country":"rs"},{"title":null,"overview":"Medan
+        Walt städar upp efter deras första knarkaffär är Skyler nära att upptäcka
+        hans dubbelliv.","language":"sv","country":"se"},{"title":"และถุงอยู่ในแม่น้ำ","overview":"ระหว่างที่วอลต์เก็บกวาดความเละเทะที่หลงเหลือจากการขายยาครั้งแรก
+        สกายเลอร์ก็เข้าใกล้ความจริงเกี่ยวกับชีวิตสองด้านของเขาเข้ามาทุกขณะ","language":"th","country":"th"},{"title":"And
+        the Bag''s in the River","overview":null,"language":"tl","country":"ph"},{"title":"Eksik
+        Parça","overview":"Walt, ilk uyuşturucu işinden geriye kalan pisliği temizlerken
+        Skyler da, kocasının ikili yaşamı hakkındaki gerçekleri öğrenmeye oldukça
+        yaklaşır.","language":"tr","country":"tr"},{"title":"…А мішок у річці","overview":"Волтер
+        свариться з Джессі через його вживання наркотиків, через що той залишає Волтера
+        наодинці з їхнім полоненим Крейзі-8. Тим часом Хенк має страшний момент із
+        Волтером-молодшим після того, як його тітка виявляє, що він курить травку.
+        Крім того, Скайлер засмучена, коли Волтер знаходиться далеко від дому.","language":"uk","country":"ua"},{"title":"Lo
+        liệu trót lọt","overview":"Khi Walt xử lý các rắc rối sót lại từ phi vụ buôn
+        bán ma túy đầu tiên, Skyler suýt biết được sự thật về cuộc sống bí mật của
+        ông.","language":"vi","country":"vn"},{"title":"滅跡","overview":"在華特收拾第一次毒品交易的爛攤子時，史凱勒過於逼近他雙重生活的真相了。","language":"zh","country":"hk"},{"title":"滅跡","overview":"在華特收拾第一次毒品交易的爛攤子時，史凱勒過於逼近他雙重生活的真相了。","language":"zh","country":"tw"},{"title":"袋在河里","overview":"沃尔特收拾第一次毒品交易后留下的残局，而斯凯勒即将了解到他的双重人生真相。","language":"zh","country":"sg"},{"title":"袋在河里","overview":"沃尔特收拾第一次毒品交易后留下的残局，而斯凯勒即将了解到他的双重人生真相。","language":"zh","country":"cn"}]'
+  recorded_at: 2025-08-04 08:06:43
+recorded_with: VCR-vcr/2.0.0

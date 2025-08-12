@@ -22,7 +22,9 @@
 # })
 
 test_that("trakt_get can make API calls", {
-	# skip_on_cran()
+	skip_on_cran()
+
+	vcr::local_cassette("api_trakt_get_basic")
 
 	url <- "https://api.trakt.tv/shows/breaking-bad"
 	result <- trakt_get(url)

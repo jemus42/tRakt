@@ -1,0 +1,32 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:49 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9188021811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":978,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"9d6b977d478026ec7451abfbe54f29da"
+      cache-control: max-age=0, private, must-revalidate
+      x-request-id: 979a73b1-ef32-4719-8f01-27ed9f9ffa6e
+      x-runtime: '7.056392'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"movies":{"plays":770,"watched":709,"minutes":88146,"collected":2907,"ratings":611,"comments":0},"shows":{"watched":562,"collected":1073,"ratings":387,"comments":0},"seasons":{"ratings":194,"comments":0},"episodes":{"plays":21497,"watched":19798,"minutes":697754,"collected":35270,"ratings":10019,"comments":0},"network":{"friends":17,"followers":58,"following":34},"ratings":{"total":11211,"distribution":{"1":188,"2":0,"3":9,"4":38,"5":273,"6":1333,"7":4078,"8":3915,"9":1212,"10":165}}}'
+  recorded_at: 2025-08-04 08:06:49
+recorded_with: VCR-vcr/2.0.0

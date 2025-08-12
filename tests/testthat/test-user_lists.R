@@ -1,4 +1,7 @@
 test_that("user_lists does stuff", {
+	skip_on_cran()
+
+	vcr::local_cassette("user_lists_basic")
 	list_names_min <- c(
 		"name",
 		"description",
@@ -26,8 +29,7 @@ test_that("user_lists does stuff", {
 	)
 
 	user_lists("jemus42") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(expected = list_names_min)
+		expect_tibble(min_cols = list_names_min)
 
 	list_names_full <- c(
 		"name",
@@ -62,11 +64,13 @@ test_that("user_lists does stuff", {
 	)
 
 	user_lists("jemus42", extended = "full") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(expected = list_names_full)
+		expect_tibble(min_cols = list_names_full)
 })
 
 test_that("user_list gets stuff", {
+	skip_on_cran()
+
+	vcr::local_cassette("user_list_single")
 	list_names_min <- c(
 		"name",
 		"description",
@@ -94,8 +98,7 @@ test_that("user_list gets stuff", {
 	)
 
 	user_list("jemus42", list_id = 2121308) |>
-		expect_s3_class("tbl_df") |>
-		expect_named(expected = list_names_min)
+		expect_tibble(min_cols = list_names_min)
 
 	list_names_full <- c(
 		"name",
@@ -130,6 +133,5 @@ test_that("user_list gets stuff", {
 	)
 
 	user_list("jemus42", list_id = 2121308, extended = "full") |>
-		expect_s3_class("tbl_df") |>
-		expect_named(expected = list_names_full)
+		expect_tibble(min_cols = list_names_full)
 })

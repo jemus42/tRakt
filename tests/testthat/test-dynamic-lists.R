@@ -1,6 +1,8 @@
 test_that("popular_media works", {
 	skip_on_cran()
 
+	vcr::local_cassette("popular_media")
+
 	# movies
 	pop_mov_min <- movies_popular(limit = 5, extended = "min")
 	pop_mov_max <- movies_popular(limit = 5, extended = "full")
@@ -26,6 +28,8 @@ test_that("popular_media works", {
 
 test_that("trending_media works", {
 	skip_on_cran()
+
+	vcr::local_cassette("trending_media")
 
 	# movies
 	tre_mov_min <- movies_trending(limit = 5, extended = "min")
@@ -53,6 +57,8 @@ test_that("trending_media works", {
 test_that("anticipated_media works", {
 	skip_on_cran()
 
+	vcr::local_cassette("anticipated_media")
+
 	# movies
 	tre_mov_min <- movies_anticipated(limit = 5, extended = "min")
 	tre_mov_max <- movies_anticipated(limit = 5, extended = "full")
@@ -77,6 +83,8 @@ test_that("anticipated_media works", {
 })
 
 test_that("played_media and watched_media also do things", {
+	vcr::local_cassette("played_watched_media")
+
 	# Both have the same variables, the difference is just sorting
 	nm_shows <- c(
 		"watcher_count",
@@ -105,31 +113,21 @@ test_that("played_media and watched_media also do things", {
 	)
 
 	shows_watched(extended = "min", period = "weekly") |>
-		expect_s3_class("tbl") |>
-		expect_named(nm_shows) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = nm_shows, exact_rows = 10)
 
 	movies_watched(extended = "min", period = "weekly") |>
-		expect_s3_class("tbl") |>
-		expect_named(nm_movies) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = nm_movies, exact_rows = 10)
 
 	shows_played(extended = "min", period = "weekly") |>
-		expect_s3_class("tbl") |>
-		expect_named(nm_shows) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = nm_shows, exact_rows = 10)
 
 	movies_played(extended = "min", period = "weekly") |>
-		expect_s3_class("tbl") |>
-		expect_named(nm_movies) |>
-		nrow() |>
-		expect_equal(10)
+		expect_tibble(min_cols = nm_movies, exact_rows = 10)
 })
 
 test_that("collected_media does its thing", {
+	vcr::local_cassette("collected_media")
+
 	shows_collected(limit = 5) |>
 		expect_s3_class("tbl") |>
 		expect_length(11) |>
@@ -142,17 +140,3 @@ test_that("collected_media does its thing", {
 		nrow() |>
 		expect_equal(5)
 })
-#
-# test_that("updated_media works", {
-#   shows_updates() |>
-#     expect_s3_class("tbl") |>
-#     expect_length(8) |>
-#     nrow() |>
-#     expect_equal(10)
-#
-#   movies_updates() |>
-#     expect_s3_class("tbl") |>
-#     expect_length(7) |>
-#     nrow() |>
-#     expect_equal(10)
-# })

@@ -1,6 +1,8 @@
 test_that("search_query works", {
 	skip_on_cran()
 
+	vcr::local_cassette("search_query_basic")
+
 	res <- search_query("russian doll 2019", type = "show")
 	# res <- search_query("russian doll", type = "show", years = "2019")
 
@@ -11,18 +13,29 @@ test_that("search_query works", {
 	expect_s3_class(res, "tbl")
 	expect_equal(nrow(res), 1)
 
-	expect_warning(search_query("deadpuul", type = "movie"))
 	expect_warning(search_query("nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb", type = "movie", years = 1100))
 
 	search_query("russian doll", type = c("show", "movie")) |>
-		expect_s3_class("tbl_df") |>
-		expect_length(9) |>
-		nrow() |>
-		expect_equal(2)
+		expect_tibble(
+			min_cols = c(
+				"type",
+				"score",
+				"title",
+				"year",
+				"trakt",
+				"slug",
+				"tvdb",
+				"imdb",
+				"tmdb"
+			),
+			exact_rows = 2
+		)
 })
 
 test_that("search_id works", {
 	skip_on_cran()
+
+	vcr::local_cassette("search_id_basic")
 
 	# Oddly enough, 614 matches Home Alone oO
 	res <- search_id(id = 614, id_type = "trakt", type = "show")

@@ -1,0 +1,208 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/people/bryan-cranston?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      cf-ray: 969c8e9b0f254e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      last-modified: Sun, 03 Aug 2025 08:08:42 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":924,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: 59cf4fe8-8979-4cb8-b706-823c01aaa5db
+      x-runtime: '0.009481'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"name":"Bryan Cranston","ids":{"trakt":297737,"slug":"bryan-cranston","imdb":"nm0186505","tmdb":17419,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/people/bryan-cranston?extended=full
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      cf-ray: 969c8e9d2b404e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      last-modified: Sun, 03 Aug 2025 08:08:42 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":918,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: 2785787e-97c4-4dea-9dd3-76a2d979a9f9
+      x-runtime: '0.011308'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"name":"Bryan Cranston","ids":{"trakt":297737,"slug":"bryan-cranston","imdb":"nm0186505","tmdb":17419,"tvrage":null},"social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":null},"biography":"Bryan
+        Lee Cranston is an American actor. After taking minor roles in television,
+        he established himself as a leading actor in both comedic and dramatic works
+        on stage and screen. He has received several accolades, including six Primetime
+        Emmy Awards, two Golden Globe Awards, a Laurence Olivier Award, five Screen
+        Actors Guild Awards, and two Tony Awards, as well as nominations for an Academy
+        Award and a BAFTA Award.\n\nCranston first gained prominence playing Hal in
+        the Fox sitcom Malcolm in the Middle (2000–2006), for which he was nominated
+        for the Primetime Emmy Award for Outstanding Supporting Actor in a Comedy
+        Series. He gained stardom for his dramatic leading role playing Walter White in
+        the AMC crime drama series Breaking Bad (2008–2013), for which he won the Outstanding
+        Lead Actor in a Drama Series four times (2008, 2009, 2010, and 2014). He was
+        Emmy-nominated for All the Way (2016) and Curb Your Enthusiasm (2018). Cranston
+        co-developed and appeared in the crime drama series Sneaky Pete (2015–2019)
+        and starred in the drama series Your Honor (2020–2023).\n\nOn stage, he earned
+        a Tony Award for Best Actor in a Play for portraying President Lyndon B. Johnson in
+        the Broadway play All the Way (2014), a role he reprised in the 2016 HBO film.
+        He received the Laurence Olivier Award for Best Actor and his second Tony
+        Award for portraying Howard Beale in the play Network on the West End and
+        Broadway, respectively.\n\nCranston earned nominations for the Academy Award and
+        the BAFTA Award for Best Actor for portraying Dalton Trumbo in the Hollywood
+        blacklist drama Trumbo (2015). Other notable films include Saving Private
+        Ryan (1998), Little Miss Sunshine (2006), Drive (2011), Contagion (2011), Argo (2012), Godzilla (2014), The
+        Infiltrator (2016), The Upside (2017), Last Flag Flying (2017), and Asteroid
+        City (2023). He has also voiced roles in Madagascar 3: Europe''s Most Wanted (2012), Kung
+        Fu Panda 3 (2016), Isle of Dogs (2018), and Kung Fu Panda 4 (2024).","birthday":"1956-03-07","death":null,"birthplace":"Hollywood,
+        Los Angeles, California, USA","homepage":null,"known_for_department":"acting","gender":"male","updated_at":"2025-08-03T08:08:42.000Z"}'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/people/bryan-cranston?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      cf-ray: 969c8e9b0f254e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      last-modified: Sun, 03 Aug 2025 08:08:42 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":924,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: 59cf4fe8-8979-4cb8-b706-823c01aaa5db
+      x-runtime: '0.009481'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"name":"Bryan Cranston","ids":{"trakt":297737,"slug":"bryan-cranston","imdb":"nm0186505","tmdb":17419,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/people/bryan-cranston?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      cf-ray: 969c8e9b0f254e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      last-modified: Sun, 03 Aug 2025 08:08:42 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":924,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: 59cf4fe8-8979-4cb8-b706-823c01aaa5db
+      x-runtime: '0.009481'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"name":"Bryan Cranston","ids":{"trakt":297737,"slug":"bryan-cranston","imdb":"nm0186505","tmdb":17419,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/people/bryan-cranston?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      cf-ray: 969c8e9b0f254e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      last-modified: Sun, 03 Aug 2025 08:08:42 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":924,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: 59cf4fe8-8979-4cb8-b706-823c01aaa5db
+      x-runtime: '0.009481'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"name":"Bryan Cranston","ids":{"trakt":297737,"slug":"bryan-cranston","imdb":"nm0186505","tmdb":17419,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/people/bryan-cranston?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      cf-ray: 969c8e9b0f254e91-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      last-modified: Sun, 03 Aug 2025 08:08:42 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":924,"until":"2025-08-03T13:35:00Z"}'
+      x-request-id: 59cf4fe8-8979-4cb8-b706-823c01aaa5db
+      x-runtime: '0.009481'
+      cf-cache-status: REVALIDATED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"name":"Bryan Cranston","ids":{"trakt":297737,"slug":"bryan-cranston","imdb":"nm0186505","tmdb":17419,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:06:44
+recorded_with: VCR-vcr/2.0.0

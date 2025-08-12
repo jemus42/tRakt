@@ -1,0 +1,169 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/watched/weekly?limit=10&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:49 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ebb8b757552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:48 GMT
+      x-pagination-page-count: '3572'
+      x-pagination-item-count: '35716'
+      etag: W/"e16c2de539c134b9beef78dcc8b7abf8"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":848,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: b8ced916-2fdc-424a-9c58-337fea159254
+      x-runtime: '0.407863'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watcher_count":26664,"play_count":114317,"collected_count":6493,"collector_count":156,"show":{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}}},{"watcher_count":18789,"play_count":34559,"collected_count":3691,"collector_count":0,"show":{"title":"Dexter:
+        Resurrection","year":2025,"ids":{"trakt":249647,"slug":"dexter-resurrection","tvdb":452595,"imdb":"tt33043892","tmdb":259909,"tvrage":null}}},{"watcher_count":16231,"play_count":41278,"collected_count":5685,"collector_count":267,"show":{"title":"Foundation","year":2021,"ids":{"trakt":150469,"slug":"foundation-2021","tvdb":366972,"imdb":"tt0804484","tmdb":93740,"tvrage":null}}},{"watcher_count":15560,"play_count":34980,"collected_count":5488,"collector_count":652,"show":{"title":"Star
+        Trek: Strange New Worlds","year":2022,"ids":{"trakt":162206,"slug":"star-trek-strange-new-worlds","tvdb":382389,"imdb":"tt12327578","tmdb":103516,"tvrage":null}}},{"watcher_count":14371,"play_count":62302,"collected_count":3970,"collector_count":403,"show":{"title":"The
+        Sandman","year":2022,"ids":{"trakt":149786,"slug":"the-sandman","tvdb":366211,"imdb":"tt1751634","tmdb":90802,"tvrage":null}}},{"watcher_count":11690,"play_count":139917,"collected_count":1714,"collector_count":318,"show":{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}}},{"watcher_count":11177,"play_count":58125,"collected_count":3867,"collector_count":3204,"show":{"title":"It''s
+        Always Sunny in Philadelphia","year":2005,"ids":{"trakt":2692,"slug":"it-s-always-sunny-in-philadelphia","tvdb":75805,"imdb":"tt0472954","tmdb":2710,"tvrage":null}}},{"watcher_count":9377,"play_count":28940,"collected_count":3565,"collector_count":276,"show":{"title":"Resident
+        Alien","year":2021,"ids":{"trakt":153575,"slug":"resident-alien","tvdb":368166,"imdb":"tt8690918","tmdb":96580,"tvrage":null}}},{"watcher_count":9285,"play_count":35323,"collected_count":529,"collector_count":0,"show":{"title":"UNTAMED","year":2025,"ids":{"trakt":230614,"slug":"untamed","tvdb":447456,"imdb":"tt31710822","tmdb":248852,"tvrage":null}}},{"watcher_count":7939,"play_count":15783,"collected_count":2924,"collector_count":0,"show":{"title":"The
+        Institute","year":2025,"ids":{"trakt":238108,"slug":"the-institute","tvdb":451177,"imdb":"tt10946316","tmdb":253372,"tvrage":null}}}]'
+  recorded_at: 2025-08-04 08:06:49
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/watched/weekly?limit=10&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:50 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ebf18c17552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:49 GMT
+      x-pagination-page-count: '8474'
+      x-pagination-item-count: '84732'
+      etag: W/"47aa0b35c4a12095d23d7e432c42529b"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":843,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: ecea7365-1af9-40fe-bc1c-cb37d46968f3
+      x-runtime: '0.439015'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watcher_count":18079,"play_count":20402,"collected_count":6620,"movie":{"title":"28
+        Years Later","year":2025,"ids":{"trakt":885672,"slug":"28-years-later-2025","imdb":"tt10548174","tmdb":1100988}}},{"watcher_count":13496,"play_count":15594,"collected_count":1474,"movie":{"title":"Happy
+        Gilmore 2","year":2025,"ids":{"trakt":1024811,"slug":"happy-gilmore-2-2025","imdb":"tt31868189","tmdb":1263256}}},{"watcher_count":6414,"play_count":7872,"collected_count":394,"movie":{"title":"Superman","year":2025,"ids":{"trakt":853702,"slug":"superman-2025","imdb":"tt5950044","tmdb":1061474}}},{"watcher_count":6255,"play_count":7021,"collected_count":455,"movie":{"title":"How
+        to Train Your Dragon","year":2025,"ids":{"trakt":873974,"slug":"how-to-train-your-dragon-2025","imdb":"tt26743210","tmdb":1087192}}},{"watcher_count":5982,"play_count":7152,"collected_count":685,"movie":{"title":"The
+        Fantastic 4: First Steps","year":2025,"ids":{"trakt":460087,"slug":"the-fantastic-4-first-steps-2025","imdb":"tt10676052","tmdb":617126}}},{"watcher_count":5705,"play_count":6402,"collected_count":1842,"movie":{"title":"War
+        of the Worlds","year":2025,"ids":{"trakt":595350,"slug":"war-of-the-worlds-2025-07-30","imdb":"tt13186306","tmdb":755898}}},{"watcher_count":5267,"play_count":6029,"collected_count":486,"movie":{"title":"Lilo
+        \u0026 Stitch","year":2025,"ids":{"trakt":402167,"slug":"lilo-stitch-2025","imdb":"tt11655566","tmdb":552524}}},{"watcher_count":5039,"play_count":5687,"collected_count":339,"movie":{"title":"Thunderbolts*","year":2025,"ids":{"trakt":792299,"slug":"thunderbolts-2025","imdb":"tt20969586","tmdb":986056}}},{"watcher_count":4580,"play_count":5154,"collected_count":508,"movie":{"title":"Materialists","year":2025,"ids":{"trakt":915211,"slug":"materialists-2025","imdb":"tt30253473","tmdb":1136867}}},{"watcher_count":4235,"play_count":4855,"collected_count":396,"movie":{"title":"M3GAN
+        2.0","year":2025,"ids":{"trakt":861568,"slug":"m3gan-2-0-2025","imdb":"tt26342662","tmdb":1071585}}}]'
+  recorded_at: 2025-08-04 08:06:50
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/played/weekly?limit=10&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:50 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec2de817552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:50 GMT
+      x-pagination-page-count: '4003'
+      x-pagination-item-count: '40025'
+      etag: W/"0cec0e723d6919f7fa9f82746eba0829"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":838,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 20b46244-312b-4694-adc9-6264ef3a7525
+      x-runtime: '0.354854'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watcher_count":2908,"play_count":171132,"collected_count":92,"collector_count":361,"show":{"title":"The
+        Big Bang Theory","year":2007,"ids":{"trakt":1409,"slug":"the-big-bang-theory","tvdb":80379,"imdb":"tt0898266","tmdb":1418,"tvrage":null}}},{"watcher_count":3078,"play_count":147178,"collected_count":68,"collector_count":291,"show":{"title":"The
+        Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}}},{"watcher_count":2649,"play_count":141164,"collected_count":78,"collector_count":339,"show":{"title":"Friends","year":1994,"ids":{"trakt":1657,"slug":"friends","tvdb":79168,"imdb":"tt0108778","tmdb":1668,"tvrage":null}}},{"watcher_count":11690,"play_count":139917,"collected_count":1714,"collector_count":318,"show":{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}}},{"watcher_count":3323,"play_count":117171,"collected_count":621,"collector_count":589,"show":{"title":"One
+        Piece","year":1999,"ids":{"trakt":37696,"slug":"one-piece","tvdb":81797,"imdb":"tt0388629","tmdb":37854,"tvrage":null}}},{"watcher_count":26664,"play_count":114317,"collected_count":6493,"collector_count":156,"show":{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}}},{"watcher_count":3157,"play_count":110848,"collected_count":330,"collector_count":499,"show":{"title":"Game
+        of Thrones","year":2011,"ids":{"trakt":1390,"slug":"game-of-thrones","tvdb":121361,"imdb":"tt0944947","tmdb":1399,"tvrage":null}}},{"watcher_count":2425,"play_count":110172,"collected_count":93,"collector_count":136,"show":{"title":"The
+        Office","year":2005,"ids":{"trakt":2302,"slug":"the-office","tvdb":73244,"imdb":"tt0386676","tmdb":2316,"tvrage":null}}},{"watcher_count":1580,"play_count":106567,"collected_count":51,"collector_count":81,"show":{"title":"How
+        I Met Your Mother","year":2005,"ids":{"trakt":1095,"slug":"how-i-met-your-mother","tvdb":75760,"imdb":"tt0460649","tmdb":1100,"tvrage":null}}},{"watcher_count":1476,"play_count":101234,"collected_count":120,"collector_count":202,"show":{"title":"The
+        Walking Dead","year":2010,"ids":{"trakt":1393,"slug":"the-walking-dead","tvdb":153021,"imdb":"tt1520211","tmdb":1402,"tvrage":null}}}]'
+  recorded_at: 2025-08-04 08:06:50
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/played/weekly?limit=10&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:51 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec60c657552-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-pagination-page: '1'
+      x-pagination-limit: '10'
+      expires: Mon, 04 Aug 2025 16:06:50 GMT
+      x-pagination-page-count: '9453'
+      x-pagination-item-count: '94524'
+      etag: W/"a90e8c824965132c0f403b47ed73cddb"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":833,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: ed78c5b0-b663-4080-98eb-e89544e543bd
+      x-runtime: '0.355690'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watcher_count":18079,"play_count":20402,"collected_count":6620,"movie":{"title":"28
+        Years Later","year":2025,"ids":{"trakt":885672,"slug":"28-years-later-2025","imdb":"tt10548174","tmdb":1100988}}},{"watcher_count":13496,"play_count":15594,"collected_count":1474,"movie":{"title":"Happy
+        Gilmore 2","year":2025,"ids":{"trakt":1024811,"slug":"happy-gilmore-2-2025","imdb":"tt31868189","tmdb":1263256}}},{"watcher_count":6414,"play_count":7872,"collected_count":394,"movie":{"title":"Superman","year":2025,"ids":{"trakt":853702,"slug":"superman-2025","imdb":"tt5950044","tmdb":1061474}}},{"watcher_count":5982,"play_count":7152,"collected_count":685,"movie":{"title":"The
+        Fantastic 4: First Steps","year":2025,"ids":{"trakt":460087,"slug":"the-fantastic-4-first-steps-2025","imdb":"tt10676052","tmdb":617126}}},{"watcher_count":6255,"play_count":7021,"collected_count":455,"movie":{"title":"How
+        to Train Your Dragon","year":2025,"ids":{"trakt":873974,"slug":"how-to-train-your-dragon-2025","imdb":"tt26743210","tmdb":1087192}}},{"watcher_count":5705,"play_count":6402,"collected_count":1842,"movie":{"title":"War
+        of the Worlds","year":2025,"ids":{"trakt":595350,"slug":"war-of-the-worlds-2025-07-30","imdb":"tt13186306","tmdb":755898}}},{"watcher_count":5267,"play_count":6029,"collected_count":486,"movie":{"title":"Lilo
+        \u0026 Stitch","year":2025,"ids":{"trakt":402167,"slug":"lilo-stitch-2025","imdb":"tt11655566","tmdb":552524}}},{"watcher_count":5039,"play_count":5687,"collected_count":339,"movie":{"title":"Thunderbolts*","year":2025,"ids":{"trakt":792299,"slug":"thunderbolts-2025","imdb":"tt20969586","tmdb":986056}}},{"watcher_count":4580,"play_count":5154,"collected_count":508,"movie":{"title":"Materialists","year":2025,"ids":{"trakt":915211,"slug":"materialists-2025","imdb":"tt30253473","tmdb":1136867}}},{"watcher_count":4235,"play_count":4855,"collected_count":396,"movie":{"title":"M3GAN
+        2.0","year":2025,"ids":{"trakt":861568,"slug":"m3gan-2-0-2025","imdb":"tt26342662","tmdb":1071585}}}]'
+  recorded_at: 2025-08-04 08:06:51
+recorded_with: VCR-vcr/2.0.0

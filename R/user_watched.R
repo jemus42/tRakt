@@ -28,6 +28,15 @@ user_watched <- function(
 	type <- match.arg(type)
 	extended <- match.arg(extended)
 
+	if (length(user) > 1) {
+		names(user) <- user
+		return(map_df(
+			user,
+			~ user_watched(user = .x, type = type, noseasons = noseasons, extended = extended),
+			.id = "user"
+		))
+	}
+
 	if (extended == "min") {
 		# extended = "min" causes weird output, expected result without param though
 		extended <- ""
@@ -35,11 +44,6 @@ user_watched <- function(
 
 	if (type == "shows" && noseasons) {
 		extended <- paste0(extended, ",noseasons")
-	}
-
-	if (length(user) > 1) {
-		names(user) <- user
-		return(map_df(user, ~ user_watched(user = .x, type, noseasons), .id = "user"))
 	}
 
 	# Construct URL, make API call

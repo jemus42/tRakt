@@ -1,6 +1,8 @@
 test_that("movies_releases works", {
 	skip_on_cran()
 
+	vcr::local_cassette("movies_releases")
+
 	movie <- "deadpool-2016"
 
 	mov <- movies_releases(id = movie)
@@ -15,6 +17,8 @@ test_that("movies_releases works", {
 
 test_that("movies_boxoffice works", {
 	skip_on_cran()
+
+	vcr::local_cassette("movies_boxoffice")
 
 	movies_boxoffice() |>
 		expect_s3_class("tbl") |>

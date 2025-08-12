@@ -1,0 +1,134 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/episodes/3/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:51 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec73bd91811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Mon, 04 Aug 2025 16:06:51 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      last-modified: Sun, 03 Aug 2025 19:51:32 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":831,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 9ad0665c-aac1-49c9-829e-611e41af66d4
+      x-runtime: '0.023412'
+      cf-cache-status: MISS
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":80858,"plays":101923,"collectors":292142,"comments":2,"lists":144,"votes":1918}'
+  recorded_at: 2025-08-04 08:06:51
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/episodes/4/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:51 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ec998001811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Mon, 04 Aug 2025 16:06:51 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      last-modified: Sun, 03 Aug 2025 20:52:47 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":829,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 3267ff2c-d144-473c-952e-4e3ef719b7db
+      x-runtime: '0.034259'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":79907,"plays":100093,"collectors":291507,"comments":5,"lists":145,"votes":1736}'
+  recorded_at: 2025-08-04 08:06:51
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/episodes/3/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:51 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ecaba561811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      expires: Mon, 04 Aug 2025 16:06:51 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      last-modified: Mon, 04 Aug 2025 02:16:15 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":828,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: ae080d42-6f54-416b-9e42-d293733412db
+      x-runtime: '0.019370'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":75568,"plays":96316,"collectors":281407,"comments":2,"lists":217,"votes":1408}'
+  recorded_at: 2025-08-04 08:06:51
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/episodes/4/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:52 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ecd1e7f1811-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      expires: Mon, 04 Aug 2025 16:06:51 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      last-modified: Sun, 03 Aug 2025 17:43:28 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":826,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 24460357-1952-45d4-bded-2ef7bef6ff4a
+      x-runtime: '0.017518'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":75193,"plays":96335,"collectors":282536,"comments":2,"lists":143,"votes":1370}'
+  recorded_at: 2025-08-04 08:06:52
+recorded_with: VCR-vcr/2.0.0

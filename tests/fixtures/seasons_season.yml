@@ -1,0 +1,205 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/1/info?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eacd808b238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '46241'
+      x-show-season-id: '56008'
+      expires: Mon, 04 Aug 2025 16:06:46 GMT
+      x-show-updated-at: '2025-08-03T07:38:12.000Z'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":890,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"83c7c57e096d7143fd109499549302bc"
+      x-request-id: 34592999-c8d7-405f-9bfd-e7584256c419
+      x-runtime: '0.011618'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":1,"ids":{"trakt":56008,"tvdb":507598,"tmdb":54695,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:20:01
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/2/info?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eadda37b238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '46241'
+      x-show-season-id: '56009'
+      expires: Mon, 04 Aug 2025 16:06:46 GMT
+      x-show-updated-at: '2025-08-03T07:38:12.000Z'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":883,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"af60a6ba0daa1c54239cd715624ddb52"
+      x-request-id: 3878d62d-6c35-4527-a540-1718850f377b
+      x-runtime: '0.015285'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":2,"ids":{"trakt":56009,"tvdb":524149,"tmdb":54696,"tvrage":null},"rating":8.08333,"votes":216,"episode_count":6,"aired_episodes":6,"title":"Season
+        2","overview":"It has been three months since the destruction of the Utopia
+        manuscript, and things have been quiet for Ian, Becky and co. Believing the
+        Network to be finished, they each try to get back to some semblance of normality.  But
+        far from being over, the Network are only just beginning...","first_aired":"2014-07-14T20:00:00.000Z","updated_at":"2025-08-03T23:48:29.000Z","network":"Channel
+        4","original_title":null}'
+  recorded_at: 2025-08-04 08:20:01
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/1/info?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eacd808b238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '46241'
+      x-show-season-id: '56008'
+      expires: Mon, 04 Aug 2025 16:06:46 GMT
+      x-show-updated-at: '2025-08-03T07:38:12.000Z'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":890,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"83c7c57e096d7143fd109499549302bc"
+      x-request-id: 34592999-c8d7-405f-9bfd-e7584256c419
+      x-runtime: '0.011618'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":1,"ids":{"trakt":56008,"tvdb":507598,"tmdb":54695,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:20:01
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/2/info?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:18:12 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c9f6ba84b3027-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '46241'
+      x-show-season-id: '56009'
+      expires: Mon, 04 Aug 2025 16:18:12 GMT
+      x-show-updated-at: '2025-08-03T07:38:12.000Z'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":999,"until":"2025-08-04T08:20:00Z"}'
+      etag: W/"5f9820508c0a4535b049ef643de64d0c"
+      x-request-id: 0cb7c8ba-6c7f-4426-b74b-cd1c85227e06
+      x-runtime: '0.022476'
+      cf-cache-status: MISS
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":2,"ids":{"trakt":56009,"tvdb":524149,"tmdb":54696,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:20:01
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/1/info?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:46 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eacd808b238-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '46241'
+      x-show-season-id: '56008'
+      expires: Mon, 04 Aug 2025 16:06:46 GMT
+      x-show-updated-at: '2025-08-03T07:38:12.000Z'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":890,"until":"2025-08-04T08:10:00Z"}'
+      etag: W/"83c7c57e096d7143fd109499549302bc"
+      x-request-id: 34592999-c8d7-405f-9bfd-e7584256c419
+      x-runtime: '0.011618'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":1,"ids":{"trakt":56008,"tvdb":507598,"tmdb":54695,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:20:01
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/2/info?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:18:12 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c9f6ba84b3027-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '46241'
+      x-show-season-id: '56009'
+      expires: Mon, 04 Aug 2025 16:18:12 GMT
+      x-show-updated-at: '2025-08-03T07:38:12.000Z'
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":999,"until":"2025-08-04T08:20:00Z"}'
+      etag: W/"5f9820508c0a4535b049ef643de64d0c"
+      x-request-id: 0cb7c8ba-6c7f-4426-b74b-cd1c85227e06
+      x-runtime: '0.022476'
+      cf-cache-status: MISS
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":2,"ids":{"trakt":56009,"tvdb":524149,"tmdb":54696,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:20:01
+recorded_with: VCR-vcr/2.0.0

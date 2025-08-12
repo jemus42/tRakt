@@ -1,0 +1,221 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/ratings/shows?extended=min&limit=3
+  response:
+    status: 200
+    headers:
+      date: Tue, 12 Aug 2025 14:26:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96e0a640ed73dbd3-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '3'
+      x-pagination-page-count: '33'
+      x-pagination-item-count: '98'
+      etag: W/"ed57ce0b83544e41ad11d017bab028a8"
+      last-modified: Thu, 22 Jun 2023 22:42:55 GMT
+      cache-control: max-age=0, private, must-revalidate
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":995,"until":"2025-08-12T14:30:00Z"}'
+      x-request-id: 8724a717-6b05-49b1-9661-f517531c279b
+      x-runtime: '0.022951'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rated_at":"2023-06-22T22:42:55.000Z","rating":2,"type":"show","show":{"title":"The
+        Mist","year":2017,"ids":{"trakt":118191,"slug":"the-mist","tvdb":326887,"imdb":"tt5639976","tmdb":68315,"tvrage":null}}},{"rated_at":"2023-06-22T21:56:15.000Z","rating":5,"type":"show","show":{"title":"The
+        Walking Dead","year":2010,"ids":{"trakt":1393,"slug":"the-walking-dead","tvdb":153021,"imdb":"tt1520211","tmdb":1402,"tvrage":null}}},{"rated_at":"2021-08-15T04:42:32.000Z","rating":3,"type":"show","show":{"title":"Mr.
+        Corman","year":2021,"ids":{"trakt":170595,"slug":"mr-corman","tvdb":393156,"imdb":"tt10971064","tmdb":124897,"tvrage":null}}}]'
+  recorded_at: 2025-08-12 14:26:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/ratings/seasons?extended=min&limit=2
+  response:
+    status: 200
+    headers:
+      date: Tue, 12 Aug 2025 14:26:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96e0a6428853dbd3-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '2'
+      x-pagination-page-count: '0'
+      x-pagination-item-count: '0'
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":992,"until":"2025-08-12T14:30:00Z"}'
+      etag: W/"3c00871168a606f8f651c41b9babf61d"
+      cache-control: max-age=0, private, must-revalidate
+      x-request-id: 5e6b0f70-9e06-4823-8feb-ff85e922b5ba
+      x-runtime: '0.015991'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2025-08-12 14:26:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/ratings/episodes?extended=min&limit=2
+  response:
+    status: 200
+    headers:
+      date: Tue, 12 Aug 2025 14:26:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96e0a64379d2dbd3-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '2'
+      x-pagination-page-count: '3'
+      x-pagination-item-count: '6'
+      etag: W/"7a8640ab5cdc462e9259537410c9dfec"
+      last-modified: Thu, 22 Feb 2024 01:50:56 GMT
+      cache-control: max-age=0, private, must-revalidate
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":990,"until":"2025-08-12T14:30:00Z"}'
+      x-request-id: e2618ebf-4ce8-45f3-bd16-33f119bc36f3
+      x-runtime: '0.025939'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rated_at":"2024-02-22T01:50:56.000Z","rating":9,"type":"episode","episode":{"season":5,"number":3,"title":"Sand
+        Job","ids":{"trakt":11412861,"tvdb":10280014,"imdb":"tt27952443","tmdb":5118691,"tvrage":null}},"show":{"title":"The
+        Grand Tour","year":2016,"ids":{"trakt":108999,"slug":"the-grand-tour","tvdb":314087,"imdb":"tt5712554","tmdb":67557,"tvrage":null}}},{"rated_at":"2015-01-09T19:30:13.000Z","rating":9,"type":"episode","episode":{"season":2,"number":1,"title":"Judgment","ids":{"trakt":194766,"tvdb":31121,"imdb":"tt0512867","tmdb":182951,"tvrage":null}},"show":{"title":"Angel","year":1999,"ids":{"trakt":2411,"slug":"angel","tvdb":71035,"imdb":"tt0162065","tmdb":2426,"tvrage":null}}}]'
+  recorded_at: 2025-08-12 14:26:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/ratings/movies?extended=min&limit=3
+  response:
+    status: 200
+    headers:
+      date: Tue, 12 Aug 2025 14:26:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 96e0a6448c8cdbd3-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '3'
+      x-pagination-page-count: '53'
+      x-pagination-item-count: '157'
+      etag: W/"35cc5cd8bc3171ddc9a5e6554215edad"
+      last-modified: Sat, 27 Apr 2024 05:06:36 GMT
+      cache-control: max-age=0, private, must-revalidate
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":988,"until":"2025-08-12T14:30:00Z"}'
+      x-request-id: 0d106c38-9417-4867-b9cb-bfef979fe35f
+      x-runtime: '0.024368'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rated_at":"2024-04-27T05:06:35.000Z","rating":8,"type":"movie","movie":{"title":"The
+        Ministry of Ungentlemanly Warfare","year":2024,"ids":{"trakt":634646,"slug":"the-ministry-of-ungentlemanly-warfare-2024","imdb":"tt5177120","tmdb":799583}}},{"rated_at":"2024-02-24T05:55:52.000Z","rating":5,"type":"movie","movie":{"title":"Madame
+        Web","year":2024,"ids":{"trakt":474113,"slug":"madame-web-2024","imdb":"tt11057302","tmdb":634492}}},{"rated_at":"2023-01-01T04:12:31.000Z","rating":8,"type":"movie","movie":{"title":"Violent
+        Night","year":2022,"ids":{"trakt":721339,"slug":"violent-night-2022","imdb":"tt12003946","tmdb":899112}}}]'
+  recorded_at: 2025-08-12 14:26:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/ratings/movies?extended=min&limit=2
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Tue, 12 Aug 2025 14:26:44 GMT
+      cf-ray: 96e0a6459e7bdbd3-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '2'
+      x-pagination-page-count: '79'
+      x-pagination-item-count: '157'
+      etag: W/"b556bbf5fcbb3a991e195eec03963e94"
+      last-modified: Sat, 27 Apr 2024 05:06:36 GMT
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":986,"until":"2025-08-12T14:30:00Z"}'
+      x-request-id: ab599708-fc7a-45c6-a1d5-8902ffe1ba30
+      x-runtime: '0.017261'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rated_at":"2024-04-27T05:06:35.000Z","rating":8,"type":"movie","movie":{"title":"The
+        Ministry of Ungentlemanly Warfare","year":2024,"ids":{"trakt":634646,"slug":"the-ministry-of-ungentlemanly-warfare-2024","imdb":"tt5177120","tmdb":799583}}},{"rated_at":"2024-02-24T05:55:52.000Z","rating":5,"type":"movie","movie":{"title":"Madame
+        Web","year":2024,"ids":{"trakt":474113,"slug":"madame-web-2024","imdb":"tt11057302","tmdb":634492}}}]'
+  recorded_at: 2025-08-12 14:26:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/ratings/movies?extended=min&limit=2
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      vary: Accept-Encoding
+      content-encoding: gzip
+      date: Tue, 12 Aug 2025 14:26:45 GMT
+      cf-ray: 96e0a6468896dbd3-FRA
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-private-user: 'false'
+      x-pagination-page: '1'
+      x-pagination-limit: '2'
+      x-pagination-page-count: '307'
+      x-pagination-item-count: '614'
+      etag: W/"b2a77211532dcf0831523a6fe87da4f2"
+      last-modified: Wed, 06 Aug 2025 14:42:37 GMT
+      cache-control: max-age=0, private, must-revalidate
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":985,"until":"2025-08-12T14:30:00Z"}'
+      x-request-id: f6e79e1c-7656-4cf6-a84d-52158ed284ee
+      x-runtime: '0.016001'
+      cf-cache-status: DYNAMIC
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rated_at":"2025-08-06T14:42:37.000Z","rating":7,"type":"movie","movie":{"title":"Aniara","year":2019,"ids":{"trakt":343877,"slug":"aniara-2019","imdb":"tt7589524","tmdb":496743}}},{"rated_at":"2025-08-06T14:42:34.000Z","rating":6,"type":"movie","movie":{"title":"Vulcanizadora","year":2024,"ids":{"trakt":909630,"slug":"vulcanizadora-2024","imdb":"tt28226888","tmdb":1130188}}}]'
+  recorded_at: 2025-08-12 14:26:44
+recorded_with: VCR-vcr/2.0.0

@@ -1,0 +1,398 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e8ef95acf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"f4e5adb0cf4dd0f5aad4eaed9f4de226"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":982,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: cc77203b-4a12-4cfd-bce1-99d37896c48b
+      x-runtime: '0.016086'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":8.15735,"votes":680,"distribution":{"1":1,"2":1,"3":0,"4":0,"5":28,"6":24,"7":121,"8":259,"9":119,"10":127}}'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e913d8fcf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"466564f5ef215e1dfc29f4b8de4c4ea3"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":974,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 5cbd3815-bdc7-448e-8737-2bf9792e4cb1
+      x-runtime: '0.013994'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":8.22594,"votes":478,"distribution":{"1":1,"2":1,"3":0,"4":1,"5":15,"6":20,"7":69,"8":184,"9":95,"10":92}}'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/1/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:42 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9388e7cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '455'
+      x-show-season-id: '1477'
+      expires: Mon, 04 Aug 2025 16:06:42 GMT
+      x-show-updated-at: '2025-08-03T07:31:30.000Z'
+      etag: W/"8089cafaf6ceb507957a6af1fcb6b232"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":966,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: fca4d365-2b65-40ea-aa6d-3fc8d16d7bb3
+      x-runtime: '0.010033'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.55795,"votes":742,"distribution":{"1":7,"2":1,"3":5,"4":8,"5":37,"6":95,"7":213,"8":195,"9":64,"10":117}}'
+  recorded_at: 2025-08-04 08:06:42
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/2/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e95bc16cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '455'
+      x-show-season-id: '1478'
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-show-updated-at: '2025-08-03T07:31:30.000Z'
+      etag: W/"284326bca91afcc56507c95e504c2ecd"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":960,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 9ea0f9bf-dbe4-4cdb-ab2d-4ddca33d58a9
+      x-runtime: '0.012139'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.94881,"votes":547,"distribution":{"1":0,"2":0,"3":0,"4":3,"5":25,"6":30,"7":129,"8":195,"9":81,"10":83}}'
+  recorded_at: 2025-08-04 08:06:43
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/episodes/3/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e97dfb7cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"dbd7960bf7f28a79785afa37277f8918"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":954,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 6da2767f-4ec7-497e-94aa-cc5f7c9b9ac9
+      x-runtime: '0.016091'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.84411,"votes":1918,"distribution":{"1":16,"2":6,"3":3,"4":0,"5":14,"6":277,"7":433,"8":610,"9":225,"10":334}}'
+  recorded_at: 2025-08-04 08:06:43
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/episodes/4/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e98e950cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"f5336e6012cfcb4d8ff1f2fea271dec2"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":952,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: fb6a1c70-76a3-44a0-87d2-7141f05818fb
+      x-runtime: '0.029672'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.7379,"votes":1736,"distribution":{"1":9,"2":8,"3":4,"4":9,"5":24,"6":262,"7":443,"8":510,"9":183,"10":284}}'
+  recorded_at: 2025-08-04 08:06:43
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/episodes/3/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:43 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9a1b40cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      expires: Mon, 04 Aug 2025 16:06:43 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"b61ef136bbf4a5dbba292b36acfa46e0"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":944,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: f4fca1e2-33eb-40da-a62a-5dfc6a0d3119
+      x-runtime: '0.017782'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.68324,"votes":1408,"distribution":{"1":12,"2":5,"3":1,"4":4,"5":22,"6":217,"7":375,"8":416,"9":148,"10":208}}'
+  recorded_at: 2025-08-04 08:06:43
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/episodes/4/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9c4ea7cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"18d3e40e5040c7b55f1d401494ef9a26"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":938,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: afb9dad8-fe77-4116-aa73-8fb89805e34f
+      x-runtime: '0.016885'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.74599,"votes":1370,"distribution":{"1":10,"2":7,"3":2,"4":6,"5":28,"6":216,"7":319,"8":383,"9":165,"10":234}}'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/1/episodes/3/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9e9af2cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '455'
+      x-show-season-id: '1477'
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T07:31:30.000Z'
+      etag: W/"f6a9fd8f6b80b722e1ee1e07afefd874"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":935,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 37b70fc0-799f-4add-aecf-02c1bf31e368
+      x-runtime: '0.023408'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.26793,"votes":1534,"distribution":{"1":16,"2":7,"3":8,"4":11,"5":55,"6":370,"7":487,"8":282,"9":89,"10":209}}'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/1/episodes/4/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:44 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8e9fbcfbcf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '455'
+      x-show-season-id: '1477'
+      expires: Mon, 04 Aug 2025 16:06:44 GMT
+      x-show-updated-at: '2025-08-03T07:31:30.000Z'
+      etag: W/"94224198f6ada03a9ed7f9b4a49845e6"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":930,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: f95021e7-f007-4be7-b0d9-d91479c73a50
+      x-runtime: '0.020246'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.55205,"votes":1364,"distribution":{"1":9,"2":7,"3":6,"4":9,"5":36,"6":234,"7":389,"8":359,"9":101,"10":213}}'
+  recorded_at: 2025-08-04 08:06:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/2/episodes/3/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea1f975cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '455'
+      x-show-season-id: '1478'
+      expires: Mon, 04 Aug 2025 16:06:45 GMT
+      x-show-updated-at: '2025-08-03T07:31:30.000Z'
+      etag: W/"dd07ae205661eb3d033411bbf49058cd"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":923,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 7275aada-619f-4905-b96a-ca28ebf21577
+      x-runtime: '0.023349'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.63733,"votes":1227,"distribution":{"1":14,"2":7,"3":5,"4":10,"5":35,"6":220,"7":264,"8":323,"9":126,"10":222}}'
+  recorded_at: 2025-08-04 08:06:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/2/episodes/4/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:45 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8ea42d46cf59-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      x-show-id: '455'
+      x-show-season-id: '1478'
+      expires: Mon, 04 Aug 2025 16:06:45 GMT
+      x-show-updated-at: '2025-08-03T07:31:30.000Z'
+      etag: W/"99806935946de87d95bafff66ea89c61"
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":915,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 149a1a04-3b8f-423b-aebc-a5e2d8177ccc
+      x-runtime: '0.020395'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.67871,"votes":996,"distribution":{"1":6,"2":5,"3":5,"4":6,"5":19,"6":143,"7":253,"8":307,"9":103,"10":148}}'
+  recorded_at: 2025-08-04 08:06:45
+recorded_with: VCR-vcr/2.0.0
