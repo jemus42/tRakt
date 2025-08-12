@@ -1,6 +1,6 @@
 test_that("user_lists does stuff", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("user_lists_basic")
 	list_names_min <- c(
@@ -70,7 +70,7 @@ test_that("user_lists does stuff", {
 
 test_that("user_list gets stuff", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("user_list_single")
 	list_names_min <- c(

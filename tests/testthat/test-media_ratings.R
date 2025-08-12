@@ -1,6 +1,6 @@
 test_that("media_ratings works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("media_ratings_basic")
 
@@ -20,7 +20,7 @@ test_that("media_ratings works", {
 
 test_that("season and episode ratings work", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("media_ratings_season_episode")
 

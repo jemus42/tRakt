@@ -1,6 +1,6 @@
 test_that("popular_media works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("popular_media")
 
@@ -29,7 +29,7 @@ test_that("popular_media works", {
 
 test_that("trending_media works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("trending_media")
 
@@ -58,7 +58,7 @@ test_that("trending_media works", {
 
 test_that("anticipated_media works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("anticipated_media")
 
@@ -86,7 +86,7 @@ test_that("anticipated_media works", {
 })
 
 test_that("played_media and watched_media also do things", {
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("played_watched_media")
 
@@ -132,7 +132,7 @@ test_that("played_media and watched_media also do things", {
 })
 
 test_that("collected_media does its thing", {
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("collected_media")
 

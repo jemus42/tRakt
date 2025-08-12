@@ -23,7 +23,7 @@
 
 test_that("trakt_get can make API calls", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("api_trakt_get_basic")
 
@@ -36,9 +36,7 @@ test_that("trakt_get can make API calls", {
 
 test_that("authenticated requests work", {
 	skip_if_no_auth()
-	skip_if_not_installed("vcr")
-
-	vcr::local_cassette("api_authenticated_requests")
+	)
 
 	# Authenticated method, should return a list
 	expect_type(trakt_get("users/settings"), "list")

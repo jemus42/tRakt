@@ -1,6 +1,6 @@
 test_that("media comments work", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("media_comments_basic")
 	media_comments_names_min <- c(

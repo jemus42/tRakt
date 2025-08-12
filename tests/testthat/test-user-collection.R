@@ -1,6 +1,6 @@
 test_that("user_collection works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("user_collection_basic")
 
@@ -35,7 +35,7 @@ test_that("user_collection works", {
 test_that("user_collection works with episode unnesting", {
 	skip_if_not_installed("tidyr")
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("user_collection_unnest_episodes")
 

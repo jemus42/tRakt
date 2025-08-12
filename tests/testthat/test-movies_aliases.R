@@ -1,6 +1,6 @@
 test_that("aliases work", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("movies_aliases_and_shows_aliases")
 	movies_aliases(190430) |>

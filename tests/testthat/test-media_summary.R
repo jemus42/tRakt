@@ -1,6 +1,6 @@
 test_that("shows_summary works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("shows_summary_multiple")
 
@@ -21,7 +21,7 @@ test_that("shows_summary works", {
 
 test_that("movies_summary works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("movies_summary_deadpool")
 

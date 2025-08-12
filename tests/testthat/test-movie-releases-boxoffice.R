@@ -1,6 +1,6 @@
 test_that("movies_releases works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("movies_releases")
 
@@ -18,7 +18,7 @@ test_that("movies_releases works", {
 
 test_that("movies_boxoffice works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("movies_boxoffice")
 

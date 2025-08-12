@@ -1,6 +1,6 @@
 test_that("user_watchlist works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("user-user-watchlist_basic")
 

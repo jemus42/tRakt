@@ -1,6 +1,6 @@
 test_that("media lists work", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("media_lists_basic")
 	media_list_names <- c(

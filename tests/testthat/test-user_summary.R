@@ -1,6 +1,6 @@
 test_that("user_profile", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("user_profile")
 	nm_min <- c("username", "private", "deleted", "user_name", "vip", "vip_ep", "user_slug")

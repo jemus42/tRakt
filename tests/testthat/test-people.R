@@ -1,6 +1,6 @@
 test_that("people_summary works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("people_summary_bryan_cranston")
 
@@ -26,7 +26,7 @@ test_that("people_summary works", {
 
 test_that("people_media works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("people_media_bryan_cranston")
 

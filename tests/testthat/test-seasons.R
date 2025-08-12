@@ -1,6 +1,6 @@
 test_that("seasons_episodes works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("seasons_episodes_futurama")
 
@@ -42,7 +42,7 @@ test_that("seasons_episodes works", {
 
 test_that("seasons_summary works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("seasons_summary_breaking_bad")
 
@@ -80,7 +80,7 @@ test_that("seasons_summary works", {
 
 test_that("seasons_summary works for episodes and matches seasons_episodes", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("seasons_summary_episodes_utopia")
 
@@ -102,7 +102,7 @@ test_that("seasons_summary works for episodes and matches seasons_episodes", {
 
 test_that("seasons_season works", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("seasons_season")
 

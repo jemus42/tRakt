@@ -1,6 +1,6 @@
 test_that("comments_trending & co work", {
 	skip_on_cran()
-	skip_if_not_installed("vcr")
+	)
 
 	vcr::local_cassette("comments_trending_and_co")
 	comments_trending("reviews") |>
