@@ -30,7 +30,11 @@ user_watched <- function(
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map_df(user, ~ user_watched(user = .x, type = type, noseasons = noseasons, extended = extended), .id = "user"))
+		return(map_df(
+			user,
+			~ user_watched(user = .x, type = type, noseasons = noseasons, extended = extended),
+			.id = "user"
+		))
 	}
 
 	if (extended == "min") {

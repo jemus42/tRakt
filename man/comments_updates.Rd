@@ -35,8 +35,10 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get recently updated/edited comments
 }
 \examples{
+\dontrun{ # quite slow
 # Recently updated comments
-comments_updates()
+comments_updates(limit = 2)
+}
 }
 \seealso{
 Other comment methods: 

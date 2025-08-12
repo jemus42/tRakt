@@ -39,7 +39,7 @@ Suggests:
     testthat (>= 3.0.0),
     tidyr,
     vcr (>= 2.0.0),
-    webmockr,
+    withr,
     yaml
 VignetteBuilder: 
     knitr

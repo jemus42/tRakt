@@ -69,7 +69,7 @@ glimpse(show_info)
 #> Rows: 1
 #> Columns: 9
 #> $ type  <chr> "show"
-#> $ score <dbl> 98.53947
+#> $ score <dbl> 5.787301e+17
 #> $ title <chr> "Utopia"
 #> $ year  <int> 2013
 #> $ trakt <chr> "46241"
@@ -87,17 +87,18 @@ Get season information for the show using its trakt ID:
 seasons_summary(show_info$trakt, extended = "full") |>
   glimpse()
 #> Rows: 2
-#> Columns: 13
+#> Columns: 14
 #> $ season         <int> 1, 2
-#> $ rating         <dbl> 8.45536, 8.06542
-#> $ votes          <int> 336, 214
+#> $ rating         <dbl> 8.40741, 8.08333
+#> $ votes          <int> 351, 216
 #> $ episode_count  <int> 6, 6
 #> $ aired_episodes <int> 6, 6
 #> $ title          <chr> "Season 1", "Season 2"
 #> $ overview       <chr> "When a group of strangers find themselves in possessio…
 #> $ first_aired    <dttm> 2013-01-15 21:00:00, 2014-07-14 20:00:00
-#> $ updated_at     <dttm> 2025-03-16 04:14:25, 2025-03-16 04:14:25
+#> $ updated_at     <dttm> 2025-08-12 06:03:40, 2025-08-12 06:03:40
 #> $ network        <chr> "Channel 4", "Channel 4"
+#> $ original_title <lgl> NA, NA
 #> $ trakt          <chr> "56008", "56009"
 #> $ tvdb           <chr> "507598", "524149"
 #> $ tmdb           <chr> "54695", "54696"
@@ -110,20 +111,23 @@ slug:
 seasons_episodes(show_info$trakt, seasons = 1, extended = "full") |>
   glimpse()
 #> Rows: 6
-#> Columns: 17
+#> Columns: 20
 #> $ season                 <int> 1, 1, 1, 1, 1, 1
 #> $ episode                <int> 1, 2, 3, 4, 5, 6
 #> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episode…
 #> $ episode_abs            <int> 1, 2, 3, 4, 5, 6
 #> $ overview               <chr> "When  five strangers from an online comic book…
-#> $ rating                 <dbl> 8.15410, 8.04485, 8.03160, 8.00973, 8.14578, 8.…
-#> $ votes                  <int> 1220, 981, 886, 822, 782, 806
+#> $ rating                 <dbl> 8.14286, 8.03480, 8.02721, 7.99512, 8.12932, 8.…
+#> $ votes                  <int> 1211, 977, 882, 820, 781, 801
 #> $ comment_count          <int> 9, 0, 1, 2, 1, 2
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
-#> $ updated_at             <dttm> 2025-03-16 07:11:31, 2025-03-15 11:14:59, 2025-…
+#> $ updated_at             <dttm> 2025-08-12 13:37:06, 2025-08-12 13:37:07, 2025-…
 #> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
 #> $ runtime                <int> 60, 49, 51, 48, 49, 62
 #> $ episode_type           <chr> "series_premiere", "standard", "standard", "sta…
+#> $ original_title         <lgl> NA, NA, NA, NA, NA, NA
+#> $ after_credits          <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE
+#> $ during_credits         <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE
 #> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
 #> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
 #> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
@@ -139,23 +143,26 @@ seasons_summary(show_info$trakt, episodes = TRUE, extended = "full") |>
   bind_rows() |>
   glimpse()
 #> Rows: 12
-#> Columns: 17
+#> Columns: 20
 #> $ season                 <int> 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2
 #> $ episode                <int> 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6
 #> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episode…
 #> $ episode_abs            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 #> $ overview               <chr> "When  five strangers from an online comic book…
-#> $ rating                 <dbl> 8.15410, 8.04485, 8.03160, 8.00973, 8.14578, 8.…
-#> $ votes                  <int> 1220, 981, 886, 822, 782, 806, 804, 700, 674, 6…
+#> $ rating                 <dbl> 8.14286, 8.03480, 8.02721, 7.99512, 8.12932, 8.…
+#> $ votes                  <int> 1211, 977, 882, 820, 781, 801, 796, 701, 669, 6…
 #> $ comment_count          <int> 9, 0, 1, 2, 1, 2, 5, 1, 2, 2, 2, 6
 #> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
-#> $ updated_at             <dttm> 2025-03-16 07:11:31, 2025-03-15 11:14:59, 2025-…
+#> $ updated_at             <dttm> 2025-08-11 21:19:50, 2025-08-12 00:25:28, 2025-…
 #> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
 #> $ runtime                <int> 60, 49, 51, 48, 49, 62, 54, 51, 50, 50, 50, 53
 #> $ episode_type           <chr> "series_premiere", "standard", "standard", "sta…
+#> $ original_title         <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA
+#> $ after_credits          <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…
+#> $ during_credits         <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…
 #> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "1…
-#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
-#> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
+#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "44…
+#> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt26182…
 #> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "910007…
 ```
 
@@ -165,18 +172,18 @@ shows](https://trakt.tv/shows/trending):
 ``` r
 shows_trending()
 #> # A tibble: 10 × 8
-#>    watchers title                  year trakt  slug            tvdb  imdb  tmdb 
-#>       <int> <chr>                 <int> <chr>  <chr>           <chr> <chr> <chr>
-#>  1    13850 Severance              2022 154997 severance       3719… tt11… 95396
-#>  2     7361 Reacher                2022 155536 reacher         3669… tt92… 1089…
-#>  3     4956 Invincible             2021 172648 invincible-2021 3682… tt67… 95557
-#>  4     4713 Solo Leveling          2024 193023 solo-leveling   3895… tt21… 1275…
-#>  5     4168 The Pitt               2025 232884 the-pitt        4481… tt31… 2503…
-#>  6     3936 The White Lotus        2021 168471 the-white-lotus 3904… tt13… 1118…
-#>  7     3601 The Wheel of Time      2021 140100 the-wheel-of-t… 3557… tt74… 71914
-#>  8     3356 Daredevil: Born Again  2025 195845 daredevil-born… 4227… tt18… 2025…
-#>  9     2631 S.W.A.T.               2017 119137 s-w-a-t-2017    3286… tt61… 71790
-#> 10     2509 Adolescence            2025 230892 adolescence     4524… tt31… 2490…
+#>    watchers title                             year trakt slug  tvdb  imdb  tmdb 
+#>       <int> <chr>                            <int> <chr> <chr> <chr> <chr> <chr>
+#>  1     6995 Wednesday                         2022 1739… wedn… 3970… tt13… 1190…
+#>  2     4905 Dexter: Resurrection              2025 2496… dext… 4525… tt33… 2599…
+#>  3     3138 The Gilded Age                    2022 1522… the-… 3644… tt44… 81723
+#>  4     2900 South Park                        1997 2177  sout… 75897 tt01… 2190 
+#>  5     2777 The Institute                     2025 2381… the-… 4511… tt10… 2533…
+#>  6     2708 Last Week Tonight with John Oli…  2014 60267 last… 2785… tt35… 60694
+#>  7     2673 Foundation                        2021 1504… foun… 3669… tt08… 93740
+#>  8     2205 Star Trek: Strange New Worlds     2022 1622… star… 3823… tt12… 1035…
+#>  9     2044 Twisted Metal                     2023 1882… twis… 3665… tt14… 1337…
+#> 10     2020 Resident Alien                    2021 1535… resi… 3681… tt86… 96580
 ```
 
 Maybe you just want to know how long it would take you to binge through
@@ -197,16 +204,16 @@ shows_trending(extended = "full") |>
 
 | Show | Episode Runtime | Aired Episodes | Total Runtime (aired) |
 |:---|:---|---:|:---|
-| Severance (2022) | 00:42:00 | 18 | 12:36:00 |
-| Reacher (2022) | 00:49:00 | 22 | 17:58:00 |
-| Invincible (2021) | 00:42:00 | 24 | 16:48:00 |
-| Solo Leveling (2024) | 00:24:00 | 23 | 09:12:00 |
-| The Pitt (2025) | 00:42:00 | 11 | 07:42:00 |
-| The White Lotus (2021) | 00:42:00 | 17 | 11:54:00 |
-| The Wheel of Time (2021) | 01:05:00 | 19 | 20:35:00 |
-| Daredevil: Born Again (2025) | 00:42:00 | 3 | 02:06:00 |
-| S.W.A.T. (2017) | 00:43:00 | 156 | 111:48:00 |
-| Adolescence (2025) | 00:42:00 | 4 | 02:48:00 |
+| Wednesday (2022) | 00:42:00 | 12 | 08:24:00 |
+| Dexter: Resurrection (2025) | 00:50:00 | 6 | 05:00:00 |
+| The Gilded Age (2022) | 00:56:00 | 25 | 23:20:00 |
+| South Park (1997) | 00:22:00 | 323 | 118:26:00 |
+| The Institute (2025) | 00:58:00 | 6 | 05:48:00 |
+| Last Week Tonight with John Oliver (2014) | 00:42:00 | 340 | 238:00:00 |
+| Foundation (2021) | 00:42:00 | 25 | 17:30:00 |
+| Star Trek: Strange New Worlds (2022) | 00:55:00 | 25 | 22:55:00 |
+| Twisted Metal (2023) | 00:42:00 | 15 | 10:30:00 |
+| Resident Alien (2021) | 00:45:00 | 44 | 33:00:00 |
 
 Please note though that episode runtime data may be inaccurate. In my
 experience, recent shows have fairly accurate runtime data, which is
