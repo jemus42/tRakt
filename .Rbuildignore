@@ -33,3 +33,5 @@ vignettes/\.httr-oauth$
 ^attic$
 ^air\.toml$
 ^Makefile$
+^CLAUDE\.md$
+^TODO\.md$

@@ -9,6 +9,10 @@ if (requireNamespace("vcr", quietly = TRUE)) {
 		filter_sensitive_data = list(
 			"<<<TRAKT_CLIENT_SECRET>>>" = Sys.getenv("trakt_client_secret", "")
 		),
+		# Filter authorization headers that may contain tokens
+		filter_request_headers = list(
+			"authorization"
+		),
 		match_requests_on = c("method", "uri")
 	)
 }
