@@ -48,7 +48,8 @@
 <span>  user <span class="op">=</span> <span class="st">"me"</span>,</span>
 <span>  type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"movies"</span>, <span class="st">"seasons"</span>, <span class="st">"shows"</span>, <span class="st">"episodes"</span><span class="op">)</span>,</span>
 <span>  rating <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  extended <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"min"</span>, <span class="st">"full"</span><span class="op">)</span></span>
+<span>  extended <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"min"</span>, <span class="st">"full"</span><span class="op">)</span>,</span>
+<span>  limit <span class="op">=</span> <span class="cn">NULL</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -80,6 +81,10 @@ functions, values <code>seasons</code> or <code>episodes</code> are also allowed
 <dd><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
 returns more variables and should generally only be used if required.
 See <code><a href="../articles/tRakt.html">vignette("tRakt")</a></code> for more details.</p></dd>
+
+
+<dt id="arg-limit">limit<a class="anchor" aria-label="anchor" href="#arg-limit"></a></dt>
+<dd><p><code>integer(1) [NULL]</code>: Number of items to return. If <code>NULL</code> (default), all items are returned.</p></dd>
 
 </dl></div>
     <div class="section level2">
