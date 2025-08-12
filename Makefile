@@ -21,9 +21,22 @@ build: doc
 install: doc
 	Rscript -e "pak::local_install(upgrade = FALSE)"
 
+.PHONY: deps
+deps:
+	Rscript -e "pak::local_install_dev_deps()"
+
 .PHONY: test
 test:
 	Rscript -e "devtools::test()"
+
+.PHONY: test
+test:
+	Rscript -e "devtools::test(reporter = 'summary')"
+
+.PHONY: coverage
+coverage:
+	Rscript -e "covr::report(covr::package_coverage(\".\"), file = \"coverage.html\")"
+
 
 .PHONY: update-workflows
 update-workflows:
