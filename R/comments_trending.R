@@ -90,8 +90,10 @@ comments_recent <- function(
 #' @family comment methods
 #' @export
 #' @examples
+#' \dontrun{ # quite slow
 #' # Recently updated comments
-#' comments_updates()
+#' comments_updates(limit = 2)
+#' }
 comments_updates <- function(
 	comment_type = c("all", "reviews", "shouts"),
 	type = c(

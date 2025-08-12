@@ -3,6 +3,7 @@
 #' Retrieve a user's media ratings
 #' @inheritParams trakt_api_common_parameters
 #' @param rating `integer(1) [NULL]`: Optional rating between `1` and `10` to filter by.
+#' @param limit `integer(1) [NULL]`: Number of items to return. If `NULL` (default), all items are returned.
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @family user data
@@ -17,7 +18,8 @@ user_ratings <- function(
 	user = "me",
 	type = c("movies", "seasons", "shows", "episodes"),
 	rating = NULL,
-	extended = c("min", "full")
+	extended = c("min", "full"),
+	limit = NULL
 ) {
 	check_username(user)
 	type <- match.arg(type)
@@ -31,11 +33,11 @@ user_ratings <- function(
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map_df(user, ~ user_ratings(user = .x, type, rating, extended), .id = "user"))
+		return(map_df(user, ~ user_ratings(user = .x, type, rating, extended, limit), .id = "user"))
 	}
 
 	# Construct URL, make API call
-	url <- build_trakt_url("users", user, "ratings", type, rating, extended = extended)
+	url <- build_trakt_url("users", user, "ratings", type, rating, extended = extended, limit = limit)
 	response <- trakt_get(url = url)
 
 	if (identical(response, tibble())) {
