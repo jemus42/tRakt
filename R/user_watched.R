@@ -32,7 +32,7 @@ user_watched <- function(
 		names(user) <- user
 		return(map_df(
 			user,
-			~ user_watched(user = .x, type = type, noseasons = noseasons, extended = extended),
+			\(x) user_watched(user = x, type = type, noseasons = noseasons, extended = extended),
 			.id = "user"
 		))
 	}

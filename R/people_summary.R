@@ -21,7 +21,7 @@ people_summary <- function(id, extended = c("min", "full")) {
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		return(map_df(id, ~ people_summary(.x, extended)))
+		return(map_df(id, \(x) people_summary(x, extended)))
 	}
 
 	# Construct URL, make API call

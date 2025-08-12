@@ -138,7 +138,7 @@ search_id <- function(
 	extended = c("min", "full")
 ) {
 	if (length(type) > 1) {
-		return(map_df(type, ~ search_id(id, id_type, type = .x, n_results, extended)))
+		return(map_df(type, \(x) search_id(id, id_type, type = x, n_results, extended)))
 	}
 
 	id_type <- match.arg(id_type)

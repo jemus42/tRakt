@@ -48,7 +48,7 @@ user_history <- function(
 		names(user) <- user
 		return(map_df(
 			user,
-			~ user_history(user = .x, type, item_id = item_id, limit, start_at, end_at, extended),
+			\(x) user_history(user = x, type, item_id = item_id, limit, start_at, end_at, extended),
 			.id = "user"
 		))
 	}

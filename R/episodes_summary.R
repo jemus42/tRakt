@@ -16,15 +16,15 @@
 #' episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
 episodes_summary <- function(id, season = 1L, episode = 1L, extended = c("min", "full")) {
 	if (length(id) > 1) {
-		return(map_df(id, ~ episodes_summary(.x, season, episode, extended = extended)))
+		return(map_df(id, \(x) episodes_summary(x, season, episode, extended = extended)))
 	}
 
 	if (length(season) > 1) {
-		return(map_df(season, ~ episodes_summary(id, .x, episode, extended = extended)))
+		return(map_df(season, \(x) episodes_summary(id, x, episode, extended = extended)))
 	}
 
 	if (length(episode) > 1) {
-		return(map_df(episode, ~ episodes_summary(id, season, .x, extended = extended)))
+		return(map_df(episode, \(x) episodes_summary(id, season, x, extended = extended)))
 	}
 
 	extended <- match.arg(extended)

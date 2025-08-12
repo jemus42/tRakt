@@ -27,7 +27,7 @@ seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
 
 	# Vectorize
 	if (length(seasons) > 1) {
-		return(map_df(seasons, ~ seasons_season(id, .x, extended)))
+		return(map_df(seasons, \(x) seasons_season(id, x, extended)))
 	}
 
 	# Basic sanity check

@@ -28,7 +28,7 @@ user_network <- function(
 	relationship <- match.arg(relationship)
 
 	if (length(user) > 1) {
-		return(map_df(user, ~ user_network(relationship, user = .x, extended)))
+		return(map_df(user, \(x) user_network(relationship, user = x, extended)))
 	}
 
 	# Construct URL, make API call

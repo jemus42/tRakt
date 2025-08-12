@@ -20,7 +20,7 @@ user_watchlist <- function(user = "me", type = c("movies", "shows"), extended = 
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map_df(user, ~ user_watchlist(user = .x, type, extended), .id = "user"))
+		return(map_df(user, \(x) user_watchlist(user = x, type, extended), .id = "user"))
 	}
 
 	# Construct URL, make API call

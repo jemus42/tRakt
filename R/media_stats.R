@@ -25,7 +25,7 @@ media_stats <- function(type = c("shows", "movies"), id) {
 	type <- match.arg(type)
 
 	if (length(id) > 1) {
-		return(map_df(id, ~ media_stats(type, .x)))
+		return(map_df(id, \(x) media_stats(type, x)))
 	}
 
 	# Construct URL, make API call
@@ -62,11 +62,11 @@ movies_stats <- function(id) {
 #' @importFrom purrr map_df
 seasons_stats <- function(id, season = 1L) {
 	if (length(id) > 1) {
-		return(map_df(id, ~ seasons_stats(.x, season)))
+		return(map_df(id, \(x) seasons_stats(x, season)))
 	}
 
 	if (length(season) > 1) {
-		return(map_df(season, ~ seasons_stats(id, .x)))
+		return(map_df(season, \(x) seasons_stats(id, x)))
 	}
 
 	# Construct URL, make API call
@@ -85,15 +85,15 @@ seasons_stats <- function(id, season = 1L) {
 #' @importFrom purrr map_df
 episodes_stats <- function(id, season = 1L, episode = 1L) {
 	if (length(id) > 1) {
-		return(map_df(id, ~ episodes_stats(.x, season, episode)))
+		return(map_df(id, \(x) episodes_stats(x, season, episode)))
 	}
 
 	if (length(season) > 1) {
-		return(map_df(season, ~ episodes_stats(id, .x, episode)))
+		return(map_df(season, \(x) episodes_stats(id, x, episode)))
 	}
 
 	if (length(episode) > 1) {
-		return(map_df(episode, ~ episodes_stats(id, season, .x)))
+		return(map_df(episode, \(x) episodes_stats(id, season, x)))
 	}
 
 	# Construct URL, make API call

@@ -17,7 +17,7 @@
 #' }
 movies_releases <- function(id, country = NULL) {
 	if (length(id) > 1) {
-		return(map_df(id, ~ movies_releases(id = .x, country = country)))
+		return(map_df(id, \(x) movies_releases(id = x, country = country)))
 	}
 
 	country <- check_filter_arg(country, filter_type = "countries")

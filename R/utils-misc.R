@@ -57,7 +57,7 @@ build_trakt_url <- function(...) {
 	dots <- list(...)
 
 	# Nuke NULL elements
-	dots <- dots[purrr::map_lgl(dots, ~ !is.null(.x))]
+	dots <- dots[purrr::map_lgl(dots, \(x) !is.null(x))]
 
 	# If there are no named elements, names() will return NULL
 	if (!is.null(names(dots))) {
