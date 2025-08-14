@@ -27,10 +27,6 @@ deps:
 
 .PHONY: test
 test:
-	Rscript -e "devtools::test()"
-
-.PHONY: test
-test:
 	Rscript -e "devtools::test(reporter = 'summary')"
 
 .PHONY: coverage

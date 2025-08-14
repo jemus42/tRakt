@@ -25,7 +25,7 @@ user_stats <- function(user = "me") {
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map(user, ~ user_stats(user = .x)))
+		return(map(user, \(x) user_stats(user = x)))
 	}
 
 	# Construct URL, make API call
