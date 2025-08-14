@@ -57,7 +57,7 @@ build_trakt_url <- function(...) {
 	dots <- list(...)
 
 	# Nuke NULL elements
-	dots <- dots[purrr::map_lgl(dots, \(x) !is.null(x))]
+	dots <- purrr::discard(dots, is.null)
 
 	# If there are no named elements, names() will return NULL
 	if (!is.null(names(dots))) {
@@ -90,7 +90,7 @@ build_trakt_url <- function(...) {
 #'
 #' @return `character(1)`
 #' @keywords internal
-#' @importFrom purrr pluck
+#' @importFrom purrr pluck discard
 apidoc <- function(section, method, key) {
 	if (!requireNamespace("yaml", quietly = TRUE)) {
 		stop("Please install the 'yaml' package")

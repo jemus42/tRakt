@@ -7,7 +7,7 @@
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @importFrom purrr modify_if
-#' @importFrom purrr map_df
+#' @importFrom purrr map list_rbind
 #' @family people data
 #' @family summary methods
 #' @eval apiurl("people", "summary")
@@ -21,7 +21,7 @@ people_summary <- function(id, extended = c("min", "full")) {
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		return(map_df(id, \(x) people_summary(x, extended)))
+		return(map(id, \(x) people_summary(x, extended)) |> list_rbind())
 	}
 
 	# Construct URL, make API call

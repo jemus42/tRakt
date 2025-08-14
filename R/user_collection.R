@@ -18,7 +18,7 @@
 #' @eval apiurl("users", "collection")
 #' @importFrom lubridate ymd_hms
 #' @importFrom dplyr mutate select bind_cols rename everything
-#' @importFrom purrr map map_df pluck
+#' @importFrom purrr map list_rbind pluck
 #' @importFrom rlang is_empty
 #' @examples
 #' \dontrun{
@@ -41,16 +41,15 @@ user_collection <- function(
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map_df(
+		return(map(
 			user,
-			~ user_collection(
-				user = .x,
+			\(x) user_collection(
+				user = x,
 				type = type,
 				unnest_episodes = unnest_episodes,
 				extended = extended
-			),
-			.id = "user"
-		))
+			)
+		) |> list_rbind(names_to = "user"))
 	}
 
 	if (extended == "min") {

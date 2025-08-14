@@ -1,7 +1,7 @@
 # Internal worker ----
 #' @keywords internal
 #' @importFrom tibble as_tibble
-#' @importFrom purrr map_df
+#' @importFrom purrr map list_rbind
 #' @importFrom dplyr select
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr everything
@@ -17,7 +17,7 @@ media_related <- function(
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		return(map_df(id, \(x) media_related(x, type, extended)))
+		return(map(id, \(x) media_related(x, type, extended)) |> list_rbind())
 	}
 
 	# Construct URL, make API call

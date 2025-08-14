@@ -10,7 +10,7 @@
 #' @importFrom lubridate year
 #' @importFrom rlang is_integerish
 #' @importFrom purrr is_integer
-#' @importFrom purrr map_df
+#' @importFrom purrr map list_rbind
 #' @importFrom tibble as_tibble
 #' @note If you want to quickly gather episode data of all available seasons,
 #' see [seasons_summary] and use the `episodes = TRUE` parameter.
@@ -29,7 +29,7 @@ seasons_episodes <- function(id, seasons = 1L, extended = c("min", "full")) {
 
 	# Vectorize
 	if (length(seasons) > 1) {
-		return(map_df(seasons, \(x) seasons_episodes(id, x, extended)))
+		return(map(seasons, \(x) seasons_episodes(id, x, extended)) |> list_rbind())
 	}
 
 	# Basic sanity check

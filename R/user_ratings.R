@@ -9,6 +9,7 @@
 #' @family user data
 #' @eval apiurl("users", "ratings")
 #' @importFrom dplyr bind_cols rename
+#' @importFrom purrr map list_rbind
 #' @examples
 #' \dontrun{
 #' user_ratings(user = "jemus42", "shows")
@@ -33,7 +34,7 @@ user_ratings <- function(
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map_df(user, \(x) user_ratings(user = x, type, rating, extended, limit), .id = "user"))
+		return(map(user, \(x) user_ratings(user = x, type, rating, extended, limit)) |> list_rbind(names_to = "user"))
 	}
 
 	# Construct URL, make API call
