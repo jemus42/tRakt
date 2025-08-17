@@ -2,7 +2,6 @@
 
 #' @keywords internal
 #' @noRd
-#' @importFrom purrr map list_rbind
 #' @importFrom purrr modify_if
 #' @importFrom rlang has_name
 #' @importFrom lubridate as_datetime

@@ -65,21 +65,23 @@ search_query <- function(
 	if (length(type) > 1) {
 		res <- map_df(
 			type,
-			~ search_query(
-				query,
-				type = .x,
-				n_results = n_results,
-				years = years,
-				extended = extended,
-				genres = genres,
-				languages = languages,
-				countries = countries,
-				runtimes = runtimes,
-				ratings = ratings,
-				certifications = certifications,
-				networks = networks,
-				status = status
-			)
+			\(x) {
+				search_query(
+					query,
+					type = x,
+					n_results = n_results,
+					years = years,
+					extended = extended,
+					genres = genres,
+					languages = languages,
+					countries = countries,
+					runtimes = runtimes,
+					ratings = ratings,
+					certifications = certifications,
+					networks = networks,
+					status = status
+				)
+			}
 		)
 		return(res)
 	}

@@ -11,7 +11,6 @@
 #' @family user data
 #' @eval apiurl("users", "history")
 #' @importFrom dplyr bind_cols select rename rename_all
-#' @importFrom purrr map list_rbind
 #' @importFrom rlang is_empty
 #' @inherit trakt_api_common_parameters return
 #' @note For `type = "shows"`, the

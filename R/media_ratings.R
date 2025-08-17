@@ -26,7 +26,6 @@ NULL
 
 #' @keywords internal
 #' @importFrom dplyr mutate
-#' @importFrom purrr map list_rbind
 media_ratings <- function(type = c("shows", "movies"), id) {
 	type <- match.arg(type)
 
@@ -72,7 +71,6 @@ movies_ratings <- function(id) {
 #' @family season data
 #' @export
 #' @importFrom dplyr mutate
-#' @importFrom purrr map list_rbind
 seasons_ratings <- function(id, season = 1L) {
 	if (length(id) > 1) {
 		return(map(id, \(x) seasons_ratings(x, season)) |> list_rbind())
@@ -100,7 +98,6 @@ seasons_ratings <- function(id, season = 1L) {
 #' @family episode data
 #' @export
 #' @importFrom dplyr mutate
-#' @importFrom purrr map list_rbind
 episodes_ratings <- function(id, season = 1L, episode = 1L) {
 	if (length(id) > 1) {
 		return(map(id, \(x) episodes_ratings(x, season, episode)) |> list_rbind())

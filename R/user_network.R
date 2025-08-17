@@ -8,7 +8,6 @@
 #' @note If the specified user is private, you need to be able to make an [authenticated
 #' request][trakt_credentials] and be friends with the user.
 #' @family user data
-#' @importFrom purrr map list_rbind
 #' @importFrom tibble as_tibble
 #' @importFrom tibble remove_rownames
 #' @importFrom rlang has_name

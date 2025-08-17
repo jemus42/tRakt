@@ -19,8 +19,6 @@ NULL
 
 #' @keywords internal
 #' @noRd
-#' @importFrom purrr map list_rbind
-#' @importFrom tibble as_tibble
 media_stats <- function(type = c("shows", "movies"), id) {
 	type <- match.arg(type)
 
@@ -59,7 +57,6 @@ movies_stats <- function(id) {
 #' @eval apiurl("seasons", "stats")
 #' @family season data
 #' @export
-#' @importFrom purrr map list_rbind
 seasons_stats <- function(id, season = 1L) {
 	if (length(id) > 1) {
 		return(map(id, \(x) seasons_stats(x, season)) |> list_rbind())
@@ -82,7 +79,6 @@ seasons_stats <- function(id, season = 1L) {
 #' @eval apiurl("episodes", "stats")
 #' @family episode data
 #' @export
-#' @importFrom purrr map list_rbind
 episodes_stats <- function(id, season = 1L, episode = 1L) {
 	if (length(id) > 1) {
 		return(map(id, \(x) episodes_stats(x, season, episode)) |> list_rbind())

@@ -50,10 +50,10 @@ use_data(trakt_countries, overwrite = TRUE, compress = "xz")
 # Certifications ----
 trakt_certifications <- purrr::map_df(
 	c("movies", "shows"),
-	~ {
+	\(x) {
 		trakt_get(build_trakt_url("certifications", .x)) |>
 			purrr::map_df(as_tibble, .id = "country") |>
-			mutate(type = .x)
+			mutate(type = x)
 	}
 )
 

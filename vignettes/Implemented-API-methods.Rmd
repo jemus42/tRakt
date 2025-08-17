@@ -13,9 +13,9 @@ editor_options:
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  echo = FALSE
+	collapse = TRUE,
+	comment = "#>",
+	echo = FALSE
 )
 
 library(tRakt)
@@ -27,55 +27,59 @@ library(stringr)
 
 ```{r api-list}
 api <- system.file("api-methods.yml", package = "tRakt") |>
-  yaml::read_yaml() 
+	yaml::read_yaml()
 
 api <- api |>
-  map_dfr(~ {
-    map_dfr(.x, as_tibble, .id = "Method")
-  }, .id = "Section")
+	map(\(section) {
+		section |>
+			map(tibble::as_tibble) |>
+			list_rbind(names_to = "Method")
+	}) |>
+	list_rbind(names_to = "Section")
+
 
 pkg_funs <- getNamespaceExports("tRakt") |>
-  str_subset("trakt_get|build_trakt_url", negate = TRUE)
+	str_subset("trakt_get|build_trakt_url", negate = TRUE)
 
 unmentioned <- pkg_funs[!(pkg_funs %in% str_remove_all(api$implementation, pattern = "\\(\\)"))]
 
 format_api_table <- function(xdf) {
-  xdf |>
-    mutate(
-      endpoint = glue::glue("<a href = '{url}'>{endpoint}</a>"),
-      # Section = stringr::str_to_title(Section),
-      # Section = cell_spec(Section, bold = TRUE),
-      Method = str_to_title(Method),
-      Method = str_replace_all(Method, "^Id\\s", "ID "),
-      #implementation = if_else(is.na(implementation), "N/A", implementation),
-      implementation = if_else(
-        implementation == "none",
-        "",
-        glue::glue("<code>{implementation}</code>")
-      ),
-      authentication = if_else(
-        !is.na(authentication),
-        cell_spec("Required", bold = TRUE, color = "white", background = "red"),
-        cell_spec("Optional", bold = FALSE, color = "white", background = "green")
-      ),
-    ) |>
-    select(
-      -url,
-      Endpoint = endpoint,
-      Auth = authentication,
-      Implementation = implementation
-    )
+	xdf |>
+		mutate(
+			endpoint = glue::glue("<a href = '{url}'>{endpoint}</a>"),
+			# Section = stringr::str_to_title(Section),
+			# Section = cell_spec(Section, bold = TRUE),
+			Method = str_to_title(Method),
+			Method = str_replace_all(Method, "^Id\\s", "ID "),
+			#implementation = if_else(is.na(implementation), "N/A", implementation),
+			implementation = if_else(
+				implementation == "none",
+				"",
+				glue::glue("<code>{implementation}</code>")
+			),
+			authentication = if_else(
+				!is.na(authentication),
+				cell_spec("Required", bold = TRUE, color = "white", background = "red"),
+				cell_spec("Optional", bold = FALSE, color = "white", background = "green")
+			),
+		) |>
+		select(
+			-url,
+			Endpoint = endpoint,
+			Auth = authentication,
+			Implementation = implementation
+		)
 }
 
 print_api_table <- function(xdf) {
-  xdf |>
-    kbl(escape = FALSE) |>
-    kable_styling(
-      position = "center",
-      bootstrap_options = c("striped", "hover"),
-      full_width = TRUE
-    ) |>
-    column_spec(column = 3, width_min = "20%")
+	xdf |>
+		kbl(escape = FALSE) |>
+		kable_styling(
+			position = "center",
+			bootstrap_options = c("striped", "hover"),
+			full_width = TRUE
+		) |>
+		column_spec(column = 3, width_min = "20%")
 }
 ```
 
@@ -88,90 +92,90 @@ Note that not all available methods are listed here, especially those geared tow
 
 ```{r api-search}
 api |>
-  filter(Section == "search") |>
-  select(-Section) |>
-  format_api_table() |>
-  print_api_table()
+	filter(Section == "search") |>
+	select(-Section) |>
+	format_api_table() |>
+	print_api_table()
 ```
 
 # Movies
 
 ```{r api-movies}
 api |>
-  filter(Section == "movies") |>
-  select(-Section) |>
-  format_api_table() |>
-  print_api_table()
+	filter(Section == "movies") |>
+	select(-Section) |>
+	format_api_table() |>
+	print_api_table()
 ```
 
 # Shows
 
 ```{r api-shows}
 api |>
-  filter(Section == "shows") |>
-  select(-Section) |>
-  format_api_table() |>
-  print_api_table()
+	filter(Section == "shows") |>
+	select(-Section) |>
+	format_api_table() |>
+	print_api_table()
 ```
 
 ## Seasons
 
 ```{r api-shows-seasons}
 api |>
-  filter(Section == "seasons") |>
-  select(-Section) |>
-  format_api_table() |>
-  print_api_table()
+	filter(Section == "seasons") |>
+	select(-Section) |>
+	format_api_table() |>
+	print_api_table()
 ```
 
 ## Episodes
 
 ```{r api-shows-episodes}
 api |>
-  filter(Section == "episodes") |>
-  select(-Section) |>
-  format_api_table() |>
-  print_api_table()
+	filter(Section == "episodes") |>
+	select(-Section) |>
+	format_api_table() |>
+	print_api_table()
 ```
 
 # People
 
 ```{r api-people}
 api |>
-  filter(Section == "people") |>
-  select(-Section) |>
-  format_api_table() |>
-  print_api_table()
+	filter(Section == "people") |>
+	select(-Section) |>
+	format_api_table() |>
+	print_api_table()
 ```
 
 # Users
 
 ```{r api-users}
 api |>
-  filter(Section == "users") |>
-  select(-Section) |>
-  format_api_table() |>
-  print_api_table()
+	filter(Section == "users") |>
+	select(-Section) |>
+	format_api_table() |>
+	print_api_table()
 ```
 
 # Comments
 
 ```{r api-comments}
 api |>
-  filter(Section == "comments") |>
-  select(-Section) |>
-  format_api_table() |>
-  print_api_table()
+	filter(Section == "comments") |>
+	select(-Section) |>
+	format_api_table() |>
+	print_api_table()
 ```
 
 # Lists
 
 ```{r api-lists}
 api |>
-  filter(Section == "lists") |>
-  select(-Section) |>
-  format_api_table() |>
-  print_api_table()
+	filter(Section == "lists") |>
+	select(-Section) |>
+	format_api_table() |>
+	print_api_table()
 ```
 
 # Misc
@@ -181,11 +185,17 @@ format as package datasets.
 
 ```{r api-misc}
 api |>
-  filter(Section %in% c(
-    "certifications", "countries",
-    "genres", "languages", "networks"
-  )) |>
-  format_api_table() |>
-  select(-Auth) |>
-  print_api_table()
+	filter(
+		Section %in%
+			c(
+				"certifications",
+				"countries",
+				"genres",
+				"languages",
+				"networks"
+			)
+	) |>
+	format_api_table() |>
+	select(-Auth) |>
+	print_api_table()
 ```

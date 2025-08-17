@@ -18,7 +18,7 @@
 #' @eval apiurl("users", "collection")
 #' @importFrom lubridate ymd_hms
 #' @importFrom dplyr mutate select bind_cols rename everything
-#' @importFrom purrr map list_rbind pluck
+#' @importFrom purrr pluck
 #' @importFrom rlang is_empty
 #' @examples
 #' \dontrun{

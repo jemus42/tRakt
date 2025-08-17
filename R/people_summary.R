@@ -7,7 +7,6 @@
 #' @inherit trakt_api_common_parameters return
 #' @export
 #' @importFrom purrr modify_if
-#' @importFrom purrr map list_rbind
 #' @family people data
 #' @family summary methods
 #' @eval apiurl("people", "summary")

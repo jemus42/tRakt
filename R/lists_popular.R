@@ -25,7 +25,7 @@ lists_popular <- function(limit = 10) {
 
 	response |>
 		pull("list") |>
-		select_if(~ !is.data.frame(.x)) |>
+		select_if(\(x) !is.data.frame(x)) |>
 		bind_cols(
 			pluck(response, "list", "ids") |> fix_ids(),
 			pluck(response, "list", "user") |> unpack_user()
@@ -51,7 +51,7 @@ lists_trending <- function(limit = 10) {
 
 	response |>
 		pull("list") |>
-		select_if(~ !is.data.frame(.x)) |>
+		select_if(\(x) !is.data.frame(x)) |>
 		bind_cols(
 			pluck(response, "list", "ids") |> fix_ids(),
 			pluck(response, "list", "user") |> unpack_user()

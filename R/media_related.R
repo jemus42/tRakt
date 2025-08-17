@@ -1,11 +1,7 @@
 # Internal worker ----
 #' @keywords internal
-#' @importFrom tibble as_tibble
-#' @importFrom purrr map list_rbind
-#' @importFrom dplyr select
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr everything
-#' @importFrom dplyr mutate
 #' @noRd
 media_related <- function(
 	id,

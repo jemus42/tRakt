@@ -10,7 +10,6 @@
 #' @export
 #' @eval apiurl("movies", "releases")
 #' @family movie data
-#' @importFrom purrr map list_rbind
 #' @examples
 #' \dontrun{
 #' movies_releases("tron-legacy-2010")

@@ -9,8 +9,6 @@
 #' @importFrom lubridate year
 #' @importFrom rlang is_integerish
 #' @importFrom purrr is_integer
-#' @importFrom purrr map list_rbind
-#' @importFrom tibble as_tibble
 #' @note If you want to quickly gather episode data of all available seasons,
 #' see [seasons_summary] and use the `episodes = TRUE` parameter.
 #' @family season data

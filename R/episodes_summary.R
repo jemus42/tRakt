@@ -10,7 +10,6 @@
 #' @eval apiurl("episodes", "summary")
 #' @importFrom dplyr select rename bind_cols mutate
 #' @importFrom rlang has_name
-#' @importFrom purrr map list_rbind
 #' @examples
 #' # Get just this one episode with its ratings, votes, etc.
 #' episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
