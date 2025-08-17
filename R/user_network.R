@@ -8,7 +8,6 @@
 #' @note If the specified user is private, you need to be able to make an [authenticated
 #' request][trakt_credentials] and be friends with the user.
 #' @family user data
-#' @importFrom purrr map_df
 #' @importFrom tibble as_tibble
 #' @importFrom tibble remove_rownames
 #' @importFrom rlang has_name
@@ -28,7 +27,7 @@ user_network <- function(
 	relationship <- match.arg(relationship)
 
 	if (length(user) > 1) {
-		return(map_df(user, ~ user_network(relationship, user = .x, extended)))
+		return(map(user, \(x) user_network(relationship, user = x, extended)) |> list_rbind())
 	}
 
 	# Construct URL, make API call

@@ -19,13 +19,11 @@ NULL
 
 #' @keywords internal
 #' @noRd
-#' @importFrom purrr map_df
-#' @importFrom tibble as_tibble
 media_stats <- function(type = c("shows", "movies"), id) {
 	type <- match.arg(type)
 
 	if (length(id) > 1) {
-		return(map_df(id, ~ media_stats(type, .x)))
+		return(map(id, \(x) media_stats(type, x)) |> list_rbind())
 	}
 
 	# Construct URL, make API call
@@ -59,14 +57,13 @@ movies_stats <- function(id) {
 #' @eval apiurl("seasons", "stats")
 #' @family season data
 #' @export
-#' @importFrom purrr map_df
 seasons_stats <- function(id, season = 1L) {
 	if (length(id) > 1) {
-		return(map_df(id, ~ seasons_stats(.x, season)))
+		return(map(id, \(x) seasons_stats(x, season)) |> list_rbind())
 	}
 
 	if (length(season) > 1) {
-		return(map_df(season, ~ seasons_stats(id, .x)))
+		return(map(season, \(x) seasons_stats(id, x)) |> list_rbind())
 	}
 
 	# Construct URL, make API call
@@ -82,18 +79,17 @@ seasons_stats <- function(id, season = 1L) {
 #' @eval apiurl("episodes", "stats")
 #' @family episode data
 #' @export
-#' @importFrom purrr map_df
 episodes_stats <- function(id, season = 1L, episode = 1L) {
 	if (length(id) > 1) {
-		return(map_df(id, ~ episodes_stats(.x, season, episode)))
+		return(map(id, \(x) episodes_stats(x, season, episode)) |> list_rbind())
 	}
 
 	if (length(season) > 1) {
-		return(map_df(season, ~ episodes_stats(id, .x, episode)))
+		return(map(season, \(x) episodes_stats(id, x, episode)) |> list_rbind())
 	}
 
 	if (length(episode) > 1) {
-		return(map_df(episode, ~ episodes_stats(id, season, .x)))
+		return(map(episode, \(x) episodes_stats(id, season, x)) |> list_rbind())
 	}
 
 	# Construct URL, make API call

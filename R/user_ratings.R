@@ -33,7 +33,10 @@ user_ratings <- function(
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map_df(user, ~ user_ratings(user = .x, type, rating, extended, limit), .id = "user"))
+		return(
+			map(user, \(x) user_ratings(user = x, type, rating, extended, limit)) |>
+				list_rbind(names_to = "user")
+		)
 	}
 
 	# Construct URL, make API call

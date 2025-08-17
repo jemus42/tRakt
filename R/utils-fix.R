@@ -129,7 +129,7 @@ fix_tibble_response <- function(response) {
 #' @note Currently only for [character()] variables. Because this might nuke classes.
 fix_missing <- function(x) {
 	if (inherits(x, "character")) {
-		x <- map_chr(x, ~ if_else(identical(.x, ""), NA_character_, .x))
+		x <- map_chr(x, \(x) if_else(identical(x, ""), NA_character_, x))
 	}
 	x
 }

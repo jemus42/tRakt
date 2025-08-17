@@ -3,9 +3,6 @@
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @export
-#' @importFrom tibble as_tibble
-#' @importFrom tibble tibble
-#' @importFrom purrr map_df
 #' @family user data
 #' @eval apiurl("users", "watchlist")
 #' @examples
@@ -20,7 +17,10 @@ user_watchlist <- function(user = "me", type = c("movies", "shows"), extended = 
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map_df(user, ~ user_watchlist(user = .x, type, extended), .id = "user"))
+		return(
+			map(user, \(x) user_watchlist(user = x, type, extended)) |>
+				list_rbind(names_to = "user")
+		)
 	}
 
 	# Construct URL, make API call
