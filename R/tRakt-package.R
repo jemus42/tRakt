@@ -14,6 +14,10 @@
 # The following block is used by usethis to automatically manage
 # roxygen namespace tags. Modify with care!
 ## usethis namespace: start
+#' @importFrom dplyr mutate
+#' @importFrom dplyr select
+#' @importFrom purrr list_rbind
+#' @importFrom purrr map
 #' @importFrom rlang .data
 #' @importFrom tibble as_tibble
 #' @importFrom tibble tibble
