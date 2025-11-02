@@ -66,7 +66,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Getting Started</h1>
                         <h4 data-toc-skip class="author">Lukas Burk</h4>
             
-            <h4 data-toc-skip class="date">2025-09-02</h4>
+            <h4 data-toc-skip class="date">2025-11-02</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/vignettes/tRakt.Rmd" class="external-link"><code>vignettes/tRakt.Rmd</code></a></small>
       <div class="d-none name"><code>tRakt.Rmd</code></div>
@@ -123,18 +123,18 @@ release year of the movie.</p>
 <span><span class="fu"><a href="../reference/watched_media.html">movies_watched</a></span><span class="op">(</span>period <span class="op">=</span> <span class="st">"yearly"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1990</span>, <span class="fl">2000</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">watcher_count</span>, <span class="va">title</span>, <span class="va">year</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 3</span></span></span>
-<span><span class="co">#&gt;    watcher_count title                     year</span></span>
-<span><span class="co">#&gt;            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>           962 The Matrix                <span style="text-decoration: underline;">1</span>999</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>           786 Fight Club                <span style="text-decoration: underline;">1</span>999</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>           657 The Shawshank Redemption  <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>           623 Toy Story                 <span style="text-decoration: underline;">1</span>995</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>           616 Jurassic Park             <span style="text-decoration: underline;">1</span>993</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>           584 Happy Gilmore             <span style="text-decoration: underline;">1</span>996</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>           559 Forrest Gump              <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>           524 The Truman Show           <span style="text-decoration: underline;">1</span>998</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>           512 Pulp Fiction              <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>           505 Se7en                     <span style="text-decoration: underline;">1</span>995</span></span></code></pre></div>
+<span><span class="co">#&gt;    watcher_count title                           year</span></span>
+<span><span class="co">#&gt;            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>          <span style="text-decoration: underline;">1</span>643 Hocus Pocus                     <span style="text-decoration: underline;">1</span>993</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>          <span style="text-decoration: underline;">1</span>501 The Nightmare Before Christmas  <span style="text-decoration: underline;">1</span>993</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>           808 Scream                          <span style="text-decoration: underline;">1</span>996</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>           637 The Matrix                      <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>           528 Casper                          <span style="text-decoration: underline;">1</span>995</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>           499 Fight Club                      <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>           489 Scary Movie                     <span style="text-decoration: underline;">2</span>000</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>           445 The Shawshank Redemption        <span style="text-decoration: underline;">1</span>994</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>           435 The Silence of the Lambs        <span style="text-decoration: underline;">1</span>991</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>           419 Halloweentown                   <span style="text-decoration: underline;">1</span>998</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="finding-things-and-the-right-amount">Finding Things (and the right amount)<a class="anchor" aria-label="anchor" href="#finding-things-and-the-right-amount"></a>
