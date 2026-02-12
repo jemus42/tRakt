@@ -65,21 +65,23 @@ search_query <- function(
 	if (length(type) > 1) {
 		res <- map_df(
 			type,
-			~ search_query(
-				query,
-				type = .x,
-				n_results = n_results,
-				years = years,
-				extended = extended,
-				genres = genres,
-				languages = languages,
-				countries = countries,
-				runtimes = runtimes,
-				ratings = ratings,
-				certifications = certifications,
-				networks = networks,
-				status = status
-			)
+			\(x) {
+				search_query(
+					query,
+					type = x,
+					n_results = n_results,
+					years = years,
+					extended = extended,
+					genres = genres,
+					languages = languages,
+					countries = countries,
+					runtimes = runtimes,
+					ratings = ratings,
+					certifications = certifications,
+					networks = networks,
+					status = status
+				)
+			}
 		)
 		return(res)
 	}
@@ -138,7 +140,7 @@ search_id <- function(
 	extended = c("min", "full")
 ) {
 	if (length(type) > 1) {
-		return(map_df(type, ~ search_id(id, id_type, type = .x, n_results, extended)))
+		return(map_df(type, \(x) search_id(id, id_type, type = x, n_results, extended)))
 	}
 
 	id_type <- match.arg(id_type)

@@ -10,21 +10,20 @@
 #' @eval apiurl("episodes", "summary")
 #' @importFrom dplyr select rename bind_cols mutate
 #' @importFrom rlang has_name
-#' @importFrom purrr map
 #' @examples
 #' # Get just this one episode with its ratings, votes, etc.
 #' episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
 episodes_summary <- function(id, season = 1L, episode = 1L, extended = c("min", "full")) {
 	if (length(id) > 1) {
-		return(map_df(id, ~ episodes_summary(.x, season, episode, extended = extended)))
+		return(map(id, \(x) episodes_summary(x, season, episode, extended = extended)) |> list_rbind())
 	}
 
 	if (length(season) > 1) {
-		return(map_df(season, ~ episodes_summary(id, .x, episode, extended = extended)))
+		return(map(season, \(x) episodes_summary(id, x, episode, extended = extended)) |> list_rbind())
 	}
 
 	if (length(episode) > 1) {
-		return(map_df(episode, ~ episodes_summary(id, season, .x, extended = extended)))
+		return(map(episode, \(x) episodes_summary(id, season, x, extended = extended)) |> list_rbind())
 	}
 
 	extended <- match.arg(extended)

@@ -5,6 +5,9 @@
   - `seasons_season()` now wraps new(?) endpoint [shows/:id/seasons/:season/info](https://trakt.docs.apiary.io/#reference/seasons/season/get-single-seasons-for-a-show).
 - Start using [{vcr}](https://docs.ropensci.org/vcr/articles/vcr.html#what-happens-if-the-api-changes) for recording API responses.
 - Bump `{testthat}` dependency to `>=3.0.0`, which had been necessary since adopting 3e.
+- Modernize interal `{purrr}` usage
+  - Swap purrr-style anonymous functions `~ .x` with base-R `\(x) x`-style ones
+  - Substitute `map_df()` with `map()` + `list_rbind()`
 
 # tRakt 0.17.0
 

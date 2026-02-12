@@ -10,14 +10,13 @@
 #' @export
 #' @eval apiurl("movies", "releases")
 #' @family movie data
-#' @importFrom purrr map_df
 #' @examples
 #' \dontrun{
 #' movies_releases("tron-legacy-2010")
 #' }
 movies_releases <- function(id, country = NULL) {
 	if (length(id) > 1) {
-		return(map_df(id, ~ movies_releases(id = .x, country = country)))
+		return(map(id, \(x) movies_releases(id = x, country = country)) |> list_rbind())
 	}
 
 	country <- check_filter_arg(country, filter_type = "countries")
