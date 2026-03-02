@@ -5,122 +5,122 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:41 GMT
+      date: Mon, 02 Mar 2026 11:23:16 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8e8c5d0ecf59-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"8c7bf4c2a3d10e54c3c7174a49a903dc"
+      expires: Mon, 02 Mar 2026 19:23:16 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:41 GMT
-      x-show-updated-at: '2025-08-03T08:50:13.000Z'
-      etag: W/"872dc6209f076674d1667fecdc19b802"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":998,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: c804ad28-0410-4f20-9db2-ec2471a74604
-      x-runtime: '0.036372'
-      cf-cache-status: EXPIRED
-      speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      x-request-id: b00fb431-3637-4a91-a2ef-3c88a40e7af4
+      x-runtime: '0.011870'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600740d8167754-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '{"rating":8.59678,"votes":21333,"distribution":{"1":210,"2":48,"3":73,"4":107,"5":255,"6":700,"7":2494,"8":4887,"9":5172,"10":7385}}'
-  recorded_at: 2025-08-04 08:06:41
+      string: '{"rating":8.53768,"votes":21816,"distribution":{"1":202,"2":67,"3":86,"4":123,"5":282,"6":776,"7":2668,"8":5179,"9":5332,"10":7101}}'
+  recorded_at: 2026-03-02 11:33:30
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/inception-2010/ratings
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:41 GMT
+      date: Mon, 02 Mar 2026 11:33:30 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8e8dbf52cf59-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
-      x-content-type-options: nosniff
-      x-download-options: noopen
-      x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 15:10:24 GMT
-      x-movie-updated-at: '2025-08-03T17:10:45.000Z'
-      etag: W/"ba1f5c228e2a68d084338f815c7cddba"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"UNAUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":984,"until":"2025-08-04T07:15:00Z"}'
-      x-request-id: e4f11403-898d-48eb-8e14-bc1172430db1
-      x-runtime: '0.010525'
       cf-cache-status: HIT
-      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-allow-origin: '*'
+      age: '613'
+      cache-control: public, max-age=2678400, s-maxage=3600
+      last-modified: Mon, 02 Mar 2026 11:23:17 GMT
       server: cloudflare
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      cache-tag: movie
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      cf-ray: 9d60164339759fd0-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '{"rating":8.63503,"votes":80992,"distribution":{"1":415,"2":191,"3":213,"4":447,"5":1030,"6":3064,"7":8172,"8":18300,"9":22569,"10":26575}}'
-  recorded_at: 2025-08-04 08:06:41
+      string: '{"rating":8.62665,"votes":85876,"distribution":{"1":387,"2":202,"3":235,"4":482,"5":1085,"6":3366,"7":8676,"8":19764,"9":23857,"10":27822}}'
+  recorded_at: 2026-03-02 11:33:30
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/futurama/ratings
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:41 GMT
+      date: Mon, 02 Mar 2026 11:23:16 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8e8c5d0ecf59-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"8c7bf4c2a3d10e54c3c7174a49a903dc"
+      expires: Mon, 02 Mar 2026 19:23:16 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:41 GMT
-      x-show-updated-at: '2025-08-03T08:50:13.000Z'
-      etag: W/"872dc6209f076674d1667fecdc19b802"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":998,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: c804ad28-0410-4f20-9db2-ec2471a74604
-      x-runtime: '0.036372'
-      cf-cache-status: EXPIRED
-      speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      x-request-id: b00fb431-3637-4a91-a2ef-3c88a40e7af4
+      x-runtime: '0.011870'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600740d8167754-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '{"rating":8.59678,"votes":21333,"distribution":{"1":210,"2":48,"3":73,"4":107,"5":255,"6":700,"7":2494,"8":4887,"9":5172,"10":7385}}'
-  recorded_at: 2025-08-04 08:06:41
+      string: '{"rating":8.53768,"votes":21816,"distribution":{"1":202,"2":67,"3":86,"4":123,"5":282,"6":776,"7":2668,"8":5179,"9":5332,"10":7101}}'
+  recorded_at: 2026-03-02 11:33:30
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/futurama/ratings
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:41 GMT
+      date: Mon, 02 Mar 2026 11:23:16 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8e8c5d0ecf59-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"8c7bf4c2a3d10e54c3c7174a49a903dc"
+      expires: Mon, 02 Mar 2026 19:23:16 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:41 GMT
-      x-show-updated-at: '2025-08-03T08:50:13.000Z'
-      etag: W/"872dc6209f076674d1667fecdc19b802"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":998,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: c804ad28-0410-4f20-9db2-ec2471a74604
-      x-runtime: '0.036372'
-      cf-cache-status: EXPIRED
-      speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      x-request-id: b00fb431-3637-4a91-a2ef-3c88a40e7af4
+      x-runtime: '0.011870'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600740d8167754-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '{"rating":8.59678,"votes":21333,"distribution":{"1":210,"2":48,"3":73,"4":107,"5":255,"6":700,"7":2494,"8":4887,"9":5172,"10":7385}}'
-  recorded_at: 2025-08-04 08:06:41
-recorded_with: VCR-vcr/2.0.0
+      string: '{"rating":8.53768,"votes":21816,"distribution":{"1":202,"2":67,"3":86,"4":123,"5":282,"6":776,"7":2668,"8":5179,"9":5332,"10":7101}}'
+  recorded_at: 2026-03-02 11:33:30
+recorded_with: VCR-vcr/2.1.0

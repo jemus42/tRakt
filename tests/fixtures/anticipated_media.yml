@@ -5,197 +5,244 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:46 GMT
+      date: Mon, 02 Mar 2026 11:33:32 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8ea9dd797552-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      age: '623'
+      cache-control: public, max-age=2678400, s-maxage=3600
+      last-modified: Mon, 02 Mar 2026 11:23:09 GMT
+      server: cloudflare
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      x-pagination-page: '1'
+      cache-tag: discover,anticipated,movie
+      x-pagination-item-count: '1874'
       x-pagination-limit: '5'
-      expires: Mon, 04 Aug 2025 16:06:46 GMT
-      x-pagination-page-count: '654'
-      x-pagination-item-count: '3269'
-      etag: W/"ac78ac101000df593fb864deb54340d1"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":897,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: d27ed715-badd-420e-92f2-c7e14ebf77a6
-      x-runtime: '0.596932'
-      cf-cache-status: EXPIRED
+      x-pagination-page: '1'
+      x-pagination-page-count: '375'
       speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      content-encoding: gzip
+      cf-ray: 9d60164c2ceefe9e-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '[{"list_count":38359,"movie":{"title":"Avatar: Fire and Ash","year":2025,"ids":{"trakt":62544,"slug":"avatar-fire-and-ash-2025","imdb":"tt1757678","tmdb":83533}}},{"list_count":24432,"movie":{"title":"Avatar
-        4","year":2029,"ids":{"trakt":133603,"slug":"avatar-4-2029","imdb":"tt3095356","tmdb":216527}}},{"list_count":18651,"movie":{"title":"Avatar
-        5","year":2031,"ids":{"trakt":235669,"slug":"avatar-5-2031","imdb":"tt5637536","tmdb":393209}}},{"list_count":18649,"movie":{"title":"Avengers:
-        Doomsday","year":2026,"ids":{"trakt":806490,"slug":"avengers-doomsday-2026","imdb":"tt21357150","tmdb":1003596}}},{"list_count":17647,"movie":{"title":"Avengers:
-        Secret Wars","year":2027,"ids":{"trakt":806489,"slug":"avengers-secret-wars-2027","imdb":"tt21361444","tmdb":1003598}}}]'
-  recorded_at: 2025-08-04 08:06:46
+      string: '[{"list_count":24742,"movie":{"title":"Avengers: Doomsday","year":2026,"ids":{"trakt":806490,"slug":"avengers-doomsday-2026","imdb":"tt21357150","tmdb":1003596,"plex":{"guid":"62deb8bf9576053a6b5c5ee7","slug":"avengers-doomsday"}},"tagline":"","overview":"The
+        Avengers, Wakandans, Fantastic Four, Thunderbolts, and X-Men all fight against
+        Doctor Doom. Plot TBA.","runtime":90,"country":"us","homepage":"https://www.marvel.com/movies/avengers-doomsday","status":"post
+        production","rating":7.61538,"votes":65,"comment_count":6,"updated_at":"2026-03-02T08:41:23.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","en","es","fa","fr","he","hi","hr","hu","ja","ka","ko","ml","my","pt","ro","ru","th","tr","uk","vi","zh"],"genres":["science-fiction","superhero","action","adventure"],"subgenres":["based-on-comic","marvel-cinematic-universe-mcu","superhero-team"],"original_title":"Avengers:
+        Doomsday","images":{"fanart":["media.trakt.tv/images/movies/000/806/490/fanarts/medium/af94d52c6e.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/806/490/posters/medium/b8f5a22c56.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/806/490/logos/medium/1c077b6815.png.webp"],"banner":[],"thumb":["media.trakt.tv/images/movies/000/806/490/thumbs/medium/9ffc704adb.jpg.webp"],"clearart":[]},"colors":{"poster":["#A4BF91","#172019"]},"released":"2026-12-18","after_credits":false,"during_credits":false}},{"list_count":13796,"movie":{"title":"Spider-Man:
+        Brand New Day","year":2026,"ids":{"trakt":905132,"slug":"spider-man-brand-new-day-2026","imdb":"tt22084616","tmdb":969681,"plex":{"guid":"5ed8a6246e2d7200411126cf","slug":"spider-man-brand-new-day"}},"tagline":"","overview":"Four
+        years after the events of Spider-Man: No Way Home, Peter Parker is no more
+        and Spider-Man is at the top of his game keeping New York City safe. Things
+        are going well until an unusual trail of crimes pulls Spider-Man into a web
+        of mystery larger than he''s ever faced before. In order to take on what''s
+        ahead, Spider-Man not only needs to be at the top of his physical and mental
+        game, but he must also be prepared to face the repercussions of his past!","runtime":90,"country":"us","homepage":"https://www.marvel.com/movies/spider-man-brand-new-day","status":"post
+        production","rating":7.6129,"votes":31,"comment_count":2,"updated_at":"2026-03-02T08:40:07.000Z","language":"en","languages":["en"],"available_translations":["az","bg","cs","en","es","fr","he","hu","ja","ka","ko","pl","pt","ro","ru","th","uk","vi","zh"],"genres":["science-fiction","action","adventure","superhero"],"subgenres":["super-power","based-on-comic","marvel-cinematic-universe-mcu","masked-superhero","secret-identity"],"original_title":"Spider-Man:
+        Brand New Day","images":{"fanart":["media.trakt.tv/images/movies/000/905/132/fanarts/medium/638a312284.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/905/132/posters/medium/ff77450a46.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/905/132/logos/medium/0af84e42ac.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#CD2923","#020203"]},"released":"2026-07-31","after_credits":false,"during_credits":false}},{"list_count":13073,"movie":{"title":"Project
+        Hail Mary","year":2026,"ids":{"trakt":531178,"slug":"project-hail-mary-2026","imdb":"tt12042730","tmdb":687163,"plex":{"guid":"5e91843e9bec79003fe50ffb","slug":"project-hail-mary"}},"tagline":"Believe
+        in the Hail Mary.","overview":"Science teacher Ryland Grace wakes up on a
+        spaceship light years from home with no recollection of who he is or how he
+        got there. As his memory returns, he begins to uncover his mission: solve
+        the riddle of the mysterious substance causing the sun to die out. He must
+        call on his scientific knowledge and unorthodox ideas to save everything on
+        Earth from extinction… but an unexpected friendship means he may not have
+        to do it alone.","runtime":157,"country":"us","trailer":"https://youtube.com/watch?v=P0XN3-n-2Lo","homepage":"https://www.amazon.com/salp/projecthailmary?hhf","status":"post
+        production","rating":6.95,"votes":20,"comment_count":7,"updated_at":"2026-03-02T08:40:20.000Z","language":"en","languages":["en"],"available_translations":["az","bg","cs","de","en","es","et","fi","fr","he","hr","hu","it","ja","ka","ko","lv","nl","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"],"genres":["science-fiction","adventure","mystery"],"subgenres":["space","space-travel"],"original_title":"Project
+        Hail Mary","images":{"fanart":["media.trakt.tv/images/movies/000/531/178/fanarts/medium/3d45964b29.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/531/178/posters/medium/ffd0e05d42.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/531/178/logos/medium/21efcafc56.png.webp"],"banner":[],"thumb":["media.trakt.tv/images/movies/000/531/178/thumbs/medium/a1b2372997.jpg.webp"],"clearart":[]},"colors":{"poster":["#A19F92","#23383B"]},"released":"2026-03-13","after_credits":false,"during_credits":false,"certification":"PG-13"}},{"list_count":12987,"movie":{"title":"Star
+        Wars: The Mandalorian and Grogu","year":2026,"ids":{"trakt":993003,"slug":"star-wars-the-mandalorian-and-grogu-2026","imdb":"tt30825738","tmdb":1228710,"plex":{"guid":"659eea0148cee3ee85e48609","slug":"the-mandalorian-and-grogu-2026"}},"tagline":"If
+        you''re searching for new adventure, \"this is the way.\"","overview":"The
+        evil Empire has fallen, and Imperial warlords remain scattered throughout
+        the galaxy. As the fledgling New Republic works to protect everything the
+        Rebellion fought for, they have enlisted the help of legendary Mandalorian
+        bounty hunter Din Djarin and his young apprentice Grogu.","runtime":90,"country":"us","trailer":"https://youtube.com/watch?v=IHWlvwu8t1w","homepage":"https://www.starwars.com/films/star-wars-the-mandalorian-and-grogu","status":"post
+        production","rating":7.25,"votes":52,"comment_count":1,"updated_at":"2026-02-27T08:42:05.000Z","language":"en","languages":["en"],"available_translations":["bg","cs","de","en","es","fi","fr","he","hr","hu","ka","ko","lv","nl","pl","pt","ru","sv","th","tr","uk","vi","zh"],"genres":["science-fiction","adventure","action"],"subgenres":["based-on-tv-series","space-opera","bounty-hunter"],"original_title":"Star
+        Wars: The Mandalorian and Grogu","images":{"fanart":["media.trakt.tv/images/movies/000/993/003/fanarts/medium/c993436a5f.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/993/003/posters/medium/8bbc6b3ad1.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/993/003/logos/medium/05a92bbcf4.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#F2E6C6","#8F5828"]},"released":"2026-05-22","after_credits":false,"during_credits":false}},{"list_count":12335,"movie":{"title":"Dune:
+        Part Three","year":2026,"ids":{"trakt":943606,"slug":"dune-part-three-2026","imdb":"tt31378509","tmdb":1170608,"plex":{"guid":"65d514b7e0e20b8c84ece2f6","slug":"dune-messiah-2026"}},"tagline":"","overview":"The
+        third and final installment in Villeneuve''s Dune trilogy. Based on Frank
+        Herbert''s novel Dune Messiah.","runtime":90,"country":"us","status":"post
+        production","rating":7.73684,"votes":38,"comment_count":2,"updated_at":"2026-02-25T08:32:42.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","de","en","es","et","fa","fi","fr","he","hu","ja","ka","ko","lo","lt","lv","pl","pt","ro","ru","sv","th","uk","vi","zh"],"genres":["science-fiction","adventure"],"subgenres":[],"original_title":"Dune:
+        Part Three","images":{"fanart":["media.trakt.tv/images/movies/000/943/606/fanarts/medium/225e3e89a5.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/943/606/posters/medium/54780292f6.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#9D4921","#5B3A5D"]},"released":"2026-12-18","after_credits":false,"during_credits":false}}]'
+  recorded_at: 2026-03-02 11:33:32
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/anticipated?limit=5&extended=full
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:47 GMT
+      date: Mon, 02 Mar 2026 11:33:32 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8eae8db47552-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      age: '622'
+      cache-control: public, max-age=2678400, s-maxage=3600
+      last-modified: Mon, 02 Mar 2026 11:23:09 GMT
+      server: cloudflare
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      x-pagination-page: '1'
+      cache-tag: discover,anticipated,movie
+      x-pagination-item-count: '1874'
       x-pagination-limit: '5'
-      expires: Mon, 04 Aug 2025 16:06:46 GMT
-      x-pagination-page-count: '654'
-      x-pagination-item-count: '3269'
-      etag: W/"ac78ac101000df593fb864deb54340d1"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":885,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: 0153d0a0-fc86-4e7e-9a3c-668fcb380774
-      x-runtime: '0.535806'
-      cf-cache-status: EXPIRED
+      x-pagination-page: '1'
+      x-pagination-page-count: '375'
       speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      content-encoding: gzip
+      cf-ray: 9d60164d3f72fe9e-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '[{"list_count":38359,"movie":{"title":"Avatar: Fire and Ash","year":2025,"ids":{"trakt":62544,"slug":"avatar-fire-and-ash-2025","imdb":"tt1757678","tmdb":83533},"tagline":"","overview":"In
-        the wake of the devastating war against the RDA and the loss of their eldest
-        son, Jake Sully and Neytiri face a new threat on Pandora: the Ash People,
-        a violent and power-hungry Na''vi tribe led by the ruthless Varang. Jake''s
-        family must fight for their survival and the future of Pandora in a conflict
-        that pushes them to their emotional and physical limits.","released":"2025-12-19","runtime":192,"country":"us","trailer":"https://youtube.com/watch?v=SKe4G3OfUew","homepage":"http://www.avatar.com/movies/avatar-fire-and-ash","status":"post
-        production","rating":7.42,"votes":150,"comment_count":2,"updated_at":"2025-08-03T08:06:08.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","de","en","es","fr","he","hr","hu","it","ja","ka","ko","lv","nl","pl","pt","ro","ru","sk","sv","th","tr","uk","vi","zh"],"genres":["adventure","science-fiction","fantasy"],"subgenres":[],"certification":null,"original_title":"Avatar:
-        Fire and Ash","after_credits":false,"during_credits":false}},{"list_count":24432,"movie":{"title":"Avatar
-        4","year":2029,"ids":{"trakt":133603,"slug":"avatar-4-2029","imdb":"tt3095356","tmdb":216527},"tagline":"","overview":"The
-        fourth installment of the Avatar franchise.","released":"2029-12-21","runtime":1,"country":"us","trailer":null,"homepage":"http://www.avatar.com/movies","status":"in
-        production","rating":6.82558,"votes":86,"comment_count":3,"updated_at":"2025-07-31T09:09:47.000Z","language":"en","languages":["en"],"available_translations":["bg","en","es","fr","he","ja","ka","ko","pt","ru","uk","zh"],"genres":["adventure","science-fiction","fantasy"],"subgenres":[],"certification":null,"original_title":"Avatar
-        4","after_credits":false,"during_credits":false}},{"list_count":18651,"movie":{"title":"Avatar
-        5","year":2031,"ids":{"trakt":235669,"slug":"avatar-5-2031","imdb":"tt5637536","tmdb":393209},"tagline":"","overview":"The
-        fifth installment of the Avatar franchise.","released":"2031-12-19","runtime":1,"country":"us","trailer":null,"homepage":"http://www.avatar.com/movies","status":"in
-        production","rating":5.95918,"votes":49,"comment_count":5,"updated_at":"2025-07-23T08:39:34.000Z","language":"en","languages":["en"],"available_translations":["bg","en","es","fr","he","ja","ka","ko","pt","ru","uk","zh"],"genres":["adventure","science-fiction","fantasy"],"subgenres":[],"certification":null,"original_title":"Avatar
-        5","after_credits":false,"during_credits":false}},{"list_count":18649,"movie":{"title":"Avengers:
-        Doomsday","year":2026,"ids":{"trakt":806490,"slug":"avengers-doomsday-2026","imdb":"tt21357150","tmdb":1003596},"tagline":"","overview":"The
+      string: '[{"list_count":24742,"movie":{"title":"Avengers: Doomsday","year":2026,"ids":{"trakt":806490,"slug":"avengers-doomsday-2026","imdb":"tt21357150","tmdb":1003596,"plex":{"guid":"62deb8bf9576053a6b5c5ee7","slug":"avengers-doomsday"}},"tagline":"","overview":"The
         Avengers, Wakandans, Fantastic Four, Thunderbolts, and X-Men all fight against
-        Doctor Doom. Plot TBA.","released":"2026-12-18","runtime":90,"country":"us","trailer":null,"homepage":"http://www.marvel.com/movies/avengers-doomsday","status":"in
-        production","rating":7.10811,"votes":37,"comment_count":7,"updated_at":"2025-08-03T08:07:13.000Z","language":"en","languages":["en"],"available_translations":["en","es","fr","he","ja","ka","ko","my","pt","ro","ru","tr","uk","vi","zh"],"genres":["science-fiction","superhero"],"subgenres":["superhero","superhero-team"],"certification":null,"original_title":"Avengers:
-        Doomsday","after_credits":false,"during_credits":false}},{"list_count":17647,"movie":{"title":"Avengers:
-        Secret Wars","year":2027,"ids":{"trakt":806489,"slug":"avengers-secret-wars-2027","imdb":"tt21361444","tmdb":1003598},"tagline":"","overview":"An
-        upcoming film in Phase Six of the Marvel Cinematic Universe (MCU) and the
-        finale of The Multiverse Saga. Plot TBA.","released":"2027-12-17","runtime":90,"country":"us","trailer":null,"homepage":"http://www.marvel.com/movies/avengers-secret-wars","status":"planned","rating":7.14815,"votes":27,"comment_count":0,"updated_at":"2025-08-02T08:06:25.000Z","language":"en","languages":["en"],"available_translations":["en","es","fr","he","ka","ko","pt","ro","ru","tr","uk","vi","zh"],"genres":["science-fiction","superhero"],"subgenres":["superhero","superhero-team"],"certification":null,"original_title":"Avengers:
-        Secret Wars","after_credits":false,"during_credits":false}}]'
-  recorded_at: 2025-08-04 08:06:47
+        Doctor Doom. Plot TBA.","runtime":90,"country":"us","homepage":"https://www.marvel.com/movies/avengers-doomsday","status":"post
+        production","rating":7.61538,"votes":65,"comment_count":6,"updated_at":"2026-03-02T08:41:23.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","en","es","fa","fr","he","hi","hr","hu","ja","ka","ko","ml","my","pt","ro","ru","th","tr","uk","vi","zh"],"genres":["science-fiction","superhero","action","adventure"],"subgenres":["based-on-comic","marvel-cinematic-universe-mcu","superhero-team"],"original_title":"Avengers:
+        Doomsday","images":{"fanart":["media.trakt.tv/images/movies/000/806/490/fanarts/medium/af94d52c6e.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/806/490/posters/medium/b8f5a22c56.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/806/490/logos/medium/1c077b6815.png.webp"],"banner":[],"thumb":["media.trakt.tv/images/movies/000/806/490/thumbs/medium/9ffc704adb.jpg.webp"],"clearart":[]},"colors":{"poster":["#A4BF91","#172019"]},"released":"2026-12-18","after_credits":false,"during_credits":false}},{"list_count":13796,"movie":{"title":"Spider-Man:
+        Brand New Day","year":2026,"ids":{"trakt":905132,"slug":"spider-man-brand-new-day-2026","imdb":"tt22084616","tmdb":969681,"plex":{"guid":"5ed8a6246e2d7200411126cf","slug":"spider-man-brand-new-day"}},"tagline":"","overview":"Four
+        years after the events of Spider-Man: No Way Home, Peter Parker is no more
+        and Spider-Man is at the top of his game keeping New York City safe. Things
+        are going well until an unusual trail of crimes pulls Spider-Man into a web
+        of mystery larger than he''s ever faced before. In order to take on what''s
+        ahead, Spider-Man not only needs to be at the top of his physical and mental
+        game, but he must also be prepared to face the repercussions of his past!","runtime":90,"country":"us","homepage":"https://www.marvel.com/movies/spider-man-brand-new-day","status":"post
+        production","rating":7.6129,"votes":31,"comment_count":2,"updated_at":"2026-03-02T08:40:07.000Z","language":"en","languages":["en"],"available_translations":["az","bg","cs","en","es","fr","he","hu","ja","ka","ko","pl","pt","ro","ru","th","uk","vi","zh"],"genres":["science-fiction","action","adventure","superhero"],"subgenres":["super-power","based-on-comic","marvel-cinematic-universe-mcu","masked-superhero","secret-identity"],"original_title":"Spider-Man:
+        Brand New Day","images":{"fanart":["media.trakt.tv/images/movies/000/905/132/fanarts/medium/638a312284.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/905/132/posters/medium/ff77450a46.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/905/132/logos/medium/0af84e42ac.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#CD2923","#020203"]},"released":"2026-07-31","after_credits":false,"during_credits":false}},{"list_count":13073,"movie":{"title":"Project
+        Hail Mary","year":2026,"ids":{"trakt":531178,"slug":"project-hail-mary-2026","imdb":"tt12042730","tmdb":687163,"plex":{"guid":"5e91843e9bec79003fe50ffb","slug":"project-hail-mary"}},"tagline":"Believe
+        in the Hail Mary.","overview":"Science teacher Ryland Grace wakes up on a
+        spaceship light years from home with no recollection of who he is or how he
+        got there. As his memory returns, he begins to uncover his mission: solve
+        the riddle of the mysterious substance causing the sun to die out. He must
+        call on his scientific knowledge and unorthodox ideas to save everything on
+        Earth from extinction… but an unexpected friendship means he may not have
+        to do it alone.","runtime":157,"country":"us","trailer":"https://youtube.com/watch?v=P0XN3-n-2Lo","homepage":"https://www.amazon.com/salp/projecthailmary?hhf","status":"post
+        production","rating":6.95,"votes":20,"comment_count":7,"updated_at":"2026-03-02T08:40:20.000Z","language":"en","languages":["en"],"available_translations":["az","bg","cs","de","en","es","et","fi","fr","he","hr","hu","it","ja","ka","ko","lv","nl","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"],"genres":["science-fiction","adventure","mystery"],"subgenres":["space","space-travel"],"original_title":"Project
+        Hail Mary","images":{"fanart":["media.trakt.tv/images/movies/000/531/178/fanarts/medium/3d45964b29.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/531/178/posters/medium/ffd0e05d42.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/531/178/logos/medium/21efcafc56.png.webp"],"banner":[],"thumb":["media.trakt.tv/images/movies/000/531/178/thumbs/medium/a1b2372997.jpg.webp"],"clearart":[]},"colors":{"poster":["#A19F92","#23383B"]},"released":"2026-03-13","after_credits":false,"during_credits":false,"certification":"PG-13"}},{"list_count":12987,"movie":{"title":"Star
+        Wars: The Mandalorian and Grogu","year":2026,"ids":{"trakt":993003,"slug":"star-wars-the-mandalorian-and-grogu-2026","imdb":"tt30825738","tmdb":1228710,"plex":{"guid":"659eea0148cee3ee85e48609","slug":"the-mandalorian-and-grogu-2026"}},"tagline":"If
+        you''re searching for new adventure, \"this is the way.\"","overview":"The
+        evil Empire has fallen, and Imperial warlords remain scattered throughout
+        the galaxy. As the fledgling New Republic works to protect everything the
+        Rebellion fought for, they have enlisted the help of legendary Mandalorian
+        bounty hunter Din Djarin and his young apprentice Grogu.","runtime":90,"country":"us","trailer":"https://youtube.com/watch?v=IHWlvwu8t1w","homepage":"https://www.starwars.com/films/star-wars-the-mandalorian-and-grogu","status":"post
+        production","rating":7.25,"votes":52,"comment_count":1,"updated_at":"2026-02-27T08:42:05.000Z","language":"en","languages":["en"],"available_translations":["bg","cs","de","en","es","fi","fr","he","hr","hu","ka","ko","lv","nl","pl","pt","ru","sv","th","tr","uk","vi","zh"],"genres":["science-fiction","adventure","action"],"subgenres":["based-on-tv-series","space-opera","bounty-hunter"],"original_title":"Star
+        Wars: The Mandalorian and Grogu","images":{"fanart":["media.trakt.tv/images/movies/000/993/003/fanarts/medium/c993436a5f.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/993/003/posters/medium/8bbc6b3ad1.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/993/003/logos/medium/05a92bbcf4.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#F2E6C6","#8F5828"]},"released":"2026-05-22","after_credits":false,"during_credits":false}},{"list_count":12335,"movie":{"title":"Dune:
+        Part Three","year":2026,"ids":{"trakt":943606,"slug":"dune-part-three-2026","imdb":"tt31378509","tmdb":1170608,"plex":{"guid":"65d514b7e0e20b8c84ece2f6","slug":"dune-messiah-2026"}},"tagline":"","overview":"The
+        third and final installment in Villeneuve''s Dune trilogy. Based on Frank
+        Herbert''s novel Dune Messiah.","runtime":90,"country":"us","status":"post
+        production","rating":7.73684,"votes":38,"comment_count":2,"updated_at":"2026-02-25T08:32:42.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","de","en","es","et","fa","fi","fr","he","hu","ja","ka","ko","lo","lt","lv","pl","pt","ro","ru","sv","th","uk","vi","zh"],"genres":["science-fiction","adventure"],"subgenres":[],"original_title":"Dune:
+        Part Three","images":{"fanart":["media.trakt.tv/images/movies/000/943/606/fanarts/medium/225e3e89a5.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/943/606/posters/medium/54780292f6.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#9D4921","#5B3A5D"]},"released":"2026-12-18","after_credits":false,"during_credits":false}}]'
+  recorded_at: 2026-03-02 11:33:32
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/anticipated?limit=5&extended=min
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:48 GMT
+      date: Mon, 02 Mar 2026 11:33:32 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8eb30d9f7552-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      age: '622'
+      cache-control: public, max-age=2678400, s-maxage=3600
+      last-modified: Mon, 02 Mar 2026 11:23:10 GMT
+      server: cloudflare
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      x-pagination-page: '1'
+      cache-tag: discover,anticipated,show
+      x-pagination-item-count: '237'
       x-pagination-limit: '5'
-      expires: Mon, 04 Aug 2025 16:06:47 GMT
-      x-pagination-page-count: '68'
-      x-pagination-item-count: '340'
-      etag: W/"02d05ab63f5d9a8ff424fc2275ce5ced"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":867,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: e05426a5-3d05-4de2-8928-428c8afb2077
-      x-runtime: '0.383853'
-      cf-cache-status: EXPIRED
+      x-pagination-page: '1'
+      x-pagination-page-count: '48'
       speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      content-encoding: gzip
+      cf-ray: 9d60164e59cefe9e-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '[{"list_count":12202,"show":{"title":"Alien: Earth","year":2025,"ids":{"trakt":170689,"slug":"alien-earth","tvdb":458912,"imdb":"tt13623632","tmdb":157239,"tvrage":null}}},{"list_count":8683,"show":{"title":"Marvel
-        Zombies","year":2025,"ids":{"trakt":191189,"slug":"marvel-zombies","tvdb":412428,"imdb":"tt16027014","tmdb":138505,"tvrage":null}}},{"list_count":3170,"show":{"title":"The
-        Terminal List: Dark Wolf","year":2025,"ids":{"trakt":202250,"slug":"the-terminal-list-dark-wolf","tvdb":464185,"imdb":"tt26576161","tmdb":219760,"tvrage":null}}},{"list_count":2600,"show":{"title":"NCIS:
-        Tony \u0026 Ziva","year":2025,"ids":{"trakt":228468,"slug":"ncis-tony-ziva","tvdb":446847,"imdb":"tt31512256","tmdb":247732,"tvrage":null}}},{"list_count":2345,"show":{"title":"Outlander:
-        Blood of My Blood","year":2025,"ids":{"trakt":197276,"slug":"outlander-blood-of-my-blood","tvdb":429964,"imdb":"tt18332852","tmdb":207484,"tvrage":null}}}]'
-  recorded_at: 2025-08-04 08:06:48
+      string: '[{"list_count":5583,"show":{"title":"Young Sherlock","year":2026,"ids":{"trakt":242387,"slug":"young-sherlock-2026","imdb":"tt8599532","tmdb":255661,"plex":{"guid":"66589e320f6e7f8278b9be69","slug":"young-sherlock-2026"},"tvdb":450633},"tagline":"","overview":"Sherlock
+        Holmes is a disgraced young man – raw and unfiltered – when he finds himself
+        wrapped up in a murder case that threatens his liberty. His first ever case
+        unravels a globe-trotting conspiracy that changes his life forever.","runtime":42,"country":"gb","trailer":"https://youtube.com/watch?v=rXMrTALO2ME","homepage":"https://www.amazon.co.uk/gp/video/detail/B0G2BVD2YT","status":"returning
+        series","rating":6.5,"votes":8,"comment_count":0,"updated_at":"2026-03-01T15:37:09.000Z","language":"en","languages":["en"],"available_translations":["ar","ca","cs","da","de","el","en","es","eu","fr","he","ko","nl","pl","pt","ro","ru","sv","ta","te","th","tr","zh"],"genres":["action","adventure","mystery"],"subgenres":["conspiracy"],"original_title":"Young
+        Sherlock","images":{"fanart":["media.trakt.tv/images/shows/000/242/387/fanarts/medium/981d5f59db.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/242/387/posters/medium/dd49725164.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#C3BEA1","#1D1C19"]},"first_aired":"2026-03-04T00:00:00.000Z","aired_episodes":0,"airs":{"day":"Sunday","time":"00:00","timezone":"Europe/London"},"network":"Amazon"}},{"list_count":4541,"show":{"title":"Spider-Noir","year":2026,"ids":{"trakt":202400,"slug":"spider-noir","imdb":"tt30460310","tmdb":220102,"plex":{},"tvdb":450033},"tagline":"With
+        no power comes no responsibility.","overview":"Ben Reilly, an aging and down
+        on his luck private investigator in 1930s New York, is forced to grapple with
+        his past life as the city''s one and only superhero.","runtime":42,"country":"us","trailer":"https://youtube.com/watch?v=b-Blr0_koQA","status":"in
+        production","rating":8.83333,"votes":6,"comment_count":3,"updated_at":"2026-03-01T15:23:03.000Z","language":"en","languages":["en"],"available_translations":["en","es","fr","he","it","ko","nl","pt","ru","th","uk","zh"],"genres":["superhero","action","adventure","mystery","crime"],"subgenres":["black-and-white","private-investigator","1930s","based-on-comic"],"original_title":"Spider-Noir","images":{"fanart":["media.trakt.tv/images/shows/000/202/400/fanarts/medium/121221d5a3.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/202/400/posters/medium/1016cd9342.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/202/400/logos/medium/242b759529.png.webp"],"banner":[],"thumb":["media.trakt.tv/images/shows/000/202/400/thumbs/medium/0d4f73250b.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/202/400/cleararts/medium/d07e305ff7.png.webp"]},"colors":{"poster":["#B3A9A5","#282322"]},"first_aired":"2026-05-25T04:00:00.000Z","aired_episodes":0,"airs":{"day":"Sunday","time":"00:00","timezone":"America/New_York"},"network":"MGM+"}},{"list_count":4378,"show":{"title":"Scarpetta","year":2026,"ids":{"trakt":216188,"slug":"scarpetta","imdb":"tt14786934","tmdb":240740,"plex":{},"tvdb":464253},"tagline":"","overview":"Chief
+        Medical Examiner Kay Scarpetta returns to Virginia and resumes her former
+        position with complex relationships, both personal and professional – including
+        her sister Dorothy, with plenty of grudges and secrets to uncover.","runtime":42,"country":"us","trailer":"https://youtube.com/watch?v=RSpvGC0_XLM","homepage":"https://www.amazon.com/gp/video/detail/B0GGMF3LTF","status":"in
+        production","rating":6.5,"votes":8,"comment_count":0,"updated_at":"2026-03-01T15:45:45.000Z","language":"en","languages":["en"],"available_translations":["cs","en","es","fr","ko","nl","pt","ru"],"genres":["drama","thriller","mystery","crime"],"subgenres":[],"original_title":"Scarpetta","images":{"fanart":["media.trakt.tv/images/shows/000/216/188/fanarts/medium/dd17de7403.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/216/188/posters/medium/96f2dee5fa.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/216/188/logos/medium/3c3793e76b.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#675359","#342F3D"]},"first_aired":"2026-03-11T04:00:00.000Z","aired_episodes":0,"airs":{"day":"Sunday","time":"00:00","timezone":"America/New_York"},"network":"Amazon"}},{"list_count":3504,"show":{"title":"The
+        Madison","year":2026,"ids":{"trakt":212581,"slug":"the-madison","imdb":"tt33204276","tmdb":225891,"plex":{},"tvdb":441735},"tagline":"","overview":"A
+        heartfelt study of grief and human connection following a New York City family
+        in the Madison River valley of central Montana.","runtime":42,"country":"us","trailer":"https://youtube.com/watch?v=OSb-X_YkLg4","status":"in
+        production","rating":5.6,"votes":5,"comment_count":0,"updated_at":"2026-03-01T15:42:02.000Z","language":"en","languages":["en"],"available_translations":["en","fr","hu","ko","pt","ru"],"genres":["western","drama"],"subgenres":["family-drama"],"original_title":"The
+        Madison","images":{"fanart":["media.trakt.tv/images/shows/000/212/581/fanarts/medium/5c544f7d61.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/212/581/posters/medium/6e727ccca7.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#CED8E3","#523F2A"]},"first_aired":"2026-03-14T07:00:00.000Z","aired_episodes":0,"airs":{"day":"Saturday","time":"03:00","timezone":"America/New_York"},"network":"Paramount+"}},{"list_count":3143,"show":{"title":"Star
+        Wars: Maul - Shadow Lord","year":2026,"ids":{"trakt":282764,"slug":"star-wars-maul-shadow-lord","imdb":"tt36594331","tmdb":289219,"plex":{},"tvdb":462715},"tagline":"","overview":"After
+        the Clone Wars, Maul plots to rebuild his criminal syndicate on a planet untouched
+        by the Empire.","runtime":42,"country":"us","trailer":"https://youtube.com/watch?v=oonACDq89BY","homepage":"https://www.disneyplus.com/browse/entity-9ba0f41b-6173-4ff1-8967-71cad0620244","status":"in
+        production","rating":7,"votes":3,"comment_count":1,"updated_at":"2026-02-27T16:33:23.000Z","language":"en","languages":["en"],"available_translations":["cs","de","en","es","fi","fr","he","ko","nl","pt","sv"],"genres":["animation","fantasy","science-fiction"],"subgenres":[],"original_title":"Star
+        Wars: Maul - Shadow Lord","images":{"fanart":["media.trakt.tv/images/shows/000/282/764/fanarts/medium/5de14c0c82.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/282/764/posters/medium/3d6e086f12.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/282/764/logos/medium/0c1a62d4e0.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#DF4F48","#1B0204"]},"first_aired":"2026-04-06T04:00:00.000Z","aired_episodes":0,"certification":"TV-PG","airs":{"day":"Friday","time":"00:00","timezone":"America/New_York"},"network":"Disney+"}}]'
+  recorded_at: 2026-03-02 11:33:32
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/anticipated?limit=5&extended=full
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:48 GMT
+      date: Mon, 02 Mar 2026 11:33:32 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8eb78cf97552-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      age: '622'
+      cache-control: public, max-age=2678400, s-maxage=3600
+      last-modified: Mon, 02 Mar 2026 11:23:10 GMT
+      server: cloudflare
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      x-pagination-page: '1'
+      cache-tag: discover,anticipated,show
+      x-pagination-item-count: '237'
       x-pagination-limit: '5'
-      expires: Mon, 04 Aug 2025 16:06:48 GMT
-      x-pagination-page-count: '68'
-      x-pagination-item-count: '340'
-      etag: W/"02d05ab63f5d9a8ff424fc2275ce5ced"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":858,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: db98e4c6-07d5-48aa-8fcd-662f387ababd
-      x-runtime: '0.466107'
-      cf-cache-status: MISS
+      x-pagination-page: '1'
+      x-pagination-page-count: '48'
       speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      content-encoding: gzip
+      cf-ray: 9d60164f6bf4fe9e-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '[{"list_count":12202,"show":{"title":"Alien: Earth","year":2025,"ids":{"trakt":170689,"slug":"alien-earth","tvdb":458912,"imdb":"tt13623632","tmdb":157239,"tvrage":null},"tagline":"We
-        were safer in space.","overview":"When the mysterious deep space research
-        vessel USCSS Maginot crash-lands on Earth, Wendy and a ragtag group of tactical
-        soldiers make a fateful discovery that puts them face-to-face with the planet''s
-        greatest threat.","first_aired":"2025-08-12T04:00:00.000Z","airs":{"day":"Sunday","time":"00:00","timezone":"America/New_York"},"runtime":42,"certification":"TV-MA","network":"FX","country":"us","trailer":"https://youtube.com/watch?v=FqIi3N9dusk","homepage":"http://www.fxnetworks.com/shows/alien-earth","status":"in
-        production","rating":6.57692,"votes":26,"comment_count":6,"updated_at":"2025-08-03T15:27:39.000Z","language":"en","languages":["en"],"available_translations":["bg","cs","de","en","es","fi","fr","he","hu","it","ja","ko","nl","pl","pt","ru","sk","tr","uk","vi","zh"],"genres":["drama","fantasy","science-fiction","horror"],"subgenres":[],"aired_episodes":0,"original_title":"Alien:
-        Earth"}},{"list_count":8683,"show":{"title":"Marvel Zombies","year":2025,"ids":{"trakt":191189,"slug":"marvel-zombies","tvdb":412428,"imdb":"tt16027014","tmdb":138505,"tvrage":null},"tagline":"","overview":"The
-        Marvel Universe is reimagined as a new generation of heroes battle against
-        an ever-spreading zombie scourge.","first_aired":"2025-10-03T04:00:00.000Z","airs":{"day":"Friday","time":"00:00","timezone":"America/New_York"},"runtime":42,"certification":"TV-MA","network":"Disney+","country":"us","trailer":null,"homepage":"http://www.marvel.com/tv-shows/marvel-zombies/1","status":"in
-        production","rating":5.5,"votes":26,"comment_count":0,"updated_at":"2025-07-25T15:42:39.000Z","language":"en","languages":["en"],"available_translations":["bg","de","en","fr","he","it","ja","ko","nl","pt","ru","tr","zh"],"genres":["animation","fantasy","science-fiction"],"subgenres":["zombie"],"aired_episodes":0,"original_title":"Marvel
-        Zombies"}},{"list_count":3170,"show":{"title":"The Terminal List: Dark Wolf","year":2025,"ids":{"trakt":202250,"slug":"the-terminal-list-dark-wolf","tvdb":464185,"imdb":"tt26576161","tmdb":219760,"tvrage":null},"tagline":"An
-        origin story.","overview":"Before The Terminal List, Navy SEAL Ben Edwards
-        finds himself entangled in the black operations side of the CIA. The deeper
-        Ben goes into the ''gray'', the harder it will become to not give himself
-        over to his darker impulses. Every man has two wolves inside him – light and
-        dark – fighting for control. Which wolf will Ben Edwards feed?","first_aired":"2025-08-27T07:00:00.000Z","airs":{"day":"Wednesday","time":"03:00","timezone":"America/New_York"},"runtime":42,"certification":"TV-MA","network":"Amazon","country":"us","trailer":"https://youtube.com/watch?v=l8tZ07FLDdU","homepage":"http://www.amazon.com/dp/B0FBJHCKDW","status":"in
-        production","rating":3.5,"votes":4,"comment_count":1,"updated_at":"2025-08-03T15:37:26.000Z","language":"en","languages":["en"],"available_translations":["ar","ca","da","de","el","en","es","eu","fi","fr","gl","he","hi","hu","id","it","ja","kn","ko","ml","ms","nb","nl","no","pl","pt","ro","sv","ta","te","th","tr","zh"],"genres":["action","adventure","drama"],"subgenres":[],"aired_episodes":0,"original_title":"The
-        Terminal List: Dark Wolf"}},{"list_count":2600,"show":{"title":"NCIS: Tony
-        \u0026 Ziva","year":2025,"ids":{"trakt":228468,"slug":"ncis-tony-ziva","tvdb":446847,"imdb":"tt31512256","tmdb":247732,"tvrage":null},"tagline":"","overview":"When
-        his security company is attacked, Tony and Ziva must go on the run across
-        Europe, try to figure out who is after them and maybe even learn to trust
-        each other again so that they can finally have their unconventional happily
-        ever after.","first_aired":"2025-09-04T07:00:00.000Z","airs":{"day":"Thursday","time":"03:00","timezone":"America/New_York"},"runtime":42,"network":"Paramount+","country":"us","trailer":"https://youtube.com/watch?v=wSawZVeaKao","homepage":null,"status":"in
-        production","rating":7.85714,"votes":7,"comment_count":2,"updated_at":"2025-07-26T15:47:26.000Z","language":"en","languages":["en"],"available_translations":["en","fr","nl"],"genres":["action","adventure","drama"],"subgenres":[],"aired_episodes":0,"original_title":"NCIS:
-        Tony \u0026 Ziva"}},{"list_count":2345,"show":{"title":"Outlander: Blood of
-        My Blood","year":2025,"ids":{"trakt":197276,"slug":"outlander-blood-of-my-blood","tvdb":429964,"imdb":"tt18332852","tmdb":207484,"tvrage":null},"tagline":"","overview":"From
-        the battlefields of World War I to the rugged Highlands of 18th century Scotland,
-        two fated couples must defy the forces that seek to tear them apart, unfolding
-        in surprising and unforeseen ways in this romantic saga that unfolds across
-        time.","first_aired":"2025-08-09T00:00:00.000Z","airs":{"day":"Friday","time":"20:00","timezone":"America/New_York"},"runtime":42,"certification":"TV-MA","network":"Starz","country":"us","trailer":"https://youtube.com/watch?v=9hvjJEXoIhs","homepage":"http://www.starz.com/us/en/series/outlander-blood-of-my-blood/69342","status":"returning
-        series","rating":6.11111,"votes":9,"comment_count":0,"updated_at":"2025-08-03T16:55:52.000Z","language":"en","languages":["en"],"available_translations":["en","es","fr","he","ru"],"genres":["drama","romance"],"subgenres":[],"aired_episodes":0,"original_title":"Outlander:
-        Blood of My Blood"}}]'
-  recorded_at: 2025-08-04 08:06:48
-recorded_with: VCR-vcr/2.0.0
+      string: '[{"list_count":5583,"show":{"title":"Young Sherlock","year":2026,"ids":{"trakt":242387,"slug":"young-sherlock-2026","imdb":"tt8599532","tmdb":255661,"plex":{"guid":"66589e320f6e7f8278b9be69","slug":"young-sherlock-2026"},"tvdb":450633},"tagline":"","overview":"Sherlock
+        Holmes is a disgraced young man – raw and unfiltered – when he finds himself
+        wrapped up in a murder case that threatens his liberty. His first ever case
+        unravels a globe-trotting conspiracy that changes his life forever.","runtime":42,"country":"gb","trailer":"https://youtube.com/watch?v=rXMrTALO2ME","homepage":"https://www.amazon.co.uk/gp/video/detail/B0G2BVD2YT","status":"returning
+        series","rating":6.5,"votes":8,"comment_count":0,"updated_at":"2026-03-01T15:37:09.000Z","language":"en","languages":["en"],"available_translations":["ar","ca","cs","da","de","el","en","es","eu","fr","he","ko","nl","pl","pt","ro","ru","sv","ta","te","th","tr","zh"],"genres":["action","adventure","mystery"],"subgenres":["conspiracy"],"original_title":"Young
+        Sherlock","images":{"fanart":["media.trakt.tv/images/shows/000/242/387/fanarts/medium/981d5f59db.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/242/387/posters/medium/dd49725164.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#C3BEA1","#1D1C19"]},"first_aired":"2026-03-04T00:00:00.000Z","aired_episodes":0,"airs":{"day":"Sunday","time":"00:00","timezone":"Europe/London"},"network":"Amazon"}},{"list_count":4541,"show":{"title":"Spider-Noir","year":2026,"ids":{"trakt":202400,"slug":"spider-noir","imdb":"tt30460310","tmdb":220102,"plex":{},"tvdb":450033},"tagline":"With
+        no power comes no responsibility.","overview":"Ben Reilly, an aging and down
+        on his luck private investigator in 1930s New York, is forced to grapple with
+        his past life as the city''s one and only superhero.","runtime":42,"country":"us","trailer":"https://youtube.com/watch?v=b-Blr0_koQA","status":"in
+        production","rating":8.83333,"votes":6,"comment_count":3,"updated_at":"2026-03-01T15:23:03.000Z","language":"en","languages":["en"],"available_translations":["en","es","fr","he","it","ko","nl","pt","ru","th","uk","zh"],"genres":["superhero","action","adventure","mystery","crime"],"subgenres":["black-and-white","private-investigator","1930s","based-on-comic"],"original_title":"Spider-Noir","images":{"fanart":["media.trakt.tv/images/shows/000/202/400/fanarts/medium/121221d5a3.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/202/400/posters/medium/1016cd9342.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/202/400/logos/medium/242b759529.png.webp"],"banner":[],"thumb":["media.trakt.tv/images/shows/000/202/400/thumbs/medium/0d4f73250b.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/202/400/cleararts/medium/d07e305ff7.png.webp"]},"colors":{"poster":["#B3A9A5","#282322"]},"first_aired":"2026-05-25T04:00:00.000Z","aired_episodes":0,"airs":{"day":"Sunday","time":"00:00","timezone":"America/New_York"},"network":"MGM+"}},{"list_count":4378,"show":{"title":"Scarpetta","year":2026,"ids":{"trakt":216188,"slug":"scarpetta","imdb":"tt14786934","tmdb":240740,"plex":{},"tvdb":464253},"tagline":"","overview":"Chief
+        Medical Examiner Kay Scarpetta returns to Virginia and resumes her former
+        position with complex relationships, both personal and professional – including
+        her sister Dorothy, with plenty of grudges and secrets to uncover.","runtime":42,"country":"us","trailer":"https://youtube.com/watch?v=RSpvGC0_XLM","homepage":"https://www.amazon.com/gp/video/detail/B0GGMF3LTF","status":"in
+        production","rating":6.5,"votes":8,"comment_count":0,"updated_at":"2026-03-01T15:45:45.000Z","language":"en","languages":["en"],"available_translations":["cs","en","es","fr","ko","nl","pt","ru"],"genres":["drama","thriller","mystery","crime"],"subgenres":[],"original_title":"Scarpetta","images":{"fanart":["media.trakt.tv/images/shows/000/216/188/fanarts/medium/dd17de7403.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/216/188/posters/medium/96f2dee5fa.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/216/188/logos/medium/3c3793e76b.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#675359","#342F3D"]},"first_aired":"2026-03-11T04:00:00.000Z","aired_episodes":0,"airs":{"day":"Sunday","time":"00:00","timezone":"America/New_York"},"network":"Amazon"}},{"list_count":3504,"show":{"title":"The
+        Madison","year":2026,"ids":{"trakt":212581,"slug":"the-madison","imdb":"tt33204276","tmdb":225891,"plex":{},"tvdb":441735},"tagline":"","overview":"A
+        heartfelt study of grief and human connection following a New York City family
+        in the Madison River valley of central Montana.","runtime":42,"country":"us","trailer":"https://youtube.com/watch?v=OSb-X_YkLg4","status":"in
+        production","rating":5.6,"votes":5,"comment_count":0,"updated_at":"2026-03-01T15:42:02.000Z","language":"en","languages":["en"],"available_translations":["en","fr","hu","ko","pt","ru"],"genres":["western","drama"],"subgenres":["family-drama"],"original_title":"The
+        Madison","images":{"fanart":["media.trakt.tv/images/shows/000/212/581/fanarts/medium/5c544f7d61.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/212/581/posters/medium/6e727ccca7.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#CED8E3","#523F2A"]},"first_aired":"2026-03-14T07:00:00.000Z","aired_episodes":0,"airs":{"day":"Saturday","time":"03:00","timezone":"America/New_York"},"network":"Paramount+"}},{"list_count":3143,"show":{"title":"Star
+        Wars: Maul - Shadow Lord","year":2026,"ids":{"trakt":282764,"slug":"star-wars-maul-shadow-lord","imdb":"tt36594331","tmdb":289219,"plex":{},"tvdb":462715},"tagline":"","overview":"After
+        the Clone Wars, Maul plots to rebuild his criminal syndicate on a planet untouched
+        by the Empire.","runtime":42,"country":"us","trailer":"https://youtube.com/watch?v=oonACDq89BY","homepage":"https://www.disneyplus.com/browse/entity-9ba0f41b-6173-4ff1-8967-71cad0620244","status":"in
+        production","rating":7,"votes":3,"comment_count":1,"updated_at":"2026-02-27T16:33:23.000Z","language":"en","languages":["en"],"available_translations":["cs","de","en","es","fi","fr","he","ko","nl","pt","sv"],"genres":["animation","fantasy","science-fiction"],"subgenres":[],"original_title":"Star
+        Wars: Maul - Shadow Lord","images":{"fanart":["media.trakt.tv/images/shows/000/282/764/fanarts/medium/5de14c0c82.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/282/764/posters/medium/3d6e086f12.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/282/764/logos/medium/0c1a62d4e0.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#DF4F48","#1B0204"]},"first_aired":"2026-04-06T04:00:00.000Z","aired_episodes":0,"certification":"TV-PG","airs":{"day":"Friday","time":"00:00","timezone":"America/New_York"},"network":"Disney+"}}]'
+  recorded_at: 2026-03-02 11:33:32
+recorded_with: VCR-vcr/2.1.0

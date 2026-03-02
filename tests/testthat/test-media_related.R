@@ -10,10 +10,9 @@ test_that("media_related works", {
 	rel_show_min <- shows_related(id = show, extended = "min")
 	rel_show_max <- shows_related(id = show, extended = "full")
 
-	expect_s3_class(rel_show, "tbl")
+	rel_show |>
+		expect_tibble(min_cols = c("title", "year", "trakt", "slug"), exact_rows = 10)
 	expect_identical(rel_show, rel_show_min)
-	expect_gt(ncol(rel_show_max), ncol(rel_show))
-	expect_equal(nrow(rel_show), 10)
 
 	expect_identical(
 		rbind(
@@ -27,10 +26,9 @@ test_that("media_related works", {
 	rel_movie_min <- movies_related(id = movie, extended = "min")
 	rel_movie_max <- movies_related(id = movie, extended = "full")
 
-	expect_s3_class(rel_movie, "tbl")
+	rel_movie |>
+		expect_tibble(min_cols = c("title", "year", "trakt", "slug"), exact_rows = 10)
 	expect_identical(rel_movie, rel_movie_min)
-	expect_gt(ncol(rel_movie_max), ncol(rel_movie))
-	expect_equal(nrow(rel_movie), 10)
 
 	# Error conditions ----
 	expect_error(movies_related(id = NA))

@@ -5,28 +5,29 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:47 GMT
+      date: Mon, 02 Mar 2026 11:33:32 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8eb4eaa11dd2-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"135e880540de271bd97022135a523bf6"
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
       x-private-user: 'false'
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":866,"until":"2025-08-04T08:10:00Z"}'
-      etag: W/"1fe6be07096dc9f1f8e6a8c1f98f7da1"
-      cache-control: max-age=0, private, must-revalidate
-      x-request-id: 5704ba26-930e-4643-8545-817a4d71d968
-      x-runtime: '0.012869'
-      cf-cache-status: DYNAMIC
-      speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      x-request-id: 7f13dd65-0640-439d-8f21-5a727dea04d2
+      x-runtime: '0.015439'
+      x-xss-protection: '0'
+      cf-ray: 9d60164b283a931d-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}'
-  recorded_at: 2025-08-04 08:06:47
-recorded_with: VCR-vcr/2.0.0
+  recorded_at: 2026-03-02 11:33:32
+recorded_with: VCR-vcr/2.1.0

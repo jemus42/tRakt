@@ -7,8 +7,9 @@ test_that("user_collection works", {
 	user <- "sean"
 
 	# Define minimum expected columns
+	# Note: updated_at gets disambiguated due to collision between collection and movie data
 	shows_cols <- c("last_collected_at", "last_updated_at", "title", "year", "trakt", "slug")
-	movies_cols <- c("collected_at", "updated_at", "type", "title", "year", "trakt", "slug")
+	movies_cols <- c("collected_at", "type", "title", "year", "trakt", "slug")
 
 	# Focus primarily on movies (smaller data) and minimal show testing
 	user_collection(user = user, type = "movies") |>

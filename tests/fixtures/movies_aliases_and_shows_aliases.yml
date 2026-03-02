@@ -3,29 +3,30 @@ http_interactions:
     method: GET
     uri: https://api.trakt.tv/movies/190430/aliases
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 11:11:03 GMT
       content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
       content-encoding: gzip
-      date: Mon, 04 Aug 2025 08:06:42 GMT
-      cf-ray: 969c8e9428ab7f29-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      etag: W/"e8c3b38060e82205390e8de086c2a7eb"
+      expires: Mon, 02 Mar 2026 17:43:44 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-movie-updated-at: '2026-03-01T16:39:38.000Z'
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:42 GMT
-      x-movie-updated-at: '2025-08-02T06:31:27.000Z'
-      etag: W/"e8c3b38060e82205390e8de086c2a7eb"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":992,"until":"2025-08-02T15:40:00Z"}'
-      x-request-id: e9ddf2b9-bf47-4c5f-895d-6c67e504cebf
-      x-runtime: '0.015182'
-      cf-cache-status: REVALIDATED
-      speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      x-request-id: d8d58cee-e1dc-44ad-88f6-e59ae66f5c45
+      x-runtime: '0.012773'
+      x-xss-protection: '0'
+      cf-ray: 9d5ff55d1aadd655-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"title":"X-Men Origins: Deadpool","country":"us"},{"title":"X-Men:
@@ -38,35 +39,35 @@ http_interactions:
         1","country":"de"},{"title":"Deadpool 2016","country":"jp"},{"title":"Quái
         Nhân Deadpool","country":"vn"},{"title":"死侍：不死現身","country":"hk"},{"title":"死侍：不死現身","country":"tw"},{"title":"デッドプール：2016","country":"jp"},{"title":"Deadpool:
         1","country":"es"},{"title":"死侍1","country":"cn"}]'
-  recorded_at: 2025-08-04 08:06:42
+  recorded_at: 2026-03-02 11:33:30
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/104439/aliases
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 11:11:03 GMT
       content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
       content-encoding: gzip
-      age: '9059'
-      date: Mon, 04 Aug 2025 08:06:43 GMT
-      cf-ray: 969c8e953a487f29-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      etag: W/"b84f8cc291debb0d66d8f5f608cc2e4d"
+      expires: Mon, 02 Mar 2026 13:35:41 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:43 GMT
-      x-show-updated-at: '2025-07-12T06:35:06.000Z'
-      etag: W/"873758797f2ed694c1b13088699df284"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":980,"until":"2025-07-12T13:15:00Z"}'
-      x-request-id: 17e9d329-9b33-455f-9ee9-cee464a80f00
-      x-runtime: '0.033646'
-      cf-cache-status: REVALIDATED
-      speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      x-request-id: 98dec814-e1cd-4d82-9649-636822bd6499
+      x-runtime: '0.032286'
+      x-show-updated-at: '2026-02-28T15:36:52.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d5ff55dfcf6d655-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"title":"Очень странные дела","country":"us"},{"title":"Странные
@@ -423,6 +424,7 @@ http_interactions:
         Things","country":"pt"},{"title":"Extraño al revés","country":"cu"},{"title":"Cosas
         Extrañas","country":"mx"},{"title":"осд","country":"ru"},{"title":"ОСД","country":"ru"},{"title":"Странные
         дела","country":"ru"},{"title":"Stranger Things 5","country":"us"},{"title":"أشياء
-        غريبة","country":"sa"}]'
-  recorded_at: 2025-08-04 08:06:43
-recorded_with: VCR-vcr/2.0.0
+        غريبة","country":"sa"},{"title":"Очень странные дела","country":"ru"},{"title":"Cedar
+        Lodge","country":"us"}]'
+  recorded_at: 2026-03-02 11:33:30
+recorded_with: VCR-vcr/2.1.0

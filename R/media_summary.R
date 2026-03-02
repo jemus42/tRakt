@@ -23,14 +23,7 @@ media_summary <- function(type = c("movies", "shows"), id, extended = c("min", "
 		return(tibble())
 	}
 
-	# If extended == "min", we only have IDs to worry about, so early return
-	if (extended == "min") {
-		response[names(response) != "ids"] |>
-			as_tibble() |>
-			bind_cols(fix_ids(response$ids))
-	} else {
-		flatten_single_media_object(response, type)
-	}
+	flatten_single_media_object(response, type)
 }
 
 # Exported ----

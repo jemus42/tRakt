@@ -3,29 +3,30 @@ http_interactions:
     method: GET
     uri: https://api.trakt.tv/movies/193972/translations
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 11:11:05 GMT
       content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
       content-encoding: gzip
-      date: Mon, 04 Aug 2025 08:06:43 GMT
-      cf-ray: 969c8e97cfc37f29-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      etag: W/"2a013a1497c3503872b0fcbd72843e24"
+      expires: Mon, 02 Mar 2026 19:11:04 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-movie-updated-at: '2026-03-01T16:27:50.000Z'
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:43 GMT
-      x-movie-updated-at: '2025-07-31T16:55:44.000Z'
-      etag: W/"45837033648df03010d19b353da7f63d"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      x-ratelimit: '{"name":"UNAUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":832,"until":"2025-08-01T08:15:00Z"}'
-      x-request-id: 5c7a2490-dfe9-4f33-a836-1fcb942d828b
-      x-runtime: '0.020775'
-      cf-cache-status: REVALIDATED
-      speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      x-request-id: df842d75-c662-4aa6-aeee-9209bb5d80d8
+      x-runtime: '0.017802'
+      x-xss-protection: '0'
+      cf-ray: 9d5ff567aab7d655-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"title":"حكاية لعبة 4","overview":"لطالما كان وودي واثقا من مكانته
@@ -73,16 +74,16 @@ http_interactions:
         and that his priority is taking care of his kid, whether that''s Andy or Bonnie.
         But when Bonnie adds a reluctant new toy called \"Forky\" to her room, a road
         trip adventure alongside old and new friends will show Woody how big the world
-        can be for a toy.","tagline":"Get ready to hit the road!","language":"en","country":"us"},{"title":null,"overview":"Cuando
-        un nuevo juguete llamado «Forky» se une a Woody y a la pandilla, un viaje
-        por carretera junto a viejos y nuevos amigos revela lo grande que puede ser
-        el mundo para un juguete.","tagline":"Woody termina en un inesperado reencuentro
-        con su vieja amiga perdida Bo Peep.","language":"es","country":"mx"},{"title":null,"overview":"Woody
+        can be for a toy.","tagline":"The adventure of a lifetime.","language":"en","country":"us"},{"title":null,"overview":"Woody
         siempre ha tenido claro cuál es su labor en el mundo y cuál es su prioridad:
         cuidar a su dueño, ya sea Andy o Bonnie. Sin embargo, Woody descubrirá lo
         grande que puede ser el mundo para un juguete cuando Forky se convierta en
         su nuevo compañero de habitación. Los juguetes se embarcarán en una aventura
-        de la que no se olvidarán jamás.","tagline":"La aventura de toda una vida.","language":"es","country":"es"},{"title":"Lelulugu
+        de la que no se olvidarán jamás.","tagline":"La aventura de toda una vida.","language":"es","country":"es"},{"title":null,"overview":"Cuando
+        un nuevo juguete llamado «Forky» se une a Woody y a la pandilla, un viaje
+        por carretera junto a viejos y nuevos amigos revela lo grande que puede ser
+        el mundo para un juguete.","tagline":"Woody termina en un inesperado reencuentro
+        con su vieja amiga perdida Bo Peep.","language":"es","country":"mx"},{"title":"Lelulugu
         4","overview":"Kauboi Woody on teadnud alati oma kohta selles maailmas ning
         et tema põhiliseks ülesandeks on hoolitseda oma lapse eest, olgu selleks siis
         Andy või uus omanik Bonnie. Kui Bonnie poolt käsitöötunnis loodud uus lelu
@@ -141,7 +142,14 @@ http_interactions:
         baru yang enggan disebut \"Forky\" ke kamarnya, petualangan perjalanan bersama
         teman-teman lama dan baru akan menunjukkan kepada Woody seberapa besar dunia
         untuk sebuah mainan.","tagline":null,"language":"id","country":"id"},{"title":"Leikfangasaga
-        4","overview":null,"tagline":"Þegar þú ert leikfang, þá er ekkert sem sýnist.","language":"is","country":"is"},{"title":null,"overview":"Woody,
+        4","overview":"Í Leikganfasögu 4 mæta að sjálfsögðu öll gömlu og góðu leikföngin
+        til leiks á ný með Vidda og Bósa ljósár í fararbroddi. Auk þess hafa nokkur
+        ný leikföng bæst í hópinn, þar á meðal plastgaffallinn Fork, sem eigandi leikfanganna,
+        Bonnie, bjó sjálf til og á eftir að verða örlagavaldurinn í sögunni þegar
+        hann týnist. Við það getur Viddi ekki sætt sig og ákveður að finna Fork og
+        koma honum heim á ný. Í þeim björgunarleiðangri gerast svo vægast sagt stórbrotnir
+        hlutir sem eiga eftir að fá Vidda og vini hans til að endurmeta tilveru sína.","tagline":"Þegar
+        þú ert leikfang, þá er ekkert sem sýnist.","language":"is","country":"is"},{"title":null,"overview":"Woody,
         Buzz e compagni sono ora i giocattoli di Bonnie, una bambina dolcissima che
         sta per affrontare un passo importante della sua giovane vita: l''inizio della
         scuola. C''è fermento tra i giocattoli per questo passo e in particolare è
@@ -168,7 +176,8 @@ http_interactions:
         Bonei, kuri kino juostoje „Žaislų istorija 3“ paveldėjo žaislus iš pradinio
         savininko Endžio, trumpame vaizdo klipe nuotykių ieškotojai pristato savo
         naująjį draugą – Forkį (orig. Forky).","tagline":null,"language":"lt","country":"lt"},{"title":"Rotaļlietu
-        stāsts 4","overview":null,"tagline":null,"language":"lv","country":"lv"},{"title":null,"overview":"Woody
+        stāsts 4","overview":null,"tagline":null,"language":"lv","country":"lv"},{"title":"Приказна
+        за играчките 4","overview":null,"tagline":null,"language":"mk","country":"mk"},{"title":null,"overview":"Woody
         en Bo Peep zijn stapelverliefd op elkaar en leven gelukkig samen. Dit maakt
         het des te meer pijnlijk wanneer zij plotseling wordt weggegeven. Hierop start
         Woody samen met zijn kameraad Buzz Lightyear een zoektocht om haar terug te
@@ -218,14 +227,14 @@ http_interactions:
         ei este o prăpastie uriașă când vine vorba despre așteptările de la viața
         lor ca jucării. Este inimaginabil cât de mare poate fi lumea pentru o jucărie!","tagline":"Pregătește-te
         să pornești la drum","language":"ro","country":"ro"},{"title":"История Игрушек
-        4","overview":"Космический рейнджер Баз Лайтер, ковбой Вуди, собака Спиралька,
-        тиранозавр Рекс и вся команда игрушек снова вместе, и они как никогда готовы
-        к приключениям. С тех пор как Энди поступил в колледж, игрушки поселились
-        в доме своей новой хозяйки Бонни. В свой первый день в школе Бонни смастерила
-        себе из отходов новую игрушку Вилкинса, что положит начало череде событий,
-        в которой найдётся место и путешествиям с погонями, и знакомству с новыми
-        игрушками, и встречам с некоторыми из старых друзей, и даже романтической
-        истории.","tagline":"«Собирайтесь в Дорогу»","language":"ru","country":"ru"},{"title":"Toy
+        4","overview":"После поступления в колледж, Энди передал свои игрушки на сохранение
+        маленькой Бонни. Шериф Вуди, космический рейнджер Базз Лайтер и остальные
+        обрадовались возможности оказаться в руках новой хозяйки, которая будет находить
+        время с ними играть, но их мечты сбылись лишь на половину. Девочка смастерила
+        себе из столового прибора новую игрушку по имени Вилкинс, с которой играет
+        большую часть времени. Когда семья Бонни отправляется на автомобиле к парку
+        аттракционов, самодельную игрушку сдувает ветром, что вынуждает главных героев
+        организовать операцию по спасению Вилкинса.","tagline":"«Собирайтесь в Дорогу»","language":"ru","country":"ru"},{"title":"Toy
         Story 4: Príbeh hračiek","overview":"Hračkársky kovboj Woody si bol vždy istý
         zmyslom svojho života. Vedel, že na prvom mieste je dávať pozor na dieťa,
         či už to bol chlapček Andy alebo dievčatko Bonnie.   Problém však nastane,
@@ -271,40 +280,38 @@ http_interactions:
         rằng mình có thể có một cuộc sống phiêu lưu thú vị hơn là làm một món đồ chơi
         bằng sứ. Khi Woody và Bo Peep nhận ra họ là những món đồ chơi thuộc về hai
         thế giới khác nhau, họ đã sớm cảm nhận được những mối lo lắng của mình.","tagline":"Chuẩn
-        bị lên đường đi.","language":"vi","country":"vn"},{"title":"玩具总动员4","overview":"自从与小主人安迪告别后，胡迪（汤姆·汉克斯
-        Tom Hanks 配音）和他的伙伴们在小女孩邦妮家安顿下来，不仅成为了邦妮（玛德琳·麦格劳 Madeleine McGraw 配音）的心爱之物，还结识了一批新伙伴。转眼之间，邦妮也要进入幼儿园啦，她用灵巧的小手把一个餐叉做成了玩具带了回来，并且热爱有加。胡迪虽然稍感失落，却还能欣然接受。只不过叉叉（托尼·海尔
-        Tony Hale 配音）似乎认定自己只是垃圾，一次次逃走跳进垃圾桶里，这可给胡迪找了不少麻烦。不久，邦妮一家外出旅行。叉叉故技重施，想方设法逃走，结果在追逐他的过程中，胡迪和叉叉便与邦妮家失散了。在流浪途中，胡迪意外重逢久未谋面的牧羊女（安妮·波茨
-        Annie Potts 配音），与此同时，新的冒险也就此展开……","tagline":"再遇玩伴 邂逅无限可能","language":"zh","country":"cn"},{"title":"反斗奇兵
-        4","overview":"寶妮帶著一眾玩具穿州過省展開家庭旅行，格格不入的新玩具「小叉」乘機走佬，胡迪立即展開追蹤，巴斯光年亦率領一眾玩具出手相助，由此踏上一段意想不到的全新歷險！","tagline":"新舊玩具大哂冷
-        爆笑爆喊爆好玩","language":"zh","country":"hk"},{"title":"玩具總動員4","overview":"胡迪的首要任務是照顧他的孩子，無論是安弟還是邦妮。但是當邦妮製造了一個不情願的玩具「叉奇」後，胡迪一行人再度面臨「新生玩具來臨」的議題。叉奇是邦妮現在最愛的玩具，但他卻不願意正視自己莫名而得的身分，試圖逃離並結束自己身為「玩具」的生命。在與胡迪一行人隨著邦妮一家踏上公路旅行中，叉奇成功地逃離並使胡迪不得不跳車找回叉奇。在兩人開始展開一段迷失的旅途期間，卻在一間古董店裡與曾經的舊愛牧羊女寶貝重逢，並引發一連串的麻煩，最後胡迪離開了邦妮。","tagline":null,"language":"zh","country":"tw"}]'
-  recorded_at: 2025-08-04 08:06:43
+        bị lên đường đi.","language":"vi","country":"vn"},{"title":"玩具总动员4","overview":"伍迪一直坚信自己在世界上的位置，并始终将照顾孩子——无论是安迪还是邦妮——视为首要任务。因此当邦妮心爱的新手工玩具“叉叉”宣称自己是“垃圾”而非玩具时，伍迪毅然承担起引导叉叉认识玩具价值的责任。然而当邦妮带着全体玩具踏上家庭公路旅行时，伍迪意外遭遇转折，与失散多年的老朋友牧羊女宝贝重逢。多年来独立生活的宝贝，其冒险精神与漂泊生活的历练，与她精致的瓷娃娃外表形成了鲜明对比。当伍迪和宝贝发现彼此对玩具生活的理念天差地别时，他们很快意识到这竟是所有麻烦中最微不足道的一个。","tagline":"再遇玩伴
+        邂逅无限可能","language":"zh","country":"cn"},{"title":"反鬥奇兵 4","overview":"寶妮帶著一眾玩具穿州過省展開家庭旅行，格格不入的新玩具「小叉」乘機走佬，胡迪立即展開追蹤，巴斯光年亦率領一眾玩具出手相助，由此踏上一段意想不到的全新歷險！","tagline":"新舊玩具大哂冷
+        爆笑爆喊爆好玩","language":"zh","country":"hk"},{"title":"玩具總動員4","overview":"故事發生在安弟離家展開大學生涯，玩具們輾轉來到愛惜玩具的小女孩邦妮家中。某天，邦妮帶來了一個手作新成員「叉奇」加入玩具們，本身為拋棄式餐具的叉奇認為自己不是玩具，而是垃圾，因而引發了不少混亂。在一場冒險旅程之後，胡迪警長與老友牧羊女重逢，發現外面玩具們的世界，遠比他想像的還要巨大……","tagline":null,"language":"zh","country":"tw"}]'
+  recorded_at: 2026-03-02 11:33:30
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/breaking-bad/translations
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 11:23:32 GMT
       content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
       content-encoding: gzip
-      date: Mon, 04 Aug 2025 08:06:43 GMT
-      cf-ray: 969c8e98e9eb7f29-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      etag: W/"f89ebf5de5b556a42bd9b0d8799c5b08"
+      expires: Mon, 02 Mar 2026 19:23:32 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:43 GMT
-      x-show-updated-at: '2025-08-02T15:05:19.000Z'
-      etag: W/"f89ebf5de5b556a42bd9b0d8799c5b08"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":895,"until":"2025-08-02T15:40:00Z"}'
-      x-request-id: fb047a23-d252-4a07-9e9a-31edc2357549
-      x-runtime: '0.146267'
-      cf-cache-status: REVALIDATED
-      speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      x-request-id: 5a357d1d-b8d0-4955-8d4b-af1d7c7dfcd3
+      x-runtime: '0.022409'
+      x-show-updated-at: '2026-03-02T06:38:59.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007a88e5c9f9a-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"title":null,"overview":"مدرس كيمياء في مدرسة ثانوية على وشك الوفاة
@@ -360,14 +367,15 @@ http_interactions:
         fabricar y vender metanfetamina a fin de que su familia no pase apuros económicos.","tagline":"Recuerda
         mi nombre","language":"es","country":"es"},{"title":null,"overview":"Un profesor
         de Química de secundaria con cáncer terminal se asocia a un exestudiante para
-        asegurar el futuro de su familia al fabricar y vender metanfetamina.","tagline":null,"language":"es","country":"mx"},{"title":"Halvale
-        teele","overview":"\"Halvale teele\" on huumorivarjundiga draamasari keemiaõpetaja
-        Walter White''ist (rolli eest Emmy auhinna võitnud Bryan Cranston), keda on
-        tabanud pingeline keskeakriis. Lisaks erivajadustega teismelisele pojale ja
-        naisele, kes temasse külmalt suhtub, diagnoositakse tal ravimatu kopsuvähk.
-        Jõudnud otsusele, et tema elu väärtus on äärmiselt kaheldav, otsustab ta oma
-        endise õpilase, narkomaanist eluheidiku Jesse Pinkmaniga (Aaron Paul) hakata
-        keetma metamfetamiini, ja kus oleks seda parem teha, kui keset kõrbe ja vagunelamus?","tagline":null,"language":"et","country":"ee"},{"title":"بریکینگ
+        asegurar el futuro de su familia al fabricar y vender metanfetamina.","tagline":"Vive
+        libre o muere.","language":"es","country":"mx"},{"title":"Halvale teele","overview":"\"Halvale
+        teele\" on huumorivarjundiga draamasari keemiaõpetaja Walter White''ist (rolli
+        eest Emmy auhinna võitnud Bryan Cranston), keda on tabanud pingeline keskeakriis.
+        Lisaks erivajadustega teismelisele pojale ja naisele, kes temasse külmalt
+        suhtub, diagnoositakse tal ravimatu kopsuvähk. Jõudnud otsusele, et tema elu
+        väärtus on äärmiselt kaheldav, otsustab ta oma endise õpilase, narkomaanist
+        eluheidiku Jesse Pinkmaniga (Aaron Paul) hakata keetma metamfetamiini, ja
+        kus oleks seda parem teha, kui keset kõrbe ja vagunelamus?","tagline":null,"language":"et","country":"ee"},{"title":"بریکینگ
         بد","overview":"داستان سریال درباره یک معلم شیمی میانسال است که متوجه می‌شود
         که دارای سرطان ریه است و ۲ سال بیشتر وقت برای زندگی ندارد. او که وضع مالی
         خوبی ندارد و دارای همسر و پسری معلول می‌باشد، به این فکر می‌افتد که باید قبل
@@ -475,14 +483,11 @@ http_interactions:
         хемија","overview":"Волтер Вајт је професор хемије у средњој школи, који се
         окреће другој страни закона да би прехранио трудну жену и сина са парализом,
         након што му је постављена дијагноза рака плућа у поодмаклој фази.","tagline":"Упамти
-        моје име.","language":"sr","country":"rs"},{"title":null,"overview":"Walter
-        White, en alldaglig high school-kemilärare i 50-årsåldern som även extraknäcker
-        på en biltvätt lever ett stillsamt liv, i ett oengagerat äktenskap med sin
-        gravida, TV-shoppande fru Skyler och deras tonårige son Walter Jr., som lider
-        av en lätt CP-skada När Walt Senior blir diagnostiserad med lungcancer, bestämmer
-        han sig för att slå sig in på den brottsliga banan, för att kunna få ihop
-        ett kapital att lämna efter sig vid sin kommande död. Han sätter upp ett \"meth
-        lab\" och kokar metamfetamin tillsammans med sin tidigare elev, Jesse Pinkman.","tagline":null,"language":"sv","country":"se"},{"title":"ดับเครื่องชน
+        моје име.","language":"sr","country":"rs"},{"title":null,"overview":"I Vince
+        Giligans geniala serie får vi följa en cancersjuk kemilärare som slår sig
+        ihop med en tidigare student för att tillverka och sälja metamfetamin för
+        att trygga sin familjs framtid efter sin kommande bortgång. Hyllad av kritiker
+        som den bästa serien genom tiderna.","tagline":"Ändra ekvationen.","language":"sv","country":"se"},{"title":"ดับเครื่องชน
         คนดีแตก","overview":"ครูสอนเคมีในโรงเรียนมัธยมซึ่งกำลังใกล้ตายด้วยโรคมะเร็งต้องมาร่วมมือกับอดีตนักเรียน
         เพื่อสร้างความมั่นคงให้กับครอบครัวก่อนที่เขาจะตายด้วยการผลิตยาไอซ์ขาย","tagline":null,"language":"th","country":"th"},{"title":null,"overview":"Kanserden
         öleceğini öğrenen bir kimya öğretmeni, ailesinin geleceğini garanti altına
@@ -498,36 +503,37 @@ http_interactions:
         làm người xấu","overview":"Một giáo viên dạy hóa ở trường trung học mắc bệnh
         ung thư bắt tay với một cựu học sinh để bảo vệ tương lai của gia đình bằng
         cách sản xuất và bán ma túy đá.","tagline":null,"language":"vi","country":"vn"},{"title":"絕命毒師","overview":"一名即將死於癌症的高中化學老師與他過去的學生一起合作，透過製造及販賣冰毒保障他家人的未來。","tagline":"改變方程式。","language":"zh","country":"tw"},{"title":"絕命毒師","overview":"該劇講述了一比特普通的高中化學老師在得知自己身患絕症之後，為了給家人留下財產，而利用自己超凡的化學知識製造毒品，並成為世界頂級毒王的傳奇犯罪故事。","tagline":null,"language":"zh","country":"hk"},{"title":"绝命毒师","overview":"新墨西哥州的高中化学老师沃尔特·H·怀特是拮据家庭的唯一经济来源。他大半生安分守己，兢兢业业，却在50岁生日之际突然得知自己罹患肺癌晚期的噩耗，原本便不甚顺意的人生顿时雪上加霜。为了保障怀孕的妻子斯凯勒和残疾的儿子小沃特能在自己死后衣食无忧，沃尔特决意铤而走险。他主动找到曾经的学生、而今的毒贩小混混杰西·平克曼谈合作，并运用娴熟高超的化学技术提炼出高纯度冰毒交给后者贩售。孰料事态的发展却在平克曼带回毒品供销商疯狂小八及其表弟后急转直下，沃尔特的人生也由此彻底步向失控。他被迫开始了教书与制毒的双重生活，逐渐坠落至万劫不复的深渊。","tagline":null,"language":"zh","country":"cn"},{"title":"绝命毒师","overview":"一位患有晚期肺癌的高中化学老师为了保证家人未来的生计，决定和以前的学生联手制作并贩卖冰毒。","tagline":null,"language":"zh","country":"sg"}]'
-  recorded_at: 2025-08-04 08:06:43
+  recorded_at: 2026-03-02 11:33:31
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/3/translations
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 11:23:32 GMT
       content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
       content-encoding: gzip
-      date: Mon, 04 Aug 2025 08:06:43 GMT
-      cf-ray: 969c8e9b1dca7f29-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      etag: W/"c65df98eb591b5204a0eee8d45c741b2"
+      expires: Mon, 02 Mar 2026 19:23:32 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
+      x-request-id: 322ace7d-9a62-45d0-a328-ae21037708f7
+      x-runtime: '0.027422'
       x-show-id: '1388'
       x-show-season-id: '3950'
-      expires: Mon, 04 Aug 2025 16:06:43 GMT
-      x-show-updated-at: '2025-08-02T15:05:19.000Z'
-      etag: W/"c65df98eb591b5204a0eee8d45c741b2"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":894,"until":"2025-08-02T15:40:00Z"}'
-      x-request-id: dd947e00-25b4-4231-bb00-90e05ab9e218
-      x-runtime: '0.018892'
-      cf-cache-status: REVALIDATED
-      speculation-rules: '"/cdn-cgi/speculation"'
-      server: cloudflare
+      x-show-updated-at: '2026-03-02T06:38:59.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007a99f339f9a-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"title":"والحقيبة في النهر","overview":"يحارب والتر مع جيسي بسبب
@@ -557,16 +563,14 @@ http_interactions:
         río","overview":"Walter pelea con Jesse debido a su adicción a las drogas
         y Jesse se va, dejándole solo con su cautivo, Krazy-8; Hank lleva a Walter
         Jr. a dar un paseo para hablarle acerca de la marihuana; a Skyler no le gusta
-        que Walt esté tan ausente de casa.","language":"es","country":"es"},{"title":"Episodio
-        3 - Y la bolsa está en el río","overview":"Walter no sabe si matar o no a
-        Krazy-8. Mientras, Marie cree que su hijo está enganchado a la marihuana y
-        le pide a Hank que le de algún susto para que lo deje.\n\nWalter decide invitar
-        a comer a Krazy-8, pero las cosas se tuercen cuando se marea mientras baja
-        unos escalones. ¿Le contará lo que pasa?","language":"es","country":"mx"},{"title":"...و
-        کیسه در رودخانه است","overview":null,"language":"fa","country":"ir"},{"title":"Ja
-        säkki jokeen","overview":"Skylerin oudot kysymykset saavat Marien vetämään
-        vääriä johtopäätöksiä. Walt ja Jesse yrittävät päättää mitä Krazy-8:n kanssa
-        pitäisi tehdä. Hank pääsee liikkuvan metalaboratorion jäljille.","language":"fi","country":"fi"},{"title":"Dérapage","overview":"Alors
+        que Walt esté tan ausente de casa.","language":"es","country":"es"},{"title":"Y
+        la bolsa en el río","overview":"Mientras Walt limpia el desorden que quedó
+        tras su primer negocio de drogas, piensa en decirle a Skyler la verdad sobre
+        su enfermedad.","language":"es","country":"mx"},{"title":"...و کیسه در رودخانه
+        است","overview":null,"language":"fa","country":"ir"},{"title":"Ja säkki jokeen","overview":"Skylerin
+        oudot kysymykset saavat Marien vetämään vääriä johtopäätöksiä. Walt ja Jesse
+        yrittävät päättää mitä Krazy-8:n kanssa pitäisi tehdä. Hank pääsee liikkuvan
+        metalaboratorion jäljille.","language":"fi","country":"fi"},{"title":"Dérapage","overview":"Alors
         que Walt tente de remettre de l''ordre après son premier deal, Skyler est
         à deux doigts de la vérité au sujet de la double vie de son mari.","language":"fr","country":"ca"},{"title":"Dérapage","overview":"Alors
         que Walt tente de remettre de l''ordre après son premier deal, Skyler est
@@ -595,7 +599,7 @@ http_interactions:
         próby sprzedaży narkotyków, Skyler zbliża się do poznania prawdy o jego podwójnym
         życiu.","language":"pl","country":"pl"},{"title":"E o saco está no rio","overview":"Enquanto
         tenta limpar os estragos provocados pela sua primeira venda, Walt pondera
-        contar a Skyler a verdade sobre a sua doença.","language":"pt","country":"pt"},{"title":"And
+        contar a Skyler a verdade sobre a sua doença.","language":"pt","country":"pt"},{"title":"...And
         the Bag''s in the River","overview":"Enquanto Walt limpa a bagunça que foi
         deixada após a primeira venda de drogas, ele pensa em contar a Skyler o segredo
         sobre a sua doença.","language":"pt","country":"br"},{"title":"Derapaj","overview":"Walt
@@ -610,9 +614,9 @@ http_interactions:
         а Скайлер между тем уличает мужа во лжи насчёт его работы.","language":"ru","country":"ru"},{"title":null,"overview":"Док
         се он и Џеси суочавају са последицама својих поступака, Волтер је приморан
         да донесе одлуку која ће му променити живот. У међувремену, Скајлерина сумња
-        је све већа, а и Хенк почиње да примећује Волтерово необично понашање.","language":"sr","country":"rs"},{"title":null,"overview":"Medan
-        Walt städar upp efter deras första knarkaffär är Skyler nära att upptäcka
-        hans dubbelliv.","language":"sv","country":"se"},{"title":"และถุงอยู่ในแม่น้ำ","overview":"ระหว่างที่วอลต์เก็บกวาดความเละเทะที่หลงเหลือจากการขายยาครั้งแรก
+        је све већа, а и Хенк почиње да примећује Волтерово необично понашање.","language":"sr","country":"rs"},{"title":"...And
+        the Bag''s in the River","overview":"Medan Walt städar upp efter deras första
+        knarkaffär är Skyler nära att upptäcka hans dubbelliv.","language":"sv","country":"se"},{"title":"และถุงอยู่ในแม่น้ำ","overview":"ระหว่างที่วอลต์เก็บกวาดความเละเทะที่หลงเหลือจากการขายยาครั้งแรก
         สกายเลอร์ก็เข้าใกล้ความจริงเกี่ยวกับชีวิตสองด้านของเขาเข้ามาทุกขณะ","language":"th","country":"th"},{"title":"And
         the Bag''s in the River","overview":null,"language":"tl","country":"ph"},{"title":"Eksik
         Parça","overview":"Walt, ilk uyuşturucu işinden geriye kalan pisliği temizlerken
@@ -624,6 +628,6 @@ http_interactions:
         Крім того, Скайлер засмучена, коли Волтер знаходиться далеко від дому.","language":"uk","country":"ua"},{"title":"Lo
         liệu trót lọt","overview":"Khi Walt xử lý các rắc rối sót lại từ phi vụ buôn
         bán ma túy đầu tiên, Skyler suýt biết được sự thật về cuộc sống bí mật của
-        ông.","language":"vi","country":"vn"},{"title":"滅跡","overview":"在華特收拾第一次毒品交易的爛攤子時，史凱勒過於逼近他雙重生活的真相了。","language":"zh","country":"hk"},{"title":"滅跡","overview":"在華特收拾第一次毒品交易的爛攤子時，史凱勒過於逼近他雙重生活的真相了。","language":"zh","country":"tw"},{"title":"袋在河里","overview":"沃尔特收拾第一次毒品交易后留下的残局，而斯凯勒即将了解到他的双重人生真相。","language":"zh","country":"sg"},{"title":"袋在河里","overview":"沃尔特收拾第一次毒品交易后留下的残局，而斯凯勒即将了解到他的双重人生真相。","language":"zh","country":"cn"}]'
-  recorded_at: 2025-08-04 08:06:43
-recorded_with: VCR-vcr/2.0.0
+        ông.","language":"vi","country":"vn"},{"title":"滅跡","overview":"在華特收拾第一次毒品交易的爛攤子時，史凱勒過於逼近他雙重生活的真相了。","language":"zh","country":"hk"},{"title":"滅跡","overview":"在華特收拾第一次毒品交易的爛攤子時，史凱勒過於逼近他雙重生活的真相了。","language":"zh","country":"tw"},{"title":"袋在河里","overview":"沃尔特收拾第一次毒品交易后留下的残局，而斯凯勒即将了解到他的双重人生真相。","language":"zh","country":"sg"},{"title":"…实难挽回","overview":"沃尔特收拾第一次毒品交易后留下的残局，而斯凯勒即将了解到他的双重人生真相。","language":"zh","country":"cn"}]'
+  recorded_at: 2026-03-02 11:33:31
+recorded_with: VCR-vcr/2.1.0

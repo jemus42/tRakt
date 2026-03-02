@@ -6,30 +6,31 @@ http_interactions:
     status: 304
     headers:
       content-type: application/json; charset=utf-8
-      vary: Accept-Encoding
       content-encoding: gzip
-      date: Mon, 04 Aug 2025 08:06:45 GMT
-      cf-ray: 969c8ea37b93bf14-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
-      x-content-type-options: nosniff
-      x-download-options: noopen
-      x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      x-private-user: 'false'
-      x-pagination-page: '1'
-      x-pagination-limit: '10'
-      x-pagination-page-count: '1'
-      x-pagination-item-count: '10'
+      date: Mon, 02 Mar 2026 11:33:31 GMT
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
       etag: W/"3e6cf078f757fd8497789eb41a2d5909"
       last-modified: Mon, 13 Jan 2025 22:52:57 GMT
-      cache-control: max-age=0, private, must-revalidate
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":922,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: 2d4a4f2a-8b13-405f-b549-ebcc372c2ad9
-      x-runtime: '0.016067'
-      cf-cache-status: DYNAMIC
-      speculation-rules: '"/cdn-cgi/speculation"'
       server: cloudflare
+      vary: Origin, accept-encoding
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '10'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '1'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 604290f9-ee2e-47c9-b1a7-5359a1d69551
+      x-runtime: '0.032545'
+      x-xss-protection: '0'
+      cf-ray: 9d6016470a6e656d-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"liked_at":"2025-01-13T22:52:57.000Z","type":"comment","comment":{"id":140586,"comment":"Headcanon:
@@ -74,15 +75,15 @@ http_interactions:
         that appointment. I’m going to use my name. I’m going to claw to who I want
         to be and who I am inch by inch. And like Owen, I may be alone when I take
         that path but I will be so relieved to be on it, I will know who I am, and
-        that will be in part due to seeing the TV glow.","spoiler":false,"review":true,"parent_id":0,"created_at":"2024-05-19T23:27:22.000Z","updated_at":"2024-05-19T23:27:22.000Z","replies":5,"likes":61,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":1,"completed_count":1},"user":{"username":"JC230","private":false,"deleted":false,"name":"JC","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jc230"}}}},{"liked_at":"2023-01-30T20:31:36.000Z","type":"comment","comment":{"id":537743,"comment":"This
+        that will be in part due to seeing the TV glow.","spoiler":false,"review":true,"parent_id":0,"created_at":"2024-05-19T23:27:22.000Z","updated_at":"2024-05-19T23:27:22.000Z","replies":5,"likes":65,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":1,"completed_count":1},"user":{"username":"JC230","private":false,"deleted":false,"name":"JC","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jc230"}}}},{"liked_at":"2023-01-30T20:31:36.000Z","type":"comment","comment":{"id":537743,"comment":"This
         is it folks, this is peak television. What we have here is one of the most
         gut wrenching and masterfully crafted episodes ever brought to screen. Absolutely
         fucking phenomenal with career best performances from Murray Bartlett and
-        Nick Oferman. Holy shit this will stick with me.","spoiler":false,"review":false,"parent_id":0,"created_at":"2023-01-30T03:34:08.000Z","updated_at":"2023-01-30T03:34:08.000Z","replies":6,"likes":271,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"BraylonMitch07","private":false,"deleted":false,"name":"BraylonMitch07","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"braylonmitch07"}}}},{"liked_at":"2021-12-19T22:31:59.000Z","type":"comment","comment":{"id":252708,"comment":"some
-        exquisite cringe in tonights episode","spoiler":false,"review":false,"parent_id":0,"created_at":"2019-09-30T09:05:36.000Z","updated_at":"2019-10-04T14:41:54.000Z","replies":0,"likes":27,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"dobata","private":false,"deleted":false,"name":"dobata","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"dobata"}}}},{"liked_at":"2021-07-13T20:35:14.000Z","type":"comment","comment":{"id":338107,"comment":"wai,
+        Nick Oferman. Holy shit this will stick with me.","spoiler":false,"review":false,"parent_id":0,"created_at":"2023-01-30T03:34:08.000Z","updated_at":"2023-01-30T03:34:08.000Z","replies":6,"likes":275,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"BraylonMitch07","private":false,"deleted":false,"name":"BraylonMitch07","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"braylonmitch07"}}}},{"liked_at":"2021-12-19T22:31:59.000Z","type":"comment","comment":{"id":252708,"comment":"some
+        exquisite cringe in tonights episode","spoiler":false,"review":false,"parent_id":0,"created_at":"2019-09-30T09:05:36.000Z","updated_at":"2019-10-04T14:41:54.000Z","replies":0,"likes":28,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"dobata","private":false,"deleted":false,"name":"dobata","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"dobata"}}}},{"liked_at":"2021-07-13T20:35:14.000Z","type":"comment","comment":{"id":338107,"comment":"wai,
         why y''all haitn on Kaley?","spoiler":false,"review":false,"parent_id":0,"created_at":"2020-11-27T21:34:26.000Z","updated_at":"2020-11-27T21:34:26.000Z","replies":6,"likes":34,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":8,"completed_count":8},"user":{"username":"Goutham3113","private":false,"deleted":false,"name":"Goutham","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"goutham3113"}}}},{"liked_at":"2020-04-19T02:37:25.000Z","type":"comment","comment":{"id":283636,"comment":"Alex
         Garland, the man behind Ex Machina and Annihilation has done it again. Floored
-        by the first two episodes. The man creates art.","spoiler":false,"review":false,"parent_id":0,"created_at":"2020-03-06T06:25:18.000Z","updated_at":"2020-03-06T06:25:18.000Z","replies":4,"likes":31,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":8,"completed_count":8},"user":{"username":"ReclaimerCube","private":false,"deleted":false,"name":"Trace
+        by the first two episodes. The man creates art.","spoiler":false,"review":false,"parent_id":0,"created_at":"2020-03-06T06:25:18.000Z","updated_at":"2020-03-06T06:25:18.000Z","replies":4,"likes":33,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":8,"completed_count":8},"user":{"username":"ReclaimerCube","private":false,"deleted":false,"name":"Trace
         Eliot Anderson","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"reclaimercube"}}}},{"liked_at":"2019-04-22T19:09:39.000Z","type":"comment","comment":{"id":226794,"comment":"Best
         lines\r\n**I’m waiting for an old friend** - Bran\r\n**You left me for dead**
         - Hound\r\n**I also robbed you** - Arya\r\n**I’ve always had blue eyes!**
@@ -188,51 +189,52 @@ http_interactions:
         Similar to when **Robert''s Rebellion, began** when **Rhaegar Targaryen**,
         allegedly **abducted** Robert''s betrothed, **Lyanna Stark.**","spoiler":true,"review":true,"parent_id":0,"created_at":"2019-04-15T03:49:07.000Z","updated_at":"2019-04-16T17:07:57.000Z","replies":7,"likes":158,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":4,"completed_count":1},"user":{"username":"Cadrieldur","private":false,"deleted":false,"name":"Cadrieldur","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"cadrieldur"}}}},{"liked_at":"2016-07-17T23:51:57.000Z","type":"comment","comment":{"id":89569,"comment":"If
         Stephen King and Steven Spielberg had a baby, this is EXACTLY what it would
-        look it.","spoiler":false,"review":false,"parent_id":0,"created_at":"2016-07-15T20:29:36.000Z","updated_at":"2016-07-15T21:28:50.000Z","replies":13,"likes":261,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":8,"completed_count":8},"user":{"username":"KrystalGoderitch","private":false,"deleted":false,"name":"RoxieVelma","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"krystalgoderitch"}}}},{"liked_at":"2015-03-08T04:19:21.000Z","type":"comment","comment":{"id":34406,"comment":"It''s
+        look it.","spoiler":false,"review":false,"parent_id":0,"created_at":"2016-07-15T20:29:36.000Z","updated_at":"2016-07-15T21:28:50.000Z","replies":15,"likes":290,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":8,"completed_count":8},"user":{"username":"KrystalGoderitch","private":false,"deleted":false,"name":"RoxieVelma","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"krystalgoderitch"}}}},{"liked_at":"2015-03-08T04:19:21.000Z","type":"comment","comment":{"id":34406,"comment":"It''s
         based on an existing comic, so somehow I don''t think that''s how that went
         down.","spoiler":false,"review":false,"parent_id":0,"created_at":"2014-07-23T22:09:37.000Z","updated_at":"2014-07-23T22:09:37.000Z","replies":0,"likes":24,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":71,"completed_count":71},"user":{"username":"rfrancis","private":false,"deleted":false,"name":"R.
-        Francis Smith","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"rfrancis"}}}}]'
-  recorded_at: 2025-08-04 08:06:45
+        Francis Smith","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"rfrancis"}}}}]'
+  recorded_at: 2026-03-02 11:33:31
 - request:
     method: GET
     uri: https://api.trakt.tv/users/likes/lists
   response:
     status: 304
     headers:
-      content-type: application/json; charset=utf-8
-      vary: Accept-Encoding
       content-encoding: gzip
-      date: Mon, 04 Aug 2025 08:06:45 GMT
-      cf-ray: 969c8ea49d4ebf14-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
-      x-content-type-options: nosniff
-      x-download-options: noopen
-      x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      x-private-user: 'false'
-      x-pagination-page: '1'
-      x-pagination-limit: '10'
-      x-pagination-page-count: '1'
-      x-pagination-item-count: '3'
+      date: Mon, 02 Mar 2026 11:33:31 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
       etag: W/"1a51c591a6fad594f2a9506102d68f1e"
       last-modified: Fri, 13 Oct 2023 22:51:43 GMT
-      cache-control: max-age=0, private, must-revalidate
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":918,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: e4d819e1-238c-411b-9278-e035b4225bfc
-      x-runtime: '0.020343'
-      cf-cache-status: DYNAMIC
-      speculation-rules: '"/cdn-cgi/speculation"'
       server: cloudflare
+      vary: Origin, accept-encoding
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '3'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '1'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 8378bbde-7fe3-4dc4-b08b-97c8497f782f
+      x-runtime: '0.026695'
+      x-xss-protection: '0'
+      cf-ray: 9d6016484b5d656d-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"liked_at":"2023-10-13T22:51:43.000Z","type":"list","list":{"name":"Treehouse
-        of Horror","description":"All the Simpsons Halloween specials.","privacy":"public","share_link":"https://trakt.tv/lists/19842305","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2020-10-02T17:55:46.000Z","updated_at":"2025-07-22T14:04:17.000Z","item_count":35,"comment_count":0,"likes":73,"ids":{"trakt":19842305,"slug":"treehouse-of-horror"},"user":{"username":"christhebaker","private":false,"deleted":false,"name":"Chris
+        of Horror","description":"All the Simpsons Halloween specials.","privacy":"public","share_link":"https://trakt.tv/lists/19842305","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2020-10-02T17:55:46.000Z","updated_at":"2025-11-01T21:51:50.000Z","item_count":35,"comment_count":0,"likes":77,"ids":{"trakt":19842305,"slug":"treehouse-of-horror"},"user":{"username":"christhebaker","private":false,"deleted":false,"name":"Chris
         Baker","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"christhebaker"}}}},{"liked_at":"2019-10-10T19:00:23.000Z","type":"list","list":{"name":"Rotten
         Tomatoes: Top 100 Movies Of All Time","description":"https://www.rottentomatoes.com/top/bestofrt/?cmp=FBRT_Top100Films\r\n\r\nUPDATED:
         3/28/22\r\n\r\nNOTE: It appears Rotten Tomatoes has removed this list. There
-        will not be any future updates to this list.","privacy":"public","share_link":"https://trakt.tv/lists/3785062","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2017-05-23T18:06:05.000Z","updated_at":"2025-08-02T10:33:39.000Z","item_count":100,"comment_count":0,"likes":546,"ids":{"trakt":3785062,"slug":"rotten-tomatoes-top-100-movies-of-all-time"},"user":{"username":"lish408","private":false,"deleted":false,"name":"LISH","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"lish408"}}}},{"liked_at":"2019-10-10T18:59:40.000Z","type":"list","list":{"name":"IMDB
+        will not be any future updates to this list.","privacy":"public","share_link":"https://trakt.tv/lists/3785062","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2017-05-23T18:06:05.000Z","updated_at":"2026-01-09T21:38:51.000Z","item_count":100,"comment_count":0,"likes":546,"ids":{"trakt":3785062,"slug":"rotten-tomatoes-top-100-movies-of-all-time"},"user":{"username":"lish408","private":false,"deleted":false,"name":"LISH","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"lish408"}}}},{"liked_at":"2019-10-10T18:59:40.000Z","type":"list","list":{"name":"IMDB
         Most Popular TV Series","description":"Most Popular TV Series With At Least
-        5,000 Votes","privacy":"public","share_link":"https://trakt.tv/lists/851496","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2014-09-11T21:05:08.000Z","updated_at":"2023-12-15T10:17:55.000Z","item_count":50,"comment_count":0,"likes":24,"ids":{"trakt":851496,"slug":"imdb-most-popular-tv-series"},"user":{"username":"hulkhorgen","private":false,"deleted":false,"name":null,"vip":false,"vip_ep":false,"director":false,"ids":{"slug":"hulkhorgen"}}}}]'
-  recorded_at: 2025-08-04 08:06:45
-recorded_with: VCR-vcr/2.0.0
+        5,000 Votes","privacy":"public","share_link":"https://trakt.tv/lists/851496","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2014-09-11T21:05:08.000Z","updated_at":"2026-01-13T19:42:03.000Z","item_count":50,"comment_count":0,"likes":22,"ids":{"trakt":851496,"slug":"imdb-most-popular-tv-series"},"user":{"username":"hulkhorgen","private":false,"deleted":false,"name":"hulkhorgen","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"hulkhorgen"}}}}]'
+  recorded_at: 2026-03-02 11:33:31
+recorded_with: VCR-vcr/2.1.0

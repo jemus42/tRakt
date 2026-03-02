@@ -3,7 +3,9 @@
 
 # Only set up vcr if it's installed
 if (requireNamespace("vcr", quietly = TRUE)) {
-	# Configure vcr with basic settings
+	# Re-record cassettes after 30 days to catch API changes
+	re_record_interval <- 30 * 24 * 60 * 60 # 30 days in seconds
+
 	vcr::vcr_configure(
 		dir = vcr::vcr_test_path("fixtures"),
 		filter_sensitive_data = list(
@@ -13,6 +15,7 @@ if (requireNamespace("vcr", quietly = TRUE)) {
 		filter_request_headers = list(
 			"authorization"
 		),
-		match_requests_on = c("method", "uri")
+		match_requests_on = c("method", "uri"),
+		re_record_interval = re_record_interval
 	)
 }

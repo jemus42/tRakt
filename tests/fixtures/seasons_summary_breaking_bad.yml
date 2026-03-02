@@ -5,236 +5,390 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:45 GMT
+      date: Mon, 02 Mar 2026 11:19:33 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8ea39cf5b238-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:45 GMT
-      x-show-updated-at: '2025-08-04T06:54:29.000Z'
-      etag: W/"32402e6054dd6f2887c0de43ca6db823"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":920,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: e2632b9b-d432-47a5-910d-424c2c1d1865
-      x-runtime: '0.012520'
-      cf-cache-status: EXPIRED
+      x-show-updated-at: '2026-03-02T07:18:19.000Z'
       speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
       server: cloudflare
+      cf-ray: 9d6001d1bd7fdac7-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '[{"number":0,"ids":{"trakt":3949,"tvdb":439371,"tmdb":3577,"tvrage":null}},{"number":1,"ids":{"trakt":3950,"tvdb":30272,"tmdb":3572,"tvrage":null}},{"number":2,"ids":{"trakt":3951,"tvdb":40719,"tmdb":3573,"tvrage":null}},{"number":3,"ids":{"trakt":3952,"tvdb":171641,"tmdb":3575,"tvrage":null}},{"number":4,"ids":{"trakt":3953,"tvdb":297361,"tmdb":3576,"tvrage":null}},{"number":5,"ids":{"trakt":3954,"tvdb":490110,"tmdb":3578,"tvrage":null}}]'
-  recorded_at: 2025-08-04 08:06:45
+      string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
+        1","votes":4301,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/950/thumbs/medium/0c78adaabb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/950/posters/medium/eded236292.jpg.webp"]},"number":1,"rating":8.439664840698242,"network":null,"overview":"High
+        school chemistry teacher Walter White''s life is suddenly transformed by a
+        dire medical diagnosis. Street-savvy former student Jesse Pinkman \"teaches\"
+        Walter a new trade.","updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2008-01-21T02:00:00.000Z","episode_count":7,"aired_episodes":7,"original_title":"Season
+        1"},{"ids":{"plex":{"guid":"602e61df66dfdb002c096b48"},"tmdb":3573,"tvdb":40719,"trakt":3951},"title":"Season
+        2","votes":3570,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/951/thumbs/medium/21896e4fb8.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/951/posters/medium/285d570ea2.jpg.webp"]},"number":2,"rating":8.634173393249512,"network":null,"overview":"Walt
+        must deal with the chain reaction of his choice, as he and Jesse face new
+        and severe consequences. When danger and suspicion around Walt escalate, he
+        is pushed to new levels of desperation. Just how much higher will the stakes
+        rise? How far is Walt willing to go to ensure his family''s security? Will
+        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
+        3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
+        continues to battle dueling identities: a desperate husband and father trying
+        to provide for his family, and a newly appointed key player in the Albuquerque
+        drug trade. As the danger around him escalates, Walt is now entrenched in
+        the complex worlds of an angst-ridden family on the verge of dissolution,
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
+        4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
+        and Jesse must cope with the fallout of their previous actions, both personally
+        and professionally. Tension mounts as Walt faces a true standoff with his
+        employer, Gus, with neither side willing or able to back down. Walt must also
+        adjust to a new relationship with Skyler, whom while still reconciling her
+        relationship with Walt, is committed to properly laundering Walt’s money and
+        ensuring her sister Marie and an ailing Hank are financially stable.","updated_at":"2026-03-02T09:04:56.000Z","first_aired":"2011-07-18T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        4"},{"ids":{"plex":{"guid":"602e61e366dfdb002c096c00"},"tmdb":3578,"tvdb":490110,"trakt":3954},"title":"Season
+        5","votes":2868,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/954/thumbs/medium/7382445277.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/954/posters/medium/a1878b564a.jpg.webp"]},"number":5,"rating":9.307182312011719,"network":null,"overview":"Walt
+        is faced with the prospect of moving on in a world without his enemy. As the
+        pressure of a criminal life starts to build, Skyler struggles to keep Walt’s
+        terrible secrets. Facing resistance from sometime adversary and former Fring
+        lieutenant Mike, Walt tries to keep his world from falling apart even as his
+        DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
+        straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
+        5"}]'
+  recorded_at: 2026-03-02 11:27:45
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=full
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:45 GMT
+      date: Mon, 02 Mar 2026 11:00:26 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8ea4cf42b238-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:45 GMT
-      x-show-updated-at: '2025-08-04T06:54:29.000Z'
-      etag: W/"3d40e8812d4254cc323e36ec73a66298"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":917,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: 827d3fdf-7f73-48b3-bea6-b7ea5d624bfa
-      x-runtime: '0.070897'
-      cf-cache-status: MISS
+      x-show-updated-at: '2026-03-02T07:18:19.000Z'
       speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
       server: cloudflare
+      cf-ray: 9d5fe5d21a706566-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '[{"number":0,"ids":{"trakt":3949,"tvdb":439371,"tmdb":3577,"tvrage":null},"rating":8.20379,"votes":211,"episode_count":9,"aired_episodes":7,"title":"Specials","overview":null,"first_aired":"2009-02-18T02:00:00.000Z","updated_at":"2025-08-04T01:54:02.000Z","network":"AMC","original_title":"Specials"},{"number":1,"ids":{"trakt":3950,"tvdb":30272,"tmdb":3572,"tvrage":null},"rating":8.47045,"votes":3892,"episode_count":7,"aired_episodes":7,"title":"Season
-        1","overview":"High school chemistry teacher Walter White''s life is suddenly
-        transformed by a dire medical diagnosis. Street-savvy former student Jesse
-        Pinkman \"teaches\" Walter a new trade.","first_aired":"2008-01-21T02:00:00.000Z","updated_at":"2025-08-04T01:54:02.000Z","network":"AMC","original_title":null},{"number":2,"ids":{"trakt":3951,"tvdb":40719,"tmdb":3573,"tvrage":null},"rating":8.66553,"votes":3232,"episode_count":13,"aired_episodes":13,"title":"Season
-        2","overview":"Walt must deal with the chain reaction of his choice, as he
-        and Jesse face new and severe consequences. When danger and suspicion around
-        Walt escalate, he is pushed to new levels of desperation. Just how much higher
-        will the stakes rise? How far is Walt willing to go to ensure his family''s
-        security? Will his grand plan spiral out of control?","first_aired":"2009-03-09T01:00:00.000Z","updated_at":"2025-08-04T01:54:02.000Z","network":"AMC","original_title":null},{"number":3,"ids":{"trakt":3952,"tvdb":171641,"tmdb":3575,"tvrage":null},"rating":8.86785,"votes":3042,"episode_count":13,"aired_episodes":13,"title":"Season
-        3","overview":"Walt continues to battle dueling identities: a desperate husband
-        and father trying to provide for his family, and a newly appointed key player
-        in the Albuquerque drug trade. As the danger around him escalates, Walt is
-        now entrenched in the complex worlds of an angst-ridden family on the verge
-        of dissolution, and the ruthless and unrelenting drug cartel.","first_aired":"2010-03-22T01:00:00.000Z","updated_at":"2025-08-04T07:17:53.000Z","network":"AMC","original_title":null},{"number":4,"ids":{"trakt":3953,"tvdb":297361,"tmdb":3576,"tvrage":null},"rating":9.19062,"votes":2922,"episode_count":13,"aired_episodes":13,"title":"Season
-        4","overview":"Walt and Jesse must cope with the fallout of their previous
-        actions, both personally and professionally. Tension mounts as Walt faces
-        a true standoff with his employer, Gus, with neither side willing or able
-        to back down. Walt must also adjust to a new relationship with Skyler, whom
-        while still reconciling her relationship with Walt, is committed to properly
-        laundering Walt’s money and ensuring her sister Marie and an ailing Hank are
-        financially stable.","first_aired":"2011-07-18T01:00:00.000Z","updated_at":"2025-08-04T03:42:13.000Z","network":"AMC","original_title":null},{"number":5,"ids":{"trakt":3954,"tvdb":490110,"tmdb":3578,"tvrage":null},"rating":9.30711,"votes":2758,"episode_count":16,"aired_episodes":16,"title":"Season
-        5","overview":"Walt is faced with the prospect of moving on in a world without
-        his enemy. As the pressure of a criminal life starts to build, Skyler struggles
-        to keep Walt’s terrible secrets. Facing resistance from sometime adversary
-        and former Fring lieutenant Mike, Walt tries to keep his world from falling
-        apart even as his DEA Agent brother in law, Hank, finds numerous leads that
-        could blaze a path straight to Walt. ","first_aired":"2012-07-16T01:00:00.000Z","updated_at":"2025-08-04T04:36:25.000Z","network":"AMC","original_title":null}]'
-  recorded_at: 2025-08-04 08:06:45
+      string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
+        1","votes":4301,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/950/thumbs/medium/0c78adaabb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/950/posters/medium/eded236292.jpg.webp"]},"number":1,"rating":8.439664840698242,"network":null,"overview":"High
+        school chemistry teacher Walter White''s life is suddenly transformed by a
+        dire medical diagnosis. Street-savvy former student Jesse Pinkman \"teaches\"
+        Walter a new trade.","updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2008-01-21T02:00:00.000Z","episode_count":7,"aired_episodes":7,"original_title":"Season
+        1"},{"ids":{"plex":{"guid":"602e61df66dfdb002c096b48"},"tmdb":3573,"tvdb":40719,"trakt":3951},"title":"Season
+        2","votes":3570,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/951/thumbs/medium/21896e4fb8.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/951/posters/medium/285d570ea2.jpg.webp"]},"number":2,"rating":8.634173393249512,"network":null,"overview":"Walt
+        must deal with the chain reaction of his choice, as he and Jesse face new
+        and severe consequences. When danger and suspicion around Walt escalate, he
+        is pushed to new levels of desperation. Just how much higher will the stakes
+        rise? How far is Walt willing to go to ensure his family''s security? Will
+        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
+        3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
+        continues to battle dueling identities: a desperate husband and father trying
+        to provide for his family, and a newly appointed key player in the Albuquerque
+        drug trade. As the danger around him escalates, Walt is now entrenched in
+        the complex worlds of an angst-ridden family on the verge of dissolution,
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
+        4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
+        and Jesse must cope with the fallout of their previous actions, both personally
+        and professionally. Tension mounts as Walt faces a true standoff with his
+        employer, Gus, with neither side willing or able to back down. Walt must also
+        adjust to a new relationship with Skyler, whom while still reconciling her
+        relationship with Walt, is committed to properly laundering Walt’s money and
+        ensuring her sister Marie and an ailing Hank are financially stable.","updated_at":"2026-03-02T09:04:56.000Z","first_aired":"2011-07-18T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        4"},{"ids":{"plex":{"guid":"602e61e366dfdb002c096c00"},"tmdb":3578,"tvdb":490110,"trakt":3954},"title":"Season
+        5","votes":2868,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/954/thumbs/medium/7382445277.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/954/posters/medium/a1878b564a.jpg.webp"]},"number":5,"rating":9.307182312011719,"network":null,"overview":"Walt
+        is faced with the prospect of moving on in a world without his enemy. As the
+        pressure of a criminal life starts to build, Skyler struggles to keep Walt’s
+        terrible secrets. Facing resistance from sometime adversary and former Fring
+        lieutenant Mike, Walt tries to keep his world from falling apart even as his
+        DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
+        straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
+        5"}]'
+  recorded_at: 2026-03-02 11:27:45
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=min
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:45 GMT
+      date: Mon, 02 Mar 2026 11:19:33 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8ea39cf5b238-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:45 GMT
-      x-show-updated-at: '2025-08-04T06:54:29.000Z'
-      etag: W/"32402e6054dd6f2887c0de43ca6db823"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":920,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: e2632b9b-d432-47a5-910d-424c2c1d1865
-      x-runtime: '0.012520'
-      cf-cache-status: EXPIRED
+      x-show-updated-at: '2026-03-02T07:18:19.000Z'
       speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
       server: cloudflare
+      cf-ray: 9d6001d1bd7fdac7-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '[{"number":0,"ids":{"trakt":3949,"tvdb":439371,"tmdb":3577,"tvrage":null}},{"number":1,"ids":{"trakt":3950,"tvdb":30272,"tmdb":3572,"tvrage":null}},{"number":2,"ids":{"trakt":3951,"tvdb":40719,"tmdb":3573,"tvrage":null}},{"number":3,"ids":{"trakt":3952,"tvdb":171641,"tmdb":3575,"tvrage":null}},{"number":4,"ids":{"trakt":3953,"tvdb":297361,"tmdb":3576,"tvrage":null}},{"number":5,"ids":{"trakt":3954,"tvdb":490110,"tmdb":3578,"tvrage":null}}]'
-  recorded_at: 2025-08-04 08:06:45
+      string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
+        1","votes":4301,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/950/thumbs/medium/0c78adaabb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/950/posters/medium/eded236292.jpg.webp"]},"number":1,"rating":8.439664840698242,"network":null,"overview":"High
+        school chemistry teacher Walter White''s life is suddenly transformed by a
+        dire medical diagnosis. Street-savvy former student Jesse Pinkman \"teaches\"
+        Walter a new trade.","updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2008-01-21T02:00:00.000Z","episode_count":7,"aired_episodes":7,"original_title":"Season
+        1"},{"ids":{"plex":{"guid":"602e61df66dfdb002c096b48"},"tmdb":3573,"tvdb":40719,"trakt":3951},"title":"Season
+        2","votes":3570,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/951/thumbs/medium/21896e4fb8.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/951/posters/medium/285d570ea2.jpg.webp"]},"number":2,"rating":8.634173393249512,"network":null,"overview":"Walt
+        must deal with the chain reaction of his choice, as he and Jesse face new
+        and severe consequences. When danger and suspicion around Walt escalate, he
+        is pushed to new levels of desperation. Just how much higher will the stakes
+        rise? How far is Walt willing to go to ensure his family''s security? Will
+        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
+        3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
+        continues to battle dueling identities: a desperate husband and father trying
+        to provide for his family, and a newly appointed key player in the Albuquerque
+        drug trade. As the danger around him escalates, Walt is now entrenched in
+        the complex worlds of an angst-ridden family on the verge of dissolution,
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
+        4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
+        and Jesse must cope with the fallout of their previous actions, both personally
+        and professionally. Tension mounts as Walt faces a true standoff with his
+        employer, Gus, with neither side willing or able to back down. Walt must also
+        adjust to a new relationship with Skyler, whom while still reconciling her
+        relationship with Walt, is committed to properly laundering Walt’s money and
+        ensuring her sister Marie and an ailing Hank are financially stable.","updated_at":"2026-03-02T09:04:56.000Z","first_aired":"2011-07-18T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        4"},{"ids":{"plex":{"guid":"602e61e366dfdb002c096c00"},"tmdb":3578,"tvdb":490110,"trakt":3954},"title":"Season
+        5","votes":2868,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/954/thumbs/medium/7382445277.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/954/posters/medium/a1878b564a.jpg.webp"]},"number":5,"rating":9.307182312011719,"network":null,"overview":"Walt
+        is faced with the prospect of moving on in a world without his enemy. As the
+        pressure of a criminal life starts to build, Skyler struggles to keep Walt’s
+        terrible secrets. Facing resistance from sometime adversary and former Fring
+        lieutenant Mike, Walt tries to keep his world from falling apart even as his
+        DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
+        straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
+        5"}]'
+  recorded_at: 2026-03-02 11:27:45
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=min
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:45 GMT
+      date: Mon, 02 Mar 2026 11:19:33 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8ea39cf5b238-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:45 GMT
-      x-show-updated-at: '2025-08-04T06:54:29.000Z'
-      etag: W/"32402e6054dd6f2887c0de43ca6db823"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":920,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: e2632b9b-d432-47a5-910d-424c2c1d1865
-      x-runtime: '0.012520'
-      cf-cache-status: EXPIRED
+      x-show-updated-at: '2026-03-02T07:18:19.000Z'
       speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
       server: cloudflare
+      cf-ray: 9d6001d1bd7fdac7-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '[{"number":0,"ids":{"trakt":3949,"tvdb":439371,"tmdb":3577,"tvrage":null}},{"number":1,"ids":{"trakt":3950,"tvdb":30272,"tmdb":3572,"tvrage":null}},{"number":2,"ids":{"trakt":3951,"tvdb":40719,"tmdb":3573,"tvrage":null}},{"number":3,"ids":{"trakt":3952,"tvdb":171641,"tmdb":3575,"tvrage":null}},{"number":4,"ids":{"trakt":3953,"tvdb":297361,"tmdb":3576,"tvrage":null}},{"number":5,"ids":{"trakt":3954,"tvdb":490110,"tmdb":3578,"tvrage":null}}]'
-  recorded_at: 2025-08-04 08:06:45
+      string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
+        1","votes":4301,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/950/thumbs/medium/0c78adaabb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/950/posters/medium/eded236292.jpg.webp"]},"number":1,"rating":8.439664840698242,"network":null,"overview":"High
+        school chemistry teacher Walter White''s life is suddenly transformed by a
+        dire medical diagnosis. Street-savvy former student Jesse Pinkman \"teaches\"
+        Walter a new trade.","updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2008-01-21T02:00:00.000Z","episode_count":7,"aired_episodes":7,"original_title":"Season
+        1"},{"ids":{"plex":{"guid":"602e61df66dfdb002c096b48"},"tmdb":3573,"tvdb":40719,"trakt":3951},"title":"Season
+        2","votes":3570,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/951/thumbs/medium/21896e4fb8.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/951/posters/medium/285d570ea2.jpg.webp"]},"number":2,"rating":8.634173393249512,"network":null,"overview":"Walt
+        must deal with the chain reaction of his choice, as he and Jesse face new
+        and severe consequences. When danger and suspicion around Walt escalate, he
+        is pushed to new levels of desperation. Just how much higher will the stakes
+        rise? How far is Walt willing to go to ensure his family''s security? Will
+        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
+        3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
+        continues to battle dueling identities: a desperate husband and father trying
+        to provide for his family, and a newly appointed key player in the Albuquerque
+        drug trade. As the danger around him escalates, Walt is now entrenched in
+        the complex worlds of an angst-ridden family on the verge of dissolution,
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
+        4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
+        and Jesse must cope with the fallout of their previous actions, both personally
+        and professionally. Tension mounts as Walt faces a true standoff with his
+        employer, Gus, with neither side willing or able to back down. Walt must also
+        adjust to a new relationship with Skyler, whom while still reconciling her
+        relationship with Walt, is committed to properly laundering Walt’s money and
+        ensuring her sister Marie and an ailing Hank are financially stable.","updated_at":"2026-03-02T09:04:56.000Z","first_aired":"2011-07-18T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        4"},{"ids":{"plex":{"guid":"602e61e366dfdb002c096c00"},"tmdb":3578,"tvdb":490110,"trakt":3954},"title":"Season
+        5","votes":2868,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/954/thumbs/medium/7382445277.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/954/posters/medium/a1878b564a.jpg.webp"]},"number":5,"rating":9.307182312011719,"network":null,"overview":"Walt
+        is faced with the prospect of moving on in a world without his enemy. As the
+        pressure of a criminal life starts to build, Skyler struggles to keep Walt’s
+        terrible secrets. Facing resistance from sometime adversary and former Fring
+        lieutenant Mike, Walt tries to keep his world from falling apart even as his
+        DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
+        straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
+        5"}]'
+  recorded_at: 2026-03-02 11:27:45
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=min
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:45 GMT
+      date: Mon, 02 Mar 2026 11:19:33 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8ea39cf5b238-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:45 GMT
-      x-show-updated-at: '2025-08-04T06:54:29.000Z'
-      etag: W/"32402e6054dd6f2887c0de43ca6db823"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":920,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: e2632b9b-d432-47a5-910d-424c2c1d1865
-      x-runtime: '0.012520'
-      cf-cache-status: EXPIRED
+      x-show-updated-at: '2026-03-02T07:18:19.000Z'
       speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
       server: cloudflare
+      cf-ray: 9d6001d1bd7fdac7-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '[{"number":0,"ids":{"trakt":3949,"tvdb":439371,"tmdb":3577,"tvrage":null}},{"number":1,"ids":{"trakt":3950,"tvdb":30272,"tmdb":3572,"tvrage":null}},{"number":2,"ids":{"trakt":3951,"tvdb":40719,"tmdb":3573,"tvrage":null}},{"number":3,"ids":{"trakt":3952,"tvdb":171641,"tmdb":3575,"tvrage":null}},{"number":4,"ids":{"trakt":3953,"tvdb":297361,"tmdb":3576,"tvrage":null}},{"number":5,"ids":{"trakt":3954,"tvdb":490110,"tmdb":3578,"tvrage":null}}]'
-  recorded_at: 2025-08-04 08:06:45
+      string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
+        1","votes":4301,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/950/thumbs/medium/0c78adaabb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/950/posters/medium/eded236292.jpg.webp"]},"number":1,"rating":8.439664840698242,"network":null,"overview":"High
+        school chemistry teacher Walter White''s life is suddenly transformed by a
+        dire medical diagnosis. Street-savvy former student Jesse Pinkman \"teaches\"
+        Walter a new trade.","updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2008-01-21T02:00:00.000Z","episode_count":7,"aired_episodes":7,"original_title":"Season
+        1"},{"ids":{"plex":{"guid":"602e61df66dfdb002c096b48"},"tmdb":3573,"tvdb":40719,"trakt":3951},"title":"Season
+        2","votes":3570,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/951/thumbs/medium/21896e4fb8.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/951/posters/medium/285d570ea2.jpg.webp"]},"number":2,"rating":8.634173393249512,"network":null,"overview":"Walt
+        must deal with the chain reaction of his choice, as he and Jesse face new
+        and severe consequences. When danger and suspicion around Walt escalate, he
+        is pushed to new levels of desperation. Just how much higher will the stakes
+        rise? How far is Walt willing to go to ensure his family''s security? Will
+        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
+        3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
+        continues to battle dueling identities: a desperate husband and father trying
+        to provide for his family, and a newly appointed key player in the Albuquerque
+        drug trade. As the danger around him escalates, Walt is now entrenched in
+        the complex worlds of an angst-ridden family on the verge of dissolution,
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
+        4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
+        and Jesse must cope with the fallout of their previous actions, both personally
+        and professionally. Tension mounts as Walt faces a true standoff with his
+        employer, Gus, with neither side willing or able to back down. Walt must also
+        adjust to a new relationship with Skyler, whom while still reconciling her
+        relationship with Walt, is committed to properly laundering Walt’s money and
+        ensuring her sister Marie and an ailing Hank are financially stable.","updated_at":"2026-03-02T09:04:56.000Z","first_aired":"2011-07-18T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        4"},{"ids":{"plex":{"guid":"602e61e366dfdb002c096c00"},"tmdb":3578,"tvdb":490110,"trakt":3954},"title":"Season
+        5","votes":2868,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/954/thumbs/medium/7382445277.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/954/posters/medium/a1878b564a.jpg.webp"]},"number":5,"rating":9.307182312011719,"network":null,"overview":"Walt
+        is faced with the prospect of moving on in a world without his enemy. As the
+        pressure of a criminal life starts to build, Skyler struggles to keep Walt’s
+        terrible secrets. Facing resistance from sometime adversary and former Fring
+        lieutenant Mike, Walt tries to keep his world from falling apart even as his
+        DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
+        straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
+        5"}]'
+  recorded_at: 2026-03-02 11:27:45
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=min
   response:
     status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:45 GMT
+      date: Mon, 02 Mar 2026 11:19:33 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: 969c8ea39cf5b238-DUS
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      expires: Mon, 04 Aug 2025 16:06:45 GMT
-      x-show-updated-at: '2025-08-04T06:54:29.000Z'
-      etag: W/"32402e6054dd6f2887c0de43ca6db823"
-      cache-control: public, max-age=28800
-      vary: Accept-Encoding
-      content-encoding: gzip
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":920,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: e2632b9b-d432-47a5-910d-424c2c1d1865
-      x-runtime: '0.012520'
-      cf-cache-status: EXPIRED
+      x-show-updated-at: '2026-03-02T07:18:19.000Z'
       speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
       server: cloudflare
+      cf-ray: 9d6001d1bd7fdac7-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '[{"number":0,"ids":{"trakt":3949,"tvdb":439371,"tmdb":3577,"tvrage":null}},{"number":1,"ids":{"trakt":3950,"tvdb":30272,"tmdb":3572,"tvrage":null}},{"number":2,"ids":{"trakt":3951,"tvdb":40719,"tmdb":3573,"tvrage":null}},{"number":3,"ids":{"trakt":3952,"tvdb":171641,"tmdb":3575,"tvrage":null}},{"number":4,"ids":{"trakt":3953,"tvdb":297361,"tmdb":3576,"tvrage":null}},{"number":5,"ids":{"trakt":3954,"tvdb":490110,"tmdb":3578,"tvrage":null}}]'
-  recorded_at: 2025-08-04 08:06:45
+      string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
+        1","votes":4301,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/950/thumbs/medium/0c78adaabb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/950/posters/medium/eded236292.jpg.webp"]},"number":1,"rating":8.439664840698242,"network":null,"overview":"High
+        school chemistry teacher Walter White''s life is suddenly transformed by a
+        dire medical diagnosis. Street-savvy former student Jesse Pinkman \"teaches\"
+        Walter a new trade.","updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2008-01-21T02:00:00.000Z","episode_count":7,"aired_episodes":7,"original_title":"Season
+        1"},{"ids":{"plex":{"guid":"602e61df66dfdb002c096b48"},"tmdb":3573,"tvdb":40719,"trakt":3951},"title":"Season
+        2","votes":3570,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/951/thumbs/medium/21896e4fb8.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/951/posters/medium/285d570ea2.jpg.webp"]},"number":2,"rating":8.634173393249512,"network":null,"overview":"Walt
+        must deal with the chain reaction of his choice, as he and Jesse face new
+        and severe consequences. When danger and suspicion around Walt escalate, he
+        is pushed to new levels of desperation. Just how much higher will the stakes
+        rise? How far is Walt willing to go to ensure his family''s security? Will
+        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
+        3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
+        continues to battle dueling identities: a desperate husband and father trying
+        to provide for his family, and a newly appointed key player in the Albuquerque
+        drug trade. As the danger around him escalates, Walt is now entrenched in
+        the complex worlds of an angst-ridden family on the verge of dissolution,
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
+        4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
+        and Jesse must cope with the fallout of their previous actions, both personally
+        and professionally. Tension mounts as Walt faces a true standoff with his
+        employer, Gus, with neither side willing or able to back down. Walt must also
+        adjust to a new relationship with Skyler, whom while still reconciling her
+        relationship with Walt, is committed to properly laundering Walt’s money and
+        ensuring her sister Marie and an ailing Hank are financially stable.","updated_at":"2026-03-02T09:04:56.000Z","first_aired":"2011-07-18T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        4"},{"ids":{"plex":{"guid":"602e61e366dfdb002c096c00"},"tmdb":3578,"tvdb":490110,"trakt":3954},"title":"Season
+        5","votes":2868,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/954/thumbs/medium/7382445277.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/954/posters/medium/a1878b564a.jpg.webp"]},"number":5,"rating":9.307182312011719,"network":null,"overview":"Walt
+        is faced with the prospect of moving on in a world without his enemy. As the
+        pressure of a criminal life starts to build, Skyler struggles to keep Walt’s
+        terrible secrets. Facing resistance from sometime adversary and former Fring
+        lieutenant Mike, Walt tries to keep his world from falling apart even as his
+        DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
+        straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
+        5"}]'
+  recorded_at: 2026-03-02 11:27:45
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/bvkjqbkqjbf/seasons?extended=min
   response:
-    status: 404
+    status: 200
     headers:
-      date: Mon, 04 Aug 2025 08:06:45 GMT
-      content-type: text/html
-      content-encoding: gzip
-      x-frame-options: SAMEORIGIN
-      x-xss-protection: '0'
+      date: Mon, 02 Mar 2026 11:23:36 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
+      x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      referrer-policy: strict-origin-when-cross-origin
-      cache-control: max-age=0, private, must-revalidate, no_store=true, no_cache=true
-      vary: Accept-Encoding
-      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":906,"until":"2025-08-04T08:10:00Z"}'
-      x-request-id: fc4d615d-8fe8-4fa9-a12f-446b9cc1a94b
-      x-runtime: '0.010235'
-      cf-cache-status: BYPASS
+      x-show-updated-at: '1970-01-01T00:00:00.000Z'
       speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
       server: cloudflare
-      cf-ray: 969c8ea69aefb238-DUS
+      cf-ray: 9d6007c20fbe7754-AMS
       alt-svc: h3=":443"; ma=86400
-  recorded_at: 2025-08-04 08:06:45
-recorded_with: VCR-vcr/2.0.0
+    body:
+      string: '[]'
+  recorded_at: 2026-03-02 11:27:45
+recorded_with: VCR-vcr/2.1.0
