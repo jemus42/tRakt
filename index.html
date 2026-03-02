@@ -113,77 +113,83 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <p>Get season information for the show using its trakt ID:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 2</span></span>
-<span><span class="co">#&gt; Columns: 14</span></span>
+<span><span class="co">#&gt; Columns: 16</span></span>
+<span><span class="co">#&gt; $ title          &lt;chr&gt; "Season 1", "Season 2"</span></span>
+<span><span class="co">#&gt; $ votes          &lt;int&gt; 377, 226</span></span>
+<span><span class="co">#&gt; $ images         &lt;df[,2]&gt; &lt;data.frame[2 x 2]&gt;</span></span>
 <span><span class="co">#&gt; $ season         &lt;int&gt; 1, 2</span></span>
-<span><span class="co">#&gt; $ rating         &lt;dbl&gt; 8.40741, 8.08333</span></span>
-<span><span class="co">#&gt; $ votes          &lt;int&gt; 351, 216</span></span>
+<span><span class="co">#&gt; $ rating         &lt;dbl&gt; 8.336870, 8.057522</span></span>
+<span><span class="co">#&gt; $ network        &lt;lgl&gt; NA, NA</span></span>
+<span><span class="co">#&gt; $ overview       &lt;chr&gt; "When a group of strangers find themselves in possessio…</span></span>
+<span><span class="co">#&gt; $ updated_at     &lt;dttm&gt; 2026-03-02 01:28:02, 2026-03-02 01:28:02</span></span>
+<span><span class="co">#&gt; $ first_aired    &lt;dttm&gt; 2013-01-15 21:00:00, 2014-07-14 20:00:00</span></span>
 <span><span class="co">#&gt; $ episode_count  &lt;int&gt; 6, 6</span></span>
 <span><span class="co">#&gt; $ aired_episodes &lt;int&gt; 6, 6</span></span>
-<span><span class="co">#&gt; $ title          &lt;chr&gt; "Season 1", "Season 2"</span></span>
-<span><span class="co">#&gt; $ overview       &lt;chr&gt; "When a group of strangers find themselves in possessio…</span></span>
-<span><span class="co">#&gt; $ first_aired    &lt;dttm&gt; 2013-01-15 21:00:00, 2014-07-14 20:00:00</span></span>
-<span><span class="co">#&gt; $ updated_at     &lt;dttm&gt; 2025-08-12 06:03:40, 2025-08-12 06:03:40</span></span>
-<span><span class="co">#&gt; $ network        &lt;chr&gt; "Channel 4", "Channel 4"</span></span>
-<span><span class="co">#&gt; $ original_title &lt;lgl&gt; NA, NA</span></span>
-<span><span class="co">#&gt; $ trakt          &lt;chr&gt; "56008", "56009"</span></span>
+<span><span class="co">#&gt; $ original_title &lt;chr&gt; "Season 1", "Season 2"</span></span>
+<span><span class="co">#&gt; $ plex           &lt;chr&gt; "c(\"602e627b0f4bde002da31cdc\", \"602e627b0f4bde002da3…</span></span>
+<span><span class="co">#&gt; $ tmdb           &lt;chr&gt; "54695", "54696"</span></span>
 <span><span class="co">#&gt; $ tvdb           &lt;chr&gt; "507598", "524149"</span></span>
-<span><span class="co">#&gt; $ tmdb           &lt;chr&gt; "54695", "54696"</span></span></code></pre></div>
+<span><span class="co">#&gt; $ trakt          &lt;chr&gt; "56008", "56009"</span></span></code></pre></div>
 <p>Get episode data for the first season, this time using the show’s URL slug:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_episodes.html">seasons_episodes</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, seasons <span class="op">=</span> <span class="fl">1</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 6</span></span>
-<span><span class="co">#&gt; Columns: 20</span></span>
-<span><span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1</span></span>
-<span><span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6</span></span>
+<span><span class="co">#&gt; Columns: 22</span></span>
 <span><span class="co">#&gt; $ title                  &lt;chr&gt; "Episode 1", "Episode 2", "Episode 3", "Episode…</span></span>
-<span><span class="co">#&gt; $ episode_abs            &lt;int&gt; 1, 2, 3, 4, 5, 6</span></span>
-<span><span class="co">#&gt; $ overview               &lt;chr&gt; "When  five strangers from an online comic book…</span></span>
-<span><span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.14286, 8.03480, 8.02721, 7.99512, 8.12932, 8.…</span></span>
-<span><span class="co">#&gt; $ votes                  &lt;int&gt; 1211, 977, 882, 820, 781, 801</span></span>
-<span><span class="co">#&gt; $ comment_count          &lt;int&gt; 9, 0, 1, 2, 1, 2</span></span>
-<span><span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…</span></span>
-<span><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2025-08-12 13:37:06, 2025-08-12 13:37:07, 2025-…</span></span>
-<span><span class="co">#&gt; $ available_translations &lt;list&gt; &lt;"de", "en", "es", "fr", "he", "nl", "pl", "ru"…</span></span>
+<span><span class="co">#&gt; $ votes                  &lt;int&gt; 1214, 969, 877, 814, 784, 799</span></span>
+<span><span class="co">#&gt; $ images                 &lt;df[,1]&gt; &lt;data.frame[6 x 1]&gt;</span></span>
+<span><span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6</span></span>
+<span><span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.126030, 8.027864, 8.025085, 7.986486, 8.12755…</span></span>
+<span><span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1</span></span>
 <span><span class="co">#&gt; $ runtime                &lt;int&gt; 60, 49, 51, 48, 49, 62</span></span>
+<span><span class="co">#&gt; $ overview               &lt;chr&gt; "When  five strangers from an online comic b…</span></span>
+<span><span class="co">#&gt; $ episode_abs            &lt;int&gt; 1, 2, 3, 4, 5, 6</span></span>
+<span><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2026-03-02 00:16:11, 2026-03-02 08:04:28, 2026-…</span></span>
+<span><span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…</span></span>
 <span><span class="co">#&gt; $ episode_type           &lt;chr&gt; "series_premiere", "standard", "standard", "sta…</span></span>
-<span><span class="co">#&gt; $ original_title         &lt;lgl&gt; NA, NA, NA, NA, NA, NA</span></span>
 <span><span class="co">#&gt; $ after_credits          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE</span></span>
+<span><span class="co">#&gt; $ comment_count          &lt;int&gt; 9, 0, 1, 2, 2, 2</span></span>
 <span><span class="co">#&gt; $ during_credits         &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE</span></span>
-<span><span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056", "14…</span></span>
+<span><span class="co">#&gt; $ original_title         &lt;lgl&gt; NA, NA, NA, NA, NA, NA</span></span>
+<span><span class="co">#&gt; $ available_translations &lt;list&gt; &lt;"de", "en", "es", "fr", "he", "nl", "pl", "ru"…</span></span>
+<span><span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "tt26182…</span></span>
+<span><span class="co">#&gt; $ plex                   &lt;chr&gt; "c(\"5d9c1007ba6eb9001fbf63c1\", \"5d9c1007ba6e…</span></span>
+<span><span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></span>
 <span><span class="co">#&gt; $ tvdb                   &lt;chr&gt; "4471351", "4477746", "4477747", "4477748", "4…</span></span>
-<span><span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "tt2618…</span></span>
-<span><span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "91000…</span></span></code></pre></div>
+<span><span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056", "14…</span></span></code></pre></div>
 <p>You cann also get episode data for all seasons, but note that episodes will be included as a list-column and need further unpacking:</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, episodes <span class="op">=</span> <span class="cn">TRUE</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html" class="external-link">pull</a></span><span class="op">(</span><span class="va">episodes</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html" class="external-link">pull</a></span><span class="op">(</span><span class="va">episodes</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html" class="external-link">bind_rows</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 12</span></span>
-<span><span class="co">#&gt; Columns: 20</span></span>
-<span><span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2</span></span>
-<span><span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6</span></span>
+<span><span class="co">#&gt; Columns: 22</span></span>
 <span><span class="co">#&gt; $ title                  &lt;chr&gt; "Episode 1", "Episode 2", "Episode 3", "Episode…</span></span>
-<span><span class="co">#&gt; $ episode_abs            &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12</span></span>
-<span><span class="co">#&gt; $ overview               &lt;chr&gt; "When  five strangers from an online comic book…</span></span>
-<span><span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.14286, 8.03480, 8.02721, 7.99512, 8.12932, 8.…</span></span>
-<span><span class="co">#&gt; $ votes                  &lt;int&gt; 1211, 977, 882, 820, 781, 801, 796, 701, 669, 6…</span></span>
-<span><span class="co">#&gt; $ comment_count          &lt;int&gt; 9, 0, 1, 2, 1, 2, 5, 1, 2, 2, 2, 6</span></span>
-<span><span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…</span></span>
-<span><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2025-08-11 21:19:50, 2025-08-12 00:25:28, 2025-…</span></span>
-<span><span class="co">#&gt; $ available_translations &lt;list&gt; &lt;"de", "en", "es", "fr", "he", "nl", "pl", "ru"…</span></span>
+<span><span class="co">#&gt; $ votes                  &lt;int&gt; 1214, 969, 877, 814, 784, 799, 796, 695, 664, 6…</span></span>
+<span><span class="co">#&gt; $ images                 &lt;df[,1]&gt; &lt;data.frame[12 x 1]&gt;</span></span>
+<span><span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6</span></span>
+<span><span class="co">#&gt; $ rating                 &lt;dbl&gt; 8.126030, 8.027864, 8.025085, 7.986486, 8.12…</span></span>
+<span><span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2</span></span>
 <span><span class="co">#&gt; $ runtime                &lt;int&gt; 60, 49, 51, 48, 49, 62, 54, 51, 50, 50, 50, 53</span></span>
+<span><span class="co">#&gt; $ overview               &lt;chr&gt; "When  five strangers from an online comic book…</span></span>
+<span><span class="co">#&gt; $ episode_abs            &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12</span></span>
+<span><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2026-03-02 00:16:11, 2026-03-02 08:04:28, 2026-…</span></span>
+<span><span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…</span></span>
 <span><span class="co">#&gt; $ episode_type           &lt;chr&gt; "series_premiere", "standard", "standard", "sta…</span></span>
+<span><span class="co">#&gt; $ after_credits          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…</span></span>
+<span><span class="co">#&gt; $ comment_count          &lt;int&gt; 9, 0, 1, 2, 2, 2, 5, 1, 2, 2, 2, 7</span></span>
+<span><span class="co">#&gt; $ during_credits         &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…</span></span>
 <span><span class="co">#&gt; $ original_title         &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA</span></span>
-<span><span class="co">#&gt; $ after_credits          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…</span></span>
-<span><span class="co">#&gt; $ during_credits         &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…</span></span>
-<span><span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056", "1…</span></span>
+<span><span class="co">#&gt; $ available_translations &lt;list&gt; &lt;"de", "en", "es", "fr", "he", "nl", "pl", "ru…</span></span>
+<span><span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "tt2618…</span></span>
+<span><span class="co">#&gt; $ plex                   &lt;chr&gt; "c(\"5d9c1007ba6eb9001fbf63c1\", \"5d9c1007ba6e…</span></span>
+<span><span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "910007…</span></span>
 <span><span class="co">#&gt; $ tvdb                   &lt;chr&gt; "4471351", "4477746", "4477747", "4477748", "44…</span></span>
-<span><span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt2618234", "tt2618232", "tt2618236", "tt26182…</span></span>
-<span><span class="co">#&gt; $ tmdb                   &lt;chr&gt; "910003", "910004", "910005", "910006", "910007…</span></span></code></pre></div>
+<span><span class="co">#&gt; $ trakt                  &lt;chr&gt; "1405053", "1405054", "1405055", "1405056", "14…</span></span></code></pre></div>
 <p>Or alternatively, get the <a href="https://trakt.tv/shows/trending" class="external-link">trending shows</a>:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -203,22 +209,16 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 <p>Maybe you just want to know how long it would take you to binge through these shows:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/trending_media.html">shows_trending</a></span><span class="op">(</span>extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/transmute.html" class="external-link">transmute</a></span><span class="op">(</span></span>
-<span>    show <span class="op">=</span> <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html" class="external-link">glue</a></span><span class="op">(</span><span class="st">"{title} ({year})"</span><span class="op">)</span>,</span>
-<span>    runtime_hms <span class="op">=</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu">hms</span><span class="op">(</span>minutes <span class="op">=</span> <span class="va">runtime</span><span class="op">)</span>,</span>
-<span>    aired_episodes <span class="op">=</span> <span class="va">aired_episodes</span>,</span>
-<span>    runtime_aired <span class="op">=</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu">hms</span><span class="op">(</span>minutes <span class="op">=</span> <span class="va">runtime</span> <span class="op">*</span> <span class="va">aired_episodes</span><span class="op">)</span></span>
-<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span></span>
-<span>    col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Show"</span>, <span class="st">"Episode Runtime"</span>, <span class="st">"Aired Episodes"</span>, <span class="st">"Total Runtime (aired)"</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span></code></pre></div>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/transmute.html" class="external-link">transmute</a></span><span class="op">(</span></span>
+<span>        show <span class="op">=</span> <span class="fu">glue</span><span class="fu">::</span><span class="fu"><a href="https://glue.tidyverse.org/reference/glue.html" class="external-link">glue</a></span><span class="op">(</span><span class="st">"{title} ({year})"</span><span class="op">)</span>,</span>
+<span>        runtime_hms <span class="op">=</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu">hms</span><span class="op">(</span>minutes <span class="op">=</span> <span class="va">runtime</span><span class="op">)</span>,</span>
+<span>        aired_episodes <span class="op">=</span> <span class="va">aired_episodes</span>,</span>
+<span>        runtime_aired <span class="op">=</span> <span class="fu">hms</span><span class="fu">::</span><span class="fu">hms</span><span class="op">(</span>minutes <span class="op">=</span> <span class="va">runtime</span> <span class="op">*</span> <span class="va">aired_episodes</span><span class="op">)</span></span>
+<span>    <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html" class="external-link">kable</a></span><span class="op">(</span></span>
+<span>        col.names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Show"</span>, <span class="st">"Episode Runtime"</span>, <span class="st">"Aired Episodes"</span>, <span class="st">"Total Runtime (aired)"</span><span class="op">)</span></span>
+<span>    <span class="op">)</span></span></code></pre></div>
 <table class="table">
-<colgroup>
-<col width="25%">
-<col width="25%">
-<col width="25%">
-<col width="25%">
-</colgroup>
 <thead><tr class="header">
 <th align="left">Show</th>
 <th align="left">Episode Runtime</th>
@@ -227,64 +227,64 @@ And, most importantly, <a href="https://trakt.docs.apiary.io" class="external-li
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">Wednesday (2022)</td>
-<td align="left">00:42:00</td>
-<td align="right">12</td>
-<td align="left">08:24:00</td>
+<td align="left">The Pitt (2025)</td>
+<td align="left">00:48:00</td>
+<td align="right">23</td>
+<td align="left">18:24:00</td>
 </tr>
 <tr class="even">
-<td align="left">Dexter: Resurrection (2025)</td>
+<td align="left">Bridgerton (2020)</td>
+<td align="left">01:00:00</td>
+<td align="right">32</td>
+<td align="left">32:00:00</td>
+</tr>
+<tr class="odd">
+<td align="left">A Knight of the Seven Kingdoms (2026)</td>
+<td align="left">00:35:00</td>
+<td align="right">6</td>
+<td align="left">03:30:00</td>
+</tr>
+<tr class="even">
+<td align="left">The Night Agent (2023)</td>
 <td align="left">00:50:00</td>
-<td align="right">6</td>
-<td align="left">05:00:00</td>
+<td align="right">30</td>
+<td align="left">25:00:00</td>
 </tr>
 <tr class="odd">
-<td align="left">The Gilded Age (2022)</td>
-<td align="left">00:56:00</td>
-<td align="right">25</td>
-<td align="left">23:20:00</td>
+<td align="left">Paradise (2025)</td>
+<td align="left">00:52:00</td>
+<td align="right">12</td>
+<td align="left">10:24:00</td>
 </tr>
 <tr class="even">
-<td align="left">South Park (1997)</td>
-<td align="left">00:22:00</td>
-<td align="right">323</td>
-<td align="left">118:26:00</td>
+<td align="left">Monarch: Legacy of Monsters (2023)</td>
+<td align="left">00:46:00</td>
+<td align="right">11</td>
+<td align="left">08:26:00</td>
 </tr>
 <tr class="odd">
-<td align="left">The Institute (2025)</td>
-<td align="left">00:58:00</td>
-<td align="right">6</td>
-<td align="left">05:48:00</td>
+<td align="left">Formula 1: Drive to Survive (2019)</td>
+<td align="left">00:40:00</td>
+<td align="right">78</td>
+<td align="left">52:00:00</td>
 </tr>
 <tr class="even">
-<td align="left">Last Week Tonight with John Oliver (2014)</td>
-<td align="left">00:42:00</td>
-<td align="right">340</td>
-<td align="left">238:00:00</td>
+<td align="left">Shrinking (2023)</td>
+<td align="left">00:35:00</td>
+<td align="right">27</td>
+<td align="left">15:45:00</td>
 </tr>
 <tr class="odd">
-<td align="left">Foundation (2021)</td>
-<td align="left">00:42:00</td>
-<td align="right">25</td>
-<td align="left">17:30:00</td>
+<td align="left">The Rookie (2018)</td>
+<td align="left">00:40:00</td>
+<td align="right">134</td>
+<td align="left">89:20:00</td>
 </tr>
 <tr class="even">
-<td align="left">Star Trek: Strange New Worlds (2022)</td>
+<td align="left">Fallout (2024)</td>
 <td align="left">00:55:00</td>
-<td align="right">25</td>
-<td align="left">22:55:00</td>
-</tr>
-<tr class="odd">
-<td align="left">Twisted Metal (2023)</td>
-<td align="left">00:42:00</td>
-<td align="right">15</td>
-<td align="left">10:30:00</td>
-</tr>
-<tr class="even">
-<td align="left">Resident Alien (2021)</td>
-<td align="left">00:45:00</td>
-<td align="right">44</td>
-<td align="left">33:00:00</td>
+<td align="right">16</td>
+<td align="left">14:40:00</td>
 </tr>
 </tbody>
 </table>
@@ -366,7 +366,7 @@ Be nice to their servers.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>

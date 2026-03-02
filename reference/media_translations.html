@@ -96,14 +96,14 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
-<code><a href="media_stats.html">media_stats</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
+<code><a href="media_stats.html">media_stats()</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="movies_boxoffice.html">movies_boxoffice</a>()</code>,
-<code><a href="movies_related.html">movies_related</a>()</code>,
-<code><a href="movies_releases.html">movies_releases</a>()</code>,
-<code><a href="movies_summary.html">movies_summary</a>()</code>,
-<code><a href="people_media.html">people_media</a>()</code>,
+<code><a href="movies_boxoffice.html">movies_boxoffice()</a></code>,
+<code><a href="movies_related.html">movies_related()</a></code>,
+<code><a href="movies_releases.html">movies_releases()</a></code>,
+<code><a href="movies_summary.html">movies_summary()</a></code>,
+<code><a href="people_media.html">people_media()</a></code>,
 <code><a href="played_media.html">played_media</a></code>,
 <code><a href="popular_media.html">popular_media</a></code>,
 <code><a href="trending_media.html">trending_media</a></code>,
@@ -114,32 +114,32 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
-<code><a href="media_stats.html">media_stats</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
+<code><a href="media_stats.html">media_stats()</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="people_media.html">people_media</a>()</code>,
+<code><a href="people_media.html">people_media()</a></code>,
 <code><a href="played_media.html">played_media</a></code>,
-<code><a href="shows_next_episode.html">shows_next_episode</a>()</code>,
-<code><a href="shows_related.html">shows_related</a>()</code>,
-<code><a href="shows_summary.html">shows_summary</a>()</code></p>
+<code><a href="shows_next_episode.html">shows_next_episode()</a></code>,
+<code><a href="shows_related.html">shows_related()</a></code>,
+<code><a href="shows_summary.html">shows_summary()</a></code></p>
 <p>Other episode data:
-<code><a href="episodes_summary.html">episodes_summary</a>()</code>,
+<code><a href="episodes_summary.html">episodes_summary()</a></code>,
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
-<code><a href="media_stats.html">media_stats</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
+<code><a href="media_stats.html">media_stats()</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="seasons_episodes.html">seasons_episodes</a>()</code>,
-<code><a href="seasons_summary.html">seasons_summary</a>()</code>,
-<code><a href="shows_next_episode.html">shows_next_episode</a>()</code></p></div>
+<code><a href="seasons_episodes.html">seasons_episodes()</a></code>,
+<code><a href="seasons_summary.html">seasons_summary()</a></code>,
+<code><a href="shows_next_episode.html">shows_next_episode()</a></code></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Get all translations</span></span></span>
 <span class="r-in"><span><span class="fu">movies_translations</span><span class="op">(</span><span class="st">"193972"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 46 × 5</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 47 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    title                                     overview   tagline language country</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> حكاية لعبة 4                              <span style="color: #949494;">"</span>لطالما ك… مغامرة… ar       sa     </span>
@@ -149,10 +149,10 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> <span style="color: #BB0000;">NA</span>                                        <span style="color: #949494;">"</span>Siden An… <span style="color: #BB0000;">NA</span>      da       dk     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> A Toy Story: Alles hört auf kein Kommando <span style="color: #949494;">"</span>Die Cowb… Hier s… de       de     </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> Η Ιστορία των Παιχνιδιών 4                <span style="color: #949494;">"</span>Στη διάρ… Η περι… el       gr     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Toy Story 4                               <span style="color: #949494;">"</span>Woody ha… Get re… en       us     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> <span style="color: #BB0000;">NA</span>                                        <span style="color: #949494;">"</span>Cuando u… Woody … es       mx     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> <span style="color: #BB0000;">NA</span>                                        <span style="color: #949494;">"</span>Woody si… La ave… es       es     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 36 more rows</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Toy Story 4                               <span style="color: #949494;">"</span>Woody ha… The ad… en       us     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> <span style="color: #BB0000;">NA</span>                                        <span style="color: #949494;">"</span>Woody si… La ave… es       es     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> <span style="color: #BB0000;">NA</span>                                        <span style="color: #949494;">"</span>Cuando u… Woody … es       mx     </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 37 more rows</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Only get a specific language</span></span></span>
 <span class="r-in"><span><span class="fu">movies_translations</span><span class="op">(</span><span class="st">"193972"</span>, <span class="st">"de"</span><span class="op">)</span></span></span>
@@ -171,7 +171,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>

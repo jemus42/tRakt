@@ -39,7 +39,14 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.17.0.9000" id="trakt-01709000-development-version">tRakt 0.17.0.9000 (development version)<a class="anchor" aria-label="anchor" href="#trakt-01709000-development-version"></a></h2>
-<ul><li>Catch up with inconsistent API endpoints:
+<ul><li>Adapt to trakt.tv API response changes:
+<ul><li>Show results now include <code>plex_guid</code> and <code>plex_slug</code> ID columns, <code>subgenres</code> as a list column, and new fields <code>tagline</code> and <code>original_title</code>.</li>
+<li>Nested <code>images</code> and <code>colors</code> objects are dropped from show data as they don’t fit tabular output.</li>
+<li>
+<code><a href="../reference/search_query.html">search_query()</a></code> and <code><a href="../reference/search_query.html">search_id()</a></code> now return properly structured show data for both <code>extended = "min"</code> and <code>extended = "full"</code>.</li>
+</ul></li>
+<li>Token refresh failures (e.g. expired or revoked refresh tokens) now fall back to device authentication instead of erroring.</li>
+<li>Catch up with inconsistent API endpoints:
 <ul><li>
 <code><a href="../reference/seasons_season.html">seasons_season()</a></code> was renamed to <code><a href="../reference/seasons_episodes.html">seasons_episodes()</a></code>, wrapping endpoint <a href="https://trakt.docs.apiary.io/#reference/seasons/episodes/get-all-episodes-for-a-single-season" class="external-link">shows/:id/seasons/:season?translations=</a>.</li>
 <li>
@@ -47,6 +54,11 @@
 </ul></li>
 <li>Start using <a href="https://docs.ropensci.org/vcr/articles/vcr.html#what-happens-if-the-api-changes" class="external-link">{vcr}</a> for recording API responses.</li>
 <li>Bump <a href="https://testthat.r-lib.org" class="external-link">testthat</a> dependency to <code>&gt;=3.0.0</code>, which had been necessary since adopting 3e.</li>
+<li>Modernize interal <a href="https://purrr.tidyverse.org/" class="external-link">purrr</a> usage
+<ul><li>Swap purrr-style anonymous functions <code>~ .x</code> with base-R <code>\(x) x</code>-style ones</li>
+<li>Substitute <code>map_df()</code> with <code>map()</code> + <code>list_rbind()</code>
+</li>
+</ul></li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.17.0" id="trakt-0170">tRakt 0.17.0<a class="anchor" aria-label="anchor" href="#trakt-0170"></a></h2>
@@ -584,7 +596,7 @@ Not only do most functions return a <code>tibble</code> now, but some additional
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>

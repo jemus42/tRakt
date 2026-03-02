@@ -93,14 +93,14 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
 <code><a href="media_translations.html">media_translations</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="people_media.html">people_media</a>()</code>,
+<code><a href="people_media.html">people_media()</a></code>,
 <code><a href="played_media.html">played_media</a></code>,
-<code><a href="shows_next_episode.html">shows_next_episode</a>()</code>,
-<code><a href="shows_related.html">shows_related</a>()</code>,
-<code><a href="shows_summary.html">shows_summary</a>()</code></p>
+<code><a href="shows_next_episode.html">shows_next_episode()</a></code>,
+<code><a href="shows_related.html">shows_related()</a></code>,
+<code><a href="shows_summary.html">shows_summary()</a></code></p>
 <p>Other movie data:
 <code><a href="anticipated_media.html">anticipated_media</a></code>,
 <code><a href="collected_media.html">collected_media</a></code>,
@@ -108,14 +108,14 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
 <code><a href="media_translations.html">media_translations</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="movies_boxoffice.html">movies_boxoffice</a>()</code>,
-<code><a href="movies_related.html">movies_related</a>()</code>,
-<code><a href="movies_releases.html">movies_releases</a>()</code>,
-<code><a href="movies_summary.html">movies_summary</a>()</code>,
-<code><a href="people_media.html">people_media</a>()</code>,
+<code><a href="movies_boxoffice.html">movies_boxoffice()</a></code>,
+<code><a href="movies_related.html">movies_related()</a></code>,
+<code><a href="movies_releases.html">movies_releases()</a></code>,
+<code><a href="movies_summary.html">movies_summary()</a></code>,
+<code><a href="people_media.html">people_media()</a></code>,
 <code><a href="played_media.html">played_media</a></code>,
 <code><a href="popular_media.html">popular_media</a></code>,
 <code><a href="trending_media.html">trending_media</a></code>,
@@ -124,21 +124,21 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
-<code><a href="seasons_episodes.html">seasons_episodes</a>()</code>,
-<code><a href="seasons_season.html">seasons_season</a>()</code>,
-<code><a href="seasons_summary.html">seasons_summary</a>()</code></p>
+<code><a href="media_ratings.html">media_ratings()</a></code>,
+<code><a href="seasons_episodes.html">seasons_episodes()</a></code>,
+<code><a href="seasons_season.html">seasons_season()</a></code>,
+<code><a href="seasons_summary.html">seasons_summary()</a></code></p>
 <p>Other episode data:
-<code><a href="episodes_summary.html">episodes_summary</a>()</code>,
+<code><a href="episodes_summary.html">episodes_summary()</a></code>,
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
 <code><a href="media_translations.html">media_translations</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="seasons_episodes.html">seasons_episodes</a>()</code>,
-<code><a href="seasons_summary.html">seasons_summary</a>()</code>,
-<code><a href="shows_next_episode.html">shows_next_episode</a>()</code></p></div>
+<code><a href="seasons_episodes.html">seasons_episodes()</a></code>,
+<code><a href="seasons_summary.html">seasons_summary()</a></code>,
+<code><a href="shows_next_episode.html">shows_next_episode()</a></code></p></div>
     </div>
 
     <div class="section level2">
@@ -146,9 +146,9 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Stats for a movie</span></span></span>
 <span class="r-in"><span><span class="fu">movies_stats</span><span class="op">(</span><span class="st">"inception-2010"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 10</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   watchers  plays collectors comments lists votes favorited recommended type  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>   <span style="text-decoration: underline;">293</span>212 <span style="text-decoration: underline;">342</span>577     <span style="text-decoration: underline;">456</span>109      193 <span style="text-decoration: underline;">89</span>969 <span style="text-decoration: underline;">82</span>494      <span style="text-decoration: underline;">3</span>953        <span style="text-decoration: underline;">3</span>953 movies</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   collectors comments favorited lists  plays recommended votes watchers type  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>     <span style="text-decoration: underline;">458</span>239      200      <span style="text-decoration: underline;">4</span>636 <span style="text-decoration: underline;">92</span>816 <span style="text-decoration: underline;">286</span>715        <span style="text-decoration: underline;">4</span>636 <span style="text-decoration: underline;">85</span>874   <span style="text-decoration: underline;">193</span>762 movies</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 1 more variable: id &lt;chr&gt;</span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="co"># Stats for multiple shows at once</span></span></span>
@@ -168,7 +168,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>

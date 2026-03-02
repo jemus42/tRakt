@@ -79,14 +79,14 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
-<code><a href="media_stats.html">media_stats</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
+<code><a href="media_stats.html">media_stats()</a></code>,
 <code><a href="media_translations.html">media_translations</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="movies_related.html">movies_related</a>()</code>,
-<code><a href="movies_releases.html">movies_releases</a>()</code>,
-<code><a href="movies_summary.html">movies_summary</a>()</code>,
-<code><a href="people_media.html">people_media</a>()</code>,
+<code><a href="movies_related.html">movies_related()</a></code>,
+<code><a href="movies_releases.html">movies_releases()</a></code>,
+<code><a href="movies_summary.html">movies_summary()</a></code>,
+<code><a href="people_media.html">people_media()</a></code>,
 <code><a href="played_media.html">played_media</a></code>,
 <code><a href="popular_media.html">popular_media</a></code>,
 <code><a href="trending_media.html">trending_media</a></code>,
@@ -97,18 +97,18 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">movies_boxoffice</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     revenue title                                 year trakt   slug  imdb  tmdb </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 17<span style="text-decoration: underline;">000</span>000 Chainsaw Man - The Movie: Reze Arc    <span style="text-decoration: underline;">2</span>025 983519  chai… tt30… 1218…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 13<span style="text-decoration: underline;">000</span>000 Black Phone 2                         <span style="text-decoration: underline;">2</span>025 965839  blac… tt29… 1197…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 13<span style="text-decoration: underline;">000</span>000 Regretting You                        <span style="text-decoration: underline;">2</span>025 1086230 regr… tt33… 1327…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>  9<span style="text-decoration: underline;">100</span>000 Springsteen: Deliver Me from Nowhere  <span style="text-decoration: underline;">2</span>025 994890  spri… tt31… 1230…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>  4<span style="text-decoration: underline;">900</span>000 TRON: Ares                            <span style="text-decoration: underline;">2</span>025 385396  tron… tt66… 5335…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>  3<span style="text-decoration: underline;">100</span>000 Good Fortune                          <span style="text-decoration: underline;">2</span>025 897095  good… tt27… 1114…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>  2<span style="text-decoration: underline;">400</span>000 Shelby Oaks                           <span style="text-decoration: underline;">2</span>025 752846  shel… tt14… 9379…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>  2<span style="text-decoration: underline;">300</span>000 One Battle After Another              <span style="text-decoration: underline;">2</span>025 848797  one-… tt30… 1054…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>  2<span style="text-decoration: underline;">000</span>000 Roofman                               <span style="text-decoration: underline;">2</span>025 1005789 roof… tt46… 1242…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>   <span style="text-decoration: underline;">933</span>000 Truth &amp; Treason                       <span style="text-decoration: underline;">2</span>025 1181859 trut… tt21… 1443…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     revenue title                                   year trakt slug  imdb  tmdb </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 64<span style="text-decoration: underline;">000</span>000 <span style="color: #949494;">"</span>Scream 7<span style="color: #949494;">"</span>                              <span style="text-decoration: underline;">2</span>026 9341… scre… tt27… 1159…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 12<span style="text-decoration: underline;">000</span>000 <span style="color: #949494;">"</span>GOAT<span style="color: #949494;">"</span>                                  <span style="text-decoration: underline;">2</span>026 1057… goat… tt27… 1297…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span>  7<span style="text-decoration: underline;">000</span>000 <span style="color: #949494;">"</span>\"Wuthering Heights\"<span style="color: #949494;">"</span>                 <span style="text-decoration: underline;">2</span>026 1077… wuth… tt32… 1316…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span>  4<span style="text-decoration: underline;">300</span>000 <span style="color: #949494;">"</span>Twenty One Pilots: More Than We Ever…  <span style="text-decoration: underline;">2</span>026 1339… twen… tt39… 1612…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span>  3<span style="text-decoration: underline;">500</span>000 <span style="color: #949494;">"</span>EPiC: Elvis Presley in Concert<span style="color: #949494;">"</span>        <span style="text-decoration: underline;">2</span>026 1183… epic… tt35… 1445…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span>  3<span style="text-decoration: underline;">400</span>000 <span style="color: #949494;">"</span>Crime 101<span style="color: #949494;">"</span>                             <span style="text-decoration: underline;">2</span>026 9440… crim… tt32… 1171…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span>  3<span style="text-decoration: underline;">100</span>000 <span style="color: #949494;">"</span>I Can Only Imagine 2<span style="color: #949494;">"</span>                  <span style="text-decoration: underline;">2</span>026 1184… i-ca… tt34… 1405…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span>  2<span style="text-decoration: underline;">800</span>000 <span style="color: #949494;">"</span>Send Help<span style="color: #949494;">"</span>                             <span style="text-decoration: underline;">2</span>026 9678… send… tt80… 1198…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span>  1<span style="text-decoration: underline;">600</span>000 <span style="color: #949494;">"</span>How to Make a Killing<span style="color: #949494;">"</span>                 <span style="text-decoration: underline;">2</span>026 3151… how-… tt43… 4679…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span>  1<span style="text-decoration: underline;">400</span>000 <span style="color: #949494;">"</span>Zootopia 2<span style="color: #949494;">"</span>                            <span style="text-decoration: underline;">2</span>025 8714… zoot… tt26… 1084…</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -120,7 +120,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>

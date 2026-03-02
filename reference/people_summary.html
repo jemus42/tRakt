@@ -87,37 +87,33 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
     <div class="dont-index"><p>Other people data:
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="people_media.html">people_media</a>()</code></p>
+<code><a href="people_media.html">people_media()</a></code></p>
 <p>Other summary methods:
-<code><a href="comments_comment.html">comments_comment</a>()</code>,
-<code><a href="episodes_summary.html">episodes_summary</a>()</code>,
-<code><a href="movies_summary.html">movies_summary</a>()</code>,
-<code><a href="seasons_summary.html">seasons_summary</a>()</code>,
-<code><a href="shows_summary.html">shows_summary</a>()</code>,
-<code><a href="user_profile.html">user_profile</a>()</code></p></div>
+<code><a href="comments_comment.html">comments_comment()</a></code>,
+<code><a href="episodes_summary.html">episodes_summary()</a></code>,
+<code><a href="movies_summary.html">movies_summary()</a></code>,
+<code><a href="seasons_summary.html">seasons_summary()</a></code>,
+<code><a href="shows_summary.html">shows_summary()</a></code>,
+<code><a href="user_profile.html">user_profile()</a></code></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># A single person's extended information</span></span></span>
 <span class="r-in"><span><span class="fu">people_summary</span><span class="op">(</span><span class="st">"bryan-cranston"</span>, <span class="st">"full"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 4 × 14</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   name           social_ids   biography     birthday   death birthplace homepage</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;named list&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Bryan Cranston <span style="color: #949494;">&lt;chr [1]&gt;</span>    <span style="color: #949494;">"</span>Bryan Lee C… 1956-03-07 <span style="color: #BB0000;">NA</span>    Hollywood… <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Bryan Cranston <span style="color: #949494;">&lt;chr [1]&gt;</span>    <span style="color: #949494;">"</span>Bryan Lee C… 1956-03-07 <span style="color: #BB0000;">NA</span>    Hollywood… <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Bryan Cranston <span style="color: #949494;">&lt;chr [1]&gt;</span>    <span style="color: #949494;">"</span>Bryan Lee C… 1956-03-07 <span style="color: #BB0000;">NA</span>    Hollywood… <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> Bryan Cranston <span style="color: #949494;">&lt;NULL&gt;</span>       <span style="color: #949494;">"</span>Bryan Lee C… 1956-03-07 <span style="color: #BB0000;">NA</span>    Hollywood… <span style="color: #BB0000;">NA</span>      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 7 more variables: known_for_department &lt;chr&gt;, gender &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   updated_at &lt;dttm&gt;, trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in recycle_columns(x, .rows, lengths):</span> Tibble columns must have compatible sizes.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> Size 2: Column `images`.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> Size 4: Column `social_ids`.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Only values of size one are recycled.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Multiple people</span></span></span>
 <span class="r-in"><span><span class="fu">people_summary</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"kit-harington"</span>, <span class="st">"emilia-clarke"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 2 × 5</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   name          trakt  slug          imdb      tmdb   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Kit Harington 436512 kit-harington nm3229685 239019 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Emilia Clarke 436511 emilia-clarke nm3592338 1223786</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in purrr::map(input, fn, ...):</span> <span style="color: #00BBBB;">ℹ</span> In index: 1.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="font-weight: bold;">Caused by error in `recycle_columns()`:</span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #BBBB00;">!</span> Tibble columns must have compatible sizes.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> Size 2: Column `images`.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">•</span> Size 4: Column `social_ids`.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Only values of size one are recycled.</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
@@ -129,7 +125,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>

@@ -87,64 +87,61 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
-<code><a href="media_stats.html">media_stats</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
+<code><a href="media_stats.html">media_stats()</a></code>,
 <code><a href="media_translations.html">media_translations</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="people_media.html">people_media</a>()</code>,
+<code><a href="people_media.html">people_media()</a></code>,
 <code><a href="played_media.html">played_media</a></code>,
-<code><a href="shows_related.html">shows_related</a>()</code>,
-<code><a href="shows_summary.html">shows_summary</a>()</code></p>
+<code><a href="shows_related.html">shows_related()</a></code>,
+<code><a href="shows_summary.html">shows_summary()</a></code></p>
 <p>Other episode data:
-<code><a href="episodes_summary.html">episodes_summary</a>()</code>,
+<code><a href="episodes_summary.html">episodes_summary()</a></code>,
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
-<code><a href="media_stats.html">media_stats</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
+<code><a href="media_stats.html">media_stats()</a></code>,
 <code><a href="media_translations.html">media_translations</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="seasons_episodes.html">seasons_episodes</a>()</code>,
-<code><a href="seasons_summary.html">seasons_summary</a>()</code></p>
+<code><a href="seasons_episodes.html">seasons_episodes()</a></code>,
+<code><a href="seasons_summary.html">seasons_summary()</a></code></p>
 <p>Other show data:
 <code><a href="collected_media.html">collected_media</a></code>,
 <code><a href="media_aliases.html">media_aliases</a></code>,
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
-<code><a href="media_stats.html">media_stats</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
+<code><a href="media_stats.html">media_stats()</a></code>,
 <code><a href="media_translations.html">media_translations</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="people_media.html">people_media</a>()</code>,
+<code><a href="people_media.html">people_media()</a></code>,
 <code><a href="played_media.html">played_media</a></code>,
-<code><a href="shows_related.html">shows_related</a>()</code>,
-<code><a href="shows_summary.html">shows_summary</a>()</code></p>
+<code><a href="shows_related.html">shows_related()</a></code>,
+<code><a href="shows_summary.html">shows_summary()</a></code></p>
 <p>Other episode data:
-<code><a href="episodes_summary.html">episodes_summary</a>()</code>,
+<code><a href="episodes_summary.html">episodes_summary()</a></code>,
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_lists.html">media_lists</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
-<code><a href="media_ratings.html">media_ratings</a>()</code>,
-<code><a href="media_stats.html">media_stats</a>()</code>,
+<code><a href="media_ratings.html">media_ratings()</a></code>,
+<code><a href="media_stats.html">media_stats()</a></code>,
 <code><a href="media_translations.html">media_translations</a></code>,
 <code><a href="media_watching.html">media_watching</a></code>,
-<code><a href="seasons_episodes.html">seasons_episodes</a>()</code>,
-<code><a href="seasons_summary.html">seasons_summary</a>()</code></p></div>
+<code><a href="seasons_episodes.html">seasons_episodes()</a></code>,
+<code><a href="seasons_summary.html">seasons_summary()</a></code></p></div>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">shows_next_episode</span><span class="op">(</span><span class="st">"one-piece"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   season number title        trakt    tvdb  imdb  tmdb   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>     22   <span style="text-decoration: underline;">1</span>149 Episode 1149 13639170 <span style="color: #BB0000;">NA</span>    <span style="color: #BB0000;">NA</span>    6615217</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in resp_body_raw(resp):</span> Can't retrieve empty body.</span>
 <span class="r-in"><span><span class="fu">shows_last_episode</span><span class="op">(</span><span class="st">"one-piece"</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 19</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   season number title             number_abs overview rating votes comment_count</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>     22   <span style="text-decoration: underline;">1</span>147 A Stunning Concl… <span style="color: #BB0000;">NA</span>         Vegapun…   8.24    76             0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>     22   <span style="text-decoration: underline;">1</span>155 The Promised Hor… <span style="color: #BB0000;">NA</span>         York wa…   8.54   126             4</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 11 more variables: first_aired &lt;dttm&gt;, updated_at &lt;dttm&gt;, runtime &lt;int&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   episode_type &lt;chr&gt;, original_title &lt;chr&gt;, after_credits &lt;lgl&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   during_credits &lt;lgl&gt;, trakt &lt;chr&gt;, tvdb &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;</span></span>
@@ -159,7 +156,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>

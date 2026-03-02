@@ -89,60 +89,276 @@ collection have dedicated functions in this package.</p>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># A simple request to a direct URL</span></span></span>
 <span class="r-in"><span><span class="fu">trakt_get</span><span class="op">(</span><span class="st">"https://api.trakt.tv/shows/breaking-bad"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $title</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Breaking Bad"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $year</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2008</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $ids</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$trakt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1388</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$imdb</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "tt0903747"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$plex</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$plex$guid</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "5d9c083402391c001f583d09"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$plex$slug</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "breaking-bad"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $ids$slug</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "breaking-bad"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$tvdb</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 81189</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$imdb</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "tt0903747"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $ids$tmdb</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1396</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$tvrage</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$tvdb</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 81189</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$trakt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1388</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $airs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $airs$day</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Sunday"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $airs$time</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "21:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $airs$timezone</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "America/New_York"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $year</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Breaking Bad"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $votes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 115193</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $colors</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $colors$poster</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "#A5AF96" "#272A2E"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $genres</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "drama"    "crime"    "thriller"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$logo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/388/logos/medium/d8abdb2dee.png.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$thumb</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/388/thumbs/medium/e348e4a03f.jpg.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$banner</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/388/banners/medium/c53872a7e2.jpg.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$fanart</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/388/fanarts/medium/fdbc0cb02d.jpg.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$poster</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/388/posters/medium/fa39b59954.jpg.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$clearart</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/388/cleararts/medium/1f00520834.png.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $rating</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 9.244034</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $status</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "ended"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $country</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "us"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $network</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "AMC"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $runtime</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 50</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $tagline</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Change the equation."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $trailer</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://youtube.com/watch?v=XZ8daibM3AE"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $homepage</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://www.sonypictures.com/tv/breakingbad"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $language</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "en"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $overview</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $languages</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "en" "de" "es"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $subgenres</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "criminal"            "drugs"               "dark-comedy"        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [4] "drug-dealer"         "psychopath"          "high-school-teacher"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] "dark"                "tragedy"             "neo-western"        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [10] "outlaw"             </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $updated_at</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2026-03-02 06:38:59 UTC"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $first_aired</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2008-01-21 02:00:00 UTC"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $certification</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "TV-MA"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $comment_count</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 522</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $aired_episodes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 62</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $original_title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Breaking Bad"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_translations</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "ar" "bg" "bs" "ca" "cs" "da" "de" "el" "en" "es" "et" "fa" "fi" "fr" "he"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] "hi" "hr" "hu" "id" "it" "ja" "ka" "ko" "lt" "lv" "nl" "no" "pl" "pt" "ro"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [31] "ru" "sk" "sl" "sr" "sv" "th" "tr" "uk" "vi" "zh"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Optionally be lazy about URL specification by dropping the hostname:</span></span></span>
 <span class="r-in"><span><span class="fu">trakt_get</span><span class="op">(</span><span class="st">"shows/game-of-thrones"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $title</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Game of Thrones"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $year</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2011</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $ids</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$trakt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1390</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$imdb</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "tt0944947"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$plex</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$plex$guid</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "5d9c086c46115600200aa2fe"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$plex$slug</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "game-of-thrones"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $ids$slug</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "game-of-thrones"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$tvdb</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 121361</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$imdb</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "tt0944947"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $ids$tmdb</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1399</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$tvrage</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$tvdb</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 121361</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ids$trakt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1390</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $airs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $airs$day</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Sunday"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $airs$time</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "21:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $airs$timezone</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "America/New_York"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $year</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2011</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Game of Thrones"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $votes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 145230</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $colors</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $colors$poster</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "#AD836A" "#261713"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $genres</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "fantasy"   "drama"     "action"    "adventure"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$logo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/390/logos/medium/13b614ad43.png.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$thumb</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/390/thumbs/medium/7beccbd5a1.jpg.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$banner</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/390/banners/medium/9fefff703d.jpg.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$fanart</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/390/fanarts/medium/76d5df8aed.jpg.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$poster</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/390/posters/medium/93df9cd612.jpg.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $images$clearart</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "media.trakt.tv/images/shows/000/001/390/cleararts/medium/5cbde9e647.png.webp"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $rating</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 8.89129</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $status</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "ended"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $country</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "us"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $network</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "HBO"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $runtime</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 55</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $tagline</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Winter is coming."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $trailer</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://youtube.com/watch?v=KPLWWIOCOOQ"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $homepage</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "https://www.hbo.com/game-of-thrones"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $language</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "en"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $overview</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond."</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $languages</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "en"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $subgenres</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "fantasy-world" "dragon"        "kingdom"       "king"         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $updated_at</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2026-03-01 15:30:59 UTC"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $first_aired</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2011-04-18 01:00:00 UTC"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $certification</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "TV-MA"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $comment_count</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 450</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $aired_episodes</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 73</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $original_title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Game of Thrones"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $available_translations</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "ar" "be" "bg" "bs" "ca" "cs" "da" "de" "el" "en" "eo" "es" "et" "fa" "fi"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [16] "fr" "he" "hr" "hu" "id" "is" "it" "ja" "ka" "ko" "lb" "lt" "lv" "ml" "nl"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [31] "no" "pl" "pt" "ro" "ru" "sk" "sl" "so" "sr" "sv" "ta" "th" "tr" "tw" "uk"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [46] "uz" "vi" "zh"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
@@ -155,7 +371,7 @@ collection have dedicated functions in this package.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>
