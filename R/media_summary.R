@@ -12,8 +12,7 @@ media_summary <- function(type = c("movies", "shows"), id, extended = c("min", "
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		res <- map(id, \(x) media_summary(type, id = x, extended)) |> list_rbind()
-		return(res)
+		return(map_rbind(id, \(x) media_summary(type, id = x, extended)))
 	}
 
 	# Construct URL, make API call

@@ -40,21 +40,18 @@ user_collection <- function(
 	}
 
 	if (length(user) > 1) {
-		names(user) <- user
-		return(
-			map(
-				user,
-				\(x) {
-					user_collection(
-						user = x,
-						type = type,
-						unnest_episodes = unnest_episodes,
-						extended = extended
-					)
-				}
-			) |>
-				list_rbind(names_to = "user")
-		)
+		return(map_rbind(
+			user,
+			\(x) {
+				user_collection(
+					user = x,
+					type = type,
+					unnest_episodes = unnest_episodes,
+					extended = extended
+				)
+			},
+			.names_to = "user"
+		))
 	}
 
 	if (extended == "min") {

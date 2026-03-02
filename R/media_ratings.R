@@ -30,7 +30,7 @@ media_ratings <- function(type = c("shows", "movies"), id) {
 	type <- match.arg(type)
 
 	if (length(id) > 1) {
-		return(map(id, \(x) media_ratings(type = type, id = x)) |> list_rbind())
+		return(map_rbind(id, \(x) media_ratings(type = type, id = x)))
 	}
 
 	# Construct URL, make API call
@@ -73,11 +73,11 @@ movies_ratings <- function(id) {
 #' @importFrom dplyr mutate
 seasons_ratings <- function(id, season = 1L) {
 	if (length(id) > 1) {
-		return(map(id, \(x) seasons_ratings(x, season)) |> list_rbind())
+		return(map_rbind(id, \(x) seasons_ratings(x, season)))
 	}
 
 	if (length(season) > 1) {
-		return(map(season, \(x) seasons_ratings(id, x)) |> list_rbind())
+		return(map_rbind(season, \(x) seasons_ratings(id, x)))
 	}
 
 	# Construct URL, make API call
@@ -100,15 +100,15 @@ seasons_ratings <- function(id, season = 1L) {
 #' @importFrom dplyr mutate
 episodes_ratings <- function(id, season = 1L, episode = 1L) {
 	if (length(id) > 1) {
-		return(map(id, \(x) episodes_ratings(x, season, episode)) |> list_rbind())
+		return(map_rbind(id, \(x) episodes_ratings(x, season, episode)))
 	}
 
 	if (length(season) > 1) {
-		return(map(season, \(x) episodes_ratings(id, x, episode)) |> list_rbind())
+		return(map_rbind(season, \(x) episodes_ratings(id, x, episode)))
 	}
 
 	if (length(episode) > 1) {
-		return(map(episode, \(x) episodes_ratings(id, season, x)) |> list_rbind())
+		return(map_rbind(episode, \(x) episodes_ratings(id, season, x)))
 	}
 
 	# Construct URL, make API call

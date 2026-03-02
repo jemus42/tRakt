@@ -13,7 +13,7 @@ media_related <- function(
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		return(map(id, \(x) media_related(x, type, extended)) |> list_rbind())
+		return(map_rbind(id, \(x) media_related(x, type, extended)))
 	}
 
 	# Construct URL, make API call

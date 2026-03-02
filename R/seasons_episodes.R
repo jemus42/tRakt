@@ -28,7 +28,7 @@ seasons_episodes <- function(id, seasons = 1L, extended = c("min", "full")) {
 
 	# Vectorize
 	if (length(seasons) > 1) {
-		return(map(seasons, \(x) seasons_episodes(id, x, extended)) |> list_rbind())
+		return(map_rbind(seasons, \(x) seasons_episodes(id, x, extended)))
 	}
 
 	# Basic sanity check

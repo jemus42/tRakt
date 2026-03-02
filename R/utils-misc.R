@@ -82,6 +82,27 @@ build_trakt_url <- function(...) {
 
 # API docs helpers -----
 
+#' Map over multiple inputs and row-bind the results
+#'
+#' A convenience wrapper around [purrr::map()] and [purrr::list_rbind()] for
+#' the common pattern of vectorizing a function over multiple inputs.
+#'
+#' @param input A vector of inputs to iterate over.
+#' @param fn A function to apply to each element of `input`.
+#' @param ... Additional arguments passed to [purrr::map()].
+#' @param .names_to If not `NULL`, the input values are used as names and
+#'   added as a column with this name in the result. Useful for user functions
+#'   where the source user should be tracked.
+#' @return A [tibble][tibble::tibble-package] from row-binding the results.
+#' @keywords internal
+#' @noRd
+map_rbind <- function(input, fn, ..., .names_to = NULL) {
+	if (!is.null(.names_to)) {
+		names(input) <- input
+	}
+	purrr::map(input, fn, ...) |> purrr::list_rbind(names_to = .names_to)
+}
+
 #' Get API docs keys
 #'
 #' @param section E.g. "movies"

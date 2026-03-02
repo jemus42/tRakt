@@ -18,7 +18,7 @@
 #' @eval apiurl("seasons", "summary")
 #' @importFrom dplyr select
 #' @importFrom rlang has_name is_empty
-#' @importFrom purrr map map_df
+#' @importFrom purrr map
 #' @importFrom dplyr rename
 #' @examples
 #' # Get just the season numbers and their IDs
@@ -38,19 +38,15 @@ seasons_summary <- function(
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		response <- map_df(
-			id,
-			\(x) {
-				seasons_summary(
-					id = x,
-					extended = extended,
-					episodes = episodes,
-					drop_specials = drop_specials,
-					drop_unaired = drop_unaired
-				)
-			}
-		)
-		return(response)
+		return(map_rbind(id, \(x) {
+			seasons_summary(
+				id = x,
+				extended = extended,
+				episodes = episodes,
+				drop_specials = drop_specials,
+				drop_unaired = drop_unaired
+			)
+		}))
 	}
 
 	if (episodes) {

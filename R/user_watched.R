@@ -11,7 +11,7 @@
 #' @family user data
 #' @eval apiurl("users", "watched")
 #' @importFrom dplyr bind_cols select matches everything
-#' @importFrom purrr pluck map list_rbind
+#' @importFrom purrr pluck map
 #' @importFrom rlang is_empty
 #' @examples
 #' \dontrun{
@@ -29,11 +29,11 @@ user_watched <- function(
 	extended <- match.arg(extended)
 
 	if (length(user) > 1) {
-		names(user) <- user
-		return(map(
+		return(map_rbind(
 			user,
-			\(x) user_watched(user = x, type = type, noseasons = noseasons, extended = extended)
-		) |> list_rbind(names_to = "user"))
+			\(x) user_watched(user = x, type = type, noseasons = noseasons, extended = extended),
+			.names_to = "user"
+		))
 	}
 
 	if (extended == "min") {

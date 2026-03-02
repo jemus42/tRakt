@@ -17,10 +17,7 @@ user_profile <- function(user = "me", extended = c("min", "full")) {
 	extended <- match.arg(extended)
 
 	if (length(user) > 1) {
-		return(
-			map(user, \(x) user_profile(user = x, extended)) |>
-				list_rbind()
-		)
+		return(map_rbind(user, \(x) user_profile(user = x, extended)))
 	}
 
 	# Construct URL, make API call

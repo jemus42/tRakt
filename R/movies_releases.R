@@ -16,7 +16,7 @@
 #' }
 movies_releases <- function(id, country = NULL) {
 	if (length(id) > 1) {
-		return(map(id, \(x) movies_releases(id = x, country = country)) |> list_rbind())
+		return(map_rbind(id, \(x) movies_releases(id = x, country = country)))
 	}
 
 	country <- check_filter_arg(country, filter_type = "countries")

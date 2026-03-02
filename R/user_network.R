@@ -27,7 +27,7 @@ user_network <- function(
 	relationship <- match.arg(relationship)
 
 	if (length(user) > 1) {
-		return(map(user, \(x) user_network(relationship, user = x, extended)) |> list_rbind())
+		return(map_rbind(user, \(x) user_network(relationship, user = x, extended)))
 	}
 
 	# Construct URL, make API call

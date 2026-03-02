@@ -16,14 +16,7 @@ comments_comment <- function(id, extended = c("min", "full")) {
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		res <- map(
-			id,
-			\(x) {
-				comments_comment(x, extended = extended)
-			}
-		) |>
-			list_rbind()
-		return(res)
+		return(map_rbind(id, \(x) comments_comment(x, extended = extended)))
 	}
 
 	url <- build_trakt_url("comments", id, extended = extended)
@@ -44,14 +37,7 @@ comments_replies <- function(id, extended = c("min", "full")) {
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		res <- map(
-			id,
-			\(x) {
-				comments_replies(x, extended = extended)
-			}
-		) |>
-			list_rbind()
-		return(res)
+		return(map_rbind(id, \(x) comments_replies(x, extended = extended)))
 	}
 
 	url <- build_trakt_url("comments", id, "replies", extended = extended)
@@ -74,13 +60,7 @@ comments_likes <- function(id, extended = c("min", "full")) {
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		res <- map_df(
-			id,
-			\(x) {
-				comments_likes(x, extended = extended)
-			}
-		)
-		return(res)
+		return(map_rbind(id, \(x) comments_likes(x, extended = extended)))
 	}
 
 	url <- build_trakt_url("comments", id, "likes", extended = extended)
@@ -123,13 +103,7 @@ comments_item <- function(id, extended = c("min", "full")) {
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		res <- map_df(
-			id,
-			\(x) {
-				comments_item(x, extended = extended)
-			}
-		)
-		return(res)
+		return(map_rbind(id, \(x) comments_item(x, extended = extended)))
 	}
 
 	url <- build_trakt_url("comments", id, "item", extended = extended)

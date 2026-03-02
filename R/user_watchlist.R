@@ -16,11 +16,7 @@ user_watchlist <- function(user = "me", type = c("movies", "shows"), extended = 
 	extended <- match.arg(extended)
 
 	if (length(user) > 1) {
-		names(user) <- user
-		return(
-			map(user, \(x) user_watchlist(user = x, type, extended)) |>
-				list_rbind(names_to = "user")
-		)
+		return(map_rbind(user, \(x) user_watchlist(user = x, type, extended), .names_to = "user"))
 	}
 
 	# Construct URL, make API call

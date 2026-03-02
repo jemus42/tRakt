@@ -44,14 +44,11 @@ user_history <- function(
 	end_at <- if (!is.null(end_at)) format(as.POSIXct(end_at), "%FT%T.000Z", tz = "UTC")
 
 	if (length(user) > 1) {
-		names(user) <- user
-		return(
-			map(
-				user,
-				\(x) user_history(user = x, type, item_id = item_id, limit, start_at, end_at, extended)
-			) |>
-				list_rbind(names_to = "user")
-		)
+		return(map_rbind(
+			user,
+			\(x) user_history(user = x, type, item_id = item_id, limit, start_at, end_at, extended),
+			.names_to = "user"
+		))
 	}
 
 	# Construct URL, make API call

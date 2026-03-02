@@ -25,7 +25,7 @@ seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
 
 	# Vectorize
 	if (length(seasons) > 1) {
-		return(map(seasons, \(x) seasons_season(id, x, extended)) |> list_rbind())
+		return(map_rbind(seasons, \(x) seasons_season(id, x, extended)))
 	}
 
 	# Basic sanity check

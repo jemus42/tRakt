@@ -33,7 +33,6 @@
 #' @family search functions
 #' @eval apiurl("search", "text query")
 #' @importFrom tibble tibble
-#' @importFrom purrr map_df
 #' @examples
 #' # A show
 #' search_query("Breaking Bad", type = "show", n_results = 3)
@@ -63,27 +62,23 @@ search_query <- function(
 	status = NULL
 ) {
 	if (length(type) > 1) {
-		res <- map_df(
-			type,
-			\(x) {
-				search_query(
-					query,
-					type = x,
-					n_results = n_results,
-					years = years,
-					extended = extended,
-					genres = genres,
-					languages = languages,
-					countries = countries,
-					runtimes = runtimes,
-					ratings = ratings,
-					certifications = certifications,
-					networks = networks,
-					status = status
-				)
-			}
-		)
-		return(res)
+		return(map_rbind(type, \(x) {
+			search_query(
+				query,
+				type = x,
+				n_results = n_results,
+				years = years,
+				extended = extended,
+				genres = genres,
+				languages = languages,
+				countries = countries,
+				runtimes = runtimes,
+				ratings = ratings,
+				certifications = certifications,
+				networks = networks,
+				status = status
+			)
+		}))
 	}
 	ok_types <- c("movie", "show", "episode", "person", "list")
 	type <- check_types(type, several.ok = TRUE, possible_types = ok_types)
@@ -140,7 +135,7 @@ search_id <- function(
 	extended = c("min", "full")
 ) {
 	if (length(type) > 1) {
-		return(map_df(type, \(x) search_id(id, id_type, type = x, n_results, extended)))
+		return(map_rbind(type, \(x) search_id(id, id_type, type = x, n_results, extended)))
 	}
 
 	id_type <- match.arg(id_type)

@@ -23,7 +23,7 @@ media_stats <- function(type = c("shows", "movies"), id) {
 	type <- match.arg(type)
 
 	if (length(id) > 1) {
-		return(map(id, \(x) media_stats(type, x)) |> list_rbind())
+		return(map_rbind(id, \(x) media_stats(type, x)))
 	}
 
 	# Construct URL, make API call
@@ -59,11 +59,11 @@ movies_stats <- function(id) {
 #' @export
 seasons_stats <- function(id, season = 1L) {
 	if (length(id) > 1) {
-		return(map(id, \(x) seasons_stats(x, season)) |> list_rbind())
+		return(map_rbind(id, \(x) seasons_stats(x, season)))
 	}
 
 	if (length(season) > 1) {
-		return(map(season, \(x) seasons_stats(id, x)) |> list_rbind())
+		return(map_rbind(season, \(x) seasons_stats(id, x)))
 	}
 
 	# Construct URL, make API call
@@ -81,15 +81,15 @@ seasons_stats <- function(id, season = 1L) {
 #' @export
 episodes_stats <- function(id, season = 1L, episode = 1L) {
 	if (length(id) > 1) {
-		return(map(id, \(x) episodes_stats(x, season, episode)) |> list_rbind())
+		return(map_rbind(id, \(x) episodes_stats(x, season, episode)))
 	}
 
 	if (length(season) > 1) {
-		return(map(season, \(x) episodes_stats(id, x, episode)) |> list_rbind())
+		return(map_rbind(season, \(x) episodes_stats(id, x, episode)))
 	}
 
 	if (length(episode) > 1) {
-		return(map(episode, \(x) episodes_stats(id, season, x)) |> list_rbind())
+		return(map_rbind(episode, \(x) episodes_stats(id, season, x)))
 	}
 
 	# Construct URL, make API call

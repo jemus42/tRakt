@@ -20,7 +20,7 @@ people_summary <- function(id, extended = c("min", "full")) {
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		return(map(id, \(x) people_summary(x, extended)) |> list_rbind())
+		return(map_rbind(id, \(x) people_summary(x, extended)))
 	}
 
 	# Construct URL, make API call
