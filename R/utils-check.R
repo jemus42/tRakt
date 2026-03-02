@@ -8,12 +8,8 @@
 #' @importFrom rlang is_empty is_character
 check_username <- function(user, validate = FALSE) {
 	if (is_empty(user) || identical(user, "") || !is_character(user)) {
-		stop(
-			"Supplied user must be a non-empty character string, you provided <",
-			user,
-			"> of class '",
-			class(user),
-			"'"
+		cli::cli_abort(
+			"{.arg user} must be a non-empty character string, not {.obj_type_friendly {user}}."
 		)
 	}
 
@@ -109,7 +105,7 @@ check_filter_arg <- function(
 	}
 	if (filter_type == "years") {
 		if (!(length(filter) %in% c(1, 2))) {
-			warning("'years' must be of length 1 or 2, keeping only first two values")
+			cli::cli_warn("{.arg years} must be of length 1 or 2, keeping only first two values.")
 			filter <- sort(filter[1:2])
 		}
 
@@ -121,12 +117,14 @@ check_filter_arg <- function(
 		if (grepl(x = filter, pattern = "(^\\d{4}-\\d{4}$)|(^\\d{4}$)")) {
 			filter
 		} else {
-			warning("'years' must be interpretable as 4 digit year or range of 4-digit years")
+			cli::cli_warn(
+				"{.arg years} must be interpretable as a 4-digit year or range of 4-digit years."
+			)
 		}
 	}
 	if (filter_type == "runtimes") {
 		if (!(length(filter) %in% c(1, 2))) {
-			warning("'runtimes' must be of length 1 or 2, keeping only first two values")
+			cli::cli_warn("{.arg runtimes} must be of length 1 or 2, keeping only first two values.")
 			filter <- filter[1:2]
 		}
 
@@ -138,12 +136,12 @@ check_filter_arg <- function(
 		if (grepl(x = filter, pattern = "(^\\d+-\\d+$)|(^\\d+$)")) {
 			filter
 		} else {
-			warning("'runtimes' must be interpretable as duration in minutes or range.")
+			cli::cli_warn("{.arg runtimes} must be interpretable as duration in minutes or range.")
 		}
 	}
 	if (filter_type == "ratings") {
 		if (!(length(filter) %in% c(1, 2))) {
-			warning("'ratings' must be of length 1 or 2, keeping only first two values")
+			cli::cli_warn("{.arg ratings} must be of length 1 or 2, keeping only first two values.")
 			filter <- filter[1:2]
 		}
 
@@ -155,9 +153,8 @@ check_filter_arg <- function(
 		if (grepl(x = filter, pattern = "(^[1-9]{1,2}-[1-9]{1,3}$)|((^[1-9]{1,2}$)|(^100$))")) {
 			filter
 		} else {
-			warning(
-				"'ratings' must be interpretable as integer range or single integer ",
-				"between 1 and 100"
+			cli::cli_warn(
+				"{.arg ratings} must be interpretable as an integer range or single integer between 1 and 100."
 			)
 		}
 	}
@@ -224,14 +221,7 @@ check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
 			matches <- x %in% clean_filter_ok
 
 			if (!matches) {
-				warning(
-					call. = FALSE,
-					"'",
-					filter_type,
-					"' includes unknown value, ignoring: '",
-					x,
-					"'"
-				)
+				cli::cli_warn("{.arg {filter_type}} includes unknown value, ignoring: {.val {x}}.")
 				""
 			} else {
 				filter_ok[x == clean_filter_ok] |>

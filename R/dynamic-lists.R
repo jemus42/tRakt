@@ -49,7 +49,7 @@ trakt_auto_lists <- function(
 
 	# Check limit
 	if (limit < 1) {
-		stop("'limit' must be greater than zero, supplied <", limit, ">")
+		cli::cli_abort("{.arg limit} must be greater than zero, not {.val {limit}}.")
 	}
 
 	# Construct URL, make API call

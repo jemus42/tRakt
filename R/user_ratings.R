@@ -27,7 +27,7 @@ user_ratings <- function(
 
 	if (!is.null(rating)) {
 		if (!(as.integer(rating) %in% 1:10)) {
-			stop("rating must be an integer between 1 and 10")
+			cli::cli_abort("{.arg rating} must be an integer between 1 and 10, not {.val {rating}}.")
 		}
 	}
 

@@ -11,7 +11,7 @@
 #' @importFrom dplyr rename mutate_if
 unpack_user <- function(response_user) {
 	if (!inherits(response_user, what = "data.frame")) {
-		stop("User object must be data.frame like")
+		cli::cli_abort("User object must be data.frame-like, not {.obj_type_friendly {response_user}}.")
 	}
 
 	if (is_empty(response_user)) {
@@ -50,7 +50,7 @@ unpack_user <- function(response_user) {
 #' @importFrom dplyr bind_cols
 unpack_show <- function(show) {
 	if (!inherits(show, "data.frame")) {
-		stop("show should inherit from data.frame, but is class ", class(show))
+		cli::cli_abort("{.arg show} must inherit from data.frame, not {.obj_type_friendly {show}}.")
 	}
 
 	# Convert, just in case

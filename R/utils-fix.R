@@ -64,7 +64,9 @@ fix_ids <- function(ids) {
 #' @noRd
 fix_datetime <- function(response) {
 	if (!inherits(response, c("data.frame", "list"))) {
-		cli::cli_abort("{.arg response} must inherit from data.frame or list, not {.obj_type_friendly {response}}.")
+		cli::cli_abort(
+			"{.arg response} must inherit from data.frame or list, not {.obj_type_friendly {response}}."
+		)
 	}
 	datevars <- c(
 		"first_aired",

@@ -26,7 +26,7 @@ omdb_get <- function(imdb) {
 		httr2::resp_body_json(simplifyVector = TRUE)
 
 	if (identical(res$Response, "False")) {
-		warning(imdb, ": ", res$Error)
+		cli::cli_warn("{.val {imdb}}: {res$Error}")
 		return(tibble())
 	}
 

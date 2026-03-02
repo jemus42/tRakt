@@ -36,20 +36,25 @@ user_collection <- function(
 	extended <- match.arg(extended)
 
 	if (type == "movie" && unnest_episodes) {
-		warning("'unnest_episodes' only applies to type = 'shows'")
+		cli::cli_warn("{.arg unnest_episodes} only applies to {.code type = \"shows\"}.")
 	}
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map(
-			user,
-			\(x) user_collection(
-				user = x,
-				type = type,
-				unnest_episodes = unnest_episodes,
-				extended = extended
-			)
-		) |> list_rbind(names_to = "user"))
+		return(
+			map(
+				user,
+				\(x) {
+					user_collection(
+						user = x,
+						type = type,
+						unnest_episodes = unnest_episodes,
+						extended = extended
+					)
+				}
+			) |>
+				list_rbind(names_to = "user")
+		)
 	}
 
 	if (extended == "min") {
@@ -82,7 +87,7 @@ user_collection <- function(
 
 		if (unnest_episodes) {
 			if (!requireNamespace("tidyr", quietly = TRUE)) {
-				stop("This functionality requires the tidyr package")
+				cli::cli_abort("This functionality requires the {.pkg tidyr} package.")
 			}
 
 			response <- as_tibble(response) |>

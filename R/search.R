@@ -121,7 +121,7 @@ search_query <- function(
 	response <- trakt_get(url = url)
 
 	if (identical(response, tibble())) {
-		warning("No results for query '", query, "'")
+		cli::cli_warn("No results for query {.val {query}}.")
 		return(response)
 	}
 

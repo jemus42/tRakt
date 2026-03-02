@@ -93,7 +93,7 @@ build_trakt_url <- function(...) {
 #' @importFrom purrr pluck discard
 apidoc <- function(section, method, key) {
 	if (!requireNamespace("yaml", quietly = TRUE)) {
-		stop("Please install the 'yaml' package")
+		cli::cli_abort("Please install the {.pkg yaml} package.")
 	}
 
 	system.file("api-methods.yml", package = "tRakt") |>
@@ -110,7 +110,7 @@ apidoc <- function(section, method, key) {
 #' @keywords internal
 apiurl <- function(section, method, prefix = "@source ") {
 	if (!requireNamespace("glue", quietly = TRUE)) {
-		stop("Please install the 'glue' package")
+		cli::cli_abort("Please install the {.pkg glue} package.")
 	}
 
 	func <- apidoc(section, method, "implementation")

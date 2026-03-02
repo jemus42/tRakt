@@ -34,7 +34,7 @@ seasons_episodes <- function(id, seasons = 1L, extended = c("min", "full")) {
 	# Basic sanity check
 	# Do this after vectorization due to scalar ifs
 	if (!rlang::is_integerish(seasons)) {
-		stop("'seasons' cannot be coerced to integer: '", seasons, "'")
+		cli::cli_abort("{.arg seasons} cannot be coerced to integer: {.val {seasons}}.")
 	}
 
 	# Construct URL, make API call
