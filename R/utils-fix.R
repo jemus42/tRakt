@@ -29,6 +29,22 @@ fix_ids <- function(ids) {
 		ids["tvrage"] <- NULL
 	}
 
+	# Flatten nested plex object into plex_guid and plex_slug
+	if (has_name(ids, "plex")) {
+		plex <- ids[["plex"]]
+		ids[["plex"]] <- NULL
+		if (is.data.frame(plex)) {
+			ids[["plex_guid"]] <- as.character(plex[["guid"]])
+			ids[["plex_slug"]] <- as.character(plex[["slug"]])
+		} else if (is.list(plex) && !is.null(plex)) {
+			ids[["plex_guid"]] <- as.character(plex[["guid"]] %||% NA_character_)
+			ids[["plex_slug"]] <- as.character(plex[["slug"]] %||% NA_character_)
+		} else {
+			ids[["plex_guid"]] <- NA_character_
+			ids[["plex_slug"]] <- NA_character_
+		}
+	}
+
 	modify_if(ids, is.null, ~NA_character_, .else = as.character)
 }
 

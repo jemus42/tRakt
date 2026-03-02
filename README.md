@@ -6,8 +6,6 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml)
-[![CRAN
-status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
 [![GitHub
 release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](https://github.com/jemus42/tRakt/releases)
 [![Project Status: WIP – Initial development is in progress, but there
@@ -23,7 +21,7 @@ user base. The site also enables media-center integration, so you can
 automatically sync your collection and watch progress, as well as
 scrobble playback and ratings via [Plex](https://www.plex.tv/),
 [Kodi](https://kodi.tv/) and streaming services like Netflix and
-AppleTV+.  
+AppleTV+.\
 And, most importantly, [trakt.tv has a publicly available
 API](https://trakt.docs.apiary.io), which makes this package possible
 and allows you to collect all that nice data people have contributed.
@@ -85,23 +83,25 @@ Get season information for the show using its trakt ID:
 
 ``` r
 seasons_summary(show_info$trakt, extended = "full") |>
-  glimpse()
+    glimpse()
 #> Rows: 2
-#> Columns: 14
+#> Columns: 16
+#> $ title          <chr> "Season 1", "Season 2"
+#> $ votes          <int> 377, 226
+#> $ images         <df[,2]> <data.frame[2 x 2]>
 #> $ season         <int> 1, 2
-#> $ rating         <dbl> 8.40741, 8.08333
-#> $ votes          <int> 351, 216
+#> $ rating         <dbl> 8.336870, 8.057522
+#> $ network        <lgl> NA, NA
+#> $ overview       <chr> "When a group of strangers find themselves in possessio…
+#> $ updated_at     <dttm> 2026-03-02 01:28:02, 2026-03-02 01:28:02
+#> $ first_aired    <dttm> 2013-01-15 21:00:00, 2014-07-14 20:00:00
 #> $ episode_count  <int> 6, 6
 #> $ aired_episodes <int> 6, 6
-#> $ title          <chr> "Season 1", "Season 2"
-#> $ overview       <chr> "When a group of strangers find themselves in possessio…
-#> $ first_aired    <dttm> 2013-01-15 21:00:00, 2014-07-14 20:00:00
-#> $ updated_at     <dttm> 2025-08-12 06:03:40, 2025-08-12 06:03:40
-#> $ network        <chr> "Channel 4", "Channel 4"
-#> $ original_title <lgl> NA, NA
-#> $ trakt          <chr> "56008", "56009"
-#> $ tvdb           <chr> "507598", "524149"
+#> $ original_title <chr> "Season 1", "Season 2"
+#> $ plex           <chr> "c(\"602e627b0f4bde002da31cdc\", \"602e627b0f4bde002da3…
 #> $ tmdb           <chr> "54695", "54696"
+#> $ tvdb           <chr> "507598", "524149"
+#> $ trakt          <chr> "56008", "56009"
 ```
 
 Get episode data for the first season, this time using the show’s URL
@@ -109,29 +109,31 @@ slug:
 
 ``` r
 seasons_episodes(show_info$trakt, seasons = 1, extended = "full") |>
-  glimpse()
+    glimpse()
 #> Rows: 6
-#> Columns: 20
-#> $ season                 <int> 1, 1, 1, 1, 1, 1
-#> $ episode                <int> 1, 2, 3, 4, 5, 6
+#> Columns: 22
 #> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episode…
-#> $ episode_abs            <int> 1, 2, 3, 4, 5, 6
-#> $ overview               <chr> "When  five strangers from an online comic book…
-#> $ rating                 <dbl> 8.14286, 8.03480, 8.02721, 7.99512, 8.12932, 8.…
-#> $ votes                  <int> 1211, 977, 882, 820, 781, 801
-#> $ comment_count          <int> 9, 0, 1, 2, 1, 2
-#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
-#> $ updated_at             <dttm> 2025-08-12 13:37:06, 2025-08-12 13:37:07, 2025-…
-#> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
+#> $ votes                  <int> 1214, 969, 877, 814, 784, 799
+#> $ images                 <df[,1]> <data.frame[6 x 1]>
+#> $ episode                <int> 1, 2, 3, 4, 5, 6
+#> $ rating                 <dbl> 8.126030, 8.027864, 8.025085, 7.986486, 8.12755…
+#> $ season                 <int> 1, 1, 1, 1, 1, 1
 #> $ runtime                <int> 60, 49, 51, 48, 49, 62
+#> $ overview               <chr> "When  five strangers from an online comic b…
+#> $ episode_abs            <int> 1, 2, 3, 4, 5, 6
+#> $ updated_at             <dttm> 2026-03-02 00:16:11, 2026-03-02 08:04:28, 2026-…
+#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
 #> $ episode_type           <chr> "series_premiere", "standard", "standard", "sta…
-#> $ original_title         <lgl> NA, NA, NA, NA, NA, NA
 #> $ after_credits          <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE
+#> $ comment_count          <int> 9, 0, 1, 2, 2, 2
 #> $ during_credits         <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE
-#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
-#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
-#> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
+#> $ original_title         <lgl> NA, NA, NA, NA, NA, NA
+#> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
+#> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt26182…
+#> $ plex                   <chr> "c(\"5d9c1007ba6eb9001fbf63c1\", \"5d9c1007ba6e…
 #> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "91000…
+#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "4…
+#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
 ```
 
 You cann also get episode data for all seasons, but note that episodes
@@ -139,31 +141,33 @@ will be included as a list-column and need further unpacking:
 
 ``` r
 seasons_summary(show_info$trakt, episodes = TRUE, extended = "full") |>
-  pull(episodes) |>
-  bind_rows() |>
-  glimpse()
+    pull(episodes) |>
+    bind_rows() |>
+    glimpse()
 #> Rows: 12
-#> Columns: 20
-#> $ season                 <int> 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2
-#> $ episode                <int> 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6
+#> Columns: 22
 #> $ title                  <chr> "Episode 1", "Episode 2", "Episode 3", "Episode…
-#> $ episode_abs            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
-#> $ overview               <chr> "When  five strangers from an online comic book…
-#> $ rating                 <dbl> 8.14286, 8.03480, 8.02721, 7.99512, 8.12932, 8.…
-#> $ votes                  <int> 1211, 977, 882, 820, 781, 801, 796, 701, 669, 6…
-#> $ comment_count          <int> 9, 0, 1, 2, 1, 2, 5, 1, 2, 2, 2, 6
-#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
-#> $ updated_at             <dttm> 2025-08-11 21:19:50, 2025-08-12 00:25:28, 2025-…
-#> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru"…
+#> $ votes                  <int> 1214, 969, 877, 814, 784, 799, 796, 695, 664, 6…
+#> $ images                 <df[,1]> <data.frame[12 x 1]>
+#> $ episode                <int> 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6
+#> $ rating                 <dbl> 8.126030, 8.027864, 8.025085, 7.986486, 8.12…
+#> $ season                 <int> 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2
 #> $ runtime                <int> 60, 49, 51, 48, 49, 62, 54, 51, 50, 50, 50, 53
+#> $ overview               <chr> "When  five strangers from an online comic book…
+#> $ episode_abs            <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+#> $ updated_at             <dttm> 2026-03-02 00:16:11, 2026-03-02 08:04:28, 2026-…
+#> $ first_aired            <dttm> 2013-01-15 21:00:00, 2013-01-22 21:00:00, 2013-…
 #> $ episode_type           <chr> "series_premiere", "standard", "standard", "sta…
+#> $ after_credits          <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…
+#> $ comment_count          <int> 9, 0, 1, 2, 2, 2, 5, 1, 2, 2, 2, 7
+#> $ during_credits         <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…
 #> $ original_title         <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA
-#> $ after_credits          <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…
-#> $ during_credits         <lgl> FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALS…
-#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "1…
-#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "44…
-#> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt26182…
+#> $ available_translations <list> <"de", "en", "es", "fr", "he", "nl", "pl", "ru…
+#> $ imdb                   <chr> "tt2618234", "tt2618232", "tt2618236", "tt2618…
+#> $ plex                   <chr> "c(\"5d9c1007ba6eb9001fbf63c1\", \"5d9c1007ba6e…
 #> $ tmdb                   <chr> "910003", "910004", "910005", "910006", "910007…
+#> $ tvdb                   <chr> "4471351", "4477746", "4477747", "4477748", "44…
+#> $ trakt                  <chr> "1405053", "1405054", "1405055", "1405056", "14…
 ```
 
 Or alternatively, get the [trending
@@ -191,29 +195,29 @@ these shows:
 
 ``` r
 shows_trending(extended = "full") |>
-  transmute(
-    show = glue::glue("{title} ({year})"),
-    runtime_hms = hms::hms(minutes = runtime),
-    aired_episodes = aired_episodes,
-    runtime_aired = hms::hms(minutes = runtime * aired_episodes)
-  ) |>
-  knitr::kable(
-    col.names = c("Show", "Episode Runtime", "Aired Episodes", "Total Runtime (aired)")
-  )
+    transmute(
+        show = glue::glue("{title} ({year})"),
+        runtime_hms = hms::hms(minutes = runtime),
+        aired_episodes = aired_episodes,
+        runtime_aired = hms::hms(minutes = runtime * aired_episodes)
+    ) |>
+    knitr::kable(
+        col.names = c("Show", "Episode Runtime", "Aired Episodes", "Total Runtime (aired)")
+    )
 ```
 
 | Show | Episode Runtime | Aired Episodes | Total Runtime (aired) |
 |:---|:---|---:|:---|
-| Wednesday (2022) | 00:42:00 | 12 | 08:24:00 |
-| Dexter: Resurrection (2025) | 00:50:00 | 6 | 05:00:00 |
-| The Gilded Age (2022) | 00:56:00 | 25 | 23:20:00 |
-| South Park (1997) | 00:22:00 | 323 | 118:26:00 |
-| The Institute (2025) | 00:58:00 | 6 | 05:48:00 |
-| Last Week Tonight with John Oliver (2014) | 00:42:00 | 340 | 238:00:00 |
-| Foundation (2021) | 00:42:00 | 25 | 17:30:00 |
-| Star Trek: Strange New Worlds (2022) | 00:55:00 | 25 | 22:55:00 |
-| Twisted Metal (2023) | 00:42:00 | 15 | 10:30:00 |
-| Resident Alien (2021) | 00:45:00 | 44 | 33:00:00 |
+| The Pitt (2025) | 00:48:00 | 23 | 18:24:00 |
+| Bridgerton (2020) | 01:00:00 | 32 | 32:00:00 |
+| A Knight of the Seven Kingdoms (2026) | 00:35:00 | 6 | 03:30:00 |
+| The Night Agent (2023) | 00:50:00 | 30 | 25:00:00 |
+| Paradise (2025) | 00:52:00 | 12 | 10:24:00 |
+| Monarch: Legacy of Monsters (2023) | 00:46:00 | 11 | 08:26:00 |
+| Formula 1: Drive to Survive (2019) | 00:40:00 | 78 | 52:00:00 |
+| Shrinking (2023) | 00:35:00 | 27 | 15:45:00 |
+| The Rookie (2018) | 00:40:00 | 134 | 89:20:00 |
+| Fallout (2024) | 00:55:00 | 16 | 14:40:00 |
 
 Please note though that episode runtime data may be inaccurate. In my
 experience, recent shows have fairly accurate runtime data, which is
@@ -221,7 +225,7 @@ often not the case for older shows.
 
 ## Credentials
 
-The API requires at least a `client id` for the API calls.  
+The API requires at least a `client id` for the API calls.\
 Loading the package (or calling its functions via `tRakt::` wil
 automatically set the app’s credentials for authentication, but for
 extended use you should set your own credentials via environment
@@ -249,7 +253,7 @@ trakt.tv](http://trakt.tv/oauth/applications).
 You theoretically never need to supply your own credentials. However, if
 you want to actually use this package for some project, I do not
 recommend relying on the package’s credentials due to API rate limits.
-In any case, trakt.tv is free.  
+In any case, trakt.tv is free.\
 Be nice to their servers.
 
 # Code of Conduct

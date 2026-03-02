@@ -5,7 +5,7 @@ format:
 	air format .
 
 .PHONY: doc
-doc:
+doc: format
 	Rscript -e "usethis::use_tidy_description()"
 	Rscript -e "devtools::document()"
 

@@ -56,6 +56,14 @@ unpack_show <- function(show) {
 	# Convert, just in case
 	show <- as_tibble(show)
 
+	# Drop nested objects that don't fit tabular output
+	if (has_name(show, "images")) {
+		show[["images"]] <- NULL
+	}
+	if (has_name(show, "colors")) {
+		show[["colors"]] <- NULL
+	}
+
 	# Flatten "airs" (not present in minimal output)
 	if (has_name(show, "airs")) {
 		show <- modify_in(
@@ -466,7 +474,7 @@ flatten_single_media_object <- function(response, type) {
 	# might not be a list already
 	res |>
 		modify_at(
-			grepl("^genres$|^available_translations$|^languages$", names(res)),
+			grepl("^genres$|^subgenres$|^available_translations$|^languages$", names(res)),
 			~ {
 				if (!is.list(.x)) list(.x) else .x
 			}

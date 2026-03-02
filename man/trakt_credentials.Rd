@@ -7,6 +7,6 @@
 trakt_credentials()
 }
 \description{
-Authentication has changed with the migration to \link{httr2}, so this function is just a
+Authentication has changed with the migration to \link[httr2:httr2-package]{httr2::httr2}, so this function is just a
 placeholder that shows information about available credentials.
 }

@@ -170,7 +170,7 @@ search_result_cleanup <- function(response, type, n_results, extended) {
 	# Just to be really safe it's always a numeric
 	response$score <- as.numeric(response$score)
 
-	if (type == "show" && extended == "full") {
+	if (type == "show") {
 		response$show <- unpack_show(response$show)
 	}
 
@@ -185,7 +185,8 @@ search_result_cleanup <- function(response, type, n_results, extended) {
 	# Happens for exact title matches (bumps "score") but e.g. false type in this case
 	response <- as_tibble(response)
 	if (has_name(response, "year")) {
-		response[is.na(response$year) & response$score == 1000, "score"] <- 20
+		max_score <- max(response$score, na.rm = TRUE)
+		response[is.na(response$year) & response$score == max_score, "score"] <- 0
 	}
 
 	head(response, n_results) |>

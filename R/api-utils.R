@@ -72,7 +72,20 @@ get_cached_token <- function() {
 		token <- readRDS(cache_loc)
 
 		if (token_expired(token)) {
-			token <- refresh_token(token)
+			token <- tryCatch(
+				refresh_token(token),
+				error = function(e) {
+					cli::cli_warn(
+						"Failed to refresh token: {conditionMessage(e)}",
+						class = "tRakt_refresh_failed"
+					)
+					clear_cached_token()
+					NULL
+				}
+			)
+			if (is.null(token)) {
+				return(FALSE)
+			}
 			cache_token(token)
 		} else {
 			if (getOption("tRakt_debug")) {

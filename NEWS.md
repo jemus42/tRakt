@@ -1,5 +1,10 @@
 # tRakt 0.17.0.9000 (development version)
 
+- Adapt to trakt.tv API response changes:
+  - Show results now include `plex_guid` and `plex_slug` ID columns, `subgenres` as a list column, and new fields `tagline` and `original_title`.
+  - Nested `images` and `colors` objects are dropped from show data as they don't fit tabular output.
+  - `search_query()` and `search_id()` now return properly structured show data for both `extended = "min"` and `extended = "full"`.
+- Token refresh failures (e.g. expired or revoked refresh tokens) now fall back to device authentication instead of erroring.
 - Catch up with inconsistent API endpoints:
   - `seasons_season()` was renamed to `seasons_episodes()`, wrapping endpoint [shows/:id/seasons/:season?translations=](https://trakt.docs.apiary.io/#reference/seasons/episodes/get-all-episodes-for-a-single-season).
   - `seasons_season()` now wraps new(?) endpoint [shows/:id/seasons/:season/info](https://trakt.docs.apiary.io/#reference/seasons/season/get-single-seasons-for-a-show).

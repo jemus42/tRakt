@@ -8,12 +8,14 @@ editor_options:
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
-  cache = TRUE,
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%",
-  message = FALSE, warning = FALSE, error = FALSE
+	cache = TRUE,
+	collapse = TRUE,
+	comment = "#>",
+	fig.path = "man/figures/README-",
+	out.width = "100%",
+	message = FALSE,
+	warning = FALSE,
+	error = FALSE
 )
 ```
 
@@ -21,7 +23,6 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml)
-[![CRAN status](https://www.r-pkg.org/badges/version/tRakt)](https://cran.r-project.org/package=tRakt)
 [![GitHub release](https://img.shields.io/github/release/jemus42/tRakt.svg?logo=GitHub)](https://github.com/jemus42/tRakt/releases)
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Codecov test coverage](https://codecov.io/gh/jemus42/tRakt/graph/badge.svg)](https://app.codecov.io/gh/jemus42/tRakt)
@@ -70,23 +71,23 @@ Get season information for the show using its trakt ID:
 
 ```{r}
 seasons_summary(show_info$trakt, extended = "full") |>
-  glimpse()
+	glimpse()
 ```
 
 Get episode data for the first season, this time using the show's URL slug:
 
 ```{r}
 seasons_episodes(show_info$trakt, seasons = 1, extended = "full") |>
-  glimpse()
+	glimpse()
 ```
 
 You cann also get episode data for all seasons, but note that episodes will be included as a list-column and need further unpacking:
 
 ```{r}
 seasons_summary(show_info$trakt, episodes = TRUE, extended = "full") |>
-  pull(episodes) |>
-  bind_rows() |>
-  glimpse()
+	pull(episodes) |>
+	bind_rows() |>
+	glimpse()
 ```
 
 Or alternatively, get the [trending shows](https://trakt.tv/shows/trending):
@@ -99,15 +100,15 @@ Maybe you just want to know how long it would take you to binge through these sh
 
 ```{r}
 shows_trending(extended = "full") |>
-  transmute(
-    show = glue::glue("{title} ({year})"),
-    runtime_hms = hms::hms(minutes = runtime),
-    aired_episodes = aired_episodes,
-    runtime_aired = hms::hms(minutes = runtime * aired_episodes)
-  ) |>
-  knitr::kable(
-    col.names = c("Show", "Episode Runtime", "Aired Episodes", "Total Runtime (aired)")
-  )
+	transmute(
+		show = glue::glue("{title} ({year})"),
+		runtime_hms = hms::hms(minutes = runtime),
+		aired_episodes = aired_episodes,
+		runtime_aired = hms::hms(minutes = runtime * aired_episodes)
+	) |>
+	knitr::kable(
+		col.names = c("Show", "Episode Runtime", "Aired Episodes", "Total Runtime (aired)")
+	)
 ```
 
 Please note though that episode runtime data may be inaccurate. In my experience, recent shows have fairly accurate runtime data, which is often not the case for older shows.

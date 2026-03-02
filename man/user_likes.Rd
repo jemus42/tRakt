@@ -21,7 +21,7 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get items (comments, lists) a user likes
 }
 \examples{
-\dontshow{if (FALSE) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (FALSE) withAutoprint(\{ # examplesIf}
 # Get liked lists (only if there's a client secret set)
 user_likes("lists")
 \dontshow{\}) # examplesIf}
