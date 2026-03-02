@@ -4,12 +4,13 @@ on:
   push:
     branches: [main, master]
   pull_request:
-    branches: [main, master]
   release:
     types: [published]
   workflow_dispatch:
 
-name: pkgdown
+name: pkgdown.yaml
+
+permissions: read-all
 
 jobs:
   pkgdown:
@@ -20,6 +21,8 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       tRakt_KEY: ${{ secrets.TRAKT_KEY }}
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v6
 
