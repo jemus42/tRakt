@@ -16,12 +16,13 @@ comments_comment <- function(id, extended = c("min", "full")) {
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		res <- map_df(
+		res <- map(
 			id,
-			~ {
-				comments_comment(.x, extended = extended)
+			\(x) {
+				comments_comment(x, extended = extended)
 			}
-		)
+		) |>
+			list_rbind()
 		return(res)
 	}
 
@@ -43,12 +44,13 @@ comments_replies <- function(id, extended = c("min", "full")) {
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		res <- map_df(
+		res <- map(
 			id,
-			~ {
-				comments_replies(.x, extended = extended)
+			\(x) {
+				comments_replies(x, extended = extended)
 			}
-		)
+		) |>
+			list_rbind()
 		return(res)
 	}
 
@@ -97,8 +99,8 @@ comments_likes <- function(id, extended = c("min", "full")) {
 #' @export
 #' @eval apiurl("comments", "item")
 #' @family comment methods
-#' @importFrom dplyr mutate select everything bind_cols
-#' @importFrom purrr map_df pluck
+#' @importFrom dplyr everything bind_cols
+#' @importFrom purrr pluck
 #' @examples
 #' \dontrun{
 #' # A movie

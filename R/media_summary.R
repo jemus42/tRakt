@@ -2,7 +2,6 @@
 
 #' @keywords internal
 #' @noRd
-#' @importFrom purrr map_df
 #' @importFrom purrr modify_if
 #' @importFrom rlang has_name
 #' @importFrom lubridate as_datetime
@@ -13,7 +12,7 @@ media_summary <- function(type = c("movies", "shows"), id, extended = c("min", "
 	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
-		res <- map_df(id, ~ media_summary(type, id = .x, extended))
+		res <- map(id, \(x) media_summary(type, id = x, extended)) |> list_rbind()
 		return(res)
 	}
 

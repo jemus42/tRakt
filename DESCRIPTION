@@ -18,10 +18,10 @@ Depends:
 Imports:
     cli,
     curl,
-    dplyr (>= 1.0.0),
+    dplyr,
     httr2,
     lubridate,
-    purrr (>= 0.2.3),
+    purrr,
     rappdirs,
     rlang,
     stringr,

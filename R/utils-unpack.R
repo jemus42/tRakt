@@ -108,15 +108,12 @@ unpack_movie <- function(response) {
 #' writing, sound, and camera
 #' @keywords internal
 #' @noRd
-#' @importFrom purrr map_df
 #' @importFrom rlang has_name
 #' @importFrom dplyr bind_cols
-#' @importFrom dplyr mutate
-#' @importFrom dplyr select
 #' @source <https://trakt.docs.apiary.io/#reference/people/shows> for crew sections
 unpack_crew_sections <- function(crew, type) {
 	if (type == "shows") {
-		map_df(trakt_people_crew_sections, function(section) {
+		map(trakt_people_crew_sections, \(section) {
 			if (has_name(crew, section)) {
 				crew[[section]] <- crew[[section]]$show |>
 					unpack_show() |>
@@ -129,9 +126,10 @@ unpack_crew_sections <- function(crew, type) {
 			}
 
 			crew[[section]]
-		})
+		}) |>
+			list_rbind()
 	} else if (type == "movies") {
-		map_df(trakt_people_crew_sections, function(section) {
+		map(trakt_people_crew_sections, \(section) {
 			if (has_name(crew, section)) {
 				crew[[section]] <- crew[[section]] |>
 					unpack_movie() |>
@@ -140,7 +138,8 @@ unpack_crew_sections <- function(crew, type) {
 			}
 
 			crew[[section]]
-		})
+		}) |>
+			list_rbind()
 	}
 }
 

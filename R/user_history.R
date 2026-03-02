@@ -11,7 +11,6 @@
 #' @family user data
 #' @eval apiurl("users", "history")
 #' @importFrom dplyr bind_cols select rename rename_all
-#' @importFrom purrr map_df
 #' @importFrom rlang is_empty
 #' @inherit trakt_api_common_parameters return
 #' @note For `type = "shows"`, the
@@ -46,11 +45,10 @@ user_history <- function(
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map_df(
+		return(map(
 			user,
-			~ user_history(user = .x, type, item_id = item_id, limit, start_at, end_at, extended),
-			.id = "user"
-		))
+			\(x) user_history(user = x, type, item_id = item_id, limit, start_at, end_at, extended)
+		) |> list_rbind(names_to = "user"))
 	}
 
 	# Construct URL, make API call
