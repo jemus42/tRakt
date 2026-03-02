@@ -1,0 +1,126 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:16 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"8c7bf4c2a3d10e54c3c7174a49a903dc"
+      expires: Mon, 02 Mar 2026 19:23:16 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: b00fb431-3637-4a91-a2ef-3c88a40e7af4
+      x-runtime: '0.011870'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600740d8167754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":8.53768,"votes":21816,"distribution":{"1":202,"2":67,"3":86,"4":123,"5":282,"6":776,"7":2668,"8":5179,"9":5332,"10":7101}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/inception-2010/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:33:30 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      age: '613'
+      cache-control: public, max-age=2678400, s-maxage=3600
+      last-modified: Mon, 02 Mar 2026 11:23:17 GMT
+      server: cloudflare
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      cache-tag: movie
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      cf-ray: 9d60164339759fd0-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":8.62665,"votes":85876,"distribution":{"1":387,"2":202,"3":235,"4":482,"5":1085,"6":3366,"7":8676,"8":19764,"9":23857,"10":27822}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:16 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"8c7bf4c2a3d10e54c3c7174a49a903dc"
+      expires: Mon, 02 Mar 2026 19:23:16 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: b00fb431-3637-4a91-a2ef-3c88a40e7af4
+      x-runtime: '0.011870'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600740d8167754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":8.53768,"votes":21816,"distribution":{"1":202,"2":67,"3":86,"4":123,"5":282,"6":776,"7":2668,"8":5179,"9":5332,"10":7101}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:16 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"8c7bf4c2a3d10e54c3c7174a49a903dc"
+      expires: Mon, 02 Mar 2026 19:23:16 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: b00fb431-3637-4a91-a2ef-3c88a40e7af4
+      x-runtime: '0.011870'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600740d8167754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":8.53768,"votes":21816,"distribution":{"1":202,"2":67,"3":86,"4":123,"5":282,"6":776,"7":2668,"8":5179,"9":5332,"10":7101}}'
+  recorded_at: 2026-03-02 11:33:30
+recorded_with: VCR-vcr/2.1.0

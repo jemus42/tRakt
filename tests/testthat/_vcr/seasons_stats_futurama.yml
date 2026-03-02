@@ -1,0 +1,70 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:32 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 19:23:32 GMT
+      last-modified: Mon, 02 Mar 2026 07:43:55 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 3169b24d-1094-42be-b5d6-a89569fa84d2
+      x-runtime: '0.027231'
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007a49cda7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":75520,"plays":782340,"collectors":327646,"collected_episodes":357670,"comments":5,"lists":188,"votes":769}'
+  recorded_at: 2026-03-02 11:33:31
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:32 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 19:23:32 GMT
+      last-modified: Mon, 02 Mar 2026 07:43:55 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 05b9e22c-1fca-4697-82a0-019499c38082
+      x-runtime: '0.044662'
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007a5bdd97754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":68152,"plays":1596752,"collectors":338131,"collected_episodes":367134,"comments":2,"lists":146,"votes":529}'
+  recorded_at: 2026-03-02 11:33:31
+recorded_with: VCR-vcr/2.1.0

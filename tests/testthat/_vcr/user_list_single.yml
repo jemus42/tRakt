@@ -1,0 +1,39 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/lists/2121308?extended=min
+  response:
+    status: 304
+    headers:
+      content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 02 Mar 2026 11:31:55 GMT
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      etag: W/"0457c771129a5d1a53edd8f2764bb557"
+      server: cloudflare
+      vary: Origin, accept-encoding
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-list-id: '2121308'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 3c6edcc2-848d-4037-8e35-a8627c5c8e25
+      x-runtime: '0.031211'
+      x-sort-by: rank
+      x-sort-how: asc
+      x-xss-protection: '0'
+      cf-ray: 9d6013f1de805f1e-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"name":"Anime of 2016","description":"Ranked list of 2016 anime.\r\n\r\nThis
+        is not a complete list of 2016 anime, but rather a list for myself to keep
+        track of anime I want to keep track of.\r\n\r\nI *tried* to rank it, but since
+        I can''t do that without having seen the full thing, ranks are obviously incomplete.","privacy":"public","share_link":"https://trakt.tv/lists/2121308","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-06T16:03:31.000Z","updated_at":"2019-09-01T21:16:16.000Z","item_count":23,"comment_count":0,"likes":3,"ids":{"trakt":2121308,"slug":"anime-of-2016"},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}'
+  recorded_at: 2026-03-02 11:31:55
+recorded_with: VCR-vcr/2.1.0

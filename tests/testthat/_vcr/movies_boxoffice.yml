@@ -1,0 +1,41 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/boxoffice?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:11:05 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"d4eb81617e209ea68432b34e06ebf92a"
+      expires: Mon, 02 Mar 2026 17:43:46 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 02b94d03-5801-490d-a9c9-d4ee51cacd9e
+      x-runtime: '0.043778'
+      x-xss-protection: '0'
+      cf-ray: 9d5ff56a3921d655-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"revenue":64000000,"movie":{"title":"Scream 7","year":2026,"ids":{"trakt":934134,"slug":"scream-7-2026","imdb":"tt27047903","tmdb":1159559}}},{"revenue":12000000,"movie":{"title":"GOAT","year":2026,"ids":{"trakt":1057839,"slug":"goat-2026","imdb":"tt27613895","tmdb":1297842}}},{"revenue":7000000,"movie":{"title":"\"Wuthering
+        Heights\"","year":2026,"ids":{"trakt":1077273,"slug":"wuthering-heights-2026","imdb":"tt32897959","tmdb":1316092}}},{"revenue":4300000,"movie":{"title":"Twenty
+        One Pilots: More Than We Ever Imagined","year":2026,"ids":{"trakt":1339079,"slug":"twenty-one-pilots-more-than-we-ever-imagined-2026","imdb":"tt39315536","tmdb":1612063}}},{"revenue":3500000,"movie":{"title":"EPiC:
+        Elvis Presley in Concert","year":2026,"ids":{"trakt":1183117,"slug":"epic-elvis-presley-in-concert-2026","imdb":"tt35003538","tmdb":1445363}}},{"revenue":3400000,"movie":{"title":"Crime
+        101","year":2026,"ids":{"trakt":944042,"slug":"crime-101-2026","imdb":"tt32430579","tmdb":1171145}}},{"revenue":3100000,"movie":{"title":"I
+        Can Only Imagine 2","year":2026,"ids":{"trakt":1184977,"slug":"i-can-only-imagine-2-2026","imdb":"tt34888646","tmdb":1405769}}},{"revenue":2800000,"movie":{"title":"Send
+        Help","year":2026,"ids":{"trakt":967810,"slug":"send-help-2026","imdb":"tt8036976","tmdb":1198994}}},{"revenue":1600000,"movie":{"title":"How
+        to Make a Killing","year":2026,"ids":{"trakt":315133,"slug":"how-to-make-a-killing-2026","imdb":"tt4357198","tmdb":467905}}},{"revenue":1400000,"movie":{"title":"Zootopia
+        2","year":2025,"ids":{"trakt":871499,"slug":"zootopia-2-2025","imdb":"tt26443597","tmdb":1084242}}}]'
+  recorded_at: 2026-03-02 11:33:30
+recorded_with: VCR-vcr/2.1.0

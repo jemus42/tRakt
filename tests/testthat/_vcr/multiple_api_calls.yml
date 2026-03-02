@@ -1,0 +1,66 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/deadpool-2016?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:48 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eb858071dd2-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:48 GMT
+      x-movie-updated-at: '2025-08-03T17:13:04.000Z'
+      etag: W/"85e4b2a346eba20a418177dc7efd9967"
+      last-modified: Sun, 03 Aug 2025 17:13:04 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":855,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 491bd46c-7dfd-4c30-a788-c047096fbc85
+      x-runtime: '0.016349'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"title":"Deadpool","year":2016,"ids":{"trakt":190430,"slug":"deadpool-2016","imdb":"tt1431045","tmdb":293660}}'
+  recorded_at: 2025-08-04 08:06:48
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:48 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eb959b41dd2-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:48 GMT
+      x-show-updated-at: '2025-08-03T08:50:13.000Z'
+      etag: W/"e07242746b61aea91580cf3d80f73cd9"
+      last-modified: Sun, 03 Aug 2025 08:50:13 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":851,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: c8982aa7-bcaf-4e4f-8ac7-a6ccf9245016
+      x-runtime: '0.013623'
+      cf-cache-status: MISS
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"title":"Futurama","year":1999,"ids":{"trakt":614,"slug":"futurama","tvdb":73871,"imdb":"tt0149460","tmdb":615,"tvrage":null}}'
+  recorded_at: 2025-08-04 08:06:48
+recorded_with: VCR-vcr/2.0.0

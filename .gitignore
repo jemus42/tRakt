@@ -23,3 +23,6 @@ README.html
 README_cache
 
 /.quarto/
+
+# test intermediates
+tests/testthat/_problems/*R

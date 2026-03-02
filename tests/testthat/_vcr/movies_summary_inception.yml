@@ -1,0 +1,34 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/inception-2010?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 04 Aug 2025 08:06:48 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: 969c8eb70e301dd2-DUS
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: '0'
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-permitted-cross-domain-policies: none
+      referrer-policy: strict-origin-when-cross-origin
+      expires: Mon, 04 Aug 2025 16:06:48 GMT
+      x-movie-updated-at: '2025-08-03T17:10:45.000Z'
+      etag: W/"2c890492acdd3e4104e137b7eecfc3b3"
+      last-modified: Sun, 03 Aug 2025 17:10:45 GMT
+      cache-control: public, max-age=28800
+      vary: Accept-Encoding
+      content-encoding: gzip
+      x-ratelimit: '{"name":"AUTHED_API_GET_LIMIT","period":300,"limit":1000,"remaining":859,"until":"2025-08-04T08:10:00Z"}'
+      x-request-id: 48465d76-4b56-4afd-a91b-bdc87b407c93
+      x-runtime: '0.016629'
+      cf-cache-status: EXPIRED
+      speculation-rules: '"/cdn-cgi/speculation"'
+      server: cloudflare
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"title":"Inception","year":2010,"ids":{"trakt":16662,"slug":"inception-2010","imdb":"tt1375666","tmdb":27205}}'
+  recorded_at: 2025-08-04 08:06:48
+recorded_with: VCR-vcr/2.0.0

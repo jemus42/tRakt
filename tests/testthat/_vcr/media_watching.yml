@@ -1,0 +1,164 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/deadpool-2016/watching?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:52:37 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=900, public
+      content-encoding: gzip
+      etag: W/"538549b727b734f2d14621fa297da3e9"
+      expires: Mon, 02 Mar 2026 12:07:37 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-movie-updated-at: '2026-03-01T16:39:38.000Z'
+      x-permitted-cross-domain-policies: none
+      x-request-id: a40d6bd8-c476-4a05-93b8-42cf184180c2
+      x-runtime: '0.159241'
+      x-xss-protection: '0'
+      cf-ray: 9d603241de016651-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"username":"KevinDutton","private":true,"deleted":false,"ids":{"slug":"kevindutton"}}]'
+  recorded_at: 2026-03-02 11:52:37
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/watching?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:52:37 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=900, public
+      content-encoding: gzip
+      etag: W/"47a84dd0a5fa1af2453c55648f8486d5"
+      expires: Mon, 02 Mar 2026 12:07:37 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 10a8fd71-9b13-43e8-90db-bc182c68dfad
+      x-runtime: '0.046351'
+      x-show-updated-at: '2026-03-02T08:03:16.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d603243ff586651-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"username":"Cthalin","private":false,"deleted":false,"name":"Cthalin","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"cthalin"},"joined_at":"2012-11-19T22:14:35.000Z","location":"","about":"","gender":"","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/2f60727beda966892f343017172f2b58?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"russelgazimov","private":false,"deleted":false,"name":"russelg","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"russelgazimov"},"joined_at":"2021-08-26T12:09:50.000Z","location":"Perth,
+        Western Australia","about":"","gender":"male","age":28,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/999960d1f2f096af6a6e9bb222209121?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}},{"username":"ivo@brownbanana.eu","private":false,"deleted":false,"name":"ivo@brownbanana.eu","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ivo-brownbanana-eu"},"joined_at":"2024-01-27T16:30:55.000Z","location":"","about":null,"gender":"","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/79d4983ab2c4c34327de00e518892128?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"davide23register@gmail.com","private":false,"deleted":false,"name":"davide23register@gmail.com","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"davide23register-gmail-com"},"joined_at":"2024-09-07T10:37:59.000Z","location":"Budapest,
+        Budapest","about":null,"gender":"","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/42bedb31b10ac8cb1634fa0a7876ab41?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"WillSmith110","private":false,"deleted":false,"name":"Will
+        Smith","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"willsmith110"},"joined_at":"2025-12-26T01:52:58.000Z","location":"United
+        Kingdom","about":null,"gender":"male","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/84ffcdd0348c3d2ca2695490bf2934e7?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}},{"username":"Programmdude","private":false,"deleted":false,"name":"Matthew
+        Smit","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"programmdude"},"joined_at":"2015-10-16T14:04:54.000Z","location":"","about":"","gender":"male","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/2aee4903925424c06da9588f0ebbe123?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}},{"username":"codyjaggers","private":false,"deleted":false,"name":"Cody
+        Jaggers","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"codyjaggers"},"joined_at":"2016-08-05T14:39:33.000Z","location":null,"about":null,"gender":"male","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/eb32cff322de2f0cfc9bcb7c71d38ca3?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}},{"username":"melarial","private":false,"deleted":false,"name":"Mel","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"melarial"},"joined_at":"2021-12-09T04:29:21.000Z","location":"Langley,
+        British Columbia","about":null,"gender":"","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/72ead4c14489e605ae4c2983c91334be?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"allanrolls","private":false,"deleted":false,"name":"allanrolls","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"allanrolls"},"joined_at":"2026-01-06T00:32:50.000Z","location":null,"about":null,"gender":null,"age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/494d70977e1cb354ab9b204b81c9ec2f?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"williamalake","private":false,"deleted":false,"name":"William
+        Lake","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"williamalake"},"joined_at":"2024-08-10T07:10:03.000Z","location":"Siem
+        Reap, Siem Reap","about":"","gender":"male","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/61e59e7d46e232aa80d0e2b8a5059eba?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}},{"username":"jessdonohoe","private":false,"deleted":false,"name":"jessdonohoe","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"jessdonohoe"},"joined_at":"2020-03-29T23:45:46.000Z","location":"Manchester,
+        England","about":null,"gender":"female","age":30,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/776f50e9eaadc8a8a4f929c2927a50b6?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fleela.png\u0026r=pg\u0026s=256"}}},{"username":"jarvis-16138492","private":false,"deleted":false,"name":"Chris","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"jarvis-16138492"},"joined_at":"2025-12-28T23:19:55.000Z","location":"Australia","about":null,"gender":"male","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/3929bf94837681edb895f0c06be1c160?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}},{"username":"tomrossify","private":false,"deleted":false,"name":"Tom
+        Ross","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"tomrossify"},"joined_at":"2021-12-25T06:32:44.000Z","location":"Ulladulla,
+        NSW","about":null,"gender":"male","age":38,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/0f292ea750445949873b7e7ce4cefb6d?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}},{"username":"xdtrammell","private":false,"deleted":false,"name":"xdtrammell","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"xdtrammell"},"joined_at":"2012-08-16T07:20:51.000Z","location":null,"about":null,"gender":null,"age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/7b4bb9921698e3fc7ae44cbe33f73150?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"OldestMate","private":false,"deleted":false,"name":"OldestMate","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"oldestmate"},"joined_at":"2017-01-30T11:19:36.000Z","location":null,"about":null,"gender":"","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/94d956b14c32fea345778fcaea55769e?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"Ruijsenaars","private":false,"deleted":false,"name":"Raphael
+        Ruijsenaars","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ruijsenaars"},"joined_at":"2025-07-25T21:52:58.000Z","location":"Riyadh,
+        Riyadh Region","about":null,"gender":"male","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/161c525649256c4e6fd3faa6ff6b2a21?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}},{"username":"Dabi2.deivid","private":false,"deleted":false,"name":"Dabi2","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"dabi2-deivid"},"joined_at":"2024-05-23T15:31:54.000Z","location":"Ceuta,
+        Ceuta","about":null,"gender":"","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/de694de44f217f16b15504c75c45bad5?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"atrakt.tv","private":true,"deleted":false,"ids":{"slug":"atrakt-tv"}},{"username":"R0SSCO","private":false,"deleted":false,"name":"Rossco","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"r0ssco"},"joined_at":"2025-01-03T08:26:23.000Z","location":"Sydney,
+        New South Wales","about":"","gender":"male","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/16276cc6652483537d6378df69b991c5?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}},{"username":"TN88","private":false,"deleted":false,"name":"TN88","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"tn88"},"joined_at":"2024-11-25T06:47:21.000Z","location":",
+        Victoria","about":"","gender":"","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/6d4a5291747bb5361f280e9e7b0650a9?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"ash.ezard","private":false,"deleted":false,"name":"ash.ezard","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ash-ezard"},"joined_at":"2024-10-26T11:04:03.000Z","location":null,"about":null,"gender":null,"age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/26459b0724542b98d9a1d51ac16433c2?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"jvarktic","private":false,"deleted":false,"name":"jvarktic","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"jvarktic"},"joined_at":"2024-02-22T16:01:50.000Z","location":"","about":"","gender":"","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/d8b39a65e1617271e554cf9df55289cf?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"Dad
+        1111","private":false,"deleted":false,"name":"Dad 1111","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"dad-1111"},"joined_at":"2025-05-08T22:32:52.000Z","location":"","about":null,"gender":"","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/88eb51e712d90d781d9275a267759ddb?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"Devondyck88","private":false,"deleted":false,"name":"Devon
+        Dyck","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"devondyck88"},"joined_at":"2022-09-12T21:30:38.000Z","location":null,"about":null,"gender":null,"age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/ae0aaef3050321f400b5ece6b5834bd2?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"jarvis-16205590","private":false,"deleted":false,"name":"Alejandro
+        Ruiz","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"jarvis-16205590"},"joined_at":"2026-01-15T11:15:58.000Z","location":null,"about":null,"gender":null,"age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/2a5a693e735a0c6ad7de4b07c152a277?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"Damage,Incorporated","private":false,"deleted":false,"name":"Dirtbag,Industries2:tm:","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"damage-incorporated"},"joined_at":"2026-02-12T19:04:02.000Z","location":"Infinite
+        Plane","about":"","gender":"male","age":null,"images":{"avatar":{"full":"https://walter-r2.trakt.tv/images/users/016/304/528/avatars/large/0a9099bfed.jpg"}}},{"username":"Cyberu2","private":false,"deleted":false,"name":"Cyberu2","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"cyberu2"},"joined_at":"2022-12-20T21:03:54.000Z","location":"Chalco,
+        México","about":"","gender":"male","age":null,"images":{"avatar":{"full":"https://walter-r2.trakt.tv/images/users/012/386/895/avatars/large/f287130b2c.jpg"}}},{"username":"MJMC","private":true,"deleted":false,"ids":{"slug":"mjmc"}},{"username":"woopsicle","private":true,"deleted":false,"ids":{"slug":"woopsicle"}},{"username":"flxk6","private":false,"deleted":false,"name":"flxk6","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"flxk6"},"joined_at":"2015-12-25T23:43:32.000Z","location":null,"about":null,"gender":null,"age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/28c46e86456a54282644a301937f6420?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}},{"username":"br41n","private":true,"deleted":false,"ids":{"slug":"br41n"}},{"username":"afiedler","private":false,"deleted":false,"name":"phreshxmetal","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"afiedler"},"joined_at":"2023-02-24T10:45:09.000Z","location":"Santa
+        Ana, California","about":null,"gender":"male","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/ab0b0a3fc1b8bba9cdb8aeb3432123fc?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}},{"username":"Omerico","private":false,"deleted":false,"name":"Omer
+        Bechar","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"omerico"},"joined_at":"2017-02-14T21:19:36.000Z","location":"","about":"","gender":"","age":null,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/fd0932eef9ad6bbd99969ee17d265dac?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Fzoidberg.png\u0026r=pg\u0026s=256"}}}]'
+  recorded_at: 2026-03-02 11:52:37
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/9/watching?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:33 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600
+      content-encoding: gzip
+      etag: W/"be5372eb2e6235529cf66a7adf151098"
+      expires: Mon, 02 Mar 2026 11:38:33 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: b79281f4-3a53-4098-9b7e-c388253e2f0e
+      x-runtime: '0.031756'
+      x-show-id: '455'
+      x-show-season-id: '1485'
+      x-show-updated-at: '2026-03-02T08:03:16.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007ad69979f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"username":"jarvis-12557835","private":false,"deleted":false,"name":"No
+        Name","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"jarvis-12557835"}},{"username":"Cyberu2","private":false,"deleted":false,"name":"Cyberu2","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"cyberu2"}},{"username":"Cosmic_Lizard","private":false,"deleted":false,"name":"Cosmic
+        Lizard","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"cosmic_lizard"}},{"username":"jarvis-16205590","private":false,"deleted":false,"name":"Alejandro
+        Ruiz","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"jarvis-16205590"}},{"username":"GoTeamScotch","private":false,"deleted":false,"name":"Jordan
+        Chase","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"goteamscotch"}}]'
+  recorded_at: 2026-03-02 11:52:37
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/game-of-thrones/seasons/1/episodes/1/watching?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:33 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600
+      content-encoding: gzip
+      etag: W/"aef24bf73428d30af037567feae5eeea"
+      expires: Mon, 02 Mar 2026 11:38:33 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 0a8983fa-f1eb-48d4-bbb1-02fafbfe9a14
+      x-runtime: '0.031441'
+      x-show-id: '1390'
+      x-show-season-id: '3963'
+      x-show-updated-at: '2026-03-02T06:38:27.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007aeaa5e9f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"username":"rishhyt","private":false,"deleted":false,"name":"Hrishit
+        Verma","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"rishhyt"}},{"username":"krmts2311","private":false,"deleted":false,"name":"javi","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"krmts2311"}},{"username":"jtang7","private":false,"deleted":false,"name":"João
+        Tang","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"jtang7"}}]'
+  recorded_at: 2026-03-02 11:52:37
+recorded_with: VCR-vcr/2.1.0

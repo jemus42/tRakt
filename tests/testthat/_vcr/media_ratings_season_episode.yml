@@ -1,0 +1,410 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:17 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"889a1aa8f4ba32fb9cf2f6df9ac4ba90"
+      expires: Mon, 02 Mar 2026 19:23:17 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: ede10245-fd21-4bf9-9158-0b42eb9986ff
+      x-runtime: '0.022572'
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600747ce9e7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":8.10663,"votes":769,"distribution":{"1":3,"2":1,"3":0,"4":1,"5":41,"6":27,"7":133,"8":288,"9":127,"10":148}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:17 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"cfcf5a6bfc7fa474d03920590179ad46"
+      expires: Mon, 02 Mar 2026 19:23:17 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: c8e5bfac-f890-4572-9c0d-bfb6fb9dad18
+      x-runtime: '0.016356'
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600748ffb67754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":8.19849,"votes":529,"distribution":{"1":2,"2":1,"3":0,"4":1,"5":20,"6":21,"7":79,"8":197,"9":106,"10":102}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/1/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:17 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"e00cd338adae11ce28884f9767969f60"
+      expires: Mon, 02 Mar 2026 19:23:17 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 93cfeb19-d36b-447c-813d-8ff7818e053e
+      x-runtime: '0.021052'
+      x-show-id: '455'
+      x-show-season-id: '1477'
+      x-show-updated-at: '2026-03-02T08:03:16.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d60074a28f67754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.63756,"votes":836,"distribution":{"1":6,"2":1,"3":5,"4":8,"5":50,"6":99,"7":230,"8":211,"9":72,"10":154}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/2/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:17 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"e493ced1c720655dc8577ab9be751e20"
+      expires: Mon, 02 Mar 2026 19:23:17 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 1ff1ba8f-0a0c-4098-98e5-60eb1d16cbfc
+      x-runtime: '0.018710'
+      x-show-id: '455'
+      x-show-season-id: '1478'
+      x-show-updated-at: '2026-03-02T08:03:16.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d60074b6a3e7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.93874,"votes":604,"distribution":{"1":0,"2":0,"3":0,"4":3,"5":34,"6":36,"7":133,"8":213,"9":84,"10":100}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/episodes/3/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:17 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"084e7797afd784b1059aada8ca29dc7a"
+      expires: Mon, 02 Mar 2026 19:23:17 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: ecf01bad-be57-4b7e-83ab-06db6c806d93
+      x-runtime: '0.013167'
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d60074c8b607754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.83204,"votes":1935,"distribution":{"1":15,"2":6,"3":3,"4":0,"5":14,"6":280,"7":439,"8":627,"9":230,"10":321}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/episodes/4/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:18 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"62f7279ec373c960ebd40466bd433d8a"
+      expires: Mon, 02 Mar 2026 19:23:18 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 21b953eb-7559-42f8-aff4-a862b52ecf30
+      x-runtime: '0.026249'
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d60074daca67754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.71616,"votes":1751,"distribution":{"1":9,"2":8,"3":4,"4":9,"5":24,"6":271,"7":448,"8":519,"9":186,"10":273}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/episodes/3/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:18 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"b46aa94df399777bc13081fbeb8e7fad"
+      expires: Mon, 02 Mar 2026 19:23:18 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: dd506dfa-8e09-4983-9da2-91ce3040f87b
+      x-runtime: '0.058333'
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d60074eddd37754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.68447,"votes":1423,"distribution":{"1":10,"2":5,"3":0,"4":4,"5":22,"6":219,"7":382,"8":429,"9":151,"10":201}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/episodes/4/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:18 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"c743b0c84e1dd50156212481274d7aae"
+      expires: Mon, 02 Mar 2026 19:23:18 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: ac7625e9-68cb-40a1-8f15-2aeafc22038d
+      x-runtime: '0.014097'
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007503f267754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.73791,"votes":1385,"distribution":{"1":9,"2":7,"3":2,"4":6,"5":30,"6":219,"7":322,"8":393,"9":168,"10":229}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/1/episodes/3/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:18 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"b9ddd6f382ff274754b3c63d4e60a7d6"
+      expires: Mon, 02 Mar 2026 19:23:18 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: ca49fc62-7395-4ea2-b0a4-6f790d05232b
+      x-runtime: '0.024731'
+      x-show-id: '455'
+      x-show-season-id: '1477'
+      x-show-updated-at: '2026-03-02T08:03:16.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600751583e7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.25346,"votes":1590,"distribution":{"1":14,"2":8,"3":8,"4":13,"5":62,"6":375,"7":515,"8":296,"9":92,"10":206}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/1/episodes/4/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:18 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"871e7d735ec004fbbd05a75b202b14c5"
+      expires: Mon, 02 Mar 2026 19:23:18 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 4959b531-3679-437b-ad14-ff9e43ecf669
+      x-runtime: '0.023671'
+      x-show-id: '455'
+      x-show-season-id: '1477'
+      x-show-updated-at: '2026-03-02T08:03:16.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600752695a7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.53451,"votes":1420,"distribution":{"1":8,"2":8,"3":6,"4":10,"5":38,"6":250,"7":407,"8":374,"9":104,"10":215}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/2/episodes/3/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:19 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"3776a36575f459db315c698df5c7513a"
+      expires: Mon, 02 Mar 2026 19:23:19 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: a14999e6-5737-4560-82af-ce840048c031
+      x-runtime: '0.023119'
+      x-show-id: '455'
+      x-show-season-id: '1478'
+      x-show-updated-at: '2026-03-02T08:03:16.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007539a827754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.6609,"votes":1271,"distribution":{"1":11,"2":7,"3":5,"4":10,"5":35,"6":222,"7":280,"8":342,"9":136,"10":223}}'
+  recorded_at: 2026-03-02 11:33:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/the-simpsons/seasons/2/episodes/4/ratings
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:19 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"460d9dffd36c3568db2d5321544fd1d4"
+      expires: Mon, 02 Mar 2026 19:23:19 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: ec1276de-7d3e-4aa2-8f1b-c7767d3c522c
+      x-runtime: '0.026696'
+      x-show-id: '455'
+      x-show-season-id: '1478'
+      x-show-updated-at: '2026-03-02T08:03:16.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600754db947754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"rating":7.67377,"votes":1033,"distribution":{"1":5,"2":6,"3":5,"4":6,"5":19,"6":153,"7":258,"8":323,"9":112,"10":146}}'
+  recorded_at: 2026-03-02 11:33:30
+recorded_with: VCR-vcr/2.1.0

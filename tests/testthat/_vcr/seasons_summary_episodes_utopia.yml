@@ -1,0 +1,144 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons?extended=full%2Cepisodes
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:37 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-show-updated-at: '2026-03-02T09:44:02.000Z'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007c318b47754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"plex":{"guid":null},"tmdb":500264,"tvdb":null,"trakt":515470},"title":"Specials","votes":0,"images":{"thumb":[],"poster":["media.trakt.tv/images/seasons/000/515/470/posters/medium/c315ae7b20.jpg.webp"]},"number":0,"rating":0,"network":null,"overview":null,"updated_at":"2026-03-02T09:44:02.000Z","first_aired":"2013-03-11T21:00:00.000Z","episode_count":4,"aired_episodes":4,"original_title":"Specials","episodes":[{"ids":{"imdb":null,"plex":{"guid":null},"tmdb":6945822,"tvdb":null,"trakt":14003928},"title":"The
+        World of Utopia","votes":0,"images":{"screenshot":[]},"number":1,"rating":0,"season":0,"runtime":60,"overview":"Featurette
+        from Blu-Ray of season 1 with writer Dennis Kelly","number_abs":null,"updated_at":"2026-03-01T13:54:01.000Z","first_aired":"2013-03-11T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":0,"during_credits":false,"original_title":"The
+        World of Utopia","available_translations":["en"]},{"ids":{"imdb":null,"plex":{"guid":null},"tmdb":6945823,"tvdb":null,"trakt":14003929},"title":"Fly
+        on the Wall","votes":0,"images":{"screenshot":[]},"number":2,"rating":0,"season":0,"runtime":60,"overview":"Featurette
+        from Blu-Ray of season 1 with Director Marc Munden","number_abs":null,"updated_at":"2026-03-01T13:54:01.000Z","first_aired":"2013-03-11T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":0,"during_credits":false,"original_title":"Fly
+        on the Wall","available_translations":["en"]},{"ids":{"imdb":null,"plex":{"guid":null},"tmdb":6945824,"tvdb":null,"trakt":14003930},"title":"Analysis
+        of a Stunt Scene","votes":0,"images":{"screenshot":[]},"number":3,"rating":0,"season":0,"runtime":60,"overview":"Featurette
+        from Blu-Ray of Season 1 with directors Wayne Yipp and Alex Garcia","number_abs":null,"updated_at":"2026-03-01T13:54:01.000Z","first_aired":"2013-03-11T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":0,"during_credits":false,"original_title":"Analysis
+        of a Stunt Scene","available_translations":["en"]},{"ids":{"imdb":null,"plex":{"guid":null},"tmdb":6945825,"tvdb":null,"trakt":14003931},"title":"Deleted
+        Scenes","votes":0,"images":{"screenshot":[]},"number":4,"rating":0,"season":0,"runtime":60,"overview":"Featurette
+        from Blu-Ray of Season 1","number_abs":null,"updated_at":"2026-03-01T13:54:01.000Z","first_aired":"2013-03-11T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":0,"during_credits":false,"original_title":"Deleted
+        Scenes","available_translations":["en"]}]},{"ids":{"plex":{"guid":"602e627b0f4bde002da31cdc"},"tmdb":54695,"tvdb":507598,"trakt":56008},"title":"Season
+        1","votes":377,"images":{"thumb":[],"poster":["media.trakt.tv/images/seasons/000/056/008/posters/medium/455cf5ad13.jpg.webp"]},"number":1,"rating":8.336870193481445,"network":null,"overview":"When
+        a group of strangers find themselves in possession of the manuscript for a
+        legendary graphic novel, their lives brutally implode as they are pursued
+        by a shadowy and murderous organisation...","updated_at":"2026-03-02T09:44:01.000Z","first_aired":"2013-01-15T21:00:00.000Z","episode_count":6,"aired_episodes":6,"original_title":"Season
+        1","episodes":[{"ids":{"imdb":"tt2618234","plex":{"guid":"5d9c1007ba6eb9001fbf63c1"},"tmdb":910003,"tvdb":4471351,"trakt":1405053},"title":"Episode
+        1","votes":1214,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/053/screenshots/medium/99cbfbad8a.jpg.webp"]},"number":1,"rating":8.126029968261719,"season":1,"runtime":60,"overview":"When  five
+        strangers from an online comic book forum gain possession of a  cult graphic
+        novel, they find themselves pursued by a shadowy  organisation who are prepared
+        to kill to track it down.","number_abs":1,"updated_at":"2026-03-02T00:16:11.000Z","first_aired":"2013-01-15T21:00:00.000Z","episode_type":"series_premiere","after_credits":false,"comment_count":9,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt2618232","plex":{"guid":"5d9c1007ba6eb9001fbf63d0"},"tmdb":910004,"tvdb":4477746,"trakt":1405054},"title":"Episode
+        2","votes":969,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/054/screenshots/medium/487644b136.jpg.webp"]},"number":2,"rating":8.027863502502441,"season":1,"runtime":49,"overview":"Ian  and
+        Becky are forced to face the terrifying reality of life on the run.  Meanwhile,
+        Dugdale is drawn deeper and deeper into a plot that  threatens to have fatal
+        consequences.","number_abs":2,"updated_at":"2026-03-02T08:04:28.000Z","first_aired":"2013-01-22T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":0,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt2618236","plex":{"guid":"5d9c1007ba6eb9001fbf63c9"},"tmdb":910005,"tvdb":4477747,"trakt":1405055},"title":"Episode
+        3","votes":877,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/055/screenshots/medium/fa7d3dfd18.jpg.webp"]},"number":3,"rating":8.02508544921875,"season":1,"runtime":51,"overview":"The
+        gang feel the full weight of The Network''s power as Grant is framed  for
+        a shocking crime. With nowhere else to turn, they are forced to make  a new
+        ally - but can she really be trusted?","number_abs":3,"updated_at":"2026-03-02T00:23:43.000Z","first_aired":"2013-01-29T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":1,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt2618238","plex":{"guid":"5d9c1007ba6eb9001fbf63b4"},"tmdb":910006,"tvdb":4477748,"trakt":1405056},"title":"Episode
+        4","votes":814,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/056/screenshots/medium/4d613da08d.jpg.webp"]},"number":4,"rating":7.986486434936523,"season":1,"runtime":48,"overview":"Hidden
+        away in a derelict manor house, the group attempt to decipher the  secret
+        meaning of the manuscript. Will uncovering the identity of Mr  Rabbit really
+        allow them to return to their former lives?","number_abs":4,"updated_at":"2026-03-02T00:23:43.000Z","first_aired":"2013-02-05T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt2618240","plex":{"guid":"5d9c1007ba6eb9001fbf63c5"},"tmdb":910007,"tvdb":4477749,"trakt":1405057},"title":"Episode
+        5","votes":784,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/057/screenshots/medium/67ad679b1d.jpg.webp"]},"number":5,"rating":8.127551078796387,"season":1,"runtime":49,"overview":"The
+        gang''s attempt to disrupt The Network''s plans backfires leaving one of them
+        in danger. Arby''s confession to Jessica has damaging repercussions while
+        Becky is left with an impossible choice.","number_abs":5,"updated_at":"2026-03-02T00:23:43.000Z","first_aired":"2013-02-12T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt2618242","plex":{"guid":"5d9c1008ec357c001f9c7745"},"tmdb":910008,"tvdb":4477750,"trakt":1405058},"title":"Episode
+        6","votes":799,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/058/screenshots/medium/dc75fb05b4.jpg.webp"]},"number":6,"rating":8.546934127807617,"season":1,"runtime":62,"overview":"The  final
+        episode sees time running out. As a daring plan is formed, only  one question
+        remains - will the true secrets of Utopia finally be  revealed?","number_abs":6,"updated_at":"2026-03-02T09:02:35.000Z","first_aired":"2013-02-19T21:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":2,"during_credits":false,"original_title":null,"available_translations":["de","el","en","es","fr","he","nl","pl","ru"]}]},{"ids":{"plex":{"guid":"602e627b0f4bde002da31cf8"},"tmdb":54696,"tvdb":524149,"trakt":56009},"title":"Season
+        2","votes":226,"images":{"thumb":[],"poster":["media.trakt.tv/images/seasons/000/056/009/posters/medium/a9fb4a9533.jpg.webp"]},"number":2,"rating":8.05752182006836,"network":null,"overview":"It
+        has been three months since the destruction of the Utopia manuscript, and
+        things have been quiet for Ian, Becky and co. Believing the Network to be
+        finished, they each try to get back to some semblance of normality.  But far
+        from being over, the Network are only just beginning...","updated_at":"2026-03-02T09:44:02.000Z","first_aired":"2014-07-14T20:00:00.000Z","episode_count":6,"aired_episodes":6,"original_title":"Season
+        2","episodes":[{"ids":{"imdb":"tt3371724","plex":{"guid":"5fbd6a35eadbaa002dfd66f1"},"tmdb":994956,"tvdb":4756838,"trakt":1405059},"title":"Episode
+        1","votes":796,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/059/screenshots/medium/afb05c65fe.jpg.webp"]},"number":1,"rating":8.41331672668457,"season":2,"runtime":54,"overview":"In
+        1974, genius Philip Carvel meets an idealistic security services agent, Milner,
+        at a secret forum of political, industrial, financial and academic leaders...
+        by 1979, Carvel''s losing his mind.","number_abs":7,"updated_at":"2026-03-01T23:07:08.000Z","first_aired":"2014-07-14T20:00:00.000Z","episode_type":"season_premiere","after_credits":false,"comment_count":5,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt3850852","plex":{"guid":"5fbd6a39eadbaa002dfd6719"},"tmdb":993741,"tvdb":4922909,"trakt":1405060},"title":"Episode
+        2","votes":695,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/060/screenshots/medium/672d99be39.jpg.webp"]},"number":2,"rating":8.212949752807617,"season":2,"runtime":51,"overview":"In  the
+        present day, Jessica has been held captive by Milner who has  tortured her
+        in a desperate attempt to find out just what adjustment  Carvel made to Janus","number_abs":8,"updated_at":"2026-03-02T01:16:50.000Z","first_aired":"2014-07-15T20:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":1,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt3867850","plex":{"guid":"5fbd6a3aeadbaa002dfd6732"},"tmdb":1000628,"tvdb":4924678,"trakt":1405061},"title":"Episode
+        3","votes":664,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/061/screenshots/medium/a90716cec5.jpg.webp"]},"number":3,"rating":8.162651062011719,"season":2,"runtime":50,"overview":"The  gang
+        are on the run and find a precocious young hacker, who uncovers  the key to
+        The Network''s new plan: a real global outbreak of weaponised  Russian flu.","number_abs":9,"updated_at":"2026-03-01T13:11:08.000Z","first_aired":"2014-07-22T20:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt3892828","plex":{"guid":"5fbd6a3aeadbaa002dfd6748"},"tmdb":1000629,"tvdb":4924679,"trakt":1405062},"title":"Episode
+        4","votes":655,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/062/screenshots/medium/556b5d2c2f.jpg.webp"]},"number":4,"rating":8.155725479125977,"season":2,"runtime":50,"overview":"A  shocked
+        Dugdale reluctantly agrees to harbour Jessica, but who should  be scared of
+        who? When Dugdale visits Jen and Alice in a secret prison  it''s clear he
+        will do whatever The Network asks.","number_abs":10,"updated_at":"2026-03-01T10:08:15.000Z","first_aired":"2014-07-29T20:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt3902654","plex":{"guid":"5fbd6a3ceadbaa002dfd6761"},"tmdb":1001533,"tvdb":4924680,"trakt":1405063},"title":"Episode
+        5","votes":644,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/063/screenshots/medium/2e216fb5a9.jpg.webp"]},"number":5,"rating":8.17546558380127,"season":2,"runtime":50,"overview":"Following  the
+        revelation that her father''s alive, Jessica sets off to find him,  with hostage
+        Milner in tow. Wilson and Leah analyse their information  and discover a far
+        darker, more terrifying secret.","number_abs":11,"updated_at":"2026-03-01T19:01:25.000Z","first_aired":"2014-08-05T20:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt3916922","plex":{"guid":"5fbd6a3deadbaa002dfd6771"},"tmdb":1003290,"tvdb":4924681,"trakt":1405064},"title":"Episode
+        6","votes":644,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/064/screenshots/medium/b30afb0fc6.jpg.webp"]},"number":6,"rating":8.12888240814209,"season":2,"runtime":53,"overview":"In  the
+        final episode the race is on to find out who is going to release  the flu.
+        The gang track down Dobri Gorski, where he tells them the names  of the three
+        people he trained to release the flu.","number_abs":12,"updated_at":"2026-03-01T19:44:02.000Z","first_aired":"2014-08-12T20:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":7,"during_credits":false,"original_title":null,"available_translations":["de","el","en","es","fr","he","nl","pl","ru"]}]}]'
+  recorded_at: 2026-03-02 11:27:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/1?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:37 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007c5aae87754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"imdb":"tt2618234","plex":{"guid":"5d9c1007ba6eb9001fbf63c1"},"tmdb":910003,"tvdb":4471351,"trakt":1405053},"title":"Episode
+        1","votes":1214,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/053/screenshots/medium/99cbfbad8a.jpg.webp"]},"number":1,"rating":8.126029968261719,"season":1,"runtime":60,"overview":"When  five
+        strangers from an online comic book forum gain possession of a  cult graphic
+        novel, they find themselves pursued by a shadowy  organisation who are prepared
+        to kill to track it down.","number_abs":1,"updated_at":"2026-03-02T00:16:11.000Z","first_aired":"2013-01-15T21:00:00.000Z","episode_type":"series_premiere","after_credits":false,"comment_count":9,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt2618232","plex":{"guid":"5d9c1007ba6eb9001fbf63d0"},"tmdb":910004,"tvdb":4477746,"trakt":1405054},"title":"Episode
+        2","votes":969,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/054/screenshots/medium/487644b136.jpg.webp"]},"number":2,"rating":8.027863502502441,"season":1,"runtime":49,"overview":"Ian  and
+        Becky are forced to face the terrifying reality of life on the run.  Meanwhile,
+        Dugdale is drawn deeper and deeper into a plot that  threatens to have fatal
+        consequences.","number_abs":2,"updated_at":"2026-03-02T08:04:28.000Z","first_aired":"2013-01-22T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":0,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt2618236","plex":{"guid":"5d9c1007ba6eb9001fbf63c9"},"tmdb":910005,"tvdb":4477747,"trakt":1405055},"title":"Episode
+        3","votes":877,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/055/screenshots/medium/fa7d3dfd18.jpg.webp"]},"number":3,"rating":8.02508544921875,"season":1,"runtime":51,"overview":"The
+        gang feel the full weight of The Network''s power as Grant is framed  for
+        a shocking crime. With nowhere else to turn, they are forced to make  a new
+        ally - but can she really be trusted?","number_abs":3,"updated_at":"2026-03-02T00:23:43.000Z","first_aired":"2013-01-29T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":1,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt2618238","plex":{"guid":"5d9c1007ba6eb9001fbf63b4"},"tmdb":910006,"tvdb":4477748,"trakt":1405056},"title":"Episode
+        4","votes":814,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/056/screenshots/medium/4d613da08d.jpg.webp"]},"number":4,"rating":7.986486434936523,"season":1,"runtime":48,"overview":"Hidden
+        away in a derelict manor house, the group attempt to decipher the  secret
+        meaning of the manuscript. Will uncovering the identity of Mr  Rabbit really
+        allow them to return to their former lives?","number_abs":4,"updated_at":"2026-03-02T00:23:43.000Z","first_aired":"2013-02-05T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt2618240","plex":{"guid":"5d9c1007ba6eb9001fbf63c5"},"tmdb":910007,"tvdb":4477749,"trakt":1405057},"title":"Episode
+        5","votes":784,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/057/screenshots/medium/67ad679b1d.jpg.webp"]},"number":5,"rating":8.127551078796387,"season":1,"runtime":49,"overview":"The
+        gang''s attempt to disrupt The Network''s plans backfires leaving one of them
+        in danger. Arby''s confession to Jessica has damaging repercussions while
+        Becky is left with an impossible choice.","number_abs":5,"updated_at":"2026-03-02T00:23:43.000Z","first_aired":"2013-02-12T21:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":null,"available_translations":["de","en","es","fr","he","nl","pl","ru"]},{"ids":{"imdb":"tt2618242","plex":{"guid":"5d9c1008ec357c001f9c7745"},"tmdb":910008,"tvdb":4477750,"trakt":1405058},"title":"Episode
+        6","votes":799,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/058/screenshots/medium/dc75fb05b4.jpg.webp"]},"number":6,"rating":8.546934127807617,"season":1,"runtime":62,"overview":"The  final
+        episode sees time running out. As a daring plan is formed, only  one question
+        remains - will the true secrets of Utopia finally be  revealed?","number_abs":6,"updated_at":"2026-03-02T09:02:35.000Z","first_aired":"2013-02-19T21:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":2,"during_credits":false,"original_title":null,"available_translations":["de","el","en","es","fr","he","nl","pl","ru"]}]'
+  recorded_at: 2026-03-02 11:27:45
+recorded_with: VCR-vcr/2.1.0

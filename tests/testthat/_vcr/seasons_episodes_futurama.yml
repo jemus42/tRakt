@@ -1,0 +1,605 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:35 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007ba383f7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"imdb":"tt0584449","plex":{"guid":"65dcb23629624af2f7e6d37b"},"tmdb":35006,"tvdb":131174,"trakt":38803},"title":"Space
+        Pilot 3000","votes":2624,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/803/screenshots/medium/7a6a1ca832.jpg.webp"]},"number":1,"rating":8.10746955871582,"season":1,"runtime":22,"overview":"On
+        New Year''s Eve 1999, Pizza Delivery boy Philip J. Fry accidentally falls
+        into a cryogenic chamber and is frozen for 1,000 years. Finally unfrozen,
+        he explores New New York, meets his new best friend (a kleptomaniacal robot
+        named Bender) and goes to work for his great-great-great-great-grand-nephew''s
+        space delivery business.","number_abs":1,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-03-29T01:00:00.000Z","episode_type":"series_premiere","after_credits":false,"comment_count":6,"during_credits":false,"original_title":"Space
+        Pilot 3000","available_translations":[]},{"ids":{"imdb":"tt0756891","plex":{"guid":"65dcb23629624af2f7e6d36b"},"tmdb":35007,"tvdb":131175,"trakt":38804},"title":"The
+        Series Has Landed","votes":2122,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/804/screenshots/medium/06e3bee196.jpg.webp"]},"number":2,"rating":7.79311990737915,"season":1,"runtime":22,"overview":"For
+        the crew''s first mission, they must deliver a crate full of toys for an arcade
+        game to the moon. Fry is very excited, while it is not really a big deal in
+        the year 3000. Fry tries to persuade Leela to go exploring on the moon, while
+        Amy tries to recover the keys to the Planet Express Ship.","number_abs":2,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-05T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":4,"during_credits":false,"original_title":"The
+        Series Has Landed","available_translations":[]},{"ids":{"imdb":"tt0756882","plex":{"guid":"5d9c0e334eefaa001f6119b0"},"tmdb":35008,"tvdb":131176,"trakt":38805},"title":"I,
+        Roommate","votes":1935,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/805/screenshots/medium/b9be67a29a.jpg.webp"]},"number":3,"rating":7.832041263580322,"season":1,"runtime":22,"overview":"When
+        it is discovered that Philip has been living in the Planet Express office,
+        he is forced to move out. Trying to sleep standing up in Bender''s closet-sized
+        apartment doesn''t work, so they go looking for a place both can be comfortable.
+        Unfortunately, Bender is incompatible with the ideal apartment they do find
+        until he has a radical... modification which makes him less than happy.","number_abs":3,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-07T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"I,
+        Roommate","available_translations":[]},{"ids":{"imdb":"tt0756885","plex":{"guid":"65dcb23529624af2f7e6d346"},"tmdb":35009,"tvdb":131177,"trakt":38806},"title":"Love''s
+        Labours Lost in Space","votes":1751,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/806/screenshots/medium/7788472fc2.jpg.webp"]},"number":4,"rating":7.716162204742432,"season":1,"runtime":22,"overview":"On
+        a mission intended to save endangered animals on a collapsing planet, Leela
+        and the crew run into legendary starship captain Zapp Brannigan. A self-proclaimed
+        ladies man, Zapp sees Leela as a potential new conquest. When the captain
+        refuses to aid the animal rescue, Leela and her crew try to leave Zapp''s
+        starship. But Zapp throws Fry and Bender in jail, and summons Leela to his
+        \"Lovenasium\". They ultimately escape and arrive on the doomed planet, where
+        Leela finally finds love - with a cute, and very useful, creature named Nibbler.","number_abs":4,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-14T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":5,"during_credits":false,"original_title":"Love''s
+        Labours Lost in Space","available_translations":[]},{"ids":{"imdb":"tt0584438","plex":{"guid":"65dcb23529624af2f7e6d32d"},"tmdb":35010,"tvdb":131178,"trakt":38807},"title":"Fear
+        of a Bot Planet","votes":1682,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/807/screenshots/medium/8a8f960fb9.jpg.webp"]},"number":5,"rating":7.645659923553467,"season":1,"runtime":22,"overview":"Fry
+        and Leela disguise themselves as robots to find Bender after he fails to return
+        from a delivery to a robot planet, only to learn that he has become a celebrity
+        in a culture which fears humans.","number_abs":5,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-21T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Fear
+        of a Bot Planet","available_translations":[]},{"ids":{"imdb":"tt0584425","plex":{"guid":"65dcb23529624af2f7e6d319"},"tmdb":35011,"tvdb":131179,"trakt":38808},"title":"A
+        Fishful of Dollars","votes":1676,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/808/screenshots/medium/cb0c75e844.jpg.webp"]},"number":6,"rating":7.723150253295898,"season":1,"runtime":22,"overview":"Fry
+        discovers his bank account interest has made him a billionaire and buys the
+        one thing the year 3000 doesn''t have, anchovies.","number_abs":6,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-28T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":4,"during_credits":false,"original_title":"A
+        Fishful of Dollars","available_translations":[]},{"ids":{"imdb":"tt0756887","plex":{"guid":"65dcb23429624af2f7e6d305"},"tmdb":35012,"tvdb":131180,"trakt":38809},"title":"My
+        Three Suns","votes":1546,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/809/screenshots/medium/4b551fc9d0.jpg.webp"]},"number":7,"rating":7.611901760101318,"season":1,"runtime":22,"overview":"Delivery
+        Boy Philip J. Fry is promoted to Emperor after accidentally drinking his fluid-based
+        predecessor.","number_abs":7,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-05-05T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"My
+        Three Suns","available_translations":[]},{"ids":{"imdb":"tt0584423","plex":{"guid":"65dcb23429624af2f7e6d2f1"},"tmdb":35013,"tvdb":131181,"trakt":38810},"title":"A
+        Big Piece of Garbage","votes":1535,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/810/screenshots/medium/6b55435d0c.jpg.webp"]},"number":8,"rating":7.724430084228516,"season":1,"runtime":22,"overview":"A
+        big piece of garbage that was released a thousand years ago is now on the
+        way to Earth to destroy it. After Fry, Leela and Bender fail on placing a
+        bomb on it, the city has to build another big piece of garbage, yet that may
+        be a problem since trash doesn''t exist in year 3000.","number_abs":8,"updated_at":"2026-03-02T04:25:09.000Z","first_aired":"1999-05-12T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":1,"during_credits":false,"original_title":"A
+        Big Piece of Garbage","available_translations":[]},{"ids":{"imdb":"tt0584441","plex":{"guid":"65dcb23429624af2f7e6d2d9"},"tmdb":35014,"tvdb":131182,"trakt":38811},"title":"Hell
+        Is Other Robots","votes":1504,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/811/screenshots/medium/fa07c18682.jpg.webp"]},"number":9,"rating":7.813164710998535,"season":1,"runtime":22,"overview":"During
+        a Beastie Boys concert, Bender runs into a high school buddy, Fender. He invites
+        him to a party, which turns out to be robots getting high off of electricity,
+        or \"jacking on\". After one try, Bender is hooked.","number_abs":9,"updated_at":"2026-03-02T00:57:02.000Z","first_aired":"1999-05-19T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Hell
+        Is Other Robots","available_translations":[]}]'
+  recorded_at: 2026-03-02 11:27:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:35 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007bbe9d07754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"imdb":"tt0584449","plex":{"guid":"65dcb23629624af2f7e6d37b"},"tmdb":35006,"tvdb":131174,"trakt":38803},"title":"Space
+        Pilot 3000","votes":2624,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/803/screenshots/medium/7a6a1ca832.jpg.webp"]},"number":1,"rating":8.10746955871582,"season":1,"runtime":22,"overview":"On
+        New Year''s Eve 1999, Pizza Delivery boy Philip J. Fry accidentally falls
+        into a cryogenic chamber and is frozen for 1,000 years. Finally unfrozen,
+        he explores New New York, meets his new best friend (a kleptomaniacal robot
+        named Bender) and goes to work for his great-great-great-great-grand-nephew''s
+        space delivery business.","number_abs":1,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-03-29T01:00:00.000Z","episode_type":"series_premiere","after_credits":false,"comment_count":6,"during_credits":false,"original_title":"Space
+        Pilot 3000","available_translations":[]},{"ids":{"imdb":"tt0756891","plex":{"guid":"65dcb23629624af2f7e6d36b"},"tmdb":35007,"tvdb":131175,"trakt":38804},"title":"The
+        Series Has Landed","votes":2122,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/804/screenshots/medium/06e3bee196.jpg.webp"]},"number":2,"rating":7.79311990737915,"season":1,"runtime":22,"overview":"For
+        the crew''s first mission, they must deliver a crate full of toys for an arcade
+        game to the moon. Fry is very excited, while it is not really a big deal in
+        the year 3000. Fry tries to persuade Leela to go exploring on the moon, while
+        Amy tries to recover the keys to the Planet Express Ship.","number_abs":2,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-05T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":4,"during_credits":false,"original_title":"The
+        Series Has Landed","available_translations":[]},{"ids":{"imdb":"tt0756882","plex":{"guid":"5d9c0e334eefaa001f6119b0"},"tmdb":35008,"tvdb":131176,"trakt":38805},"title":"I,
+        Roommate","votes":1935,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/805/screenshots/medium/b9be67a29a.jpg.webp"]},"number":3,"rating":7.832041263580322,"season":1,"runtime":22,"overview":"When
+        it is discovered that Philip has been living in the Planet Express office,
+        he is forced to move out. Trying to sleep standing up in Bender''s closet-sized
+        apartment doesn''t work, so they go looking for a place both can be comfortable.
+        Unfortunately, Bender is incompatible with the ideal apartment they do find
+        until he has a radical... modification which makes him less than happy.","number_abs":3,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-07T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"I,
+        Roommate","available_translations":[]},{"ids":{"imdb":"tt0756885","plex":{"guid":"65dcb23529624af2f7e6d346"},"tmdb":35009,"tvdb":131177,"trakt":38806},"title":"Love''s
+        Labours Lost in Space","votes":1751,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/806/screenshots/medium/7788472fc2.jpg.webp"]},"number":4,"rating":7.716162204742432,"season":1,"runtime":22,"overview":"On
+        a mission intended to save endangered animals on a collapsing planet, Leela
+        and the crew run into legendary starship captain Zapp Brannigan. A self-proclaimed
+        ladies man, Zapp sees Leela as a potential new conquest. When the captain
+        refuses to aid the animal rescue, Leela and her crew try to leave Zapp''s
+        starship. But Zapp throws Fry and Bender in jail, and summons Leela to his
+        \"Lovenasium\". They ultimately escape and arrive on the doomed planet, where
+        Leela finally finds love - with a cute, and very useful, creature named Nibbler.","number_abs":4,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-14T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":5,"during_credits":false,"original_title":"Love''s
+        Labours Lost in Space","available_translations":[]},{"ids":{"imdb":"tt0584438","plex":{"guid":"65dcb23529624af2f7e6d32d"},"tmdb":35010,"tvdb":131178,"trakt":38807},"title":"Fear
+        of a Bot Planet","votes":1682,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/807/screenshots/medium/8a8f960fb9.jpg.webp"]},"number":5,"rating":7.645659923553467,"season":1,"runtime":22,"overview":"Fry
+        and Leela disguise themselves as robots to find Bender after he fails to return
+        from a delivery to a robot planet, only to learn that he has become a celebrity
+        in a culture which fears humans.","number_abs":5,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-21T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Fear
+        of a Bot Planet","available_translations":[]},{"ids":{"imdb":"tt0584425","plex":{"guid":"65dcb23529624af2f7e6d319"},"tmdb":35011,"tvdb":131179,"trakt":38808},"title":"A
+        Fishful of Dollars","votes":1676,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/808/screenshots/medium/cb0c75e844.jpg.webp"]},"number":6,"rating":7.723150253295898,"season":1,"runtime":22,"overview":"Fry
+        discovers his bank account interest has made him a billionaire and buys the
+        one thing the year 3000 doesn''t have, anchovies.","number_abs":6,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-28T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":4,"during_credits":false,"original_title":"A
+        Fishful of Dollars","available_translations":[]},{"ids":{"imdb":"tt0756887","plex":{"guid":"65dcb23429624af2f7e6d305"},"tmdb":35012,"tvdb":131180,"trakt":38809},"title":"My
+        Three Suns","votes":1546,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/809/screenshots/medium/4b551fc9d0.jpg.webp"]},"number":7,"rating":7.611901760101318,"season":1,"runtime":22,"overview":"Delivery
+        Boy Philip J. Fry is promoted to Emperor after accidentally drinking his fluid-based
+        predecessor.","number_abs":7,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-05-05T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"My
+        Three Suns","available_translations":[]},{"ids":{"imdb":"tt0584423","plex":{"guid":"65dcb23429624af2f7e6d2f1"},"tmdb":35013,"tvdb":131181,"trakt":38810},"title":"A
+        Big Piece of Garbage","votes":1535,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/810/screenshots/medium/6b55435d0c.jpg.webp"]},"number":8,"rating":7.724430084228516,"season":1,"runtime":22,"overview":"A
+        big piece of garbage that was released a thousand years ago is now on the
+        way to Earth to destroy it. After Fry, Leela and Bender fail on placing a
+        bomb on it, the city has to build another big piece of garbage, yet that may
+        be a problem since trash doesn''t exist in year 3000.","number_abs":8,"updated_at":"2026-03-02T04:25:09.000Z","first_aired":"1999-05-12T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":1,"during_credits":false,"original_title":"A
+        Big Piece of Garbage","available_translations":[]},{"ids":{"imdb":"tt0584441","plex":{"guid":"65dcb23429624af2f7e6d2d9"},"tmdb":35014,"tvdb":131182,"trakt":38811},"title":"Hell
+        Is Other Robots","votes":1504,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/811/screenshots/medium/fa07c18682.jpg.webp"]},"number":9,"rating":7.813164710998535,"season":1,"runtime":22,"overview":"During
+        a Beastie Boys concert, Bender runs into a high school buddy, Fender. He invites
+        him to a party, which turns out to be robots getting high off of electricity,
+        or \"jacking on\". After one try, Bender is hooked.","number_abs":9,"updated_at":"2026-03-02T00:57:02.000Z","first_aired":"1999-05-19T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Hell
+        Is Other Robots","available_translations":[]}]'
+  recorded_at: 2026-03-02 11:27:44
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1123?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:36 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007bddbdd7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2026-03-02 11:27:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:35 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007ba383f7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"imdb":"tt0584449","plex":{"guid":"65dcb23629624af2f7e6d37b"},"tmdb":35006,"tvdb":131174,"trakt":38803},"title":"Space
+        Pilot 3000","votes":2624,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/803/screenshots/medium/7a6a1ca832.jpg.webp"]},"number":1,"rating":8.10746955871582,"season":1,"runtime":22,"overview":"On
+        New Year''s Eve 1999, Pizza Delivery boy Philip J. Fry accidentally falls
+        into a cryogenic chamber and is frozen for 1,000 years. Finally unfrozen,
+        he explores New New York, meets his new best friend (a kleptomaniacal robot
+        named Bender) and goes to work for his great-great-great-great-grand-nephew''s
+        space delivery business.","number_abs":1,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-03-29T01:00:00.000Z","episode_type":"series_premiere","after_credits":false,"comment_count":6,"during_credits":false,"original_title":"Space
+        Pilot 3000","available_translations":[]},{"ids":{"imdb":"tt0756891","plex":{"guid":"65dcb23629624af2f7e6d36b"},"tmdb":35007,"tvdb":131175,"trakt":38804},"title":"The
+        Series Has Landed","votes":2122,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/804/screenshots/medium/06e3bee196.jpg.webp"]},"number":2,"rating":7.79311990737915,"season":1,"runtime":22,"overview":"For
+        the crew''s first mission, they must deliver a crate full of toys for an arcade
+        game to the moon. Fry is very excited, while it is not really a big deal in
+        the year 3000. Fry tries to persuade Leela to go exploring on the moon, while
+        Amy tries to recover the keys to the Planet Express Ship.","number_abs":2,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-05T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":4,"during_credits":false,"original_title":"The
+        Series Has Landed","available_translations":[]},{"ids":{"imdb":"tt0756882","plex":{"guid":"5d9c0e334eefaa001f6119b0"},"tmdb":35008,"tvdb":131176,"trakt":38805},"title":"I,
+        Roommate","votes":1935,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/805/screenshots/medium/b9be67a29a.jpg.webp"]},"number":3,"rating":7.832041263580322,"season":1,"runtime":22,"overview":"When
+        it is discovered that Philip has been living in the Planet Express office,
+        he is forced to move out. Trying to sleep standing up in Bender''s closet-sized
+        apartment doesn''t work, so they go looking for a place both can be comfortable.
+        Unfortunately, Bender is incompatible with the ideal apartment they do find
+        until he has a radical... modification which makes him less than happy.","number_abs":3,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-07T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"I,
+        Roommate","available_translations":[]},{"ids":{"imdb":"tt0756885","plex":{"guid":"65dcb23529624af2f7e6d346"},"tmdb":35009,"tvdb":131177,"trakt":38806},"title":"Love''s
+        Labours Lost in Space","votes":1751,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/806/screenshots/medium/7788472fc2.jpg.webp"]},"number":4,"rating":7.716162204742432,"season":1,"runtime":22,"overview":"On
+        a mission intended to save endangered animals on a collapsing planet, Leela
+        and the crew run into legendary starship captain Zapp Brannigan. A self-proclaimed
+        ladies man, Zapp sees Leela as a potential new conquest. When the captain
+        refuses to aid the animal rescue, Leela and her crew try to leave Zapp''s
+        starship. But Zapp throws Fry and Bender in jail, and summons Leela to his
+        \"Lovenasium\". They ultimately escape and arrive on the doomed planet, where
+        Leela finally finds love - with a cute, and very useful, creature named Nibbler.","number_abs":4,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-14T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":5,"during_credits":false,"original_title":"Love''s
+        Labours Lost in Space","available_translations":[]},{"ids":{"imdb":"tt0584438","plex":{"guid":"65dcb23529624af2f7e6d32d"},"tmdb":35010,"tvdb":131178,"trakt":38807},"title":"Fear
+        of a Bot Planet","votes":1682,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/807/screenshots/medium/8a8f960fb9.jpg.webp"]},"number":5,"rating":7.645659923553467,"season":1,"runtime":22,"overview":"Fry
+        and Leela disguise themselves as robots to find Bender after he fails to return
+        from a delivery to a robot planet, only to learn that he has become a celebrity
+        in a culture which fears humans.","number_abs":5,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-21T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Fear
+        of a Bot Planet","available_translations":[]},{"ids":{"imdb":"tt0584425","plex":{"guid":"65dcb23529624af2f7e6d319"},"tmdb":35011,"tvdb":131179,"trakt":38808},"title":"A
+        Fishful of Dollars","votes":1676,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/808/screenshots/medium/cb0c75e844.jpg.webp"]},"number":6,"rating":7.723150253295898,"season":1,"runtime":22,"overview":"Fry
+        discovers his bank account interest has made him a billionaire and buys the
+        one thing the year 3000 doesn''t have, anchovies.","number_abs":6,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-28T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":4,"during_credits":false,"original_title":"A
+        Fishful of Dollars","available_translations":[]},{"ids":{"imdb":"tt0756887","plex":{"guid":"65dcb23429624af2f7e6d305"},"tmdb":35012,"tvdb":131180,"trakt":38809},"title":"My
+        Three Suns","votes":1546,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/809/screenshots/medium/4b551fc9d0.jpg.webp"]},"number":7,"rating":7.611901760101318,"season":1,"runtime":22,"overview":"Delivery
+        Boy Philip J. Fry is promoted to Emperor after accidentally drinking his fluid-based
+        predecessor.","number_abs":7,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-05-05T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"My
+        Three Suns","available_translations":[]},{"ids":{"imdb":"tt0584423","plex":{"guid":"65dcb23429624af2f7e6d2f1"},"tmdb":35013,"tvdb":131181,"trakt":38810},"title":"A
+        Big Piece of Garbage","votes":1535,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/810/screenshots/medium/6b55435d0c.jpg.webp"]},"number":8,"rating":7.724430084228516,"season":1,"runtime":22,"overview":"A
+        big piece of garbage that was released a thousand years ago is now on the
+        way to Earth to destroy it. After Fry, Leela and Bender fail on placing a
+        bomb on it, the city has to build another big piece of garbage, yet that may
+        be a problem since trash doesn''t exist in year 3000.","number_abs":8,"updated_at":"2026-03-02T04:25:09.000Z","first_aired":"1999-05-12T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":1,"during_credits":false,"original_title":"A
+        Big Piece of Garbage","available_translations":[]},{"ids":{"imdb":"tt0584441","plex":{"guid":"65dcb23429624af2f7e6d2d9"},"tmdb":35014,"tvdb":131182,"trakt":38811},"title":"Hell
+        Is Other Robots","votes":1504,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/811/screenshots/medium/fa07c18682.jpg.webp"]},"number":9,"rating":7.813164710998535,"season":1,"runtime":22,"overview":"During
+        a Beastie Boys concert, Bender runs into a high school buddy, Fender. He invites
+        him to a party, which turns out to be robots getting high off of electricity,
+        or \"jacking on\". After one try, Bender is hooked.","number_abs":9,"updated_at":"2026-03-02T00:57:02.000Z","first_aired":"1999-05-19T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Hell
+        Is Other Robots","available_translations":[]}]'
+  recorded_at: 2026-03-02 11:27:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:36 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007bf7d4b7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"imdb":"tt0584426","plex":{"guid":"65dcb23329624af2f7e6d2c4"},"tmdb":1285653,"tvdb":131183,"trakt":38816},"title":"A
+        Flight to Remember","votes":1571,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/816/screenshots/medium/63e27b0648.jpg.webp"]},"number":1,"rating":7.80267333984375,"season":2,"runtime":22,"overview":"The
+        Planet Express crew take a space cruise vacation. Leela tells Captain Zapp
+        Brannigan that Fry is her boyfriend and Amy tells the same thing to her parents.
+        Bender falls in love with a rich female robot. Problems start when the spaceship
+        approaches a black hole.","number_abs":10,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-09-27T00:00:00.000Z","episode_type":"season_premiere","after_credits":false,"comment_count":1,"during_credits":false,"original_title":"A
+        Flight to Remember","available_translations":[]},{"ids":{"imdb":"tt0756886","plex":{"guid":"5d9c0e33e264b7001fc78243"},"tmdb":1285654,"tvdb":131184,"trakt":38817},"title":"Mars
+        University","votes":1439,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/817/screenshots/medium/c1067d3bea.jpg.webp"]},"number":2,"rating":7.6101460456848145,"season":2,"runtime":22,"overview":"Fry,
+        Leela, Bender and Farnsworth have to go to Mars University where Fry has to
+        share a room with a talking monkey, Farnsworth''s last invention. The monkey
+        becomes a real headache when he starts beating Fry in all areas. Meanwhile,
+        Bender is hanging out with nerd robots.","number_abs":11,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-10-04T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Mars
+        University","available_translations":[]},{"ids":{"imdb":"tt0756892","plex":{"guid":"65dcb23329624af2f7e6d2a3"},"tmdb":1285655,"tvdb":131185,"trakt":38818},"title":"When
+        Aliens Attack","votes":1423,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/818/screenshots/medium/1c0b173f05.jpg.webp"]},"number":3,"rating":7.684469223022461,"season":2,"runtime":22,"overview":"The
+        Omicronians invade Earth, demanding to see the lost final episode of the 1999
+        TV show Single Female Lawyer. The Planet Express crew must re-enact the episode
+        to appease the invading aliens.","number_abs":12,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-11-08T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"When
+        Aliens Attack","available_translations":[]},{"ids":{"imdb":"tt0584439","plex":{"guid":"65dcb23329624af2f7e6d28c"},"tmdb":1285656,"tvdb":131186,"trakt":38819},"title":"Fry
+        & the Slurm Factory","votes":1385,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/819/screenshots/medium/3eb2322879.jpg.webp"]},"number":4,"rating":7.737905979156494,"season":2,"runtime":22,"overview":"When
+        Fry wins a free tour of the Slurm soda factory, he and his friends split off
+        from the tour group and make a horrifying discovery concerning the \"secret
+        ingredient\" that makes Slurm so addictive.","number_abs":13,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-11-15T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Fry
+        & the Slurm Factory","available_translations":[]},{"ids":{"imdb":"tt0756881","plex":{"guid":"65dcb23229624af2f7e6d279"},"tmdb":35019,"tvdb":131187,"trakt":38820},"title":"I
+        Second That Emotion","votes":1255,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/820/screenshots/medium/c399276fc4.jpg.webp"]},"number":5,"rating":7.606374263763428,"season":2,"runtime":22,"overview":"Professor
+        Farnsworth installs an empathy chip in Bender after the inconsiderate robot
+        flushes Nibbler down the toilet. With his newfound emotions, a concerned Bender
+        ventures into the mutant-infested sewers to rescue Leela''s beloved pet.","number_abs":14,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-11-22T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"I
+        Second That Emotion","available_translations":[]},{"ids":{"imdb":"tt0766796","plex":{"guid":"65dcb23229624af2f7e6d267"},"tmdb":35020,"tvdb":131188,"trakt":38821},"title":"Brannigan,
+        Begin Again","votes":1231,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/821/screenshots/medium/8b581cc022.jpg.webp"]},"number":6,"rating":7.571892738342285,"season":2,"runtime":22,"overview":"Upon
+        destroying the new DOOP headquarters, Zapp Brannigan and Kif find themselves
+        court-martialed and dishonorably discharged. They take up jobs at Planet Express,
+        where Kif learns what respect feels like and Zapp incites a mutiny against
+        Leela.","number_abs":15,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-11-29T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":9,"during_credits":false,"original_title":"Brannigan,
+        Begin Again","available_translations":[]},{"ids":{"imdb":"tt0584427","plex":{"guid":"65dcb23229624af2f7e6d253"},"tmdb":35021,"tvdb":131189,"trakt":38822},"title":"A
+        Head in the Polls","votes":1145,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/822/screenshots/medium/d1353021ef.jpg.webp"]},"number":7,"rating":7.507423400878906,"season":2,"runtime":22,"overview":"When
+        the price of titanium skyrockets, Bender pawns his titanium-rich body and
+        lives the high life as just a head. But when the head-in-a-jar of Richard
+        M. Nixon uses Bender''s body to run for election for President of Earth, Bender
+        vows to get his rightful property back.","number_abs":16,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-12-13T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"A
+        Head in the Polls","available_translations":[]},{"ids":{"imdb":"tt0584465","plex":{"guid":"65dcb23229624af2f7e6d23f"},"tmdb":35022,"tvdb":131190,"trakt":38823},"title":"Xmas
+        Story","votes":1130,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/823/screenshots/medium/87c09e987f.jpg.webp"]},"number":8,"rating":7.658407211303711,"season":2,"runtime":22,"overview":"To
+        apologize for an inconsiderate remark, Fry searches for the perfect Xmas gift
+        for Leela, all the while trying to avoid the murderous SantaBot, whose standards
+        for niceness are astronomically high.","number_abs":17,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-12-20T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Xmas
+        Story","available_translations":[]},{"ids":{"imdb":"tt0766798","plex":{"guid":"65dcb23129624af2f7e6d22c"},"tmdb":35023,"tvdb":131191,"trakt":38824},"title":"Why
+        Must I Be a Crustacean in Love?","votes":1130,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/824/screenshots/medium/92ae91c4ce.jpg.webp"]},"number":9,"rating":7.582300662994385,"season":2,"runtime":22,"overview":"When
+        Dr. Zoidberg runs amok during the Decapodian mating season, Fry sets out to
+        teach him how to woo a mate. Things backfire when Zoidberg''s desired mate
+        falls for Fry instead, and Zoidberg challenges Fry to a battle to the death.","number_abs":18,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"2000-02-07T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Why
+        Must I Be a Crustacean in Love?","available_translations":[]},{"ids":{"imdb":"tt0772479","plex":{"guid":"65dcb23129624af2f7e6d21b"},"tmdb":35024,"tvdb":131192,"trakt":38825},"title":"Put
+        Your Head on My Shoulders","votes":1141,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/825/screenshots/medium/7c280bf90d.jpg.webp"]},"number":10,"rating":7.622261047363281,"season":2,"runtime":22,"overview":"Fry''s
+        brief relationship with Amy is forcibly prolonged when a near-fatal car crash
+        leaves Fry''s head grafted to Amy''s left shoulder. Meanwhile, Bender cashes
+        in on Valentine''s Day by starting a dating service.","number_abs":20,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"2000-02-14T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":5,"during_credits":false,"original_title":"Put
+        Your Head on My Shoulders","available_translations":[]},{"ids":{"imdb":"tt0584445","plex":{"guid":"65dcb23129624af2f7e6d204"},"tmdb":35034,"tvdb":131193,"trakt":38826},"title":"Lesser
+        of Two Evils","votes":1101,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/826/screenshots/medium/5317e9fb04.jpg.webp"]},"number":11,"rating":7.55131721496582,"season":2,"runtime":22,"overview":"Fry
+        suspects Bender''s new buddy, a bending unit named Flexo who looks almost
+        exactly like Bender, of being pure evil. When a valuable atom of Jumbonium
+        goes missing, Fry suspects Flexo, but can''t tell which robot is which.","number_abs":19,"updated_at":"2026-03-01T23:42:58.000Z","first_aired":"2000-02-21T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Lesser
+        of Two Evils","available_translations":[]},{"ids":{"imdb":"tt0584448","plex":{"guid":"65dcb23029624af2f7e6d1ed"},"tmdb":35025,"tvdb":131194,"trakt":38827},"title":"Raging
+        Bender","votes":1141,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/827/screenshots/medium/1798b1c2b2.jpg.webp"]},"number":12,"rating":7.488168239593506,"season":2,"runtime":22,"overview":"Bender
+        is the featured attraction in the Ultimate Robot Fighting League, but his
+        glory is short-lived when he is instructed to intentionally lose his next
+        match. Leela vows to lead Bender to victory, in an effort to show up her unsupportive
+        martial arts teacher.","number_abs":21,"updated_at":"2026-03-02T04:25:08.000Z","first_aired":"2000-02-28T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Raging
+        Bender","available_translations":[]},{"ids":{"imdb":"tt0766129","plex":{"guid":"65dcb23029624af2f7e6d1dc"},"tmdb":35026,"tvdb":131195,"trakt":38828},"title":"A
+        Bicyclops Built For Two","votes":1049,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/828/screenshots/medium/603809678e.jpg.webp"]},"number":13,"rating":7.669209003448486,"season":2,"runtime":22,"overview":"Leela
+        meets Alkazar, who claims to be the only other remaining cyclops in the universe.
+        But when Alkazar invites Leela back to his home planet and treats her like
+        a slave, Fry suspects that something is amiss.","number_abs":22,"updated_at":"2026-03-01T23:43:00.000Z","first_aired":"2000-03-20T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"A
+        Bicyclops Built For Two","available_translations":[]},{"ids":{"imdb":"tt0584442","plex":{"guid":"65dcb23029624af2f7e6d1c7"},"tmdb":35029,"tvdb":131196,"trakt":38829},"title":"How
+        Hermes Requisitioned His Groove Back","votes":1104,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/829/screenshots/medium/491db50d47.jpg.webp"]},"number":14,"rating":7.659420490264893,"season":2,"runtime":22,"overview":"When
+        Hermes takes a stress-relieving vacation, replacement bureaucrat Morgan Proctor
+        becomes infatuated with Fry. Bender threatens to publicize their affair, but
+        Morgan removes Bender''s memory and hides it within the cavernous Central
+        Bureaucracy.","number_abs":24,"updated_at":"2026-03-01T23:43:01.000Z","first_aired":"2000-04-03T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"How
+        Hermes Requisitioned His Groove Back","available_translations":[]},{"ids":{"imdb":"tt0584424","plex":{"guid":"65dcb23029624af2f7e6d1b5"},"tmdb":35027,"tvdb":131197,"trakt":38830},"title":"A
+        Clone of My Own","votes":1058,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/830/screenshots/medium/89da4fe97b.jpg.webp"]},"number":15,"rating":7.526464939117432,"season":2,"runtime":22,"overview":"Professor
+        Farnsworth unveils his clone, Cubert Farnsworth, whom he plans to leave everything
+        to upon his retirement. But Cubert wants no part of Farnsworth''s lifestyle,
+        prompting the professor into a premature retirement on the Near-Death Star.","number_abs":23,"updated_at":"2026-03-01T23:43:02.000Z","first_aired":"2000-04-10T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":0,"during_credits":false,"original_title":"A
+        Clone of My Own","available_translations":[]},{"ids":{"imdb":"tt0584455","plex":{"guid":"5d9c0e33ba6eb9001fbddc1b"},"tmdb":35028,"tvdb":131198,"trakt":38831},"title":"The
+        Deep South","votes":1047,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/831/screenshots/medium/231ba2805a.jpg.webp"]},"number":16,"rating":7.653295040130615,"season":2,"runtime":22,"overview":"A
+        fishing trip over the ocean takes a turn for the worse when a colossal mouth
+        bass pulls the Planet Express ship to the bottom of the sea. There, Fry falls
+        in love with a mermaid named Umbriel, and the crew discovers the sunken city
+        of Atlanta, Georgia.","number_abs":25,"updated_at":"2026-03-01T23:43:03.000Z","first_aired":"2000-04-17T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":1,"during_credits":false,"original_title":"The
+        Deep South","available_translations":[]},{"ids":{"imdb":"tt0766130","plex":{"guid":"5d9c0e33ba6eb9001fbddc0c"},"tmdb":35030,"tvdb":131199,"trakt":1394789},"title":"Bender
+        Gets Made","votes":1023,"images":{"screenshot":["media.trakt.tv/images/episodes/001/394/789/screenshots/medium/6dba108980.jpg.webp"]},"number":17,"rating":7.5708699226379395,"season":2,"runtime":22,"overview":"Bender
+        takes a new job in the Robot Mafia, but his loyalty is tested when he goes
+        along on the robotic gangster''s efforts to rob the Planet Express ship.","number_abs":26,"updated_at":"2026-03-02T00:52:33.000Z","first_aired":"2000-05-01T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Bender
+        Gets Made","available_translations":[]},{"ids":{"imdb":"tt0584457","plex":{"guid":"5d9c0e33ba6eb9001fbddc05"},"tmdb":35033,"tvdb":131200,"trakt":1394791},"title":"The
+        Problem with Popplers","votes":1028,"images":{"screenshot":["media.trakt.tv/images/episodes/001/394/791/screenshots/medium/0201678b0c.jpg.webp"]},"number":18,"rating":7.8356032371521,"season":2,"runtime":22,"overview":"The
+        crew discovers an irresistible source of food on a distant planet, and brings
+        it back to Earth to be sold at the Fishy Joe''s restaurant chain. But when
+        it''s discovered that the so-called \"Popplers\" are actually Omicronian babies,
+        the Omicronians demand recompense.","number_abs":28,"updated_at":"2026-03-01T23:43:04.000Z","first_aired":"2000-05-08T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":0,"during_credits":false,"original_title":"The
+        Problem with Popplers","available_translations":[]},{"ids":{"imdb":"tt0584447","plex":{"guid":"5d9c0e33ba6eb9001fbddc09"},"tmdb":35031,"tvdb":131201,"trakt":1394792},"title":"Mother''s
+        Day","votes":978,"images":{"screenshot":["media.trakt.tv/images/episodes/001/394/792/screenshots/medium/a87d1913f3.jpg.webp"]},"number":19,"rating":7.641104221343994,"season":2,"runtime":22,"overview":"Mom
+        reprograms the world''s robots to rebel against humanity. The only hope of
+        salvation is Mom''s old flame - Professor Farnsworth, who must rekindle his
+        romance with Mom in order to save mankind.","number_abs":27,"updated_at":"2026-03-01T23:43:04.000Z","first_aired":"2000-05-15T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Mother''s
+        Day","available_translations":[]},{"ids":{"imdb":"tt0584432","plex":{"guid":"5d9c0e33ba6eb9001fbddc0f"},"tmdb":1089973,"tvdb":131202,"trakt":1685110},"title":"Anthology
+        of Interest I","votes":906,"images":{"screenshot":["media.trakt.tv/images/episodes/001/685/110/screenshots/medium/da840a41d8.jpg.webp"]},"number":20,"rating":7.841059684753418,"season":2,"runtime":22,"overview":"The
+        Professor''s \"What-If\" machine simulates Bender, Leela and Fry''s wishes.
+        Bender discovers what it would be like if he were 500 feet tall, Leela discovers
+        what it would be like if she were more impulsive, and Fry discovers what would
+        happen if he never came to the future.","number_abs":29,"updated_at":"2026-03-01T23:43:05.000Z","first_aired":"2000-05-22T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Anthology
+        of Interest I","available_translations":[]}]'
+  recorded_at: 2026-03-02 11:27:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:35 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007ba383f7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"imdb":"tt0584449","plex":{"guid":"65dcb23629624af2f7e6d37b"},"tmdb":35006,"tvdb":131174,"trakt":38803},"title":"Space
+        Pilot 3000","votes":2624,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/803/screenshots/medium/7a6a1ca832.jpg.webp"]},"number":1,"rating":8.10746955871582,"season":1,"runtime":22,"overview":"On
+        New Year''s Eve 1999, Pizza Delivery boy Philip J. Fry accidentally falls
+        into a cryogenic chamber and is frozen for 1,000 years. Finally unfrozen,
+        he explores New New York, meets his new best friend (a kleptomaniacal robot
+        named Bender) and goes to work for his great-great-great-great-grand-nephew''s
+        space delivery business.","number_abs":1,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-03-29T01:00:00.000Z","episode_type":"series_premiere","after_credits":false,"comment_count":6,"during_credits":false,"original_title":"Space
+        Pilot 3000","available_translations":[]},{"ids":{"imdb":"tt0756891","plex":{"guid":"65dcb23629624af2f7e6d36b"},"tmdb":35007,"tvdb":131175,"trakt":38804},"title":"The
+        Series Has Landed","votes":2122,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/804/screenshots/medium/06e3bee196.jpg.webp"]},"number":2,"rating":7.79311990737915,"season":1,"runtime":22,"overview":"For
+        the crew''s first mission, they must deliver a crate full of toys for an arcade
+        game to the moon. Fry is very excited, while it is not really a big deal in
+        the year 3000. Fry tries to persuade Leela to go exploring on the moon, while
+        Amy tries to recover the keys to the Planet Express Ship.","number_abs":2,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-05T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":4,"during_credits":false,"original_title":"The
+        Series Has Landed","available_translations":[]},{"ids":{"imdb":"tt0756882","plex":{"guid":"5d9c0e334eefaa001f6119b0"},"tmdb":35008,"tvdb":131176,"trakt":38805},"title":"I,
+        Roommate","votes":1935,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/805/screenshots/medium/b9be67a29a.jpg.webp"]},"number":3,"rating":7.832041263580322,"season":1,"runtime":22,"overview":"When
+        it is discovered that Philip has been living in the Planet Express office,
+        he is forced to move out. Trying to sleep standing up in Bender''s closet-sized
+        apartment doesn''t work, so they go looking for a place both can be comfortable.
+        Unfortunately, Bender is incompatible with the ideal apartment they do find
+        until he has a radical... modification which makes him less than happy.","number_abs":3,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-07T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"I,
+        Roommate","available_translations":[]},{"ids":{"imdb":"tt0756885","plex":{"guid":"65dcb23529624af2f7e6d346"},"tmdb":35009,"tvdb":131177,"trakt":38806},"title":"Love''s
+        Labours Lost in Space","votes":1751,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/806/screenshots/medium/7788472fc2.jpg.webp"]},"number":4,"rating":7.716162204742432,"season":1,"runtime":22,"overview":"On
+        a mission intended to save endangered animals on a collapsing planet, Leela
+        and the crew run into legendary starship captain Zapp Brannigan. A self-proclaimed
+        ladies man, Zapp sees Leela as a potential new conquest. When the captain
+        refuses to aid the animal rescue, Leela and her crew try to leave Zapp''s
+        starship. But Zapp throws Fry and Bender in jail, and summons Leela to his
+        \"Lovenasium\". They ultimately escape and arrive on the doomed planet, where
+        Leela finally finds love - with a cute, and very useful, creature named Nibbler.","number_abs":4,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-14T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":5,"during_credits":false,"original_title":"Love''s
+        Labours Lost in Space","available_translations":[]},{"ids":{"imdb":"tt0584438","plex":{"guid":"65dcb23529624af2f7e6d32d"},"tmdb":35010,"tvdb":131178,"trakt":38807},"title":"Fear
+        of a Bot Planet","votes":1682,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/807/screenshots/medium/8a8f960fb9.jpg.webp"]},"number":5,"rating":7.645659923553467,"season":1,"runtime":22,"overview":"Fry
+        and Leela disguise themselves as robots to find Bender after he fails to return
+        from a delivery to a robot planet, only to learn that he has become a celebrity
+        in a culture which fears humans.","number_abs":5,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-21T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Fear
+        of a Bot Planet","available_translations":[]},{"ids":{"imdb":"tt0584425","plex":{"guid":"65dcb23529624af2f7e6d319"},"tmdb":35011,"tvdb":131179,"trakt":38808},"title":"A
+        Fishful of Dollars","votes":1676,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/808/screenshots/medium/cb0c75e844.jpg.webp"]},"number":6,"rating":7.723150253295898,"season":1,"runtime":22,"overview":"Fry
+        discovers his bank account interest has made him a billionaire and buys the
+        one thing the year 3000 doesn''t have, anchovies.","number_abs":6,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-04-28T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":4,"during_credits":false,"original_title":"A
+        Fishful of Dollars","available_translations":[]},{"ids":{"imdb":"tt0756887","plex":{"guid":"65dcb23429624af2f7e6d305"},"tmdb":35012,"tvdb":131180,"trakt":38809},"title":"My
+        Three Suns","votes":1546,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/809/screenshots/medium/4b551fc9d0.jpg.webp"]},"number":7,"rating":7.611901760101318,"season":1,"runtime":22,"overview":"Delivery
+        Boy Philip J. Fry is promoted to Emperor after accidentally drinking his fluid-based
+        predecessor.","number_abs":7,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-05-05T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"My
+        Three Suns","available_translations":[]},{"ids":{"imdb":"tt0584423","plex":{"guid":"65dcb23429624af2f7e6d2f1"},"tmdb":35013,"tvdb":131181,"trakt":38810},"title":"A
+        Big Piece of Garbage","votes":1535,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/810/screenshots/medium/6b55435d0c.jpg.webp"]},"number":8,"rating":7.724430084228516,"season":1,"runtime":22,"overview":"A
+        big piece of garbage that was released a thousand years ago is now on the
+        way to Earth to destroy it. After Fry, Leela and Bender fail on placing a
+        bomb on it, the city has to build another big piece of garbage, yet that may
+        be a problem since trash doesn''t exist in year 3000.","number_abs":8,"updated_at":"2026-03-02T04:25:09.000Z","first_aired":"1999-05-12T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":1,"during_credits":false,"original_title":"A
+        Big Piece of Garbage","available_translations":[]},{"ids":{"imdb":"tt0584441","plex":{"guid":"65dcb23429624af2f7e6d2d9"},"tmdb":35014,"tvdb":131182,"trakt":38811},"title":"Hell
+        Is Other Robots","votes":1504,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/811/screenshots/medium/fa07c18682.jpg.webp"]},"number":9,"rating":7.813164710998535,"season":1,"runtime":22,"overview":"During
+        a Beastie Boys concert, Bender runs into a high school buddy, Fender. He invites
+        him to a party, which turns out to be robots getting high off of electricity,
+        or \"jacking on\". After one try, Bender is hooked.","number_abs":9,"updated_at":"2026-03-02T00:57:02.000Z","first_aired":"1999-05-19T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Hell
+        Is Other Robots","available_translations":[]}]'
+  recorded_at: 2026-03-02 11:27:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:36 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007bf7d4b7754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"imdb":"tt0584426","plex":{"guid":"65dcb23329624af2f7e6d2c4"},"tmdb":1285653,"tvdb":131183,"trakt":38816},"title":"A
+        Flight to Remember","votes":1571,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/816/screenshots/medium/63e27b0648.jpg.webp"]},"number":1,"rating":7.80267333984375,"season":2,"runtime":22,"overview":"The
+        Planet Express crew take a space cruise vacation. Leela tells Captain Zapp
+        Brannigan that Fry is her boyfriend and Amy tells the same thing to her parents.
+        Bender falls in love with a rich female robot. Problems start when the spaceship
+        approaches a black hole.","number_abs":10,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-09-27T00:00:00.000Z","episode_type":"season_premiere","after_credits":false,"comment_count":1,"during_credits":false,"original_title":"A
+        Flight to Remember","available_translations":[]},{"ids":{"imdb":"tt0756886","plex":{"guid":"5d9c0e33e264b7001fc78243"},"tmdb":1285654,"tvdb":131184,"trakt":38817},"title":"Mars
+        University","votes":1439,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/817/screenshots/medium/c1067d3bea.jpg.webp"]},"number":2,"rating":7.6101460456848145,"season":2,"runtime":22,"overview":"Fry,
+        Leela, Bender and Farnsworth have to go to Mars University where Fry has to
+        share a room with a talking monkey, Farnsworth''s last invention. The monkey
+        becomes a real headache when he starts beating Fry in all areas. Meanwhile,
+        Bender is hanging out with nerd robots.","number_abs":11,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-10-04T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Mars
+        University","available_translations":[]},{"ids":{"imdb":"tt0756892","plex":{"guid":"65dcb23329624af2f7e6d2a3"},"tmdb":1285655,"tvdb":131185,"trakt":38818},"title":"When
+        Aliens Attack","votes":1423,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/818/screenshots/medium/1c0b173f05.jpg.webp"]},"number":3,"rating":7.684469223022461,"season":2,"runtime":22,"overview":"The
+        Omicronians invade Earth, demanding to see the lost final episode of the 1999
+        TV show Single Female Lawyer. The Planet Express crew must re-enact the episode
+        to appease the invading aliens.","number_abs":12,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-11-08T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"When
+        Aliens Attack","available_translations":[]},{"ids":{"imdb":"tt0584439","plex":{"guid":"65dcb23329624af2f7e6d28c"},"tmdb":1285656,"tvdb":131186,"trakt":38819},"title":"Fry
+        & the Slurm Factory","votes":1385,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/819/screenshots/medium/3eb2322879.jpg.webp"]},"number":4,"rating":7.737905979156494,"season":2,"runtime":22,"overview":"When
+        Fry wins a free tour of the Slurm soda factory, he and his friends split off
+        from the tour group and make a horrifying discovery concerning the \"secret
+        ingredient\" that makes Slurm so addictive.","number_abs":13,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-11-15T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Fry
+        & the Slurm Factory","available_translations":[]},{"ids":{"imdb":"tt0756881","plex":{"guid":"65dcb23229624af2f7e6d279"},"tmdb":35019,"tvdb":131187,"trakt":38820},"title":"I
+        Second That Emotion","votes":1255,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/820/screenshots/medium/c399276fc4.jpg.webp"]},"number":5,"rating":7.606374263763428,"season":2,"runtime":22,"overview":"Professor
+        Farnsworth installs an empathy chip in Bender after the inconsiderate robot
+        flushes Nibbler down the toilet. With his newfound emotions, a concerned Bender
+        ventures into the mutant-infested sewers to rescue Leela''s beloved pet.","number_abs":14,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-11-22T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"I
+        Second That Emotion","available_translations":[]},{"ids":{"imdb":"tt0766796","plex":{"guid":"65dcb23229624af2f7e6d267"},"tmdb":35020,"tvdb":131188,"trakt":38821},"title":"Brannigan,
+        Begin Again","votes":1231,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/821/screenshots/medium/8b581cc022.jpg.webp"]},"number":6,"rating":7.571892738342285,"season":2,"runtime":22,"overview":"Upon
+        destroying the new DOOP headquarters, Zapp Brannigan and Kif find themselves
+        court-martialed and dishonorably discharged. They take up jobs at Planet Express,
+        where Kif learns what respect feels like and Zapp incites a mutiny against
+        Leela.","number_abs":15,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-11-29T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":9,"during_credits":false,"original_title":"Brannigan,
+        Begin Again","available_translations":[]},{"ids":{"imdb":"tt0584427","plex":{"guid":"65dcb23229624af2f7e6d253"},"tmdb":35021,"tvdb":131189,"trakt":38822},"title":"A
+        Head in the Polls","votes":1145,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/822/screenshots/medium/d1353021ef.jpg.webp"]},"number":7,"rating":7.507423400878906,"season":2,"runtime":22,"overview":"When
+        the price of titanium skyrockets, Bender pawns his titanium-rich body and
+        lives the high life as just a head. But when the head-in-a-jar of Richard
+        M. Nixon uses Bender''s body to run for election for President of Earth, Bender
+        vows to get his rightful property back.","number_abs":16,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-12-13T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"A
+        Head in the Polls","available_translations":[]},{"ids":{"imdb":"tt0584465","plex":{"guid":"65dcb23229624af2f7e6d23f"},"tmdb":35022,"tvdb":131190,"trakt":38823},"title":"Xmas
+        Story","votes":1130,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/823/screenshots/medium/87c09e987f.jpg.webp"]},"number":8,"rating":7.658407211303711,"season":2,"runtime":22,"overview":"To
+        apologize for an inconsiderate remark, Fry searches for the perfect Xmas gift
+        for Leela, all the while trying to avoid the murderous SantaBot, whose standards
+        for niceness are astronomically high.","number_abs":17,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"1999-12-20T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Xmas
+        Story","available_translations":[]},{"ids":{"imdb":"tt0766798","plex":{"guid":"65dcb23129624af2f7e6d22c"},"tmdb":35023,"tvdb":131191,"trakt":38824},"title":"Why
+        Must I Be a Crustacean in Love?","votes":1130,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/824/screenshots/medium/92ae91c4ce.jpg.webp"]},"number":9,"rating":7.582300662994385,"season":2,"runtime":22,"overview":"When
+        Dr. Zoidberg runs amok during the Decapodian mating season, Fry sets out to
+        teach him how to woo a mate. Things backfire when Zoidberg''s desired mate
+        falls for Fry instead, and Zoidberg challenges Fry to a battle to the death.","number_abs":18,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"2000-02-07T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Why
+        Must I Be a Crustacean in Love?","available_translations":[]},{"ids":{"imdb":"tt0772479","plex":{"guid":"65dcb23129624af2f7e6d21b"},"tmdb":35024,"tvdb":131192,"trakt":38825},"title":"Put
+        Your Head on My Shoulders","votes":1141,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/825/screenshots/medium/7c280bf90d.jpg.webp"]},"number":10,"rating":7.622261047363281,"season":2,"runtime":22,"overview":"Fry''s
+        brief relationship with Amy is forcibly prolonged when a near-fatal car crash
+        leaves Fry''s head grafted to Amy''s left shoulder. Meanwhile, Bender cashes
+        in on Valentine''s Day by starting a dating service.","number_abs":20,"updated_at":"2026-03-02T08:43:23.000Z","first_aired":"2000-02-14T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":5,"during_credits":false,"original_title":"Put
+        Your Head on My Shoulders","available_translations":[]},{"ids":{"imdb":"tt0584445","plex":{"guid":"65dcb23129624af2f7e6d204"},"tmdb":35034,"tvdb":131193,"trakt":38826},"title":"Lesser
+        of Two Evils","votes":1101,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/826/screenshots/medium/5317e9fb04.jpg.webp"]},"number":11,"rating":7.55131721496582,"season":2,"runtime":22,"overview":"Fry
+        suspects Bender''s new buddy, a bending unit named Flexo who looks almost
+        exactly like Bender, of being pure evil. When a valuable atom of Jumbonium
+        goes missing, Fry suspects Flexo, but can''t tell which robot is which.","number_abs":19,"updated_at":"2026-03-01T23:42:58.000Z","first_aired":"2000-02-21T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Lesser
+        of Two Evils","available_translations":[]},{"ids":{"imdb":"tt0584448","plex":{"guid":"65dcb23029624af2f7e6d1ed"},"tmdb":35025,"tvdb":131194,"trakt":38827},"title":"Raging
+        Bender","votes":1141,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/827/screenshots/medium/1798b1c2b2.jpg.webp"]},"number":12,"rating":7.488168239593506,"season":2,"runtime":22,"overview":"Bender
+        is the featured attraction in the Ultimate Robot Fighting League, but his
+        glory is short-lived when he is instructed to intentionally lose his next
+        match. Leela vows to lead Bender to victory, in an effort to show up her unsupportive
+        martial arts teacher.","number_abs":21,"updated_at":"2026-03-02T04:25:08.000Z","first_aired":"2000-02-28T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Raging
+        Bender","available_translations":[]},{"ids":{"imdb":"tt0766129","plex":{"guid":"65dcb23029624af2f7e6d1dc"},"tmdb":35026,"tvdb":131195,"trakt":38828},"title":"A
+        Bicyclops Built For Two","votes":1049,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/828/screenshots/medium/603809678e.jpg.webp"]},"number":13,"rating":7.669209003448486,"season":2,"runtime":22,"overview":"Leela
+        meets Alkazar, who claims to be the only other remaining cyclops in the universe.
+        But when Alkazar invites Leela back to his home planet and treats her like
+        a slave, Fry suspects that something is amiss.","number_abs":22,"updated_at":"2026-03-01T23:43:00.000Z","first_aired":"2000-03-20T01:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"A
+        Bicyclops Built For Two","available_translations":[]},{"ids":{"imdb":"tt0584442","plex":{"guid":"65dcb23029624af2f7e6d1c7"},"tmdb":35029,"tvdb":131196,"trakt":38829},"title":"How
+        Hermes Requisitioned His Groove Back","votes":1104,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/829/screenshots/medium/491db50d47.jpg.webp"]},"number":14,"rating":7.659420490264893,"season":2,"runtime":22,"overview":"When
+        Hermes takes a stress-relieving vacation, replacement bureaucrat Morgan Proctor
+        becomes infatuated with Fry. Bender threatens to publicize their affair, but
+        Morgan removes Bender''s memory and hides it within the cavernous Central
+        Bureaucracy.","number_abs":24,"updated_at":"2026-03-01T23:43:01.000Z","first_aired":"2000-04-03T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"How
+        Hermes Requisitioned His Groove Back","available_translations":[]},{"ids":{"imdb":"tt0584424","plex":{"guid":"65dcb23029624af2f7e6d1b5"},"tmdb":35027,"tvdb":131197,"trakt":38830},"title":"A
+        Clone of My Own","votes":1058,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/830/screenshots/medium/89da4fe97b.jpg.webp"]},"number":15,"rating":7.526464939117432,"season":2,"runtime":22,"overview":"Professor
+        Farnsworth unveils his clone, Cubert Farnsworth, whom he plans to leave everything
+        to upon his retirement. But Cubert wants no part of Farnsworth''s lifestyle,
+        prompting the professor into a premature retirement on the Near-Death Star.","number_abs":23,"updated_at":"2026-03-01T23:43:02.000Z","first_aired":"2000-04-10T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":0,"during_credits":false,"original_title":"A
+        Clone of My Own","available_translations":[]},{"ids":{"imdb":"tt0584455","plex":{"guid":"5d9c0e33ba6eb9001fbddc1b"},"tmdb":35028,"tvdb":131198,"trakt":38831},"title":"The
+        Deep South","votes":1047,"images":{"screenshot":["media.trakt.tv/images/episodes/000/038/831/screenshots/medium/231ba2805a.jpg.webp"]},"number":16,"rating":7.653295040130615,"season":2,"runtime":22,"overview":"A
+        fishing trip over the ocean takes a turn for the worse when a colossal mouth
+        bass pulls the Planet Express ship to the bottom of the sea. There, Fry falls
+        in love with a mermaid named Umbriel, and the crew discovers the sunken city
+        of Atlanta, Georgia.","number_abs":25,"updated_at":"2026-03-01T23:43:03.000Z","first_aired":"2000-04-17T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":1,"during_credits":false,"original_title":"The
+        Deep South","available_translations":[]},{"ids":{"imdb":"tt0766130","plex":{"guid":"5d9c0e33ba6eb9001fbddc0c"},"tmdb":35030,"tvdb":131199,"trakt":1394789},"title":"Bender
+        Gets Made","votes":1023,"images":{"screenshot":["media.trakt.tv/images/episodes/001/394/789/screenshots/medium/6dba108980.jpg.webp"]},"number":17,"rating":7.5708699226379395,"season":2,"runtime":22,"overview":"Bender
+        takes a new job in the Robot Mafia, but his loyalty is tested when he goes
+        along on the robotic gangster''s efforts to rob the Planet Express ship.","number_abs":26,"updated_at":"2026-03-02T00:52:33.000Z","first_aired":"2000-05-01T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Bender
+        Gets Made","available_translations":[]},{"ids":{"imdb":"tt0584457","plex":{"guid":"5d9c0e33ba6eb9001fbddc05"},"tmdb":35033,"tvdb":131200,"trakt":1394791},"title":"The
+        Problem with Popplers","votes":1028,"images":{"screenshot":["media.trakt.tv/images/episodes/001/394/791/screenshots/medium/0201678b0c.jpg.webp"]},"number":18,"rating":7.8356032371521,"season":2,"runtime":22,"overview":"The
+        crew discovers an irresistible source of food on a distant planet, and brings
+        it back to Earth to be sold at the Fishy Joe''s restaurant chain. But when
+        it''s discovered that the so-called \"Popplers\" are actually Omicronian babies,
+        the Omicronians demand recompense.","number_abs":28,"updated_at":"2026-03-01T23:43:04.000Z","first_aired":"2000-05-08T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":0,"during_credits":false,"original_title":"The
+        Problem with Popplers","available_translations":[]},{"ids":{"imdb":"tt0584447","plex":{"guid":"5d9c0e33ba6eb9001fbddc09"},"tmdb":35031,"tvdb":131201,"trakt":1394792},"title":"Mother''s
+        Day","votes":978,"images":{"screenshot":["media.trakt.tv/images/episodes/001/394/792/screenshots/medium/a87d1913f3.jpg.webp"]},"number":19,"rating":7.641104221343994,"season":2,"runtime":22,"overview":"Mom
+        reprograms the world''s robots to rebel against humanity. The only hope of
+        salvation is Mom''s old flame - Professor Farnsworth, who must rekindle his
+        romance with Mom in order to save mankind.","number_abs":27,"updated_at":"2026-03-01T23:43:04.000Z","first_aired":"2000-05-15T00:00:00.000Z","episode_type":"standard","after_credits":false,"comment_count":2,"during_credits":false,"original_title":"Mother''s
+        Day","available_translations":[]},{"ids":{"imdb":"tt0584432","plex":{"guid":"5d9c0e33ba6eb9001fbddc0f"},"tmdb":1089973,"tvdb":131202,"trakt":1685110},"title":"Anthology
+        of Interest I","votes":906,"images":{"screenshot":["media.trakt.tv/images/episodes/001/685/110/screenshots/medium/da840a41d8.jpg.webp"]},"number":20,"rating":7.841059684753418,"season":2,"runtime":22,"overview":"The
+        Professor''s \"What-If\" machine simulates Bender, Leela and Fry''s wishes.
+        Bender discovers what it would be like if he were 500 feet tall, Leela discovers
+        what it would be like if she were more impulsive, and Fry discovers what would
+        happen if he never came to the future.","number_abs":29,"updated_at":"2026-03-01T23:43:05.000Z","first_aired":"2000-05-22T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Anthology
+        of Interest I","available_translations":[]}]'
+  recorded_at: 2026-03-02 11:27:45
+recorded_with: VCR-vcr/2.1.0

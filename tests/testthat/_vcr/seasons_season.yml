@@ -1,0 +1,211 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/1/info?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:37 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"df055b6fd943b06f9da12248540680de"
+      expires: Mon, 02 Mar 2026 19:23:37 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 92d3a1fa-3be9-4e48-b0a3-16eb3f5bcd7e
+      x-runtime: '0.016335'
+      x-show-id: '46241'
+      x-show-season-id: '56008'
+      x-show-updated-at: '2026-03-02T09:44:01.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007c76c827754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":1,"ids":{"trakt":56008,"tvdb":507598,"tmdb":54695,"tvrage":null}}'
+  recorded_at: 2026-03-02 11:27:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/2/info?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:37 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"126b89c6730536e773ad945e79a3f7a6"
+      expires: Mon, 02 Mar 2026 19:23:37 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: f3240f25-8af7-4a7c-9882-ec1451c83006
+      x-runtime: '0.020648'
+      x-show-id: '46241'
+      x-show-season-id: '56009'
+      x-show-updated-at: '2026-03-02T09:44:01.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007c87d917754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":2,"ids":{"trakt":56009,"tvdb":524149,"tmdb":54696,"tvrage":null},"rating":8.05752,"votes":226,"episode_count":6,"aired_episodes":6,"title":"Season
+        2","overview":"It has been three months since the destruction of the Utopia
+        manuscript, and things have been quiet for Ian, Becky and co. Believing the
+        Network to be finished, they each try to get back to some semblance of normality.  But
+        far from being over, the Network are only just beginning...","first_aired":"2014-07-14T20:00:00.000Z","updated_at":"2026-03-02T09:44:02.000Z","network":"Channel
+        4","original_title":null}'
+  recorded_at: 2026-03-02 11:27:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/1/info?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:37 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"df055b6fd943b06f9da12248540680de"
+      expires: Mon, 02 Mar 2026 19:23:37 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 92d3a1fa-3be9-4e48-b0a3-16eb3f5bcd7e
+      x-runtime: '0.016335'
+      x-show-id: '46241'
+      x-show-season-id: '56008'
+      x-show-updated-at: '2026-03-02T09:44:01.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007c76c827754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":1,"ids":{"trakt":56008,"tvdb":507598,"tmdb":54695,"tvrage":null}}'
+  recorded_at: 2026-03-02 11:27:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/2/info?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:38 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"30c6df188dc8504ad767cc18e0edae4e"
+      expires: Mon, 02 Mar 2026 19:23:37 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 39003407-2798-4634-a5dc-6a775f907391
+      x-runtime: '0.015924'
+      x-show-id: '46241'
+      x-show-season-id: '56009'
+      x-show-updated-at: '2026-03-02T09:44:01.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007c9aee17754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":2,"ids":{"trakt":56009,"tvdb":524149,"tmdb":54696,"tvrage":null}}'
+  recorded_at: 2026-03-02 11:27:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/1/info?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:37 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"df055b6fd943b06f9da12248540680de"
+      expires: Mon, 02 Mar 2026 19:23:37 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 92d3a1fa-3be9-4e48-b0a3-16eb3f5bcd7e
+      x-runtime: '0.016335'
+      x-show-id: '46241'
+      x-show-season-id: '56008'
+      x-show-updated-at: '2026-03-02T09:44:01.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007c76c827754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":1,"ids":{"trakt":56008,"tvdb":507598,"tmdb":54695,"tvrage":null}}'
+  recorded_at: 2026-03-02 11:27:45
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/utopia/seasons/2/info?extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:38 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"30c6df188dc8504ad767cc18e0edae4e"
+      expires: Mon, 02 Mar 2026 19:23:37 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 39003407-2798-4634-a5dc-6a775f907391
+      x-runtime: '0.015924'
+      x-show-id: '46241'
+      x-show-season-id: '56009'
+      x-show-updated-at: '2026-03-02T09:44:01.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007c9aee17754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"number":2,"ids":{"trakt":56009,"tvdb":524149,"tmdb":54696,"tvrage":null}}'
+  recorded_at: 2026-03-02 11:27:45
+recorded_with: VCR-vcr/2.1.0

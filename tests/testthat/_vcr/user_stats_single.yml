@@ -1,0 +1,33 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:33:31 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"bcccb2963b7a61c1e970911f5dab40bc"
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 7eb412c0-90c4-4aa6-86d2-d201b0b0b384
+      x-runtime: '0.044754'
+      x-xss-protection: '0'
+      cf-ray: 9d6016449c6d0df5-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"movies":{"plays":1310,"watched":830,"minutes":151367,"collected":3197,"ratings":665,"comments":0},"shows":{"watched":588,"collected":1236,"ratings":392,"comments":0},"seasons":{"ratings":197,"comments":0},"episodes":{"plays":31778,"watched":20263,"minutes":1013904,"collected":45725,"ratings":10167,"comments":0},"network":{"friends":10,"followers":49,"following":24},"ratings":{"total":11421,"distribution":{"1":188,"2":0,"3":11,"4":41,"5":282,"6":1371,"7":4166,"8":3973,"9":1219,"10":170}}}'
+  recorded_at: 2026-03-02 11:33:31
+recorded_with: VCR-vcr/2.1.0

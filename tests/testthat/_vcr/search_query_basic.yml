@@ -1,0 +1,257 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/show?query=russian+doll+2019&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:33 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=1800, s-maxage=21600
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: search,show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '1'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '1'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007b00b439f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"score":1157451471441102800,"type":"show","show":{"title":"Russian
+        Doll","year":2019,"ids":{"trakt":141548,"slug":"russian-doll","imdb":"tt7520794","tmdb":84977,"plex":{"guid":"5d9c0915705e7a001e6ea05b","slug":"russian-doll"},"tvdb":356640},"tagline":"All
+        aboard the crazy train.","overview":"Nadia keeps dying and reliving her 36th
+        birthday party. She''s trapped in a surreal time loop -- and staring down
+        the barrel of her own mortality.","runtime":30,"country":"us","trailer":"https://youtube.com/watch?v=qPELCYFK-Wg","homepage":"https://www.netflix.com/title/80211627","status":"ended","rating":7.59118,"votes":7419,"comment_count":56,"updated_at":"2026-03-01T10:00:13.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","cs","de","el","en","es","fi","fr","he","hr","hu","it","ja","ka","ko","lt","nl","pl","pt","ru","sv","th","tr","uk","zh"],"genres":["comedy","drama"],"subgenres":["death","family-relationships","dark-comedy","dramedy","mysterious","witty"],"original_title":"Russian
+        Doll","images":{"fanart":["media.trakt.tv/images/shows/000/141/548/fanarts/medium/fec07c96d3.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/141/548/posters/medium/15a7a763ae.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/141/548/logos/medium/b69ffaf2a1.png.webp"],"banner":["media.trakt.tv/images/shows/000/141/548/banners/medium/6cf4e79701.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/141/548/thumbs/medium/f3f55c9753.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/141/548/cleararts/medium/0f946572cb.png.webp"]},"colors":{"poster":["#CAA98C","#26201C"]},"first_aired":"2019-02-01T08:00:00.000Z","aired_episodes":15,"certification":"TV-MA","airs":{"day":"Friday","time":"03:00","timezone":"America/New_York"},"network":"Netflix"}}]'
+  recorded_at: 2026-03-02 11:33:31
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/movie?query=russian+doll&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:34 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=1800, s-maxage=21600
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: search,movie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '9'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '1'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007b16c3b9f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"score":1157451471441102800,"type":"movie","movie":{"title":"Russian
+        Doll","year":2016,"ids":{"trakt":359123,"slug":"russian-doll-2016","imdb":"tt5138866","tmdb":511336,"plex":{"guid":"5d776e3e47dd6e001f6fad90","slug":"russian-doll-2016"}},"tagline":"","overview":"The
+        story begins when a young woman discovers a murder plot, and calls 911. But
+        seconds into the call, she''s attacked and abducted. The police investigation
+        into the woman''s disappearance leads them to interrogate the cast and crew
+        of a play called ''The Russian Doll.''","runtime":82,"country":"us","homepage":"https://www.russiandollthemovie.com/RussianDollTheMovie.com/Russian_Doll_Home.html","status":"released","rating":6.89286,"votes":28,"comment_count":0,"updated_at":"2025-12-13T17:53:54.000Z","language":"en","languages":["en"],"available_translations":["en","ru","zh"],"genres":["thriller","drama","crime","mystery"],"subgenres":[],"original_title":"Russian
+        Doll","images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/359/123/posters/medium/861d3b8c03.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#DAD1CA","#6A5A46"]},"released":"2016-03-12","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"Russian
+        Doll","year":2001,"ids":{"trakt":169443,"slug":"russian-doll-2001","imdb":"tt0215139","tmdb":271462,"plex":{"guid":"5d776adead5437001f78b3f4","slug":"russian-doll"}},"tagline":"A
+        new comedy about a mail order bride and a reluctant groom that truly pushes
+        the envelope.","overview":"A private detective agrees to marry his best friend''s
+        mistress to keep her from being deported.","runtime":90,"country":"au","status":"released","rating":6.2,"votes":20,"comment_count":0,"updated_at":"2025-07-03T17:12:48.000Z","language":"en","languages":["en","ru"],"available_translations":["en"],"genres":["romance","comedy","drama"],"subgenres":[],"original_title":"Russian
+        Doll","images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/169/443/posters/medium/f426c82a0f.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#E0D6D3","#756363"]},"released":"2001-06-14","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"Russian
+        Doll","year":2023,"ids":{"trakt":888673,"slug":"russian-doll-2023","tmdb":1104655,"plex":{}},"tagline":"There’s
+        layers in heritage, but how can you know if you’ve never felt it?","overview":"An
+        artist film exploring my relationship with being a mixed heritage women and
+        my struggles with my Russian and English culture clashing.","runtime":5,"country":"gb","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2023-04-10T08:03:19.000Z","language":"en","languages":["en"],"available_translations":["en"],"genres":["documentary","drama"],"subgenres":[],"original_title":"Russian
+        Doll","images":{"fanart":["media.trakt.tv/images/movies/000/888/673/fanarts/medium/6bf96a87ec.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/888/673/posters/medium/aeb9e7bdb9.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#BCB7CC","#060404"]},"released":"2023-01-18","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"The
+        Russian Doll","year":2019,"ids":{"trakt":906230,"slug":"the-russian-doll-2019","tmdb":1126090,"plex":{}},"tagline":"Til
+        Death Do Us Part","overview":"A young Russian Bride comes to America and becomes
+        stuck in a nightmarish marriage.","runtime":36,"country":"us","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2026-02-03T18:15:23.000Z","language":"en","languages":["en"],"available_translations":["en"],"genres":["drama","horror"],"subgenres":[],"original_title":"The
+        Russian Doll","images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/906/230/posters/medium/41467278f4.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#9E7170","#08090A"]},"released":"2019-07-26","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"Russian
+        Doll","year":2021,"ids":{"trakt":730529,"slug":"russian-doll-2021","tmdb":912098,"plex":{}},"tagline":"","overview":"After
+        meeting a stranger, a man in the terminal has to choose between doubt and
+        trust.","runtime":9,"country":"ir","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2021-12-15T08:01:21.000Z","language":"fa","languages":["fa"],"available_translations":["en"],"genres":["drama"],"subgenres":[],"images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/730/529/posters/medium/8020f268ff.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#C09B78","#37271E"]},"released":"2021-12-01","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"Matryoshka.
+        Russian Doll","year":2023,"ids":{"trakt":1062750,"slug":"matryoshka-russian-doll-2023","tmdb":1303103,"plex":{}},"tagline":"","overview":"The
+        absence of a man in the family is a given, which is genetically incorporated
+        in Russia. We find confirmation of this even in the traditional toys of Russia.
+        A Matryoshka is a nested doll. All of her children are collected in a large
+        mother-doll. But there was no place for the father. The father''s place is
+        at war.","runtime":7,"homepage":"https://filmfreeway.com/MatryoshkaRussiandoll","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2024-06-13T08:05:28.000Z","language":"ru","languages":["ru"],"available_translations":[],"genres":["documentary"],"subgenres":[],"images":{"fanart":[],"poster":[],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":[]},"released":"2023-03-31","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"Love
+        Deal","year":1995,"ids":{"trakt":193673,"slug":"love-deal-1995","imdb":"tt0164188","tmdb":314140,"plex":{}},"tagline":"","overview":"Joaquín
+        goes to Russia for business. There he falls in love with Tatiana, a young
+        and beautiful interpreter who asks her to accompany him on his return as a
+        maid - secretary - interpreter - lover or whatever.","runtime":90,"country":"es","status":"released","rating":4.5,"votes":6,"comment_count":0,"updated_at":"2026-02-26T08:45:25.000Z","language":"es","languages":["ru","es"],"available_translations":["en","es","it"],"genres":["drama"],"subgenres":["business"],"original_title":"Tatiana,
+        la muñeca rusa","images":{"fanart":["media.trakt.tv/images/movies/000/193/673/fanarts/medium/8091f3d668.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/193/673/posters/medium/5ff1f58dcf.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#EBD4C6","#6C3B3F"]},"released":"1995-12-21","after_credits":false,"during_credits":false}},{"score":1157451437081364500,"type":"movie","movie":{"title":"Russian
+        Dolls","year":2005,"ids":{"trakt":1208,"slug":"russian-dolls-2005","imdb":"tt0409184","tmdb":1826,"plex":{"guid":"5d77682a961905001eb91d09","slug":"russian-dolls"}},"tagline":"","overview":"Five
+        years after their summer together in Barcelona, Xavier, William, Wendy, Martine
+        and Isabelle reunite.","runtime":129,"country":"fr","trailer":"https://youtube.com/watch?v=Nu8F2EL1l-I","status":"released","rating":6.99622,"votes":529,"comment_count":0,"updated_at":"2026-03-01T16:44:11.000Z","language":"fr","languages":["en","fr"],"available_translations":["bg","ca","cs","de","el","en","es","fi","fr","he","hr","hu","it","ja","ka","ko","nl","pl","pt","ro","ru","sv","tr","uk","zh"],"genres":["comedy","drama","romance"],"subgenres":["wedding"],"original_title":"Les
+        Poupées russes","images":{"fanart":["media.trakt.tv/images/movies/000/001/208/fanarts/medium/0b569aa6ac.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/001/208/posters/medium/e3af41edb6.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/001/208/logos/medium/a32eaa5f42.png.webp"],"banner":[],"thumb":[],"clearart":["media.trakt.tv/images/movies/000/001/208/cleararts/medium/97a43d265e.png.webp"]},"colors":{"poster":["#FBF6F0","#774541"]},"released":"2005-06-15","after_credits":false,"during_credits":false}},{"score":1157451437081364500,"type":"movie","movie":{"title":"Russian
+        Dolls","year":2014,"ids":{"trakt":595135,"slug":"russian-dolls-2014","imdb":"tt4121318","tmdb":584653,"plex":{}},"tagline":"Love
+        is a rainy labyrinth","overview":"Luisa and Antonio surrender to the game
+        of keeping tricks up their sleeves, of disagreements and reconciliations.
+        Luisa follows with curiosity the thread of the words while Antonio imagines
+        a movie inhabited by Elsa and Miguel: some fictional characters blurred in
+        the middle of a deep sentimental crisis; a he and a she confused and lost
+        in the rainy labyrinth that sometimes we call love.","runtime":90,"country":"cr","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2020-10-22T06:15:06.000Z","language":"es","languages":["es"],"available_translations":["en"],"genres":["drama"],"subgenres":[],"images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/595/135/posters/medium/b55d070dbb.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#E2C04D","#160B08"]},"released":"2014-11-12","after_credits":false,"during_credits":false}}]'
+  recorded_at: 2026-03-02 11:33:31
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/movie?query=nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb&years=1100&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:34 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=1800, s-maxage=21600
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: search,movie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '0'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '0'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007b46e489f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2026-03-02 11:33:31
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/show?query=russian+doll&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:34 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=1800, s-maxage=21600
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: search,show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '3'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '1'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007b5df459f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"score":1157451471441102800,"type":"show","show":{"title":"Russian
+        Doll","year":2019,"ids":{"trakt":141548,"slug":"russian-doll","imdb":"tt7520794","tmdb":84977,"plex":{"guid":"5d9c0915705e7a001e6ea05b","slug":"russian-doll"},"tvdb":356640},"tagline":"All
+        aboard the crazy train.","overview":"Nadia keeps dying and reliving her 36th
+        birthday party. She''s trapped in a surreal time loop -- and staring down
+        the barrel of her own mortality.","runtime":30,"country":"us","trailer":"https://youtube.com/watch?v=qPELCYFK-Wg","homepage":"https://www.netflix.com/title/80211627","status":"ended","rating":7.59118,"votes":7419,"comment_count":56,"updated_at":"2026-03-01T10:00:13.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","cs","de","el","en","es","fi","fr","he","hr","hu","it","ja","ka","ko","lt","nl","pl","pt","ru","sv","th","tr","uk","zh"],"genres":["comedy","drama"],"subgenres":["death","family-relationships","dark-comedy","dramedy","mysterious","witty"],"original_title":"Russian
+        Doll","images":{"fanart":["media.trakt.tv/images/shows/000/141/548/fanarts/medium/fec07c96d3.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/141/548/posters/medium/15a7a763ae.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/141/548/logos/medium/b69ffaf2a1.png.webp"],"banner":["media.trakt.tv/images/shows/000/141/548/banners/medium/6cf4e79701.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/141/548/thumbs/medium/f3f55c9753.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/141/548/cleararts/medium/0f946572cb.png.webp"]},"colors":{"poster":["#CAA98C","#26201C"]},"first_aired":"2019-02-01T08:00:00.000Z","aired_episodes":15,"certification":"TV-MA","airs":{"day":"Friday","time":"03:00","timezone":"America/New_York"},"network":"Netflix"}},{"score":1157451437081364500,"type":"show","show":{"title":"Russian
+        Dolls: Sex Trade","year":2005,"ids":{"trakt":62287,"slug":"russian-dolls-sex-trade","imdb":"tt0320882","tmdb":20790,"plex":{"guid":"5d9c084b02391c001f585e9a","slug":"matroesjkas"},"tvdb":79648},"tagline":"","overview":"Young
+        women from Lithuania and Russia are taken to Belgium by a gang involved in
+        the sex trade to work as sex slaves.","runtime":50,"country":"be","status":"ended","rating":7.71111,"votes":90,"comment_count":0,"updated_at":"2026-02-28T12:39:35.000Z","language":"nl","languages":["ru","nl","en","lt"],"available_translations":["bg","cs","de","en","es","fr","it","nl","ru","zh"],"genres":["drama","crime"],"subgenres":["organized-crime"],"original_title":"Matroesjka''s","images":{"fanart":["media.trakt.tv/images/shows/000/062/287/fanarts/medium/d843bf4fa1.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/062/287/posters/medium/cee6c2ece8.jpg.webp"],"logo":[],"banner":["media.trakt.tv/images/shows/000/062/287/banners/medium/4d0620fe2b.jpg.webp"],"thumb":[],"clearart":[]},"colors":{"poster":["#AC8F92","#120A0C"]},"first_aired":"2005-01-05T19:00:00.000Z","aired_episodes":20,"airs":{"day":"Wednesday","time":"20:00","timezone":"Europe/Brussels"},"network":"vtm"}},{"score":1157451437081364500,"type":"show","show":{"title":"Russian
+        Dolls","year":2011,"ids":{"trakt":63958,"slug":"russian-dolls","imdb":"tt2006560","plex":{},"tvdb":250959},"overview":"Russian
+        Dolls follows colorful women and men who live, love and work in Brooklyn,
+        New York. In the midst of the Russian-American community. The multi-generational
+        families have drama that matches that of the other reality stars with drama
+        and dreams to contend with their Russian heritage. Together they are going
+        to be living in the same household to have fun and party as the Russians like
+        to.","runtime":25,"country":"us","status":"ended","rating":1,"votes":3,"comment_count":0,"updated_at":"2025-07-04T08:45:08.000Z","languages":[],"available_translations":[],"genres":["reality"],"subgenres":[],"images":{"fanart":["media.trakt.tv/images/shows/000/063/958/fanarts/medium/67a5c0df1f.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/063/958/posters/medium/6a511eeb5e.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/063/958/logos/medium/eeecc8292b.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#D7E6EB","#4D5865"]},"first_aired":"2011-08-11T04:00:00.000Z","aired_episodes":12,"certification":"TV-PG","airs":{"day":"Thursday","time":"00:00","timezone":"America/New_York"}}}]'
+  recorded_at: 2026-03-02 11:33:31
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/movie?query=russian+doll&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:34 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=1800, s-maxage=21600
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: search,movie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '9'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '1'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007b16c3b9f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"score":1157451471441102800,"type":"movie","movie":{"title":"Russian
+        Doll","year":2016,"ids":{"trakt":359123,"slug":"russian-doll-2016","imdb":"tt5138866","tmdb":511336,"plex":{"guid":"5d776e3e47dd6e001f6fad90","slug":"russian-doll-2016"}},"tagline":"","overview":"The
+        story begins when a young woman discovers a murder plot, and calls 911. But
+        seconds into the call, she''s attacked and abducted. The police investigation
+        into the woman''s disappearance leads them to interrogate the cast and crew
+        of a play called ''The Russian Doll.''","runtime":82,"country":"us","homepage":"https://www.russiandollthemovie.com/RussianDollTheMovie.com/Russian_Doll_Home.html","status":"released","rating":6.89286,"votes":28,"comment_count":0,"updated_at":"2025-12-13T17:53:54.000Z","language":"en","languages":["en"],"available_translations":["en","ru","zh"],"genres":["thriller","drama","crime","mystery"],"subgenres":[],"original_title":"Russian
+        Doll","images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/359/123/posters/medium/861d3b8c03.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#DAD1CA","#6A5A46"]},"released":"2016-03-12","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"Russian
+        Doll","year":2001,"ids":{"trakt":169443,"slug":"russian-doll-2001","imdb":"tt0215139","tmdb":271462,"plex":{"guid":"5d776adead5437001f78b3f4","slug":"russian-doll"}},"tagline":"A
+        new comedy about a mail order bride and a reluctant groom that truly pushes
+        the envelope.","overview":"A private detective agrees to marry his best friend''s
+        mistress to keep her from being deported.","runtime":90,"country":"au","status":"released","rating":6.2,"votes":20,"comment_count":0,"updated_at":"2025-07-03T17:12:48.000Z","language":"en","languages":["en","ru"],"available_translations":["en"],"genres":["romance","comedy","drama"],"subgenres":[],"original_title":"Russian
+        Doll","images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/169/443/posters/medium/f426c82a0f.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#E0D6D3","#756363"]},"released":"2001-06-14","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"Russian
+        Doll","year":2023,"ids":{"trakt":888673,"slug":"russian-doll-2023","tmdb":1104655,"plex":{}},"tagline":"There’s
+        layers in heritage, but how can you know if you’ve never felt it?","overview":"An
+        artist film exploring my relationship with being a mixed heritage women and
+        my struggles with my Russian and English culture clashing.","runtime":5,"country":"gb","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2023-04-10T08:03:19.000Z","language":"en","languages":["en"],"available_translations":["en"],"genres":["documentary","drama"],"subgenres":[],"original_title":"Russian
+        Doll","images":{"fanart":["media.trakt.tv/images/movies/000/888/673/fanarts/medium/6bf96a87ec.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/888/673/posters/medium/aeb9e7bdb9.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#BCB7CC","#060404"]},"released":"2023-01-18","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"The
+        Russian Doll","year":2019,"ids":{"trakt":906230,"slug":"the-russian-doll-2019","tmdb":1126090,"plex":{}},"tagline":"Til
+        Death Do Us Part","overview":"A young Russian Bride comes to America and becomes
+        stuck in a nightmarish marriage.","runtime":36,"country":"us","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2026-02-03T18:15:23.000Z","language":"en","languages":["en"],"available_translations":["en"],"genres":["drama","horror"],"subgenres":[],"original_title":"The
+        Russian Doll","images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/906/230/posters/medium/41467278f4.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#9E7170","#08090A"]},"released":"2019-07-26","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"Russian
+        Doll","year":2021,"ids":{"trakt":730529,"slug":"russian-doll-2021","tmdb":912098,"plex":{}},"tagline":"","overview":"After
+        meeting a stranger, a man in the terminal has to choose between doubt and
+        trust.","runtime":9,"country":"ir","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2021-12-15T08:01:21.000Z","language":"fa","languages":["fa"],"available_translations":["en"],"genres":["drama"],"subgenres":[],"images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/730/529/posters/medium/8020f268ff.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#C09B78","#37271E"]},"released":"2021-12-01","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"Matryoshka.
+        Russian Doll","year":2023,"ids":{"trakt":1062750,"slug":"matryoshka-russian-doll-2023","tmdb":1303103,"plex":{}},"tagline":"","overview":"The
+        absence of a man in the family is a given, which is genetically incorporated
+        in Russia. We find confirmation of this even in the traditional toys of Russia.
+        A Matryoshka is a nested doll. All of her children are collected in a large
+        mother-doll. But there was no place for the father. The father''s place is
+        at war.","runtime":7,"homepage":"https://filmfreeway.com/MatryoshkaRussiandoll","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2024-06-13T08:05:28.000Z","language":"ru","languages":["ru"],"available_translations":[],"genres":["documentary"],"subgenres":[],"images":{"fanart":[],"poster":[],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":[]},"released":"2023-03-31","after_credits":false,"during_credits":false}},{"score":1157451471441102800,"type":"movie","movie":{"title":"Love
+        Deal","year":1995,"ids":{"trakt":193673,"slug":"love-deal-1995","imdb":"tt0164188","tmdb":314140,"plex":{}},"tagline":"","overview":"Joaquín
+        goes to Russia for business. There he falls in love with Tatiana, a young
+        and beautiful interpreter who asks her to accompany him on his return as a
+        maid - secretary - interpreter - lover or whatever.","runtime":90,"country":"es","status":"released","rating":4.5,"votes":6,"comment_count":0,"updated_at":"2026-02-26T08:45:25.000Z","language":"es","languages":["ru","es"],"available_translations":["en","es","it"],"genres":["drama"],"subgenres":["business"],"original_title":"Tatiana,
+        la muñeca rusa","images":{"fanart":["media.trakt.tv/images/movies/000/193/673/fanarts/medium/8091f3d668.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/193/673/posters/medium/5ff1f58dcf.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#EBD4C6","#6C3B3F"]},"released":"1995-12-21","after_credits":false,"during_credits":false}},{"score":1157451437081364500,"type":"movie","movie":{"title":"Russian
+        Dolls","year":2005,"ids":{"trakt":1208,"slug":"russian-dolls-2005","imdb":"tt0409184","tmdb":1826,"plex":{"guid":"5d77682a961905001eb91d09","slug":"russian-dolls"}},"tagline":"","overview":"Five
+        years after their summer together in Barcelona, Xavier, William, Wendy, Martine
+        and Isabelle reunite.","runtime":129,"country":"fr","trailer":"https://youtube.com/watch?v=Nu8F2EL1l-I","status":"released","rating":6.99622,"votes":529,"comment_count":0,"updated_at":"2026-03-01T16:44:11.000Z","language":"fr","languages":["en","fr"],"available_translations":["bg","ca","cs","de","el","en","es","fi","fr","he","hr","hu","it","ja","ka","ko","nl","pl","pt","ro","ru","sv","tr","uk","zh"],"genres":["comedy","drama","romance"],"subgenres":["wedding"],"original_title":"Les
+        Poupées russes","images":{"fanart":["media.trakt.tv/images/movies/000/001/208/fanarts/medium/0b569aa6ac.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/001/208/posters/medium/e3af41edb6.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/001/208/logos/medium/a32eaa5f42.png.webp"],"banner":[],"thumb":[],"clearart":["media.trakt.tv/images/movies/000/001/208/cleararts/medium/97a43d265e.png.webp"]},"colors":{"poster":["#FBF6F0","#774541"]},"released":"2005-06-15","after_credits":false,"during_credits":false}},{"score":1157451437081364500,"type":"movie","movie":{"title":"Russian
+        Dolls","year":2014,"ids":{"trakt":595135,"slug":"russian-dolls-2014","imdb":"tt4121318","tmdb":584653,"plex":{}},"tagline":"Love
+        is a rainy labyrinth","overview":"Luisa and Antonio surrender to the game
+        of keeping tricks up their sleeves, of disagreements and reconciliations.
+        Luisa follows with curiosity the thread of the words while Antonio imagines
+        a movie inhabited by Elsa and Miguel: some fictional characters blurred in
+        the middle of a deep sentimental crisis; a he and a she confused and lost
+        in the rainy labyrinth that sometimes we call love.","runtime":90,"country":"cr","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2020-10-22T06:15:06.000Z","language":"es","languages":["es"],"available_translations":["en"],"genres":["drama"],"subgenres":[],"images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/595/135/posters/medium/b55d070dbb.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#E2C04D","#160B08"]},"released":"2014-11-12","after_credits":false,"during_credits":false}}]'
+  recorded_at: 2026-03-02 11:33:31
+recorded_with: VCR-vcr/2.1.0

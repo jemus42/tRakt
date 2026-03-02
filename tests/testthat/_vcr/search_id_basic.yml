@@ -1,0 +1,141 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/trakt/614?type=show&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:35 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"eeecdad904c5bb82197d80b0df60ab7f"
+      expires: Mon, 02 Mar 2026 19:23:35 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '1'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '1'
+      x-permitted-cross-domain-policies: none
+      x-request-id: 09867329-f74f-4d6b-9278-effc0293b7c5
+      x-runtime: '0.014064'
+      x-xss-protection: '0'
+      cf-ray: 9d6007b768429f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"type":"show","score":100,"show":{"title":"Futurama","year":1999,"ids":{"trakt":614,"slug":"futurama","tvdb":73871,"imdb":"tt0149460","tmdb":615,"tvrage":null}}}]'
+  recorded_at: 2026-03-02 11:33:31
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/show?query=futurama&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:35 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=1800, s-maxage=21600
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: search,show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '1'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '1'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6007b8898f9f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"score":578730123365189800,"type":"show","show":{"title":"Futurama","year":1999,"ids":{"trakt":614,"slug":"futurama","imdb":"tt0149460","tmdb":615,"plex":{"guid":"5d9c0819cb3ffa001f1b207c","slug":"futurama"},"tvdb":73871},"tagline":"Defying
+        gravity and common sense.","overview":"The adventures of a late-20th-century
+        New York City pizza delivery boy, Philip J. Fry, who, after being unwittingly
+        cryogenically frozen for one thousand years, finds employment at Planet Express,
+        an interplanetary delivery company in the retro-futuristic 31st century.","runtime":20,"country":"us","trailer":"https://youtube.com/watch?v=dUHzt5md1x0","homepage":"https://www.hulu.com/series/85bf4cc1-cd8b-4469-ad87-7289217a0b74","status":"returning
+        series","rating":8.53768,"votes":21816,"comment_count":73,"updated_at":"2026-03-01T23:43:50.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","bs","cs","da","de","el","en","es","fi","fr","he","hr","hu","it","ja","ka","ko","lt","nl","no","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","zh"],"genres":["animation","comedy","science-fiction","adventure"],"subgenres":["future","robot","adult-animation","adult-humor","parody","sitcom","adoring","alien","mad-scientist","space-travel","spacecraft","vibrant","inspirational"],"original_title":"Futurama","images":{"fanart":["media.trakt.tv/images/shows/000/000/614/fanarts/medium/c437fe689f.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/000/614/posters/medium/15a1a8a84a.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/000/614/logos/medium/40af721901.png.webp"],"banner":["media.trakt.tv/images/shows/000/000/614/banners/medium/8e8f9692ed.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/000/614/thumbs/medium/d270905b12.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/000/614/cleararts/medium/aaf62ee662.png.webp"]},"colors":{"poster":["#991F1F","#717071"]},"first_aired":"1999-03-29T01:00:00.000Z","aired_episodes":154,"certification":"TV-14","airs":{"day":"Monday","time":"20:00","timezone":"America/New_York"},"network":"Hulu"}}]'
+  recorded_at: 2026-03-02 11:33:31
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/imdb/1?type=show&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:35 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"d4e72ca784acf4bc3177efeea5f13de8"
+      expires: Mon, 02 Mar 2026 19:23:35 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '0'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '0'
+      x-permitted-cross-domain-policies: none
+      x-request-id: 6a059f35-a2c8-4808-9863-2060010a951a
+      x-runtime: '0.015497'
+      x-xss-protection: '0'
+      cf-ray: 9d6007b9ba839f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2026-03-02 11:33:31
+- request:
+    method: GET
+    uri: https://api.trakt.tv/search/trakt/nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb?type=show&extended=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:35 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"d4e72ca784acf4bc3177efeea5f13de8"
+      expires: Mon, 02 Mar 2026 19:23:35 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '0'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '0'
+      x-permitted-cross-domain-policies: none
+      x-request-id: e67f53e1-709f-4580-9786-ae601412c1a9
+      x-runtime: '0.012521'
+      x-xss-protection: '0'
+      cf-ray: 9d6007bafb469f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2026-03-02 11:33:31
+recorded_with: VCR-vcr/2.1.0
