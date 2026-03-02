@@ -45,10 +45,13 @@ user_history <- function(
 
 	if (length(user) > 1) {
 		names(user) <- user
-		return(map(
-			user,
-			\(x) user_history(user = x, type, item_id = item_id, limit, start_at, end_at, extended)
-		) |> list_rbind(names_to = "user"))
+		return(
+			map(
+				user,
+				\(x) user_history(user = x, type, item_id = item_id, limit, start_at, end_at, extended)
+			) |>
+				list_rbind(names_to = "user")
+		)
 	}
 
 	# Construct URL, make API call
@@ -83,7 +86,7 @@ user_history <- function(
 				bind_cols(fix_ids(response$episode$ids)) |>
 				rename(episode = "number") |>
 				fix_tibble_response() |>
-				rename_all(~ paste0("episode_", .x))
+				rename_all(\(x) paste0("episode_", x))
 		)
 	}
 	if (type == "movies") {

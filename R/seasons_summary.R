@@ -40,9 +40,9 @@ seasons_summary <- function(
 	if (length(id) > 1) {
 		response <- map_df(
 			id,
-			~ {
+			\(x) {
 				seasons_summary(
-					id = .x,
+					id = x,
 					extended = extended,
 					episodes = episodes,
 					drop_specials = drop_specials,

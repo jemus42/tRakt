@@ -25,8 +25,8 @@ shows_next_episode <- function(id, extended = c("min", "full")) {
 
 	response |>
 		discard(is.list) |>
-		modify_if(is.null, ~NA_character_) |>
-		modify_at(~ grepl("(^available_translations$)|(^genres$)", .x), list) |>
+		modify_if(is.null, \(x) NA_character_) |>
+		modify_at(\(x) grepl("(^available_translations$)|(^genres$)", x), list) |>
 		as_tibble() |>
 		bind_cols(
 			pluck(response, "ids") |> fix_ids()
@@ -46,8 +46,8 @@ shows_last_episode <- function(id, extended = c("min", "full")) {
 
 	response |>
 		discard(is.list) |>
-		modify_if(is.null, ~NA_character_) |>
-		modify_at(~ grepl("(^available_translations$)|(^genres$)", .x), list) |>
+		modify_if(is.null, \(x) NA_character_) |>
+		modify_at(\(x) grepl("(^available_translations$)|(^genres$)", x), list) |>
 		as_tibble() |>
 		bind_cols(
 			pluck(response, "ids") |> fix_ids()

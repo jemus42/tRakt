@@ -59,6 +59,10 @@ omdb_get <- function(imdb) {
 #' fanarttv_get(tvdb = "81189")
 #' }
 fanarttv_get <- function(tvdb) {
+	if (Sys.getenv("fanarttv_api_key", unset = "") == "") {
+		cli::cli_abort("No fanarttv API key set")
+	}
+
 	res <- httr2::request("http://webservice.fanart.tv") |>
 		httr2::req_url_path_append("v3/tv", tvdb) |>
 		httr2::req_url_query(api_key = Sys.getenv("fanarttv_api_key")) |>
@@ -73,7 +77,7 @@ fanarttv_get <- function(tvdb) {
 	)
 
 	res_y <- res[!(names(res) %in% c("name", "thetvdb_id"))] |>
-		map(~ list(.x)) |>
+		map(\(x) list(x)) |>
 		as_tibble()
 
 	bind_cols(res_x, res_y)

@@ -20,7 +20,7 @@ fix_ratings <- function(response) {
 #' @noRd
 fix_ids <- function(ids) {
 	if (!inherits(ids, c("data.frame", "list"))) {
-		stop("IDs must be list or data.frame")
+		cli::cli_abort("{.arg ids} must be a list or data.frame, not {.obj_type_friendly {ids}}.")
 	}
 
 	# Since tvrage is dead and tvrage IDs tend to be NA/0,
@@ -64,7 +64,7 @@ fix_ids <- function(ids) {
 #' @noRd
 fix_datetime <- function(response) {
 	if (!inherits(response, c("data.frame", "list"))) {
-		stop("Object type not supported, must inherit from data.frame or list")
+		cli::cli_abort("{.arg response} must inherit from data.frame or list, not {.obj_type_friendly {response}}.")
 	}
 	datevars <- c(
 		"first_aired",
@@ -95,12 +95,12 @@ fix_datetime <- function(response) {
 		response |>
 			mutate(across(
 				any_of(datevars),
-				~ {
+				\(x) {
 					# Don't convert already POSIXct vars
-					if (!(inherits(.x, "POSIXct"))) {
-						ymd_hms(.x)
+					if (!(inherits(x, "POSIXct"))) {
+						ymd_hms(x)
 					} else {
-						.x
+						x
 					}
 				}
 			))

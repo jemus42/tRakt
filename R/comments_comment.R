@@ -76,8 +76,8 @@ comments_likes <- function(id, extended = c("min", "full")) {
 	if (length(id) > 1) {
 		res <- map_df(
 			id,
-			~ {
-				comments_likes(.x, extended = extended)
+			\(x) {
+				comments_likes(x, extended = extended)
 			}
 		)
 		return(res)
@@ -125,8 +125,8 @@ comments_item <- function(id, extended = c("min", "full")) {
 	if (length(id) > 1) {
 		res <- map_df(
 			id,
-			~ {
-				comments_item(.x, extended = extended)
+			\(x) {
+				comments_item(x, extended = extended)
 			}
 		)
 		return(res)

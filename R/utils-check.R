@@ -220,8 +220,8 @@ check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
 
 	filter <- map_chr(
 		clean_filter,
-		~ {
-			matches <- .x %in% clean_filter_ok
+		\(x) {
+			matches <- x %in% clean_filter_ok
 
 			if (!matches) {
 				warning(
@@ -229,12 +229,12 @@ check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
 					"'",
 					filter_type,
 					"' includes unknown value, ignoring: '",
-					.x,
+					x,
 					"'"
 				)
 				""
 			} else {
-				filter_ok[.x == clean_filter_ok] |>
+				filter_ok[x == clean_filter_ok] |>
 					unique()
 			}
 		}

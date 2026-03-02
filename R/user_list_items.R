@@ -65,11 +65,11 @@ user_list_items <- function(user = "me", list_id, type = NULL, extended = c("min
 	# Row-bind the list base to the unpacked media items
 	map_df(
 		list_types,
-		~ {
+		\(x) {
 			bind_cols(
 				list_base |>
-					filter(type == .x),
-				flatten_media_object(response, .x)
+					filter(type == x),
+				flatten_media_object(response, x)
 			)
 		}
 	) |>

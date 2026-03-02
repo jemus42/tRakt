@@ -69,7 +69,7 @@ unpack_show <- function(show) {
 		show <- modify_in(
 			show,
 			"airs",
-			~ modify_if(.x, is.null, ~ return(NA_character_))
+			\(x) modify_if(x, is.null, \(x) NA_character_)
 		)
 		show$airs <- as_tibble(show$airs)
 
@@ -295,15 +295,15 @@ unpack_comments_multitype <- function(response) {
 	# Row-bind the list base to the unpacked media items
 	map_df(
 		list_types,
-		~ {
+		\(x) {
 			bind_cols(
 				list_base |>
-					filter(type == .x),
+					filter(type == x),
 				response |>
-					filter(type == .x) |>
+					filter(type == x) |>
 					pull("comment") |>
 					unpack_comments(),
-				flatten_media_object(response, .x)
+				flatten_media_object(response, x)
 			)
 		}
 	) |>
@@ -344,20 +344,20 @@ flatten_media_object <- function(x, type) {
 				unpack_show(),
 			pluck(x, "season") |>
 				select(-"ids") |>
-				rename_all(~ paste0("season_", .x)),
+				rename_all(\(x) paste0("season_", x)),
 			pluck(x, "season", "ids") |>
 				fix_ids() |>
-				rename_all(~ paste0("season_", .x))
+				rename_all(\(x) paste0("season_", x))
 		)
 	} else if (type == "episode") {
 		res <- bind_cols(
 			pluck(x, "show") |> unpack_show(),
 			pluck(x, "episode") |>
 				select(-"ids") |>
-				rename_all(~ paste0("episode_", .x)),
+				rename_all(\(x) paste0("episode_", x)),
 			pluck(x, "episode", "ids") |>
 				fix_ids() |>
-				rename_all(~ paste0("episode_", .x))
+				rename_all(\(x) paste0("episode_", x))
 		)
 	} else if (type == "person") {
 		res <- bind_cols(
@@ -399,12 +399,12 @@ flatten_single_media_object <- function(response, type) {
 		}
 
 		res <- response |>
-			modify_if(is.null, ~NA_character_) |>
+			modify_if(is.null, \(x) NA_character_) |>
 			discard(is.list) |>
 			list_merge(
 				!!!(pluck(response, "ids") |> fix_ids())
 			) |>
-			modify_if(~ length(.x) > 1, list)
+			modify_if(\(x) length(x) > 1, list)
 	}
 
 	if (type %in% c("show", "shows")) {
@@ -413,14 +413,14 @@ flatten_single_media_object <- function(response, type) {
 		}
 
 		res <- response |>
-			modify_if(is.null, ~NA_character_) |>
+			modify_if(is.null, \(x) NA_character_) |>
 			discard(is.list) |>
-			modify_if(~ length(.x) > 1, list)
+			modify_if(\(x) length(x) > 1, list)
 
 		if (has_name(response, "airs")) {
 			airs <- response |>
 				pluck("airs", .default = NULL) |>
-				set_names(~ paste0("airs_", .x))
+				set_names(\(x) paste0("airs_", x))
 
 			res <- list_merge(res, !!!airs)
 		}
@@ -434,15 +434,15 @@ flatten_single_media_object <- function(response, type) {
 	if (type %in% c("episode", "episodes")) {
 		res <- response |>
 			pluck("episode") |>
-			modify_if(is.null, ~NA_character_) |>
+			modify_if(is.null, \(x) NA_character_) |>
 			discard(is.list) |>
-			modify_if(~ length(.x) > 1, list) |>
+			modify_if(\(x) length(x) > 1, list) |>
 			list_merge(
 				!!!(pluck(response, "episode", "ids") |> fix_ids())
 			) |>
 			as_tibble() |>
 			rename(episode = "number") |>
-			rename_at(vars(-"season", -"episode"), ~ paste0("episode_", .x))
+			rename_at(vars(-"season", -"episode"), \(x) paste0("episode_", x))
 
 		res <- bind_cols(
 			flatten_single_media_object(response[["show"]], "show"),
@@ -453,15 +453,15 @@ flatten_single_media_object <- function(response, type) {
 	if (type %in% c("season", "seasons")) {
 		res <- response |>
 			pluck("season") |>
-			modify_if(is.null, ~NA_character_) |>
+			modify_if(is.null, \(x) NA_character_) |>
 			discard(is.list) |>
-			modify_if(~ length(.x) > 1, list) |>
+			modify_if(\(x) length(x) > 1, list) |>
 			list_merge(
 				!!!(pluck(response, "season", "ids") |> fix_ids())
 			) |>
 			as_tibble() |>
 			rename(season = "number") |>
-			rename_at(vars(-"season"), ~ paste0("season_", .x))
+			rename_at(vars(-"season"), \(x) paste0("season_", x))
 
 		res <- bind_cols(
 			flatten_single_media_object(response[["show"]], "show"),
@@ -475,8 +475,8 @@ flatten_single_media_object <- function(response, type) {
 	res |>
 		modify_at(
 			grepl("^genres$|^subgenres$|^available_translations$|^languages$", names(res)),
-			~ {
-				if (!is.list(.x)) list(.x) else .x
+			\(x) {
+				if (!is.list(x)) list(x) else x
 			}
 		) |>
 		fix_tibble_response()

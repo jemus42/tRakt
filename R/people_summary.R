@@ -29,7 +29,7 @@ people_summary <- function(id, extended = c("min", "full")) {
 
 	# Substitute NULLs with explicit NAs and flatten IDs
 	response$ids <- as_tibble(fix_ids(response$ids))
-	response <- modify_if(response, is.null, ~ return(NA_character_))
+	response <- modify_if(response, is.null, \(x) NA_character_)
 	response <- fix_datetime(response)
 	response[names(response) != "ids"] |>
 		as_tibble() |>
