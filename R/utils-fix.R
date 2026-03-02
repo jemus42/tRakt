@@ -29,19 +29,18 @@ fix_ids <- function(ids) {
 		ids["tvrage"] <- NULL
 	}
 
-	# Flatten nested plex object into plex_guid and plex_slug
+	# Flatten nested plex object into plex_guid (and plex_slug when present)
+	# Shows/movies have both guid and slug; seasons/episodes only have guid
 	if (has_name(ids, "plex")) {
 		plex <- ids[["plex"]]
 		ids[["plex"]] <- NULL
-		if (is.data.frame(plex)) {
-			ids[["plex_guid"]] <- as.character(plex[["guid"]])
-			ids[["plex_slug"]] <- as.character(plex[["slug"]])
-		} else if (is.list(plex) && !is.null(plex)) {
-			ids[["plex_guid"]] <- as.character(plex[["guid"]] %||% NA_character_)
-			ids[["plex_slug"]] <- as.character(plex[["slug"]] %||% NA_character_)
-		} else {
-			ids[["plex_guid"]] <- NA_character_
-			ids[["plex_slug"]] <- NA_character_
+		if (is.data.frame(plex) || (is.list(plex) && !is.null(plex))) {
+			if (!is.null(plex[["guid"]])) {
+				ids[["plex_guid"]] <- as.character(plex[["guid"]])
+			}
+			if (!is.null(plex[["slug"]])) {
+				ids[["plex_slug"]] <- as.character(plex[["slug"]])
+			}
 		}
 	}
 
@@ -132,6 +131,11 @@ fix_ratings_distribution <- function(response) {
 #' @importFrom tibble as_tibble
 #' @importFrom tibble remove_rownames
 fix_tibble_response <- function(response) {
+	# Drop nested objects that don't fit tabular output
+	# These are returned by the API for shows, seasons, and episodes
+	response[["images"]] <- NULL
+	response[["colors"]] <- NULL
+
 	response |>
 		as_tibble() |>
 		fix_datetime() |>
