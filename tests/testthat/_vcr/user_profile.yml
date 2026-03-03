@@ -1,0 +1,126 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:28 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"76aceced90bf9c2c988d7fd4e093f76e"
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 5008ea93-d8b6-44a5-b597-a12385d4cb73
+      x-runtime: '0.016286'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d1ea83c118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}'
+  recorded_at: 2026-03-02 12:41:28
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:28 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"885cf0b0c8e9de60d8135a03213cfdb0"
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 9299cf71-e6e7-4f06-af97-3022060be30a
+      x-runtime: '0.016061'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d2ec96c118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"},"joined_at":"2012-08-01T18:28:30.000Z","location":"Germany","about":"","gender":"male","age":34,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/d7e7de7b124101ee2285ca6fcc426a9a?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}}'
+  recorded_at: 2026-03-02 12:41:28
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"ee2b8f18f1704869f54f106f0e0b8ae2"
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 2f226ca6-ecfb-40d6-a179-a1850b0e0c39
+      x-runtime: '0.016908'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d3ef05c118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"username":"sean","private":false,"deleted":false,"name":"Sean Rudford","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"sean"}}'
+  recorded_at: 2026-03-02 12:41:29
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"01b65ac04022f5201bf6ede12c9d0636"
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 98914118-96dd-4dcd-89ea-68715053acf5
+      x-runtime: '0.015828'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d4e937c118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}'
+  recorded_at: 2026-03-02 12:41:29
+recorded_with: VCR-vcr/2.1.0

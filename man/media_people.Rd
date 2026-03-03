@@ -17,23 +17,18 @@
 \code{episodes_people()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/episodes/people/get-all-people-for-an-episode}{/shows/:id/seasons/:season/episodes/:episode/people}.
 }
 \usage{
-movies_people(id, extended = c("min", "full"))
+movies_people(id, extended = "min")
 
-shows_people(id, guest_stars = FALSE, extended = c("min", "full"))
+shows_people(id, guest_stars = FALSE, extended = "min")
 
-seasons_people(
-  id,
-  season = 1L,
-  guest_stars = FALSE,
-  extended = c("min", "full")
-)
+seasons_people(id, season = 1L, guest_stars = FALSE, extended = "min")
 
 episodes_people(
   id,
   season = 1L,
   episode = 1L,
   guest_stars = FALSE,
-  extended = c("min", "full")
+  extended = "min"
 )
 }
 \arguments{
@@ -44,9 +39,17 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{id} values separately and the result is combined. See
 \code{vignette("tRakt")} for more details.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 
 \item{guest_stars}{\code{logical(1) ["FALSE"]}: Also include guest stars. This returns
 a lot of data, so use with care.}

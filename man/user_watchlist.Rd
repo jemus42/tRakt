@@ -7,11 +7,7 @@
 \code{user_watchlist()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist}{/users/:id/watchlist/:type/:sort}.
 }
 \usage{
-user_watchlist(
-  user = "me",
-  type = c("movies", "shows"),
-  extended = c("min", "full")
-)
+user_watchlist(user = "me", type = c("movies", "shows"), extended = "min")
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -22,9 +18,17 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{type}{\code{character(1)}: Either \code{"shows"} or \code{"movies"}. For season/episode-specific
 functions, values \code{seasons} or \code{episodes} are also allowed.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

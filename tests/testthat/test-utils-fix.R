@@ -167,7 +167,7 @@ test_that("fix_ratings passes through when columns are missing", {
 
 # fix_tibble_response ----
 
-test_that("fix_tibble_response drops images column", {
+test_that("fix_tibble_response drops images column by default", {
 	res <- data.frame(title = "Test", rating = 8.0, votes = 100)
 	res$images <- data.frame(screenshot = I(list("http://example.com/img.jpg")))
 
@@ -175,6 +175,25 @@ test_that("fix_tibble_response drops images column", {
 
 	expect_false("images" %in% names(result))
 	expect_true("title" %in% names(result))
+})
+
+test_that("fix_tibble_response keeps images when keep_images = TRUE", {
+	res <- data.frame(title = "Test", rating = 8.0, votes = 100)
+	res$images <- data.frame(screenshot = I(list("http://example.com/img.jpg")))
+
+	result <- fix_tibble_response(res, keep_images = TRUE)
+
+	expect_true("images" %in% names(result))
+	expect_true("title" %in% names(result))
+})
+
+test_that("fix_tibble_response always drops colors regardless of keep_images", {
+	res <- data.frame(title = "Test", rating = 8.0, votes = 100)
+	res$colors <- data.frame(primary = "#ff0000")
+
+	result <- fix_tibble_response(res, keep_images = TRUE)
+
+	expect_false("colors" %in% names(result))
 })
 
 test_that("fix_tibble_response drops colors column", {

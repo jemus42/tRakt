@@ -33,11 +33,11 @@ NULL
 #' @family movie data
 #' @family people data
 #' @export
-movies_people <- function(id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
+movies_people <- function(id, extended = "min") {
+	extended <- validate_extended(extended)
 
 	# Construct URL, make API call
-	url <- build_trakt_url("movies", id, "people", extended = extended)
+	url <- build_trakt_url("movies", id, "people", extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	unpack_people(response)
@@ -48,15 +48,13 @@ movies_people <- function(id, extended = c("min", "full")) {
 #' @family show data
 #' @family people data
 #' @export
-shows_people <- function(id, guest_stars = FALSE, extended = c("min", "full")) {
-	extended <- match.arg(extended)
-
-	if (guest_stars) {
-		extended <- paste0(extended, ",guest_stars")
-	}
+shows_people <- function(id, guest_stars = FALSE, extended = "min") {
+	# Combine extended with guest_stars modifier before validation
+	extended_input <- if (guest_stars) c(extended, "guest_stars") else extended
+	extended <- validate_extended(extended_input)
 
 	# Construct URL, make API call
-	url <- build_trakt_url("shows", id, "people", extended = extended)
+	url <- build_trakt_url("shows", id, "people", extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	unpack_people(response)
@@ -67,12 +65,10 @@ shows_people <- function(id, guest_stars = FALSE, extended = c("min", "full")) {
 #' @family season data
 #' @family people data
 #' @export
-seasons_people <- function(id, season = 1L, guest_stars = FALSE, extended = c("min", "full")) {
-	extended <- match.arg(extended)
-
-	if (guest_stars) {
-		extended <- paste0(extended, ",guest_stars")
-	}
+seasons_people <- function(id, season = 1L, guest_stars = FALSE, extended = "min") {
+	# Combine extended with guest_stars modifier before validation
+	extended_input <- if (guest_stars) c(extended, "guest_stars") else extended
+	extended <- validate_extended(extended_input)
 
 	# Construct URL, make API call
 	url <- build_trakt_url(
@@ -81,7 +77,7 @@ seasons_people <- function(id, season = 1L, guest_stars = FALSE, extended = c("m
 		"seasons",
 		season,
 		"people",
-		extended = extended
+		extended = extended$query_value
 	)
 	response <- trakt_get(url = url)
 
@@ -98,13 +94,11 @@ episodes_people <- function(
 	season = 1L,
 	episode = 1L,
 	guest_stars = FALSE,
-	extended = c("min", "full")
+	extended = "min"
 ) {
-	extended <- match.arg(extended)
-
-	if (guest_stars) {
-		extended <- paste0(extended, ",guest_stars")
-	}
+	# Combine extended with guest_stars modifier before validation
+	extended_input <- if (guest_stars) c(extended, "guest_stars") else extended
+	extended <- validate_extended(extended_input)
 
 	# Construct URL, make API call
 	url <- build_trakt_url(
@@ -115,7 +109,7 @@ episodes_people <- function(
 		"episodes",
 		episode,
 		"people",
-		extended = extended
+		extended = extended$query_value
 	)
 	response <- trakt_get(url = url)
 

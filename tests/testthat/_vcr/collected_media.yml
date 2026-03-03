@@ -1,0 +1,80 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/collected/weekly?limit=5
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:30 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: EXPIRED
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"4a57c55831f85fec0cae0bba1d0731f8"
+      expires: Mon, 02 Mar 2026 20:41:30 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '213501'
+      x-pagination-limit: '5'
+      x-pagination-page: '1'
+      x-pagination-page-count: '42701'
+      x-permitted-cross-domain-policies: none
+      x-request-id: dda43e64-7f9b-4781-b5e2-e85e0c0903fb
+      x-runtime: '0.045417'
+      x-xss-protection: '0'
+      cf-ray: 9d6079dde9afe5e0-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watcher_count":110,"play_count":4486,"collected_count":140,"collector_count":7015,"show":{"title":"Jimmy
+        Kimmel Live","year":2003,"ids":{"trakt":1480,"slug":"jimmy-kimmel-live","tvdb":71998,"imdb":"tt0320037","tmdb":1489,"tvrage":null}}},{"watcher_count":952,"play_count":8488,"collected_count":855,"collector_count":6861,"show":{"title":"Silo","year":2023,"ids":{"trakt":180770,"slug":"silo","tvdb":403245,"imdb":"tt14688458","tmdb":125988,"tvrage":null}}},{"watcher_count":238,"play_count":2949,"collected_count":25,"collector_count":3777,"show":{"title":"Superman
+        \u0026 Lois","year":2021,"ids":{"trakt":162205,"slug":"superman-lois","tvdb":375655,"imdb":"tt11192306","tmdb":95057,"tvrage":null}}},{"watcher_count":867,"play_count":25888,"collected_count":60,"collector_count":3698,"show":{"title":"The
+        Blacklist","year":2013,"ids":{"trakt":46676,"slug":"the-blacklist","tvdb":266189,"imdb":"tt2741602","tmdb":46952,"tvrage":null}}},{"watcher_count":2043,"play_count":26138,"collected_count":56,"collector_count":3204,"show":{"title":"It''s
+        Always Sunny in Philadelphia","year":2005,"ids":{"trakt":2692,"slug":"it-s-always-sunny-in-philadelphia","tvdb":75805,"imdb":"tt0472954","tmdb":2710,"tvrage":null}}}]'
+  recorded_at: 2026-03-02 12:41:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/collected/weekly?limit=5
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:30 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      etag: W/"08f386a1f66eb5fad0880679495d906f"
+      expires: Mon, 02 Mar 2026 20:41:30 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '1253075'
+      x-pagination-limit: '5'
+      x-pagination-page: '1'
+      x-pagination-page-count: '250615'
+      x-permitted-cross-domain-policies: none
+      x-request-id: c00c3de1-b06e-4f8e-95e3-1a1de5fe5249
+      x-runtime: '0.115466'
+      x-xss-protection: '0'
+      cf-ray: 9d6079df2cb4e5e0-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"watcher_count":12654,"play_count":16749,"collected_count":3991,"movie":{"title":"Shelter","year":2026,"ids":{"trakt":1050424,"slug":"shelter-2026","imdb":"tt32357218","tmdb":1290821}}},{"watcher_count":5961,"play_count":7186,"collected_count":2675,"movie":{"title":"The
+        Bluff","year":2026,"ids":{"trakt":634944,"slug":"the-bluff-2026","imdb":"tt14181714","tmdb":799882}}},{"watcher_count":2390,"play_count":2794,"collected_count":2143,"movie":{"title":"Return
+        to Silent Hill","year":2026,"ids":{"trakt":525669,"slug":"return-to-silent-hill-2026","imdb":"tt22868010","tmdb":680493}}},{"watcher_count":1079,"play_count":1224,"collected_count":1464,"movie":{"title":"In
+        the Blink of an Eye","year":2026,"ids":{"trakt":830830,"slug":"in-the-blink-of-an-eye-2026","imdb":"tt6341826","tmdb":1032892}}},{"watcher_count":1147,"play_count":1500,"collected_count":1202,"movie":{"title":"Dead
+        Man''s Wire","year":2026,"ids":{"trakt":1024887,"slug":"dead-man-s-wire-2026","imdb":"tt15181326","tmdb":1263012}}}]'
+  recorded_at: 2026-03-02 12:41:30
+recorded_with: VCR-vcr/2.1.0

@@ -1,0 +1,66 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/136632/item
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      last-modified: Thu, 27 Nov 2025 15:48:25 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 46ed4fb6-5b29-4e4c-aa24-09d7e936e581
+      x-runtime: '0.025727'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c66a0e0e6c-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"type":"episode","episode":{"season":7,"number":4,"title":"The Spoils
+        of War","ids":{"trakt":2610969,"tvdb":6235145,"imdb":"tt5775846","tmdb":1340524,"tvrage":null}},"show":{"title":"Game
+        of Thrones","year":2011,"ids":{"trakt":1390,"slug":"game-of-thrones","tvdb":121361,"imdb":"tt0944947","tmdb":1399,"tvrage":null}}}'
+  recorded_at: 2026-03-02 12:41:27
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/236397/item
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      last-modified: Sun, 07 Sep 2025 18:04:56 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 6a2a736b-7615-41f5-a7bb-a204a14ea8af
+      x-runtime: '0.025616'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c1debc0e6c-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"type":"movie","movie":{"title":"John Wick: Chapter 3 - Parabellum","year":2019,"ids":{"trakt":304278,"slug":"john-wick-chapter-3-parabellum-2019","imdb":"tt6146586","tmdb":458156}}}'
+  recorded_at: 2026-03-02 12:41:27
+recorded_with: VCR-vcr/2.1.0

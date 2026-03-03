@@ -13,7 +13,7 @@
 #' @examples
 #' # Get just this one episode with its ratings, votes, etc.
 #' episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
-episodes_summary <- function(id, season = 1L, episode = 1L, extended = c("min", "full")) {
+episodes_summary <- function(id, season = 1L, episode = 1L, extended = "min") {
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) episodes_summary(x, season, episode, extended = extended)))
 	}
@@ -26,7 +26,7 @@ episodes_summary <- function(id, season = 1L, episode = 1L, extended = c("min", 
 		return(map_rbind(episode, \(x) episodes_summary(id, season, x, extended = extended)))
 	}
 
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
 	# Construct URL, make API call
 	url <- build_trakt_url(
@@ -36,7 +36,7 @@ episodes_summary <- function(id, season = 1L, episode = 1L, extended = c("min", 
 		season,
 		"episodes",
 		episode,
-		extended = extended
+		extended = extended$query_value
 	)
 	response <- trakt_get(url = url)
 
@@ -51,5 +51,5 @@ episodes_summary <- function(id, season = 1L, episode = 1L, extended = c("min", 
 		rename(episode = "number") |>
 		mutate(id = id, .before = "season")
 
-	fix_tibble_response(response)
+	fix_tibble_response(response, keep_images = extended$keep_images)
 }

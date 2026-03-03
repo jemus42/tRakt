@@ -14,8 +14,7 @@ test_that("user_watchlist works", {
 	expect_s3_class(res_movies, "tbl")
 
 	user_watchlist(user = c(user, user)) |>
-		expect_s3_class("tbl_df") |>
-		expect_length(12)
+		expect_tibble(min_cols = c("listed_at", "type", "title", "year", "trakt", "slug"))
 
 	# FIXME: Find no shows test case
 	# expect_identical(

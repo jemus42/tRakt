@@ -67,3 +67,94 @@ test_that("check_filter_arg fails how it should", {
 		"ended"
 	)
 })
+
+
+# validate_extended() tests ----
+
+test_that("validate_extended handles basic values", {
+	# "min" returns NULL query_value (omit the parameter)
+	res <- validate_extended("min")
+	expect_s3_class(res, "trakt_extended")
+	expect_null(res$query_value)
+	expect_false(res$keep_images)
+	expect_equal(res$components, character(0))
+
+	# "full" returns "full"
+	res <- validate_extended("full")
+	expect_equal(res$query_value, "full")
+	expect_false(res$keep_images)
+	expect_equal(res$components, "full")
+
+	# "images" returns "images" and keep_images = TRUE
+	res <- validate_extended("images")
+	expect_equal(res$query_value, "images")
+	expect_true(res$keep_images)
+	expect_equal(res$components, "images")
+
+	# "metadata" returns "metadata"
+	res <- validate_extended("metadata")
+	expect_equal(res$query_value, "metadata")
+	expect_false(res$keep_images)
+})
+
+test_that("validate_extended handles combinations", {
+	# Comma-separated string
+	res <- validate_extended("full,images")
+	expect_equal(res$query_value, "full,images")
+	expect_true(res$keep_images)
+	expect_setequal(res$components, c("full", "images"))
+
+	# Character vector
+	res <- validate_extended(c("full", "images"))
+	expect_equal(res$query_value, "full,images")
+	expect_true(res$keep_images)
+	expect_setequal(res$components, c("full", "images"))
+
+	# full,metadata
+	res <- validate_extended("full,metadata")
+	expect_equal(res$query_value, "full,metadata")
+	expect_false(res$keep_images)
+})
+
+test_that("validate_extended handles internal modifiers", {
+	# episodes modifier
+	res <- validate_extended(c("full", "episodes"))
+	expect_equal(res$query_value, "full,episodes")
+
+	# noseasons modifier (with min, which gets stripped)
+	res <- validate_extended(c("min", "noseasons"))
+	expect_equal(res$query_value, "noseasons")
+	expect_equal(res$components, "noseasons")
+
+	# guest_stars modifier
+	res <- validate_extended(c("full", "guest_stars"))
+	expect_equal(res$query_value, "full,guest_stars")
+})
+
+test_that("validate_extended handles edge cases", {
+	# NULL defaults to min
+	res <- validate_extended(NULL)
+	expect_null(res$query_value)
+
+	# Empty string defaults to min
+	res <- validate_extended("")
+	expect_null(res$query_value)
+
+	# Case insensitive
+	res <- validate_extended("FULL")
+	expect_equal(res$query_value, "full")
+
+	# Whitespace handling
+	res <- validate_extended(" full , images ")
+	expect_equal(res$query_value, "full,images")
+})
+
+test_that("validate_extended rejects invalid values", {
+	expect_error(validate_extended("invalid"), "invalid")
+	expect_error(validate_extended("full,bogus"), "bogus")
+	expect_error(validate_extended(123), "character")
+})
+
+test_that("validate_extended rejects min + full combination", {
+	expect_error(validate_extended(c("min", "full")), "cannot contain both")
+})

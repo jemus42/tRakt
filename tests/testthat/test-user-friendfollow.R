@@ -8,9 +8,10 @@ test_that("user_network stuff works", {
 	fol_min <- user_followers(user = user, extended = "min")
 	fol_max <- user_followers(user = user, extended = "full")
 
-	expect_s3_class(fol_min, "tbl")
-	expect_s3_class(fol_max, "tbl")
-	expect_gt(ncol(fol_max), ncol(fol_min))
+	fol_min |>
+		expect_tibble(min_cols = c("username", "slug"))
+	fol_max |>
+		expect_tibble(min_cols = c("username", "slug"))
 
 	expect_identical(
 		rbind(

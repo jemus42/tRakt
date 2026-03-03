@@ -11,7 +11,7 @@ user_collection(
   user = "me",
   type = c("shows", "movies"),
   unnest_episodes = FALSE,
-  extended = c("min", "full")
+  extended = "min"
 )
 }
 \arguments{
@@ -26,9 +26,17 @@ functions, values \code{seasons} or \code{episodes} are also allowed.}
 \item{unnest_episodes}{\code{logical(1) [FALSE]}: Unnests episode data using
 \code{\link[tidyr:unnest]{tidyr::unnest()}} and returns one row per episode rather than one row per show.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
@@ -43,10 +51,9 @@ This function wraps the API method
 \href{https://trakt.docs.apiary.io/#reference/users/collection/get-collection}{\verb{/users/:user_id/collection/:type}}.
 }
 \note{
-The \code{extended = "metadata"} API parameter is not implemented. This would
-add media information \code{media_type}, \code{resolution}, \code{audio}, \code{audio_channels} and \verb{3D}
-to the output, which may or may not be available. If this feature is important to
-you, please open an issue on GitHub.
+The \code{extended = "metadata"} API parameter can be used to add media
+information like \code{media_type}, \code{resolution}, \code{audio}, \code{audio_channels} and \verb{3D}
+to the output. Combine with \code{"full"} as \code{extended = "full,metadata"}.
 }
 \examples{
 \dontrun{

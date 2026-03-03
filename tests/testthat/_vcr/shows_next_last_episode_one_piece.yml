@@ -1,0 +1,28 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/one-piece/next_episode
+  response:
+    status: 204
+    headers:
+      date: Mon, 02 Mar 2026 12:41:28 GMT
+      cf-cache-status: BYPASS
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate, no_store=true, no_cache=true
+      server: cloudflare
+      vary: accept-encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: d9976eb4-9c00-44ae-9090-5fa057981d28
+      x-runtime: '0.019613'
+      x-show-updated-at: '2026-03-02T11:57:26.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6079cd9fe20e6c-AMS
+      alt-svc: h3=":443"; ma=86400
+  recorded_at: 2026-03-02 12:41:28
+recorded_with: VCR-vcr/2.1.0

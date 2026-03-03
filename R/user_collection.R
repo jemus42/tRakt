@@ -4,10 +4,9 @@
 #' @details
 #' This function wraps the API method
 #' [`/users/:user_id/collection/:type`](https://trakt.docs.apiary.io/#reference/users/collection/get-collection).
-#' @note The `extended = "metadata"` API parameter is not implemented. This would
-#' add media information `media_type`, `resolution`, `audio`, `audio_channels` and `3D`
-#' to the output, which may or may not be available. If this feature is important to
-#' you, please open an issue on GitHub.
+#' @note The `extended = "metadata"` API parameter can be used to add media
+#' information like `media_type`, `resolution`, `audio`, `audio_channels` and `3D`
+#' to the output. Combine with `"full"` as `extended = "full,metadata"`.
 #'
 #' @inheritParams trakt_api_common_parameters
 #' @param unnest_episodes `logical(1) [FALSE]`: Unnests episode data using
@@ -29,11 +28,10 @@ user_collection <- function(
 	user = "me",
 	type = c("shows", "movies"),
 	unnest_episodes = FALSE,
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	check_username(user)
 	type <- match.arg(type)
-	extended <- match.arg(extended)
 
 	if (type == "movie" && unnest_episodes) {
 		cli::cli_warn("{.arg unnest_episodes} only applies to {.code type = \"shows\"}.")
@@ -54,13 +52,10 @@ user_collection <- function(
 		))
 	}
 
-	if (extended == "min") {
-		# extended = "min" causes weird output, expected result without param though
-		extended <- ""
-	}
+	extended <- validate_extended(extended)
 
 	# Construct URL, make API call
-	url <- build_trakt_url("users", user, "collection", type, extended = extended)
+	url <- build_trakt_url("users", user, "collection", type, extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	if (is_empty(response)) {
@@ -72,7 +67,7 @@ user_collection <- function(
 			select(-"show") |>
 			bind_cols(
 				pluck(response, "show") |>
-					unpack_show()
+					unpack_show(keep_images = extended$keep_images)
 			) |>
 			as_tibble() |>
 			select(-"seasons", everything(), "seasons") |>
@@ -95,8 +90,8 @@ user_collection <- function(
 				mutate(collected_at = ymd_hms(.data[["collected_at"]]))
 		}
 	} else if (type == "movies") {
-		response <- unpack_movie(response)
+		response <- unpack_movie(response, keep_images = extended$keep_images)
 	}
 
-	fix_tibble_response(response)
+	fix_tibble_response(response, keep_images = extended$keep_images)
 }

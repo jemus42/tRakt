@@ -13,7 +13,7 @@
 \usage{
 movies_collected(
   limit = 10,
-  extended = c("min", "full"),
+  extended = "min",
   period = c("weekly", "monthly", "yearly", "all"),
   query = NULL,
   years = NULL,
@@ -27,7 +27,7 @@ movies_collected(
 
 shows_collected(
   limit = 10,
-  extended = c("min", "full"),
+  extended = "min",
   period = c("weekly", "monthly", "yearly", "all"),
   query = NULL,
   years = NULL,
@@ -45,9 +45,17 @@ shows_collected(
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced via \code{as.integer()}.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}

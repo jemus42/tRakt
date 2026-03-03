@@ -20,13 +20,13 @@
 #' # Including all episode data:
 #' seasons_season("breaking-bad", 1, extended = "full")
 #' }
-seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
-	extended <- match.arg(extended)
-
+seasons_season <- function(id, seasons = 1L, extended = "min") {
 	# Vectorize
 	if (length(seasons) > 1) {
 		return(map_rbind(seasons, \(x) seasons_season(id, x, extended)))
 	}
+
+	extended <- validate_extended(extended)
 
 	# Basic sanity check
 	# Do this after vectorization due to scalar ifs
@@ -35,14 +35,14 @@ seasons_season <- function(id, seasons = 1L, extended = c("min", "full")) {
 	}
 
 	# Construct URL, make API call
-	url <- build_trakt_url("shows", id, "seasons", seasons, "info", extended = extended)
+	url <- build_trakt_url("shows", id, "seasons", seasons, "info", extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	if (identical(response, tibble())) {
 		return(tibble())
 	}
 
-	if (extended == "min") {
+	if (!"full" %in% extended$components) {
 		tibble(number = response$number, as_tibble(fix_ids(response$ids)))
 	} else {
 		discard(response, is.list) |>

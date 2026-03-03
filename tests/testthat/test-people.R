@@ -8,11 +8,12 @@ test_that("people_summary works", {
 	people_min <- people_summary(id = id, extended = "min")
 	people_max <- people_summary(id = id, extended = "full")
 
-	expect_s3_class(people_min, "tbl")
-	expect_equal(nrow(people_min), 1)
-	expect_equal(ncol(people_min), 5)
-	expect_s3_class(people_max, "tbl")
-	expect_equal(ncol(people_max), 14)
+	expect_tibble(people_min, min_cols = c("name", "trakt", "slug", "imdb", "tmdb"), exact_rows = 1)
+	expect_tibble(
+		people_max,
+		min_cols = c("name", "birthday", "biography", "trakt", "slug", "imdb", "tmdb"),
+		exact_rows = 1
+	)
 
 	expect_identical(
 		rbind(

@@ -13,10 +13,10 @@
 #' @examples
 #' shows_next_episode("one-piece")
 #' shows_last_episode("one-piece", extended = "full")
-shows_next_episode <- function(id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
+shows_next_episode <- function(id, extended = "min") {
+	extended <- validate_extended(extended)
 
-	url <- build_trakt_url("shows", id, "next_episode", extended = extended)
+	url <- build_trakt_url("shows", id, "next_episode", extended = extended$query_value)
 	response <- trakt_get(url)
 
 	if (is_empty(response)) {
@@ -38,10 +38,10 @@ shows_next_episode <- function(id, extended = c("min", "full")) {
 #' @family show data
 #' @family episode data
 #' @export
-shows_last_episode <- function(id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
+shows_last_episode <- function(id, extended = "min") {
+	extended <- validate_extended(extended)
 
-	url <- build_trakt_url("shows", id, "last_episode", extended = extended)
+	url <- build_trakt_url("shows", id, "last_episode", extended = extended$query_value)
 	response <- trakt_get(url)
 
 	response |>

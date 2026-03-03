@@ -14,7 +14,7 @@ search_query(
   query,
   type = "show",
   n_results = 1L,
-  extended = c("min", "full"),
+  extended = "min",
   years = NULL,
   genres = NULL,
   languages = NULL,
@@ -31,7 +31,7 @@ search_id(
   id_type = c("trakt", "imdb", "tmdb", "tvdb"),
   type = "show",
   n_results = 1L,
-  extended = c("min", "full")
+  extended = "min"
 )
 }
 \arguments{
@@ -48,9 +48,17 @@ separate function calls in that case.}
 
 \item{n_results}{\code{integer(1) [1]}: How many results to return.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 
 \item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range,
 e.g. \code{"2010-2020"}. Can also be an integer vector of length two which will be

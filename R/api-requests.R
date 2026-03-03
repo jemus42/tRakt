@@ -64,6 +64,12 @@ trakt_get <- function(url) {
 
 	resp <- httr2::req_perform(req)
 	httr2::resp_check_status(resp, info = url)
+
+	# Handle empty responses (e.g. HTTP 204 No Content)
+	if (httr2::resp_status(resp) == 204 || length(httr2::resp_body_raw(resp)) == 0) {
+		return(tibble())
+	}
+
 	resp <- httr2::resp_body_json(resp, simplifyVector = TRUE, check_type = FALSE)
 
 	# Kept from previous version, should be refactored at some point

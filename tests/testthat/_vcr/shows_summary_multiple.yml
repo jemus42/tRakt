@@ -1,0 +1,265 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      age: '4705'
+      cache-control: public, max-age=2678400, s-maxage=43200
+      last-modified: Mon, 02 Mar 2026 11:23:00 GMT
+      server: cloudflare
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      cache-tag: show
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      cf-ray: 9d6079c1abe6d595-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"ids":{"imdb":"tt0903747","plex":{"guid":"5d9c083402391c001f583d09","slug":"breaking-bad"},"slug":"breaking-bad","tmdb":1396,"tvdb":81189,"trakt":1388},"airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"year":2008,"title":"Breaking
+        Bad","votes":115194,"colors":{"poster":["#A5AF96","#272A2E"]},"genres":["drama","crime","thriller"],"images":{"logo":["media.trakt.tv/images/shows/000/001/388/logos/medium/d8abdb2dee.png.webp"],"thumb":["media.trakt.tv/images/shows/000/001/388/thumbs/medium/e348e4a03f.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/001/388/banners/medium/c53872a7e2.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/001/388/fanarts/medium/fdbc0cb02d.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/001/388/posters/medium/fa39b59954.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/001/388/cleararts/medium/1f00520834.png.webp"]},"rating":9.244023323059082,"status":"ended","country":"us","network":"AMC","runtime":50,"tagline":"Change
+        the equation.","trailer":"https://youtube.com/watch?v=XZ8daibM3AE","homepage":"https://www.sonypictures.com/tv/breakingbad","language":"en","overview":"Walter
+        White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer
+        and given a prognosis of only two years left to live. He becomes filled with
+        a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","languages":["en","de","es"],"subgenres":["criminal","drugs","dark-comedy","drug-dealer","psychopath","high-school-teacher","dark","tragedy","neo-western","outlaw"],"updated_at":"2026-03-02T06:38:59.000Z","first_aired":"2008-01-21T02:00:00.000Z","certification":"TV-MA","comment_count":522,"aired_episodes":62,"original_title":"Breaking
+        Bad","available_translations":["ar","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/dexter
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6079c53dc1c118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"ids":{"imdb":"tt0773262","plex":{"guid":"5d9c086c46115600200aa2ea","slug":"dexter"},"slug":"dexter","tmdb":1405,"tvdb":79349,"trakt":1396},"airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"year":2006,"title":"Dexter","votes":44687,"colors":{"poster":["#E1D8C6","#787367"]},"genres":["drama","mystery","crime","thriller"],"images":{"logo":["media.trakt.tv/images/shows/000/001/396/logos/medium/a123c07a62.png.webp"],"thumb":["media.trakt.tv/images/shows/000/001/396/thumbs/medium/d47869a778.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/001/396/banners/medium/eb9edd8c25.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/001/396/fanarts/medium/54db09b7c9.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/001/396/posters/medium/af1b16f10c.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/001/396/cleararts/medium/6ed9624120.png.webp"]},"rating":8.397564888000488,"status":"ended","country":"us","network":"Showtime","runtime":60,"tagline":"A
+        serial killer with a heart..... just pray it''s not yours.","trailer":"https://youtube.com/watch?v=YQeUmSD1c3g","homepage":"https://www.paramountplus.com/shows/dexter","language":"en","overview":"Dexter
+        Morgan, a blood spatter pattern analyst for the Miami Metro Police also leads
+        a secret life as a serial killer, hunting down criminals who have slipped
+        through the cracks of justice.","languages":["en","es"],"subgenres":["murder","crime-investigation","homicide","killer","murder-investigation","neo-noir","police-procedural","psychological-thriller","serial-killer","psychological-drama","dark","violence","vigilante"],"updated_at":"2026-03-02T06:56:23.000Z","first_aired":"2006-10-02T01:00:00.000Z","certification":"TV-MA","comment_count":234,"aired_episodes":96,"original_title":"Dexter","available_translations":["ar","bg","bs","cs","da","de","el","en","es","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:13:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      age: '1'
+      cache-control: public, max-age=2678400, s-maxage=43200
+      last-modified: Mon, 02 Mar 2026 11:13:28 GMT
+      server: cloudflare
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      cache-tag: show
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      cf-ray: 9d5ff8f20dfefea8-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"ids":{"imdb":"tt0903747","plex":{"guid":"5d9c083402391c001f583d09","slug":"breaking-bad"},"slug":"breaking-bad","tmdb":1396,"tvdb":81189,"trakt":1388},"airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"year":2008,"title":"Breaking
+        Bad","votes":115194,"colors":{"poster":["#A5AF96","#272A2E"]},"genres":["drama","crime","thriller"],"images":{"logo":["media.trakt.tv/images/shows/000/001/388/logos/medium/d8abdb2dee.png.webp"],"thumb":["media.trakt.tv/images/shows/000/001/388/thumbs/medium/e348e4a03f.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/001/388/banners/medium/c53872a7e2.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/001/388/fanarts/medium/fdbc0cb02d.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/001/388/posters/medium/fa39b59954.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/001/388/cleararts/medium/1f00520834.png.webp"]},"rating":9.244023323059082,"status":"ended","country":"us","network":"AMC","runtime":50,"tagline":"Change
+        the equation.","trailer":"https://youtube.com/watch?v=XZ8daibM3AE","homepage":"https://www.sonypictures.com/tv/breakingbad","language":"en","overview":"Walter
+        White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer
+        and given a prognosis of only two years left to live. He becomes filled with
+        a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","languages":["en","de","es"],"subgenres":["criminal","drugs","dark-comedy","drug-dealer","psychopath","high-school-teacher","dark","tragedy","neo-western","outlaw"],"updated_at":"2026-03-02T06:38:59.000Z","first_aired":"2008-01-21T02:00:00.000Z","certification":"TV-MA","comment_count":522,"aired_episodes":62,"original_title":"Breaking
+        Bad","available_translations":["ar","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/dexter?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:22 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      age: '3626'
+      cache-control: public, max-age=2678400, s-maxage=43200
+      last-modified: Mon, 02 Mar 2026 10:22:56 GMT
+      server: cloudflare
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      cache-tag: show
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      cf-ray: 9d60076a1a7b9f9a-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"ids":{"imdb":"tt0773262","plex":{"guid":"5d9c086c46115600200aa2ea","slug":"dexter"},"slug":"dexter","tmdb":1405,"tvdb":79349,"trakt":1396},"airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"year":2006,"title":"Dexter","votes":44685,"colors":{"poster":["#E1D8C6","#787367"]},"genres":["drama","mystery","crime","thriller"],"images":{"logo":["media.trakt.tv/images/shows/000/001/396/logos/medium/a123c07a62.png.webp"],"thumb":["media.trakt.tv/images/shows/000/001/396/thumbs/medium/d47869a778.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/001/396/banners/medium/eb9edd8c25.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/001/396/fanarts/medium/54db09b7c9.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/001/396/posters/medium/af1b16f10c.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/001/396/cleararts/medium/6ed9624120.png.webp"]},"rating":8.397493362426758,"status":"ended","country":"us","network":"Showtime","runtime":60,"tagline":"A
+        serial killer with a heart..... just pray it''s not yours.","trailer":"https://youtube.com/watch?v=YQeUmSD1c3g","homepage":"https://www.paramountplus.com/shows/dexter","language":"en","overview":"Dexter
+        Morgan, a blood spatter pattern analyst for the Miami Metro Police also leads
+        a secret life as a serial killer, hunting down criminals who have slipped
+        through the cracks of justice.","languages":["en","es"],"subgenres":["murder","crime-investigation","homicide","killer","murder-investigation","neo-noir","police-procedural","psychological-thriller","serial-killer","psychological-drama","dark","violence","vigilante"],"updated_at":"2026-03-02T06:56:23.000Z","first_aired":"2006-10-02T01:00:00.000Z","certification":"TV-MA","comment_count":234,"aired_episodes":96,"original_title":"Dexter","available_translations":["ar","bg","bs","cs","da","de","el","en","es","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      age: '4705'
+      cache-control: public, max-age=2678400, s-maxage=43200
+      last-modified: Mon, 02 Mar 2026 11:23:00 GMT
+      server: cloudflare
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      cache-tag: show
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      cf-ray: 9d6079c1abe6d595-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"ids":{"imdb":"tt0903747","plex":{"guid":"5d9c083402391c001f583d09","slug":"breaking-bad"},"slug":"breaking-bad","tmdb":1396,"tvdb":81189,"trakt":1388},"airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"year":2008,"title":"Breaking
+        Bad","votes":115194,"colors":{"poster":["#A5AF96","#272A2E"]},"genres":["drama","crime","thriller"],"images":{"logo":["media.trakt.tv/images/shows/000/001/388/logos/medium/d8abdb2dee.png.webp"],"thumb":["media.trakt.tv/images/shows/000/001/388/thumbs/medium/e348e4a03f.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/001/388/banners/medium/c53872a7e2.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/001/388/fanarts/medium/fdbc0cb02d.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/001/388/posters/medium/fa39b59954.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/001/388/cleararts/medium/1f00520834.png.webp"]},"rating":9.244023323059082,"status":"ended","country":"us","network":"AMC","runtime":50,"tagline":"Change
+        the equation.","trailer":"https://youtube.com/watch?v=XZ8daibM3AE","homepage":"https://www.sonypictures.com/tv/breakingbad","language":"en","overview":"Walter
+        White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer
+        and given a prognosis of only two years left to live. He becomes filled with
+        a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","languages":["en","de","es"],"subgenres":["criminal","drugs","dark-comedy","drug-dealer","psychopath","high-school-teacher","dark","tragedy","neo-western","outlaw"],"updated_at":"2026-03-02T06:38:59.000Z","first_aired":"2008-01-21T02:00:00.000Z","certification":"TV-MA","comment_count":522,"aired_episodes":62,"original_title":"Breaking
+        Bad","available_translations":["ar","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/dexter
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6079c53dc1c118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"ids":{"imdb":"tt0773262","plex":{"guid":"5d9c086c46115600200aa2ea","slug":"dexter"},"slug":"dexter","tmdb":1405,"tvdb":79349,"trakt":1396},"airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"year":2006,"title":"Dexter","votes":44687,"colors":{"poster":["#E1D8C6","#787367"]},"genres":["drama","mystery","crime","thriller"],"images":{"logo":["media.trakt.tv/images/shows/000/001/396/logos/medium/a123c07a62.png.webp"],"thumb":["media.trakt.tv/images/shows/000/001/396/thumbs/medium/d47869a778.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/001/396/banners/medium/eb9edd8c25.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/001/396/fanarts/medium/54db09b7c9.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/001/396/posters/medium/af1b16f10c.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/001/396/cleararts/medium/6ed9624120.png.webp"]},"rating":8.397564888000488,"status":"ended","country":"us","network":"Showtime","runtime":60,"tagline":"A
+        serial killer with a heart..... just pray it''s not yours.","trailer":"https://youtube.com/watch?v=YQeUmSD1c3g","homepage":"https://www.paramountplus.com/shows/dexter","language":"en","overview":"Dexter
+        Morgan, a blood spatter pattern analyst for the Miami Metro Police also leads
+        a secret life as a serial killer, hunting down criminals who have slipped
+        through the cracks of justice.","languages":["en","es"],"subgenres":["murder","crime-investigation","homicide","killer","murder-investigation","neo-noir","police-procedural","psychological-thriller","serial-killer","psychological-drama","dark","violence","vigilante"],"updated_at":"2026-03-02T06:56:23.000Z","first_aired":"2006-10-02T01:00:00.000Z","certification":"TV-MA","comment_count":234,"aired_episodes":96,"original_title":"Dexter","available_translations":["ar","bg","bs","cs","da","de","el","en","es","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/breaking-bad
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
+      access-control-allow-origin: '*'
+      age: '4705'
+      cache-control: public, max-age=2678400, s-maxage=43200
+      last-modified: Mon, 02 Mar 2026 11:23:00 GMT
+      server: cloudflare
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      cache-tag: show
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      cf-ray: 9d6079c1abe6d595-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"ids":{"imdb":"tt0903747","plex":{"guid":"5d9c083402391c001f583d09","slug":"breaking-bad"},"slug":"breaking-bad","tmdb":1396,"tvdb":81189,"trakt":1388},"airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"year":2008,"title":"Breaking
+        Bad","votes":115194,"colors":{"poster":["#A5AF96","#272A2E"]},"genres":["drama","crime","thriller"],"images":{"logo":["media.trakt.tv/images/shows/000/001/388/logos/medium/d8abdb2dee.png.webp"],"thumb":["media.trakt.tv/images/shows/000/001/388/thumbs/medium/e348e4a03f.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/001/388/banners/medium/c53872a7e2.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/001/388/fanarts/medium/fdbc0cb02d.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/001/388/posters/medium/fa39b59954.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/001/388/cleararts/medium/1f00520834.png.webp"]},"rating":9.244023323059082,"status":"ended","country":"us","network":"AMC","runtime":50,"tagline":"Change
+        the equation.","trailer":"https://youtube.com/watch?v=XZ8daibM3AE","homepage":"https://www.sonypictures.com/tv/breakingbad","language":"en","overview":"Walter
+        White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer
+        and given a prognosis of only two years left to live. He becomes filled with
+        a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","languages":["en","de","es"],"subgenres":["criminal","drugs","dark-comedy","drug-dealer","psychopath","high-school-teacher","dark","tragedy","neo-western","outlaw"],"updated_at":"2026-03-02T06:38:59.000Z","first_aired":"2008-01-21T02:00:00.000Z","certification":"TV-MA","comment_count":522,"aired_episodes":62,"original_title":"Breaking
+        Bad","available_translations":["ar","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/dexter
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=3600, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: show
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6079c53dc1c118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"ids":{"imdb":"tt0773262","plex":{"guid":"5d9c086c46115600200aa2ea","slug":"dexter"},"slug":"dexter","tmdb":1405,"tvdb":79349,"trakt":1396},"airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"year":2006,"title":"Dexter","votes":44687,"colors":{"poster":["#E1D8C6","#787367"]},"genres":["drama","mystery","crime","thriller"],"images":{"logo":["media.trakt.tv/images/shows/000/001/396/logos/medium/a123c07a62.png.webp"],"thumb":["media.trakt.tv/images/shows/000/001/396/thumbs/medium/d47869a778.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/001/396/banners/medium/eb9edd8c25.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/001/396/fanarts/medium/54db09b7c9.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/001/396/posters/medium/af1b16f10c.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/001/396/cleararts/medium/6ed9624120.png.webp"]},"rating":8.397564888000488,"status":"ended","country":"us","network":"Showtime","runtime":60,"tagline":"A
+        serial killer with a heart..... just pray it''s not yours.","trailer":"https://youtube.com/watch?v=YQeUmSD1c3g","homepage":"https://www.paramountplus.com/shows/dexter","language":"en","overview":"Dexter
+        Morgan, a blood spatter pattern analyst for the Miami Metro Police also leads
+        a secret life as a serial killer, hunting down criminals who have slipped
+        through the cracks of justice.","languages":["en","es"],"subgenres":["murder","crime-investigation","homicide","killer","murder-investigation","neo-noir","police-procedural","psychological-thriller","serial-killer","psychological-drama","dark","violence","vigilante"],"updated_at":"2026-03-02T06:56:23.000Z","first_aired":"2006-10-02T01:00:00.000Z","certification":"TV-MA","comment_count":234,"aired_episodes":96,"original_title":"Dexter","available_translations":["ar","bg","bs","cs","da","de","el","en","es","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}'
+  recorded_at: 2026-03-02 12:41:26
+recorded_with: VCR-vcr/2.1.0

@@ -34,11 +34,10 @@ user_history <- function(
 	limit = 10L,
 	start_at = NULL,
 	end_at = NULL,
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	check_username(user)
 	type <- match.arg(type)
-	extended <- match.arg(extended)
 
 	start_at <- if (!is.null(start_at)) format(as.POSIXct(start_at), "%FT%T.000Z", tz = "UTC")
 	end_at <- if (!is.null(end_at)) format(as.POSIXct(end_at), "%FT%T.000Z", tz = "UTC")
@@ -51,6 +50,8 @@ user_history <- function(
 		))
 	}
 
+	extended <- validate_extended(extended)
+
 	# Construct URL, make API call
 	url <- build_trakt_url(
 		"users",
@@ -58,7 +59,7 @@ user_history <- function(
 		"history",
 		type,
 		item_id = item_id,
-		extended = extended,
+		extended = extended$query_value,
 		limit = limit,
 		start_at = start_at,
 		end_at = end_at
@@ -76,19 +77,19 @@ user_history <- function(
 			response |>
 				select(-"show", -"episode"),
 			# Unpacked show data
-			unpack_show(response$show),
+			unpack_show(response$show, keep_images = extended$keep_images),
 			# Unpacked episode data
 			response$episode |>
 				select(-"ids") |>
 				bind_cols(fix_ids(response$episode$ids)) |>
 				rename(episode = "number") |>
-				fix_tibble_response() |>
+				fix_tibble_response(keep_images = extended$keep_images) |>
 				rename_all(\(x) paste0("episode_", x))
 		)
 	}
 	if (type == "movies") {
-		response <- unpack_movie(response)
+		response <- unpack_movie(response, keep_images = extended$keep_images)
 	}
 
-	fix_tibble_response(response)
+	fix_tibble_response(response, keep_images = extended$keep_images)
 }

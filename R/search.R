@@ -50,7 +50,7 @@ search_query <- function(
 	query,
 	type = "show",
 	n_results = 1L,
-	extended = c("min", "full"),
+	extended = "min",
 	years = NULL,
 	genres = NULL,
 	languages = NULL,
@@ -83,7 +83,7 @@ search_query <- function(
 	ok_types <- c("movie", "show", "episode", "person", "list")
 	type <- check_types(type, several.ok = TRUE, possible_types = ok_types)
 
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
 	# Check filters
 	query <- check_filter_arg(query, "query")
@@ -103,7 +103,7 @@ search_query <- function(
 		type,
 		query = query,
 		years = years,
-		extended = extended,
+		extended = extended$query_value,
 		genres = genres,
 		languages = languages,
 		countries = countries,
@@ -120,7 +120,7 @@ search_query <- function(
 		return(response)
 	}
 
-	search_result_cleanup(response, type, n_results, extended)
+	search_result_cleanup(response, type, n_results, keep_images = extended$keep_images)
 }
 
 #' @rdname search_query
@@ -132,7 +132,7 @@ search_id <- function(
 	id_type = c("trakt", "imdb", "tmdb", "tvdb"),
 	type = "show",
 	n_results = 1L,
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	if (length(type) > 1) {
 		return(map_rbind(type, \(x) search_id(id, id_type, type = x, n_results, extended)))
@@ -141,10 +141,10 @@ search_id <- function(
 	id_type <- match.arg(id_type)
 	ok_types <- c("movie", "show", "episode", "person", "list")
 	type <- check_types(type, several.ok = TRUE, possible_types = ok_types)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
 	# Construct URL, make API call
-	url <- build_trakt_url("search", id_type, id, type = type, extended = extended)
+	url <- build_trakt_url("search", id_type, id, type = type, extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	# Check if response is empty (nothing found)
@@ -153,7 +153,7 @@ search_id <- function(
 		return(tibble())
 	}
 
-	search_result_cleanup(response, type, n_results, extended)
+	search_result_cleanup(response, type, n_results, keep_images = extended$keep_images)
 }
 
 #' Search helper function
@@ -161,12 +161,12 @@ search_id <- function(
 #' @importFrom utils head
 #' @importFrom rlang has_name
 #' @noRd
-search_result_cleanup <- function(response, type, n_results, extended) {
+search_result_cleanup <- function(response, type, n_results, keep_images = FALSE) {
 	# Just to be really safe it's always a numeric
 	response$score <- as.numeric(response$score)
 
 	if (type == "show") {
-		response$show <- unpack_show(response$show)
+		response$show <- unpack_show(response$show, keep_images = keep_images)
 	}
 
 	response <- cbind(response[names(response) != type], response[[type]])
@@ -185,5 +185,5 @@ search_result_cleanup <- function(response, type, n_results, extended) {
 	}
 
 	head(response, n_results) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = keep_images)
 }

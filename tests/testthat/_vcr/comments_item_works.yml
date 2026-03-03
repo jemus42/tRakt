@@ -1,0 +1,281 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/236397/item
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      last-modified: Sun, 07 Sep 2025 18:04:56 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 6a2a736b-7615-41f5-a7bb-a204a14ea8af
+      x-runtime: '0.025616'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c1debc0e6c-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"type":"movie","movie":{"title":"John Wick: Chapter 3 - Parabellum","year":2019,"ids":{"trakt":304278,"slug":"john-wick-chapter-3-parabellum-2019","imdb":"tt6146586","tmdb":458156}}}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/236397/item?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:03 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 19:23:03 GMT
+      last-modified: Sun, 07 Sep 2025 18:04:56 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 26281143-6afd-43a1-989f-3ffe9776f4f5
+      x-runtime: '0.028294'
+      x-xss-protection: '0'
+      cf-ray: 9d6006f0bc117754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"type":"movie","movie":{"title":"John Wick: Chapter 3 - Parabellum","year":2019,"ids":{"trakt":304278,"slug":"john-wick-chapter-3-parabellum-2019","imdb":"tt6146586","tmdb":458156},"tagline":"If
+        you want peace, prepare for war.","overview":"Super-assassin John Wick returns
+        with a $14 million price tag on his head and an army of bounty-hunting killers
+        on his trail. After killing a member of the shadowy international assassin’s
+        guild, the High Table, John Wick is excommunicado, but the world’s most ruthless
+        hit men and women await his every turn.","released":"2019-05-17","runtime":131,"country":"us","status":"released","rating":7.66512,"votes":32573,"comment_count":158,"trailer":"https://youtube.com/watch?v=pU8-7BX9uxs","homepage":"http://johnwick.movie/film/john-wick-chapter-3-parabellum","updated_at":"2026-03-01T16:50:52.000Z","language":"en","languages":["ar","zh","en","id","it","ja","la","ru"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","mk","ms","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["crime","thriller","action"],"subgenres":["martial-arts","organized-crime","secret-organization"],"certification":"R","original_title":"John
+        Wick: Chapter 3 - Parabellum","after_credits":false,"during_credits":false}}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/120768/item
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      last-modified: Sat, 24 May 2025 23:30:18 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 376f3722-82fe-4591-bfc0-c3f3a6bb939f
+      x-runtime: '0.024992'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c3b8090e6c-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"type":"show","show":{"title":"13 Reasons Why","year":2017,"ids":{"trakt":116129,"slug":"13-reasons-why","tvdb":323168,"imdb":"tt1837492","tmdb":66788,"tvrage":null}}}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/120768/item?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:03 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 19:23:03 GMT
+      last-modified: Sat, 24 May 2025 23:30:18 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 737e2c2e-fd10-41cb-b1ba-b0119f3035ee
+      x-runtime: '0.030089'
+      x-xss-protection: '0'
+      cf-ray: 9d6006f31e587754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"type":"show","show":{"title":"13 Reasons Why","year":2017,"ids":{"trakt":116129,"slug":"13-reasons-why","tvdb":323168,"imdb":"tt1837492","tmdb":66788,"tvrage":null},"tagline":"If
+        you''re listening, you''re too late.","overview":"After a teenage girl''s
+        perplexing suicide, a classmate receives a series of tapes that unravel the
+        mystery of her tragic choice.","first_aired":"2017-03-31T07:00:00.000Z","airs":{"day":"Friday","time":"03:00","timezone":"America/New_York"},"runtime":60,"certification":"TV-MA","country":"us","status":"ended","rating":6.98279,"votes":16562,"comment_count":156,"trailer":"https://youtube.com/watch?v=QkT-HIMSrRk","homepage":"http://www.netflix.com/title/80117470","network":"Netflix","updated_at":"2026-03-02T10:59:18.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nl","no","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","vi","zh"],"genres":["drama","mystery"],"subgenres":["high-school","rape","suicide","bullying","melodrama","mental-illness","dark"],"aired_episodes":49,"original_title":"13
+        Reasons Why"}}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/140265/item
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      last-modified: Sun, 07 Sep 2025 18:05:31 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 832b92d3-fecd-482f-aa52-b2e918cd0bd8
+      x-runtime: '0.038133'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c4f8e60e6c-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"type":"season","season":{"number":3,"ids":{"trakt":138350,"tvdb":696307,"tmdb":83866,"tvrage":null}},"show":{"title":"Twin
+        Peaks","year":1990,"ids":{"trakt":1907,"slug":"twin-peaks","tvdb":70533,"imdb":"tt0098936","tmdb":1920,"tvrage":null}}}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/140265/item?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:04 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 19:23:04 GMT
+      last-modified: Sun, 07 Sep 2025 18:05:31 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 691de190-6c08-4fa3-9758-cf7a764a48a2
+      x-runtime: '0.051881'
+      x-xss-protection: '0'
+      cf-ray: 9d6006f5a8b27754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"type":"season","season":{"number":3,"ids":{"trakt":138350,"tvdb":696307,"tmdb":83866,"tvrage":null},"rating":8.17381,"votes":863,"episode_count":18,"aired_episodes":18,"title":"The
+        Return","overview":"Twenty-five years later, the story continues...","first_aired":"2017-05-22T00:00:00.000Z","updated_at":"2026-03-02T07:34:16.000Z","network":"Showtime","original_title":"The
+        Return"},"show":{"title":"Twin Peaks","year":1990,"ids":{"trakt":1907,"slug":"twin-peaks","tvdb":70533,"imdb":"tt0098936","tmdb":1920,"tvrage":null},"tagline":"It
+        is happening again.","overview":"The body of Laura Palmer is washed up on
+        a beach near the small Washington state town of Twin Peaks. FBI Special Agent
+        Dale Cooper is called in to investigate her strange demise only to uncover
+        a web of mystery that ultimately leads him deep into the heart of the surrounding
+        woodland and his very own soul.","first_aired":"1990-04-09T00:00:00.000Z","airs":{"day":"Sunday","time":"20:00","timezone":"America/New_York"},"runtime":55,"certification":"TV-MA","country":"us","status":"ended","rating":8.483,"votes":8998,"comment_count":54,"trailer":null,"homepage":"http://www.sho.com/twin-peaks","network":"Showtime","updated_at":"2026-03-02T08:50:54.000Z","language":"en","languages":["en"],"available_translations":["bg","bs","cs","da","de","el","en","es","fi","fr","he","hr","hu","is","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","zh"],"genres":["drama","mystery"],"subgenres":["fbi","forest","surrealism","school","small-town","murder-mystery","serial-killer","paranormal-investigation","soap-opera","1990s","mysterious","possession","psychological-horror","secret","witty"],"aired_episodes":48,"original_title":"Twin
+        Peaks"}}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/136632/item
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      last-modified: Thu, 27 Nov 2025 15:48:25 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 46ed4fb6-5b29-4e4c-aa24-09d7e936e581
+      x-runtime: '0.025727'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c66a0e0e6c-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"type":"episode","episode":{"season":7,"number":4,"title":"The Spoils
+        of War","ids":{"trakt":2610969,"tvdb":6235145,"imdb":"tt5775846","tmdb":1340524,"tvrage":null}},"show":{"title":"Game
+        of Thrones","year":2011,"ids":{"trakt":1390,"slug":"game-of-thrones","tvdb":121361,"imdb":"tt0944947","tmdb":1399,"tvrage":null}}}'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/comments/136632/item?extended=full
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:04 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 19:23:04 GMT
+      last-modified: Thu, 27 Nov 2025 15:48:25 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 10ab2ff5-98a1-4913-92d6-689a4fc9c8f7
+      x-runtime: '0.030143'
+      x-xss-protection: '0'
+      cf-ray: 9d6006f73a167754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"type":"episode","episode":{"season":7,"number":4,"title":"The Spoils
+        of War","ids":{"trakt":2610969,"tvdb":6235145,"imdb":"tt5775846","tmdb":1340524,"tvrage":null},"number_abs":64,"overview":"The
+        Lannisters pay their debts. Daenerys weighs her options. Arya comes home.","rating":8.74857,"votes":18228,"comment_count":84,"first_aired":"2017-08-07T01:00:00.000Z","updated_at":"2026-03-02T11:17:17.000Z","available_translations":[],"runtime":50,"episode_type":"standard","original_title":"The
+        Spoils of War","after_credits":false,"during_credits":false},"show":{"title":"Game
+        of Thrones","year":2011,"ids":{"trakt":1390,"slug":"game-of-thrones","tvdb":121361,"imdb":"tt0944947","tmdb":1399,"tvrage":null},"tagline":"Winter
+        is coming.","overview":"Seven noble families fight for control of the mythical
+        land of Westeros. Friction between the houses leads to full-scale war. All
+        while a very ancient evil awakens in the farthest north. Amidst the war, a
+        neglected military order of misfits, the Night''s Watch, is all that stands
+        between the realms of men and icy horrors beyond.","first_aired":"2011-04-18T01:00:00.000Z","airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"runtime":55,"certification":"TV-MA","country":"us","status":"ended","rating":8.8913,"votes":145238,"comment_count":450,"trailer":"https://youtube.com/watch?v=KPLWWIOCOOQ","homepage":"http://www.hbo.com/game-of-thrones","network":"HBO","updated_at":"2026-03-02T06:38:27.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","bs","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hr","hu","id","is","it","ja","ka","ko","lb","lt","lv","ml","nl","no","pl","pt","ro","ru","sk","sl","so","sr","sv","ta","th","tr","tw","uk","uz","vi","zh"],"genres":["fantasy","drama","action","adventure"],"subgenres":["fantasy-world","dragon","kingdom","king"],"aired_episodes":73,"original_title":"Game
+        of Thrones"}}'
+  recorded_at: 2026-03-02 12:41:26
+recorded_with: VCR-vcr/2.1.0

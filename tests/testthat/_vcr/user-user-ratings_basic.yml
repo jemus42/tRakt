@@ -1,0 +1,229 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/ratings/shows?limit=3
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"4fbe6231e7602e0e6ed9b09204f24c99"
+      last-modified: Thu, 22 Jun 2023 22:42:55 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '98'
+      x-pagination-limit: '3'
+      x-pagination-page: '1'
+      x-pagination-page-count: '33'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 802b60b2-ca50-4ff6-9c50-dbe14de416d2
+      x-runtime: '0.035954'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d61bf7c118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rated_at":"2023-06-22T22:42:55.000Z","rating":2,"type":"show","show":{"title":"The
+        Mist","year":2017,"ids":{"trakt":118191,"slug":"the-mist","tvdb":326887,"imdb":"tt5639976","tmdb":68315,"tvrage":null}}},{"rated_at":"2023-06-22T21:56:15.000Z","rating":5,"type":"show","show":{"title":"The
+        Walking Dead","year":2010,"ids":{"trakt":1393,"slug":"the-walking-dead","tvdb":153021,"imdb":"tt1520211","tmdb":1402,"tvrage":null}}},{"rated_at":"2021-08-15T04:42:32.000Z","rating":3,"type":"show","show":{"title":"Mr.
+        Corman","year":2021,"ids":{"trakt":170595,"slug":"mr-corman","tvdb":393156,"imdb":"tt10971064","tmdb":124897,"tvrage":null}}}]'
+  recorded_at: 2026-03-02 12:41:29
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/ratings/seasons?limit=2
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: BYPASS
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"c280e662c7752b4efc002e59ac8264bb"
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '0'
+      x-pagination-limit: '2'
+      x-pagination-page: '1'
+      x-pagination-page-count: '0'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: e93f1c43-0911-491b-8fb3-6a0bb7e61edc
+      x-runtime: '0.029505'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d74ebfc118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2026-03-02 12:41:29
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/ratings/episodes?limit=2
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"a5f1d6c89f7d1fa649de23cde512f7cd"
+      last-modified: Thu, 22 Feb 2024 01:50:56 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '6'
+      x-pagination-limit: '2'
+      x-pagination-page: '1'
+      x-pagination-page-count: '3'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 5365bed6-e3dd-401c-ab04-504e92f1239d
+      x-runtime: '0.038231'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d868edc118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rated_at":"2024-02-22T01:50:56.000Z","rating":9,"type":"episode","episode":{"season":5,"number":3,"title":"Sand
+        Job","ids":{"trakt":11412861,"tvdb":10280014,"imdb":"tt27952443","tmdb":5118691,"tvrage":null}},"show":{"title":"The
+        Grand Tour","year":2016,"ids":{"trakt":108999,"slug":"the-grand-tour","tvdb":314087,"imdb":"tt5712554","tmdb":67557,"tvrage":null}}},{"rated_at":"2015-01-09T19:30:13.000Z","rating":9,"type":"episode","episode":{"season":2,"number":1,"title":"Judgment","ids":{"trakt":194766,"tvdb":31121,"imdb":"tt0512867","tmdb":182951,"tvrage":null}},"show":{"title":"Angel","year":1999,"ids":{"trakt":2411,"slug":"angel","tvdb":71035,"imdb":"tt0162065","tmdb":2426,"tvrage":null}}}]'
+  recorded_at: 2026-03-02 12:41:29
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/ratings/movies?limit=3
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"001deaeedc24b6221279237aa2ccdc79"
+      last-modified: Sat, 27 Apr 2024 05:06:36 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '157'
+      x-pagination-limit: '3'
+      x-pagination-page: '1'
+      x-pagination-page-count: '53'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 770dbea5-81d3-41ee-a542-bd0ce9265aa2
+      x-runtime: '0.044793'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d98bd3c118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rated_at":"2024-04-27T05:06:35.000Z","rating":8,"type":"movie","movie":{"title":"The
+        Ministry of Ungentlemanly Warfare","year":2024,"ids":{"trakt":634646,"slug":"the-ministry-of-ungentlemanly-warfare-2024","imdb":"tt5177120","tmdb":799583}}},{"rated_at":"2024-02-24T05:55:52.000Z","rating":5,"type":"movie","movie":{"title":"Madame
+        Web","year":2024,"ids":{"trakt":474113,"slug":"madame-web-2024","imdb":"tt11057302","tmdb":634492}}},{"rated_at":"2023-01-01T04:12:31.000Z","rating":8,"type":"movie","movie":{"title":"Violent
+        Night","year":2022,"ids":{"trakt":721339,"slug":"violent-night-2022","imdb":"tt12003946","tmdb":899112}}}]'
+  recorded_at: 2026-03-02 12:41:29
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/ratings/movies?limit=2
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:30 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"305d8ac4fbcbd0488c0502f5f623a82f"
+      last-modified: Sat, 27 Apr 2024 05:06:36 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '157'
+      x-pagination-limit: '2'
+      x-pagination-page: '1'
+      x-pagination-page-count: '79'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 539d8815-43df-49a6-be64-8b505384bc20
+      x-runtime: '0.034911'
+      x-xss-protection: '0'
+      cf-ray: 9d6079dabeeec118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rated_at":"2024-04-27T05:06:35.000Z","rating":8,"type":"movie","movie":{"title":"The
+        Ministry of Ungentlemanly Warfare","year":2024,"ids":{"trakt":634646,"slug":"the-ministry-of-ungentlemanly-warfare-2024","imdb":"tt5177120","tmdb":799583}}},{"rated_at":"2024-02-24T05:55:52.000Z","rating":5,"type":"movie","movie":{"title":"Madame
+        Web","year":2024,"ids":{"trakt":474113,"slug":"madame-web-2024","imdb":"tt11057302","tmdb":634492}}}]'
+  recorded_at: 2026-03-02 12:41:30
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/ratings/movies?limit=2
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:30 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"19480548f6a25bd2ca26de9f7a43452a"
+      last-modified: Wed, 25 Feb 2026 22:27:39 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '665'
+      x-pagination-limit: '2'
+      x-pagination-page: '1'
+      x-pagination-page-count: '333'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: bbe663ee-e908-4982-b47a-001fc47e3190
+      x-runtime: '0.045573'
+      x-xss-protection: '0'
+      cf-ray: 9d6079dbea1fc118-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"rated_at":"2026-02-25T22:27:39.000Z","rating":9,"type":"movie","movie":{"title":"Marty
+        Supreme","year":2025,"ids":{"trakt":1076665,"slug":"marty-supreme-2025","imdb":"tt32916440","tmdb":1317288}}},{"rated_at":"2026-02-14T22:36:37.000Z","rating":6,"type":"movie","movie":{"title":"Gunpowder
+        Milkshake","year":2021,"ids":{"trakt":427910,"slug":"gunpowder-milkshake-2021","imdb":"tt8368408","tmdb":574060}}}]'
+  recorded_at: 2026-03-02 12:41:30
+recorded_with: VCR-vcr/2.1.0

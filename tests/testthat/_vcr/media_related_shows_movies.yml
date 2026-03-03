@@ -1,0 +1,663 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"de583f66a70affe8713a62c5c65c677f"
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '20'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '2'
+      x-permitted-cross-domain-policies: none
+      x-request-id: 93e27879-20f9-400a-a476-db69461c2934
+      x-runtime: '0.026673'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c4cdcf6650-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"de583f66a70affe8713a62c5c65c677f"
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '20'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '2'
+      x-permitted-cross-domain-policies: none
+      x-request-id: 93e27879-20f9-400a-a476-db69461c2934
+      x-runtime: '0.026673'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c4cdcf6650-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?extended=full&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:19 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"a0045355d9feac6e665c9385dd2224ef"
+      expires: Mon, 02 Mar 2026 19:23:19 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '20'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '2'
+      x-permitted-cross-domain-policies: none
+      x-request-id: 6696f5e4-409d-4d4d-bf38-ade96536ac84
+      x-runtime: '0.070415'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d600757ae617754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null},"tagline":"Just
+        a product of society that''s lost its good manners.","overview":"Set in Springfield,
+        the average American town, the show focuses on the antics and everyday adventures
+        of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual
+        cast of thousands. Since the beginning, the series has been a pop culture
+        icon, attracting hundreds of celebrities to guest star. The show has also
+        made name for itself in its fearless satirical take on politics, media and
+        American life in general.","first_aired":"1989-12-18T01:00:00.000Z","airs":{"day":"Sunday","time":"20:00","timezone":"America/New_York"},"runtime":20,"certification":"TV-14","country":"us","status":"returning
+        series","rating":8.23545,"votes":24506,"comment_count":79,"trailer":"https://youtube.com/watch?v=_jgYEYERYFQ","homepage":"http://www.thesimpsons.com/","network":"FOX","updated_at":"2026-03-02T08:03:16.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lb","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","ta","th","tr","uk","uz","vi","zh"],"genres":["animation","comedy","family"],"subgenres":["cartoon","adult-animation","adult-humor","parody","satire","sitcom","kids","school","dysfunctional-family"],"aired_episodes":801,"original_title":"The
+        Simpsons"},{"title":"Rick and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null},"tagline":"Science
+        makes sense, family doesn''t.","overview":"Follows a sociopathic genius scientist
+        who drags his inherently timid grandson on adventures across the universe.","first_aired":"2013-12-03T04:00:00.000Z","airs":{"day":"Sunday","time":"23:00","timezone":"America/New_York"},"runtime":20,"certification":"TV-14","country":"us","status":"returning
+        series","rating":8.67003,"votes":36937,"comment_count":91,"trailer":"https://youtube.com/watch?v=WNhH00OIPP0","homepage":"http://www.adultswim.com/videos/rick-and-morty","network":"Adult
+        Swim","updated_at":"2026-03-02T07:48:10.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["animation","comedy","fantasy","science-fiction","action","adventure"],"subgenres":["time-travel","adult-animation","dysfunctional-family","scientist","alien","mad-scientist"],"aired_episodes":81,"original_title":"Rick
+        and Morty"},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null},"tagline":"Her
+        throne is calling.","overview":"Set in a ruined medieval city called Dreamland,
+        Disenchantment follows the grubby adventures of a hard-drinking princess,
+        her feisty elf companion and her personal demon.","first_aired":"2018-08-17T07:00:00.000Z","airs":{"day":"Wednesday","time":"03:00","timezone":"America/New_York"},"runtime":27,"certification":"TV-MA","country":"us","status":"ended","rating":7.19439,"votes":6986,"comment_count":51,"trailer":null,"homepage":"http://www.netflix.com/title/80095697","network":"Netflix","updated_at":"2026-03-01T09:50:48.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fi","fr","he","hr","hu","it","ja","ko","lt","lv","nl","no","pl","pt","ru","sk","sr","sv","th","tr","uk","vi","zh"],"genres":["animation","comedy","action","adventure","fantasy","science-fiction"],"subgenres":["fantasy-world","fairy-tale","princess","absurd","adult-animation","kingdom","demon","medieval","elves","female-protagonist"],"aired_episodes":50,"original_title":"Disenchantment"},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null},"tagline":"","overview":"An
+        astronaut named Gary and his planet-destroying sidekick Mooncake embark on
+        serialized journeys through space in order to unlock the mystery of “Final
+        Space,” the last point in the universe, if it actually does exist.","first_aired":"2018-02-26T05:30:00.000Z","airs":{"day":"Monday","time":"00:30","timezone":"America/New_York"},"runtime":22,"certification":"TV-14","country":"us","status":"canceled","rating":8.00416,"votes":3609,"comment_count":39,"trailer":"https://youtube.com/watch?v=KTXIIOzyyE8","homepage":"http://www.adultswim.com/videos/final-space","network":"Adult
+        Swim","updated_at":"2026-03-01T09:51:14.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fi","fr","he","hi","hu","id","it","ja","ko","lt","nb","nl","nn","no","pl","pt","ro","ru","sk","sv","th","tr","uk","vi","zh"],"genres":["animation","adventure","action","fantasy","science-fiction","comedy"],"subgenres":["alien","astronaut"],"aired_episodes":36,"original_title":"Final
+        Space"},{"title":"South Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null},"tagline":"Four
+        boys. One f**ked-up town.","overview":"Follow the misadventures of four irreverent
+        grade-schoolers in the quiet, dysfunctional town of South Park, Colorado.","first_aired":"1997-08-14T02:00:00.000Z","airs":{"day":"Wednesday","time":"22:00","timezone":"America/New_York"},"runtime":25,"certification":"TV-MA","country":"us","status":"returning
+        series","rating":8.42562,"votes":22701,"comment_count":50,"trailer":null,"homepage":"http://southpark.cc.com/","network":"Comedy
+        Central","updated_at":"2026-03-02T09:02:19.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nb","nl","nn","no","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["animation","comedy"],"subgenres":["absurd","adult-animation","adult-humor","hilarious","parody","satire","sitcom","best-friend"],"aired_episodes":331,"original_title":"South
+        Park"},{"title":"Family Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null},"tagline":"Parental
+        Discretion Advised, that''s how you know it''s good.","overview":"Sick, twisted,
+        politically incorrect and Freakin'' Sweet animated series featuring the adventures
+        of the dysfunctional Griffin family. Bumbling Peter and long-suffering Lois
+        have three kids. Stewie (a brilliant but sadistic baby bent on killing his
+        mother and taking over the world), Meg (the oldest, and is the most unpopular
+        girl in town) and Chris (the middle kid, he''s not very bright but has a passion
+        for movies). The final member of the family is Brian - a talking dog and much
+        more than a pet, he keeps Stewie in check whilst sipping Martinis and sorting
+        through his own life issues.","first_aired":"1999-02-01T01:30:00.000Z","airs":{"day":"Sunday","time":"20:30","timezone":"America/New_York"},"runtime":22,"certification":"TV-14","country":"us","status":"returning
+        series","rating":7.72205,"votes":22004,"comment_count":62,"trailer":"https://youtube.com/watch?v=J32iwo65RMc","homepage":"http://www.fox.com/detail/series/SER000854XOPZ/family-guy","network":"FOX","updated_at":"2026-03-02T06:41:30.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","zh"],"genres":["animation","comedy"],"subgenres":["adult-animation","adult-humor","parody","satire","dysfunctional-family"],"aired_episodes":446,"original_title":"Family
+        Guy"},{"title":"BoJack Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null},"tagline":"Don''t
+        look back. You''re not going that way.","overview":"Meet the most beloved
+        sitcom horse of the ''90s , 20 years later. He''s a curmudgeon with a heart
+        of...not quite gold...but something like gold. Copper?","first_aired":"2014-08-22T07:00:00.000Z","airs":{"day":"Friday","time":"03:00","timezone":"America/New_York"},"runtime":25,"certification":"TV-MA","country":"us","status":"ended","rating":8.60864,"votes":13177,"comment_count":74,"trailer":"https://youtube.com/watch?v=i1eJMig5Ik4","homepage":"http://www.netflix.com/title/70300800","network":"Netflix","updated_at":"2026-03-02T07:38:38.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","et","fa","fi","fr","he","hu","id","it","ja","ka","ko","lt","nl","no","pl","pt","ro","ru","sk","sv","th","tr","uk","vi","zh"],"genres":["animation","comedy","drama"],"subgenres":["anthropomorphism","adult-animation","adult-humor","satire","sitcom","horse","show-business","tragic"],"aired_episodes":76,"original_title":"BoJack
+        Horseman"},{"title":"Solar Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null},"tagline":"Buckle
+        up for another crazy ride.","overview":"A family of aliens from a much better
+        world must take refuge in middle America after the destruction of their planet.
+        Their mission: protect the Pupa, a living super computer that will one day
+        evolve into its true form, consume them and terraform the Earth.","first_aired":"2020-05-08T07:00:00.000Z","airs":{"day":"Monday","time":"03:00","timezone":"America/New_York"},"runtime":23,"certification":"TV-MA","country":"us","status":"ended","rating":7.54853,"votes":2988,"comment_count":36,"trailer":"https://youtube.com/watch?v=sMDb4ewturw","homepage":"http://www.hulu.com/series/solar-opposites-f089664b-1a87-433b-86a5-24e7da5a246a","network":"Hulu","updated_at":"2026-03-01T14:28:39.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fi","fr","he","hu","it","ja","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sv","th","tr","uk","zh"],"genres":["animation","comedy","fantasy","science-fiction"],"subgenres":["adult-animation","adult-humor","alien"],"aired_episodes":59,"original_title":"Solar
+        Opposites"},{"title":"Gravity Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null},"tagline":"Just
+        west of weird.","overview":"Twin brother and sister Dipper and Mabel Pines
+        are in for an unexpected adventure when they spend the summer helping their
+        great uncle Stan run a tourist trap in the mysterious town of Gravity Falls,
+        Oregon.","first_aired":"2012-06-16T01:30:00.000Z","airs":{"day":"Friday","time":"21:30","timezone":"America/New_York"},"runtime":22,"certification":"TV-Y7","country":"us","status":"ended","rating":8.83866,"votes":10072,"comment_count":35,"trailer":"https://youtube.com/watch?v=VviwUvs3hd0","homepage":"http://disneyxd.disney.com/gravity-falls","network":"Disney
+        Channel","updated_at":"2026-03-02T07:48:59.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","cs","da","de","el","en","es","fa","fi","fr","he","hu","it","ja","ka","ko","lt","nl","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","uz","vi","zh"],"genres":["animation","comedy","mystery","fantasy","science-fiction","action","adventure","family"],"subgenres":["magic","time-travel","coming-of-age","lighthearted","small-town","dreams","summer","alien"],"aired_episodes":40,"original_title":"Gravity
+        Falls"},{"title":"Adventure Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null},"tagline":"They’re
+        not righteous, they’re wrongteous!","overview":"Unlikely heroes Finn and Jake
+        are buddies who traverse the mystical Land of Ooo. The best of friends, our
+        heroes always find themselves in the middle of escapades. Finn and Jake depend
+        on each other through thick and thin.","first_aired":"2010-04-05T07:00:00.000Z","airs":{"day":"Thursday","time":"03:00","timezone":"America/New_York"},"runtime":11,"certification":"TV-PG","country":"us","status":"ended","rating":8.70387,"votes":8682,"comment_count":38,"trailer":"https://youtube.com/watch?v=dQX4tS9JSj8","homepage":"http://www.cartoonnetwork.com/video/adventuretime/","network":"Cartoon
+        Network","updated_at":"2026-03-02T06:57:09.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","de","el","en","es","fi","fr","he","hu","it","ja","ka","ko","lt","nl","no","pl","pt","ro","ru","sk","sv","th","tr","uk","uz","vi","zh"],"genres":["animation","comedy","fantasy","science-fiction"],"subgenres":["cartoon","magic","dog","post-apocalyptic-future","princess","wizard","absurd","talking-animal","talking-dog","vampire"],"aired_episodes":279,"original_title":"Adventure
+        Time"}]'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"de583f66a70affe8713a62c5c65c677f"
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '20'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '2'
+      x-permitted-cross-domain-policies: none
+      x-request-id: 93e27879-20f9-400a-a476-db69461c2934
+      x-runtime: '0.026673'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c4cdcf6650-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"de583f66a70affe8713a62c5c65c677f"
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '20'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '2'
+      x-permitted-cross-domain-policies: none
+      x-request-id: 93e27879-20f9-400a-a476-db69461c2934
+      x-runtime: '0.026673'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c4cdcf6650-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?limit=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"de583f66a70affe8713a62c5c65c677f"
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '20'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '2'
+      x-permitted-cross-domain-policies: none
+      x-request-id: f1b04147-515c-4588-95b0-ec38dd36aded
+      x-runtime: '0.028389'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c6af366650-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/related?limit=min
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"de583f66a70affe8713a62c5c65c677f"
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '20'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '2'
+      x-permitted-cross-domain-policies: none
+      x-request-id: f1b04147-515c-4588-95b0-ec38dd36aded
+      x-runtime: '0.028389'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c6af366650-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"title":"The Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}},{"title":"Rick
+        and Morty","year":2013,"ids":{"trakt":69829,"slug":"rick-and-morty","tvdb":275274,"imdb":"tt2861424","tmdb":60625,"tvrage":null}},{"title":"Disenchantment","year":2018,"ids":{"trakt":126558,"slug":"disenchantment","tvdb":340234,"imdb":"tt5363918","tmdb":73021,"tvrage":null}},{"title":"Final
+        Space","year":2018,"ids":{"trakt":122298,"slug":"final-space","tvdb":332353,"imdb":"tt6317068","tmdb":74387,"tvrage":null}},{"title":"South
+        Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}},{"title":"BoJack
+        Horseman","year":2014,"ids":{"trakt":60730,"slug":"bojack-horseman","tvdb":282254,"imdb":"tt3398228","tmdb":61222,"tvrage":null}},{"title":"Solar
+        Opposites","year":2020,"ids":{"trakt":157503,"slug":"solar-opposites","tvdb":375892,"imdb":"tt8910922","tmdb":97645,"tvrage":null}},{"title":"Gravity
+        Falls","year":2012,"ids":{"trakt":39892,"slug":"gravity-falls","tvdb":259972,"imdb":"tt1865718","tmdb":40075,"tvrage":null}},{"title":"Adventure
+        Time","year":2010,"ids":{"trakt":15195,"slug":"adventure-time","tvdb":152831,"imdb":"tt1305826","tmdb":15260,"tvrage":null}}]'
+  recorded_at: 2026-03-02 12:41:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/inception-2010/related?limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:27 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=10800, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: movie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '20'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '2'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6079c7e8166650-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"imdb":"tt0133093","plex":{"guid":"5d776827880197001ec90904","slug":"the-matrix"},"slug":"the-matrix-1999","tmdb":603,"trakt":481},"year":1999,"title":"The
+        Matrix","votes":74350,"colors":{"poster":["#9AAAB4","#141A2A"]},"genres":["action","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/000/481/logos/medium/f5e05ed291.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/481/thumbs/medium/f81f544f62.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/481/banners/medium/035f31fce0.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/481/fanarts/medium/c556867276.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/481/posters/medium/373310d2ee.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/481/cleararts/medium/a01dd6ff88.png.webp"]},"rating":8.732938766479492,"status":"released","country":"us","runtime":136,"tagline":"Believe
+        the unbelievable.","trailer":"https://youtube.com/watch?v=d0XTFAMmhrE","homepage":"https://www.warnerbros.com/matrix","language":"en","overview":"Set
+        in the 22nd century, The Matrix tells the story of a computer hacker who joins
+        a group of underground insurgents fighting the vast and powerful computers
+        who now rule the earth.","released":"1999-03-31","languages":["en"],"subgenres":["action-hero","dystopia","fight","kung-fu","martial-arts","artificial-intelligence-a-i","dreams","cyberpunk","virtual-reality","saving-the-world","self-sacrifice"],"updated_at":"2026-03-01T16:26:47.000Z","after_credits":false,"certification":"R","comment_count":153,"during_credits":false,"original_title":"The
+        Matrix","available_translations":["ar","bg","bs","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","gl","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","mk","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"]},{"ids":{"imdb":"tt0816692","plex":{"guid":"5d7769cefb0d55001f530acd","slug":"interstellar"},"slug":"interstellar-2014","tmdb":157336,"trakt":102156},"year":2014,"title":"Interstellar","votes":92914,"colors":{"poster":["#C1CCD1","#546069"]},"genres":["science-fiction","drama","adventure"],"images":{"logo":["media.trakt.tv/images/movies/000/102/156/logos/medium/0344cc280a.png.webp"],"thumb":["media.trakt.tv/images/movies/000/102/156/thumbs/medium/fb14dbece1.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/102/156/banners/medium/e0cf0afa2e.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/102/156/fanarts/medium/d36f9b7a07.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/102/156/posters/medium/7fcf530e15.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/102/156/cleararts/medium/389f401600.png.webp"]},"rating":8.652861595153809,"status":"released","country":"us","runtime":169,"tagline":"Mankind
+        was born on Earth. It was never meant to die here.","trailer":"https://youtube.com/watch?v=LY19rHKAaAg","homepage":"https://www.interstellarmovie.net/","language":"en","overview":"The
+        adventures of a group of explorers who make use of a newly discovered wormhole
+        to surpass the limitations on human space travel and conquer the vast distances
+        involved in an interstellar voyage.","released":"2014-11-05","languages":["en"],"subgenres":["dystopia","future","robot","rescue","family-relationships","father-daughter-relationship","single-father","artificial-intelligence-a-i","scientist","astronaut","space","space-travel","spacecraft"],"updated_at":"2026-03-02T08:41:29.000Z","after_credits":false,"certification":"PG-13","comment_count":322,"during_credits":false,"original_title":"Interstellar","available_translations":["ar","az","be","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","tw","uk","uz","vi","zh"]},{"ids":{"imdb":"tt0209144","plex":{"guid":"5d776d1796b655001fe3f324","slug":"memento-2000"},"slug":"memento-2000","tmdb":77,"trakt":47},"year":2000,"title":"Memento","votes":32864,"colors":{"poster":["#DAC4B9","#251A1B"]},"genres":["mystery","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/000/047/logos/medium/75c8f2628e.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/047/thumbs/medium/812b12cc42.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/047/banners/medium/8b4b6680b2.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/047/fanarts/medium/2b4d79c785.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/047/posters/medium/45d6e27ad3.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/047/cleararts/medium/15f350f169.png.webp"]},"rating":8.324762344360352,"status":"released","country":"us","runtime":113,"tagline":"Some
+        memories are best forgotten.","trailer":"https://youtube.com/watch?v=Rq9eM4ZXRgs","homepage":null,"language":"en","overview":"Leonard
+        Shelby is tracking down the man who raped and murdered his wife. The difficulty
+        of locating his wife''s killer, however, is compounded by the fact that he
+        suffers from a rare, untreatable form of short-term memory loss. Although
+        he can recall details of life before his accident, Leonard cannot remember
+        what happened fifteen minutes ago, where he''s going, or why.","released":"2001-03-16","languages":["en"],"subgenres":["murder","revenge","drug-dealer","neo-noir","psychological-thriller","whodunit","flashback","manipulation","paranoid","amnesia","memory"],"updated_at":"2026-03-02T08:43:04.000Z","after_credits":false,"certification":"R","comment_count":91,"during_credits":false,"original_title":"Memento","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt0945513","plex":{"guid":"5d776881e6d55c00204146e3","slug":"source-code"},"slug":"source-code-2011","tmdb":45612,"trakt":31151},"year":2011,"title":"Source
+        Code","votes":20005,"colors":{"poster":["#8DA67F","#1C3334"]},"genres":["mystery","science-fiction","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/031/151/logos/medium/5bb9b6ee02.png.webp"],"thumb":["media.trakt.tv/images/movies/000/031/151/thumbs/medium/196d8bd909.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/031/151/banners/medium/7a15218a9a.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/031/151/fanarts/medium/60e1f41a2e.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/031/151/posters/medium/98034ecf52.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/031/151/cleararts/medium/7e8c8f96f8.png.webp"]},"rating":7.5137715339660645,"status":"released","country":"ca","runtime":93,"tagline":"Make
+        every second count.","trailer":"https://youtube.com/watch?v=0dafmG_c8kc","homepage":"https://www.enterthesourcecode.com","language":"en","overview":"When
+        decorated soldier Captain Colter Stevens wakes up in the body of an unknown
+        man, he discovers he''s part of a mission to find the bomber of a Chicago
+        commuter train.","released":"2011-04-01","languages":["en"],"subgenres":["investigation","soldier","surrealism","suspicion","virtual-reality","identity"],"updated_at":"2026-03-01T16:45:08.000Z","after_credits":false,"certification":"PG-13","comment_count":76,"during_credits":false,"original_title":"Source
+        Code","available_translations":["ar","bg","ca","cs","da","de","el","en","es","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt1130884","plex":{"guid":"5d7768365af944001f1fa488","slug":"shutter-island"},"slug":"shutter-island-2010","tmdb":11324,"trakt":6422},"year":2010,"title":"Shutter
+        Island","votes":42227,"colors":{"poster":["#B38D8B","#14161D"]},"genres":["drama","mystery","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/006/422/logos/medium/308f84e130.png.webp"],"thumb":["media.trakt.tv/images/movies/000/006/422/thumbs/medium/47649a70ef.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/006/422/banners/medium/98613f9eac.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/006/422/fanarts/medium/8c04827883.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/006/422/posters/medium/25438cb7fa.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/006/422/cleararts/medium/13b2f68555.png.webp"]},"rating":8.194023132324219,"status":"released","country":"us","runtime":138,"tagline":"Someone
+        is missing.","trailer":"https://youtube.com/watch?v=qdPw9x9h5CY","homepage":"https://www.shutterisland.com/","language":"en","overview":"World
+        War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance
+        of a patient from a hospital for the criminally insane, but his efforts are
+        compromised by troubling visions and a mysterious doctor.","released":"2010-02-19","languages":["en","de"],"subgenres":["investigation","island","whimsical","neo-noir","psychological-thriller","whodunit","1950s","u-s-marshal"],"updated_at":"2026-03-02T08:44:34.000Z","after_credits":false,"certification":"R","comment_count":80,"during_credits":false,"original_title":"Shutter
+        Island","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt0181689","plex":{"guid":"5d776824f54112001f5bbddc","slug":"minority-report"},"slug":"minority-report-2002","tmdb":180,"trakt":145},"year":2002,"title":"Minority
+        Report","votes":22326,"colors":{"poster":["#98AAAF","#212023"]},"genres":["action","science-fiction","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/000/145/logos/medium/19d168abb9.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/145/thumbs/medium/60675caf98.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/145/banners/medium/fc4fecc634.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/145/fanarts/medium/e6078658aa.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/145/posters/medium/6c2838edd5.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/145/cleararts/medium/52067331e6.png.webp"]},"rating":7.68856954574585,"status":"released","country":"us","runtime":145,"tagline":"Everybody
+        runs.","trailer":"https://youtube.com/watch?v=3JNsNp2DVSE","homepage":null,"language":"en","overview":"John
+        Anderton is a top ''Precrime'' cop in the late-21st century, when technology
+        can predict crimes before they''re committed. But Anderton becomes the quarry
+        when another investigator targets him for a murder charge.","released":"2002-06-21","languages":["en","sv"],"subgenres":["conspiracy","drugs","intense","murder","suspenseful","paranoid","cyberpunk"],"updated_at":"2026-03-01T16:38:34.000Z","after_credits":false,"certification":"PG-13","comment_count":48,"during_credits":false,"original_title":"Minority
+        Report","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt0482571","plex":{"guid":"5d776828999c64001ec2ce66","slug":"the-prestige"},"slug":"the-prestige-2006","tmdb":1124,"trakt":851},"year":2006,"title":"The
+        Prestige","votes":36955,"colors":{"poster":["#B2B0AD","#0B0A09"]},"genres":["drama","mystery","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/000/851/logos/medium/3973126fa5.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/851/thumbs/medium/e7753066f8.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/851/banners/medium/d0eaeee728.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/851/fanarts/medium/f60e9ffe00.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/851/posters/medium/8bee0f74c3.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/851/cleararts/medium/b67da3d82e.png.webp"]},"rating":8.37913703918457,"status":"released","country":"us","runtime":130,"tagline":"Are
+        You Watching Closely?","trailer":"https://youtube.com/watch?v=ObGVA1WOqyE","homepage":"https://wwws.warnerbros.de/theprestige/","language":"en","overview":"A
+        mysterious story of two magicians whose intense rivalry leads them on a life-long
+        battle for supremacy -- full of obsession, deceit and jealousy with dangerous
+        and deadly consequences.","released":"2006-10-17","languages":["en"],"subgenres":["19th-century","magic","suicide","competition","rivalry","secret"],"updated_at":"2026-03-01T16:28:56.000Z","after_credits":false,"certification":"PG-13","comment_count":92,"during_credits":false,"original_title":"The
+        Prestige","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt1856101","plex":{"guid":"5d776b95594b2b001e6de3f3","slug":"blade-runner-2049"},"slug":"blade-runner-2049-2017","tmdb":335984,"trakt":216716},"year":2017,"title":"Blade
+        Runner 2049","votes":39539,"colors":{"poster":["#F55782","#210B10"]},"genres":["science-fiction","drama"],"images":{"logo":["media.trakt.tv/images/movies/000/216/716/logos/medium/7bedf52d8a.png.webp"],"thumb":["media.trakt.tv/images/movies/000/216/716/thumbs/medium/010ee4987c.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/216/716/banners/medium/e229dca26c.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/216/716/fanarts/medium/6fe50c59eb.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/216/716/posters/medium/addcff9f21.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/216/716/cleararts/medium/bf99ad3b79.png.webp"]},"rating":7.809833526611328,"status":"released","country":"us","runtime":164,"tagline":"The
+        key to the future is finally unearthed.","trailer":"https://youtube.com/watch?v=geFtxCSz8xI","homepage":"https://bladerunnermovie.com/","language":"en","overview":"Thirty
+        years after the events of the first film, a new blade runner, LAPD Officer
+        K, unearths a long-buried secret that has the potential to plunge what''s
+        left of society into chaos. K''s discovery leads him on a quest to find Rick
+        Deckard, a former LAPD blade runner who has been missing for 30 years.","released":"2017-10-06","languages":["en","fi","hu","ja","ru","so","es"],"subgenres":["dystopia","future","artificial-intelligence-a-i","android","cyberpunk","bounty-hunter"],"updated_at":"2026-03-02T08:43:04.000Z","after_credits":false,"certification":"R","comment_count":157,"during_credits":false,"original_title":"Blade
+        Runner 2049","available_translations":["ar","be","bg","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt6723592","plex":{"guid":"5d7770c2594b2b001e75121a","slug":"tenet"},"slug":"tenet-2020","tmdb":577922,"trakt":427989},"year":2020,"title":"Tenet","votes":31962,"colors":{"poster":["#8FA2B1","#272C34"]},"genres":["action","thriller","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/427/989/logos/medium/5460556321.png.webp"],"thumb":["media.trakt.tv/images/movies/000/427/989/thumbs/medium/f57e49d282.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/427/989/banners/medium/8e7775e254.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/427/989/fanarts/medium/027f3f82d3.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/427/989/posters/medium/f002269e00.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/427/989/cleararts/medium/936e0bb71d.png.webp"]},"rating":7.272980213165283,"status":"released","country":"us","runtime":150,"tagline":"Time
+        runs out.","trailer":"https://youtube.com/watch?v=KJP5RunZUKk","homepage":"https://www.tenetfilm.com/","language":"en","overview":"Armed
+        with only one word - Tenet - and fighting for the survival of the entire world,
+        the Protagonist journeys through a twilight world of international espionage
+        on a mission that will unfold in something beyond real time.","released":"2020-09-03","languages":["en","et","ru","uk"],"subgenres":["amused","assassin","spy","terrorism","time-travel","admiring","espionage"],"updated_at":"2026-03-02T08:45:40.000Z","after_credits":false,"certification":"PG-13","comment_count":296,"during_credits":false,"original_title":"Tenet","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt1631867","plex":{"guid":"5d7769a27a53e9001e6ebc72","slug":"edge-of-tomorrow"},"slug":"edge-of-tomorrow-2014","tmdb":137113,"trakt":92230},"year":2014,"title":"Edge
+        of Tomorrow","votes":45632,"colors":{"poster":["#C89575","#221E1A"]},"genres":["action","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/092/230/logos/medium/ec685a6d34.png.webp"],"thumb":["media.trakt.tv/images/movies/000/092/230/thumbs/medium/cb6feccdf4.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/092/230/banners/medium/8cfcd8692e.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/092/230/fanarts/medium/ddeca859eb.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/092/230/posters/medium/2d11caa143.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/092/230/cleararts/medium/3cd57f7447.png.webp"]},"rating":7.927506923675537,"status":"released","country":"us","runtime":114,"tagline":"Live.
+        Die. Repeat.","trailer":"https://youtube.com/watch?v=eb8wTIcGLgQ","homepage":"https://www.warnerbros.com/movies/edge-tomorrow","language":"en","overview":"Major
+        Bill Cage is an officer who has never seen a day of combat when he is unceremoniously
+        demoted and dropped into combat. Cage is killed within minutes, managing to
+        take an alpha alien down with him. He awakens back at the beginning of the
+        same day and is forced to fight and die again... and again - as physical contact
+        with the alien has thrown him into a time loop.","released":"2014-06-06","languages":["en"],"subgenres":["dystopia","soldier","admiring","adoring","romantic","defiant","alien","alien-invasion"],"updated_at":"2026-03-01T16:40:51.000Z","after_credits":false,"certification":"PG-13","comment_count":136,"during_credits":false,"original_title":"Edge
+        of Tomorrow","available_translations":["ar","bg","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"]}]'
+  recorded_at: 2026-03-02 12:41:27
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/inception-2010/related?limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:27 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=10800, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: movie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '20'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '2'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d6079c7e8166650-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"imdb":"tt0133093","plex":{"guid":"5d776827880197001ec90904","slug":"the-matrix"},"slug":"the-matrix-1999","tmdb":603,"trakt":481},"year":1999,"title":"The
+        Matrix","votes":74350,"colors":{"poster":["#9AAAB4","#141A2A"]},"genres":["action","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/000/481/logos/medium/f5e05ed291.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/481/thumbs/medium/f81f544f62.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/481/banners/medium/035f31fce0.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/481/fanarts/medium/c556867276.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/481/posters/medium/373310d2ee.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/481/cleararts/medium/a01dd6ff88.png.webp"]},"rating":8.732938766479492,"status":"released","country":"us","runtime":136,"tagline":"Believe
+        the unbelievable.","trailer":"https://youtube.com/watch?v=d0XTFAMmhrE","homepage":"https://www.warnerbros.com/matrix","language":"en","overview":"Set
+        in the 22nd century, The Matrix tells the story of a computer hacker who joins
+        a group of underground insurgents fighting the vast and powerful computers
+        who now rule the earth.","released":"1999-03-31","languages":["en"],"subgenres":["action-hero","dystopia","fight","kung-fu","martial-arts","artificial-intelligence-a-i","dreams","cyberpunk","virtual-reality","saving-the-world","self-sacrifice"],"updated_at":"2026-03-01T16:26:47.000Z","after_credits":false,"certification":"R","comment_count":153,"during_credits":false,"original_title":"The
+        Matrix","available_translations":["ar","bg","bs","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","gl","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","mk","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"]},{"ids":{"imdb":"tt0816692","plex":{"guid":"5d7769cefb0d55001f530acd","slug":"interstellar"},"slug":"interstellar-2014","tmdb":157336,"trakt":102156},"year":2014,"title":"Interstellar","votes":92914,"colors":{"poster":["#C1CCD1","#546069"]},"genres":["science-fiction","drama","adventure"],"images":{"logo":["media.trakt.tv/images/movies/000/102/156/logos/medium/0344cc280a.png.webp"],"thumb":["media.trakt.tv/images/movies/000/102/156/thumbs/medium/fb14dbece1.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/102/156/banners/medium/e0cf0afa2e.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/102/156/fanarts/medium/d36f9b7a07.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/102/156/posters/medium/7fcf530e15.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/102/156/cleararts/medium/389f401600.png.webp"]},"rating":8.652861595153809,"status":"released","country":"us","runtime":169,"tagline":"Mankind
+        was born on Earth. It was never meant to die here.","trailer":"https://youtube.com/watch?v=LY19rHKAaAg","homepage":"https://www.interstellarmovie.net/","language":"en","overview":"The
+        adventures of a group of explorers who make use of a newly discovered wormhole
+        to surpass the limitations on human space travel and conquer the vast distances
+        involved in an interstellar voyage.","released":"2014-11-05","languages":["en"],"subgenres":["dystopia","future","robot","rescue","family-relationships","father-daughter-relationship","single-father","artificial-intelligence-a-i","scientist","astronaut","space","space-travel","spacecraft"],"updated_at":"2026-03-02T08:41:29.000Z","after_credits":false,"certification":"PG-13","comment_count":322,"during_credits":false,"original_title":"Interstellar","available_translations":["ar","az","be","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","tw","uk","uz","vi","zh"]},{"ids":{"imdb":"tt0209144","plex":{"guid":"5d776d1796b655001fe3f324","slug":"memento-2000"},"slug":"memento-2000","tmdb":77,"trakt":47},"year":2000,"title":"Memento","votes":32864,"colors":{"poster":["#DAC4B9","#251A1B"]},"genres":["mystery","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/000/047/logos/medium/75c8f2628e.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/047/thumbs/medium/812b12cc42.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/047/banners/medium/8b4b6680b2.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/047/fanarts/medium/2b4d79c785.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/047/posters/medium/45d6e27ad3.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/047/cleararts/medium/15f350f169.png.webp"]},"rating":8.324762344360352,"status":"released","country":"us","runtime":113,"tagline":"Some
+        memories are best forgotten.","trailer":"https://youtube.com/watch?v=Rq9eM4ZXRgs","homepage":null,"language":"en","overview":"Leonard
+        Shelby is tracking down the man who raped and murdered his wife. The difficulty
+        of locating his wife''s killer, however, is compounded by the fact that he
+        suffers from a rare, untreatable form of short-term memory loss. Although
+        he can recall details of life before his accident, Leonard cannot remember
+        what happened fifteen minutes ago, where he''s going, or why.","released":"2001-03-16","languages":["en"],"subgenres":["murder","revenge","drug-dealer","neo-noir","psychological-thriller","whodunit","flashback","manipulation","paranoid","amnesia","memory"],"updated_at":"2026-03-02T08:43:04.000Z","after_credits":false,"certification":"R","comment_count":91,"during_credits":false,"original_title":"Memento","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt0945513","plex":{"guid":"5d776881e6d55c00204146e3","slug":"source-code"},"slug":"source-code-2011","tmdb":45612,"trakt":31151},"year":2011,"title":"Source
+        Code","votes":20005,"colors":{"poster":["#8DA67F","#1C3334"]},"genres":["mystery","science-fiction","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/031/151/logos/medium/5bb9b6ee02.png.webp"],"thumb":["media.trakt.tv/images/movies/000/031/151/thumbs/medium/196d8bd909.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/031/151/banners/medium/7a15218a9a.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/031/151/fanarts/medium/60e1f41a2e.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/031/151/posters/medium/98034ecf52.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/031/151/cleararts/medium/7e8c8f96f8.png.webp"]},"rating":7.5137715339660645,"status":"released","country":"ca","runtime":93,"tagline":"Make
+        every second count.","trailer":"https://youtube.com/watch?v=0dafmG_c8kc","homepage":"https://www.enterthesourcecode.com","language":"en","overview":"When
+        decorated soldier Captain Colter Stevens wakes up in the body of an unknown
+        man, he discovers he''s part of a mission to find the bomber of a Chicago
+        commuter train.","released":"2011-04-01","languages":["en"],"subgenres":["investigation","soldier","surrealism","suspicion","virtual-reality","identity"],"updated_at":"2026-03-01T16:45:08.000Z","after_credits":false,"certification":"PG-13","comment_count":76,"during_credits":false,"original_title":"Source
+        Code","available_translations":["ar","bg","ca","cs","da","de","el","en","es","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt1130884","plex":{"guid":"5d7768365af944001f1fa488","slug":"shutter-island"},"slug":"shutter-island-2010","tmdb":11324,"trakt":6422},"year":2010,"title":"Shutter
+        Island","votes":42227,"colors":{"poster":["#B38D8B","#14161D"]},"genres":["drama","mystery","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/006/422/logos/medium/308f84e130.png.webp"],"thumb":["media.trakt.tv/images/movies/000/006/422/thumbs/medium/47649a70ef.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/006/422/banners/medium/98613f9eac.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/006/422/fanarts/medium/8c04827883.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/006/422/posters/medium/25438cb7fa.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/006/422/cleararts/medium/13b2f68555.png.webp"]},"rating":8.194023132324219,"status":"released","country":"us","runtime":138,"tagline":"Someone
+        is missing.","trailer":"https://youtube.com/watch?v=qdPw9x9h5CY","homepage":"https://www.shutterisland.com/","language":"en","overview":"World
+        War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance
+        of a patient from a hospital for the criminally insane, but his efforts are
+        compromised by troubling visions and a mysterious doctor.","released":"2010-02-19","languages":["en","de"],"subgenres":["investigation","island","whimsical","neo-noir","psychological-thriller","whodunit","1950s","u-s-marshal"],"updated_at":"2026-03-02T08:44:34.000Z","after_credits":false,"certification":"R","comment_count":80,"during_credits":false,"original_title":"Shutter
+        Island","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt0181689","plex":{"guid":"5d776824f54112001f5bbddc","slug":"minority-report"},"slug":"minority-report-2002","tmdb":180,"trakt":145},"year":2002,"title":"Minority
+        Report","votes":22326,"colors":{"poster":["#98AAAF","#212023"]},"genres":["action","science-fiction","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/000/145/logos/medium/19d168abb9.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/145/thumbs/medium/60675caf98.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/145/banners/medium/fc4fecc634.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/145/fanarts/medium/e6078658aa.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/145/posters/medium/6c2838edd5.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/145/cleararts/medium/52067331e6.png.webp"]},"rating":7.68856954574585,"status":"released","country":"us","runtime":145,"tagline":"Everybody
+        runs.","trailer":"https://youtube.com/watch?v=3JNsNp2DVSE","homepage":null,"language":"en","overview":"John
+        Anderton is a top ''Precrime'' cop in the late-21st century, when technology
+        can predict crimes before they''re committed. But Anderton becomes the quarry
+        when another investigator targets him for a murder charge.","released":"2002-06-21","languages":["en","sv"],"subgenres":["conspiracy","drugs","intense","murder","suspenseful","paranoid","cyberpunk"],"updated_at":"2026-03-01T16:38:34.000Z","after_credits":false,"certification":"PG-13","comment_count":48,"during_credits":false,"original_title":"Minority
+        Report","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt0482571","plex":{"guid":"5d776828999c64001ec2ce66","slug":"the-prestige"},"slug":"the-prestige-2006","tmdb":1124,"trakt":851},"year":2006,"title":"The
+        Prestige","votes":36955,"colors":{"poster":["#B2B0AD","#0B0A09"]},"genres":["drama","mystery","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/000/851/logos/medium/3973126fa5.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/851/thumbs/medium/e7753066f8.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/851/banners/medium/d0eaeee728.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/851/fanarts/medium/f60e9ffe00.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/851/posters/medium/8bee0f74c3.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/851/cleararts/medium/b67da3d82e.png.webp"]},"rating":8.37913703918457,"status":"released","country":"us","runtime":130,"tagline":"Are
+        You Watching Closely?","trailer":"https://youtube.com/watch?v=ObGVA1WOqyE","homepage":"https://wwws.warnerbros.de/theprestige/","language":"en","overview":"A
+        mysterious story of two magicians whose intense rivalry leads them on a life-long
+        battle for supremacy -- full of obsession, deceit and jealousy with dangerous
+        and deadly consequences.","released":"2006-10-17","languages":["en"],"subgenres":["19th-century","magic","suicide","competition","rivalry","secret"],"updated_at":"2026-03-01T16:28:56.000Z","after_credits":false,"certification":"PG-13","comment_count":92,"during_credits":false,"original_title":"The
+        Prestige","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt1856101","plex":{"guid":"5d776b95594b2b001e6de3f3","slug":"blade-runner-2049"},"slug":"blade-runner-2049-2017","tmdb":335984,"trakt":216716},"year":2017,"title":"Blade
+        Runner 2049","votes":39539,"colors":{"poster":["#F55782","#210B10"]},"genres":["science-fiction","drama"],"images":{"logo":["media.trakt.tv/images/movies/000/216/716/logos/medium/7bedf52d8a.png.webp"],"thumb":["media.trakt.tv/images/movies/000/216/716/thumbs/medium/010ee4987c.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/216/716/banners/medium/e229dca26c.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/216/716/fanarts/medium/6fe50c59eb.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/216/716/posters/medium/addcff9f21.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/216/716/cleararts/medium/bf99ad3b79.png.webp"]},"rating":7.809833526611328,"status":"released","country":"us","runtime":164,"tagline":"The
+        key to the future is finally unearthed.","trailer":"https://youtube.com/watch?v=geFtxCSz8xI","homepage":"https://bladerunnermovie.com/","language":"en","overview":"Thirty
+        years after the events of the first film, a new blade runner, LAPD Officer
+        K, unearths a long-buried secret that has the potential to plunge what''s
+        left of society into chaos. K''s discovery leads him on a quest to find Rick
+        Deckard, a former LAPD blade runner who has been missing for 30 years.","released":"2017-10-06","languages":["en","fi","hu","ja","ru","so","es"],"subgenres":["dystopia","future","artificial-intelligence-a-i","android","cyberpunk","bounty-hunter"],"updated_at":"2026-03-02T08:43:04.000Z","after_credits":false,"certification":"R","comment_count":157,"during_credits":false,"original_title":"Blade
+        Runner 2049","available_translations":["ar","be","bg","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt6723592","plex":{"guid":"5d7770c2594b2b001e75121a","slug":"tenet"},"slug":"tenet-2020","tmdb":577922,"trakt":427989},"year":2020,"title":"Tenet","votes":31962,"colors":{"poster":["#8FA2B1","#272C34"]},"genres":["action","thriller","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/427/989/logos/medium/5460556321.png.webp"],"thumb":["media.trakt.tv/images/movies/000/427/989/thumbs/medium/f57e49d282.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/427/989/banners/medium/8e7775e254.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/427/989/fanarts/medium/027f3f82d3.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/427/989/posters/medium/f002269e00.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/427/989/cleararts/medium/936e0bb71d.png.webp"]},"rating":7.272980213165283,"status":"released","country":"us","runtime":150,"tagline":"Time
+        runs out.","trailer":"https://youtube.com/watch?v=KJP5RunZUKk","homepage":"https://www.tenetfilm.com/","language":"en","overview":"Armed
+        with only one word - Tenet - and fighting for the survival of the entire world,
+        the Protagonist journeys through a twilight world of international espionage
+        on a mission that will unfold in something beyond real time.","released":"2020-09-03","languages":["en","et","ru","uk"],"subgenres":["amused","assassin","spy","terrorism","time-travel","admiring","espionage"],"updated_at":"2026-03-02T08:45:40.000Z","after_credits":false,"certification":"PG-13","comment_count":296,"during_credits":false,"original_title":"Tenet","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt1631867","plex":{"guid":"5d7769a27a53e9001e6ebc72","slug":"edge-of-tomorrow"},"slug":"edge-of-tomorrow-2014","tmdb":137113,"trakt":92230},"year":2014,"title":"Edge
+        of Tomorrow","votes":45632,"colors":{"poster":["#C89575","#221E1A"]},"genres":["action","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/092/230/logos/medium/ec685a6d34.png.webp"],"thumb":["media.trakt.tv/images/movies/000/092/230/thumbs/medium/cb6feccdf4.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/092/230/banners/medium/8cfcd8692e.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/092/230/fanarts/medium/ddeca859eb.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/092/230/posters/medium/2d11caa143.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/092/230/cleararts/medium/3cd57f7447.png.webp"]},"rating":7.927506923675537,"status":"released","country":"us","runtime":114,"tagline":"Live.
+        Die. Repeat.","trailer":"https://youtube.com/watch?v=eb8wTIcGLgQ","homepage":"https://www.warnerbros.com/movies/edge-tomorrow","language":"en","overview":"Major
+        Bill Cage is an officer who has never seen a day of combat when he is unceremoniously
+        demoted and dropped into combat. Cage is killed within minutes, managing to
+        take an alpha alien down with him. He awakens back at the beginning of the
+        same day and is forced to fight and die again... and again - as physical contact
+        with the alien has thrown him into a time loop.","released":"2014-06-06","languages":["en"],"subgenres":["dystopia","soldier","admiring","adoring","romantic","defiant","alien","alien-invasion"],"updated_at":"2026-03-01T16:40:51.000Z","after_credits":false,"certification":"PG-13","comment_count":136,"during_credits":false,"original_title":"Edge
+        of Tomorrow","available_translations":["ar","bg","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"]}]'
+  recorded_at: 2026-03-02 12:41:27
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/inception-2010/related?extended=full&limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:20 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=10800, s-maxage=43200
+      vary: Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: movie
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '20'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '2'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: 9d60075c2ac47754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"ids":{"imdb":"tt0133093","plex":{"guid":"5d776827880197001ec90904","slug":"the-matrix"},"slug":"the-matrix-1999","tmdb":603,"trakt":481},"year":1999,"title":"The
+        Matrix","votes":74350,"colors":{"poster":["#9AAAB4","#141A2A"]},"genres":["action","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/000/481/logos/medium/f5e05ed291.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/481/thumbs/medium/f81f544f62.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/481/banners/medium/035f31fce0.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/481/fanarts/medium/c556867276.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/481/posters/medium/373310d2ee.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/481/cleararts/medium/a01dd6ff88.png.webp"]},"rating":8.732938766479492,"status":"released","country":"us","runtime":136,"tagline":"Believe
+        the unbelievable.","trailer":"https://youtube.com/watch?v=d0XTFAMmhrE","homepage":"https://www.warnerbros.com/matrix","language":"en","overview":"Set
+        in the 22nd century, The Matrix tells the story of a computer hacker who joins
+        a group of underground insurgents fighting the vast and powerful computers
+        who now rule the earth.","released":"1999-03-31","languages":["en"],"subgenres":["action-hero","dystopia","fight","kung-fu","martial-arts","artificial-intelligence-a-i","dreams","cyberpunk","virtual-reality","saving-the-world","self-sacrifice"],"updated_at":"2026-03-01T16:26:47.000Z","after_credits":false,"certification":"R","comment_count":153,"during_credits":false,"original_title":"The
+        Matrix","available_translations":["ar","bg","bs","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","gl","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","mk","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"]},{"ids":{"imdb":"tt0816692","plex":{"guid":"5d7769cefb0d55001f530acd","slug":"interstellar"},"slug":"interstellar-2014","tmdb":157336,"trakt":102156},"year":2014,"title":"Interstellar","votes":92914,"colors":{"poster":["#C1CCD1","#546069"]},"genres":["science-fiction","drama","adventure"],"images":{"logo":["media.trakt.tv/images/movies/000/102/156/logos/medium/0344cc280a.png.webp"],"thumb":["media.trakt.tv/images/movies/000/102/156/thumbs/medium/fb14dbece1.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/102/156/banners/medium/e0cf0afa2e.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/102/156/fanarts/medium/d36f9b7a07.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/102/156/posters/medium/7fcf530e15.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/102/156/cleararts/medium/389f401600.png.webp"]},"rating":8.652861595153809,"status":"released","country":"us","runtime":169,"tagline":"Mankind
+        was born on Earth. It was never meant to die here.","trailer":"https://youtube.com/watch?v=LY19rHKAaAg","homepage":"https://www.interstellarmovie.net/","language":"en","overview":"The
+        adventures of a group of explorers who make use of a newly discovered wormhole
+        to surpass the limitations on human space travel and conquer the vast distances
+        involved in an interstellar voyage.","released":"2014-11-05","languages":["en"],"subgenres":["dystopia","future","robot","rescue","family-relationships","father-daughter-relationship","single-father","artificial-intelligence-a-i","scientist","astronaut","space","space-travel","spacecraft"],"updated_at":"2026-03-02T08:41:29.000Z","after_credits":false,"certification":"PG-13","comment_count":322,"during_credits":false,"original_title":"Interstellar","available_translations":["ar","az","be","bg","bs","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","tw","uk","uz","vi","zh"]},{"ids":{"imdb":"tt0209144","plex":{"guid":"5d776d1796b655001fe3f324","slug":"memento-2000"},"slug":"memento-2000","tmdb":77,"trakt":47},"year":2000,"title":"Memento","votes":32861,"colors":{"poster":["#DAC4B9","#251A1B"]},"genres":["mystery","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/000/047/logos/medium/75c8f2628e.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/047/thumbs/medium/812b12cc42.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/047/banners/medium/8b4b6680b2.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/047/fanarts/medium/2b4d79c785.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/047/posters/medium/45d6e27ad3.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/047/cleararts/medium/15f350f169.png.webp"]},"rating":8.324762344360352,"status":"released","country":"us","runtime":113,"tagline":"Some
+        memories are best forgotten.","trailer":"https://youtube.com/watch?v=Rq9eM4ZXRgs","homepage":null,"language":"en","overview":"Leonard
+        Shelby is tracking down the man who raped and murdered his wife. The difficulty
+        of locating his wife''s killer, however, is compounded by the fact that he
+        suffers from a rare, untreatable form of short-term memory loss. Although
+        he can recall details of life before his accident, Leonard cannot remember
+        what happened fifteen minutes ago, where he''s going, or why.","released":"2001-03-16","languages":["en"],"subgenres":["murder","revenge","drug-dealer","neo-noir","psychological-thriller","whodunit","flashback","manipulation","paranoid","amnesia","memory"],"updated_at":"2026-03-02T08:43:04.000Z","after_credits":false,"certification":"R","comment_count":91,"during_credits":false,"original_title":"Memento","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt0945513","plex":{"guid":"5d776881e6d55c00204146e3","slug":"source-code"},"slug":"source-code-2011","tmdb":45612,"trakt":31151},"year":2011,"title":"Source
+        Code","votes":20003,"colors":{"poster":["#8DA67F","#1C3334"]},"genres":["mystery","science-fiction","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/031/151/logos/medium/5bb9b6ee02.png.webp"],"thumb":["media.trakt.tv/images/movies/000/031/151/thumbs/medium/196d8bd909.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/031/151/banners/medium/7a15218a9a.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/031/151/fanarts/medium/60e1f41a2e.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/031/151/posters/medium/98034ecf52.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/031/151/cleararts/medium/7e8c8f96f8.png.webp"]},"rating":7.513772964477539,"status":"released","country":"ca","runtime":93,"tagline":"Make
+        every second count.","trailer":"https://youtube.com/watch?v=0dafmG_c8kc","homepage":"https://www.enterthesourcecode.com","language":"en","overview":"When
+        decorated soldier Captain Colter Stevens wakes up in the body of an unknown
+        man, he discovers he''s part of a mission to find the bomber of a Chicago
+        commuter train.","released":"2011-04-01","languages":["en"],"subgenres":["investigation","soldier","surrealism","suspicion","virtual-reality","identity"],"updated_at":"2026-03-01T16:45:08.000Z","after_credits":false,"certification":"PG-13","comment_count":76,"during_credits":false,"original_title":"Source
+        Code","available_translations":["ar","bg","ca","cs","da","de","el","en","es","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt1130884","plex":{"guid":"5d7768365af944001f1fa488","slug":"shutter-island"},"slug":"shutter-island-2010","tmdb":11324,"trakt":6422},"year":2010,"title":"Shutter
+        Island","votes":42225,"colors":{"poster":["#B38D8B","#14161D"]},"genres":["drama","mystery","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/006/422/logos/medium/308f84e130.png.webp"],"thumb":["media.trakt.tv/images/movies/000/006/422/thumbs/medium/47649a70ef.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/006/422/banners/medium/98613f9eac.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/006/422/fanarts/medium/8c04827883.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/006/422/posters/medium/25438cb7fa.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/006/422/cleararts/medium/13b2f68555.png.webp"]},"rating":8.193937301635742,"status":"released","country":"us","runtime":138,"tagline":"Someone
+        is missing.","trailer":"https://youtube.com/watch?v=qdPw9x9h5CY","homepage":"https://www.shutterisland.com/","language":"en","overview":"World
+        War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance
+        of a patient from a hospital for the criminally insane, but his efforts are
+        compromised by troubling visions and a mysterious doctor.","released":"2010-02-19","languages":["en","de"],"subgenres":["investigation","island","whimsical","neo-noir","psychological-thriller","whodunit","1950s","u-s-marshal"],"updated_at":"2026-03-02T08:44:34.000Z","after_credits":false,"certification":"R","comment_count":80,"during_credits":false,"original_title":"Shutter
+        Island","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt0181689","plex":{"guid":"5d776824f54112001f5bbddc","slug":"minority-report"},"slug":"minority-report-2002","tmdb":180,"trakt":145},"year":2002,"title":"Minority
+        Report","votes":22325,"colors":{"poster":["#98AAAF","#212023"]},"genres":["action","science-fiction","thriller"],"images":{"logo":["media.trakt.tv/images/movies/000/000/145/logos/medium/19d168abb9.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/145/thumbs/medium/60675caf98.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/145/banners/medium/fc4fecc634.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/145/fanarts/medium/e6078658aa.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/145/posters/medium/6c2838edd5.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/145/cleararts/medium/52067331e6.png.webp"]},"rating":7.6885552406311035,"status":"released","country":"us","runtime":145,"tagline":"Everybody
+        runs.","trailer":"https://youtube.com/watch?v=3JNsNp2DVSE","homepage":null,"language":"en","overview":"John
+        Anderton is a top ''Precrime'' cop in the late-21st century, when technology
+        can predict crimes before they''re committed. But Anderton becomes the quarry
+        when another investigator targets him for a murder charge.","released":"2002-06-21","languages":["en","sv"],"subgenres":["conspiracy","drugs","intense","murder","suspenseful","paranoid","cyberpunk"],"updated_at":"2026-03-01T16:38:34.000Z","after_credits":false,"certification":"PG-13","comment_count":48,"during_credits":false,"original_title":"Minority
+        Report","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt0482571","plex":{"guid":"5d776828999c64001ec2ce66","slug":"the-prestige"},"slug":"the-prestige-2006","tmdb":1124,"trakt":851},"year":2006,"title":"The
+        Prestige","votes":36952,"colors":{"poster":["#B2B0AD","#0B0A09"]},"genres":["drama","mystery","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/000/851/logos/medium/3973126fa5.png.webp"],"thumb":["media.trakt.tv/images/movies/000/000/851/thumbs/medium/e7753066f8.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/000/851/banners/medium/d0eaeee728.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/000/851/fanarts/medium/f60e9ffe00.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/000/851/posters/medium/8bee0f74c3.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/000/851/cleararts/medium/b67da3d82e.png.webp"]},"rating":8.37911319732666,"status":"released","country":"us","runtime":130,"tagline":"Are
+        You Watching Closely?","trailer":"https://youtube.com/watch?v=ObGVA1WOqyE","homepage":"https://wwws.warnerbros.de/theprestige/","language":"en","overview":"A
+        mysterious story of two magicians whose intense rivalry leads them on a life-long
+        battle for supremacy -- full of obsession, deceit and jealousy with dangerous
+        and deadly consequences.","released":"2006-10-17","languages":["en"],"subgenres":["19th-century","magic","suicide","competition","rivalry","secret"],"updated_at":"2026-03-01T16:28:56.000Z","after_credits":false,"certification":"PG-13","comment_count":92,"during_credits":false,"original_title":"The
+        Prestige","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt1856101","plex":{"guid":"5d776b95594b2b001e6de3f3","slug":"blade-runner-2049"},"slug":"blade-runner-2049-2017","tmdb":335984,"trakt":216716},"year":2017,"title":"Blade
+        Runner 2049","votes":39539,"colors":{"poster":["#F55782","#210B10"]},"genres":["science-fiction","drama"],"images":{"logo":["media.trakt.tv/images/movies/000/216/716/logos/medium/7bedf52d8a.png.webp"],"thumb":["media.trakt.tv/images/movies/000/216/716/thumbs/medium/010ee4987c.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/216/716/banners/medium/e229dca26c.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/216/716/fanarts/medium/6fe50c59eb.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/216/716/posters/medium/addcff9f21.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/216/716/cleararts/medium/bf99ad3b79.png.webp"]},"rating":7.809833526611328,"status":"released","country":"us","runtime":164,"tagline":"The
+        key to the future is finally unearthed.","trailer":"https://youtube.com/watch?v=geFtxCSz8xI","homepage":"https://bladerunnermovie.com/","language":"en","overview":"Thirty
+        years after the events of the first film, a new blade runner, LAPD Officer
+        K, unearths a long-buried secret that has the potential to plunge what''s
+        left of society into chaos. K''s discovery leads him on a quest to find Rick
+        Deckard, a former LAPD blade runner who has been missing for 30 years.","released":"2017-10-06","languages":["en","fi","hu","ja","ru","so","es"],"subgenres":["dystopia","future","artificial-intelligence-a-i","android","cyberpunk","bounty-hunter"],"updated_at":"2026-03-02T08:43:04.000Z","after_credits":false,"certification":"R","comment_count":157,"during_credits":false,"original_title":"Blade
+        Runner 2049","available_translations":["ar","be","bg","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt6723592","plex":{"guid":"5d7770c2594b2b001e75121a","slug":"tenet"},"slug":"tenet-2020","tmdb":577922,"trakt":427989},"year":2020,"title":"Tenet","votes":31961,"colors":{"poster":["#8FA2B1","#272C34"]},"genres":["action","thriller","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/427/989/logos/medium/5460556321.png.webp"],"thumb":["media.trakt.tv/images/movies/000/427/989/thumbs/medium/f57e49d282.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/427/989/banners/medium/8e7775e254.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/427/989/fanarts/medium/027f3f82d3.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/427/989/posters/medium/f002269e00.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/427/989/cleararts/medium/936e0bb71d.png.webp"]},"rating":7.272988796234131,"status":"released","country":"us","runtime":150,"tagline":"Time
+        runs out.","trailer":"https://youtube.com/watch?v=KJP5RunZUKk","homepage":"https://www.tenetfilm.com/","language":"en","overview":"Armed
+        with only one word - Tenet - and fighting for the survival of the entire world,
+        the Protagonist journeys through a twilight world of international espionage
+        on a mission that will unfold in something beyond real time.","released":"2020-09-03","languages":["en","et","ru","uk"],"subgenres":["amused","assassin","spy","terrorism","time-travel","admiring","espionage"],"updated_at":"2026-03-02T08:45:40.000Z","after_credits":false,"certification":"PG-13","comment_count":296,"during_credits":false,"original_title":"Tenet","available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]},{"ids":{"imdb":"tt1631867","plex":{"guid":"5d7769a27a53e9001e6ebc72","slug":"edge-of-tomorrow"},"slug":"edge-of-tomorrow-2014","tmdb":137113,"trakt":92230},"year":2014,"title":"Edge
+        of Tomorrow","votes":45632,"colors":{"poster":["#C89575","#221E1A"]},"genres":["action","science-fiction"],"images":{"logo":["media.trakt.tv/images/movies/000/092/230/logos/medium/ec685a6d34.png.webp"],"thumb":["media.trakt.tv/images/movies/000/092/230/thumbs/medium/cb6feccdf4.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/092/230/banners/medium/8cfcd8692e.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/092/230/fanarts/medium/ddeca859eb.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/092/230/posters/medium/2d11caa143.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/092/230/cleararts/medium/3cd57f7447.png.webp"]},"rating":7.927506923675537,"status":"released","country":"us","runtime":114,"tagline":"Live.
+        Die. Repeat.","trailer":"https://youtube.com/watch?v=eb8wTIcGLgQ","homepage":"https://www.warnerbros.com/movies/edge-tomorrow","language":"en","overview":"Major
+        Bill Cage is an officer who has never seen a day of combat when he is unceremoniously
+        demoted and dropped into combat. Cage is killed within minutes, managing to
+        take an alpha alien down with him. He awakens back at the beginning of the
+        same day and is forced to fight and die again... and again - as physical contact
+        with the alien has thrown him into a time loop.","released":"2014-06-06","languages":["en"],"subgenres":["dystopia","soldier","admiring","adoring","romantic","defiant","alien","alien-invasion"],"updated_at":"2026-03-01T16:40:51.000Z","after_credits":false,"certification":"PG-13","comment_count":136,"during_credits":false,"original_title":"Edge
+        of Tomorrow","available_translations":["ar","bg","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","uz","vi","zh"]}]'
+  recorded_at: 2026-03-02 12:41:27
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/NA/related?limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:27 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public, s-maxage=43200
+      content-encoding: gzip
+      etag: W/"236f423846c17cd73fe069ba9c771d55"
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
+      server: cloudflare
+      vary: accept-encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: movie
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-movie-updated-at: '2025-04-08T19:25:05.000Z'
+      x-pagination-item-count: '0'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '0'
+      x-permitted-cross-domain-policies: none
+      x-request-id: 34b8b781-9c3a-4318-879a-45ce857c2c2f
+      x-runtime: '0.036041'
+      x-xss-protection: '0'
+      cf-ray: 9d6079c9794d6650-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[]'
+  recorded_at: 2026-03-02 12:41:27
+recorded_with: VCR-vcr/2.1.0

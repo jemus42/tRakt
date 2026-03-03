@@ -1,0 +1,172 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/history/shows?limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"9b2b37a85e25e9eae2029044934d0670"
+      last-modified: Sat, 28 Feb 2026 20:37:27 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '31778'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '3178'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 9cb512ec-54f7-41fd-80cb-93eb4eea9a37
+      x-runtime: '0.050612'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d51aaaa4bf-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":12055733579,"watched_at":"2026-02-28T20:37:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":7,"title":"Contact","ids":{"trakt":13642190,"tvdb":11414576,"imdb":"tt38755006","tmdb":6618120,"tvrage":null}},"show":{"title":"Hijack","year":2023,"ids":{"trakt":194907,"slug":"hijack","tvdb":419254,"imdb":"tt19854762","tmdb":198102,"tvrage":null}}},{"id":12053859591,"watched_at":"2026-02-28T00:10:00.000Z","action":"scrobble","type":"episode","episode":{"season":1,"number":2,"title":"My
+        2nd First Day","ids":{"trakt":13668730,"tvdb":11426443,"imdb":"tt38789459","tmdb":6638204,"tvrage":null}},"show":{"title":"Scrubs","year":2026,"ids":{"trakt":291441,"slug":"scrubs-2026","tvdb":465690,"imdb":"tt40197357","tmdb":295778,"tvrage":null}}},{"id":12053810210,"watched_at":"2026-02-27T23:48:00.000Z","action":"scrobble","type":"episode","episode":{"season":1,"number":1,"title":"My
+        Return","ids":{"trakt":13307308,"tvdb":11238020,"imdb":"tt38789454","tmdb":6372133,"tvrage":null}},"show":{"title":"Scrubs","year":2026,"ids":{"trakt":291441,"slug":"scrubs-2026","tvdb":465690,"imdb":"tt40197357","tmdb":295778,"tvrage":null}}},{"id":12053763197,"watched_at":"2026-02-27T23:21:00.000Z","action":"scrobble","type":"episode","episode":{"season":19,"number":9,"title":"David
+        Morrissey, Holly Willoughby, John Kearns \u0026 Montell Douglas","ids":{"trakt":13812447,"tvdb":null,"imdb":null,"tmdb":6759363,"tvrage":null}},"show":{"title":"Would
+        I Lie to You?","year":2007,"ids":{"trakt":4751,"slug":"would-i-lie-to-you","tvdb":82548,"imdb":"tt1055238","tmdb":4775,"tvrage":null}}},{"id":12053590803,"watched_at":"2026-02-27T21:42:00.000Z","action":"scrobble","type":"episode","episode":{"season":3,"number":5,"title":"Hold
+        Your Horsies","ids":{"trakt":13642178,"tvdb":11413554,"imdb":"tt37532361","tmdb":6617356,"tvrage":null}},"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}}},{"id":12053506767,"watched_at":"2026-02-27T20:50:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":8,"title":"2:00
+        P.M.","ids":{"trakt":13822407,"tvdb":11518797,"imdb":"tt37971409","tmdb":6768680,"tvrage":null}},"show":{"title":"The
+        Pitt","year":2025,"ids":{"trakt":232884,"slug":"the-pitt","tvdb":448176,"imdb":"tt31938062","tmdb":250307,"tvrage":null}}},{"id":12051972741,"watched_at":"2026-02-27T00:43:00.000Z","action":"scrobble","type":"episode","episode":{"season":3,"number":4,"title":"The
+        Field","ids":{"trakt":13642177,"tvdb":11413553,"imdb":"tt37532360","tmdb":6617355,"tvrage":null}},"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}}},{"id":12051924602,"watched_at":"2026-02-27T00:09:00.000Z","action":"scrobble","type":"episode","episode":{"season":3,"number":3,"title":"D-Day","ids":{"trakt":13642176,"tvdb":11413552,"imdb":"tt37532358","tmdb":6617354,"tvrage":null}},"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}}},{"id":12051876323,"watched_at":"2026-02-26T23:29:00.000Z","action":"scrobble","type":"episode","episode":{"season":3,"number":2,"title":"Happiness
+        Mission","ids":{"trakt":13642175,"tvdb":11413551,"imdb":"tt37532353","tmdb":6617353,"tvrage":null}},"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}}},{"id":12047556483,"watched_at":"2026-02-24T22:36:00.000Z","action":"scrobble","type":"episode","episode":{"season":37,"number":15,"title":"Homer?
+        A Cracker Bro?","ids":{"trakt":13836493,"tvdb":11464297,"imdb":"tt36431491","tmdb":6883535,"tvrage":null}},"show":{"title":"The
+        Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}}}]'
+  recorded_at: 2026-03-02 12:41:29
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/history/movies?limit=10
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"a2149de793fd897ba37a197d7a625656"
+      last-modified: Wed, 25 Feb 2026 21:33:52 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '1310'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '131'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 7edfb39b-b4da-459d-847a-14d71125d14d
+      x-runtime: '0.038442'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d66e93a4bf-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":12049455725,"watched_at":"2026-02-25T21:33:00.000Z","action":"watch","type":"movie","movie":{"title":"Marty
+        Supreme","year":2025,"ids":{"trakt":1076665,"slug":"marty-supreme-2025","imdb":"tt32916440","tmdb":1317288}}},{"id":12040100004,"watched_at":"2026-02-21T23:16:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Sleep
+        Dealer","year":2008,"ids":{"trakt":12751,"slug":"sleep-dealer-2008","imdb":"tt0804529","tmdb":20764}}},{"id":12023802521,"watched_at":"2026-02-15T19:00:00.000Z","action":"watch","type":"movie","movie":{"title":"Princess
+        Mononoke","year":1997,"ids":{"trakt":96,"slug":"princess-mononoke-1997","imdb":"tt0119698","tmdb":128}}},{"id":12020917947,"watched_at":"2026-02-14T22:20:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Gunpowder
+        Milkshake","year":2021,"ids":{"trakt":427910,"slug":"gunpowder-milkshake-2021","imdb":"tt8368408","tmdb":574060}}},{"id":12019928560,"watched_at":"2026-02-14T20:18:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Ed
+        Gamble: Blood Sugar","year":2019,"ids":{"trakt":466402,"slug":"ed-gamble-blood-sugar-2019","imdb":"tt11597152","tmdb":624536}}},{"id":12017145387,"watched_at":"2026-02-13T22:41:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Sympathy
+        for Mr. Vengeance","year":2002,"ids":{"trakt":2750,"slug":"sympathy-for-mr-vengeance-2002","imdb":"tt0310775","tmdb":4689}}},{"id":12002075147,"watched_at":"2026-02-07T21:58:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Memories
+        of Murder","year":2003,"ids":{"trakt":6518,"slug":"memories-of-murder-2003","imdb":"tt0353969","tmdb":11423}}},{"id":11986136817,"watched_at":"2026-01-31T22:20:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Grave
+        of the Fireflies","year":1988,"ids":{"trakt":7251,"slug":"grave-of-the-fireflies-1988","imdb":"tt0095327","tmdb":12477}}},{"id":11972493027,"watched_at":"2026-01-25T21:10:00.000Z","action":"scrobble","type":"movie","movie":{"title":"The
+        Rip","year":2026,"ids":{"trakt":1065701,"slug":"the-rip-2026","imdb":"tt32642706","tmdb":1306368}}},{"id":11957038144,"watched_at":"2026-01-19T21:18:00.000Z","action":"checkin","type":"movie","movie":{"title":"28
+        Years Later: The Bone Temple","year":2026,"ids":{"trakt":1033738,"slug":"28-years-later-the-bone-temple-2026","imdb":"tt32141377","tmdb":1272837}}}]'
+  recorded_at: 2026-03-02 12:41:29
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/jemus42/history/shows?limit=2
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"1cac5ee7550aec734c3c21dfd3f6f96e"
+      last-modified: Sat, 28 Feb 2026 20:37:27 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '31778'
+      x-pagination-limit: '2'
+      x-pagination-page: '1'
+      x-pagination-page-count: '15889'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: 0cc05aa3-5d81-4baa-be25-94bae7a95803
+      x-runtime: '0.031296'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d799a7a4bf-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":12055733579,"watched_at":"2026-02-28T20:37:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":7,"title":"Contact","ids":{"trakt":13642190,"tvdb":11414576,"imdb":"tt38755006","tmdb":6618120,"tvrage":null}},"show":{"title":"Hijack","year":2023,"ids":{"trakt":194907,"slug":"hijack","tvdb":419254,"imdb":"tt19854762","tmdb":198102,"tvrage":null}}},{"id":12053859591,"watched_at":"2026-02-28T00:10:00.000Z","action":"scrobble","type":"episode","episode":{"season":1,"number":2,"title":"My
+        2nd First Day","ids":{"trakt":13668730,"tvdb":11426443,"imdb":"tt38789459","tmdb":6638204,"tvrage":null}},"show":{"title":"Scrubs","year":2026,"ids":{"trakt":291441,"slug":"scrubs-2026","tvdb":465690,"imdb":"tt40197357","tmdb":295778,"tvrage":null}}}]'
+  recorded_at: 2026-03-02 12:41:29
+- request:
+    method: GET
+    uri: https://api.trakt.tv/users/sean/history/shows?limit=2
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
+      etag: W/"0795ef830fdffa0c8281cb0f7500207c"
+      last-modified: Sat, 28 Feb 2026 08:07:04 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '64152'
+      x-pagination-limit: '2'
+      x-pagination-page: '1'
+      x-pagination-page-count: '32076'
+      x-permitted-cross-domain-policies: none
+      x-private-user: 'false'
+      x-request-id: f68f108f-9ea1-4821-a058-aedf15ab3a01
+      x-runtime: '0.038276'
+      x-xss-protection: '0'
+      cf-ray: 9d6079d8ccefa4bf-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '[{"id":12054498959,"watched_at":"2026-02-28T08:07:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":3,"title":"Homestar
+        Runner, Hearthstone, Demolition Man","ids":{"trakt":3653424,"tvdb":7309413,"imdb":null,"tmdb":2984435,"tvrage":null}},"show":{"title":"Um,
+        Actually...","year":2018,"ids":{"trakt":140399,"slug":"um-actually","tvdb":356085,"imdb":"tt9690112","tmdb":126565,"tvrage":null}}},{"id":12053760833,"watched_at":"2026-02-27T23:20:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":6,"title":"Ghost
+        Pointe Blank","ids":{"trakt":12752119,"tvdb":10911593,"imdb":"tt32567381","tmdb":5929347,"tvrage":null}},"show":{"title":"School
+        Spirits","year":2023,"ids":{"trakt":198139,"slug":"school-spirits-2023","tvdb":421636,"imdb":"tt21057450","tmdb":208397,"tvrage":null}}}]'
+  recorded_at: 2026-03-02 12:41:29
+recorded_with: VCR-vcr/2.1.0

@@ -130,10 +130,11 @@ fix_ratings_distribution <- function(response) {
 #' @noRd
 #' @importFrom tibble as_tibble
 #' @importFrom tibble remove_rownames
-fix_tibble_response <- function(response) {
+fix_tibble_response <- function(response, keep_images = FALSE) {
 	# Drop nested objects that don't fit tabular output
-	# These are returned by the API for shows, seasons, and episodes
-	response[["images"]] <- NULL
+	if (!keep_images) {
+		response[["images"]] <- NULL
+	}
 	response[["colors"]] <- NULL
 
 	response |>

@@ -31,12 +31,12 @@
 #' # Only episodes
 #' user_list_items("sp1ti", list_id = "5615781", extended = "min", type = "episodes")
 #' }
-user_list_items <- function(user = "me", list_id, type = NULL, extended = c("min", "full")) {
+user_list_items <- function(user = "me", list_id, type = NULL, extended = "min") {
 	check_username(user)
 
 	type <- check_types(type, several.ok = TRUE)
 
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
 	url <- build_trakt_url(
 		"users",
@@ -45,7 +45,7 @@ user_list_items <- function(user = "me", list_id, type = NULL, extended = c("min
 		list_id,
 		"items",
 		type,
-		extended = extended
+		extended = extended$query_value
 	)
 	response <- trakt_get(url)
 
@@ -69,10 +69,10 @@ user_list_items <- function(user = "me", list_id, type = NULL, extended = c("min
 			bind_cols(
 				list_base |>
 					filter(type == x),
-				flatten_media_object(response, x)
+				flatten_media_object(response, x, keep_images = extended$keep_images)
 			)
 		}
 	) |>
 		arrange(rank) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = extended$keep_images)
 }

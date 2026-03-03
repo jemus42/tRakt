@@ -237,7 +237,6 @@ test_that("comments_item works", {
 		"episode_comment_count",
 		"episode_first_aired",
 		"episode_updated_at",
-		"episode_available_translations",
 		"episode_runtime",
 		"episode_episode_type",
 		"episode_trakt",

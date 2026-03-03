@@ -22,11 +22,10 @@ user_watched <- function(
 	user = "me",
 	type = c("shows", "movies"),
 	noseasons = TRUE,
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	check_username(user)
 	type <- match.arg(type)
-	extended <- match.arg(extended)
 
 	if (length(user) > 1) {
 		return(map_rbind(
@@ -36,17 +35,12 @@ user_watched <- function(
 		))
 	}
 
-	if (extended == "min") {
-		# extended = "min" causes weird output, expected result without param though
-		extended <- ""
-	}
-
-	if (type == "shows" && noseasons) {
-		extended <- paste0(extended, ",noseasons")
-	}
+	# Combine extended with noseasons modifier before validation
+	extended_input <- if (type == "shows" && noseasons) c(extended, "noseasons") else extended
+	extended <- validate_extended(extended_input)
 
 	# Construct URL, make API call
-	url <- build_trakt_url("users", user, "watched", type, extended = extended)
+	url <- build_trakt_url("users", user, "watched", type, extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	if (is_empty(response)) {
@@ -58,7 +52,7 @@ user_watched <- function(
 		response <- response |>
 			select(-"show") |>
 			bind_cols(
-				pluck(response, "show") |> unpack_show()
+				pluck(response, "show") |> unpack_show(keep_images = extended$keep_images)
 			) |>
 			select(
 				-matches("^seasons$"),
@@ -68,8 +62,8 @@ user_watched <- function(
 		# This uses contains() because the seasons column might not exist
 		# and this way I don't have to use an extra if-statement to check "noseasons == TRUE"
 	} else if (type == "movies") {
-		response <- unpack_movie(response)
+		response <- unpack_movie(response, keep_images = extended$keep_images)
 	}
 
-	fix_tibble_response(response)
+	fix_tibble_response(response, keep_images = extended$keep_images)
 }

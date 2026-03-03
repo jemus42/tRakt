@@ -1,0 +1,138 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/episodes/3/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:32 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 19:23:32 GMT
+      last-modified: Mon, 02 Mar 2026 03:39:36 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 19f383be-537a-42ef-b717-f682a5dfa5b4
+      x-runtime: '0.018640'
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007a70ed77754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":68395,"plays":88474,"collectors":297798,"comments":2,"lists":141,"votes":1935}'
+  recorded_at: 2026-03-02 12:41:27
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/1/episodes/4/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:32 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 19:23:32 GMT
+      last-modified: Mon, 02 Mar 2026 06:50:41 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 7ca39f6c-baef-44f4-a52e-5188dca7493e
+      x-runtime: '0.018213'
+      x-show-id: '614'
+      x-show-season-id: '2083'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007a81fb67754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":67455,"plays":86592,"collectors":297159,"comments":5,"lists":142,"votes":1751}'
+  recorded_at: 2026-03-02 12:41:27
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/episodes/3/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:32 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 19:23:32 GMT
+      last-modified: Sun, 01 Mar 2026 17:37:54 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 5e9f7dcc-93c4-46ef-b4dd-2ffc9c03bad2
+      x-runtime: '0.022712'
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007a938b77754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":63479,"plays":83988,"collectors":286782,"comments":2,"lists":213,"votes":1423}'
+  recorded_at: 2026-03-02 12:41:27
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/futurama/seasons/2/episodes/4/stats
+  response:
+    status: 200
+    headers:
+      date: Mon, 02 Mar 2026 11:23:32 GMT
+      content-type: application/json; charset=utf-8
+      cf-cache-status: MISS
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=28800
+      content-encoding: gzip
+      expires: Mon, 02 Mar 2026 19:23:32 GMT
+      last-modified: Sun, 01 Mar 2026 17:37:54 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      speculation-rules: '"/cdn-cgi/speculation"'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 26eff532-a15b-4b59-a2f4-a0e233d7fc6a
+      x-runtime: '0.018186'
+      x-show-id: '614'
+      x-show-season-id: '2084'
+      x-show-updated-at: '2026-03-01T23:43:50.000Z'
+      x-xss-protection: '0'
+      cf-ray: 9d6007aa49b97754-AMS
+      alt-svc: h3=":443"; ma=86400
+    body:
+      string: '{"watchers":63121,"plays":84115,"collectors":287940,"comments":3,"lists":147,"votes":1385}'
+  recorded_at: 2026-03-02 12:41:27
+recorded_with: VCR-vcr/2.1.0

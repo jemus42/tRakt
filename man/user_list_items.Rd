@@ -7,7 +7,7 @@
 \code{user_list_items()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/users/list-items/get-items-on-a-custom-list}{/users/:id/lists/:list_id/items/:type}.
 }
 \usage{
-user_list_items(user = "me", list_id, type = NULL, extended = c("min", "full"))
+user_list_items(user = "me", list_id, type = NULL, extended = "min")
 }
 \arguments{
 \item{user}{\code{character(1)}: Target username (or \code{slug}). Defaults to
@@ -21,9 +21,17 @@ Can be optained via the website (URL \code{slug}) or e.g. \link{user_lists}.}
 \item{type}{\code{character(1) [NULL]}: If not \code{NULL}, only items of that media type are
 returned. Possible values are \code{"movie"}, \code{"show"}, \code{"season"}, \code{"episode"}, \code{"person"}.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

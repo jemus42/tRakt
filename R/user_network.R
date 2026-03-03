@@ -20,18 +20,19 @@ NULL
 user_network <- function(
 	relationship = c("friends", "followers", "following"),
 	user = "me",
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	check_username(user)
-	extended <- match.arg(extended)
 	relationship <- match.arg(relationship)
 
 	if (length(user) > 1) {
 		return(map_rbind(user, \(x) user_network(relationship, user = x, extended)))
 	}
 
+	extended <- validate_extended(extended)
+
 	# Construct URL, make API call
-	url <- build_trakt_url("users", user, relationship, extended = extended)
+	url <- build_trakt_url("users", user, relationship, extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	if (identical(response, tibble())) {
@@ -51,7 +52,7 @@ user_network <- function(
 	# Consistency: "", NA, NULL, they should all be NA_character_
 	response |>
 		mutate_if(is.character, fix_missing) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = extended$keep_images)
 }
 
 #' Get a user's followers
