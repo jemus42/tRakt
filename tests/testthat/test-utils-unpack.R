@@ -21,7 +21,7 @@ test_that("unpack_show handles minimal show object", {
 	expect_false("ids" %in% names(result))
 })
 
-test_that("unpack_show drops images and colors", {
+test_that("unpack_show drops images and colors by default", {
 	show <- tibble::tibble(
 		title = "Test Show",
 		year = 2024L,
@@ -45,6 +45,34 @@ test_that("unpack_show drops images and colors", {
 	result <- unpack_show(show)
 
 	expect_false("images" %in% names(result))
+	expect_false("colors" %in% names(result))
+	expect_true("title" %in% names(result))
+})
+
+test_that("unpack_show keeps images when keep_images = TRUE", {
+	show <- tibble::tibble(
+		title = "Test Show",
+		year = 2024L,
+		ids = tibble::tibble(
+			trakt = 1L,
+			slug = "test-show",
+			imdb = "tt1234",
+			tmdb = 200L,
+			tvdb = 100L
+		)
+	)
+	show$images <- tibble::tibble(
+		fanart = I(list("http://example.com/fanart.jpg")),
+		poster = I(list("http://example.com/poster.jpg"))
+	)
+	show$colors <- tibble::tibble(
+		primary = "#ff0000",
+		accent = "#00ff00"
+	)
+
+	result <- unpack_show(show, keep_images = TRUE)
+
+	expect_true("images" %in% names(result))
 	expect_false("colors" %in% names(result))
 	expect_true("title" %in% names(result))
 })

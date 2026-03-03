@@ -4,7 +4,7 @@
 # Only set up vcr if it's installed
 if (requireNamespace("vcr", quietly = TRUE)) {
 	vcr::vcr_configure(
-		# Default vcr location: tests/testthat/_vcr
+		dir = "_vcr",
 		filter_sensitive_data = list(
 			"<<<TRAKT_CLIENT_SECRET>>>" = Sys.getenv("trakt_client_secret", "")
 		),
