@@ -18,12 +18,11 @@ user_ratings <- function(
 	user = "me",
 	type = c("movies", "seasons", "shows", "episodes"),
 	rating = NULL,
-	extended = c("min", "full"),
+	extended = "min",
 	limit = NULL
 ) {
 	check_username(user)
 	type <- match.arg(type)
-	extended <- match.arg(extended)
 
 	if (!is.null(rating)) {
 		if (!(as.integer(rating) %in% 1:10)) {
@@ -39,8 +38,18 @@ user_ratings <- function(
 		))
 	}
 
+	extended <- validate_extended(extended)
+
 	# Construct URL, make API call
-	url <- build_trakt_url("users", user, "ratings", type, rating, extended = extended, limit = limit)
+	url <- build_trakt_url(
+		"users",
+		user,
+		"ratings",
+		type,
+		rating,
+		extended = extended$query_value,
+		limit = limit
+	)
 	response <- trakt_get(url = url)
 
 	if (identical(response, tibble())) {
@@ -49,13 +58,13 @@ user_ratings <- function(
 
 	# Flattening
 	if (type == "movies") {
-		response <- unpack_movie(response)
+		response <- unpack_movie(response, keep_images = extended$keep_images)
 	}
 
 	if (type == "shows") {
 		response <- response |>
 			select(-"show") |>
-			bind_cols(unpack_show(response$show))
+			bind_cols(unpack_show(response$show, keep_images = extended$keep_images))
 	}
 
 	if (type == "seasons") {
@@ -68,7 +77,7 @@ user_ratings <- function(
 			rename(season = "number") |>
 			fix_datetime()
 
-		response$show <- unpack_show(response$show)
+		response$show <- unpack_show(response$show, keep_images = extended$keep_images)
 	}
 
 	if (type == "episodes") {
@@ -82,7 +91,7 @@ user_ratings <- function(
 			as_tibble() |>
 			rename(episode = "number")
 
-		response$show <- unpack_show(response$show)
+		response$show <- unpack_show(response$show, keep_images = extended$keep_images)
 	}
-	fix_tibble_response(response)
+	fix_tibble_response(response, keep_images = extended$keep_images)
 }

@@ -1,18 +1,18 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/comments/236397/replies?extended=min
+    uri: https://api.trakt.tv/comments/236397/replies
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:02 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=3600, public
       content-encoding: gzip
       etag: W/"ba08da7d5483792d8edeb637a211216f"
-      expires: Mon, 02 Mar 2026 12:23:02 GMT
+      expires: Mon, 02 Mar 2026 13:41:26 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -26,29 +26,29 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
-      x-request-id: 4262e406-9829-422d-a21c-5eb117291d7b
-      x-runtime: '0.053141'
+      x-request-id: 6adba45e-edf2-41ea-8536-285e217537c3
+      x-runtime: '0.073495'
       x-xss-protection: '0'
-      cf-ray: 9d6006ed5e549f9a-AMS
+      cf-ray: 9d6079c46a27dfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"id":250976,"comment":"@jemus42  That scene is honestly the only
         thing in the film that actually made me say \"Wtf...?\"","spoiler":false,"review":false,"parent_id":236397,"created_at":"2019-09-18T02:57:44.000Z","updated_at":"2019-09-18T02:57:44.000Z","replies":0,"likes":0,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":3,"completed_count":1},"user":{"username":"MisterX867","private":false,"deleted":false,"name":"MisterX867","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"misterx867"}}}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
-    uri: https://api.trakt.tv/comments/236397/replies?extended=min
+    uri: https://api.trakt.tv/comments/236397/replies
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:02 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=3600, public
       content-encoding: gzip
       etag: W/"ba08da7d5483792d8edeb637a211216f"
-      expires: Mon, 02 Mar 2026 12:23:02 GMT
+      expires: Mon, 02 Mar 2026 13:41:26 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -62,13 +62,13 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
-      x-request-id: 4262e406-9829-422d-a21c-5eb117291d7b
-      x-runtime: '0.053141'
+      x-request-id: 6adba45e-edf2-41ea-8536-285e217537c3
+      x-runtime: '0.073495'
       x-xss-protection: '0'
-      cf-ray: 9d6006ed5e549f9a-AMS
+      cf-ray: 9d6079c46a27dfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"id":250976,"comment":"@jemus42  That scene is honestly the only
         thing in the film that actually made me say \"Wtf...?\"","spoiler":false,"review":false,"parent_id":236397,"created_at":"2019-09-18T02:57:44.000Z","updated_at":"2019-09-18T02:57:44.000Z","replies":0,"likes":0,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":3,"completed_count":1},"user":{"username":"MisterX867","private":false,"deleted":false,"name":"MisterX867","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"misterx867"}}}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 recorded_with: VCR-vcr/2.1.0

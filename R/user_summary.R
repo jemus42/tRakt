@@ -12,16 +12,17 @@
 #' \dontrun{
 #' user_profile("sean")
 #' }
-user_profile <- function(user = "me", extended = c("min", "full")) {
+user_profile <- function(user = "me", extended = "min") {
 	check_username(user)
-	extended <- match.arg(extended)
 
 	if (length(user) > 1) {
 		return(map_rbind(user, \(x) user_profile(user = x, extended)))
 	}
 
+	extended <- validate_extended(extended)
+
 	# Construct URL, make API call
-	url <- build_trakt_url("users", user, extended = extended)
+	url <- build_trakt_url("users", user, extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	response |>

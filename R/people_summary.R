@@ -16,15 +16,15 @@
 #'
 #' # Multiple people
 #' people_summary(c("kit-harington", "emilia-clarke"))
-people_summary <- function(id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
-
+people_summary <- function(id, extended = "min") {
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) people_summary(x, extended)))
 	}
 
+	extended <- validate_extended(extended)
+
 	# Construct URL, make API call
-	url <- build_trakt_url("people", id, extended = extended)
+	url <- build_trakt_url("people", id, extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	ids <- as_tibble(fix_ids(response$ids))
@@ -47,5 +47,5 @@ people_summary <- function(id, extended = c("min", "full")) {
 		response <- bind_cols(response, social)
 	}
 
-	fix_tibble_response(response)
+	fix_tibble_response(response, keep_images = extended$keep_images)
 }

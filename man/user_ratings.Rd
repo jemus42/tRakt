@@ -11,7 +11,7 @@ user_ratings(
   user = "me",
   type = c("movies", "seasons", "shows", "episodes"),
   rating = NULL,
-  extended = c("min", "full"),
+  extended = "min",
   limit = NULL
 )
 }
@@ -26,9 +26,17 @@ functions, values \code{seasons} or \code{episodes} are also allowed.}
 
 \item{rating}{\code{integer(1) [NULL]}: Optional rating between \code{1} and \code{10} to filter by.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 
 \item{limit}{\code{integer(1) [NULL]}: Number of items to return. If \code{NULL} (default), all items are returned.}
 }

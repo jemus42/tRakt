@@ -1,19 +1,19 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/donxy/lists/1248149/comments/newest?extended=min
+    uri: https://api.trakt.tv/users/donxy/lists/1248149/comments/newest
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
-      content-encoding: gzip
-      date: Mon, 02 Mar 2026 11:33:31 GMT
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
       etag: W/"95106a183748688af6d610b5acd7922f"
       server: cloudflare
-      vary: Origin, accept-encoding
+      vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
@@ -27,10 +27,10 @@ http_interactions:
       x-pagination-page-count: '4'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: e1ef9862-97a8-442f-8e02-f7e5a7f1cc40
-      x-runtime: '0.058204'
+      x-request-id: 8184d8dd-d969-4733-857a-d650cd1228f9
+      x-runtime: '0.068254'
       x-xss-protection: '0'
-      cf-ray: 9d601646a9f76710-AMS
+      cf-ray: 9d6079cef8e90e6c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"id":775285,"comment":"Thanks for the list mate. Appreciate it. Cheers.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-02-18T15:53:18.000Z","updated_at":"2025-02-18T15:53:18.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"YourFiore","private":false,"deleted":false,"name":"Fiona
@@ -50,5 +50,5 @@ http_interactions:
         Toribio","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"syphon0928-gmail-com"}}},{"id":496675,"comment":"techradar
         does a pretty good job outlining the timeline of MCU as it runs. I''m sure
         keeping this popular trakt list in order is taxing, hope this helps a bit.\r\nhttps://www.techradar.com/how-to/how-to-watch-the-marvel-movies-in-order#section-marvel-movies-in-order-how-to-watch-chronologically","spoiler":false,"review":false,"parent_id":0,"created_at":"2022-08-24T16:10:02.000Z","updated_at":"2022-08-24T16:10:02.000Z","replies":0,"likes":1,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"wrorser","private":false,"deleted":false,"name":"wrorser","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"wrorser"}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 recorded_with: VCR-vcr/2.1.0

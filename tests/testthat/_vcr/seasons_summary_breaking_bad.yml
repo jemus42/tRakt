@@ -1,11 +1,11 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=min
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:19:33 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
@@ -20,7 +20,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6001d1bd7fdac7-AMS
+      cf-ray: 9d6079d2a90b6650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
@@ -34,14 +34,14 @@ http_interactions:
         and severe consequences. When danger and suspicion around Walt escalate, he
         is pushed to new levels of desperation. Just how much higher will the stakes
         rise? How far is Walt willing to go to ensure his family''s security? Will
-        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        his grand plan spiral out of control?","updated_at":"2026-03-02T11:40:57.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
         2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
         3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
         continues to battle dueling identities: a desperate husband and father trying
         to provide for his family, and a newly appointed key player in the Albuquerque
         drug trade. As the danger around him escalates, Walt is now entrenched in
         the complex worlds of an angst-ridden family on the verge of dissolution,
-        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T12:27:52.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
         3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
         4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
         and Jesse must cope with the fallout of their previous actions, both personally
@@ -59,29 +59,32 @@ http_interactions:
         DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
         straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
         5"}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=full
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:00:26 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
       access-control-allow-origin: '*'
+      age: '6062'
       cache-control: public, max-age=3600, s-maxage=43200
+      last-modified: Mon, 02 Mar 2026 11:00:26 GMT
+      server: cloudflare
       vary: Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
+      cache-tag: show
       x-show-updated-at: '2026-03-02T07:18:19.000Z'
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
-      server: cloudflare
-      cf-ray: 9d5fe5d21a706566-AMS
+      cf-ray: 9d6079d3ca116650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
@@ -120,14 +123,14 @@ http_interactions:
         DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
         straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
         5"}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=min
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:19:33 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
@@ -142,7 +145,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6001d1bd7fdac7-AMS
+      cf-ray: 9d6079d2a90b6650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
@@ -156,14 +159,14 @@ http_interactions:
         and severe consequences. When danger and suspicion around Walt escalate, he
         is pushed to new levels of desperation. Just how much higher will the stakes
         rise? How far is Walt willing to go to ensure his family''s security? Will
-        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        his grand plan spiral out of control?","updated_at":"2026-03-02T11:40:57.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
         2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
         3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
         continues to battle dueling identities: a desperate husband and father trying
         to provide for his family, and a newly appointed key player in the Albuquerque
         drug trade. As the danger around him escalates, Walt is now entrenched in
         the complex worlds of an angst-ridden family on the verge of dissolution,
-        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T12:27:52.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
         3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
         4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
         and Jesse must cope with the fallout of their previous actions, both personally
@@ -181,14 +184,14 @@ http_interactions:
         DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
         straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
         5"}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=min
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:19:33 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
@@ -203,7 +206,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6001d1bd7fdac7-AMS
+      cf-ray: 9d6079d2a90b6650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
@@ -217,14 +220,14 @@ http_interactions:
         and severe consequences. When danger and suspicion around Walt escalate, he
         is pushed to new levels of desperation. Just how much higher will the stakes
         rise? How far is Walt willing to go to ensure his family''s security? Will
-        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        his grand plan spiral out of control?","updated_at":"2026-03-02T11:40:57.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
         2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
         3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
         continues to battle dueling identities: a desperate husband and father trying
         to provide for his family, and a newly appointed key player in the Albuquerque
         drug trade. As the danger around him escalates, Walt is now entrenched in
         the complex worlds of an angst-ridden family on the verge of dissolution,
-        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T12:27:52.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
         3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
         4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
         and Jesse must cope with the fallout of their previous actions, both personally
@@ -242,14 +245,14 @@ http_interactions:
         DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
         straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
         5"}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=min
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:19:33 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
@@ -264,7 +267,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6001d1bd7fdac7-AMS
+      cf-ray: 9d6079d2a90b6650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
@@ -278,14 +281,14 @@ http_interactions:
         and severe consequences. When danger and suspicion around Walt escalate, he
         is pushed to new levels of desperation. Just how much higher will the stakes
         rise? How far is Walt willing to go to ensure his family''s security? Will
-        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        his grand plan spiral out of control?","updated_at":"2026-03-02T11:40:57.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
         2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
         3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
         continues to battle dueling identities: a desperate husband and father trying
         to provide for his family, and a newly appointed key player in the Albuquerque
         drug trade. As the danger around him escalates, Walt is now entrenched in
         the complex worlds of an angst-ridden family on the verge of dissolution,
-        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T12:27:52.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
         3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
         4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
         and Jesse must cope with the fallout of their previous actions, both personally
@@ -303,14 +306,14 @@ http_interactions:
         DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
         straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
         5"}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/seasons?extended=min
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:19:33 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
@@ -325,7 +328,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6001d1bd7fdac7-AMS
+      cf-ray: 9d6079d2a90b6650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"plex":{"guid":"602e61dd66dfdb002c096afd"},"tmdb":3577,"tvdb":439371,"trakt":3949},"title":"Specials","votes":219,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/949/thumbs/medium/58727e71f3.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/949/posters/medium/74cf1d2116.jpg.webp"]},"number":0,"rating":8.21004581451416,"network":null,"overview":null,"updated_at":"2026-03-02T07:18:19.000Z","first_aired":"2009-02-18T02:00:00.000Z","episode_count":10,"aired_episodes":8,"original_title":"Specials"},{"ids":{"plex":{"guid":"602e61de66dfdb002c096b16"},"tmdb":3572,"tvdb":30272,"trakt":3950},"title":"Season
@@ -339,14 +342,14 @@ http_interactions:
         and severe consequences. When danger and suspicion around Walt escalate, he
         is pushed to new levels of desperation. Just how much higher will the stakes
         rise? How far is Walt willing to go to ensure his family''s security? Will
-        his grand plan spiral out of control?","updated_at":"2026-03-02T09:58:04.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        his grand plan spiral out of control?","updated_at":"2026-03-02T11:40:57.000Z","first_aired":"2009-03-09T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
         2"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096ba3"},"tmdb":3575,"tvdb":171641,"trakt":3952},"title":"Season
         3","votes":3364,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/952/thumbs/medium/34cfd630c0.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/952/posters/medium/191835bf48.jpg.webp"]},"number":3,"rating":8.818965911865234,"network":null,"overview":"Walt
         continues to battle dueling identities: a desperate husband and father trying
         to provide for his family, and a newly appointed key player in the Albuquerque
         drug trade. As the danger around him escalates, Walt is now entrenched in
         the complex worlds of an angst-ridden family on the verge of dissolution,
-        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T11:00:16.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
+        and the ruthless and unrelenting drug cartel.","updated_at":"2026-03-02T12:27:52.000Z","first_aired":"2010-03-22T01:00:00.000Z","episode_count":13,"aired_episodes":13,"original_title":"Season
         3"},{"ids":{"plex":{"guid":"602e61e266dfdb002c096bd2"},"tmdb":3576,"tvdb":297361,"trakt":3953},"title":"Season
         4","votes":3206,"images":{"thumb":["media.trakt.tv/images/seasons/000/003/953/thumbs/medium/f79fa42beb.jpg.webp"],"poster":["media.trakt.tv/images/seasons/000/003/953/posters/medium/228c53bc43.jpg.webp"]},"number":4,"rating":9.15096664428711,"network":null,"overview":"Walt
         and Jesse must cope with the fallout of their previous actions, both personally
@@ -364,14 +367,14 @@ http_interactions:
         DEA Agent brother in law, Hank, finds numerous leads that could blaze a path
         straight to Walt. ","updated_at":"2026-03-02T09:10:13.000Z","first_aired":"2012-07-16T01:00:00.000Z","episode_count":16,"aired_episodes":16,"original_title":"Season
         5"}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/bvkjqbkqjbf/seasons?extended=min
+    uri: https://api.trakt.tv/shows/bvkjqbkqjbf/seasons
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:36 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
@@ -386,9 +389,9 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007c20fbe7754-AMS
+      cf-ray: 9d6079d48aa76650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:29
 recorded_with: VCR-vcr/2.1.0

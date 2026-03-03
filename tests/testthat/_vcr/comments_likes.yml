@@ -1,17 +1,17 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/comments/236397/likes?extended=min
+    uri: https://api.trakt.tv/comments/236397/likes
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:33:30 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate, no_store=true, no_cache=true
       content-encoding: gzip
-      etag: W/"74ea85fa2244818ae4708bad3329e783"
+      etag: W/"a4945a777e601d80c86968e2262bde80"
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -25,27 +25,27 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
-      x-request-id: c4c0a195-98f0-4d6a-bb27-db1f13baba11
-      x-runtime: '0.026595'
+      x-request-id: d0a1d516-4f39-4b7a-b5a5-9ab30f67dd59
+      x-runtime: '0.026829'
       x-xss-protection: '0'
-      cf-ray: 9d601643bfcd6710-AMS
+      cf-ray: 9d6079c60e44dfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"liked_at":"2019-09-15T02:43:31.000Z","user":{"username":"OvejaMecanica","private":false,"deleted":false,"name":"Laura","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ovejamecanica"}}}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
-    uri: https://api.trakt.tv/comments/236397/likes?extended=min
+    uri: https://api.trakt.tv/comments/236397/likes
   response:
-    status: 200
+    status: 304
     headers:
-      date: Mon, 02 Mar 2026 11:33:31 GMT
       content-type: application/json; charset=utf-8
+      content-encoding: gzip
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate, no_store=true, no_cache=true
-      content-encoding: gzip
-      etag: W/"a46fd1551394ee4d7fa874f4854758b4"
+      etag: W/"a4945a777e601d80c86968e2262bde80"
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -59,12 +59,12 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
-      x-request-id: e0efcee7-affc-40af-8e55-2827cf92f937
-      x-runtime: '0.034107'
+      x-request-id: 2545d95e-33f4-4783-9d23-a88f3e365074
+      x-runtime: '0.028918'
       x-xss-protection: '0'
-      cf-ray: 9d601644d8a76710-AMS
+      cf-ray: 9d6079c7091cdfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"liked_at":"2019-09-15T02:43:31.000Z","user":{"username":"OvejaMecanica","private":false,"deleted":false,"name":"Laura","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ovejamecanica"}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 recorded_with: VCR-vcr/2.1.0

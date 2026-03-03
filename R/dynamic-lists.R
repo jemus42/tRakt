@@ -15,7 +15,7 @@ trakt_auto_lists <- function(
 	),
 	type = c("shows", "movies"),
 	limit = 10L,
-	extended = c("min", "full"),
+	extended = "min",
 	period = NULL,
 	start_date = NULL,
 	query = NULL,
@@ -32,7 +32,7 @@ trakt_auto_lists <- function(
 	# Check arguments
 	list_type <- match.arg(list_type)
 
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 	limit <- as.integer(limit)
 
 	# Check filters
@@ -59,7 +59,7 @@ trakt_auto_lists <- function(
 		start_date,
 		period,
 		limit = limit,
-		extended = extended,
+		extended = extended$query_value,
 		query = query,
 		years = years,
 		genres = genres,
@@ -76,14 +76,14 @@ trakt_auto_lists <- function(
 
 	# For this case we *only* get show objects, so we handle that first
 	if (type == "shows" && list_type == "popular") {
-		response <- unpack_show(response)
+		response <- unpack_show(response, keep_images = extended$keep_images)
 	}
 
 	# Unnest show or movie object present only in some methods
 	if (has_name(response, "show")) {
 		response <- bind_cols(
 			response |> select(-"show"),
-			unpack_show(response$show)
+			unpack_show(response$show, keep_images = extended$keep_images)
 		)
 	}
 
@@ -105,7 +105,7 @@ trakt_auto_lists <- function(
 		)
 	}
 
-	fix_tibble_response(response)
+	fix_tibble_response(response, keep_images = extended$keep_images)
 }
 
 # Popular ----
@@ -128,7 +128,7 @@ trakt_auto_lists <- function(
 #' }
 movies_popular <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -161,7 +161,7 @@ movies_popular <- function(
 #' @export
 shows_popular <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -206,7 +206,7 @@ shows_popular <- function(
 #' @family dynamic lists
 movies_trending <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -239,7 +239,7 @@ movies_trending <- function(
 #' @export
 shows_trending <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -284,7 +284,7 @@ shows_trending <- function(
 #' @family dynamic lists
 movies_anticipated <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -323,7 +323,7 @@ movies_anticipated <- function(
 #' }
 shows_anticipated <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -368,7 +368,7 @@ shows_anticipated <- function(
 #' @family dynamic lists
 movies_played <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
 	query = NULL,
 	years = NULL,
@@ -405,7 +405,7 @@ movies_played <- function(
 #' @export
 shows_played <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
 	query = NULL,
 	years = NULL,
@@ -454,7 +454,7 @@ shows_played <- function(
 #' @family dynamic lists
 movies_watched <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
 	query = NULL,
 	years = NULL,
@@ -491,7 +491,7 @@ movies_watched <- function(
 #' @export
 shows_watched <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
 	query = NULL,
 	years = NULL,
@@ -540,7 +540,7 @@ shows_watched <- function(
 #' @family dynamic lists
 movies_collected <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
 	query = NULL,
 	years = NULL,
@@ -577,7 +577,7 @@ movies_collected <- function(
 #' @export
 shows_collected <- function(
 	limit = 10,
-	extended = c("min", "full"),
+	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
 	query = NULL,
 	years = NULL,

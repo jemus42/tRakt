@@ -38,7 +38,7 @@ http_interactions:
         Frisson"},{"country":"nl","certification":"16","release_date":"2018-05-21","release_type":"tv","note":"Veronica"},{"country":"fr","certification":"16","release_date":"2020-09-30","release_type":"digital","note":"Prime
         Video"},{"country":"fr","certification":"16","release_date":"2021-02-23","release_type":"digital","note":"Disney+"},{"country":"es","certification":"18","release_date":"2021-02-23","release_type":"digital","note":"Disney
         + (Star)"}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/deadpool-2016/releases?country=de
@@ -70,7 +70,7 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"country":"de","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"de","certification":"16","release_date":"2016-06-23","release_type":"physical","note":null}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/deadpool-2016/releases?country=de
@@ -102,7 +102,7 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"country":"de","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"de","certification":"16","release_date":"2016-06-23","release_type":"physical","note":null}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/inception-2010/releases?country=de
@@ -134,5 +134,5 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"country":"de","certification":"12","release_date":"2010-07-29","release_type":"theatrical","note":null},{"country":"de","certification":"12","release_date":"2010-12-03","release_type":"physical","note":"DvD"}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:27
 recorded_with: VCR-vcr/2.1.0

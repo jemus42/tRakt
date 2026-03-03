@@ -30,7 +30,7 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"rating":8.53768,"votes":21816,"distribution":{"1":202,"2":67,"3":86,"4":123,"5":282,"6":776,"7":2668,"8":5179,"9":5332,"10":7101}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/inception-2010/ratings
@@ -58,7 +58,7 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"rating":8.62665,"votes":85876,"distribution":{"1":387,"2":202,"3":235,"4":482,"5":1085,"6":3366,"7":8676,"8":19764,"9":23857,"10":27822}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/futurama/ratings
@@ -90,7 +90,7 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"rating":8.53768,"votes":21816,"distribution":{"1":202,"2":67,"3":86,"4":123,"5":282,"6":776,"7":2668,"8":5179,"9":5332,"10":7101}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/futurama/ratings
@@ -122,5 +122,5 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"rating":8.53768,"votes":21816,"distribution":{"1":202,"2":67,"3":86,"4":123,"5":282,"6":776,"7":2668,"8":5179,"9":5332,"10":7101}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 recorded_with: VCR-vcr/2.1.0

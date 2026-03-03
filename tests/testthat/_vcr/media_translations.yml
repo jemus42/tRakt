@@ -283,7 +283,7 @@ http_interactions:
         bị lên đường đi.","language":"vi","country":"vn"},{"title":"玩具总动员4","overview":"伍迪一直坚信自己在世界上的位置，并始终将照顾孩子——无论是安迪还是邦妮——视为首要任务。因此当邦妮心爱的新手工玩具“叉叉”宣称自己是“垃圾”而非玩具时，伍迪毅然承担起引导叉叉认识玩具价值的责任。然而当邦妮带着全体玩具踏上家庭公路旅行时，伍迪意外遭遇转折，与失散多年的老朋友牧羊女宝贝重逢。多年来独立生活的宝贝，其冒险精神与漂泊生活的历练，与她精致的瓷娃娃外表形成了鲜明对比。当伍迪和宝贝发现彼此对玩具生活的理念天差地别时，他们很快意识到这竟是所有麻烦中最微不足道的一个。","tagline":"再遇玩伴
         邂逅无限可能","language":"zh","country":"cn"},{"title":"反鬥奇兵 4","overview":"寶妮帶著一眾玩具穿州過省展開家庭旅行，格格不入的新玩具「小叉」乘機走佬，胡迪立即展開追蹤，巴斯光年亦率領一眾玩具出手相助，由此踏上一段意想不到的全新歷險！","tagline":"新舊玩具大哂冷
         爆笑爆喊爆好玩","language":"zh","country":"hk"},{"title":"玩具總動員4","overview":"故事發生在安弟離家展開大學生涯，玩具們輾轉來到愛惜玩具的小女孩邦妮家中。某天，邦妮帶來了一個手作新成員「叉奇」加入玩具們，本身為拋棄式餐具的叉奇認為自己不是玩具，而是垃圾，因而引發了不少混亂。在一場冒險旅程之後，胡迪警長與老友牧羊女重逢，發現外面玩具們的世界，遠比他想像的還要巨大……","tagline":null,"language":"zh","country":"tw"}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/breaking-bad/translations
@@ -503,7 +503,7 @@ http_interactions:
         làm người xấu","overview":"Một giáo viên dạy hóa ở trường trung học mắc bệnh
         ung thư bắt tay với một cựu học sinh để bảo vệ tương lai của gia đình bằng
         cách sản xuất và bán ma túy đá.","tagline":null,"language":"vi","country":"vn"},{"title":"絕命毒師","overview":"一名即將死於癌症的高中化學老師與他過去的學生一起合作，透過製造及販賣冰毒保障他家人的未來。","tagline":"改變方程式。","language":"zh","country":"tw"},{"title":"絕命毒師","overview":"該劇講述了一比特普通的高中化學老師在得知自己身患絕症之後，為了給家人留下財產，而利用自己超凡的化學知識製造毒品，並成為世界頂級毒王的傳奇犯罪故事。","tagline":null,"language":"zh","country":"hk"},{"title":"绝命毒师","overview":"新墨西哥州的高中化学老师沃尔特·H·怀特是拮据家庭的唯一经济来源。他大半生安分守己，兢兢业业，却在50岁生日之际突然得知自己罹患肺癌晚期的噩耗，原本便不甚顺意的人生顿时雪上加霜。为了保障怀孕的妻子斯凯勒和残疾的儿子小沃特能在自己死后衣食无忧，沃尔特决意铤而走险。他主动找到曾经的学生、而今的毒贩小混混杰西·平克曼谈合作，并运用娴熟高超的化学技术提炼出高纯度冰毒交给后者贩售。孰料事态的发展却在平克曼带回毒品供销商疯狂小八及其表弟后急转直下，沃尔特的人生也由此彻底步向失控。他被迫开始了教书与制毒的双重生活，逐渐坠落至万劫不复的深渊。","tagline":null,"language":"zh","country":"cn"},{"title":"绝命毒师","overview":"一位患有晚期肺癌的高中化学老师为了保证家人未来的生计，决定和以前的学生联手制作并贩卖冰毒。","tagline":null,"language":"zh","country":"sg"}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/3/translations
@@ -629,5 +629,5 @@ http_interactions:
         liệu trót lọt","overview":"Khi Walt xử lý các rắc rối sót lại từ phi vụ buôn
         bán ma túy đầu tiên, Skyler suýt biết được sự thật về cuộc sống bí mật của
         ông.","language":"vi","country":"vn"},{"title":"滅跡","overview":"在華特收拾第一次毒品交易的爛攤子時，史凱勒過於逼近他雙重生活的真相了。","language":"zh","country":"hk"},{"title":"滅跡","overview":"在華特收拾第一次毒品交易的爛攤子時，史凱勒過於逼近他雙重生活的真相了。","language":"zh","country":"tw"},{"title":"袋在河里","overview":"沃尔特收拾第一次毒品交易后留下的残局，而斯凯勒即将了解到他的双重人生真相。","language":"zh","country":"sg"},{"title":"…实难挽回","overview":"沃尔特收拾第一次毒品交易后留下的残局，而斯凯勒即将了解到他的双重人生真相。","language":"zh","country":"cn"}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 recorded_with: VCR-vcr/2.1.0

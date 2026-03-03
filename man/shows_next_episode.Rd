@@ -10,9 +10,9 @@
 \code{shows_last_episode()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/last-episode/get-last-episode}{/shows/:id/last_episode}.
 }
 \usage{
-shows_next_episode(id, extended = c("min", "full"))
+shows_next_episode(id, extended = "min")
 
-shows_last_episode(id, extended = c("min", "full"))
+shows_last_episode(id, extended = "min")
 }
 \arguments{
 \item{id}{\code{character(1)}: The ID of the item requested. Preferably the
@@ -22,9 +22,17 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{id} values separately and the result is combined. See
 \code{vignette("tRakt")} for more details.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter

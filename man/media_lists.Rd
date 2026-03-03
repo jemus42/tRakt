@@ -23,7 +23,7 @@ movies_lists(
   type = c("all", "personal", "official", "watchlists"),
   sort = c("popular", "likes", "comments", "items", "added", "updated"),
   limit = 10L,
-  extended = c("min", "full")
+  extended = "min"
 )
 
 shows_lists(
@@ -31,7 +31,7 @@ shows_lists(
   type = c("all", "personal", "official", "watchlists"),
   sort = c("popular", "likes", "comments", "items", "added", "updated"),
   limit = 10L,
-  extended = c("min", "full")
+  extended = "min"
 )
 
 seasons_lists(
@@ -40,7 +40,7 @@ seasons_lists(
   type = c("all", "personal", "official", "watchlists"),
   sort = c("popular", "likes", "comments", "items", "added", "updated"),
   limit = 10L,
-  extended = c("min", "full")
+  extended = "min"
 )
 
 episodes_lists(
@@ -50,7 +50,7 @@ episodes_lists(
   type = c("all", "personal", "official", "watchlists"),
   sort = c("popular", "likes", "comments", "items", "added", "updated"),
   limit = 10L,
-  extended = c("min", "full")
+  extended = "min"
 )
 
 people_lists(
@@ -58,7 +58,7 @@ people_lists(
   type = c("all", "personal", "official", "watchlists"),
   sort = c("popular", "likes", "comments", "items", "added", "updated"),
   limit = 10L,
-  extended = c("min", "full")
+  extended = "min"
 )
 }
 \arguments{
@@ -78,9 +78,17 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced via \code{as.integer()}.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 
 \item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be

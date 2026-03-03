@@ -5,22 +5,25 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:37 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
       access-control-allow-origin: '*'
+      age: '4672'
       cache-control: public, max-age=3600, s-maxage=43200
+      last-modified: Mon, 02 Mar 2026 11:23:37 GMT
+      server: cloudflare
       vary: Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
+      cache-tag: show
       x-show-updated-at: '2026-03-02T09:44:02.000Z'
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
-      server: cloudflare
-      cf-ray: 9d6007c318b47754-AMS
+      cf-ray: 9d6079d58b616650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"plex":{"guid":null},"tmdb":500264,"tvdb":null,"trakt":515470},"title":"Specials","votes":0,"images":{"thumb":[],"poster":["media.trakt.tv/images/seasons/000/515/470/posters/medium/c315ae7b20.jpg.webp"]},"number":0,"rating":0,"network":null,"overview":null,"updated_at":"2026-03-02T09:44:02.000Z","first_aired":"2013-03-11T21:00:00.000Z","episode_count":4,"aired_episodes":4,"original_title":"Specials","episodes":[{"ids":{"imdb":null,"plex":{"guid":null},"tmdb":6945822,"tvdb":null,"trakt":14003928},"title":"The
@@ -92,28 +95,31 @@ http_interactions:
         final episode the race is on to find out who is going to release  the flu.
         The gang track down Dobri Gorski, where he tells them the names  of the three
         people he trained to release the flu.","number_abs":12,"updated_at":"2026-03-01T19:44:02.000Z","first_aired":"2014-08-12T20:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":7,"during_credits":false,"original_title":null,"available_translations":["de","el","en","es","fr","he","nl","pl","ru"]}]}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/utopia/seasons/1?extended=full
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:37 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
       access-control-allow-origin: '*'
+      age: '4671'
       cache-control: public, max-age=3600, s-maxage=43200
+      last-modified: Mon, 02 Mar 2026 11:23:37 GMT
+      server: cloudflare
       vary: Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
+      cache-tag: show
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
-      server: cloudflare
-      cf-ray: 9d6007c5aae87754-AMS
+      cf-ray: 9d6079d61bbe6650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"imdb":"tt2618234","plex":{"guid":"5d9c1007ba6eb9001fbf63c1"},"tmdb":910003,"tvdb":4471351,"trakt":1405053},"title":"Episode
@@ -140,5 +146,5 @@ http_interactions:
         6","votes":799,"images":{"screenshot":["media.trakt.tv/images/episodes/001/405/058/screenshots/medium/dc75fb05b4.jpg.webp"]},"number":6,"rating":8.546934127807617,"season":1,"runtime":62,"overview":"The  final
         episode sees time running out. As a daring plan is formed, only  one question
         remains - will the true secrets of Utopia finally be  revealed?","number_abs":6,"updated_at":"2026-03-02T09:02:35.000Z","first_aired":"2013-02-19T21:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":2,"during_credits":false,"original_title":null,"available_translations":["de","el","en","es","fr","he","nl","pl","ru"]}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:29
 recorded_with: VCR-vcr/2.1.0

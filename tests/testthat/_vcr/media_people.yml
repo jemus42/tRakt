@@ -1,11 +1,11 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/movies/deadpool-2016/people?extended=min
+    uri: https://api.trakt.tv/movies/deadpool-2016/people
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:14 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=10800, s-maxage=43200
@@ -19,7 +19,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007328a717754-AMS
+      cf-ray: 9d6079c2d9b1a4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"cast":[{"character":"Wade Wilson / Deadpool","characters":["Wade
@@ -1201,21 +1201,21 @@ http_interactions:
         Holmes","death":null,"gender":"male","height":null,"images":{"fanart":[],"headshot":[]},"birthday":null,"homepage":null,"biography":"","birthplace":null,"social_ids":{"twitter":null,"facebook":null,"instagram":null,"wikipedia":null},"updated_at":"2026-01-14T08:42:49.000Z","known_for_department":"lighting"},"images":{"headshot":[]}},{"job":"Rigging
         Grip","jobs":["Rigging Grip"],"person":{"ids":{"imdb":"nm8153812","slug":"andrew-kearney","tmdb":3144657,"trakt":2323646},"name":"Andrew
         Kearney","death":null,"gender":"unknown","height":null,"images":{"fanart":[],"headshot":[]},"birthday":null,"homepage":null,"biography":"","birthplace":null,"social_ids":{"twitter":null,"facebook":null,"instagram":null,"wikipedia":null},"updated_at":"2025-01-08T08:29:57.000Z","known_for_department":"lighting"},"images":{"headshot":[]}}]}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/people?extended=min
+    uri: https://api.trakt.tv/shows/breaking-bad/people
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:14 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"ba5290f11508f04d41318999e54390f0"
-      expires: Mon, 02 Mar 2026 19:23:14 GMT
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -1225,11 +1225,11 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: 0f2fa037-fcc8-4424-9040-eeb64ab5db52
-      x-runtime: '0.031066'
+      x-request-id: f4e8bdf1-6619-4415-89b0-8ae60b5ee709
+      x-runtime: '0.309548'
       x-show-updated-at: '2026-03-02T06:38:59.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6007364e427754-AMS
+      cf-ray: 9d6079c67adfa4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"cast":[{"character":"Walter White","characters":["Walter White"],"episode_count":62,"person":{"name":"Bryan
@@ -1394,21 +1394,21 @@ http_interactions:
         McCaleb","ids":{"trakt":637884,"slug":"chris-mccaleb","imdb":"nm0564604","tmdb":1483956,"tvrage":null}}}],"created
         by":[{"job":"Creator","jobs":["Creator"],"episode_count":62,"person":{"name":"Vince
         Gilligan","ids":{"trakt":423003,"slug":"vince-gilligan","imdb":"nm0319213","tmdb":66633,"tvrage":null}}}]}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/people?extended=min%2Cguest_stars
+    uri: https://api.trakt.tv/shows/breaking-bad/people?extended=guest_stars
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:14 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"0d354b0acf3dfab36670b6e87d478592"
-      expires: Mon, 02 Mar 2026 19:23:14 GMT
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -1418,11 +1418,11 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: 38191154-746c-45b6-b203-3405ec0b939d
-      x-runtime: '0.097137'
+      x-request-id: 9665f31c-4322-42b9-81fa-f3ae2f1fdbee
+      x-runtime: '0.095175'
       x-show-updated-at: '2026-03-02T06:38:59.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6007379f9e7754-AMS
+      cf-ray: 9d6079c9aa8aa4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"cast":[{"character":"Walter White","characters":["Walter White"],"episode_count":62,"person":{"name":"Bryan
@@ -2161,21 +2161,21 @@ http_interactions:
         McCaleb","ids":{"trakt":637884,"slug":"chris-mccaleb","imdb":"nm0564604","tmdb":1483956,"tvrage":null}}}],"created
         by":[{"job":"Creator","jobs":["Creator"],"episode_count":62,"person":{"name":"Vince
         Gilligan","ids":{"trakt":423003,"slug":"vince-gilligan","imdb":"nm0319213","tmdb":66633,"tvrage":null}}}]}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/people?extended=min
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/people
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:15 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: MISS
       access-control-allow-origin: '*'
       cache-control: public, max-age=28800
       content-encoding: gzip
       etag: W/"2fd1f6e369c1afdc6648e591c1d8423e"
-      expires: Mon, 02 Mar 2026 19:23:14 GMT
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -2185,13 +2185,13 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: e72f0b33-9ab2-48c3-9484-1d203cc66412
-      x-runtime: '0.159094'
+      x-request-id: be6c3a35-f725-4273-a9f2-d00f61650295
+      x-runtime: '0.028223'
       x-show-id: '1388'
       x-show-season-id: '3950'
       x-show-updated-at: '2026-03-02T06:38:59.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d60073979707754-AMS
+      cf-ray: 9d6079cb6f7aa4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"cast":[{"character":"Walter White","characters":["Walter White"],"episode_count":7,"person":{"name":"Bryan
@@ -2261,21 +2261,21 @@ http_interactions:
         Hunter","ids":{"trakt":420822,"slug":"tim-hunter-b3f4e55e-a017-4d9b-812a-094fbfe8ea7a","imdb":"nm0006853","tmdb":15858,"tvrage":null}}},{"job":"Director","jobs":["Director"],"episode_count":1,"person":{"name":"Vince
         Gilligan","ids":{"trakt":423003,"slug":"vince-gilligan","imdb":"nm0319213","tmdb":66633,"tvrage":null}}},{"job":"Director","jobs":["Director"],"episode_count":1,"person":{"name":"Jim
         McKay","ids":{"trakt":442030,"slug":"jim-mckay-4139dfe9-27d7-4aef-8645-1fa7b610514c","imdb":"nm0570995","tmdb":205639,"tvrage":null}}}]}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/people?extended=min%2Cguest_stars
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/people?extended=guest_stars
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:15 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: MISS
       access-control-allow-origin: '*'
       cache-control: public, max-age=28800
       content-encoding: gzip
       etag: W/"948c09030c7cb6ab9932b9566fc80f34"
-      expires: Mon, 02 Mar 2026 19:23:15 GMT
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -2285,13 +2285,13 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: f1540da1-eaa3-41e7-b7fb-59a3de383e5a
-      x-runtime: '0.048185'
+      x-request-id: 688df677-efb5-4167-ab7a-3daa44b64e8d
+      x-runtime: '0.040399'
       x-show-id: '1388'
       x-show-season-id: '3950'
       x-show-updated-at: '2026-03-02T06:38:59.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d60073c2ba87754-AMS
+      cf-ray: 9d6079cccb4ca4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"cast":[{"character":"Walter White","characters":["Walter White"],"episode_count":7,"person":{"name":"Bryan
@@ -2463,21 +2463,21 @@ http_interactions:
         Hunter","ids":{"trakt":420822,"slug":"tim-hunter-b3f4e55e-a017-4d9b-812a-094fbfe8ea7a","imdb":"nm0006853","tmdb":15858,"tvrage":null}}},{"job":"Director","jobs":["Director"],"episode_count":1,"person":{"name":"Vince
         Gilligan","ids":{"trakt":423003,"slug":"vince-gilligan","imdb":"nm0319213","tmdb":66633,"tvrage":null}}},{"job":"Director","jobs":["Director"],"episode_count":1,"person":{"name":"Jim
         McKay","ids":{"trakt":442030,"slug":"jim-mckay-4139dfe9-27d7-4aef-8645-1fa7b610514c","imdb":"nm0570995","tmdb":205639,"tvrage":null}}}]}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/1/people?extended=min
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/1/people
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:15 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: MISS
       access-control-allow-origin: '*'
       cache-control: public, max-age=28800
       content-encoding: gzip
       etag: W/"f8ea9722679d9e3885162bdc4eca8f35"
-      expires: Mon, 02 Mar 2026 19:23:15 GMT
+      expires: Mon, 02 Mar 2026 20:41:28 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -2487,13 +2487,13 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: 272f0613-2fba-4ec7-84f9-d191a6faf755
-      x-runtime: '0.035117'
+      x-request-id: 0f703e4b-43e0-4ffb-aa7a-961dd81f702f
+      x-runtime: '0.031686'
       x-show-id: '1388'
       x-show-season-id: '3950'
       x-show-updated-at: '2026-03-02T06:38:59.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d60073dbd427754-AMS
+      cf-ray: 9d6079ce4fcba4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"cast":[{"character":"Walter White","characters":["Walter White"],"person":{"name":"Bryan
@@ -2511,21 +2511,21 @@ http_interactions:
         Toll","ids":{"trakt":2172,"slug":"john-toll","imdb":"nm0001799","tmdb":2483,"tvrage":null}}}],"writing":[{"job":"Writer","jobs":["Writer"],"person":{"name":"Vince
         Gilligan","ids":{"trakt":423003,"slug":"vince-gilligan","imdb":"nm0319213","tmdb":66633,"tvrage":null}}}],"directing":[{"job":"Director","jobs":["Director"],"person":{"name":"Vince
         Gilligan","ids":{"trakt":423003,"slug":"vince-gilligan","imdb":"nm0319213","tmdb":66633,"tvrage":null}}}]}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/1/people?extended=min%2Cguest_stars
+    uri: https://api.trakt.tv/shows/breaking-bad/seasons/1/episodes/1/people?extended=guest_stars
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:15 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: MISS
       access-control-allow-origin: '*'
       cache-control: public, max-age=28800
       content-encoding: gzip
       etag: W/"07eb40a938b671d3ae1a6a072439fe5e"
-      expires: Mon, 02 Mar 2026 19:23:15 GMT
+      expires: Mon, 02 Mar 2026 20:41:28 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -2535,13 +2535,13 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: d62c4777-98d0-46b5-aae4-d68b2c5a60a5
-      x-runtime: '0.030777'
+      x-request-id: 74f57982-16d8-45b5-8dff-350e3e2211b2
+      x-runtime: '0.023499'
       x-show-id: '1388'
       x-show-season-id: '3950'
       x-show-updated-at: '2026-03-02T06:38:59.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d60073f3e9e7754-AMS
+      cf-ray: 9d6079cfab53a4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"cast":[{"character":"Walter White","characters":["Walter White"],"person":{"name":"Bryan
@@ -2580,5 +2580,5 @@ http_interactions:
         Toll","ids":{"trakt":2172,"slug":"john-toll","imdb":"nm0001799","tmdb":2483,"tvrage":null}}}],"writing":[{"job":"Writer","jobs":["Writer"],"person":{"name":"Vince
         Gilligan","ids":{"trakt":423003,"slug":"vince-gilligan","imdb":"nm0319213","tmdb":66633,"tvrage":null}}}],"directing":[{"job":"Director","jobs":["Director"],"person":{"name":"Vince
         Gilligan","ids":{"trakt":423003,"slug":"vince-gilligan","imdb":"nm0319213","tmdb":66633,"tvrage":null}}}]}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:28
 recorded_with: VCR-vcr/2.1.0

@@ -1,17 +1,17 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/comments/236397/item?extended=min
+    uri: https://api.trakt.tv/comments/236397/item
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:03 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
-      expires: Mon, 02 Mar 2026 19:23:03 GMT
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
       last-modified: Sun, 07 Sep 2025 18:04:56 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
@@ -22,14 +22,14 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: 22fdb9ee-32e3-4e17-8440-3226b711256b
-      x-runtime: '0.028972'
+      x-request-id: 6a2a736b-7615-41f5-a7bb-a204a14ea8af
+      x-runtime: '0.025616'
       x-xss-protection: '0'
-      cf-ray: 9d6006ef8adb7754-AMS
+      cf-ray: 9d6079c1debc0e6c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"type":"movie","movie":{"title":"John Wick: Chapter 3 - Parabellum","year":2019,"ids":{"trakt":304278,"slug":"john-wick-chapter-3-parabellum-2019","imdb":"tt6146586","tmdb":458156}}}'
-  recorded_at: 2026-03-02 11:52:36
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
     uri: https://api.trakt.tv/comments/236397/item?extended=full
@@ -66,20 +66,20 @@ http_interactions:
         guild, the High Table, John Wick is excommunicado, but the world’s most ruthless
         hit men and women await his every turn.","released":"2019-05-17","runtime":131,"country":"us","status":"released","rating":7.66512,"votes":32573,"comment_count":158,"trailer":"https://youtube.com/watch?v=pU8-7BX9uxs","homepage":"http://johnwick.movie/film/john-wick-chapter-3-parabellum","updated_at":"2026-03-01T16:50:52.000Z","language":"en","languages":["ar","zh","en","id","it","ja","la","ru"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","mk","ms","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["crime","thriller","action"],"subgenres":["martial-arts","organized-crime","secret-organization"],"certification":"R","original_title":"John
         Wick: Chapter 3 - Parabellum","after_credits":false,"during_credits":false}}'
-  recorded_at: 2026-03-02 11:52:36
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
-    uri: https://api.trakt.tv/comments/120768/item?extended=min
+    uri: https://api.trakt.tv/comments/120768/item
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:03 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
-      expires: Mon, 02 Mar 2026 19:23:03 GMT
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
       last-modified: Sat, 24 May 2025 23:30:18 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
@@ -90,14 +90,14 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: c02e4ff1-3b3e-4ccd-bfd2-6c2148724386
-      x-runtime: '0.032033'
+      x-request-id: 376f3722-82fe-4591-bfc0-c3f3a6bb939f
+      x-runtime: '0.024992'
       x-xss-protection: '0'
-      cf-ray: 9d6006f1dd267754-AMS
+      cf-ray: 9d6079c3b8090e6c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"type":"show","show":{"title":"13 Reasons Why","year":2017,"ids":{"trakt":116129,"slug":"13-reasons-why","tvdb":323168,"imdb":"tt1837492","tmdb":66788,"tvrage":null}}}'
-  recorded_at: 2026-03-02 11:52:36
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
     uri: https://api.trakt.tv/comments/120768/item?extended=full
@@ -132,20 +132,20 @@ http_interactions:
         perplexing suicide, a classmate receives a series of tapes that unravel the
         mystery of her tragic choice.","first_aired":"2017-03-31T07:00:00.000Z","airs":{"day":"Friday","time":"03:00","timezone":"America/New_York"},"runtime":60,"certification":"TV-MA","country":"us","status":"ended","rating":6.98279,"votes":16562,"comment_count":156,"trailer":"https://youtube.com/watch?v=QkT-HIMSrRk","homepage":"http://www.netflix.com/title/80117470","network":"Netflix","updated_at":"2026-03-02T10:59:18.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","ms","nl","no","pl","pt","ro","ru","sk","sr","sv","th","tr","uk","vi","zh"],"genres":["drama","mystery"],"subgenres":["high-school","rape","suicide","bullying","melodrama","mental-illness","dark"],"aired_episodes":49,"original_title":"13
         Reasons Why"}}'
-  recorded_at: 2026-03-02 11:52:36
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
-    uri: https://api.trakt.tv/comments/140265/item?extended=min
+    uri: https://api.trakt.tv/comments/140265/item
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:03 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
-      expires: Mon, 02 Mar 2026 19:23:03 GMT
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
       last-modified: Sun, 07 Sep 2025 18:05:31 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
@@ -156,15 +156,15 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: da982aeb-b089-4b57-854b-e405caa947cd
-      x-runtime: '0.029372'
+      x-request-id: 832b92d3-fecd-482f-aa52-b2e918cd0bd8
+      x-runtime: '0.038133'
       x-xss-protection: '0'
-      cf-ray: 9d6006f48f9f7754-AMS
+      cf-ray: 9d6079c4f8e60e6c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"type":"season","season":{"number":3,"ids":{"trakt":138350,"tvdb":696307,"tmdb":83866,"tvrage":null}},"show":{"title":"Twin
         Peaks","year":1990,"ids":{"trakt":1907,"slug":"twin-peaks","tvdb":70533,"imdb":"tt0098936","tmdb":1920,"tvrage":null}}}'
-  recorded_at: 2026-03-02 11:52:36
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
     uri: https://api.trakt.tv/comments/140265/item?extended=full
@@ -203,20 +203,20 @@ http_interactions:
         a web of mystery that ultimately leads him deep into the heart of the surrounding
         woodland and his very own soul.","first_aired":"1990-04-09T00:00:00.000Z","airs":{"day":"Sunday","time":"20:00","timezone":"America/New_York"},"runtime":55,"certification":"TV-MA","country":"us","status":"ended","rating":8.483,"votes":8998,"comment_count":54,"trailer":null,"homepage":"http://www.sho.com/twin-peaks","network":"Showtime","updated_at":"2026-03-02T08:50:54.000Z","language":"en","languages":["en"],"available_translations":["bg","bs","cs","da","de","el","en","es","fi","fr","he","hr","hu","is","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","zh"],"genres":["drama","mystery"],"subgenres":["fbi","forest","surrealism","school","small-town","murder-mystery","serial-killer","paranormal-investigation","soap-opera","1990s","mysterious","possession","psychological-horror","secret","witty"],"aired_episodes":48,"original_title":"Twin
         Peaks"}}'
-  recorded_at: 2026-03-02 11:52:36
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
-    uri: https://api.trakt.tv/comments/136632/item?extended=min
+    uri: https://api.trakt.tv/comments/136632/item
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:03 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
-      expires: Mon, 02 Mar 2026 19:23:03 GMT
+      expires: Mon, 02 Mar 2026 20:41:26 GMT
       last-modified: Thu, 27 Nov 2025 15:48:25 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
@@ -227,16 +227,16 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: c969c079-09f5-42ed-99da-907de4ee9b7a
-      x-runtime: '0.039301'
+      x-request-id: 46ed4fb6-5b29-4e4c-aa24-09d7e936e581
+      x-runtime: '0.025727'
       x-xss-protection: '0'
-      cf-ray: 9d6006f038389f9a-AMS
+      cf-ray: 9d6079c66a0e0e6c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"type":"episode","episode":{"season":7,"number":4,"title":"The Spoils
         of War","ids":{"trakt":2610969,"tvdb":6235145,"imdb":"tt5775846","tmdb":1340524,"tvrage":null}},"show":{"title":"Game
         of Thrones","year":2011,"ids":{"trakt":1390,"slug":"game-of-thrones","tvdb":121361,"imdb":"tt0944947","tmdb":1399,"tvrage":null}}}'
-  recorded_at: 2026-03-02 11:52:37
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
     uri: https://api.trakt.tv/comments/136632/item?extended=full
@@ -277,5 +277,5 @@ http_interactions:
         neglected military order of misfits, the Night''s Watch, is all that stands
         between the realms of men and icy horrors beyond.","first_aired":"2011-04-18T01:00:00.000Z","airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"runtime":55,"certification":"TV-MA","country":"us","status":"ended","rating":8.8913,"votes":145238,"comment_count":450,"trailer":"https://youtube.com/watch?v=KPLWWIOCOOQ","homepage":"http://www.hbo.com/game-of-thrones","network":"HBO","updated_at":"2026-03-02T06:38:27.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","bs","ca","cs","da","de","el","en","eo","es","et","fa","fi","fr","he","hr","hu","id","is","it","ja","ka","ko","lb","lt","lv","ml","nl","no","pl","pt","ro","ru","sk","sl","so","sr","sv","ta","th","tr","tw","uk","uz","vi","zh"],"genres":["fantasy","drama","action","adventure"],"subgenres":["fantasy-world","dragon","kingdom","king"],"aired_episodes":73,"original_title":"Game
         of Thrones"}}'
-  recorded_at: 2026-03-02 11:52:37
+  recorded_at: 2026-03-02 12:41:26
 recorded_with: VCR-vcr/2.1.0

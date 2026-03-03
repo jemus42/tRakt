@@ -7,7 +7,7 @@ http_interactions:
     headers:
       content-type: application/json; charset=utf-8
       content-encoding: gzip
-      date: Mon, 02 Mar 2026 11:33:31 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
@@ -27,10 +27,10 @@ http_interactions:
       x-pagination-page-count: '2'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 2eb61133-6778-4b42-9f70-64dbed1e212f
-      x-runtime: '0.036376'
+      x-request-id: 5bca12a2-589a-4486-9056-27fac1496215
+      x-runtime: '0.028117'
       x-xss-protection: '0'
-      cf-ray: 9d6016467d8d931d-AMS
+      cf-ray: 9d6079ce9a62656c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"type":"episode","episode":{"season":1,"number":1,"title":"Pilot","ids":{"trakt":9492805,"tvdb":9792791,"imdb":"tt27102157","tmdb":4447673,"tvrage":null}},"show":{"title":"High
@@ -74,7 +74,7 @@ http_interactions:
         Time","year":2011,"ids":{"trakt":34516,"slug":"in-time-2011","imdb":"tt1637688","tmdb":49530}},"comment":{"id":119806,"comment":"I
         watched it because I was interest in the premise, and because of Olivia Wilde.  \r\nI
         was disappointed by the underutilization of both, unfortunately :/","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-03-25T21:00:38.000Z","updated_at":"2017-03-25T21:00:38.000Z","replies":0,"likes":0,"user_rating":5,"language":"en","user_stats":{"rating":5,"play_count":2,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
     uri: https://api.trakt.tv/users/jemus42/comments/all/movies?include_replies=FALSE
@@ -83,7 +83,7 @@ http_interactions:
     headers:
       content-type: application/json; charset=utf-8
       content-encoding: gzip
-      date: Mon, 02 Mar 2026 11:33:31 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
@@ -103,10 +103,10 @@ http_interactions:
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 643c80ac-5c9a-4c28-914c-2ad04b35394e
-      x-runtime: '0.030986'
+      x-request-id: 40630009-cfd1-467a-971d-b09d1613e4f2
+      x-runtime: '0.023977'
       x-xss-protection: '0'
-      cf-ray: 9d6016486a05931d-AMS
+      cf-ray: 9d6079d05bd9656c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"type":"movie","movie":{"title":"John Wick: Chapter 3 - Parabellum","year":2019,"ids":{"trakt":304278,"slug":"john-wick-chapter-3-parabellum-2019","imdb":"tt6146586","tmdb":458156}},"comment":{"id":236397,"comment":"All
@@ -130,20 +130,20 @@ http_interactions:
         Imagine if the Hunger games were set in the third trial of the Triwizard Tournament,
         but set in a dystopian future\r\n\r\nI think that about covers it.  \r\nWas
         mildly entertained, though.","spoiler":false,"review":false,"parent_id":0,"created_at":"2016-09-27T21:47:36.000Z","updated_at":"2016-09-27T21:47:36.000Z","replies":0,"likes":4,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
     uri: https://api.trakt.tv/users/sofakissen/comments/all/all?include_replies=FALSE
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:33:31 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"6d8ba41d837f761cae72c4712f367322"
+      etag: W/"5cf95a7f1cba23c8cc5fd0188cc32ef8"
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -158,12 +158,12 @@ http_interactions:
       x-pagination-page-count: '0'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 3dc271b7-31ea-479c-8d89-67c52bd5401a
-      x-runtime: '0.027966'
+      x-request-id: 8487b145-37ea-436b-813a-40df81a7d0a4
+      x-runtime: '0.124912'
       x-xss-protection: '0'
-      cf-ray: 9d6016499d04931d-AMS
+      cf-ray: 9d6079d18cb5656c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 recorded_with: VCR-vcr/2.1.0

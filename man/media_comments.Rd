@@ -20,14 +20,14 @@
 movies_comments(
   id,
   sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full"),
+  extended = "min",
   limit = 10L
 )
 
 shows_comments(
   id,
   sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full"),
+  extended = "min",
   limit = 10L
 )
 
@@ -35,7 +35,7 @@ seasons_comments(
   id,
   season = 1L,
   sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full"),
+  extended = "min",
   limit = 10L
 )
 
@@ -44,7 +44,7 @@ episodes_comments(
   season = 1L,
   episode = 1L,
   sort = c("newest", "oldest", "likes", "replies"),
-  extended = c("min", "full"),
+  extended = "min",
   limit = 10L
 )
 }
@@ -59,9 +59,17 @@ Can also be of length greater than 1, in which case the function is called on al
 \item{sort}{\code{character(1) ["newest"]}: Comment sort order, one of
 "newest", "oldest", "likes" or "replies".}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced via \code{as.integer()}.}

@@ -1,17 +1,17 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/stats
+    uri: https://api.trakt.tv/users/jemus42
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:26 GMT
+      date: Tue, 03 Mar 2026 00:39:48 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"2df2a1c76b8732e9df653314c6113f6a"
+      etag: W/"08707f9437b88ef988feb4b168f7c5a4"
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -22,12 +22,12 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 8d21eb49-aaf8-4532-993c-be177b1877b4
-      x-runtime: '0.059694'
+      x-request-id: 2d8b2dd4-2d77-407a-829b-aeac32578b3c
+      x-runtime: '0.015842'
       x-xss-protection: '0'
-      cf-ray: 9d6079c4fd09d595-AMS
+      cf-ray: 9d64960fdf5b9085-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: '{"movies":{"plays":1310,"watched":830,"minutes":151367,"collected":3197,"ratings":665,"comments":0},"shows":{"watched":588,"collected":1236,"ratings":392,"comments":0},"seasons":{"ratings":197,"comments":0},"episodes":{"plays":31778,"watched":20263,"minutes":1013904,"collected":45725,"ratings":10167,"comments":0},"network":{"friends":10,"followers":49,"following":24},"ratings":{"total":11421,"distribution":{"1":188,"2":0,"3":11,"4":41,"5":282,"6":1371,"7":4166,"8":3973,"9":1219,"10":170}}}'
-  recorded_at: 2026-03-02 12:41:26
+      string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}'
+  recorded_at: 2026-03-03 00:39:48
 recorded_with: VCR-vcr/2.1.0

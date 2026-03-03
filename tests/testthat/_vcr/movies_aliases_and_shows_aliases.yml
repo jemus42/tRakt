@@ -39,7 +39,7 @@ http_interactions:
         1","country":"de"},{"title":"Deadpool 2016","country":"jp"},{"title":"Quái
         Nhân Deadpool","country":"vn"},{"title":"死侍：不死現身","country":"hk"},{"title":"死侍：不死現身","country":"tw"},{"title":"デッドプール：2016","country":"jp"},{"title":"Deadpool:
         1","country":"es"},{"title":"死侍1","country":"cn"}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/104439/aliases
@@ -426,5 +426,5 @@ http_interactions:
         дела","country":"ru"},{"title":"Stranger Things 5","country":"us"},{"title":"أشياء
         غريبة","country":"sa"},{"title":"Очень странные дела","country":"ru"},{"title":"Cedar
         Lodge","country":"us"}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:27
 recorded_with: VCR-vcr/2.1.0

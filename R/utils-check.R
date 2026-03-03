@@ -232,3 +232,96 @@ check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
 
 	paste0(unique(filter), collapse = ",")
 }
+
+
+#' Validate and normalize the extended parameter
+#'
+#' Validates the `extended` parameter against values documented in the trakt.tv API.
+#' The API supports `"full"`, `"images"`, `"metadata"`, and comma-separated combinations.
+#' `"min"` is a package-level convenience meaning "use the API default" (omit the parameter).
+#'
+#' @param extended A character string or vector specifying the extended level.
+#'   Valid user-facing values: `"min"`, `"full"`, `"images"`, `"metadata"`.
+#'   Can be combined as `"full,images"` or `c("full", "images")`.
+#'   Internal API modifiers (`"episodes"`, `"noseasons"`, `"guest_stars"`) are also accepted.
+#' @return A list with class `"trakt_extended"` containing:
+#'   - `query_value`: The string to pass as the `extended` URL query parameter,
+#'     or `NULL` if minimal info is requested.
+#'   - `keep_images`: Logical, whether images should be preserved in output.
+#'   - `components`: Character vector of individual components.
+#' @keywords internal
+#' @noRd
+validate_extended <- function(extended) {
+	if (is.null(extended) || identical(extended, "")) {
+		extended <- "min"
+	}
+
+	if (!is.character(extended)) {
+		cli::cli_abort(
+			"{.arg extended} must be a character string or vector, not {.obj_type_friendly {extended}}."
+		)
+	}
+
+	# User-facing values documented in the API + internal modifiers used by specific endpoints
+	valid_components <- c(
+		"min",
+		"full",
+		"images",
+		"metadata",
+		"episodes",
+		"noseasons",
+		"guest_stars"
+	)
+
+	# Accept both "full,images" and c("full", "images")
+	if (length(extended) == 1 && grepl(",", extended)) {
+		components <- trimws(strsplit(extended, ",")[[1]])
+	} else {
+		components <- trimws(extended)
+	}
+
+	components <- tolower(components)
+	# Remove empty strings from splitting
+	components <- components[nzchar(components)]
+
+	if (length(components) == 0) {
+		components <- "min"
+	}
+
+	# Validate each component
+	invalid <- setdiff(components, valid_components)
+	if (length(invalid) > 0) {
+		valid_user_facing <- setdiff(valid_components, c("episodes", "noseasons", "guest_stars"))
+		cli::cli_abort(c(
+			"{.arg extended} contains invalid value{?s}: {.val {invalid}}.",
+			"i" = "Valid values are: {.val {valid_user_facing}}."
+		))
+	}
+
+	# "min" is mutually exclusive with "full"
+	if ("min" %in% components && "full" %in% components) {
+		cli::cli_abort(
+			'{.arg extended} cannot contain both {.val min} and {.val full}.'
+		)
+	}
+
+	# "min" means omit the parameter entirely — but internal modifiers can still be present
+	if ("min" %in% components) {
+		components <- setdiff(components, "min")
+	}
+
+	if (length(components) == 0) {
+		query_value <- NULL
+	} else {
+		query_value <- paste(components, collapse = ",")
+	}
+
+	structure(
+		list(
+			query_value = query_value,
+			keep_images = "images" %in% components,
+			components = components
+		),
+		class = "trakt_extended"
+	)
+}

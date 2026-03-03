@@ -16,10 +16,10 @@ user_list_comments <- function(
 	user = "me",
 	list_id,
 	sort = c("newest", "oldest", "likes", "replies"),
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	sort <- match.arg(sort)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
 	url <- build_trakt_url(
 		"users",
@@ -28,7 +28,7 @@ user_list_comments <- function(
 		list_id,
 		"comments",
 		sort,
-		extended = extended
+		extended = extended$query_value
 	)
 
 	response <- trakt_get(url)

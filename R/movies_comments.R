@@ -19,12 +19,12 @@ NULL
 movies_comments <- function(
 	id,
 	sort = c("newest", "oldest", "likes", "replies"),
-	extended = c("min", "full"),
+	extended = "min",
 	limit = 10L
 ) {
 	sort <- match.arg(sort)
-	extended <- match.arg(extended)
-	url <- build_trakt_url("movies", id, "comments", sort, extended = extended)
+	extended <- validate_extended(extended)
+	url <- build_trakt_url("movies", id, "comments", sort, extended = extended$query_value)
 	response <- trakt_get(url)
 	unpack_comments(response)
 }
@@ -36,12 +36,12 @@ movies_comments <- function(
 shows_comments <- function(
 	id,
 	sort = c("newest", "oldest", "likes", "replies"),
-	extended = c("min", "full"),
+	extended = "min",
 	limit = 10L
 ) {
 	sort <- match.arg(sort)
-	extended <- match.arg(extended)
-	url <- build_trakt_url("shows", id, "comments", sort, extended = extended)
+	extended <- validate_extended(extended)
+	url <- build_trakt_url("shows", id, "comments", sort, extended = extended$query_value)
 	response <- trakt_get(url)
 	unpack_comments(response)
 }
@@ -54,11 +54,11 @@ seasons_comments <- function(
 	id,
 	season = 1L,
 	sort = c("newest", "oldest", "likes", "replies"),
-	extended = c("min", "full"),
+	extended = "min",
 	limit = 10L
 ) {
 	sort <- match.arg(sort)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 	url <- build_trakt_url(
 		"shows",
 		id,
@@ -66,7 +66,7 @@ seasons_comments <- function(
 		season,
 		"comments",
 		sort,
-		extended = extended
+		extended = extended$query_value
 	)
 	response <- trakt_get(url)
 	unpack_comments(response)
@@ -81,11 +81,11 @@ episodes_comments <- function(
 	season = 1L,
 	episode = 1L,
 	sort = c("newest", "oldest", "likes", "replies"),
-	extended = c("min", "full"),
+	extended = "min",
 	limit = 10L
 ) {
 	sort <- match.arg(sort)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 	url <- build_trakt_url(
 		"shows",
 		id,
@@ -95,7 +95,7 @@ episodes_comments <- function(
 		episode,
 		"comments",
 		sort,
-		extended = extended
+		extended = extended$query_value
 	)
 	response <- trakt_get(url)
 	unpack_comments(response)

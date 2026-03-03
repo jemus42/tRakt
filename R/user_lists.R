@@ -20,11 +20,11 @@
 #' \dontrun{
 #' user_lists("jemus42")
 #' }
-user_lists <- function(user = "me", extended = c("min", "full")) {
+user_lists <- function(user = "me", extended = "min") {
 	check_username(user)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
-	url <- build_trakt_url("users", user, "lists", extended = extended)
+	url <- build_trakt_url("users", user, "lists", extended = extended$query_value)
 	response <- trakt_get(url)
 
 	if (is_empty(response)) {
@@ -40,7 +40,7 @@ user_lists <- function(user = "me", extended = c("min", "full")) {
 				pull(.data[["user"]]) |>
 				unpack_user()
 		) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = extended$keep_images)
 }
 
 
@@ -67,11 +67,11 @@ user_lists <- function(user = "me", extended = c("min", "full")) {
 #' \dontrun{
 #' user_list("jemus42", list_id = 2121308)
 #' }
-user_list <- function(user = "me", list_id, extended = c("min", "full")) {
+user_list <- function(user = "me", list_id, extended = "min") {
 	check_username(user)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
-	url <- build_trakt_url("users", user, "lists", list_id, extended = extended)
+	url <- build_trakt_url("users", user, "lists", list_id, extended = extended$query_value)
 	response <- trakt_get(url)
 
 	if (is_empty(response)) {
@@ -88,5 +88,5 @@ user_list <- function(user = "me", list_id, extended = c("min", "full")) {
 				as_tibble() |>
 				unpack_user()
 		) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = extended$keep_images)
 }

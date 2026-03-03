@@ -1,15 +1,16 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=min
+    uri: https://api.trakt.tv/shows/futurama/seasons/1
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:35 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
+      content-encoding: gzip
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
-      vary: Origin, accept-encoding
+      vary: Origin, Accept-Encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       cache-tag: show
       x-content-type-options: nosniff
@@ -17,9 +18,8 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       speculation-rules: '"/cdn-cgi/speculation"'
-      content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007ba383f7754-AMS
+      cf-ray: 9d6079cbeb3a6650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"imdb":"tt0584449","plex":{"guid":"65dcb23629624af2f7e6d37b"},"tmdb":35006,"tvdb":131174,"trakt":38803},"title":"Space
@@ -76,28 +76,31 @@ http_interactions:
         him to a party, which turns out to be robots getting high off of electricity,
         or \"jacking on\". After one try, Bender is hooked.","number_abs":9,"updated_at":"2026-03-02T00:57:02.000Z","first_aired":"1999-05-19T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Hell
         Is Other Robots","available_translations":[]}]'
-  recorded_at: 2026-03-02 11:27:44
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=full
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:35 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
+      cf-cache-status: HIT
       access-control-allow-origin: '*'
+      age: '4672'
       cache-control: public, max-age=3600, s-maxage=43200
+      last-modified: Mon, 02 Mar 2026 11:23:35 GMT
+      server: cloudflare
       vary: Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: show
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
+      cache-tag: show
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
-      server: cloudflare
-      cf-ray: 9d6007bbe9d07754-AMS
+      cf-ray: 9d6079ce1d106650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"imdb":"tt0584449","plex":{"guid":"65dcb23629624af2f7e6d37b"},"tmdb":35006,"tvdb":131174,"trakt":38803},"title":"Space
@@ -154,14 +157,14 @@ http_interactions:
         him to a party, which turns out to be robots getting high off of electricity,
         or \"jacking on\". After one try, Bender is hooked.","number_abs":9,"updated_at":"2026-03-02T00:57:02.000Z","first_aired":"1999-05-19T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Hell
         Is Other Robots","available_translations":[]}]'
-  recorded_at: 2026-03-02 11:27:44
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/futurama/seasons/1123?extended=min
+    uri: https://api.trakt.tv/shows/futurama/seasons/1123
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:36 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
@@ -175,22 +178,23 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007bddbdd7754-AMS
+      cf-ray: 9d6079ceedbc6650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=min
+    uri: https://api.trakt.tv/shows/futurama/seasons/1
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:35 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
+      content-encoding: gzip
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
-      vary: Origin, accept-encoding
+      vary: Origin, Accept-Encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       cache-tag: show
       x-content-type-options: nosniff
@@ -198,9 +202,8 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       speculation-rules: '"/cdn-cgi/speculation"'
-      content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007ba383f7754-AMS
+      cf-ray: 9d6079cbeb3a6650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"imdb":"tt0584449","plex":{"guid":"65dcb23629624af2f7e6d37b"},"tmdb":35006,"tvdb":131174,"trakt":38803},"title":"Space
@@ -257,14 +260,14 @@ http_interactions:
         him to a party, which turns out to be robots getting high off of electricity,
         or \"jacking on\". After one try, Bender is hooked.","number_abs":9,"updated_at":"2026-03-02T00:57:02.000Z","first_aired":"1999-05-19T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Hell
         Is Other Robots","available_translations":[]}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/futurama/seasons/2?extended=min
+    uri: https://api.trakt.tv/shows/futurama/seasons/2
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:36 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
@@ -278,7 +281,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007bf7d4b7754-AMS
+      cf-ray: 9d6079d09f206650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"imdb":"tt0584426","plex":{"guid":"65dcb23329624af2f7e6d2c4"},"tmdb":1285653,"tvdb":131183,"trakt":38816},"title":"A
@@ -390,18 +393,19 @@ http_interactions:
         what it would be like if she were more impulsive, and Fry discovers what would
         happen if he never came to the future.","number_abs":29,"updated_at":"2026-03-01T23:43:05.000Z","first_aired":"2000-05-22T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Anthology
         of Interest I","available_translations":[]}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/futurama/seasons/1?extended=min
+    uri: https://api.trakt.tv/shows/futurama/seasons/1
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:35 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
+      content-encoding: gzip
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
-      vary: Origin, accept-encoding
+      vary: Origin, Accept-Encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       cache-tag: show
       x-content-type-options: nosniff
@@ -409,9 +413,8 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       speculation-rules: '"/cdn-cgi/speculation"'
-      content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007ba383f7754-AMS
+      cf-ray: 9d6079cbeb3a6650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"imdb":"tt0584449","plex":{"guid":"65dcb23629624af2f7e6d37b"},"tmdb":35006,"tvdb":131174,"trakt":38803},"title":"Space
@@ -468,14 +471,14 @@ http_interactions:
         him to a party, which turns out to be robots getting high off of electricity,
         or \"jacking on\". After one try, Bender is hooked.","number_abs":9,"updated_at":"2026-03-02T00:57:02.000Z","first_aired":"1999-05-19T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Hell
         Is Other Robots","available_translations":[]}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/futurama/seasons/2?extended=min
+    uri: https://api.trakt.tv/shows/futurama/seasons/2
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:36 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=3600, s-maxage=43200
@@ -489,7 +492,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007bf7d4b7754-AMS
+      cf-ray: 9d6079d09f206650-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"ids":{"imdb":"tt0584426","plex":{"guid":"65dcb23329624af2f7e6d2c4"},"tmdb":1285653,"tvdb":131183,"trakt":38816},"title":"A
@@ -601,5 +604,5 @@ http_interactions:
         what it would be like if she were more impulsive, and Fry discovers what would
         happen if he never came to the future.","number_abs":29,"updated_at":"2026-03-01T23:43:05.000Z","first_aired":"2000-05-22T00:00:00.000Z","episode_type":"season_finale","after_credits":false,"comment_count":3,"during_credits":false,"original_title":"Anthology
         of Interest I","available_translations":[]}]'
-  recorded_at: 2026-03-02 11:27:45
+  recorded_at: 2026-03-02 12:41:28
 recorded_with: VCR-vcr/2.1.0

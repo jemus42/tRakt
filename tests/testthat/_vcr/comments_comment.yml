@@ -1,17 +1,17 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/comments/236397?extended=min
+    uri: https://api.trakt.tv/comments/236397
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:11:02 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=3600, public
       content-encoding: gzip
-      expires: Mon, 02 Mar 2026 12:11:02 GMT
+      expires: Mon, 02 Mar 2026 13:41:26 GMT
       last-modified: Sun, 07 Sep 2025 18:04:56 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
@@ -24,29 +24,29 @@ http_interactions:
       x-item-id: '304278'
       x-item-type: movie
       x-permitted-cross-domain-policies: none
-      x-request-id: 73a1ddcc-1ae7-4d46-b01d-bd7c7f9867b5
-      x-runtime: '0.022914'
+      x-request-id: d1eb619e-77b8-4d35-8c26-7fbe5efe6a95
+      x-runtime: '0.026390'
       x-xss-protection: '0'
-      cf-ray: 9d5ff5586fc0d655-AMS
+      cf-ray: 9d6079c1ca96dfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"id":236397,"comment":"All the gun inflicted deaths in the world and
         the scene that got me was [spoiler]a casually torn-off ballet dancer''s toe
         nail.[/spoiler]","spoiler":false,"review":false,"parent_id":0,"created_at":"2019-06-09T21:33:00.000Z","updated_at":"2019-06-09T21:33:00.000Z","replies":1,"likes":2,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":2,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
-    uri: https://api.trakt.tv/comments/112561?extended=min
+    uri: https://api.trakt.tv/comments/112561
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:11:02 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=3600, public
       content-encoding: gzip
-      expires: Mon, 02 Mar 2026 12:11:02 GMT
+      expires: Mon, 02 Mar 2026 13:41:26 GMT
       last-modified: Sun, 07 Sep 2025 18:06:19 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
@@ -59,12 +59,12 @@ http_interactions:
       x-item-id: '2441489'
       x-item-type: episode
       x-permitted-cross-domain-policies: none
-      x-request-id: 5ad2a9e7-91b8-4c6a-b473-af18d8b4b998
-      x-runtime: '0.033165'
+      x-request-id: 829abdeb-0695-4639-8e75-1cde3bbdc2be
+      x-runtime: '0.022882'
       x-xss-protection: '0'
-      cf-ray: 9d5ff559fb49d655-AMS
+      cf-ray: 9d6079c34e6edfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"id":112561,"comment":"Seriously though what the f**k, Adventure Time.","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-01-31T17:48:59.000Z","updated_at":"2017-01-31T17:48:59.000Z","replies":0,"likes":5,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":2,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 recorded_with: VCR-vcr/2.1.0

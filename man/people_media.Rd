@@ -11,9 +11,9 @@
 \code{people_shows()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/people/shows/get-show-credits}{/people/:id/shows}.
 }
 \usage{
-people_movies(id, extended = c("min", "full"))
+people_movies(id, extended = "min")
 
-people_shows(id, extended = c("min", "full"))
+people_shows(id, extended = "min")
 }
 \arguments{
 \item{id}{\code{character(1)}: The ID of the item requested. Preferably the
@@ -23,9 +23,17 @@ Can also be of length greater than 1, in which case the function is called on al
 \code{id} values separately and the result is combined. See
 \code{vignette("tRakt")} for more details.}
 
-\item{extended}{\code{character(1)}: Either \code{"min"} (API default) or \code{"full"}. The latter
-returns more variables and should generally only be used if required.
-See \code{vignette("tRakt")} for more details.}
+\item{extended}{\code{character}: Level of detail for the API response.
+\itemize{
+\item \code{"min"} (default): Minimal info (title, year, IDs). Omits the \code{extended} query param.
+\item \code{"full"}: Complete info including overview, ratings, runtime, etc.
+\item \code{"images"}: Minimal info plus image URLs (returned as a list-column).
+\item \code{"full,images"}: Complete info plus images.
+\item \code{"metadata"}: Collection endpoints only; adds video/audio metadata.
+}
+
+Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
+or a character vector (e.g. \code{c("full", "images")}).}
 }
 \value{
 A \code{list} of one or more \link[tibble:tibble-package]{tibbles} for \code{cast}

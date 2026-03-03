@@ -23,9 +23,7 @@
 #' # Including all episode data:
 #' seasons_episodes("breaking-bad", 1, extended = "full")
 #' }
-seasons_episodes <- function(id, seasons = 1L, extended = c("min", "full")) {
-	extended <- match.arg(extended)
-
+seasons_episodes <- function(id, seasons = 1L, extended = "min") {
 	# Vectorize
 	if (length(seasons) > 1) {
 		return(map_rbind(seasons, \(x) seasons_episodes(id, x, extended)))
@@ -37,8 +35,10 @@ seasons_episodes <- function(id, seasons = 1L, extended = c("min", "full")) {
 		cli::cli_abort("{.arg seasons} cannot be coerced to integer: {.val {seasons}}.")
 	}
 
+	extended <- validate_extended(extended)
+
 	# Construct URL, make API call
-	url <- build_trakt_url("shows", id, "seasons", seasons, extended = extended)
+	url <- build_trakt_url("shows", id, "seasons", seasons, extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	if (identical(response, tibble())) {
@@ -48,7 +48,7 @@ seasons_episodes <- function(id, seasons = 1L, extended = c("min", "full")) {
 	response <- response |>
 		select(-"ids") |>
 		cbind(fix_ids(response$ids)) |>
-		fix_tibble_response() |>
+		fix_tibble_response(keep_images = extended$keep_images) |>
 		rename(episode = "number")
 
 	if (has_name(response, "number_abs")) {

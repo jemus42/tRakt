@@ -7,27 +7,28 @@ media_related <- function(
 	id,
 	type = c("shows", "movies"),
 	limit = 10L,
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	type <- match.arg(type)
-	extended <- match.arg(extended)
 
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) media_related(x, type, extended)))
 	}
 
+	extended <- validate_extended(extended)
+
 	# Construct URL, make API call
-	url <- build_trakt_url(type, id, "related", extended = extended, limit = limit)
+	url <- build_trakt_url(type, id, "related", extended = extended$query_value, limit = limit)
 	response <- trakt_get(url = url)
 
 	# Flattening
 	if (type == "shows") {
-		response <- unpack_show(response)
+		response <- unpack_show(response, keep_images = extended$keep_images)
 	} else if (type == "movies") {
-		response <- unpack_movie(response)
+		response <- unpack_movie(response, keep_images = extended$keep_images)
 	}
 
-	if (extended == "min" && type == "movies") {
+	if (!"full" %in% extended$components && type == "movies") {
 		response <- response |>
 			select(-"ids") |>
 			bind_cols(fix_ids(response$ids))
@@ -36,7 +37,7 @@ media_related <- function(
 	response |>
 		mutate(related_to = id) |>
 		select("related_to", everything()) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = extended$keep_images)
 }
 
 # Exported ----
@@ -49,7 +50,7 @@ media_related <- function(
 #' @export
 #' @examples
 #' movies_related("the-avengers-2012", limit = 5)
-movies_related <- function(id, limit = 10L, extended = c("min", "full")) {
+movies_related <- function(id, limit = 10L, extended = "min") {
 	media_related(id, type = "movies", extended = extended, limit = limit)
 }
 
@@ -61,6 +62,6 @@ movies_related <- function(id, limit = 10L, extended = c("min", "full")) {
 #' @export
 #' @examples
 #' shows_related("breaking-bad", limit = 5)
-shows_related <- function(id, limit = 10L, extended = c("min", "full")) {
+shows_related <- function(id, limit = 10L, extended = "min") {
 	media_related(id, type = "shows", extended = extended, limit = limit)
 }

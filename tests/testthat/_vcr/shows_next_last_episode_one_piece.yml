@@ -1,11 +1,11 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/one-piece/next_episode?extended=min
+    uri: https://api.trakt.tv/shows/one-piece/next_episode
   response:
     status: 204
     headers:
-      date: Mon, 02 Mar 2026 11:33:31 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       cf-cache-status: BYPASS
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate, no_store=true, no_cache=true
@@ -18,11 +18,11 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: feab1a71-822e-48fb-8f6a-b7e7f0e5b184
-      x-runtime: '0.016684'
-      x-show-updated-at: '2026-03-01T15:23:28.000Z'
+      x-request-id: d9976eb4-9c00-44ae-9090-5fa057981d28
+      x-runtime: '0.019613'
+      x-show-updated-at: '2026-03-02T11:57:26.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d601646cab21de3-AMS
+      cf-ray: 9d6079cd9fe20e6c-AMS
       alt-svc: h3=":443"; ma=86400
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 recorded_with: VCR-vcr/2.1.0

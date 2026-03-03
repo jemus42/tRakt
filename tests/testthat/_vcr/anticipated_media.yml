@@ -1,32 +1,29 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/movies/anticipated?limit=5&extended=min
+    uri: https://api.trakt.tv/movies/anticipated?limit=5
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:33:32 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: HIT
       access-control-allow-origin: '*'
-      age: '623'
-      cache-control: public, max-age=2678400, s-maxage=3600
-      last-modified: Mon, 02 Mar 2026 11:23:09 GMT
-      server: cloudflare
+      cache-control: public, max-age=600, s-maxage=3600
       vary: query, Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: discover,anticipated,movie
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      cache-tag: discover,anticipated,movie
-      x-pagination-item-count: '1874'
+      x-pagination-item-count: '1873'
       x-pagination-limit: '5'
       x-pagination-page: '1'
       x-pagination-page-count: '375'
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
-      cf-ray: 9d60164c2ceefe9e-AMS
+      server: cloudflare
+      cf-ray: 9d6079d0b852e5e0-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"list_count":24742,"movie":{"title":"Avengers: Doomsday","year":2026,"ids":{"trakt":806490,"slug":"avengers-doomsday-2026","imdb":"tt21357150","tmdb":1003596,"plex":{"guid":"62deb8bf9576053a6b5c5ee7","slug":"avengers-doomsday"}},"tagline":"","overview":"The
@@ -66,7 +63,7 @@ http_interactions:
         Herbert''s novel Dune Messiah.","runtime":90,"country":"us","status":"post
         production","rating":7.73684,"votes":38,"comment_count":2,"updated_at":"2026-02-25T08:32:42.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","de","en","es","et","fa","fi","fr","he","hu","ja","ka","ko","lo","lt","lv","pl","pt","ro","ru","sv","th","uk","vi","zh"],"genres":["science-fiction","adventure"],"subgenres":[],"original_title":"Dune:
         Part Three","images":{"fanart":["media.trakt.tv/images/movies/000/943/606/fanarts/medium/225e3e89a5.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/943/606/posters/medium/54780292f6.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#9D4921","#5B3A5D"]},"released":"2026-12-18","after_credits":false,"during_credits":false}}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/anticipated?limit=5&extended=full
@@ -134,35 +131,32 @@ http_interactions:
         Herbert''s novel Dune Messiah.","runtime":90,"country":"us","status":"post
         production","rating":7.73684,"votes":38,"comment_count":2,"updated_at":"2026-02-25T08:32:42.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","de","en","es","et","fa","fi","fr","he","hu","ja","ka","ko","lo","lt","lv","pl","pt","ro","ru","sv","th","uk","vi","zh"],"genres":["science-fiction","adventure"],"subgenres":[],"original_title":"Dune:
         Part Three","images":{"fanart":["media.trakt.tv/images/movies/000/943/606/fanarts/medium/225e3e89a5.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/943/606/posters/medium/54780292f6.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#9D4921","#5B3A5D"]},"released":"2026-12-18","after_credits":false,"during_credits":false}}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/anticipated?limit=5&extended=min
+    uri: https://api.trakt.tv/shows/anticipated?limit=5
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:33:32 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: HIT
       access-control-allow-origin: '*'
-      age: '622'
-      cache-control: public, max-age=2678400, s-maxage=3600
-      last-modified: Mon, 02 Mar 2026 11:23:10 GMT
-      server: cloudflare
+      cache-control: public, max-age=600, s-maxage=3600
       vary: query, Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: discover,anticipated,show
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      cache-tag: discover,anticipated,show
-      x-pagination-item-count: '237'
+      x-pagination-item-count: '236'
       x-pagination-limit: '5'
       x-pagination-page: '1'
       x-pagination-page-count: '48'
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
-      cf-ray: 9d60164e59cefe9e-AMS
+      server: cloudflare
+      cf-ray: 9d6079d67f29e5e0-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"list_count":5583,"show":{"title":"Young Sherlock","year":2026,"ids":{"trakt":242387,"slug":"young-sherlock-2026","imdb":"tt8599532","tmdb":255661,"plex":{"guid":"66589e320f6e7f8278b9be69","slug":"young-sherlock-2026"},"tvdb":450633},"tagline":"","overview":"Sherlock
@@ -189,7 +183,7 @@ http_interactions:
         by the Empire.","runtime":42,"country":"us","trailer":"https://youtube.com/watch?v=oonACDq89BY","homepage":"https://www.disneyplus.com/browse/entity-9ba0f41b-6173-4ff1-8967-71cad0620244","status":"in
         production","rating":7,"votes":3,"comment_count":1,"updated_at":"2026-02-27T16:33:23.000Z","language":"en","languages":["en"],"available_translations":["cs","de","en","es","fi","fr","he","ko","nl","pt","sv"],"genres":["animation","fantasy","science-fiction"],"subgenres":[],"original_title":"Star
         Wars: Maul - Shadow Lord","images":{"fanart":["media.trakt.tv/images/shows/000/282/764/fanarts/medium/5de14c0c82.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/282/764/posters/medium/3d6e086f12.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/282/764/logos/medium/0c1a62d4e0.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#DF4F48","#1B0204"]},"first_aired":"2026-04-06T04:00:00.000Z","aired_episodes":0,"certification":"TV-PG","airs":{"day":"Friday","time":"00:00","timezone":"America/New_York"},"network":"Disney+"}}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/anticipated?limit=5&extended=full
@@ -244,5 +238,5 @@ http_interactions:
         by the Empire.","runtime":42,"country":"us","trailer":"https://youtube.com/watch?v=oonACDq89BY","homepage":"https://www.disneyplus.com/browse/entity-9ba0f41b-6173-4ff1-8967-71cad0620244","status":"in
         production","rating":7,"votes":3,"comment_count":1,"updated_at":"2026-02-27T16:33:23.000Z","language":"en","languages":["en"],"available_translations":["cs","de","en","es","fi","fr","he","ko","nl","pt","sv"],"genres":["animation","fantasy","science-fiction"],"subgenres":[],"original_title":"Star
         Wars: Maul - Shadow Lord","images":{"fanart":["media.trakt.tv/images/shows/000/282/764/fanarts/medium/5de14c0c82.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/282/764/posters/medium/3d6e086f12.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/282/764/logos/medium/0c1a62d4e0.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#DF4F48","#1B0204"]},"first_aired":"2026-04-06T04:00:00.000Z","aired_episodes":0,"certification":"TV-PG","airs":{"day":"Friday","time":"00:00","timezone":"America/New_York"},"network":"Disney+"}}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:29
 recorded_with: VCR-vcr/2.1.0

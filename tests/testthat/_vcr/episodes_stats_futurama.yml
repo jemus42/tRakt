@@ -32,7 +32,7 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"watchers":68395,"plays":88474,"collectors":297798,"comments":2,"lists":141,"votes":1935}'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/futurama/seasons/1/episodes/4/stats
@@ -66,7 +66,7 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"watchers":67455,"plays":86592,"collectors":297159,"comments":5,"lists":142,"votes":1751}'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/futurama/seasons/2/episodes/3/stats
@@ -100,7 +100,7 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"watchers":63479,"plays":83988,"collectors":286782,"comments":2,"lists":213,"votes":1423}'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/futurama/seasons/2/episodes/4/stats
@@ -134,5 +134,5 @@ http_interactions:
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"watchers":63121,"plays":84115,"collectors":287940,"comments":3,"lists":147,"votes":1385}'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 recorded_with: VCR-vcr/2.1.0

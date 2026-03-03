@@ -11,14 +11,14 @@
 #' @importFrom tibble as_tibble
 #' @examples
 #' movies_boxoffice()
-movies_boxoffice <- function(extended = c("min", "full")) {
-	extended <- match.arg(extended)
+movies_boxoffice <- function(extended = "min") {
+	extended <- validate_extended(extended)
 
 	# Construct URL, make API call
-	url <- build_trakt_url("movies/boxoffice", extended = extended)
+	url <- build_trakt_url("movies/boxoffice", extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	response |>
-		unpack_movie() |>
-		fix_tibble_response()
+		unpack_movie(keep_images = extended$keep_images) |>
+		fix_tibble_response(keep_images = extended$keep_images)
 }

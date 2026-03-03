@@ -12,14 +12,14 @@
 #'
 #' # Multiple comments
 #' comments_comment(c("236397", "112561"))
-comments_comment <- function(id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
-
+comments_comment <- function(id, extended = "min") {
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) comments_comment(x, extended = extended)))
 	}
 
-	url <- build_trakt_url("comments", id, extended = extended)
+	extended <- validate_extended(extended)
+
+	url <- build_trakt_url("comments", id, extended = extended$query_value)
 	response <- trakt_get(url)
 
 	unpack_comments(response)
@@ -33,14 +33,14 @@ comments_comment <- function(id, extended = c("min", "full")) {
 #' \dontrun{
 #' comments_replies("236397")
 #' }
-comments_replies <- function(id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
-
+comments_replies <- function(id, extended = "min") {
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) comments_replies(x, extended = extended)))
 	}
 
-	url <- build_trakt_url("comments", id, "replies", extended = extended)
+	extended <- validate_extended(extended)
+
+	url <- build_trakt_url("comments", id, "replies", extended = extended$query_value)
 	response <- trakt_get(url)
 
 	unpack_comments(response)
@@ -56,14 +56,14 @@ comments_replies <- function(id, extended = c("min", "full")) {
 #' \dontrun{
 #' comments_likes("236397")
 #' }
-comments_likes <- function(id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
-
+comments_likes <- function(id, extended = "min") {
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) comments_likes(x, extended = extended)))
 	}
 
-	url <- build_trakt_url("comments", id, "likes", extended = extended)
+	extended <- validate_extended(extended)
+
+	url <- build_trakt_url("comments", id, "likes", extended = extended$query_value)
 	response <- trakt_get(url)
 
 	response |>
@@ -72,7 +72,7 @@ comments_likes <- function(id, extended = c("min", "full")) {
 			pluck(response, "user") |>
 				unpack_user()
 		) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = extended$keep_images)
 }
 
 #' @describeIn comments_comment Get the media item attached to the comment.
@@ -99,20 +99,20 @@ comments_likes <- function(id, extended = c("min", "full")) {
 #' comments_item("136632")
 #' comments_item("136632", extended = "full")
 #' }
-comments_item <- function(id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
-
+comments_item <- function(id, extended = "min") {
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) comments_item(x, extended = extended)))
 	}
 
-	url <- build_trakt_url("comments", id, "item", extended = extended)
+	extended <- validate_extended(extended)
+
+	url <- build_trakt_url("comments", id, "item", extended = extended$query_value)
 	response <- trakt_get(url)
 
 	item_type <- pluck(response, "type")
 
 	response |>
-		flatten_single_media_object(type = item_type) |>
+		flatten_single_media_object(type = item_type, keep_images = extended$keep_images) |>
 		mutate(type = item_type) |>
 		select("type", everything())
 }

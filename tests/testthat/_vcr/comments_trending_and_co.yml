@@ -5,14 +5,14 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:10 GMT
+      date: Mon, 02 Mar 2026 12:41:33 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=3600, public
       content-encoding: gzip
-      etag: W/"77de837b308a5fa8a2f8853b303f4674"
-      expires: Mon, 02 Mar 2026 12:23:03 GMT
+      etag: W/"ac0da824133b2941eff079c8f64a5786"
+      expires: Mon, 02 Mar 2026 13:41:26 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -26,10 +26,10 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '4364'
       x-permitted-cross-domain-policies: none
-      x-request-id: 1bd534dc-c113-4a33-b920-beff2f36f50d
-      x-runtime: '6.902852'
+      x-request-id: 101cb5af-bd21-4ebc-a4a7-edb10debe5d5
+      x-runtime: '7.114685'
       x-xss-protection: '0'
-      cf-ray: 9d6006f1b94d9f9a-AMS
+      cf-ray: 9d6079c219e7b932-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"type":"show","show":{"title":"Jazz","year":2001,"ids":{"trakt":20765,"slug":"jazz","tvdb":80679,"imdb":"tt0221300","tmdb":20861,"tvrage":null}},"comment":{"id":657653,"comment":"Jazz
@@ -470,21 +470,21 @@ http_interactions:
         enough about how much I adored this film as it was absolute cinema in my opinion
         and I seriously can’t see many films this year beating it. What an awesome
         movie and of course it’s getting a 10. Hell yeah.\n\n10/10","spoiler":true,"review":true,"parent_id":0,"created_at":"2026-01-16T01:03:12.000Z","updated_at":"2026-01-16T01:07:08.000Z","replies":6,"likes":23,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":2,"completed_count":1},"user":{"username":"Biscuitjack","private":false,"deleted":false,"name":"Biscuitjack","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"biscuitjack"}}}}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:33
 - request:
     method: GET
     uri: https://api.trakt.tv/comments/recent/shouts/all?include_replies=FALSE&limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:17 GMT
+      date: Mon, 02 Mar 2026 12:41:40 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=3600, public
       content-encoding: gzip
-      etag: W/"d005362e27b3379ae697dc266ae2826d"
-      expires: Mon, 02 Mar 2026 12:23:10 GMT
+      etag: W/"dafd658d425142a4e50bba0d876377a6"
+      expires: Mon, 02 Mar 2026 13:41:33 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -493,83 +493,72 @@ http_interactions:
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '728908'
+      x-pagination-item-count: '728913'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '72891'
+      x-pagination-page-count: '72892'
       x-permitted-cross-domain-policies: none
-      x-request-id: 87ae215a-42c2-4083-983b-662c6064bfe2
-      x-runtime: '7.263338'
+      x-request-id: 69d32df4-36d0-415d-9a94-d23934670df8
+      x-runtime: '6.411289'
       x-xss-protection: '0'
-      cf-ray: 9d60071e2ff39f9a-AMS
+      cf-ray: 9d6079f06c14b932-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: "[{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":1,\"title\":\"Cobwebs\",\"ids\":{\"trakt\":4542373,\"tvdb\":7996548,\"imdb\":\"tt9894872\",\"tmdb\":2470680,\"tvrage\":null}},\"show\":{\"title\":\"30
+      string: "[{\"type\":\"movie\",\"movie\":{\"title\":\"Borderlands\",\"year\":2024,\"ids\":{\"trakt\":223432,\"slug\":\"borderlands-2024\",\"imdb\":\"tt4978420\",\"tmdb\":365177}},\"comment\":{\"id\":930083,\"comment\":\"It
+        feels like Cate Blanchett was the only one trying. That Kevin Hart is a terrible
+        actor is nothing new. And I don't blame the kid for this role. But wtf happened
+        to Jamie Lee Curtis?\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:40:05.000Z\",\"updated_at\":\"2026-03-02T12:40:05.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":3,\"language\":\"en\",\"user_stats\":{\"rating\":3,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Silrog\",\"private\":false,\"deleted\":false,\"name\":\"Silrog\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"silrog\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":18,\"number\":14,\"title\":\"Finale:
+        Part 2\",\"ids\":{\"trakt\":4035996,\"tvdb\":7619788,\"imdb\":\"tt11932866\",\"tmdb\":2183055,\"tvrage\":null}},\"show\":{\"title\":\"Project
+        Runway\",\"year\":2004,\"ids\":{\"trakt\":1673,\"slug\":\"project-runway\",\"tvdb\":74285,\"imdb\":\"tt0437741\",\"tmdb\":1685,\"tvrage\":null}},\"comment\":{\"id\":930082,\"comment\":\"I
+        don't know, was not expected\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:36:50.000Z\",\"updated_at\":\"2026-03-02T12:36:50.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"AKW\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"akw\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"The
+        Bluff\",\"year\":2026,\"ids\":{\"trakt\":634944,\"slug\":\"the-bluff-2026\",\"imdb\":\"tt14181714\",\"tmdb\":799882}},\"comment\":{\"id\":930081,\"comment\":\"The
+        production values were great, but everything feels mid and like you’ve seen
+        this kind of storyline before.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:26:31.000Z\",\"updated_at\":\"2026-03-02T12:26:31.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":5,\"language\":\"en\",\"user_stats\":{\"rating\":5,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"hu.MAN1\",\"private\":false,\"deleted\":false,\"name\":\"AJ\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"hu-man1\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":2,\"number\":1,\"title\":\"Xbalanque\",\"ids\":{\"trakt\":3591415,\"tvdb\":7250050,\"imdb\":\"tt9068158\",\"tmdb\":1835646,\"tvrage\":null}},\"show\":{\"title\":\"Mayans
+        M.C.\",\"year\":2018,\"ids\":{\"trakt\":133615,\"slug\":\"mayans-m-c\",\"tvdb\":349659,\"imdb\":\"tt5715524\",\"tmdb\":76231,\"tvrage\":null}},\"comment\":{\"id\":930080,\"comment\":\"I
+        can't believe they changed the opening theme. There's no comparison, the other
+        one is much better.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:16:52.000Z\",\"updated_at\":\"2026-03-02T12:16:52.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":0,\"completed_count\":0},\"user\":{\"username\":\"Sebastião
+        Nunes\",\"private\":false,\"deleted\":false,\"name\":\"Sebastião\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"sebastiao-nunes\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Mouse\",\"year\":2021,\"ids\":{\"trakt\":172127,\"slug\":\"mouse-2021\",\"tvdb\":394955,\"imdb\":\"tt13634792\",\"tmdb\":117378,\"tvrage\":null}},\"comment\":{\"id\":930079,\"comment\":\"the
+        things i'd do to rewatch this for the first time again.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:16:41.000Z\",\"updated_at\":\"2026-03-02T12:16:41.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":20,\"completed_count\":20},\"user\":{\"username\":\"ajl0vr\",\"private\":false,\"deleted\":false,\"name\":\"g\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"ajl0vr\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Cold
+        Storage\",\"year\":2026,\"ids\":{\"trakt\":540330,\"slug\":\"cold-storage-2026\",\"imdb\":\"tt8879928\",\"tmdb\":696393}},\"comment\":{\"id\":930078,\"comment\":\"It
+        started as thrilling as the Book, BUT;\\nWhen i heard BEACH BOYS (nothing
+        against em!)... i wondered!\\nA... COMEDY?\\nSorry, but... ANYBODY who read
+        the book, or listened to the great AUDIOBOOK will confirm:\\nThis is NOT a
+        comedy.\\nI'm disapointed... and waited SO LONG for this Movie to come.\\nIn
+        the end i say:\\nIF you watch it... KNOWING to GET a Comedy...then it's STILL
+        ENTERTAINING!\\nBut... DON'T expect something like Pitt's \\\"World War Z\\\"\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:09:34.000Z\",\"updated_at\":\"2026-03-02T12:09:34.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":6,\"language\":\"en\",\"user_stats\":{\"rating\":6,\"play_count\":0,\"completed_count\":0},\"user\":{\"username\":\"Cosmina
+        N.\",\"private\":false,\"deleted\":false,\"name\":\"CosmoNoMAD\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"cosmina-n\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":9,\"title\":\"Merge!
+        Serpo Dover Demon Nessie!\",\"ids\":{\"trakt\":12263439,\"tvdb\":10624777,\"imdb\":\"tt33609044\",\"tmdb\":5585814,\"tvrage\":null}},\"show\":{\"title\":\"Dan
+        Da Dan\",\"year\":2024,\"ids\":{\"trakt\":215309,\"slug\":\"dan-da-dan\",\"tvdb\":432832,\"imdb\":\"tt30217403\",\"tmdb\":240411,\"tvrage\":null}},\"comment\":{\"id\":930076,\"comment\":\"I
+        f love the ending!\U0001F606\U0001F602\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:42:30.000Z\",\"updated_at\":\"2026-03-02T11:42:30.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"HelmHeim\",\"private\":false,\"deleted\":false,\"name\":\"Sir
+        Ghatti\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"helmheim\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":13,\"number\":3,\"title\":\"March
+        1, 2026\",\"ids\":{\"trakt\":13911669,\"tvdb\":null,\"imdb\":null,\"tmdb\":6850459,\"tvrage\":null}},\"show\":{\"title\":\"Last
+        Week Tonight with John Oliver\",\"year\":2014,\"ids\":{\"trakt\":60267,\"slug\":\"last-week-tonight-with-john-oliver\",\"tvdb\":278518,\"imdb\":\"tt3530232\",\"tmdb\":60694,\"tvrage\":null}},\"comment\":{\"id\":930075,\"comment\":\"Solid
+        episode, appreciated the dive into the politics and reality of body cams\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:39:21.000Z\",\"updated_at\":\"2026-03-02T11:39:21.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"SunnyGabe\",\"private\":false,\"deleted\":false,\"name\":\"Gabe\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"sunnygabe\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Another\",\"year\":2012,\"ids\":{\"trakt\":42364,\"slug\":\"another\",\"tvdb\":254349,\"imdb\":\"tt2176165\",\"tmdb\":42589,\"tvrage\":null}},\"comment\":{\"id\":930074,\"comment\":\"They
+        made a 12-episode show from what could've been a ninety-minute max movie.
+        I thought the OPs were just stupid at the beginning, but as I went on and
+        on with this show, I started realising they're just stretching it for literally
+        no good reason. They had a really good premise, but then they dragged it on
+        and turned it into something even less than mediocre.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:25:54.000Z\",\"updated_at\":\"2026-03-02T11:25:54.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":4,\"language\":\"en\",\"user_stats\":{\"rating\":4,\"play_count\":12,\"completed_count\":12},\"user\":{\"username\":\"jarvis-16024922\",\"private\":false,\"deleted\":false,\"name\":\"Rahul
+        Singh\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"jarvis-16024922\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":1,\"title\":\"Cobwebs\",\"ids\":{\"trakt\":4542373,\"tvdb\":7996548,\"imdb\":\"tt9894872\",\"tmdb\":2470680,\"tvrage\":null}},\"show\":{\"title\":\"30
         Coins\",\"year\":2020,\"ids\":{\"trakt\":152990,\"slug\":\"30-coins\",\"tvdb\":369414,\"imdb\":\"tt9764386\",\"tmdb\":89844,\"tvrage\":null}},\"comment\":{\"id\":930073,\"comment\":\"The
         original Spanish audio dub sounds very off, like they re-recorded it in a
         studio rather than on location or something, it's very off putting. \\nthe
-        series looks more like a telenovela, or soap. Won't be watching more.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:22:55.000Z\",\"updated_at\":\"2026-03-02T11:22:55.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":2,\"language\":\"en\",\"user_stats\":{\"rating\":2,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Kalamoren\",\"private\":false,\"deleted\":false,\"name\":\"Kalamoren\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"kalamoren\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Caveat\",\"year\":2021,\"ids\":{\"trakt\":585480,\"slug\":\"caveat-2021\",\"imdb\":\"tt7917178\",\"tmdb\":744746}},\"comment\":{\"id\":930072,\"comment\":\"This
-        was a good movie, however a lot of things were left ambiguous which might
-        leave a lot of the people wanting more. You need to connect a lot of the dots
-        by yourself.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:17:00.000Z\",\"updated_at\":\"2026-03-02T11:17:00.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"jarvis-16024922\",\"private\":false,\"deleted\":false,\"name\":\"Rahul
-        Singh\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"jarvis-16024922\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":8,\"title\":\"I've
-        Got This Funny Feeling\",\"ids\":{\"trakt\":12263438,\"tvdb\":10624776,\"imdb\":\"tt33609043\",\"tmdb\":5585813,\"tvrage\":null}},\"show\":{\"title\":\"Dan
-        Da Dan\",\"year\":2024,\"ids\":{\"trakt\":215309,\"slug\":\"dan-da-dan\",\"tvdb\":432832,\"imdb\":\"tt30217403\",\"tmdb\":240411,\"tvrage\":null}},\"comment\":{\"id\":930071,\"comment\":\"where
-        are the minions of Gru they like the banana too\U0001F606\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:14:01.000Z\",\"updated_at\":\"2026-03-02T11:14:01.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"HelmHeim\",\"private\":false,\"deleted\":false,\"name\":\"Sir
-        Ghatti\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"helmheim\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":2,\"title\":\"It's
-        a Face Not a Mask\",\"ids\":{\"trakt\":4852336,\"tvdb\":8167798,\"imdb\":\"tt10914202\",\"tmdb\":2753826,\"tvrage\":null}},\"show\":{\"title\":\"Ginny
-        \\u0026 Georgia\",\"year\":2021,\"ids\":{\"trakt\":170997,\"slug\":\"ginny-georgia\",\"tvdb\":393625,\"imdb\":\"tt10813940\",\"tmdb\":117581,\"tvrage\":null}},\"comment\":{\"id\":930069,\"comment\":\"Oh
-        I just love Max, i enjoyed her unhinged vulnerable enery, sad how she was
-        left out and not really seen in the ep 2..well, this was so mommy-daughter
-        centric and the curve of Ginny trying to slowly understand her mom. I like
-        how Georgia really does care deeply about Austin, even if she sometimes seems
-        emotionally absent in front of him. The audacity of those girls to snitch
-        on Ginny that was so unfair i had a bad feeling about them from the first...or
-        maybe it was their situational response... atleast they did make it up for
-        their behavior in the end but nahh i still hate them i can sense chaos from
-        their end in the coming eps hmmm I really hate Max's brother bro he is so
-        clueless of his needs and wants huh just a spoiled brat, atleast Max got a
-        personality, Marcaus just wandering in Ginny's life like a fuck boy huh...
-        Hunter is fine...and kind ig?? but I don't like the way he looks though..
-        what is this plot twist in the end??this is chaotic I don't know why I am
-        watching it leave me alone.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:03:00.000Z\",\"updated_at\":\"2026-03-02T11:03:00.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Unknownspeciess\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"unknownspeciess\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":13,\"title\":\"The
-        Best Chrismukkah Ever\",\"ids\":{\"trakt\":215865,\"tvdb\":75555,\"imdb\":\"tt0663865\",\"tmdb\":205057,\"tvrage\":null}},\"show\":{\"title\":\"The
-        O.C.\",\"year\":2003,\"ids\":{\"trakt\":2655,\"slug\":\"the-o-c\",\"tvdb\":72164,\"imdb\":\"tt0362359\",\"tmdb\":2673,\"tvrage\":null}},\"comment\":{\"id\":930066,\"comment\":\"Marisa
-        is the worst!! I hate her\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T10:55:36.000Z\",\"updated_at\":\"2026-03-02T10:55:36.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Random123gthtyt\",\"private\":false,\"deleted\":false,\"name\":\"Shreya
-        Daga\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"random123gthtyt\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"\\\"Wuthering
-        Heights\\\"\",\"year\":2026,\"ids\":{\"trakt\":1077273,\"slug\":\"wuthering-heights-2026\",\"imdb\":\"tt32897959\",\"tmdb\":1316092}},\"comment\":{\"id\":930064,\"comment\":\"My
-        favourite movie, I will watch this again and again and again!!!!\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T10:45:58.000Z\",\"updated_at\":\"2026-03-02T10:45:58.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":0,\"completed_count\":0},\"user\":{\"username\":\"Pen15club\",\"private\":false,\"deleted\":false,\"name\":\"Pen15club\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"pen15club\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":7,\"title\":\"To
-        a Kinder World\",\"ids\":{\"trakt\":12263437,\"tvdb\":10624775,\"imdb\":\"tt33609042\",\"tmdb\":5585812,\"tvrage\":null}},\"show\":{\"title\":\"Dan
-        Da Dan\",\"year\":2024,\"ids\":{\"trakt\":215309,\"slug\":\"dan-da-dan\",\"tvdb\":432832,\"imdb\":\"tt30217403\",\"tmdb\":240411,\"tvrage\":null}},\"comment\":{\"id\":930063,\"comment\":\"I
-        completely forgot the side of this story of the woman from the manga and I
-        think they've expanded it a little bit.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T10:44:22.000Z\",\"updated_at\":\"2026-03-02T10:44:22.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"HelmHeim\",\"private\":false,\"deleted\":false,\"name\":\"Sir
-        Ghatti\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"helmheim\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":4,\"title\":\"Who
-        Goes There?\",\"ids\":{\"trakt\":919902,\"tvdb\":4592331,\"imdb\":\"tt2790174\",\"tmdb\":971604,\"tvrage\":null}},\"show\":{\"title\":\"True
-        Detective\",\"year\":2014,\"ids\":{\"trakt\":46375,\"slug\":\"true-detective\",\"tvdb\":270633,\"imdb\":\"tt2356777\",\"tmdb\":46648,\"tvrage\":null}},\"comment\":{\"id\":930062,\"comment\":\"★★★★½☆
-        Final average: 9.4 / 10\\n———\\n\\nWriting: 9.5\\nCharacters: 9.5\\nDirection:
-        10\\nActing: 9.0\\nVisuals: 9.0\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T10:44:05.000Z\",\"updated_at\":\"2026-03-02T10:44:05.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"sirBat\",\"private\":false,\"deleted\":false,\"name\":\"Caio
-        Vasconcelos\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"sirbat\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":22,\"number\":1,\"title\":\"Aw
-        Rats, A Pool Party\",\"ids\":{\"trakt\":13215183,\"tvdb\":11575766,\"imdb\":\"tt36271345\",\"tmdb\":6676758,\"tvrage\":null}},\"show\":{\"title\":\"American
-        Dad!\",\"year\":2005,\"ids\":{\"trakt\":1424,\"slug\":\"american-dad\",\"tvdb\":73141,\"imdb\":\"tt0397306\",\"tmdb\":1433,\"tvrage\":null}},\"comment\":{\"id\":930061,\"comment\":\"They
-        got patrick stewart to say sigma\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T10:30:11.000Z\",\"updated_at\":\"2026-03-02T10:30:11.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":0,\"completed_count\":0},\"user\":{\"username\":\"ahhncee\",\"private\":false,\"deleted\":false,\"name\":\"Ancee\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"ahhncee\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":8,\"number\":2,\"title\":\"Strictly
-        Business\",\"ids\":{\"trakt\":14018179,\"tvdb\":11570681,\"imdb\":\"tt40245494\",\"tmdb\":6969281,\"tvrage\":null}},\"show\":{\"title\":\"Formula
-        1: Drive to Survive\",\"year\":2019,\"ids\":{\"trakt\":144377,\"slug\":\"formula-1-drive-to-survive\",\"tvdb\":359913,\"imdb\":\"tt8289930\",\"tmdb\":87083,\"tvrage\":null}},\"comment\":{\"id\":930058,\"comment\":\"After
-        256 GP’s the hulkster is on the podium\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T10:23:29.000Z\",\"updated_at\":\"2026-03-02T10:23:29.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"WhyNotCallMeRo\",\"private\":false,\"deleted\":false,\"name\":\"Ro\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"whynotcallmero\"}}}}]"
-  recorded_at: 2026-03-02 11:33:30
+        series looks more like a telenovela, or soap. Won't be watching more.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:22:55.000Z\",\"updated_at\":\"2026-03-02T11:22:55.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":2,\"language\":\"en\",\"user_stats\":{\"rating\":2,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Kalamoren\",\"private\":false,\"deleted\":false,\"name\":\"Kalamoren\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"kalamoren\"}}}}]"
+  recorded_at: 2026-03-02 12:41:40
 - request:
     method: GET
     uri: https://api.trakt.tv/comments/updates/all/all?include_replies=FALSE&limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:22 GMT
+      date: Mon, 02 Mar 2026 12:41:45 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=3600, public
       content-encoding: gzip
-      etag: W/"b7175b2da2715993797cffca604b920a"
-      expires: Mon, 02 Mar 2026 12:23:17 GMT
+      etag: W/"470ef85ecaacbf88b89c311ce28bf4db"
+      expires: Mon, 02 Mar 2026 13:41:40 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -578,69 +567,73 @@ http_interactions:
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '772539'
+      x-pagination-item-count: '772544'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '77254'
+      x-pagination-page-count: '77255'
       x-permitted-cross-domain-policies: none
-      x-request-id: 9e09f492-0030-4fdf-9c11-e6f41fc19c7b
-      x-runtime: '4.235819'
+      x-request-id: c7ae2a7e-4ed1-483f-b4e9-3ce7dc74b7e4
+      x-runtime: '5.116356'
       x-xss-protection: '0'
-      cf-ray: 9d60074cde9f9f9a-AMS
+      cf-ray: 9d607a19d97db932-AMS
       alt-svc: h3=":443"; ma=86400
     body:
-      string: "[{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":1,\"title\":\"Cobwebs\",\"ids\":{\"trakt\":4542373,\"tvdb\":7996548,\"imdb\":\"tt9894872\",\"tmdb\":2470680,\"tvrage\":null}},\"show\":{\"title\":\"30
-        Coins\",\"year\":2020,\"ids\":{\"trakt\":152990,\"slug\":\"30-coins\",\"tvdb\":369414,\"imdb\":\"tt9764386\",\"tmdb\":89844,\"tvrage\":null}},\"comment\":{\"id\":930073,\"comment\":\"The
-        original Spanish audio dub sounds very off, like they re-recorded it in a
-        studio rather than on location or something, it's very off putting. \\nthe
-        series looks more like a telenovela, or soap. Won't be watching more.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:22:55.000Z\",\"updated_at\":\"2026-03-02T11:22:55.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":2,\"language\":\"en\",\"user_stats\":{\"rating\":2,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Kalamoren\",\"private\":false,\"deleted\":false,\"name\":\"Kalamoren\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"kalamoren\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":2,\"number\":8,\"title\":\"The
-        Hurt Stalker\",\"ids\":{\"trakt\":2046703,\"tvdb\":5401445,\"imdb\":\"tt5104310\",\"tmdb\":1137167,\"tvrage\":null}},\"show\":{\"title\":\"iZombie\",\"year\":2015,\"ids\":{\"trakt\":77686,\"slug\":\"izombie\",\"tvdb\":281470,\"imdb\":\"tt3501584\",\"tmdb\":60866,\"tvrage\":null}},\"comment\":{\"id\":684434,\"comment\":\"Now
-        I remember why I stopped watching this show.  The continued and increasing
-        lack of control Liv has for each brain is so annoying.  It stared out as a
-        few quirks, but it has grown to be all consuming.  So annoying.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2024-06-15T10:14:31.000Z\",\"updated_at\":\"2024-06-15T10:14:31.000Z\",\"replies\":0,\"likes\":1,\"user_rating\":3,\"language\":\"en\",\"user_stats\":{\"rating\":3,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"wpafbo79\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"wpafbo79\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":5,\"title\":\"Series
-        Acclimation Mil\",\"ids\":{\"trakt\":13617404,\"tvdb\":11418819,\"imdb\":\"tt34127769\",\"tmdb\":6594796,\"tvrage\":null}},\"show\":{\"title\":\"Star
-        Trek: Starfleet Academy\",\"year\":2026,\"ids\":{\"trakt\":203632,\"slug\":\"star-trek-starfleet-academy\",\"tvdb\":433120,\"imdb\":\"tt8622160\",\"tmdb\":223530,\"tvrage\":null}},\"comment\":{\"id\":929688,\"comment\":\"Reno's
-        dry delivery of, \\\"Good thing I'm hilarious,\\\" made me laugh out loud,
-        considering.\\n\\nAnyways, do the new Trek haters have literally nothing better
-        to do?\\n\\\"I hate this show, it's so woke/not traditional Trek/not aimed
-        and made for me and my specific taste and nostalgia-tinted opinions/etc.\\\"\\n*continues
-        to watch every single episode*\\n\\nThere's someone in this episode's comments
-        that admitted that they will keep watching it even though they don't like
-        it. I wonder if the new \\\"woke\\\" series are forcing them to realize uncomfortable
-        truths about themselves.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-01T13:27:52.000Z\",\"updated_at\":\"2026-03-01T13:27:52.000Z\",\"replies\":2,\"likes\":1,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"yatt0\",\"private\":false,\"deleted\":false,\"name\":\"yatto\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"yatt0\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":2,\"number\":7,\"title\":\"Some
-        Assembly Required\",\"ids\":{\"trakt\":193585,\"tvdb\":184511,\"imdb\":\"tt0554597\",\"tmdb\":181694,\"tvrage\":null}},\"show\":{\"title\":\"Dark
-        Angel\",\"year\":2000,\"ids\":{\"trakt\":2393,\"slug\":\"dark-angel\",\"tvdb\":76148,\"imdb\":\"tt0204993\",\"tmdb\":2407,\"tvrage\":null}},\"comment\":{\"id\":516459,\"comment\":\"Really
-        nice send off for Zack after the sacrifice he made. Max made her own sacrifice
-        in her relationship with him.\\n\\nCan imagine Zack being a happy farm hand
-        somewhere, living a normal life\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2022-11-07T19:51:56.000Z\",\"updated_at\":\"2022-11-07T19:51:56.000Z\",\"replies\":0,\"likes\":1,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":3,\"completed_count\":1},\"user\":{\"username\":\"rxp91\",\"private\":false,\"deleted\":false,\"name\":\"Dush
-        Patel\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"rxp91\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":2,\"title\":\"Beta
-        Test\",\"ids\":{\"trakt\":13617398,\"tvdb\":11391554,\"imdb\":\"tt32800965\",\"tmdb\":6594793,\"tvrage\":null}},\"show\":{\"title\":\"Star
-        Trek: Starfleet Academy\",\"year\":2026,\"ids\":{\"trakt\":203632,\"slug\":\"star-trek-starfleet-academy\",\"tvdb\":433120,\"imdb\":\"tt8622160\",\"tmdb\":223530,\"tvrage\":null}},\"comment\":{\"id\":929291,\"comment\":\"Lura
-        Thok is my favorite character! I wish she had more lines. Kind of reminds
-        me of Sister Michael from Derry Girls.\\n\\nThis was a very Caleb teen drama
-        episode. I wish it wasn't because I enjoyed the ensemble from the first episode
-        better. Maybe as his acting improves, I'll tolerate it more. But it looks
-        like he's finally getting past that rebel I don't belong here phase.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-02-28T12:36:29.000Z\",\"updated_at\":\"2026-02-28T12:36:29.000Z\",\"replies\":0,\"likes\":1,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"yatt0\",\"private\":false,\"deleted\":false,\"name\":\"yatto\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"yatt0\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":4,\"number\":8,\"title\":\"Dance
-        in the Country\",\"ids\":{\"trakt\":12134974,\"tvdb\":11394458,\"imdb\":\"tt33029790\",\"tmdb\":6599350,\"tvrage\":null}},\"show\":{\"title\":\"Bridgerton\",\"year\":2020,\"ids\":{\"trakt\":157479,\"slug\":\"bridgerton\",\"tvdb\":366668,\"imdb\":\"tt8740790\",\"tmdb\":91239,\"tvrage\":null}},\"comment\":{\"id\":928627,\"comment\":\"I
-        didn't think I'd cry so much as I did during that last scene the Queen and
-        Lady Danbury had together \U0001F62D❤ (edit: just report that dude; bro's
-        being a creep and going through my comment history)\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-02-26T19:28:27.000Z\",\"updated_at\":\"2026-03-01T21:42:19.000Z\",\"replies\":0,\"likes\":9,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"yatt0\",\"private\":false,\"deleted\":false,\"name\":\"yatto\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"yatt0\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Jeopardy!
-        Sverige\",\"year\":2023,\"ids\":{\"trakt\":202319,\"slug\":\"jeopardy-sverige\",\"tvdb\":430010,\"imdb\":\"tt0779470\",\"tmdb\":219942,\"tvrage\":null}},\"comment\":{\"id\":928044,\"comment\":\"Note
-        to the trakt community Jeopardy SE on IMDb is not quite right because they
-        don’t allow this to be the 3rd installment/edition of Jeopardy, \\n\\nSo season
-        16/17 is the current running one \\nSince it’s not known of many seasons Magnus
-        Härenstam was host, just X years and +X episodes \\nAnd most of unknown season
-        is from 2025, just need to be moved to right season\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-02-24T23:30:16.000Z\",\"updated_at\":\"2026-02-24T23:30:16.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":5,\"language\":\"en\",\"user_stats\":{\"rating\":5,\"play_count\":84,\"completed_count\":84},\"user\":{\"username\":\"Steffe73\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"steffe73\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":1,\"title\":\"Children
-        of the Gods (1)\",\"ids\":{\"trakt\":344111,\"tvdb\":295696,\"imdb\":\"tt0234794\",\"tmdb\":336043,\"tvrage\":null}},\"show\":{\"title\":\"Stargate
-        SG-1\",\"year\":1997,\"ids\":{\"trakt\":4605,\"slug\":\"stargate-sg-1\",\"tvdb\":72449,\"imdb\":\"tt0118480\",\"tmdb\":4629,\"tvrage\":null}},\"comment\":{\"id\":923281,\"comment\":\"Wow,
-        no one told me the version on Amazon has full frontal nudity. I was not ready
-        for that as I rewatched this with my niece, who is 21 now \U0001F62D\U0001F62D\U0001F62D\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-02-13T06:15:54.000Z\",\"updated_at\":\"2026-02-13T06:15:54.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"yatt0\",\"private\":false,\"deleted\":false,\"name\":\"yatto\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"yatt0\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Teen
-        Wolf\",\"year\":2011,\"ids\":{\"trakt\":34375,\"slug\":\"teen-wolf-2011\",\"tvdb\":175001,\"imdb\":\"tt1567432\",\"tmdb\":34524,\"tvrage\":null}},\"comment\":{\"id\":923410,\"comment\":\"İncredible
-        plot. I like it.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-02-13T15:11:02.000Z\",\"updated_at\":\"2026-02-13T15:11:02.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":59,\"completed_count\":59},\"user\":{\"username\":\"Lola_Shen\",\"private\":false,\"deleted\":false,\"name\":\"Lola
-        Shen\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"lola_shen\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Caveat\",\"year\":2021,\"ids\":{\"trakt\":585480,\"slug\":\"caveat-2021\",\"imdb\":\"tt7917178\",\"tmdb\":744746}},\"comment\":{\"id\":930072,\"comment\":\"This
-        was a good movie, however a lot of things were left ambiguous which might
-        leave a lot of the people wanting more. You need to connect a lot of the dots
-        by yourself.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:17:00.000Z\",\"updated_at\":\"2026-03-02T11:17:00.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"jarvis-16024922\",\"private\":false,\"deleted\":false,\"name\":\"Rahul
-        Singh\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"jarvis-16024922\"}}}}]"
-  recorded_at: 2026-03-02 11:33:30
+      string: "[{\"type\":\"show\",\"show\":{\"title\":\"The Night Agent\",\"year\":2023,\"ids\":{\"trakt\":184471,\"slug\":\"the-night-agent\",\"tvdb\":407281,\"imdb\":\"tt13918776\",\"tmdb\":129552,\"tvrage\":null}},\"comment\":{\"id\":551359,\"comment\":\"this
+        is soooo NETFLIX!\\r\\nThe quality of the production is below standards, but
+        the best part are the dialogues\\r\\n\\r\\nFirst of all (this is no spoiler)
+        how on earth does he get to blame about the bombing, that he was the architect
+        and ends up on the basement office, that is very stupid\\r\\n\\r\\nFavorite
+        lines:\\r\\n\\r\\n[spoiler]I have no idea what to do but i know where to start
+        - So i don't know what to cook but i have spaggeti\\r\\nThey talk about a
+        drive on the woods, a drive ? what do you mean ? i do not know, oh could it
+        be a hard drive ??!?!???!?!?!? \U0001F606\\r\\nAnd of course a couple(!) of
+        psycho killers, not two, i mean a romantic crazy couple who love each other
+        to the death\\r\\n[/spoiler]\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2023-03-24T08:07:02.000Z\",\"updated_at\":\"2023-03-24T08:08:53.000Z\",\"replies\":0,\"likes\":3,\"user_rating\":6,\"language\":\"en\",\"user_stats\":{\"rating\":6,\"play_count\":28,\"completed_count\":28},\"user\":{\"username\":\"great_vc\",\"private\":false,\"deleted\":false,\"name\":\"Vassilis\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"great_vc\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Borderlands\",\"year\":2024,\"ids\":{\"trakt\":223432,\"slug\":\"borderlands-2024\",\"imdb\":\"tt4978420\",\"tmdb\":365177}},\"comment\":{\"id\":930083,\"comment\":\"It
+        feels like Cate Blanchett was the only one trying. That Kevin Hart is a terrible
+        actor is nothing new. And I don't blame the kid for this role. But wtf happened
+        to Jamie Lee Curtis?\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:40:05.000Z\",\"updated_at\":\"2026-03-02T12:40:05.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":3,\"language\":\"en\",\"user_stats\":{\"rating\":3,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Silrog\",\"private\":false,\"deleted\":false,\"name\":\"Silrog\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"silrog\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":2,\"number\":4,\"title\":\"The
+        Demon in the Snow\",\"ids\":{\"trakt\":13426610,\"tvdb\":11296173,\"imdb\":\"tt36758868\",\"tmdb\":6468135,\"tvrage\":null}},\"show\":{\"title\":\"Fallout\",\"year\":2024,\"ids\":{\"trakt\":163965,\"slug\":\"fallout\",\"tvdb\":416744,\"imdb\":\"tt12637874\",\"tmdb\":106379,\"tvrage\":null}},\"comment\":{\"id\":907783,\"comment\":\"They
+        better not kill off Dane, the only likeable member of the brotherhood\U0001F62D\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-01-07T12:53:20.000Z\",\"updated_at\":\"2026-01-07T12:53:20.000Z\",\"replies\":1,\"likes\":11,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"amberrav\",\"private\":false,\"deleted\":false,\"name\":\"amberrav\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"amberrav\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":18,\"number\":14,\"title\":\"Finale:
+        Part 2\",\"ids\":{\"trakt\":4035996,\"tvdb\":7619788,\"imdb\":\"tt11932866\",\"tmdb\":2183055,\"tvrage\":null}},\"show\":{\"title\":\"Project
+        Runway\",\"year\":2004,\"ids\":{\"trakt\":1673,\"slug\":\"project-runway\",\"tvdb\":74285,\"imdb\":\"tt0437741\",\"tmdb\":1685,\"tvrage\":null}},\"comment\":{\"id\":930082,\"comment\":\"I
+        don't know, was not expected\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:36:50.000Z\",\"updated_at\":\"2026-03-02T12:36:50.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"AKW\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"akw\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Deadpool
+        \\u0026 Wolverine\",\"year\":2024,\"ids\":{\"trakt\":395672,\"slug\":\"deadpool-wolverine-2024\",\"imdb\":\"tt6263850\",\"tmdb\":533535}},\"comment\":{\"id\":698062,\"comment\":\"It
+        was just F***ing epic. It's a Deadpool movie through and through.\\r\\nThe
+        opening credits was really good, all the action and gore you'd expect. Then
+        the flashback hit which was so fun with all the different wolverines and cameos.
+        There is no proper story, which has become a trademark for Marvel movies,
+        but it's Deadpool so he definitely gets away with it.\\r\\nAll the different
+        cameos, characters, so so satisfying to fans of the franchise. It's like a
+        treat for all the fans that have stayed with them. I won't spoil anything
+        but the climax was also incredible. These guys were born for these roles.\\r\\nALL
+        HAIL MARVEL JESUS - He just might save them.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2024-07-26T10:36:17.000Z\",\"updated_at\":\"2024-07-26T10:36:17.000Z\",\"replies\":0,\"likes\":2,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"adwaithak\",\"private\":false,\"deleted\":false,\"name\":\"Adwaith
+        Anoop Kumar\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"adwaithak\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"St.
+        Denis Medical\",\"year\":2024,\"ids\":{\"trakt\":235514,\"slug\":\"st-denis-medical\",\"tvdb\":435916,\"imdb\":\"tt21433690\",\"tmdb\":251941,\"tvrage\":null}},\"comment\":{\"id\":797680,\"comment\":\"These
+        types of shows are only as good as the cast that is involved with them. that's
+        100% why The Office and Parks and Rec worked so well. Thankfully they seemed
+        to have done a great job with casting for this one and all the characters/actors
+        seem to have great chemistry. Its worth checking out for sure.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-04-13T06:20:23.000Z\",\"updated_at\":\"2025-04-13T06:23:25.000Z\",\"replies\":0,\"likes\":2,\"user_rating\":6,\"language\":\"en\",\"user_stats\":{\"rating\":6,\"play_count\":25,\"completed_count\":25},\"user\":{\"username\":\"ABSTRACTlegend\",\"private\":false,\"deleted\":false,\"name\":\"ABSTRACTlegend\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"abstractlegend\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"You
+        and I Are Polar Opposites\",\"year\":2026,\"ids\":{\"trakt\":264998,\"slug\":\"you-and-i-are-polar-opposites\",\"tvdb\":457078,\"imdb\":\"tt36034547\",\"tmdb\":278043,\"tvrage\":null}},\"comment\":{\"id\":909497,\"comment\":\"Sometimes
+        I wonder who even rates anime on this site, because how this is sitting at
+        40% (this was before trakt redesign) is beyond my understanding. It honestly
+        looks like one of the best romcoms of the season, and the animation and art
+        are beautiful and faithful to the manga.\\n\\nOn top of that, the whole premise
+        is about how the relationship starts right in the first episode, so we get
+        to see something we usually don’t in most romcoms: the relationship itself
+        and how it develops further. It also looks like this might be a complete adaptation,
+        which is rare for romcoms in general.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-01-11T16:02:46.000Z\",\"updated_at\":\"2026-02-07T11:30:54.000Z\",\"replies\":1,\"likes\":12,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":12,\"completed_count\":6},\"user\":{\"username\":\"Smexhy\",\"private\":false,\"deleted\":false,\"name\":\"Smexhy\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"smexhy\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Boon\",\"year\":1986,\"ids\":{\"trakt\":2544,\"slug\":\"boon\",\"tvdb\":77716,\"imdb\":\"tt0090400\",\"tmdb\":2559,\"tvrage\":null}},\"comment\":{\"id\":927540,\"comment\":\"I
+        liked it when it was first on the telly.  It's quite gentle,  twee  and inoffensive,
+        it also features an absolute who's who of British acting chops.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-02-23T18:07:29.000Z\",\"updated_at\":\"2026-02-23T18:07:29.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":80,\"completed_count\":80},\"user\":{\"username\":\"paulrobson666@duck.com\",\"private\":false,\"deleted\":false,\"name\":\"DryNosedDog\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"paulrobson666-duck-com\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"The
+        Bluff\",\"year\":2026,\"ids\":{\"trakt\":634944,\"slug\":\"the-bluff-2026\",\"imdb\":\"tt14181714\",\"tmdb\":799882}},\"comment\":{\"id\":930081,\"comment\":\"The
+        production values were great, but everything feels mid and like you’ve seen
+        this kind of storyline before.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:26:31.000Z\",\"updated_at\":\"2026-03-02T12:26:31.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":5,\"language\":\"en\",\"user_stats\":{\"rating\":5,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"hu.MAN1\",\"private\":false,\"deleted\":false,\"name\":\"AJ\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"hu-man1\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Cold
+        Storage\",\"year\":2026,\"ids\":{\"trakt\":540330,\"slug\":\"cold-storage-2026\",\"imdb\":\"tt8879928\",\"tmdb\":696393}},\"comment\":{\"id\":930078,\"comment\":\"It
+        started as thrilling as the Book, BUT;\\nWhen i heard BEACH BOYS (nothing
+        against em!)... i wondered!\\nA... COMEDY?\\nSorry, but... ANYBODY who read
+        the book, or listened to the great AUDIOBOOK will confirm:\\nThis is NOT a
+        comedy.\\nI'm disapointed... and waited SO LONG for this Movie to come.\\nIn
+        the end i say:\\nIF you watch it... KNOWING to GET a Comedy...then it's STILL
+        ENTERTAINING!\\nBut... DON'T expect something like Pitt's \\\"World War Z\\\"\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:09:34.000Z\",\"updated_at\":\"2026-03-02T12:09:34.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":6,\"language\":\"en\",\"user_stats\":{\"rating\":6,\"play_count\":0,\"completed_count\":0},\"user\":{\"username\":\"Cosmina
+        N.\",\"private\":false,\"deleted\":false,\"name\":\"CosmoNoMAD\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"cosmina-n\"}}}}]"
+  recorded_at: 2026-03-02 12:41:45
 recorded_with: VCR-vcr/2.1.0

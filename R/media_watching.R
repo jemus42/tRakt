@@ -16,10 +16,10 @@ NULL
 #' @eval apiurl("movies", "watching")
 #' @family movie data
 #' @export
-movies_watching <- function(id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
+movies_watching <- function(id, extended = "min") {
+	extended <- validate_extended(extended)
 
-	url <- build_trakt_url("movies", id, "watching", extended = extended)
+	url <- build_trakt_url("movies", id, "watching", extended = extended$query_value)
 	response <- trakt_get(url)
 
 	unpack_user(response)
@@ -29,10 +29,10 @@ movies_watching <- function(id, extended = c("min", "full")) {
 #' @eval apiurl("shows", "watching")
 #' @family show data
 #' @export
-shows_watching <- function(id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
+shows_watching <- function(id, extended = "min") {
+	extended <- validate_extended(extended)
 
-	url <- build_trakt_url("shows", id, "watching", extended = extended)
+	url <- build_trakt_url("shows", id, "watching", extended = extended$query_value)
 	response <- trakt_get(url)
 
 	unpack_user(response)
@@ -42,8 +42,8 @@ shows_watching <- function(id, extended = c("min", "full")) {
 #' @eval apiurl("episodes", "watching")
 #' @family episode data
 #' @export
-seasons_watching <- function(id, season = 1L, extended = c("min", "full")) {
-	extended <- match.arg(extended)
+seasons_watching <- function(id, season = 1L, extended = "min") {
+	extended <- validate_extended(extended)
 
 	url <- build_trakt_url(
 		"shows",
@@ -51,7 +51,7 @@ seasons_watching <- function(id, season = 1L, extended = c("min", "full")) {
 		"seasons",
 		season,
 		"watching",
-		extended = extended
+		extended = extended$query_value
 	)
 	response <- trakt_get(url)
 
@@ -61,8 +61,8 @@ seasons_watching <- function(id, season = 1L, extended = c("min", "full")) {
 
 #' @describeIn media_watching Who's watching an episode.
 #' @export
-episodes_watching <- function(id, season = 1L, episode = 1L, extended = c("min", "full")) {
-	extended <- match.arg(extended)
+episodes_watching <- function(id, season = 1L, episode = 1L, extended = "min") {
+	extended <- validate_extended(extended)
 
 	url <- build_trakt_url(
 		"shows",
@@ -72,7 +72,7 @@ episodes_watching <- function(id, season = 1L, episode = 1L, extended = c("min",
 		"episodes",
 		episode,
 		"watching",
-		extended = extended
+		extended = extended$query_value
 	)
 	response <- trakt_get(url)
 

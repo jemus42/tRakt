@@ -27,12 +27,12 @@ NULL
 #' @importFrom dplyr bind_cols
 #' @importFrom dplyr select
 #' @importFrom purrr is_empty
-people_media <- function(type = c("shows", "movies"), id, extended = c("min", "full")) {
-	extended <- match.arg(extended)
+people_media <- function(type = c("shows", "movies"), id, extended = "min") {
 	type <- match.arg(type)
+	extended <- validate_extended(extended)
 
 	# Construct URL, make API call
-	url <- build_trakt_url("people", id, type, extended = extended)
+	url <- build_trakt_url("people", id, type, extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	if (identical(response, list(cast = list()))) {
@@ -42,7 +42,7 @@ people_media <- function(type = c("shows", "movies"), id, extended = c("min", "f
 	if (type == "shows") {
 		if (has_name(response, "cast") && !is_empty(response$cast)) {
 			response$cast <- response$cast$show |>
-				unpack_show() |>
+				unpack_show(keep_images = extended$keep_images) |>
 				bind_cols(
 					response$cast |>
 						select(-"show")
@@ -50,17 +50,25 @@ people_media <- function(type = c("shows", "movies"), id, extended = c("min", "f
 				as_tibble()
 		}
 		if (has_name(response, "crew") && !is_empty(response$crew)) {
-			response$crew <- unpack_crew_sections(response$crew, type = "shows")
+			response$crew <- unpack_crew_sections(
+				response$crew,
+				type = "shows",
+				keep_images = extended$keep_images
+			)
 		}
 	}
 	if (type == "movies") {
 		if (has_name(response, "cast") && !is_empty(response$cast)) {
 			response$cast <- response$cast |>
-				unpack_movie() |>
+				unpack_movie(keep_images = extended$keep_images) |>
 				as_tibble()
 		}
 		if (has_name(response, "crew") && !is_empty(response$crew)) {
-			response$crew <- unpack_crew_sections(response$crew, type = "movies")
+			response$crew <- unpack_crew_sections(
+				response$crew,
+				type = "movies",
+				keep_images = extended$keep_images
+			)
 		}
 	}
 
@@ -73,7 +81,7 @@ people_media <- function(type = c("shows", "movies"), id, extended = c("min", "f
 #' @family movie data
 #' @family people data
 #' @export
-people_movies <- function(id, extended = c("min", "full")) {
+people_movies <- function(id, extended = "min") {
 	people_media(type = "movies", id = id, extended = extended)
 }
 
@@ -82,6 +90,6 @@ people_movies <- function(id, extended = c("min", "full")) {
 #' @family show data
 #' @family people data
 #' @export
-people_shows <- function(id, extended = c("min", "full")) {
+people_shows <- function(id, extended = "min") {
 	people_media(type = "shows", id = id, extended = extended)
 }

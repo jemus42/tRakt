@@ -48,7 +48,7 @@ unpack_user <- function(response_user) {
 #' @importFrom purrr modify_in
 #' @importFrom dplyr select
 #' @importFrom dplyr bind_cols
-unpack_show <- function(show) {
+unpack_show <- function(show, keep_images = FALSE) {
 	if (!inherits(show, "data.frame")) {
 		cli::cli_abort("{.arg show} must inherit from data.frame, not {.obj_type_friendly {show}}.")
 	}
@@ -57,7 +57,7 @@ unpack_show <- function(show) {
 	show <- as_tibble(show)
 
 	# Drop nested objects that don't fit tabular output
-	if (has_name(show, "images")) {
+	if (has_name(show, "images") && !keep_images) {
 		show[["images"]] <- NULL
 	}
 	if (has_name(show, "colors")) {
@@ -98,7 +98,7 @@ unpack_show <- function(show) {
 #' @importFrom dplyr select
 #' @importFrom rlang has_name
 #' @noRd
-unpack_movie <- function(response) {
+unpack_movie <- function(response, keep_images = FALSE) {
 	if (!has_name(response, "movie")) {
 		return(response)
 	}
@@ -108,7 +108,7 @@ unpack_movie <- function(response) {
 		response$movie |> select(-"ids"),
 		response$movie$ids |> fix_ids()
 	) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = keep_images)
 }
 
 #' Crew subsections
@@ -119,12 +119,12 @@ unpack_movie <- function(response) {
 #' @importFrom rlang has_name
 #' @importFrom dplyr bind_cols
 #' @source <https://trakt.docs.apiary.io/#reference/people/shows> for crew sections
-unpack_crew_sections <- function(crew, type) {
+unpack_crew_sections <- function(crew, type, keep_images = FALSE) {
 	if (type == "shows") {
 		map(trakt_people_crew_sections, \(section) {
 			if (has_name(crew, section)) {
 				crew[[section]] <- crew[[section]]$show |>
-					unpack_show() |>
+					unpack_show(keep_images = keep_images) |>
 					bind_cols(
 						crew[[section]] |>
 							select(-"show")
@@ -140,7 +140,7 @@ unpack_crew_sections <- function(crew, type) {
 		map(trakt_people_crew_sections, \(section) {
 			if (has_name(crew, section)) {
 				crew[[section]] <- crew[[section]] |>
-					unpack_movie() |>
+					unpack_movie(keep_images = keep_images) |>
 					as_tibble() |>
 					mutate(crew_type = section)
 			}
@@ -229,7 +229,7 @@ unpack_people <- function(response) {
 #' @importFrom rlang is_empty
 #' @importFrom dplyr bind_cols select
 #' @importFrom purrr pluck
-unpack_lists <- function(response) {
+unpack_lists <- function(response, keep_images = FALSE) {
 	if (is_empty(response)) {
 		return(tibble())
 	}
@@ -240,7 +240,7 @@ unpack_lists <- function(response) {
 			pluck(response, "ids") |> fix_ids(),
 			pluck(response, "user") |> unpack_user()
 		) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = keep_images)
 }
 
 #' Unpack comments in comment methods
@@ -280,7 +280,7 @@ unpack_comments <- function(response) {
 #' @importFrom rlang is_empty
 #' @importFrom dplyr bind_cols filter select pull
 #' @importFrom purrr pluck map_df
-unpack_comments_multitype <- function(response) {
+unpack_comments_multitype <- function(response, keep_images = FALSE) {
 	if (is_empty(response)) {
 		return(tibble())
 	}
@@ -303,11 +303,11 @@ unpack_comments_multitype <- function(response) {
 					filter(type == x) |>
 					pull("comment") |>
 					unpack_comments(),
-				flatten_media_object(response, x)
+				flatten_media_object(response, x, keep_images = keep_images)
 			)
 		}
 	) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = keep_images)
 }
 
 #' Generalized unpacker
@@ -321,7 +321,7 @@ unpack_comments_multitype <- function(response) {
 #' @importFrom dplyr filter select bind_cols vars rename_at rename_all ends_with
 #' @importFrom stringr str_c str_remove str_replace
 #' @importFrom purrr pluck
-flatten_media_object <- function(x, type) {
+flatten_media_object <- function(x, type, keep_images = FALSE) {
 	x <- x |>
 		as_tibble() |>
 		filter(type == !!type)
@@ -332,7 +332,7 @@ flatten_media_object <- function(x, type) {
 
 	if (type == "show") {
 		res <- pluck(x, "show") |>
-			unpack_show()
+			unpack_show(keep_images = keep_images)
 	} else if (type == "movie") {
 		res <- bind_cols(
 			pluck(x, "movie") |> select(-"ids"),
@@ -341,7 +341,7 @@ flatten_media_object <- function(x, type) {
 	} else if (type == "season") {
 		res <- bind_cols(
 			pluck(x, "show") |>
-				unpack_show(),
+				unpack_show(keep_images = keep_images),
 			pluck(x, "season") |>
 				select(-"ids") |>
 				rename_all(\(x) paste0("season_", x)),
@@ -351,7 +351,7 @@ flatten_media_object <- function(x, type) {
 		)
 	} else if (type == "episode") {
 		res <- bind_cols(
-			pluck(x, "show") |> unpack_show(),
+			pluck(x, "show") |> unpack_show(keep_images = keep_images),
 			pluck(x, "episode") |>
 				select(-"ids") |>
 				rename_all(\(x) paste0("episode_", x)),
@@ -388,7 +388,7 @@ flatten_media_object <- function(x, type) {
 #' @importFrom dplyr filter select bind_cols vars rename_at rename_all ends_with matches
 #' @importFrom stringr str_c str_remove str_replace
 #' @importFrom purrr modify_if modify_at discard pluck list_merge set_names
-flatten_single_media_object <- function(response, type) {
+flatten_single_media_object <- function(response, type, keep_images = FALSE) {
 	if (is_empty(response)) {
 		return(tibble())
 	}
@@ -398,6 +398,12 @@ flatten_single_media_object <- function(response, type) {
 			response <- pluck(response, "movie")
 		}
 
+		# Preserve images before discard(is.list) removes them
+		images_data <- NULL
+		if (keep_images && !is.null(response[["images"]])) {
+			images_data <- list(response[["images"]])
+		}
+
 		res <- response |>
 			modify_if(is.null, \(x) NA_character_) |>
 			discard(is.list) |>
@@ -405,11 +411,21 @@ flatten_single_media_object <- function(response, type) {
 				!!!(pluck(response, "ids") |> fix_ids())
 			) |>
 			modify_if(\(x) length(x) > 1, list)
+
+		if (!is.null(images_data)) {
+			res$images <- images_data
+		}
 	}
 
 	if (type %in% c("show", "shows")) {
 		if (has_name(response, "show")) {
 			response <- pluck(response, "show")
+		}
+
+		# Preserve images before discard(is.list) removes them
+		images_data <- NULL
+		if (keep_images && !is.null(response[["images"]])) {
+			images_data <- list(response[["images"]])
 		}
 
 		res <- response |>
@@ -429,6 +445,10 @@ flatten_single_media_object <- function(response, type) {
 			list_merge(
 				!!!(pluck(response, "ids") |> fix_ids())
 			)
+
+		if (!is.null(images_data)) {
+			res$images <- images_data
+		}
 	}
 
 	if (type %in% c("episode", "episodes")) {
@@ -479,5 +499,5 @@ flatten_single_media_object <- function(response, type) {
 				if (!is.list(x)) list(x) else x
 			}
 		) |>
-		fix_tibble_response()
+		fix_tibble_response(keep_images = keep_images)
 }

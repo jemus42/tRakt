@@ -12,9 +12,15 @@
 #'   Can also be of length greater than 1, in which case the function is called on all
 #'   `id` values separately and the result is combined. See
 #'   `vignette("tRakt")` for more details.
-#' @param extended `character(1)`: Either `"min"` (API default) or `"full"`. The latter
-#'   returns more variables and should generally only be used if required.
-#'   See `vignette("tRakt")` for more details.
+#' @param extended `character`: Level of detail for the API response.
+#'   - `"min"` (default): Minimal info (title, year, IDs). Omits the `extended` query param.
+#'   - `"full"`: Complete info including overview, ratings, runtime, etc.
+#'   - `"images"`: Minimal info plus image URLs (returned as a list-column).
+#'   - `"full,images"`: Complete info plus images.
+#'   - `"metadata"`: Collection endpoints only; adds video/audio metadata.
+#'
+#'   Multiple values can be combined as a comma-separated string (e.g. `"full,images"`)
+#'   or a character vector (e.g. `c("full", "images")`).
 #' @param type `character(1)`: Either `"shows"` or `"movies"`. For season/episode-specific
 #'   functions, values `seasons` or `episodes` are also allowed.
 #' @param user `character(1)`: Target username (or `slug`). Defaults to

@@ -1,11 +1,11 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/followers?extended=min
+    uri: https://api.trakt.tv/users/jemus42/followers
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:40 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: private, max-age=600, s-maxage=3600
@@ -19,7 +19,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007d6aae67754-AMS
+      cf-ray: 9d6079d4db91d595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"followed_at":"2012-08-03T19:15:59.000Z","user":{"ids":{"slug":"sofakissen","trakt":31970},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/a25a2f83126e9b9eab21e367dc014e02?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"sofakissen","private":false,"deleted":false,"joined_at":"2012-02-20T19:29:09.000Z","location":"","about":"","name":"Daniel","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-08-03T21:52:54.000Z","user":{"ids":{"slug":"farthen","trakt":50973},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/3e432b04555dde1c87750a0e19a74554?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"Farthen","private":false,"deleted":false,"joined_at":"2012-07-07T10:23:38.000Z","location":"","about":"","name":"","gender":"","age":33,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:11.000Z","user":{"ids":{"slug":"lsanoj","trakt":63165},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/503dbb1ef4074ee7739592744fae029c?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"lsanoj","private":false,"deleted":false,"joined_at":"2012-09-10T09:53:32.000Z","location":"","about":"","name":"Jonas","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:13.000Z","user":{"ids":{"slug":"viirus","trakt":50961},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/5270ccaa11050c6db0d1589743510523?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"viirus","private":false,"deleted":false,"joined_at":"2012-07-07T09:53:58.000Z","location":"Berlin","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2013-01-08T19:05:33.000Z","user":{"ids":{"slug":"ekelias","trakt":173060},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/173/060/avatars/medium/16172dfa8b.gif"}},"username":"ekelias","private":false,"deleted":false,"joined_at":"2013-01-08T18:42:09.000Z","location":"","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2014-02-10T20:00:47.000Z","user":{"ids":{"slug":"kimberley_jones","trakt":411059},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/64c6b4bfa85898cff342fe368e948040?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/leela.png"}},"username":"kimberley_jones","private":false,"deleted":false,"joined_at":"2014-01-19T18:38:45.000Z","location":"other
@@ -93,14 +93,14 @@ http_interactions:
         Way","about":"","name":"Grey Walker","gender":"male","age":55,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2025-12-16T10:13:28.000Z","user":{"ids":{"slug":"count-von-count","trakt":10625571},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/010/625/571/avatars/medium/8c6edf80cb.webp"}},"username":"Count
         von Count","private":false,"deleted":false,"joined_at":"2020-12-22T09:42:19.000Z","location":"Australia","about":null,"name":null,"gender":"","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2026-02-04T15:33:15.000Z","user":{"ids":{"slug":"arnab001","trakt":8189451},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/008/189/451/avatars/medium/33313edce4.jpg"}},"username":"arnab001","private":true,"deleted":false,"joined_at":"2019-06-07T16:24:39.000Z","location":"Kolkata,
         West Bengal","about":"","name":"Arnab","gender":"male","age":30,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
     uri: https://api.trakt.tv/users/jemus42/followers?extended=full
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:33:32 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: private, max-age=600, s-maxage=3600
@@ -114,7 +114,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d601649fd20feb1-AMS
+      cf-ray: 9d6079d6d86cd595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"followed_at":"2012-08-03T19:15:59.000Z","user":{"ids":{"slug":"sofakissen","trakt":31970},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/a25a2f83126e9b9eab21e367dc014e02?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"sofakissen","private":false,"deleted":false,"joined_at":"2012-02-20T19:29:09.000Z","location":"","about":"","name":"Daniel","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-08-03T21:52:54.000Z","user":{"ids":{"slug":"farthen","trakt":50973},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/3e432b04555dde1c87750a0e19a74554?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"Farthen","private":false,"deleted":false,"joined_at":"2012-07-07T10:23:38.000Z","location":"","about":"","name":"","gender":"","age":33,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:11.000Z","user":{"ids":{"slug":"lsanoj","trakt":63165},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/503dbb1ef4074ee7739592744fae029c?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"lsanoj","private":false,"deleted":false,"joined_at":"2012-09-10T09:53:32.000Z","location":"","about":"","name":"Jonas","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:13.000Z","user":{"ids":{"slug":"viirus","trakt":50961},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/5270ccaa11050c6db0d1589743510523?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"viirus","private":false,"deleted":false,"joined_at":"2012-07-07T09:53:58.000Z","location":"Berlin","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2013-01-08T19:05:33.000Z","user":{"ids":{"slug":"ekelias","trakt":173060},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/173/060/avatars/medium/16172dfa8b.gif"}},"username":"ekelias","private":false,"deleted":false,"joined_at":"2013-01-08T18:42:09.000Z","location":"","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2014-02-10T20:00:47.000Z","user":{"ids":{"slug":"kimberley_jones","trakt":411059},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/64c6b4bfa85898cff342fe368e948040?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/leela.png"}},"username":"kimberley_jones","private":false,"deleted":false,"joined_at":"2014-01-19T18:38:45.000Z","location":"other
@@ -188,14 +188,14 @@ http_interactions:
         Way","about":"","name":"Grey Walker","gender":"male","age":55,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2025-12-16T10:13:28.000Z","user":{"ids":{"slug":"count-von-count","trakt":10625571},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/010/625/571/avatars/medium/8c6edf80cb.webp"}},"username":"Count
         von Count","private":false,"deleted":false,"joined_at":"2020-12-22T09:42:19.000Z","location":"Australia","about":null,"name":null,"gender":"","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2026-02-04T15:33:15.000Z","user":{"ids":{"slug":"arnab001","trakt":8189451},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/008/189/451/avatars/medium/33313edce4.jpg"}},"username":"arnab001","private":true,"deleted":false,"joined_at":"2019-06-07T16:24:39.000Z","location":"Kolkata,
         West Bengal","about":"","name":"Arnab","gender":"male","age":30,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/followers?extended=min
+    uri: https://api.trakt.tv/users/jemus42/followers
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:40 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: private, max-age=600, s-maxage=3600
@@ -209,7 +209,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007d6aae67754-AMS
+      cf-ray: 9d6079d4db91d595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"followed_at":"2012-08-03T19:15:59.000Z","user":{"ids":{"slug":"sofakissen","trakt":31970},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/a25a2f83126e9b9eab21e367dc014e02?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"sofakissen","private":false,"deleted":false,"joined_at":"2012-02-20T19:29:09.000Z","location":"","about":"","name":"Daniel","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-08-03T21:52:54.000Z","user":{"ids":{"slug":"farthen","trakt":50973},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/3e432b04555dde1c87750a0e19a74554?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"Farthen","private":false,"deleted":false,"joined_at":"2012-07-07T10:23:38.000Z","location":"","about":"","name":"","gender":"","age":33,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:11.000Z","user":{"ids":{"slug":"lsanoj","trakt":63165},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/503dbb1ef4074ee7739592744fae029c?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"lsanoj","private":false,"deleted":false,"joined_at":"2012-09-10T09:53:32.000Z","location":"","about":"","name":"Jonas","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:13.000Z","user":{"ids":{"slug":"viirus","trakt":50961},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/5270ccaa11050c6db0d1589743510523?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"viirus","private":false,"deleted":false,"joined_at":"2012-07-07T09:53:58.000Z","location":"Berlin","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2013-01-08T19:05:33.000Z","user":{"ids":{"slug":"ekelias","trakt":173060},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/173/060/avatars/medium/16172dfa8b.gif"}},"username":"ekelias","private":false,"deleted":false,"joined_at":"2013-01-08T18:42:09.000Z","location":"","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2014-02-10T20:00:47.000Z","user":{"ids":{"slug":"kimberley_jones","trakt":411059},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/64c6b4bfa85898cff342fe368e948040?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/leela.png"}},"username":"kimberley_jones","private":false,"deleted":false,"joined_at":"2014-01-19T18:38:45.000Z","location":"other
@@ -283,14 +283,14 @@ http_interactions:
         Way","about":"","name":"Grey Walker","gender":"male","age":55,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2025-12-16T10:13:28.000Z","user":{"ids":{"slug":"count-von-count","trakt":10625571},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/010/625/571/avatars/medium/8c6edf80cb.webp"}},"username":"Count
         von Count","private":false,"deleted":false,"joined_at":"2020-12-22T09:42:19.000Z","location":"Australia","about":null,"name":null,"gender":"","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2026-02-04T15:33:15.000Z","user":{"ids":{"slug":"arnab001","trakt":8189451},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/008/189/451/avatars/medium/33313edce4.jpg"}},"username":"arnab001","private":true,"deleted":false,"joined_at":"2019-06-07T16:24:39.000Z","location":"Kolkata,
         West Bengal","about":"","name":"Arnab","gender":"male","age":30,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/followers?extended=min
+    uri: https://api.trakt.tv/users/jemus42/followers
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:40 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: private, max-age=600, s-maxage=3600
@@ -304,7 +304,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007d6aae67754-AMS
+      cf-ray: 9d6079d4db91d595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"followed_at":"2012-08-03T19:15:59.000Z","user":{"ids":{"slug":"sofakissen","trakt":31970},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/a25a2f83126e9b9eab21e367dc014e02?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"sofakissen","private":false,"deleted":false,"joined_at":"2012-02-20T19:29:09.000Z","location":"","about":"","name":"Daniel","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-08-03T21:52:54.000Z","user":{"ids":{"slug":"farthen","trakt":50973},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/3e432b04555dde1c87750a0e19a74554?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"Farthen","private":false,"deleted":false,"joined_at":"2012-07-07T10:23:38.000Z","location":"","about":"","name":"","gender":"","age":33,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:11.000Z","user":{"ids":{"slug":"lsanoj","trakt":63165},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/503dbb1ef4074ee7739592744fae029c?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"lsanoj","private":false,"deleted":false,"joined_at":"2012-09-10T09:53:32.000Z","location":"","about":"","name":"Jonas","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:13.000Z","user":{"ids":{"slug":"viirus","trakt":50961},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/5270ccaa11050c6db0d1589743510523?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"viirus","private":false,"deleted":false,"joined_at":"2012-07-07T09:53:58.000Z","location":"Berlin","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2013-01-08T19:05:33.000Z","user":{"ids":{"slug":"ekelias","trakt":173060},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/173/060/avatars/medium/16172dfa8b.gif"}},"username":"ekelias","private":false,"deleted":false,"joined_at":"2013-01-08T18:42:09.000Z","location":"","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2014-02-10T20:00:47.000Z","user":{"ids":{"slug":"kimberley_jones","trakt":411059},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/64c6b4bfa85898cff342fe368e948040?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/leela.png"}},"username":"kimberley_jones","private":false,"deleted":false,"joined_at":"2014-01-19T18:38:45.000Z","location":"other
@@ -378,14 +378,14 @@ http_interactions:
         Way","about":"","name":"Grey Walker","gender":"male","age":55,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2025-12-16T10:13:28.000Z","user":{"ids":{"slug":"count-von-count","trakt":10625571},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/010/625/571/avatars/medium/8c6edf80cb.webp"}},"username":"Count
         von Count","private":false,"deleted":false,"joined_at":"2020-12-22T09:42:19.000Z","location":"Australia","about":null,"name":null,"gender":"","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2026-02-04T15:33:15.000Z","user":{"ids":{"slug":"arnab001","trakt":8189451},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/008/189/451/avatars/medium/33313edce4.jpg"}},"username":"arnab001","private":true,"deleted":false,"joined_at":"2019-06-07T16:24:39.000Z","location":"Kolkata,
         West Bengal","about":"","name":"Arnab","gender":"male","age":30,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/followers?extended=min
+    uri: https://api.trakt.tv/users/jemus42/followers
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:40 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: private, max-age=600, s-maxage=3600
@@ -399,7 +399,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007d6aae67754-AMS
+      cf-ray: 9d6079d4db91d595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"followed_at":"2012-08-03T19:15:59.000Z","user":{"ids":{"slug":"sofakissen","trakt":31970},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/a25a2f83126e9b9eab21e367dc014e02?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"sofakissen","private":false,"deleted":false,"joined_at":"2012-02-20T19:29:09.000Z","location":"","about":"","name":"Daniel","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-08-03T21:52:54.000Z","user":{"ids":{"slug":"farthen","trakt":50973},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/3e432b04555dde1c87750a0e19a74554?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"Farthen","private":false,"deleted":false,"joined_at":"2012-07-07T10:23:38.000Z","location":"","about":"","name":"","gender":"","age":33,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:11.000Z","user":{"ids":{"slug":"lsanoj","trakt":63165},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/503dbb1ef4074ee7739592744fae029c?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"lsanoj","private":false,"deleted":false,"joined_at":"2012-09-10T09:53:32.000Z","location":"","about":"","name":"Jonas","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:13.000Z","user":{"ids":{"slug":"viirus","trakt":50961},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/5270ccaa11050c6db0d1589743510523?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"viirus","private":false,"deleted":false,"joined_at":"2012-07-07T09:53:58.000Z","location":"Berlin","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2013-01-08T19:05:33.000Z","user":{"ids":{"slug":"ekelias","trakt":173060},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/173/060/avatars/medium/16172dfa8b.gif"}},"username":"ekelias","private":false,"deleted":false,"joined_at":"2013-01-08T18:42:09.000Z","location":"","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2014-02-10T20:00:47.000Z","user":{"ids":{"slug":"kimberley_jones","trakt":411059},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/64c6b4bfa85898cff342fe368e948040?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/leela.png"}},"username":"kimberley_jones","private":false,"deleted":false,"joined_at":"2014-01-19T18:38:45.000Z","location":"other
@@ -473,14 +473,14 @@ http_interactions:
         Way","about":"","name":"Grey Walker","gender":"male","age":55,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2025-12-16T10:13:28.000Z","user":{"ids":{"slug":"count-von-count","trakt":10625571},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/010/625/571/avatars/medium/8c6edf80cb.webp"}},"username":"Count
         von Count","private":false,"deleted":false,"joined_at":"2020-12-22T09:42:19.000Z","location":"Australia","about":null,"name":null,"gender":"","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2026-02-04T15:33:15.000Z","user":{"ids":{"slug":"arnab001","trakt":8189451},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/008/189/451/avatars/medium/33313edce4.jpg"}},"username":"arnab001","private":true,"deleted":false,"joined_at":"2019-06-07T16:24:39.000Z","location":"Kolkata,
         West Bengal","about":"","name":"Arnab","gender":"male","age":30,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/followers?extended=min
+    uri: https://api.trakt.tv/users/jemus42/followers
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:40 GMT
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: private, max-age=600, s-maxage=3600
@@ -494,7 +494,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007d6aae67754-AMS
+      cf-ray: 9d6079d4db91d595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"followed_at":"2012-08-03T19:15:59.000Z","user":{"ids":{"slug":"sofakissen","trakt":31970},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/a25a2f83126e9b9eab21e367dc014e02?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"sofakissen","private":false,"deleted":false,"joined_at":"2012-02-20T19:29:09.000Z","location":"","about":"","name":"Daniel","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-08-03T21:52:54.000Z","user":{"ids":{"slug":"farthen","trakt":50973},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/3e432b04555dde1c87750a0e19a74554?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"Farthen","private":false,"deleted":false,"joined_at":"2012-07-07T10:23:38.000Z","location":"","about":"","name":"","gender":"","age":33,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:11.000Z","user":{"ids":{"slug":"lsanoj","trakt":63165},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/503dbb1ef4074ee7739592744fae029c?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"lsanoj","private":false,"deleted":false,"joined_at":"2012-09-10T09:53:32.000Z","location":"","about":"","name":"Jonas","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2012-11-26T15:41:13.000Z","user":{"ids":{"slug":"viirus","trakt":50961},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/5270ccaa11050c6db0d1589743510523?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"viirus","private":false,"deleted":false,"joined_at":"2012-07-07T09:53:58.000Z","location":"Berlin","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2013-01-08T19:05:33.000Z","user":{"ids":{"slug":"ekelias","trakt":173060},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/173/060/avatars/medium/16172dfa8b.gif"}},"username":"ekelias","private":false,"deleted":false,"joined_at":"2013-01-08T18:42:09.000Z","location":"","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2014-02-10T20:00:47.000Z","user":{"ids":{"slug":"kimberley_jones","trakt":411059},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/64c6b4bfa85898cff342fe368e948040?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/leela.png"}},"username":"kimberley_jones","private":false,"deleted":false,"joined_at":"2014-01-19T18:38:45.000Z","location":"other
@@ -568,14 +568,14 @@ http_interactions:
         Way","about":"","name":"Grey Walker","gender":"male","age":55,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2025-12-16T10:13:28.000Z","user":{"ids":{"slug":"count-von-count","trakt":10625571},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/010/625/571/avatars/medium/8c6edf80cb.webp"}},"username":"Count
         von Count","private":false,"deleted":false,"joined_at":"2020-12-22T09:42:19.000Z","location":"Australia","about":null,"name":null,"gender":"","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62},{"followed_at":"2026-02-04T15:33:15.000Z","user":{"ids":{"slug":"arnab001","trakt":8189451},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/008/189/451/avatars/medium/33313edce4.jpg"}},"username":"arnab001","private":true,"deleted":false,"joined_at":"2019-06-07T16:24:39.000Z","location":"Kolkata,
         West Bengal","about":"","name":"Arnab","gender":"male","age":30,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":62}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/following?extended=min
+    uri: https://api.trakt.tv/users/jemus42/following
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:40 GMT
+      date: Mon, 02 Mar 2026 12:41:30 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: private, max-age=600, s-maxage=3600
@@ -589,7 +589,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007d9fdf87754-AMS
+      cf-ray: 9d6079d99fcfd595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"followed_at":"2012-08-03T19:15:59.000Z","user":{"ids":{"slug":"sofakissen","trakt":31970},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/a25a2f83126e9b9eab21e367dc014e02?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"sofakissen","private":false,"deleted":false,"joined_at":"2012-02-20T19:29:09.000Z","location":"","about":"","name":"Daniel","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":34},{"followed_at":"2012-08-03T21:52:54.000Z","user":{"ids":{"slug":"farthen","trakt":50973},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/3e432b04555dde1c87750a0e19a74554?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"Farthen","private":false,"deleted":false,"joined_at":"2012-07-07T10:23:38.000Z","location":"","about":"","name":"","gender":"","age":33,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":34},{"followed_at":"2012-11-26T15:41:11.000Z","user":{"ids":{"slug":"lsanoj","trakt":63165},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/503dbb1ef4074ee7739592744fae029c?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"lsanoj","private":false,"deleted":false,"joined_at":"2012-09-10T09:53:32.000Z","location":"","about":"","name":"Jonas","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":34},{"followed_at":"2012-11-26T15:41:13.000Z","user":{"ids":{"slug":"viirus","trakt":50961},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/5270ccaa11050c6db0d1589743510523?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"viirus","private":false,"deleted":false,"joined_at":"2012-07-07T09:53:58.000Z","location":"Berlin","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":34},{"followed_at":"2013-09-24T19:51:15.000Z","user":{"ids":{"slug":"ekelias","trakt":173060},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/173/060/avatars/medium/16172dfa8b.gif"}},"username":"ekelias","private":false,"deleted":false,"joined_at":"2013-01-08T18:42:09.000Z","location":"","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":34},{"followed_at":"2014-02-10T20:00:32.000Z","user":{"ids":{"slug":"kimberley_jones","trakt":411059},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/64c6b4bfa85898cff342fe368e948040?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/leela.png"}},"username":"kimberley_jones","private":false,"deleted":false,"joined_at":"2014-01-19T18:38:45.000Z","location":"other
@@ -612,22 +612,22 @@ http_interactions:
         Watch Trailers.","name":"Phil","gender":"male","age":41,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":34},{"followed_at":"2018-03-16T17:28:42.000Z","user":{"ids":{"slug":"schmalzkrapfen","trakt":3681047},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/795e11a4491aeb89e2f0fe806cf043d9?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/leela.png"}},"username":"schmalzkrapfen","private":false,"deleted":false,"joined_at":"2018-03-16T17:20:03.000Z","location":null,"about":null,"name":"Monika
         Burk","gender":"female","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":34},{"followed_at":"2019-05-15T20:52:57.000Z","user":{"ids":{"slug":"lish408","trakt":609065},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/609/065/avatars/medium/710c9ad583.jpg"}},"username":"lish408","private":false,"deleted":false,"joined_at":"2014-08-25T22:24:56.000Z","location":"San
         Jose, CA","about":null,"name":"LISH","gender":"male","age":40,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":34},{"followed_at":"2019-05-17T15:10:28.000Z","user":{"ids":{"slug":"glck","trakt":5316340},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/ba6408365284876c7f3579958a58ac71?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"glck","private":true,"deleted":false,"joined_at":"2019-03-20T07:42:37.000Z","location":"Germany","about":"","name":"GB","gender":"other","age":49,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":34}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:30
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/friends?extended=min
+    uri: https://api.trakt.tv/users/jemus42/friends
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 12:41:30 GMT
       content-type: application/json; charset=utf-8
-      content-encoding: gzip
-      date: Mon, 02 Mar 2026 11:33:32 GMT
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
-      etag: W/"c4709e559a4816607f18413094350034"
+      content-encoding: gzip
+      etag: W/"e7e785e91a1d5e048fbe2fa6be93b472"
       server: cloudflare
-      vary: Origin, accept-encoding
+      vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
@@ -636,13 +636,13 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 3b8d13dc-ce9e-4aae-8a36-7ac8548c8db7
-      x-runtime: '0.037889'
+      x-request-id: 3c8e65b2-5ed4-4a4e-8770-8f43a1647cee
+      x-runtime: '0.031120'
       x-xss-protection: '0'
-      cf-ray: 9d60164d2ccafeb1-AMS
+      cf-ray: 9d6079db5d25d595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"friends_at":"2012-11-26T15:41:11.000Z","user":{"username":"lsanoj","private":false,"deleted":false,"name":"Jonas","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"lsanoj"}}},{"friends_at":"2012-11-26T15:41:13.000Z","user":{"username":"viirus","private":false,"deleted":false,"name":"viirus","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"viirus"}}},{"friends_at":"2013-01-08T19:05:33.000Z","user":{"username":"ekelias","private":false,"deleted":false,"name":"ekelias","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ekelias"}}},{"friends_at":"2015-10-12T17:08:05.000Z","user":{"username":"swanqueenz","private":false,"deleted":false,"name":"emily","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"swanqueenz"}}},{"friends_at":"2016-01-10T13:05:27.000Z","user":{"username":"_Captain","private":false,"deleted":false,"name":"_Captain","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"_captain"}}},{"friends_at":"2016-01-17T18:00:06.000Z","user":{"username":"ironfox1","private":false,"deleted":false,"name":"ironfox1","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"ironfox1"}}},{"friends_at":"2016-04-07T21:44:01.000Z","user":{"username":"l0wBoB","private":false,"deleted":false,"name":"Sebastian
         Billmann","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"l0wbob"}}},{"friends_at":"2016-07-07T22:49:07.000Z","user":{"username":"seristapp","private":false,"deleted":false,"name":"SERIST","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"seristapp"}}},{"friends_at":"2016-12-22T13:55:49.000Z","user":{"username":"sp1ti","private":false,"deleted":false,"name":"sp1ti","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"sp1ti"}}},{"friends_at":"2018-05-16T03:30:17.000Z","user":{"username":"justin","private":false,"deleted":false,"name":"Justin","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:30
 recorded_with: VCR-vcr/2.1.0

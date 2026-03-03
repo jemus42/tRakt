@@ -121,21 +121,21 @@ http_interactions:
         2024: I''ve added this list in years ago but it got surprisingly popular on
         trakt. For prosperity sake: I don''t remember the edition of the book... it
         is an inconsistent mix up to the 5th edition which was published in 2008.","privacy":"public","share_link":"https://trakt.tv/lists/805405","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2013-01-06T20:11:36.000Z","updated_at":"2026-03-01T08:13:59.000Z","item_count":1002,"comment_count":8,"likes":2572,"ids":{"trakt":805405,"slug":"1001-movies-you-must-see-before-you-die"},"user":{"username":"sp1ti","private":false,"deleted":false,"name":"sp1ti","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"sp1ti"}}}}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:26
 - request:
     method: GET
     uri: https://api.trakt.tv/lists/trending?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:33:30 GMT
+      date: Mon, 02 Mar 2026 12:41:26 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=300, public
       content-encoding: gzip
-      etag: W/"ebb3d9ba86eb5755bda979974a300d6f"
-      expires: Mon, 02 Mar 2026 11:38:30 GMT
+      etag: W/"64069b4567f94a90ce6ba83ccb5d03ce"
+      expires: Mon, 02 Mar 2026 12:46:26 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -144,22 +144,22 @@ http_interactions:
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '23868'
+      x-pagination-item-count: '23866'
       x-pagination-limit: '10'
       x-pagination-page: '1'
       x-pagination-page-count: '2387'
       x-permitted-cross-domain-policies: none
-      x-request-id: fb9613c2-4898-4a63-8ebc-c87c163751fc
-      x-runtime: '0.051182'
+      x-request-id: 9478e66b-b356-4150-b34a-b12a72c70207
+      x-runtime: '0.059706'
       x-xss-protection: '0'
-      cf-ray: 9d6016435d1ca419-AMS
+      cf-ray: 9d6079c369d6c118-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"like_count":41,"comment_count":0,"list":{"name":"IMDB: Top Rated
         Movies","description":"Top 250 movies, as rated by regular IMDB voters. List
-        updated daily.","privacy":"public","share_link":"https://trakt.tv/lists/2142753","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T20:13:18.000Z","updated_at":"2026-03-02T09:04:23.000Z","item_count":250,"comment_count":6,"likes":4571,"ids":{"trakt":2142753,"slug":"imdb-top-rated-movies"},"user":{"username":"justin","private":false,"deleted":false,"name":"Justin","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}},{"like_count":29,"comment_count":0,"list":{"name":"IMDB:
+        updated daily.","privacy":"public","share_link":"https://trakt.tv/lists/2142753","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T20:13:18.000Z","updated_at":"2026-03-02T09:04:23.000Z","item_count":250,"comment_count":6,"likes":4572,"ids":{"trakt":2142753,"slug":"imdb-top-rated-movies"},"user":{"username":"justin","private":false,"deleted":false,"name":"Justin","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}},{"like_count":28,"comment_count":0,"list":{"name":"IMDB:
         Top Rated TV Shows","description":"Top 250 TV shows, as rated by IMDB members.  List
-        updated daily.","privacy":"public","share_link":"https://trakt.tv/lists/2143363","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T23:10:50.000Z","updated_at":"2026-03-02T09:10:51.000Z","item_count":243,"comment_count":0,"likes":3488,"ids":{"trakt":2143363,"slug":"imdb-top-rated-tv-shows"},"user":{"username":"justin","private":false,"deleted":false,"name":"Justin","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}},{"like_count":24,"comment_count":0,"list":{"name":"Latest
+        updated daily.","privacy":"public","share_link":"https://trakt.tv/lists/2143363","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T23:10:50.000Z","updated_at":"2026-03-02T11:44:19.000Z","item_count":243,"comment_count":0,"likes":3489,"ids":{"trakt":2143363,"slug":"imdb-top-rated-tv-shows"},"user":{"username":"justin","private":false,"deleted":false,"name":"Justin","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}},{"like_count":24,"comment_count":0,"list":{"name":"Latest
         releases","description":"","privacy":"public","share_link":"https://trakt.tv/lists/5308818","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"added","sort_how":"desc","created_at":"2018-07-29T10:16:22.000Z","updated_at":"2026-03-02T01:59:26.000Z","item_count":249,"comment_count":6,"likes":5698,"ids":{"trakt":5308818,"slug":"latest-releases"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}}},{"like_count":21,"comment_count":0,"list":{"name":"Best
         Mindfucks","description":"What’s a mindfuck? A movie that plays with your
         mind, confuses you, and leads you on. It’s not just a movie with a twist ending.
@@ -207,12 +207,12 @@ http_interactions:
         Releases","description":"","privacy":"public","share_link":"https://trakt.tv/lists/3837211","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"added","sort_how":"desc","created_at":"2017-06-07T13:22:46.000Z","updated_at":"2026-03-02T06:14:56.000Z","item_count":99,"comment_count":0,"likes":10053,"ids":{"trakt":3837211,"slug":"latest-releases"},"user":{"username":"giladg","private":false,"deleted":false,"name":"G\u0026A","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"giladg"}}}},{"like_count":15,"comment_count":0,"list":{"name":"Trending
         Shows","description":"This list is maintained by mdblist.com\r\nCreate your
         own: https://mdblist.com/lists/snoak/trakt-s-trending-shows\r\nUpdated at
-        2026-03-01 23:19:11","privacy":"public","share_link":"https://trakt.tv/lists/33032820","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T11:25:26.000Z","updated_at":"2026-03-01T22:24:54.000Z","item_count":250,"comment_count":0,"likes":158,"ids":{"trakt":33032820,"slug":"trending-shows"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}}},{"like_count":14,"comment_count":0,"list":{"name":"Trending
+        2026-03-01 23:19:11","privacy":"public","share_link":"https://trakt.tv/lists/33032820","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T11:25:26.000Z","updated_at":"2026-03-02T12:31:06.000Z","item_count":250,"comment_count":0,"likes":159,"ids":{"trakt":33032820,"slug":"trending-shows"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}}},{"like_count":14,"comment_count":0,"list":{"name":"Trending
         Movies","description":"This list is maintained by mdblist.com\r\nCreate your
         own: https://mdblist.com/lists/snoak/trending-movies\r\nUpdated at 2026-03-02
-        02:13:51","privacy":"public","share_link":"https://trakt.tv/lists/33032593","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T10:46:23.000Z","updated_at":"2026-03-02T00:13:51.000Z","item_count":249,"comment_count":0,"likes":135,"ids":{"trakt":33032593,"slug":"trending-movies"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}}},{"like_count":12,"comment_count":0,"list":{"name":"Latest
-        Movies (Digital Release)","description":"This list is maintained by mdblist.com\r\nCreate
-        your own: https://mdblist.com/lists/snoak/latest-movies-digital-release\r\nUpdated
-        at 2026-03-01 12:40:54","privacy":"public","share_link":"https://trakt.tv/lists/33032845","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T11:31:07.000Z","updated_at":"2026-03-02T01:48:59.000Z","item_count":498,"comment_count":0,"likes":127,"ids":{"trakt":33032845,"slug":"latest-movies-digital-release"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}}}]'
-  recorded_at: 2026-03-02 11:33:30
+        02:13:51","privacy":"public","share_link":"https://trakt.tv/lists/33032593","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T10:46:23.000Z","updated_at":"2026-03-02T00:13:51.000Z","item_count":249,"comment_count":0,"likes":135,"ids":{"trakt":33032593,"slug":"trending-movies"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}}},{"like_count":13,"comment_count":0,"list":{"name":"New
+        HD Releases","description":"This will be updated daily with new releases as
+        they come online. Please enjoy and feel free to give me a freakin shout out
+        if u see me \r\n\r\nSmirk;-D","privacy":"public","share_link":"https://trakt.tv/lists/11057926","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"added","sort_how":"desc","created_at":"2020-03-08T16:06:09.000Z","updated_at":"2026-03-02T11:53:28.000Z","item_count":84,"comment_count":7,"likes":2045,"ids":{"trakt":11057926,"slug":"new-hd-releases"},"user":{"username":"Fresnobiker","private":false,"deleted":false,"name":"Fresnobiker","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"fresnobiker"}}}}]'
+  recorded_at: 2026-03-02 12:41:26
 recorded_with: VCR-vcr/2.1.0

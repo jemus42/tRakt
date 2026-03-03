@@ -1,18 +1,18 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/people/bryan-cranston/movies?extended=min
+    uri: https://api.trakt.tv/people/bryan-cranston/movies
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:33 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"5a5f75c0442bd1299f681db4d57d2521"
-      expires: Mon, 02 Mar 2026 19:23:33 GMT
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -22,10 +22,10 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: 4a9f5bf6-7f38-452b-abba-1c88067dda80
-      x-runtime: '0.036987'
+      x-request-id: 81b5c242-e8b0-44e4-99f4-59f2fb13adcb
+      x-runtime: '0.050369'
       x-xss-protection: '0'
-      cf-ray: 9d6007ac1b647754-AMS
+      cf-ray: 9d6079cb1b11c118-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"cast":[{"character":"Sebastian (voice)","characters":["Sebastian
@@ -163,7 +163,7 @@ http_interactions:
         Producer","jobs":["Executive Producer"],"movie":{"title":"The Infiltrator","year":2016,"ids":{"trakt":214309,"slug":"the-infiltrator-2016","imdb":"tt1355631","tmdb":325789}}},{"job":"Executive
         Producer","jobs":["Executive Producer"],"movie":{"title":"All the Way","year":2016,"ids":{"trakt":231247,"slug":"all-the-way-2016","imdb":"tt3791216","tmdb":347123}}},{"job":"Producer","jobs":["Producer"],"movie":{"title":"Last
         Chance","year":1999,"ids":{"trakt":169591,"slug":"last-chance-1999","imdb":"tt0183392","tmdb":271612}}}]}}'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
     uri: https://api.trakt.tv/people/bryan-cranston/movies?extended=full
@@ -884,21 +884,21 @@ http_interactions:
         collide in a small cafe in the California desert when a man and a woman must
         decide whether or not to gamble on an uncertain future.","released":"1999-01-01","runtime":98,"country":"us","status":"released","rating":3.33333,"votes":3,"comment_count":0,"trailer":null,"homepage":null,"updated_at":"2025-12-28T08:35:14.000Z","language":"en","languages":["en"],"available_translations":["en"],"genres":["drama"],"subgenres":[],"certification":null,"original_title":"Last
         Chance","after_credits":false,"during_credits":false}}]}}'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
-    uri: https://api.trakt.tv/people/bryan-cranston/shows?extended=min
+    uri: https://api.trakt.tv/people/bryan-cranston/shows
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:33 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"2118b28d47d65cd517986e32a7470793"
-      expires: Mon, 02 Mar 2026 19:23:33 GMT
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -908,10 +908,10 @@ http_interactions:
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: 4f3d9b5c-e5db-453f-8d74-1274bbba4aa6
-      x-runtime: '0.052061'
+      x-request-id: 8a025b28-175c-4b60-b9a8-4aeaee10e5bd
+      x-runtime: '0.049308'
       x-xss-protection: '0'
-      cf-ray: 9d6007af2e157754-AMS
+      cf-ray: 9d6079ccceb9c118-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"cast":[{"character":"Hal","characters":["Hal"],"episode_count":0,"series_regular":true,"show":{"title":"Malcolm
@@ -1095,7 +1095,7 @@ http_interactions:
         by":[{"job":"Creator","jobs":["Creator"],"episode_count":6,"show":{"title":"The
         Dangerous Book for Boys","year":2018,"ids":{"trakt":128228,"slug":"the-dangerous-book-for-boys","tvdb":343209,"imdb":"tt1082583","tmdb":77345,"tvrage":null}}},{"job":"Creator","jobs":["Creator"],"episode_count":44,"show":{"title":"SuperMansion","year":2015,"ids":{"trakt":101644,"slug":"supermansion","tvdb":300147,"imdb":"tt4843640","tmdb":63214,"tvrage":null}}},{"job":"Creator","jobs":["Creator"],"episode_count":30,"show":{"title":"Sneaky
         Pete","year":2015,"ids":{"trakt":101657,"slug":"sneaky-pete","tvdb":300166,"imdb":"tt5011816","tmdb":64199,"tvrage":null}}}]}}'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
     uri: https://api.trakt.tv/people/bryan-cranston/shows?extended=full
@@ -1954,5 +1954,5 @@ http_interactions:
         he’s trying to escape - and, just maybe, give him a taste of the loving family
         he’s never had.\",\"first_aired\":\"2015-08-07T04:00:00.000Z\",\"airs\":{\"day\":\"Friday\",\"time\":\"00:00\",\"timezone\":\"America/New_York\"},\"runtime\":50,\"certification\":\"TV-MA\",\"country\":\"us\",\"status\":\"canceled\",\"rating\":7.76409,\"votes\":2378,\"comment_count\":24,\"trailer\":\"https://youtube.com/watch?v=KCM-I4j-Rv4\",\"homepage\":\"http://www.amazon.com/dp/B013488XFS\",\"network\":\"Amazon\",\"updated_at\":\"2026-02-26T11:35:06.000Z\",\"language\":\"en\",\"languages\":[\"en\"],\"available_translations\":[\"ar\",\"bg\",\"cs\",\"da\",\"de\",\"el\",\"en\",\"es\",\"fi\",\"fr\",\"he\",\"hu\",\"it\",\"ja\",\"ko\",\"lv\",\"nl\",\"no\",\"pl\",\"pt\",\"ro\",\"ru\",\"sl\",\"sv\",\"th\",\"tr\",\"uk\",\"zh\"],\"genres\":[\"drama\",\"crime\"],\"subgenres\":[\"heist\",\"suspenseful\"],\"aired_episodes\":30,\"original_title\":\"Sneaky
         Pete\"}}]}}"
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 recorded_with: VCR-vcr/2.1.0

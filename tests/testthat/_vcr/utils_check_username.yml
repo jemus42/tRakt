@@ -5,13 +5,13 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:33:32 GMT
+      date: Mon, 02 Mar 2026 12:41:30 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"135e880540de271bd97022135a523bf6"
+      etag: W/"70a09c2deea781afc997e809f48c4e8a"
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -22,12 +22,12 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 7f13dd65-0640-439d-8f21-5a727dea04d2
-      x-runtime: '0.015439'
+      x-request-id: a5557acb-cb28-4fdf-a830-7c26c88f51b1
+      x-runtime: '0.014198'
       x-xss-protection: '0'
-      cf-ray: 9d60164b283a931d-AMS
+      cf-ray: 9d6079dd19d5d595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:30
 recorded_with: VCR-vcr/2.1.0

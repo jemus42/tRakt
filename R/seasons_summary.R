@@ -33,10 +33,8 @@ seasons_summary <- function(
 	episodes = FALSE,
 	drop_specials = TRUE,
 	drop_unaired = TRUE,
-	extended = c("min", "full")
+	extended = "min"
 ) {
-	extended <- match.arg(extended)
-
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) {
 			seasons_summary(
@@ -49,12 +47,12 @@ seasons_summary <- function(
 		}))
 	}
 
-	if (episodes) {
-		extended <- paste0(extended, ",episodes")
-	}
+	# Combine extended with episodes modifier before validation
+	extended_input <- if (episodes) c(extended, "episodes") else extended
+	extended <- validate_extended(extended_input)
 
 	# Construct URL, make API call
-	url <- build_trakt_url("shows", id, "seasons", extended = extended)
+	url <- build_trakt_url("shows", id, "seasons", extended = extended$query_value)
 	response <- trakt_get(url = url)
 
 	if (is_empty(response)) {
@@ -84,7 +82,7 @@ seasons_summary <- function(
 			ret <- episodes |>
 				select(-"ids") |>
 				cbind(fix_ids(episodes$ids)) |>
-				fix_tibble_response()
+				fix_tibble_response(keep_images = extended$keep_images)
 
 			names(ret) <- sub("^number", "episode", names(ret))
 			ret
@@ -96,5 +94,5 @@ seasons_summary <- function(
 		# }
 	}
 
-	fix_tibble_response(response)
+	fix_tibble_response(response, keep_images = extended$keep_images)
 }

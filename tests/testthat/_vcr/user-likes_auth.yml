@@ -7,7 +7,7 @@ http_interactions:
     headers:
       content-type: application/json; charset=utf-8
       content-encoding: gzip
-      date: Mon, 02 Mar 2026 11:33:31 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
@@ -27,10 +27,10 @@ http_interactions:
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 604290f9-ee2e-47c9-b1a7-5359a1d69551
-      x-runtime: '0.032545'
+      x-request-id: 748df35a-0452-4a56-a219-d02ed50754e4
+      x-runtime: '0.023000'
       x-xss-protection: '0'
-      cf-ray: 9d6016470a6e656d-AMS
+      cf-ray: 9d6079cefbb1c118-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"liked_at":"2025-01-13T22:52:57.000Z","type":"comment","comment":{"id":140586,"comment":"Headcanon:
@@ -193,7 +193,7 @@ http_interactions:
         based on an existing comic, so somehow I don''t think that''s how that went
         down.","spoiler":false,"review":false,"parent_id":0,"created_at":"2014-07-23T22:09:37.000Z","updated_at":"2014-07-23T22:09:37.000Z","replies":0,"likes":24,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":71,"completed_count":71},"user":{"username":"rfrancis","private":false,"deleted":false,"name":"R.
         Francis Smith","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"rfrancis"}}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
     uri: https://api.trakt.tv/users/likes/lists
@@ -201,7 +201,7 @@ http_interactions:
     status: 304
     headers:
       content-encoding: gzip
-      date: Mon, 02 Mar 2026 11:33:31 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
@@ -222,10 +222,10 @@ http_interactions:
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 8378bbde-7fe3-4dc4-b08b-97c8497f782f
-      x-runtime: '0.026695'
+      x-request-id: 5ff3274f-496b-4939-a778-1151988f1cd7
+      x-runtime: '0.020859'
       x-xss-protection: '0'
-      cf-ray: 9d6016484b5d656d-AMS
+      cf-ray: 9d6079d02e65c118-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"liked_at":"2023-10-13T22:51:43.000Z","type":"list","list":{"name":"Treehouse
@@ -236,5 +236,5 @@ http_interactions:
         will not be any future updates to this list.","privacy":"public","share_link":"https://trakt.tv/lists/3785062","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2017-05-23T18:06:05.000Z","updated_at":"2026-01-09T21:38:51.000Z","item_count":100,"comment_count":0,"likes":546,"ids":{"trakt":3785062,"slug":"rotten-tomatoes-top-100-movies-of-all-time"},"user":{"username":"lish408","private":false,"deleted":false,"name":"LISH","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"lish408"}}}},{"liked_at":"2019-10-10T18:59:40.000Z","type":"list","list":{"name":"IMDB
         Most Popular TV Series","description":"Most Popular TV Series With At Least
         5,000 Votes","privacy":"public","share_link":"https://trakt.tv/lists/851496","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2014-09-11T21:05:08.000Z","updated_at":"2026-01-13T19:42:03.000Z","item_count":50,"comment_count":0,"likes":22,"ids":{"trakt":851496,"slug":"imdb-most-popular-tv-series"},"user":{"username":"hulkhorgen","private":false,"deleted":false,"name":"hulkhorgen","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"hulkhorgen"}}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 recorded_with: VCR-vcr/2.1.0

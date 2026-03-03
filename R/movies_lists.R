@@ -30,16 +30,24 @@ movies_lists <- function(
 		"updated"
 	),
 	limit = 10L,
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	type <- match.arg(type)
 	sort <- match.arg(sort)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
-	url <- build_trakt_url("movies", id, "lists", type, sort, limit = limit, extended = extended)
+	url <- build_trakt_url(
+		"movies",
+		id,
+		"lists",
+		type,
+		sort,
+		limit = limit,
+		extended = extended$query_value
+	)
 	response <- trakt_get(url)
 
-	unpack_lists(response)
+	unpack_lists(response, keep_images = extended$keep_images)
 }
 
 #' @export
@@ -63,16 +71,24 @@ shows_lists <- function(
 		"updated"
 	),
 	limit = 10L,
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	type <- match.arg(type)
 	sort <- match.arg(sort)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
-	url <- build_trakt_url("shows", id, "lists", type, sort, limit = limit, extended = extended)
+	url <- build_trakt_url(
+		"shows",
+		id,
+		"lists",
+		type,
+		sort,
+		limit = limit,
+		extended = extended$query_value
+	)
 	response <- trakt_get(url)
 
-	unpack_lists(response)
+	unpack_lists(response, keep_images = extended$keep_images)
 }
 
 #' @export
@@ -97,11 +113,11 @@ seasons_lists <- function(
 		"updated"
 	),
 	limit = 10L,
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	type <- match.arg(type)
 	sort <- match.arg(sort)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
 	url <- build_trakt_url(
 		"shows",
@@ -112,11 +128,11 @@ seasons_lists <- function(
 		type,
 		sort,
 		limit = limit,
-		extended = extended
+		extended = extended$query_value
 	)
 	response <- trakt_get(url)
 
-	unpack_lists(response)
+	unpack_lists(response, keep_images = extended$keep_images)
 }
 
 #' @export
@@ -142,11 +158,11 @@ episodes_lists <- function(
 		"updated"
 	),
 	limit = 10L,
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	type <- match.arg(type)
 	sort <- match.arg(sort)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
 	url <- build_trakt_url(
 		"shows",
@@ -159,11 +175,11 @@ episodes_lists <- function(
 		type,
 		sort,
 		limit = limit,
-		extended = extended
+		extended = extended$query_value
 	)
 	response <- trakt_get(url)
 
-	unpack_lists(response)
+	unpack_lists(response, keep_images = extended$keep_images)
 }
 
 #' @export
@@ -188,14 +204,22 @@ people_lists <- function(
 		"updated"
 	),
 	limit = 10L,
-	extended = c("min", "full")
+	extended = "min"
 ) {
 	type <- match.arg(type)
 	sort <- match.arg(sort)
-	extended <- match.arg(extended)
+	extended <- validate_extended(extended)
 
-	url <- build_trakt_url("people", id, "lists", type, sort, limit = limit, extended = extended)
+	url <- build_trakt_url(
+		"people",
+		id,
+		"lists",
+		type,
+		sort,
+		limit = limit,
+		extended = extended$query_value
+	)
 	response <- trakt_get(url)
 
-	unpack_lists(response)
+	unpack_lists(response, keep_images = extended$keep_images)
 }

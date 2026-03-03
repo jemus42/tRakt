@@ -1,11 +1,11 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/search/show?query=russian+doll+2019&extended=min
+    uri: https://api.trakt.tv/search/show?query=russian+doll+2019
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:33 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=1800, s-maxage=21600
@@ -23,7 +23,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007b00b439f9a-AMS
+      cf-ray: 9d6079c9fbced595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"score":1157451471441102800,"type":"show","show":{"title":"Russian
@@ -32,14 +32,14 @@ http_interactions:
         birthday party. She''s trapped in a surreal time loop -- and staring down
         the barrel of her own mortality.","runtime":30,"country":"us","trailer":"https://youtube.com/watch?v=qPELCYFK-Wg","homepage":"https://www.netflix.com/title/80211627","status":"ended","rating":7.59118,"votes":7419,"comment_count":56,"updated_at":"2026-03-01T10:00:13.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","bs","cs","de","el","en","es","fi","fr","he","hr","hu","it","ja","ka","ko","lt","nl","pl","pt","ru","sv","th","tr","uk","zh"],"genres":["comedy","drama"],"subgenres":["death","family-relationships","dark-comedy","dramedy","mysterious","witty"],"original_title":"Russian
         Doll","images":{"fanart":["media.trakt.tv/images/shows/000/141/548/fanarts/medium/fec07c96d3.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/141/548/posters/medium/15a7a763ae.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/141/548/logos/medium/b69ffaf2a1.png.webp"],"banner":["media.trakt.tv/images/shows/000/141/548/banners/medium/6cf4e79701.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/141/548/thumbs/medium/f3f55c9753.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/141/548/cleararts/medium/0f946572cb.png.webp"]},"colors":{"poster":["#CAA98C","#26201C"]},"first_aired":"2019-02-01T08:00:00.000Z","aired_episodes":15,"certification":"TV-MA","airs":{"day":"Friday","time":"03:00","timezone":"America/New_York"},"network":"Netflix"}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
-    uri: https://api.trakt.tv/search/movie?query=russian+doll&extended=min
+    uri: https://api.trakt.tv/search/movie?query=russian+doll
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:34 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=1800, s-maxage=21600
@@ -57,7 +57,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007b16c3b9f9a-AMS
+      cf-ray: 9d6079cbf980d595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"score":1157451471441102800,"type":"movie","movie":{"title":"Russian
@@ -106,14 +106,14 @@ http_interactions:
         a movie inhabited by Elsa and Miguel: some fictional characters blurred in
         the middle of a deep sentimental crisis; a he and a she confused and lost
         in the rainy labyrinth that sometimes we call love.","runtime":90,"country":"cr","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2020-10-22T06:15:06.000Z","language":"es","languages":["es"],"available_translations":["en"],"genres":["drama"],"subgenres":[],"images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/595/135/posters/medium/b55d070dbb.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#E2C04D","#160B08"]},"released":"2014-11-12","after_credits":false,"during_credits":false}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
-    uri: https://api.trakt.tv/search/movie?query=nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb&years=1100&extended=min
+    uri: https://api.trakt.tv/search/movie?query=nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb&years=1100
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:34 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=1800, s-maxage=21600
@@ -131,18 +131,18 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007b46e489f9a-AMS
+      cf-ray: 9d6079cd6dc4d595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/search/show?query=russian+doll&extended=min
+    uri: https://api.trakt.tv/search/show?query=russian+doll
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:34 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=1800, s-maxage=21600
@@ -160,7 +160,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007b5df459f9a-AMS
+      cf-ray: 9d6079cea93ad595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"score":1157451471441102800,"type":"show","show":{"title":"Russian
@@ -179,14 +179,14 @@ http_interactions:
         and dreams to contend with their Russian heritage. Together they are going
         to be living in the same household to have fun and party as the Russians like
         to.","runtime":25,"country":"us","status":"ended","rating":1,"votes":3,"comment_count":0,"updated_at":"2025-07-04T08:45:08.000Z","languages":[],"available_translations":[],"genres":["reality"],"subgenres":[],"images":{"fanart":["media.trakt.tv/images/shows/000/063/958/fanarts/medium/67a5c0df1f.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/063/958/posters/medium/6a511eeb5e.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/063/958/logos/medium/eeecc8292b.png.webp"],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#D7E6EB","#4D5865"]},"first_aired":"2011-08-11T04:00:00.000Z","aired_episodes":12,"certification":"TV-PG","airs":{"day":"Thursday","time":"00:00","timezone":"America/New_York"}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 - request:
     method: GET
-    uri: https://api.trakt.tv/search/movie?query=russian+doll&extended=min
+    uri: https://api.trakt.tv/search/movie?query=russian+doll
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:34 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=1800, s-maxage=21600
@@ -204,7 +204,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007b16c3b9f9a-AMS
+      cf-ray: 9d6079cbf980d595-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"score":1157451471441102800,"type":"movie","movie":{"title":"Russian
@@ -253,5 +253,5 @@ http_interactions:
         a movie inhabited by Elsa and Miguel: some fictional characters blurred in
         the middle of a deep sentimental crisis; a he and a she confused and lost
         in the rainy labyrinth that sometimes we call love.","runtime":90,"country":"cr","status":"released","rating":0,"votes":0,"comment_count":0,"updated_at":"2020-10-22T06:15:06.000Z","language":"es","languages":["es"],"available_translations":["en"],"genres":["drama"],"subgenres":[],"images":{"fanart":[],"poster":["media.trakt.tv/images/movies/000/595/135/posters/medium/b55d070dbb.jpg.webp"],"logo":[],"banner":[],"thumb":[],"clearart":[]},"colors":{"poster":["#E2C04D","#160B08"]},"released":"2014-11-12","after_credits":false,"during_credits":false}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:28
 recorded_with: VCR-vcr/2.1.0

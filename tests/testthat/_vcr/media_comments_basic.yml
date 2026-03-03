@@ -1,18 +1,18 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/movies/193972/comments/newest?extended=min
+    uri: https://api.trakt.tv/movies/193972/comments/newest
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:24 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"cd377cd4d9f400075d851e766e5b0308"
-      expires: Mon, 02 Mar 2026 19:23:23 GMT
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -27,10 +27,10 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '8'
       x-permitted-cross-domain-policies: none
-      x-request-id: 1407362d-5027-4bfd-97f3-0619797c504b
-      x-runtime: '0.050075'
+      x-request-id: 5d2df71a-f4fa-45f2-abf2-fe68e18ea171
+      x-runtime: '0.053660'
       x-xss-protection: '0'
-      cf-ray: 9d60077218939f9a-AMS
+      cf-ray: 9d6079c84bad0e6c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"id":927376,"comment":"Genuinely, I can''t believe they''ve done
@@ -149,21 +149,21 @@ http_interactions:
         know why they felt like drawing it out even more and with that, [spoiler]
         separating Woody and Buzz, even though their unlikely friendship was such
         a big deal [/spoiler]","spoiler":false,"review":false,"parent_id":0,"created_at":"2024-07-06T20:07:03.000Z","updated_at":"2024-07-06T20:07:03.000Z","replies":0,"likes":0,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":1,"completed_count":1},"user":{"username":"CorvusAstrum","private":false,"deleted":false,"name":"Corvus","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"corvusastrum"}}}]'
-  recorded_at: 2026-03-02 11:33:30
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/46241/comments/likes?extended=min
+    uri: https://api.trakt.tv/shows/46241/comments/likes
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:24 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"a978809c0577980f35bae41aa9d5eda6"
-      expires: Mon, 02 Mar 2026 19:23:24 GMT
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -177,11 +177,11 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '5'
       x-permitted-cross-domain-policies: none
-      x-request-id: cc4f107a-54db-4967-bdaf-2d565ee026fb
-      x-runtime: '0.048630'
+      x-request-id: dfb6952b-e115-4d45-bd31-ef2512cbcfd4
+      x-runtime: '0.045708'
       x-show-updated-at: '2026-03-02T09:44:01.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d600773a95a9f9a-AMS
+      cf-ray: 9d6079c9acd30e6c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"id":4528,"comment":"The bright colours, the haunting and melodic
@@ -233,21 +233,21 @@ http_interactions:
         you been for the last 2.5yrs!","spoiler":false,"review":false,"parent_id":0,"created_at":"2022-07-04T14:16:16.000Z","updated_at":"2022-07-04T14:16:16.000Z","replies":0,"likes":2,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":12,"completed_count":12},"user":{"username":"tropolite","private":false,"deleted":false,"name":"tropolite","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"tropolite"}}},{"id":171295,"comment":"If
         you like this style of shows, I recommend you to watch Legion 2017. It has
         a uniquely weird style of music, acting, and directing.","spoiler":false,"review":false,"parent_id":0,"created_at":"2018-04-20T01:20:40.000Z","updated_at":"2018-04-20T01:20:40.000Z","replies":0,"likes":2,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":25,"completed_count":12},"user":{"username":"ahmed365","private":false,"deleted":false,"name":"Ahmed","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"ahmed365"}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/1388/seasons/1/comments/likes?extended=min
+    uri: https://api.trakt.tv/shows/1388/seasons/1/comments/likes
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:24 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"d9a4fa9f5c31b86ab64025b12f9125fa"
-      expires: Mon, 02 Mar 2026 19:23:24 GMT
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -261,13 +261,13 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
-      x-request-id: 71f91883-b82f-4702-a2d8-c7cc5a615c42
-      x-runtime: '0.044209'
+      x-request-id: 42f01c6d-30e3-4589-91d1-4219ccee7900
+      x-runtime: '0.035921'
       x-show-id: '1388'
       x-show-season-id: '3950'
       x-show-updated-at: '2026-03-02T06:38:59.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d600774fa459f9a-AMS
+      cf-ray: 9d6079caedc90e6c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"id":63853,"comment":"Thus begins one of the greatest television
@@ -351,21 +351,21 @@ http_interactions:
         acting is good though and there are some really good scenes but it’s far from
         being this so called phenomenon. Haven‘t watched all of it so I might change
         my opinion but I highly doubt it.","spoiler":false,"review":false,"parent_id":0,"created_at":"2021-04-19T07:19:12.000Z","updated_at":"2021-04-19T07:20:53.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":9,"completed_count":7},"user":{"username":"ShoMok","private":true,"deleted":false,"ids":{"slug":"shomok"}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/1388/seasons/1/episodes/2/comments/likes?extended=min
+    uri: https://api.trakt.tv/shows/1388/seasons/1/episodes/2/comments/likes
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:24 GMT
+      date: Mon, 02 Mar 2026 12:41:27 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"96aca393cc35eef73668c18c24d96203"
-      expires: Mon, 02 Mar 2026 19:23:24 GMT
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -379,13 +379,13 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '2'
       x-permitted-cross-domain-policies: none
-      x-request-id: 585767dc-56a2-4447-97a1-d03ddab9ebf5
-      x-runtime: '0.041905'
+      x-request-id: f275257a-4239-4678-8141-9f6e54293b33
+      x-runtime: '0.041431'
       x-show-id: '1388'
       x-show-season-id: '3950'
       x-show-updated-at: '2026-03-02T06:38:59.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6007765b0d9f9a-AMS
+      cf-ray: 9d6079cc2ebf0e6c-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: "[{\"id\":201806,\"comment\":\"Walter's wife is a badass. For a second
@@ -460,5 +460,5 @@ http_interactions:
         nosey, condescending and arrogant. Yikes.\\r\\n\\r\\nOverall, it's a good
         continuation of the first episode, dealing fully with the consequences of
         what happened.\",\"spoiler\":true,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-05-25T20:07:29.000Z\",\"updated_at\":\"2025-05-25T20:12:09.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"Warden1\",\"private\":false,\"deleted\":false,\"name\":\"Ward\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"warden1\"}}}]"
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:27
 recorded_with: VCR-vcr/2.1.0

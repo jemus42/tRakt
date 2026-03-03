@@ -1,20 +1,20 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/history/shows?extended=min&limit=10
+    uri: https://api.trakt.tv/users/jemus42/history/shows?limit=10
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
-      content-encoding: gzip
-      date: Mon, 02 Mar 2026 11:33:31 GMT
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
-      etag: W/"16dcdd8ae592440c6120e4679a733cd0"
+      content-encoding: gzip
+      etag: W/"9b2b37a85e25e9eae2029044934d0670"
       last-modified: Sat, 28 Feb 2026 20:37:27 GMT
       server: cloudflare
-      vary: Origin, accept-encoding
+      vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
@@ -27,10 +27,10 @@ http_interactions:
       x-pagination-page-count: '3178'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: a6ea2e4c-5f99-43d9-b136-2acd107fc8fa
-      x-runtime: '0.017944'
+      x-request-id: 9cb512ec-54f7-41fd-80cb-93eb4eea9a37
+      x-runtime: '0.050612'
       x-xss-protection: '0'
-      cf-ray: 9d6016497be56710-AMS
+      cf-ray: 9d6079d51aaaa4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"id":12055733579,"watched_at":"2026-02-28T20:37:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":7,"title":"Contact","ids":{"trakt":13642190,"tvdb":11414576,"imdb":"tt38755006","tmdb":6618120,"tvrage":null}},"show":{"title":"Hijack","year":2023,"ids":{"trakt":194907,"slug":"hijack","tvdb":419254,"imdb":"tt19854762","tmdb":198102,"tvrage":null}}},{"id":12053859591,"watched_at":"2026-02-28T00:10:00.000Z","action":"scrobble","type":"episode","episode":{"season":1,"number":2,"title":"My
@@ -45,23 +45,23 @@ http_interactions:
         Mission","ids":{"trakt":13642175,"tvdb":11413551,"imdb":"tt37532353","tmdb":6617353,"tvrage":null}},"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}}},{"id":12047556483,"watched_at":"2026-02-24T22:36:00.000Z","action":"scrobble","type":"episode","episode":{"season":37,"number":15,"title":"Homer?
         A Cracker Bro?","ids":{"trakt":13836493,"tvdb":11464297,"imdb":"tt36431491","tmdb":6883535,"tvrage":null}},"show":{"title":"The
         Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/history/movies?extended=min&limit=10
+    uri: https://api.trakt.tv/users/jemus42/history/movies?limit=10
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
-      content-encoding: gzip
-      date: Mon, 02 Mar 2026 11:33:32 GMT
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
-      etag: W/"f02b3a85061ec0db7177b8d8c9f3ec88"
+      content-encoding: gzip
+      etag: W/"a2149de793fd897ba37a197d7a625656"
       last-modified: Wed, 25 Feb 2026 21:33:52 GMT
       server: cloudflare
-      vary: Origin, accept-encoding
+      vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
@@ -74,10 +74,10 @@ http_interactions:
       x-pagination-page-count: '131'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: da291c55-50d4-4ba9-8ccc-f48685e6aae8
-      x-runtime: '0.016570'
+      x-request-id: 7edfb39b-b4da-459d-847a-14d71125d14d
+      x-runtime: '0.038442'
       x-xss-protection: '0'
-      cf-ray: 9d60164aacd56710-AMS
+      cf-ray: 9d6079d66e93a4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"id":12049455725,"watched_at":"2026-02-25T21:33:00.000Z","action":"watch","type":"movie","movie":{"title":"Marty
@@ -91,23 +91,23 @@ http_interactions:
         of the Fireflies","year":1988,"ids":{"trakt":7251,"slug":"grave-of-the-fireflies-1988","imdb":"tt0095327","tmdb":12477}}},{"id":11972493027,"watched_at":"2026-01-25T21:10:00.000Z","action":"scrobble","type":"movie","movie":{"title":"The
         Rip","year":2026,"ids":{"trakt":1065701,"slug":"the-rip-2026","imdb":"tt32642706","tmdb":1306368}}},{"id":11957038144,"watched_at":"2026-01-19T21:18:00.000Z","action":"checkin","type":"movie","movie":{"title":"28
         Years Later: The Bone Temple","year":2026,"ids":{"trakt":1033738,"slug":"28-years-later-the-bone-temple-2026","imdb":"tt32141377","tmdb":1272837}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/history/shows?extended=min&limit=2
+    uri: https://api.trakt.tv/users/jemus42/history/shows?limit=2
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
-      content-encoding: gzip
-      date: Mon, 02 Mar 2026 11:33:32 GMT
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
-      etag: W/"15073aa9118e054bcc92ca72f972dab8"
+      content-encoding: gzip
+      etag: W/"1cac5ee7550aec734c3c21dfd3f6f96e"
       last-modified: Sat, 28 Feb 2026 20:37:27 GMT
       server: cloudflare
-      vary: Origin, accept-encoding
+      vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
@@ -120,31 +120,31 @@ http_interactions:
       x-pagination-page-count: '15889'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 94cfdbce-ae79-40c6-9e6e-789e1f14bd66
-      x-runtime: '0.017407'
+      x-request-id: 0cc05aa3-5d81-4baa-be25-94bae7a95803
+      x-runtime: '0.031296'
       x-xss-protection: '0'
-      cf-ray: 9d60164bbd816710-AMS
+      cf-ray: 9d6079d799a7a4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"id":12055733579,"watched_at":"2026-02-28T20:37:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":7,"title":"Contact","ids":{"trakt":13642190,"tvdb":11414576,"imdb":"tt38755006","tmdb":6618120,"tvrage":null}},"show":{"title":"Hijack","year":2023,"ids":{"trakt":194907,"slug":"hijack","tvdb":419254,"imdb":"tt19854762","tmdb":198102,"tvrage":null}}},{"id":12053859591,"watched_at":"2026-02-28T00:10:00.000Z","action":"scrobble","type":"episode","episode":{"season":1,"number":2,"title":"My
         2nd First Day","ids":{"trakt":13668730,"tvdb":11426443,"imdb":"tt38789459","tmdb":6638204,"tvrage":null}},"show":{"title":"Scrubs","year":2026,"ids":{"trakt":291441,"slug":"scrubs-2026","tvdb":465690,"imdb":"tt40197357","tmdb":295778,"tvrage":null}}}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:29
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/sean/history/shows?extended=min&limit=2
+    uri: https://api.trakt.tv/users/sean/history/shows?limit=2
   response:
-    status: 304
+    status: 200
     headers:
+      date: Mon, 02 Mar 2026 12:41:29 GMT
       content-type: application/json; charset=utf-8
-      content-encoding: gzip
-      date: Mon, 02 Mar 2026 11:33:32 GMT
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
-      etag: W/"2f184c75a547c188b6a3c187bae7afa2"
+      content-encoding: gzip
+      etag: W/"0795ef830fdffa0c8281cb0f7500207c"
       last-modified: Sat, 28 Feb 2026 08:07:04 GMT
       server: cloudflare
-      vary: Origin, accept-encoding
+      vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
@@ -157,10 +157,10 @@ http_interactions:
       x-pagination-page-count: '32076'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: a4376e79-4257-477a-96a7-0d111beea5b8
-      x-runtime: '0.028792'
+      x-request-id: f68f108f-9ea1-4821-a058-aedf15ab3a01
+      x-runtime: '0.038276'
       x-xss-protection: '0'
-      cf-ray: 9d60164cde406710-AMS
+      cf-ray: 9d6079d8ccefa4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"id":12054498959,"watched_at":"2026-02-28T08:07:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":3,"title":"Homestar
@@ -168,5 +168,5 @@ http_interactions:
         Actually...","year":2018,"ids":{"trakt":140399,"slug":"um-actually","tvdb":356085,"imdb":"tt9690112","tmdb":126565,"tvrage":null}}},{"id":12053760833,"watched_at":"2026-02-27T23:20:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":6,"title":"Ghost
         Pointe Blank","ids":{"trakt":12752119,"tvdb":10911593,"imdb":"tt32567381","tmdb":5929347,"tvrage":null}},"show":{"title":"School
         Spirits","year":2023,"ids":{"trakt":198139,"slug":"school-spirits-2023","tvdb":421636,"imdb":"tt21057450","tmdb":208397,"tvrage":null}}}]'
-  recorded_at: 2026-03-02 11:33:32
+  recorded_at: 2026-03-02 12:41:29
 recorded_with: VCR-vcr/2.1.0

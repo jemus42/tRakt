@@ -1,18 +1,18 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/movies/190430/lists/personal/popular?limit=5&extended=min
+    uri: https://api.trakt.tv/movies/190430/lists/personal/popular?limit=5
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:29 GMT
+      date: Mon, 02 Mar 2026 12:41:31 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"da47e6cdb9842ea1831b40ad14d28102"
-      expires: Mon, 02 Mar 2026 19:23:24 GMT
+      expires: Mon, 02 Mar 2026 20:41:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -27,10 +27,10 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '842'
       x-permitted-cross-domain-policies: none
-      x-request-id: 783a04ad-7eec-4739-a2bb-7c3df5a7d7f0
-      x-runtime: '4.296545'
+      x-request-id: 16fb532e-e53b-4b1b-865b-1095c5707a83
+      x-runtime: '4.078967'
       x-xss-protection: '0'
-      cf-ray: 9d600777fc349f9a-AMS
+      cf-ray: 9d6079c8bd44dfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"name":"Trending Movies","description":"This list is maintained by
@@ -47,21 +47,21 @@ http_interactions:
         Sci-Fi Movies","description":"This list is maintained by mdblist.com\r\nCreate
         your own: https://mdblist.com/lists/snoak/science-fiction-movies\r\nUpdated
         at 2026-03-02 03:01:38","privacy":"public","share_link":"https://trakt.tv/lists/33032944","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T11:41:13.000Z","updated_at":"2026-03-02T01:01:38.000Z","item_count":500,"comment_count":0,"likes":26,"ids":{"trakt":33032944,"slug":"popular-sci-fi-movies"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:31
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/46241/lists/all/popular?limit=10&extended=min
+    uri: https://api.trakt.tv/shows/46241/lists/all/popular?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:31 GMT
+      date: Mon, 02 Mar 2026 12:41:33 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"e6779a3a25b197667e2afd28ccc72865"
-      expires: Mon, 02 Mar 2026 19:23:29 GMT
+      expires: Mon, 02 Mar 2026 20:41:31 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -75,11 +75,11 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '1000'
       x-permitted-cross-domain-policies: none
-      x-request-id: f02a11c7-3335-42a6-8fe5-484e117c05d4
-      x-runtime: '2.199454'
+      x-request-id: d9f91c6c-b821-4e29-ad65-61f627df4152
+      x-runtime: '1.972775'
       x-show-updated-at: '2026-03-02T09:44:01.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d600793efe99f9a-AMS
+      cf-ray: 9d6079e32cabdfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"name":"British Shows","description":"","privacy":"public","share_link":"https://trakt.tv/lists/4554911","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"title","sort_how":"asc","created_at":"2018-02-09T14:25:33.000Z","updated_at":"2026-03-01T14:29:42.000Z","item_count":629,"comment_count":0,"likes":149,"ids":{"trakt":4554911,"slug":"british-shows"},"user":{"username":"Gonzohunter","private":false,"deleted":false,"name":"Gonzohunter","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"gonzohunter"}}},{"name":"Sci-Fi
@@ -105,21 +105,21 @@ http_interactions:
         Type: Filters\r\nTrakt ratings: Between 75 and 100 with at least 10\r\nRumtime:
         Between 30 and 250 minutes\r\nYears: Between 1910 and 2022","privacy":"public","share_link":"https://trakt.tv/lists/23127409","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2022-03-03T15:11:58.000Z","updated_at":"2025-10-22T11:39:28.000Z","item_count":3768,"comment_count":0,"likes":10,"ids":{"trakt":23127409,"slug":"hbo"},"user":{"username":"cammyjay","private":false,"deleted":false,"name":"Cameron","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"cammyjay"}}},{"name":"Best
         TV Shows","description":"The Best TV Shows of All Time.","privacy":"public","share_link":"https://trakt.tv/lists/30770379","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"popularity","sort_how":"desc","created_at":"2025-02-26T11:41:27.000Z","updated_at":"2026-02-08T15:42:32.000Z","item_count":6828,"comment_count":0,"likes":2,"ids":{"trakt":30770379,"slug":"best-tv-shows"},"user":{"username":"Reiskonen","private":false,"deleted":false,"name":"Ramazan","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"reiskonen"}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:33
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/46241/seasons/1/lists/all/popular?limit=10&extended=min
+    uri: https://api.trakt.tv/shows/46241/seasons/1/lists/all/popular?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:31 GMT
+      date: Mon, 02 Mar 2026 12:41:33 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: MISS
       access-control-allow-origin: '*'
       cache-control: public, max-age=28800
       content-encoding: gzip
       etag: W/"c4c22a7a2efb0eaa42d1026ecf252f37"
-      expires: Mon, 02 Mar 2026 19:23:31 GMT
+      expires: Mon, 02 Mar 2026 20:41:33 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -133,13 +133,13 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '8'
       x-permitted-cross-domain-policies: none
-      x-request-id: 39b75f68-ea92-4775-b44d-0c0c1ea3aa02
-      x-runtime: '0.130387'
+      x-request-id: b1c8f2a3-843e-455e-b925-2efb78bb4023
+      x-runtime: '0.083102'
       x-show-id: '46241'
       x-show-season-id: '56008'
       x-show-updated-at: '2026-03-02T09:44:01.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6007a2aa869f9a-AMS
+      cf-ray: 9d6079f06d8cdfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"name":"Shows I watched in 2017","description":"","privacy":"public","share_link":"https://trakt.tv/lists/3488381","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2017-03-18T13:01:53.000Z","updated_at":"2021-11-27T16:11:04.000Z","item_count":113,"comment_count":0,"likes":2,"ids":{"trakt":3488381,"slug":"shows-i-watched-in-2017"},"user":{"username":"Arlowe_","private":false,"deleted":false,"name":"Arlowe_","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"arlowe_"}}},{"name":"Yo","description":"","privacy":"public","share_link":"https://trakt.tv/lists/32869234","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-05T21:41:34.000Z","updated_at":"2026-01-02T12:10:28.000Z","item_count":30,"comment_count":0,"likes":0,"ids":{"trakt":32869234,"slug":"yo"},"user":{"username":"casius","private":false,"deleted":false,"name":"casius","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"casius"}}},{"name":"Watchlist","description":"Movies,
@@ -156,21 +156,21 @@ http_interactions:
         Bandukwala","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"thekkid"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/30261953","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2024-12-31T00:00:44.000Z","updated_at":"2025-01-24T19:45:28.000Z","item_count":127,"comment_count":0,"likes":0,"ids":{"trakt":30261953,"slug":null},"user":{"username":"silensito","private":false,"deleted":true,"name":"Ilija
         S","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"silensito"}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:33
 - request:
     method: GET
-    uri: https://api.trakt.tv/shows/46241/seasons/1/episodes/1/lists/all/popular?limit=10&extended=min
+    uri: https://api.trakt.tv/shows/46241/seasons/1/episodes/1/lists/all/popular?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:32 GMT
+      date: Mon, 02 Mar 2026 12:41:34 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: MISS
       access-control-allow-origin: '*'
       cache-control: public, max-age=28800
       content-encoding: gzip
       etag: W/"cb81265f5d9819f42c3ff36a1a32be6c"
-      expires: Mon, 02 Mar 2026 19:23:32 GMT
+      expires: Mon, 02 Mar 2026 20:41:33 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -184,13 +184,13 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '6'
       x-permitted-cross-domain-policies: none
-      x-request-id: 2c191ce3-2489-4d47-86b4-920651d0c781
-      x-runtime: '0.076136'
+      x-request-id: a0ea5a36-a9c9-4eef-bc97-892222f85e10
+      x-runtime: '0.075344'
       x-show-id: '46241'
       x-show-season-id: '56008'
       x-show-updated-at: '2026-03-02T09:44:01.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6007a4abc89f9a-AMS
+      cf-ray: 9d6079f25a26dfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"name":"Watchlist - TvShows - Pilots","description":"","privacy":"public","share_link":"https://trakt.tv/lists/9411491","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2019-06-23T11:43:27.000Z","updated_at":"2023-03-16T18:29:47.000Z","item_count":120,"comment_count":0,"likes":1,"ids":{"trakt":9411491,"slug":"watchlist-tvshows-pilots"},"user":{"username":"LHofman","private":false,"deleted":false,"name":"Lennert
@@ -207,21 +207,21 @@ http_interactions:
         Enrique Castro","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"pedro011"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/22770918","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2021-12-30T17:41:44.000Z","updated_at":"2025-02-25T16:32:01.000Z","item_count":104,"comment_count":0,"likes":0,"ids":{"trakt":22770918,"slug":null},"user":{"username":"vectravi","private":false,"deleted":false,"name":"John
         Vectravi","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"vectravi"}}}]'
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:34
 - request:
     method: GET
-    uri: https://api.trakt.tv/people/david-tennant/lists/all/popular?limit=10&extended=min
+    uri: https://api.trakt.tv/people/david-tennant/lists/all/popular?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:32 GMT
+      date: Mon, 02 Mar 2026 12:41:34 GMT
       content-type: application/json; charset=utf-8
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"d3b677021d3b778c702c3af86da046e4"
-      expires: Mon, 02 Mar 2026 19:23:32 GMT
+      expires: Mon, 02 Mar 2026 20:41:34 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
       speculation-rules: '"/cdn-cgi/speculation"'
@@ -235,10 +235,10 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '5'
       x-permitted-cross-domain-policies: none
-      x-request-id: 972285b1-2cd2-4f1c-8b4c-656bf9c5f8b1
-      x-runtime: '0.127780'
+      x-request-id: 134fba95-8ab9-49e2-991a-00208178ac5b
+      x-runtime: '0.083072'
       x-xss-protection: '0'
-      cf-ray: 9d6007a65cfc9f9a-AMS
+      cf-ray: 9d6079f3ddf8dfa5-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: "[{\"name\":\"Favourite Actors\",\"description\":\"My personal favourite
@@ -259,5 +259,5 @@ http_interactions:
         Actors\",\"description\":\"\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/25865736\",\"type\":\"personal\",\"display_numbers\":false,\"allow_comments\":true,\"sort_by\":\"title\",\"sort_how\":\"asc\",\"created_at\":\"2023-09-17T09:40:32.000Z\",\"updated_at\":\"2023-10-09T15:07:30.000Z\",\"item_count\":196,\"comment_count\":0,\"likes\":0,\"ids\":{\"trakt\":25865736,\"slug\":\"favorite-actors\"},\"user\":{\"username\":\"Natrion\",\"private\":false,\"deleted\":false,\"name\":\"Natrion\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"natrion\"}}},{\"name\":\"Favourite
         People\",\"description\":\"Some of my favourite Actors/Actresses etc, in no
         particular order.\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/25668296\",\"type\":\"personal\",\"display_numbers\":false,\"allow_comments\":false,\"sort_by\":\"added\",\"sort_how\":\"asc\",\"created_at\":\"2023-08-14T23:44:47.000Z\",\"updated_at\":\"2025-02-02T05:01:01.000Z\",\"item_count\":37,\"comment_count\":0,\"likes\":0,\"ids\":{\"trakt\":25668296,\"slug\":\"favourite-people\"},\"user\":{\"username\":\"SmallestCube\",\"private\":false,\"deleted\":false,\"name\":\"SmallestCube\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"smallestcube\"}}}]"
-  recorded_at: 2026-03-02 11:33:31
+  recorded_at: 2026-03-02 12:41:34
 recorded_with: VCR-vcr/2.1.0

@@ -1,11 +1,11 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/jemus42/lists?extended=min
+    uri: https://api.trakt.tv/users/jemus42/lists
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:38 GMT
+      date: Mon, 02 Mar 2026 12:41:28 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: private, max-age=600, s-maxage=3600
@@ -23,7 +23,7 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6007cb28347754-AMS
+      cf-ray: 9d6079d12f7ca4bf-AMS
       alt-svc: h3=":443"; ma=86400
     body:
       string: '[{"name":"Anime of 2020","description":"Just for keeping track.","privacy":"private","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"added","sort_how":"desc","created_at":"2020-01-15T16:15:18.000Z","updated_at":"2021-12-24T22:30:22.000Z","item_count":5,"comment_count":0,"likes":0,"ids":{"slug":"anime-of-2020","trakt":10765320},"images":{"posters":[]},"user":{"ids":{"slug":"jemus42","trakt":57359},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/d7e7de7b124101ee2285ca6fcc426a9a?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"jemus42","private":false,"deleted":false,"joined_at":"2012-08-01T18:28:30.000Z","location":"Germany","about":"","name":"jemus42","gender":"male","age":34,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":24},{"name":"Power
@@ -68,5 +68,5 @@ http_interactions:
         The Worst (Apparently)","description":"I probably haven''t watched them, but
         according to others, I really don''t need to.","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2017-12-11T23:47:30.000Z","updated_at":"2019-08-29T11:04:53.000Z","item_count":7,"comment_count":0,"likes":0,"ids":{"slug":"anime-the-worst-apparently","trakt":4375202},"images":{"posters":[]},"user":{"ids":{"slug":"jemus42","trakt":57359},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/d7e7de7b124101ee2285ca6fcc426a9a?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"jemus42","private":false,"deleted":false,"joined_at":"2012-08-01T18:28:30.000Z","location":"Germany","about":"","name":"jemus42","gender":"male","age":34,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":24},{"name":"Treehouse
         of Horror","description":"All the Simpsons Halloween specials.","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2023-10-19T21:58:10.000Z","updated_at":"2024-10-20T21:58:25.000Z","item_count":34,"comment_count":0,"likes":1,"ids":{"slug":"treehouse-of-horror","trakt":26054766},"images":{"posters":[]},"user":{"ids":{"slug":"jemus42","trakt":57359},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/d7e7de7b124101ee2285ca6fcc426a9a?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"jemus42","private":false,"deleted":false,"joined_at":"2012-08-01T18:28:30.000Z","location":"Germany","about":"","name":"jemus42","gender":"male","age":34,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false},"total_count":24}]'
-  recorded_at: 2026-03-02 11:31:17
+  recorded_at: 2026-03-02 12:41:28
 recorded_with: VCR-vcr/2.1.0
