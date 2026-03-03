@@ -59,6 +59,13 @@
 <li>Substitute <code>map_df()</code> with <code>map()</code> + <code>list_rbind()</code>
 </li>
 </ul></li>
+<li>Overhaul the <code>extended</code> parameter across all API functions:
+<ul><li>
+<code>"min"</code> no longer sends <code>?extended=min</code> to the API (which was never a valid API value). Instead, the query parameter is omitted entirely, matching the API’s documented behavior.</li>
+<li>New values <code>"images"</code>, <code>"metadata"</code>, and combinations like <code>c("full", "images")</code> or <code>"full,images"</code> are now supported.</li>
+<li>When <code>extended</code> includes <code>"images"</code>, image data is preserved as a list-column instead of being dropped.</li>
+<li>All functions now use <code>validate_extended()</code> internally instead of <code><a href="https://rdrr.io/r/base/match.arg.html" class="external-link">match.arg()</a></code>, providing clearer error messages for invalid values.</li>
+</ul></li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.17.0" id="trakt-0170">tRakt 0.17.0<a class="anchor" aria-label="anchor" href="#trakt-0170"></a></h2>

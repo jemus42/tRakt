@@ -33,6 +33,17 @@
   - Swap purrr-style anonymous functions `~ .x` with base-R
     `\(x) x`-style ones
   - Substitute `map_df()` with `map()` + `list_rbind()`
+- Overhaul the `extended` parameter across all API functions:
+  - `"min"` no longer sends `?extended=min` to the API (which was never
+    a valid API value). Instead, the query parameter is omitted
+    entirely, matching the API’s documented behavior.
+  - New values `"images"`, `"metadata"`, and combinations like
+    `c("full", "images")` or `"full,images"` are now supported.
+  - When `extended` includes `"images"`, image data is preserved as a
+    list-column instead of being dropped.
+  - All functions now use `validate_extended()` internally instead of
+    [`match.arg()`](https://rdrr.io/r/base/match.arg.html), providing
+    clearer error messages for invalid values.
 
 ## tRakt 0.17.0
 
