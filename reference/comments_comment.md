@@ -5,13 +5,13 @@ Get a single comment
 ## Usage
 
 ``` r
-comments_comment(id, extended = c("min", "full"))
+comments_comment(id, extended = "min")
 
-comments_replies(id, extended = c("min", "full"))
+comments_replies(id, extended = "min")
 
-comments_likes(id, extended = c("min", "full"))
+comments_likes(id, extended = "min")
 
-comments_item(id, extended = c("min", "full"))
+comments_item(id, extended = "min")
 ```
 
 ## Source
@@ -42,11 +42,22 @@ comments_item(id, extended = c("min", "full"))
 
 - extended:
 
-  `character(1)`: Either `"min"` (API default) or `"full"`. The latter
-  returns more variables and should generally only be used if required.
-  See
-  [`vignette("tRakt")`](https://jemus42.github.io/tRakt/articles/tRakt.md)
-  for more details.
+  `character`: Level of detail for the API response.
+
+  - `"min"` (default): Minimal info (title, year, IDs). Omits the
+    `extended` query param.
+
+  - `"full"`: Complete info including overview, ratings, runtime, etc.
+
+  - `"images"`: Minimal info plus image URLs (returned as a
+    list-column).
+
+  - `"full,images"`: Complete info plus images.
+
+  - `"metadata"`: Collection endpoints only; adds video/audio metadata.
+
+  Multiple values can be combined as a comma-separated string (e.g.
+  `"full,images"`) or a character vector (e.g. `c("full", "images")`).
 
 ## Value
 

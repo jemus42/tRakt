@@ -13,7 +13,7 @@ seasons_summary(
   episodes = FALSE,
   drop_specials = TRUE,
   drop_unaired = TRUE,
-  extended = c("min", "full")
+  extended = "min"
 )
 ```
 
@@ -51,11 +51,22 @@ seasons_summary(
 
 - extended:
 
-  `character(1)`: Either `"min"` (API default) or `"full"`. The latter
-  returns more variables and should generally only be used if required.
-  See
-  [`vignette("tRakt")`](https://jemus42.github.io/tRakt/articles/tRakt.md)
-  for more details.
+  `character`: Level of detail for the API response.
+
+  - `"min"` (default): Minimal info (title, year, IDs). Omits the
+    `extended` query param.
+
+  - `"full"`: Complete info including overview, ratings, runtime, etc.
+
+  - `"images"`: Minimal info plus image URLs (returned as a
+    list-column).
+
+  - `"full,images"`: Complete info plus images.
+
+  - `"metadata"`: Collection endpoints only; adds video/audio metadata.
+
+  Multiple values can be combined as a comma-separated string (e.g.
+  `"full,images"`) or a character vector (e.g. `c("full", "images")`).
 
 ## Value
 
@@ -106,11 +117,11 @@ seasons_summary("breaking-bad", extended = "min")
 #> # A tibble: 5 × 15
 #>   title    votes season rating network overview              updated_at         
 #>   <chr>    <int>  <int>  <dbl> <lgl>   <chr>                 <dttm>             
-#> 1 Season 1  4301      1   8.44 NA      "High school chemist… 2026-03-02 07:18:19
-#> 2 Season 2  3570      2   8.63 NA      "Walt must deal with… 2026-03-02 09:58:04
-#> 3 Season 3  3364      3   8.82 NA      "Walt continues to b… 2026-03-02 11:00:16
-#> 4 Season 4  3206      4   9.15 NA      "Walt and Jesse must… 2026-03-02 09:04:56
-#> 5 Season 5  2868      5   9.31 NA      "Walt is faced with … 2026-03-02 09:10:13
+#> 1 Season 1  4302      1   8.44 NA      "High school chemist… 2026-03-02 23:32:48
+#> 2 Season 2  3573      2   8.63 NA      "Walt must deal with… 2026-03-03 00:45:17
+#> 3 Season 3  3365      3   8.82 NA      "Walt continues to b… 2026-03-03 00:00:11
+#> 4 Season 4  3206      4   9.15 NA      "Walt and Jesse must… 2026-03-02 23:32:48
+#> 5 Season 5  2868      5   9.31 NA      "Walt is faced with … 2026-03-03 00:08:14
 #> # ℹ 8 more variables: first_aired <dttm>, episode_count <int>,
 #> #   aired_episodes <int>, original_title <chr>, tmdb <chr>, tvdb <chr>,
 #> #   trakt <chr>, plex_guid <chr>

@@ -9,7 +9,7 @@ user_collection(
   user = "me",
   type = c("shows", "movies"),
   unnest_episodes = FALSE,
-  extended = c("min", "full")
+  extended = "min"
 )
 ```
 
@@ -41,11 +41,22 @@ user_collection(
 
 - extended:
 
-  `character(1)`: Either `"min"` (API default) or `"full"`. The latter
-  returns more variables and should generally only be used if required.
-  See
-  [`vignette("tRakt")`](https://jemus42.github.io/tRakt/articles/tRakt.md)
-  for more details.
+  `character`: Level of detail for the API response.
+
+  - `"min"` (default): Minimal info (title, year, IDs). Omits the
+    `extended` query param.
+
+  - `"full"`: Complete info including overview, ratings, runtime, etc.
+
+  - `"images"`: Minimal info plus image URLs (returned as a
+    list-column).
+
+  - `"full,images"`: Complete info plus images.
+
+  - `"metadata"`: Collection endpoints only; adds video/audio metadata.
+
+  Multiple values can be combined as a comma-separated string (e.g.
+  `"full,images"`) or a character vector (e.g. `c("full", "images")`).
 
 ## Value
 
@@ -64,11 +75,10 @@ This function wraps the API method
 
 ## Note
 
-The `extended = "metadata"` API parameter is not implemented. This would
-add media information `media_type`, `resolution`, `audio`,
-`audio_channels` and `3D` to the output, which may or may not be
-available. If this feature is important to you, please open an issue on
-GitHub.
+The `extended = "metadata"` API parameter can be used to add media
+information like `media_type`, `resolution`, `audio`, `audio_channels`
+and `3D` to the output. Combine with `"full"` as
+`extended = "full,metadata"`.
 
 ## See also
 

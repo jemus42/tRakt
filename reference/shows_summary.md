@@ -5,7 +5,7 @@ Get a single show
 ## Usage
 
 ``` r
-shows_summary(id, extended = c("min", "full"))
+shows_summary(id, extended = "min")
 ```
 
 ## Source
@@ -27,11 +27,22 @@ shows_summary(id, extended = c("min", "full"))
 
 - extended:
 
-  `character(1)`: Either `"min"` (API default) or `"full"`. The latter
-  returns more variables and should generally only be used if required.
-  See
-  [`vignette("tRakt")`](https://jemus42.github.io/tRakt/articles/tRakt.md)
-  for more details.
+  `character`: Level of detail for the API response.
+
+  - `"min"` (default): Minimal info (title, year, IDs). Omits the
+    `extended` query param.
+
+  - `"full"`: Complete info including overview, ratings, runtime, etc.
+
+  - `"images"`: Minimal info plus image URLs (returned as a
+    list-column).
+
+  - `"full,images"`: Complete info plus images.
+
+  - `"metadata"`: Collection endpoints only; adds video/audio metadata.
+
+  Multiple values can be combined as a comma-separated string (e.g.
+  `"full,images"`) or a character vector (e.g. `c("full", "images")`).
 
 ## Value
 
@@ -73,12 +84,17 @@ Other summary methods:
 ``` r
 # Minimal info by default
 shows_summary("breaking-bad")
-#> Error in recycle_columns(x, .rows, lengths): Tibble columns must have compatible sizes.
-#> • Size 3: Columns `airs`, `genres`, and `languages`.
-#> • Size 6: Column `images`.
-#> • Size 10: Column `subgenres`.
-#> • Size 40: Column `available_translations`.
-#> ℹ Only values of size one are recycled.
+#> # A tibble: 1 × 33
+#>    year title         votes genres rating status country network runtime tagline
+#>   <int> <chr>         <int> <list>  <dbl> <chr>  <chr>   <chr>     <int> <chr>  
+#> 1  2008 Breaking Bad 115197 <chr>    9.24 ended  us      AMC          50 Change…
+#> # ℹ 23 more variables: trailer <chr>, homepage <chr>, language <chr>,
+#> #   overview <chr>, languages <list>, subgenres <list>, updated_at <dttm>,
+#> #   first_aired <dttm>, certification <chr>, comment_count <int>,
+#> #   aired_episodes <int>, original_title <chr>, available_translations <list>,
+#> #   airs_day <chr>, airs_time <chr>, airs_timezone <chr>, imdb <chr>,
+#> #   slug <chr>, tmdb <chr>, tvdb <chr>, trakt <chr>, plex_guid <chr>,
+#> #   plex_slug <chr>
 if (FALSE) { # \dontrun{
 # More information
 shows_summary("breaking-bad", extended = "full")

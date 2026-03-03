@@ -85,7 +85,7 @@ trakt_get("https://api.trakt.tv/shows/breaking-bad")
 #> [1] "Breaking Bad"
 #> 
 #> $votes
-#> [1] 115193
+#> [1] 115197
 #> 
 #> $colors
 #> $colors$poster
@@ -223,7 +223,7 @@ trakt_get("shows/game-of-thrones")
 #> [1] "Game of Thrones"
 #> 
 #> $votes
-#> [1] 145230
+#> [1] 145250
 #> 
 #> $colors
 #> $colors$poster
@@ -254,7 +254,7 @@ trakt_get("shows/game-of-thrones")
 #> 
 #> 
 #> $rating
-#> [1] 8.89129
+#> [1] 8.891367
 #> 
 #> $status
 #> [1] "ended"
@@ -290,7 +290,7 @@ trakt_get("shows/game-of-thrones")
 #> [1] "fantasy-world" "dragon"        "kingdom"       "king"         
 #> 
 #> $updated_at
-#> [1] "2026-03-01 15:30:59 UTC"
+#> [1] "2026-03-02 15:34:13 UTC"
 #> 
 #> $first_aired
 #> [1] "2011-04-18 01:00:00 UTC"

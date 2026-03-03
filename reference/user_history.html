@@ -54,7 +54,7 @@ which it was logged (e.g. <em>scrobble</em> or <em>checkin</em>).</p>
 <span>  limit <span class="op">=</span> <span class="fl">10L</span>,</span>
 <span>  start_at <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  end_at <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  extended <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"min"</span>, <span class="st">"full"</span><span class="op">)</span></span>
+<span>  extended <span class="op">=</span> <span class="st">"min"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -93,9 +93,13 @@ to a datetime object of class <code>POSIXct</code>. See <a href="https://rdrr.io
 
 
 <dt id="arg-extended">extended<a class="anchor" aria-label="anchor" href="#arg-extended"></a></dt>
-<dd><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
-returns more variables and should generally only be used if required.
-See <code><a href="../articles/tRakt.html">vignette("tRakt")</a></code> for more details.</p></dd>
+<dd><p><code>character</code>: Level of detail for the API response.</p><ul><li><p><code>"min"</code> (default): Minimal info (title, year, IDs). Omits the <code>extended</code> query param.</p></li>
+<li><p><code>"full"</code>: Complete info including overview, ratings, runtime, etc.</p></li>
+<li><p><code>"images"</code>: Minimal info plus image URLs (returned as a list-column).</p></li>
+<li><p><code>"full,images"</code>: Complete info plus images.</p></li>
+<li><p><code>"metadata"</code>: Collection endpoints only; adds video/audio metadata.</p></li>
+</ul><p>Multiple values can be combined as a comma-separated string (e.g. <code>"full,images"</code>)
+or a character vector (e.g. <code>c("full", "images")</code>).</p></dd>
 
 </dl></div>
     <div class="section level2">

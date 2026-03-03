@@ -5,9 +5,9 @@ Get a shows next or latest episode
 ## Usage
 
 ``` r
-shows_next_episode(id, extended = c("min", "full"))
+shows_next_episode(id, extended = "min")
 
-shows_last_episode(id, extended = c("min", "full"))
+shows_last_episode(id, extended = "min")
 ```
 
 ## Source
@@ -32,11 +32,22 @@ shows_last_episode(id, extended = c("min", "full"))
 
 - extended:
 
-  `character(1)`: Either `"min"` (API default) or `"full"`. The latter
-  returns more variables and should generally only be used if required.
-  See
-  [`vignette("tRakt")`](https://jemus42.github.io/tRakt/articles/tRakt.md)
-  for more details.
+  `character`: Level of detail for the API response.
+
+  - `"min"` (default): Minimal info (title, year, IDs). Omits the
+    `extended` query param.
+
+  - `"full"`: Complete info including overview, ratings, runtime, etc.
+
+  - `"images"`: Minimal info plus image URLs (returned as a
+    list-column).
+
+  - `"full,images"`: Complete info plus images.
+
+  - `"metadata"`: Collection endpoints only; adds video/audio metadata.
+
+  Multiple values can be combined as a comma-separated string (e.g.
+  `"full,images"`) or a character vector (e.g. `c("full", "images")`).
 
 ## Value
 
@@ -108,12 +119,12 @@ Other episode data:
 
 ``` r
 shows_next_episode("one-piece")
-#> Error in resp_body_raw(resp): Can't retrieve empty body.
+#> # A tibble: 0 × 0
 shows_last_episode("one-piece", extended = "full")
 #> # A tibble: 1 × 19
 #>   season number title             number_abs overview rating votes comment_count
 #>    <int>  <int> <chr>             <chr>      <chr>     <dbl> <int>         <int>
-#> 1     22   1155 The Promised Hor… NA         York wa…   8.54   126             4
+#> 1     22   1155 The Promised Hor… NA         York wa…   8.55   127             4
 #> # ℹ 11 more variables: first_aired <dttm>, updated_at <dttm>, runtime <int>,
 #> #   episode_type <chr>, original_title <chr>, after_credits <lgl>,
 #> #   during_credits <lgl>, trakt <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>

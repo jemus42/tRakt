@@ -133,14 +133,14 @@ movies_ratings("tron-legacy-2010")
 #> # A tibble: 1 × 5
 #>   rating votes distribution      id               type  
 #>    <dbl> <int> <list>            <chr>            <chr> 
-#> 1   7.15 20040 <tibble [10 × 2]> tron-legacy-2010 movies
+#> 1   7.15 20043 <tibble [10 × 2]> tron-legacy-2010 movies
 
 # A show's ratings
 shows_ratings("game-of-thrones")
 #> # A tibble: 1 × 5
 #>   rating  votes distribution      id              type 
 #>    <dbl>  <int> <list>            <chr>           <chr>
-#> 1   8.89 145238 <tibble [10 × 2]> game-of-thrones shows
+#> 1   8.89 145254 <tibble [10 × 2]> game-of-thrones shows
 if (FALSE) { # \dontrun{
 # Ratings for seasons 1 through 5
 seasons_ratings("futurama", season = 1:5)

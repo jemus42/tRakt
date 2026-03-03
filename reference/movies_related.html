@@ -44,7 +44,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">movies_related</span><span class="op">(</span><span class="va">id</span>, limit <span class="op">=</span> <span class="fl">10L</span>, extended <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"min"</span>, <span class="st">"full"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">movies_related</span><span class="op">(</span><span class="va">id</span>, limit <span class="op">=</span> <span class="fl">10L</span>, extended <span class="op">=</span> <span class="st">"min"</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -70,9 +70,13 @@ than <code>0</code> and will be coerced via <code><a href="https://rdrr.io/r/bas
 
 
 <dt id="arg-extended">extended<a class="anchor" aria-label="anchor" href="#arg-extended"></a></dt>
-<dd><p><code>character(1)</code>: Either <code>"min"</code> (API default) or <code>"full"</code>. The latter
-returns more variables and should generally only be used if required.
-See <code><a href="../articles/tRakt.html">vignette("tRakt")</a></code> for more details.</p></dd>
+<dd><p><code>character</code>: Level of detail for the API response.</p><ul><li><p><code>"min"</code> (default): Minimal info (title, year, IDs). Omits the <code>extended</code> query param.</p></li>
+<li><p><code>"full"</code>: Complete info including overview, ratings, runtime, etc.</p></li>
+<li><p><code>"images"</code>: Minimal info plus image URLs (returned as a list-column).</p></li>
+<li><p><code>"full,images"</code>: Complete info plus images.</p></li>
+<li><p><code>"metadata"</code>: Collection endpoints only; adds video/audio metadata.</p></li>
+</ul><p>Multiple values can be combined as a comma-separated string (e.g. <code>"full,images"</code>)
+or a character vector (e.g. <code>c("full", "images")</code>).</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -110,11 +114,11 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 5 × 30</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   related_to      year title  votes genres rating status country runtime tagline</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> the-avengers-…  <span style="text-decoration: underline;">2</span>011 Capt…  <span style="text-decoration: underline;">47</span>072 <span style="color: #949494;">&lt;chr&gt;</span>    7.40 relea… us          124 We are…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> the-avengers-…  <span style="text-decoration: underline;">2</span>008 Iron…  <span style="text-decoration: underline;">62</span>938 <span style="color: #949494;">&lt;chr&gt;</span>    8.08 relea… us          126 Heroes…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> the-avengers-…  <span style="text-decoration: underline;">2</span>011 Thor   <span style="text-decoration: underline;">45</span>218 <span style="color: #949494;">&lt;chr&gt;</span>    7.15 relea… us          115 Courag…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> the-avengers-…  <span style="text-decoration: underline;">2</span>014 Guar… <span style="text-decoration: underline;">108</span>095 <span style="color: #949494;">&lt;chr&gt;</span>    8.26 relea… us          121 When t…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> the-avengers-…  <span style="text-decoration: underline;">2</span>000 X-Men  <span style="text-decoration: underline;">26</span>665 <span style="color: #949494;">&lt;chr&gt;</span>    7.47 relea… us          104 Trust …</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> the-avengers-…  <span style="text-decoration: underline;">2</span>011 Capt…  <span style="text-decoration: underline;">47</span>078 <span style="color: #949494;">&lt;chr&gt;</span>    7.40 relea… us          124 We are…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> the-avengers-…  <span style="text-decoration: underline;">2</span>008 Iron…  <span style="text-decoration: underline;">62</span>948 <span style="color: #949494;">&lt;chr&gt;</span>    8.08 relea… us          126 Heroes…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> the-avengers-…  <span style="text-decoration: underline;">2</span>011 Thor   <span style="text-decoration: underline;">45</span>227 <span style="color: #949494;">&lt;chr&gt;</span>    7.15 relea… us          115 Courag…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> the-avengers-…  <span style="text-decoration: underline;">2</span>014 Guar… <span style="text-decoration: underline;">108</span>103 <span style="color: #949494;">&lt;chr&gt;</span>    8.26 relea… us          121 When t…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> the-avengers-…  <span style="text-decoration: underline;">2</span>000 X-Men  <span style="text-decoration: underline;">26</span>669 <span style="color: #949494;">&lt;chr&gt;</span>    7.47 relea… us          104 Trust …</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 20 more variables: trailer &lt;chr&gt;, homepage &lt;chr&gt;, language &lt;chr&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   overview &lt;chr&gt;, released &lt;date&gt;, languages &lt;list&gt;, subgenres &lt;list&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   updated_at &lt;dttm&gt;, after_credits &lt;lgl&gt;, certification &lt;chr&gt;,</span></span>

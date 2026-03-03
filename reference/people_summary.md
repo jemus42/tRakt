@@ -7,7 +7,7 @@ birthday.
 ## Usage
 
 ``` r
-people_summary(id, extended = c("min", "full"))
+people_summary(id, extended = "min")
 ```
 
 ## Source
@@ -29,11 +29,22 @@ people_summary(id, extended = c("min", "full"))
 
 - extended:
 
-  `character(1)`: Either `"min"` (API default) or `"full"`. The latter
-  returns more variables and should generally only be used if required.
-  See
-  [`vignette("tRakt")`](https://jemus42.github.io/tRakt/articles/tRakt.md)
-  for more details.
+  `character`: Level of detail for the API response.
+
+  - `"min"` (default): Minimal info (title, year, IDs). Omits the
+    `extended` query param.
+
+  - `"full"`: Complete info including overview, ratings, runtime, etc.
+
+  - `"images"`: Minimal info plus image URLs (returned as a
+    list-column).
+
+  - `"full,images"`: Complete info plus images.
+
+  - `"metadata"`: Collection endpoints only; adds video/audio metadata.
+
+  Multiple values can be combined as a comma-separated string (e.g.
+  `"full,images"`) or a character vector (e.g. `c("full", "images")`).
 
 ## Value
 
@@ -65,17 +76,22 @@ Other summary methods:
 ``` r
 # A single person's extended information
 people_summary("bryan-cranston", "full")
-#> Error in recycle_columns(x, .rows, lengths): Tibble columns must have compatible sizes.
-#> • Size 2: Column `images`.
-#> • Size 4: Column `social_ids`.
-#> ℹ Only values of size one are recycled.
+#> # A tibble: 1 × 18
+#>   name           death gender height birthday   homepage biography    birthplace
+#>   <chr>          <chr> <chr>   <dbl> <date>     <chr>    <chr>        <chr>     
+#> 1 Bryan Cranston NA    male     179. 1956-03-07 NA       "Bryan Lee … Hollywood…
+#> # ℹ 10 more variables: updated_at <dttm>, known_for_department <chr>,
+#> #   imdb <chr>, slug <chr>, tmdb <chr>, trakt <chr>, social_twitter <chr>,
+#> #   social_facebook <chr>, social_instagram <chr>, social_wikipedia <chr>
 
 # Multiple people
 people_summary(c("kit-harington", "emilia-clarke"))
-#> Error in purrr::map(input, fn, ...): ℹ In index: 1.
-#> Caused by error in `recycle_columns()`:
-#> ! Tibble columns must have compatible sizes.
-#> • Size 2: Column `images`.
-#> • Size 4: Column `social_ids`.
-#> ℹ Only values of size one are recycled.
+#> # A tibble: 2 × 18
+#>   name          death gender height birthday   homepage biography     birthplace
+#>   <chr>         <chr> <chr>   <int> <date>     <chr>    <chr>         <chr>     
+#> 1 Kit Harington NA    male      173 1986-12-26 NA       "Christopher… Worcester…
+#> 2 Emilia Clarke NA    female    157 1986-10-23 NA       "Emilia Isob… London, E…
+#> # ℹ 10 more variables: updated_at <dttm>, known_for_department <chr>,
+#> #   imdb <chr>, slug <chr>, tmdb <chr>, trakt <chr>, social_twitter <chr>,
+#> #   social_facebook <chr>, social_instagram <chr>, social_wikipedia <chr>
 ```

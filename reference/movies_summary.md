@@ -5,7 +5,7 @@ Get a single movie
 ## Usage
 
 ``` r
-movies_summary(id, extended = c("min", "full"))
+movies_summary(id, extended = "min")
 ```
 
 ## Source
@@ -27,11 +27,22 @@ movies_summary(id, extended = c("min", "full"))
 
 - extended:
 
-  `character(1)`: Either `"min"` (API default) or `"full"`. The latter
-  returns more variables and should generally only be used if required.
-  See
-  [`vignette("tRakt")`](https://jemus42.github.io/tRakt/articles/tRakt.md)
-  for more details.
+  `character`: Level of detail for the API response.
+
+  - `"min"` (default): Minimal info (title, year, IDs). Omits the
+    `extended` query param.
+
+  - `"full"`: Complete info including overview, ratings, runtime, etc.
+
+  - `"images"`: Minimal info plus image URLs (returned as a
+    list-column).
+
+  - `"full,images"`: Complete info plus images.
+
+  - `"metadata"`: Collection endpoints only; adds video/audio metadata.
+
+  Multiple values can be combined as a comma-separated string (e.g.
+  `"full,images"`) or a character vector (e.g. `c("full", "images")`).
 
 ## Value
 
@@ -78,12 +89,16 @@ Other summary methods:
 ``` r
 # Minimal info by default
 movies_summary("inception-2010")
-#> Error in recycle_columns(x, .rows, lengths): Tibble columns must have compatible sizes.
-#> • Size 3: Column `genres`.
-#> • Size 4: Column `languages`.
-#> • Size 6: Columns `images` and `subgenres`.
-#> • Size 40: Column `available_translations`.
-#> ℹ Only values of size one are recycled.
+#> # A tibble: 1 × 29
+#>    year title     votes genres    rating status  country runtime tagline trailer
+#>   <int> <chr>     <int> <list>     <dbl> <chr>   <chr>     <int> <chr>   <chr>  
+#> 1  2010 Inception 85888 <chr [3]>   8.63 releas… us          148 Your m… https:…
+#> # ℹ 19 more variables: homepage <chr>, language <chr>, overview <chr>,
+#> #   released <date>, languages <list>, subgenres <list>, updated_at <dttm>,
+#> #   after_credits <lgl>, certification <chr>, comment_count <int>,
+#> #   during_credits <lgl>, original_title <chr>, available_translations <list>,
+#> #   imdb <chr>, slug <chr>, tmdb <chr>, trakt <chr>, plex_guid <chr>,
+#> #   plex_slug <chr>
 if (FALSE) { # \dontrun{
 # Full information,  multiple movies
 movies_summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")

@@ -58,7 +58,7 @@ shows_popular(limit = 5)
 #> 2 Pluribus  2025 "Happi… The mos…      50 us      https:… https:/… retur…   8.04
 #> 3 MobLand   2025 ""      Two mob…      60 us      https:… https:/… retur…   8.36
 #> 4 Alien: …  2025 "We we… When th…      55 us      https:… https:/… retur…   7.44
-#> 5 A Knigh…  2026 "A tal… A centu…      35 us      https:… https:/… retur…   8.23
+#> 5 A Knigh…  2026 "A tal… A centu…      35 us      https:… https:/… retur…   8.22
 #> # ℹ 23 more variables: votes <int>, comment_count <int>, updated_at <dttm>,
 #> #   language <chr>, languages <list>, available_translations <list>,
 #> #   genres <list>, subgenres <list>, original_title <chr>, first_aired <dttm>,
@@ -77,16 +77,16 @@ movies_watched(period = "yearly", years = c(1990, 2000)) |>
 #> # A tibble: 10 × 3
 #>    watcher_count title                     year
 #>            <int> <chr>                    <int>
-#>  1           615 Toy Story                 1995
-#>  2           576 Scream                    1996
+#>  1           626 Toy Story                 1995
+#>  2           595 Scream                    1996
 #>  3           559 The Matrix                1999
-#>  4           402 The Shawshank Redemption  1994
-#>  5           384 Scream 2                  1997
-#>  6           362 The Lion King             1994
-#>  7           361 Fight Club                1999
-#>  8           359 Toy Story 2               1999
-#>  9           346 Pulp Fiction              1994
-#> 10           329 Jurassic Park             1993
+#>  4           403 The Shawshank Redemption  1994
+#>  5           396 Scream 2                  1997
+#>  6           369 Scary Movie               2000
+#>  7           367 Fight Club                1999
+#>  8           363 The Lion King             1994
+#>  9           363 Toy Story 2               1999
+#> 10           337 Pulp Fiction              1994
 ```
 
 ## Finding Things (and the right amount)

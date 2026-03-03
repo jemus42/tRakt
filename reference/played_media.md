@@ -7,7 +7,7 @@ These functions return the most played movies/shows on trakt.tv.
 ``` r
 movies_played(
   limit = 10,
-  extended = c("min", "full"),
+  extended = "min",
   period = c("weekly", "monthly", "yearly", "all"),
   query = NULL,
   years = NULL,
@@ -21,7 +21,7 @@ movies_played(
 
 shows_played(
   limit = 10,
-  extended = c("min", "full"),
+  extended = "min",
   period = c("weekly", "monthly", "yearly", "all"),
   query = NULL,
   years = NULL,
@@ -54,11 +54,22 @@ shows_played(
 
 - extended:
 
-  `character(1)`: Either `"min"` (API default) or `"full"`. The latter
-  returns more variables and should generally only be used if required.
-  See
-  [`vignette("tRakt")`](https://jemus42.github.io/tRakt/articles/tRakt.md)
-  for more details.
+  `character`: Level of detail for the API response.
+
+  - `"min"` (default): Minimal info (title, year, IDs). Omits the
+    `extended` query param.
+
+  - `"full"`: Complete info including overview, ratings, runtime, etc.
+
+  - `"images"`: Minimal info plus image URLs (returned as a
+    list-column).
+
+  - `"full,images"`: Complete info plus images.
+
+  - `"metadata"`: Collection endpoints only; adds video/audio metadata.
+
+  Multiple values can be combined as a comma-separated string (e.g.
+  `"full,images"`) or a character vector (e.g. `c("full", "images")`).
 
 - period:
 
