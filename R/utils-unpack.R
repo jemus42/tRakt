@@ -298,9 +298,9 @@ unpack_comments_multitype <- function(response, keep_images = FALSE) {
 		\(x) {
 			bind_cols(
 				list_base |>
-					filter(type == x),
+					filter(.data$type == x),
 				response |>
-					filter(type == x) |>
+					filter(.data$type == x) |>
 					pull("comment") |>
 					unpack_comments(),
 				flatten_media_object(response, x, keep_images = keep_images)
