@@ -1,13 +1,13 @@
 ---
-title: "Implemented API methods"
+title: "API Methods"
 author: "Lukas Burk"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Implemented API methods}
+  %\VignetteIndexEntry{API Methods}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
 
@@ -38,20 +38,15 @@ api <- api |>
 	list_rbind(names_to = "Section")
 
 
-pkg_funs <- getNamespaceExports("tRakt") |>
-	str_subset("trakt_get|build_trakt_url", negate = TRUE)
-
-unmentioned <- pkg_funs[!(pkg_funs %in% str_remove_all(api$implementation, pattern = "\\(\\)"))]
+n_implemented <- sum(api$implementation != "none" & !str_starts(api$implementation, "\\?"))
+n_total <- nrow(api)
 
 format_api_table <- function(xdf) {
 	xdf |>
 		mutate(
 			endpoint = glue::glue("<a href = '{url}'>{endpoint}</a>"),
-			# Section = stringr::str_to_title(Section),
-			# Section = cell_spec(Section, bold = TRUE),
 			Method = str_to_title(Method),
 			Method = str_replace_all(Method, "^Id\\s", "ID "),
-			#implementation = if_else(is.na(implementation), "N/A", implementation),
 			implementation = if_else(
 				implementation == "none",
 				"",
@@ -78,15 +73,17 @@ print_api_table <- function(xdf) {
 			position = "center",
 			bootstrap_options = c("striped", "hover"),
 			full_width = TRUE
-		) |>
-		column_spec(column = 3, width_min = "20%")
+		)
 }
 ```
 
-This is a reference list of [API methods available](https://trakt.docs.apiary.io/), their endpoint URLs (with user-specified parameters indiciated by a `:` prefix) and a link to their respective implementation in this package, if applicable.  
-Authenticated methods (there's only a few) are indicated as such.
+This is a reference list of [trakt.tv API methods](https://trakt.docs.apiary.io/) tracked by this package, their endpoint URLs (with user-specified parameters indicated by a `:` prefix) and their implementation status.
+Methods with an implementation link are available in this package; blank entries are tracked but not yet implemented.
+Authenticated methods are indicated as such.
 
-Note that not all available methods are listed here, especially those geared towards interactive apps – I highly doubt that people will want to post (or update) comments through this package.
+Write-only endpoints (creating/updating/deleting items, scrobbling, check-ins) are omitted as they are outside the scope of this package.
+
+Currently **`r n_implemented`** of **`r n_total`** tracked GET endpoints are implemented.
 
 # Search
 
@@ -173,6 +170,16 @@ api |>
 ```{r api-lists}
 api |>
 	filter(Section == "lists") |>
+	select(-Section) |>
+	format_api_table() |>
+	print_api_table()
+```
+
+# Recommendations
+
+```{r api-recommendations}
+api |>
+	filter(Section == "recommendations") |>
 	select(-Section) |>
 	format_api_table() |>
 	print_api_table()

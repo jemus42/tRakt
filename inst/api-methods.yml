@@ -37,6 +37,22 @@ lists:
     url: https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists
     endpoint: /lists/trending
     implementation: lists_trending()
+  list:
+    url: https://trakt.docs.apiary.io/#reference/lists/list/get-list
+    endpoint: /lists/:id
+    implementation: none
+  likes:
+    url: https://trakt.docs.apiary.io/#reference/lists/likes/get-all-users-who-liked-a-list
+    endpoint: /lists/:id/likes
+    implementation: none
+  items:
+    url: https://trakt.docs.apiary.io/#reference/lists/items/get-items-on-a-list
+    endpoint: /lists/:id/items/:type/:sort_by/:sort_how
+    implementation: none
+  comments:
+    url: https://trakt.docs.apiary.io/#reference/lists/comments/get-all-list-comments
+    endpoint: /lists/:id/comments/:sort
+    implementation: none
 
 movies:
   trending:
@@ -47,6 +63,10 @@ movies:
     url: https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-movies
     endpoint: /movies/popular
     implementation: movies_popular()
+  favorited:
+    url: https://trakt.docs.apiary.io/#reference/movies/favorited/get-the-most-favorited-movies
+    endpoint: /movies/favorited/:period
+    implementation: none
   played:
     url: https://trakt.docs.apiary.io/#reference/movies/played/get-the-most-played-movies
     endpoint: /movies/played/:period
@@ -71,6 +91,10 @@ movies:
     url: https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies
     endpoint: /movies/updates/:start_date
     implementation: movies_updates()
+  updates id:
+    url: https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movie-trakt-ids
+    endpoint: /movies/updates/id/:start_date
+    implementation: none
   summary:
     url: https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie
     endpoint: /movies/:id
@@ -111,12 +135,24 @@ movies:
     url: https://trakt.docs.apiary.io/#reference/movies/stats/get-movie-stats
     endpoint: /movies/:id/stats
     implementation: movies_stats()
+  studios:
+    url: https://trakt.docs.apiary.io/#reference/movies/studios/get-movie-studios
+    endpoint: /movies/:id/studios
+    implementation: none
   watching:
     url: https://trakt.docs.apiary.io/#reference/movies/watching/get-users-watching-right-now
     endpoint: /movies/:id/watching
     implementation: movies_watching()
 
 people:
+  updates:
+    url: https://trakt.docs.apiary.io/#reference/people/updates/get-recently-updated-people
+    endpoint: /people/updates/:start_date
+    implementation: none
+  updates id:
+    url: https://trakt.docs.apiary.io/#reference/people/updates/get-recently-updated-people-trakt-ids
+    endpoint: /people/updates/id/:start_date
+    implementation: none
   summary:
     url: https://trakt.docs.apiary.io/#reference/people/summary/get-a-single-person
     endpoint: /people/:id
@@ -153,6 +189,10 @@ shows:
     url: https://trakt.docs.apiary.io/#reference/shows/popular/get-popular-shows
     endpoint: /shows/popular
     implementation: shows_popular()
+  favorited:
+    url: https://trakt.docs.apiary.io/#reference/shows/favorited/get-the-most-favorited-shows
+    endpoint: /shows/favorited/:period
+    implementation: none
   played:
     url: https://trakt.docs.apiary.io/#reference/shows/played/get-the-most-played-shows
     endpoint: /shows/played/:period
@@ -173,14 +213,22 @@ shows:
     url: https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows
     endpoint: /shows/updates/:start_date
     implementation: shows_updates()
+  updates id:
+    url: https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-show-trakt-ids
+    endpoint: /shows/updates/id/:start_date
+    implementation: none
   summary:
     url: https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show
     endpoint: /shows/:id
     implementation: shows_summary()
   aliases:
-    url: https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases
+    url: https://trakt.docs.apiary.io/#reference/shows/aliases/get-all-show-aliases
     endpoint: /shows/:id/aliases
     implementation: shows_aliases()
+  certifications:
+    url: https://trakt.docs.apiary.io/#reference/shows/certifications/get-all-show-certifications
+    endpoint: /shows/:id/certifications
+    implementation: none
   translations:
     url: https://trakt.docs.apiary.io/#reference/shows/translations/get-all-show-translations
     endpoint: /shows/:id/translations/:language
@@ -219,6 +267,10 @@ shows:
     url: https://trakt.docs.apiary.io/#reference/shows/stats/get-show-stats
     endpoint: /shows/:id/stats
     implementation: shows_stats()
+  studios:
+    url: https://trakt.docs.apiary.io/#reference/shows/studios/get-show-studios
+    endpoint: /shows/:id/studios
+    implementation: none
   watching:
     url: https://trakt.docs.apiary.io/#reference/shows/watching/get-users-watching-right-now
     endpoint: /shows/:id/watching
@@ -245,6 +297,10 @@ seasons:
     url: https://trakt.docs.apiary.io/#reference/seasons/episodes/get-all-episodes-for-a-single-season
     endpoint: /shows/:id/seasons/:season?translations=
     implementation: seasons_episodes()
+  translations:
+    url: https://trakt.docs.apiary.io/#reference/seasons/translations/get-all-season-translations
+    endpoint: /shows/:id/seasons/:season/translations/:language
+    implementation: none
   comments:
     url: https://trakt.docs.apiary.io/#reference/seasons/comments/get-all-season-comments
     endpoint: /shows/:id/seasons/:season/comments/:sort
@@ -322,14 +378,26 @@ users:
     url: https://trakt.docs.apiary.io/#reference/users/comments/get-comments
     endpoint: /users/:id/comments/:comment_type/:type?include_replies=
     implementation: user_comments()
+  notes:
+    url: https://trakt.docs.apiary.io/#reference/users/notes/get-notes
+    endpoint: /users/:id/notes/:type
+    implementation: none
   lists:
     url: https://trakt.docs.apiary.io/#reference/users/lists/get-a-user's-custom-lists
     endpoint: /users/:id/lists
     implementation: user_lists()
+  list collaborations:
+    url: https://trakt.docs.apiary.io/#reference/users/lists/get-all-lists-a-user-can-collaborate-on
+    endpoint: /users/:id/lists/collaborations
+    implementation: none
   list:
     url: https://trakt.docs.apiary.io/#reference/users/list/get-custom-list
     endpoint: /users/:id/lists/:list_id
     implementation: user_list()
+  list likes:
+    url: https://trakt.docs.apiary.io/#reference/users/list-likes/get-all-users-who-liked-a-list
+    endpoint: /users/:id/lists/:list_id/likes
+    implementation: none
   list items:
     url: https://trakt.docs.apiary.io/#reference/users/list-items/get-items-on-a-custom-list
     endpoint: /users/:id/lists/:list_id/items/:type
@@ -362,6 +430,22 @@ users:
     url: https://trakt.docs.apiary.io/#reference/users/watchlist/get-watchlist
     endpoint: /users/:id/watchlist/:type/:sort
     implementation: user_watchlist()
+  watchlist comments:
+    url: https://trakt.docs.apiary.io/#reference/users/watchlist-comments/get-all-watchlist-comments
+    endpoint: /users/:id/watchlist/comments/:sort
+    implementation: none
+  favorites:
+    url: https://trakt.docs.apiary.io/#reference/users/favorites/get-favorites
+    endpoint: /users/:id/favorites/:type/:sort_by/:sort_how
+    implementation: none
+  favorites comments:
+    url: https://trakt.docs.apiary.io/#reference/users/favorites-comments/get-all-favorites-comments
+    endpoint: /users/:id/favorites/comments/:sort
+    implementation: none
+  watching:
+    url: https://trakt.docs.apiary.io/#reference/users/watching/get-watching
+    endpoint: /users/:id/watching
+    implementation: none
   watched:
     url: https://trakt.docs.apiary.io/#reference/users/watched/get-watched
     endpoint: /users/:id/watched/:type
@@ -371,6 +455,17 @@ users:
     endpoint: /users/:id/stats
     implementation: user_stats()
 
+recommendations:
+  movies:
+    url: https://trakt.docs.apiary.io/#reference/recommendations/movies/get-movie-recommendations
+    endpoint: /recommendations/movies
+    implementation: none
+    authentication: yes
+  shows:
+    url: https://trakt.docs.apiary.io/#reference/recommendations/shows/get-show-recommendations
+    endpoint: /recommendations/shows
+    implementation: none
+    authentication: yes
 
 # These are just cached lists
 certifications:
