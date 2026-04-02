@@ -92,7 +92,7 @@ movies_summary("inception-2010")
 #> # A tibble: 1 × 29
 #>    year title     votes genres    rating status  country runtime tagline trailer
 #>   <int> <chr>     <int> <list>     <dbl> <chr>   <chr>     <int> <chr>   <chr>  
-#> 1  2010 Inception 85888 <chr [3]>   8.63 releas… us          148 Your m… https:…
+#> 1  2010 Inception 86584 <chr [3]>   8.63 releas… us          148 Your m… https:…
 #> # ℹ 19 more variables: homepage <chr>, language <chr>, overview <chr>,
 #> #   released <date>, languages <list>, subgenres <list>, updated_at <dttm>,
 #> #   after_credits <lgl>, certification <chr>, comment_count <int>,

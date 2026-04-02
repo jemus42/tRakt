@@ -119,12 +119,15 @@ Other episode data:
 
 ``` r
 shows_next_episode("one-piece")
-#> # A tibble: 0 × 0
+#> # A tibble: 1 × 7
+#>   season number title                                    trakt tvdb  imdb  tmdb 
+#>    <int>  <int> <chr>                                    <chr> <chr> <chr> <chr>
+#> 1     23   1156 The Long-sought Elbaph! The Big Reunion… 1408… 1152… NA    7099…
 shows_last_episode("one-piece", extended = "full")
 #> # A tibble: 1 × 19
 #>   season number title             number_abs overview rating votes comment_count
 #>    <int>  <int> <chr>             <chr>      <chr>     <dbl> <int>         <int>
-#> 1     22   1155 The Promised Hor… NA         York wa…   8.55   127             4
+#> 1     22   1155 The Promised Hor… NA         York wa…   8.55   136             5
 #> # ℹ 11 more variables: first_aired <dttm>, updated_at <dttm>, runtime <int>,
 #> #   episode_type <chr>, original_title <chr>, after_credits <lgl>,
 #> #   during_credits <lgl>, trakt <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>

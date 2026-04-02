@@ -31,10 +31,17 @@ Search using an ID:
 
 ``` r
 search_id("tt2384811", id_type = "imdb", type = "show")
-#> # A tibble: 1 × 9
-#>   type  score title   year trakt slug   tvdb   imdb      tmdb 
-#>   <chr> <dbl> <chr>  <int> <chr> <chr>  <chr>  <chr>     <chr>
-#> 1 show    100 Utopia  2013 46241 utopia 264991 tt2384811 46511
+#> # A tibble: 1 × 36
+#>   type  score  year title  votes genres    rating status country network runtime
+#>   <chr> <dbl> <int> <chr>  <int> <list>     <dbl> <chr>  <chr>   <chr>     <int>
+#> 1 show    100  2013 Utopia  4590 <chr [7]>   8.41 cance… gb      Channe…      50
+#> # ℹ 25 more variables: tagline <chr>, trailer <chr>, homepage <chr>,
+#> #   language <chr>, overview <chr>, languages <list>, subgenres <list>,
+#> #   updated_at <dttm>, first_aired <dttm>, certification <chr>,
+#> #   comment_count <int>, total_runtime <int>, aired_episodes <int>,
+#> #   original_title <chr>, available_translations <list>, airs_day <chr>,
+#> #   airs_time <chr>, airs_timezone <chr>, imdb <chr>, slug <chr>, tmdb <chr>,
+#> #   tvdb <chr>, trakt <chr>, plex_guid <chr>, plex_slug <chr>
 ```
 
 Or via whatever’s popular(ish):
@@ -54,11 +61,11 @@ shows_popular(limit = 5)
 #> # A tibble: 5 × 33
 #>   title     year tagline overview runtime country trailer homepage status rating
 #>   <chr>    <int> <chr>   <chr>      <int> <chr>   <chr>   <chr>    <chr>   <dbl>
-#> 1 Adolesc…  2025 "A chi… When a …      58 gb      https:… https:/… ended    7.72
-#> 2 Pluribus  2025 "Happi… The mos…      50 us      https:… https:/… retur…   8.04
-#> 3 MobLand   2025 ""      Two mob…      60 us      https:… https:/… retur…   8.36
-#> 4 Alien: …  2025 "We we… When th…      55 us      https:… https:/… retur…   7.44
-#> 5 A Knigh…  2026 "A tal… A centu…      35 us      https:… https:/… retur…   8.22
+#> 1 Pluribus  2025 Happin… The mos…      50 us      https:… https:/… retur…   8.05
+#> 2 A Knigh…  2026 A tall… A centu…      35 us      https:… https:/… retur…   8.19
+#> 3 Alien: …  2025 We wer… When th…      55 us      https:… https:/… retur…   7.44
+#> 4 Dept. Q   2025 Not al… A brash…      55 gb      https:… https:/… retur…   8.00
+#> 5 HIS & H…  2026 Two si… Two est…      45 us      https:… https:/… ended    7.61
 #> # ℹ 23 more variables: votes <int>, comment_count <int>, updated_at <dttm>,
 #> #   language <chr>, languages <list>, available_translations <list>,
 #> #   genres <list>, subgenres <list>, original_title <chr>, first_aired <dttm>,
@@ -77,16 +84,16 @@ movies_watched(period = "yearly", years = c(1990, 2000)) |>
 #> # A tibble: 10 × 3
 #>    watcher_count title                     year
 #>            <int> <chr>                    <int>
-#>  1           628 Toy Story                 1995
-#>  2           595 Scream                    1996
-#>  3           561 The Matrix                1999
-#>  4           404 The Shawshank Redemption  1994
-#>  5           396 Scream 2                  1997
-#>  6           369 Scary Movie               2000
-#>  7           369 Fight Club                1999
-#>  8           363 Toy Story 2               1999
-#>  9           356 The Lion King             1994
-#> 10           338 Pulp Fiction              1994
+#>  1           457 The Matrix                1999
+#>  2           429 Toy Story                 1995
+#>  3           367 Scary Movie               2000
+#>  4           313 Toy Story 2               1999
+#>  5           301 The Shawshank Redemption  1994
+#>  6           287 The Lion King             1994
+#>  7           268 Se7en                     1995
+#>  8           259 The Truman Show           1998
+#>  9           252 Fight Club                1999
+#> 10           248 Jurassic Park             1993
 ```
 
 ## Finding Things (and the right amount)

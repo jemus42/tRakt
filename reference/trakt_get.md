@@ -85,7 +85,7 @@ trakt_get("https://api.trakt.tv/shows/breaking-bad")
 #> [1] "Breaking Bad"
 #> 
 #> $votes
-#> [1] 115197
+#> [1] 115942
 #> 
 #> $colors
 #> $colors$poster
@@ -116,7 +116,7 @@ trakt_get("https://api.trakt.tv/shows/breaking-bad")
 #> 
 #> 
 #> $rating
-#> [1] 9.244034
+#> [1] 9.24539
 #> 
 #> $status
 #> [1] "ended"
@@ -128,7 +128,7 @@ trakt_get("https://api.trakt.tv/shows/breaking-bad")
 #> [1] "AMC"
 #> 
 #> $runtime
-#> [1] 50
+#> NULL
 #> 
 #> $tagline
 #> [1] "Change the equation."
@@ -155,16 +155,19 @@ trakt_get("https://api.trakt.tv/shows/breaking-bad")
 #> [10] "outlaw"             
 #> 
 #> $updated_at
-#> [1] "2026-03-02 06:38:59 UTC"
+#> [1] "2026-04-01 17:41:56 UTC"
 #> 
 #> $first_aired
-#> [1] "2008-01-21 02:00:00 UTC"
+#> [1] "2008-01-20 UTC"
 #> 
 #> $certification
 #> [1] "TV-MA"
 #> 
 #> $comment_count
-#> [1] 522
+#> [1] 527
+#> 
+#> $total_runtime
+#> [1] 2995
 #> 
 #> $aired_episodes
 #> [1] 62
@@ -223,7 +226,7 @@ trakt_get("shows/game-of-thrones")
 #> [1] "Game of Thrones"
 #> 
 #> $votes
-#> [1] 145250
+#> [1] 145825
 #> 
 #> $colors
 #> $colors$poster
@@ -254,7 +257,7 @@ trakt_get("shows/game-of-thrones")
 #> 
 #> 
 #> $rating
-#> [1] 8.891367
+#> [1] 8.892309
 #> 
 #> $status
 #> [1] "ended"
@@ -266,7 +269,7 @@ trakt_get("shows/game-of-thrones")
 #> [1] "HBO"
 #> 
 #> $runtime
-#> [1] 55
+#> NULL
 #> 
 #> $tagline
 #> [1] "Winter is coming."
@@ -290,16 +293,19 @@ trakt_get("shows/game-of-thrones")
 #> [1] "fantasy-world" "dragon"        "kingdom"       "king"         
 #> 
 #> $updated_at
-#> [1] "2026-03-02 15:34:13 UTC"
+#> [1] "2026-03-23 15:41:24 UTC"
 #> 
 #> $first_aired
-#> [1] "2011-04-18 01:00:00 UTC"
+#> [1] "2011-04-17 UTC"
 #> 
 #> $certification
 #> [1] "TV-MA"
 #> 
 #> $comment_count
-#> [1] 450
+#> [1] 451
+#> 
+#> $total_runtime
+#> [1] 4232
 #> 
 #> $aired_episodes
 #> [1] 73

@@ -66,7 +66,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Getting Started</h1>
                         <h4 data-toc-skip class="author">Lukas Burk</h4>
             
-            <h4 data-toc-skip class="date">2026-03-03</h4>
+            <h4 data-toc-skip class="date">2026-04-02</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/vignettes/tRakt.Rmd" class="external-link"><code>vignettes/tRakt.Rmd</code></a></small>
       <div class="d-none name"><code>tRakt.Rmd</code></div>
@@ -100,10 +100,17 @@ trakt.tv</a>.</p>
 <p>Search using an ID:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/search_query.html">search_id</a></span><span class="op">(</span><span class="st">"tt2384811"</span>, id_type <span class="op">=</span> <span class="st">"imdb"</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 9</span></span></span>
-<span><span class="co">#&gt;   type  score title   year trakt slug   tvdb   imdb      tmdb </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show    100 Utopia  <span style="text-decoration: underline;">2</span>013 46241 utopia 264991 tt2384811 46511</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 36</span></span></span>
+<span><span class="co">#&gt;   type  score  year title  votes genres    rating status country network runtime</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;list&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> show    100  <span style="text-decoration: underline;">2</span>013 Utopia  <span style="text-decoration: underline;">4</span>590 <span style="color: #949494;">&lt;chr [7]&gt;</span>   8.41 cance… gb      Channe…      50</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 25 more variables: tagline &lt;chr&gt;, trailer &lt;chr&gt;, homepage &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   language &lt;chr&gt;, overview &lt;chr&gt;, languages &lt;list&gt;, subgenres &lt;list&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   updated_at &lt;dttm&gt;, first_aired &lt;dttm&gt;, certification &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   comment_count &lt;int&gt;, total_runtime &lt;int&gt;, aired_episodes &lt;int&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   original_title &lt;chr&gt;, available_translations &lt;list&gt;, airs_day &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   airs_time &lt;chr&gt;, airs_timezone &lt;chr&gt;, imdb &lt;chr&gt;, slug &lt;chr&gt;, tmdb &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   tvdb &lt;chr&gt;, trakt &lt;chr&gt;, plex_guid &lt;chr&gt;, plex_slug &lt;chr&gt;</span></span></span></code></pre></div>
 <p>Or via whatever’s popular(ish):</p>
 <p>Another scenario would be that you’re not necessarily interested in
 some specific media item, but rather a collection of items that fulfill
@@ -118,11 +125,11 @@ release year of the movie.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 33</span></span></span>
 <span><span class="co">#&gt;   title     year tagline overview runtime country trailer homepage status rating</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Adolesc…  <span style="text-decoration: underline;">2</span>025 <span style="color: #949494;">"</span>A chi… When a …      58 gb      https:… https:/… ended    7.72</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> Pluribus  <span style="text-decoration: underline;">2</span>025 <span style="color: #949494;">"</span>Happi… The mos…      50 us      https:… https:/… retur…   8.04</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> MobLand   <span style="text-decoration: underline;">2</span>025 <span style="color: #949494;">""</span>      Two mob…      60 us      https:… https:/… retur…   8.36</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Alien: …  <span style="text-decoration: underline;">2</span>025 <span style="color: #949494;">"</span>We we… When th…      55 us      https:… https:/… retur…   7.44</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> A Knigh…  <span style="text-decoration: underline;">2</span>026 <span style="color: #949494;">"</span>A tal… A centu…      35 us      https:… https:/… retur…   8.22</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> Pluribus  <span style="text-decoration: underline;">2</span>025 Happin… The mos…      50 us      https:… https:/… retur…   8.05</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> A Knigh…  <span style="text-decoration: underline;">2</span>026 A tall… A centu…      35 us      https:… https:/… retur…   8.19</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> Alien: …  <span style="text-decoration: underline;">2</span>025 We wer… When th…      55 us      https:… https:/… retur…   7.44</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> Dept. Q   <span style="text-decoration: underline;">2</span>025 Not al… A brash…      55 gb      https:… https:/… retur…   8.00</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> HIS &amp; H…  <span style="text-decoration: underline;">2</span>026 Two si… Two est…      45 us      https:… https:/… ended    7.61</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 23 more variables: votes &lt;int&gt;, comment_count &lt;int&gt;, updated_at &lt;dttm&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   language &lt;chr&gt;, languages &lt;list&gt;, available_translations &lt;list&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   genres &lt;list&gt;, subgenres &lt;list&gt;, original_title &lt;chr&gt;, first_aired &lt;dttm&gt;,</span></span></span>
@@ -138,16 +145,16 @@ release year of the movie.</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 10 × 3</span></span></span>
 <span><span class="co">#&gt;    watcher_count title                     year</span></span>
 <span><span class="co">#&gt;            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>           628 Toy Story                 <span style="text-decoration: underline;">1</span>995</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>           595 Scream                    <span style="text-decoration: underline;">1</span>996</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>           561 The Matrix                <span style="text-decoration: underline;">1</span>999</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>           404 The Shawshank Redemption  <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>           396 Scream 2                  <span style="text-decoration: underline;">1</span>997</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>           369 Scary Movie               <span style="text-decoration: underline;">2</span>000</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>           369 Fight Club                <span style="text-decoration: underline;">1</span>999</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>           363 Toy Story 2               <span style="text-decoration: underline;">1</span>999</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>           356 The Lion King             <span style="text-decoration: underline;">1</span>994</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>           338 Pulp Fiction              <span style="text-decoration: underline;">1</span>994</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>           457 The Matrix                <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>           429 Toy Story                 <span style="text-decoration: underline;">1</span>995</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>           367 Scary Movie               <span style="text-decoration: underline;">2</span>000</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>           313 Toy Story 2               <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>           301 The Shawshank Redemption  <span style="text-decoration: underline;">1</span>994</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>           287 The Lion King             <span style="text-decoration: underline;">1</span>994</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>           268 Se7en                     <span style="text-decoration: underline;">1</span>995</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>           259 The Truman Show           <span style="text-decoration: underline;">1</span>998</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>           252 Fight Club                <span style="text-decoration: underline;">1</span>999</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span>           248 Jurassic Park             <span style="text-decoration: underline;">1</span>993</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="finding-things-and-the-right-amount">Finding Things (and the right amount)<a class="anchor" aria-label="anchor" href="#finding-things-and-the-right-amount"></a>

@@ -174,7 +174,7 @@ search_query("Breaking Bad", type = "show", n_results = 3)
 #> # A tibble: 3 × 35
 #>     score type  title     year tagline overview runtime country trailer homepage
 #>     <dbl> <chr> <chr>    <int> <chr>   <chr>      <int> <chr>   <chr>   <chr>   
-#> 1 1.16e18 show  Breakin…  2008 "Chang… "Walter…      50 us      https:… https:/…
+#> 1 1.16e18 show  Breakin…  2008 "Chang… "Walter…      42 us      https:… https:/…
 #> 2 1.16e18 show  Breakin…  2016 ""      "During…      42 cn      NA      NA      
 #> 3 1.16e18 show  Breakin…  2009 ""      "Breaki…      42 us      NA      NA      
 #> # ℹ 25 more variables: status <chr>, rating <dbl>, votes <int>,

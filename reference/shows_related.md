@@ -81,12 +81,19 @@ Other show data:
 
 ``` r
 shows_related("breaking-bad", limit = 5)
-#> # A tibble: 5 × 8
-#>   related_to   title             year trakt  slug             tvdb   imdb  tmdb 
-#>   <chr>        <chr>            <int> <chr>  <chr>            <chr>  <chr> <chr>
-#> 1 breaking-bad Better Call Saul  2015 59660  better-call-saul 273181 tt30… 60059
-#> 2 breaking-bad The Wire          2002 1429   the-wire         79126  tt03… 1438 
-#> 3 breaking-bad The Sopranos      1999 1389   the-sopranos     75299  tt01… 1398 
-#> 4 breaking-bad Ozark             2017 119913 ozark            329089 tt50… 69740
-#> 5 breaking-bad Narcos            2015 94630  narcos           282670 tt27… 63351
+#> # A tibble: 5 × 35
+#>   related_to    year title    votes genres rating status country network runtime
+#>   <chr>        <int> <chr>    <int> <list>  <dbl> <chr>  <chr>   <chr>     <int>
+#> 1 breaking-bad  2015 Better … 34065 <chr>    8.80 ended  us      AMC          50
+#> 2 breaking-bad  2002 The Wire 18185 <chr>    9.19 ended  us      HBO          60
+#> 3 breaking-bad  1999 The Sop… 19034 <chr>    9.11 ended  us      HBO          55
+#> 4 breaking-bad  2017 Ozark    18343 <chr>    8.26 ended  us      Netflix      60
+#> 5 breaking-bad  2015 Narcos   18828 <chr>    8.48 ended  us      Netflix      50
+#> # ℹ 25 more variables: tagline <chr>, trailer <chr>, homepage <chr>,
+#> #   language <chr>, overview <chr>, languages <list>, subgenres <list>,
+#> #   updated_at <dttm>, first_aired <dttm>, certification <chr>,
+#> #   comment_count <int>, total_runtime <int>, aired_episodes <int>,
+#> #   original_title <chr>, available_translations <list>, airs_day <chr>,
+#> #   airs_time <chr>, airs_timezone <chr>, imdb <chr>, slug <chr>, tmdb <chr>,
+#> #   tvdb <chr>, trakt <chr>, plex_guid <chr>, plex_slug <chr>
 ```
