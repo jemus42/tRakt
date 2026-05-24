@@ -1,5 +1,10 @@
-# tRakt 0.17.0.9000 (development version)
+# tRakt 0.18.0
 
+- The `guest_stars` argument of `shows_people()` / `seasons_people()` /
+  `episodes_people()` is now deprecated (via `lifecycle::deprecate_warn()`).
+  The trakt.tv API stopped returning a separate `guest_stars` array — guest
+  cast is now included in `cast`. The argument is a no-op pending removal
+  in a future release.
 - Fix vectorisation bug in `movies_related()` / `shows_related()`: when called
   with multiple IDs, the internal recursion forwarded the `extended` argument
   positionally as `limit`, producing malformed `?limit=min` URLs and empty

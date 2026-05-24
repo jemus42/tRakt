@@ -12,8 +12,10 @@
 #'
 #' @name media_people
 #' @inheritParams trakt_api_common_parameters
-#' @param guest_stars `logical(1) ["FALSE"]`: Also include guest stars. This returns
-#'   a lot of data, so use with care.
+#' @param guest_stars `r lifecycle::badge("deprecated")` `logical(1) ["FALSE"]`:
+#'   Previously requested a separate `guest_stars` table. The trakt.tv API no
+#'   longer returns that array — guest cast is now included in `cast`.
+#'   This argument is currently a no-op and will be removed in a future release.
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
 #'   and/or `crew`. The latter `tibble` objects are as flat as possible.
 #' @family people data
@@ -27,6 +29,27 @@
 #' episodes_people("breaking-bad", season = 1, episode = 1)
 #' }
 NULL
+
+# Shared deprecation warning for the no-op `guest_stars` argument.
+# The trakt.tv API stopped returning a separate `guest_stars` array; guest
+# cast is now included in `cast`. Warn only when the user explicitly opts in,
+# so callers using the default behaviour see nothing.
+warn_for_guest_stars <- function(guest_stars, user_env = rlang::caller_env(2)) {
+	if (!isTRUE(guest_stars)) {
+		return(invisible())
+	}
+	lifecycle::deprecate_warn(
+		when = "0.18.0",
+		what = I("The `guest_stars` argument"),
+		details = c(
+			"The trakt.tv API no longer returns a separate `guest_stars` array.",
+			"Guest cast is now included in `cast`.",
+			"This argument is a no-op and will be removed in a future release."
+		),
+		user_env = user_env
+	)
+	invisible()
+}
 
 #' @rdname media_people
 #' @eval apiurl("movies", "people")
@@ -49,6 +72,7 @@ movies_people <- function(id, extended = "min") {
 #' @family people data
 #' @export
 shows_people <- function(id, guest_stars = FALSE, extended = "min") {
+	warn_for_guest_stars(guest_stars)
 	# Combine extended with guest_stars modifier before validation
 	extended_input <- if (guest_stars) c(extended, "guest_stars") else extended
 	extended <- validate_extended(extended_input)
@@ -66,6 +90,7 @@ shows_people <- function(id, guest_stars = FALSE, extended = "min") {
 #' @family people data
 #' @export
 seasons_people <- function(id, season = 1L, guest_stars = FALSE, extended = "min") {
+	warn_for_guest_stars(guest_stars)
 	# Combine extended with guest_stars modifier before validation
 	extended_input <- if (guest_stars) c(extended, "guest_stars") else extended
 	extended <- validate_extended(extended_input)
@@ -96,6 +121,7 @@ episodes_people <- function(
 	guest_stars = FALSE,
 	extended = "min"
 ) {
+	warn_for_guest_stars(guest_stars)
 	# Combine extended with guest_stars modifier before validation
 	extended_input <- if (guest_stars) c(extended, "guest_stars") else extended
 	extended <- validate_extended(extended_input)

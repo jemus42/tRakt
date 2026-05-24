@@ -16,6 +16,7 @@
 ## usethis namespace: start
 #' @importFrom dplyr mutate
 #' @importFrom dplyr select
+#' @importFrom lifecycle deprecated
 #' @importFrom purrr list_rbind
 #' @importFrom purrr map
 #' @importFrom rlang .data

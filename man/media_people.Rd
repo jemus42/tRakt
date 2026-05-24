@@ -51,8 +51,10 @@ Can also be of length greater than 1, in which case the function is called on al
 Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
 or a character vector (e.g. \code{c("full", "images")}).}
 
-\item{guest_stars}{\code{logical(1) ["FALSE"]}: Also include guest stars. This returns
-a lot of data, so use with care.}
+\item{guest_stars}{\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}} \code{logical(1) ["FALSE"]}:
+Previously requested a separate \code{guest_stars} table. The trakt.tv API no
+longer returns that array — guest cast is now included in \code{cast}.
+This argument is currently a no-op and will be removed in a future release.}
 
 \item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
