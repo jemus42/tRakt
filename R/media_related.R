@@ -12,7 +12,7 @@ media_related <- function(
 	type <- match.arg(type)
 
 	if (length(id) > 1) {
-		return(map_rbind(id, \(x) media_related(x, type, extended)))
+		return(map_rbind(id, \(x) media_related(x, type = type, limit = limit, extended = extended)))
 	}
 
 	extended <- validate_extended(extended)
