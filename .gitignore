@@ -26,3 +26,8 @@ README_cache
 
 # test intermediates
 tests/testthat/_problems/*R
+
+# Claude Code: only the shared project brief (.claude/CLAUDE.md) is tracked.
+# Local settings stay out of git.
+.claude/settings.json
+.claude/settings.local.json
