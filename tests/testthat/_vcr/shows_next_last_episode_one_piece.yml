@@ -3,26 +3,97 @@ http_interactions:
     method: GET
     uri: https://api.trakt.tv/shows/one-piece/next_episode
   response:
-    status: 204
+    status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:28 GMT
-      cf-cache-status: BYPASS
+      date: Sun, 24 May 2026 16:58:56 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: a00dd915894b0c49-AMS
+      cf-cache-status: HIT
       access-control-allow-origin: '*'
-      cache-control: max-age=0, private, must-revalidate, no_store=true, no_cache=true
+      age: '11781'
+      cache-control: public, max-age=86400, s-maxage=43200
+      etag: W/"f0ab423a89f1f0eaf34a5978a5fdc004"
+      expires: Sun, 24 May 2026 21:42:34 GMT
+      last-modified: Sat, 23 May 2026 19:57:54 GMT
       server: cloudflare
-      vary: accept-encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: accept-encoding, query, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: d9976eb4-9c00-44ae-9090-5fa057981d28
-      x-runtime: '0.019613'
-      x-show-updated-at: '2026-03-02T11:57:26.000Z'
+      x-request-id: c7290a8f-bef5-455b-b733-aee9078442b1
+      x-runtime: '0.007430'
+      x-show-updated-at: '2026-05-23T16:14:41.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6079cd9fe20e6c-AMS
-      alt-svc: h3=":443"; ma=86400
-  recorded_at: 2026-03-02 12:41:28
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+    body:
+      string: '{"season":23,"number":1163,"title":"Episode 1163","ids":{"trakt":14100238,"tvdb":11700060,"imdb":null,"tmdb":7124433,"tvrage":null}}'
+  recorded_at: 2026-05-24 16:58:56
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/one-piece/last_episode
+  response:
+    status: 200
+    headers:
+      date: Sun, 24 May 2026 16:58:56 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: a00dd9161b350c49-AMS
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"8d0dc757e480072117fd6b3b5f55fa95"
+      expires: Mon, 25 May 2026 00:58:56 GMT
+      last-modified: Sun, 24 May 2026 16:55:51 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 2e6bd0fd-2957-4eab-acf2-280e740e5621
+      x-runtime: '0.025931'
+      x-show-updated-at: '2026-05-24T16:39:08.000Z'
+      x-xss-protection: '0'
+      speculation-rules: '"/cdn-cgi/speculation"'
+    body:
+      string: '{"season":23,"number":1163,"title":"Episode 1163","ids":{"trakt":14100238,"tvdb":11700060,"imdb":null,"tmdb":7124433,"tvrage":null}}'
+  recorded_at: 2026-05-24 16:58:56
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/one-piece/last_episode?extended=full
+  response:
+    status: 200
+    headers:
+      date: Sun, 24 May 2026 16:58:56 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: a00dd9175f4d0c49-AMS
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public
+      content-encoding: gzip
+      etag: W/"8d0dc757e480072117fd6b3b5f55fa95"
+      expires: Mon, 25 May 2026 00:58:56 GMT
+      last-modified: Sun, 24 May 2026 16:55:51 GMT
+      server: cloudflare
+      vary: Accept-Encoding, Origin
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-request-id: 77b0024f-0854-4982-9104-2c69085566c6
+      x-runtime: '0.012462'
+      x-show-updated-at: '2026-05-24T16:39:08.000Z'
+      x-xss-protection: '0'
+      speculation-rules: '"/cdn-cgi/speculation"'
+    body:
+      string: '{"season":23,"number":1163,"title":"Episode 1163","ids":{"trakt":14100238,"tvdb":11700060,"imdb":null,"tmdb":7124433,"tvrage":null},"number_abs":1163,"overview":null,"rating":8.8,"votes":5,"comment_count":0,"first_aired":"2026-05-24T14:15:00.000Z","updated_at":"2026-05-24T16:55:51.000Z","available_translations":["de","es","it","ja","pt","zh"],"runtime":24,"episode_type":"standard","original_title":"褒めてほしい　ロビンとサウロの再会","after_credits":false,"during_credits":false}'
+  recorded_at: 2026-05-24 16:58:56
 recorded_with: VCR-vcr/2.1.0

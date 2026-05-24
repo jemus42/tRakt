@@ -79,6 +79,10 @@ test_that("user_comments", {
 		unique() |>
 		expect_equal("movie")
 
-	user_comments("sofakissen") |>
-		expect_tibble(exact_rows = 0)
+	# Non-existent / deleted users should surface the HTTP 404 explicitly
+	# rather than silently returning an empty result.
+	expect_error(
+		user_comments("nonexistent-user-quux-trakt-test"),
+		class = "httr2_http_404"
+	)
 })

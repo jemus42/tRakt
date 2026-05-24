@@ -5,29 +5,28 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:11:03 GMT
+      date: Sun, 24 May 2026 13:42:30 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: HIT
+      cf-ray: a00cb954cc3f37b0-AMS
+      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: public, max-age=28800
+      cache-control: max-age=28800, public, s-maxage=43200
       content-encoding: gzip
-      etag: W/"e8c3b38060e82205390e8de086c2a7eb"
-      expires: Mon, 02 Mar 2026 17:43:44 GMT
+      etag: W/"fbbc9f7659181770c02bebeffe30bd2f"
+      expires: Sun, 24 May 2026 21:42:29 GMT
       server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: accept-encoding, query, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-movie-updated-at: '2026-03-01T16:39:38.000Z'
+      x-movie-updated-at: '2026-05-24T08:31:59.000Z'
       x-permitted-cross-domain-policies: none
-      x-request-id: d8d58cee-e1dc-44ad-88f6-e59ae66f5c45
-      x-runtime: '0.012773'
+      x-request-id: 87aa5ba2-a346-4066-a6a2-e385351213fa
+      x-runtime: '0.010767'
       x-xss-protection: '0'
-      cf-ray: 9d5ff55d1aadd655-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"title":"X-Men Origins: Deadpool","country":"us"},{"title":"X-Men:
         Deadpool","country":"us"},{"title":"Deadpool","country":"br"},{"title":"Дедпул","country":"bg"},{"title":"Dedpul","country":"rs"},{"title":"Дэдпул","country":"ru"},{"title":"惡棍英雄：死侍","country":"tw"},{"title":"死侍：不死现身","country":"cn"},{"title":"X战警：死侍","country":"cn"},{"title":"Deadpool
@@ -38,37 +37,37 @@ http_interactions:
         I","country":"us"},{"title":"X-Men 8: Deadpool","country":"us"},{"title":"Deadpool
         1","country":"de"},{"title":"Deadpool 2016","country":"jp"},{"title":"Quái
         Nhân Deadpool","country":"vn"},{"title":"死侍：不死現身","country":"hk"},{"title":"死侍：不死現身","country":"tw"},{"title":"デッドプール：2016","country":"jp"},{"title":"Deadpool:
-        1","country":"es"},{"title":"死侍1","country":"cn"}]'
-  recorded_at: 2026-03-02 12:41:26
+        1","country":"es"},{"title":"死侍1","country":"cn"},{"title":"ديدبول","country":"sa"}]'
+  recorded_at: 2026-05-24 13:42:29
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/104439/aliases
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:11:03 GMT
+      date: Sun, 24 May 2026 13:42:30 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb955cebe37b0-AMS
       cf-cache-status: HIT
       access-control-allow-origin: '*'
-      cache-control: public, max-age=28800
-      content-encoding: gzip
+      age: '10104'
+      cache-control: public, max-age=86400, s-maxage=43200
       etag: W/"b84f8cc291debb0d66d8f5f608cc2e4d"
-      expires: Mon, 02 Mar 2026 13:35:41 GMT
+      expires: Sun, 24 May 2026 18:54:05 GMT
       server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: accept-encoding, query, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: 98dec814-e1cd-4d82-9649-636822bd6499
-      x-runtime: '0.032286'
-      x-show-updated-at: '2026-02-28T15:36:52.000Z'
+      x-request-id: 79812fbd-43d1-4748-8408-43cf02e6127f
+      x-runtime: '0.025799'
+      x-show-updated-at: '2026-05-23T12:15:53.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d5ff55dfcf6d655-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
     body:
       string: '[{"title":"Очень странные дела","country":"us"},{"title":"Странные
         вещи","country":"us"},{"title":"Загадкові справи","country":"ua"},{"title":"Keisti
@@ -426,5 +425,5 @@ http_interactions:
         дела","country":"ru"},{"title":"Stranger Things 5","country":"us"},{"title":"أشياء
         غريبة","country":"sa"},{"title":"Очень странные дела","country":"ru"},{"title":"Cedar
         Lodge","country":"us"}]'
-  recorded_at: 2026-03-02 12:41:27
+  recorded_at: 2026-05-24 13:42:29
 recorded_with: VCR-vcr/2.1.0

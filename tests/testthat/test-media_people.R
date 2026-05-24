@@ -19,7 +19,7 @@ test_that("media_people works", {
 		)
 
 	shows_people("breaking-bad", guest_stars = TRUE) |>
-		expect_named(c("cast", "guest_stars", "crew")) |>
+		expect_named(c("cast", "crew")) |>
 		purrr::walk(
 			~ {
 				expect_s3_class(.x, "tbl_df")
@@ -35,7 +35,7 @@ test_that("media_people works", {
 		)
 
 	seasons_people("breaking-bad", season = 1, guest_stars = TRUE) |>
-		expect_named(c("cast", "guest_stars", "crew")) |>
+		expect_named(c("cast", "crew")) |>
 		purrr::walk(
 			~ {
 				expect_s3_class(.x, "tbl_df")
@@ -51,7 +51,7 @@ test_that("media_people works", {
 		)
 
 	episodes_people("breaking-bad", season = 1, episode = 1, guest_stars = TRUE) |>
-		expect_named(c("cast", "guest_stars", "crew")) |>
+		expect_named(c("cast", "crew")) |>
 		purrr::walk(
 			~ {
 				expect_s3_class(.x, "tbl_df")

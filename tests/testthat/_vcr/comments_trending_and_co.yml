@@ -5,133 +5,142 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:33 GMT
+      date: Sun, 24 May 2026 13:42:17 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb8ec296937b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=3600, public
       content-encoding: gzip
-      etag: W/"ac0da824133b2941eff079c8f64a5786"
-      expires: Mon, 02 Mar 2026 13:41:26 GMT
+      etag: W/"9b4d3ed25e5ae72c099d69e514875f0e"
+      expires: Sun, 24 May 2026 14:42:13 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '43631'
+      x-pagination-item-count: '44413'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '4364'
+      x-pagination-page-count: '4442'
       x-permitted-cross-domain-policies: none
-      x-request-id: 101cb5af-bd21-4ebc-a4a7-edb10debe5d5
-      x-runtime: '7.114685'
+      x-request-id: ece774fe-3669-4513-9095-21b62c5e07b3
+      x-runtime: '4.651435'
       x-xss-protection: '0'
-      cf-ray: 9d6079c219e7b932-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"type":"show","show":{"title":"Jazz","year":2001,"ids":{"trakt":20765,"slug":"jazz","tvdb":80679,"imdb":"tt0221300","tmdb":20861,"tvrage":null}},"comment":{"id":657653,"comment":"Jazz
-        is a noble attempt to be the defining documentary about jazz, “America’s art
-        music” and one of the greatest things to happen in human history, in my humble
-        opinion.\r\n\r\nBurns has assembled his usual materials – pictures, quotes,
-        historians, contemporary music – to go along with video clips and reminiscences
-        due to the fact that much of this music was performed when it could be recorded
-        either by audio alone or by audio and film.\r\n\r\nAnd it should be commended
-        that the tried to do this, just like Burns should be commended for his other
-        long-form documentary projects. But this film is not the story of jazz.\r\n\r\nRather
-        it is a biased and inaccurate account that is ultimately a failure as a history
-        of jazz, and so a failure as a film. It is an excellent history of jazz prior
-        to about 1950, and if that was its stated goal, we would have another excellent
-        Burns documentary.\r\n\r\nInstead we get typical Wynton Marsalis conservatism
-        that is opposed to everything that is great about jazz. (And this isn’t necessarily
-        a criticism of Marsalis himself, as he is an excellent educator – I can tell
-        that by his interviews. But he is horribly wrong about what jazz is and isn’t.)\r\n\r\nThis
-        film is something like 19 hours long, and barely makes room for anything post-bop.
-        These conservative types are the worst: they idolize Bird and Diz for how
-        they broke with tradition but hate late period Miles or late period Trane,
-        or hate Ayler for the same reasons. And of course they totally ignore the
-        Europeans post Reinhardt as if European jazz had barely happened at all.\r\n\r\nHere
-        are some of their various crimes:\r\n\r\nMonk is ignored until near the end
-        and when they do eventually discuss him its partly to talk about how he was
-        ignored.\r\nBud Powell barely gets any time.\r\nThey spend something like
-        90 seconds on Mulligan’s piano-less quartet.\r\nBrubeck gets some time, but
-        hardly as much as you might think given the revolutionary nature of the one
-        recording of his they actually acknowledge.\r\nDavis gets more attention than
-        anyone else post-Bird but Davis should get similar amounts of time to Armstrong
-        and Ellington and yet the first 15 hours or so are dedicated primarily to
-        Armstrong, followed by Ellington – Ellington is not mentioned in the earliest
-        segments – and Miles gets major sections of the last few episodes and that
-        is all.\r\nSpeaking of Davis, when he did cool jazz, apparently it was cool,
-        but when other people did it, not so much – now I don’t particularly enjoy
-        cool, but they don’t really provide any reason for their opinions and they
-        shouldn’t ignore the fact that cool jazz has been as popular as bop post-war.\r\nWhat
-        was with that brief, horrible “history” of rock and roll? It was all of 90
-        seconds and seemed to imply that Ray Charles invented it and Elvis made it
-        popular. Um, right…\r\nTrane’s free jazz phase is ignored altogether until
-        the final episode and Coleman gets what feels like 10 minutes.\r\nIn the last
-        episode, when they list contemporary styles of jazz they omit fusion entirely
-        and then later fusion is dismissed as Miles’ attempt to make money, even though
-        if they had actually paid any attention to history, they would know he wasn’t
-        even the first fusion musician. (This is the most egregious error of the entire
-        program. They insist that Miles only embraced fusion because of his experiences
-        at the 1969 Newport Jazz Festival but this is idiotic and easily fact-checked:
-        Miles’ first fusion album – not the first ever – was released in July of 1969,
-        probably prior to the festival, which I believe usually takes place in August.
-        Moreover it was recorded in February, i.e. half a year before the festival.
-        Also the idiots keep calling the instruments used in Fusion “electronic” as
-        if an electric guitar or bass is “electronic.”)\r\nApparently, because Armstrong
-        sang pop tunes that were hits during the British invasion, we should care
-        more about his ’60s work than, say, Miles’ work of the same period, which
-        is basically the embodiment of the “When I was younger things were better”
-        conservatism that ruins this series.\r\nThe brief amount of time they give
-        Mingus is almost entirely dedicated towards his social comment, and not his
-        actual music.\r\nThe Art Ensemble of Chicago gets only a few minutes.\r\nThey
-        and Taylor are pretty much the only people who are addressed in Free post-Coleman,
-        and Taylor gets some flak because apparently he’s just too difficult to bother
-        with. (And the same people who accuse Taylor of being too difficult accuse
-        Miles of pandering…)\r\nHancock is discussed as as sideman only.\r\nThe film
-        completely ignores the following genres (only the ones I can think of off
-        the top of my head):\r\n\r\nChamber jazz;\r\nECM;\r\nFusion (the modern variants
-        with alternative rock and hip hop);\r\nKlezmer jazz;\r\nModern creative;\r\nAnd
-        no doubt many more.\r\nThe documentary further  omits or barely acknowledges
-        many important jazz artists, here are only a few:\r\n\r\nChet Baker (mentioned
-        only in passing);\r\nAnthony Braxton;\r\nDon Cherry (mentioned only as a member
-        of Coleman’s quartet);\r\nSteve Coleman (mentioned only in passing, shockingly
-        as someone we should listen to);\r\nChick Corea;\r\nEric Dolphy;\r\nEvery
-        single European jazz musician post-Reinhardt and every other international
-        jazz performer;\r\nEvery post-Miles fusion performer;\r\nAhmad Jamal (mentioned
-        only in passing);\r\nKeith Jarrett (mentioned only in passing and only in
-        relation to Art Blakey – can you imagine thinking Keith Jarrett is only worth
-        knowing as a sideman to Art Blakey?!?!?);\r\nRoland Kirk;\r\nWes Montgomery
-        and every single post-Charlie Christian jazz guitarist save one I didn’t know
-        (who is mentioned in passing) – that’s right, the guitar as a jazz instrument
-        is ignored from the 1940s onward;\r\nLee Morgan (mentioned only in passing);\r\nBud
-        Powell (mentioned briefly);\r\nEvery major jazz vocalist post-Fitzgerald (though
-        a couple are shown as interviews and Cassandra Wilson gets a sentence);\r\nJohn
-        Zorn;\r\nAnd numerous others I am forgetting – I apologize but I haven’t set
-        out to write a definitive history here, I was just attempting to watch one.\r\nSupposedly
-        many of these people aren’t mentioned or barely mentioned because they helped
-        kill jazz. Clubs closed and people stopped listening because of too much innovation.\r\n\r\nAnd
-        who will safe us from the poverty of self-indulgent free jazz and pandering
-        fusion? Why, it’s Wynton Marsalis, the same guy who we’ve been listening to
-        for 18+ hours. Talk about self-serving… I mean, I don’t know what Burns was
-        thinking but the final hour of this film is practically an advertisement for
-        Wynton and his despicable conservatism. I mean, how can these guys seriously
-        let him say this shit? Your lead interviewee is also the person who “saved”
-        jazz? And you don’t question this? Unbelievable.\r\n\r\nAnd then they give
-        us a list of the people we should be listening to, multiple of whom had participated
-        in the program as interviewees. Thanks, I’ll be sure to listen to these people
-        who are apparently so much better than everyone ignored, who all actually
-        have reputations and make great music.\r\n\r\nBut I’ll give them one thing:
-        At least they have Artie Shaw talking about how much he hated Glenn Miller.
-        That part was awesome.\r\n\r\nIf you want a history of the first decades of
-        jazz, watch this. If you want a history of jazz, read a book, such as Alyn
-        Shipton’s excellent history.\r\n\r\nI really wanted to give this a 3 or lower,
-        however the first 8 episodes are a near-excellent history of jazz in the first
-        half of the 20th century, and so that is why I am being kind and giving it
-        a 4.","spoiler":true,"review":true,"parent_id":0,"created_at":"2024-03-24T21:20:50.000Z","updated_at":"2024-03-24T21:20:50.000Z","replies":13,"likes":0,"user_rating":4,"language":"en","user_stats":{"rating":4,"play_count":10,"completed_count":10},"user":{"username":"rnhaas","private":false,"deleted":false,"name":"rnhaas","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"rnhaas"}}}},{"type":"episode","episode":{"season":28,"number":3,"title":"Sora
+      string: '[{"type":"episode","episode":{"season":5,"number":8,"title":"Blood
+        and Bone","ids":{"trakt":12138436,"tvdb":11194629,"imdb":"tt33023494","tmdb":6745012,"tvrage":null}},"show":{"title":"The
+        Boys","year":2019,"ids":{"trakt":139960,"slug":"the-boys-2019","tvdb":355567,"imdb":"tt1190634","tmdb":76479,"tvrage":null}},"comment":{"id":955318,"comment":"Anticlimactic
+        end to everything.\n\nLet''s start with the most obvious issue: the final
+        showdown with Homelander isn''t even more intense than Herogasm. \n\nIt replicates
+        that 3-vs-1 fight, but delivers only a minuscule fraction of its impact. The
+        V1 doesn''t even make any difference during their fight. And no, there''s
+        not even a moment of Homelander snapping against civilians, something the
+        show had teased and many had expected across five seasons. \n\nAnd when it
+        finally comes down to Butcher vs Homelander, the supposed ultimate showdown,
+        it barely lasts a few minutes. \n\nIt references the comics showdown, but
+        weakly. The scene feels more interested in making Homelander a theatrical
+        embarrassment than actually dealing with the years of enmity between them.
+        Even Butcher''s rage feels toned down. He beat Mesmer and Gunpowder with more
+        ferocious hatred than he brings to the man who ruined his life. The editing
+        and SFX is so weak and much less punchy here than in those fights.\n\nEverything
+        the show set up across seven years of 5 seasons (and 2 seasons of Gen V) amounts
+        to almost nothing.\n\nRyan, supposedly the ultimate weapon against Homelander,
+        ends up meaning nothing. Even the consequence of him being the son of the
+        most powerful supe is brushed off instantly.\n\nButcher''s V-induced cancer
+        is similarly brushed off instantly.\n\nMarie Moreau and Gen V, who were also
+        set up as the weapon against Homelander, have been hanging in the background
+        this whole season, and they stayed there in the background.\n\nAfter the showdown,
+        the show once again tries to reference the comics with the final moments between
+        Hughie and Butcher, but it is so rushed that the decision leading to Butcher''s
+        choice feels dumbfounding. By that point, the dust has already settled. The
+        finale has to invent excuses to escalate things again, and it becomes stupid.\n\nIn
+        general I feel like so much is swept under the rug.\n\nOh Father''s demise
+        is so mundane. The Deep''s fate, as the last remaining member of The Seven,
+        is expected but also thrown aside too quickly. They don''t even do anything
+        meaningful with his gills, which earlier seasons had already established as
+        his ultimate weakness.\n\nBy the credits, The Boys'' adventure has ended,
+        and most of them get a happy ending. \n\nBut because the show sweeps so much
+        under the rug, the status quo barely changes. Vought persists. Bob Singer
+        returns. It feels like we''re back in Season 2.\n\nThis could have been a
+        scathing critique of how the rich and powerful survive everything, if the
+        show had stayed true to the earlier seasons'' criticism of supe power.\n\nButcher''s
+        final message could have worked beautifully. But because everything is rushed
+        and anticlimactic, it just feels lazy, and worse, like setup for future spinoffs.
+        The aftermath of Homelander''s extravagant rule is barely explored beyond
+        a news-anchor summary that lasts less than a minute.\n\nA sad, pathetic ending
+        for a series that started with a genuinely diabolical run. Their planned spinoffs
+        aren''t worth it.","spoiler":false,"review":true,"parent_id":0,"created_at":"2026-05-20T08:32:30.000Z","updated_at":"2026-05-20T08:41:09.000Z","replies":1,"likes":97,"user_rating":4,"language":"en","user_stats":{"rating":4,"play_count":1,"completed_count":1},"user":{"username":"xaliber","private":false,"deleted":false,"name":"Pradipa
+        PR","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"xaliber"}}}},{"type":"movie","movie":{"title":"Project
+        Hail Mary","year":2026,"ids":{"trakt":531178,"slug":"project-hail-mary-2026","imdb":"tt12042730","tmdb":687163}},"comment":{"id":937063,"comment":"If
+        you go into this expecting something like The Martian or Interstellar, you
+        will be disappointed. This is nothing like a typical sci-fi film, even though
+        on paper it should have all the ingredients of a serious sci-fi story. It
+        has the typical \"save the Earth\" stakes, the scientific problem that has
+        to be solved, but somehow, it manages to come off as unserious and oddly shallow.
+        Instead of tension, action and complexity, we get to see a Pixar-like bromance
+        between Ryan Gosling and an alien 3D rock filled with playful, hopeful, emotionally
+        safe dialogue, which makes you question whether you are watching a sci-fi
+        movie or a kids movie. Gosling comes across as an insufferable man-child,
+        the rock thing looks weird and is annoyingly hard to connect to, and aside
+        from the central duo the rest of the cast barely registers: they might as
+        well be called \"Generic Scientist #2921\". I''m pretty sure a 13-year-old
+        would love this. To me as an adult it felt insulting by how watered-down it
+        is. It seems like they stripped out a lot of the science in the book, anything
+        scientific is explained quickly and cleanly, which removes a lot of the complexity
+        and tension one would expect from such a movie. If you enjoyed this , please
+        feel free to comment and explain what I missed in this movie, I''d love to
+        hear others thoughts on this.","spoiler":false,"review":true,"parent_id":0,"created_at":"2026-03-22T21:58:25.000Z","updated_at":"2026-05-14T20:49:05.000Z","replies":9,"likes":120,"user_rating":4,"language":"en","user_stats":{"rating":4,"play_count":2,"completed_count":1},"user":{"username":"AlmosYT","private":false,"deleted":false,"name":"AlmosYT","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"almosyt"}}}},{"type":"episode","episode":{"season":5,"number":7,"title":"The
+        Frenchman, the Female, and the Man Called Mother''s Milk","ids":{"trakt":12138435,"tvdb":11194628,"imdb":"tt33023489","tmdb":6745011,"tvrage":null}},"show":{"title":"The
+        Boys","year":2019,"ids":{"trakt":139960,"slug":"the-boys-2019","tvdb":355567,"imdb":"tt1190634","tmdb":76479,"tvrage":null}},"comment":{"id":953190,"comment":"We
+        won''t be seeing Homelander''s brutal rampage, apparently. \n\nAt this point,
+        I realized the show is moving in a completely different direction from what
+        it initially set up. After the intense ending of the previous episode, this
+        one is strangely downbeat. No aggressive bloodshed, no intense fights, just
+        a quiet acceptance of defeat before everyone gets pep-talked out of it.\n\nThe
+        throwback to the Season 1 pep talk could''ve worked if the season had not
+        already done the whole \"finding hope\" speech several times. They seem to
+        want to show this through Starlight, who ends up helping the very people who
+        hated her. But even that feels underwhelming. Starlight is not exactly popular
+        for her combat prowess, so making her beat some minor antagonists does not
+        really secure her place. They could''ve let her fight Black Noir 2 instead.
+        \n\nAs a penultimate episode, it keeps making character decisions that should
+        have happened episodes ago: The Deep''s turn, the Kimiko decision, and the
+        show''s confused handling of Gen V. Marie''s rebuttal to Starlight about being
+        dismissed so unceremoniously almost feels meta, because that is exactly what
+        the show has done to the characters from a spinoff set up to be (supposedly)
+        secret weapons against Homelander.\n\nThis is a very character-focused episode,
+        but these loose ends should have been tied earlier.\n\nSpeaking of loose ends,
+        Soldier Boy''s arc seems to be over, and they just shelve him again like they
+        did in Season 3. For what? He was set up like Butcher''s Homelander for MM
+        (as referenced in this very episode), but his exit is deeply anticlimactic.
+        It feels like they cannot kill off a popular character because Vought Rising
+        is coming. At this point, I would not be surprised if Soldier Boy shows up
+        in The Boys: Mexico too.\n\nThe episode does have stakes. A major character
+        dies. But even that lands in... a very strangely flat, anticlimactic manner.
+        It should feel emotional and consequential, especially after all the death
+        flags raised in this and previous episodes. But it just happens. Even Homelander''s
+        involvement does not make it feel heavier. He strangely just flies away.\n\nWhich
+        brings me back to Homelander. This whole season has not portrayed him as the
+        raging maniac the show seemed to promise. \n\nSure, he murders people once
+        or twice when they fail to satisfy his god complex, but he is weirdly restrained.
+        This is not the Homelander from Season 2 imagining himself mowing down a crowd
+        with his lasers. He is restrained with Firecracker, with The Deep, even with
+        the protagonists - some of whom get caught (again), btw, and still are not
+        dealt with by him directly.\n\nIt feels like the season is writing Homelander
+        as someone trying to build a legacy, not as an uncontrollable lunatic finally
+        going off the rails.\n\nThat could have been an interesting direction if it
+        had been set up more coherently. But with only one episode left, I am not
+        confident. He feels so toned down that I doubt the finale will be anywhere
+        near as bombastic as Herogasm.\n\n\"Can you at least write a finale that isn''t
+        just a dogpile?\" one in-universe actor says to the director. \"Homelander
+        is rebooting the universe,\" the director replies. \n\nAt this point, that
+        line feels more like a super-meta commentary on how the show is setting everything
+        up for spinoffs.","spoiler":false,"review":true,"parent_id":0,"created_at":"2026-05-13T15:38:56.000Z","updated_at":"2026-05-13T15:38:56.000Z","replies":0,"likes":20,"user_rating":4,"language":"en","user_stats":{"rating":4,"play_count":1,"completed_count":1},"user":{"username":"xaliber","private":false,"deleted":false,"name":"Pradipa
+        PR","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"xaliber"}}}},{"type":"episode","episode":{"season":28,"number":3,"title":"Sora
         Not Sorry","ids":{"trakt":13352067,"tvdb":11256177,"imdb":"tt38043392","tmdb":6606755,"tvrage":null}},"show":{"title":"South
         Park","year":1997,"ids":{"trakt":2177,"slug":"south-park","tvdb":75897,"imdb":"tt0121955","tmdb":2190,"tvrage":null}},"comment":{"id":885289,"comment":"[6.8/10]
         Let’s start with this. *South Park* is a pretty gross show by nature. Blood
@@ -184,27 +193,268 @@ http_interactions:
         a whole. But when using that “fake news” excuse to let the world write off
         arguably the grossest thing *South Park* has ever produced, well, the point
         is made.","spoiler":true,"review":true,"parent_id":0,"created_at":"2025-11-13T22:02:48.000Z","updated_at":"2025-11-13T22:02:48.000Z","replies":0,"likes":10,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":1,"completed_count":1},"user":{"username":"AndrewBloom","private":false,"deleted":false,"name":"Andrew
-        Bloom","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"andrewbloom"}}}},{"type":"episode","episode":{"season":2,"number":8,"title":"2:00
-        P.M.","ids":{"trakt":13822407,"tvdb":11518797,"imdb":"tt37971409","tmdb":6768680,"tvrage":null}},"show":{"title":"The
-        Pitt","year":2025,"ids":{"trakt":232884,"slug":"the-pitt","tvdb":448176,"imdb":"tt31938062","tmdb":250307,"tvrage":null}},"comment":{"id":928971,"comment":"I
-        loved this one. Nothing much actually happens but it ran smooth like butter.
-        \r\nThe whole coming up with solutions at the beginning for the situation
-        and throughout the episode, with Javadi/Ogilvie and Santos/Langdon forced
-        to work together and therefore leading their complicated relationship to a
-        new level. Not necessarily better, but it''s a development. And that Santos
-        comment in the end kinda reframed her attitude to me: she isn''t sure she
-        can trust a former addict, it''s not personal. I wonder if she was scarred
-        before in that area, that would add a great layer to her as a character, to
-        their dynamic, and a really interesting aspect to consider in such cases.
-        \r\nWith the added McKay 9-years-sober comment. I like that she seemed quite
-        judgemental at the start of season 1 but she turned out to be the opposite,
-        and it could be another instance of showing support network for addiction
-        cases. I don''t recall if she had much screen time with Langdon but it could
-        be another dynamic to explore. A good, solid friendship bonded by shared trauma
-        - like the good ole ones.\r\nHoward was a great patient and another instance
-        of \"let''s learn not to judge a book by its cover\". \r\nAnd mad respect
-        for Mohan (if she does) and those who''d consider going into geriatrics, gotta
-        be one of the most heartbreaking ones personally","spoiler":true,"review":true,"parent_id":0,"created_at":"2026-02-27T20:31:52.000Z","updated_at":"2026-02-27T20:31:52.000Z","replies":0,"likes":7,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":1,"completed_count":1},"user":{"username":"JoJoConejo","private":true,"deleted":false,"ids":{"slug":"jojoconejo"}}}},{"type":"episode","episode":{"season":3,"number":5,"title":"Tribal","ids":{"trakt":1002079,"tvdb":4874873,"imdb":"tt3842948","tmdb":1016902,"tvrage":null}},"show":{"title":"Banshee","year":2013,"ids":{"trakt":41522,"slug":"banshee","tvdb":259765,"imdb":"tt2017109","tmdb":41727,"tvrage":null}},"comment":{"id":716309,"comment":"Random
+        Bloom","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"andrewbloom"}}}},{"type":"episode","episode":{"season":5,"number":8,"title":"Blood
+        and Bone","ids":{"trakt":12138436,"tvdb":11194629,"imdb":"tt33023494","tmdb":6745012,"tvrage":null}},"show":{"title":"The
+        Boys","year":2019,"ids":{"trakt":139960,"slug":"the-boys-2019","tvdb":355567,"imdb":"tt1190634","tmdb":76479,"tvrage":null}},"comment":{"id":955522,"comment":"Oi,
+        fuck off, you cunts\n\nThis was honestly so much better than I expected and
+        I have no clue how the creators managed to pull this off. It wasn’t 100% perfect
+        and still had a couple of things here and there which could’ve been improved.
+        But as finales go this was a really good one.\n\nOver this season we have
+        lost a fair share of major characters, like A-Train and Frenchie, but in this
+        episode we have possibly lost the most characters in any The Boys episode.
+        It was absolutely fucking diabolical and full of shocking moments\n\nButcher,
+        Ryan and Kimiko teaming up to take down Homelander once and for all was one
+        heck of an intense battle. Everything about that fight was perfect and they
+        really gave him one hell of a beating. Even managing to take away his powers
+        \n\nAs we all know Homelander thinks he’s some kind of God, so taking away
+        his powers was probably the most satasfying way to humiliate him. It was really
+        strange seeing him with no powers though, and also kind of funny at the same
+        time. The way he was trying to fly away was hilarious.  \n\nHomelander may
+        have been the most powerful Supe in the show, but without his powers, Butcher
+        is far superior. He literally beat the absolute shit out of Homelander, and
+        I’m so glad he finally got his revenge for what he did to Becca. It’s been
+        a long time coming, cunts.\n\nThe Deep also met his end by the hands (or fins)
+        of the very thing he used to love, fish. I can’t believe he made it this far
+        in the series to be honest, but I’m glad he did because I like The Deep a
+        lot. He’s a douchebag, sure, but I find him so funny. I kind of wish he redeemed
+        himself though, but can he really be redeemed for the shit he’s done ?  He’s
+        too much of a twat to ever change.\n\nAfter Terror’s death and the rejection
+        of Ryan sticking with him, Butcher went back to his old tricks again at taking
+        out every single Supe on Earth. This was his plan all along so I’m not surprised
+        it was gonna end like this. Luckily Hughie got there just in time to end Butcher’s
+        plan. \n\nAs Hughie is beat up by Butcher, the only way to stop him is to
+        kill him, and sadly he did. I’m absolutely devastated about Butcher’s death
+        because he’s my favourite character in the show. His final scene with him
+        and Hughie was such an emotional one.\n\nEven after everything butcher has
+        done, Hughie still would’ve saved him which says a lot about the person he
+        is, and why he reminds him of Lenny. Hughie always brought out the good side
+        of Butcher, which is what we saw in his final moments. RIP, Cunt. \n\nI just
+        wanna quickly say that out of all the deaths in this episode, I think Terror’s
+        one hit the most for me, and the fact he died in real life made it even more
+        tragic. RIP you little rascal. \n\nThe episodes conclusion was fantastic,
+        and I loved how we saw what the characters got up to after these diabolical
+        events. Kimiko went to that restaurant Frenchie liked, MM got married, and
+        Hughie started up his own computing business. “Piano Man” really made this
+        scene stand out so much more. I loved it a lot. \n\nThe only flaws I have
+        with this finale is how it didn’t include Soldier Boy, I mean we could’ve
+        at least seen him one last time after how big of a character he’s been in
+        this season. It just felt like a silly decision in my opinion to not include
+        him in this. I think it would’ve been nice to see Queen Maeve make a cameo
+        here as well.  \n\nApart from that, I really enjoyed this finale and it’s
+        a great end to a series that I love so much. I remember when the first season
+        came out and how much I loved it, now seeing it end is just sad. I’ll be sure
+        to give it multiple re watches in the future though and I’m excited to see
+        how they handle Vought Rising.\n\nFair well Cunts!!","spoiler":true,"review":true,"parent_id":0,"created_at":"2026-05-20T19:57:13.000Z","updated_at":"2026-05-20T21:53:33.000Z","replies":1,"likes":6,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":2,"completed_count":1},"user":{"username":"Biscuitjack","private":false,"deleted":false,"name":"Biscuitjack","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"biscuitjack"}}}},{"type":"episode","episode":{"season":5,"number":4,"title":"King
+        of Hell","ids":{"trakt":12138432,"tvdb":11148641,"imdb":"tt33023431","tmdb":6745009,"tvrage":null}},"show":{"title":"The
+        Boys","year":2019,"ids":{"trakt":139960,"slug":"the-boys-2019","tvdb":355567,"imdb":"tt1190634","tmdb":76479,"tvrage":null}},"comment":{"id":947821,"comment":"We
+        are in halftime of season 5, the final season of The Boys, but it doesn’t
+        feel like that.\n\n50% of this episode feel more like a build-up for the upcoming
+        rip off prequel tv show “Vaught Rising“ than an episode solely for “The Boys“.  Yes,
+        we are in the final season, but the family arc of Annie - last episode she
+        leaves Hougie just to come back at the end of this episode - was just to stretch
+        the season. The Deep was in previous seasons good for the fun part in the
+        show, but now he’s not even funny and I’ve got the feeling his character doesn’t
+        go anywhere in this fifth season and I’m very surprised that he’s still alive:
+        he doesn’t really contribute anything to the show.\n\nWhat’s really interesting
+        about this episode:\n- Soldier Boy shows some humanity \n- Homelanders „weakness“:
+        lethal radiation \n- Homelander realizes that Butcher has no Anti-Supe virus
+        \n- MM and Butcher becoming buddies again\n- the plan of Homelander becoming
+        a God and the re-foundation of a democratic Church \n\nSo, all in all, it’s
+        an ok episode with some character development but too much eye candy and fan
+        service for the upcoming prequel tv show and too less focus on this final
+        season.","spoiler":false,"review":true,"parent_id":0,"created_at":"2026-04-24T14:10:49.000Z","updated_at":"2026-04-25T20:13:18.000Z","replies":0,"likes":7,"user_rating":5,"language":"en","user_stats":{"rating":5,"play_count":1,"completed_count":1},"user":{"username":"Monsieur
+        FU","private":false,"deleted":false,"name":"Monsieur FU","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"monsieur-fu"}}}},{"type":"episode","episode":{"season":1,"number":10,"title":"Rubincon","ids":{"trakt":13617413,"tvdb":11418824,"imdb":"tt34127868","tmdb":6594801,"tvrage":null}},"show":{"title":"Star
+        Trek: Starfleet Academy","year":2026,"ids":{"trakt":203632,"slug":"star-trek-starfleet-academy","tvdb":433120,"imdb":"tt8622160","tmdb":223530,"tvrage":null}},"comment":{"id":933954,"comment":"[85/100]
+        The finale of *Starfleet Academy*’s first season hits all its marks. All the
+        narrative and emotional bills that have come due are paid. The episode touches
+        on just about every character arc and significant plot point. And it resolves
+        toward Star Trek’s indomitable themes of compassion and belonging. This is
+        a sound, sturdy swan song for the series’ first academic year.\r\n\r\nBut
+        it also rarely rises above “pretty good” and “pretty satisfying.” “Rubincon”
+        checks all of the boxes. I have a couple of technical nitpicks (like why didn’t
+        the Venari Ral ships’ sensors detect the holographic ruse?) and objections
+        to how certain story threads seem rushed. But the finale ably delivers on
+        the promises made from the first episode, and offers an all-around conclusion
+        that answers the big questions about plot, character, and theme.\r\n\r\nThe
+        show just struggles to find that extra layer of magic, of meaning, of more,
+        that the best installments of the franchise use to fly higher. You can''t
+        fault the construction here, which frankly feels more watertight and cohesive
+        than a lot of modern Star Trek’s grand blazing finales. But the ability to
+        elevate those key moments from something functional into something transcendent
+        is intermittent at best.\r\n\r\nThe peak of that is the grand “Starfleet on
+        Trial” setpiece orchestrated by Nus Brakka. The whole affair is pure Trek.
+        You can question why the bad guy would go to such lengths to ruin the Federation’s
+        reputation in such an over-the-top fashion.\r\n\r\nBut the show trial works
+        within the fig leaf of Brakka trying to rally his own Federation alternative,
+        and if the series’ has established one thing about its baddie, it''s that
+        he’s an attention-seeking drama queen. So all of this feels in character.
+        And grandiose courtroom confrontations where enlightened explorers and resentful
+        detractors debate the merits of Starfleet is a time-honored tradition in the
+        franchise.\r\n\r\nOnly, it’s also all kind of ridiculous. The trashed, spray-painted,
+        “Derelicte” aesthetic of the repurposed atrium looks like an imitation of
+        something out of a mid-1990s Batman movie. The swooping camera shots with
+        cable news chyrons are corny as hell. And it has to be said -- as incredible
+        of an actor as Paul Giamatti is, we’ve reached the point where it feels more
+        like he’s doing a parody of a Star Trek villain than playing a Star Trek villain.\r\n\r\nI’d
+        guess that part of how they got a performer of his caliber on board is by
+        pitching the show as an opportunity for him to ham it up with abandon. I can
+        respect the approach. He’s making choices, certainly. But it’s hard to take
+        Nus Brakka seriously as a character when what we get is closer to his take
+        on Rhino in *The Amazing Spider-Man 2* than his grounded, layered character
+        in *The Holdovers*. \r\n\r\nEven then, “Rubincon” introduces some worthwhile
+        concepts into the fold. Brakka exposits his backstory, of Starfleet vessels
+        ignoring their desperate pleas for help until the locals fired on a ship and
+        were obliterated. It is not just conspicuous character motivation being dumped
+        on the audience, but his pitch to the galaxy. In his eyes, the Federation
+        are a bunch of pompous, uncaring aristocrats, lording their laws and their
+        resources over the rest of the interstellar community. His pitch -- that they
+        were building a weapon that could recreate The Burn, that he’s fighting in
+        the name of transparency, that we want to democratize power apart from this
+        collection of self-appointed do-gooders -- has a surface-level of appeal.\r\n\r\nHowever
+        contrived the “Starfleet on Trial” situation is as a way to turn interpersonal
+        drama into political/philosophical drama, I appreciate Ake’s rebuttals, for
+        the most part. Her point that the Federation’s study of the Omega particle
+        is for energy, and that it’s Brakka who weaponized it, is a strong one. Her
+        suggestion that Nus is exaggerating since Starfleet doesn’t fire on civilians
+        carries weight. And most of all, I love her point that, however much Brakka
+        and his family might genuinely have been suffering, they were in a community
+        that was mining something valuable. There were people who had nothing, and
+        the Federation had to triage, however uncomfortable that may have been.\r\n\r\nThat
+        is a tough but fair reality, that sometimes the people who are suffering the
+        most get the first bits of attention when supplies are short, and people who
+        are at a manageable level of suffering get passed over. Tough calls about
+        who to help and who to prioritize have to be made. That''s not always pretty,
+        but it’s a fair defense of this society and its institutions, in a way beyond
+        the mercenary motivations dressed up in populist rhetoric that Brakka offers.\r\n\r\nBut
+        then, the cross-examination turns personal, through Anisha. Whatever tough
+        calls the Federation has to make, however optimistic its principles. In practice
+        their system robbed Anisha of twelve years with her son. It is the original
+        sin of this series, and the fairest critique offered here. However good the
+        Federation’s intentions are, is it worth holding onto? Could it be beyond
+        reform, if it allows something like this to happen?\r\n\r\nAnisha’s recriminations
+        are as much an appeal to emotion as they are a firmly logical argument, but
+        the point lands. Ake feels the pain of what happened with the Mir family,
+        but she also let it happen, and has the luxury of taking moral standards and
+        coming back when she feels like it that people like Anisha and Caleb didn’t.
+        That stings, and it should.\r\n\r\nOf course, *Starfleet Academy* isn’t just
+        going to leave things there. Our heroes are naturally going to try to defend
+        and rehabilitate the Federation and justify their choices. And frankly it’s
+        where the show loses me a bit.\r\n\r\nAke bringing up that a fellow parent
+        died (conveniently three days before retirement, no less!) during the crime
+        that cost Anisha her son and her freedom doesn’t sit easy with me. The charitable
+        version of her case is that many people have suffered losses in these hard
+        times: Nala lost her son; that family lost their husband and father, and of
+        course, Anisha was separated from her child. Using those common losses as
+        a basis for mutual understanding and sympathy, rather than vengeance, to do
+        good rather than extract a pound of flesh, is a worthwhile theme.\r\n\r\nBut
+        much of it’s phrased in a way that basically sounds like a justification for
+        the felony murder rule. What we were told in the first episode made it sound
+        like a desperate mother who badly needed food and supplies threw her lot in
+        with the wrong people to try to get them. The fact that she had her freedom
+        taken away for so long, kept from her son, when she didn’t pull the trigger,
+        feels like injustice.\r\n\r\nTo have the voice of wisdom and reason in the
+        show basically say, “You walked onto the ship with a weapon and didn’t stop
+        Brakka, so this is on you,” gives me heartburn in a series that seemed founded
+        on the difference between what’s technically legal and what’s just. Maybe
+        that''s not what the writers 100% intended exactly, but the implications aren’t
+        great.\r\n\r\nIt’s the same hesitation I have in the otherwise lovely scene
+        between Caleb and Tamira. Their emotional reunion is one of the most cathartic
+        points in the episode. There is a cleverness to combining Tamira’s powers
+        and Caleb’s memories of his mother to create what is essentially a homing
+        signal. The fact that it requires Caleb to open himself to Tamira, where before
+        that prospect drove a wedge between them before, shows growth and vulnerability
+        in each of them. And Caleb’s affirmation of Tamira, including the powers she
+        feared would drive him away, is wonderful.\r\n\r\nBut when Caleb says she
+        doesn’t need her inhibitor,I think the show means to have him convey that
+        her different ways of perceiving and interacting with the world are a gift,
+        not a curse, and that she is wonderful and worthy just as she is. But given
+        the metaphors for mental illness that have been in play this season, it comes
+        with an unfortunate implication of “You don’t really have to take your meds”
+        a la *Garden State*. That sits uneasy with me too.\r\n\r\nThe other rebuttals
+        to Nus and Anisha’s accusations are less problematic, but still land somewhere
+        between “fine” and a headscratch. I get what “Rubincon” is going for with
+        Ake’s gotcha moment. Piecing together that Brakka’s father set his community
+        ablaze, not Starfleet, thanks to Caleb’s knowledge of both science and the
+        Federation is a decent enough way to show that he’s been learning things in
+        his first year at the Academy, and that they even have practical use.\r\n\r\nBut
+        the whole “Nuh uh, turns out it wasn’t Starfleet that fired on you after all!”
+        reveal feels too cute by half. As with the pushback to Anisha, taking a position
+        adjacent too “the Federation is always right and your problems are self-made,”
+        doesn’t sit comfortably in a show that just paid tribute to *Deep Space Nine*.\r\n\r\nAgain,
+        you can see what the series is going for. There’s a canny contrast between
+        Brakka, who never let go of his childhood hatred and encouraged a scared child
+        to do the same, and Caleb, who has learned to move past his reflexive scorn
+        for the Federation and taken a more mature and healing view of it. The charges
+        that Nus represents an “us vs. them” mentality and is basically an overgrown
+        child comes with salient political commentary to boot. But solving a mystery
+        nobody asked for, that exonerates Starfleet of any wrongdoing, is a peculiar
+        way to dramatize it.\r\n\r\nWhat makes more sense is for Caleb himself to
+        dive in and make a spirited defense of the Federation. And on paper, it’s
+        good enough. He says all the right things, about finding friends, learning
+        from Chancellor Ake, and finding a home. But frankly, much of it falls flat.
+        Maybe it’s because the speech is fairly generic. Maybe it’s because the performer
+        still isn’t quite up to this big monologues. Maybe it’s because the score
+        swells and the camera slowly zooms in and there’s all these other signals
+        that feel like the show trying to convince you this is a moving affirmation
+        of the Academy and the values it represents with bombast rather than just
+        letting the moment thrive on its own.\r\n\r\nWhat’s funny is that this scene
+        is wildly outstripped by the one that Caleb shares with Commander Reno when
+        working to fix the warp core. Their interaction is much less flashy, much
+        more grounded, and much more basic in its presentation. Yet, somehow, that
+        gives it more power because it feels real.\r\n\r\nBig cinematic moments where
+        you deliver a speech to a galactic audience laying out what you’ve learned
+        about an institution and yourself are rare for anyone. But matter-of-fact
+        encouragement and acceptance from a mentor in the midst of doing good work
+        together is much more relatable. Reno’s reassurance to Caleb -- that he’s
+        not broken, that he doesn’t get people hurt, and that his going back to help
+        his friends shows the kind of altruism and loyalty that are at the heart of
+        Starfleet’s values -- is a better and truer vindication of Caleb and his time
+        on the *Athena* than anything grandiosely declared or debated in the shadow
+        of Nus Brakka.\r\n\r\nFrankly, the rest of the business on the ship outdoes
+        the big debate in the atrium by quite a bit. The script finds ways for everyone
+        to be involved. The whole situation is a pretty convenient excuse for the
+        kids to have to run the ship, but it works! Reymi has some bumps in the road,
+        but ably flies the ship. Jay-Den isn’t a holo-expert, but gets to help be
+        a healer for the Doctor. Caleb helps generate the program that can stop Nus’
+        superweapon. In addition to Tamira’s psychic abilities, she figures out how
+        to deploy it. And after much stress over it, Genesis gets to take the conn
+        and sit in the big chair. (Even if the “Wait, I have to pee” joke is about
+        as facepalm-worthy a line as there’s been in Star Trek.)\r\n\r\nOnce again,
+        though, the peak of it all comes from Sam. I really wish we had more time
+        to flesh this storyline out, but the reveal of the reasons behind her reluctance
+        around Genesis is strong. I love the notion that when she reflects on who
+        she was before, Sam winces at the sense that she was Genesis’ admirer and
+        puppy dog. It’s understandable, and relatable for anyone who matured and felt
+        awkward about the person you were before. But Genesis affirming her, and saying
+        that their friendship was always earnest and equal from her perspective, is
+        sweet as hell, and gives Sam the confidence to help her dad and save the day.\r\n\r\nThat''s
+        the thing about “Rubicon”. All the pieces of the puzzle are there. The Doctor’s
+        brain-scrambled puzzle is a little goofy, but no more so than other Treknobabble
+        solutions to scientific problems. The way the cadets have to unpack all the
+        usual “ship’s in danger” challenges like the crews of old is neat, and we
+        see them working every step of the problem to liberate the Federation from
+        Braka’s trap. Some points are certainly quick or convenient, but everyone’s
+        involved, and the incremental progress to make it all work is often paired
+        with significant emotional undercurrents that make it more than just an arbitrary
+        exercise or another galactic threat.\r\n\r\nI can''t fault the finale for
+        soundness. “Rubicon” does what it needs to do, giving each of our cadets a
+        win, discrediting the season’s villain, and showing Caleb not only independently
+        choosing Starfleet himself but convincing his mother it’s the right place
+        for him. These are necessary beats to honor what the show’s first year on
+        the air has been building to. It manages that credibly, if not unimpeachably.\r\n\r\nAt
+        the same time, though, sometimes it feels more like an assemblage of various
+        solid pieces rather than a greater whole that can truly move you or impress
+        you with its ability to make something meaningful out of all these constituent
+        parts. The notes are all there, but somehow the melody isn’t quite what it
+        could be.\r\n\r\nStill, as with the cadets, “Rubicon” caps off a rocky but
+        promising year for *Starfleet Academy*. Admittedly, the series seemed to whipsaw
+        between great episodes and rough ones and mediocre ones. But its highs were
+        high enough, and intentions strong enough, that there’s reason to expect good
+        things to come for next year’s class. This final episode can''t quite pull
+        off the uplifting affirmation of its cadets and its benediction for the Academy
+        itself that the show seems to be going for. Yet, despite some growing pains,
+        there’s reason to hope this series can have a bright future.","spoiler":true,"review":true,"parent_id":0,"created_at":"2026-03-13T04:10:03.000Z","updated_at":"2026-03-13T04:10:03.000Z","replies":2,"likes":5,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":1,"completed_count":1},"user":{"username":"AndrewBloom","private":false,"deleted":false,"name":"Andrew
+        Bloom","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"andrewbloom"}}}},{"type":"episode","episode":{"season":3,"number":5,"title":"Tribal","ids":{"trakt":1002079,"tvdb":4874873,"imdb":"tt3842948","tmdb":1016902,"tvrage":null}},"show":{"title":"Banshee","year":2013,"ids":{"trakt":41522,"slug":"banshee","tvdb":259765,"imdb":"tt2017109","tmdb":41727,"tvrage":null}},"comment":{"id":716309,"comment":"Random
         thoughts as I watched this episode:\n\nHoly shit! They finally changed the
         sad chords! It only took them 25 episodes to finally play a different 4 notes
         when they want the audience to feel sad. I literally said last episode that
@@ -304,336 +554,199 @@ http_interactions:
         series finale was a decent end to the show. As much as I thought this show
         was underwhelming and not as good as it could''ve been, as well as being sarcastic
         about certain things that were convenient or ridiculous, I''ll miss this show.
-        It was entertaining enough.","spoiler":false,"review":true,"parent_id":0,"created_at":"2021-12-11T19:57:16.000Z","updated_at":"2021-12-11T19:57:16.000Z","replies":8,"likes":5,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":3,"completed_count":1},"user":{"username":"LegendaryFang56","private":false,"deleted":false,"name":"Lineage","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"legendaryfang56"}}}},{"type":"episode","episode":{"season":3,"number":3,"title":"D-Day","ids":{"trakt":13642176,"tvdb":11413552,"imdb":"tt37532358","tmdb":6617354,"tvrage":null}},"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}},"comment":{"id":922489,"comment":"Let''s
-        see what we got this week.\r\n\r\n- Jeff Daniels and the dinner were nice\r\n-
-        Brian lines and singing at the store was cringe\r\n- Gaby: \"... at that gorgeous
-        woman with all those curves and lashes like butterfly wings\". Let''s recall
-        that she''s only seen her lashing out at Jorge at his workplace. But it''s
-        fine cause she''s gorgeous and has nice lashes! Go scream in people''s faces
-        in public tomorrow, Gaby and Liz say it''s ok ❤.\r\n- Then Sean says \"being
-        accountable matters\". Gaby: \"I see what this is. You wanna smooch her\".
-        Then she has a lovely and deep speech, but do we always have to balance those
-        out not with funny and silly stuff which is great, but whatever that thing
-        was before?\r\n- WAIT. Julie appeared and no one said that she''s hot and
-        stunning and...??? Are we celebrating her enough? What''s going on here? I''m
-        furious.\r\n- Liz and epidural, making total sense finally\r\n- \"guys...
-        lock the fuck in\". There''s not a single case in which \"locking in\" is
-        fine to be used, after the amount of times I''ve heard it in the past year\r\n-
-        Paul suggesting that Alice doesn''t have to tell Jimmy about inviting grandpa
-        to her graduation seems like a shitty tip that happens only in a world where
-        writers want Jimmy and his dad to bury the hatchet. That''s not how you get
-        there tho.\r\n- Brian and the checklist moment is emblematic of how monodimensional
-        they turned him into. Before he was a friend, he was there for Jimmy and had
-        this nurturing side... now it''s been more than one season where he''s just...
-        this. Nervous, hyperactive, wanting to be at brunch. Give him back some more
-        layer and some trope less.\r\n- Somehow when I saw Kellie before I was like:
-        that''s Lisa Gilroy. Well no, but actually yes and here she is\r\n- \"Being
-        a woman in America today is brutal\". It''s true, this administration is trash,
-        but when they phrase stuff like that feels just like wanting to give validation
-        to the viewer\r\n- That anesthesiologist felt like a less creepy The Todd\r\n-
-        Liz, Ava and Jimmy are fire together tho. Great chemistry and best part of
-        the episode so far.\r\n- Summer steals every scene she''s in\r\n- Damn, that
-        Twix metaphor hits hard! \"You think I wanna be alone forever? You see this
-        Twix? You see it just dangling there? I am that candy bar. I know that I have
-        to drop and I am just clinging to my old life\". Liz: \"what''s holding you
-        back, bubba?\". J: \"Do you know what every relationship has in common? They
-        all fucking end. Somebody falls out of love. Somebody cheats. Somebody dies.
-        I do not think that I can handle another bad ending. \"\r\nTHIS is Shrinking
-        at its best and why I love it. Cut the wannabe CoolRelatable stuff, and we''re
-        on. And I might be a little Jimmy in my view of relationships.\r\n- This is
-        the Liz we love as well\r\n- Ah, wish granted immediately: that Brian-Ava
-        scene was lovely.\r\n\r\nWeirdly enough, when they focus on this stuff everything
-        works","spoiler":true,"review":true,"parent_id":0,"created_at":"2026-02-11T20:38:39.000Z","updated_at":"2026-02-11T20:38:53.000Z","replies":1,"likes":5,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"Snowy_CapHaddock","private":true,"deleted":false,"ids":{"slug":"snowy_caphaddock"}}}},{"type":"episode","episode":{"season":1,"number":7,"title":"The
-        Black Spot","ids":{"trakt":13539333,"tvdb":11326661,"imdb":"tt38116637","tmdb":6548356,"tvrage":null}},"show":{"title":"IT:
-        Welcome to Derry","year":2025,"ids":{"trakt":195268,"slug":"it-welcome-to-derry","tvdb":418424,"imdb":"tt19244304","tmdb":200875,"tvrage":null}},"comment":{"id":894815,"comment":"Episode
-        7 of _IT: Welcome to Derry_ tried to be grand by showcasing the tragedy of
-        the Black Spot and delving into Pennywise’s past, but for me the execution
-        fell flat in rhythm, impact, and narrative cohesion, which is why I would
-        rate it **3/10**. The flashback to Bob Gray in 1908 was supposed to be disturbing,
-        yet I found it overly long and uninvolving, with revelations explained too
-        directly and stripped of the mystery that could have built tension. The Black
-        Spot tragedy, which I expected to carry the same emotional brutality as in
-        Stephen King’s work, felt rushed and lacked dramatic weight.\r\n\r\nThe uneven
-        pacing bothered me most: the episode swings between horror moments and drawn-out
-        explanations, leaving me with a sense of drag and monotony. The attempt to
-        show that Pennywise isn’t the only villain came across as misplaced, since
-        the social antagonisms hinted at weren’t developed convincingly.\r\n\r\nIn
-        the end, I felt the episode squandered the potential of the source material
-        and worked more like filler than a meaningful step forward in the story. It
-        lacked emotional impact, suffered from poor direction, and lost the constant
-        atmosphere of terror. Instead of being devastating and memorable, the chapter
-        felt long, not very frightening, and dramatically weak, fully justifying my
-        **3/10** rating.","spoiler":false,"review":true,"parent_id":0,"created_at":"2025-12-08T19:16:46.000Z","updated_at":"2025-12-08T19:16:46.000Z","replies":0,"likes":6,"user_rating":3,"language":"en","user_stats":{"rating":3,"play_count":1,"completed_count":1},"user":{"username":"diegoarmandothe","private":false,"deleted":false,"name":"Diego
-        Armando","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"diegoarmandothe"}}}},{"type":"episode","episode":{"season":4,"number":5,"title":"The
-        Joy of Cooking","ids":{"trakt":13512043,"tvdb":11355515,"imdb":"tt38677125","tmdb":6527392,"tvrage":null}},"show":{"title":"The
-        Witcher","year":2019,"ids":{"trakt":138163,"slug":"the-witcher-2019","tvdb":362696,"imdb":"tt5180504","tmdb":71912,"tvrage":null}},"comment":{"id":881996,"comment":"A
-        laid-back episode of importance and character development, which primarily
-        focused on Geralt and the others. We spent precious and essential, worthwhile
-        time with these characters, learning more about them and diving into an exploration
-        of the backstories of each member of the Hansa, which was great. All of that
-        developed and made their dynamic more believable; we have grown closer to
-        them.\r\n\r\nSome might consider it boring... uninteresting, while others
-        will like it better than previous episodes because they''ve been enjoying
-        that portion of the season the most... and here we have an episode that primarily
-        focuses on it without devoting the usual focus and screen time to the other
-        plotlines. I really enjoyed it.\r\n\r\nIn particular, Regis''s backstory was
-        compelling. Telling it through animation was an interesting choice... an effective
-        choice. The art style was well done and looked great.\r\n\r\nJaskier''s history/backstory
-        with Valdo Marx, told through the musical number, was alright. I''m sure plenty
-        of people loved it, specifically a decent number of the average viewers who
-        aren''t well-versed in social media (but not limited to them, as a noticeable
-        fanbase of his exists online, the stan variety). I imagine it''s partly because
-        they particularly love his character, partly because it''s whimsical, vivacious,
-        and fun; they also love musicals. I wasn''t much of a fan, but I didn''t dislike
-        it, either. It just wasn''t for me. Musicals (and musical numbers) might not
-        be for me.\r\n\r\nEmhyr''s identity being brought to light by Cahir to Geralt
-        (and everyone else) was a satisfying moment for me. I''m unsure how this reveal
-        compares to the books, whether it occurred at this point in the story or all
-        the way at the end, possibly whenever Geralt and Emhyr come face to face.
-        I wasn''t bothered by its execution here. But I can see how some people, show-only
-        viewers or book readers, might find it anticlimactic and not as weighty and
-        meaningful as it should''ve been... as big a deal, or having occurred too
-        soon (if it did happen later on in the books).\r\n\r\nAs a show-only layman,
-        that reveal landed for me. It was impactful, stirring exciting anticipation
-        within me for the eventual vis-à-vis confrontation between Geralt and Emhyr,
-        as well as strengthening those same feelings (but in a positive way) regarding
-        him and Ciri''s inevitable (destined) reunion.\r\n\r\nThe highlight, though,
-        was undoubtedly Geralt and Ciri''s flashback and the moment where she knighted
-        him. That scene was sublime, with the tenderness, care, and love present from
-        him toward her and from her toward him. If people weren''t convinced by Liam
-        Hemsworth''s take on the character and on board with him yet, still propping
-        Henry Cavill, that scene should immediately change their opinion. If not,
-        all hope is lost. His portrayal of Geralt is considerably better, with greater
-        depth and a broader range... of emotionality and vulnerability, which continues
-        to improve. Easily the best episode of the season so far.\r\n\r\nI also want
-        to highlight James Purefoy, the actor playing the character of Skellen. He
-        has delivered an excellent, convincing performance in the few scenes with
-        him, especially the subtlety. The calm and collected schemer aspect of Skellen''s
-        characterization. He effectively conveys the subtle undertones of uncertainty:
-        someone who exudes a powerful presence but also an unstable disposition, potentially
-        emphasizing that he''s on the verge of losing it at any moment.\r\n\r\nIt
-        would''ve been preferable if we had gotten more of him up to this point. The
-        fewer appearances are fine. At the very least, he''ll be on screen more often
-        in the remaining episodes, hopefully, and possibly even in the fifth final
-        season.\r\n\r\nSuch an unexpectedly stand-out performance, in addition to
-        being an intriguing character and a subtle draw of this season. In a similar
-        vein, both performance-wise and character-wise, so are Laurence Fishburne
-        and Regis: unexpected stand-outs.","spoiler":true,"review":true,"parent_id":0,"created_at":"2025-11-05T07:12:50.000Z","updated_at":"2025-11-05T07:12:50.000Z","replies":2,"likes":4,"user_rating":8,"language":"en","user_stats":{"rating":8,"play_count":1,"completed_count":1},"user":{"username":"LegendaryFang56","private":false,"deleted":false,"name":"Lineage","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"legendaryfang56"}}}},{"type":"episode","episode":{"season":1,"number":3,"title":"Vitus
-        Reflux","ids":{"trakt":13617400,"tvdb":11391555,"imdb":"tt34127729","tmdb":6594794,"tvrage":null}},"show":{"title":"Star
-        Trek: Starfleet Academy","year":2026,"ids":{"trakt":203632,"slug":"star-trek-starfleet-academy","tvdb":433120,"imdb":"tt8622160","tmdb":223530,"tvrage":null}},"comment":{"id":914151,"comment":"This
-        is brutal disgrace. [spoiler]  Much worse then I had anticipated already.
-        Reminded me, of being at age around 10 years old shooting among kids at the
-        fucking end of the village near the forest and talking stupid shit at the
-        old green radios, pretending we are where we wore not or other stupid shit,
-        hiding among the trees and hitting a leg or shit and jump scaring some other
-        kid or I shoot you in the ass and lossing our shit because we think this shit
-        is funny and shit with whatever the shit we had left in the hands and making
-        it out funnier then it is. Can you imagine, the level of stupidity, I was
-        bored to see this. It''s childish, stupid, no smart tactic no flanking nothing
-        to engage our mind to agree that someone was thinking on this while writing
-        this bullshit, I had a smarter way of thinking when I was 11, making poweder
-        bombs out of aluminium foil and powder to dig a fucking hole for whatever
-        dumb reason my kid mind had at the time. I think, oh how they had massacured
-        this star treck accademy show, pranking and wtf was this I don''t know, like
-        a fucking school and shit, Disgracefull !  [/spoiler] This is kindergarden
-        or school shit... mhm.","spoiler":false,"review":true,"parent_id":0,"created_at":"2026-01-22T14:33:34.000Z","updated_at":"2026-01-22T14:36:23.000Z","replies":1,"likes":5,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"tirranaa","private":true,"deleted":false,"ids":{"slug":"tirranaa"}}}},{"type":"movie","movie":{"title":"28
-        Years Later: The Bone Temple","year":2026,"ids":{"trakt":1033738,"slug":"28-years-later-the-bone-temple-2026","imdb":"tt32141377","tmdb":1272837}},"comment":{"id":911396,"comment":"This
-        is easily the best movie in the franchise.\n\nI so wished I started off 2026
-        with this movie as man it was fucking Insane. I literally loved every single
-        thing about this film and it’s hands down my favourite movie of the franchise,
-        which goes to show how good it is really as every film so far has been pretty
-        damm awesome…. yes even 28 weeks later which in my opinion is extremely underrated.\n\nThe
-        story was fantastic and I like how it focused a lot more on Dr Ian Kelson’s
-        character, with him trying to tame a zombie, yeah I know how mad that sounds
-        as I never actually thought that was possible until now but it happened, he
-        did in fact tame a freaking zombie and it was so awesome. I actually didn’t
-        think I’d like that idea as it is a little silly, but it honestly worked for
-        me and I just loved seeing Ian and Samson having a super fun time together.
-        It made me so happy. I thought Samson was so badass too.\n\nI find it pretty
-        funny how the zombies ain’t even the real threat here, it’s a bloody gang
-        of Jimmy Savile’s and let me tell you, they were way more scary and super
-        gross than any freaking zombie as they were absolute psychopaths and were
-        so messed up in the head, especially the leader, Jimmy Crystal as he was the
-        worst Jimmy of the lot. He was just insane and I’m so glad he got what was
-        coming to him. It was such a satisfying death.\n\nThe ending gave me so many
-        goosebumps as it has to be one of the best endings I have seen in such a long
-        time. It was absolutely amazing and so much happened, like Dr Ian Kelson’s
-        insanely beast and badass Iron Maiden performance, the satisfying death of
-        Jimmy Crystal and of course the surprise cameo from Cillian Murphy coming
-        back as Jim which was so crazy, I seriously can’t wait for the next film now
-        as it’s going to be just absolutely insane at this point.\n\nI know I’ve mentioned
-        it a couple times now but I’ve gotta mention again about how badass that Iron
-        Maiden scene was as it was literally so cool and is easily my favourite part
-        of the movie. It was pure freaking gold, I absolutely loved it and I wanna
-        watch it again so badly. The Number Of The Beast has automatically been added
-        to one of my rock playlists now. Rock on Voldermort!!.\n\nI can’t really express
-        enough about how much I adored this film as it was absolute cinema in my opinion
-        and I seriously can’t see many films this year beating it. What an awesome
-        movie and of course it’s getting a 10. Hell yeah.\n\n10/10","spoiler":true,"review":true,"parent_id":0,"created_at":"2026-01-16T01:03:12.000Z","updated_at":"2026-01-16T01:07:08.000Z","replies":6,"likes":23,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":2,"completed_count":1},"user":{"username":"Biscuitjack","private":false,"deleted":false,"name":"Biscuitjack","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"biscuitjack"}}}}]'
-  recorded_at: 2026-03-02 12:41:33
+        It was entertaining enough.","spoiler":false,"review":true,"parent_id":0,"created_at":"2021-12-11T19:57:16.000Z","updated_at":"2021-12-11T19:57:16.000Z","replies":8,"likes":5,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":3,"completed_count":1},"user":{"username":"LegendaryFang56","private":false,"deleted":false,"name":"Lineage","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"legendaryfang56"}}}},{"type":"episode","episode":{"season":5,"number":1,"title":"Fifteen
+        Inches of Sheer Dynamite","ids":{"trakt":12138429,"tvdb":10825283,"imdb":"tt32368472","tmdb":5788295,"tvrage":null}},"show":{"title":"The
+        Boys","year":2019,"ids":{"trakt":139960,"slug":"the-boys-2019","tvdb":355567,"imdb":"tt1190634","tmdb":76479,"tvrage":null}},"comment":{"id":942933,"comment":"I
+        genuinely thought this was bad. First, why is Kimiko talking now? Her character
+        was perfect as she was. it was nice having a cool mute character. Awful decision.\n\nThe
+        A-Train action sequence makes no sense and ruins his entire redemption arc.
+        If he really perceives time this way when moving fast, then the first episode
+        of this whole show where he ran through Hughie''s girlfriend is now suddenly
+        changed. I thought the point was that he was careless and accidentally ran
+        through her without caring, which made sense. But if he perceives time the
+        way we see it in this episode then it means he ran through her 100% on purpose,
+        not by accident. And if he was murdering people on purpose like that, then
+        his redemption arc doesn''t work the same way.\n\nAfter a subpar season 4
+        and now this episode, it really feels like this show is just an unintentional
+        parody of itself. They''re trying to keep doing the same stuff and be shocking
+        and tense, but it falls flat compared to the highs of past great episodes.
+        I also hate the amount of times I heard AI mentioned in this episode. It was
+        painful to listen to. It''s never a good thing when a show tries to bring
+        current things/trends into later seasons. It''s like how during the early
+        2020s shows and movies started inserting COVID references. Every single one
+        of those references made those shows and movies worse because of them. It
+        feels cheap, lazy, and out of place.\n\nI''m glad the first 3 seasons were
+        great, but this isn''t good anymore.","spoiler":true,"review":true,"parent_id":0,"created_at":"2026-04-09T18:13:09.000Z","updated_at":"2026-04-09T18:13:09.000Z","replies":2,"likes":4,"user_rating":4,"language":"en","user_stats":{"rating":4,"play_count":1,"completed_count":1},"user":{"username":"ragreynolds","private":false,"deleted":false,"name":"ragreynolds","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"ragreynolds"}}}}]'
+  recorded_at: 2026-05-24 13:42:17
 - request:
     method: GET
     uri: https://api.trakt.tv/comments/recent/shouts/all?include_replies=FALSE&limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:40 GMT
+      date: Sun, 24 May 2026 13:42:23 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb90a6e8137b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=3600, public
       content-encoding: gzip
-      etag: W/"dafd658d425142a4e50bba0d876377a6"
-      expires: Mon, 02 Mar 2026 13:41:33 GMT
+      etag: W/"745cee9133f87f34bc262d83e9fbf4d6"
+      expires: Sun, 24 May 2026 14:42:18 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '728913'
+      x-pagination-item-count: '747821'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '72892'
+      x-pagination-page-count: '74783'
       x-permitted-cross-domain-policies: none
-      x-request-id: 69d32df4-36d0-415d-9a94-d23934670df8
-      x-runtime: '6.411289'
+      x-request-id: 0deec05a-175d-4d0d-8160-9f0b8ad3cf2c
+      x-runtime: '4.955495'
       x-xss-protection: '0'
-      cf-ray: 9d6079f06c14b932-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: "[{\"type\":\"movie\",\"movie\":{\"title\":\"Borderlands\",\"year\":2024,\"ids\":{\"trakt\":223432,\"slug\":\"borderlands-2024\",\"imdb\":\"tt4978420\",\"tmdb\":365177}},\"comment\":{\"id\":930083,\"comment\":\"It
-        feels like Cate Blanchett was the only one trying. That Kevin Hart is a terrible
-        actor is nothing new. And I don't blame the kid for this role. But wtf happened
-        to Jamie Lee Curtis?\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:40:05.000Z\",\"updated_at\":\"2026-03-02T12:40:05.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":3,\"language\":\"en\",\"user_stats\":{\"rating\":3,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Silrog\",\"private\":false,\"deleted\":false,\"name\":\"Silrog\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"silrog\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":18,\"number\":14,\"title\":\"Finale:
-        Part 2\",\"ids\":{\"trakt\":4035996,\"tvdb\":7619788,\"imdb\":\"tt11932866\",\"tmdb\":2183055,\"tvrage\":null}},\"show\":{\"title\":\"Project
-        Runway\",\"year\":2004,\"ids\":{\"trakt\":1673,\"slug\":\"project-runway\",\"tvdb\":74285,\"imdb\":\"tt0437741\",\"tmdb\":1685,\"tvrage\":null}},\"comment\":{\"id\":930082,\"comment\":\"I
-        don't know, was not expected\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:36:50.000Z\",\"updated_at\":\"2026-03-02T12:36:50.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"AKW\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"akw\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"The
-        Bluff\",\"year\":2026,\"ids\":{\"trakt\":634944,\"slug\":\"the-bluff-2026\",\"imdb\":\"tt14181714\",\"tmdb\":799882}},\"comment\":{\"id\":930081,\"comment\":\"The
-        production values were great, but everything feels mid and like you’ve seen
-        this kind of storyline before.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:26:31.000Z\",\"updated_at\":\"2026-03-02T12:26:31.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":5,\"language\":\"en\",\"user_stats\":{\"rating\":5,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"hu.MAN1\",\"private\":false,\"deleted\":false,\"name\":\"AJ\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"hu-man1\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":2,\"number\":1,\"title\":\"Xbalanque\",\"ids\":{\"trakt\":3591415,\"tvdb\":7250050,\"imdb\":\"tt9068158\",\"tmdb\":1835646,\"tvrage\":null}},\"show\":{\"title\":\"Mayans
-        M.C.\",\"year\":2018,\"ids\":{\"trakt\":133615,\"slug\":\"mayans-m-c\",\"tvdb\":349659,\"imdb\":\"tt5715524\",\"tmdb\":76231,\"tvrage\":null}},\"comment\":{\"id\":930080,\"comment\":\"I
-        can't believe they changed the opening theme. There's no comparison, the other
-        one is much better.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:16:52.000Z\",\"updated_at\":\"2026-03-02T12:16:52.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":0,\"completed_count\":0},\"user\":{\"username\":\"Sebastião
-        Nunes\",\"private\":false,\"deleted\":false,\"name\":\"Sebastião\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"sebastiao-nunes\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Mouse\",\"year\":2021,\"ids\":{\"trakt\":172127,\"slug\":\"mouse-2021\",\"tvdb\":394955,\"imdb\":\"tt13634792\",\"tmdb\":117378,\"tvrage\":null}},\"comment\":{\"id\":930079,\"comment\":\"the
-        things i'd do to rewatch this for the first time again.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:16:41.000Z\",\"updated_at\":\"2026-03-02T12:16:41.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":20,\"completed_count\":20},\"user\":{\"username\":\"ajl0vr\",\"private\":false,\"deleted\":false,\"name\":\"g\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"ajl0vr\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Cold
-        Storage\",\"year\":2026,\"ids\":{\"trakt\":540330,\"slug\":\"cold-storage-2026\",\"imdb\":\"tt8879928\",\"tmdb\":696393}},\"comment\":{\"id\":930078,\"comment\":\"It
-        started as thrilling as the Book, BUT;\\nWhen i heard BEACH BOYS (nothing
-        against em!)... i wondered!\\nA... COMEDY?\\nSorry, but... ANYBODY who read
-        the book, or listened to the great AUDIOBOOK will confirm:\\nThis is NOT a
-        comedy.\\nI'm disapointed... and waited SO LONG for this Movie to come.\\nIn
-        the end i say:\\nIF you watch it... KNOWING to GET a Comedy...then it's STILL
-        ENTERTAINING!\\nBut... DON'T expect something like Pitt's \\\"World War Z\\\"\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:09:34.000Z\",\"updated_at\":\"2026-03-02T12:09:34.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":6,\"language\":\"en\",\"user_stats\":{\"rating\":6,\"play_count\":0,\"completed_count\":0},\"user\":{\"username\":\"Cosmina
-        N.\",\"private\":false,\"deleted\":false,\"name\":\"CosmoNoMAD\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"cosmina-n\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":9,\"title\":\"Merge!
-        Serpo Dover Demon Nessie!\",\"ids\":{\"trakt\":12263439,\"tvdb\":10624777,\"imdb\":\"tt33609044\",\"tmdb\":5585814,\"tvrage\":null}},\"show\":{\"title\":\"Dan
-        Da Dan\",\"year\":2024,\"ids\":{\"trakt\":215309,\"slug\":\"dan-da-dan\",\"tvdb\":432832,\"imdb\":\"tt30217403\",\"tmdb\":240411,\"tvrage\":null}},\"comment\":{\"id\":930076,\"comment\":\"I
-        f love the ending!\U0001F606\U0001F602\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:42:30.000Z\",\"updated_at\":\"2026-03-02T11:42:30.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"HelmHeim\",\"private\":false,\"deleted\":false,\"name\":\"Sir
-        Ghatti\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"helmheim\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":13,\"number\":3,\"title\":\"March
-        1, 2026\",\"ids\":{\"trakt\":13911669,\"tvdb\":null,\"imdb\":null,\"tmdb\":6850459,\"tvrage\":null}},\"show\":{\"title\":\"Last
-        Week Tonight with John Oliver\",\"year\":2014,\"ids\":{\"trakt\":60267,\"slug\":\"last-week-tonight-with-john-oliver\",\"tvdb\":278518,\"imdb\":\"tt3530232\",\"tmdb\":60694,\"tvrage\":null}},\"comment\":{\"id\":930075,\"comment\":\"Solid
-        episode, appreciated the dive into the politics and reality of body cams\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:39:21.000Z\",\"updated_at\":\"2026-03-02T11:39:21.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"SunnyGabe\",\"private\":false,\"deleted\":false,\"name\":\"Gabe\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"sunnygabe\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Another\",\"year\":2012,\"ids\":{\"trakt\":42364,\"slug\":\"another\",\"tvdb\":254349,\"imdb\":\"tt2176165\",\"tmdb\":42589,\"tvrage\":null}},\"comment\":{\"id\":930074,\"comment\":\"They
-        made a 12-episode show from what could've been a ninety-minute max movie.
-        I thought the OPs were just stupid at the beginning, but as I went on and
-        on with this show, I started realising they're just stretching it for literally
-        no good reason. They had a really good premise, but then they dragged it on
-        and turned it into something even less than mediocre.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:25:54.000Z\",\"updated_at\":\"2026-03-02T11:25:54.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":4,\"language\":\"en\",\"user_stats\":{\"rating\":4,\"play_count\":12,\"completed_count\":12},\"user\":{\"username\":\"jarvis-16024922\",\"private\":false,\"deleted\":false,\"name\":\"Rahul
-        Singh\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"jarvis-16024922\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":1,\"title\":\"Cobwebs\",\"ids\":{\"trakt\":4542373,\"tvdb\":7996548,\"imdb\":\"tt9894872\",\"tmdb\":2470680,\"tvrage\":null}},\"show\":{\"title\":\"30
-        Coins\",\"year\":2020,\"ids\":{\"trakt\":152990,\"slug\":\"30-coins\",\"tvdb\":369414,\"imdb\":\"tt9764386\",\"tmdb\":89844,\"tvrage\":null}},\"comment\":{\"id\":930073,\"comment\":\"The
-        original Spanish audio dub sounds very off, like they re-recorded it in a
-        studio rather than on location or something, it's very off putting. \\nthe
-        series looks more like a telenovela, or soap. Won't be watching more.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T11:22:55.000Z\",\"updated_at\":\"2026-03-02T11:22:55.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":2,\"language\":\"en\",\"user_stats\":{\"rating\":2,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Kalamoren\",\"private\":false,\"deleted\":false,\"name\":\"Kalamoren\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"kalamoren\"}}}}]"
-  recorded_at: 2026-03-02 12:41:40
+      string: "[{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":5,\"title\":\"Episode
+        5\",\"ids\":{\"trakt\":7397012,\"tvdb\":null,\"imdb\":null,\"tmdb\":4245996,\"tvrage\":null}},\"show\":{\"title\":\"Ariyoshi
+        Assists\",\"year\":2023,\"ids\":{\"trakt\":203239,\"slug\":\"ariyoshi-assists\",\"tvdb\":431664,\"imdb\":\"tt26766489\",\"tmdb\":220783,\"tvrage\":null}},\"comment\":{\"id\":956800,\"comment\":\"Netflix:
+        Season 1 - Episode 5 “Tokyo Voiceover Film Festival”\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T13:39:48.000Z\",\"updated_at\":\"2026-05-24T13:39:48.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"DarkAngelX2\",\"private\":false,\"deleted\":false,\"name\":\"Dark Angel\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"darkangelx2\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Grogu
+        Cutest In The Galaxy\",\"year\":2024,\"ids\":{\"trakt\":272557,\"slug\":\"grogu-cutest-in-the-galaxy\",\"tvdb\":null,\"imdb\":\"tt34932446\",\"tmdb\":281383,\"tvrage\":null}},\"comment\":{\"id\":956799,\"comment\":\"Unfortunately,
+        I'm probably not a fan of these short content and the stories and animations...\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T13:30:29.000Z\",\"updated_at\":\"2026-05-24T13:30:29.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":4,\"language\":\"en\",\"user_stats\":{\"rating\":4,\"play_count\":13,\"completed_count\":13},\"user\":{\"username\":\"Idek\",\"private\":false,\"deleted\":false,\"name\":\"Adam
+        K.\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"idek\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"The
+        Mandalorian\",\"year\":2019,\"ids\":{\"trakt\":137178,\"slug\":\"the-mandalorian\",\"tvdb\":361753,\"imdb\":\"tt8111088\",\"tmdb\":82856,\"tvrage\":null}},\"comment\":{\"id\":956798,\"comment\":\"The
+        series demonstrated that Star Wars doesn't need the Jedi to tell an engaging
+        story; that there's a vast universe beyond them, where both evil and good
+        heroes compete. On the plus side, it also offers plenty of tidbits for fans
+        of the universe, including references to earlier canon films and series.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T13:25:49.000Z\",\"updated_at\":\"2026-05-24T13:25:49.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":32,\"completed_count\":24},\"user\":{\"username\":\"Idek\",\"private\":false,\"deleted\":false,\"name\":\"Adam
+        K.\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"idek\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"The
+        Bus: A French Football Mutiny\",\"year\":2026,\"ids\":{\"trakt\":1369664,\"slug\":\"the-bus-a-french-football-mutiny-2026\",\"imdb\":\"tt37024319\",\"tmdb\":1678844}},\"comment\":{\"id\":956797,\"comment\":\"Astrology
+        over tactics. France collapsed..\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T13:14:57.000Z\",\"updated_at\":\"2026-05-24T13:14:57.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"GabsAvila\",\"private\":false,\"deleted\":false,\"name\":\"Gabriel
+        Ávila\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"gabsavila\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"The
+        Book of Boba Fett\",\"year\":2021,\"ids\":{\"trakt\":171129,\"slug\":\"the-book-of-boba-fett\",\"tvdb\":393589,\"imdb\":\"tt13668894\",\"tmdb\":115036,\"tvrage\":null}},\"comment\":{\"id\":956796,\"comment\":\"The
+        series isn't bad, it's an interesting take on Bobba as not entirely \\\"evil\\\",
+        but it's a shame it's just a spin-off for The Mandalorian... because the potential
+        was there.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T13:14:42.000Z\",\"updated_at\":\"2026-05-24T13:14:42.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":7,\"completed_count\":7},\"user\":{\"username\":\"Idek\",\"private\":false,\"deleted\":false,\"name\":\"Adam
+        K.\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"idek\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":4,\"title\":\"The
+        War on Drugs\",\"ids\":{\"trakt\":14161469,\"tvdb\":11729338,\"imdb\":\"tt35412961\",\"tmdb\":7238701,\"tvrage\":null}},\"show\":{\"title\":\"Legends\",\"year\":2026,\"ids\":{\"trakt\":253005,\"slug\":\"legends-2026\",\"tvdb\":453615,\"imdb\":\"tt33265765\",\"tmdb\":262280,\"tvrage\":null}},\"comment\":{\"id\":956795,\"comment\":\"A
+        vicious ending to the episode!\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T13:14:38.000Z\",\"updated_at\":\"2026-05-24T13:14:38.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"The
+        Ace Face\",\"private\":false,\"deleted\":false,\"name\":\"The Ace Face\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"the-ace-face\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Legends\",\"year\":2026,\"ids\":{\"trakt\":253005,\"slug\":\"legends-2026\",\"tvdb\":453615,\"imdb\":\"tt33265765\",\"tmdb\":262280,\"tvrage\":null}},\"comment\":{\"id\":956794,\"comment\":\"The
+        cast is excellent, and the story is entertaining, but comparisons to The Wire
+        show a fundamental misunderstanding of the latter.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T12:59:42.000Z\",\"updated_at\":\"2026-05-24T12:59:42.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":6,\"completed_count\":6},\"user\":{\"username\":\"SummerBran\",\"private\":false,\"deleted\":false,\"name\":\"Sebastian
+        Hagedorn\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"summerbran\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":3,\"number\":8,\"title\":\"Slip\",\"ids\":{\"trakt\":2442703,\"tvdb\":6024002,\"imdb\":\"tt5719546\",\"tmdb\":1319840,\"tvrage\":null}},\"show\":{\"title\":\"Better
+        Call Saul\",\"year\":2015,\"ids\":{\"trakt\":59660,\"slug\":\"better-call-saul\",\"tvdb\":273181,\"imdb\":\"tt3032476\",\"tmdb\":60059,\"tvrage\":null}},\"comment\":{\"id\":956793,\"comment\":\"this
+        episode is a masterclass at how to swap medicine ,every little detail , the
+        training, the perfomance by Nacho❤. wow!!!! and slipin jimmy just layin on
+        the floor - that's cinema\U0001F64C\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T12:57:00.000Z\",\"updated_at\":\"2026-05-24T12:57:00.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"vantageview25\",\"private\":false,\"deleted\":false,\"name\":\"Vantage\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"vantageview25\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":8,\"title\":\"Happiness
+        Belongs to He Who Loves\",\"ids\":{\"trakt\":13809804,\"tvdb\":11793220,\"imdb\":\"tt35521767\",\"tmdb\":6756902,\"tvrage\":null}},\"show\":{\"title\":\"Berlin
+        and the Lady with an Ermine\",\"year\":2026,\"ids\":{\"trakt\":310740,\"slug\":\"berlin-and-the-lady-with-an-ermine\",\"tvdb\":477676,\"imdb\":\"tt42178219\",\"tmdb\":308014,\"tvrage\":null}},\"comment\":{\"id\":956792,\"comment\":\"Ultimo
+        episodio che messo una pezza ai 7 precedenti, dove si è parlato solo di amori
+        e tradimenti.\\nAvessero fatto 5 episodi probabilmente sarebbe uscita una
+        bella miniserie.\\nMi è piaciuto molto rivedere il Professore!\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T12:50:25.000Z\",\"updated_at\":\"2026-05-24T12:50:25.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"it\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"NickBitta\",\"private\":false,\"deleted\":false,\"name\":\"Nico
+        Giusti\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"nickbitta\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Mortal
+        Kombat II\",\"year\":2026,\"ids\":{\"trakt\":746852,\"slug\":\"mortal-kombat-ii-2026\",\"imdb\":\"tt17490712\",\"tmdb\":931285}},\"comment\":{\"id\":956791,\"comment\":\"Mortal
+        Kombat 2 tries to keep the franchise alive, but honestly, it doesn’t bring
+        much new to the table.\\nStory (1/2): Just a continuation of the old plot,
+        nothing fresh.\\nPlot (1/2): Predictable and expected, no surprises.\\nVisual
+        Effects (0.5/2): Weak and unimpressive.\\nActing (0.5/2): Flat performances,
+        lacking maturity.\\nEnjoyment (1/2): Average—watchable but not exciting.\\n⭐
+        Overall Score: 5/10\\nIt’s a film that fans might watch for continuity, but
+        weak effects and acting keep it from standing out.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T12:49:44.000Z\",\"updated_at\":\"2026-05-24T12:49:44.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":5,\"language\":\"en\",\"user_stats\":{\"rating\":5,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"LAA1984\",\"private\":false,\"deleted\":false,\"name\":\"LAA1984\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"laa1984\"}}}}]"
+  recorded_at: 2026-05-24 13:42:22
 - request:
     method: GET
     uri: https://api.trakt.tv/comments/updates/all/all?include_replies=FALSE&limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:45 GMT
+      date: Sun, 24 May 2026 13:42:28 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb92a985837b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=3600, public
       content-encoding: gzip
-      etag: W/"470ef85ecaacbf88b89c311ce28bf4db"
-      expires: Mon, 02 Mar 2026 13:41:40 GMT
+      etag: W/"138b7f981e8e0465d0917126bde616ea"
+      expires: Sun, 24 May 2026 14:42:23 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '772544'
+      x-pagination-item-count: '792234'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '77255'
+      x-pagination-page-count: '79224'
       x-permitted-cross-domain-policies: none
-      x-request-id: c7ae2a7e-4ed1-483f-b4e9-3ce7dc74b7e4
-      x-runtime: '5.116356'
+      x-request-id: b6294f06-febd-4a67-ab3c-42593b7793a2
+      x-runtime: '4.853090'
       x-xss-protection: '0'
-      cf-ray: 9d607a19d97db932-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: "[{\"type\":\"show\",\"show\":{\"title\":\"The Night Agent\",\"year\":2023,\"ids\":{\"trakt\":184471,\"slug\":\"the-night-agent\",\"tvdb\":407281,\"imdb\":\"tt13918776\",\"tmdb\":129552,\"tvrage\":null}},\"comment\":{\"id\":551359,\"comment\":\"this
-        is soooo NETFLIX!\\r\\nThe quality of the production is below standards, but
-        the best part are the dialogues\\r\\n\\r\\nFirst of all (this is no spoiler)
-        how on earth does he get to blame about the bombing, that he was the architect
-        and ends up on the basement office, that is very stupid\\r\\n\\r\\nFavorite
-        lines:\\r\\n\\r\\n[spoiler]I have no idea what to do but i know where to start
-        - So i don't know what to cook but i have spaggeti\\r\\nThey talk about a
-        drive on the woods, a drive ? what do you mean ? i do not know, oh could it
-        be a hard drive ??!?!???!?!?!? \U0001F606\\r\\nAnd of course a couple(!) of
-        psycho killers, not two, i mean a romantic crazy couple who love each other
-        to the death\\r\\n[/spoiler]\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2023-03-24T08:07:02.000Z\",\"updated_at\":\"2023-03-24T08:08:53.000Z\",\"replies\":0,\"likes\":3,\"user_rating\":6,\"language\":\"en\",\"user_stats\":{\"rating\":6,\"play_count\":28,\"completed_count\":28},\"user\":{\"username\":\"great_vc\",\"private\":false,\"deleted\":false,\"name\":\"Vassilis\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"great_vc\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Borderlands\",\"year\":2024,\"ids\":{\"trakt\":223432,\"slug\":\"borderlands-2024\",\"imdb\":\"tt4978420\",\"tmdb\":365177}},\"comment\":{\"id\":930083,\"comment\":\"It
-        feels like Cate Blanchett was the only one trying. That Kevin Hart is a terrible
-        actor is nothing new. And I don't blame the kid for this role. But wtf happened
-        to Jamie Lee Curtis?\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:40:05.000Z\",\"updated_at\":\"2026-03-02T12:40:05.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":3,\"language\":\"en\",\"user_stats\":{\"rating\":3,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Silrog\",\"private\":false,\"deleted\":false,\"name\":\"Silrog\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"silrog\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":2,\"number\":4,\"title\":\"The
-        Demon in the Snow\",\"ids\":{\"trakt\":13426610,\"tvdb\":11296173,\"imdb\":\"tt36758868\",\"tmdb\":6468135,\"tvrage\":null}},\"show\":{\"title\":\"Fallout\",\"year\":2024,\"ids\":{\"trakt\":163965,\"slug\":\"fallout\",\"tvdb\":416744,\"imdb\":\"tt12637874\",\"tmdb\":106379,\"tvrage\":null}},\"comment\":{\"id\":907783,\"comment\":\"They
-        better not kill off Dane, the only likeable member of the brotherhood\U0001F62D\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-01-07T12:53:20.000Z\",\"updated_at\":\"2026-01-07T12:53:20.000Z\",\"replies\":1,\"likes\":11,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"amberrav\",\"private\":false,\"deleted\":false,\"name\":\"amberrav\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"amberrav\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":18,\"number\":14,\"title\":\"Finale:
-        Part 2\",\"ids\":{\"trakt\":4035996,\"tvdb\":7619788,\"imdb\":\"tt11932866\",\"tmdb\":2183055,\"tvrage\":null}},\"show\":{\"title\":\"Project
-        Runway\",\"year\":2004,\"ids\":{\"trakt\":1673,\"slug\":\"project-runway\",\"tvdb\":74285,\"imdb\":\"tt0437741\",\"tmdb\":1685,\"tvrage\":null}},\"comment\":{\"id\":930082,\"comment\":\"I
-        don't know, was not expected\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:36:50.000Z\",\"updated_at\":\"2026-03-02T12:36:50.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"AKW\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"akw\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Deadpool
-        \\u0026 Wolverine\",\"year\":2024,\"ids\":{\"trakt\":395672,\"slug\":\"deadpool-wolverine-2024\",\"imdb\":\"tt6263850\",\"tmdb\":533535}},\"comment\":{\"id\":698062,\"comment\":\"It
-        was just F***ing epic. It's a Deadpool movie through and through.\\r\\nThe
-        opening credits was really good, all the action and gore you'd expect. Then
-        the flashback hit which was so fun with all the different wolverines and cameos.
-        There is no proper story, which has become a trademark for Marvel movies,
-        but it's Deadpool so he definitely gets away with it.\\r\\nAll the different
-        cameos, characters, so so satisfying to fans of the franchise. It's like a
-        treat for all the fans that have stayed with them. I won't spoil anything
-        but the climax was also incredible. These guys were born for these roles.\\r\\nALL
-        HAIL MARVEL JESUS - He just might save them.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2024-07-26T10:36:17.000Z\",\"updated_at\":\"2024-07-26T10:36:17.000Z\",\"replies\":0,\"likes\":2,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"adwaithak\",\"private\":false,\"deleted\":false,\"name\":\"Adwaith
-        Anoop Kumar\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"adwaithak\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"St.
-        Denis Medical\",\"year\":2024,\"ids\":{\"trakt\":235514,\"slug\":\"st-denis-medical\",\"tvdb\":435916,\"imdb\":\"tt21433690\",\"tmdb\":251941,\"tvrage\":null}},\"comment\":{\"id\":797680,\"comment\":\"These
-        types of shows are only as good as the cast that is involved with them. that's
-        100% why The Office and Parks and Rec worked so well. Thankfully they seemed
-        to have done a great job with casting for this one and all the characters/actors
-        seem to have great chemistry. Its worth checking out for sure.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-04-13T06:20:23.000Z\",\"updated_at\":\"2025-04-13T06:23:25.000Z\",\"replies\":0,\"likes\":2,\"user_rating\":6,\"language\":\"en\",\"user_stats\":{\"rating\":6,\"play_count\":25,\"completed_count\":25},\"user\":{\"username\":\"ABSTRACTlegend\",\"private\":false,\"deleted\":false,\"name\":\"ABSTRACTlegend\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"abstractlegend\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"You
-        and I Are Polar Opposites\",\"year\":2026,\"ids\":{\"trakt\":264998,\"slug\":\"you-and-i-are-polar-opposites\",\"tvdb\":457078,\"imdb\":\"tt36034547\",\"tmdb\":278043,\"tvrage\":null}},\"comment\":{\"id\":909497,\"comment\":\"Sometimes
-        I wonder who even rates anime on this site, because how this is sitting at
-        40% (this was before trakt redesign) is beyond my understanding. It honestly
-        looks like one of the best romcoms of the season, and the animation and art
-        are beautiful and faithful to the manga.\\n\\nOn top of that, the whole premise
-        is about how the relationship starts right in the first episode, so we get
-        to see something we usually don’t in most romcoms: the relationship itself
-        and how it develops further. It also looks like this might be a complete adaptation,
-        which is rare for romcoms in general.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-01-11T16:02:46.000Z\",\"updated_at\":\"2026-02-07T11:30:54.000Z\",\"replies\":1,\"likes\":12,\"user_rating\":9,\"language\":\"en\",\"user_stats\":{\"rating\":9,\"play_count\":12,\"completed_count\":6},\"user\":{\"username\":\"Smexhy\",\"private\":false,\"deleted\":false,\"name\":\"Smexhy\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"smexhy\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Boon\",\"year\":1986,\"ids\":{\"trakt\":2544,\"slug\":\"boon\",\"tvdb\":77716,\"imdb\":\"tt0090400\",\"tmdb\":2559,\"tvrage\":null}},\"comment\":{\"id\":927540,\"comment\":\"I
-        liked it when it was first on the telly.  It's quite gentle,  twee  and inoffensive,
-        it also features an absolute who's who of British acting chops.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-02-23T18:07:29.000Z\",\"updated_at\":\"2026-02-23T18:07:29.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":80,\"completed_count\":80},\"user\":{\"username\":\"paulrobson666@duck.com\",\"private\":false,\"deleted\":false,\"name\":\"DryNosedDog\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"paulrobson666-duck-com\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"The
-        Bluff\",\"year\":2026,\"ids\":{\"trakt\":634944,\"slug\":\"the-bluff-2026\",\"imdb\":\"tt14181714\",\"tmdb\":799882}},\"comment\":{\"id\":930081,\"comment\":\"The
-        production values were great, but everything feels mid and like you’ve seen
-        this kind of storyline before.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:26:31.000Z\",\"updated_at\":\"2026-03-02T12:26:31.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":5,\"language\":\"en\",\"user_stats\":{\"rating\":5,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"hu.MAN1\",\"private\":false,\"deleted\":false,\"name\":\"AJ\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"hu-man1\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Cold
-        Storage\",\"year\":2026,\"ids\":{\"trakt\":540330,\"slug\":\"cold-storage-2026\",\"imdb\":\"tt8879928\",\"tmdb\":696393}},\"comment\":{\"id\":930078,\"comment\":\"It
-        started as thrilling as the Book, BUT;\\nWhen i heard BEACH BOYS (nothing
-        against em!)... i wondered!\\nA... COMEDY?\\nSorry, but... ANYBODY who read
-        the book, or listened to the great AUDIOBOOK will confirm:\\nThis is NOT a
-        comedy.\\nI'm disapointed... and waited SO LONG for this Movie to come.\\nIn
-        the end i say:\\nIF you watch it... KNOWING to GET a Comedy...then it's STILL
-        ENTERTAINING!\\nBut... DON'T expect something like Pitt's \\\"World War Z\\\"\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-02T12:09:34.000Z\",\"updated_at\":\"2026-03-02T12:09:34.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":6,\"language\":\"en\",\"user_stats\":{\"rating\":6,\"play_count\":0,\"completed_count\":0},\"user\":{\"username\":\"Cosmina
-        N.\",\"private\":false,\"deleted\":false,\"name\":\"CosmoNoMAD\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"cosmina-n\"}}}}]"
-  recorded_at: 2026-03-02 12:41:45
+      string: "[{\"type\":\"episode\",\"episode\":{\"season\":2,\"number\":15,\"title\":\"Murdoc
+        + Handcuffs\",\"ids\":{\"trakt\":2853272,\"tvdb\":6497157,\"imdb\":\"tt7781504\",\"tmdb\":1423667,\"tvrage\":null}},\"show\":{\"title\":\"MacGyver\",\"year\":2016,\"ids\":{\"trakt\":107792,\"slug\":\"macgyver-2016\",\"tvdb\":311902,\"imdb\":\"tt1399045\",\"tmdb\":67133,\"tvrage\":null}},\"comment\":{\"id\":953565,\"comment\":\"Look
+        who showed up, Michael Des Barres, Nicholas Helman here, is the original Murdoc.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-14T17:50:46.000Z\",\"updated_at\":\"2026-05-14T17:50:46.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Sebastião
+        Nunes\",\"private\":false,\"deleted\":false,\"name\":\"Sebastião\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"sebastiao-nunes\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":1,\"number\":5,\"title\":\"Episode
+        5\",\"ids\":{\"trakt\":7397012,\"tvdb\":null,\"imdb\":null,\"tmdb\":4245996,\"tvrage\":null}},\"show\":{\"title\":\"Ariyoshi
+        Assists\",\"year\":2023,\"ids\":{\"trakt\":203239,\"slug\":\"ariyoshi-assists\",\"tvdb\":431664,\"imdb\":\"tt26766489\",\"tmdb\":220783,\"tvrage\":null}},\"comment\":{\"id\":956800,\"comment\":\"Netflix:
+        Season 1 - Episode 5 “Tokyo Voiceover Film Festival”\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-24T13:39:48.000Z\",\"updated_at\":\"2026-05-24T13:39:48.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"DarkAngelX2\",\"private\":false,\"deleted\":false,\"name\":\"Dark Angel\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"darkangelx2\"}}}},{\"type\":\"movie\",\"movie\":{\"title\":\"Project
+        Hail Mary\",\"year\":2026,\"ids\":{\"trakt\":531178,\"slug\":\"project-hail-mary-2026\",\"imdb\":\"tt12042730\",\"tmdb\":687163}},\"comment\":{\"id\":938874,\"comment\":\"As
+        one might say out there in space, this film was \U0001F44E .\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-28T09:39:20.000Z\",\"updated_at\":\"2026-03-28T09:39:20.000Z\",\"replies\":3,\"likes\":92,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"rosaklebbfoot\",\"private\":false,\"deleted\":false,\"name\":\"Footy
+        foot foot\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"rosaklebbfoot\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":3,\"number\":3,\"title\":\"Episode
+        3\",\"ids\":{\"trakt\":330641,\"tvdb\":322922,\"imdb\":\"tt1543171\",\"tmdb\":321857,\"tvrage\":null}},\"show\":{\"title\":\"The
+        Thick of It\",\"year\":2005,\"ids\":{\"trakt\":4483,\"slug\":\"the-thick-of-it\",\"tvdb\":79843,\"imdb\":\"tt0459159\",\"tmdb\":4507,\"tvrage\":null}},\"comment\":{\"id\":956596,\"comment\":\"Malcolm
+        Tucker furiously calling Miles Jupp Richard F’n Stillgoe made me laugh milk
+        out of my nose. Wasn’t even drinking milk at the time, natch.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-05-23T21:04:38.000Z\",\"updated_at\":\"2026-05-23T21:04:38.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"Goldenarrow74\",\"private\":false,\"deleted\":false,\"name\":\"Solid
+        Gold\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"goldenarrow74\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"The
+        Boys\",\"year\":2019,\"ids\":{\"trakt\":139960,\"slug\":\"the-boys-2019\",\"tvdb\":355567,\"imdb\":\"tt1190634\",\"tmdb\":76479,\"tvrage\":null}},\"comment\":{\"id\":878396,\"comment\":\"Very
+        good show. Very vulgar and unhinged in a good way. It's a different take on
+        the \\\"superhero\\\" stuff that feels refreshing. The story is pretty good,
+        the characters are very good and unique. [spoiler] The Ryan storyline gets
+        pretty annoying though (s3), in s4 it gets better but still annoying [/spoiler]\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-10-27T18:55:30.000Z\",\"updated_at\":\"2025-10-27T18:55:30.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":40,\"completed_count\":40},\"user\":{\"username\":\"imBrega\",\"private\":false,\"deleted\":false,\"name\":\"Matteo\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"imbrega\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"The
+        Boys\",\"year\":2019,\"ids\":{\"trakt\":139960,\"slug\":\"the-boys-2019\",\"tvdb\":355567,\"imdb\":\"tt1190634\",\"tmdb\":76479,\"tvrage\":null}},\"comment\":{\"id\":834493,\"comment\":\"Very
+        good show. Very vulgar and unhinged in a good way. It's a different take on
+        the \\\"superhero\\\" stuff that feels refreshing. The story is pretty good,
+        the characters are very good and unique. [spoiler] The Ryan storyline gets
+        pretty annoying though [/spoiler]\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-07-11T15:07:06.000Z\",\"updated_at\":\"2025-07-11T15:07:06.000Z\",\"replies\":0,\"likes\":1,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":40,\"completed_count\":40},\"user\":{\"username\":\"imBrega\",\"private\":false,\"deleted\":false,\"name\":\"Matteo\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"imbrega\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Wednesday\",\"year\":2022,\"ids\":{\"trakt\":173996,\"slug\":\"wednesday\",\"tvdb\":397060,\"imdb\":\"tt13443470\",\"tmdb\":119051,\"tvrage\":null}},\"comment\":{\"id\":522683,\"comment\":\"Vastly
+        overrated.\\r\\n\\r\\nThis is basically just a Nancy Drew, Veronica Mars style
+        murder mystery, but placed in a supernatural school.\\r\\n\\r\\nIf you're
+        a 30-40-something year old looking to revisit the Addams Family for some creepy
+        capers and what-not. This isn't for you. This is written for alt-teens who
+        grew up on Disney Channel movies and are now at the point in life where they
+        are trying to rebel. The only thing here for the older crowd is Christina
+        Ricci popping up in a new role.\\r\\n\\r\\nThe show is entirely predictable
+        from the moment the \\\"Hyde\\\" (monster) is introduced. Ask yourself, why
+        are certain character 1 and 2 so prominent in the story? What are they seriously
+        offering?... Oh, it's because they're the bad guy and whoever are the bad
+        guys at the start obviously won't end up being so. There are zero surprises
+        here.\\r\\n\\r\\nDespite the world it's set in, werewolves, sirens etc., it's
+        entirely unimaginative and lacking in any real depth. Wednesday is just a
+        15/16 year old kid trying to be a detective and sticking her nose in where
+        she has no business. Everyone keeps telling her to go away and stop and she
+        is just annoying as anything. She also just isn't creepy and at all threatening
+        like Christina Ricci was in the 90s. Jenna Ortega seems to act like she's
+        watched one too many movies of Hollywood depicting an autistic kid and rolled
+        it all into one reclusive bundle. It doesn't help that the script is bad and
+        cheesey to be fair to her but again, she's just a kid devoid of giving a crap...
+        with some one liners thrown in to make her sound like she's threatening or
+        creepy here and there just to remind you she's Wednesday Addams and not Veronica
+        Mars.\\r\\n\\r\\nI fell asleep three times trying to watch through some of
+        the middle episodes.\\r\\n\\r\\nOh... and the CGI on the Hyde monster. HORRIBLE.
+        So cartoon. If you want to be reminded \\\"this is definitely not realistic\\\",
+        that CGI covers it off nicely for you.\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2022-12-02T02:35:53.000Z\",\"updated_at\":\"2022-12-29T11:21:56.000Z\",\"replies\":3,\"likes\":33,\"user_rating\":4,\"language\":\"en\",\"user_stats\":{\"rating\":4,\"play_count\":8,\"completed_count\":8},\"user\":{\"username\":\"8point9\",\"private\":true,\"deleted\":false,\"ids\":{\"slug\":\"8point9\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":5,\"number\":6,\"title\":\"Everything
+        Is Illumenated\",\"ids\":{\"trakt\":74214,\"tvdb\":2755231,\"imdb\":\"tt1699544\",\"tmdb\":953252,\"tvrage\":null}},\"show\":{\"title\":\"Dexter\",\"year\":2006,\"ids\":{\"trakt\":1396,\"slug\":\"dexter\",\"tvdb\":79349,\"imdb\":\"tt0773262\",\"tmdb\":1405,\"tvrage\":null}},\"comment\":{\"id\":396305,\"comment\":\"Lumen...
+        Most. Annoying. Character. Ever. It's almost unwatchable. This season is the
+        turning point where this show starts to fall off.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2021-08-09T16:18:11.000Z\",\"updated_at\":\"2021-08-09T16:18:11.000Z\",\"replies\":0,\"likes\":8,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":4,\"completed_count\":1},\"user\":{\"username\":\"vespeyre\",\"private\":false,\"deleted\":false,\"name\":\"vespeyre\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"vespeyre\"}}}},{\"type\":\"episode\",\"episode\":{\"season\":5,\"number\":46,\"title\":\"The
+        Labyrinth of White\",\"ids\":{\"trakt\":1756253,\"tvdb\":5128305,\"imdb\":\"tt4354296\",\"tmdb\":1044303,\"tvrage\":null}},\"show\":{\"title\":\"Fairy
+        Tail\",\"year\":2009,\"ids\":{\"trakt\":46004,\"slug\":\"fairy-tail\",\"tvdb\":114801,\"imdb\":\"tt1528406\",\"tmdb\":46261,\"tvrage\":null}},\"comment\":{\"id\":879152,\"comment\":\"The
+        trash talking at the beginning of the episode was amazing.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-10-29T04:02:57.000Z\",\"updated_at\":\"2025-10-29T04:02:57.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"noiramnesiac\",\"private\":false,\"deleted\":false,\"name\":\"Christopher
+        Handley\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"noiramnesiac\"}}}},{\"type\":\"show\",\"show\":{\"title\":\"Bob's
+        Burgers\",\"year\":2011,\"ids\":{\"trakt\":32585,\"slug\":\"bob-s-burgers\",\"tvdb\":194031,\"imdb\":\"tt1561755\",\"tmdb\":32726,\"tvrage\":null}},\"comment\":{\"id\":687390,\"comment\":\"Best
+        show on Fox, move over Simpsons\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2024-06-24T08:03:43.000Z\",\"updated_at\":\"2024-06-24T08:03:43.000Z\",\"replies\":0,\"likes\":1,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":26339,\"completed_count\":308},\"user\":{\"username\":\"OutlierForLife\",\"private\":false,\"deleted\":false,\"name\":\"OutlierForLife\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"outlierforlife\"}}}}]"
+  recorded_at: 2026-05-24 13:42:28
 recorded_with: VCR-vcr/2.1.0

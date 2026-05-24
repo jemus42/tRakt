@@ -5,29 +5,28 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:23 GMT
+      date: Sun, 24 May 2026 13:42:29 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb9506ff637b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"b4fd917e9df273762f09d4bba9505567"
-      expires: Mon, 02 Mar 2026 19:23:23 GMT
+      expires: Sun, 24 May 2026 21:42:29 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-movie-updated-at: '2026-03-01T16:39:38.000Z'
+      x-movie-updated-at: '2026-05-24T08:31:59.000Z'
       x-permitted-cross-domain-policies: none
-      x-request-id: fa0a6a57-6c73-4dd6-ac93-c15a010c35f0
-      x-runtime: '0.018038'
+      x-request-id: 2a7221c1-a8c9-4dd0-a506-ba04f41e90c9
+      x-runtime: '0.015232'
       x-xss-protection: '0'
-      cf-ray: 9d60076e1dbd9f9a-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"country":"fr","certification":"16","release_date":"2016-02-08","release_type":"premiere","note":"Paris"},{"country":"hk","certification":"III","release_date":"2016-02-09","release_type":"theatrical","note":null},{"country":"tw","certification":"15+","release_date":"2016-02-09","release_type":"theatrical","note":null},{"country":"fr","certification":"16","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"gb","certification":"15","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"be","certification":"18","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"ie","certification":"16","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"ph","certification":"R-16","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"id","certification":"17+","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"ch","certification":"18","release_date":"2016-02-10","release_type":"theatrical","note":null},{"country":"my","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"kz","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"ua","certification":"18+","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"il","certification":"הותר
         לבני 16 ומעלה","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"th","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"cl","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"br","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"nz","certification":"R16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"sk","certification":"15","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"cz","certification":"15+","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"mx","certification":"B-15","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"ar","certification":null,"release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"nl","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"au","certification":"MA
@@ -38,101 +37,98 @@ http_interactions:
         Frisson"},{"country":"nl","certification":"16","release_date":"2018-05-21","release_type":"tv","note":"Veronica"},{"country":"fr","certification":"16","release_date":"2020-09-30","release_type":"digital","note":"Prime
         Video"},{"country":"fr","certification":"16","release_date":"2021-02-23","release_type":"digital","note":"Disney+"},{"country":"es","certification":"18","release_date":"2021-02-23","release_type":"digital","note":"Disney
         + (Star)"}]'
-  recorded_at: 2026-03-02 12:41:26
+  recorded_at: 2026-05-24 13:42:29
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/deadpool-2016/releases?country=de
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:23 GMT
+      date: Sun, 24 May 2026 13:42:29 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb9517aab37b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"f70884e844afc5eaa8e917cac56ba662"
-      expires: Mon, 02 Mar 2026 19:23:23 GMT
+      expires: Sun, 24 May 2026 21:42:29 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-movie-updated-at: '2026-03-01T16:39:38.000Z'
+      x-movie-updated-at: '2026-05-24T08:31:59.000Z'
       x-permitted-cross-domain-policies: none
-      x-request-id: 2b4f2c50-a065-4e2d-b1e1-f666c2817876
-      x-runtime: '0.018036'
+      x-request-id: 3d1163b2-17c0-459d-ab2a-05b5731d8146
+      x-runtime: '0.014802'
       x-xss-protection: '0'
-      cf-ray: 9d60076f2e829f9a-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"country":"de","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"de","certification":"16","release_date":"2016-06-23","release_type":"physical","note":null}]'
-  recorded_at: 2026-03-02 12:41:27
+  recorded_at: 2026-05-24 13:42:29
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/deadpool-2016/releases?country=de
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:23 GMT
+      date: Sun, 24 May 2026 13:42:29 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb9517aab37b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"f70884e844afc5eaa8e917cac56ba662"
-      expires: Mon, 02 Mar 2026 19:23:23 GMT
+      expires: Sun, 24 May 2026 21:42:29 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-movie-updated-at: '2026-03-01T16:39:38.000Z'
+      x-movie-updated-at: '2026-05-24T08:31:59.000Z'
       x-permitted-cross-domain-policies: none
-      x-request-id: 2b4f2c50-a065-4e2d-b1e1-f666c2817876
-      x-runtime: '0.018036'
+      x-request-id: 3d1163b2-17c0-459d-ab2a-05b5731d8146
+      x-runtime: '0.014802'
       x-xss-protection: '0'
-      cf-ray: 9d60076f2e829f9a-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"country":"de","certification":"16","release_date":"2016-02-11","release_type":"theatrical","note":null},{"country":"de","certification":"16","release_date":"2016-06-23","release_type":"physical","note":null}]'
-  recorded_at: 2026-03-02 12:41:27
+  recorded_at: 2026-05-24 13:42:29
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/inception-2010/releases?country=de
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:23:23 GMT
+      date: Sun, 24 May 2026 13:42:29 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb9527db737b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
       etag: W/"d9b8733c0c30a5c01a4f03fe244ebdc2"
-      expires: Mon, 02 Mar 2026 19:23:23 GMT
+      expires: Sun, 24 May 2026 21:42:29 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-movie-updated-at: '2026-03-01T16:36:29.000Z'
+      x-movie-updated-at: '2026-05-24T09:20:02.000Z'
       x-permitted-cross-domain-policies: none
-      x-request-id: 4eb2125e-555c-4ff4-b23c-0abeb22fab00
-      x-runtime: '0.018722'
+      x-request-id: 234f5450-3a55-4c07-b859-4ae904ee58e7
+      x-runtime: '0.015744'
       x-xss-protection: '0'
-      cf-ray: 9d6007704f3a9f9a-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"country":"de","certification":"12","release_date":"2010-07-29","release_type":"theatrical","note":null},{"country":"de","certification":"12","release_date":"2010-12-03","release_type":"physical","note":"DvD"}]'
-  recorded_at: 2026-03-02 12:41:27
+  recorded_at: 2026-05-24 13:42:29
 recorded_with: VCR-vcr/2.1.0

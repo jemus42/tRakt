@@ -5,146 +5,221 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:31 GMT
+      date: Sun, 24 May 2026 13:42:31 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: max-age=28800, public
-      content-encoding: gzip
-      etag: W/"da47e6cdb9842ea1831b40ad14d28102"
-      expires: Mon, 02 Mar 2026 20:41:27 GMT
-      server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      cache-control: public, max-age=1800, s-maxage=21600
+      vary: query, Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      referrer-policy: strict-origin-when-cross-origin
+      cache-tag: movie,user_list,resource:movie:22537852,resource:movie:11487194,resource:movie:4403343,resource:movie:2197031,resource:movie:4834049,owner_id:949678,owner_id:2108849,owner_id:1343113,owner_id:1249835,owner_id:1
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-movie-updated-at: '2026-03-01T16:39:38.000Z'
-      x-pagination-item-count: '4209'
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '186'
       x-pagination-limit: '5'
       x-pagination-page: '1'
-      x-pagination-page-count: '842'
-      x-permitted-cross-domain-policies: none
-      x-request-id: 16fb532e-e53b-4b1b-865b-1095c5707a83
-      x-runtime: '4.078967'
-      x-xss-protection: '0'
-      cf-ray: 9d6079c8bd44dfa5-AMS
-      alt-svc: h3=":443"; ma=86400
+      x-pagination-page-count: '38'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: a00cb95b983a37b0-AMS
     body:
-      string: '[{"name":"Trending Movies","description":"This list is maintained by
-        mdblist.com\r\nCreate your own: https://mdblist.com/lists/snoak/trending-movies\r\nUpdated
-        at 2026-03-02 02:13:51","privacy":"public","share_link":"https://trakt.tv/lists/33032593","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T10:46:23.000Z","updated_at":"2026-03-02T00:13:51.000Z","item_count":249,"comment_count":0,"likes":135,"ids":{"trakt":33032593,"slug":"trending-movies"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}},{"name":"Popular
-        Comedy Movies","description":"This list is maintained by mdblist.com\r\nCreate
-        your own: https://mdblist.com/lists/snoak/comedy-movies\r\nUpdated at 2026-03-02
-        01:41:37","privacy":"public","share_link":"https://trakt.tv/lists/33032930","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T11:39:45.000Z","updated_at":"2026-03-01T23:41:37.000Z","item_count":500,"comment_count":0,"likes":38,"ids":{"trakt":33032930,"slug":"popular-comedy-movies"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}},{"name":"Movies
-        Being Released on 4K UHD Blu Ray","description":"Per blu-ray.com\r\nhttp://www.blu-ray.com/movies/search.php?action=search\u0026ultrahd=1\u0026sortby=recentlyaddeddesc\r\n\r\nUPDATED
-        2/11/26 (Page 256)","privacy":"public","share_link":"https://trakt.tv/lists/4608018","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"added","sort_how":"desc","created_at":"2018-03-01T18:20:12.000Z","updated_at":"2026-03-01T23:51:06.000Z","item_count":3100,"comment_count":7,"likes":1038,"ids":{"trakt":4608018,"slug":"movies-being-released-on-4k-uhd-blu-ray"},"user":{"username":"lish408","private":false,"deleted":false,"name":"LISH","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"lish408"}}},{"name":"Popular
-        Action Movies","description":"This list is maintained by mdblist.com\r\nCreate
-        your own: https://mdblist.com/lists/snoak/action-movies\r\nUpdated at 2026-03-02
-        00:42:24","privacy":"public","share_link":"https://trakt.tv/lists/33032919","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T11:38:12.000Z","updated_at":"2026-03-01T22:42:24.000Z","item_count":500,"comment_count":0,"likes":38,"ids":{"trakt":33032919,"slug":"popular-action-movies"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}},{"name":"Popular
-        Sci-Fi Movies","description":"This list is maintained by mdblist.com\r\nCreate
-        your own: https://mdblist.com/lists/snoak/science-fiction-movies\r\nUpdated
-        at 2026-03-02 03:01:38","privacy":"public","share_link":"https://trakt.tv/lists/33032944","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T11:41:13.000Z","updated_at":"2026-03-02T01:01:38.000Z","item_count":500,"comment_count":0,"likes":26,"ids":{"trakt":33032944,"slug":"popular-sci-fi-movies"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}}]'
-  recorded_at: 2026-03-02 12:41:31
+      string: '[{"name":"Sci-Fi","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2021-11-13T04:01:28.000Z","updated_at":"2026-05-24T12:50:17.000Z","item_count":1472,"comment_count":0,"likes":262,"ids":{"slug":"sci-fi-72c81243-2a16-453c-8366-b41d86114c23","trakt":22537852},"images":{"posters":[]},"user":{"ids":{"slug":"usiris","trakt":949678},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/221bc22769f16f338c1b723ca475da75?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"Usiris","private":false,"deleted":false,"joined_at":"2015-03-21T21:06:41.000Z","location":"Ontario,
+        Canada","about":"","name":"Martin","gender":"male","age":1,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"Movie
+        Boxsets & Collections","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2020-05-04T00:53:04.000Z","updated_at":"2026-05-24T07:51:41.000Z","item_count":1277,"comment_count":0,"likes":710,"ids":{"slug":"movie-boxsets-collections","trakt":11487194},"images":{"posters":[]},"user":{"ids":{"slug":"crims7392","trakt":2108849},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/002/108/849/avatars/medium/6a73cd9870.png"}},"username":"crims7392","private":false,"deleted":false,"joined_at":"2016-07-24T11:49:26.000Z","location":null,"about":null,"name":"Anthony
+        Munoz","gender":"","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"Superheroes","description":"Missing
+        something?","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2017-12-23T01:23:29.000Z","updated_at":"2026-05-23T06:05:08.000Z","item_count":702,"comment_count":3,"likes":178,"ids":{"slug":"superheroes","trakt":4403343},"images":{"posters":[]},"user":{"ids":{"slug":"zubiaks","trakt":1343113},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/001/343/113/avatars/medium/3a45c5a287.jpg"}},"username":"zubiaks","private":false,"deleted":false,"joined_at":"2015-10-18T23:53:47.000Z","location":"Portugal","about":"","name":"zubiaks","gender":"male","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"Watching
+        Order: Marvel Cinematic Multiverse","description":"This is a chronological
+        watching order of all movies, series episodes and specials of the Marvel Cinematic
+        Multiverse. For this list I considered mainly the chronoligcal order from
+        the persepctive of the Sacred Timeline. For example: If a story of an alternative
+        universe takes place in the year 2018, but after an event in 2024 on Earth-199999,
+        I put it after this event. For sorting this list only the main plots of the
+        movies and episodes are considered while I ignored flashbacks. When time travelling
+        is part of the plot I placed the movies and episodes at the point, where the
+        protagonists leave the present (exception is Days of Future Past). Following
+        universes are considered for this list:\r\n- Earth-199999: This is the main
+        universe of the Avengers, Guardians of the Galaxy and S.H.I.E.L.D.\r\n- Earth-10005:
+        This is the original universe of 20th Century Fox''s X-Men series.\r\n- Earth-120703:
+        This is the universe of Marc Webb''s Amazing Spider-Man movies.\r\n- Earth-121698:
+        This is the universe of the 2000s Fantastic Four movies.\r\n- Earth-18315:
+        This is the universe, that was created, when Deadpool travelled back in time
+        to kill Weapon XI, shown in Deadpool 2.\r\n- Earth-1610B: This is the universe
+        of Miles Morales, shown in the Spider-Verse movies.\r\n- Earth-16828: This
+        is the universe of Team Thor.\r\n- Earth-21828: This is the universe of T''Challa
+        as Star-Lord, shown in What If.\r\n- Earth-17315: This is a possible future
+        of Earth-10005 and universe of the movie Logan.\r\n- Earth-17516: This is
+        the destroyed Earth universe, shown in Agents of S.H.I.E.L.D. - Season 5 and
+        Avengers: Infinity War.\r\n- Earth-19859: This universe was created when the
+        Chronicoms altered timeline, shown in Agents of S.H.I.E.L.D.\r\n- Earth-26320:
+        This is the universe of the Blade movie trilogy.\r\n- Earth-29929: This is
+        the universe, where Ultron won, show in What If.\r\n- Earth-32938: This is
+        the universe of Killmonger as Black Panther, shown in What If.\r\n- Earth-41633:
+        This is the universe, that was created when Deadpool travelled back in time
+        to save Vanessa in Deadpool 2.\r\n- Earth-42: This is the home universe of
+        Prowler Miles Morales, shown in the Spider-Verse movies.\r\n- Earth-50101B:
+        This is the home universe of Pavitr Prabhakar, shown in the Spider-Verse movies.\r\n-
+        Earth-51835: This is the universe where Earth lost the Avengers, shown in
+        What If.\r\n- Earth-616B: This is the home universe of Peter Ben Parker, shown
+        in the Spider-Verse movies.\r\n- Earth-65B: This is the home universe of Gwen
+        Stacy, shown in the Spider-Verse movies.\r\n- Earth-66250: This is the home
+        universe of Cable from Deadpool 2.\r\n- Earth-688B: This is the home universe
+        of Venom, Morbius, Madame Web and Kraven.\r\n- Earth-701306: This is the universe
+        of the 2000s Daredevil and Elektra movies.\r\n- Earth-72124: This is the universe
+        of Thor as a only child, shown in What If.\r\n- Earth-82111: This is the universe
+        of Captain Carter, shown in What If.\r\n- Earth-828: This is the universe
+        of the Fantastic Four shown in Fantastic Four: First Steps.\r\n- Earth-838:
+        This is the home universe of the Illuminati, shown in Doctor Strange in the
+        the Multiverse of Madness.\r\n- Earth-89521: This is the Zombie universe,
+        shown in What If.\r\n- Earth-91233: This is the universe of Doctor Strange
+        Supreme, shown in What If.\r\n- Earth-928B: This is the home universe of Miguel
+        O''Hara, shown in the Spider-Verse movies.\r\n- Earth-96283: This is the universe
+        of Sam Raimi''s Spider-Man trilogy.\r\n- Earth-TRN414: This is the X-Men universe,
+        that was created, when Wolverine traveld back in time to 1973.\r\n- Earth-TRN732:
+        This is the universe that was created when Captain America, Iron Man, Hulk
+        and Ant-Man traveled back in time to 2012 in Avengers: Endgame.\r\n- Earth-TRN733:
+        This is the universe that was created when Thor traveld back in time to 2013
+        in Avengers: Endgame.\r\n- Earth-TRN734: This is the universe that was created
+        when Nebula, War Machine, Hawkeye and Black Widow traveled back in time to
+        2014 in Avengers: Endgame.\r\n- Earth-TRN735: This is the universe that was
+        created when Iron Man traveld back in time to 1970 in Avengers: Endgame.\r\n-
+        Earth-TRN736: This is the universe that was created when Captain America travel
+        back in time to 1949 in Avengers: Endgame.\r\n- Earth-TRN769: This is the
+        universe diverged from the main universe, when Gert Yorkes dies in 2018 and
+        the Runaways travel back in time to prevent this.\r\n- Earth-TRN770: This
+        is the universe created, when Victor Stein''s travels back in time from 2028
+        to 2021 shown in Runaways.\r\n- Earth-TRN870: This is the home universe of
+        He Who Remains.\r\n- Earth-TRN908: This is the universe where Gamore killed
+        Thanos, shown in What If.\r\n- Earth-TRN952: This is the home universe of
+        America Chavez, shown in Doctor Strange in the Multiverse of Madness.\r\n-
+        Earth-TRN953: This is the universe of Defender Strange, shown in Doctor Strange
+        in the Multiverse of Madness.\r\n- Earth-TRN954: This is the universe of Sinister
+        Strange, shown in Doctor Strange in the Multiverse of Madness.\r\n- Earth-TRN1071:
+        This is the home universe of Victor Timely, shown in Loki - season 2.\r\n-
+        Earth-TRN1077: This is the home universe of Ouroboros, shown in Loki - season
+        2.\r\n- Earth-TRN1088: This is the universe where Nebula joined the Nova Corps,
+        shown in What If.\r\n- Earth-TRN1089: This is the universe where Peter Quill
+        attacked the Avengers, shown in What If.\r\n- Earth-TRN1090: This is the universe
+        of Happy Hogan as Freak, show in What If.\r\n- Earth-TRN1091: This is the
+        universe of Kahhori, shown in What If.\r\n- Earth-TRN1092: This is the universe
+        where Hela found the Ten Rings, shown in What If.\r\n- Earth-TRN1093: This
+        is the 1602 universe, shown in What If.\r\n- Earth-TRN1111: This is the universe
+        where Hydra won World War 2, shown in What If.\r\n- Earth-TRN1225: This is
+        the alternete Binary and X-Men universe, shown in The Marvels.\r\n- Earth-TRN1393
+        - Earth-TRN1399: These are the universes of the different Wolverine variants,
+        shown in Deadpool & Wolverine.\r\n- Earth-TRN1400: This is the home universe
+        of Wolverine from Deadpool & Wolverine.\r\n- Earth-TRN1401: This is the home
+        universe of Gambit, from Deadpool & Wolverine.\r\n- Earth-TRN1443: This is
+        the universe, where Slyvie works at McDonald''s shown in Loki - season 2.\r\n-
+        Earth-TRN1450: This is the universe of Spider-Man shown in Your Friendly Neighborhood
+        Spider-Man.\r\n- Earth-TRN1491: This is the universe of the Gamma beasts,
+        shown in What If.\r\n- Earth-TRN1492: This is the universe of Cosmic Queen
+        Agatha Harkness, shown in What If.\r\n- Earth-TRN1493: This is the universe
+        where Howard Stark wasn''t assassinated, shown in What If.\r\n- Earth-TRN1494:
+        This is the universe where the Emergence destroyed Earth, shown in What If.\r\n-
+        Earth-TRN1495: This is the Wild West Super Heroes universe, shown in What
+        If.\r\n- Earth-TRN1502: This is the univers of the refelctive Ultron, shown
+        in What If.","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-26T07:51:24.000Z","updated_at":"2026-05-23T18:09:57.000Z","item_count":688,"comment_count":0,"likes":101,"ids":{"slug":"watching-order-marvel-cinematic-multiverse","trakt":2197031},"images":{"posters":[]},"user":{"ids":{"slug":"grendelcrusher","trakt":1249835},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/001/249/835/avatars/medium/98ce31797b.jpg"}},"username":"GrendelCrusher","private":false,"deleted":false,"joined_at":"2015-09-04T08:01:03.000Z","location":"Germany","about":null,"name":null,"gender":"male","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"Trakt:
+        Popular Movies","description":"The Trakt top 250 movies, based on popularity.
+        List updated daily.","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2018-05-13T16:33:23.000Z","updated_at":"2026-05-23T04:57:23.000Z","item_count":250,"comment_count":0,"likes":409,"ids":{"slug":"trakt-popular-movies","trakt":4834049},"images":{"posters":[]},"user":{"ids":{"slug":"justin","trakt":1},"images":{"avatar":{"full":"https://media.trakt.tv/images/admins/000/000/001/avatars/medium/2e6df69058.jpg"}},"username":"justin","private":false,"deleted":false,"joined_at":"2010-09-25T17:49:25.000Z","location":"United
+        States","about":"Do the truffle shuffle!!","name":"Justin","gender":"male","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":true}}]'
+  recorded_at: 2026-05-24 13:42:31
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/46241/lists/all/popular?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:33 GMT
+      date: Sun, 24 May 2026 13:42:31 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: max-age=28800, public
-      content-encoding: gzip
-      etag: W/"e6779a3a25b197667e2afd28ccc72865"
-      expires: Mon, 02 Mar 2026 20:41:31 GMT
-      server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      cache-control: public, max-age=1800, s-maxage=21600
+      vary: query, Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      referrer-policy: strict-origin-when-cross-origin
+      cache-tag: show,user_list,resource:show:5495188,resource:show:4554911,resource:show:24376999,resource:show:21539470,resource:show:4117210,resource:show:22421838,resource:show:815809,resource:show:23120274,resource:show:23105515,resource:show:22865671,owner_id:411514,owner_id:1462423,owner_id:12372829,owner_id:10837251,owner_id:1988309,owner_id:4807896,owner_id:241323,owner_id:11396069,owner_id:1822726,owner_id:2860384
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '10000'
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '48'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '1000'
-      x-permitted-cross-domain-policies: none
-      x-request-id: d9f91c6c-b821-4e29-ad65-61f627df4152
-      x-runtime: '1.972775'
-      x-show-updated-at: '2026-03-02T09:44:01.000Z'
-      x-xss-protection: '0'
-      cf-ray: 9d6079e32cabdfa5-AMS
-      alt-svc: h3=":443"; ma=86400
+      x-pagination-page-count: '5'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: a00cb95e7ff437b0-AMS
     body:
-      string: '[{"name":"British Shows","description":"","privacy":"public","share_link":"https://trakt.tv/lists/4554911","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"title","sort_how":"asc","created_at":"2018-02-09T14:25:33.000Z","updated_at":"2026-03-01T14:29:42.000Z","item_count":629,"comment_count":0,"likes":149,"ids":{"trakt":4554911,"slug":"british-shows"},"user":{"username":"Gonzohunter","private":false,"deleted":false,"name":"Gonzohunter","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"gonzohunter"}}},{"name":"Sci-Fi
-        Shows","description":"This list is maintained by mdblist.com\r\nCreate your
-        own: https://mdblist.com/lists/garycrawfordgc/sci-fi-shows\r\nUpdated at 2026-03-02
-        11:52:11","privacy":"public","share_link":"https://trakt.tv/lists/20772095","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2021-01-29T23:22:37.000Z","updated_at":"2026-03-02T09:52:11.000Z","item_count":134,"comment_count":0,"likes":926,"ids":{"trakt":20772095,"slug":"sci-fi-shows"},"user":{"username":"garycrawfordgc","private":false,"deleted":false,"name":"Gary","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"garycrawfordgc"}}},{"name":"BBC
+      string: '[{"name":"UK and Irish Shows","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2018-09-14T02:03:08.000Z","updated_at":"2026-05-24T08:11:09.000Z","item_count":177,"comment_count":1,"likes":22,"ids":{"slug":"uk-and-irish-shows","trakt":5495188},"images":{"posters":[]},"user":{"ids":{"slug":"dandiandi","trakt":411514},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/411/514/avatars/medium/58f3cc715d.jpg"}},"username":"dandiandi","private":false,"deleted":false,"joined_at":"2014-01-20T05:27:30.000Z","location":"Nashville,
+        TN","about":"twitter: @andibing","name":"Andi","gender":"female","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"British
+        Shows","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"title","sort_how":"asc","created_at":"2018-02-09T14:25:33.000Z","updated_at":"2026-05-21T08:08:40.000Z","item_count":629,"comment_count":0,"likes":160,"ids":{"slug":"british-shows","trakt":4554911},"images":{"posters":[]},"user":{"ids":{"slug":"gonzohunter","trakt":1462423},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/001/462/423/avatars/medium/2a3ff689f0.jpg"}},"username":"Gonzohunter","private":false,"deleted":false,"joined_at":"2015-12-14T06:44:46.000Z","location":"","about":"","name":"","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"Highly
+        rated shows (post-2010)","description":"Shows with at least 75% rating on
+        trakt (and enough votes). No documentaries, reality tv or anime.\r\n\r\n(Find
+        the pre-2010 list here: https://trakt.tv/users/themlethem/lists/highly-rated-shows-pre-2010)\r\n\r\n(Find
+        the movie list here: https://trakt.tv/users/themlethem/lists/highly-rated-movies-post-2010)","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2022-12-08T20:41:08.000Z","updated_at":"2026-05-23T19:52:39.000Z","item_count":409,"comment_count":0,"likes":613,"ids":{"slug":"highly-rated-shows-post-2010","trakt":24376999},"images":{"posters":[]},"user":{"ids":{"slug":"themlethem","trakt":12372829},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/892f453167c9b998f94d7c24def2cd8f?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"themlethem","private":false,"deleted":false,"joined_at":"2022-12-08T20:36:24.000Z","location":"","about":null,"name":"Themlethem","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"Hidden
+        Gems","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"percentage","sort_how":"desc","created_at":"2021-05-22T06:52:54.000Z","updated_at":"2026-05-16T07:23:38.000Z","item_count":509,"comment_count":1,"likes":420,"ids":{"slug":"hidden-gems","trakt":21539470},"images":{"posters":[]},"user":{"ids":{"slug":"recom273","trakt":10837251},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/caf08ff04d0589ce88519e11911592fc?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"recom273","private":false,"deleted":false,"joined_at":"2021-02-17T01:47:41.000Z","location":"Khon
+        Kaen, Thailand","about":"","name":"","gender":"male","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"Series/
+        British, Canadian, Aussie","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"title","sort_how":"asc","created_at":"2017-09-11T02:46:05.000Z","updated_at":"2026-05-15T01:47:56.000Z","item_count":334,"comment_count":0,"likes":10,"ids":{"slug":"series-british-canadian-aussie","trakt":4117210},"images":{"posters":[]},"user":{"ids":{"slug":"morgana47","trakt":1988309},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/4b415c8baa93daca6713b9560035826d?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/leela.png"}},"username":"morgana47","private":false,"deleted":false,"joined_at":"2016-06-02T03:39:54.000Z","location":"morgana47","about":"About","name":"Morgana47","gender":"female","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"BBC
         Culture - The 100 greatest TV series of the 21st Century","description":"\"BBC
         Culture polled 206 TV experts from 43 countries in order to find the greatest
-        TV of the 21st Century – here’s the top 100\"\r\n\r\nhttps://www.bbc.com/culture/article/20211015-the-100-greatest-tv-series-of-the-21st-century?ocid=twcul","privacy":"public","share_link":"https://trakt.tv/lists/22421838","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2021-10-19T14:45:09.000Z","updated_at":"2026-03-01T15:06:32.000Z","item_count":100,"comment_count":0,"likes":105,"ids":{"trakt":22421838,"slug":"bbc-culture-the-100-greatest-tv-series-of-the-21st-century"},"user":{"username":"Nylgeroo","private":false,"deleted":false,"name":"Nylgeroo","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"nylgeroo"}}},{"name":"Justwatch
-        4K Library","description":"","privacy":"public","share_link":"https://trakt.tv/lists/33491660","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2026-01-08T22:47:01.000Z","updated_at":"2026-02-19T04:58:19.000Z","item_count":1647,"comment_count":0,"likes":4,"ids":{"trakt":33491660,"slug":"justwatch-4k-library"},"user":{"username":"sacwooky","private":false,"deleted":false,"name":"Keith
-        Stewart","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"sacwooky"}}},{"name":"Popular
-        Sci-Fi Shows","description":"This list is maintained by mdblist.com\r\nCreate
-        your own: https://mdblist.com/lists/snoak/science-fiction-shows\r\nUpdated
-        at 2026-03-02 02:13:58","privacy":"public","share_link":"https://trakt.tv/lists/33032946","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T11:41:27.000Z","updated_at":"2026-03-02T00:13:58.000Z","item_count":500,"comment_count":0,"likes":43,"ids":{"trakt":33032946,"slug":"popular-sci-fi-shows"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}},{"name":"Hidden
-        Gems","description":"","privacy":"public","share_link":"https://trakt.tv/lists/21539470","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"percentage","sort_how":"desc","created_at":"2021-05-22T06:52:54.000Z","updated_at":"2026-02-15T23:17:51.000Z","item_count":510,"comment_count":1,"likes":401,"ids":{"trakt":21539470,"slug":"hidden-gems"},"user":{"username":"recom273","private":false,"deleted":false,"name":"recom273","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"recom273"}}},{"name":"Popular
-        Action Shows","description":"This list is maintained by mdblist.com\r\nCreate
-        your own: https://mdblist.com/lists/snoak/action-shows\r\nUpdated at 2026-03-02
-        01:17:34","privacy":"public","share_link":"https://trakt.tv/lists/33032916","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T11:37:57.000Z","updated_at":"2026-03-01T23:17:34.000Z","item_count":500,"comment_count":0,"likes":33,"ids":{"trakt":33032916,"slug":"popular-action-shows"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}},{"name":"Popular
-        Comedy Shows","description":"This list is maintained by mdblist.com\r\nCreate
-        your own: https://mdblist.com/lists/snoak/comedy-shows\r\nUpdated at 2026-03-02
-        00:22:34","privacy":"public","share_link":"https://trakt.tv/lists/33032929","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-24T11:39:30.000Z","updated_at":"2026-03-01T22:22:35.000Z","item_count":500,"comment_count":0,"likes":34,"ids":{"trakt":33032929,"slug":"popular-comedy-shows"},"user":{"username":"snoak","private":false,"deleted":false,"name":"snoak","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"snoak"}}},{"name":"HBO","description":"List
-        created and maintained by https://listrr.pro\r\n\r\nNormal Filters:\r\nContent
-        Type: Filters\r\nTrakt ratings: Between 75 and 100 with at least 10\r\nRumtime:
-        Between 30 and 250 minutes\r\nYears: Between 1910 and 2022","privacy":"public","share_link":"https://trakt.tv/lists/23127409","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2022-03-03T15:11:58.000Z","updated_at":"2025-10-22T11:39:28.000Z","item_count":3768,"comment_count":0,"likes":10,"ids":{"trakt":23127409,"slug":"hbo"},"user":{"username":"cammyjay","private":false,"deleted":false,"name":"Cameron","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"cammyjay"}}},{"name":"Best
-        TV Shows","description":"The Best TV Shows of All Time.","privacy":"public","share_link":"https://trakt.tv/lists/30770379","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"popularity","sort_how":"desc","created_at":"2025-02-26T11:41:27.000Z","updated_at":"2026-02-08T15:42:32.000Z","item_count":6828,"comment_count":0,"likes":2,"ids":{"trakt":30770379,"slug":"best-tv-shows"},"user":{"username":"Reiskonen","private":false,"deleted":false,"name":"Ramazan","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"reiskonen"}}}]'
-  recorded_at: 2026-03-02 12:41:33
+        TV of the 21st Century – here’s the top 100\"\r\n\r\nhttps://www.bbc.com/culture/article/20211015-the-100-greatest-tv-series-of-the-21st-century?ocid=twcul","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2021-10-19T14:45:09.000Z","updated_at":"2026-05-23T12:50:22.000Z","item_count":100,"comment_count":0,"likes":108,"ids":{"slug":"bbc-culture-the-100-greatest-tv-series-of-the-21st-century","trakt":22421838},"images":{"posters":[]},"user":{"ids":{"slug":"nylgeroo","trakt":4807896},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/c49e1ce006e64d9955e6cbd199f01bbc?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"Nylgeroo","private":false,"deleted":false,"joined_at":"2018-11-26T09:03:22.000Z","location":"Bradford,
+        England","about":"","name":"Nylgeroo","gender":"male","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"UK","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2013-06-03T13:03:36.000Z","updated_at":"2026-04-02T18:18:15.000Z","item_count":447,"comment_count":3,"likes":84,"ids":{"slug":"uk","trakt":815809},"images":{"posters":[]},"user":{"ids":{"slug":"additup","trakt":241323},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/f0297905a2deddbef9342c3aa11bebcd?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/leela.png"}},"username":"additup","private":false,"deleted":false,"joined_at":"2013-06-01T20:03:27.000Z","location":"Jarnac,
+        France","about":"\r\n","name":"","gender":"female","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"O
+        - British TV","description":"List created and maintained by https://listrr.pro\r\n\r\nNormal
+        Filters:\r\nContent Type: Filters\r\nNetworks: BBC, BBC One, BBC Three, BBC
+        Two, Channel 4, E4, ITV, ITV 1, ITV London, ITV2, Sky, Sky 1\r\nTrakt ratings:
+        Between 40 and 100 with at least 10\r\nRumtime: Between 20 and 250 minutes\r\nYears:
+        Between 2010 and 2022","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2022-03-02T05:47:14.000Z","updated_at":"2026-01-16T06:28:47.000Z","item_count":946,"comment_count":0,"likes":8,"ids":{"slug":"o-british-tv","trakt":23120274},"images":{"posters":[]},"user":{"ids":{"slug":"ohwhat","trakt":11396069},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/3ae37d90f37abbee0aa82cb75a7dc3e6?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"ohwhat","private":false,"deleted":false,"joined_at":"2021-08-30T05:06:53.000Z","location":"Vancouver,
+        British Columbia","about":null,"name":"Oliver Watson","gender":"male","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"2000s  TV
+        Shows","description":"List created and maintained by https://listrr.pro\r\n\r\nNormal
+        Filters:\r\nContent Type: Filters\r\nGenres: action, adventure, biography,
+        comedy, crime, documentary, drama, family, fantasy, history, home-and-garden,
+        horror, mini-series, mystery, reality, romance, science-fiction, superhero,
+        suspense, thriller, war, western\r\nLanguages: en\r\nTrakt ratings: Between
+        82 and 100 with at least 12\r\nRumtime: Between 15 and 250 minutes\r\nYears:
+        Between 2000 and 2018","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2022-02-26T21:35:50.000Z","updated_at":"2026-04-26T13:13:24.000Z","item_count":425,"comment_count":0,"likes":13,"ids":{"slug":"2000s-tv-shows","trakt":23105515},"images":{"posters":[]},"user":{"ids":{"slug":"ramjam500","trakt":1822726},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/08dd424d8d23ab570e6002c3e5bdabed?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/zoidberg.png"}},"username":"ramjam500","private":false,"deleted":false,"joined_at":"2016-04-02T21:56:26.000Z","location":null,"about":null,"name":null,"gender":null,"age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}},{"name":"Obscure
+        TV Shows List","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":false,"sort_by":"title","sort_how":"asc","created_at":"2022-01-11T19:36:23.000Z","updated_at":"2026-01-21T20:37:29.000Z","item_count":219,"comment_count":0,"likes":31,"ids":{"slug":"obscure-tv-shows-list","trakt":22865671},"images":{"posters":[]},"user":{"ids":{"slug":"smexycan","trakt":2860384},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/5ed55e6220824706091d25c357a88942?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"Smexycan","private":false,"deleted":false,"joined_at":"2017-03-29T00:33:02.000Z","location":"","about":"","name":"Smexycan","gender":"male","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}}]'
+  recorded_at: 2026-05-24 13:42:31
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/46241/seasons/1/lists/all/popular?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:33 GMT
+      date: Sun, 24 May 2026 13:42:32 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: MISS
+      cf-ray: a00cb961b9a437b0-AMS
+      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: public, max-age=28800
+      cache-control: max-age=28800, public, s-maxage=43200
       content-encoding: gzip
-      etag: W/"c4c22a7a2efb0eaa42d1026ecf252f37"
-      expires: Mon, 02 Mar 2026 20:41:33 GMT
+      etag: W/"cef3fce2db55ea2a2c523789f09345ed"
+      expires: Sun, 24 May 2026 21:42:32 GMT
       server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: accept-encoding, query, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '74'
+      x-pagination-item-count: '71'
       x-pagination-limit: '10'
       x-pagination-page: '1'
       x-pagination-page-count: '8'
       x-permitted-cross-domain-policies: none
-      x-request-id: b1c8f2a3-843e-455e-b925-2efb78bb4023
-      x-runtime: '0.083102'
+      x-request-id: 2d4f72ab-9063-473b-9559-641be2e097a3
+      x-runtime: '0.097315'
       x-show-id: '46241'
       x-show-season-id: '56008'
-      x-show-updated-at: '2026-03-02T09:44:01.000Z'
+      x-show-updated-at: '2026-05-24T12:14:38.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6079f06d8cdfa5-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"name":"Shows I watched in 2017","description":"","privacy":"public","share_link":"https://trakt.tv/lists/3488381","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2017-03-18T13:01:53.000Z","updated_at":"2021-11-27T16:11:04.000Z","item_count":113,"comment_count":0,"likes":2,"ids":{"trakt":3488381,"slug":"shows-i-watched-in-2017"},"user":{"username":"Arlowe_","private":false,"deleted":false,"name":"Arlowe_","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"arlowe_"}}},{"name":"Yo","description":"","privacy":"public","share_link":"https://trakt.tv/lists/32869234","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-05T21:41:34.000Z","updated_at":"2026-01-02T12:10:28.000Z","item_count":30,"comment_count":0,"likes":0,"ids":{"trakt":32869234,"slug":"yo"},"user":{"username":"casius","private":false,"deleted":false,"name":"casius","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"casius"}}},{"name":"Watchlist","description":"Movies,
+      string: '[{"name":"Shows I watched in 2017","description":"","privacy":"public","share_link":"https://trakt.tv/lists/3488381","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2017-03-18T13:01:53.000Z","updated_at":"2021-11-27T16:11:04.000Z","item_count":113,"comment_count":0,"likes":2,"ids":{"trakt":3488381,"slug":"shows-i-watched-in-2017"},"user":{"username":"Arlowe_","private":false,"deleted":false,"name":"Arlowe_","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"arlowe_"}}},{"name":"TV
+        shows I watched in 2026","description":"","privacy":"public","share_link":"https://trakt.tv/lists/33433216","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"added","sort_how":"desc","created_at":"2026-01-03T01:29:21.000Z","updated_at":"2026-05-11T16:50:57.000Z","item_count":39,"comment_count":0,"likes":0,"ids":{"trakt":33433216,"slug":"tv-shows-i-watched-in-2026"},"user":{"username":"Ultramarinas","private":false,"deleted":false,"name":"Ultramarinas","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"ultramarinas"}}},{"name":"Yo","description":"","privacy":"public","share_link":"https://trakt.tv/lists/32869234","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2025-11-05T21:41:34.000Z","updated_at":"2026-01-02T12:10:28.000Z","item_count":30,"comment_count":0,"likes":0,"ids":{"trakt":32869234,"slug":"yo"},"user":{"username":"casius","private":false,"deleted":false,"name":"casius","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"casius"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/31183474","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2025-04-19T10:16:20.000Z","updated_at":"2025-07-22T19:35:25.000Z","item_count":19,"comment_count":0,"likes":0,"ids":{"trakt":31183474,"slug":null},"user":{"username":"FiniolSnetheron","private":false,"deleted":false,"name":"F","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"finiolsnetheron"}}},{"name":"Watchlist","description":"Movies,
-        shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/30682809","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2025-02-16T19:27:35.000Z","updated_at":"2026-02-27T21:47:35.000Z","item_count":98,"comment_count":0,"likes":0,"ids":{"trakt":30682809,"slug":null},"user":{"username":"sonjanena","private":false,"deleted":false,"name":"sonja
+        shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/30682809","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2025-02-16T19:27:35.000Z","updated_at":"2026-05-17T18:05:06.000Z","item_count":97,"comment_count":0,"likes":0,"ids":{"trakt":30682809,"slug":null},"user":{"username":"sonjanena","private":false,"deleted":false,"name":"sonja
         nena","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"sonjanena"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/30444492","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2025-01-19T04:12:31.000Z","updated_at":"2025-01-20T13:19:10.000Z","item_count":122,"comment_count":0,"likes":0,"ids":{"trakt":30444492,"slug":null},"user":{"username":"Vallalomuge","private":false,"deleted":false,"name":"Arthur
         Villalongue","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"vallalomuge"}}},{"name":"Watchlist","description":"Movies,
@@ -153,111 +228,86 @@ http_interactions:
         Badalamenty","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"portfail"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/30408948","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2025-01-14T22:39:56.000Z","updated_at":"2025-05-07T04:24:44.000Z","item_count":740,"comment_count":0,"likes":0,"ids":{"trakt":30408948,"slug":null},"user":{"username":"myghoul","private":false,"deleted":false,"name":"Myghoul","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"myghoul"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/30325992","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2025-01-06T01:02:46.000Z","updated_at":"2025-01-06T05:00:37.000Z","item_count":220,"comment_count":0,"likes":0,"ids":{"trakt":30325992,"slug":null},"user":{"username":"thekkid","private":false,"deleted":true,"name":"Alexander
-        Bandukwala","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"thekkid"}}},{"name":"Watchlist","description":"Movies,
-        shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/30261953","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2024-12-31T00:00:44.000Z","updated_at":"2025-01-24T19:45:28.000Z","item_count":127,"comment_count":0,"likes":0,"ids":{"trakt":30261953,"slug":null},"user":{"username":"silensito","private":false,"deleted":true,"name":"Ilija
-        S","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"silensito"}}}]'
-  recorded_at: 2026-03-02 12:41:33
+        Bandukwala","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"thekkid"}}}]'
+  recorded_at: 2026-05-24 13:42:32
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/46241/seasons/1/episodes/1/lists/all/popular?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:34 GMT
+      date: Sun, 24 May 2026 13:42:32 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: MISS
+      cf-ray: a00cb9635de237b0-AMS
+      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: public, max-age=28800
+      cache-control: max-age=28800, public, s-maxage=43200
       content-encoding: gzip
       etag: W/"cb81265f5d9819f42c3ff36a1a32be6c"
-      expires: Mon, 02 Mar 2026 20:41:33 GMT
+      expires: Sun, 24 May 2026 21:42:32 GMT
       server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: accept-encoding, query, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '54'
+      x-pagination-item-count: '38'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '6'
+      x-pagination-page-count: '4'
       x-permitted-cross-domain-policies: none
-      x-request-id: a0ea5a36-a9c9-4eef-bc97-892222f85e10
-      x-runtime: '0.075344'
+      x-request-id: e32a6809-d78b-4d4c-8154-daa9afa1da75
+      x-runtime: '0.068802'
       x-show-id: '46241'
       x-show-season-id: '56008'
-      x-show-updated-at: '2026-03-02T09:44:01.000Z'
+      x-show-updated-at: '2026-05-24T12:14:38.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6079f25a26dfa5-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"name":"Watchlist - TvShows - Pilots","description":"","privacy":"public","share_link":"https://trakt.tv/lists/9411491","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2019-06-23T11:43:27.000Z","updated_at":"2023-03-16T18:29:47.000Z","item_count":120,"comment_count":0,"likes":1,"ids":{"trakt":9411491,"slug":"watchlist-tvshows-pilots"},"user":{"username":"LHofman","private":false,"deleted":false,"name":"Lennert
         Hofman","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"lhofman"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/31982794","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2025-07-27T23:25:57.000Z","updated_at":"2026-01-25T22:28:17.000Z","item_count":61,"comment_count":0,"likes":0,"ids":{"trakt":31982794,"slug":null},"user":{"username":"Lenny712","private":false,"deleted":false,"name":"Lenny712","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"lenny712"}}},{"name":"Watchlist","description":"Movies,
-        shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/29269057","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2024-09-28T15:54:27.000Z","updated_at":"2025-01-07T23:05:18.000Z","item_count":11,"comment_count":0,"likes":0,"ids":{"trakt":29269057,"slug":null},"user":{"username":"elsyu","private":false,"deleted":false,"name":"Elaine","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"elsyu"}}},{"name":"Watchlist","description":"Movies,
+        shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/29269057","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2024-09-28T15:54:27.000Z","updated_at":"2026-03-10T02:33:42.000Z","item_count":10,"comment_count":0,"likes":0,"ids":{"trakt":29269057,"slug":null},"user":{"username":"elsyu","private":false,"deleted":false,"name":"Elaine","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"elsyu"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/28555553","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2024-07-28T13:40:27.000Z","updated_at":"2024-11-29T16:17:44.000Z","item_count":29,"comment_count":0,"likes":0,"ids":{"trakt":28555553,"slug":null},"user":{"username":"oxidnitram","private":false,"deleted":false,"name":"Oxid
         no Mokou","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"oxidnitram"}}},{"name":"Watchlist","description":"Movies,
-        shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/26714504","type":"watchlist","display_numbers":true,"allow_comments":false,"sort_by":"released","sort_how":"asc","created_at":"2024-01-05T01:09:22.000Z","updated_at":"2026-02-16T00:23:27.000Z","item_count":3215,"comment_count":0,"likes":0,"ids":{"trakt":26714504,"slug":null},"user":{"username":"folion","private":false,"deleted":false,"name":"Leonid","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"folion"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/26251594","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2023-11-18T14:56:28.000Z","updated_at":"2024-05-21T01:18:47.000Z","item_count":6,"comment_count":0,"likes":0,"ids":{"trakt":26251594,"slug":null},"user":{"username":"pfave101","private":false,"deleted":false,"name":"Pfave101","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"pfave101"}}},{"name":"Watchlist","description":"Movies,
-        shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/26230384","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2023-11-15T16:22:24.000Z","updated_at":"2024-04-08T18:33:27.000Z","item_count":3,"comment_count":0,"likes":0,"ids":{"trakt":26230384,"slug":null},"user":{"username":"alfiebc","private":false,"deleted":false,"name":"Alfie","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"alfiebc"}}},{"name":"Watchlist","description":"Movies,
+        shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/26230384","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2023-11-15T16:22:24.000Z","updated_at":"2026-04-20T02:22:00.000Z","item_count":4,"comment_count":0,"likes":0,"ids":{"trakt":26230384,"slug":null},"user":{"username":"alfiebc","private":false,"deleted":false,"name":"Alfie","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"alfiebc"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/25666562","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2023-08-14T17:12:55.000Z","updated_at":"2024-02-11T20:29:28.000Z","item_count":8,"comment_count":0,"likes":0,"ids":{"trakt":25666562,"slug":null},"user":{"username":"sharonmruane","private":false,"deleted":true,"name":"Sharon","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"sharonmruane"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/23472690","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"title","sort_how":"asc","created_at":"2022-05-10T17:11:23.000Z","updated_at":"2025-01-11T23:41:41.000Z","item_count":1954,"comment_count":0,"likes":0,"ids":{"trakt":23472690,"slug":null},"user":{"username":"pedro011","private":false,"deleted":false,"name":"Pedro
         Enrique Castro","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"pedro011"}}},{"name":"Watchlist","description":"Movies,
         shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/22770918","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2021-12-30T17:41:44.000Z","updated_at":"2025-02-25T16:32:01.000Z","item_count":104,"comment_count":0,"likes":0,"ids":{"trakt":22770918,"slug":null},"user":{"username":"vectravi","private":false,"deleted":false,"name":"John
-        Vectravi","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"vectravi"}}}]'
-  recorded_at: 2026-03-02 12:41:34
+        Vectravi","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"vectravi"}}},{"name":"Watchlist","description":"Movies,
+        shows, seasons, and episodes I plan to watch.","privacy":"public","share_link":"https://trakt.tv/lists/20859475","type":"watchlist","display_numbers":false,"allow_comments":false,"sort_by":"rank","sort_how":"asc","created_at":"2021-02-10T15:05:09.000Z","updated_at":"2026-05-11T13:03:09.000Z","item_count":116,"comment_count":0,"likes":0,"ids":{"trakt":20859475,"slug":null},"user":{"username":"LOYTRAKI","private":false,"deleted":false,"name":"Giorgos
+        Glykos","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"loytraki"}}}]'
+  recorded_at: 2026-05-24 13:42:32
 - request:
     method: GET
     uri: https://api.trakt.tv/people/david-tennant/lists/all/popular?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:34 GMT
+      date: Sun, 24 May 2026 13:42:32 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: max-age=28800, public
-      content-encoding: gzip
-      etag: W/"d3b677021d3b778c702c3af86da046e4"
-      expires: Mon, 02 Mar 2026 20:41:34 GMT
-      server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      cache-control: public, max-age=1800, s-maxage=21600
+      vary: query, Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      referrer-policy: strict-origin-when-cross-origin
+      cache-tag: people,user_list,resource:person:6172360,owner_id:1979796
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '43'
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '1'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '5'
-      x-permitted-cross-domain-policies: none
-      x-request-id: 134fba95-8ab9-49e2-991a-00208178ac5b
-      x-runtime: '0.083072'
-      x-xss-protection: '0'
-      cf-ray: 9d6079f3ddf8dfa5-AMS
-      alt-svc: h3=":443"; ma=86400
+      x-pagination-page-count: '1'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+      server: cloudflare
+      cf-ray: a00cb964b9b237b0-AMS
     body:
-      string: "[{\"name\":\"Favourite Actors\",\"description\":\"My personal favourite
-        list of favourite actors.\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/9997351\",\"type\":\"personal\",\"display_numbers\":true,\"allow_comments\":true,\"sort_by\":\"rank\",\"sort_how\":\"asc\",\"created_at\":\"2019-09-28T14:50:47.000Z\",\"updated_at\":\"2021-02-19T20:06:29.000Z\",\"item_count\":31,\"comment_count\":0,\"likes\":4,\"ids\":{\"trakt\":9997351,\"slug\":\"favourite-actors\"},\"user\":{\"username\":\"callingjupiter\",\"private\":false,\"deleted\":false,\"name\":\"jupiter.\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"callingjupiter\"}}},{\"name\":\"Actors
-        and Actresses I Like!\",\"description\":\"The list of actors and actresses
-        that I like!\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/4674997\",\"type\":\"personal\",\"display_numbers\":false,\"allow_comments\":true,\"sort_by\":\"title\",\"sort_how\":\"asc\",\"created_at\":\"2018-03-26T10:01:12.000Z\",\"updated_at\":\"2025-08-02T16:46:10.000Z\",\"item_count\":287,\"comment_count\":0,\"likes\":2,\"ids\":{\"trakt\":4674997,\"slug\":\"actors-and-actresses-i-like\"},\"user\":{\"username\":\"SparklinDiamond\",\"private\":false,\"deleted\":false,\"name\":\"Ellie
-        \\u003c3\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"sparklindiamond\"}}},{\"name\":\"Watching
-        David Tennant\",\"description\":\"Everything he's in I'm watching it.\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/836661\",\"type\":\"personal\",\"display_numbers\":false,\"allow_comments\":true,\"sort_by\":\"rank\",\"sort_how\":\"asc\",\"created_at\":\"2014-03-09T09:03:00.000Z\",\"updated_at\":\"2023-09-10T19:10:32.000Z\",\"item_count\":21,\"comment_count\":0,\"likes\":1,\"ids\":{\"trakt\":836661,\"slug\":\"watching-david-tennant\"},\"user\":{\"username\":\"gallifreysbowtie\",\"private\":false,\"deleted\":false,\"name\":\"Karu\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"gallifreysbowtie\"}}},{\"name\":\"Favorite
-        Actors\",\"description\":\"I saw someone making a favorite actors list, so
-        here's mine! A few badasses and a few to crush for\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/32077084\",\"type\":\"personal\",\"display_numbers\":true,\"allow_comments\":true,\"sort_by\":\"rank\",\"sort_how\":\"asc\",\"created_at\":\"2025-08-07T13:27:07.000Z\",\"updated_at\":\"2025-11-07T11:16:34.000Z\",\"item_count\":52,\"comment_count\":0,\"likes\":0,\"ids\":{\"trakt\":32077084,\"slug\":\"favorite-actors\"},\"user\":{\"username\":\"Butters333\",\"private\":false,\"deleted\":false,\"name\":\"Butters333\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"butters333\"}}},{\"name\":\"Fav
-        Actors \U0001F468‍\U0001F468\",\"description\":\"My favored actors by performance
-        and look \U0001F632\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/31123953\",\"type\":\"personal\",\"display_numbers\":true,\"allow_comments\":true,\"sort_by\":\"rank\",\"sort_how\":\"asc\",\"created_at\":\"2025-04-12T07:48:28.000Z\",\"updated_at\":\"2025-11-07T05:51:40.000Z\",\"item_count\":64,\"comment_count\":0,\"likes\":1,\"ids\":{\"trakt\":31123953,\"slug\":\"fav-actors-man-man\"},\"user\":{\"username\":\"NeverSmile\",\"private\":false,\"deleted\":false,\"name\":\"NeverSmile\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"neversmile\"}}},{\"name\":\"Favorite
-        Actors\",\"description\":\"What it says on the tin.\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/30956068\",\"type\":\"personal\",\"display_numbers\":false,\"allow_comments\":true,\"sort_by\":\"popularity\",\"sort_how\":\"desc\",\"created_at\":\"2025-03-22T19:18:23.000Z\",\"updated_at\":\"2025-07-22T20:55:32.000Z\",\"item_count\":64,\"comment_count\":0,\"likes\":0,\"ids\":{\"trakt\":30956068,\"slug\":\"favorite-actors\"},\"user\":{\"username\":\"kijilinn\",\"private\":false,\"deleted\":false,\"name\":\"Linn
-        Browning\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"kijilinn\"}}},{\"name\":\"Liked
-        People\",\"description\":\"\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/26890720\",\"type\":\"personal\",\"display_numbers\":false,\"allow_comments\":true,\"sort_by\":\"title\",\"sort_how\":\"asc\",\"created_at\":\"2024-01-24T13:17:29.000Z\",\"updated_at\":\"2025-08-20T04:55:58.000Z\",\"item_count\":17,\"comment_count\":0,\"likes\":0,\"ids\":{\"trakt\":26890720,\"slug\":\"liked-people\"},\"user\":{\"username\":\"GabsBITS\",\"private\":false,\"deleted\":false,\"name\":\"GabsBITS\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"gabsbits\"}}},{\"name\":\"Favorite
-        actors\",\"description\":\"\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/26559149\",\"type\":\"personal\",\"display_numbers\":false,\"allow_comments\":true,\"sort_by\":\"rank\",\"sort_how\":\"asc\",\"created_at\":\"2023-12-22T06:51:08.000Z\",\"updated_at\":\"2024-08-18T05:05:37.000Z\",\"item_count\":10,\"comment_count\":0,\"likes\":0,\"ids\":{\"trakt\":26559149,\"slug\":\"favorite-actors\"},\"user\":{\"username\":\"branarahahabah\",\"private\":false,\"deleted\":false,\"name\":\"Display
-        Name\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"branarahahabah\"}}},{\"name\":\"Favorite
-        Actors\",\"description\":\"\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/25865736\",\"type\":\"personal\",\"display_numbers\":false,\"allow_comments\":true,\"sort_by\":\"title\",\"sort_how\":\"asc\",\"created_at\":\"2023-09-17T09:40:32.000Z\",\"updated_at\":\"2023-10-09T15:07:30.000Z\",\"item_count\":196,\"comment_count\":0,\"likes\":0,\"ids\":{\"trakt\":25865736,\"slug\":\"favorite-actors\"},\"user\":{\"username\":\"Natrion\",\"private\":false,\"deleted\":false,\"name\":\"Natrion\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"natrion\"}}},{\"name\":\"Favourite
-        People\",\"description\":\"Some of my favourite Actors/Actresses etc, in no
-        particular order.\",\"privacy\":\"public\",\"share_link\":\"https://trakt.tv/lists/25668296\",\"type\":\"personal\",\"display_numbers\":false,\"allow_comments\":false,\"sort_by\":\"added\",\"sort_how\":\"asc\",\"created_at\":\"2023-08-14T23:44:47.000Z\",\"updated_at\":\"2025-02-02T05:01:01.000Z\",\"item_count\":37,\"comment_count\":0,\"likes\":0,\"ids\":{\"trakt\":25668296,\"slug\":\"favourite-people\"},\"user\":{\"username\":\"SmallestCube\",\"private\":false,\"deleted\":false,\"name\":\"SmallestCube\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"smallestcube\"}}}]"
-  recorded_at: 2026-03-02 12:41:34
+      string: '[{"name":"Actors","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2019-01-16T21:47:25.000Z","updated_at":"2026-05-21T23:23:21.000Z","item_count":596,"comment_count":0,"likes":5,"ids":{"slug":"actors","trakt":6172360},"images":{"posters":[]},"user":{"ids":{"slug":"stonecold669","trakt":1979796},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/001/979/796/avatars/medium/1d8b8fe840.JPG"}},"username":"stonecold669","private":false,"deleted":false,"joined_at":"2016-05-29T14:42:26.000Z","location":"Clacton-on-Sea","about":"","name":"Phil
+        Davies","gender":"male","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}}]'
+  recorded_at: 2026-05-24 13:42:32
 recorded_with: VCR-vcr/2.1.0

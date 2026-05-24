@@ -5,16 +5,16 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:26 GMT
+      date: Sun, 24 May 2026 13:42:12 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb8e84e0237b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate, no_store=true, no_cache=true
       content-encoding: gzip
-      etag: W/"a4945a777e601d80c86968e2262bde80"
+      etag: W/"22d075978010d48fecb942c16ec3cd9c"
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
@@ -25,14 +25,13 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
-      x-request-id: d0a1d516-4f39-4b7a-b5a5-9ab30f67dd59
-      x-runtime: '0.026829'
+      x-request-id: 7d433c2c-1f5b-4f2b-88f5-89a04f2f5f3f
+      x-runtime: '0.032679'
       x-xss-protection: '0'
-      cf-ray: 9d6079c60e44dfa5-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"liked_at":"2019-09-15T02:43:31.000Z","user":{"username":"OvejaMecanica","private":false,"deleted":false,"name":"Laura","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ovejamecanica"}}}]'
-  recorded_at: 2026-03-02 12:41:26
+  recorded_at: 2026-05-24 13:42:12
 - request:
     method: GET
     uri: https://api.trakt.tv/comments/236397/likes
@@ -40,15 +39,15 @@ http_interactions:
     status: 304
     headers:
       content-type: application/json; charset=utf-8
-      content-encoding: gzip
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:12 GMT
+      cf-ray: a00cb8e948d437b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate, no_store=true, no_cache=true
-      etag: W/"a4945a777e601d80c86968e2262bde80"
+      content-encoding: gzip
+      etag: W/"22d075978010d48fecb942c16ec3cd9c"
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
@@ -59,12 +58,11 @@ http_interactions:
       x-pagination-page: '1'
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
-      x-request-id: 2545d95e-33f4-4783-9d23-a88f3e365074
-      x-runtime: '0.028918'
+      x-request-id: 9ddc543f-1859-4a26-b07c-2793629399db
+      x-runtime: '0.034489'
       x-xss-protection: '0'
-      cf-ray: 9d6079c7091cdfa5-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"liked_at":"2019-09-15T02:43:31.000Z","user":{"username":"OvejaMecanica","private":false,"deleted":false,"name":"Laura","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ovejamecanica"}}}]'
-  recorded_at: 2026-03-02 12:41:27
+  recorded_at: 2026-05-24 13:42:12
 recorded_with: VCR-vcr/2.1.0

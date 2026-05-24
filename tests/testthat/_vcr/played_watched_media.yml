@@ -5,168 +5,164 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:29 GMT
+      date: Sun, 24 May 2026 13:42:16 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: HIT
+      cf-ray: a00cb9009b8a8f37-AMS
+      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: public, max-age=28800
+      cache-control: max-age=28800, public, s-maxage=3600
       content-encoding: gzip
-      etag: W/"b5cfdd8a7081573c5b57b0db8f2919c3"
-      expires: Mon, 02 Mar 2026 15:54:45 GMT
+      etag: W/"faa0946e9129d7a727a498caaac11582"
+      expires: Sun, 24 May 2026 21:42:16 GMT
       server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: accept-encoding, query, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '213503'
+      x-pagination-item-count: '215218'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '21351'
+      x-pagination-page-count: '21522'
       x-permitted-cross-domain-policies: none
-      x-request-id: da9a513b-7d9a-4b2b-a7cc-966eee5eae52
-      x-runtime: '0.067002'
+      x-request-id: f8c1a31e-682b-4798-bde1-c22f254b3e87
+      x-runtime: '0.034568'
       x-xss-protection: '0'
-      cf-ray: 9d6079d8dcf7e5e0-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"watcher_count":61257,"play_count":130162,"collected_count":9338,"collector_count":0,"show":{"title":"A
-        Knight of the Seven Kingdoms","year":2026,"ids":{"trakt":204141,"slug":"a-knight-of-the-seven-kingdoms","tvdb":433631,"imdb":"tt27497448","tmdb":224372,"tvrage":null}}},{"watcher_count":34096,"play_count":90918,"collected_count":5745,"collector_count":0,"show":{"title":"The
-        Pitt","year":2025,"ids":{"trakt":232884,"slug":"the-pitt","tvdb":448176,"imdb":"tt31938062","tmdb":250307,"tvrage":null}}},{"watcher_count":21441,"play_count":108024,"collected_count":2809,"collector_count":56,"show":{"title":"Bridgerton","year":2020,"ids":{"trakt":157479,"slug":"bridgerton","tvdb":366668,"imdb":"tt8740790","tmdb":91239,"tvrage":null}}},{"watcher_count":19716,"play_count":80919,"collected_count":5187,"collector_count":506,"show":{"title":"The
-        Rookie","year":2018,"ids":{"trakt":134421,"slug":"the-rookie-2018","tvdb":350665,"imdb":"tt7587890","tmdb":79744,"tvrage":null}}},{"watcher_count":19041,"play_count":71223,"collected_count":4174,"collector_count":0,"show":{"title":"Paradise","year":2025,"ids":{"trakt":225096,"slug":"paradise-2025","tvdb":454565,"imdb":"tt27444205","tmdb":245927,"tvrage":null}}},{"watcher_count":17934,"play_count":47445,"collected_count":5463,"collector_count":490,"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}}},{"watcher_count":15067,"play_count":36592,"collected_count":4339,"collector_count":8,"show":{"title":"Hijack","year":2023,"ids":{"trakt":194907,"slug":"hijack","tvdb":419254,"imdb":"tt19854762","tmdb":198102,"tvrage":null}}},{"watcher_count":14464,"play_count":100305,"collected_count":506,"collector_count":344,"show":{"title":"The
-        Night Agent","year":2023,"ids":{"trakt":184471,"slug":"the-night-agent","tvdb":407281,"imdb":"tt13918776","tmdb":129552,"tvrage":null}}},{"watcher_count":12201,"play_count":21543,"collected_count":4144,"collector_count":0,"show":{"title":"Star
-        Trek: Starfleet Academy","year":2026,"ids":{"trakt":203632,"slug":"star-trek-starfleet-academy","tvdb":433120,"imdb":"tt8622160","tmdb":223530,"tvrage":null}}},{"watcher_count":10732,"play_count":24400,"collected_count":3824,"collector_count":0,"show":{"title":"Monarch:
-        Legacy of Monsters","year":2023,"ids":{"trakt":195644,"slug":"monarch-legacy-of-monsters","tvdb":422598,"imdb":"tt17220216","tmdb":202411,"tvrage":null}}}]'
-  recorded_at: 2026-03-02 12:41:29
+      string: '[{"watcher_count":64371,"play_count":251385,"collected_count":5797,"collector_count":520,"show":{"title":"The
+        Boys","year":2019,"ids":{"trakt":139960,"slug":"the-boys-2019","tvdb":355567,"imdb":"tt1190634","tmdb":76479,"tvrage":null}}},{"watcher_count":36857,"play_count":123207,"collected_count":4258,"collector_count":2965,"show":{"title":"FROM","year":2022,"ids":{"trakt":188205,"slug":"from","tvdb":401003,"imdb":"tt9813792","tmdb":124364,"tvrage":null}}},{"watcher_count":24959,"play_count":57435,"collected_count":3679,"collector_count":324,"show":{"title":"Euphoria","year":2019,"ids":{"trakt":144629,"slug":"euphoria-2019","tvdb":360261,"imdb":"tt8772296","tmdb":85552,"tvrage":null}}},{"watcher_count":18201,"play_count":38001,"collected_count":1856,"collector_count":0,"show":{"title":"Dutton
+        Ranch","year":2026,"ids":{"trakt":296208,"slug":"dutton-ranch","tvdb":463308,"imdb":"tt34991493","tmdb":299167,"tvrage":null}}},{"watcher_count":17623,"play_count":45214,"collected_count":2329,"collector_count":0,"show":{"title":"Your
+        Friends \u0026 Neighbors","year":2025,"ids":{"trakt":217691,"slug":"your-friends-neighbors","tvdb":443433,"imdb":"tt30459041","tmdb":241609,"tvrage":null}}},{"watcher_count":15437,"play_count":33401,"collected_count":1580,"collector_count":0,"show":{"title":"Marshals","year":2026,"ids":{"trakt":284855,"slug":"marshals","tvdb":463433,"imdb":"tt36849871","tmdb":290856,"tvrage":null}}},{"watcher_count":14684,"play_count":32078,"collected_count":1976,"collector_count":0,"show":{"title":"Widow''s
+        Bay","year":2026,"ids":{"trakt":254678,"slug":"widow-s-bay","tvdb":454109,"imdb":"tt33332385","tmdb":270476,"tvrage":null}}},{"watcher_count":12721,"play_count":45405,"collected_count":3012,"collector_count":402,"show":{"title":"For
+        All Mankind","year":2019,"ids":{"trakt":140481,"slug":"for-all-mankind","tvdb":356202,"imdb":"tt7772588","tmdb":87917,"tvrage":null}}},{"watcher_count":12710,"play_count":37663,"collected_count":1819,"collector_count":0,"show":{"title":"Tracker","year":2024,"ids":{"trakt":198575,"slug":"tracker-2024","tvdb":428433,"imdb":"tt13875494","tmdb":211288,"tvrage":null}}},{"watcher_count":9708,"play_count":20606,"collected_count":1596,"collector_count":0,"show":{"title":"The
+        Testaments","year":2026,"ids":{"trakt":280754,"slug":"the-testaments","tvdb":460241,"imdb":"tt10970762","tmdb":287527,"tvrage":null}}}]'
+  recorded_at: 2026-05-24 13:42:16
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/watched/weekly?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:30 GMT
+      date: Sun, 24 May 2026 13:42:16 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: HIT
+      cf-ray: a00cb901eec58f37-AMS
+      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: public, max-age=28800
+      cache-control: max-age=28800, public, s-maxage=3600
       content-encoding: gzip
-      etag: W/"5f27a3f83193fdd8773f3e9358ae3bc1"
-      expires: Mon, 02 Mar 2026 14:00:57 GMT
+      etag: W/"dbff0e9b42552bc06d06b4d8a3ccde8b"
+      expires: Sun, 24 May 2026 21:42:16 GMT
       server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: accept-encoding, query, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '1253132'
+      x-pagination-item-count: '689490'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '125314'
+      x-pagination-page-count: '68949'
       x-permitted-cross-domain-policies: none
-      x-request-id: a8e49e9c-878e-4671-b681-c03affc90f2d
-      x-runtime: '0.131475'
+      x-request-id: 616b1f28-6cf3-48de-9dfe-2ecf558f1731
+      x-runtime: '0.074039'
       x-xss-protection: '0'
-      cf-ray: 9d6079d9df82e5e0-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"watcher_count":12491,"play_count":16510,"collected_count":3991,"movie":{"title":"Shelter","year":2026,"ids":{"trakt":1050424,"slug":"shelter-2026","imdb":"tt32357218","tmdb":1290821}}},{"watcher_count":11783,"play_count":14945,"collected_count":688,"movie":{"title":"Mercy","year":2026,"ids":{"trakt":1000015,"slug":"mercy-2026","imdb":"tt31050594","tmdb":1236153}}},{"watcher_count":7411,"play_count":10163,"collected_count":680,"movie":{"title":"28
-        Years Later: The Bone Temple","year":2026,"ids":{"trakt":1033738,"slug":"28-years-later-the-bone-temple-2026","imdb":"tt32141377","tmdb":1272837}}},{"watcher_count":6239,"play_count":9303,"collected_count":339,"movie":{"title":"The
-        Housemaid","year":2025,"ids":{"trakt":1117195,"slug":"the-housemaid-2025","imdb":"tt27543632","tmdb":1368166}}},{"watcher_count":5836,"play_count":7006,"collected_count":2675,"movie":{"title":"The
-        Bluff","year":2026,"ids":{"trakt":634944,"slug":"the-bluff-2026","imdb":"tt14181714","tmdb":799882}}},{"watcher_count":5011,"play_count":7662,"collected_count":392,"movie":{"title":"Marty
-        Supreme","year":2025,"ids":{"trakt":1076665,"slug":"marty-supreme-2025","imdb":"tt32916440","tmdb":1317288}}},{"watcher_count":3538,"play_count":4727,"collected_count":437,"movie":{"title":"Zootopia
-        2","year":2025,"ids":{"trakt":871499,"slug":"zootopia-2-2025","imdb":"tt26443597","tmdb":1084242}}},{"watcher_count":3329,"play_count":4222,"collected_count":184,"movie":{"title":"Predator:
-        Badlands","year":2025,"ids":{"trakt":1006226,"slug":"predator-badlands-2025","imdb":"tt31227572","tmdb":1242898}}},{"watcher_count":3100,"play_count":3808,"collected_count":913,"movie":{"title":"One
-        Mile: Chapter One","year":2026,"ids":{"trakt":1086071,"slug":"one-mile-chapter-one-2026","imdb":"tt24326458","tmdb":1327688}}},{"watcher_count":2702,"play_count":3499,"collected_count":159,"movie":{"title":"The
-        Wrecking Crew","year":2026,"ids":{"trakt":941438,"slug":"the-wrecking-crew-2026","imdb":"tt33046197","tmdb":1168190}}}]'
-  recorded_at: 2026-03-02 12:41:30
+      string: '[{"watcher_count":16863,"play_count":19001,"collected_count":868,"movie":{"title":"Project
+        Hail Mary","year":2026,"ids":{"trakt":531178,"slug":"project-hail-mary-2026","imdb":"tt12042730","tmdb":687163}}},{"watcher_count":13595,"play_count":15035,"collected_count":1190,"movie":{"title":"The
+        Punisher: One Last Kill","year":2026,"ids":{"trakt":1178309,"slug":"the-punisher-one-last-kill-2026","imdb":"tt36042156","tmdb":1439930}}},{"watcher_count":9677,"play_count":10581,"collected_count":3027,"movie":{"title":"Tom
+        Clancy''s Jack Ryan: Ghost War","year":2026,"ids":{"trakt":1127320,"slug":"tom-clancy-s-jack-ryan-ghost-war-2026","imdb":"tt34378301","tmdb":1380291}}},{"watcher_count":9360,"play_count":10873,"collected_count":1243,"movie":{"title":"Mortal
+        Kombat II","year":2026,"ids":{"trakt":746852,"slug":"mortal-kombat-ii-2026","imdb":"tt17490712","tmdb":931285}}},{"watcher_count":9322,"play_count":10548,"collected_count":2801,"movie":{"title":"Lee
+        Cronin''s The Mummy","year":2026,"ids":{"trakt":1063866,"slug":"lee-cronin-s-the-mummy-2026","imdb":"tt32612507","tmdb":1304313}}},{"watcher_count":6632,"play_count":7859,"collected_count":2251,"movie":{"title":"The
+        Super Mario Galaxy Movie","year":2026,"ids":{"trakt":991429,"slug":"the-super-mario-galaxy-movie-2026","imdb":"tt28650488","tmdb":1226863}}},{"watcher_count":6325,"play_count":7262,"collected_count":2319,"movie":{"title":"Normal","year":2026,"ids":{"trakt":1005706,"slug":"normal-2026","imdb":"tt31195136","tmdb":1242332}}},{"watcher_count":5124,"play_count":5779,"collected_count":594,"movie":{"title":"The
+        Crash","year":2026,"ids":{"trakt":1362157,"slug":"the-crash-2026","imdb":"tt40792117","tmdb":1662317}}},{"watcher_count":4746,"play_count":5179,"collected_count":185,"movie":{"title":"Apex","year":2026,"ids":{"trakt":1077748,"slug":"apex-2026","imdb":"tt16431404","tmdb":1318447}}},{"watcher_count":4377,"play_count":4757,"collected_count":320,"movie":{"title":"Remarkably
+        Bright Creatures","year":2026,"ids":{"trakt":1088230,"slug":"remarkably-bright-creatures-2026","imdb":"tt33100314","tmdb":1330021}}}]'
+  recorded_at: 2026-05-24 13:42:16
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/played/weekly?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:30 GMT
+      date: Sun, 24 May 2026 13:42:16 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: MISS
+      cf-ray: a00cb9036a258f37-AMS
+      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: public, max-age=28800
+      cache-control: max-age=28800, public, s-maxage=3600
       content-encoding: gzip
-      etag: W/"cc9d1dd8bcd5bf1b0f6786a7e3e92e8e"
-      expires: Mon, 02 Mar 2026 20:41:30 GMT
+      etag: W/"8c54578775007ecb0c135aed1df2ef25"
+      expires: Sun, 24 May 2026 21:42:16 GMT
       server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: accept-encoding, query, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '213501'
+      x-pagination-item-count: '215218'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '21351'
+      x-pagination-page-count: '21522'
       x-permitted-cross-domain-policies: none
-      x-request-id: bf3dedaa-4d9f-4838-b2c8-6206d12f0bec
-      x-runtime: '0.038593'
+      x-request-id: 65826cd5-77da-48d2-b152-83c9ecf2d666
+      x-runtime: '0.037288'
       x-xss-protection: '0'
-      cf-ray: 9d6079daea5ee5e0-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"watcher_count":47,"play_count":132267,"collected_count":174,"collector_count":6,"show":{"title":"Wheel
-        of Fortune","year":1983,"ids":{"trakt":2760,"slug":"wheel-of-fortune","tvdb":76573,"imdb":"tt0072584","tmdb":2778,"tvrage":null}}},{"watcher_count":57928,"play_count":125386,"collected_count":9338,"collector_count":0,"show":{"title":"A
-        Knight of the Seven Kingdoms","year":2026,"ids":{"trakt":204141,"slug":"a-knight-of-the-seven-kingdoms","tvdb":433631,"imdb":"tt27497448","tmdb":224372,"tvrage":null}}},{"watcher_count":21679,"play_count":109595,"collected_count":2809,"collector_count":56,"show":{"title":"Bridgerton","year":2020,"ids":{"trakt":157479,"slug":"bridgerton","tvdb":366668,"imdb":"tt8740790","tmdb":91239,"tvrage":null}}},{"watcher_count":14379,"play_count":99532,"collected_count":506,"collector_count":344,"show":{"title":"The
-        Night Agent","year":2023,"ids":{"trakt":184471,"slug":"the-night-agent","tvdb":407281,"imdb":"tt13918776","tmdb":129552,"tvrage":null}}},{"watcher_count":4838,"play_count":94631,"collected_count":133,"collector_count":291,"show":{"title":"The
-        Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}}},{"watcher_count":3033,"play_count":93544,"collected_count":76,"collector_count":361,"show":{"title":"The
-        Big Bang Theory","year":2007,"ids":{"trakt":1409,"slug":"the-big-bang-theory","tvdb":80379,"imdb":"tt0898266","tmdb":1418,"tvrage":null}}},{"watcher_count":34093,"play_count":90947,"collected_count":5745,"collector_count":0,"show":{"title":"The
-        Pitt","year":2025,"ids":{"trakt":232884,"slug":"the-pitt","tvdb":448176,"imdb":"tt31938062","tmdb":250307,"tvrage":null}}},{"watcher_count":1566,"play_count":88853,"collected_count":55,"collector_count":589,"show":{"title":"One
-        Piece","year":1999,"ids":{"trakt":37696,"slug":"one-piece","tvdb":81797,"imdb":"tt0388629","tmdb":37854,"tvrage":null}}},{"watcher_count":8923,"play_count":88668,"collected_count":3829,"collector_count":158,"show":{"title":"Family
-        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}}},{"watcher_count":299,"play_count":80614,"collected_count":463,"collector_count":154,"show":{"title":"Jeopardy!","year":1984,"ids":{"trakt":2893,"slug":"jeopardy","tvdb":77075,"imdb":"tt0159881","tmdb":2912,"tvrage":null}}}]'
-  recorded_at: 2026-03-02 12:41:30
+      string: '[{"watcher_count":64371,"play_count":251385,"collected_count":5797,"collector_count":520,"show":{"title":"The
+        Boys","year":2019,"ids":{"trakt":139960,"slug":"the-boys-2019","tvdb":355567,"imdb":"tt1190634","tmdb":76479,"tvrage":null}}},{"watcher_count":4966,"play_count":194712,"collected_count":544,"collector_count":589,"show":{"title":"One
+        Piece","year":1999,"ids":{"trakt":37696,"slug":"one-piece","tvdb":81797,"imdb":"tt0388629","tmdb":37854,"tvrage":null}}},{"watcher_count":6224,"play_count":132906,"collected_count":776,"collector_count":98,"show":{"title":"Survivor","year":2000,"ids":{"trakt":14594,"slug":"survivor-2000","tvdb":76733,"imdb":"tt0239195","tmdb":14658,"tvrage":null}}},{"watcher_count":36857,"play_count":123207,"collected_count":4258,"collector_count":2965,"show":{"title":"FROM","year":2022,"ids":{"trakt":188205,"slug":"from","tvdb":401003,"imdb":"tt9813792","tmdb":124364,"tvrage":null}}},{"watcher_count":8841,"play_count":119420,"collected_count":2122,"collector_count":158,"show":{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}}},{"watcher_count":3372,"play_count":109760,"collected_count":22,"collector_count":291,"show":{"title":"The
+        Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}}},{"watcher_count":3114,"play_count":103465,"collected_count":55,"collector_count":499,"show":{"title":"Game
+        of Thrones","year":2011,"ids":{"trakt":1390,"slug":"game-of-thrones","tvdb":121361,"imdb":"tt0944947","tmdb":1399,"tvrage":null}}},{"watcher_count":3336,"play_count":96482,"collected_count":51,"collector_count":361,"show":{"title":"The
+        Big Bang Theory","year":2007,"ids":{"trakt":1409,"slug":"the-big-bang-theory","tvdb":80379,"imdb":"tt0898266","tmdb":1418,"tvrage":null}}},{"watcher_count":859,"play_count":92394,"collected_count":439,"collector_count":7,"show":{"title":"The
+        Daily Show","year":1996,"ids":{"trakt":2211,"slug":"the-daily-show","tvdb":71256,"imdb":"tt0115147","tmdb":2224,"tvrage":null}}},{"watcher_count":4281,"play_count":82788,"collected_count":319,"collector_count":180,"show":{"title":"Law
+        \u0026 Order: Special Victims Unit","year":1999,"ids":{"trakt":2716,"slug":"law-order-special-victims-unit","tvdb":75692,"imdb":"tt0203259","tmdb":2734,"tvrage":null}}}]'
+  recorded_at: 2026-05-24 13:42:16
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/played/weekly?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:30 GMT
+      date: Sun, 24 May 2026 13:42:17 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: MISS
+      cf-ray: a00cb9049cc48f37-AMS
+      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: public, max-age=28800
+      cache-control: max-age=28800, public, s-maxage=3600
       content-encoding: gzip
-      etag: W/"881c2053ad92c963b6a8bced9db4dc4a"
-      expires: Mon, 02 Mar 2026 20:41:30 GMT
+      etag: W/"85abc0f74ca0ecdfae00259e24b2a5cc"
+      expires: Sun, 24 May 2026 21:42:17 GMT
       server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: accept-encoding, query, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '1253075'
+      x-pagination-item-count: '689490'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '125308'
+      x-pagination-page-count: '68949'
       x-permitted-cross-domain-policies: none
-      x-request-id: 3c45e576-2f78-48a5-99ad-29cef63d7f58
-      x-runtime: '0.124713'
+      x-request-id: 001bf32e-b2d7-405d-8579-29652e62a8b2
+      x-runtime: '0.073101'
       x-xss-protection: '0'
-      cf-ray: 9d6079dc1d1ce5e0-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"watcher_count":12654,"play_count":16749,"collected_count":3991,"movie":{"title":"Shelter","year":2026,"ids":{"trakt":1050424,"slug":"shelter-2026","imdb":"tt32357218","tmdb":1290821}}},{"watcher_count":11655,"play_count":14825,"collected_count":688,"movie":{"title":"Mercy","year":2026,"ids":{"trakt":1000015,"slug":"mercy-2026","imdb":"tt31050594","tmdb":1236153}}},{"watcher_count":7307,"play_count":10019,"collected_count":563,"movie":{"title":"28
-        Years Later: The Bone Temple","year":2026,"ids":{"trakt":1033738,"slug":"28-years-later-the-bone-temple-2026","imdb":"tt32141377","tmdb":1272837}}},{"watcher_count":6185,"play_count":9230,"collected_count":290,"movie":{"title":"The
-        Housemaid","year":2025,"ids":{"trakt":1117195,"slug":"the-housemaid-2025","imdb":"tt27543632","tmdb":1368166}}},{"watcher_count":4990,"play_count":7611,"collected_count":392,"movie":{"title":"Marty
-        Supreme","year":2025,"ids":{"trakt":1076665,"slug":"marty-supreme-2025","imdb":"tt32916440","tmdb":1317288}}},{"watcher_count":5961,"play_count":7186,"collected_count":2675,"movie":{"title":"The
-        Bluff","year":2026,"ids":{"trakt":634944,"slug":"the-bluff-2026","imdb":"tt14181714","tmdb":799882}}},{"watcher_count":3529,"play_count":4718,"collected_count":433,"movie":{"title":"Zootopia
-        2","year":2025,"ids":{"trakt":871499,"slug":"zootopia-2-2025","imdb":"tt26443597","tmdb":1084242}}},{"watcher_count":3302,"play_count":4195,"collected_count":174,"movie":{"title":"Predator:
-        Badlands","year":2025,"ids":{"trakt":1006226,"slug":"predator-badlands-2025","imdb":"tt31227572","tmdb":1242898}}},{"watcher_count":3060,"play_count":3754,"collected_count":913,"movie":{"title":"One
-        Mile: Chapter One","year":2026,"ids":{"trakt":1086071,"slug":"one-mile-chapter-one-2026","imdb":"tt24326458","tmdb":1327688}}},{"watcher_count":2678,"play_count":3463,"collected_count":159,"movie":{"title":"The
-        Wrecking Crew","year":2026,"ids":{"trakt":941438,"slug":"the-wrecking-crew-2026","imdb":"tt33046197","tmdb":1168190}}}]'
-  recorded_at: 2026-03-02 12:41:30
+      string: '[{"watcher_count":16863,"play_count":19001,"collected_count":868,"movie":{"title":"Project
+        Hail Mary","year":2026,"ids":{"trakt":531178,"slug":"project-hail-mary-2026","imdb":"tt12042730","tmdb":687163}}},{"watcher_count":13595,"play_count":15035,"collected_count":1190,"movie":{"title":"The
+        Punisher: One Last Kill","year":2026,"ids":{"trakt":1178309,"slug":"the-punisher-one-last-kill-2026","imdb":"tt36042156","tmdb":1439930}}},{"watcher_count":9360,"play_count":10873,"collected_count":1243,"movie":{"title":"Mortal
+        Kombat II","year":2026,"ids":{"trakt":746852,"slug":"mortal-kombat-ii-2026","imdb":"tt17490712","tmdb":931285}}},{"watcher_count":9677,"play_count":10581,"collected_count":3027,"movie":{"title":"Tom
+        Clancy''s Jack Ryan: Ghost War","year":2026,"ids":{"trakt":1127320,"slug":"tom-clancy-s-jack-ryan-ghost-war-2026","imdb":"tt34378301","tmdb":1380291}}},{"watcher_count":9322,"play_count":10548,"collected_count":2801,"movie":{"title":"Lee
+        Cronin''s The Mummy","year":2026,"ids":{"trakt":1063866,"slug":"lee-cronin-s-the-mummy-2026","imdb":"tt32612507","tmdb":1304313}}},{"watcher_count":6632,"play_count":7859,"collected_count":2251,"movie":{"title":"The
+        Super Mario Galaxy Movie","year":2026,"ids":{"trakt":991429,"slug":"the-super-mario-galaxy-movie-2026","imdb":"tt28650488","tmdb":1226863}}},{"watcher_count":6325,"play_count":7262,"collected_count":2319,"movie":{"title":"Normal","year":2026,"ids":{"trakt":1005706,"slug":"normal-2026","imdb":"tt31195136","tmdb":1242332}}},{"watcher_count":5124,"play_count":5779,"collected_count":594,"movie":{"title":"The
+        Crash","year":2026,"ids":{"trakt":1362157,"slug":"the-crash-2026","imdb":"tt40792117","tmdb":1662317}}},{"watcher_count":4746,"play_count":5179,"collected_count":185,"movie":{"title":"Apex","year":2026,"ids":{"trakt":1077748,"slug":"apex-2026","imdb":"tt16431404","tmdb":1318447}}},{"watcher_count":4377,"play_count":4757,"collected_count":320,"movie":{"title":"Remarkably
+        Bright Creatures","year":2026,"ids":{"trakt":1088230,"slug":"remarkably-bright-creatures-2026","imdb":"tt33100314","tmdb":1330021}}}]'
+  recorded_at: 2026-05-24 13:42:17
 recorded_with: VCR-vcr/2.1.0

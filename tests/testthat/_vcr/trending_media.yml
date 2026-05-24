@@ -5,234 +5,188 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:28 GMT
+      date: Sun, 24 May 2026 13:42:14 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=600, s-maxage=3600
       vary: query, Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: discover,trending,movie
+      cache-tag: discover,trending,movie,resource:movie:1127320,resource:movie:531178,resource:movie:1063866,resource:movie:746852,resource:movie:1178309
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-pagination-item-count: '1708'
+      x-pagination-item-count: '235'
       x-pagination-limit: '5'
       x-pagination-page: '1'
-      x-pagination-page-count: '342'
-      x-trending-user-count: '8098'
+      x-pagination-page-count: '47'
+      x-trending-user-count: '12583'
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6079cc0cf3e5e0-AMS
-      alt-svc: h3=":443"; ma=86400
+      cf-ray: a00cb8f3e9ba8f37-AMS
     body:
-      string: '[{"watchers":2254,"movie":{"title":"Shelter","year":2026,"ids":{"trakt":1050424,"slug":"shelter-2026","imdb":"tt32357218","tmdb":1290821,"plex":{"guid":"6646bd6262ca77e1d6a100df","slug":"shelter-2026"}},"tagline":"Her
-        safety. His mission.","overview":"A man living in self-imposed exile on a
-        remote island rescues a young girl from a violent storm, setting off a chain
-        of events that forces him out of seclusion to protect her from enemies tied
-        to his past.","runtime":107,"country":"gb","trailer":"https://youtube.com/watch?v=auHiLFjaIc0","homepage":"https://blackbearpictures.com/film-and-tv/shelter","status":"released","rating":7.05719,"votes":1766,"comment_count":27,"updated_at":"2026-03-02T08:41:30.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"],"genres":["action","crime","thriller"],"subgenres":[],"original_title":"Shelter","images":{"fanart":["media.trakt.tv/images/movies/001/050/424/fanarts/medium/1128172ccd.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/050/424/posters/medium/e904b05b02.jpg.webp"],"logo":["media.trakt.tv/images/movies/001/050/424/logos/medium/1f6a9628cb.png.webp"],"banner":["media.trakt.tv/images/movies/001/050/424/banners/medium/b07ebd6b4e.jpg.webp"],"thumb":["media.trakt.tv/images/movies/001/050/424/thumbs/medium/42cb52071f.jpg.webp"],"clearart":["media.trakt.tv/images/movies/001/050/424/cleararts/medium/565202a071.png.webp"]},"colors":{"poster":["#AAB386","#373935"]},"released":"2026-01-30","after_credits":false,"during_credits":false,"certification":"R"}},{"watchers":2024,"movie":{"title":"Mercy","year":2026,"ids":{"trakt":1000015,"slug":"mercy-2026","imdb":"tt31050594","tmdb":1236153,"plex":{"guid":"65b41a7eb5cab988940e14b1","slug":"mercy-2026"}},"tagline":"Prove
-        your innocence to an AI judge or face execution.","overview":"In the near
-        future, a detective stands on trial accused of murdering his wife. He has
-        ninety minutes to prove his innocence to the advanced AI Judge he once championed,
-        before it determines his fate.","runtime":100,"country":"us","trailer":"https://youtube.com/watch?v=JUADqWkJiiE","homepage":"https://www.amazon.com/salp/mercy?hhf=","status":"released","rating":6.94131,"votes":4260,"comment_count":56,"updated_at":"2026-03-02T08:46:28.000Z","language":"en","languages":["en","hi"],"available_translations":["ar","az","bg","ca","cs","da","de","el","en","es","et","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"],"genres":["science-fiction","action","thriller"],"subgenres":["aggressive","kidnapping","father-daughter-relationship","artificial-intelligence-a-i","near-future"],"original_title":"Mercy","images":{"fanart":["media.trakt.tv/images/movies/001/000/015/fanarts/medium/9bff8f863d.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/000/015/posters/medium/504c0cc266.jpg.webp"],"logo":["media.trakt.tv/images/movies/001/000/015/logos/medium/f75246b9b7.png.webp"],"banner":["media.trakt.tv/images/movies/001/000/015/banners/medium/a12658a749.jpg.webp"],"thumb":["media.trakt.tv/images/movies/001/000/015/thumbs/medium/15b5134234.jpg.webp"],"clearart":["media.trakt.tv/images/movies/001/000/015/cleararts/medium/3869f112e8.png.webp"]},"colors":{"poster":["#D3D6D1","#564238"]},"released":"2026-01-23","after_credits":false,"during_credits":false,"certification":"PG-13"}},{"watchers":1457,"movie":{"title":"The
-        Bluff","year":2026,"ids":{"trakt":634944,"slug":"the-bluff-2026","imdb":"tt14181714","tmdb":799882,"plex":{"guid":"6048832da653c5002d11fefb","slug":"the-bluff-2026"}},"tagline":"Betrayal
-        cuts deep.","overview":"When her tranquil life on a remote island is shattered
-        by the return of her vengeful former captain, a skilled ex-pirate must confront
-        her bloody past and unleash her deadly talents to save her family from a ruthless
-        siege.","runtime":102,"country":"us","trailer":"https://youtube.com/watch?v=uUYMqRjNxhM","homepage":"https://www.amazon.com/gp/video/detail/B0G569YVZW","status":"released","rating":6.69822,"votes":898,"comment_count":9,"updated_at":"2026-03-02T08:40:17.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","eu","fi","fr","gl","he","hi","hu","id","it","ja","ka","kn","ko","ml","ms","nl","no","pl","pt","ro","ru","sk","sl","sv","ta","te","th","tr","uk","vi","zh"],"genres":["action","thriller"],"subgenres":["19th-century","pirate"],"original_title":"The
-        Bluff","images":{"fanart":["media.trakt.tv/images/movies/000/634/944/fanarts/medium/0e8e6f409d.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/634/944/posters/medium/5852ee701c.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/634/944/logos/medium/58a5b50adf.png.webp"],"banner":[],"thumb":["media.trakt.tv/images/movies/000/634/944/thumbs/medium/3a6c036568.jpg.webp"],"clearart":[]},"colors":{"poster":["#AEA98F","#271A1B"]},"released":"2026-02-25","after_credits":false,"during_credits":false,"certification":"R"}},{"watchers":1190,"movie":{"title":"28
-        Years Later: The Bone Temple","year":2026,"ids":{"trakt":1033738,"slug":"28-years-later-the-bone-temple-2026","imdb":"tt32141377","tmdb":1272837,"plex":{"guid":"66233b1bb07ed996b70874e5","slug":"28-years-later-the-bone-temple-2026"}},"tagline":"Fear
-        is the new faith.","overview":"Dr. Kelson finds himself in a shocking new
-        relationship - with consequences that could change the world as they know
-        it - and Spike''s encounter with Jimmy Crystal becomes a nightmare he can''t
-        escape.","runtime":109,"country":"gb","trailer":"https://youtube.com/watch?v=rl_DJZCyEH4","homepage":"https://28yearslater.movie","status":"released","rating":7.22951,"votes":3551,"comment_count":68,"updated_at":"2026-03-02T08:43:00.000Z","language":"en","languages":["en"],"available_translations":["ar","az","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"],"genres":["horror","science-fiction","thriller"],"subgenres":["death","survival","zombie","post-apocalyptic-future","survival-horror","zombie-apocalypse"],"original_title":"28
-        Years Later: The Bone Temple","images":{"fanart":["media.trakt.tv/images/movies/001/033/738/fanarts/medium/634a5e2f80.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/033/738/posters/medium/490a2d3fbb.jpg.webp"],"logo":["media.trakt.tv/images/movies/001/033/738/logos/medium/5cda893584.png.webp"],"banner":[],"thumb":["media.trakt.tv/images/movies/001/033/738/thumbs/medium/82837aae23.jpg.webp"],"clearart":[]},"colors":{"poster":["#BE6E3F","#31190D"]},"released":"2026-01-14","after_credits":false,"during_credits":false,"certification":"R"}},{"watchers":1173,"movie":{"title":"The
-        Housemaid","year":2025,"ids":{"trakt":1117195,"slug":"the-housemaid-2025","imdb":"tt27543632","tmdb":1368166,"plex":{"guid":"6444698339b14cd38176a513","slug":"the-housemaid-2025"}},"tagline":"Discover
-        what lies behind closed doors.","overview":"Trying to escape her past, Millie
-        Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew
-        Winchester. But what begins as a dream job quickly unravels into something
-        far more dangerous—a sexy, seductive game of secrets, scandal, and power.","runtime":131,"country":"us","trailer":"https://youtube.com/watch?v=BqWH0KDqm3U","homepage":"https://thehousemaid.movie","status":"released","rating":7.20381,"votes":5873,"comment_count":106,"updated_at":"2026-03-02T08:41:41.000Z","language":"en","languages":["en"],"available_translations":["az","bg","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["thriller","mystery","drama"],"subgenres":["psychological-thriller","suspense-thriller"],"original_title":"The
-        Housemaid","images":{"fanart":["media.trakt.tv/images/movies/001/117/195/fanarts/medium/9d746aebfd.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/117/195/posters/medium/eb491d79d8.jpg.webp"],"logo":["media.trakt.tv/images/movies/001/117/195/logos/medium/81e8cccad1.png.webp"],"banner":["media.trakt.tv/images/movies/001/117/195/banners/medium/047e6b7eba.jpg.webp"],"thumb":["media.trakt.tv/images/movies/001/117/195/thumbs/medium/7d914fc58c.jpg.webp"],"clearart":["media.trakt.tv/images/movies/001/117/195/cleararts/medium/2bdd0c611d.png.webp"]},"colors":{"poster":["#AF9856","#2F2B32"]},"released":"2025-12-19","after_credits":false,"during_credits":false,"certification":"R"}}]'
-  recorded_at: 2026-03-02 12:41:28
+      string: '[{"watchers":3223,"movie":{"ids":{"imdb":"tt34378301","plex":{"guid":"672a6e52c25ec7f136678ce0","slug":"untitled-jack-ryan-project"},"slug":"tom-clancy-s-jack-ryan-ghost-war-2026","tmdb":1380291,"trakt":1127320},"year":2026,"title":"Tom
+        Clancy''s Jack Ryan: Ghost War"}},{"watchers":3054,"movie":{"ids":{"imdb":"tt12042730","plex":{"guid":"5e91843e9bec79003fe50ffb","slug":"project-hail-mary"},"slug":"project-hail-mary-2026","tmdb":687163,"trakt":531178},"year":2026,"title":"Project
+        Hail Mary"}},{"watchers":2395,"movie":{"ids":{"imdb":"tt32612507","plex":{"guid":"666e8f86b54e01613b35bccf","slug":"lee-cronins-the-mummy"},"slug":"lee-cronin-s-the-mummy-2026","tmdb":1304313,"trakt":1063866},"year":2026,"title":"Lee
+        Cronin''s The Mummy"}},{"watchers":2267,"movie":{"ids":{"imdb":"tt17490712","plex":{"guid":"61f330850ecd2260deb80a5e","slug":"mortal-kombat-ii"},"slug":"mortal-kombat-ii-2026","tmdb":931285,"trakt":746852},"year":2026,"title":"Mortal
+        Kombat II"}},{"watchers":1644,"movie":{"ids":{"imdb":"tt36042156","plex":{"guid":"67f12e697648884062e634c7","slug":"the-punisher-special-presentation"},"slug":"the-punisher-one-last-kill-2026","tmdb":1439930,"trakt":1178309},"year":2026,"title":"The
+        Punisher: One Last Kill"}}]'
+  recorded_at: 2026-05-24 13:42:14
 - request:
     method: GET
     uri: https://api.trakt.tv/movies/trending?limit=5&extended=full
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:33:31 GMT
+      date: Sun, 24 May 2026 13:42:14 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: HIT
       access-control-allow-origin: '*'
-      age: '624'
-      cache-control: public, max-age=2678400, s-maxage=3600
-      last-modified: Mon, 02 Mar 2026 11:23:07 GMT
-      server: cloudflare
+      cache-control: public, max-age=600, s-maxage=3600
       vary: query, Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: discover,trending,movie,resource:movie:1127320,resource:movie:531178,resource:movie:1063866,resource:movie:746852,resource:movie:1178309
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      cache-tag: discover,trending,movie
-      x-pagination-item-count: '1702'
+      x-pagination-item-count: '235'
       x-pagination-limit: '5'
       x-pagination-page: '1'
-      x-pagination-page-count: '341'
-      x-trending-user-count: '8334'
+      x-pagination-page-count: '47'
+      x-trending-user-count: '12583'
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
-      cf-ray: 9d6016486bfbfe9e-AMS
-      alt-svc: h3=":443"; ma=86400
+      server: cloudflare
+      cf-ray: a00cb8f4fc618f37-AMS
     body:
-      string: '[{"watchers":2362,"movie":{"title":"Shelter","year":2026,"ids":{"trakt":1050424,"slug":"shelter-2026","imdb":"tt32357218","tmdb":1290821,"plex":{"guid":"6646bd6262ca77e1d6a100df","slug":"shelter-2026"}},"tagline":"Her
-        safety. His mission.","overview":"A man living in self-imposed exile on a
-        remote island rescues a young girl from a violent storm, setting off a chain
-        of events that forces him out of seclusion to protect her from enemies tied
-        to his past.","runtime":107,"country":"gb","trailer":"https://youtube.com/watch?v=auHiLFjaIc0","homepage":"https://blackbearpictures.com/film-and-tv/shelter","status":"released","rating":7.05956,"votes":1763,"comment_count":27,"updated_at":"2026-03-02T08:41:30.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"],"genres":["action","crime","thriller"],"subgenres":[],"original_title":"Shelter","images":{"fanart":["media.trakt.tv/images/movies/001/050/424/fanarts/medium/1128172ccd.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/050/424/posters/medium/e904b05b02.jpg.webp"],"logo":["media.trakt.tv/images/movies/001/050/424/logos/medium/1f6a9628cb.png.webp"],"banner":["media.trakt.tv/images/movies/001/050/424/banners/medium/b07ebd6b4e.jpg.webp"],"thumb":["media.trakt.tv/images/movies/001/050/424/thumbs/medium/42cb52071f.jpg.webp"],"clearart":["media.trakt.tv/images/movies/001/050/424/cleararts/medium/565202a071.png.webp"]},"colors":{"poster":["#AAB386","#373935"]},"released":"2026-01-30","after_credits":false,"during_credits":false,"certification":"R"}},{"watchers":2072,"movie":{"title":"Mercy","year":2026,"ids":{"trakt":1000015,"slug":"mercy-2026","imdb":"tt31050594","tmdb":1236153,"plex":{"guid":"65b41a7eb5cab988940e14b1","slug":"mercy-2026"}},"tagline":"Prove
-        your innocence to an AI judge or face execution.","overview":"In the near
-        future, a detective stands on trial accused of murdering his wife. He has
-        ninety minutes to prove his innocence to the advanced AI Judge he once championed,
-        before it determines his fate.","runtime":100,"country":"us","trailer":"https://youtube.com/watch?v=JUADqWkJiiE","homepage":"https://www.amazon.com/salp/mercy?hhf=","status":"released","rating":6.9408,"votes":4257,"comment_count":56,"updated_at":"2026-03-02T08:46:28.000Z","language":"en","languages":["en","hi"],"available_translations":["ar","az","bg","ca","cs","da","de","el","en","es","et","fi","fr","he","hr","hu","it","ja","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"],"genres":["science-fiction","action","thriller"],"subgenres":["aggressive","kidnapping","father-daughter-relationship","artificial-intelligence-a-i","near-future"],"original_title":"Mercy","images":{"fanart":["media.trakt.tv/images/movies/001/000/015/fanarts/medium/9bff8f863d.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/000/015/posters/medium/504c0cc266.jpg.webp"],"logo":["media.trakt.tv/images/movies/001/000/015/logos/medium/f75246b9b7.png.webp"],"banner":["media.trakt.tv/images/movies/001/000/015/banners/medium/a12658a749.jpg.webp"],"thumb":["media.trakt.tv/images/movies/001/000/015/thumbs/medium/15b5134234.jpg.webp"],"clearart":["media.trakt.tv/images/movies/001/000/015/cleararts/medium/3869f112e8.png.webp"]},"colors":{"poster":["#D3D6D1","#564238"]},"released":"2026-01-23","after_credits":false,"during_credits":false,"certification":"PG-13"}},{"watchers":1490,"movie":{"title":"The
-        Bluff","year":2026,"ids":{"trakt":634944,"slug":"the-bluff-2026","imdb":"tt14181714","tmdb":799882,"plex":{"guid":"6048832da653c5002d11fefb","slug":"the-bluff-2026"}},"tagline":"Betrayal
-        cuts deep.","overview":"When her tranquil life on a remote island is shattered
-        by the return of her vengeful former captain, a skilled ex-pirate must confront
-        her bloody past and unleash her deadly talents to save her family from a ruthless
-        siege.","runtime":102,"country":"us","trailer":"https://youtube.com/watch?v=uUYMqRjNxhM","homepage":"https://www.amazon.com/gp/video/detail/B0G569YVZW","status":"released","rating":6.69978,"votes":896,"comment_count":9,"updated_at":"2026-03-02T08:40:17.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","eu","fi","fr","gl","he","hi","hu","id","it","ja","ka","kn","ko","ml","ms","nl","no","pl","pt","ro","ru","sk","sl","sv","ta","te","th","tr","uk","vi","zh"],"genres":["action","thriller"],"subgenres":["19th-century","pirate"],"original_title":"The
-        Bluff","images":{"fanart":["media.trakt.tv/images/movies/000/634/944/fanarts/medium/0e8e6f409d.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/634/944/posters/medium/5852ee701c.jpg.webp"],"logo":["media.trakt.tv/images/movies/000/634/944/logos/medium/58a5b50adf.png.webp"],"banner":[],"thumb":["media.trakt.tv/images/movies/000/634/944/thumbs/medium/3a6c036568.jpg.webp"],"clearart":[]},"colors":{"poster":["#AEA98F","#271A1B"]},"released":"2026-02-25","after_credits":false,"during_credits":false,"certification":"R"}},{"watchers":1224,"movie":{"title":"28
-        Years Later: The Bone Temple","year":2026,"ids":{"trakt":1033738,"slug":"28-years-later-the-bone-temple-2026","imdb":"tt32141377","tmdb":1272837,"plex":{"guid":"66233b1bb07ed996b70874e5","slug":"28-years-later-the-bone-temple-2026"}},"tagline":"Fear
-        is the new faith.","overview":"Dr. Kelson finds himself in a shocking new
-        relationship - with consequences that could change the world as they know
-        it - and Spike''s encounter with Jimmy Crystal becomes a nightmare he can''t
-        escape.","runtime":109,"country":"gb","trailer":"https://youtube.com/watch?v=rl_DJZCyEH4","homepage":"https://28yearslater.movie","status":"released","rating":7.22852,"votes":3549,"comment_count":68,"updated_at":"2026-03-02T08:43:00.000Z","language":"en","languages":["en"],"available_translations":["ar","az","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"],"genres":["horror","science-fiction","thriller"],"subgenres":["death","survival","zombie","post-apocalyptic-future","survival-horror","zombie-apocalypse"],"original_title":"28
-        Years Later: The Bone Temple","images":{"fanart":["media.trakt.tv/images/movies/001/033/738/fanarts/medium/634a5e2f80.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/033/738/posters/medium/490a2d3fbb.jpg.webp"],"logo":["media.trakt.tv/images/movies/001/033/738/logos/medium/5cda893584.png.webp"],"banner":[],"thumb":["media.trakt.tv/images/movies/001/033/738/thumbs/medium/82837aae23.jpg.webp"],"clearart":[]},"colors":{"poster":["#BE6E3F","#31190D"]},"released":"2026-01-14","after_credits":false,"during_credits":false,"certification":"R"}},{"watchers":1186,"movie":{"title":"The
-        Housemaid","year":2025,"ids":{"trakt":1117195,"slug":"the-housemaid-2025","imdb":"tt27543632","tmdb":1368166,"plex":{"guid":"6444698339b14cd38176a513","slug":"the-housemaid-2025"}},"tagline":"Discover
-        what lies behind closed doors.","overview":"Trying to escape her past, Millie
-        Calloway accepts a job as a live-in housemaid for the wealthy Nina and Andrew
-        Winchester. But what begins as a dream job quickly unravels into something
-        far more dangerous—a sexy, seductive game of secrets, scandal, and power.","runtime":131,"country":"us","trailer":"https://youtube.com/watch?v=BqWH0KDqm3U","homepage":"https://thehousemaid.movie","status":"released","rating":7.20525,"votes":5871,"comment_count":106,"updated_at":"2026-03-02T08:41:41.000Z","language":"en","languages":["en"],"available_translations":["az","bg","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["thriller","mystery","drama"],"subgenres":["psychological-thriller","suspense-thriller"],"original_title":"The
-        Housemaid","images":{"fanart":["media.trakt.tv/images/movies/001/117/195/fanarts/medium/9d746aebfd.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/117/195/posters/medium/eb491d79d8.jpg.webp"],"logo":["media.trakt.tv/images/movies/001/117/195/logos/medium/81e8cccad1.png.webp"],"banner":["media.trakt.tv/images/movies/001/117/195/banners/medium/047e6b7eba.jpg.webp"],"thumb":["media.trakt.tv/images/movies/001/117/195/thumbs/medium/7d914fc58c.jpg.webp"],"clearart":["media.trakt.tv/images/movies/001/117/195/cleararts/medium/2bdd0c611d.png.webp"]},"colors":{"poster":["#AF9856","#2F2B32"]},"released":"2025-12-19","after_credits":false,"during_credits":false,"certification":"R"}}]'
-  recorded_at: 2026-03-02 12:41:28
+      string: '[{"watchers":3223,"movie":{"ids":{"imdb":"tt34378301","plex":{"guid":"672a6e52c25ec7f136678ce0","slug":"untitled-jack-ryan-project"},"slug":"tom-clancy-s-jack-ryan-ghost-war-2026","tmdb":1380291,"trakt":1127320},"year":2026,"title":"Tom
+        Clancy''s Jack Ryan: Ghost War","votes":1321,"colors":{"poster":["#CFC7BA","#3A281D"]},"genres":["suspense","action","thriller"],"images":{"logo":["media.trakt.tv/images/movies/001/127/320/logos/medium/87de9c7ee4.png.webp"],"thumb":["media.trakt.tv/images/movies/001/127/320/thumbs/medium/3f3c74add8.jpg.webp"],"banner":["media.trakt.tv/images/movies/001/127/320/banners/medium/7fa0e76aea.jpg.webp"],"fanart":["media.trakt.tv/images/movies/001/127/320/fanarts/medium/b47cb6c76b.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/127/320/posters/medium/76424511b1.jpg.webp"],"clearart":["media.trakt.tv/images/movies/001/127/320/cleararts/medium/6607f027a4.png.webp"]},"rating":6.9977288246154785,"status":"released","country":"us","runtime":107,"tagline":"No
+        operation stays dark forever.","trailer":"https://youtube.com/watch?v=-4ZVFspRn3M","homepage":"https://www.amazon.com/dp/B0GVB3LYDT","language":"en","overview":"Jack
+        Ryan is reluctantly pulled back into espionage when an international covert
+        mission unravels a deadly conspiracy. Racing against time, he joins CIA allies
+        Mike November & James Greer and sharp MI6 officer Emma Marlowe to battle a
+        rogue black-ops unit in a high-stakes, deeply personal fight.","released":"2026-05-20","languages":["en"],"subgenres":["based-on-tv-series"],"social_ids":{"twitter":null,"facebook":null,"instagram":null,"wikipedia":null},"updated_at":"2026-05-24T08:25:34.000Z","after_credits":false,"certification":"R","comment_count":8,"during_credits":false,"original_title":"Tom
+        Clancy''s Jack Ryan: Ghost War","available_translations":["ar","bg","ca","cs","da","de","el","en","es","fa","fi","fr","he","hi","hu","id","it","ja","ko","ms","nb","nl","no","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"]}},{"watchers":3054,"movie":{"ids":{"imdb":"tt12042730","plex":{"guid":"5e91843e9bec79003fe50ffb","slug":"project-hail-mary"},"slug":"project-hail-mary-2026","tmdb":687163,"trakt":531178},"year":2026,"title":"Project
+        Hail Mary","votes":16225,"colors":{"poster":["#989688","#23383C"]},"genres":["science-fiction","adventure"],"images":{"logo":["media.trakt.tv/images/movies/000/531/178/logos/medium/7d1af59641.png.webp"],"thumb":["media.trakt.tv/images/movies/000/531/178/thumbs/medium/a1b2372997.jpg.webp"],"banner":["media.trakt.tv/images/movies/000/531/178/banners/medium/d08114841a.jpg.webp"],"fanart":["media.trakt.tv/images/movies/000/531/178/fanarts/medium/dac48ac7b8.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/531/178/posters/medium/9224492cbf.jpg.webp"],"clearart":["media.trakt.tv/images/movies/000/531/178/cleararts/medium/944d712cd0.png.webp"]},"rating":8.596548080444336,"status":"released","country":"us","runtime":157,"tagline":"Believe
+        in the Hail Mary.","trailer":"https://youtube.com/watch?v=NKYea63tQmI","homepage":"https://www.amazon.com/salp/projecthailmary?hhf","language":"en","overview":"Science
+        teacher Ryland Grace wakes up on a spaceship light years from home with no
+        recollection of who he is or how he got there. As his memory returns, he begins
+        to uncover his mission: solve the riddle of the mysterious substance causing
+        the sun to die out. He must call on his scientific knowledge and unorthodox
+        ideas to save everything on Earth from extinction.","released":"2026-03-20","languages":["zh","en","ja","ru"],"subgenres":["friendship","intense","admiring","scientist","alien","astronaut","space","space-travel"],"social_ids":{"twitter":"projecthailmary","facebook":"ProjectHailMary","instagram":"projecthailmary","wikipedia":"Project_Hail_Mary_(film)"},"updated_at":"2026-05-24T08:25:31.000Z","after_credits":false,"certification":"PG-13","comment_count":240,"during_credits":false,"original_title":"Project
+        Hail Mary","available_translations":["ar","az","bg","ca","cs","da","de","el","en","es","et","fi","fr","he","hi","hr","hu","it","ja","ka","ko","lt","lv","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}},{"watchers":2395,"movie":{"ids":{"imdb":"tt32612507","plex":{"guid":"666e8f86b54e01613b35bccf","slug":"lee-cronins-the-mummy"},"slug":"lee-cronin-s-the-mummy-2026","tmdb":1304313,"trakt":1063866},"year":2026,"title":"Lee
+        Cronin''s The Mummy","votes":1751,"colors":{"poster":["#B69778","#160F0A"]},"genres":["horror","mystery"],"images":{"logo":["media.trakt.tv/images/movies/001/063/866/logos/medium/5346f33462.png.webp"],"thumb":[],"banner":[],"fanart":["media.trakt.tv/images/movies/001/063/866/fanarts/medium/57a90c0e8c.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/063/866/posters/medium/0528800508.jpg.webp"],"clearart":[]},"rating":6.70017147064209,"status":"released","country":"ie","runtime":133,"tagline":"What
+        happened to Katie?","trailer":"https://youtube.com/watch?v=6wbMsDmJLCs","homepage":"https://www.warnerbros.com/movies/lee-cronins-mummy","language":"en","overview":"The
+        young daughter of a journalist disappears into the desert without a trace—eight
+        years later, the broken family is shocked when she is returned to them, as
+        what should be a joyful reunion turns into a living nightmare.","released":"2026-04-17","languages":["ar","en","es"],"subgenres":["investigation","kidnapping","monster","supernatural","missing-person","curse","demon","possession","supernatural-horror","disappearance"],"social_ids":{"twitter":"LCTheMummyMovie","facebook":"LeeCroninsTheMummy","instagram":"leecroninsthemummy","wikipedia":"The_Mummy_(2026_film)"},"updated_at":"2026-05-24T08:26:37.000Z","after_credits":false,"certification":"R","comment_count":31,"during_credits":false,"original_title":"Lee
+        Cronin''s The Mummy","available_translations":["ar","az","bg","cs","da","de","el","en","es","et","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","lv","nl","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}},{"watchers":2267,"movie":{"ids":{"imdb":"tt17490712","plex":{"guid":"61f330850ecd2260deb80a5e","slug":"mortal-kombat-ii"},"slug":"mortal-kombat-ii-2026","tmdb":931285,"trakt":746852},"year":2026,"title":"Mortal
+        Kombat II","votes":1594,"colors":{"poster":["#B59C95","#140C10"]},"genres":["action","fantasy","adventure"],"images":{"logo":["media.trakt.tv/images/movies/000/746/852/logos/medium/4933628c67.png.webp"],"thumb":[],"banner":[],"fanart":["media.trakt.tv/images/movies/000/746/852/fanarts/medium/2a5b5b6746.jpg.webp"],"poster":["media.trakt.tv/images/movies/000/746/852/posters/medium/8a5817746d.jpg.webp"],"clearart":[]},"rating":7.079673767089844,"status":"released","country":"us","runtime":116,"tagline":"Finish
+        the fight.","trailer":"https://youtube.com/watch?v=zva2PQ-ud5Y","homepage":"https://www.mortalkombatmovie.com","language":"en","overview":"The
+        fan favorite champions—now joined by Johnny Cage himself—are pitted against
+        one another in the ultimate, no-holds barred, gory battle to defeat the dark
+        rule of Shao Kahn that threatens the very existence of the Earthrealm and
+        its defenders.","released":"2026-05-08","languages":["en"],"subgenres":["based-on-video-game","magic","martial-arts","gore","alternate-dimension","ninja","fighting"],"social_ids":{"twitter":"MKMovie","facebook":"MortalKombatMovie","instagram":"mortalkombatmovie","wikipedia":"Mortal_Kombat_II_(film)"},"updated_at":"2026-05-24T08:26:50.000Z","after_credits":false,"certification":"R","comment_count":40,"during_credits":false,"original_title":"Mortal
+        Kombat II","available_translations":["ar","az","bg","cs","de","el","en","es","et","fr","he","hi","hr","hu","it","ja","ka","ko","nl","pl","pt","ro","ru","sl","sr","sv","th","tr","uk","vi","zh"]}},{"watchers":1644,"movie":{"ids":{"imdb":"tt36042156","plex":{"guid":"67f12e697648884062e634c7","slug":"the-punisher-special-presentation"},"slug":"the-punisher-one-last-kill-2026","tmdb":1439930,"trakt":1178309},"year":2026,"title":"The
+        Punisher: One Last Kill","votes":3323,"colors":{"poster":["#D4CDCC","#1F2122"]},"genres":["action","crime","drama"],"images":{"logo":["media.trakt.tv/images/movies/001/178/309/logos/medium/19f766b7a8.png.webp"],"thumb":[],"banner":[],"fanart":["media.trakt.tv/images/movies/001/178/309/fanarts/medium/2732eee907.jpg.webp"],"poster":["media.trakt.tv/images/movies/001/178/309/posters/medium/ec4c0774dd.jpg.webp"],"clearart":[]},"rating":7.474270343780518,"status":"released","country":"us","runtime":51,"tagline":"Hey
+        Frank.","trailer":"https://youtube.com/watch?v=oSeqs_xeqv4","homepage":"https://www.disneyplus.com/browse/entity-c5b69f75-f159-4749-873d-9a1d1a4eb878","language":"en","overview":"As
+        Frank Castle searches for meaning beyond revenge, an unexpected force pulls
+        him back into the fight.","released":"2026-05-12","languages":["en"],"subgenres":["conspiracy","revenge","post-traumatic-stress-disorder-ptsd","based-on-comic","anti-hero","marvel-cinematic-universe-mcu","vigilante-justice"],"social_ids":{"twitter":"ThePunisher","facebook":"MarvelsPunisher","instagram":"thepunisher","wikipedia":"The_Punisher:_One_Last_Kill"},"updated_at":"2026-05-24T08:24:55.000Z","after_credits":false,"certification":"R","comment_count":65,"during_credits":false,"original_title":"The
+        Punisher: One Last Kill","available_translations":["ar","bg","cs","da","de","el","en","es","fi","fr","he","hr","hu","it","ja","ka","ko","nl","no","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"]}}]'
+  recorded_at: 2026-05-24 13:42:14
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/trending?limit=5
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:28 GMT
+      date: Sun, 24 May 2026 13:42:14 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=600, s-maxage=3600
       vary: query, Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: discover,trending,show
+      cache-tag: discover,trending,show,resource:show:139960,resource:show:296208,resource:show:217691,resource:show:188205,resource:show:140481
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-pagination-item-count: '2270'
+      x-pagination-item-count: '657'
       x-pagination-limit: '5'
       x-pagination-page: '1'
-      x-pagination-page-count: '454'
-      x-trending-user-count: '28013'
+      x-pagination-page-count: '132'
+      x-trending-user-count: '24763'
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6079cf0c0ae5e0-AMS
-      alt-svc: h3=":443"; ma=86400
+      cf-ray: a00cb8f628678f37-AMS
     body:
-      string: '[{"watchers":7451,"show":{"title":"The Pitt","year":2025,"ids":{"trakt":232884,"slug":"the-pitt","imdb":"tt31938062","tmdb":250307,"plex":{"guid":"66047594f2781fe94954a721","slug":"the-pitt"},"tvdb":448176},"tagline":"The
-        work never stops.","overview":"The staff of Pittsburgh''s Trauma Medical Center
-        work around the clock to save lives in an overcrowded and underfunded emergency
-        department.","runtime":48,"country":"us","trailer":"https://youtube.com/watch?v=ufR_08V38sQ","homepage":"https://www.hbomax.com/shows/pitt-2024/e6e7bad9-d48d-4434-b334-7c651ffc4bdf","status":"returning
-        series","rating":8.77118,"votes":5537,"comment_count":65,"updated_at":"2026-03-01T16:22:10.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fa","fi","fr","he","hr","hu","it","ja","ko","lt","lv","mk","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["drama"],"subgenres":["hospital","medical-drama"],"original_title":"The
-        Pitt","images":{"fanart":["media.trakt.tv/images/shows/000/232/884/fanarts/medium/4200bdbce5.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/232/884/posters/medium/f45f3b3c1f.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/232/884/logos/medium/3e05070fe9.png.webp"],"banner":["media.trakt.tv/images/shows/000/232/884/banners/medium/6ea9431eb6.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/232/884/thumbs/medium/b2331becda.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/232/884/cleararts/medium/89a880ddb8.png.webp"]},"colors":{"poster":["#B3965E","#30251B"]},"first_aired":"2025-01-10T02:00:00.000Z","aired_episodes":23,"certification":"TV-MA","airs":{"day":"Thursday","time":"21:00","timezone":"America/New_York"},"network":"HBO
-        Max"}},{"watchers":7106,"show":{"title":"Bridgerton","year":2020,"ids":{"trakt":157479,"slug":"bridgerton","imdb":"tt8740790","tmdb":91239,"plex":{"guid":"5e60003a3aa1c8003ec26eac","slug":"bridgerton"},"tvdb":366668},"tagline":"Even
-        a wallflower can bloom.","overview":"Wealth, lust, and betrayal set in the
-        backdrop of Regency era England, seen through the eyes of the powerful Bridgerton
-        family.","runtime":60,"country":"us","trailer":"https://youtube.com/watch?v=gpv7ayf_tyE","homepage":"https://www.netflix.com/title/80232398","status":"returning
-        series","rating":7.76854,"votes":8628,"comment_count":42,"updated_at":"2026-03-01T17:20:59.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","ms","nl","no","pl","pt","ro","ru","sk","sl","sv","th","tl","tr","uk","vi","zh"],"genres":["drama","romance"],"subgenres":["period-drama","love","marriage","dramatic","society"],"original_title":"Bridgerton","images":{"fanart":["media.trakt.tv/images/shows/000/157/479/fanarts/medium/fee2dff6d7.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/157/479/posters/medium/b0335da4cb.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/157/479/logos/medium/599fff421b.png.webp"],"banner":["media.trakt.tv/images/shows/000/157/479/banners/medium/979a99372b.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/157/479/thumbs/medium/d41e6d0f9e.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/157/479/cleararts/medium/637e0e8661.png.webp"]},"colors":{"poster":["#AA908F","#3D343E"]},"first_aired":"2020-12-25T08:00:00.000Z","aired_episodes":32,"certification":"TV-MA","airs":{"day":"Friday","time":"03:00","timezone":"America/New_York"},"network":"Netflix"}},{"watchers":5019,"show":{"title":"A
-        Knight of the Seven Kingdoms","year":2026,"ids":{"trakt":204141,"slug":"a-knight-of-the-seven-kingdoms","imdb":"tt27497448","tmdb":224372,"plex":{"guid":"643cbf9ec1962a0897b7f6dd","slug":"a-knight-of-the-seven-kingdoms"},"tvdb":433631},"tagline":"A
-        tall tale that became legend.","overview":"A century before the events of
-        Game of Thrones, two unlikely heroes wandered Westeros: a young, naive but
-        courageous knight, Ser Duncan the Tall, and his diminutive squire, Egg. Set
-        in an age when the Targaryen line still holds the Iron Throne and the last
-        dragon has not yet passed from living memory, great destinies, powerful foes,
-        and dangerous exploits await these improbable and incomparable friends.","runtime":35,"country":"us","trailer":"https://youtube.com/watch?v=sItUCKJQLTU","homepage":"https://www.hbo.com/content/a-knight-of-the-seven-kingdoms","status":"returning
-        series","rating":8.22834,"votes":4778,"comment_count":55,"updated_at":"2026-03-01T15:57:31.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","mk","ms","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["drama","fantasy","science-fiction","action","adventure"],"subgenres":["fantasy-world","intense","spin-off"],"original_title":"A
-        Knight of the Seven Kingdoms","images":{"fanart":["media.trakt.tv/images/shows/000/204/141/fanarts/medium/e4d5748ba5.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/204/141/posters/medium/d3b65e6ff9.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/204/141/logos/medium/e4718bddda.png.webp"],"banner":["media.trakt.tv/images/shows/000/204/141/banners/medium/9b40cea8b5.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/204/141/thumbs/medium/c87b3df539.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/204/141/cleararts/medium/e43be83cd1.png.webp"]},"colors":{"poster":["#CBD3C2","#1D1D14"]},"first_aired":"2026-01-19T03:00:00.000Z","aired_episodes":6,"certification":"TV-MA","airs":{"day":"Sunday","time":"22:00","timezone":"America/New_York"},"network":"HBO"}},{"watchers":4318,"show":{"title":"Paradise","year":2025,"ids":{"trakt":225096,"slug":"paradise-2025","imdb":"tt27444205","tmdb":245927,"plex":{"guid":"673bdceaf3b97c1ef594ab33","slug":"paradise-2025-2"},"tvdb":454565},"tagline":"The
-        truth lies outside.","overview":"The tranquility in a serene, wealthy community
-        inhabited by some of the world''s most prominent individuals explodes when
-        a shocking murder occurs and a high stakes investigation unfolds.","runtime":52,"country":"us","trailer":"https://youtube.com/watch?v=QsjSIwQr7yw","homepage":"https://www.hulu.com/series/2b4b8988-50c9-4097-bf93-bc34a99a5b4f","status":"returning
-        series","rating":7.71557,"votes":3885,"comment_count":51,"updated_at":"2026-03-02T08:47:13.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","fa","fi","fr","he","hu","it","ja","ko","lt","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["drama","thriller","crime"],"subgenres":["murder","absurd","suspenseful","science-fiction","inspirational"],"original_title":"Paradise","images":{"fanart":["media.trakt.tv/images/shows/000/225/096/fanarts/medium/4221dea665.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/225/096/posters/medium/a72f8aa4db.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/225/096/logos/medium/54ac6ef3e8.png.webp"],"banner":["media.trakt.tv/images/shows/000/225/096/banners/medium/e64940bdf0.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/225/096/thumbs/medium/e2edad38a9.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/225/096/cleararts/medium/b23b14801b.png.webp"]},"colors":{"poster":["#C9C6AE","#203237"]},"first_aired":"2025-01-26T05:00:00.000Z","aired_episodes":12,"certification":"TV-MA","airs":{"day":"Tuesday","time":"00:00","timezone":"America/New_York"},"network":"Hulu"}},{"watchers":4119,"show":{"title":"The
-        Night Agent","year":2023,"ids":{"trakt":184471,"slug":"the-night-agent","imdb":"tt13918776","tmdb":129552,"plex":{"guid":"60f9444c9f3e49002d08d6e4","slug":"the-night-agent"},"tvdb":407281},"tagline":"What
-        began with a call became a calling.","overview":"Brought together by a midnight
-        phone call, an FBI agent and a cybersecurity expert must unravel an ever-growing
-        web of political conspiracies.","runtime":50,"country":"us","trailer":"https://youtube.com/watch?v=YDbnY9Obsfs","homepage":"https://www.netflix.com/title/81450827","status":"returning
-        series","rating":7.71142,"votes":7582,"comment_count":89,"updated_at":"2026-03-01T15:44:58.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","ms","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tl","tr","uk","vi","zh"],"genres":["drama","mystery","action","adventure","thriller"],"subgenres":["conspiracy","fbi","political"],"original_title":"The
-        Night Agent","images":{"fanart":["media.trakt.tv/images/shows/000/184/471/fanarts/medium/26db1a9dea.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/184/471/posters/medium/623cd73b98.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/184/471/logos/medium/dd7000c87d.png.webp"],"banner":["media.trakt.tv/images/shows/000/184/471/banners/medium/83524abddb.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/184/471/thumbs/medium/8c5ebaee1e.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/184/471/cleararts/medium/a88a62ad4f.png.webp"]},"colors":{"poster":["#BBAFAB","#171521"]},"first_aired":"2023-03-23T07:00:00.000Z","aired_episodes":30,"certification":"TV-MA","airs":{"day":"Thursday","time":"03:00","timezone":"America/New_York"},"network":"Netflix"}}]'
-  recorded_at: 2026-03-02 12:41:28
+      string: '[{"watchers":8372,"show":{"ids":{"imdb":"tt1190634","plex":{"guid":"5d9c08f246115600200ae0f6","slug":"the-boys"},"slug":"the-boys-2019","tmdb":76479,"tvdb":355567,"trakt":139960},"year":2019,"title":"The
+        Boys","aired_episodes":40}},{"watchers":4932,"show":{"ids":{"imdb":"tt34991493","plex":{"guid":"68b6e52b87dc0d2b6b23d0f3","slug":"dutton-ranch"},"slug":"dutton-ranch","tmdb":299167,"tvdb":463308,"trakt":296208},"year":2026,"title":"Dutton
+        Ranch","aired_episodes":3}},{"watchers":4387,"show":{"ids":{"imdb":"tt30459041","plex":{"guid":"657dc33ef513062f56b44a23","slug":"your-friends-and-neighbors"},"slug":"your-friends-neighbors","tmdb":241609,"tvdb":443433,"trakt":217691},"year":2025,"title":"Your
+        Friends & Neighbors","aired_episodes":17}},{"watchers":4024,"show":{"ids":{"imdb":"tt9813792","plex":{"guid":"608ae6cf5077dd002d3bb8be","slug":"from"},"slug":"from","tmdb":124364,"tvdb":401003,"trakt":188205},"year":2022,"title":"FROM","aired_episodes":35}},{"watchers":3048,"show":{"ids":{"imdb":"tt7772588","plex":{"guid":"5d9c091408fddd001f2a71c3","slug":"for-all-mankind"},"slug":"for-all-mankind","tmdb":87917,"tvdb":356202,"trakt":140481},"year":2019,"title":"For
+        All Mankind","aired_episodes":49}}]'
+  recorded_at: 2026-05-24 13:42:14
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/trending?limit=5&extended=full
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:33:32 GMT
+      date: Sun, 24 May 2026 13:42:15 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: HIT
       access-control-allow-origin: '*'
-      age: '623'
-      cache-control: public, max-age=2678400, s-maxage=3600
-      last-modified: Mon, 02 Mar 2026 11:23:08 GMT
-      server: cloudflare
+      cache-control: public, max-age=600, s-maxage=3600
       vary: query, Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: discover,trending,show,resource:show:139960,resource:show:296208,resource:show:217691,resource:show:188205,resource:show:140481
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      cache-tag: discover,trending,show
-      x-pagination-item-count: '2272'
+      x-pagination-item-count: '657'
       x-pagination-limit: '5'
       x-pagination-page: '1'
-      x-pagination-page-count: '455'
-      x-trending-user-count: '27939'
+      x-pagination-page-count: '132'
+      x-trending-user-count: '24763'
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
-      cf-ray: 9d60164b0a2efe9e-AMS
-      alt-svc: h3=":443"; ma=86400
+      server: cloudflare
+      cf-ray: a00cb8f74b9f8f37-AMS
     body:
-      string: '[{"watchers":7451,"show":{"title":"The Pitt","year":2025,"ids":{"trakt":232884,"slug":"the-pitt","imdb":"tt31938062","tmdb":250307,"plex":{"guid":"66047594f2781fe94954a721","slug":"the-pitt"},"tvdb":448176},"tagline":"The
-        work never stops.","overview":"The staff of Pittsburgh''s Trauma Medical Center
-        work around the clock to save lives in an overcrowded and underfunded emergency
-        department.","runtime":48,"country":"us","trailer":"https://youtube.com/watch?v=ufR_08V38sQ","homepage":"https://www.hbomax.com/shows/pitt-2024/e6e7bad9-d48d-4434-b334-7c651ffc4bdf","status":"returning
-        series","rating":8.77118,"votes":5537,"comment_count":65,"updated_at":"2026-03-01T16:22:10.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fa","fi","fr","he","hr","hu","it","ja","ko","lt","lv","mk","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["drama"],"subgenres":["hospital","medical-drama"],"original_title":"The
-        Pitt","images":{"fanart":["media.trakt.tv/images/shows/000/232/884/fanarts/medium/4200bdbce5.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/232/884/posters/medium/f45f3b3c1f.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/232/884/logos/medium/3e05070fe9.png.webp"],"banner":["media.trakt.tv/images/shows/000/232/884/banners/medium/6ea9431eb6.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/232/884/thumbs/medium/b2331becda.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/232/884/cleararts/medium/89a880ddb8.png.webp"]},"colors":{"poster":["#B3965E","#30251B"]},"first_aired":"2025-01-10T02:00:00.000Z","aired_episodes":23,"certification":"TV-MA","airs":{"day":"Thursday","time":"21:00","timezone":"America/New_York"},"network":"HBO
-        Max"}},{"watchers":7194,"show":{"title":"Bridgerton","year":2020,"ids":{"trakt":157479,"slug":"bridgerton","imdb":"tt8740790","tmdb":91239,"plex":{"guid":"5e60003a3aa1c8003ec26eac","slug":"bridgerton"},"tvdb":366668},"tagline":"Even
-        a wallflower can bloom.","overview":"Wealth, lust, and betrayal set in the
-        backdrop of Regency era England, seen through the eyes of the powerful Bridgerton
-        family.","runtime":60,"country":"us","trailer":"https://youtube.com/watch?v=gpv7ayf_tyE","homepage":"https://www.netflix.com/title/80232398","status":"returning
-        series","rating":7.768,"votes":8625,"comment_count":42,"updated_at":"2026-03-01T17:20:59.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","ms","nl","no","pl","pt","ro","ru","sk","sl","sv","th","tl","tr","uk","vi","zh"],"genres":["drama","romance"],"subgenres":["period-drama","love","marriage","dramatic","society"],"original_title":"Bridgerton","images":{"fanart":["media.trakt.tv/images/shows/000/157/479/fanarts/medium/fee2dff6d7.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/157/479/posters/medium/b0335da4cb.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/157/479/logos/medium/599fff421b.png.webp"],"banner":["media.trakt.tv/images/shows/000/157/479/banners/medium/979a99372b.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/157/479/thumbs/medium/d41e6d0f9e.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/157/479/cleararts/medium/637e0e8661.png.webp"]},"colors":{"poster":["#AA908F","#3D343E"]},"first_aired":"2020-12-25T08:00:00.000Z","aired_episodes":32,"certification":"TV-MA","airs":{"day":"Friday","time":"03:00","timezone":"America/New_York"},"network":"Netflix"}},{"watchers":5076,"show":{"title":"A
-        Knight of the Seven Kingdoms","year":2026,"ids":{"trakt":204141,"slug":"a-knight-of-the-seven-kingdoms","imdb":"tt27497448","tmdb":224372,"plex":{"guid":"643cbf9ec1962a0897b7f6dd","slug":"a-knight-of-the-seven-kingdoms"},"tvdb":433631},"tagline":"A
-        tall tale that became legend.","overview":"A century before the events of
-        Game of Thrones, two unlikely heroes wandered Westeros: a young, naive but
-        courageous knight, Ser Duncan the Tall, and his diminutive squire, Egg. Set
-        in an age when the Targaryen line still holds the Iron Throne and the last
-        dragon has not yet passed from living memory, great destinies, powerful foes,
-        and dangerous exploits await these improbable and incomparable friends.","runtime":35,"country":"us","trailer":"https://youtube.com/watch?v=sItUCKJQLTU","homepage":"https://www.hbo.com/content/a-knight-of-the-seven-kingdoms","status":"returning
-        series","rating":8.2284,"votes":4768,"comment_count":55,"updated_at":"2026-03-01T15:57:31.000Z","language":"en","languages":["en"],"available_translations":["ar","be","bg","ca","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","id","it","ja","ka","ko","lt","lv","mk","ms","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["drama","fantasy","science-fiction","action","adventure"],"subgenres":["fantasy-world","intense","spin-off"],"original_title":"A
-        Knight of the Seven Kingdoms","images":{"fanart":["media.trakt.tv/images/shows/000/204/141/fanarts/medium/e4d5748ba5.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/204/141/posters/medium/d3b65e6ff9.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/204/141/logos/medium/e4718bddda.png.webp"],"banner":["media.trakt.tv/images/shows/000/204/141/banners/medium/9b40cea8b5.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/204/141/thumbs/medium/c87b3df539.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/204/141/cleararts/medium/e43be83cd1.png.webp"]},"colors":{"poster":["#CBD3C2","#1D1D14"]},"first_aired":"2026-01-19T03:00:00.000Z","aired_episodes":6,"certification":"TV-MA","airs":{"day":"Sunday","time":"22:00","timezone":"America/New_York"},"network":"HBO"}},{"watchers":4121,"show":{"title":"The
-        Night Agent","year":2023,"ids":{"trakt":184471,"slug":"the-night-agent","imdb":"tt13918776","tmdb":129552,"plex":{"guid":"60f9444c9f3e49002d08d6e4","slug":"the-night-agent"},"tvdb":407281},"tagline":"What
-        began with a call became a calling.","overview":"Brought together by a midnight
-        phone call, an FBI agent and a cybersecurity expert must unravel an ever-growing
-        web of political conspiracies.","runtime":50,"country":"us","trailer":"https://youtube.com/watch?v=YDbnY9Obsfs","homepage":"https://www.netflix.com/title/81450827","status":"returning
-        series","rating":7.71125,"votes":7581,"comment_count":89,"updated_at":"2026-03-01T15:44:58.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","fa","fi","fr","he","hi","hr","hu","id","it","ja","ka","ko","lt","ms","my","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tl","tr","uk","vi","zh"],"genres":["drama","mystery","action","adventure","thriller"],"subgenres":["conspiracy","fbi","political"],"original_title":"The
-        Night Agent","images":{"fanart":["media.trakt.tv/images/shows/000/184/471/fanarts/medium/26db1a9dea.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/184/471/posters/medium/623cd73b98.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/184/471/logos/medium/dd7000c87d.png.webp"],"banner":["media.trakt.tv/images/shows/000/184/471/banners/medium/83524abddb.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/184/471/thumbs/medium/8c5ebaee1e.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/184/471/cleararts/medium/a88a62ad4f.png.webp"]},"colors":{"poster":["#BBAFAB","#171521"]},"first_aired":"2023-03-23T07:00:00.000Z","aired_episodes":30,"certification":"TV-MA","airs":{"day":"Thursday","time":"03:00","timezone":"America/New_York"},"network":"Netflix"}},{"watchers":4097,"show":{"title":"Paradise","year":2025,"ids":{"trakt":225096,"slug":"paradise-2025","imdb":"tt27444205","tmdb":245927,"plex":{"guid":"673bdceaf3b97c1ef594ab33","slug":"paradise-2025-2"},"tvdb":454565},"tagline":"The
-        truth lies outside.","overview":"The tranquility in a serene, wealthy community
-        inhabited by some of the world''s most prominent individuals explodes when
-        a shocking murder occurs and a high stakes investigation unfolds.","runtime":52,"country":"us","trailer":"https://youtube.com/watch?v=QsjSIwQr7yw","homepage":"https://www.hulu.com/series/2b4b8988-50c9-4097-bf93-bc34a99a5b4f","status":"returning
-        series","rating":7.71576,"votes":3884,"comment_count":51,"updated_at":"2026-03-02T08:47:13.000Z","language":"en","languages":["en"],"available_translations":["ar","bg","ca","cs","da","de","el","en","es","fa","fi","fr","he","hu","it","ja","ko","lt","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"],"genres":["drama","thriller","crime"],"subgenres":["murder","absurd","suspenseful","science-fiction","inspirational"],"original_title":"Paradise","images":{"fanart":["media.trakt.tv/images/shows/000/225/096/fanarts/medium/4221dea665.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/225/096/posters/medium/a72f8aa4db.jpg.webp"],"logo":["media.trakt.tv/images/shows/000/225/096/logos/medium/54ac6ef3e8.png.webp"],"banner":["media.trakt.tv/images/shows/000/225/096/banners/medium/e64940bdf0.jpg.webp"],"thumb":["media.trakt.tv/images/shows/000/225/096/thumbs/medium/e2edad38a9.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/225/096/cleararts/medium/b23b14801b.png.webp"]},"colors":{"poster":["#C9C6AE","#203237"]},"first_aired":"2025-01-26T05:00:00.000Z","aired_episodes":12,"certification":"TV-MA","airs":{"day":"Tuesday","time":"00:00","timezone":"America/New_York"},"network":"Hulu"}}]'
-  recorded_at: 2026-03-02 12:41:28
+      string: '[{"watchers":8372,"show":{"ids":{"imdb":"tt1190634","plex":{"guid":"5d9c08f246115600200ae0f6","slug":"the-boys"},"slug":"the-boys-2019","tmdb":76479,"tvdb":355567,"trakt":139960},"airs":{"day":"Thursday","time":"03:00","timezone":"America/New_York"},"year":2019,"title":"The
+        Boys","votes":37478,"colors":{"poster":["#DB908E","#130C12"]},"genres":["action","fantasy","science-fiction","adventure","superhero"],"images":{"logo":["media.trakt.tv/images/shows/000/139/960/logos/medium/fa8f09ae17.png.webp"],"thumb":["media.trakt.tv/images/shows/000/139/960/thumbs/medium/eb91ad74c4.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/139/960/banners/medium/54a845c5a7.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/139/960/fanarts/medium/50bab4ef44.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/139/960/posters/medium/c5b8a81eba.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/139/960/cleararts/medium/a48dbabf58.png.webp"]},"rating":8.350579261779785,"status":"ended","country":"us","network":"Prime
+        Video","runtime":65,"tagline":"Never meet your heroes.","trailer":"https://youtube.com/watch?v=tcrNsIaQkb4","homepage":"https://www.amazon.com/dp/B07QQQHK1Y","language":"en","overview":"A
+        group of vigilantes known informally as “The Boys” set out to take down corrupt
+        superheroes with no more than blue-collar grit and a willingness to fight
+        dirty.","languages":["en"],"subgenres":["corruption","absurd","satire","super-power","gore","tragedy","violence","based-on-comic","superhero-team"],"social_ids":{"twitter":"theboystv","facebook":"TheBoysTV","instagram":"theboystv","wikipedia":"The_Boys_(TV_series)"},"updated_at":"2026-05-23T16:14:32.000Z","first_aired":"2019-07-25T07:00:00.000Z","certification":"TV-MA","comment_count":213,"total_runtime":2546,"aired_episodes":40,"original_title":"The
+        Boys","available_translations":["ar","bg","ca","cs","da","de","el","en","es","eu","fa","fi","fr","gl","he","hi","hr","hu","id","it","ja","ka","kk","kn","ko","lt","mk","ml","ms","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","ta","te","th","tl","tr","uk","vi","zh"]}},{"watchers":4932,"show":{"ids":{"imdb":"tt34991493","plex":{"guid":"68b6e52b87dc0d2b6b23d0f3","slug":"dutton-ranch"},"slug":"dutton-ranch","tmdb":299167,"tvdb":463308,"trakt":296208},"airs":{"day":"Friday","time":"20:00","timezone":"America/New_York"},"year":2026,"title":"Dutton
+        Ranch","votes":184,"colors":{"poster":["#B47E56","#30160A"]},"genres":["western","drama"],"images":{"logo":["media.trakt.tv/images/shows/000/296/208/logos/medium/88cc4bb027.png.webp"],"thumb":[],"banner":[],"fanart":["media.trakt.tv/images/shows/000/296/208/fanarts/medium/e6f5434796.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/296/208/posters/medium/62223c73a1.jpg.webp"],"clearart":[]},"rating":8.684782981872559,"status":"returning
+        series","country":"us","network":"Paramount+","runtime":50,"tagline":"","trailer":"https://youtube.com/watch?v=k6cjKNZBQ1M","homepage":"https://www.paramountplus.com/shows/dutton-ranch","language":"en","overview":"Rip
+        Wheeler and Beth Dutton gamble everything on a new life in South Texas, but
+        the promise of building a future far from the ghosts of Yellowstone quickly
+        collides with brutal new realities and a rival ranch that will stop at nothing
+        to protect its empire.","languages":["de","en","es"],"subgenres":["spin-off","cattle-ranch"],"social_ids":{"twitter":null,"facebook":"duttonranchpplus","instagram":"duttonranch","wikipedia":"Dutton_Ranch"},"updated_at":"2026-05-23T21:08:27.000Z","first_aired":"2026-05-16T00:00:00.000Z","certification":"TV-MA","comment_count":4,"total_runtime":152,"aired_episodes":3,"original_title":"Dutton
+        Ranch","available_translations":["ar","bg","cs","da","de","en","es","fa","fr","he","hr","hu","it","nl","pl","pt","ro","ru","sk","sl","sr","th","uk","zh"]}},{"watchers":4387,"show":{"ids":{"imdb":"tt30459041","plex":{"guid":"657dc33ef513062f56b44a23","slug":"your-friends-and-neighbors"},"slug":"your-friends-neighbors","tmdb":241609,"tvdb":443433,"trakt":217691},"airs":{"day":"Thursday","time":"21:00","timezone":"America/New_York"},"year":2025,"title":"Your
+        Friends & Neighbors","votes":3276,"colors":{"poster":["#CBB0A2","#29231E"]},"genres":["drama","crime"],"images":{"logo":["media.trakt.tv/images/shows/000/217/691/logos/medium/288ec36e9a.png.webp"],"thumb":["media.trakt.tv/images/shows/000/217/691/thumbs/medium/e042dc1120.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/217/691/banners/medium/a3f3a5a9f0.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/217/691/fanarts/medium/2414ffd1d2.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/217/691/posters/medium/2696348617.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/217/691/cleararts/medium/b57fc0e3e6.png.webp"]},"rating":7.722527503967285,"status":"returning
+        series","country":"us","network":"Apple TV","runtime":52,"tagline":"Is it
+        a crime to want more?","trailer":"https://youtube.com/watch?v=iVRFMd6dEOE","homepage":"https://tv.apple.com/show/umc.cmc.74o37kzay0yuuub8iumddjsg","language":"en","overview":"When
+        a financial titan suddenly finds himself divorced and jobless, he starts robbing
+        his wealthy neighbors to stay afloat. Stealing from his own social circle
+        strangely exhilarates him—but he gradually gets tangled in a deadly web.","languages":["en"],"subgenres":[],"social_ids":{"twitter":null,"facebook":null,"instagram":null,"wikipedia":"Your_Friends_&_Neighbors_(TV_series)"},"updated_at":"2026-05-23T17:03:14.000Z","first_aired":"2025-04-11T01:00:00.000Z","certification":"TV-MA","comment_count":35,"total_runtime":911,"aired_episodes":17,"original_title":"Your
+        Friends & Neighbors","available_translations":["ar","bg","cs","da","de","el","en","es","fa","fi","fr","he","hi","hu","id","it","ja","ko","lt","nb","nl","no","pl","pt","ro","ru","sk","sl","sv","th","tr","uk","vi","zh"]}},{"watchers":4024,"show":{"ids":{"imdb":"tt9813792","plex":{"guid":"608ae6cf5077dd002d3bb8be","slug":"from"},"slug":"from","tmdb":124364,"tvdb":401003,"trakt":188205},"airs":{"day":"Sunday","time":"21:00","timezone":"America/New_York"},"year":2022,"title":"FROM","votes":10421,"colors":{"poster":["#83AAAB","#102C35"]},"genres":["mystery","fantasy","science-fiction","suspense","horror","drama"],"images":{"logo":["media.trakt.tv/images/shows/000/188/205/logos/medium/b6612efbca.png.webp"],"thumb":["media.trakt.tv/images/shows/000/188/205/thumbs/medium/7c652d65d9.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/188/205/banners/medium/73c1906e04.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/188/205/fanarts/medium/56c3bcb0f1.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/188/205/posters/medium/8275df28f8.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/188/205/cleararts/medium/7efbdeda9f.png.webp"]},"rating":8.003646850585938,"status":"returning
+        series","country":"us","network":"MGM+","runtime":50,"tagline":"","trailer":"https://youtube.com/watch?v=pDHqAj4eJcM","homepage":"https://www.mgmplus.com/series/from","language":"en","overview":"Unravel
+        the mystery of a nightmarish town in middle America that traps all those who
+        enter. As the unwilling residents fight to keep a sense of normalcy and search
+        for a way out, they must also survive the threats of the surrounding forest
+        – including the terrifying creatures that come out when the sun goes down.","languages":["en"],"subgenres":["forest","small-town","gore","priest","sheriff","supernatural-horror","violence"],"social_ids":{"twitter":"FROMonMGM","facebook":"FROMonMGM","instagram":"fromonmgm","wikipedia":"From_(TV_series)"},"updated_at":"2026-05-23T16:30:20.000Z","first_aired":"2022-02-21T02:00:00.000Z","certification":"TV-MA","comment_count":162,"total_runtime":1770,"aired_episodes":35,"original_title":"FROM","available_translations":["ar","be","bg","cs","da","de","el","en","es","et","fa","fi","fr","he","hr","hu","it","ja","ka","ko","lt","nb","nl","nn","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}},{"watchers":3048,"show":{"ids":{"imdb":"tt7772588","plex":{"guid":"5d9c091408fddd001f2a71c3","slug":"for-all-mankind"},"slug":"for-all-mankind","tmdb":87917,"tvdb":356202,"trakt":140481},"airs":{"day":"Thursday","time":"21:00","timezone":"America/New_York"},"year":2019,"title":"For
+        All Mankind","votes":6539,"colors":{"poster":["#C67E2A","#40240B"]},"genres":["fantasy","science-fiction","drama","war"],"images":{"logo":["media.trakt.tv/images/shows/000/140/481/logos/medium/4148133646.png.webp"],"thumb":["media.trakt.tv/images/shows/000/140/481/thumbs/medium/176356a5f4.jpg.webp"],"banner":["media.trakt.tv/images/shows/000/140/481/banners/medium/944876dc15.jpg.webp"],"fanart":["media.trakt.tv/images/shows/000/140/481/fanarts/medium/d2fb79821e.jpg.webp"],"poster":["media.trakt.tv/images/shows/000/140/481/posters/medium/0e1306edec.jpg.webp"],"clearart":["media.trakt.tv/images/shows/000/140/481/cleararts/medium/044ed86d18.png.webp"]},"rating":8.17984390258789,"status":"returning
+        series","country":"us","network":"Apple TV","runtime":60,"tagline":"The fight
+        for freedom lies beyond the stars.","trailer":"https://youtube.com/watch?v=HZS9M52Bd_w","homepage":"https://tv.apple.com/show/umc.cmc.6wsi780sz5tdbqcf11k76mkp7","language":"en","overview":"Explore
+        an aspirational world where NASA and the space program remained a priority
+        and a focal point of our hopes and dreams as told through the lives of NASA
+        astronauts, engineers, and their families.","languages":["en","ru","es"],"subgenres":["dystopia","politics","1970s","1980s","1990s","astronaut","cold-war"],"social_ids":{"twitter":"forallmankind_","facebook":null,"instagram":"forallmankind_","wikipedia":"For_All_Mankind_(TV_series)"},"updated_at":"2026-05-23T16:14:33.000Z","first_aired":"2019-11-02T01:00:00.000Z","certification":"TV-MA","comment_count":62,"total_runtime":2953,"aired_episodes":49,"original_title":"For
+        All Mankind","available_translations":["ar","bg","cs","da","de","el","en","es","fa","fi","fr","he","hi","hu","id","it","ja","ka","ko","lt","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","th","tr","uk","vi","zh"]}}]'
+  recorded_at: 2026-05-24 13:42:14
 recorded_with: VCR-vcr/2.1.0
