@@ -53,26 +53,26 @@ seasons_episodes("breaking-bad", 1, extended = "full")
 }
 }
 \seealso{
-Other season data: 
+Other season data:
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
-\code{\link{seasons_season}()},
-\code{\link{seasons_summary}()}
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
+\code{\link[=seasons_season]{seasons_season()}},
+\code{\link[=seasons_summary]{seasons_summary()}}
 
-Other episode data: 
-\code{\link{episodes_summary}()},
+Other episode data:
+\code{\link[=episodes_summary]{episodes_summary()}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_summary}()},
-\code{\link{shows_next_episode}()}
+\code{\link[=seasons_summary]{seasons_summary()}},
+\code{\link[=shows_next_episode]{shows_next_episode()}}
 }
 \concept{episode data}
 \concept{season data}

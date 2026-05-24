@@ -52,13 +52,13 @@ seasons_season("breaking-bad", 1, extended = "full")
 }
 }
 \seealso{
-Other season data: 
+Other season data:
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
-\code{\link{seasons_episodes}()},
-\code{\link{seasons_summary}()}
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
+\code{\link[=seasons_episodes]{seasons_episodes()}},
+\code{\link[=seasons_summary]{seasons_summary()}}
 }
 \concept{season data}

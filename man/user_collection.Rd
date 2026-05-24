@@ -62,15 +62,15 @@ user_collection(user = "sean", type = "shows")
 }
 }
 \seealso{
-Other user data: 
-\code{\link{user_comments}()},
-\code{\link{user_history}()},
-\code{\link{user_likes}()},
-\code{\link{user_network}()},
-\code{\link{user_profile}()},
-\code{\link{user_ratings}()},
-\code{\link{user_stats}()},
-\code{\link{user_watched}()},
-\code{\link{user_watchlist}()}
+Other user data:
+\code{\link[=user_comments]{user_comments()}},
+\code{\link[=user_history]{user_history()}},
+\code{\link[=user_likes]{user_likes()}},
+\code{\link[=user_network]{user_network()}},
+\code{\link[=user_profile]{user_profile()}},
+\code{\link[=user_ratings]{user_ratings()}},
+\code{\link[=user_stats]{user_stats()}},
+\code{\link[=user_watched]{user_watched()}},
+\code{\link[=user_watchlist]{user_watchlist()}}
 }
 \concept{user data}

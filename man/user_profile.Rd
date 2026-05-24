@@ -44,24 +44,24 @@ user_profile("sean")
 }
 }
 \seealso{
-Other user data: 
-\code{\link{user_collection}()},
-\code{\link{user_comments}()},
-\code{\link{user_history}()},
-\code{\link{user_likes}()},
-\code{\link{user_network}()},
-\code{\link{user_ratings}()},
-\code{\link{user_stats}()},
-\code{\link{user_watched}()},
-\code{\link{user_watchlist}()}
+Other user data:
+\code{\link[=user_collection]{user_collection()}},
+\code{\link[=user_comments]{user_comments()}},
+\code{\link[=user_history]{user_history()}},
+\code{\link[=user_likes]{user_likes()}},
+\code{\link[=user_network]{user_network()}},
+\code{\link[=user_ratings]{user_ratings()}},
+\code{\link[=user_stats]{user_stats()}},
+\code{\link[=user_watched]{user_watched()}},
+\code{\link[=user_watchlist]{user_watchlist()}}
 
-Other summary methods: 
-\code{\link{comments_comment}()},
-\code{\link{episodes_summary}()},
-\code{\link{movies_summary}()},
-\code{\link{people_summary}()},
-\code{\link{seasons_summary}()},
-\code{\link{shows_summary}()}
+Other summary methods:
+\code{\link[=comments_comment]{comments_comment()}},
+\code{\link[=episodes_summary]{episodes_summary()}},
+\code{\link[=movies_summary]{movies_summary()}},
+\code{\link[=people_summary]{people_summary()}},
+\code{\link[=seasons_summary]{seasons_summary()}},
+\code{\link[=shows_summary]{shows_summary()}}
 }
 \concept{summary methods}
 \concept{user data}

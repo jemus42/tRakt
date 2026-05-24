@@ -46,28 +46,28 @@ shows_summary("breaking-bad", extended = "full")
 }
 }
 \seealso{
-Other show data: 
+Other show data:
 \code{\link{collected_media}},
 \code{\link{media_aliases}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{people_media}()},
+\code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
-\code{\link{shows_next_episode}()},
-\code{\link{shows_related}()}
+\code{\link[=shows_next_episode]{shows_next_episode()}},
+\code{\link[=shows_related]{shows_related()}}
 
-Other summary methods: 
-\code{\link{comments_comment}()},
-\code{\link{episodes_summary}()},
-\code{\link{movies_summary}()},
-\code{\link{people_summary}()},
-\code{\link{seasons_summary}()},
-\code{\link{user_profile}()}
+Other summary methods:
+\code{\link[=comments_comment]{comments_comment()}},
+\code{\link[=episodes_summary]{episodes_summary()}},
+\code{\link[=movies_summary]{movies_summary()}},
+\code{\link[=people_summary]{people_summary()}},
+\code{\link[=seasons_summary]{seasons_summary()}},
+\code{\link[=user_profile]{user_profile()}}
 }
 \concept{show data}
 \concept{summary methods}

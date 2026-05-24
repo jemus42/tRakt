@@ -52,19 +52,19 @@ user_list_comments("donxy", "1248149")
 }
 }
 \seealso{
-Other comment methods: 
-\code{\link{comments_comment}()},
-\code{\link{comments_trending}()},
-\code{\link{comments_updates}()},
+Other comment methods:
+\code{\link[=comments_comment]{comments_comment()}},
+\code{\link[=comments_trending]{comments_trending()}},
+\code{\link[=comments_updates]{comments_updates()}},
 \code{\link{media_comments}},
-\code{\link{user_comments}()}
+\code{\link[=user_comments]{user_comments()}}
 
-Other list methods: 
-\code{\link{lists_popular}()},
+Other list methods:
+\code{\link[=lists_popular]{lists_popular()}},
 \code{\link{media_lists}},
-\code{\link{user_list}()},
-\code{\link{user_list_items}()},
-\code{\link{user_lists}()}
+\code{\link[=user_list]{user_list()}},
+\code{\link[=user_list_items]{user_list_items()}},
+\code{\link[=user_lists]{user_lists()}}
 }
 \concept{comment methods}
 \concept{list methods}

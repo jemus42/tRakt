@@ -35,5 +35,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Lukas Burk \email{github@quantenbrot.de} (\href{https://orcid.org/0000-0001-7528-3795}{ORCID})
 
+Authors:
+\itemize{
+  \item Lukas Burk \email{github@quantenbrot.de} (\href{https://orcid.org/0000-0001-7528-3795}{ORCID})
+}
+
 }
 \keyword{internal}

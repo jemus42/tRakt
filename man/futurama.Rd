@@ -30,7 +30,7 @@ This data comes from \url{https://trakt.tv} and serves as an example of episode 
 futurama
 }
 \seealso{
-Other Episode datasets: 
+Other Episode datasets:
 \code{\link{gameofthrones}}
 }
 \concept{Episode datasets}
