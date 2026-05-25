@@ -79,16 +79,16 @@ movies_watched(period = "yearly", years = c(1990, 2000)) |>
 #> # A tibble: 10 × 3
 #>    watcher_count title                                      year
 #>            <int> <chr>                                     <int>
-#>  1           585 The Matrix                                 1999
-#>  2           530 Toy Story                                  1995
-#>  3           506 Fight Club                                 1999
+#>  1           589 The Matrix                                 1999
+#>  2           538 Toy Story                                  1995
+#>  3           510 Fight Club                                 1999
 #>  4           480 The Shawshank Redemption                   1994
 #>  5           441 Star Wars: Episode I - The Phantom Menace  1999
 #>  6           436 The Mummy                                  1999
-#>  7           387 The Truman Show                            1998
-#>  8           359 Pulp Fiction                               1994
+#>  7           390 The Truman Show                            1998
+#>  8           362 Pulp Fiction                               1994
 #>  9           352 Toy Story 2                                1999
-#> 10           346 The Lion King                              1994
+#> 10           351 The Lion King                              1994
 ```
 
 ## Finding Things (and the right amount)

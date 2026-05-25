@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">tRakt</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.18.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.18.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,6 +37,9 @@
       <small>Source: <a href="http://github.com/jemus42/tRakt/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.18.0.9000" id="trakt-01809000-development-version">tRakt 0.18.0.9000 (development version)<a class="anchor" aria-label="anchor" href="#trakt-01809000-development-version"></a></h2>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.18.0" id="trakt-0180">tRakt 0.18.0<a class="anchor" aria-label="anchor" href="#trakt-0180"></a></h2>
 <ul><li>The <code>guest_stars</code> argument of <code><a href="../reference/media_people.html">shows_people()</a></code> / <code><a href="../reference/media_people.html">seasons_people()</a></code> / <code><a href="../reference/media_people.html">episodes_people()</a></code> is now deprecated (via <code><a href="https://lifecycle.r-lib.org/reference/deprecate_soft.html" class="external-link">lifecycle::deprecate_warn()</a></code>). The trakt.tv API stopped returning a separate <code>guest_stars</code> array — guest cast is now included in <code>cast</code>. The argument is a no-op pending removal in a future release.</li>
