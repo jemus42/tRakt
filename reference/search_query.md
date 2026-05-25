@@ -171,19 +171,19 @@ which fields of the item metadata are searched by default.
 ``` r
 # A show
 search_query("Breaking Bad", type = "show", n_results = 3)
-#> # A tibble: 3 × 35
+#> # A tibble: 3 × 36
 #>     score type  title     year tagline overview runtime country trailer homepage
 #>     <dbl> <chr> <chr>    <int> <chr>   <chr>      <int> <chr>   <chr>   <chr>   
-#> 1 1.16e18 show  Breakin…  2008 "Chang… "Walter…      42 us      https:… https:/…
+#> 1 1.16e18 show  Breakin…  2008 "Chang… "Walter…      50 us      https:… https:/…
 #> 2 1.16e18 show  Breakin…  2016 ""      "During…      42 cn      NA      NA      
 #> 3 1.16e18 show  Breakin…  2009 ""      "Breaki…      42 us      NA      NA      
-#> # ℹ 25 more variables: status <chr>, rating <dbl>, votes <int>,
+#> # ℹ 26 more variables: status <chr>, rating <dbl>, votes <int>,
 #> #   comment_count <int>, updated_at <dttm>, language <chr>, languages <list>,
 #> #   available_translations <list>, genres <list>, subgenres <list>,
-#> #   original_title <chr>, first_aired <dttm>, aired_episodes <int>,
-#> #   certification <chr>, network <chr>, airs_day <chr>, airs_time <chr>,
-#> #   airs_timezone <chr>, trakt <chr>, slug <chr>, imdb <chr>, tmdb <chr>,
-#> #   tvdb <chr>, plex_guid <chr>, plex_slug <chr>
+#> #   original_title <chr>, social_ids <df[,4]>, first_aired <dttm>,
+#> #   aired_episodes <int>, certification <chr>, network <chr>, airs_day <chr>,
+#> #   airs_time <chr>, airs_timezone <chr>, trakt <chr>, slug <chr>, imdb <chr>,
+#> #   tmdb <chr>, tvdb <chr>, plex_guid <chr>, plex_slug <chr>
 if (FALSE) { # \dontrun{
 # A show by its trakt id, and now with more information
 search_id(1388, "trakt", type = "show", extended = "full")

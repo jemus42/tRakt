@@ -7,7 +7,3 @@ These can be useful for labeling the numeric scale.
 ``` r
 trakt_rating_labels
 ```
-
-## Format
-
-An object of class `character` of length 10.

@@ -89,16 +89,10 @@ Other summary methods:
 ``` r
 # Minimal info by default
 movies_summary("inception-2010")
-#> # A tibble: 1 × 29
-#>    year title     votes genres    rating status  country runtime tagline trailer
-#>   <int> <chr>     <int> <list>     <dbl> <chr>   <chr>     <int> <chr>   <chr>  
-#> 1  2010 Inception 86584 <chr [3]>   8.63 releas… us          148 Your m… https:…
-#> # ℹ 19 more variables: homepage <chr>, language <chr>, overview <chr>,
-#> #   released <date>, languages <list>, subgenres <list>, updated_at <dttm>,
-#> #   after_credits <lgl>, certification <chr>, comment_count <int>,
-#> #   during_credits <lgl>, original_title <chr>, available_translations <list>,
-#> #   imdb <chr>, slug <chr>, tmdb <chr>, trakt <chr>, plex_guid <chr>,
-#> #   plex_slug <chr>
+#> # A tibble: 1 × 8
+#>    year title     imdb      slug           tmdb  trakt plex_guid       plex_slug
+#>   <int> <chr>     <chr>     <chr>          <chr> <chr> <chr>           <chr>    
+#> 1  2010 Inception tt1375666 inception-2010 27205 16662 5d77685333f255… inception
 if (FALSE) { # \dontrun{
 # Full information,  multiple movies
 movies_summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")

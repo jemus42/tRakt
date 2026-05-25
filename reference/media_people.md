@@ -68,8 +68,10 @@ episodes_people(
 
 - guest_stars:
 
-  `logical(1) ["FALSE"]`: Also include guest stars. This returns a lot
-  of data, so use with care.
+  **\[deprecated\]** `logical(1) ["FALSE"]`: Previously requested a
+  separate `guest_stars` table. The trakt.tv API no longer returns that
+  array — guest cast is now included in `cast`. This argument is
+  currently a no-op and will be removed in a future release.
 
 - season, episode:
 
@@ -122,11 +124,6 @@ Other movie data:
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
-Other people data:
-[`media_lists`](https://jemus42.github.io/tRakt/reference/media_lists.md),
-[`people_media()`](https://jemus42.github.io/tRakt/reference/people_media.md),
-[`people_summary()`](https://jemus42.github.io/tRakt/reference/people_summary.md)
-
 Other show data:
 [`collected_media`](https://jemus42.github.io/tRakt/reference/collected_media.md),
 [`media_aliases`](https://jemus42.github.io/tRakt/reference/media_aliases.md),
@@ -142,11 +139,6 @@ Other show data:
 [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
 [`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
 
-Other people data:
-[`media_lists`](https://jemus42.github.io/tRakt/reference/media_lists.md),
-[`people_media()`](https://jemus42.github.io/tRakt/reference/people_media.md),
-[`people_summary()`](https://jemus42.github.io/tRakt/reference/people_summary.md)
-
 Other season data:
 [`media_comments`](https://jemus42.github.io/tRakt/reference/media_comments.md),
 [`media_lists`](https://jemus42.github.io/tRakt/reference/media_lists.md),
@@ -155,11 +147,6 @@ Other season data:
 [`seasons_episodes()`](https://jemus42.github.io/tRakt/reference/seasons_episodes.md),
 [`seasons_season()`](https://jemus42.github.io/tRakt/reference/seasons_season.md),
 [`seasons_summary()`](https://jemus42.github.io/tRakt/reference/seasons_summary.md)
-
-Other people data:
-[`media_lists`](https://jemus42.github.io/tRakt/reference/media_lists.md),
-[`people_media()`](https://jemus42.github.io/tRakt/reference/people_media.md),
-[`people_summary()`](https://jemus42.github.io/tRakt/reference/people_summary.md)
 
 Other episode data:
 [`episodes_summary()`](https://jemus42.github.io/tRakt/reference/episodes_summary.md),
@@ -172,11 +159,6 @@ Other episode data:
 [`seasons_episodes()`](https://jemus42.github.io/tRakt/reference/seasons_episodes.md),
 [`seasons_summary()`](https://jemus42.github.io/tRakt/reference/seasons_summary.md),
 [`shows_next_episode()`](https://jemus42.github.io/tRakt/reference/shows_next_episode.md)
-
-Other people data:
-[`media_lists`](https://jemus42.github.io/tRakt/reference/media_lists.md),
-[`people_media()`](https://jemus42.github.io/tRakt/reference/people_media.md),
-[`people_summary()`](https://jemus42.github.io/tRakt/reference/people_summary.md)
 
 ## Examples
 

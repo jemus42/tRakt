@@ -109,11 +109,6 @@ Other show data:
 [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
 [`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
 
-Other people data:
-[`media_lists`](https://jemus42.github.io/tRakt/reference/media_lists.md),
-[`media_people`](https://jemus42.github.io/tRakt/reference/media_people.md),
-[`people_summary()`](https://jemus42.github.io/tRakt/reference/people_summary.md)
-
 ## Examples
 
 ``` r

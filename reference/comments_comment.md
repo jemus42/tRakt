@@ -94,27 +94,6 @@ Other summary methods:
 [`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md),
 [`user_profile()`](https://jemus42.github.io/tRakt/reference/user_profile.md)
 
-Other comment methods:
-[`comments_trending()`](https://jemus42.github.io/tRakt/reference/comments_trending.md),
-[`comments_updates()`](https://jemus42.github.io/tRakt/reference/comments_updates.md),
-[`media_comments`](https://jemus42.github.io/tRakt/reference/media_comments.md),
-[`user_comments()`](https://jemus42.github.io/tRakt/reference/user_comments.md),
-[`user_list_comments()`](https://jemus42.github.io/tRakt/reference/user_list_comments.md)
-
-Other comment methods:
-[`comments_trending()`](https://jemus42.github.io/tRakt/reference/comments_trending.md),
-[`comments_updates()`](https://jemus42.github.io/tRakt/reference/comments_updates.md),
-[`media_comments`](https://jemus42.github.io/tRakt/reference/media_comments.md),
-[`user_comments()`](https://jemus42.github.io/tRakt/reference/user_comments.md),
-[`user_list_comments()`](https://jemus42.github.io/tRakt/reference/user_list_comments.md)
-
-Other comment methods:
-[`comments_trending()`](https://jemus42.github.io/tRakt/reference/comments_trending.md),
-[`comments_updates()`](https://jemus42.github.io/tRakt/reference/comments_updates.md),
-[`media_comments`](https://jemus42.github.io/tRakt/reference/media_comments.md),
-[`user_comments()`](https://jemus42.github.io/tRakt/reference/user_comments.md),
-[`user_list_comments()`](https://jemus42.github.io/tRakt/reference/user_list_comments.md)
-
 ## Examples
 
 ``` r

@@ -16,7 +16,7 @@ shows_aliases(id)
 [/movies/:id/aliases](https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases).
 
 `shows_aliases()` wraps endpoint
-[/shows/:id/aliases](https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases).
+[/shows/:id/aliases](https://trakt.docs.apiary.io/#reference/shows/aliases/get-all-show-aliases).
 
 ## Arguments
 
@@ -81,7 +81,7 @@ Other show data:
 
 ``` r
 movies_aliases(190430)
-#> # A tibble: 30 × 2
+#> # A tibble: 31 × 2
 #>    title                   country
 #>    <chr>                   <chr>  
 #>  1 X-Men Origins: Deadpool us     
@@ -94,7 +94,7 @@ movies_aliases(190430)
 #>  8 死侍：不死现身          cn     
 #>  9 X战警：死侍             cn     
 #> 10 Deadpool 1              us     
-#> # ℹ 20 more rows
+#> # ℹ 21 more rows
 shows_aliases(104439)
 #> # A tibble: 713 × 2
 #>    title                   country

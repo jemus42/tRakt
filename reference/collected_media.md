@@ -229,11 +229,3 @@ Other show data:
 [`shows_next_episode()`](https://jemus42.github.io/tRakt/reference/shows_next_episode.md),
 [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
 [`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
-
-Other dynamic lists:
-[`anticipated_media`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
-[`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
-[`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
-[`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
-[`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
-[`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)

@@ -167,13 +167,6 @@ Other movie data:
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
-Other list methods:
-[`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
-[`user_list()`](https://jemus42.github.io/tRakt/reference/user_list.md),
-[`user_list_comments()`](https://jemus42.github.io/tRakt/reference/user_list_comments.md),
-[`user_list_items()`](https://jemus42.github.io/tRakt/reference/user_list_items.md),
-[`user_lists()`](https://jemus42.github.io/tRakt/reference/user_lists.md)
-
 Other show data:
 [`collected_media`](https://jemus42.github.io/tRakt/reference/collected_media.md),
 [`media_aliases`](https://jemus42.github.io/tRakt/reference/media_aliases.md),
@@ -189,13 +182,6 @@ Other show data:
 [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
 [`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
 
-Other list methods:
-[`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
-[`user_list()`](https://jemus42.github.io/tRakt/reference/user_list.md),
-[`user_list_comments()`](https://jemus42.github.io/tRakt/reference/user_list_comments.md),
-[`user_list_items()`](https://jemus42.github.io/tRakt/reference/user_list_items.md),
-[`user_lists()`](https://jemus42.github.io/tRakt/reference/user_lists.md)
-
 Other season data:
 [`media_comments`](https://jemus42.github.io/tRakt/reference/media_comments.md),
 [`media_people`](https://jemus42.github.io/tRakt/reference/media_people.md),
@@ -204,13 +190,6 @@ Other season data:
 [`seasons_episodes()`](https://jemus42.github.io/tRakt/reference/seasons_episodes.md),
 [`seasons_season()`](https://jemus42.github.io/tRakt/reference/seasons_season.md),
 [`seasons_summary()`](https://jemus42.github.io/tRakt/reference/seasons_summary.md)
-
-Other list methods:
-[`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
-[`user_list()`](https://jemus42.github.io/tRakt/reference/user_list.md),
-[`user_list_comments()`](https://jemus42.github.io/tRakt/reference/user_list_comments.md),
-[`user_list_items()`](https://jemus42.github.io/tRakt/reference/user_list_items.md),
-[`user_lists()`](https://jemus42.github.io/tRakt/reference/user_lists.md)
 
 Other episode data:
 [`episodes_summary()`](https://jemus42.github.io/tRakt/reference/episodes_summary.md),
@@ -223,13 +202,6 @@ Other episode data:
 [`seasons_episodes()`](https://jemus42.github.io/tRakt/reference/seasons_episodes.md),
 [`seasons_summary()`](https://jemus42.github.io/tRakt/reference/seasons_summary.md),
 [`shows_next_episode()`](https://jemus42.github.io/tRakt/reference/shows_next_episode.md)
-
-Other list methods:
-[`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
-[`user_list()`](https://jemus42.github.io/tRakt/reference/user_list.md),
-[`user_list_comments()`](https://jemus42.github.io/tRakt/reference/user_list_comments.md),
-[`user_list_items()`](https://jemus42.github.io/tRakt/reference/user_list_items.md),
-[`user_lists()`](https://jemus42.github.io/tRakt/reference/user_lists.md)
 
 Other people data:
 [`media_people`](https://jemus42.github.io/tRakt/reference/media_people.md),

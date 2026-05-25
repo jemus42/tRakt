@@ -24,6 +24,7 @@ of the API results would look like.
 Get it from GitHub:
 
 ``` r
+
 if (!("pak" %in% installed.packages())) {
   install.packages("pak")
 }
@@ -33,12 +34,14 @@ pak::pak("jemus42/tRakt")
 …or from [r-universe](https://jemus42.r-universe.dev/tRakt):
 
 ``` r
+
 install.packages("tRakt", repos = "https://jemus42.r-universe.dev")
 ```
 
 ## Usage
 
 ``` r
+
 library(tRakt)
 library(dplyr) # for convenience
 ```
@@ -47,6 +50,7 @@ Search for a specific show from 2013 (and not the US adaptation) and get
 basic info:
 
 ``` r
+
 show_info <- search_query("Utopia", year = "2013", type = "show")
 glimpse(show_info)
 #> Rows: 1
@@ -67,6 +71,7 @@ We’ll use the `$trakt` ID for subsequent requests.
 Get season information for the show using its trakt ID:
 
 ``` r
+
 seasons_summary(show_info$trakt, extended = "full") |>
     glimpse()
 #> Rows: 2
@@ -93,6 +98,7 @@ Get episode data for the first season, this time using the show’s URL
 slug:
 
 ``` r
+
 seasons_episodes(show_info$trakt, seasons = 1, extended = "full") |>
     glimpse()
 #> Rows: 6
@@ -125,6 +131,7 @@ You cann also get episode data for all seasons, but note that episodes
 will be included as a list-column and need further unpacking:
 
 ``` r
+
 seasons_summary(show_info$trakt, episodes = TRUE, extended = "full") |>
     pull(episodes) |>
     bind_rows() |>
@@ -159,6 +166,7 @@ Or alternatively, get the [trending
 shows](https://trakt.tv/shows/trending):
 
 ``` r
+
 shows_trending()
 #> # A tibble: 10 × 8
 #>    watchers title                             year trakt slug  tvdb  imdb  tmdb 
@@ -179,6 +187,7 @@ Maybe you just want to know how long it would take you to binge through
 these shows:
 
 ``` r
+
 shows_trending(extended = "full") |>
     transmute(
         show = glue::glue("{title} ({year})"),
@@ -191,18 +200,18 @@ shows_trending(extended = "full") |>
     )
 ```
 
-| Show                                  | Episode Runtime | Aired Episodes | Total Runtime (aired) |
-|:--------------------------------------|:----------------|---------------:|:----------------------|
-| The Pitt (2025)                       | 00:48:00        |             23 | 18:24:00              |
-| Bridgerton (2020)                     | 01:00:00        |             32 | 32:00:00              |
-| A Knight of the Seven Kingdoms (2026) | 00:35:00        |              6 | 03:30:00              |
-| The Night Agent (2023)                | 00:50:00        |             30 | 25:00:00              |
-| Paradise (2025)                       | 00:52:00        |             12 | 10:24:00              |
-| Monarch: Legacy of Monsters (2023)    | 00:46:00        |             11 | 08:26:00              |
-| Formula 1: Drive to Survive (2019)    | 00:40:00        |             78 | 52:00:00              |
-| Shrinking (2023)                      | 00:35:00        |             27 | 15:45:00              |
-| The Rookie (2018)                     | 00:40:00        |            134 | 89:20:00              |
-| Fallout (2024)                        | 00:55:00        |             16 | 14:40:00              |
+| Show | Episode Runtime | Aired Episodes | Total Runtime (aired) |
+|:---|:---|---:|:---|
+| The Pitt (2025) | 00:48:00 | 23 | 18:24:00 |
+| Bridgerton (2020) | 01:00:00 | 32 | 32:00:00 |
+| A Knight of the Seven Kingdoms (2026) | 00:35:00 | 6 | 03:30:00 |
+| The Night Agent (2023) | 00:50:00 | 30 | 25:00:00 |
+| Paradise (2025) | 00:52:00 | 12 | 10:24:00 |
+| Monarch: Legacy of Monsters (2023) | 00:46:00 | 11 | 08:26:00 |
+| Formula 1: Drive to Survive (2019) | 00:40:00 | 78 | 52:00:00 |
+| Shrinking (2023) | 00:35:00 | 27 | 15:45:00 |
+| The Rookie (2018) | 00:40:00 | 134 | 89:20:00 |
+| Fallout (2024) | 00:55:00 | 16 | 14:40:00 |
 
 Please note though that episode runtime data may be inaccurate. In my
 experience, recent shows have fairly accurate runtime data, which is

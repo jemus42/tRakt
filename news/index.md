@@ -1,7 +1,60 @@
 # Changelog
 
-## tRakt 0.17.0.9000 (development version)
+## tRakt 0.18.0
 
+- The `guest_stars` argument of
+  [`shows_people()`](https://jemus42.github.io/tRakt/reference/media_people.md)
+  /
+  [`seasons_people()`](https://jemus42.github.io/tRakt/reference/media_people.md)
+  /
+  [`episodes_people()`](https://jemus42.github.io/tRakt/reference/media_people.md)
+  is now deprecated (via
+  [`lifecycle::deprecate_warn()`](https://lifecycle.r-lib.org/reference/deprecate_soft.html)).
+  The trakt.tv API stopped returning a separate `guest_stars` array —
+  guest cast is now included in `cast`. The argument is a no-op pending
+  removal in a future release.
+- Fix vectorisation bug in
+  [`movies_related()`](https://jemus42.github.io/tRakt/reference/movies_related.md)
+  /
+  [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md):
+  when called with multiple IDs, the internal recursion forwarded the
+  `extended` argument positionally as `limit`, producing malformed
+  `?limit=min` URLs and empty responses for non-first IDs (subsequently
+  erroring in column-flattening).
+- [`seasons_ratings()`](https://jemus42.github.io/tRakt/reference/media_ratings.md)
+  adapts to the new multi-source rating response shape. The API now
+  returns separate sub-objects per source (`trakt`, `tmdb`, `imdb`,
+  `metascore`, `rotten_tomatoes`). The `trakt` source is promoted to the
+  top level (preserving the existing `rating` / `votes` / `distribution`
+  columns), and external scores are surfaced as `<source>_<field>`
+  columns (`tmdb_rating`, `imdb_link`, `metascore_rating`,
+  `rotten_tomatoes_state`, etc.). Missing values are returned as `NA`.
+- `unpack_user()` now renames the user’s own `trakt` id to `user_trakt`
+  to avoid colliding with the media or list `trakt` id when an unpacked
+  user is
+  [`bind_cols()`](https://dplyr.tidyverse.org/reference/bind_cols.html)’d
+  alongside other identifiers. Previously this produced auto-repaired
+  column names such as `trakt...17`. Affects all functions that embed
+  user data: `*_lists()`,
+  [`user_lists()`](https://jemus42.github.io/tRakt/reference/user_lists.md),
+  [`user_list()`](https://jemus42.github.io/tRakt/reference/user_list.md),
+  [`user_comments()`](https://jemus42.github.io/tRakt/reference/user_comments.md),
+  `user_summary()`, comments,
+  [`media_watching()`](https://jemus42.github.io/tRakt/reference/media_watching.md),
+  and list-popular endpoints.
+- [`user_list()`](https://jemus42.github.io/tRakt/reference/user_list.md)
+  no longer errors on single-list responses where the embedded user
+  profile contains `NULL` fields (e.g. `age`, `vip_cover_image`); these
+  are now coerced to `NA` before tibble conversion.
+- [`shows_people()`](https://jemus42.github.io/tRakt/reference/media_people.md)
+  /
+  [`seasons_people()`](https://jemus42.github.io/tRakt/reference/media_people.md)
+  /
+  [`episodes_people()`](https://jemus42.github.io/tRakt/reference/media_people.md)
+  no longer return a separate `guest_stars` table when called with
+  `guest_stars = TRUE`, because the trakt API stopped returning that
+  array. Guest cast is now mixed into `cast`. The `guest_stars` argument
+  is currently a no-op pending a deprecation decision.
 - Adapt to trakt.tv API response changes:
   - Show results now include `plex_guid` and `plex_slug` ID columns,
     `subgenres` as a list column, and new fields `tagline` and

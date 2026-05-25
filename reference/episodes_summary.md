@@ -91,12 +91,13 @@ Other summary methods:
 ``` r
 # Get just this one episode with its ratings, votes, etc.
 episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
-#> # A tibble: 1 × 21
-#>   id         season episode title number_abs overview rating votes comment_count
-#>   <chr>       <int>   <int> <chr>      <int> <chr>     <dbl> <int>         <int>
-#> 1 breaking-…      1       1 Pilot          1 When an…   8.33  8344            25
-#> # ℹ 12 more variables: first_aired <dttm>, updated_at <dttm>,
-#> #   available_translations <list>, runtime <int>, episode_type <chr>,
-#> #   original_title <chr>, after_credits <lgl>, during_credits <lgl>,
-#> #   trakt <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>
+#> # A tibble: 1 × 24
+#>   title votes episode rating id    season runtime overview released   number_abs
+#>   <chr> <int>   <int>  <dbl> <chr>  <int>   <int> <chr>    <date>          <int>
+#> 1 Pilot  5677       1   8.37 brea…      1      59 When an… 2008-01-21          1
+#> # ℹ 14 more variables: updated_at <dttm>, first_aired <dttm>,
+#> #   episode_type <chr>, after_credits <lgl>, comment_count <int>,
+#> #   during_credits <lgl>, original_title <chr>, available_translations <list>,
+#> #   effective_release_date <chr>, imdb <chr>, tmdb <chr>, tvdb <chr>,
+#> #   trakt <chr>, plex_guid <chr>
 ```

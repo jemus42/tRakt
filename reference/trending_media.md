@@ -212,11 +212,3 @@ Other shows data:
 [`anticipated_media`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
-
-Other dynamic lists:
-[`anticipated_media`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
-[`collected_media`](https://jemus42.github.io/tRakt/reference/collected_media.md),
-[`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
-[`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
-[`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
-[`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)

@@ -1,6 +1,7 @@
 # Getting Started
 
 ``` r
+
 library(tRakt)
 ```
 
@@ -13,35 +14,33 @@ your own API app [on trakt.tv](https://trakt.tv/oauth/applications).
 Using a text query:
 
 ``` r
+
 search_query("Utopia", type = "show")
-#> # A tibble: 1 × 35
+#> # A tibble: 1 × 36
 #>     score type  title   year tagline   overview runtime country trailer homepage
 #>     <dbl> <chr> <chr>  <int> <chr>     <chr>      <int> <chr>   <chr>   <chr>   
 #> 1 5.79e17 show  Utopia  2013 The Netw… The  Ut…      50 gb      https:… https:/…
-#> # ℹ 25 more variables: status <chr>, rating <dbl>, votes <int>,
+#> # ℹ 26 more variables: status <chr>, rating <dbl>, votes <int>,
 #> #   comment_count <int>, updated_at <dttm>, language <chr>, languages <list>,
 #> #   available_translations <list>, genres <list>, subgenres <list>,
-#> #   original_title <chr>, first_aired <dttm>, aired_episodes <int>,
-#> #   certification <chr>, network <chr>, airs_day <chr>, airs_time <chr>,
-#> #   airs_timezone <chr>, trakt <chr>, slug <chr>, imdb <chr>, tmdb <chr>,
-#> #   tvdb <chr>, plex_guid <chr>, plex_slug <chr>
+#> #   original_title <chr>, social_ids <df[,4]>, first_aired <dttm>,
+#> #   aired_episodes <int>, certification <chr>, network <chr>, airs_day <chr>,
+#> #   airs_time <chr>, airs_timezone <chr>, trakt <chr>, slug <chr>, imdb <chr>,
+#> #   tmdb <chr>, tvdb <chr>, plex_guid <chr>, plex_slug <chr>
 ```
 
 Search using an ID:
 
 ``` r
+
 search_id("tt2384811", id_type = "imdb", type = "show")
-#> # A tibble: 1 × 36
-#>   type  score  year title  votes genres    rating status country network runtime
-#>   <chr> <dbl> <int> <chr>  <int> <list>     <dbl> <chr>  <chr>   <chr>     <int>
-#> 1 show    100  2013 Utopia  4590 <chr [7]>   8.41 cance… gb      Channe…      50
-#> # ℹ 25 more variables: tagline <chr>, trailer <chr>, homepage <chr>,
-#> #   language <chr>, overview <chr>, languages <list>, subgenres <list>,
-#> #   updated_at <dttm>, first_aired <dttm>, certification <chr>,
-#> #   comment_count <int>, total_runtime <int>, aired_episodes <int>,
-#> #   original_title <chr>, available_translations <list>, airs_day <chr>,
-#> #   airs_time <chr>, airs_timezone <chr>, imdb <chr>, slug <chr>, tmdb <chr>,
-#> #   tvdb <chr>, trakt <chr>, plex_guid <chr>, plex_slug <chr>
+#> # A tibble: 1 × 13
+#>   type  score movie$ids$imdb  year title  aired_episodes imdb  slug  tmdb  tvdb 
+#>   <chr> <dbl> <chr>          <int> <chr>           <int> <chr> <chr> <chr> <chr>
+#> 1 show    100 NA              2013 Utopia             12 tt23… utop… 46511 2649…
+#> # ℹ 9 more variables: movie$ids$plex <df[,2]>, $$slug <chr>, $$tmdb <int>,
+#> #   $$trakt <int>, movie$year <int>, $title <chr>, trakt <chr>,
+#> #   plex_guid <chr>, plex_slug <chr>
 ```
 
 Or via whatever’s popular(ish):
@@ -57,43 +56,39 @@ of the movie.
 The 5 most popular shows:
 
 ``` r
+
 shows_popular(limit = 5)
-#> # A tibble: 5 × 33
-#>   title     year tagline overview runtime country trailer homepage status rating
-#>   <chr>    <int> <chr>   <chr>      <int> <chr>   <chr>   <chr>    <chr>   <dbl>
-#> 1 Pluribus  2025 Happin… The mos…      50 us      https:… https:/… retur…   8.05
-#> 2 A Knigh…  2026 A tall… A centu…      35 us      https:… https:/… retur…   8.19
-#> 3 Alien: …  2025 We wer… When th…      55 us      https:… https:/… retur…   7.44
-#> 4 Dept. Q   2025 Not al… A brash…      55 gb      https:… https:/… retur…   8.00
-#> 5 HIS & H…  2026 Two si… Two est…      45 us      https:… https:/… ended    7.61
-#> # ℹ 23 more variables: votes <int>, comment_count <int>, updated_at <dttm>,
-#> #   language <chr>, languages <list>, available_translations <list>,
-#> #   genres <list>, subgenres <list>, original_title <chr>, first_aired <dttm>,
-#> #   aired_episodes <int>, certification <chr>, network <chr>, airs_day <chr>,
-#> #   airs_time <chr>, airs_timezone <chr>, trakt <chr>, slug <chr>, imdb <chr>,
-#> #   tmdb <chr>, tvdb <chr>, plex_guid <chr>, plex_slug <chr>
+#> # A tibble: 5 × 10
+#>    year title   aired_episodes imdb  slug  tmdb  tvdb  trakt plex_guid plex_slug
+#>   <int> <chr>            <int> <chr> <chr> <chr> <chr> <chr> <chr>     <chr>    
+#> 1  2025 Plurib…              9 tt22… plur… 2251… 4364… 2067… 6497f186… pluribus 
+#> 2  2026 A Knig…              6 tt27… a-kn… 2243… 4336… 2041… 643cbf9e… a-knight…
+#> 3  2025 Alien:…              8 tt13… alie… 1572… 4589… 1706… 66391fb2… alien-ea…
+#> 4  2025 Dept. Q              9 tt27… dept… 2457… 4458… 2246… 65c281e8… dept-q   
+#> 5  2026 HIS & …              6 tt33… his-… 2597… 4525… 2494… 66a33f8e… his-and-…
 ```
 
 The 10 most watched (during the past year) movies from 1990-2000:
 
 ``` r
+
 library(dplyr)
 
 movies_watched(period = "yearly", years = c(1990, 2000)) |>
   select(watcher_count, title, year)
 #> # A tibble: 10 × 3
-#>    watcher_count title                     year
-#>            <int> <chr>                    <int>
-#>  1           457 The Matrix                1999
-#>  2           429 Toy Story                 1995
-#>  3           367 Scary Movie               2000
-#>  4           313 Toy Story 2               1999
-#>  5           301 The Shawshank Redemption  1994
-#>  6           287 The Lion King             1994
-#>  7           268 Se7en                     1995
-#>  8           259 The Truman Show           1998
-#>  9           252 Fight Club                1999
-#> 10           248 Jurassic Park             1993
+#>    watcher_count title                                      year
+#>            <int> <chr>                                     <int>
+#>  1           685 The Matrix                                 1999
+#>  2           625 Toy Story                                  1995
+#>  3           596 Fight Club                                 1999
+#>  4           571 The Shawshank Redemption                   1994
+#>  5           530 Star Wars: Episode I - The Phantom Menace  1999
+#>  6           493 The Mummy                                  1999
+#>  7           478 The Truman Show                            1998
+#>  8           438 Pulp Fiction                               1994
+#>  9           419 Toy Story 2                                1999
+#> 10           415 Se7en                                      1995
 ```
 
 ## Finding Things (and the right amount)

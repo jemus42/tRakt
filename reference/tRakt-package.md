@@ -38,3 +38,8 @@ Useful links:
 
 **Maintainer**: Lukas Burk <github@quantenbrot.de>
 ([ORCID](https://orcid.org/0000-0001-7528-3795))
+
+Authors:
+
+- Lukas Burk <github@quantenbrot.de>
+  ([ORCID](https://orcid.org/0000-0001-7528-3795))

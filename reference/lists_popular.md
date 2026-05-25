@@ -56,21 +56,6 @@ Other dynamic lists:
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
-Other list methods:
-[`media_lists`](https://jemus42.github.io/tRakt/reference/media_lists.md),
-[`user_list()`](https://jemus42.github.io/tRakt/reference/user_list.md),
-[`user_list_comments()`](https://jemus42.github.io/tRakt/reference/user_list_comments.md),
-[`user_list_items()`](https://jemus42.github.io/tRakt/reference/user_list_items.md),
-[`user_lists()`](https://jemus42.github.io/tRakt/reference/user_lists.md)
-
-Other dynamic lists:
-[`anticipated_media`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
-[`collected_media`](https://jemus42.github.io/tRakt/reference/collected_media.md),
-[`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
-[`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
-[`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
-[`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
-
 ## Examples
 
 ``` r

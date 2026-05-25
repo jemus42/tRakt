@@ -81,19 +81,13 @@ Other show data:
 
 ``` r
 shows_related("breaking-bad", limit = 5)
-#> # A tibble: 5 × 35
-#>   related_to    year title    votes genres rating status country network runtime
-#>   <chr>        <int> <chr>    <int> <list>  <dbl> <chr>  <chr>   <chr>     <int>
-#> 1 breaking-bad  2015 Better … 34065 <chr>    8.80 ended  us      AMC          50
-#> 2 breaking-bad  2002 The Wire 18185 <chr>    9.19 ended  us      HBO          60
-#> 3 breaking-bad  1999 The Sop… 19034 <chr>    9.11 ended  us      HBO          55
-#> 4 breaking-bad  2017 Ozark    18343 <chr>    8.26 ended  us      Netflix      60
-#> 5 breaking-bad  2015 Narcos   18828 <chr>    8.48 ended  us      Netflix      50
-#> # ℹ 25 more variables: tagline <chr>, trailer <chr>, homepage <chr>,
-#> #   language <chr>, overview <chr>, languages <list>, subgenres <list>,
-#> #   updated_at <dttm>, first_aired <dttm>, certification <chr>,
-#> #   comment_count <int>, total_runtime <int>, aired_episodes <int>,
-#> #   original_title <chr>, available_translations <list>, airs_day <chr>,
-#> #   airs_time <chr>, airs_timezone <chr>, imdb <chr>, slug <chr>, tmdb <chr>,
-#> #   tvdb <chr>, trakt <chr>, plex_guid <chr>, plex_slug <chr>
+#> # A tibble: 5 × 11
+#>   related_to   year title aired_episodes imdb  slug  tmdb  tvdb  trakt plex_guid
+#>   <chr>       <int> <chr>          <int> <chr> <chr> <chr> <chr> <chr> <chr>    
+#> 1 breaking-b…  2015 Bett…             63 tt30… bett… 60059 2731… 59660 5d9c0825…
+#> 2 breaking-b…  2002 The …             60 tt03… the-… 1438  79126 1429  5d9c086c…
+#> 3 breaking-b…  1999 The …             86 tt01… the-… 1398  75299 1389  5d9c086c…
+#> 4 breaking-b…  2017 Ozark             44 tt50… ozark 69740 3290… 1199… 5d9f40c6…
+#> 5 breaking-b…  2015 Narc…             30 tt27… narc… 63351 2826… 94630 5d9c0803…
+#> # ℹ 1 more variable: plex_slug <chr>
 ```

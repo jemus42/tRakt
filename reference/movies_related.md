@@ -86,18 +86,12 @@ Other movie data:
 
 ``` r
 movies_related("the-avengers-2012", limit = 5)
-#> # A tibble: 5 × 30
-#>   related_to      year title  votes genres rating status country runtime tagline
-#>   <chr>          <int> <chr>  <int> <list>  <dbl> <chr>  <chr>     <int> <chr>  
-#> 1 the-avengers-…  2011 Capt…  47336 <chr>    7.40 relea… us          124 ""     
-#> 2 the-avengers-…  2008 Iron…  63341 <chr>    8.08 relea… us          126 "Heroe…
-#> 3 the-avengers-…  2011 Thor   45471 <chr>    7.15 relea… us          115 "Coura…
-#> 4 the-avengers-…  2014 Guar… 108492 <chr>    8.26 relea… us          121 "When …
-#> 5 the-avengers-…  2000 X-Men  26820 <chr>    7.47 relea… us          104 "Trust…
-#> # ℹ 20 more variables: trailer <chr>, homepage <chr>, language <chr>,
-#> #   overview <chr>, released <date>, languages <list>, subgenres <list>,
-#> #   updated_at <dttm>, after_credits <lgl>, certification <chr>,
-#> #   comment_count <int>, during_credits <lgl>, original_title <chr>,
-#> #   available_translations <list>, imdb <chr>, slug <chr>, tmdb <chr>,
-#> #   trakt <chr>, plex_guid <chr>, plex_slug <chr>
+#> # A tibble: 5 × 9
+#>   related_to         year title      imdb  slug  tmdb  trakt plex_guid plex_slug
+#>   <chr>             <int> <chr>      <chr> <chr> <chr> <chr> <chr>     <chr>    
+#> 1 the-avengers-2012  2011 Captain A… tt04… capt… 1771  1170  5d77682a… captain-…
+#> 2 the-avengers-2012  2008 Iron Man   tt03… iron… 1726  1157  5d776829… iron-man 
+#> 3 the-avengers-2012  2011 Thor       tt08… thor… 10195 5408  5d776834… thor     
+#> 4 the-avengers-2012  2014 Guardians… tt20… guar… 1183… 82405 5d77696e… guardian…
+#> 5 the-avengers-2012  2000 X-Men      tt01… x-me… 36657 23299 5d776868… x-men    
 ```

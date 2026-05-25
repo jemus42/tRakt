@@ -84,17 +84,10 @@ Other summary methods:
 ``` r
 # Minimal info by default
 shows_summary("breaking-bad")
-#> # A tibble: 1 × 34
-#>    year title         votes genres rating status country network runtime tagline
-#>   <int> <chr>         <int> <list>  <dbl> <chr>  <chr>   <chr>   <chr>   <chr>  
-#> 1  2008 Breaking Bad 115942 <chr>    9.25 ended  us      AMC     NA      Change…
-#> # ℹ 24 more variables: trailer <chr>, homepage <chr>, language <chr>,
-#> #   overview <chr>, languages <list>, subgenres <list>, updated_at <dttm>,
-#> #   first_aired <dttm>, certification <chr>, comment_count <int>,
-#> #   total_runtime <int>, aired_episodes <int>, original_title <chr>,
-#> #   available_translations <list>, airs_day <chr>, airs_time <chr>,
-#> #   airs_timezone <chr>, imdb <chr>, slug <chr>, tmdb <chr>, tvdb <chr>,
-#> #   trakt <chr>, plex_guid <chr>, plex_slug <chr>
+#> # A tibble: 1 × 10
+#>    year title   aired_episodes imdb  slug  tmdb  tvdb  trakt plex_guid plex_slug
+#>   <int> <chr>            <int> <chr> <chr> <chr> <chr> <chr> <chr>     <chr>    
+#> 1  2008 Breaki…             62 tt09… brea… 1396  81189 1388  5d9c0834… breaking…
 if (FALSE) { # \dontrun{
 # More information
 shows_summary("breaking-bad", extended = "full")

@@ -69,13 +69,6 @@ Other comment methods:
 [`user_comments()`](https://jemus42.github.io/tRakt/reference/user_comments.md),
 [`user_list_comments()`](https://jemus42.github.io/tRakt/reference/user_list_comments.md)
 
-Other comment methods:
-[`comments_comment()`](https://jemus42.github.io/tRakt/reference/comments_comment.md),
-[`comments_updates()`](https://jemus42.github.io/tRakt/reference/comments_updates.md),
-[`media_comments`](https://jemus42.github.io/tRakt/reference/media_comments.md),
-[`user_comments()`](https://jemus42.github.io/tRakt/reference/user_comments.md),
-[`user_list_comments()`](https://jemus42.github.io/tRakt/reference/user_list_comments.md)
-
 ## Examples
 
 ``` r

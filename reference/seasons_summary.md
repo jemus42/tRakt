@@ -114,17 +114,14 @@ Other summary methods:
 ``` r
 # Get just the season numbers and their IDs
 seasons_summary("breaking-bad", extended = "min")
-#> # A tibble: 5 × 16
-#>   title    votes season rating network overview              updated_at         
-#>   <chr>    <int>  <int>  <dbl> <lgl>   <chr>                 <dttm>             
-#> 1 Season 1  5961      1   8.53 NA      "High school chemist… 2026-04-01 23:06:28
-#> 2 Season 2  5235      2   8.96 NA      "Walt must deal with… 2026-04-01 23:11:06
-#> 3 Season 3  4896      3   8.84 NA      "Walt continues to b… 2026-04-01 23:11:19
-#> 4 Season 4  4822      4   9.34 NA      "Walt and Jesse must… 2026-04-01 23:06:27
-#> 5 Season 5  4413      5   9.50 NA      "Walt is faced with … 2026-04-01 23:06:27
-#> # ℹ 9 more variables: first_aired <dttm>, episode_count <int>,
-#> #   total_runtime <int>, aired_episodes <int>, original_title <chr>,
-#> #   tmdb <chr>, tvdb <chr>, trakt <chr>, plex_guid <chr>
+#> # A tibble: 5 × 5
+#>   season tmdb  tvdb   trakt plex_guid               
+#>    <int> <chr> <chr>  <chr> <chr>                   
+#> 1      1 3572  30272  3950  602e61de66dfdb002c096b16
+#> 2      2 3573  40719  3951  602e61df66dfdb002c096b48
+#> 3      3 3575  171641 3952  602e61e266dfdb002c096ba3
+#> 4      4 3576  297361 3953  602e61e266dfdb002c096bd2
+#> 5      5 3578  490110 3954  602e61e366dfdb002c096c00
 if (FALSE) { # \dontrun{
 # Get season numbers, ratings, votes, titles and other metadata as well as
 # a list-column containing all episode data

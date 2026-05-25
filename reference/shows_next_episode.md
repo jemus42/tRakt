@@ -88,47 +88,21 @@ Other episode data:
 [`seasons_episodes()`](https://jemus42.github.io/tRakt/reference/seasons_episodes.md),
 [`seasons_summary()`](https://jemus42.github.io/tRakt/reference/seasons_summary.md)
 
-Other show data:
-[`collected_media`](https://jemus42.github.io/tRakt/reference/collected_media.md),
-[`media_aliases`](https://jemus42.github.io/tRakt/reference/media_aliases.md),
-[`media_comments`](https://jemus42.github.io/tRakt/reference/media_comments.md),
-[`media_lists`](https://jemus42.github.io/tRakt/reference/media_lists.md),
-[`media_people`](https://jemus42.github.io/tRakt/reference/media_people.md),
-[`media_ratings()`](https://jemus42.github.io/tRakt/reference/media_ratings.md),
-[`media_stats()`](https://jemus42.github.io/tRakt/reference/media_stats.md),
-[`media_translations`](https://jemus42.github.io/tRakt/reference/media_translations.md),
-[`media_watching`](https://jemus42.github.io/tRakt/reference/media_watching.md),
-[`people_media()`](https://jemus42.github.io/tRakt/reference/people_media.md),
-[`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
-[`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
-[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
-
-Other episode data:
-[`episodes_summary()`](https://jemus42.github.io/tRakt/reference/episodes_summary.md),
-[`media_comments`](https://jemus42.github.io/tRakt/reference/media_comments.md),
-[`media_lists`](https://jemus42.github.io/tRakt/reference/media_lists.md),
-[`media_people`](https://jemus42.github.io/tRakt/reference/media_people.md),
-[`media_ratings()`](https://jemus42.github.io/tRakt/reference/media_ratings.md),
-[`media_stats()`](https://jemus42.github.io/tRakt/reference/media_stats.md),
-[`media_translations`](https://jemus42.github.io/tRakt/reference/media_translations.md),
-[`media_watching`](https://jemus42.github.io/tRakt/reference/media_watching.md),
-[`seasons_episodes()`](https://jemus42.github.io/tRakt/reference/seasons_episodes.md),
-[`seasons_summary()`](https://jemus42.github.io/tRakt/reference/seasons_summary.md)
-
 ## Examples
 
 ``` r
 shows_next_episode("one-piece")
 #> # A tibble: 1 × 7
-#>   season number title                                    trakt tvdb  imdb  tmdb 
-#>    <int>  <int> <chr>                                    <chr> <chr> <chr> <chr>
-#> 1     23   1156 The Long-sought Elbaph! The Big Reunion… 1408… 1152… NA    7099…
+#>   season number title        trakt    tvdb  imdb  tmdb   
+#>    <int>  <int> <chr>        <chr>    <chr> <chr> <chr>  
+#> 1     23   1164 Episode 1164 14158859 NA    NA    7231360
 shows_last_episode("one-piece", extended = "full")
-#> # A tibble: 1 × 19
-#>   season number title             number_abs overview rating votes comment_count
-#>    <int>  <int> <chr>             <chr>      <chr>     <dbl> <int>         <int>
-#> 1     22   1155 The Promised Hor… NA         York wa…   8.55   136             5
-#> # ℹ 11 more variables: first_aired <dttm>, updated_at <dttm>, runtime <int>,
-#> #   episode_type <chr>, original_title <chr>, after_credits <lgl>,
-#> #   during_credits <lgl>, trakt <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>
+#> # A tibble: 1 × 20
+#>   season number title        number_abs overview rating votes comment_count
+#>    <int>  <int> <chr>             <int> <chr>     <dbl> <int>         <int>
+#> 1     23   1163 Episode 1163       1163 NA         8.88    26             0
+#> # ℹ 12 more variables: first_aired <dttm>, updated_at <dttm>,
+#> #   available_translations <list>, runtime <int>, episode_type <chr>,
+#> #   original_title <chr>, after_credits <lgl>, during_credits <lgl>,
+#> #   trakt <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>
 ```
