@@ -83,7 +83,7 @@ movies_watched(period = "yearly", years = c(1990, 2000)) |>
 #>  2           530 Toy Story                                  1995
 #>  3           506 Fight Club                                 1999
 #>  4           480 The Shawshank Redemption                   1994
-#>  5           438 Star Wars: Episode I - The Phantom Menace  1999
+#>  5           441 Star Wars: Episode I - The Phantom Menace  1999
 #>  6           436 The Mummy                                  1999
 #>  7           387 The Truman Show                            1998
 #>  8           359 Pulp Fiction                               1994

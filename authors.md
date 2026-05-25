@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](http://github.com/jemus42/tRakt/blob/v0.18.0/DESCRIPTION)
+[`DESCRIPTION`](http://github.com/jemus42/tRakt/blob/main/DESCRIPTION)
 
 Burk L (2026). *tRakt: Get Data from 'trakt.tv'*. R package version
 0.18.0, <https://jemus42.github.io/tRakt>.
