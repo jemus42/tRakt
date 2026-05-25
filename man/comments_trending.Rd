@@ -54,18 +54,11 @@ comments_recent("shouts")
 }
 }
 \seealso{
-Other comment methods: 
-\code{\link{comments_comment}()},
-\code{\link{comments_updates}()},
+Other comment methods:
+\code{\link[=comments_comment]{comments_comment()}},
+\code{\link[=comments_updates]{comments_updates()}},
 \code{\link{media_comments}},
-\code{\link{user_comments}()},
-\code{\link{user_list_comments}()}
-
-Other comment methods: 
-\code{\link{comments_comment}()},
-\code{\link{comments_updates}()},
-\code{\link{media_comments}},
-\code{\link{user_comments}()},
-\code{\link{user_list_comments}()}
+\code{\link[=user_comments]{user_comments()}},
+\code{\link[=user_list_comments]{user_list_comments()}}
 }
 \concept{comment methods}

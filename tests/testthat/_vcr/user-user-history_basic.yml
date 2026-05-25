@@ -5,168 +5,169 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:29 GMT
+      date: Sun, 24 May 2026 13:42:39 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb98e8db837b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"9b2b37a85e25e9eae2029044934d0670"
-      last-modified: Sat, 28 Feb 2026 20:37:27 GMT
+      etag: W/"45510a27f2ca01de764067464da87bd7"
+      last-modified: Sat, 23 May 2026 23:31:41 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '31778'
+      x-pagination-item-count: '32077'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '3178'
+      x-pagination-page-count: '3208'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 9cb512ec-54f7-41fd-80cb-93eb4eea9a37
-      x-runtime: '0.050612'
+      x-request-id: 588e19de-8a86-45df-a6da-07be87ef6c98
+      x-runtime: '0.367494'
       x-xss-protection: '0'
-      cf-ray: 9d6079d51aaaa4bf-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"id":12055733579,"watched_at":"2026-02-28T20:37:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":7,"title":"Contact","ids":{"trakt":13642190,"tvdb":11414576,"imdb":"tt38755006","tmdb":6618120,"tvrage":null}},"show":{"title":"Hijack","year":2023,"ids":{"trakt":194907,"slug":"hijack","tvdb":419254,"imdb":"tt19854762","tmdb":198102,"tvrage":null}}},{"id":12053859591,"watched_at":"2026-02-28T00:10:00.000Z","action":"scrobble","type":"episode","episode":{"season":1,"number":2,"title":"My
-        2nd First Day","ids":{"trakt":13668730,"tvdb":11426443,"imdb":"tt38789459","tmdb":6638204,"tvrage":null}},"show":{"title":"Scrubs","year":2026,"ids":{"trakt":291441,"slug":"scrubs-2026","tvdb":465690,"imdb":"tt40197357","tmdb":295778,"tvrage":null}}},{"id":12053810210,"watched_at":"2026-02-27T23:48:00.000Z","action":"scrobble","type":"episode","episode":{"season":1,"number":1,"title":"My
-        Return","ids":{"trakt":13307308,"tvdb":11238020,"imdb":"tt38789454","tmdb":6372133,"tvrage":null}},"show":{"title":"Scrubs","year":2026,"ids":{"trakt":291441,"slug":"scrubs-2026","tvdb":465690,"imdb":"tt40197357","tmdb":295778,"tvrage":null}}},{"id":12053763197,"watched_at":"2026-02-27T23:21:00.000Z","action":"scrobble","type":"episode","episode":{"season":19,"number":9,"title":"David
-        Morrissey, Holly Willoughby, John Kearns \u0026 Montell Douglas","ids":{"trakt":13812447,"tvdb":null,"imdb":null,"tmdb":6759363,"tvrage":null}},"show":{"title":"Would
-        I Lie to You?","year":2007,"ids":{"trakt":4751,"slug":"would-i-lie-to-you","tvdb":82548,"imdb":"tt1055238","tmdb":4775,"tvrage":null}}},{"id":12053590803,"watched_at":"2026-02-27T21:42:00.000Z","action":"scrobble","type":"episode","episode":{"season":3,"number":5,"title":"Hold
-        Your Horsies","ids":{"trakt":13642178,"tvdb":11413554,"imdb":"tt37532361","tmdb":6617356,"tvrage":null}},"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}}},{"id":12053506767,"watched_at":"2026-02-27T20:50:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":8,"title":"2:00
-        P.M.","ids":{"trakt":13822407,"tvdb":11518797,"imdb":"tt37971409","tmdb":6768680,"tvrage":null}},"show":{"title":"The
-        Pitt","year":2025,"ids":{"trakt":232884,"slug":"the-pitt","tvdb":448176,"imdb":"tt31938062","tmdb":250307,"tvrage":null}}},{"id":12051972741,"watched_at":"2026-02-27T00:43:00.000Z","action":"scrobble","type":"episode","episode":{"season":3,"number":4,"title":"The
-        Field","ids":{"trakt":13642177,"tvdb":11413553,"imdb":"tt37532360","tmdb":6617355,"tvrage":null}},"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}}},{"id":12051924602,"watched_at":"2026-02-27T00:09:00.000Z","action":"scrobble","type":"episode","episode":{"season":3,"number":3,"title":"D-Day","ids":{"trakt":13642176,"tvdb":11413552,"imdb":"tt37532358","tmdb":6617354,"tvrage":null}},"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}}},{"id":12051876323,"watched_at":"2026-02-26T23:29:00.000Z","action":"scrobble","type":"episode","episode":{"season":3,"number":2,"title":"Happiness
-        Mission","ids":{"trakt":13642175,"tvdb":11413551,"imdb":"tt37532353","tmdb":6617353,"tvrage":null}},"show":{"title":"Shrinking","year":2023,"ids":{"trakt":189764,"slug":"shrinking","tvdb":411364,"imdb":"tt15677150","tmdb":136311,"tvrage":null}}},{"id":12047556483,"watched_at":"2026-02-24T22:36:00.000Z","action":"scrobble","type":"episode","episode":{"season":37,"number":15,"title":"Homer?
-        A Cracker Bro?","ids":{"trakt":13836493,"tvdb":11464297,"imdb":"tt36431491","tmdb":6883535,"tvrage":null}},"show":{"title":"The
-        Simpsons","year":1989,"ids":{"trakt":455,"slug":"the-simpsons","tvdb":71663,"imdb":"tt0096697","tmdb":456,"tvrage":null}}}]'
-  recorded_at: 2026-03-02 12:41:29
+      string: '[{"id":12297139948,"watched_at":"2026-05-23T23:31:00.000Z","action":"scrobble","type":"episode","episode":{"season":13,"number":12,"title":"May
+        17, 2026: Structured Settlements","ids":{"trakt":14103828,"tvdb":11777304,"imdb":"tt42603303","tmdb":7134447,"tvrage":null}},"show":{"title":"Last
+        Week Tonight with John Oliver","year":2014,"ids":{"trakt":60267,"slug":"last-week-tonight-with-john-oliver","tvdb":278518,"imdb":"tt3530232","tmdb":60694,"tvrage":null}}},{"id":12296918466,"watched_at":"2026-05-23T21:53:00.000Z","action":"scrobble","type":"episode","episode":{"season":24,"number":15,"title":"High
+        School History","ids":{"trakt":14044564,"tvdb":11624608,"imdb":"tt36431589","tmdb":7193771,"tvrage":null}},"show":{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}}},{"id":12296652909,"watched_at":"2026-05-23T19:47:00.000Z","action":"scrobble","type":"episode","episode":{"season":21,"number":7,"title":"Putting
+        Things on Things","ids":{"trakt":14069347,"tvdb":11693615,"imdb":"tt39563481","tmdb":7065089,"tvrage":null}},"show":{"title":"Taskmaster","year":2015,"ids":{"trakt":100820,"slug":"taskmaster","tvdb":298905,"imdb":"tt4934214","tmdb":63404,"tvrage":null}}},{"id":12293722946,"watched_at":"2026-05-22T20:50:00.000Z","action":"checkin","type":"episode","episode":{"season":8,"number":1,"title":"Don''t
+        Wake Standards \u0026 Practices","ids":{"trakt":14128799,"tvdb":null,"imdb":null,"tmdb":7171307,"tvrage":null}},"show":{"title":"Game
+        Changer","year":2019,"ids":{"trakt":153142,"slug":"game-changer","tvdb":369988,"imdb":"tt11011104","tmdb":129412,"tvrage":null}}},{"id":12282342958,"watched_at":"2026-05-18T13:52:00.000Z","action":"watch","type":"episode","episode":{"season":2,"number":1,"title":"Zeke
+        Aaron McKinley","ids":{"trakt":12196359,"tvdb":10635478,"imdb":null,"tmdb":5530348,"tvrage":null}},"show":{"title":"Very
+        Important People","year":2023,"ids":{"trakt":216182,"slug":"very-important-people-2023","tvdb":440147,"imdb":"tt30468994","tmdb":240735,"tvrage":null}}},{"id":12282342692,"watched_at":"2026-05-18T13:52:00.000Z","action":"watch","type":"episode","episode":{"season":1,"number":13,"title":"Very
+        Important Bonus Content","ids":{"trakt":12259908,"tvdb":null,"imdb":null,"tmdb":5583775,"tvrage":null}},"show":{"title":"Very
+        Important People","year":2023,"ids":{"trakt":216182,"slug":"very-important-people-2023","tvdb":440147,"imdb":"tt30468994","tmdb":240735,"tvrage":null}}},{"id":12282342584,"watched_at":"2026-05-18T13:52:00.000Z","action":"watch","type":"episode","episode":{"season":1,"number":12,"title":"Augbert","ids":{"trakt":11333713,"tvdb":null,"imdb":null,"tmdb":5077246,"tvrage":null}},"show":{"title":"Very
+        Important People","year":2023,"ids":{"trakt":216182,"slug":"very-important-people-2023","tvdb":440147,"imdb":"tt30468994","tmdb":240735,"tvrage":null}}},{"id":12280313226,"watched_at":"2026-05-17T19:46:00.000Z","action":"scrobble","type":"episode","episode":{"season":4,"number":5,"title":"What
+        a Long Strange Trip It''s Been","ids":{"trakt":13946457,"tvdb":11537581,"imdb":"tt39796692","tmdb":6885594,"tvrage":null}},"show":{"title":"FROM","year":2022,"ids":{"trakt":188205,"slug":"from","tvdb":401003,"imdb":"tt9813792","tmdb":124364,"tvrage":null}}},{"id":12277613829,"watched_at":"2026-05-16T21:01:00.000Z","action":"scrobble","type":"episode","episode":{"season":5,"number":8,"title":"Brave
+        New World","ids":{"trakt":13932238,"tvdb":11571460,"imdb":"tt35287542","tmdb":6872531,"tvrage":null}},"show":{"title":"For
+        All Mankind","year":2019,"ids":{"trakt":140481,"slug":"for-all-mankind","tvdb":356202,"imdb":"tt7772588","tmdb":87917,"tvrage":null}}},{"id":12277489804,"watched_at":"2026-05-16T20:03:00.000Z","action":"scrobble","type":"episode","episode":{"season":5,"number":7,"title":"The
+        Frenchman, the Female, and the Man Called Mother''s Milk","ids":{"trakt":12138435,"tvdb":11194628,"imdb":"tt33023489","tmdb":6745011,"tvrage":null}},"show":{"title":"The
+        Boys","year":2019,"ids":{"trakt":139960,"slug":"the-boys-2019","tvdb":355567,"imdb":"tt1190634","tmdb":76479,"tvrage":null}}}]'
+  recorded_at: 2026-05-24 13:42:39
 - request:
     method: GET
     uri: https://api.trakt.tv/users/jemus42/history/movies?limit=10
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:29 GMT
+      date: Sun, 24 May 2026 13:42:39 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb991e80437b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"a2149de793fd897ba37a197d7a625656"
-      last-modified: Wed, 25 Feb 2026 21:33:52 GMT
+      etag: W/"17a089c01916fff9347b3fa05d29d33b"
+      last-modified: Mon, 18 May 2026 10:59:24 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '1310'
+      x-pagination-item-count: '1327'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '131'
+      x-pagination-page-count: '133'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 7edfb39b-b4da-459d-847a-14d71125d14d
-      x-runtime: '0.038442'
+      x-request-id: 46a50e05-8202-4ef7-893a-a0116304063c
+      x-runtime: '0.034184'
       x-xss-protection: '0'
-      cf-ray: 9d6079d66e93a4bf-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"id":12049455725,"watched_at":"2026-02-25T21:33:00.000Z","action":"watch","type":"movie","movie":{"title":"Marty
-        Supreme","year":2025,"ids":{"trakt":1076665,"slug":"marty-supreme-2025","imdb":"tt32916440","tmdb":1317288}}},{"id":12040100004,"watched_at":"2026-02-21T23:16:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Sleep
-        Dealer","year":2008,"ids":{"trakt":12751,"slug":"sleep-dealer-2008","imdb":"tt0804529","tmdb":20764}}},{"id":12023802521,"watched_at":"2026-02-15T19:00:00.000Z","action":"watch","type":"movie","movie":{"title":"Princess
-        Mononoke","year":1997,"ids":{"trakt":96,"slug":"princess-mononoke-1997","imdb":"tt0119698","tmdb":128}}},{"id":12020917947,"watched_at":"2026-02-14T22:20:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Gunpowder
-        Milkshake","year":2021,"ids":{"trakt":427910,"slug":"gunpowder-milkshake-2021","imdb":"tt8368408","tmdb":574060}}},{"id":12019928560,"watched_at":"2026-02-14T20:18:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Ed
-        Gamble: Blood Sugar","year":2019,"ids":{"trakt":466402,"slug":"ed-gamble-blood-sugar-2019","imdb":"tt11597152","tmdb":624536}}},{"id":12017145387,"watched_at":"2026-02-13T22:41:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Sympathy
-        for Mr. Vengeance","year":2002,"ids":{"trakt":2750,"slug":"sympathy-for-mr-vengeance-2002","imdb":"tt0310775","tmdb":4689}}},{"id":12002075147,"watched_at":"2026-02-07T21:58:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Memories
-        of Murder","year":2003,"ids":{"trakt":6518,"slug":"memories-of-murder-2003","imdb":"tt0353969","tmdb":11423}}},{"id":11986136817,"watched_at":"2026-01-31T22:20:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Grave
-        of the Fireflies","year":1988,"ids":{"trakt":7251,"slug":"grave-of-the-fireflies-1988","imdb":"tt0095327","tmdb":12477}}},{"id":11972493027,"watched_at":"2026-01-25T21:10:00.000Z","action":"scrobble","type":"movie","movie":{"title":"The
-        Rip","year":2026,"ids":{"trakt":1065701,"slug":"the-rip-2026","imdb":"tt32642706","tmdb":1306368}}},{"id":11957038144,"watched_at":"2026-01-19T21:18:00.000Z","action":"checkin","type":"movie","movie":{"title":"28
-        Years Later: The Bone Temple","year":2026,"ids":{"trakt":1033738,"slug":"28-years-later-the-bone-temple-2026","imdb":"tt32141377","tmdb":1272837}}}]'
-  recorded_at: 2026-03-02 12:41:29
+      string: '[{"id":12281996156,"watched_at":"2026-05-18T10:59:00.000Z","action":"watch","type":"movie","movie":{"title":"Kumail
+        Nanjiani: Night Thoughts","year":2025,"ids":{"trakt":1254822,"slug":"kumail-nanjiani-night-thoughts-2025","imdb":"tt39131664","tmdb":1529419}}},{"id":12277856193,"watched_at":"2026-05-16T22:51:00.000Z","action":"scrobble","type":"movie","movie":{"title":"The
+        Drama","year":2026,"ids":{"trakt":1083999,"slug":"the-drama-2026","imdb":"tt33071426","tmdb":1325734}}},{"id":12272228094,"watched_at":"2026-05-14T20:18:00.000Z","action":"scrobble","type":"movie","movie":{"title":"They
+        Will Kill You","year":2026,"ids":{"trakt":1052083,"slug":"they-will-kill-you-2026","imdb":"tt31728330","tmdb":1292695}}},{"id":12260850135,"watched_at":"2026-05-09T21:45:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Ready
+        or Not 2: Here I Come","year":2026,"ids":{"trakt":1027747,"slug":"ready-or-not-2-here-i-come-2026","imdb":"tt33978029","tmdb":1266127}}},{"id":12235808373,"watched_at":"2026-05-02T21:37:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Midsommar","year":2019,"ids":{"trakt":382491,"slug":"midsommar-2019","imdb":"tt8772262","tmdb":530385}}},{"id":12204139529,"watched_at":"2026-04-19T20:58:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Redline","year":2009,"ids":{"trakt":52761,"slug":"redline-2009","imdb":"tt1483797","tmdb":71883}}},{"id":12201439870,"watched_at":"2026-04-18T20:28:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Exit
+        8","year":2025,"ids":{"trakt":1152229,"slug":"exit-8-2025","imdb":"tt35222590","tmdb":1408208}}},{"id":12170458968,"watched_at":"2026-04-05T20:59:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Good
+        Luck, Have Fun, Don''t Die","year":2026,"ids":{"trakt":900786,"slug":"good-luck-have-fun-don-t-die-2026","imdb":"tt1341338","tmdb":1119449}}},{"id":12166929540,"watched_at":"2026-04-04T21:54:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Whistle","year":2026,"ids":{"trakt":962950,"slug":"whistle-2026","imdb":"tt29550683","tmdb":1193501}}},{"id":12166513845,"watched_at":"2026-04-04T20:15:00.000Z","action":"scrobble","type":"movie","movie":{"title":"Send
+        Help","year":2026,"ids":{"trakt":967810,"slug":"send-help-2026","imdb":"tt8036976","tmdb":1198994}}}]'
+  recorded_at: 2026-05-24 13:42:39
 - request:
     method: GET
     uri: https://api.trakt.tv/users/jemus42/history/shows?limit=2
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:29 GMT
+      date: Sun, 24 May 2026 13:42:40 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb9930ba037b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"1cac5ee7550aec734c3c21dfd3f6f96e"
-      last-modified: Sat, 28 Feb 2026 20:37:27 GMT
+      etag: W/"8891219bda147d2543f62459ff9235cc"
+      last-modified: Sat, 23 May 2026 23:31:41 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '31778'
+      x-pagination-item-count: '32077'
       x-pagination-limit: '2'
       x-pagination-page: '1'
-      x-pagination-page-count: '15889'
+      x-pagination-page-count: '16039'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 0cc05aa3-5d81-4baa-be25-94bae7a95803
-      x-runtime: '0.031296'
+      x-request-id: c661392f-f878-45ec-82ac-2a7975e6ec3f
+      x-runtime: '0.173839'
       x-xss-protection: '0'
-      cf-ray: 9d6079d799a7a4bf-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"id":12055733579,"watched_at":"2026-02-28T20:37:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":7,"title":"Contact","ids":{"trakt":13642190,"tvdb":11414576,"imdb":"tt38755006","tmdb":6618120,"tvrage":null}},"show":{"title":"Hijack","year":2023,"ids":{"trakt":194907,"slug":"hijack","tvdb":419254,"imdb":"tt19854762","tmdb":198102,"tvrage":null}}},{"id":12053859591,"watched_at":"2026-02-28T00:10:00.000Z","action":"scrobble","type":"episode","episode":{"season":1,"number":2,"title":"My
-        2nd First Day","ids":{"trakt":13668730,"tvdb":11426443,"imdb":"tt38789459","tmdb":6638204,"tvrage":null}},"show":{"title":"Scrubs","year":2026,"ids":{"trakt":291441,"slug":"scrubs-2026","tvdb":465690,"imdb":"tt40197357","tmdb":295778,"tvrage":null}}}]'
-  recorded_at: 2026-03-02 12:41:29
+      string: '[{"id":12297139948,"watched_at":"2026-05-23T23:31:00.000Z","action":"scrobble","type":"episode","episode":{"season":13,"number":12,"title":"May
+        17, 2026: Structured Settlements","ids":{"trakt":14103828,"tvdb":11777304,"imdb":"tt42603303","tmdb":7134447,"tvrage":null}},"show":{"title":"Last
+        Week Tonight with John Oliver","year":2014,"ids":{"trakt":60267,"slug":"last-week-tonight-with-john-oliver","tvdb":278518,"imdb":"tt3530232","tmdb":60694,"tvrage":null}}},{"id":12296918466,"watched_at":"2026-05-23T21:53:00.000Z","action":"scrobble","type":"episode","episode":{"season":24,"number":15,"title":"High
+        School History","ids":{"trakt":14044564,"tvdb":11624608,"imdb":"tt36431589","tmdb":7193771,"tvrage":null}},"show":{"title":"Family
+        Guy","year":1999,"ids":{"trakt":1425,"slug":"family-guy","tvdb":75978,"imdb":"tt0182576","tmdb":1434,"tvrage":null}}}]'
+  recorded_at: 2026-05-24 13:42:40
 - request:
     method: GET
     uri: https://api.trakt.tv/users/sean/history/shows?limit=2
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:29 GMT
+      date: Sun, 24 May 2026 13:42:45 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb9952a9b37b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"0795ef830fdffa0c8281cb0f7500207c"
-      last-modified: Sat, 28 Feb 2026 08:07:04 GMT
+      etag: W/"290b06718b0ee4f0fcbba72302998810"
+      last-modified: Sun, 24 May 2026 06:44:27 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '64152'
+      x-pagination-item-count: '64597'
       x-pagination-limit: '2'
       x-pagination-page: '1'
-      x-pagination-page-count: '32076'
+      x-pagination-page-count: '32299'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: f68f108f-9ea1-4821-a058-aedf15ab3a01
-      x-runtime: '0.038276'
+      x-request-id: 6c5569c4-c65f-4b10-9049-3997617efb3e
+      x-runtime: '5.504155'
       x-xss-protection: '0'
-      cf-ray: 9d6079d8ccefa4bf-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"id":12054498959,"watched_at":"2026-02-28T08:07:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":3,"title":"Homestar
-        Runner, Hearthstone, Demolition Man","ids":{"trakt":3653424,"tvdb":7309413,"imdb":null,"tmdb":2984435,"tvrage":null}},"show":{"title":"Um,
-        Actually...","year":2018,"ids":{"trakt":140399,"slug":"um-actually","tvdb":356085,"imdb":"tt9690112","tmdb":126565,"tvrage":null}}},{"id":12053760833,"watched_at":"2026-02-27T23:20:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":6,"title":"Ghost
-        Pointe Blank","ids":{"trakt":12752119,"tvdb":10911593,"imdb":"tt32567381","tmdb":5929347,"tvrage":null}},"show":{"title":"School
-        Spirits","year":2023,"ids":{"trakt":198139,"slug":"school-spirits-2023","tvdb":421636,"imdb":"tt21057450","tmdb":208397,"tvrage":null}}}]'
-  recorded_at: 2026-03-02 12:41:29
+      string: '[{"id":12297855656,"watched_at":"2026-05-24T06:44:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":19,"title":"Ho
+        Ho Ho, Actually: The Holiday Special","ids":{"trakt":3872607,"tvdb":7489623,"imdb":null,"tmdb":2984451,"tvrage":null}},"show":{"title":"Um,
+        Actually...","year":2018,"ids":{"trakt":140399,"slug":"um-actually","tvdb":356085,"imdb":"tt9690112","tmdb":126565,"tvrage":null}}},{"id":12295269087,"watched_at":"2026-05-23T04:55:00.000Z","action":"scrobble","type":"episode","episode":{"season":2,"number":3,"title":"Who
+        Is Alive?","ids":{"trakt":12103029,"tvdb":10592760,"imdb":"tt15241840","tmdb":5469117,"tvrage":null}},"show":{"title":"Severance","year":2022,"ids":{"trakt":154997,"slug":"severance","tvdb":371980,"imdb":"tt11280740","tmdb":95396,"tvrage":null}}}]'
+  recorded_at: 2026-05-24 13:42:45
 recorded_with: VCR-vcr/2.1.0

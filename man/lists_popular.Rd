@@ -35,29 +35,14 @@ lists_trending()
 \seealso{
 \code{\link[=user_list_items]{user_list_items()}} For the actual content of a list.
 
-Other list methods: 
+Other list methods:
 \code{\link{media_lists}},
-\code{\link{user_list}()},
-\code{\link{user_list_comments}()},
-\code{\link{user_list_items}()},
-\code{\link{user_lists}()}
+\code{\link[=user_list]{user_list()}},
+\code{\link[=user_list_comments]{user_list_comments()}},
+\code{\link[=user_list_items]{user_list_items()}},
+\code{\link[=user_lists]{user_lists()}}
 
-Other dynamic lists: 
-\code{\link{anticipated_media}},
-\code{\link{collected_media}},
-\code{\link{played_media}},
-\code{\link{popular_media}},
-\code{\link{trending_media}},
-\code{\link{watched_media}}
-
-Other list methods: 
-\code{\link{media_lists}},
-\code{\link{user_list}()},
-\code{\link{user_list_comments}()},
-\code{\link{user_list_items}()},
-\code{\link{user_lists}()}
-
-Other dynamic lists: 
+Other dynamic lists:
 \code{\link{anticipated_media}},
 \code{\link{collected_media}},
 \code{\link{played_media}},

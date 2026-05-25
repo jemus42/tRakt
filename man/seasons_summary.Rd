@@ -64,34 +64,34 @@ seasons_summary("utopia", extended = "full", episodes = TRUE)
 }
 }
 \seealso{
-Other season data: 
+Other season data:
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
-\code{\link{seasons_episodes}()},
-\code{\link{seasons_season}()}
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
+\code{\link[=seasons_episodes]{seasons_episodes()}},
+\code{\link[=seasons_season]{seasons_season()}}
 
-Other episode data: 
-\code{\link{episodes_summary}()},
+Other episode data:
+\code{\link[=episodes_summary]{episodes_summary()}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_episodes}()},
-\code{\link{shows_next_episode}()}
+\code{\link[=seasons_episodes]{seasons_episodes()}},
+\code{\link[=shows_next_episode]{shows_next_episode()}}
 
-Other summary methods: 
-\code{\link{comments_comment}()},
-\code{\link{episodes_summary}()},
-\code{\link{movies_summary}()},
-\code{\link{people_summary}()},
-\code{\link{shows_summary}()},
-\code{\link{user_profile}()}
+Other summary methods:
+\code{\link[=comments_comment]{comments_comment()}},
+\code{\link[=episodes_summary]{episodes_summary()}},
+\code{\link[=movies_summary]{movies_summary()}},
+\code{\link[=people_summary]{people_summary()}},
+\code{\link[=shows_summary]{shows_summary()}},
+\code{\link[=user_profile]{user_profile()}}
 }
 \concept{episode data}
 \concept{season data}

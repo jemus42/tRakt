@@ -8,13 +8,13 @@
   "codeRepository": "https://github.com/jemus42/tRakt",
   "issueTracker": "http://github.com/jemus42/tRakt/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.17.0.9000",
+  "version": "0.18.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.4.3 (2025-02-28)",
+  "runtimePlatform": "R version 4.6.0 (2026-04-24)",
   "author": [
     {
       "@type": "Person",
@@ -170,15 +170,15 @@
     },
     {
       "@type": "SoftwareApplication",
-      "identifier": "webmockr",
-      "name": "webmockr",
+      "identifier": "withr",
+      "name": "withr",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://CRAN.R-project.org/package=webmockr"
+      "sameAs": "https://CRAN.R-project.org/package=withr"
     },
     {
       "@type": "SoftwareApplication",
@@ -228,7 +228,6 @@
       "@type": "SoftwareApplication",
       "identifier": "dplyr",
       "name": "dplyr",
-      "version": ">= 1.0.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -251,6 +250,18 @@
     },
     "6": {
       "@type": "SoftwareApplication",
+      "identifier": "lifecycle",
+      "name": "lifecycle",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=lifecycle"
+    },
+    "7": {
+      "@type": "SoftwareApplication",
       "identifier": "lubridate",
       "name": "lubridate",
       "provider": {
@@ -261,11 +272,10 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=lubridate"
     },
-    "7": {
+    "8": {
       "@type": "SoftwareApplication",
       "identifier": "purrr",
       "name": "purrr",
-      "version": ">= 0.2.3",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -274,7 +284,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=purrr"
     },
-    "8": {
+    "9": {
       "@type": "SoftwareApplication",
       "identifier": "rappdirs",
       "name": "rappdirs",
@@ -286,7 +296,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=rappdirs"
     },
-    "9": {
+    "10": {
       "@type": "SoftwareApplication",
       "identifier": "rlang",
       "name": "rlang",
@@ -298,7 +308,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=rlang"
     },
-    "10": {
+    "11": {
       "@type": "SoftwareApplication",
       "identifier": "stringr",
       "name": "stringr",
@@ -310,7 +320,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=stringr"
     },
-    "11": {
+    "12": {
       "@type": "SoftwareApplication",
       "identifier": "tibble",
       "name": "tibble",
@@ -322,14 +332,14 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=tibble"
     },
-    "12": {
+    "13": {
       "@type": "SoftwareApplication",
       "identifier": "utils",
       "name": "utils"
     },
     "SystemRequirements": null
   },
-  "fileSize": "26289.658KB",
+  "fileSize": "10252.258KB",
   "releaseNotes": "https://github.com/jemus42/tRakt/blob/main/NEWS.md",
   "readme": "https://github.com/jemus42/tRakt/blob/main/README.md",
   "contIntegration": ["https://github.com/jemus42/tRakt/actions/workflows/R-CMD-check.yaml", "https://app.codecov.io/gh/jemus42/tRakt"],

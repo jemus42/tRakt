@@ -59,7 +59,7 @@ user_lists <- function(user = "me", extended = "min") {
 #' @seealso [user_list_items] For the actual content of a list.
 #' @importFrom dplyr select pull bind_cols
 #' @importFrom rlang is_empty
-#' @importFrom purrr discard
+#' @importFrom purrr discard modify_if
 #' @note In the embedded user data, `name` is renamed to `user_name` due
 #'   to duplication with e.g. list names,
 #'   and `slug` is renamed to `user_slug` for the same reason.
@@ -85,6 +85,7 @@ user_list <- function(user = "me", list_id, extended = "min") {
 			response$ids |>
 				as_tibble(),
 			response$user |>
+				modify_if(is.null, \(x) NA) |>
 				as_tibble() |>
 				unpack_user()
 		) |>

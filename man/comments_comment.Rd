@@ -92,41 +92,20 @@ comments_item("136632", extended = "full")
 }
 }
 \seealso{
-Other comment methods: 
-\code{\link{comments_trending}()},
-\code{\link{comments_updates}()},
+Other comment methods:
+\code{\link[=comments_trending]{comments_trending()}},
+\code{\link[=comments_updates]{comments_updates()}},
 \code{\link{media_comments}},
-\code{\link{user_comments}()},
-\code{\link{user_list_comments}()}
+\code{\link[=user_comments]{user_comments()}},
+\code{\link[=user_list_comments]{user_list_comments()}}
 
-Other summary methods: 
-\code{\link{episodes_summary}()},
-\code{\link{movies_summary}()},
-\code{\link{people_summary}()},
-\code{\link{seasons_summary}()},
-\code{\link{shows_summary}()},
-\code{\link{user_profile}()}
-
-Other comment methods: 
-\code{\link{comments_trending}()},
-\code{\link{comments_updates}()},
-\code{\link{media_comments}},
-\code{\link{user_comments}()},
-\code{\link{user_list_comments}()}
-
-Other comment methods: 
-\code{\link{comments_trending}()},
-\code{\link{comments_updates}()},
-\code{\link{media_comments}},
-\code{\link{user_comments}()},
-\code{\link{user_list_comments}()}
-
-Other comment methods: 
-\code{\link{comments_trending}()},
-\code{\link{comments_updates}()},
-\code{\link{media_comments}},
-\code{\link{user_comments}()},
-\code{\link{user_list_comments}()}
+Other summary methods:
+\code{\link[=episodes_summary]{episodes_summary()}},
+\code{\link[=movies_summary]{movies_summary()}},
+\code{\link[=people_summary]{people_summary()}},
+\code{\link[=seasons_summary]{seasons_summary()}},
+\code{\link[=shows_summary]{shows_summary()}},
+\code{\link[=user_profile]{user_profile()}}
 }
 \concept{comment methods}
 \concept{summary methods}

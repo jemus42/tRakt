@@ -5,16 +5,16 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:30 GMT
+      date: Sun, 24 May 2026 13:42:48 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb9c75bf08f37-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"70a09c2deea781afc997e809f48c4e8a"
+      etag: W/"03f46eeea6222bd7217da3d9f59bbf0b"
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
@@ -22,12 +22,11 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: a5557acb-cb28-4fdf-a830-7c26c88f51b1
-      x-runtime: '0.014198'
+      x-request-id: 25b7660a-ab71-43a4-8542-1e42b4226a36
+      x-runtime: '0.017355'
       x-xss-protection: '0'
-      cf-ray: 9d6079dd19d5d595-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}'
-  recorded_at: 2026-03-02 12:41:30
+  recorded_at: 2026-05-24 13:42:48
 recorded_with: VCR-vcr/2.1.0

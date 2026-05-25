@@ -33,6 +33,12 @@ unpack_user <- function(response_user) {
 			rename(user_name = "name")
 	}
 
+	# Rename the user's own trakt id so it doesn't collide with the media/list
+	# trakt id when an unpacked user is bind_cols()'d alongside other ids.
+	if (has_name(response_user, "trakt")) {
+		response_user <- response_user |> rename(user_trakt = "trakt")
+	}
+
 	response_user |>
 		rename(user_slug = "slug") |>
 		mutate_if(is.factor, as.character) |>

@@ -5,13 +5,13 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:33 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=10800, s-maxage=43200
       vary: Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: people
+      cache-tag: people,person_metadata,resource:person:297737
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
@@ -19,13 +19,11 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6079c98f23c118-AMS
-      alt-svc: h3=":443"; ma=86400
+      cf-ray: a00cb967ac9b8f37-AMS
     body:
       string: '{"ids":{"imdb":"nm0186505","slug":"bryan-cranston","tmdb":17419,"trakt":297737},"name":"Bryan
-        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/ef96a1e565.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
-        Lee Cranston (born March 7, 1956) is an American businessman, entrepreneur,
-        actor, voice actor, screenwriter, director and producer. After taking minor
+        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/25eb34a2d5.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
+        Lee Cranston (born March 7, 1956) is an American actor. After taking minor
         roles in television, he established himself as a leading actor in both comedic
         and dramatic works on stage and screen. He has received several accolades,
         including seven Primetime Emmy Awards, a Golden Globe Award, a Laurence Olivier
@@ -52,21 +50,21 @@ http_interactions:
         3 (2012), Kung Fu Panda 3 (2016), and Kung Fu Panda 4 (2024).\n\nDescription
         above from the Wikipedia article Bryan Cranston, licensed under CC-BY-SA,
         full list of contributors on Wikipedia.","birthplace":"Hollywood, Los Angeles,
-        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-02-26T19:39:25.000Z","known_for_department":"acting"}'
-  recorded_at: 2026-03-02 12:41:27
+        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-05-16T08:14:22.000Z","known_for_department":"acting"}'
+  recorded_at: 2026-05-24 13:42:32
 - request:
     method: GET
     uri: https://api.trakt.tv/people/bryan-cranston?extended=full
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 11:16:47 GMT
+      date: Sun, 24 May 2026 13:42:33 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=10800, s-maxage=43200
       vary: Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: people
+      cache-tag: people,person_metadata,resource:person:297737
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
@@ -74,13 +72,11 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d5ffdc44bf4f5d7-AMS
-      alt-svc: h3=":443"; ma=86400
+      cf-ray: a00cb968cefd8f37-AMS
     body:
       string: '{"ids":{"imdb":"nm0186505","slug":"bryan-cranston","tmdb":17419,"trakt":297737},"name":"Bryan
-        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/ef96a1e565.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
-        Lee Cranston (born March 7, 1956) is an American businessman, entrepreneur,
-        actor, voice actor, screenwriter, director and producer. After taking minor
+        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/25eb34a2d5.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
+        Lee Cranston (born March 7, 1956) is an American actor. After taking minor
         roles in television, he established himself as a leading actor in both comedic
         and dramatic works on stage and screen. He has received several accolades,
         including seven Primetime Emmy Awards, a Golden Globe Award, a Laurence Olivier
@@ -107,21 +103,21 @@ http_interactions:
         3 (2012), Kung Fu Panda 3 (2016), and Kung Fu Panda 4 (2024).\n\nDescription
         above from the Wikipedia article Bryan Cranston, licensed under CC-BY-SA,
         full list of contributors on Wikipedia.","birthplace":"Hollywood, Los Angeles,
-        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-02-26T19:39:25.000Z","known_for_department":"acting"}'
-  recorded_at: 2026-03-02 12:41:27
+        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-05-16T08:14:22.000Z","known_for_department":"acting"}'
+  recorded_at: 2026-05-24 13:42:33
 - request:
     method: GET
     uri: https://api.trakt.tv/people/bryan-cranston
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:33 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=10800, s-maxage=43200
       vary: Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: people
+      cache-tag: people,person_metadata,resource:person:297737
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
@@ -129,13 +125,11 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6079c98f23c118-AMS
-      alt-svc: h3=":443"; ma=86400
+      cf-ray: a00cb967ac9b8f37-AMS
     body:
       string: '{"ids":{"imdb":"nm0186505","slug":"bryan-cranston","tmdb":17419,"trakt":297737},"name":"Bryan
-        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/ef96a1e565.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
-        Lee Cranston (born March 7, 1956) is an American businessman, entrepreneur,
-        actor, voice actor, screenwriter, director and producer. After taking minor
+        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/25eb34a2d5.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
+        Lee Cranston (born March 7, 1956) is an American actor. After taking minor
         roles in television, he established himself as a leading actor in both comedic
         and dramatic works on stage and screen. He has received several accolades,
         including seven Primetime Emmy Awards, a Golden Globe Award, a Laurence Olivier
@@ -162,21 +156,21 @@ http_interactions:
         3 (2012), Kung Fu Panda 3 (2016), and Kung Fu Panda 4 (2024).\n\nDescription
         above from the Wikipedia article Bryan Cranston, licensed under CC-BY-SA,
         full list of contributors on Wikipedia.","birthplace":"Hollywood, Los Angeles,
-        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-02-26T19:39:25.000Z","known_for_department":"acting"}'
-  recorded_at: 2026-03-02 12:41:27
+        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-05-16T08:14:22.000Z","known_for_department":"acting"}'
+  recorded_at: 2026-05-24 13:42:33
 - request:
     method: GET
     uri: https://api.trakt.tv/people/bryan-cranston
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:33 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=10800, s-maxage=43200
       vary: Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: people
+      cache-tag: people,person_metadata,resource:person:297737
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
@@ -184,13 +178,11 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6079c98f23c118-AMS
-      alt-svc: h3=":443"; ma=86400
+      cf-ray: a00cb967ac9b8f37-AMS
     body:
       string: '{"ids":{"imdb":"nm0186505","slug":"bryan-cranston","tmdb":17419,"trakt":297737},"name":"Bryan
-        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/ef96a1e565.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
-        Lee Cranston (born March 7, 1956) is an American businessman, entrepreneur,
-        actor, voice actor, screenwriter, director and producer. After taking minor
+        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/25eb34a2d5.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
+        Lee Cranston (born March 7, 1956) is an American actor. After taking minor
         roles in television, he established himself as a leading actor in both comedic
         and dramatic works on stage and screen. He has received several accolades,
         including seven Primetime Emmy Awards, a Golden Globe Award, a Laurence Olivier
@@ -217,21 +209,21 @@ http_interactions:
         3 (2012), Kung Fu Panda 3 (2016), and Kung Fu Panda 4 (2024).\n\nDescription
         above from the Wikipedia article Bryan Cranston, licensed under CC-BY-SA,
         full list of contributors on Wikipedia.","birthplace":"Hollywood, Los Angeles,
-        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-02-26T19:39:25.000Z","known_for_department":"acting"}'
-  recorded_at: 2026-03-02 12:41:27
+        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-05-16T08:14:22.000Z","known_for_department":"acting"}'
+  recorded_at: 2026-05-24 13:42:33
 - request:
     method: GET
     uri: https://api.trakt.tv/people/bryan-cranston
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:33 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=10800, s-maxage=43200
       vary: Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: people
+      cache-tag: people,person_metadata,resource:person:297737
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
@@ -239,13 +231,11 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6079c98f23c118-AMS
-      alt-svc: h3=":443"; ma=86400
+      cf-ray: a00cb967ac9b8f37-AMS
     body:
       string: '{"ids":{"imdb":"nm0186505","slug":"bryan-cranston","tmdb":17419,"trakt":297737},"name":"Bryan
-        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/ef96a1e565.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
-        Lee Cranston (born March 7, 1956) is an American businessman, entrepreneur,
-        actor, voice actor, screenwriter, director and producer. After taking minor
+        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/25eb34a2d5.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
+        Lee Cranston (born March 7, 1956) is an American actor. After taking minor
         roles in television, he established himself as a leading actor in both comedic
         and dramatic works on stage and screen. He has received several accolades,
         including seven Primetime Emmy Awards, a Golden Globe Award, a Laurence Olivier
@@ -272,21 +262,21 @@ http_interactions:
         3 (2012), Kung Fu Panda 3 (2016), and Kung Fu Panda 4 (2024).\n\nDescription
         above from the Wikipedia article Bryan Cranston, licensed under CC-BY-SA,
         full list of contributors on Wikipedia.","birthplace":"Hollywood, Los Angeles,
-        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-02-26T19:39:25.000Z","known_for_department":"acting"}'
-  recorded_at: 2026-03-02 12:41:27
+        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-05-16T08:14:22.000Z","known_for_department":"acting"}'
+  recorded_at: 2026-05-24 13:42:33
 - request:
     method: GET
     uri: https://api.trakt.tv/people/bryan-cranston
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:33 GMT
       content-type: application/json; charset=utf-8
       access-control-allow-origin: '*'
       cache-control: public, max-age=10800, s-maxage=43200
       vary: Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      cache-tag: people
+      cache-tag: people,person_metadata,resource:person:297737
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
@@ -294,13 +284,11 @@ http_interactions:
       speculation-rules: '"/cdn-cgi/speculation"'
       content-encoding: gzip
       server: cloudflare
-      cf-ray: 9d6079c98f23c118-AMS
-      alt-svc: h3=":443"; ma=86400
+      cf-ray: a00cb967ac9b8f37-AMS
     body:
       string: '{"ids":{"imdb":"nm0186505","slug":"bryan-cranston","tmdb":17419,"trakt":297737},"name":"Bryan
-        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/ef96a1e565.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
-        Lee Cranston (born March 7, 1956) is an American businessman, entrepreneur,
-        actor, voice actor, screenwriter, director and producer. After taking minor
+        Cranston","death":null,"gender":"male","height":179.07000732421875,"images":{"fanart":["media.trakt.tv/images/people/000/297/737/fanarts/medium/ec609f5bcc.jpg.webp"],"headshot":["media.trakt.tv/images/people/000/297/737/headshots/medium/25eb34a2d5.jpg.webp"]},"birthday":"1956-03-07","homepage":null,"biography":"Bryan
+        Lee Cranston (born March 7, 1956) is an American actor. After taking minor
         roles in television, he established himself as a leading actor in both comedic
         and dramatic works on stage and screen. He has received several accolades,
         including seven Primetime Emmy Awards, a Golden Globe Award, a Laurence Olivier
@@ -327,6 +315,6 @@ http_interactions:
         3 (2012), Kung Fu Panda 3 (2016), and Kung Fu Panda 4 (2024).\n\nDescription
         above from the Wikipedia article Bryan Cranston, licensed under CC-BY-SA,
         full list of contributors on Wikipedia.","birthplace":"Hollywood, Los Angeles,
-        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-02-26T19:39:25.000Z","known_for_department":"acting"}'
-  recorded_at: 2026-03-02 12:41:27
+        California, USA","social_ids":{"twitter":"BryanCranston","facebook":"thebryancranston","instagram":"bryancranston","wikipedia":"Bryan_Cranston"},"updated_at":"2026-05-16T08:14:22.000Z","known_for_department":"acting"}'
+  recorded_at: 2026-05-24 13:42:33
 recorded_with: VCR-vcr/2.1.0

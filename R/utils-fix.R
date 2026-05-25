@@ -110,6 +110,37 @@ fix_datetime <- function(response) {
 	}
 }
 
+# Handle the multi-source ratings response shape introduced for
+# seasons/ratings in early 2026. The API used to return a flat object with
+# trakt's rating/votes/distribution at the top level. It now returns one
+# sub-object per source: trakt, tmdb, imdb, metascore, rotten_tomatoes.
+# We promote the trakt sub-object's fields to the top level and surface
+# external scores as <source>_<field> columns (NA when the API has no value).
+#' @keywords internal
+#' @importFrom rlang has_name
+unpack_ratings_sources <- function(response) {
+	if (!is.list(response) || !has_name(response, "trakt") || !is.list(response$trakt)) {
+		return(response)
+	}
+
+	sources <- response
+	response <- sources$trakt
+
+	external_sources <- setdiff(names(sources), "trakt")
+	for (src in external_sources) {
+		fields <- sources[[src]]
+		if (!is.list(fields)) {
+			next
+		}
+		for (field in names(fields)) {
+			value <- fields[[field]]
+			response[[paste0(src, "_", field)]] <- if (is.null(value)) NA else value
+		}
+	}
+
+	response
+}
+
 # Unpack the ratings distribution my tibblurazing them
 #' @keywords internal
 #' @importFrom tibble enframe

@@ -51,8 +51,10 @@ Can also be of length greater than 1, in which case the function is called on al
 Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
 or a character vector (e.g. \code{c("full", "images")}).}
 
-\item{guest_stars}{\code{logical(1) ["FALSE"]}: Also include guest stars. This returns
-a lot of data, so use with care.}
+\item{guest_stars}{\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}} \code{logical(1) ["FALSE"]}:
+Previously requested a separate \code{guest_stars} table. The trakt.tv API no
+longer returns that array — guest cast is now included in \code{cast}.
+This argument is currently a no-op and will be removed in a future release.}
 
 \item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
@@ -85,86 +87,66 @@ episodes_people("breaking-bad", season = 1, episode = 1)
 \link{people_media}, for the other direction: People that have credits
 in shows/movies.
 
-Other people data: 
+Other people data:
 \code{\link{media_lists}},
-\code{\link{people_media}()},
-\code{\link{people_summary}()}
+\code{\link[=people_media]{people_media()}},
+\code{\link[=people_summary]{people_summary()}}
 
-Other movie data: 
+Other movie data:
 \code{\link{anticipated_media}},
 \code{\link{collected_media}},
 \code{\link{media_aliases}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{movies_boxoffice}()},
-\code{\link{movies_related}()},
-\code{\link{movies_releases}()},
-\code{\link{movies_summary}()},
-\code{\link{people_media}()},
+\code{\link[=movies_boxoffice]{movies_boxoffice()}},
+\code{\link[=movies_related]{movies_related()}},
+\code{\link[=movies_releases]{movies_releases()}},
+\code{\link[=movies_summary]{movies_summary()}},
+\code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
 \code{\link{popular_media}},
 \code{\link{trending_media}},
 \code{\link{watched_media}}
 
-Other people data: 
-\code{\link{media_lists}},
-\code{\link{people_media}()},
-\code{\link{people_summary}()}
-
-Other show data: 
+Other show data:
 \code{\link{collected_media}},
 \code{\link{media_aliases}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{people_media}()},
+\code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
-\code{\link{shows_next_episode}()},
-\code{\link{shows_related}()},
-\code{\link{shows_summary}()}
+\code{\link[=shows_next_episode]{shows_next_episode()}},
+\code{\link[=shows_related]{shows_related()}},
+\code{\link[=shows_summary]{shows_summary()}}
 
-Other people data: 
-\code{\link{media_lists}},
-\code{\link{people_media}()},
-\code{\link{people_summary}()}
-
-Other season data: 
+Other season data:
 \code{\link{media_comments}},
 \code{\link{media_lists}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
-\code{\link{seasons_episodes}()},
-\code{\link{seasons_season}()},
-\code{\link{seasons_summary}()}
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
+\code{\link[=seasons_episodes]{seasons_episodes()}},
+\code{\link[=seasons_season]{seasons_season()}},
+\code{\link[=seasons_summary]{seasons_summary()}}
 
-Other people data: 
-\code{\link{media_lists}},
-\code{\link{people_media}()},
-\code{\link{people_summary}()}
-
-Other episode data: 
-\code{\link{episodes_summary}()},
+Other episode data:
+\code{\link[=episodes_summary]{episodes_summary()}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_episodes}()},
-\code{\link{seasons_summary}()},
-\code{\link{shows_next_episode}()}
-
-Other people data: 
-\code{\link{media_lists}},
-\code{\link{people_media}()},
-\code{\link{people_summary}()}
+\code{\link[=seasons_episodes]{seasons_episodes()}},
+\code{\link[=seasons_summary]{seasons_summary()}},
+\code{\link[=shows_next_episode]{shows_next_episode()}}
 }
 \concept{episode data}
 \concept{movie data}

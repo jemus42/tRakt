@@ -35,21 +35,21 @@ Updated every Monday morning.
 movies_boxoffice()
 }
 \seealso{
-Other movie data: 
+Other movie data:
 \code{\link{anticipated_media}},
 \code{\link{collected_media}},
 \code{\link{media_aliases}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{movies_related}()},
-\code{\link{movies_releases}()},
-\code{\link{movies_summary}()},
-\code{\link{people_media}()},
+\code{\link[=movies_related]{movies_related()}},
+\code{\link[=movies_releases]{movies_releases()}},
+\code{\link[=movies_summary]{movies_summary()}},
+\code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
 \code{\link{popular_media}},
 \code{\link{trending_media}},

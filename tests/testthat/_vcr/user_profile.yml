@@ -5,16 +5,16 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:28 GMT
+      date: Sun, 24 May 2026 13:42:37 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb985284637b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"76aceced90bf9c2c988d7fd4e093f76e"
+      etag: W/"1de3356496c32ca638d4fd5fcda829f5"
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
@@ -22,30 +22,29 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 5008ea93-d8b6-44a5-b597-a12385d4cb73
-      x-runtime: '0.016286'
+      x-request-id: 8a16cf2a-ea40-4dc1-a59d-bf0068d95daf
+      x-runtime: '0.011969'
       x-xss-protection: '0'
-      cf-ray: 9d6079d1ea83c118-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}'
-  recorded_at: 2026-03-02 12:41:28
+  recorded_at: 2026-05-24 13:42:37
 - request:
     method: GET
     uri: https://api.trakt.tv/users/jemus42?extended=full
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:28 GMT
+      date: Sun, 24 May 2026 13:42:37 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb9860be637b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"885cf0b0c8e9de60d8135a03213cfdb0"
+      etag: W/"aab5585e861b5fcc3e9a360aabbd28f6"
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
@@ -53,30 +52,29 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 9299cf71-e6e7-4f06-af97-3022060be30a
-      x-runtime: '0.016061'
+      x-request-id: f56ac751-106a-47ac-a1c7-740c6ea0aa09
+      x-runtime: '0.011890'
       x-xss-protection: '0'
-      cf-ray: 9d6079d2ec96c118-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"},"joined_at":"2012-08-01T18:28:30.000Z","location":"Germany","about":"","gender":"male","age":34,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/d7e7de7b124101ee2285ca6fcc426a9a?d=https%3A%2F%2Fwalter-r2.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}}'
-  recorded_at: 2026-03-02 12:41:28
+      string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"},"joined_at":"2012-08-01T18:28:30.000Z","location":"Germany","about":"","gender":"male","age":34,"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/d7e7de7b124101ee2285ca6fcc426a9a?d=https%3A%2F%2Fmedia.trakt.tv%2Fhotlink-ok%2Fplaceholders%2Fmedium%2Ffry.png\u0026r=pg\u0026s=256"}}}'
+  recorded_at: 2026-05-24 13:42:37
 - request:
     method: GET
     uri: https://api.trakt.tv/users/sean
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:29 GMT
+      date: Sun, 24 May 2026 13:42:38 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb986ff0b37b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"ee2b8f18f1704869f54f106f0e0b8ae2"
+      etag: W/"28123214f0aa4bfbee686df95c0304d6"
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
@@ -84,30 +82,29 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 2f226ca6-ecfb-40d6-a179-a1850b0e0c39
-      x-runtime: '0.016908'
+      x-request-id: 8eddb820-2d80-4fbf-88a4-e3c32f08457e
+      x-runtime: '0.010434'
       x-xss-protection: '0'
-      cf-ray: 9d6079d3ef05c118-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '{"username":"sean","private":false,"deleted":false,"name":"Sean Rudford","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"sean"}}'
-  recorded_at: 2026-03-02 12:41:29
+      string: '{"username":"sean","private":false,"deleted":false,"name":"Sean","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"sean"}}'
+  recorded_at: 2026-05-24 13:42:37
 - request:
     method: GET
     uri: https://api.trakt.tv/users/jemus42
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:29 GMT
+      date: Sun, 24 May 2026 13:42:38 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb987e9ca37b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"01b65ac04022f5201bf6ede12c9d0636"
+      etag: W/"b7506d942a7a835a246b7d06294cf6c0"
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
@@ -115,12 +112,11 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 98914118-96dd-4dcd-89ea-68715053acf5
-      x-runtime: '0.015828'
+      x-request-id: 16c00ed3-1cf4-4964-a5a9-874a31b5bf39
+      x-runtime: '0.009817'
       x-xss-protection: '0'
-      cf-ray: 9d6079d4e937c118-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}'
-  recorded_at: 2026-03-02 12:41:29
+  recorded_at: 2026-05-24 13:42:38
 recorded_with: VCR-vcr/2.1.0

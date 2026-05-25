@@ -42,23 +42,23 @@ user_comments("jemus42")
 }
 }
 \seealso{
-Other user data: 
-\code{\link{user_collection}()},
-\code{\link{user_history}()},
-\code{\link{user_likes}()},
-\code{\link{user_network}()},
-\code{\link{user_profile}()},
-\code{\link{user_ratings}()},
-\code{\link{user_stats}()},
-\code{\link{user_watched}()},
-\code{\link{user_watchlist}()}
+Other user data:
+\code{\link[=user_collection]{user_collection()}},
+\code{\link[=user_history]{user_history()}},
+\code{\link[=user_likes]{user_likes()}},
+\code{\link[=user_network]{user_network()}},
+\code{\link[=user_profile]{user_profile()}},
+\code{\link[=user_ratings]{user_ratings()}},
+\code{\link[=user_stats]{user_stats()}},
+\code{\link[=user_watched]{user_watched()}},
+\code{\link[=user_watchlist]{user_watchlist()}}
 
-Other comment methods: 
-\code{\link{comments_comment}()},
-\code{\link{comments_trending}()},
-\code{\link{comments_updates}()},
+Other comment methods:
+\code{\link[=comments_comment]{comments_comment()}},
+\code{\link[=comments_trending]{comments_trending()}},
+\code{\link[=comments_updates]{comments_updates()}},
 \code{\link{media_comments}},
-\code{\link{user_list_comments}()}
+\code{\link[=user_list_comments]{user_list_comments()}}
 }
 \concept{comment methods}
 \concept{user data}

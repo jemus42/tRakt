@@ -8,7 +8,7 @@
 \source{
 \code{movies_aliases()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases}{/movies/:id/aliases}.
 
-\code{shows_aliases()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/summary/get-all-show-aliases}{/shows/:id/aliases}.
+\code{shows_aliases()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/shows/aliases/get-all-show-aliases}{/shows/:id/aliases}.
 }
 \usage{
 movies_aliases(id)
@@ -36,40 +36,40 @@ movies_aliases(190430)
 shows_aliases(104439)
 }
 \seealso{
-Other movie data: 
+Other movie data:
 \code{\link{anticipated_media}},
 \code{\link{collected_media}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{movies_boxoffice}()},
-\code{\link{movies_related}()},
-\code{\link{movies_releases}()},
-\code{\link{movies_summary}()},
-\code{\link{people_media}()},
+\code{\link[=movies_boxoffice]{movies_boxoffice()}},
+\code{\link[=movies_related]{movies_related()}},
+\code{\link[=movies_releases]{movies_releases()}},
+\code{\link[=movies_summary]{movies_summary()}},
+\code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
 \code{\link{popular_media}},
 \code{\link{trending_media}},
 \code{\link{watched_media}}
 
-Other show data: 
+Other show data:
 \code{\link{collected_media}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{people_media}()},
+\code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
-\code{\link{shows_next_episode}()},
-\code{\link{shows_related}()},
-\code{\link{shows_summary}()}
+\code{\link[=shows_next_episode]{shows_next_episode()}},
+\code{\link[=shows_related]{shows_related()}},
+\code{\link[=shows_summary]{shows_summary()}}
 }
 \concept{movie data}
 \concept{show data}

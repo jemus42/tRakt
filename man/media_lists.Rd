@@ -135,101 +135,73 @@ people_lists("emilia-clarke", sort = "items")
 }
 }
 \seealso{
-Other list methods: 
-\code{\link{lists_popular}()},
-\code{\link{user_list}()},
-\code{\link{user_list_comments}()},
-\code{\link{user_list_items}()},
-\code{\link{user_lists}()}
+Other list methods:
+\code{\link[=lists_popular]{lists_popular()}},
+\code{\link[=user_list]{user_list()}},
+\code{\link[=user_list_comments]{user_list_comments()}},
+\code{\link[=user_list_items]{user_list_items()}},
+\code{\link[=user_lists]{user_lists()}}
 
-Other movie data: 
+Other movie data:
 \code{\link{anticipated_media}},
 \code{\link{collected_media}},
 \code{\link{media_aliases}},
 \code{\link{media_comments}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{movies_boxoffice}()},
-\code{\link{movies_related}()},
-\code{\link{movies_releases}()},
-\code{\link{movies_summary}()},
-\code{\link{people_media}()},
+\code{\link[=movies_boxoffice]{movies_boxoffice()}},
+\code{\link[=movies_related]{movies_related()}},
+\code{\link[=movies_releases]{movies_releases()}},
+\code{\link[=movies_summary]{movies_summary()}},
+\code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
 \code{\link{popular_media}},
 \code{\link{trending_media}},
 \code{\link{watched_media}}
 
-Other list methods: 
-\code{\link{lists_popular}()},
-\code{\link{user_list}()},
-\code{\link{user_list_comments}()},
-\code{\link{user_list_items}()},
-\code{\link{user_lists}()}
-
-Other show data: 
+Other show data:
 \code{\link{collected_media}},
 \code{\link{media_aliases}},
 \code{\link{media_comments}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{people_media}()},
+\code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
-\code{\link{shows_next_episode}()},
-\code{\link{shows_related}()},
-\code{\link{shows_summary}()}
+\code{\link[=shows_next_episode]{shows_next_episode()}},
+\code{\link[=shows_related]{shows_related()}},
+\code{\link[=shows_summary]{shows_summary()}}
 
-Other list methods: 
-\code{\link{lists_popular}()},
-\code{\link{user_list}()},
-\code{\link{user_list_comments}()},
-\code{\link{user_list_items}()},
-\code{\link{user_lists}()}
-
-Other season data: 
+Other season data:
 \code{\link{media_comments}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
-\code{\link{seasons_episodes}()},
-\code{\link{seasons_season}()},
-\code{\link{seasons_summary}()}
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
+\code{\link[=seasons_episodes]{seasons_episodes()}},
+\code{\link[=seasons_season]{seasons_season()}},
+\code{\link[=seasons_summary]{seasons_summary()}}
 
-Other list methods: 
-\code{\link{lists_popular}()},
-\code{\link{user_list}()},
-\code{\link{user_list_comments}()},
-\code{\link{user_list_items}()},
-\code{\link{user_lists}()}
-
-Other episode data: 
-\code{\link{episodes_summary}()},
+Other episode data:
+\code{\link[=episodes_summary]{episodes_summary()}},
 \code{\link{media_comments}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_episodes}()},
-\code{\link{seasons_summary}()},
-\code{\link{shows_next_episode}()}
+\code{\link[=seasons_episodes]{seasons_episodes()}},
+\code{\link[=seasons_summary]{seasons_summary()}},
+\code{\link[=shows_next_episode]{shows_next_episode()}}
 
-Other list methods: 
-\code{\link{lists_popular}()},
-\code{\link{user_list}()},
-\code{\link{user_list_comments}()},
-\code{\link{user_list_items}()},
-\code{\link{user_lists}()}
-
-Other people data: 
+Other people data:
 \code{\link{media_people}},
-\code{\link{people_media}()},
-\code{\link{people_summary}()}
+\code{\link[=people_media]{people_media()}},
+\code{\link[=people_summary]{people_summary()}}
 }
 \concept{episode data}
 \concept{list methods}

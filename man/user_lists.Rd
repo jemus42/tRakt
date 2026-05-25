@@ -53,11 +53,11 @@ user_lists("jemus42")
 
 \link{user_list_items} For the actual content of a list.
 
-Other list methods: 
-\code{\link{lists_popular}()},
+Other list methods:
+\code{\link[=lists_popular]{lists_popular()}},
 \code{\link{media_lists}},
-\code{\link{user_list}()},
-\code{\link{user_list_comments}()},
-\code{\link{user_list_items}()}
+\code{\link[=user_list]{user_list()}},
+\code{\link[=user_list_comments]{user_list_comments()}},
+\code{\link[=user_list_items]{user_list_items()}}
 }
 \concept{list methods}

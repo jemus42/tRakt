@@ -61,11 +61,11 @@ user_list_items("sp1ti", list_id = "5615781", extended = "min", type = "episodes
 }
 }
 \seealso{
-Other list methods: 
-\code{\link{lists_popular}()},
+Other list methods:
+\code{\link[=lists_popular]{lists_popular()}},
 \code{\link{media_lists}},
-\code{\link{user_list}()},
-\code{\link{user_list_comments}()},
-\code{\link{user_lists}()}
+\code{\link[=user_list]{user_list()}},
+\code{\link[=user_list_comments]{user_list_comments()}},
+\code{\link[=user_lists]{user_lists()}}
 }
 \concept{list methods}

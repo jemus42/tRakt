@@ -5,43 +5,49 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:30 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb956585e37b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
-      etag: W/"cd377cd4d9f400075d851e766e5b0308"
-      expires: Mon, 02 Mar 2026 20:41:27 GMT
+      etag: W/"baeb0a2a2484163f6ba8a62b1fddee36"
+      expires: Sun, 24 May 2026 21:42:30 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-movie-updated-at: '2026-03-01T16:27:50.000Z'
-      x-pagination-item-count: '75'
+      x-movie-updated-at: '2026-05-23T17:11:14.000Z'
+      x-pagination-item-count: '84'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '8'
+      x-pagination-page-count: '9'
       x-permitted-cross-domain-policies: none
-      x-request-id: 5d2df71a-f4fa-45f2-abf2-fe68e18ea171
-      x-runtime: '0.053660'
+      x-request-id: 1ef957dc-431c-496f-bfd4-ba7c4552aa9a
+      x-runtime: '0.048581'
       x-xss-protection: '0'
-      cf-ray: 9d6079c84bad0e6c-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"id":927376,"comment":"Genuinely, I can''t believe they''ve done
-        that. It was all going somewhat well before that atrocious ending. Visually,
-        it looked fantastic, but I despise how close it''s getting to live action,
-        and why did they cut the ratio down? I loved the full screen. Voice acting-wise,
-        it''s a great cast, but why does nearly everyone sound so much blander than
-        before? There are some great jokes, but why so many emotional cues? As for
-        the story, it''s fine, and I enjoyed the new additions, but why do we get
-        barely any of the gang together? I have so many questions. I was looking forward
-        to the next film, but now I''m not so sure.","spoiler":false,"review":false,"parent_id":0,"created_at":"2026-02-23T07:21:28.000Z","updated_at":"2026-02-23T07:21:28.000Z","replies":0,"likes":0,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":1,"completed_count":1},"user":{"username":"zxki","private":false,"deleted":false,"name":"zxki","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"zxki"}}},{"id":925920,"comment":"_Toy
+      string: '[{"id":954506,"comment":"Toy Story 4 is entertaining, beautifully animated,
+        and often genuinely funny, but it struggles to escape the shadow of the trilogy
+        that came before it. The movie leans heavily on nostalgia and soft sentiment
+        rather than building the kind of narrative drive and emotional power that
+        made the earlier films so special. It is a good family film and an easy watch,
+        just one that never fully justifies reopening a story that already ended perfectly.","spoiler":false,"review":false,"parent_id":0,"created_at":"2026-05-17T19:27:46.000Z","updated_at":"2026-05-17T19:27:46.000Z","replies":0,"likes":1,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":1,"completed_count":1},"user":{"username":"fasterfilmcritic","private":false,"deleted":false,"name":"Faster,
+        Film Critic!","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"fasterfilmcritic"}}},{"id":927376,"comment":"Genuinely,
+        I can''t believe they''ve done that. It was all going somewhat well before
+        that atrocious ending. Visually, it looked fantastic, but I despise how close
+        it''s getting to live action, and why did they cut the ratio down? I loved
+        the full screen. Voice acting-wise, it''s a great cast, but why does nearly
+        everyone sound so much blander than before? There are some great jokes, but
+        why so many emotional cues? As for the story, it''s fine, and I enjoyed the
+        new additions, but why do we get barely any of the gang together? I have so
+        many questions. I was looking forward to the next film, but now I''m not so
+        sure.","spoiler":false,"review":false,"parent_id":0,"created_at":"2026-02-23T07:21:28.000Z","updated_at":"2026-02-23T07:21:28.000Z","replies":0,"likes":0,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":1,"completed_count":1},"user":{"username":"zxki","private":false,"deleted":false,"name":"zxki","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"zxki"}}},{"id":925920,"comment":"_Toy
         Story 4_ is a strange, conflicted sequel. It''s a movie with genuinely strong
         ideas up front, but diminishing returns the longer it goes on. The first act
         is easily the film at its best. Woody steps into a parental role with Bonnie''s
@@ -139,50 +145,40 @@ http_interactions:
         It kind of messes with the legacy of 3 by continuing a story that was already
         closed. Still, Forky’s a funny addition and the animation is gorgeous. Enjoyable
         enough, but easily the weakest entry","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-07-17T11:32:02.000Z","updated_at":"2025-07-17T11:32:02.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":0,"completed_count":0},"user":{"username":"jacogiu","private":false,"deleted":false,"name":"Jaco","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jacogiu"}}},{"id":790236,"comment":"This
-        one made me cry.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-03-26T09:59:24.000Z","updated_at":"2025-03-26T09:59:24.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"AyyaBayaya","private":false,"deleted":false,"name":"Ayya","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ayyabayaya"}}},{"id":735665,"comment":"Still
-        a good movie. Technically perfect, though the story is a bit weaker than the
-        other movies. It is though still a movie way above average to be watched by
-        the whole family.","spoiler":false,"review":false,"parent_id":0,"created_at":"2024-11-13T22:25:55.000Z","updated_at":"2024-11-13T22:25:55.000Z","replies":0,"likes":0,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":1,"completed_count":1},"user":{"username":"siggi963","private":false,"deleted":false,"name":"Siggi","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"siggi963"}}},{"id":691643,"comment":"Visually
-        absolutely stunning, and the story itself isn''t bad either, but I still think
-        it''s an utterly unnecessary movie. The ending in Toy Story 3 was perfect,
-        open to the imagination yet finite enough that it was satisfying. I don''t
-        know why they felt like drawing it out even more and with that, [spoiler]
-        separating Woody and Buzz, even though their unlikely friendship was such
-        a big deal [/spoiler]","spoiler":false,"review":false,"parent_id":0,"created_at":"2024-07-06T20:07:03.000Z","updated_at":"2024-07-06T20:07:03.000Z","replies":0,"likes":0,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":1,"completed_count":1},"user":{"username":"CorvusAstrum","private":false,"deleted":false,"name":"Corvus","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"corvusastrum"}}}]'
-  recorded_at: 2026-03-02 12:41:27
+        one made me cry.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-03-26T09:59:24.000Z","updated_at":"2025-03-26T09:59:24.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"AyyaBayaya","private":false,"deleted":false,"name":"Ayya","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"ayyabayaya"}}}]'
+  recorded_at: 2026-05-24 13:42:30
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/46241/comments/likes
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:30 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb9579bae37b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
-      etag: W/"a978809c0577980f35bae41aa9d5eda6"
-      expires: Mon, 02 Mar 2026 20:41:27 GMT
+      etag: W/"2200f5981206527c333d0942ca5c7af5"
+      expires: Sun, 24 May 2026 21:42:30 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '44'
+      x-pagination-item-count: '49'
       x-pagination-limit: '10'
       x-pagination-page: '1'
       x-pagination-page-count: '5'
       x-permitted-cross-domain-policies: none
-      x-request-id: dfb6952b-e115-4d45-bd31-ef2512cbcfd4
-      x-runtime: '0.045708'
-      x-show-updated-at: '2026-03-02T09:44:01.000Z'
+      x-request-id: 0cf1d192-b4b9-4f88-ba87-2f5338d4ac2b
+      x-runtime: '0.033159'
+      x-show-updated-at: '2026-05-24T12:14:38.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6079c9acd30e6c-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"id":4528,"comment":"The bright colours, the haunting and melodic
         soundtrack and the excellent acting, direction and writing! This one is a
@@ -192,7 +188,7 @@ http_interactions:
         with it.","spoiler":false,"review":false,"parent_id":0,"created_at":"2013-02-24T18:13:58.000Z","updated_at":"2013-02-24T18:13:58.000Z","replies":0,"likes":22,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":0,"completed_count":0},"user":{"username":"Cardboardbox","private":true,"deleted":true,"ids":{"slug":"cardboardbox"}}},{"id":39755,"comment":"Holy
         hell I can''t believe I never heard of this show before now.  Absolutely amazing.  Everything
         about this show oozes greatness.  Can''t get enough, need more!  God I hope
-        HBO''s is this good","spoiler":false,"review":false,"parent_id":0,"created_at":"2015-03-11T07:54:07.000Z","updated_at":"2015-03-11T07:54:07.000Z","replies":1,"likes":19,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":12,"completed_count":12},"user":{"username":"SpookyWinchester","private":false,"deleted":false,"name":"Spooky","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"spookywinchester"}}},{"id":436459,"comment":"EIGHT
+        HBO''s is this good","spoiler":false,"review":false,"parent_id":0,"created_at":"2015-03-11T07:54:07.000Z","updated_at":"2015-03-11T07:54:07.000Z","replies":0,"likes":19,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":12,"completed_count":12},"user":{"username":"SpookyWinchester","private":false,"deleted":false,"name":"Spooky","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"spookywinchester"}}},{"id":436459,"comment":"EIGHT
         HOUR detailed YouTube analysis of Seasons 1 and 2, as well as the God Awful
         remake :\r\n\r\nhttps://www.youtube.com/watch?v=PFx2QM0Z8Qo\r\n\r\nYES I watched
         the WHOLE thing and it was worth it.\r\n\r\nSilly as hell that they didn''t
@@ -200,10 +196,7 @@ http_interactions:
         could tie up loose ends.","spoiler":false,"review":false,"parent_id":0,"created_at":"2022-01-15T08:59:48.000Z","updated_at":"2022-01-15T08:59:48.000Z","replies":1,"likes":6,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":12,"completed_count":12},"user":{"username":"Paladin5150","private":false,"deleted":false,"name":"Paladin5150","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"paladin5150"}}},{"id":143277,"comment":"After
         marathoning this amazing show and praying that the HBO adaptation somehow
         gets resurrected from the dead, I just have one thing left to say...\r\n\r\n\"Where
-        is Jessica Hyde?\"","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-10-01T18:42:14.000Z","updated_at":"2017-10-01T18:42:14.000Z","replies":0,"likes":6,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":25,"completed_count":12},"user":{"username":"deanzel","private":false,"deleted":false,"name":"deanzel","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"deanzel"}}},{"id":114728,"comment":"I
-        couldn''t say much more than has already been said. This is a phenomenal series,
-        and I highly recommend it. They really pushed boundaries in this, too. I don''t
-        want to finish this because then it will be over. :''(","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-02-17T16:59:14.000Z","updated_at":"2017-02-17T16:59:14.000Z","replies":0,"likes":4,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":15,"completed_count":12},"user":{"username":"Chocoloctopus","private":false,"deleted":false,"name":"peppermint-butler","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"chocoloctopus"}}},{"id":185427,"comment":"In
+        is Jessica Hyde?\"","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-10-01T18:42:14.000Z","updated_at":"2017-10-01T18:42:14.000Z","replies":0,"likes":6,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":25,"completed_count":12},"user":{"username":"deanzel","private":false,"deleted":false,"name":"deanzel","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"deanzel"}}},{"id":185427,"comment":"In
         February 2014, HBO ordered an American adaptation of Utopia, to be co-created
         and directed by David Fincher, with Gillian Flynn as the writer. Fincher planned
         on directing all episodes of the series, who said \"I like the characters
@@ -213,13 +206,7 @@ http_interactions:
         due to budget disputes between Fincher and HBO, and that the cast had been
         released from their contracts. After HBO seems to have lost rights to the
         project, Amazon ordered a nine-episode first season directly on April 19,
-        2018, with Flynn said to adapt the project from the original.","spoiler":false,"review":false,"parent_id":0,"created_at":"2018-08-01T12:50:58.000Z","updated_at":"2018-08-01T12:50:58.000Z","replies":0,"likes":3,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":12,"completed_count":12},"user":{"username":"Staalplaat","private":true,"deleted":false,"ids":{"slug":"staalplaat"}}},{"id":42940,"comment":"Looked
-        interesting but just couldn''t get into it.  It has a nice style but the storyline
-        just wasn''t appealing.  Seems to get a lot of good reviews, so my suggestion
-        is watched the first episode and you will not if you want to finish it.  If
-        the first episode doesn''t leave you wanting for the next then you will probably
-        lose interest as the plot unfolds. ","spoiler":false,"review":false,"parent_id":0,"created_at":"2015-05-06T17:25:07.000Z","updated_at":"2015-05-06T17:25:07.000Z","replies":0,"likes":3,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":3,"completed_count":3},"user":{"username":"hostile","private":false,"deleted":false,"name":"Bryan
-        Staton","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"hostile"}}},{"id":483035,"comment":"I''ve
+        2018, with Flynn said to adapt the project from the original.","spoiler":false,"review":false,"parent_id":0,"created_at":"2018-08-01T12:50:58.000Z","updated_at":"2018-08-01T12:50:58.000Z","replies":0,"likes":3,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":12,"completed_count":12},"user":{"username":"Staalplaat","private":true,"deleted":false,"ids":{"slug":"staalplaat"}}},{"id":483035,"comment":"I''ve
         just finished watching this show.\nIt''s June 2022 and if you can''t see how
         crazy ''coincidental'' this series is to the last 2.5yrs and going to reality,
         you really aren''t paying attention.\n\nEverything from the flag colours having
@@ -232,43 +219,51 @@ http_interactions:
         have a vision of 9yrs in the future?? \nIf you didn''t see this, where have
         you been for the last 2.5yrs!","spoiler":false,"review":false,"parent_id":0,"created_at":"2022-07-04T14:16:16.000Z","updated_at":"2022-07-04T14:16:16.000Z","replies":0,"likes":2,"user_rating":9,"language":"en","user_stats":{"rating":9,"play_count":12,"completed_count":12},"user":{"username":"tropolite","private":false,"deleted":false,"name":"tropolite","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"tropolite"}}},{"id":171295,"comment":"If
         you like this style of shows, I recommend you to watch Legion 2017. It has
-        a uniquely weird style of music, acting, and directing.","spoiler":false,"review":false,"parent_id":0,"created_at":"2018-04-20T01:20:40.000Z","updated_at":"2018-04-20T01:20:40.000Z","replies":0,"likes":2,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":25,"completed_count":12},"user":{"username":"ahmed365","private":false,"deleted":false,"name":"Ahmed","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"ahmed365"}}}]'
-  recorded_at: 2026-03-02 12:41:27
+        a uniquely weird style of music, acting, and directing.","spoiler":false,"review":false,"parent_id":0,"created_at":"2018-04-20T01:20:40.000Z","updated_at":"2018-04-20T01:20:40.000Z","replies":0,"likes":2,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":25,"completed_count":12},"user":{"username":"ahmed365","private":false,"deleted":false,"name":"Ahmed","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"ahmed365"}}},{"id":42940,"comment":"Looked
+        interesting but just couldn''t get into it.  It has a nice style but the storyline
+        just wasn''t appealing.  Seems to get a lot of good reviews, so my suggestion
+        is watched the first episode and you will not if you want to finish it.  If
+        the first episode doesn''t leave you wanting for the next then you will probably
+        lose interest as the plot unfolds. ","spoiler":false,"review":false,"parent_id":0,"created_at":"2015-05-06T17:25:07.000Z","updated_at":"2015-05-06T17:25:07.000Z","replies":0,"likes":2,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":3,"completed_count":3},"user":{"username":"hostile","private":false,"deleted":false,"name":"Bryan
+        Staton","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"hostile"}}},{"id":814556,"comment":"FUCKING
+        AMAZING, BEST TELEVISION SHOW TO EVER AIR, SINGLE HANDEDLY THE BEST THING
+        HUMANITY HAS EVER PRODUCED","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-05-20T12:03:34.000Z","updated_at":"2025-05-20T12:03:34.000Z","replies":1,"likes":1,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":13,"completed_count":12},"user":{"username":"mesto09","private":false,"deleted":false,"name":"Ludwig
+        Humboldt","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"mesto09"}}}]'
+  recorded_at: 2026-05-24 13:42:30
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/1388/seasons/1/comments/likes
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:30 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb958cf2537b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
-      etag: W/"d9a4fa9f5c31b86ab64025b12f9125fa"
-      expires: Mon, 02 Mar 2026 20:41:27 GMT
+      etag: W/"54e0827b26f91a7828e747ce4ae4a409"
+      expires: Sun, 24 May 2026 21:42:30 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '8'
+      x-pagination-item-count: '10'
       x-pagination-limit: '10'
       x-pagination-page: '1'
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
-      x-request-id: 42f01c6d-30e3-4589-91d1-4219ccee7900
-      x-runtime: '0.035921'
+      x-request-id: 4f6e96a9-9b63-4701-bb8c-057966be3fc4
+      x-runtime: '0.059957'
       x-show-id: '1388'
       x-show-season-id: '3950'
-      x-show-updated-at: '2026-03-02T06:38:59.000Z'
+      x-show-updated-at: '2026-05-24T06:20:03.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6079caedc90e6c-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"id":63853,"comment":"Thus begins one of the greatest television
         shows ever made. Like, for real. This isn''t just some really good show. This
@@ -278,9 +273,7 @@ http_interactions:
         such a good starting point that evolves into even higher stakes through the
         years.\r\n\r\nSide note, I''m told that my dad looks a lot like Walter White
         once he shaves his head. I agree, I''m pretty sure they wear the exact same
-        glasses too.","spoiler":false,"review":false,"parent_id":0,"created_at":"2015-12-02T00:56:36.000Z","updated_at":"2015-12-02T00:56:36.000Z","replies":0,"likes":17,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":7,"completed_count":7},"user":{"username":"saundrew","private":false,"deleted":false,"name":"saundrew","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"saundrew"}}},{"id":127375,"comment":"A
-        very good season of a very good series! Full of action, good acting, good
-        editing, very good story, one of the best series ever made!. 10/10","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-05-21T18:20:05.000Z","updated_at":"2017-05-21T18:21:05.000Z","replies":0,"likes":9,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":0,"completed_count":0},"user":{"username":"DanieleManna","private":false,"deleted":true,"name":"Danny","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"danielemanna"}}},{"id":205701,"comment":"From
+        glasses too.","spoiler":false,"review":false,"parent_id":0,"created_at":"2015-12-02T00:56:36.000Z","updated_at":"2015-12-02T00:56:36.000Z","replies":0,"likes":16,"user_rating":10,"language":"en","user_stats":{"rating":10,"play_count":7,"completed_count":7},"user":{"username":"saundrew","private":false,"deleted":false,"name":"saundrew","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"saundrew"}}},{"id":205701,"comment":"From
         everything I see people say about this show and how it''s essentially one
         of the greatest shows, I expected that to be the case for every episode, every
         season, in the sense that it''s one of the greatest shows in every single
@@ -351,42 +344,41 @@ http_interactions:
         acting is good though and there are some really good scenes but it’s far from
         being this so called phenomenon. Haven‘t watched all of it so I might change
         my opinion but I highly doubt it.","spoiler":false,"review":false,"parent_id":0,"created_at":"2021-04-19T07:19:12.000Z","updated_at":"2021-04-19T07:20:53.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":9,"completed_count":7},"user":{"username":"ShoMok","private":true,"deleted":false,"ids":{"slug":"shomok"}}}]'
-  recorded_at: 2026-03-02 12:41:27
+  recorded_at: 2026-05-24 13:42:30
 - request:
     method: GET
     uri: https://api.trakt.tv/shows/1388/seasons/1/episodes/2/comments/likes
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:30 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb95a2b2237b0-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=28800, public
       content-encoding: gzip
-      etag: W/"96aca393cc35eef73668c18c24d96203"
-      expires: Mon, 02 Mar 2026 20:41:27 GMT
+      etag: W/"e2e6c38a4956fe179871b028f6e2001a"
+      expires: Sun, 24 May 2026 21:42:30 GMT
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '13'
+      x-pagination-item-count: '15'
       x-pagination-limit: '10'
       x-pagination-page: '1'
       x-pagination-page-count: '2'
       x-permitted-cross-domain-policies: none
-      x-request-id: f275257a-4239-4678-8141-9f6e54293b33
-      x-runtime: '0.041431'
+      x-request-id: 8e03e213-7dda-44a6-9a70-5d143f97c591
+      x-runtime: '0.039239'
       x-show-id: '1388'
       x-show-season-id: '3950'
-      x-show-updated-at: '2026-03-02T06:38:59.000Z'
+      x-show-updated-at: '2026-05-24T06:20:03.000Z'
       x-xss-protection: '0'
-      cf-ray: 9d6079cc2ebf0e6c-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: "[{\"id\":201806,\"comment\":\"Walter's wife is a badass. For a second
         I thought she was going to figure it out.\\nThe bathtub scene was the best.\",\"spoiler\":true,\"review\":false,\"parent_id\":0,\"created_at\":\"2018-11-21T01:44:09.000Z\",\"updated_at\":\"2018-11-21T01:44:09.000Z\",\"replies\":0,\"likes\":16,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"messtix\",\"private\":false,\"deleted\":false,\"name\":\"María
@@ -399,7 +391,9 @@ http_interactions:
         do his when Jesse was the one freaking out in the RV with the [spoiler] bodies
         [/spoiler] and Walter wasn't freaking out in the slightest. I wonder if there's
         any significance to that.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2018-12-15T20:09:13.000Z\",\"updated_at\":\"2018-12-15T20:09:13.000Z\",\"replies\":0,\"likes\":8,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"LegendaryFang56\",\"private\":false,\"deleted\":false,\"name\":\"Lineage\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"legendaryfang56\"}}},{\"id\":494916,\"comment\":\"So
-        good! A total masterclass in television.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2022-08-18T04:08:52.000Z\",\"updated_at\":\"2022-08-18T04:08:52.000Z\",\"replies\":0,\"likes\":2,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"ragreynolds\",\"private\":false,\"deleted\":false,\"name\":\"ragreynolds\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"ragreynolds\"}}},{\"id\":714235,\"comment\":\"The
+        good! A total masterclass in television.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2022-08-18T04:08:52.000Z\",\"updated_at\":\"2022-08-18T04:08:52.000Z\",\"replies\":0,\"likes\":2,\"user_rating\":8,\"language\":\"en\",\"user_stats\":{\"rating\":8,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"ragreynolds\",\"private\":false,\"deleted\":false,\"name\":\"ragreynolds\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"ragreynolds\"}}},{\"id\":929812,\"comment\":\"By
+        the end of the show, maybe Jesse will be able to pass the midterm too \U0001F602\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-01T20:25:34.000Z\",\"updated_at\":\"2026-03-01T20:25:34.000Z\",\"replies\":0,\"likes\":1,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Reiko_lj\",\"private\":false,\"deleted\":false,\"name\":\"Reiko
+        LJ\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"reiko_lj\"}}},{\"id\":714235,\"comment\":\"The
         second episode of Breaking Bad is further proof that the show knows how to
         keep its momentum. Walt, now buried under the consequences of his choices,
         has to deal with the chaos that came with his dive into the criminal world.
@@ -426,39 +420,14 @@ http_interactions:
         to comedic in a heartbeat, adding even more weight to Walt’s decisions.\\r\\n\\r\\nFor
         those already invested in Walter White’s journey, it’s clear things are only
         going to get worse from here. This blend of dark humor, rising tension, and
-        morality on the edge makes Breaking Bad a truly unique experience.\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2024-09-17T20:11:01.000Z\",\"updated_at\":\"2024-09-17T20:11:01.000Z\",\"replies\":2,\"likes\":1,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":3,\"completed_count\":1},\"user\":{\"username\":\"heyflp\",\"private\":false,\"deleted\":false,\"name\":\"Felipe\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"heyflp\"}}},{\"id\":929812,\"comment\":\"By
-        the end of the show, maybe Jesse will be able to pass the midterm too \U0001F602\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-03-01T20:25:34.000Z\",\"updated_at\":\"2026-03-01T20:25:34.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"Reiko_lj\",\"private\":false,\"deleted\":false,\"name\":\"Reiko
-        LJ\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"reiko_lj\"}}},{\"id\":881457,\"comment\":\"If
+        morality on the edge makes Breaking Bad a truly unique experience.\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2024-09-17T20:11:01.000Z\",\"updated_at\":\"2024-09-17T20:11:01.000Z\",\"replies\":2,\"likes\":1,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":3,\"completed_count\":1},\"user\":{\"username\":\"heyflp\",\"private\":false,\"deleted\":false,\"name\":\"Felipe\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"heyflp\"}}},{\"id\":940119,\"comment\":\"oml
+        what are they finna do bro \U0001F62D\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2026-04-01T03:40:31.000Z\",\"updated_at\":\"2026-04-01T03:40:31.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"voicelikehoney\",\"private\":false,\"deleted\":false,\"name\":\"olivia\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"voicelikehoney\"}}},{\"id\":881457,\"comment\":\"If
         you laugh while watching this episode, then you are BrBa fan.\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-11-03T19:41:42.000Z\",\"updated_at\":\"2025-11-03T19:41:42.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":10,\"language\":\"en\",\"user_stats\":{\"rating\":10,\"play_count\":0,\"completed_count\":0},\"user\":{\"username\":\"VDK\",\"private\":false,\"deleted\":false,\"name\":\"Vaisagh
         Dilip\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"vdk\"}}},{\"id\":848647,\"comment\":\"7/10\\nPlot
         is getting even better, the more Walter and Jesse dive into organize crime
         the harder it is to get out of it, problem after problem becoming a vicious
         cycle, trying to get out of the business will become nearly impossible at
         some point\",\"spoiler\":false,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-08-14T17:13:33.000Z\",\"updated_at\":\"2025-08-14T17:13:33.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"aron_sensation\",\"private\":false,\"deleted\":false,\"name\":\"Aron
-        Torres\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"aron_sensation\"}}},{\"id\":820673,\"comment\":\"Is
-        time to get rid of the corpses. I noticed that they did many rookie mistakes
-        such as not immediately killing the survivor or immediately tie him up, they
-        aren't as evil as I thought, just a pair of newbies. Jesse had the worst part
-        in all of this, having to use his house to hide the corpse and the hostage,
-        at least he lives alone, how things would change if he lived with someone
-        else haha. Walter's wife, I'm impressed, she managed to find Jesse and was
-        able to confront him without any fear. Jesse did his part of the job, didn't
-        do it correctly but at least he tried unlike Walter. The thing about the acid
-        being able to destroy stronger materials than plastic but not plastic is pretty
-        strange, is like that in real life? Idk but I want to learn about chemistry
-        to find out if this show tells the truth. Anyways was a good episode, their
-        reactions about what they have to do is good, that was actually pretty realistic.
-        Jesse blaming Walter when he was the one who made the big mistake, that way
-        makes sense that he had the worst part in all of this.\",\"spoiler\":false,\"review\":true,\"parent_id\":0,\"created_at\":\"2025-06-04T20:38:24.000Z\",\"updated_at\":\"2025-06-04T20:38:24.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":null,\"language\":\"en\",\"user_stats\":{\"rating\":null,\"play_count\":1,\"completed_count\":1},\"user\":{\"username\":\"JKam57\",\"private\":false,\"deleted\":false,\"name\":\"JKam57\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"jkam57\"}}},{\"id\":816800,\"comment\":\"This
-        episode helps humanize the main characters more, showing more casual, laidback
-        moments and comedy, but also their stress, and the decisions they have to
-        make in order to survive.\\r\\n\\r\\nJesse, the dumbass, was told clearly
-        that you needed specialized material to melt the body. But he still goes through
-        with it anyway. Ugh. No, no one is THAT stupid, or at least Jesse isn't, and
-        it's contrived for the drama.\\r\\n\\r\\nI'm not a fan of Skyler. From the
-        first and second episodes she's exhibited annoying behaviours. Elitist, snooty,
-        nosey, condescending and arrogant. Yikes.\\r\\n\\r\\nOverall, it's a good
-        continuation of the first episode, dealing fully with the consequences of
-        what happened.\",\"spoiler\":true,\"review\":false,\"parent_id\":0,\"created_at\":\"2025-05-25T20:07:29.000Z\",\"updated_at\":\"2025-05-25T20:12:09.000Z\",\"replies\":0,\"likes\":0,\"user_rating\":7,\"language\":\"en\",\"user_stats\":{\"rating\":7,\"play_count\":2,\"completed_count\":1},\"user\":{\"username\":\"Warden1\",\"private\":false,\"deleted\":false,\"name\":\"Ward\",\"vip\":true,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"warden1\"}}}]"
-  recorded_at: 2026-03-02 12:41:27
+        Torres\",\"vip\":false,\"vip_ep\":false,\"director\":false,\"ids\":{\"slug\":\"aron_sensation\"}}}]"
+  recorded_at: 2026-05-24 13:42:30
 recorded_with: VCR-vcr/2.1.0

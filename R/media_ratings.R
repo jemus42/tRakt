@@ -84,6 +84,8 @@ seasons_ratings <- function(id, season = 1L) {
 	url <- build_trakt_url("shows", id, "seasons", season, "ratings")
 	response <- trakt_get(url = url)
 
+	response <- unpack_ratings_sources(response)
+
 	response |>
 		fix_ratings_distribution() |>
 		as_tibble() |>

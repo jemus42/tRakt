@@ -3,42 +3,45 @@ http_interactions:
     method: GET
     uri: https://api.trakt.tv/users/jemus42/comments/all/all?include_replies=FALSE
   response:
-    status: 304
+    status: 200
     headers:
+      date: Sun, 24 May 2026 17:01:51 GMT
       content-type: application/json; charset=utf-8
-      content-encoding: gzip
-      date: Mon, 02 Mar 2026 12:41:28 GMT
+      cf-ray: a00ddd5bcaff0e3d-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
-      etag: W/"c11312df100dc8183a4b963d4e93ca2c"
-      last-modified: Mon, 05 Jan 2026 13:20:49 GMT
+      content-encoding: gzip
+      etag: W/"96d7ca49b64a4a92ae4c5143800de1bc"
+      last-modified: Fri, 22 May 2026 17:01:23 GMT
       server: cloudflare
-      vary: Origin, accept-encoding
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: Accept-Encoding, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '18'
+      x-pagination-item-count: '19'
       x-pagination-limit: '10'
       x-pagination-page: '1'
       x-pagination-page-count: '2'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 5bca12a2-589a-4486-9056-27fac1496215
-      x-runtime: '0.028117'
+      x-request-id: ecf75f01-a5d5-4903-9558-5bb2f9a7afbc
+      x-runtime: '0.022732'
       x-xss-protection: '0'
-      cf-ray: 9d6079ce9a62656c-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"type":"episode","episode":{"season":1,"number":1,"title":"Pilot","ids":{"trakt":9492805,"tvdb":9792791,"imdb":"tt27102157","tmdb":4447673,"tvrage":null}},"show":{"title":"High
+      string: '[{"type":"episode","episode":{"season":1,"number":3,"title":"Mr. Dreeb
+        Comes to Town","ids":{"trakt":1441209,"tvdb":159023,"imdb":"tt0674704","tmdb":1518703,"tvrage":null}},"show":{"title":"Picket
+        Fences","year":1992,"ids":{"trakt":205,"slug":"picket-fences","tvdb":74969,"imdb":"tt0103512","tmdb":206,"tvrage":null}},"comment":{"id":948273,"comment":"How
+        did this air on network tv in 90s USA. \n\nElephant enema and brain tumor
+        in the same episode? Wow.","spoiler":true,"review":false,"parent_id":0,"created_at":"2026-04-25T22:48:04.000Z","updated_at":"2026-04-25T22:48:04.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"episode","episode":{"season":1,"number":1,"title":"Pilot","ids":{"trakt":9492805,"tvdb":9792791,"imdb":"tt27102157","tmdb":4447673,"tvrage":null}},"show":{"title":"High
         Potential","year":2024,"ids":{"trakt":205414,"slug":"high-potential","tvdb":434988,"imdb":"tt22091076","tmdb":226637,"tvrage":null}},"comment":{"id":874578,"comment":"I''ve
         seen the \"character has done the math exactly in time for checkout at the
         grocery store to really drive the point home that they''re very smart\" shtick
         so often I''ve lost count.\n\nApart from that, I''m kind of in the mood for
-        a neat little cop-not-a-cop procedural, it''s been a while.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-10-17T21:44:43.000Z","updated_at":"2025-10-17T21:45:27.000Z","replies":0,"likes":0,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"episode","episode":{"season":2,"number":6,"title":"Episode
+        a neat little cop-not-a-cop procedural, it''s been a while.","spoiler":false,"review":false,"parent_id":0,"created_at":"2025-10-17T21:44:43.000Z","updated_at":"2025-10-17T21:45:27.000Z","replies":0,"likes":1,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"episode","episode":{"season":2,"number":6,"title":"Episode
         6","ids":{"trakt":3871261,"tvdb":7488861,"imdb":"tt9699196","tmdb":1997016,"tvrage":null}},"show":{"title":"Sex
         Education","year":2019,"ids":{"trakt":140590,"slug":"sex-education","tvdb":356317,"imdb":"tt7767422","tmdb":81356,"tvrage":null}},"comment":{"id":278788,"comment":"[spoiler]As
         someone who has a hard time watching awkward stuff, this was excruciatingly
@@ -66,32 +69,29 @@ http_interactions:
         Callbacks\r\n- Dany + Missandei being girlfriends\r\n- Dany + Jon entering
         a cave of implied incestuous romance\r\n- Just Tyrion things\r\n- Arya being
         the best\r\n- Hey Meera, talk to your dad, we need him for plot stuff\r\n-
-        Fucking dracarys\r\n- Bronn","spoiler":true,"review":false,"parent_id":0,"created_at":"2017-08-07T08:04:26.000Z","updated_at":"2017-08-07T08:04:26.000Z","replies":0,"likes":23,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"show","show":{"title":"13
+        Fucking dracarys\r\n- Bronn","spoiler":true,"review":false,"parent_id":0,"created_at":"2017-08-07T08:04:26.000Z","updated_at":"2017-08-07T08:04:26.000Z","replies":0,"likes":20,"user_rating":null,"language":"en","user_stats":{"rating":null,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"show","show":{"title":"13
         Reasons Why","year":2017,"ids":{"trakt":116129,"slug":"13-reasons-why","tvdb":323168,"imdb":"tt1837492","tmdb":66788,"tvrage":null}},"comment":{"id":120768,"comment":"So
         fucking painful to watch.\r\n\r\nAlmost done with it as I''m writing this,
         and I _want_ to finish it, but shit, it''s really hard.\r\n\r\nAnd good. Very
-        good.","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-04-01T23:43:45.000Z","updated_at":"2017-04-01T23:43:45.000Z","replies":2,"likes":78,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":14,"completed_count":13},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}},{"type":"movie","movie":{"title":"In
-        Time","year":2011,"ids":{"trakt":34516,"slug":"in-time-2011","imdb":"tt1637688","tmdb":49530}},"comment":{"id":119806,"comment":"I
-        watched it because I was interest in the premise, and because of Olivia Wilde.  \r\nI
-        was disappointed by the underutilization of both, unfortunately :/","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-03-25T21:00:38.000Z","updated_at":"2017-03-25T21:00:38.000Z","replies":0,"likes":0,"user_rating":5,"language":"en","user_stats":{"rating":5,"play_count":2,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}}]'
-  recorded_at: 2026-03-02 12:41:28
+        good.","spoiler":false,"review":false,"parent_id":0,"created_at":"2017-04-01T23:43:45.000Z","updated_at":"2017-04-01T23:43:45.000Z","replies":2,"likes":69,"user_rating":6,"language":"en","user_stats":{"rating":6,"play_count":13,"completed_count":13},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}}]'
+  recorded_at: 2026-05-24 17:01:51
 - request:
     method: GET
     uri: https://api.trakt.tv/users/jemus42/comments/all/movies?include_replies=FALSE
   response:
-    status: 304
+    status: 200
     headers:
+      date: Sun, 24 May 2026 17:01:51 GMT
       content-type: application/json; charset=utf-8
-      content-encoding: gzip
-      date: Mon, 02 Mar 2026 12:41:28 GMT
+      cf-ray: a00ddd5dcc9a0e3d-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
+      content-encoding: gzip
       etag: W/"70967d72874e89da9f5978d1578337f5"
       last-modified: Sun, 14 Sep 2025 11:27:52 GMT
       server: cloudflare
-      vary: Origin, accept-encoding
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: Accept-Encoding, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
@@ -103,11 +103,10 @@ http_interactions:
       x-pagination-page-count: '1'
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 40630009-cfd1-467a-971d-b09d1613e4f2
-      x-runtime: '0.023977'
+      x-request-id: e3bf8b9c-1126-499d-839e-877668623be8
+      x-runtime: '0.022629'
       x-xss-protection: '0'
-      cf-ray: 9d6079d05bd9656c-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
       string: '[{"type":"movie","movie":{"title":"John Wick: Chapter 3 - Parabellum","year":2019,"ids":{"trakt":304278,"slug":"john-wick-chapter-3-parabellum-2019","imdb":"tt6146586","tmdb":458156}},"comment":{"id":236397,"comment":"All
         the gun inflicted deaths in the world and the scene that got me was [spoiler]a
@@ -130,40 +129,31 @@ http_interactions:
         Imagine if the Hunger games were set in the third trial of the Triwizard Tournament,
         but set in a dystopian future\r\n\r\nI think that about covers it.  \r\nWas
         mildly entertained, though.","spoiler":false,"review":false,"parent_id":0,"created_at":"2016-09-27T21:47:36.000Z","updated_at":"2016-09-27T21:47:36.000Z","replies":0,"likes":4,"user_rating":7,"language":"en","user_stats":{"rating":7,"play_count":1,"completed_count":1},"user":{"username":"jemus42","private":false,"deleted":false,"name":"jemus42","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"jemus42"}}}}]'
-  recorded_at: 2026-03-02 12:41:28
+  recorded_at: 2026-05-24 17:01:51
 - request:
     method: GET
-    uri: https://api.trakt.tv/users/sofakissen/comments/all/all?include_replies=FALSE
+    uri: https://api.trakt.tv/users/nonexistent-user-quux-trakt-test/comments/all/all?include_replies=FALSE
   response:
-    status: 200
+    status: 404
     headers:
-      date: Mon, 02 Mar 2026 12:41:28 GMT
-      content-type: application/json; charset=utf-8
+      date: Sun, 24 May 2026 17:01:51 GMT
+      content-type: text/html
+      cf-ray: a00ddd5f0dc60e3d-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: max-age=0, private, must-revalidate
-      content-encoding: gzip
-      etag: W/"5cf95a7f1cba23c8cc5fd0188cc32ef8"
+      cache-control: max-age=0, private, must-revalidate, no_store=true, no_cache=true
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '0'
-      x-pagination-limit: '10'
-      x-pagination-page: '1'
-      x-pagination-page-count: '0'
       x-permitted-cross-domain-policies: none
-      x-private-user: 'false'
-      x-request-id: 8487b145-37ea-436b-813a-40df81a7d0a4
-      x-runtime: '0.124912'
+      x-request-id: c12e6915-0b33-4a68-aa6b-d422fad7c931
+      x-runtime: '0.011300'
       x-xss-protection: '0'
-      cf-ray: 9d6079d18cb5656c-AMS
-      alt-svc: h3=":443"; ma=86400
-    body:
-      string: '[]'
-  recorded_at: 2026-03-02 12:41:28
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: gzip
+  recorded_at: 2026-05-24 17:01:51
 recorded_with: VCR-vcr/2.1.0

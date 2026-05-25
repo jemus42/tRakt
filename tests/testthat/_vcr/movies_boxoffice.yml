@@ -5,37 +5,35 @@ http_interactions:
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:29 GMT
       content-type: application/json; charset=utf-8
-      cf-cache-status: HIT
+      cf-ray: a00cb953788c37b0-AMS
+      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: public, max-age=28800
+      cache-control: max-age=28800, public, s-maxage=43200
       content-encoding: gzip
-      etag: W/"7e06e7d2a88690d46ab9da1135ef0834"
-      expires: Mon, 02 Mar 2026 19:55:34 GMT
+      etag: W/"5248d8cd2dbb3276243f4e040a3cc4fd"
+      expires: Sun, 24 May 2026 21:42:29 GMT
       server: cloudflare
-      vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
+      vary: accept-encoding, query, Origin
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
-      x-request-id: f65dfa7c-3658-4792-ac5d-fb2015e7380d
-      x-runtime: '0.036780'
+      x-request-id: bfc89426-b1bd-4041-ae70-1b75f41d90f2
+      x-runtime: '0.021640'
       x-xss-protection: '0'
-      cf-ray: 9d6079c83db2656c-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '[{"revenue":64000000,"movie":{"title":"Scream 7","year":2026,"ids":{"trakt":934134,"slug":"scream-7-2026","imdb":"tt27047903","tmdb":1159559}}},{"revenue":12000000,"movie":{"title":"GOAT","year":2026,"ids":{"trakt":1057839,"slug":"goat-2026","imdb":"tt27613895","tmdb":1297842}}},{"revenue":7000000,"movie":{"title":"\"Wuthering
-        Heights\"","year":2026,"ids":{"trakt":1077273,"slug":"wuthering-heights-2026","imdb":"tt32897959","tmdb":1316092}}},{"revenue":4300000,"movie":{"title":"Twenty
-        One Pilots: More Than We Ever Imagined","year":2026,"ids":{"trakt":1339079,"slug":"twenty-one-pilots-more-than-we-ever-imagined-2026","imdb":"tt39315536","tmdb":1612063}}},{"revenue":3500000,"movie":{"title":"EPiC:
-        Elvis Presley in Concert","year":2026,"ids":{"trakt":1183117,"slug":"epic-elvis-presley-in-concert-2026","imdb":"tt35003538","tmdb":1445363}}},{"revenue":3400000,"movie":{"title":"Crime
-        101","year":2026,"ids":{"trakt":944042,"slug":"crime-101-2026","imdb":"tt32430579","tmdb":1171145}}},{"revenue":3100000,"movie":{"title":"I
-        Can Only Imagine 2","year":2026,"ids":{"trakt":1184977,"slug":"i-can-only-imagine-2-2026","imdb":"tt34888646","tmdb":1405769}}},{"revenue":2800000,"movie":{"title":"Send
-        Help","year":2026,"ids":{"trakt":967810,"slug":"send-help-2026","imdb":"tt8036976","tmdb":1198994}}},{"revenue":1600000,"movie":{"title":"How
-        to Make a Killing","year":2026,"ids":{"trakt":315133,"slug":"how-to-make-a-killing-2026","imdb":"tt4357198","tmdb":467905}}},{"revenue":1400000,"movie":{"title":"Zootopia
-        2","year":2025,"ids":{"trakt":871499,"slug":"zootopia-2-2025","imdb":"tt26443597","tmdb":1084242}}}]'
-  recorded_at: 2026-03-02 12:41:27
+      string: '[{"revenue":29000000,"movie":{"title":"Hoppers","year":2026,"ids":{"trakt":1085761,"slug":"hoppers-2026","imdb":"tt26443616","tmdb":1327819}}},{"revenue":18000000,"movie":{"title":"Reminders
+        of Him","year":2026,"ids":{"trakt":1116720,"slug":"reminders-of-him-2026","imdb":"tt33714084","tmdb":1367642}}},{"revenue":9300000,"movie":{"title":"undertone","year":2026,"ids":{"trakt":1213506,"slug":"undertone-2026","imdb":"tt35892608","tmdb":1480387}}},{"revenue":8400000,"movie":{"title":"Scream
+        7","year":2026,"ids":{"trakt":934134,"slug":"scream-7-2026","imdb":"tt27047903","tmdb":1159559}}},{"revenue":4700000,"movie":{"title":"GOAT","year":2026,"ids":{"trakt":1057839,"slug":"goat-2026","imdb":"tt27613895","tmdb":1297842}}},{"revenue":2100000,"movie":{"title":"The
+        Bride!","year":2026,"ids":{"trakt":934595,"slug":"the-bride-2026","imdb":"tt30851137","tmdb":1159831}}},{"revenue":1700000,"movie":{"title":"Kiki''s
+        Delivery Service","year":1989,"ids":{"trakt":10314,"slug":"kiki-s-delivery-service-1989","imdb":"tt0097814","tmdb":16859}}},{"revenue":1700000,"movie":{"title":"\"Wuthering
+        Heights\"","year":2026,"ids":{"trakt":1077273,"slug":"wuthering-heights-2026","imdb":"tt32897959","tmdb":1316092}}},{"revenue":1500000,"movie":{"title":"Teenage
+        Mutant Ninja Turtles II: The Secret of the Ooze","year":1991,"ids":{"trakt":991,"slug":"teenage-mutant-ninja-turtles-ii-the-secret-of-the-ooze-1991","imdb":"tt0103060","tmdb":1497}}},{"revenue":1100000,"movie":{"title":"Crime
+        101","year":2026,"ids":{"trakt":944042,"slug":"crime-101-2026","imdb":"tt32430579","tmdb":1171145}}}]'
+  recorded_at: 2026-05-24 13:42:29
 recorded_with: VCR-vcr/2.1.0

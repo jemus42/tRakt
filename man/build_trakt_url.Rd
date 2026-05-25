@@ -31,7 +31,7 @@ build_trakt_url("users/jemus42", "ratings")
 build_trakt_url("shows", "popular", page = 1, limit = 5)
 }
 \seealso{
-Other utility functions: 
-\code{\link{pad_episode}()}
+Other utility functions:
+\code{\link[=pad_episode]{pad_episode()}}
 }
 \concept{utility functions}

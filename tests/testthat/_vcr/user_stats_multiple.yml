@@ -6,15 +6,15 @@ http_interactions:
     status: 304
     headers:
       content-type: application/json; charset=utf-8
-      content-encoding: gzip
-      date: Mon, 02 Mar 2026 12:41:26 GMT
+      date: Sun, 24 May 2026 13:42:30 GMT
+      cf-ray: a00cb9591dd68f37-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
-      etag: W/"2df2a1c76b8732e9df653314c6113f6a"
+      content-encoding: gzip
+      etag: W/"f04599aa3778a8b0515413a8b5d0ca9b"
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
@@ -22,30 +22,29 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 6c33b8eb-542a-4363-9b01-697b9b1905ac
-      x-runtime: '0.048416'
+      x-request-id: a3c97fdf-62aa-4e83-ad89-8453e266ea6c
+      x-runtime: '0.052836'
       x-xss-protection: '0'
-      cf-ray: 9d6079c6390cd595-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '{"movies":{"plays":1310,"watched":830,"minutes":151367,"collected":3197,"ratings":665,"comments":0},"shows":{"watched":588,"collected":1236,"ratings":392,"comments":0},"seasons":{"ratings":197,"comments":0},"episodes":{"plays":31778,"watched":20263,"minutes":1013904,"collected":45725,"ratings":10167,"comments":0},"network":{"friends":10,"followers":49,"following":24},"ratings":{"total":11421,"distribution":{"1":188,"2":0,"3":11,"4":41,"5":282,"6":1371,"7":4166,"8":3973,"9":1219,"10":170}}}'
-  recorded_at: 2026-03-02 12:41:26
+      string: '{"movies":{"plays":1327,"watched":846,"minutes":153219,"collected":3247,"ratings":674,"comments":6},"shows":{"watched":595,"collected":1260,"ratings":395,"comments":7},"seasons":{"ratings":197,"comments":2},"episodes":{"plays":32077,"watched":20531,"minutes":1022365,"collected":44661,"ratings":10178,"comments":6},"network":{"friends":10,"followers":45,"following":22},"ratings":{"total":11444,"distribution":{"1":188,"2":0,"3":12,"4":41,"5":282,"6":1379,"7":4167,"8":3988,"9":1217,"10":170}}}'
+  recorded_at: 2026-05-24 13:42:30
 - request:
     method: GET
     uri: https://api.trakt.tv/users/sean/stats
   response:
     status: 200
     headers:
-      date: Mon, 02 Mar 2026 12:41:27 GMT
+      date: Sun, 24 May 2026 13:42:30 GMT
       content-type: application/json; charset=utf-8
+      cf-ray: a00cb95a39278f37-AMS
       cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
       cache-control: max-age=0, private, must-revalidate
       content-encoding: gzip
-      etag: W/"569a270eddd0b78cce9d88fc88b82221"
+      etag: W/"ab4a5f8149422cb4596fcc737a7083cf"
       server: cloudflare
       vary: Accept-Encoding, Origin
-      speculation-rules: '"/cdn-cgi/speculation"'
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
       referrer-policy: strict-origin-when-cross-origin
       x-content-type-options: nosniff
@@ -53,12 +52,11 @@ http_interactions:
       x-frame-options: SAMEORIGIN
       x-permitted-cross-domain-policies: none
       x-private-user: 'false'
-      x-request-id: 6a512c01-6b1e-4d3a-8649-ca466f45049f
-      x-runtime: '0.066297'
+      x-request-id: 800993d3-e136-4c3f-9d8a-7900a952ec61
+      x-runtime: '0.072754'
       x-xss-protection: '0'
-      cf-ray: 9d6079c75c67d595-AMS
-      alt-svc: h3=":443"; ma=86400
+      speculation-rules: '"/cdn-cgi/speculation"'
     body:
-      string: '{"movies":{"plays":3911,"watched":1785,"minutes":435522,"collected":3168,"ratings":157,"comments":0},"shows":{"watched":844,"collected":580,"ratings":98,"comments":0},"seasons":{"ratings":0,"comments":0},"episodes":{"plays":64151,"watched":26036,"minutes":1959188,"collected":18084,"ratings":6,"comments":0},"network":{"friends":35,"followers":530,"following":40},"ratings":{"total":261,"distribution":{"1":8,"2":2,"3":4,"4":6,"5":14,"6":14,"7":17,"8":43,"9":48,"10":105}}}'
-  recorded_at: 2026-03-02 12:41:27
+      string: '{"movies":{"plays":3908,"watched":1781,"minutes":435262,"collected":3181,"ratings":157,"comments":42},"shows":{"watched":862,"collected":593,"ratings":98,"comments":42},"seasons":{"ratings":0,"comments":1},"episodes":{"plays":64596,"watched":26466,"minutes":1975201,"collected":18910,"ratings":6,"comments":7},"network":{"friends":25,"followers":525,"following":29},"ratings":{"total":261,"distribution":{"1":8,"2":2,"3":4,"4":6,"5":14,"6":14,"7":17,"8":43,"9":48,"10":105}}}'
+  recorded_at: 2026-05-24 13:42:30
 recorded_with: VCR-vcr/2.1.0

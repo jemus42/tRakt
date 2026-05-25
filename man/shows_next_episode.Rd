@@ -47,59 +47,32 @@ shows_next_episode("one-piece")
 shows_last_episode("one-piece", extended = "full")
 }
 \seealso{
-Other show data: 
+Other show data:
 \code{\link{collected_media}},
 \code{\link{media_aliases}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{people_media}()},
+\code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
-\code{\link{shows_related}()},
-\code{\link{shows_summary}()}
+\code{\link[=shows_related]{shows_related()}},
+\code{\link[=shows_summary]{shows_summary()}}
 
-Other episode data: 
-\code{\link{episodes_summary}()},
+Other episode data:
+\code{\link[=episodes_summary]{episodes_summary()}},
 \code{\link{media_comments}},
 \code{\link{media_lists}},
 \code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
+\code{\link[=media_ratings]{media_ratings()}},
+\code{\link[=media_stats]{media_stats()}},
 \code{\link{media_translations}},
 \code{\link{media_watching}},
-\code{\link{seasons_episodes}()},
-\code{\link{seasons_summary}()}
-
-Other show data: 
-\code{\link{collected_media}},
-\code{\link{media_aliases}},
-\code{\link{media_comments}},
-\code{\link{media_lists}},
-\code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
-\code{\link{media_translations}},
-\code{\link{media_watching}},
-\code{\link{people_media}()},
-\code{\link{played_media}},
-\code{\link{shows_related}()},
-\code{\link{shows_summary}()}
-
-Other episode data: 
-\code{\link{episodes_summary}()},
-\code{\link{media_comments}},
-\code{\link{media_lists}},
-\code{\link{media_people}},
-\code{\link{media_ratings}()},
-\code{\link{media_stats}()},
-\code{\link{media_translations}},
-\code{\link{media_watching}},
-\code{\link{seasons_episodes}()},
-\code{\link{seasons_summary}()}
+\code{\link[=seasons_episodes]{seasons_episodes()}},
+\code{\link[=seasons_summary]{seasons_summary()}}
 }
 \concept{episode data}
 \concept{show data}
