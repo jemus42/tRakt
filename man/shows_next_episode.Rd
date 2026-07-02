@@ -43,8 +43,10 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get a shows next or latest episode
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 shows_next_episode("one-piece")
 shows_last_episode("one-piece", extended = "full")
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other show data:

@@ -53,6 +53,7 @@ Since this function is able to work on multi-length inputs for
 of one API call \emph{per element in each argument}. Please be kind to the API.
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # A movie's ratings
 movies_ratings("tron-legacy-2010")
 
@@ -65,6 +66,7 @@ seasons_ratings("futurama", season = 1:5)
 # Ratings for episodes 1 through 7 of season 1
 episodes_ratings("futurama", season = 1, episode = 1:7)
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other show data:

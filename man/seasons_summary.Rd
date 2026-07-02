@@ -55,6 +55,7 @@ is also suitable to retrieve all episode data for all seasons of a show with
 just a single API call.
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # Get just the season numbers and their IDs
 seasons_summary("breaking-bad", extended = "min")
 \dontrun{
@@ -62,6 +63,7 @@ seasons_summary("breaking-bad", extended = "min")
 # a list-column containing all episode data
 seasons_summary("utopia", extended = "full", episodes = TRUE)
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other season data:

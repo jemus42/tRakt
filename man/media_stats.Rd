@@ -46,6 +46,7 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 The data contains watchers, playes, collectors, comments, lists, and votes.
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # Stats for a movie
 movies_stats("inception-2010")
 \dontrun{
@@ -55,6 +56,7 @@ shows_stats(c("breaking-bad", "game-of-thrones"))
 # Stats for multiple episodes
 episodes_stats("futurama", season = 1, episode = 1:7)
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other show data:

@@ -44,11 +44,13 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get translations for a movie, show or episode
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # Get all translations
 movies_translations("193972")
 
 # Only get a specific language
 movies_translations("193972", "de")
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other movie data:

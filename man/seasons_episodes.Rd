@@ -45,12 +45,12 @@ If you want to quickly gather episode data of all available seasons,
 see \link{seasons_summary} and use the \code{episodes = TRUE} parameter.
 }
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 seasons_episodes("breaking-bad", 1)
 
 # Including all episode data:
 seasons_episodes("breaking-bad", 1, extended = "full")
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other season data:

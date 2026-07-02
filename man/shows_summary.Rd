@@ -38,12 +38,14 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get a single show
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # Minimal info by default
 shows_summary("breaking-bad")
 \dontrun{
 # More information
 shows_summary("breaking-bad", extended = "full")
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other show data:

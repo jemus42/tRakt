@@ -31,9 +31,9 @@ including the release date, country code (two letter, e.g. \code{us}), and
 the certification (e.g. \code{PG}).
 }
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 movies_releases("tron-legacy-2010")
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other movie data:

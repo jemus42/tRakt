@@ -32,7 +32,9 @@ Returns the top 10 grossing movies in the U.S. box office last weekend.
 Updated every Monday morning.
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 movies_boxoffice()
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other movie data:

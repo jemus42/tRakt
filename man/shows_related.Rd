@@ -41,7 +41,9 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get similiar(ish) shows
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 shows_related("breaking-bad", limit = 5)
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other show data:

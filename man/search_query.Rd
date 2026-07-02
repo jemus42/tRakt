@@ -122,6 +122,7 @@ See also the
 which fields of the item metadata are searched by default.
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # A show
 search_query("Breaking Bad", type = "show", n_results = 3)
 \dontrun{
@@ -134,5 +135,6 @@ search_query("J. K. Simmons", type = "person", extended = "full")
 # A movie or a show, two of each
 search_query("Tron", type = c("movie", "show"), n_results = 2)
 }
+\dontshow{\}) # examplesIf}
 }
 \concept{search functions}

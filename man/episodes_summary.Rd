@@ -43,8 +43,10 @@ This retrieves a single episode. See \code{\link[=seasons_episodes]{seasons_epis
 \code{\link[=seasons_summary]{seasons_summary()}} for (potentially) all episodes of a show.
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # Get just this one episode with its ratings, votes, etc.
 episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other episode data:

@@ -128,10 +128,10 @@ the same additional variables besides the media information: \code{watcher_count
 }
 
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # Get the most popular German-language movies between 2000 and 2010
 movies_popular(languages = "de", years = c(2000, 2010))
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other movie data:

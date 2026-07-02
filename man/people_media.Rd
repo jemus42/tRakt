@@ -48,11 +48,11 @@ One is a regular character variable, and the other is a list-column. The singula
 \href{https://github.com/trakt/api-help/issues/74}{deprecated and only included for compatibility reasons}.
 }
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 people_movies("christopher-nolan")
 
 people_shows("kit-harington")
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \link{media_people}, for the other direction: Media that has people.

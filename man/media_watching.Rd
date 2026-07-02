@@ -67,12 +67,12 @@ Get who's watching a thing right now
 
 }}
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 movies_watching("deadpool-2016")
 shows_watching("the-simpsons")
 seasons_watching("the-simpsons", season = 6)
 episodes_watching("the-simpsons", season = 6, episode = 12)
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other movie data:

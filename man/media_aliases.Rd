@@ -32,8 +32,10 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get all movie / show aliases
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 movies_aliases(190430)
 shows_aliases(104439)
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other movie data:

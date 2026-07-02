@@ -30,10 +30,16 @@ overview of available methods. Most methods of potential interest for data
 collection have dedicated functions in this package.
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # A simple request to a direct URL
 trakt_get("https://api.trakt.tv/shows/breaking-bad")
 
 # Optionally be lazy about URL specification by dropping the hostname:
 trakt_get("shows/game-of-thrones")
+\dontshow{\}) # examplesIf}
+}
+\seealso{
+Other API-basics:
+\code{\link[=trakt_api_available]{trakt_api_available()}}
 }
 \concept{API-basics}

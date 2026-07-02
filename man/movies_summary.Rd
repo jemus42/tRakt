@@ -38,12 +38,14 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get a single movie
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # Minimal info by default
 movies_summary("inception-2010")
 \dontrun{
 # Full information,  multiple movies
 movies_summary(c("inception-2010", "the-dark-knight-2008"), extended = "full")
 }
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other movie data:

@@ -116,23 +116,23 @@ Get lists containing a movie, show, season, episode or person
 
 }}
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 movies_lists("190430", type = "personal", limit = 5)
-}
-\dontrun{
+\dontshow{\}) # examplesIf}
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 shows_lists("46241")
-}
-\dontrun{
+\dontshow{\}) # examplesIf}
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 seasons_lists("46241", season = 1)
-}
-\dontrun{
+\dontshow{\}) # examplesIf}
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 episodes_lists("46241", season = 1, episode = 1)
-}
-\dontrun{
+\dontshow{\}) # examplesIf}
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 people_lists("david-tennant")
 
 people_lists("emilia-clarke", sort = "items")
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other list methods:

@@ -98,12 +98,12 @@ Get all comments of a thing
 
 }}
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 movies_comments(193972)
 shows_comments(46241, sort = "likes")
 seasons_comments(46241, season = 1, sort = "likes")
 episodes_comments(46241, season = 1, episode = 2, sort = "likes")
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other comment methods:

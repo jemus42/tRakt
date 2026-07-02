@@ -41,7 +41,9 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get similiar(ish) movies
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 movies_related("the-avengers-2012", limit = 5)
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other movie data:

@@ -62,18 +62,20 @@ Get a single comment
 
 }}
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # A single comment
 comments_comment("236397")
 
 # Multiple comments
 comments_comment(c("236397", "112561"))
-\dontrun{
+\dontshow{\}) # examplesIf}
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 comments_replies("236397")
-}
-\dontrun{
+\dontshow{\}) # examplesIf}
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 comments_likes("236397")
-}
-\dontrun{
+\dontshow{\}) # examplesIf}
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # A movie
 comments_item("236397")
 comments_item("236397", extended = "full")
@@ -89,7 +91,7 @@ comments_item("140265", extended = "full")
 # An episode
 comments_item("136632")
 comments_item("136632", extended = "full")
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other comment methods:

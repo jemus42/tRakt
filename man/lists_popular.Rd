@@ -5,18 +5,23 @@
 \alias{lists_trending}
 \title{Get popular / trending lists}
 \source{
-\code{lists_popular()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists}{/lists/popular}.
+\code{lists_popular()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists}{/lists/popular/:type}.
 
-\code{lists_trending()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists}{/lists/trending}.
+\code{lists_trending()} wraps endpoint \href{https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists}{/lists/trending/:type}.
 }
 \usage{
-lists_popular(limit = 10)
+lists_popular(limit = 10, type = c("personal", "official"))
 
-lists_trending(limit = 10)
+lists_trending(limit = 10, type = c("personal", "official"))
 }
 \arguments{
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced via \code{as.integer()}.}
+
+\item{type}{\code{character(1) ["personal"]}: The kind of lists to return, one of
+\code{"personal"} (user-created lists) or \code{"official"} (Trakt-curated lists).
+The trakt.tv API requires this path segment; a request without it returns
+an empty (HTTP 204) response.}
 }
 \value{
 A \link[tibble:tibble-package]{tibble()}. If the function has a \code{limit} parameter
@@ -27,10 +32,10 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get popular / trending lists
 }
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 lists_popular()
 lists_trending()
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \code{\link[=user_list_items]{user_list_items()}} For the actual content of a list.

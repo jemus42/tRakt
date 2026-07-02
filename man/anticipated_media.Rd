@@ -128,11 +128,11 @@ the same additional variables besides the media information: \code{watcher_count
 }
 
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # Get 15 the most anticipated upcoming shows on Netflix that air this year
 current_year <- format(Sys.Date(), "\%Y")
 shows_anticipated(limit = 15, networks = "Netflix", years = current_year)
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other movie data:

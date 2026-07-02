@@ -76,12 +76,12 @@ One is a regular character variable, and the other is a list-column. The former 
 compatibility reasons.
 }
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 movies_people("deadpool-2016")
 shows_people("breaking-bad")
 seasons_people("breaking-bad", season = 1)
 episodes_people("breaking-bad", season = 1, episode = 1)
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \link{people_media}, for the other direction: People that have credits

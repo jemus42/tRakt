@@ -45,13 +45,13 @@ If there are no results (or the API is unreachable), an empty \code{tibble()} is
 Get trending or recently made comments
 }
 \examples{
-\dontrun{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # Trending reviews
 comments_trending("reviews")
 
 # Recent shouts (short comments)
 comments_recent("shouts")
-}
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other comment methods:

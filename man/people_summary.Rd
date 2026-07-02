@@ -40,11 +40,13 @@ Get a single person's details, like their various IDs. If \code{extended} is
 birthday.
 }
 \examples{
+\dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # A single person's extended information
 people_summary("bryan-cranston", "full")
 
 # Multiple people
 people_summary(c("kit-harington", "emilia-clarke"))
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 Other people data:
