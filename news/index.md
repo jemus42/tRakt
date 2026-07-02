@@ -1,36 +1,6 @@
 # Changelog
 
-## tRakt 0.18.0.9000 (development version)
-
-- [`trakt_get()`](https://jemus42.github.io/tRakt/reference/trakt_get.md)
-  now retries transient server errors (HTTP 500, 502, 503, 504) and
-  connection failures, not just the httr2 defaults (429, 503). The
-  trakt.tv API intermittently returns gateway errors (502/504) that
-  succeed on a retry; previously these surfaced as hard failures.
-
-- Fix an error in the `networks` (and other fixed-vocabulary) filter
-  validation used by the dynamic-list functions
-  ([`shows_anticipated()`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
-  [`movies_popular()`](https://jemus42.github.io/tRakt/reference/popular_media.md),
-  etc.): a filter value that matched several entries differing only in
-  case or duplicated in the API’s lookup data (e.g. `"Netflix"` /
-  `"NETFLIX"`) aborted with “Result must be length 1, not 2”. Such
-  values now resolve to a single canonical spelling.
-
-- New
-  [`trakt_api_available()`](https://jemus42.github.io/tRakt/reference/trakt_api_available.md):
-  a lightweight, non-erroring check of whether the API is reachable
-  (returns `TRUE`/`FALSE`). It is used to guard runnable documentation
-  examples so they execute when the API is up but are skipped (rather
-  than failing) during outages or when offline.
-
-- Documentation examples for public (non-authenticated) endpoints now
-  run conditionally via `@examplesIf trakt_api_available()` instead of
-  being hidden in `\dontrun{}`. They are exercised by `R CMD check` and
-  [`example()`](https://rdrr.io/r/utils/example.html) when the API is
-  reachable, and skipped otherwise, so upstream flakiness no longer
-  produces spurious example failures. Examples that genuinely require
-  authentication remain in `\dontrun{}`.
+## tRakt 0.19.0
 
 - [`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md)
   /
@@ -41,12 +11,36 @@
   return an empty HTTP 204 response, and the list `type` must be
   specified explicitly (`lists/popular/:type`). Previously these
   functions silently returned an empty tibble.
-
+- Fix an error in the `networks` (and other fixed-vocabulary) filter
+  validation used by the dynamic-list functions
+  ([`shows_anticipated()`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
+  [`movies_popular()`](https://jemus42.github.io/tRakt/reference/popular_media.md),
+  etc.): a filter value that matched several entries differing only in
+  case or duplicated in the API’s lookup data (e.g. `"Netflix"` /
+  `"NETFLIX"`) aborted with “Result must be length 1, not 2”. Such
+  values now resolve to a single canonical spelling.
+- [`trakt_get()`](https://jemus42.github.io/tRakt/reference/trakt_get.md)
+  now retries transient server errors (HTTP 500, 502, 503, 504) and
+  connection failures, not just the httr2 defaults (429, 503). The
+  trakt.tv API intermittently returns gateway errors (502/504) that
+  succeed on a retry; previously these surfaced as hard failures.
+- New
+  [`trakt_api_available()`](https://jemus42.github.io/tRakt/reference/trakt_api_available.md):
+  a lightweight, non-erroring check of whether the API is reachable
+  (returns `TRUE`/`FALSE`). It is used to guard runnable documentation
+  examples so they execute when the API is up but are skipped (rather
+  than failing) during outages or when offline.
+- Documentation examples for public (non-authenticated) endpoints now
+  run conditionally via `@examplesIf trakt_api_available()` instead of
+  being hidden in `\dontrun{}`. They are exercised by `R CMD check` and
+  [`example()`](https://rdrr.io/r/utils/example.html) when the API is
+  reachable, and skipped otherwise, so upstream flakiness no longer
+  produces spurious example failures. Examples that genuinely require
+  authentication remain in `\dontrun{}`.
 - Tests: vcr cassettes are now replay-only. The previous
   `re_record_interval` of 30 days caused CI to make live API calls (and
   fail on any upstream hiccup or drift) once cassettes aged past the
   interval. Re-record cassettes deliberately and locally instead.
-
 - Vignettes (`Getting Started`, `Show Analysis: 24`) are now
   pre-computed: they are authored in `vignettes/*.Rmd.orig` (with live
   API code) and knitted into static `vignettes/*.Rmd` via

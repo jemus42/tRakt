@@ -11,12 +11,12 @@ Source:
 [`DESCRIPTION`](http://github.com/jemus42/tRakt/blob/main/DESCRIPTION)
 
 Burk L (2026). *tRakt: Get Data from 'trakt.tv'*. R package version
-0.18.0.9000, <https://jemus42.github.io/tRakt>.
+0.19.0, <https://jemus42.github.io/tRakt>.
 
     @Manual{,
       title = {tRakt: Get Data from 'trakt.tv'},
       author = {Lukas Burk},
       year = {2026},
-      note = {R package version 0.18.0.9000},
+      note = {R package version 0.19.0},
       url = {https://jemus42.github.io/tRakt},
     }
