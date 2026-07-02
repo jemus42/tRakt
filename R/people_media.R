@@ -11,12 +11,10 @@
 #' @return A `list` of one or more [tibbles][tibble::tibble-package] for `cast`
 #' and `crew`. The latter `tibble` objects are as flat as possible.
 #' @seealso [media_people], for the other direction: Media that has people.
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' people_movies("christopher-nolan")
 #'
 #' people_shows("kit-harington")
-#' }
 NULL
 
 #' @keywords internal

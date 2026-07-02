@@ -6,7 +6,7 @@
 #' @export
 #' @eval apiurl("movies", "translations")
 #' @family movie data
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # Get all translations
 #' movies_translations("193972")
 #'

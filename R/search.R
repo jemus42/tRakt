@@ -33,7 +33,7 @@
 #' @family search functions
 #' @eval apiurl("search", "text query")
 #' @importFrom tibble tibble
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # A show
 #' search_query("Breaking Bad", type = "show", n_results = 3)
 #' \dontrun{

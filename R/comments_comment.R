@@ -6,7 +6,7 @@
 #' @family summary methods
 #' @inherit trakt_api_common_parameters return
 #' @export
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # A single comment
 #' comments_comment("236397")
 #'
@@ -29,10 +29,8 @@ comments_comment <- function(id, extended = "min") {
 #' @export
 #' @eval apiurl("comments", "replies")
 #' @family comment methods
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' comments_replies("236397")
-#' }
 comments_replies <- function(id, extended = "min") {
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) comments_replies(x, extended = extended)))
@@ -52,10 +50,8 @@ comments_replies <- function(id, extended = "min") {
 #' @family comment methods
 #' @importFrom purrr discard pluck
 #' @importFrom dplyr bind_cols
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' comments_likes("236397")
-#' }
 comments_likes <- function(id, extended = "min") {
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) comments_likes(x, extended = extended)))
@@ -81,8 +77,7 @@ comments_likes <- function(id, extended = "min") {
 #' @family comment methods
 #' @importFrom dplyr everything bind_cols
 #' @importFrom purrr pluck
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' # A movie
 #' comments_item("236397")
 #' comments_item("236397", extended = "full")
@@ -98,7 +93,6 @@ comments_likes <- function(id, extended = "min") {
 #' # An episode
 #' comments_item("136632")
 #' comments_item("136632", extended = "full")
-#' }
 comments_item <- function(id, extended = "min") {
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) comments_item(x, extended = extended)))

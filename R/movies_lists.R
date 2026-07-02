@@ -14,10 +14,8 @@ NULL
 #' @family list methods
 #' @family movie data
 #' @describeIn media_lists Lists containing a movie.
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' movies_lists("190430", type = "personal", limit = 5)
-#' }
 movies_lists <- function(
 	id,
 	type = c("all", "personal", "official", "watchlists"),
@@ -55,10 +53,8 @@ movies_lists <- function(
 #' @family list methods
 #' @family show data
 #' @describeIn media_lists Lists containing a show.
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' shows_lists("46241")
-#' }
 shows_lists <- function(
 	id,
 	type = c("all", "personal", "official", "watchlists"),
@@ -96,10 +92,8 @@ shows_lists <- function(
 #' @family list methods
 #' @family season data
 #' @describeIn media_lists Lists containing a season.
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' seasons_lists("46241", season = 1)
-#' }
 seasons_lists <- function(
 	id,
 	season,
@@ -140,10 +134,8 @@ seasons_lists <- function(
 #' @family list methods
 #' @family episode data
 #' @describeIn media_lists Lists containing an episode.
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' episodes_lists("46241", season = 1, episode = 1)
-#' }
 episodes_lists <- function(
 	id,
 	season,
@@ -186,12 +178,10 @@ episodes_lists <- function(
 #' @family list methods
 #' @family people data
 #' @describeIn media_lists Lists containing a person.
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' people_lists("david-tennant")
 #'
 #' people_lists("emilia-clarke", sort = "items")
-#' }
 people_lists <- function(
 	id,
 	type = c("all", "personal", "official", "watchlists"),

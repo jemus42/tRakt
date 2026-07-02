@@ -16,13 +16,11 @@
 #' @family season data
 #' @family episode data
 #' @eval apiurl("seasons", "episodes")
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' seasons_episodes("breaking-bad", 1)
 #'
 #' # Including all episode data:
 #' seasons_episodes("breaking-bad", 1, extended = "full")
-#' }
 seasons_episodes <- function(id, seasons = 1L, extended = "min") {
 	# Vectorize
 	if (length(seasons) > 1) {

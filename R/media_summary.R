@@ -36,7 +36,7 @@ media_summary <- function(type = c("movies", "shows"), id, extended = "min") {
 #' @eval apiurl("movies", "summary")
 #' @family movie data
 #' @family summary methods
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # Minimal info by default
 #' movies_summary("inception-2010")
 #' \dontrun{
@@ -54,7 +54,7 @@ movies_summary <- function(id, extended = "min") {
 #' @family show data
 #' @family summary methods
 #' @eval apiurl("shows", "summary")
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # Minimal info by default
 #' shows_summary("breaking-bad")
 #' \dontrun{

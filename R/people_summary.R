@@ -10,7 +10,7 @@
 #' @family people data
 #' @family summary methods
 #' @eval apiurl("people", "summary")
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # A single person's extended information
 #' people_summary("bryan-cranston", "full")
 #'

@@ -20,7 +20,7 @@
 #' @importFrom rlang has_name is_empty
 #' @importFrom purrr map
 #' @importFrom dplyr rename
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # Get just the season numbers and their IDs
 #' seasons_summary("breaking-bad", extended = "min")
 #' \dontrun{

@@ -10,10 +10,8 @@
 #' @export
 #' @eval apiurl("movies", "releases")
 #' @family movie data
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' movies_releases("tron-legacy-2010")
-#' }
 movies_releases <- function(id, country = NULL) {
 	if (length(id) > 1) {
 		return(map_rbind(id, \(x) movies_releases(id = x, country = country)))

@@ -121,11 +121,9 @@ trakt_auto_lists <- function(
 #' @eval apiurl("movies", "popular")
 #' @family movie data
 #' @family dynamic lists
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' # Get the most popular German-language movies between 2000 and 2010
 #' movies_popular(languages = "de", years = c(2000, 2010))
-#' }
 movies_popular <- function(
 	limit = 10,
 	extended = "min",
@@ -315,12 +313,10 @@ movies_anticipated <- function(
 #' @eval apiurl("shows", "anticipated")
 #' @family shows data
 #' @family dynamic lists
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' # Get 15 the most anticipated upcoming shows on Netflix that air this year
 #' current_year <- format(Sys.Date(), "%Y")
 #' shows_anticipated(limit = 15, networks = "Netflix", years = current_year)
-#' }
 shows_anticipated <- function(
 	limit = 10,
 	extended = "min",

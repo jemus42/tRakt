@@ -10,7 +10,7 @@
 #' @eval apiurl("episodes", "summary")
 #' @importFrom dplyr select rename bind_cols mutate
 #' @importFrom rlang has_name
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # Get just this one episode with its ratings, votes, etc.
 #' episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
 episodes_summary <- function(id, season = 1L, episode = 1L, extended = "min") {

@@ -3,13 +3,11 @@
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @family comment methods
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' movies_comments(193972)
 #' shows_comments(46241, sort = "likes")
 #' seasons_comments(46241, season = 1, sort = "likes")
 #' episodes_comments(46241, season = 1, episode = 2, sort = "likes")
-#' }
 NULL
 
 #' @describeIn media_comments Get comments for a movie

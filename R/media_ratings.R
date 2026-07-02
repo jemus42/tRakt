@@ -9,7 +9,7 @@
 #' @note Since this function is able to work on multi-length inputs for
 #' `id`, `season` and `episode`, it is possible to get a lot of data, *but* at the cost
 #' of one API call *per element in each argument*. Please be kind to the API.
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # A movie's ratings
 #' movies_ratings("tron-legacy-2010")
 #'

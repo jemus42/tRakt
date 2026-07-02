@@ -9,7 +9,7 @@
 #' @family movie data
 #' @eval apiurl("movies", "box office")
 #' @importFrom tibble as_tibble
-#' @examples
+#' @examplesIf trakt_api_available()
 #' movies_boxoffice()
 movies_boxoffice <- function(extended = "min") {
 	extended <- validate_extended(extended)

@@ -48,7 +48,7 @@ media_related <- function(
 #' @family movie data
 #' @eval apiurl("movies", "related")
 #' @export
-#' @examples
+#' @examplesIf trakt_api_available()
 #' movies_related("the-avengers-2012", limit = 5)
 movies_related <- function(id, limit = 10L, extended = "min") {
 	media_related(id, type = "movies", extended = extended, limit = limit)
@@ -60,7 +60,7 @@ movies_related <- function(id, limit = 10L, extended = "min") {
 #' @family show data
 #' @eval apiurl("shows", "related")
 #' @export
-#' @examples
+#' @examplesIf trakt_api_available()
 #' shows_related("breaking-bad", limit = 5)
 shows_related <- function(id, limit = 10L, extended = "min") {
 	media_related(id, type = "shows", extended = extended, limit = limit)

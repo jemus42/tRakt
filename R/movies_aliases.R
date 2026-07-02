@@ -6,7 +6,7 @@
 #' @export
 #' @family movie data
 #' @eval apiurl("movies", "aliases")
-#' @examples
+#' @examplesIf trakt_api_available()
 #' movies_aliases(190430)
 #' shows_aliases(104439)
 movies_aliases <- function(id) {

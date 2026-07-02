@@ -122,7 +122,7 @@ print.trakt_token <- function(x, ...) {
 can_device_auth <- function() {
 	has_pkg_key <- httr2::secret_has_key("tRakt_key")
 	has_env_secret <- Sys.getenv("trakt_client_secret", unset = "") != ""
-	has_secret = has_pkg_key | has_env_secret
+	has_secret <- has_pkg_key | has_env_secret
 
 	result <- has_secret && interactive()
 	if (getOption("tRakt_debug", default = FALSE)) {

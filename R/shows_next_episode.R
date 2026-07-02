@@ -10,7 +10,7 @@
 #' @importFrom dplyr bind_cols
 #' @importFrom purrr discard modify_if modify_at pluck
 #' @importFrom rlang is_empty
-#' @examples
+#' @examplesIf trakt_api_available()
 #' shows_next_episode("one-piece")
 #' shows_last_episode("one-piece", extended = "full")
 shows_next_episode <- function(id, extended = "min") {

@@ -21,7 +21,7 @@
 #' @export
 #' @import httr2
 #' @family API-basics
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # A simple request to a direct URL
 #' trakt_get("https://api.trakt.tv/shows/breaking-bad")
 #'
@@ -52,7 +52,17 @@ trakt_get <- function(url) {
 	}
 
 	req <- req |>
-		httr2::req_retry(max_tries = 3) |>
+		httr2::req_retry(
+			max_tries = 3,
+			# Retry on connection failures and transient server errors. httr2's
+			# default `is_transient` only covers 429 and 503, so the gateway
+			# errors the trakt.tv API intermittently returns (502/504, and 500)
+			# would otherwise surface as hard failures on a spurious blip.
+			retry_on_failure = TRUE,
+			is_transient = \(resp) {
+				httr2::resp_status(resp) %in% c(429, 500, 502, 503, 504)
+			}
+		) |>
 		httr2::req_cache(
 			path = file.path(getOption("tRakt_cache_dir"), "data"),
 			use_on_error = TRUE,
@@ -82,4 +92,42 @@ trakt_get <- function(url) {
 	}
 
 	resp
+}
+
+#' Check whether the trakt.tv API is reachable
+#'
+#' A lightweight connectivity check that performs a single, small request to a
+#' stable endpoint with a short timeout. It is primarily used to guard runnable
+#' documentation examples (via roxygen2's `@examplesIf`) so they are executed
+#' when the API is available but quietly skipped when it is not — avoiding
+#' spurious failures from transient API outages or a missing internet
+#' connection.
+#'
+#' This function never throws: it returns `FALSE` on any error (offline,
+#' timeout, non-success status, ...) and does not retry.
+#'
+#' @return `logical(1)`: `TRUE` if the API responds successfully, else `FALSE`.
+#' @export
+#' @family API-basics
+#' @examples
+#' # Returns TRUE or FALSE, never errors:
+#' trakt_api_available()
+trakt_api_available <- function() {
+	tryCatch(
+		{
+			resp <- httr2::request("https://api.trakt.tv/genres/shows") |>
+				httr2::req_headers(
+					"trakt-api-key" = get_client_id(),
+					"trakt-api-version" = "2"
+				) |>
+				httr2::req_user_agent(tRakt_user_agent()) |>
+				httr2::req_timeout(5) |>
+				# Don't treat any status as an error; we inspect it ourselves.
+				httr2::req_error(is_error = \(resp) FALSE) |>
+				httr2::req_perform()
+
+			httr2::resp_status(resp) < 400
+		},
+		error = function(e) FALSE
+	)
 }

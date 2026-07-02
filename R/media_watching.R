@@ -3,13 +3,11 @@
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' movies_watching("deadpool-2016")
 #' shows_watching("the-simpsons")
 #' seasons_watching("the-simpsons", season = 6)
 #' episodes_watching("the-simpsons", season = 6, episode = 12)
-#' }
 NULL
 
 #' @describeIn media_watching Who's watching a movie.

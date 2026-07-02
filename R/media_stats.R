@@ -5,7 +5,7 @@
 #' @inheritParams trakt_api_common_parameters
 #' @inherit trakt_api_common_parameters return
 #' @name media_stats
-#' @examples
+#' @examplesIf trakt_api_available()
 #' # Stats for a movie
 #' movies_stats("inception-2010")
 #' \dontrun{

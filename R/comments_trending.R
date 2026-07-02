@@ -8,14 +8,12 @@
 #' @inherit user_comments return
 #' @export
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf trakt_api_available()
 #' # Trending reviews
 #' comments_trending("reviews")
 #'
 #' # Recent shouts (short comments)
 #' comments_recent("shouts")
-#' }
 NULL
 
 #' @name comments_trending
