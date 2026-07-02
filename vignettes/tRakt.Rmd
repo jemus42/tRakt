@@ -82,6 +82,19 @@ library(dplyr)
 
 movies_watched(period = "yearly", years = c(1990, 2000)) |>
   select(watcher_count, title, year)
+#> # A tibble: 10 × 3
+#>    watcher_count title                       year
+#>            <int> <chr>                      <int>
+#>  1          2089 Toy Story                   1995
+#>  2          1716 Toy Story 2                 1999
+#>  3           541 The Matrix                  1999
+#>  4           537 Jurassic Park               1993
+#>  5           482 The Shawshank Redemption    1994
+#>  6           471 Fight Club                  1999
+#>  7           447 Scary Movie                 2000
+#>  8           420 Mulan                       1998
+#>  9           415 Aladdin                     1992
+#> 10           413 10 Things I Hate About You  1999
 ```
 
 ## Finding Things (and the right amount)
