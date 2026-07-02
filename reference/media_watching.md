@@ -140,20 +140,20 @@ movies_watching("deadpool-2016")
 #>   <chr>             <lgl>   <lgl>   <chr>        <lgl> <lgl>  <lgl>    <chr>    
 #> 1 Tonymontana131313 FALSE   FALSE   Anthony Wil… FALSE FALSE  FALSE    tonymont…
 shows_watching("the-simpsons")
-#> # A tibble: 37 × 8
-#>    username      private deleted user_name       vip   vip_ep director user_slug
-#>    <chr>         <lgl>   <lgl>   <chr>           <lgl> <lgl>  <lgl>    <chr>    
-#>  1 Ashamaly      FALSE   FALSE   Ashamaly        FALSE FALSE  FALSE    ashamaly 
-#>  2 Rau09         FALSE   FALSE   Rau09           FALSE FALSE  FALSE    rau09    
-#>  3 artur araujo  FALSE   FALSE   Deus Junior (T… FALSE FALSE  FALSE    artur-ar…
-#>  4 modemhead     TRUE    FALSE   NA              NA    NA     NA       modemhead
-#>  5 Animating3517 FALSE   FALSE   Animating3517   FALSE FALSE  FALSE    animatin…
-#>  6 paddy2019     FALSE   FALSE   Patrick Flynn   FALSE FALSE  FALSE    paddy2019
-#>  7 SlinkyTron    FALSE   FALSE   Zoidy           FALSE FALSE  FALSE    slinkytr…
-#>  8 KTBtv         FALSE   FALSE   KTBtv           FALSE FALSE  FALSE    ktbtv    
-#>  9 Neo           FALSE   FALSE   luciano Bouter… FALSE FALSE  FALSE    neo      
-#> 10 heavy112      FALSE   FALSE   Heavy           FALSE FALSE  FALSE    heavy112 
-#> # ℹ 27 more rows
+#> # A tibble: 32 × 8
+#>    username        private deleted user_name     vip   vip_ep director user_slug
+#>    <chr>           <lgl>   <lgl>   <chr>         <lgl> <lgl>  <lgl>    <chr>    
+#>  1 calmcl1         FALSE   FALSE   Cal McLean    FALSE FALSE  FALSE    calmcl1  
+#>  2 paulhey80       FALSE   FALSE   Paulhey80     FALSE FALSE  FALSE    paulhey80
+#>  3 jasonsbates     FALSE   FALSE   Jason         FALSE FALSE  FALSE    jasonsba…
+#>  4 jarvis-15598715 FALSE   FALSE   Rafael Salaz… FALSE FALSE  FALSE    jarvis-1…
+#>  5 dmin4           FALSE   FALSE   Dmin4         FALSE FALSE  FALSE    dmin4    
+#>  6 Rau09           FALSE   FALSE   Rau09         FALSE FALSE  FALSE    rau09    
+#>  7 artur araujo    FALSE   FALSE   Deus Junior … FALSE FALSE  FALSE    artur-ar…
+#>  8 modemhead       TRUE    FALSE   NA            NA    NA     NA       modemhead
+#>  9 Animating3517   FALSE   FALSE   Animating3517 FALSE FALSE  FALSE    animatin…
+#> 10 paddy2019       FALSE   FALSE   Patrick Flynn FALSE FALSE  FALSE    paddy2019
+#> # ℹ 22 more rows
 seasons_watching("the-simpsons", season = 6)
 #> # A tibble: 1 × 16
 #>   username   private deleted joined_at           location about user_name gender

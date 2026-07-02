@@ -100,21 +100,21 @@ comments_recent("shouts")
 #> # A tibble: 10 × 34
 #>    type        id comment           spoiler review parent_id created_at         
 #>    <chr>    <int> <chr>             <lgl>   <lgl>      <int> <dttm>             
-#>  1 movie   969855 "Como pode um fi… FALSE   FALSE          0 2026-07-02 22:40:48
-#>  2 movie   969852 "the car scene g… FALSE   FALSE          0 2026-07-02 22:38:25
-#>  3 movie   969847 "Well. She was d… FALSE   FALSE          0 2026-07-02 22:35:39
-#>  4 episode 969854 "Aun que fue un … FALSE   FALSE          0 2026-07-02 22:40:17
-#>  5 episode 969853 "altrought its t… FALSE   FALSE          0 2026-07-02 22:38:41
-#>  6 episode 969848 "These thugs at … TRUE    FALSE          0 2026-07-02 22:35:54
-#>  7 episode 969846 "That was the mo… FALSE   FALSE          0 2026-07-02 22:34:23
-#>  8 episode 969843 "I want to know … FALSE   FALSE          0 2026-07-02 22:32:26
-#>  9 episode 969842 "Cried and laugh… FALSE   FALSE          0 2026-07-02 22:31:58
+#>  1 episode 969857 "Pues así 😲 qued… FALSE   FALSE          0 2026-07-02 22:42:36
+#>  2 episode 969854 "Aun que fue un … FALSE   FALSE          0 2026-07-02 22:40:17
+#>  3 episode 969853 "altrought its t… FALSE   FALSE          0 2026-07-02 22:38:41
+#>  4 episode 969848 "These thugs at … TRUE    FALSE          0 2026-07-02 22:35:54
+#>  5 episode 969846 "That was the mo… FALSE   FALSE          0 2026-07-02 22:34:23
+#>  6 movie   969856 "FOR THE LOVE OF… FALSE   FALSE          0 2026-07-02 22:41:52
+#>  7 movie   969855 "Como pode um fi… FALSE   FALSE          0 2026-07-02 22:40:48
+#>  8 movie   969852 "the car scene g… FALSE   FALSE          0 2026-07-02 22:38:25
+#>  9 movie   969847 "Well. She was d… FALSE   FALSE          0 2026-07-02 22:35:39
 #> 10 show    969851 "Meu Deus eu ach… FALSE   FALSE          0 2026-07-02 22:37:40
 #> # ℹ 27 more variables: updated_at <dttm>, replies <int>, likes <int>,
 #> #   user_rating <int>, language <chr>, username <chr>, private <lgl>,
 #> #   deleted <lgl>, user_name <chr>, vip <lgl>, vip_ep <lgl>, director <lgl>,
 #> #   user_slug <chr>, title <chr>, year <int>, trakt <chr>, slug <chr>,
-#> #   imdb <chr>, tmdb <chr>, tvdb <chr>, episode_season <int>,
+#> #   tvdb <chr>, imdb <chr>, tmdb <chr>, episode_season <int>,
 #> #   episode_number <int>, episode_title <chr>, episode_trakt <chr>,
 #> #   episode_tvdb <chr>, episode_imdb <chr>, episode_tmdb <chr>
 ```
