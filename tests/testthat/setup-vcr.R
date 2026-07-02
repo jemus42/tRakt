@@ -11,8 +11,14 @@ if (requireNamespace("vcr", quietly = TRUE)) {
 		filter_request_headers = list(
 			"authorization"
 		),
-		match_requests_on = c("method", "uri"),
-		# Re-record cassettes after 30 days to catch API changes
-		re_record_interval = 30 * 24 * 60 * 60
+		match_requests_on = c("method", "uri")
+		# NOTE: cassettes are intentionally *replay-only* on CI. We do not set
+		# `re_record_interval`, so existing cassettes are never re-recorded
+		# automatically (vcr's default "once" mode). Automated re-recording
+		# coupled CI health to live API availability: whenever the cassettes
+		# aged past the interval, every CI run made live calls and broke on any
+		# upstream hiccup or drift. Re-record deliberately, locally, by deleting
+		# the relevant cassette(s) under tests/testthat/_vcr/ and re-running the
+		# tests with valid credentials.
 	)
 }

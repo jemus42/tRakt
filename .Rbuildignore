@@ -38,3 +38,5 @@ vignettes/\.httr-oauth$
 ^TODO\.md$
 ^\.claude$
 ^api$
+^vignettes/.*\.orig$
+^vignettes/precompile\.R$

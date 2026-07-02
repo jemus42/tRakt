@@ -31,11 +31,11 @@ comments:
 lists:
   popular:
     url: https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists
-    endpoint: /lists/popular
+    endpoint: /lists/popular/:type
     implementation: lists_popular()
   trending:
     url: https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists
-    endpoint: /lists/trending
+    endpoint: /lists/trending/:type
     implementation: lists_trending()
   list:
     url: https://trakt.docs.apiary.io/#reference/lists/list/get-list

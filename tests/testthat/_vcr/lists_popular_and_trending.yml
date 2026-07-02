@@ -1,249 +1,35 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://api.trakt.tv/lists/popular?limit=10
+    uri: https://api.trakt.tv/lists/popular/personal?limit=10
   response:
     status: 200
     headers:
-      date: Sun, 24 May 2026 13:42:18 GMT
+      date: Wed, 01 Jul 2026 22:07:59 GMT
       content-type: application/json; charset=utf-8
-      cf-ray: a00cb90e0a638f37-AMS
-      cf-cache-status: DYNAMIC
       access-control-allow-origin: '*'
-      cache-control: max-age=28800, public
-      content-encoding: gzip
-      etag: W/"d1c8cede7fb4f90eda42b68bbb5ef69b"
-      expires: Sun, 24 May 2026 21:42:18 GMT
-      server: cloudflare
-      vary: Accept-Encoding, Origin
+      cache-control: public, max-age=600, s-maxage=3600
+      vary: query, Origin, accept-encoding
       access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      referrer-policy: strict-origin-when-cross-origin
+      cache-tag: user_list,popular,resource:list:2142753,resource:list:1248149,resource:list:2143363,resource:list:800238,resource:list:1282987,resource:list:805405,resource:list:4778265,resource:list:808094,resource:list:11416887,resource:list:1257909,owner_id:1,owner_id:879337,owner_id:16751,owner_id:785,owner_id:17500,owner_id:609065,owner_id:31649,owner_id:223032
+      cf-placement: remote-ORD
       x-content-type-options: nosniff
       x-download-options: noopen
       x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '9182'
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '6541'
       x-pagination-limit: '10'
       x-pagination-page: '1'
-      x-pagination-page-count: '919'
-      x-permitted-cross-domain-policies: none
-      x-request-id: f244f951-3eaa-403b-b90a-ef6dd6d378af
-      x-runtime: '0.178011'
-      x-xss-protection: '0'
+      x-pagination-page-count: '655'
       speculation-rules: '"/cdn-cgi/speculation"'
-    body:
-      string: '[{"like_count":5089,"comment_count":35,"list":{"name":"MARVEL Cinematic
-        Universe","description":"**UPDATED** _2024-01-19_\r\n**Chronological order**                                                                                                             \r\n\r\n_(If
-        you are new to MCU, then you should start with; Iron Man, The Incredible Hulk,\r\n                                                                                                                    Iron
-        Man 2, Thor, Captain America and then Agent Carter.)_                                                                                                                                                                                                                                                                            \r\n\r\n\r\n-----------------------------------------------------------------------------\r\n\r\n**Includes:**
-        \r\n\r\n- **All Movies**\r\n- **Marvel One-Shots**\r\n -  _Agent Carter_\r\n
-        -  _A Funny Thing Happened on the Way to Thor''s Hammer_\r\n -  _The Consultant_\r\n
-        -  _Item 47_\r\n -  _All Hail the King_\r\n- **Specials/Shorts**\r\n -  _WHIH
-        World News_\r\n -  _Slingshot_ \r\n- **Netflix Series**\r\n -  _**Marvel''s**
-        Daredevil_ \r\n -  _**Marvel''s** Jessica Jones_\r\n -  _**Marvel''s** Luke
-        Cage_\r\n -  _**Marvel''s** Iron Fist_\r\n -  _**Marvel''s** Defenders_\r\n  -  _**Marvel''s**
-        The Punisher_\r\n- **ABC**\r\n - _**Marvel''s** Inhumans_\r\n -  _**Marvel''s**
-        Agent Carter_\r\n - _**Marvel''s** Agents of S.H.I.E.L.D._\r\n- **Hulu**\r\n
-        - _**Marvel''s** Runaways_\r\n- **Freeform**\r\n - _**Marvel''s** Cloak \u0026
-        Dagger_\r\n\r\n-----------------------------------------------------------------------------\r\n\r\n**Stark
-        Expo 1974** - commercial for Stark Expo 1974 in Flushing Meadows in New York.\r\nThere
-        are four different **Stark Expo 2010** videos:\r\n\r\n -  Stark Expo 2010
-        - CordCo\r\n -  Stark Expo 2010 - Fujikawa\r\n -  Stark Expo 2010 - Better
-        Living Through Technology\r\n -  Stark Expo 2010 - Accutech\r\n\r\nThey take
-        place during Iron Man 2 and you can easily find them by googling for them.\r\n\r\n**Peggy
-        Carter’s** 1953 Smithsonian Interview - Where Carter is being interviewed
-        about Steve Rogers (can be found at youtube)\r\n\r\n**S.H.I.E.L.D** spin-off
-        mini-series **Slingshot** can be found at ABC''s youtube channel. \r\n\r\n**Peter''s
-        To-Do List** (Short Film - Spider-Man: Far From Home - Blu-Ray) - short extra
-        clip when Peter is picking up his passport.\r\n\r\n**Novels**:\r\n\r\n- **Captain
-        Marvel Vol. 1:** Higher, Further, Faster, More\r\n- **Marvel''s Captain Marvel:**
-        Starforce on the Rise\r\n- **Marvel''s Avengers: Infinity War:** The Heroes''
-        Journey\r\n- **Ant-Man and the Wasp** - The Heroes'' Journey\r\n- **Marvel''s
-        Avengers: Infinity War:** The Cosmic Quest Vol. 1: Beginning\r\n- **Marvel''s
-        Avengers: Endgame:** The Pirate Angel, the Talking Tree, and Captain Rabbit\r\n-
-        **Avengers - Infinity War:** The Cosmic Quest - Volume Two: Aftermath\r\n-
-        **Spider-Man - Far From Home:** Peter and Ned''s Ultimate Travel Journal\r\n\r\n-----------------------------------------------------------------------------\r\n_(haven''t
-        updated the tie-in comics)_\r\n_**Marvel Cinematic Universe** (#1-4) tie-in
-        comics_ :\r\n\r\n- **Avengers: Road to Marvel''s The Avengers**:\r\n - Iron
-        Man: I Am Iron Man! #1-2\r\n - Iron Man 2: Public Identity #1-3\r\n - Iron
-        Man 2: Agents of S.H.I.E.L.D. #1\r\n - Captain America: First Vengeance #1-4\r\n-
-        **Marvel''s The Avengers Prelude: Fury''s Big Week**:\r\n - The Avengers -
-        Prelude: Fury''s Big Week #1-4\r\n- **Marvel''s The Avengers Prelude: Black
-        Widow Strikes**:\r\n - The Avengers - Prelude: Black Widow Strikes #1-3\r\n-
-        **Marvel''s Iron Man 3 Prelude**:\r\n - Iron Man 2 Adaptation #1-2\r\n - Iron
-        Man 3 Prelude #1-2\r\n- **Marvel''s Thor: The Dark World Prelude**:\r\n -
-        Thor Adaptation #1-2\r\n - Thor: The Dark World Prelude #1-2\r\n- **Marvel''s
-        Captain America: The Winter Soldier Prelude**:\r\n - Captain America: The
-        First Avenger Adaptation #1-2\r\n - Captain America: The Winter Soldier Infinite
-        #1\r\n- **Marvel''s Guardians of the Galaxy Prelude**:\r\n - Guardians of
-        the Galaxy – _Dangerous Prey Infinite #1_\r\n - Guardians of the Galaxy Prelude
-        #1-2\r\n- **Marvel''s Avengers: Age of Ultron Prelude**:\r\n - The Avengers
-        Adaptation #1-2\r\n - Avengers: Age of Ultron – _This Sceptre''d Isle Infinite
-        #1_\r\n- **Marvel''s Ant-Man Prelude**:\r\n - Ant-Man Prelude #1-2\r\n - Ant-Man
-        – Scott Lang: Small Time Infinite #1\r\n- **Marvel''s Jessica Jones Prelude**:\r\n
-        - Marvel''s Jessica Jones #1\r\n- **Captain America: Civil War Prelude**:\r\n
-        - Captain America: Civil War Prelude #1-4\r\n - Captain America: Civil War
-        Prelude Infinite #1\r\n- **Doctor Strange Prelude**:\r\n - Marvel''s Doctor
-        Strange Prelude #1-2\r\n - Marvel''s Doctor Strange Prelude Infinite Comic
-        – The Zealot #1\r\n- **Guardians of the Galaxy Vol. 2 Prelude**:\r\n - Marvel''s
-        Guardians of the Galaxy Vol. 2 Prelude #1-2\r\n- **Spider-Man: Homecoming
-        Prelude**:\r\n - Spider-Man: Homecoming Prelude #1-2\r\n- **Thor: Ragnarok
-        Prelude**:\r\n - Marvel''s Thor: Ragnarok Prelude #1-4\r\n- **Marvel''s Black
-        Panther Prelude**:\r\n - Marvel''s Black Panther Prelude #1-2\r\n- **Marvel''s
-        Avengers: Infinity War Prelude**:\r\n - Avengers - Infinity War: Prelude #1-2\r\n-
-        **Ant-Man and the Wasp Prelude**:\r\n - Ant-Man and the Wasp - Prelude #1-2\r\n-
-        **Captain Marvel Prelude**:\r\n - Marvel''s Captain Marvel Prelude #1\r\n-
-        **Avengers: Endgame Prelude **:\r\n - Avengers: Endgame Prelude #1-3\r\n-
-        **Spider-Man: Far From Home Prelude**:\r\n - Spider-Man: Far From Home Prelude
-        #1-2\r\n- **Black Widow: Prelude**:\r\n - Black Widow: Prelude #1-2\r\n\r\n\r\n-----------------------------------------------------------------------------","privacy":"public","share_link":"https://trakt.tv/lists/1248149","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-16T14:59:57.000Z","updated_at":"2026-05-24T12:49:48.000Z","item_count":216,"comment_count":35,"likes":5089,"ids":{"trakt":1248149,"slug":"marvel-cinematic-universe"},"user":{"username":"Donxy","private":false,"deleted":false,"name":"Donxy","vip":false,"vip_ep":true,"director":false,"ids":{"slug":"donxy"}}}},{"like_count":5111,"comment_count":6,"list":{"name":"IMDB:
-        Top Rated Movies","description":"Top 250 movies, as rated by regular IMDB
-        voters. List updated daily.","privacy":"public","share_link":"https://trakt.tv/lists/2142753","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T20:13:18.000Z","updated_at":"2026-05-24T11:05:56.000Z","item_count":250,"comment_count":6,"likes":5111,"ids":{"trakt":2142753,"slug":"imdb-top-rated-movies"},"user":{"username":"justin","private":false,"deleted":false,"name":"Justin","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}},{"like_count":3898,"comment_count":0,"list":{"name":"IMDB:
-        Top Rated TV Shows","description":"Top 250 TV shows, as rated by IMDB members.  List
-        updated daily.","privacy":"public","share_link":"https://trakt.tv/lists/2143363","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T23:10:50.000Z","updated_at":"2026-05-24T11:06:07.000Z","item_count":241,"comment_count":0,"likes":3898,"ids":{"trakt":2143363,"slug":"imdb-top-rated-tv-shows"},"user":{"username":"justin","private":false,"deleted":false,"name":"Justin","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}},{"like_count":3586,"comment_count":69,"list":{"name":"Best
-        Mindfucks","description":"What’s a mindfuck? A movie that plays with your
-        mind, confuses you, and leads you on. It’s not just a movie with a twist ending.
-        Mindfucks are borderline-incoherent, dreamlike, and surreal.","privacy":"public","share_link":"https://trakt.tv/lists/800238","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2012-06-30T23:29:30.000Z","updated_at":"2026-05-24T12:49:24.000Z","item_count":116,"comment_count":69,"likes":3586,"ids":{"trakt":800238,"slug":"best-mindfucks"},"user":{"username":"BenFranklin","private":false,"deleted":false,"name":"Ben","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"benfranklin"}}}},{"like_count":2742,"comment_count":5,"list":{"name":"1001
-        Greatest Movies of All Time","description":"/u/StopReadinMyUsername on reddit
-        combined the average ratings (Critic''s \u0026 Users) from IMDb, Rotten Tomatoes,
-        Metacritic and Letterboxd, and then weighted and tweaked the results with
-        general film data from iCheckMovies and IMDb to reveal the 1001 Greatest Movies
-        of All Time.\r\n\r\nsource: http://redd.it/3hbiio","privacy":"public","share_link":"https://trakt.tv/lists/1282987","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-28T22:49:33.000Z","updated_at":"2026-05-24T11:06:36.000Z","item_count":1001,"comment_count":5,"likes":2742,"ids":{"trakt":1282987,"slug":"1001-greatest-movies-of-all-time"},"user":{"username":"captainnapalm","private":false,"deleted":false,"name":"Brendan
-        Berg","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"captainnapalm"}}}},{"like_count":2532,"comment_count":8,"list":{"name":"1001
-        Movies You Must See Before You Die","description":"\u003e 1001 Movies You
-        Must See Before You Die is a film reference book edited by Steven Jay Schneider
-        with original essays on each film contributed by over 70 film critics. \r\n\r\nSource:
-        `http://en.wikipedia.org/wiki/1001_Movies_You_Must_See_Before_You_Die`\r\n\r\nEdit
-        2024: I''ve added this list in years ago but it got surprisingly popular on
-        trakt. For prosperity sake: I don''t remember the edition of the book... it
-        is an inconsistent mix up to the 5th edition which was published in 2008.","privacy":"public","share_link":"https://trakt.tv/lists/805405","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2013-01-06T20:11:36.000Z","updated_at":"2026-05-24T07:30:31.000Z","item_count":1002,"comment_count":8,"likes":2532,"ids":{"trakt":805405,"slug":"1001-movies-you-must-see-before-you-die"},"user":{"username":"sp1ti","private":false,"deleted":false,"name":"sp1ti","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"sp1ti"}}}},{"like_count":2026,"comment_count":7,"list":{"name":"Mindfuck","description":"The
-        objective of this Collection are Movies with:\r\n\r\n\u003e Complex plot\r\n\u003e
-        Big plot twist.\r\n\u003e Ending twist\r\n\r\n*Pulled from PTP collection*","privacy":"public","share_link":"https://trakt.tv/lists/4778265","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"popularity","sort_how":"desc","created_at":"2018-05-04T18:02:13.000Z","updated_at":"2026-05-24T07:34:43.000Z","item_count":315,"comment_count":7,"likes":2026,"ids":{"trakt":4778265,"slug":"mindfuck"},"user":{"username":"lish408","private":false,"deleted":false,"name":"LISH","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"lish408"}}}},{"like_count":1834,"comment_count":31,"list":{"name":"Great
-        Movies You May Have Never Heard Of","description":"Every year there are a
-        huge number of movies that fly right under the radar of the average movie
-        fan. movies that are great but just not that well known.\n\nThere are plenty
-        of movie gems out there and hopefully this list will help you find some.\n\nFeel
-        free to submit new movies in the comments below.\n\nThis list contains movies/documentaries
-        and short films. The list was originally created on IMDb. http://goo.gl/gHles\n","privacy":"public","share_link":"https://trakt.tv/lists/808094","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2013-03-14T15:52:29.000Z","updated_at":"2026-05-22T13:22:01.000Z","item_count":443,"comment_count":31,"likes":1834,"ids":{"trakt":808094,"slug":"great-movies-you-may-have-never-heard-of"},"user":{"username":"_aenema","private":false,"deleted":false,"name":"Lars","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"_aenema"}}}},{"like_count":1729,"comment_count":4,"list":{"name":"DC
-        Universe","description":"","privacy":"public","share_link":"https://trakt.tv/lists/1257909","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-21T06:56:44.000Z","updated_at":"2026-05-24T12:53:32.000Z","item_count":15,"comment_count":4,"likes":1729,"ids":{"trakt":1257909,"slug":"dc-universe"},"user":{"username":"Tetharion","private":false,"deleted":false,"name":"Tetharion","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"tetharion"}}}},{"like_count":1628,"comment_count":11,"list":{"name":"Star
-        Wars Canon timeline","description":"Timeline of all movies and series that
-        are considered Canon.\r\n\r\nThis includes all Saga Episodes (Ep. I-IX), Series
-        (The Clone Wars, Rebels, The Mandalorian, Andor, etc.), Web-Series and shorts
-        (Forces of Destiny, Galaxy of Adventures, etc.) and spin-off movies (Rogue
-        One, Solo, etc.)\r\n\r\nBased off Wookieepedia''s Canon media timeline https://starwars.fandom.com/wiki/Timeline_of_canon_media\r\n\r\nLast
-        updated: April 3, 2023","privacy":"public","share_link":"https://trakt.tv/lists/2233867","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-05-05T08:45:55.000Z","updated_at":"2026-05-24T13:35:04.000Z","item_count":330,"comment_count":11,"likes":1628,"ids":{"trakt":2233867,"slug":"star-wars-canon-timeline"},"user":{"username":"SonicWarrior","private":false,"deleted":false,"name":"Sonic","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"sonicwarrior"}}}}]'
-  recorded_at: 2026-05-24 13:42:18
-- request:
-    method: GET
-    uri: https://api.trakt.tv/lists/trending?limit=10
-  response:
-    status: 200
-    headers:
-      date: Sun, 24 May 2026 13:42:19 GMT
-      content-type: application/json; charset=utf-8
-      cf-ray: a00cb9102f408f37-AMS
-      cf-cache-status: DYNAMIC
-      access-control-allow-origin: '*'
-      cache-control: max-age=300, public
-      content-encoding: gzip
-      etag: W/"edc0b738e93c8254d558e604525489a5"
-      expires: Sun, 24 May 2026 13:47:18 GMT
+      content-encoding: br
       server: cloudflare
-      vary: Accept-Encoding, Origin
-      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
-      referrer-policy: strict-origin-when-cross-origin
-      x-content-type-options: nosniff
-      x-download-options: noopen
-      x-frame-options: SAMEORIGIN
-      x-pagination-item-count: '5532'
-      x-pagination-limit: '10'
-      x-pagination-page: '1'
-      x-pagination-page-count: '554'
-      x-permitted-cross-domain-policies: none
-      x-request-id: 47b29638-c570-4f62-9c91-3f49534003c7
-      x-runtime: '0.192242'
-      x-xss-protection: '0'
-      speculation-rules: '"/cdn-cgi/speculation"'
+      cf-ray: a148ba057faf88e9-AMS
     body:
-      string: '[{"like_count":60,"comment_count":0,"list":{"name":"IMDB: Top Rated
+      string: '[{"like_count":4833,"comment_count":6,"list":{"name":"IMDB: Top Rated
         Movies","description":"Top 250 movies, as rated by regular IMDB voters. List
-        updated daily.","privacy":"public","share_link":"https://trakt.tv/lists/2142753","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T20:13:18.000Z","updated_at":"2026-05-24T11:05:56.000Z","item_count":250,"comment_count":6,"likes":5111,"ids":{"trakt":2142753,"slug":"imdb-top-rated-movies"},"user":{"username":"justin","private":false,"deleted":false,"name":"Justin","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}},{"like_count":49,"comment_count":0,"list":{"name":"IMDB:
-        Top Rated TV Shows","description":"Top 250 TV shows, as rated by IMDB members.  List
-        updated daily.","privacy":"public","share_link":"https://trakt.tv/lists/2143363","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T23:10:50.000Z","updated_at":"2026-05-24T11:06:07.000Z","item_count":241,"comment_count":0,"likes":3898,"ids":{"trakt":2143363,"slug":"imdb-top-rated-tv-shows"},"user":{"username":"justin","private":false,"deleted":false,"name":"Justin","vip":true,"vip_ep":true,"director":true,"ids":{"slug":"justin"}}}},{"like_count":39,"comment_count":0,"list":{"name":"2026
-        Digitally Released Movies","description":"**May**\r\n23 - Rondallas AKA Band
-        Together\r\n23 - Sick Puppy\r\n22 - Ladies First\r\n21 - Say Less\r\n20 -
-        Paradis AKA The Last Resort \r\n20 - Jack Ryan: Ghost War\r\n19 - Mile End
-        Kicks\r\n19 - Mother Mary\r\n19 - Normal\r\n18 - Lee Cronin''s The Mummy\r\n15
-        - Driver''s Ed\r\n15 - An Enemy Within\r\n13 - A Marvel Television Special
-        Presentation - The Punisher: One Last Kill\r\n12 - You, Me \u0026 Tuscany\r\n12
-        - The Christophers\r\n12 - Addition\r\n12 - Faces of Death\r\n9 - Project
-        Hail Mary\r\n8 - Couples Weekend\r\n8 - Remarkably Bright Creatures\r\n8 -
-        Broad Trip\r\n8 - Beast\r\n8 - Fantasy Life\r\n8 - Non è un paese per single
-        AKA No Place to Be Single\r\n7 - My Dearest Assassin\r\n5 - The Drama\r\n4
-        - El Susurro AKA The Whisper\r\n4 - Ready or Not 2: Here I Come\r\n4 - Death
-        Cycle\r\n1 - Hamlet\r\n1 - You’re Dating a Narcissist!\r\n1 - Solomamma\r\n1
-        - Frontera AKA Frontier \r\n1 - You, Always\r\n\r\n**April**\r\n30 - Kraken\r\n29
-        - Je m''appelle Agneta\r\n28 - She Dances\r\n28 - No Ordinary Heist\r\n28
-        - Forbidden Fruits\r\n27 - They Will Kill You\r\n24 - Apex\r\n24 - The Wolf
-        and The Lamb\r\n24 - Dirty Hands\r\n21 - Tow\r\n17 -  La caja azul AKA Blue
-        Box\r\n17  - L''Âme idéale AKA You Found Me\r\n17 - Hollywood Grit\r\n17 -
-        Brothers Under Fire\r\n17 - Ballistic\r\n17 - The Whistler\r\n17 - The Napa
-        Boys\r\n17 - Roommates\r\n17 - Venganza AKA Revenge\r\n15 - Balls Up\r\n14
-        - Slanted\r\n14 - undertone\r\n14 - The Gates\r\n14 - The Highest Stakes\r\n13
-        - Reminders of Him\r\n11 - Winterset\r\n10 - Thrash AKA Shiver\r\n10 - The
-        Yeti\r\n10 - Infiltrate\r\n10 - Outcome\r\n9 - Mudborn\r\n8 - Wasteman\r\n8
-        - Out Standing\r\n7 - Psycho Killer\r\n6 - Bone Keeper\r\n6 - The Bride!\r\n3
-        - Step Back, Doors Closing\r\n3 - Pizza Movie\r\n3 - Feel My Voice\r\n2 -
-        Touch Me\r\n1 - Crime 101\r\n\r\n**March**\r\n31 - Scream 7\r\n30 - Avatar:
-        Fire and Ash\r\n29 - “Wuthering Heights”\r\n27  - The Virgin of the Quarry
-        Lake\r\n27 - Wardriver\r\n27 - Refuge\r\n27 - The Mortuary Assistant\r\n27
-        - Mike \u0026 Nick \u0026 Nick \u0026 Alice\r\n26 - The Red Line\r\n25 - Protector\r\n25
-        - Pretty Lethal\r\n24 - Poet\r\n24 - How to Make a Killing\r\n24 - I Can Only
-        Imagine 2\r\n23 - Send Help\r\n20 - The Fires\r\n20 - Zeta\r\n20 - Peaky Blinders:
-        The Immortal Man\r\n20 - Do Not Enter\r\n20 - The Well\r\n20 - The Cure\r\n19
-        - Dossier 137 AKA Case 137\r\n17 - Parecido a un asesinato AKA Hidden Murder\r\n17
-        - Magalhães AKA Magellan\r\n17 - Preschool\r\n13 - Mexicali\r\n13 - This Is
-        Not a Test\r\n10 - Solo Mio\r\n10 - Good Luck, Have Fun, Don''t Die\r\n10
-        - The Testament of Ann Lee\r\n8 - Los Tigres\r\n8 - The Hermit\r\n7 - Subsuelo\r\n7
-        - Allly baqi mink AKA All That''s Left of You\r\n7 - Down to the Felt\r\n6
-        - War Machine\r\n6 - Heel AKA Good Boy\r\n6 - Mother''s Baby\r\n6 - Cold Storage\r\n6
-        - The Strangers: Chapter 3\r\n5 - Breve storia d''amore AKA A Brief Affair\r\n5
-        - Hell in Paradise\r\n5 - La Trequa AKA The Truce\r\n3 - The Chronology of
-        Water\r\n3 - A Private Life\r\n3 - Whistle\r\n\r\n**February**\r\n28 - Giant\r\n27
-        - Squali\r\n27 - In the Blink of an Eye\r\n27 - Father Mother Sister Brother\r\n27
-        - Noseeums\r\n27 - Atropia\r\n25 - The Bluff\r\n24 - In Cold Light\r\n24 -
-        Dead Man''s Wire\r\n24 - Shelter\r\n24 - Return to Silent Hill\r\n24 - H Is
-        for Hawk\r\n24 - Ice Skater AKA The Drift\r\n23 - Starbright\r\n20 - Singular\r\n20
-        - Cortafuego AKA Firebreak\r\n20 - Last Ride AKA A Rare Grand Alignment\r\n20
-        - One Mile: Chapter One\r\n20 - One Mile: Chapter Two\r\n20 - The Dreadful\r\n19
-        - La petite dernière AKA The Little Sister\r\n18 - Diabolic\r\n17 - Sheepdog\r\n17
-        - Me has robado el corazón AKA You Stole My Heart\r\n17 - Hellfire \r\n17
-        - Mercy\r\n17 - 28 Years Later: The Bone Temple\r\n16 - Ghost  Train\r\n13
-        - Honey Bunch\r\n13 - Love Me, Love Me\r\n13 - Benji''s Hour\r\n13 - Sweetness\r\n12
-        - Deux pianos AKA Two Pianos\r\n11 - Reckless\r\n10 - I Was A Stranger\r\n10
-        - Is This Thing On?\r\n10 - Bight\r\n10 - Amrum\r\n10 - Primate\r\n10 - Rosemead\r\n10
-        - The Huntsman\r\n10 - Night Patrol\r\n10 - Misdirection\r\n9 - Marty Supreme\r\n8
-        - Teacher''s Pet\r\n7 - F Valentine''s Day \r\n6 - Redux Redux\r\n6 - The
-        Arborist\r\n6 - Twisted\r\n4 - Relationship Goals\r\n3 - The Morrigan\r\n3
-        - The Secret Agent\r\n3 - The Housemaid\r\n3 - The Dutchman\r\n3 - Hamnet\r\n3
-        - We Bury the Dead\r\n3 - The Plague\r\n2 - Lure \r\n2 - Nachtvlinders AKA
-        Night Creatures\r\n2 -  Det nye år AKA To New Beginnings\r\n\r\n**January:**\r\n31
-        - Tormento\r\n30 - Portal in the Pines\r\n30 - My Sister''s Bones\r\n30 -
-        Pike River\r\n29 - Smukkere AKA Pretty Young Love\r\n29 - Mountain King\r\n28
-        - The Wrecking Crew\r\n27 - Untitled Home Invasion Romance\r\n27 - Greenland
-        2: Migration\r\n27 - Anaconda\r\n26 - Silent Night, Deadly Night \r\n26 -
-        Ella McCay\r\n23 - Grizzly Night\r\n23 - Black Spines\r\n23 - The Big Fake\r\n23
-        - Jack And Ava\r\n22 - Vi dör i natt AKA We Die Tonight\r\n20 - The Calling
-        Witch\r\n20 - Chien 51 AKA Dog 51\r\n20 - The Eye\r\n20 - Savage Flowers\r\n19
-        - The Shrinking Man\r\n18 - In die Sonne schauen AKA Sound of Falling\r\n17
-        - 7 steg AKA 7 Steps\r\n17 - Dalloway AKA The Residence\r\n16  - El cautivo
-        AKA The Captive\r\n16 - The Rip\r\n16 - The Confession\r\n16 - Killer Whale\r\n15
-        - Vieja loca AKA Crazy Old Lady\r\n14 - Beneath the Light\r\n13 - Space/Time\r\n13
-        - The Internship\r\n13 - Rebuilding\r\n13 - Song Sung Blue\r\n13 - Dust Bunny\r\n13
-        - Rental Family\r\n12 - Pillion\r\n12 - Relentless\r\n9 - Kevlarsjäl AKA Kevlar
-        Soul\r\n9 - People We Meet on Vacation\r\n9 - Sleepwalker\r\n9 - Bulls\r\n8
-        - Play Dead\r\n8 - Parable\r\n6 - Self-Help\r\n6 - Joe Baby\r\n6 - Not Without
-        Hope\r\n5 - Predator: Badlands\r\n3 - No Me Sigas AKA Don''t Follow Me\r\n3
-        - Oscar Shaw\r\n2 - The Chaperone\r\n2 - Der Tiger AKA The Tank\r\n2 - Sigue
-        mi voz AKA Follow My Voice","privacy":"public","share_link":"https://trakt.tv/lists/27019914","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"desc","created_at":"2024-02-07T17:34:15.000Z","updated_at":"2026-05-24T11:06:24.000Z","item_count":233,"comment_count":0,"likes":519,"ids":{"trakt":27019914,"slug":"2026-digitally-released-movies"},"user":{"username":"Dracid7","private":false,"deleted":false,"name":"Dracid","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"dracid7"}}}},{"like_count":39,"comment_count":0,"list":{"name":"MARVEL
+        updated daily.","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T20:13:18.000Z","updated_at":"2026-07-01T17:43:40.000Z","item_count":250,"comment_count":6,"likes":4833,"ids":{"slug":"imdb-top-rated-movies","trakt":2142753},"images":{"posters":["media.trakt.tv/images/movies/000/000/234/posters/medium/a97015926b.jpg.webp","media.trakt.tv/images/movies/000/000/196/posters/medium/4436e95fee.jpg.webp","media.trakt.tv/images/movies/000/000/120/posters/medium/8369bf0d4a.jpg.webp","media.trakt.tv/images/movies/000/000/198/posters/medium/f7cd5ab346.jpg.webp","media.trakt.tv/images/movies/000/000/309/posters/medium/0f0ddf5ef5.jpg.webp","media.trakt.tv/images/movies/000/000/090/posters/medium/308c97714c.jpg.webp","media.trakt.tv/images/movies/000/000/336/posters/medium/ea3fe02622.jpg.webp","media.trakt.tv/images/movies/000/000/088/posters/medium/73a273048f.jpg.webp","media.trakt.tv/images/movies/000/000/554/posters/medium/354f1c9483.jpg.webp","media.trakt.tv/images/movies/000/000/341/posters/medium/127b564deb.jpg.webp"]},"user":{"ids":{"slug":"justin","trakt":1},"images":{"avatar":{"full":"https://media.trakt.tv/images/admins/000/000/001/avatars/medium/2e6df69058.jpg"}},"username":"justin","private":false,"deleted":false,"joined_at":"2010-09-25T17:49:25.000Z","location":"United
+        States","about":"Do the truffle shuffle!!","name":"Justin","gender":"male","age":44,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":true}}},{"like_count":4509,"comment_count":35,"list":{"name":"MARVEL
         Cinematic Universe","description":"**UPDATED** _2024-01-19_\r\n**Chronological
         order**                                                                                                             \r\n\r\n_(If
         you are new to MCU, then you should start with; Iron Man, The Incredible Hulk,\r\n                                                                                                                    Iron
@@ -256,7 +42,7 @@ http_interactions:
         Cage_\r\n -  _**Marvel''s** Iron Fist_\r\n -  _**Marvel''s** Defenders_\r\n  -  _**Marvel''s**
         The Punisher_\r\n- **ABC**\r\n - _**Marvel''s** Inhumans_\r\n -  _**Marvel''s**
         Agent Carter_\r\n - _**Marvel''s** Agents of S.H.I.E.L.D._\r\n- **Hulu**\r\n
-        - _**Marvel''s** Runaways_\r\n- **Freeform**\r\n - _**Marvel''s** Cloak \u0026
+        - _**Marvel''s** Runaways_\r\n- **Freeform**\r\n - _**Marvel''s** Cloak &
         Dagger_\r\n\r\n-----------------------------------------------------------------------------\r\n\r\n**Stark
         Expo 1974** - commercial for Stark Expo 1974 in Flushing Meadows in New York.\r\nThere
         are four different **Stark Expo 2010** videos:\r\n\r\n -  Stark Expo 2010
@@ -307,25 +93,166 @@ http_interactions:
         **Captain Marvel Prelude**:\r\n - Marvel''s Captain Marvel Prelude #1\r\n-
         **Avengers: Endgame Prelude **:\r\n - Avengers: Endgame Prelude #1-3\r\n-
         **Spider-Man: Far From Home Prelude**:\r\n - Spider-Man: Far From Home Prelude
-        #1-2\r\n- **Black Widow: Prelude**:\r\n - Black Widow: Prelude #1-2\r\n\r\n\r\n-----------------------------------------------------------------------------","privacy":"public","share_link":"https://trakt.tv/lists/1248149","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-16T14:59:57.000Z","updated_at":"2026-05-24T12:49:48.000Z","item_count":216,"comment_count":35,"likes":5089,"ids":{"trakt":1248149,"slug":"marvel-cinematic-universe"},"user":{"username":"Donxy","private":false,"deleted":false,"name":"Donxy","vip":false,"vip_ep":true,"director":false,"ids":{"slug":"donxy"}}}},{"like_count":38,"comment_count":0,"list":{"name":"Best
+        #1-2\r\n- **Black Widow: Prelude**:\r\n - Black Widow: Prelude #1-2\r\n\r\n\r\n-----------------------------------------------------------------------------","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-16T14:59:57.000Z","updated_at":"2026-07-01T20:36:01.000Z","item_count":216,"comment_count":35,"likes":4509,"ids":{"slug":"marvel-cinematic-universe","trakt":1248149},"images":{"posters":["media.trakt.tv/images/movies/000/001/170/posters/medium/04fa05d153.jpg.webp","media.trakt.tv/images/seasons/000/083/598/posters/medium/df0f98646d.jpg.webp","media.trakt.tv/images/seasons/000/110/761/posters/medium/1d8236d65d.jpg.webp","media.trakt.tv/images/movies/000/130/811/posters/medium/e0a8198730.jpg.webp","media.trakt.tv/images/seasons/000/372/372/posters/medium/197a453932.jpg.webp","media.trakt.tv/images/movies/000/193/963/posters/medium/686e39e597.jpg.webp","media.trakt.tv/images/movies/000/001/157/posters/medium/b0158ecb11.jpg.webp","media.trakt.tv/images/seasons/000/372/372/posters/medium/197a453932.jpg.webp","media.trakt.tv/images/seasons/000/372/372/posters/medium/197a453932.jpg.webp","media.trakt.tv/images/seasons/000/372/372/posters/medium/197a453932.jpg.webp"]},"user":{"ids":{"slug":"donxy","trakt":879337},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/879/337/avatars/medium/467a0229e9.jpg"}},"username":"Donxy","private":false,"deleted":false,"joined_at":"2015-02-11T08:50:52.000Z","location":"Sweden","about":"Just
+        a guy who is addicted to TV-series and movies!","name":"Donxy","gender":"male","age":31,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":3660,"comment_count":0,"list":{"name":"IMDB:
+        Top Rated TV Shows","description":"Top 250 TV shows, as rated by IMDB members.  List
+        updated daily.","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T23:10:50.000Z","updated_at":"2026-07-01T21:27:50.000Z","item_count":241,"comment_count":0,"likes":3660,"ids":{"slug":"imdb-top-rated-tv-shows","trakt":2143363},"images":{"posters":["media.trakt.tv/images/shows/000/001/388/posters/medium/fa39b59954.jpg.webp","media.trakt.tv/images/shows/000/112/332/posters/medium/705982b951.jpg.webp","media.trakt.tv/images/shows/000/001/039/posters/medium/08d148a6b6.jpg.webp","media.trakt.tv/images/shows/000/004/589/posters/medium/af60910b63.jpg.webp","media.trakt.tv/images/shows/000/145/186/posters/medium/8aefeb9e42.jpg.webp","media.trakt.tv/images/shows/000/001/429/posters/medium/bc28def267.jpg.webp","media.trakt.tv/images/shows/000/000/245/posters/medium/bf32affca0.jpg.webp","media.trakt.tv/images/shows/000/001/389/posters/medium/4d97f66ec7.jpg.webp","media.trakt.tv/images/shows/000/121/463/posters/medium/b74385ede3.jpg.webp","media.trakt.tv/images/shows/000/071/041/posters/medium/6a4e6534d0.jpg.webp"]},"user":{"ids":{"slug":"justin","trakt":1},"images":{"avatar":{"full":"https://media.trakt.tv/images/admins/000/000/001/avatars/medium/2e6df69058.jpg"}},"username":"justin","private":false,"deleted":false,"joined_at":"2010-09-25T17:49:25.000Z","location":"United
+        States","about":"Do the truffle shuffle!!","name":"Justin","gender":"male","age":44,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":true}}},{"like_count":3427,"comment_count":69,"list":{"name":"Best
         Mindfucks","description":"What’s a mindfuck? A movie that plays with your
         mind, confuses you, and leads you on. It’s not just a movie with a twist ending.
-        Mindfucks are borderline-incoherent, dreamlike, and surreal.","privacy":"public","share_link":"https://trakt.tv/lists/800238","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2012-06-30T23:29:30.000Z","updated_at":"2026-05-24T12:49:24.000Z","item_count":116,"comment_count":69,"likes":3586,"ids":{"trakt":800238,"slug":"best-mindfucks"},"user":{"username":"BenFranklin","private":false,"deleted":false,"name":"Ben","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"benfranklin"}}}},{"like_count":34,"comment_count":0,"list":{"name":"True
-        Crime Documentary Series \u0026 Film","description":"This isn''t intended
-        to be a comprehensive list. I''m just going to be periodically updating this
-        list with titles from the following IMDB search parameters:\r\n\r\nhttps://www.imdb.com/search/title/?title_type=feature,tv_movie,tv_series,tv_episode,tv_special,tv_miniseries,documentary,short,tv_short\u0026genres=crime,documentary\r\n\r\nUPDATED:
-        May 18, 2026","privacy":"public","share_link":"https://trakt.tv/lists/11416887","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2020-04-22T16:53:27.000Z","updated_at":"2026-05-24T12:50:04.000Z","item_count":495,"comment_count":6,"likes":1544,"ids":{"trakt":11416887,"slug":"true-crime-documentary-series-film"},"user":{"username":"lish408","private":false,"deleted":false,"name":"LISH","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"lish408"}}}},{"like_count":28,"comment_count":0,"list":{"name":"Disney_Films","description":"All
-        films listed here:\r\n http://disney.wikia.com/wiki/List_of_Disney_theatrical_animated_features\r\n\r\nUPDATED:
-        7/28/21","privacy":"public","share_link":"https://trakt.tv/lists/22888726","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2022-01-15T18:11:56.000Z","updated_at":"2026-05-24T11:07:04.000Z","item_count":164,"comment_count":0,"likes":158,"ids":{"trakt":22888726,"slug":"disney_films"},"user":{"username":"sargeusmc","private":false,"deleted":false,"name":"Brian
-        Shelton","vip":false,"vip_ep":false,"director":false,"ids":{"slug":"sargeusmc"}}}},{"like_count":28,"comment_count":0,"list":{"name":"Top
-        10 Pirated Movies of The Week","description":"Updated at 2026-05-24\r\n\r\nhttps://torrentfreak.com/top-10-most-torrented-pirated-movies/\r\nSource
-        code: https://github.com/linaspurinis/trakt.lists","privacy":"public","share_link":"https://trakt.tv/lists/6684844","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2019-05-16T18:22:58.000Z","updated_at":"2026-05-24T03:16:11.000Z","item_count":9,"comment_count":2,"likes":832,"ids":{"trakt":6684844,"slug":"top-10-pirated-movies-of-the-week"},"user":{"username":"linaspurinis","private":false,"deleted":false,"name":"Linas
-        Purinis","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"linaspurinis"}}}},{"like_count":28,"comment_count":0,"list":{"name":"1001
+        Mindfucks are borderline-incoherent, dreamlike, and surreal.","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2012-06-30T23:29:30.000Z","updated_at":"2026-07-01T18:57:18.000Z","item_count":116,"comment_count":69,"likes":3427,"ids":{"slug":"best-mindfucks","trakt":800238},"images":{"posters":["media.trakt.tv/images/movies/000/016/662/posters/medium/1fb1d284b7.jpg.webp","media.trakt.tv/images/shows/000/004/583/posters/medium/197c82a123.jpg.webp","media.trakt.tv/images/movies/000/000/432/posters/medium/7eb46b87e2.jpg.webp","media.trakt.tv/images/movies/000/000/590/posters/medium/a1996f1c30.jpg.webp","media.trakt.tv/images/movies/000/000/047/posters/medium/45d6e27ad3.jpg.webp","media.trakt.tv/images/movies/000/008/537/posters/medium/b2609428dc.jpg.webp","media.trakt.tv/images/movies/000/000/358/posters/medium/7e3c70b4c6.jpg.webp","media.trakt.tv/images/movies/000/000/851/posters/medium/552a055be5.jpg.webp","media.trakt.tv/images/movies/000/000/985/posters/medium/86c47ddf85.jpg.webp","media.trakt.tv/images/movies/000/006/422/posters/medium/25438cb7fa.jpg.webp"]},"user":{"ids":{"slug":"benfranklin","trakt":16751},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/9420df13eb61e539642c410a8c4f6855?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"BenFranklin","private":false,"deleted":false,"joined_at":"2011-08-25T16:22:34.000Z","location":"","about":"","name":"Ben","gender":"male","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":2626,"comment_count":5,"list":{"name":"1001
         Greatest Movies of All Time","description":"/u/StopReadinMyUsername on reddit
-        combined the average ratings (Critic''s \u0026 Users) from IMDb, Rotten Tomatoes,
+        combined the average ratings (Critic''s & Users) from IMDb, Rotten Tomatoes,
         Metacritic and Letterboxd, and then weighted and tweaked the results with
         general film data from iCheckMovies and IMDb to reveal the 1001 Greatest Movies
-        of All Time.\r\n\r\nsource: http://redd.it/3hbiio","privacy":"public","share_link":"https://trakt.tv/lists/1282987","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-28T22:49:33.000Z","updated_at":"2026-05-24T11:06:36.000Z","item_count":1001,"comment_count":5,"likes":2742,"ids":{"trakt":1282987,"slug":"1001-greatest-movies-of-all-time"},"user":{"username":"captainnapalm","private":false,"deleted":false,"name":"Brendan
-        Berg","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"captainnapalm"}}}},{"like_count":27,"comment_count":0,"list":{"name":"Sci-Fi","description":"","privacy":"public","share_link":"https://trakt.tv/lists/22537852","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2021-11-13T04:01:28.000Z","updated_at":"2026-05-24T12:50:17.000Z","item_count":1472,"comment_count":0,"likes":262,"ids":{"trakt":22537852,"slug":"sci-fi-72c81243-2a16-453c-8366-b41d86114c23"},"user":{"username":"Usiris","private":false,"deleted":false,"name":"Martin","vip":true,"vip_ep":false,"director":false,"ids":{"slug":"usiris"}}}}]'
-  recorded_at: 2026-05-24 13:42:19
+        of All Time.\r\n\r\nsource: http://redd.it/3hbiio","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-28T22:49:33.000Z","updated_at":"2026-07-01T20:03:20.000Z","item_count":1001,"comment_count":5,"likes":2626,"ids":{"slug":"1001-greatest-movies-of-all-time","trakt":1282987},"images":{"posters":["media.trakt.tv/images/movies/000/000/196/posters/medium/4436e95fee.jpg.webp","media.trakt.tv/images/movies/000/000/293/posters/medium/fabf0d90bc.jpg.webp","media.trakt.tv/images/movies/000/000/198/posters/medium/f7cd5ab346.jpg.webp","media.trakt.tv/images/movies/000/000/554/posters/medium/354f1c9483.jpg.webp","media.trakt.tv/images/movies/000/000/309/posters/medium/0f0ddf5ef5.jpg.webp","media.trakt.tv/images/movies/000/000/787/posters/medium/1492e1c960.jpg.webp","media.trakt.tv/images/movies/000/000/336/posters/medium/ea3fe02622.jpg.webp","media.trakt.tv/images/movies/000/000/477/posters/medium/8b5664e582.jpg.webp","media.trakt.tv/images/movies/000/000/675/posters/medium/d316db9cb2.jpg.webp","media.trakt.tv/images/movies/000/002/058/posters/medium/ef0599058d.jpg.webp"]},"user":{"ids":{"slug":"captainnapalm","trakt":785},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/000/785/avatars/medium/e9ee365f8f.jpg"}},"username":"captainnapalm","private":false,"deleted":false,"joined_at":"2010-12-15T21:15:27.000Z","location":"Edmonton,
+        AB","about":"","name":"Brendan Berg","gender":"male","age":43,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":2246,"comment_count":8,"list":{"name":"1001
+        Movies You Must See Before You Die","description":"> 1001 Movies You Must
+        See Before You Die is a film reference book edited by Steven Jay Schneider
+        with original essays on each film contributed by over 70 film critics. \r\n\r\nSource:
+        `http://en.wikipedia.org/wiki/1001_Movies_You_Must_See_Before_You_Die`\r\n\r\nEdit
+        2024: I''ve added this list in years ago but it got surprisingly popular on
+        trakt. For prosperity sake: I don''t remember the edition of the book... it
+        is an inconsistent mix up to the 5th edition which was published in 2008.","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2013-01-06T20:11:36.000Z","updated_at":"2026-07-01T15:25:22.000Z","item_count":1001,"comment_count":8,"likes":2246,"ids":{"slug":"1001-movies-you-must-see-before-you-die","trakt":805405},"images":{"posters":["media.trakt.tv/images/movies/000/000/618/posters/medium/c7a5fe3621.jpg.webp","media.trakt.tv/images/movies/000/003/220/posters/medium/b7bd0b2d74.jpg.webp","media.trakt.tv/images/movies/000/000/494/posters/medium/3a480cf686.jpg.webp","media.trakt.tv/images/movies/000/018/234/posters/medium/0360567df9.jpg.webp","media.trakt.tv/images/movies/000/002/035/posters/medium/313e8e8411.jpg.webp","media.trakt.tv/images/movies/000/000/192/posters/medium/37bcc48570.jpg.webp","media.trakt.tv/images/movies/000/000/742/posters/medium/95214ed88a.jpg.webp","media.trakt.tv/images/movies/000/020/178/posters/medium/eb0b147c40.jpg.webp","media.trakt.tv/images/movies/000/057/401/posters/medium/94e26f969d.jpg.webp","media.trakt.tv/images/movies/000/041/575/posters/medium/a7ea703779.jpg.webp"]},"user":{"ids":{"slug":"sp1ti","trakt":17500},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/017/500/avatars/medium/5fca448417.jpg"}},"username":"sp1ti","private":false,"deleted":false,"joined_at":"2011-09-08T20:48:11.000Z","location":"","about":"RIP
+        trakt 2010-2025. Get ready for the rug pull.\r\nI will no longer using the
+        service given it''s new insane direction. \r\nAny activity was probably not
+        done by human hand.","name":"sp1ti","gender":"","age":null,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":1868,"comment_count":7,"list":{"name":"Mindfuck","description":"The
+        objective of this Collection are Movies with:\r\n\r\n> Complex plot\r\n> Big
+        plot twist.\r\n> Ending twist\r\n\r\n*Pulled from PTP collection*","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"popularity","sort_how":"desc","created_at":"2018-05-04T18:02:13.000Z","updated_at":"2026-07-01T15:25:20.000Z","item_count":314,"comment_count":7,"likes":1868,"ids":{"slug":"mindfuck","trakt":4778265},"images":{"posters":["media.trakt.tv/images/movies/000/000/430/posters/medium/6d8e32fbaa.jpg.webp","media.trakt.tv/images/movies/000/113/759/posters/medium/b05741a22d.jpg.webp","media.trakt.tv/images/movies/000/000/338/posters/medium/409641b0ea.jpg.webp","media.trakt.tv/images/movies/000/000/422/posters/medium/bfef95c79d.jpg.webp","media.trakt.tv/images/movies/000/002/411/posters/medium/578266f103.jpg.webp","media.trakt.tv/images/movies/000/037/572/posters/medium/e1f67fab8d.jpg.webp","media.trakt.tv/images/movies/000/000/334/posters/medium/94da9dded5.jpg.webp","media.trakt.tv/images/movies/000/000/835/posters/medium/28d3763b64.jpg.webp","media.trakt.tv/images/movies/000/000/640/posters/medium/928a211e3b.jpg.webp","media.trakt.tv/images/movies/000/004/042/posters/medium/76b03e229f.jpg.webp"]},"user":{"ids":{"slug":"lish408","trakt":609065},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/609/065/avatars/medium/710c9ad583.jpg"}},"username":"lish408","private":false,"deleted":false,"joined_at":"2014-08-25T22:24:56.000Z","location":"San
+        Jose, CA","about":"","name":"LISH","gender":"male","age":41,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":1664,"comment_count":31,"list":{"name":"Great
+        Movies You May Have Never Heard Of","description":"Every year there are a
+        huge number of movies that fly right under the radar of the average movie
+        fan. movies that are great but just not that well known.\n\nThere are plenty
+        of movie gems out there and hopefully this list will help you find some.\n\nFeel
+        free to submit new movies in the comments below.\n\nThis list contains movies/documentaries
+        and short films. The list was originally created on IMDb. http://goo.gl/gHles\n","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2013-03-14T15:52:29.000Z","updated_at":"2026-06-30T00:08:21.000Z","item_count":443,"comment_count":31,"likes":1664,"ids":{"slug":"great-movies-you-may-have-never-heard-of","trakt":808094},"images":{"posters":["media.trakt.tv/images/movies/000/082/183/posters/medium/2d687fdf3f.jpg.webp","media.trakt.tv/images/movies/000/070/741/posters/medium/d889913137.jpg.webp","media.trakt.tv/images/movies/000/072/653/posters/medium/53f0c56a40.jpg.webp","media.trakt.tv/images/movies/000/018/925/posters/medium/5a40878729.jpg.webp","media.trakt.tv/images/movies/000/054/396/posters/medium/8c6ffacd31.jpg.webp","media.trakt.tv/images/movies/000/058/687/posters/medium/77c26ca242.jpg.webp","media.trakt.tv/images/movies/000/077/846/posters/medium/112dae52a3.jpg.webp","media.trakt.tv/images/movies/000/051/768/posters/medium/1e05d5815f.jpg.webp","media.trakt.tv/images/movies/000/070/372/posters/medium/8c4db0c1a8.jpg.webp","media.trakt.tv/images/movies/000/054/066/posters/medium/2809527fe4.jpg.webp"]},"user":{"ids":{"slug":"_aenema","trakt":31649},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/0b9798f5f8f15af61820efe9fab58c59?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"_aenema","private":false,"deleted":false,"joined_at":"2012-02-18T13:31:36.000Z","location":"Berlin","about":"","name":"Lars","gender":"male","age":42,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":1634,"comment_count":6,"list":{"name":"True
+        Crime Documentary Series & Film","description":"This isn''t intended to be
+        a comprehensive list. I''m just going to be periodically updating this list
+        with titles from the following [IMDB search parameters](https://www.imdb.com/search/title/?title_type=feature,tv_movie,tv_series,tv_episode,tv_special,tv_miniseries,documentary,short,tv_short&genres=crime,documentary).\r\n\r\nUPDATED:
+        June 29, 2026","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2020-04-22T16:53:27.000Z","updated_at":"2026-07-01T15:50:00.000Z","item_count":496,"comment_count":6,"likes":1634,"ids":{"slug":"true-crime-documentary-series-film","trakt":11416887},"images":{"posters":["media.trakt.tv/images/movies/001/372/949/posters/medium/a6c10a4dc8.jpg.webp","media.trakt.tv/images/movies/001/362/157/posters/medium/ef1cdb716e.jpg.webp","media.trakt.tv/images/movies/001/145/888/posters/medium/4a6a6e8ff9.jpg.webp","media.trakt.tv/images/movies/001/369/505/posters/medium/4486357fdd.jpg.webp","media.trakt.tv/images/shows/000/308/404/posters/medium/f52321de51.jpg.webp","media.trakt.tv/images/movies/000/009/489/posters/medium/1c1cd0b459.jpg.webp","media.trakt.tv/images/shows/000/094/066/posters/medium/5cb0ec9764.jpg.webp","media.trakt.tv/images/shows/000/248/773/posters/medium/793dbb939d.jpg.webp","media.trakt.tv/images/movies/000/794/001/posters/medium/f426f86022.jpg.webp","media.trakt.tv/images/movies/000/085/301/posters/medium/bb19834c4f.jpg.webp"]},"user":{"ids":{"slug":"lish408","trakt":609065},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/609/065/avatars/medium/710c9ad583.jpg"}},"username":"lish408","private":false,"deleted":false,"joined_at":"2014-08-25T22:24:56.000Z","location":"San
+        Jose, CA","about":"","name":"LISH","gender":"male","age":41,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":1541,"comment_count":4,"list":{"name":"DC
+        Universe","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-21T06:56:44.000Z","updated_at":"2026-07-01T15:25:34.000Z","item_count":15,"comment_count":4,"likes":1541,"ids":{"slug":"dc-universe","trakt":1257909},"images":{"posters":["media.trakt.tv/images/movies/000/034/507/posters/medium/a17797e710.jpg.webp","media.trakt.tv/images/movies/000/129/583/posters/medium/b66699936d.jpg.webp","media.trakt.tv/images/movies/000/193/079/posters/medium/506a6329c6.jpg.webp","media.trakt.tv/images/movies/000/192/487/posters/medium/deef7a5830.jpg.webp","media.trakt.tv/images/movies/000/094/232/posters/medium/0ea9157c32.jpg.webp","media.trakt.tv/images/movies/000/193/968/posters/medium/5aa0cc8211.jpg.webp","media.trakt.tv/images/movies/000/184/992/posters/medium/52b5f3e1f5.jpg.webp","media.trakt.tv/images/movies/000/342/639/posters/medium/9b4cbd6627.jpg.webp","media.trakt.tv/images/movies/000/311/212/posters/medium/33c6ce7c91.jpg.webp","media.trakt.tv/images/movies/000/283/364/posters/medium/988df30b60.jpg.webp"]},"user":{"ids":{"slug":"tetharion","trakt":223032},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/223/032/avatars/medium/eb729cbc20.jpg"}},"username":"Tetharion","private":false,"deleted":false,"joined_at":"2013-04-30T23:06:47.000Z","location":"Austria","about":null,"name":null,"gender":"male","age":40,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}}}]'
+  recorded_at: 2026-07-01 22:07:59
+- request:
+    method: GET
+    uri: https://api.trakt.tv/lists/trending/personal?limit=10
+  response:
+    status: 200
+    headers:
+      date: Wed, 01 Jul 2026 22:08:00 GMT
+      content-type: application/json; charset=utf-8
+      access-control-allow-origin: '*'
+      cache-control: public, max-age=600, s-maxage=3600
+      vary: query, Origin, accept-encoding
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      cache-tag: user_list,trending,resource:list:2142753,resource:list:800238,resource:list:2143363,resource:list:1282987,resource:list:22537852,resource:list:11416887,resource:list:4834057,resource:list:23438792,resource:list:1248149,resource:list:24146149,owner_id:1,owner_id:16751,owner_id:785,owner_id:949678,owner_id:609065,owner_id:8485988,owner_id:879337,owner_id:10269536
+      cf-placement: remote-ORD
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-permitted-cross-domain-policies: none
+      x-pagination-item-count: '6541'
+      x-pagination-limit: '10'
+      x-pagination-page: '1'
+      x-pagination-page-count: '655'
+      speculation-rules: '"/cdn-cgi/speculation"'
+      content-encoding: br
+      server: cloudflare
+      cf-ray: a148ba0cbbdb88e9-AMS
+    body:
+      string: '[{"like_count":59,"comment_count":0,"list":{"name":"IMDB: Top Rated
+        Movies","description":"Top 250 movies, as rated by regular IMDB voters. List
+        updated daily.","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T20:13:18.000Z","updated_at":"2026-07-01T17:43:40.000Z","item_count":250,"comment_count":6,"likes":4833,"ids":{"slug":"imdb-top-rated-movies","trakt":2142753},"images":{"posters":["media.trakt.tv/images/movies/000/000/234/posters/medium/a97015926b.jpg.webp","media.trakt.tv/images/movies/000/000/196/posters/medium/4436e95fee.jpg.webp","media.trakt.tv/images/movies/000/000/120/posters/medium/8369bf0d4a.jpg.webp","media.trakt.tv/images/movies/000/000/198/posters/medium/f7cd5ab346.jpg.webp","media.trakt.tv/images/movies/000/000/309/posters/medium/0f0ddf5ef5.jpg.webp","media.trakt.tv/images/movies/000/000/090/posters/medium/308c97714c.jpg.webp","media.trakt.tv/images/movies/000/000/336/posters/medium/ea3fe02622.jpg.webp","media.trakt.tv/images/movies/000/000/088/posters/medium/73a273048f.jpg.webp","media.trakt.tv/images/movies/000/000/554/posters/medium/354f1c9483.jpg.webp","media.trakt.tv/images/movies/000/000/341/posters/medium/127b564deb.jpg.webp"]},"user":{"ids":{"slug":"justin","trakt":1},"images":{"avatar":{"full":"https://media.trakt.tv/images/admins/000/000/001/avatars/medium/2e6df69058.jpg"}},"username":"justin","private":false,"deleted":false,"joined_at":"2010-09-25T17:49:25.000Z","location":"United
+        States","about":"Do the truffle shuffle!!","name":"Justin","gender":"male","age":44,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":true}}},{"like_count":45,"comment_count":0,"list":{"name":"Best
+        Mindfucks","description":"What’s a mindfuck? A movie that plays with your
+        mind, confuses you, and leads you on. It’s not just a movie with a twist ending.
+        Mindfucks are borderline-incoherent, dreamlike, and surreal.","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2012-06-30T23:29:30.000Z","updated_at":"2026-07-01T18:57:18.000Z","item_count":116,"comment_count":69,"likes":3427,"ids":{"slug":"best-mindfucks","trakt":800238},"images":{"posters":["media.trakt.tv/images/movies/000/016/662/posters/medium/1fb1d284b7.jpg.webp","media.trakt.tv/images/shows/000/004/583/posters/medium/197c82a123.jpg.webp","media.trakt.tv/images/movies/000/000/432/posters/medium/7eb46b87e2.jpg.webp","media.trakt.tv/images/movies/000/000/590/posters/medium/a1996f1c30.jpg.webp","media.trakt.tv/images/movies/000/000/047/posters/medium/45d6e27ad3.jpg.webp","media.trakt.tv/images/movies/000/008/537/posters/medium/b2609428dc.jpg.webp","media.trakt.tv/images/movies/000/000/358/posters/medium/7e3c70b4c6.jpg.webp","media.trakt.tv/images/movies/000/000/851/posters/medium/552a055be5.jpg.webp","media.trakt.tv/images/movies/000/000/985/posters/medium/86c47ddf85.jpg.webp","media.trakt.tv/images/movies/000/006/422/posters/medium/25438cb7fa.jpg.webp"]},"user":{"ids":{"slug":"benfranklin","trakt":16751},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/9420df13eb61e539642c410a8c4f6855?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"BenFranklin","private":false,"deleted":false,"joined_at":"2011-08-25T16:22:34.000Z","location":"","about":"","name":"Ben","gender":"male","age":null,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":37,"comment_count":0,"list":{"name":"IMDB:
+        Top Rated TV Shows","description":"Top 250 TV shows, as rated by IMDB members.  List
+        updated daily.","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2016-04-11T23:10:50.000Z","updated_at":"2026-07-01T21:27:50.000Z","item_count":241,"comment_count":0,"likes":3660,"ids":{"slug":"imdb-top-rated-tv-shows","trakt":2143363},"images":{"posters":["media.trakt.tv/images/shows/000/001/388/posters/medium/fa39b59954.jpg.webp","media.trakt.tv/images/shows/000/112/332/posters/medium/705982b951.jpg.webp","media.trakt.tv/images/shows/000/001/039/posters/medium/08d148a6b6.jpg.webp","media.trakt.tv/images/shows/000/004/589/posters/medium/af60910b63.jpg.webp","media.trakt.tv/images/shows/000/145/186/posters/medium/8aefeb9e42.jpg.webp","media.trakt.tv/images/shows/000/001/429/posters/medium/bc28def267.jpg.webp","media.trakt.tv/images/shows/000/000/245/posters/medium/bf32affca0.jpg.webp","media.trakt.tv/images/shows/000/001/389/posters/medium/4d97f66ec7.jpg.webp","media.trakt.tv/images/shows/000/121/463/posters/medium/b74385ede3.jpg.webp","media.trakt.tv/images/shows/000/071/041/posters/medium/6a4e6534d0.jpg.webp"]},"user":{"ids":{"slug":"justin","trakt":1},"images":{"avatar":{"full":"https://media.trakt.tv/images/admins/000/000/001/avatars/medium/2e6df69058.jpg"}},"username":"justin","private":false,"deleted":false,"joined_at":"2010-09-25T17:49:25.000Z","location":"United
+        States","about":"Do the truffle shuffle!!","name":"Justin","gender":"male","age":44,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":true}}},{"like_count":28,"comment_count":0,"list":{"name":"1001
+        Greatest Movies of All Time","description":"/u/StopReadinMyUsername on reddit
+        combined the average ratings (Critic''s & Users) from IMDb, Rotten Tomatoes,
+        Metacritic and Letterboxd, and then weighted and tweaked the results with
+        general film data from iCheckMovies and IMDb to reveal the 1001 Greatest Movies
+        of All Time.\r\n\r\nsource: http://redd.it/3hbiio","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-28T22:49:33.000Z","updated_at":"2026-07-01T20:03:20.000Z","item_count":1001,"comment_count":5,"likes":2626,"ids":{"slug":"1001-greatest-movies-of-all-time","trakt":1282987},"images":{"posters":["media.trakt.tv/images/movies/000/000/196/posters/medium/4436e95fee.jpg.webp","media.trakt.tv/images/movies/000/000/293/posters/medium/fabf0d90bc.jpg.webp","media.trakt.tv/images/movies/000/000/198/posters/medium/f7cd5ab346.jpg.webp","media.trakt.tv/images/movies/000/000/554/posters/medium/354f1c9483.jpg.webp","media.trakt.tv/images/movies/000/000/309/posters/medium/0f0ddf5ef5.jpg.webp","media.trakt.tv/images/movies/000/000/787/posters/medium/1492e1c960.jpg.webp","media.trakt.tv/images/movies/000/000/336/posters/medium/ea3fe02622.jpg.webp","media.trakt.tv/images/movies/000/000/477/posters/medium/8b5664e582.jpg.webp","media.trakt.tv/images/movies/000/000/675/posters/medium/d316db9cb2.jpg.webp","media.trakt.tv/images/movies/000/002/058/posters/medium/ef0599058d.jpg.webp"]},"user":{"ids":{"slug":"captainnapalm","trakt":785},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/000/785/avatars/medium/e9ee365f8f.jpg"}},"username":"captainnapalm","private":false,"deleted":false,"joined_at":"2010-12-15T21:15:27.000Z","location":"Edmonton,
+        AB","about":"","name":"Brendan Berg","gender":"male","age":43,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":25,"comment_count":1,"list":{"name":"Sci-Fi","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"released","sort_how":"desc","created_at":"2021-11-13T04:01:28.000Z","updated_at":"2026-07-01T15:48:42.000Z","item_count":1476,"comment_count":2,"likes":423,"ids":{"slug":"sci-fi-72c81243-2a16-453c-8366-b41d86114c23","trakt":22537852},"images":{"posters":["media.trakt.tv/images/shows/000/136/863/posters/medium/6eb02ad8cd.jpg.webp","media.trakt.tv/images/shows/000/152/958/posters/medium/e355fd2f88.jpg.webp","media.trakt.tv/images/shows/000/147/922/posters/medium/d31e283740.jpg.webp","media.trakt.tv/images/shows/000/129/197/posters/medium/db8be33b7c.jpg.webp","media.trakt.tv/images/shows/000/144/126/posters/medium/b9b0fe9f0c.jpg.webp","media.trakt.tv/images/shows/000/147/011/posters/medium/a3c0984c2d.jpg.webp","media.trakt.tv/images/shows/000/171/129/posters/medium/85ce4b4a01.jpg.webp","media.trakt.tv/images/shows/000/181/803/posters/medium/d66dd6b197.jpg.webp","media.trakt.tv/images/shows/000/169/009/posters/medium/17785b3497.jpg.webp","media.trakt.tv/images/shows/000/173/509/posters/medium/9069fb1c11.jpg.webp"]},"user":{"ids":{"slug":"usiris","trakt":949678},"images":{"avatar":{"full":"https://secure.gravatar.com/avatar/221bc22769f16f338c1b723ca475da75?s=256&r=pg&d=https://i2.wp.com/media.trakt.tv/hotlink-ok/placeholders/medium/fry.png"}},"username":"Usiris","private":false,"deleted":false,"joined_at":"2015-03-21T21:06:41.000Z","location":"Ontario,
+        Canada","about":"","name":"Martin","gender":"male","age":58,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":25,"comment_count":0,"list":{"name":"True
+        Crime Documentary Series & Film","description":"This isn''t intended to be
+        a comprehensive list. I''m just going to be periodically updating this list
+        with titles from the following [IMDB search parameters](https://www.imdb.com/search/title/?title_type=feature,tv_movie,tv_series,tv_episode,tv_special,tv_miniseries,documentary,short,tv_short&genres=crime,documentary).\r\n\r\nUPDATED:
+        June 29, 2026","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2020-04-22T16:53:27.000Z","updated_at":"2026-07-01T15:50:00.000Z","item_count":496,"comment_count":6,"likes":1634,"ids":{"slug":"true-crime-documentary-series-film","trakt":11416887},"images":{"posters":["media.trakt.tv/images/movies/001/372/949/posters/medium/a6c10a4dc8.jpg.webp","media.trakt.tv/images/movies/001/362/157/posters/medium/ef1cdb716e.jpg.webp","media.trakt.tv/images/movies/001/145/888/posters/medium/4a6a6e8ff9.jpg.webp","media.trakt.tv/images/movies/001/369/505/posters/medium/4486357fdd.jpg.webp","media.trakt.tv/images/shows/000/308/404/posters/medium/f52321de51.jpg.webp","media.trakt.tv/images/movies/000/009/489/posters/medium/1c1cd0b459.jpg.webp","media.trakt.tv/images/shows/000/094/066/posters/medium/5cb0ec9764.jpg.webp","media.trakt.tv/images/shows/000/248/773/posters/medium/793dbb939d.jpg.webp","media.trakt.tv/images/movies/000/794/001/posters/medium/f426f86022.jpg.webp","media.trakt.tv/images/movies/000/085/301/posters/medium/bb19834c4f.jpg.webp"]},"user":{"ids":{"slug":"lish408","trakt":609065},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/609/065/avatars/medium/710c9ad583.jpg"}},"username":"lish408","private":false,"deleted":false,"joined_at":"2014-08-25T22:24:56.000Z","location":"San
+        Jose, CA","about":"","name":"LISH","gender":"male","age":41,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":24,"comment_count":0,"list":{"name":"Trakt:
+        Popular TV Shows","description":"The Trakt top 250 TV shows, based on popularity.
+        List updated daily.","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2018-05-13T16:33:57.000Z","updated_at":"2026-07-01T18:57:41.000Z","item_count":250,"comment_count":0,"likes":1114,"ids":{"slug":"trakt-popular-tv-shows","trakt":4834057},"images":{"posters":["media.trakt.tv/images/shows/000/001/390/posters/medium/93df9cd612.jpg.webp","media.trakt.tv/images/shows/000/001/388/posters/medium/fa39b59954.jpg.webp","media.trakt.tv/images/shows/000/104/439/posters/medium/84177ad9b8.jpg.webp","media.trakt.tv/images/shows/000/001/393/posters/medium/dec5cd226c.jpg.webp","media.trakt.tv/images/shows/000/139/960/posters/medium/c5b8a81eba.jpg.webp","media.trakt.tv/images/shows/000/001/409/posters/medium/8adfe77938.jpg.webp","media.trakt.tv/images/shows/000/162/712/posters/medium/37cc9bab97.jpg.webp","media.trakt.tv/images/shows/000/019/792/posters/medium/84c9780bfd.jpg.webp","media.trakt.tv/images/shows/000/145/186/posters/medium/8aefeb9e42.jpg.webp","media.trakt.tv/images/shows/000/001/657/posters/medium/77f73a63c8.jpg.webp"]},"user":{"ids":{"slug":"justin","trakt":1},"images":{"avatar":{"full":"https://media.trakt.tv/images/admins/000/000/001/avatars/medium/2e6df69058.jpg"}},"username":"justin","private":false,"deleted":false,"joined_at":"2010-09-25T17:49:25.000Z","location":"United
+        States","about":"Do the truffle shuffle!!","name":"Justin","gender":"male","age":44,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":true}}},{"like_count":23,"comment_count":0,"list":{"name":"The
+        100 Best Anime Movies of All Time","description":"","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2022-05-02T14:46:48.000Z","updated_at":"2026-07-01T15:52:59.000Z","item_count":98,"comment_count":0,"likes":263,"ids":{"slug":"the-100-best-anime-movies-of-all-time","trakt":23438792},"images":{"posters":["media.trakt.tv/images/movies/000/000/115/posters/medium/6ba8bea4e7.jpg.webp","media.trakt.tv/images/movies/000/000/097/posters/medium/f5dd88b533.jpg.webp","media.trakt.tv/images/movies/000/007/251/posters/medium/242597f61b.jpg.webp","media.trakt.tv/images/movies/000/004/621/posters/medium/cee2ab8c8d.jpg.webp","media.trakt.tv/images/movies/000/002/909/posters/medium/bf63f0ad3e.jpg.webp","media.trakt.tv/images/movies/000/098/669/posters/medium/6d364b8cdb.jpg.webp","media.trakt.tv/images/movies/000/005/677/posters/medium/36d5470889.jpg.webp","media.trakt.tv/images/movies/000/008/783/posters/medium/5c1314a94b.jpg.webp","media.trakt.tv/images/movies/000/004/169/posters/medium/e087929aae.jpg.webp","media.trakt.tv/images/movies/000/023/969/posters/medium/6b33858e32.jpg.webp"]},"user":{"ids":{"slug":"majeed_pk","trakt":8485988},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/008/485/988/avatars/medium/c4623f1079.png"}},"username":"majeed_pk","private":false,"deleted":false,"joined_at":"2019-08-13T20:26:50.000Z","location":"Islamabad,
+        Islamabad","about":"","name":"majeedpk","gender":"male","age":57,"vip":true,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":22,"comment_count":0,"list":{"name":"MARVEL
+        Cinematic Universe","description":"**UPDATED** _2024-01-19_\r\n**Chronological
+        order**                                                                                                             \r\n\r\n_(If
+        you are new to MCU, then you should start with; Iron Man, The Incredible Hulk,\r\n                                                                                                                    Iron
+        Man 2, Thor, Captain America and then Agent Carter.)_                                                                                                                                                                                                                                                                            \r\n\r\n\r\n-----------------------------------------------------------------------------\r\n\r\n**Includes:**
+        \r\n\r\n- **All Movies**\r\n- **Marvel One-Shots**\r\n -  _Agent Carter_\r\n
+        -  _A Funny Thing Happened on the Way to Thor''s Hammer_\r\n -  _The Consultant_\r\n
+        -  _Item 47_\r\n -  _All Hail the King_\r\n- **Specials/Shorts**\r\n -  _WHIH
+        World News_\r\n -  _Slingshot_ \r\n- **Netflix Series**\r\n -  _**Marvel''s**
+        Daredevil_ \r\n -  _**Marvel''s** Jessica Jones_\r\n -  _**Marvel''s** Luke
+        Cage_\r\n -  _**Marvel''s** Iron Fist_\r\n -  _**Marvel''s** Defenders_\r\n  -  _**Marvel''s**
+        The Punisher_\r\n- **ABC**\r\n - _**Marvel''s** Inhumans_\r\n -  _**Marvel''s**
+        Agent Carter_\r\n - _**Marvel''s** Agents of S.H.I.E.L.D._\r\n- **Hulu**\r\n
+        - _**Marvel''s** Runaways_\r\n- **Freeform**\r\n - _**Marvel''s** Cloak &
+        Dagger_\r\n\r\n-----------------------------------------------------------------------------\r\n\r\n**Stark
+        Expo 1974** - commercial for Stark Expo 1974 in Flushing Meadows in New York.\r\nThere
+        are four different **Stark Expo 2010** videos:\r\n\r\n -  Stark Expo 2010
+        - CordCo\r\n -  Stark Expo 2010 - Fujikawa\r\n -  Stark Expo 2010 - Better
+        Living Through Technology\r\n -  Stark Expo 2010 - Accutech\r\n\r\nThey take
+        place during Iron Man 2 and you can easily find them by googling for them.\r\n\r\n**Peggy
+        Carter’s** 1953 Smithsonian Interview - Where Carter is being interviewed
+        about Steve Rogers (can be found at youtube)\r\n\r\n**S.H.I.E.L.D** spin-off
+        mini-series **Slingshot** can be found at ABC''s youtube channel. \r\n\r\n**Peter''s
+        To-Do List** (Short Film - Spider-Man: Far From Home - Blu-Ray) - short extra
+        clip when Peter is picking up his passport.\r\n\r\n**Novels**:\r\n\r\n- **Captain
+        Marvel Vol. 1:** Higher, Further, Faster, More\r\n- **Marvel''s Captain Marvel:**
+        Starforce on the Rise\r\n- **Marvel''s Avengers: Infinity War:** The Heroes''
+        Journey\r\n- **Ant-Man and the Wasp** - The Heroes'' Journey\r\n- **Marvel''s
+        Avengers: Infinity War:** The Cosmic Quest Vol. 1: Beginning\r\n- **Marvel''s
+        Avengers: Endgame:** The Pirate Angel, the Talking Tree, and Captain Rabbit\r\n-
+        **Avengers - Infinity War:** The Cosmic Quest - Volume Two: Aftermath\r\n-
+        **Spider-Man - Far From Home:** Peter and Ned''s Ultimate Travel Journal\r\n\r\n-----------------------------------------------------------------------------\r\n_(haven''t
+        updated the tie-in comics)_\r\n_**Marvel Cinematic Universe** (#1-4) tie-in
+        comics_ :\r\n\r\n- **Avengers: Road to Marvel''s The Avengers**:\r\n - Iron
+        Man: I Am Iron Man! #1-2\r\n - Iron Man 2: Public Identity #1-3\r\n - Iron
+        Man 2: Agents of S.H.I.E.L.D. #1\r\n - Captain America: First Vengeance #1-4\r\n-
+        **Marvel''s The Avengers Prelude: Fury''s Big Week**:\r\n - The Avengers -
+        Prelude: Fury''s Big Week #1-4\r\n- **Marvel''s The Avengers Prelude: Black
+        Widow Strikes**:\r\n - The Avengers - Prelude: Black Widow Strikes #1-3\r\n-
+        **Marvel''s Iron Man 3 Prelude**:\r\n - Iron Man 2 Adaptation #1-2\r\n - Iron
+        Man 3 Prelude #1-2\r\n- **Marvel''s Thor: The Dark World Prelude**:\r\n -
+        Thor Adaptation #1-2\r\n - Thor: The Dark World Prelude #1-2\r\n- **Marvel''s
+        Captain America: The Winter Soldier Prelude**:\r\n - Captain America: The
+        First Avenger Adaptation #1-2\r\n - Captain America: The Winter Soldier Infinite
+        #1\r\n- **Marvel''s Guardians of the Galaxy Prelude**:\r\n - Guardians of
+        the Galaxy – _Dangerous Prey Infinite #1_\r\n - Guardians of the Galaxy Prelude
+        #1-2\r\n- **Marvel''s Avengers: Age of Ultron Prelude**:\r\n - The Avengers
+        Adaptation #1-2\r\n - Avengers: Age of Ultron – _This Sceptre''d Isle Infinite
+        #1_\r\n- **Marvel''s Ant-Man Prelude**:\r\n - Ant-Man Prelude #1-2\r\n - Ant-Man
+        – Scott Lang: Small Time Infinite #1\r\n- **Marvel''s Jessica Jones Prelude**:\r\n
+        - Marvel''s Jessica Jones #1\r\n- **Captain America: Civil War Prelude**:\r\n
+        - Captain America: Civil War Prelude #1-4\r\n - Captain America: Civil War
+        Prelude Infinite #1\r\n- **Doctor Strange Prelude**:\r\n - Marvel''s Doctor
+        Strange Prelude #1-2\r\n - Marvel''s Doctor Strange Prelude Infinite Comic
+        – The Zealot #1\r\n- **Guardians of the Galaxy Vol. 2 Prelude**:\r\n - Marvel''s
+        Guardians of the Galaxy Vol. 2 Prelude #1-2\r\n- **Spider-Man: Homecoming
+        Prelude**:\r\n - Spider-Man: Homecoming Prelude #1-2\r\n- **Thor: Ragnarok
+        Prelude**:\r\n - Marvel''s Thor: Ragnarok Prelude #1-4\r\n- **Marvel''s Black
+        Panther Prelude**:\r\n - Marvel''s Black Panther Prelude #1-2\r\n- **Marvel''s
+        Avengers: Infinity War Prelude**:\r\n - Avengers - Infinity War: Prelude #1-2\r\n-
+        **Ant-Man and the Wasp Prelude**:\r\n - Ant-Man and the Wasp - Prelude #1-2\r\n-
+        **Captain Marvel Prelude**:\r\n - Marvel''s Captain Marvel Prelude #1\r\n-
+        **Avengers: Endgame Prelude **:\r\n - Avengers: Endgame Prelude #1-3\r\n-
+        **Spider-Man: Far From Home Prelude**:\r\n - Spider-Man: Far From Home Prelude
+        #1-2\r\n- **Black Widow: Prelude**:\r\n - Black Widow: Prelude #1-2\r\n\r\n\r\n-----------------------------------------------------------------------------","privacy":"public","share_link":"","type":"personal","display_numbers":true,"allow_comments":true,"sort_by":"rank","sort_how":"asc","created_at":"2015-07-16T14:59:57.000Z","updated_at":"2026-07-01T20:36:01.000Z","item_count":216,"comment_count":35,"likes":4509,"ids":{"slug":"marvel-cinematic-universe","trakt":1248149},"images":{"posters":["media.trakt.tv/images/movies/000/001/170/posters/medium/04fa05d153.jpg.webp","media.trakt.tv/images/seasons/000/083/598/posters/medium/df0f98646d.jpg.webp","media.trakt.tv/images/seasons/000/110/761/posters/medium/1d8236d65d.jpg.webp","media.trakt.tv/images/movies/000/130/811/posters/medium/e0a8198730.jpg.webp","media.trakt.tv/images/seasons/000/372/372/posters/medium/197a453932.jpg.webp","media.trakt.tv/images/movies/000/193/963/posters/medium/686e39e597.jpg.webp","media.trakt.tv/images/movies/000/001/157/posters/medium/b0158ecb11.jpg.webp","media.trakt.tv/images/seasons/000/372/372/posters/medium/197a453932.jpg.webp","media.trakt.tv/images/seasons/000/372/372/posters/medium/197a453932.jpg.webp","media.trakt.tv/images/seasons/000/372/372/posters/medium/197a453932.jpg.webp"]},"user":{"ids":{"slug":"donxy","trakt":879337},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/000/879/337/avatars/medium/467a0229e9.jpg"}},"username":"Donxy","private":false,"deleted":false,"joined_at":"2015-02-11T08:50:52.000Z","location":"Sweden","about":"Just
+        a guy who is addicted to TV-series and movies!","name":"Donxy","gender":"male","age":31,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}}},{"like_count":21,"comment_count":0,"list":{"name":"Sexflix","description":"...the
+        sexuality that cinema left us.","privacy":"public","share_link":"","type":"personal","display_numbers":false,"allow_comments":true,"sort_by":"random","sort_how":"asc","created_at":"2022-10-15T23:55:02.000Z","updated_at":"2026-07-01T18:30:37.000Z","item_count":992,"comment_count":0,"likes":428,"ids":{"slug":"sexflix","trakt":24146149},"images":{"posters":["media.trakt.tv/images/movies/000/016/238/posters/medium/2f54f64219.jpg.webp","media.trakt.tv/images/movies/000/072/499/posters/medium/d580f1eedc.jpg.webp","media.trakt.tv/images/movies/000/008/615/posters/medium/f3cb920d61.jpg.webp","media.trakt.tv/images/movies/000/055/228/posters/medium/4b1b39db2d.jpg.webp","media.trakt.tv/images/movies/000/005/680/posters/medium/fe56a929d0.jpg.webp","media.trakt.tv/images/movies/000/006/482/posters/medium/66373a90fd.jpg.webp","media.trakt.tv/images/movies/000/006/151/posters/medium/bb884cc68e.jpg.webp","media.trakt.tv/images/movies/000/002/687/posters/medium/b94dbfbff8.jpg.webp","media.trakt.tv/images/movies/000/046/648/posters/medium/f0b37f258f.jpg.webp","media.trakt.tv/images/movies/000/005/289/posters/medium/cdbb3092d3.jpg.webp"]},"user":{"ids":{"slug":"jjvaliant","trakt":10269536},"images":{"avatar":{"full":"https://media.trakt.tv/images/users/010/269/536/avatars/medium/5c5fd2148d.jpg"}},"username":"JJVALIANT","private":false,"deleted":false,"joined_at":"2020-08-25T22:22:56.000Z","location":"Buenos
+        Aires","about":"","name":"JJVALIANT","gender":"","age":50,"vip":false,"vip_ep":false,"vip_cover_image":null,"director":false}}}]'
+  recorded_at: 2026-07-01 22:08:00
 recorded_with: VCR-vcr/2.1.0

@@ -1,7 +1,7 @@
 ---
 title: "Getting Started"
 author: "Lukas Burk"
-date: "2026-07-02"
+date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Getting Started}
@@ -12,10 +12,16 @@ vignette: >
 <!-- WARNING: tRakt.Rmd is generated from tRakt.Rmd.orig. Please edit that file, -->
 <!-- then re-knit it with vignettes/precompile.R (see that script for details). -->
 
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  message = FALSE, warning = FALSE, error = FALSE,
+  out.width = "100%"
+)
+```
 
-
-
-``` r
+```{r startup}
 library(tRakt)
 ```
 
@@ -26,34 +32,14 @@ That's all you need to to for basic things. If you're planning a larger project 
 
 Using a text query:
 
-
-``` r
+```{r search}
 search_query("Utopia", type = "show")
-#> # A tibble: 1 × 36
-#>     score type  title   year tagline   overview runtime country trailer homepage
-#>     <dbl> <chr> <chr>  <int> <chr>     <chr>      <int> <chr>   <chr>   <chr>   
-#> 1 5.79e17 show  Utopia  2013 The Netw… The  Ut…      50 gb      https:… https:/…
-#> # ℹ 26 more variables: status <chr>, rating <dbl>, votes <int>,
-#> #   comment_count <int>, updated_at <dttm>, language <chr>, languages <list>,
-#> #   available_translations <list>, genres <list>, subgenres <list>,
-#> #   original_title <chr>, social_ids <df[,4]>, first_aired <dttm>,
-#> #   aired_episodes <int>, certification <chr>, network <chr>, airs_day <chr>,
-#> #   airs_time <chr>, airs_timezone <chr>, trakt <chr>, slug <chr>, imdb <chr>,
-#> #   tmdb <chr>, tvdb <chr>, plex_guid <chr>, plex_slug <chr>
 ```
 
 Search using an ID:
 
-
-``` r
+```{r search_id}
 search_id("tt2384811", id_type = "imdb", type = "show")
-#> # A tibble: 1 × 13
-#>   type  score movie$ids$imdb  year title  aired_episodes imdb  slug  tmdb  tvdb 
-#>   <chr> <dbl> <chr>          <int> <chr>           <int> <chr> <chr> <chr> <chr>
-#> 1 show    100 <NA>            2013 Utopia             12 tt23… utop… 46511 2649…
-#> # ℹ 9 more variables: movie$ids$plex <df[,2]>, $$slug <chr>, $$tmdb <int>,
-#> #   $$trakt <int>, movie$year <int>, $title <chr>, trakt <chr>,
-#> #   plex_guid <chr>, plex_slug <chr>
 ```
 
 Or via whatever's popular(ish):
@@ -62,22 +48,12 @@ Another scenario would be that you're not necessarily interested in some specifi
 
 The 5 most popular shows:
 
-
-``` r
+```{r auto-lists}
 shows_popular(limit = 5)
-#> # A tibble: 5 × 10
-#>    year title   aired_episodes imdb  slug  tmdb  tvdb  trakt plex_guid plex_slug
-#>   <int> <chr>            <int> <chr> <chr> <chr> <chr> <chr> <chr>     <chr>    
-#> 1  2025 The Pi…             30 tt31… the-… 2503… 4481… 2328… 66047594… the-pitt 
-#> 2  2025 Plurib…              9 tt22… plur… 2251… 4364… 2067… 6497f186… pluribus 
-#> 3  2026 A Knig…              6 tt27… a-kn… 2243… 4336… 2041… 643cbf9e… a-knight…
-#> 4  2024 Fallout             16 tt12… fall… 1063… 4167… 1639… 5f1b325f… fallout-1
-#> 5  2024 Landman             20 tt14… land… 1577… 3974… 1743… 622ac0c4… landman
 ```
 The 10 most watched (during the past year) movies from 1990-2000:
 
-
-``` r
+```{r auto-lists-watched}
 library(dplyr)
 
 movies_watched(period = "yearly", years = c(1990, 2000)) |>

@@ -44,6 +44,12 @@ README.md: README.Rmd
 	Rscript -e "rmarkdown::render('README.Rmd', output_file = 'README.md')"
 	-rm README.html
 
+.PHONY: vignettes
+# Pre-compute the API-backed vignettes from their *.Rmd.orig sources.
+# Run deliberately, with a healthy API / valid credentials; makes live calls.
+vignettes:
+	Rscript vignettes/precompile.R
+
 .PHONY: site
 site: doc README.md
 	Rscript -e "pkgdown::build_site()"
