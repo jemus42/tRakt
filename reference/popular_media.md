@@ -216,8 +216,20 @@ Other shows data:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 # Get the most popular German-language movies between 2000 and 2010
 movies_popular(languages = "de", years = c(2000, 2010))
-} # }
+#> # A tibble: 10 × 7
+#>     year title                                 imdb  plex$guid slug   tmdb trakt
+#>    <int> <chr>                                 <chr> <chr>     <chr> <int> <int>
+#>  1  2010 Shutter Island                        tt11… 5d776836… shut… 11324  6422
+#>  2  2009 Inglourious Basterds                  tt03… 5d77683f… ingl… 16869 10322
+#>  3  2009 2012                                  tt11… 5d77683b… 2012… 14161  8477
+#>  4  2009 The Human Centipede (First Sequence)  tt14… 5d77686a… the-… 37169 23737
+#>  5  2010 The A-Team                            tt04… 5d776864… the-… 34544 22059
+#>  6  2010 Knight and Day                        tt10… 5d77686c… knig… 37834 24307
+#>  7  2009 Angels & Demons                       tt08… 5d77683a… ange… 13448  7917
+#>  8  2008 Quantum of Solace                     tt08… 5d776835… quan… 10764  5927
+#>  9  2008 Indiana Jones and the Kingdom of the… tt03… 5d776824… indi…   217   176
+#> 10  2010 From Paris with Love                  tt11… 5d776851… from… 26389 16053
+#> # ℹ 1 more variable: plex$slug <chr>
 ```

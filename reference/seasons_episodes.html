@@ -117,12 +117,35 @@ see <a href="seasons_summary.html">seasons_summary</a> and use the <code>episode
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="fu">seasons_episodes</span><span class="op">(</span><span class="st">"breaking-bad"</span>, <span class="fl">1</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">seasons_episodes</span><span class="op">(</span><span class="st">"breaking-bad"</span>, <span class="fl">1</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 7 × 8</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   title                         episode season imdb  tmdb  tvdb  trakt plex_guid</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Pilot                               1      1 tt09… 62085 3492… 73482 5d9c0fc3…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Cat's in the Bag...                 2      1 tt10… 62086 3492… 73483 5d9c0fc3…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> ...And the Bag's in the River       3      1 tt10… 62087 3492… 73484 5d9c0fc3…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> Cancer Man                          4      1 tt10… 62088 3492… 73485 5d9c0fc3…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> Gray Matter                         5      1 tt10… 62089 3492… 73486 5d9c0fc3…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> Crazy Handful of Nothin'            6      1 tt10… 62090 3551… 73487 5d9c0fc3…</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">7</span> A No Rough Stuff Type Deal          7      1 tt10… 62091 3525… 73488 5d9c0fc3…</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Including all episode data:</span></span></span>
 <span class="r-in"><span><span class="fu">seasons_episodes</span><span class="op">(</span><span class="st">"breaking-bad"</span>, <span class="fl">1</span>, extended <span class="op">=</span> <span class="st">"full"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 7 × 23</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   title      votes episode rating season runtime overview released   episode_abs</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Pilot       <span style="text-decoration: underline;">4</span>744       1   8.35      1      59 When an… 2008-01-21           1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Cat's in …  <span style="text-decoration: underline;">3</span>943       2   8.10      1      49 Walt an… 2008-01-28           2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> ...And th…  <span style="text-decoration: underline;">3</span>669       3   8.03      1      49 Walter … 2008-02-11           3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> Cancer Man  <span style="text-decoration: underline;">3</span>536       4   7.93      1      49 Walter … 2008-02-18           4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> Gray Matt…  <span style="text-decoration: underline;">3</span>460       5   7.95      1      49 Walter … 2008-02-25           5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> Crazy Han…  <span style="text-decoration: underline;">3</span>496       6   8.54      1      49 The sid… 2008-03-03           6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">7</span> A No Roug…  <span style="text-decoration: underline;">3</span>403       7   8.35      1      48 Walter … 2008-03-10           7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 14 more variables: updated_at &lt;dttm&gt;, first_aired &lt;dttm&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   episode_type &lt;chr&gt;, after_credits &lt;lgl&gt;, comment_count &lt;int&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   during_credits &lt;lgl&gt;, original_title &lt;chr&gt;, available_translations &lt;list&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   effective_release_date &lt;chr&gt;, imdb &lt;chr&gt;, tmdb &lt;chr&gt;, tvdb &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   trakt &lt;chr&gt;, plex_guid &lt;chr&gt;</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

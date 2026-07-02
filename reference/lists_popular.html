@@ -44,15 +44,15 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">lists_popular</span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">lists_popular</span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">10</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"personal"</span>, <span class="st">"official"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">lists_trending</span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">lists_trending</span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">10</span>, type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"personal"</span>, <span class="st">"official"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p><code>lists_popular()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists" class="external-link">/lists/popular</a>.</p>
-<p><code>lists_trending()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists" class="external-link">/lists/trending</a>.</p>
+    <p><code>lists_popular()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists" class="external-link">/lists/popular/:type</a>.</p>
+<p><code>lists_trending()</code> wraps endpoint <a href="https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists" class="external-link">/lists/trending/:type</a>.</p>
     </div>
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
@@ -61,6 +61,13 @@
 <dl><dt id="arg-limit">limit<a class="anchor" aria-label="anchor" href="#arg-limit"></a></dt>
 <dd><p><code>integer(1) [10L]</code>: Number of items to return. Must be greater
 than <code>0</code> and will be coerced via <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer()</a></code>.</p></dd>
+
+
+<dt id="arg-type">type<a class="anchor" aria-label="anchor" href="#arg-type"></a></dt>
+<dd><p><code>character(1) ["personal"]</code>: The kind of lists to return, one of
+<code>"personal"</code> (user-created lists) or <code>"official"</code> (Trakt-curated lists).
+The trakt.tv API requires this path segment; a request without it returns
+an empty (HTTP 204) response.</p></dd>
 
 </dl></div>
     <div class="section level2">
@@ -89,10 +96,46 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="fu">lists_popular</span><span class="op">(</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">lists_popular</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 32</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    name      description privacy share_link type  display_numbers allow_comments</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> IMDB: To… <span style="color: #949494;">"</span>Top 250 m… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> MARVEL C… <span style="color: #949494;">"</span>**UPDATED… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> IMDB: To… <span style="color: #949494;">"</span>Top 250 T… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> Best Min… <span style="color: #949494;">"</span>What’s a … public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 1001 Gre… <span style="color: #949494;">"</span>/u/StopRe… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 1001 Mov… <span style="color: #949494;">"</span>&gt; 1001 Mo… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> Mindfuck  <span style="color: #949494;">"</span>The objec… public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Great Mo… <span style="color: #949494;">"</span>Every yea… public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> True Cri… <span style="color: #949494;">"</span>This isn'… public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> DC Unive… <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 25 more variables: sort_by &lt;chr&gt;, sort_how &lt;chr&gt;, created_at &lt;dttm&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   updated_at &lt;dttm&gt;, item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   slug &lt;chr&gt;, trakt &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, deleted &lt;lgl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   joined_at &lt;dttm&gt;, location &lt;chr&gt;, about &lt;chr&gt;, user_name &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   gender &lt;chr&gt;, age &lt;int&gt;, vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, vip_cover_image &lt;lgl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   director &lt;lgl&gt;, user_slug &lt;chr&gt;, user_trakt &lt;int&gt;, avatar &lt;chr&gt;</span></span>
 <span class="r-in"><span><span class="fu">lists_trending</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 32</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    name      description privacy share_link type  display_numbers allow_comments</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> IMDB: To… <span style="color: #949494;">"</span>Top 250 m… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> Best Min… <span style="color: #949494;">"</span>What’s a … public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> IMDB: To… <span style="color: #949494;">"</span>Top 250 T… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> Trakt: P… <span style="color: #949494;">"</span>The Trakt… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> MARVEL C… <span style="color: #949494;">"</span>**UPDATED… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 1001 Gre… <span style="color: #949494;">"</span>/u/StopRe… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> True Cri… <span style="color: #949494;">"</span>This isn'… public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> Sci-Fi    <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> Popular … <span style="color: #949494;">"</span>This isn'… public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> Korean^^  <span style="color: #949494;">"</span>Explore t… public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 25 more variables: sort_by &lt;chr&gt;, sort_how &lt;chr&gt;, created_at &lt;dttm&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   updated_at &lt;dttm&gt;, item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   slug &lt;chr&gt;, trakt &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, deleted &lt;lgl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   joined_at &lt;dttm&gt;, location &lt;chr&gt;, about &lt;chr&gt;, user_name &lt;chr&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   gender &lt;chr&gt;, age &lt;int&gt;, vip &lt;lgl&gt;, vip_ep &lt;lgl&gt;, vip_cover_image &lt;lgl&gt;,</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   director &lt;lgl&gt;, user_slug &lt;chr&gt;, user_trakt &lt;int&gt;, avatar &lt;chr&gt;</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

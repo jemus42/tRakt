@@ -123,7 +123,7 @@ movies_stats("inception-2010")
 #> # A tibble: 1 × 10
 #>   collectors comments favorited lists  plays recommended votes watchers type  
 #>        <int>    <int>     <int> <int>  <int>       <int> <int>    <int> <chr> 
-#> 1     459908      204      5133 95082 290332        5133 74220   244299 movies
+#> 1     460635      204      5386 96059 297086        5386 53093   249270 movies
 #> # ℹ 1 more variable: id <chr>
 if (FALSE) { # \dontrun{
 # Stats for multiple shows at once

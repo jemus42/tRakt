@@ -159,8 +159,8 @@ Currently **86** of **116** tracked GET endpoints are implemented.
 
 | Method | Endpoint | Implementation | Auth |
 |:---|:---|:---|:---|
-| Popular | [/lists/popular](https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists) | [`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md) | Optional |
-| Trending | [/lists/trending](https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists) | [`lists_trending()`](https://jemus42.github.io/tRakt/reference/lists_popular.md) | Optional |
+| Popular | [/lists/popular/:type](https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists) | [`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md) | Optional |
+| Trending | [/lists/trending/:type](https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists) | [`lists_trending()`](https://jemus42.github.io/tRakt/reference/lists_popular.md) | Optional |
 | List | [/lists/:id](https://trakt.docs.apiary.io/#reference/lists/list/get-list) |  | Optional |
 | Likes | [/lists/:id/likes](https://trakt.docs.apiary.io/#reference/lists/likes/get-all-users-who-liked-a-list) |  | Optional |
 | Items | [/lists/:id/items/:type/:sort_by/:sort_how](https://trakt.docs.apiary.io/#reference/lists/items/get-items-on-a-list) |  | Optional |

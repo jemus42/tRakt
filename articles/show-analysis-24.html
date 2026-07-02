@@ -66,7 +66,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Show Analysis: 24</h1>
                         <h4 data-toc-skip class="author">Lukas Burk</h4>
             
-            <h4 data-toc-skip class="date">2026-05-25</h4>
+            <h4 data-toc-skip class="date">2026-07-02</h4>
       
       <small class="dont-index">Source: <a href="http://github.com/jemus42/tRakt/blob/main/vignettes/show-analysis-24.Rmd" class="external-link"><code>vignettes/show-analysis-24.Rmd</code></a></small>
       <div class="d-none name"><code>show-analysis-24.Rmd</code></div>
@@ -74,6 +74,8 @@
 
     
     
+<!-- WARNING: show-analysis-24.Rmd is generated from show-analysis-24.Rmd.orig. -->
+<!-- Please edit that file, then re-knit it with vignettes/precompile.R. -->
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://jemus42.github.io/tRakt">tRakt</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
@@ -83,24 +85,23 @@
 </h2>
 <p>Use the search function to find the show you’re looking for. The show
 “24” is a particularly good example for a show with a bad name, because
-If we just search for “24”, we’ll get a wrong result due to
-ambiguity.<br>
+If we just search for “24”, we’ll get a wrong result due to ambiguity.
 To nudge the search function to find the show we’re looking for, we can
 specify the year of release:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">show_info</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/search_query.html">search_query</a></span><span class="op">(</span><span class="st">"24"</span>, years <span class="op">=</span> <span class="fl">2001</span>, type <span class="op">=</span> <span class="st">"show"</span><span class="op">)</span></span>
 <span><span class="va">show_info</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 36</span></span></span>
+<span><span class="co">#&gt; # A tibble: 1 × 36</span></span>
 <span><span class="co">#&gt;     score type  title  year tagline    overview runtime country trailer homepage</span></span>
-<span><span class="co">#&gt;     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> 5.79<span style="color: #949494;">e</span>17 show  24     <span style="text-decoration: underline;">2</span>001 A lot can… <span style="color: #949494;">"</span>Counte…      45 us      https:… https:/…</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 26 more variables: status &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;, languages &lt;list&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   available_translations &lt;list&gt;, genres &lt;list&gt;, subgenres &lt;list&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   original_title &lt;chr&gt;, social_ids &lt;df[,4]&gt;, first_aired &lt;dttm&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   aired_episodes &lt;int&gt;, certification &lt;chr&gt;, network &lt;chr&gt;, airs_day &lt;chr&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   airs_time &lt;chr&gt;, airs_timezone &lt;chr&gt;, trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   tmdb &lt;chr&gt;, tvdb &lt;chr&gt;, plex_guid &lt;chr&gt;, plex_slug &lt;chr&gt;</span></span></span></code></pre></div>
+<span><span class="co">#&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   </span></span>
+<span><span class="co">#&gt; 1 5.79e17 show  24     2001 A lot can… "Counte…      45 us      https:… https:/…</span></span>
+<span><span class="co">#&gt; # ℹ 26 more variables: status &lt;chr&gt;, rating &lt;dbl&gt;, votes &lt;int&gt;,</span></span>
+<span><span class="co">#&gt; #   comment_count &lt;int&gt;, updated_at &lt;dttm&gt;, language &lt;chr&gt;, languages &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   available_translations &lt;list&gt;, genres &lt;list&gt;, subgenres &lt;list&gt;,</span></span>
+<span><span class="co">#&gt; #   original_title &lt;chr&gt;, social_ids &lt;df[,4]&gt;, first_aired &lt;dttm&gt;,</span></span>
+<span><span class="co">#&gt; #   aired_episodes &lt;int&gt;, certification &lt;chr&gt;, network &lt;chr&gt;, airs_day &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   airs_time &lt;chr&gt;, airs_timezone &lt;chr&gt;, trakt &lt;chr&gt;, slug &lt;chr&gt;, imdb &lt;chr&gt;,</span></span>
+<span><span class="co">#&gt; #   tmdb &lt;chr&gt;, tvdb &lt;chr&gt;, plex_guid &lt;chr&gt;, plex_slug &lt;chr&gt;</span></span></code></pre></div>
 <p>Now we have the basic show info to work with, including the
 <code>title</code> and various IDs.</p>
 </div>
@@ -108,32 +109,32 @@ specify the year of release:</p>
 <h2 id="step-2-use-the-id">Step 2: Use the ID<a class="anchor" aria-label="anchor" href="#step-2-use-the-id"></a>
 </h2>
 <p>Use the <code>trakt</code> ID for subsequent API calls, which is
-guaranteed to be always available and unique on trakt.tv.<br>
-Now we’ll use <code><a href="../reference/seasons_summary.html">seasons_summary()</a></code> to get data for all seasons
-of the show, while also getting an additional list-column containing all
-episode data, which includes user ratings.</p>
+guaranteed to be always available and unique on trakt.tv. Now we’ll use
+<code><a href="../reference/seasons_summary.html">seasons_summary()</a></code> to get data for all seasons of the show,
+while also getting an additional list-column containing all episode
+data, which includes user ratings.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">seasons</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/seasons_summary.html">seasons_summary</a></span><span class="op">(</span><span class="va">show_info</span><span class="op">$</span><span class="va">trakt</span>, extended <span class="op">=</span> <span class="st">"full"</span>, episodes <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">seasons</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 9</span></span>
 <span><span class="co">#&gt; Columns: 17</span></span>
-<span><span class="co">#&gt; $ title          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Season 1"<span style="color: #949494;">, </span>"Season 2"<span style="color: #949494;">, </span>"Season 3"<span style="color: #949494;">, </span>"Season 4"<span style="color: #949494;">, </span>"Season…</span></span>
-<span><span class="co">#&gt; $ votes          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 512<span style="color: #949494;">, </span>362<span style="color: #949494;">, </span>304<span style="color: #949494;">, </span>272<span style="color: #949494;">, </span>226<span style="color: #949494;">, </span>220<span style="color: #949494;">, </span>209<span style="color: #949494;">, </span>203<span style="color: #949494;">, </span>208</span></span>
-<span><span class="co">#&gt; $ season         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>4<span style="color: #949494;">, </span>5<span style="color: #949494;">, </span>6<span style="color: #949494;">, </span>7<span style="color: #949494;">, </span>8<span style="color: #949494;">, </span>9</span></span>
-<span><span class="co">#&gt; $ rating         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 8.169922<span style="color: #949494;">, </span>8.165750<span style="color: #949494;">, </span>8.092105<span style="color: #949494;">, </span>8.176471<span style="color: #949494;">, </span>8.384955<span style="color: #949494;">, </span>7.431…</span></span>
-<span><span class="co">#&gt; $ network        <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> <span style="color: #BB0000;">NA</span><span style="color: #949494;">, </span><span style="color: #BB0000;">NA</span><span style="color: #949494;">, </span><span style="color: #BB0000;">NA</span><span style="color: #949494;">, </span><span style="color: #BB0000;">NA</span><span style="color: #949494;">, </span><span style="color: #BB0000;">NA</span><span style="color: #949494;">, </span><span style="color: #BB0000;">NA</span><span style="color: #949494;">, </span><span style="color: #BB0000;">NA</span><span style="color: #949494;">, </span><span style="color: #BB0000;">NA</span><span style="color: #949494;">, </span><span style="color: #BB0000;">NA</span></span></span>
-<span><span class="co">#&gt; $ overview       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Counter-terrorism agent Jack Bauer attempts to stop th…</span></span>
-<span><span class="co">#&gt; $ updated_at     <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2026-05-24 23:40:57<span style="color: #949494;">, </span>2026-05-24 23:33:06<span style="color: #949494;">, </span>2026-05-24 23…</span></span>
-<span><span class="co">#&gt; $ first_aired    <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2001-11-07 02:00:00<span style="color: #949494;">, </span>2002-10-30 02:00:00<span style="color: #949494;">, </span>2003-10-29 02…</span></span>
-<span><span class="co">#&gt; $ episode_count  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>12</span></span>
-<span><span class="co">#&gt; $ total_runtime  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1024<span style="color: #949494;">, </span>1072<span style="color: #949494;">, </span>1080<span style="color: #949494;">, </span>1080<span style="color: #949494;">, </span>1080<span style="color: #949494;">, </span>1080<span style="color: #949494;">, </span>1080<span style="color: #949494;">, </span>1080<span style="color: #949494;">, </span>540</span></span>
-<span><span class="co">#&gt; $ aired_episodes <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>24<span style="color: #949494;">, </span>12</span></span>
-<span><span class="co">#&gt; $ original_title <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Season 1"<span style="color: #949494;">, </span>"Season 2"<span style="color: #949494;">, </span>"Season 3"<span style="color: #949494;">, </span>"Season 4"<span style="color: #949494;">, </span>"Season…</span></span>
-<span><span class="co">#&gt; $ episodes       <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> [&lt;tbl_df[24 x 23]&gt;]<span style="color: #949494;">, </span>[&lt;tbl_df[24 x 23]&gt;]<span style="color: #949494;">, </span>[&lt;tbl_df[24 …</span></span>
-<span><span class="co">#&gt; $ tmdb           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "5845"<span style="color: #949494;">, </span>"5846"<span style="color: #949494;">, </span>"5847"<span style="color: #949494;">, </span>"5848"<span style="color: #949494;">, </span>"5849"<span style="color: #949494;">, </span>"5850"<span style="color: #949494;">, </span>"5851"…</span></span>
-<span><span class="co">#&gt; $ tvdb           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "10063"<span style="color: #949494;">, </span>"10064"<span style="color: #949494;">, </span>"10065"<span style="color: #949494;">, </span>"10066"<span style="color: #949494;">, </span>"10067"<span style="color: #949494;">, </span>"16794"<span style="color: #949494;">, </span>"…</span></span>
-<span><span class="co">#&gt; $ trakt          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "6262"<span style="color: #949494;">, </span>"6263"<span style="color: #949494;">, </span>"6264"<span style="color: #949494;">, </span>"6265"<span style="color: #949494;">, </span>"6266"<span style="color: #949494;">, </span>"6267"<span style="color: #949494;">, </span>"6268"<span style="color: #949494;">,</span>…</span></span>
-<span><span class="co">#&gt; $ plex_guid      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "602e68e0d17ae1002dc137f5"<span style="color: #949494;">, </span>"602e68f2d17ae1002dc13d5e"<span style="color: #949494;">,</span>…</span></span></code></pre></div>
+<span><span class="co">#&gt; $ title          &lt;chr&gt; "Season 1", "Season 2", "Season 3", "Season 4", "Season…</span></span>
+<span><span class="co">#&gt; $ votes          &lt;int&gt; 401, 295, 248, 221, 203, 185, 177, 175, 171</span></span>
+<span><span class="co">#&gt; $ season         &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9</span></span>
+<span><span class="co">#&gt; $ rating         &lt;dbl&gt; 8.15711, 8.14576, 8.03629, 8.15385, 8.34975, 7.40541, 7…</span></span>
+<span><span class="co">#&gt; $ network        &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA</span></span>
+<span><span class="co">#&gt; $ overview       &lt;chr&gt; "Counter-terrorism agent Jack Bauer attempts to stop th…</span></span>
+<span><span class="co">#&gt; $ updated_at     &lt;dttm&gt; 2026-07-01 08:20:26, 2026-07-01 08:20:26, 2026-07-01 08…</span></span>
+<span><span class="co">#&gt; $ first_aired    &lt;dttm&gt; 2001-11-07 02:00:00, 2002-10-30 02:00:00, 2003-10-29 02…</span></span>
+<span><span class="co">#&gt; $ episode_count  &lt;int&gt; 24, 24, 24, 24, 24, 24, 24, 24, 12</span></span>
+<span><span class="co">#&gt; $ total_runtime  &lt;int&gt; 1024, 1072, 1066, 1080, 1080, 1080, 1080, 1080, 540</span></span>
+<span><span class="co">#&gt; $ aired_episodes &lt;int&gt; 24, 24, 24, 24, 24, 24, 24, 24, 12</span></span>
+<span><span class="co">#&gt; $ original_title &lt;chr&gt; "Season 1", "Season 2", "Season 3", "Season 4", "Season…</span></span>
+<span><span class="co">#&gt; $ episodes       &lt;list&gt; [&lt;tbl_df[24 x 23]&gt;], [&lt;tbl_df[24 x 23]&gt;], [&lt;tbl_df[24 …</span></span>
+<span><span class="co">#&gt; $ tmdb           &lt;chr&gt; "5845", "5846", "5847", "5848", "5849", "5850", "5851"…</span></span>
+<span><span class="co">#&gt; $ tvdb           &lt;chr&gt; "10063", "10064", "10065", "10066", "10067", "16794", "…</span></span>
+<span><span class="co">#&gt; $ trakt          &lt;chr&gt; "6262", "6263", "6264", "6265", "6266", "6267", "6268",…</span></span>
+<span><span class="co">#&gt; $ plex_guid      &lt;chr&gt; "602e68e0d17ae1002dc137f5", "602e68f2d17ae1002dc13d5e",…</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="step-3-tidying-up">Step 3: Tidying up<a class="anchor" aria-label="anchor" href="#step-3-tidying-up"></a>
@@ -148,29 +149,29 @@ data we care about.</p>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">episodes</span><span class="op">)</span></span>
 <span><span class="co">#&gt; Rows: 204</span></span>
 <span><span class="co">#&gt; Columns: 23</span></span>
-<span><span class="co">#&gt; $ title                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "12:00 A.M.-1:00 A.M."<span style="color: #949494;">, </span>"1:00 A.M.-2:00 A.M."<span style="color: #949494;">, </span>…</span></span>
-<span><span class="co">#&gt; $ votes                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1065<span style="color: #949494;">, </span>831<span style="color: #949494;">, </span>1048<span style="color: #949494;">, </span>877<span style="color: #949494;">, </span>679<span style="color: #949494;">, </span>655<span style="color: #949494;">, </span>641<span style="color: #949494;">, </span>634<span style="color: #949494;">, </span>638<span style="color: #949494;">, </span>…</span></span>
-<span><span class="co">#&gt; $ episode                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>4<span style="color: #949494;">, </span>5<span style="color: #949494;">, </span>6<span style="color: #949494;">, </span>7<span style="color: #949494;">, </span>8<span style="color: #949494;">, </span>9<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>11<span style="color: #949494;">, </span>12<span style="color: #949494;">, </span>13<span style="color: #949494;">, </span>14<span style="color: #949494;">, </span>…</span></span>
-<span><span class="co">#&gt; $ rating                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 7.640376<span style="color: #949494;">, </span>7.717208<span style="color: #949494;">, </span>7.690840<span style="color: #949494;">, </span>7.661350<span style="color: #949494;">, </span>7.66421…</span></span>
-<span><span class="co">#&gt; $ season                 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>1<span style="color: #949494;">,</span>…</span></span>
-<span><span class="co">#&gt; $ runtime                <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 43<span style="color: #949494;">, </span>42<span style="color: #949494;">, </span>43<span style="color: #949494;">, </span>42<span style="color: #949494;">, </span>42<span style="color: #949494;">, </span>43<span style="color: #949494;">, </span>43<span style="color: #949494;">, </span>43<span style="color: #949494;">, </span>43<span style="color: #949494;">, </span>43<span style="color: #949494;">, </span>43<span style="color: #949494;">, </span>43<span style="color: #949494;">,</span>…</span></span>
-<span><span class="co">#&gt; $ overview               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Moments after discovering his daughter, Kimber…</span></span>
-<span><span class="co">#&gt; $ released               <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> 2001-11-07<span style="color: #949494;">, </span>2001-11-14<span style="color: #949494;">, </span>2001-11-21<span style="color: #949494;">, </span>2001-11-28…</span></span>
-<span><span class="co">#&gt; $ episode_abs            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>4<span style="color: #949494;">, </span>5<span style="color: #949494;">, </span>6<span style="color: #949494;">, </span>7<span style="color: #949494;">, </span>8<span style="color: #949494;">, </span>9<span style="color: #949494;">, </span>10<span style="color: #949494;">, </span>11<span style="color: #949494;">, </span>12<span style="color: #949494;">, </span>13<span style="color: #949494;">, </span>14<span style="color: #949494;">, </span>…</span></span>
-<span><span class="co">#&gt; $ updated_at             <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2026-05-24 23:40:57<span style="color: #949494;">, </span>2026-05-24 15:30:52<span style="color: #949494;">, </span>2026…</span></span>
-<span><span class="co">#&gt; $ first_aired            <span style="color: #949494; font-style: italic;">&lt;dttm&gt;</span> 2001-11-07 02:00:00<span style="color: #949494;">, </span>2001-11-14 02:00:00<span style="color: #949494;">, </span>2001…</span></span>
-<span><span class="co">#&gt; $ episode_type           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "series_premiere"<span style="color: #949494;">, </span>"standard"<span style="color: #949494;">, </span>"standard"<span style="color: #949494;">, </span>"sta…</span></span>
-<span><span class="co">#&gt; $ after_credits          <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE<span style="color: #949494;">, </span>FALSE<span style="color: #949494;">, </span>FALSE<span style="color: #949494;">, </span>FALSE<span style="color: #949494;">, </span>FALSE<span style="color: #949494;">, </span>FALSE<span style="color: #949494;">, </span>FALSE…</span></span>
-<span><span class="co">#&gt; $ comment_count          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 8<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>4<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>3<span style="color: #949494;">, </span>1<span style="color: #949494;">, </span>2<span style="color: #949494;">, </span>4<span style="color: #949494;">, </span>5<span style="color: #949494;">,</span>…</span></span>
-<span><span class="co">#&gt; $ during_credits         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span> FALSE<span style="color: #949494;">, </span>FALSE<span style="color: #949494;">, </span>FALSE<span style="color: #949494;">, </span>FALSE<span style="color: #949494;">, </span>FALSE<span style="color: #949494;">, </span>FALSE<span style="color: #949494;">, </span>FALSE…</span></span>
-<span><span class="co">#&gt; $ original_title         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "12:00 A.M.-1:00 A.M."<span style="color: #949494;">, </span>"1:00 A.M.-2:00 A.M."<span style="color: #949494;">, </span>…</span></span>
-<span><span class="co">#&gt; $ available_translations <span style="color: #949494; font-style: italic;">&lt;list&gt;</span> []<span style="color: #949494;">, </span>[]<span style="color: #949494;">, </span>[]<span style="color: #949494;">, </span>[]<span style="color: #949494;">, </span>[]<span style="color: #949494;">, </span>[]<span style="color: #949494;">, </span>[]<span style="color: #949494;">, </span>[]<span style="color: #949494;">, </span>[]<span style="color: #949494;">, </span>[]<span style="color: #949494;">, </span>[]<span style="color: #949494;">, </span>[]…</span></span>
-<span><span class="co">#&gt; $ effective_release_date <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2001-11-07T02:00:00.000Z"<span style="color: #949494;">, </span>"2001-11-14T02:00:0…</span></span>
-<span><span class="co">#&gt; $ imdb                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "tt0502165"<span style="color: #949494;">, </span>"tt0502167"<span style="color: #949494;">, </span>"tt0502169"<span style="color: #949494;">, </span>"tt05021…</span></span>
-<span><span class="co">#&gt; $ tmdb                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "972745"<span style="color: #949494;">, </span>"972752"<span style="color: #949494;">, </span>"972753"<span style="color: #949494;">, </span>"134397"<span style="color: #949494;">, </span>"134398…</span></span>
-<span><span class="co">#&gt; $ tvdb                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "189255"<span style="color: #949494;">, </span>"189256"<span style="color: #949494;">, </span>"189257"<span style="color: #949494;">, </span>"189258"<span style="color: #949494;">, </span>"189259…</span></span>
-<span><span class="co">#&gt; $ trakt                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "146247"<span style="color: #949494;">, </span>"146248"<span style="color: #949494;">, </span>"146249"<span style="color: #949494;">, </span>"146250"<span style="color: #949494;">, </span>"146251…</span></span>
-<span><span class="co">#&gt; $ plex_guid              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "5d9c13506c3e37001ed024b3"<span style="color: #949494;">, </span>"5d9c13506c3e37001e…</span></span></code></pre></div>
+<span><span class="co">#&gt; $ title                  &lt;chr&gt; "12:00 A.M.-1:00 A.M.", "1:00 A.M.-2:00 A.M.", …</span></span>
+<span><span class="co">#&gt; $ votes                  &lt;int&gt; 988, 783, 712, 690, 643, 624, 609, 600, 603, 58…</span></span>
+<span><span class="co">#&gt; $ episode                &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, …</span></span>
+<span><span class="co">#&gt; $ rating                 &lt;dbl&gt; 7.66599, 7.74074, 7.71629, 7.67826, 7.67030, 7.…</span></span>
+<span><span class="co">#&gt; $ season                 &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span></span>
+<span><span class="co">#&gt; $ runtime                &lt;int&gt; 43, 42, 43, 42, 42, 43, 43, 43, 43, 43, 43, 43,…</span></span>
+<span><span class="co">#&gt; $ overview               &lt;chr&gt; "Moments after discovering his daughter, Kimber…</span></span>
+<span><span class="co">#&gt; $ released               &lt;date&gt; 2001-11-07, 2001-11-14, 2001-11-21, 2001-11-28…</span></span>
+<span><span class="co">#&gt; $ episode_abs            &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, …</span></span>
+<span><span class="co">#&gt; $ updated_at             &lt;dttm&gt; 2026-07-01 06:27:31, 2026-06-30 16:33:59, 2026…</span></span>
+<span><span class="co">#&gt; $ first_aired            &lt;dttm&gt; 2001-11-07 02:00:00, 2001-11-14 02:00:00, 2001…</span></span>
+<span><span class="co">#&gt; $ episode_type           &lt;chr&gt; "series_premiere", "standard", "standard", "sta…</span></span>
+<span><span class="co">#&gt; $ after_credits          &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…</span></span>
+<span><span class="co">#&gt; $ comment_count          &lt;int&gt; 8, 3, 2, 3, 3, 4, 3, 2, 2, 3, 2, 3, 1, 2, 4, 5,…</span></span>
+<span><span class="co">#&gt; $ during_credits         &lt;lgl&gt; FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE…</span></span>
+<span><span class="co">#&gt; $ original_title         &lt;chr&gt; "12:00 A.M.-1:00 A.M.", "1:00 A.M.-2:00 A.M.", …</span></span>
+<span><span class="co">#&gt; $ available_translations &lt;list&gt; [], [], [], [], [], [], [], [], [], [], [], []…</span></span>
+<span><span class="co">#&gt; $ effective_release_date &lt;chr&gt; "2001-11-07T02:00:00.000Z", "2001-11-14T02:00:0…</span></span>
+<span><span class="co">#&gt; $ imdb                   &lt;chr&gt; "tt0502165", "tt0502167", "tt0502169", "tt05021…</span></span>
+<span><span class="co">#&gt; $ tmdb                   &lt;chr&gt; "972745", "972752", "972753", "134397", "134398…</span></span>
+<span><span class="co">#&gt; $ tvdb                   &lt;chr&gt; "189255", "189256", "189257", "189258", "189259…</span></span>
+<span><span class="co">#&gt; $ trakt                  &lt;chr&gt; "146247", "146248", "146249", "146250", "146251…</span></span>
+<span><span class="co">#&gt; $ plex_guid              &lt;chr&gt; "5d9c13506c3e37001ed024b3", "5d9c13506c3e37001e…</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="step-4-graph">Step 4: Graph!<a class="anchor" aria-label="anchor" href="#step-4-graph"></a>
@@ -198,7 +199,11 @@ it.</p>
 <span>        plot.title.position <span class="op">=</span> <span class="st">"plot"</span>,</span>
 <span>        legend.position <span class="op">=</span> <span class="st">"bottom"</span></span>
 <span>    <span class="op">)</span></span></code></pre></div>
-<p><img src="show-analysis-24_files/figure-html/24-episodes-plot-1.png" class="r-plt" alt="" width="100%"></p>
+<div class="figure">
+<img src="figures/24-episodes-plot-1.png" alt="plot of chunk 24-episodes-plot" width="100%"><p class="caption">
+plot of chunk 24-episodes-plot
+</p>
+</div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>

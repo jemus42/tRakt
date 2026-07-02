@@ -13,6 +13,8 @@ directly.
 
 - [`trakt_get()`](https://jemus42.github.io/tRakt/reference/trakt_get.md)
   : Make an API call and receive parsed output
+- [`trakt_api_available()`](https://jemus42.github.io/tRakt/reference/trakt_api_available.md)
+  : Check whether the trakt.tv API is reachable
 - [`trakt_credentials()`](https://jemus42.github.io/tRakt/reference/trakt_credentials.md)
   : trakt.tv credentials
 - [`tRakt_sitrep()`](https://jemus42.github.io/tRakt/reference/tRakt_sitrep.md)

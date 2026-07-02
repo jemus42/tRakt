@@ -37,7 +37,7 @@ search_id("tt2384811", id_type = "imdb", type = "show")
 #> # A tibble: 1 × 13
 #>   type  score movie$ids$imdb  year title  aired_episodes imdb  slug  tmdb  tvdb 
 #>   <chr> <dbl> <chr>          <int> <chr>           <int> <chr> <chr> <chr> <chr>
-#> 1 show    100 NA              2013 Utopia             12 tt23… utop… 46511 2649…
+#> 1 show    100 <NA>            2013 Utopia             12 tt23… utop… 46511 2649…
 #> # ℹ 9 more variables: movie$ids$plex <df[,2]>, $$slug <chr>, $$tmdb <int>,
 #> #   $$trakt <int>, movie$year <int>, $title <chr>, trakt <chr>,
 #> #   plex_guid <chr>, plex_slug <chr>
@@ -61,11 +61,11 @@ shows_popular(limit = 5)
 #> # A tibble: 5 × 10
 #>    year title   aired_episodes imdb  slug  tmdb  tvdb  trakt plex_guid plex_slug
 #>   <int> <chr>            <int> <chr> <chr> <chr> <chr> <chr> <chr>     <chr>    
-#> 1  2025 Plurib…              9 tt22… plur… 2251… 4364… 2067… 6497f186… pluribus 
-#> 2  2026 A Knig…              6 tt27… a-kn… 2243… 4336… 2041… 643cbf9e… a-knight…
-#> 3  2025 Alien:…              8 tt13… alie… 1572… 4589… 1706… 66391fb2… alien-ea…
-#> 4  2025 Dept. Q              9 tt27… dept… 2457… 4458… 2246… 65c281e8… dept-q   
-#> 5  2026 HIS & …              6 tt33… his-… 2597… 4525… 2494… 66a33f8e… his-and-…
+#> 1  2025 The Pi…             30 tt31… the-… 2503… 4481… 2328… 66047594… the-pitt 
+#> 2  2025 Plurib…              9 tt22… plur… 2251… 4364… 2067… 6497f186… pluribus 
+#> 3  2026 A Knig…              6 tt27… a-kn… 2243… 4336… 2041… 643cbf9e… a-knight…
+#> 4  2024 Fallout             16 tt12… fall… 1063… 4167… 1639… 5f1b325f… fallout-1
+#> 5  2024 Landman             20 tt14… land… 1577… 3974… 1743… 622ac0c4… landman
 ```
 
 The 10 most watched (during the past year) movies from 1990-2000:
@@ -77,18 +77,18 @@ library(dplyr)
 movies_watched(period = "yearly", years = c(1990, 2000)) |>
   select(watcher_count, title, year)
 #> # A tibble: 10 × 3
-#>    watcher_count title                                      year
-#>            <int> <chr>                                     <int>
-#>  1           589 The Matrix                                 1999
-#>  2           538 Toy Story                                  1995
-#>  3           510 Fight Club                                 1999
-#>  4           480 The Shawshank Redemption                   1994
-#>  5           441 Star Wars: Episode I - The Phantom Menace  1999
-#>  6           436 The Mummy                                  1999
-#>  7           390 The Truman Show                            1998
-#>  8           362 Pulp Fiction                               1994
-#>  9           352 Toy Story 2                                1999
-#> 10           351 The Lion King                              1994
+#>    watcher_count title                       year
+#>            <int> <chr>                      <int>
+#>  1          2089 Toy Story                   1995
+#>  2          1716 Toy Story 2                 1999
+#>  3           541 The Matrix                  1999
+#>  4           537 Jurassic Park               1993
+#>  5           482 The Shawshank Redemption    1994
+#>  6           471 Fight Club                  1999
+#>  7           447 Scary Movie                 2000
+#>  8           420 Mulan                       1998
+#>  9           415 Aladdin                     1992
+#> 10           413 10 Things I Hate About You  1999
 ```
 
 ## Finding Things (and the right amount)

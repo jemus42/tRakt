@@ -111,20 +111,20 @@ Other episode data:
 ``` r
 # Get all translations
 movies_translations("193972")
-#> # A tibble: 47 × 5
+#> # A tibble: 55 × 5
 #>    title                                     overview   tagline language country
 #>    <chr>                                     <chr>      <chr>   <chr>    <chr>  
 #>  1 حكاية لعبة 4                              "لطالما ك… مغامرة… ar       sa     
-#>  2 Играта на играчките: Пътешествието        "Уди вина… Приклю… bg       bg     
-#>  3 NA                                        "Compte! … Torna … ca       es     
-#>  4 Toy Story 4: Příběh hraček                "Kovboj W… Připra… cs       cz     
-#>  5 NA                                        "Siden An… NA      da       dk     
-#>  6 A Toy Story: Alles hört auf kein Kommando "Die Cowb… Hier s… de       de     
-#>  7 Η Ιστορία των Παιχνιδιών 4                "Στη διάρ… Η περι… el       gr     
-#>  8 Toy Story 4                               "Woody ha… The ad… en       us     
-#>  9 NA                                        "Woody si… La ave… es       es     
-#> 10 NA                                        "Cuando u… Woody … es       mx     
-#> # ℹ 37 more rows
+#>  2 حكاية لعبة 4                               NA        NA      ar       ae     
+#>  3 Гісторыя цацак 4                           NA        NA      be       by     
+#>  4 Играта на играчките: Пътешествието        "Уди вина… Приклю… bg       bg     
+#>  5 টয় স্টোরি ৪                                 NA        NA      bn       bd     
+#>  6 NA                                        "Compte! … Torna … ca       es     
+#>  7 Toy Story 4: Příběh hraček                "Kovboj W… Připra… cs       cz     
+#>  8 NA                                        "Siden An… NA      da       dk     
+#>  9 A Toy Story: Alles hört auf kein Kommando "Die Cowb… Hier s… de       de     
+#> 10 Η Ιστορία των Παιχνιδιών 4                "Στη διάρ… Η περι… el       gr     
+#> # ℹ 45 more rows
 
 # Only get a specific language
 movies_translations("193972", "de")

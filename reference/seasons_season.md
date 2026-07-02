@@ -80,10 +80,19 @@ Other season data:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 seasons_season("breaking-bad", 1)
+#> # A tibble: 1 × 5
+#>   number tmdb  tvdb  trakt plex_guid               
+#>    <int> <chr> <chr> <chr> <chr>                   
+#> 1      1 3572  30272 3950  602e61de66dfdb002c096b16
 
 # Including all episode data:
 seasons_season("breaking-bad", 1, extended = "full")
-} # }
+#> # A tibble: 1 × 16
+#>   title    votes number rating network overview              updated_at         
+#>   <chr>    <int>  <int>  <dbl> <lgl>   <chr>                 <dttm>             
+#> 1 Season 1  3328      1   8.39 NA      "High school chemist… 2026-07-02 22:28:21
+#> # ℹ 9 more variables: first_aired <dttm>, episode_count <int>,
+#> #   total_runtime <int>, aired_episodes <int>, original_title <chr>,
+#> #   tmdb <chr>, tvdb <chr>, trakt <chr>, plex_guid <chr>
 ```

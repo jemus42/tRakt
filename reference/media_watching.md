@@ -134,10 +134,34 @@ Other episode data:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 movies_watching("deadpool-2016")
+#> # A tibble: 1 × 8
+#>   username          private deleted user_name    vip   vip_ep director user_slug
+#>   <chr>             <lgl>   <lgl>   <chr>        <lgl> <lgl>  <lgl>    <chr>    
+#> 1 Tonymontana131313 FALSE   FALSE   Anthony Wil… FALSE FALSE  FALSE    tonymont…
 shows_watching("the-simpsons")
+#> # A tibble: 35 × 8
+#>    username       private deleted user_name      vip   vip_ep director user_slug
+#>    <chr>          <lgl>   <lgl>   <chr>          <lgl> <lgl>  <lgl>    <chr>    
+#>  1 Mohamedjack321 FALSE   FALSE   Mohamed Khalil FALSE FALSE  FALSE    mohamedj…
+#>  2 calmcl1        FALSE   FALSE   Cal McLean     FALSE FALSE  FALSE    calmcl1  
+#>  3 Jose moya98    FALSE   FALSE   Jose Moya      FALSE FALSE  FALSE    jose-moy…
+#>  4 feysofit       FALSE   FALSE   Alexandru O.   FALSE FALSE  FALSE    feysofit 
+#>  5 jcltsajp       FALSE   FALSE   Pena           FALSE FALSE  FALSE    jcltsajp 
+#>  6 Dabomb1001     FALSE   FALSE   Dabomb         FALSE FALSE  FALSE    dabomb10…
+#>  7 FMR            FALSE   FALSE   FMR            FALSE FALSE  FALSE    fmr      
+#>  8 gophergrad     FALSE   FALSE   Mitch          TRUE  FALSE  FALSE    gophergr…
+#>  9 modemhead      TRUE    FALSE   NA             NA    NA     NA       modemhead
+#> 10 TheDoctah      FALSE   FALSE   TheDoctah      FALSE FALSE  FALSE    thedoctah
+#> # ℹ 25 more rows
 seasons_watching("the-simpsons", season = 6)
+#> # A tibble: 1 × 16
+#>   username   private deleted joined_at           location about user_name gender
+#>   <chr>      <lgl>   <lgl>   <dttm>              <chr>    <lgl> <chr>     <chr> 
+#> 1 Dabomb1001 FALSE   FALSE   2023-07-12 00:52:46 Waterlo… NA    Dabomb    male  
+#> # ℹ 8 more variables: age <int>, vip <lgl>, vip_ep <lgl>,
+#> #   vip_cover_image <lgl>, director <lgl>, user_slug <chr>, user_trakt <int>,
+#> #   avatar <chr>
 episodes_watching("the-simpsons", season = 6, episode = 12)
-} # }
+#> # A tibble: 0 × 0
 ```

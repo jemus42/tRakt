@@ -37,6 +37,11 @@ See [the official API reference](https://trakt.docs.apiary.io) for a
 detailed overview of available methods. Most methods of potential
 interest for data collection have dedicated functions in this package.
 
+## See also
+
+Other API-basics:
+[`trakt_api_available()`](https://jemus42.github.io/tRakt/reference/trakt_api_available.md)
+
 ## Examples
 
 ``` r

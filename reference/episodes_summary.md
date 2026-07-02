@@ -94,7 +94,7 @@ episodes_summary("breaking-bad", season = 1, episode = 1, extended = "full")
 #> # A tibble: 1 × 24
 #>   title votes episode rating id    season runtime overview released   number_abs
 #>   <chr> <int>   <int>  <dbl> <chr>  <int>   <int> <chr>    <date>          <int>
-#> 1 Pilot  5677       1   8.37 brea…      1      59 When an… 2008-01-21          1
+#> 1 Pilot  4752       1   8.35 brea…      1      59 When an… 2008-01-21          1
 #> # ℹ 14 more variables: updated_at <dttm>, first_aired <dttm>,
 #> #   episode_type <chr>, after_credits <lgl>, comment_count <int>,
 #> #   during_credits <lgl>, original_title <chr>, available_translations <list>,

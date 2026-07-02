@@ -5,18 +5,18 @@ Get popular / trending lists
 ## Usage
 
 ``` r
-lists_popular(limit = 10)
+lists_popular(limit = 10, type = c("personal", "official"))
 
-lists_trending(limit = 10)
+lists_trending(limit = 10, type = c("personal", "official"))
 ```
 
 ## Source
 
 `lists_popular()` wraps endpoint
-[/lists/popular](https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists).
+[/lists/popular/:type](https://trakt.docs.apiary.io/#reference/lists/popular/get-popular-lists).
 
 `lists_trending()` wraps endpoint
-[/lists/trending](https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists).
+[/lists/trending/:type](https://trakt.docs.apiary.io/#reference/lists/trending/get-trending-lists).
 
 ## Arguments
 
@@ -25,6 +25,13 @@ lists_trending(limit = 10)
   `integer(1) [10L]`: Number of items to return. Must be greater than
   `0` and will be coerced via
   [`as.integer()`](https://rdrr.io/r/base/integer.html).
+
+- type:
+
+  `character(1) ["personal"]`: The kind of lists to return, one of
+  `"personal"` (user-created lists) or `"official"` (Trakt-curated
+  lists). The trakt.tv API requires this path segment; a request without
+  it returns an empty (HTTP 204) response.
 
 ## Value
 
@@ -59,8 +66,44 @@ Other dynamic lists:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 lists_popular()
+#> # A tibble: 10 × 32
+#>    name      description privacy share_link type  display_numbers allow_comments
+#>    <chr>     <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
+#>  1 IMDB: To… "Top 250 m… public  ""         pers… TRUE            TRUE          
+#>  2 MARVEL C… "**UPDATED… public  ""         pers… TRUE            TRUE          
+#>  3 IMDB: To… "Top 250 T… public  ""         pers… TRUE            TRUE          
+#>  4 Best Min… "What’s a … public  ""         pers… FALSE           TRUE          
+#>  5 1001 Gre… "/u/StopRe… public  ""         pers… TRUE            TRUE          
+#>  6 1001 Mov… "> 1001 Mo… public  ""         pers… TRUE            TRUE          
+#>  7 Mindfuck  "The objec… public  ""         pers… FALSE           TRUE          
+#>  8 Great Mo… "Every yea… public  ""         pers… FALSE           TRUE          
+#>  9 True Cri… "This isn'… public  ""         pers… FALSE           TRUE          
+#> 10 DC Unive… ""          public  ""         pers… TRUE            TRUE          
+#> # ℹ 25 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
+#> #   updated_at <dttm>, item_count <int>, comment_count <int>, likes <int>,
+#> #   slug <chr>, trakt <chr>, username <chr>, private <lgl>, deleted <lgl>,
+#> #   joined_at <dttm>, location <chr>, about <chr>, user_name <chr>,
+#> #   gender <chr>, age <int>, vip <lgl>, vip_ep <lgl>, vip_cover_image <lgl>,
+#> #   director <lgl>, user_slug <chr>, user_trakt <int>, avatar <chr>
 lists_trending()
-} # }
+#> # A tibble: 10 × 32
+#>    name      description privacy share_link type  display_numbers allow_comments
+#>    <chr>     <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
+#>  1 IMDB: To… "Top 250 m… public  ""         pers… TRUE            TRUE          
+#>  2 Best Min… "What’s a … public  ""         pers… FALSE           TRUE          
+#>  3 IMDB: To… "Top 250 T… public  ""         pers… TRUE            TRUE          
+#>  4 Trakt: P… "The Trakt… public  ""         pers… TRUE            TRUE          
+#>  5 MARVEL C… "**UPDATED… public  ""         pers… TRUE            TRUE          
+#>  6 1001 Gre… "/u/StopRe… public  ""         pers… TRUE            TRUE          
+#>  7 True Cri… "This isn'… public  ""         pers… FALSE           TRUE          
+#>  8 Sci-Fi    ""          public  ""         pers… FALSE           TRUE          
+#>  9 Popular … "This isn'… public  ""         pers… FALSE           TRUE          
+#> 10 Korean^^  "Explore t… public  ""         pers… FALSE           TRUE          
+#> # ℹ 25 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
+#> #   updated_at <dttm>, item_count <int>, comment_count <int>, likes <int>,
+#> #   slug <chr>, trakt <chr>, username <chr>, private <lgl>, deleted <lgl>,
+#> #   joined_at <dttm>, location <chr>, about <chr>, user_name <chr>,
+#> #   gender <chr>, age <int>, vip <lgl>, vip_ep <lgl>, vip_cover_image <lgl>,
+#> #   director <lgl>, user_slug <chr>, user_trakt <int>, avatar <chr>
 ```

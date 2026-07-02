@@ -93,10 +93,33 @@ Other episode data:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
 seasons_episodes("breaking-bad", 1)
+#> # A tibble: 7 × 8
+#>   title                         episode season imdb  tmdb  tvdb  trakt plex_guid
+#>   <chr>                           <int>  <int> <chr> <chr> <chr> <chr> <chr>    
+#> 1 Pilot                               1      1 tt09… 62085 3492… 73482 5d9c0fc3…
+#> 2 Cat's in the Bag...                 2      1 tt10… 62086 3492… 73483 5d9c0fc3…
+#> 3 ...And the Bag's in the River       3      1 tt10… 62087 3492… 73484 5d9c0fc3…
+#> 4 Cancer Man                          4      1 tt10… 62088 3492… 73485 5d9c0fc3…
+#> 5 Gray Matter                         5      1 tt10… 62089 3492… 73486 5d9c0fc3…
+#> 6 Crazy Handful of Nothin'            6      1 tt10… 62090 3551… 73487 5d9c0fc3…
+#> 7 A No Rough Stuff Type Deal          7      1 tt10… 62091 3525… 73488 5d9c0fc3…
 
 # Including all episode data:
 seasons_episodes("breaking-bad", 1, extended = "full")
-} # }
+#> # A tibble: 7 × 23
+#>   title      votes episode rating season runtime overview released   episode_abs
+#>   <chr>      <int>   <int>  <dbl>  <int>   <int> <chr>    <date>           <int>
+#> 1 Pilot       4744       1   8.35      1      59 When an… 2008-01-21           1
+#> 2 Cat's in …  3943       2   8.10      1      49 Walt an… 2008-01-28           2
+#> 3 ...And th…  3669       3   8.03      1      49 Walter … 2008-02-11           3
+#> 4 Cancer Man  3536       4   7.93      1      49 Walter … 2008-02-18           4
+#> 5 Gray Matt…  3460       5   7.95      1      49 Walter … 2008-02-25           5
+#> 6 Crazy Han…  3496       6   8.54      1      49 The sid… 2008-03-03           6
+#> 7 A No Roug…  3403       7   8.35      1      48 Walter … 2008-03-10           7
+#> # ℹ 14 more variables: updated_at <dttm>, first_aired <dttm>,
+#> #   episode_type <chr>, after_credits <lgl>, comment_count <int>,
+#> #   during_credits <lgl>, original_title <chr>, available_translations <list>,
+#> #   effective_release_date <chr>, imdb <chr>, tmdb <chr>, tvdb <chr>,
+#> #   trakt <chr>, plex_guid <chr>
 ```
