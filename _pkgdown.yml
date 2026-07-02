@@ -50,6 +50,7 @@ reference:
       These functions are basic building blocks, you don't have to use them directly.
     contents:
       - trakt_get
+      - trakt_api_available
       - trakt_credentials
       - tRakt_sitrep
   - subtitle: Search – Finding media
