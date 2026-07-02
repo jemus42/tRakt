@@ -1,7 +1,7 @@
 ---
 title: "Getting Started"
 author: "Lukas Burk"
-date: "2026-07-02"
+date: "2026-07-03"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Getting Started}
@@ -30,14 +30,14 @@ Using a text query:
 ``` r
 search_query("Utopia", type = "show")
 #> # A tibble: 1 × 36
-#>     score type  title   year tagline   overview runtime country trailer homepage
-#>     <dbl> <chr> <chr>  <int> <chr>     <chr>      <int> <chr>   <chr>   <chr>   
-#> 1 5.79e17 show  Utopia  2013 The Netw… The  Ut…      50 gb      https:… https:/…
+#>     score type  title     year tagline overview runtime country trailer homepage
+#>     <dbl> <chr> <chr>    <int> <chr>   <chr>      <int> <chr>   <chr>   <chr>   
+#> 1 5.79e17 show  Utopia …  2014 A blur… Set ins…      25 au      https:… https:/…
 #> # ℹ 26 more variables: status <chr>, rating <dbl>, votes <int>,
 #> #   comment_count <int>, updated_at <dttm>, language <chr>, languages <list>,
 #> #   available_translations <list>, genres <list>, subgenres <list>,
 #> #   original_title <chr>, social_ids <df[,4]>, first_aired <dttm>,
-#> #   aired_episodes <int>, certification <chr>, network <chr>, airs_day <chr>,
+#> #   aired_episodes <int>, network <chr>, certification <chr>, airs_day <chr>,
 #> #   airs_time <chr>, airs_timezone <chr>, trakt <chr>, slug <chr>, imdb <chr>,
 #> #   tmdb <chr>, tvdb <chr>, plex_guid <chr>, plex_slug <chr>
 ```
@@ -80,21 +80,21 @@ The 10 most watched (during the past year) movies from 1990-2000:
 ``` r
 library(dplyr)
 
-movies_watched(period = "yearly", years = c(1990, 2000)) |>
+movies_watched(period = "yearly", filters = filters_movies(years = c(1990, 2000))) |>
   select(watcher_count, title, year)
 #> # A tibble: 10 × 3
-#>    watcher_count title                       year
-#>            <int> <chr>                      <int>
-#>  1          2089 Toy Story                   1995
-#>  2          1716 Toy Story 2                 1999
-#>  3           541 The Matrix                  1999
-#>  4           537 Jurassic Park               1993
-#>  5           482 The Shawshank Redemption    1994
-#>  6           471 Fight Club                  1999
-#>  7           447 Scary Movie                 2000
-#>  8           420 Mulan                       1998
-#>  9           415 Aladdin                     1992
-#> 10           413 10 Things I Hate About You  1999
+#>    watcher_count title                     year
+#>            <int> <chr>                    <int>
+#>  1          2480 Toy Story                 1995
+#>  2          2003 Toy Story 2               1999
+#>  3           911 Fight Club                1999
+#>  4           871 The Matrix                1999
+#>  5           778 The Lion King             1994
+#>  6           762 Titanic                   1997
+#>  7           759 The Shawshank Redemption  1994
+#>  8           728 Forrest Gump              1994
+#>  9           711 The Truman Show           1998
+#> 10           695 Se7en                     1995
 ```
 
 ## Finding Things (and the right amount)

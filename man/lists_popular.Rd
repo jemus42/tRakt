@@ -50,6 +50,7 @@ Other list methods:
 Other dynamic lists:
 \code{\link{anticipated_media}},
 \code{\link{collected_media}},
+\code{\link{filters}},
 \code{\link{played_media}},
 \code{\link{popular_media}},
 \code{\link{trending_media}},

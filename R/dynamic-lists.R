@@ -18,6 +18,7 @@ trakt_auto_lists <- function(
 	extended = "min",
 	period = NULL,
 	start_date = NULL,
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -27,49 +28,57 @@ trakt_auto_lists <- function(
 	ratings = NULL,
 	certifications = NULL,
 	networks = NULL,
-	status = NULL
+	status = NULL,
+	# Captures the user's calling frame (through the public wrapper) so the
+	# soft-deprecation of the legacy flat filter arguments targets user code.
+	user_env = rlang::caller_env(2)
 ) {
 	# Check arguments
 	list_type <- match.arg(list_type)
+	type <- match.arg(type)
 
 	extended <- validate_extended(extended)
 	limit <- as.integer(limit)
 
-	# Check filters
-	query <- check_filter_arg(query, "query")
-	years <- check_filter_arg(years, "years")
-	genres <- check_filter_arg(genres, "genres")
-	languages <- check_filter_arg(languages, "languages")
-	countries <- check_filter_arg(countries, "countries")
-	runtimes <- check_filter_arg(runtimes, "runtimes")
-	ratings <- check_filter_arg(ratings, "ratings")
-	certifications <- check_filter_arg(certifications, "certifications")
-	networks <- check_filter_arg(networks, "networks")
-	status <- check_filter_arg(status, "status")
+	# Reconcile the `filters` object with any legacy individual filter arguments.
+	filters <- resolve_filters(
+		filters,
+		flat = list(
+			query = query,
+			years = years,
+			genres = genres,
+			languages = languages,
+			countries = countries,
+			runtimes = runtimes,
+			ratings = ratings,
+			certifications = certifications,
+			networks = networks,
+			status = status
+		),
+		context = type,
+		user_env = user_env
+	)
 
 	# Check limit
 	if (limit < 1) {
 		cli::cli_abort("{.arg limit} must be greater than zero, not {.val {limit}}.")
 	}
 
-	# Construct URL, make API call
-	url <- build_trakt_url(
-		type,
-		list_type,
-		start_date,
-		period,
-		limit = limit,
-		extended = extended$query_value,
-		query = query,
-		years = years,
-		genres = genres,
-		languages = languages,
-		countries = countries,
-		runtimes = runtimes,
-		ratings = ratings,
-		certifications = certifications,
-		networks = networks,
-		status = status
+	# Construct URL, make API call. Filter query parameters are spliced in from
+	# the validated `filters` object.
+	url <- do.call(
+		build_trakt_url,
+		c(
+			list(
+				type,
+				list_type,
+				start_date,
+				period,
+				limit = limit,
+				extended = extended$query_value
+			),
+			unclass(filters)
+		)
 	)
 	response <- trakt_get(url)
 	response <- as_tibble(response)
@@ -123,10 +132,11 @@ trakt_auto_lists <- function(
 #' @family dynamic lists
 #' @examplesIf trakt_api_available()
 #' # Get the most popular German-language movies between 2000 and 2010
-#' movies_popular(languages = "de", years = c(2000, 2010))
+#' movies_popular(filters = filters_movies(languages = "de", years = c(2000, 2010)))
 movies_popular <- function(
 	limit = 10,
 	extended = "min",
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -141,6 +151,7 @@ movies_popular <- function(
 		type = "movies",
 		limit = limit,
 		extended = extended,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -160,6 +171,7 @@ movies_popular <- function(
 shows_popular <- function(
 	limit = 10,
 	extended = "min",
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -176,6 +188,7 @@ shows_popular <- function(
 		type = "shows",
 		limit = limit,
 		extended = extended,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -205,6 +218,7 @@ shows_popular <- function(
 movies_trending <- function(
 	limit = 10,
 	extended = "min",
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -219,6 +233,7 @@ movies_trending <- function(
 		type = "movies",
 		limit = limit,
 		extended = extended,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -238,6 +253,7 @@ movies_trending <- function(
 shows_trending <- function(
 	limit = 10,
 	extended = "min",
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -254,6 +270,7 @@ shows_trending <- function(
 		type = "shows",
 		limit = limit,
 		extended = extended,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -283,6 +300,7 @@ shows_trending <- function(
 movies_anticipated <- function(
 	limit = 10,
 	extended = "min",
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -297,6 +315,7 @@ movies_anticipated <- function(
 		type = "movies",
 		limit = limit,
 		extended = extended,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -316,10 +335,14 @@ movies_anticipated <- function(
 #' @examplesIf trakt_api_available()
 #' # Get 15 the most anticipated upcoming shows on Netflix that air this year
 #' current_year <- format(Sys.Date(), "%Y")
-#' shows_anticipated(limit = 15, networks = "Netflix", years = current_year)
+#' shows_anticipated(
+#'   limit = 15,
+#'   filters = filters_shows(networks = "Netflix", years = current_year)
+#' )
 shows_anticipated <- function(
 	limit = 10,
 	extended = "min",
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -336,6 +359,7 @@ shows_anticipated <- function(
 		type = "shows",
 		limit = limit,
 		extended = extended,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -366,6 +390,7 @@ movies_played <- function(
 	limit = 10,
 	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -383,6 +408,7 @@ movies_played <- function(
 		limit = limit,
 		extended = extended,
 		period = period,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -403,6 +429,7 @@ shows_played <- function(
 	limit = 10,
 	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -422,6 +449,7 @@ shows_played <- function(
 		limit = limit,
 		extended = extended,
 		period = period,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -452,6 +480,7 @@ movies_watched <- function(
 	limit = 10,
 	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -469,6 +498,7 @@ movies_watched <- function(
 		limit = limit,
 		extended = extended,
 		period = period,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -489,6 +519,7 @@ shows_watched <- function(
 	limit = 10,
 	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -508,6 +539,7 @@ shows_watched <- function(
 		limit = limit,
 		extended = extended,
 		period = period,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -538,6 +570,7 @@ movies_collected <- function(
 	limit = 10,
 	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -555,6 +588,7 @@ movies_collected <- function(
 		limit = limit,
 		extended = extended,
 		period = period,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,
@@ -575,6 +609,7 @@ shows_collected <- function(
 	limit = 10,
 	extended = "min",
 	period = c("weekly", "monthly", "yearly", "all"),
+	filters = NULL,
 	query = NULL,
 	years = NULL,
 	genres = NULL,
@@ -594,6 +629,7 @@ shows_collected <- function(
 		limit = limit,
 		extended = extended,
 		period = period,
+		filters = filters,
 		query = query,
 		years = years,
 		genres = genres,

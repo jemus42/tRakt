@@ -66,6 +66,9 @@ reference:
     contents:
       - ends_with("(popular|trending|anticipated|watched|watching|played|collected)")
       - -starts_with("user_")
+  - subtitle: Filtering dynamic lists and search
+    contents:
+      - starts_with("filters_")
   - subtitle: Single-item summary data
     contents:
       - ends_with("_summary")

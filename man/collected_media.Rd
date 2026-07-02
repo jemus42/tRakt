@@ -15,6 +15,7 @@ movies_collected(
   limit = 10,
   extended = "min",
   period = c("weekly", "monthly", "yearly", "all"),
+  filters = NULL,
   query = NULL,
   years = NULL,
   genres = NULL,
@@ -29,6 +30,7 @@ shows_collected(
   limit = 10,
   extended = "min",
   period = c("weekly", "monthly", "yearly", "all"),
+  filters = NULL,
   query = NULL,
   years = NULL,
   genres = NULL,
@@ -59,6 +61,13 @@ or a character vector (e.g. \code{c("full", "images")}).}
 
 \item{period}{\code{character(1) ["weekly"]}: Which period to filter by. Possible values
 are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
+
+\item{filters}{A \code{\link[=filters]{trakt_filters}} object created with
+\code{\link[=filters_movies]{filters_movies()}}, \code{\link[=filters_shows]{filters_shows()}}, or \code{\link[=filters_episodes]{filters_episodes()}} that refines
+which items are returned. See \link{filters} for the full set of supported
+filters. Supplying filters as individual arguments (\code{genres}, \code{years},
+\code{networks}, ...) is soft-deprecated in favour of this argument; if both are
+given, \code{filters} takes precedence.}
 
 \item{query}{\code{character(1)}: Search string for titles and descriptions.
 For \code{search_query()} other fields are searched depending on the \code{type} of media.
@@ -155,6 +164,7 @@ Other movie data:
 
 Other dynamic lists:
 \code{\link{anticipated_media}},
+\code{\link{filters}},
 \code{\link[=lists_popular]{lists_popular()}},
 \code{\link{played_media}},
 \code{\link{popular_media}},

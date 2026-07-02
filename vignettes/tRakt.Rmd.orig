@@ -56,7 +56,7 @@ The 10 most watched (during the past year) movies from 1990-2000:
 ```{r auto-lists-watched}
 library(dplyr)
 
-movies_watched(period = "yearly", years = c(1990, 2000)) |>
+movies_watched(period = "yearly", filters = filters_movies(years = c(1990, 2000))) |>
   select(watcher_count, title, year)
 ```
 

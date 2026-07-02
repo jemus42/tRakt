@@ -14,6 +14,7 @@
 movies_anticipated(
   limit = 10,
   extended = "min",
+  filters = NULL,
   query = NULL,
   years = NULL,
   genres = NULL,
@@ -27,6 +28,7 @@ movies_anticipated(
 shows_anticipated(
   limit = 10,
   extended = "min",
+  filters = NULL,
   query = NULL,
   years = NULL,
   genres = NULL,
@@ -54,6 +56,13 @@ than \code{0} and will be coerced via \code{as.integer()}.}
 
 Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
 or a character vector (e.g. \code{c("full", "images")}).}
+
+\item{filters}{A \code{\link[=filters]{trakt_filters}} object created with
+\code{\link[=filters_movies]{filters_movies()}}, \code{\link[=filters_shows]{filters_shows()}}, or \code{\link[=filters_episodes]{filters_episodes()}} that refines
+which items are returned. See \link{filters} for the full set of supported
+filters. Supplying filters as individual arguments (\code{genres}, \code{years},
+\code{networks}, ...) is soft-deprecated in favour of this argument; if both are
+given, \code{filters} takes precedence.}
 
 \item{query}{\code{character(1)}: Search string for titles and descriptions.
 For \code{search_query()} other fields are searched depending on the \code{type} of media.
@@ -131,7 +140,10 @@ the same additional variables besides the media information: \code{watcher_count
 \dontshow{if (trakt_api_available()) withAutoprint(\{ # examplesIf}
 # Get 15 the most anticipated upcoming shows on Netflix that air this year
 current_year <- format(Sys.Date(), "\%Y")
-shows_anticipated(limit = 15, networks = "Netflix", years = current_year)
+shows_anticipated(
+  limit = 15,
+  filters = filters_shows(networks = "Netflix", years = current_year)
+)
 \dontshow{\}) # examplesIf}
 }
 \seealso{
@@ -157,6 +169,7 @@ Other movie data:
 
 Other dynamic lists:
 \code{\link{collected_media}},
+\code{\link{filters}},
 \code{\link[=lists_popular]{lists_popular()}},
 \code{\link{played_media}},
 \code{\link{popular_media}},

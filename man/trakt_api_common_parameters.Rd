@@ -37,6 +37,13 @@ are \code{"weekly"}, \code{"monthly"}, \code{"yearly"}, \code{"all"}.}
 \item{limit}{\code{integer(1) [10L]}: Number of items to return. Must be greater
 than \code{0} and will be coerced via \code{as.integer()}.}
 
+\item{filters}{A \code{\link[=filters]{trakt_filters}} object created with
+\code{\link[=filters_movies]{filters_movies()}}, \code{\link[=filters_shows]{filters_shows()}}, or \code{\link[=filters_episodes]{filters_episodes()}} that refines
+which items are returned. See \link{filters} for the full set of supported
+filters. Supplying filters as individual arguments (\code{genres}, \code{years},
+\code{networks}, ...) is soft-deprecated in favour of this argument; if both are
+given, \code{filters} takes precedence.}
+
 \item{season, episode}{\code{integer(1) [1L]}: The season and episode number. If longer,
 e.g. \code{1:5}, the function is vectorized and the output will be
 combined. This may result in \emph{a lot} of API calls. Use wisely.}

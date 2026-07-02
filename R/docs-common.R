@@ -31,6 +31,12 @@
 #'   are `"weekly"`, `"monthly"`, `"yearly"`, `"all"`.
 #' @param limit `integer(1) [10L]`: Number of items to return. Must be greater
 #'   than `0` and will be coerced via `as.integer()`.
+#' @param filters A [`trakt_filters`][filters] object created with
+#'   [filters_movies()], [filters_shows()], or [filters_episodes()] that refines
+#'   which items are returned. See [filters] for the full set of supported
+#'   filters. Supplying filters as individual arguments (`genres`, `years`,
+#'   `networks`, ...) is soft-deprecated in favour of this argument; if both are
+#'   given, `filters` takes precedence.
 #' @param season,episode `integer(1) [1L]`: The season and episode number. If longer,
 #'   e.g. `1:5`, the function is vectorized and the output will be
 #'   combined. This may result in *a lot* of API calls. Use wisely.
