@@ -51,6 +51,7 @@ search_query <- function(
 	type = "show",
 	n_results = 1L,
 	extended = "min",
+	filters = NULL,
 	years = NULL,
 	genres = NULL,
 	languages = NULL,
@@ -61,22 +62,39 @@ search_query <- function(
 	networks = NULL,
 	status = NULL
 ) {
+	# Reconcile the `filters` object with any legacy individual filter arguments
+	# once, up front, so the per-type recursion below does not re-warn. Search
+	# spans several media types, so the "any" context accepts every filter.
+	# `user_env` targets the soft-deprecation warning at the caller's code.
+	user_env <- rlang::caller_env()
+	filters <- resolve_filters(
+		filters,
+		flat = list(
+			years = years,
+			genres = genres,
+			languages = languages,
+			countries = countries,
+			runtimes = runtimes,
+			ratings = ratings,
+			certifications = certifications,
+			networks = networks,
+			status = status
+		),
+		context = "any",
+		user_env = user_env
+	)
+	# `query` is the primary search input and is handled separately below, so it
+	# never travels inside the filter object.
+	filters$query <- NULL
+
 	if (length(type) > 1) {
 		return(map_rbind(type, \(x) {
 			search_query(
 				query,
 				type = x,
 				n_results = n_results,
-				years = years,
 				extended = extended,
-				genres = genres,
-				languages = languages,
-				countries = countries,
-				runtimes = runtimes,
-				ratings = ratings,
-				certifications = certifications,
-				networks = networks,
-				status = status
+				filters = filters
 			)
 		}))
 	}
@@ -84,34 +102,21 @@ search_query <- function(
 	type <- check_types(type, several.ok = TRUE, possible_types = ok_types)
 
 	extended <- validate_extended(extended)
-
-	# Check filters
 	query <- check_filter_arg(query, "query")
-	years <- check_filter_arg(years, "years")
-	genres <- check_filter_arg(genres, "genres")
-	languages <- check_filter_arg(languages, "languages")
-	countries <- check_filter_arg(countries, "countries")
-	runtimes <- check_filter_arg(runtimes, "runtimes")
-	ratings <- check_filter_arg(ratings, "ratings")
-	certifications <- check_filter_arg(certifications, "certifications")
-	networks <- check_filter_arg(networks, "networks")
-	status <- check_filter_arg(status, "status")
 
-	# Construct URL, make API call
-	url <- build_trakt_url(
-		"search",
-		type,
-		query = query,
-		years = years,
-		extended = extended$query_value,
-		genres = genres,
-		languages = languages,
-		countries = countries,
-		runtimes = runtimes,
-		ratings = ratings,
-		certifications = certifications,
-		networks = networks,
-		status = status
+	# Construct URL, make API call. Filter query parameters are spliced in from
+	# the validated `filters` object.
+	url <- do.call(
+		build_trakt_url,
+		c(
+			list(
+				"search",
+				type,
+				query = query,
+				extended = extended$query_value
+			),
+			unclass(filters)
+		)
 	)
 	response <- trakt_get(url = url)
 

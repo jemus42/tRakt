@@ -15,6 +15,7 @@ search_query(
   type = "show",
   n_results = 1L,
   extended = "min",
+  filters = NULL,
   years = NULL,
   genres = NULL,
   languages = NULL,
@@ -59,6 +60,13 @@ separate function calls in that case.}
 
 Multiple values can be combined as a comma-separated string (e.g. \code{"full,images"})
 or a character vector (e.g. \code{c("full", "images")}).}
+
+\item{filters}{A \code{\link[=filters]{trakt_filters}} object created with
+\code{\link[=filters_movies]{filters_movies()}}, \code{\link[=filters_shows]{filters_shows()}}, or \code{\link[=filters_episodes]{filters_episodes()}} that refines
+which items are returned. See \link{filters} for the full set of supported
+filters. Supplying filters as individual arguments (\code{genres}, \code{years},
+\code{networks}, ...) is soft-deprecated in favour of this argument; if both are
+given, \code{filters} takes precedence.}
 
 \item{years}{\code{character | integer}: 4-digit year (\code{2010}) \strong{or} range,
 e.g. \code{"2010-2020"}. Can also be an integer vector of length two which will be

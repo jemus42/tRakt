@@ -13,7 +13,14 @@ test_that("search_query works", {
 	expect_s3_class(res, "tbl")
 	expect_equal(nrow(res), 1)
 
-	expect_warning(search_query("nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb", type = "movie", years = 1100))
+	expect_warning(
+		search_query(
+			"nfkwjbevkwbvkwvbqlwfbqwkjfbqkjfb",
+			type = "movie",
+			filters = filters_movies(years = 1100)
+		),
+		"No results"
+	)
 
 	search_query("russian doll", type = c("show", "movie")) |>
 		expect_tibble(
