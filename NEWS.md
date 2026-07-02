@@ -1,15 +1,21 @@
-# tRakt 0.18.0.9000 (development version)
+# tRakt 0.19.0
 
-- `trakt_get()` now retries transient server errors (HTTP 500, 502, 503, 504)
-  and connection failures, not just the httr2 defaults (429, 503). The
-  trakt.tv API intermittently returns gateway errors (502/504) that succeed on
-  a retry; previously these surfaced as hard failures.
+- `lists_popular()` / `lists_trending()` gain a `type` argument (`"personal"`
+  or `"official"`, default `"personal"`) and now send it as a required path
+  segment. The trakt.tv API changed: the bare `lists/popular` / `lists/trending`
+  endpoints now return an empty HTTP 204 response, and the list `type` must be
+  specified explicitly (`lists/popular/:type`). Previously these functions
+  silently returned an empty tibble.
 - Fix an error in the `networks` (and other fixed-vocabulary) filter validation
   used by the dynamic-list functions (`shows_anticipated()`, `movies_popular()`,
   etc.): a filter value that matched several entries differing only in case or
   duplicated in the API's lookup data (e.g. `"Netflix"` / `"NETFLIX"`) aborted
   with "Result must be length 1, not 2". Such values now resolve to a single
   canonical spelling.
+- `trakt_get()` now retries transient server errors (HTTP 500, 502, 503, 504)
+  and connection failures, not just the httr2 defaults (429, 503). The
+  trakt.tv API intermittently returns gateway errors (502/504) that succeed on
+  a retry; previously these surfaced as hard failures.
 - New `trakt_api_available()`: a lightweight, non-erroring check of whether the
   API is reachable (returns `TRUE`/`FALSE`). It is used to guard runnable
   documentation examples so they execute when the API is up but are skipped
@@ -20,13 +26,6 @@
   API is reachable, and skipped otherwise, so upstream flakiness no longer
   produces spurious example failures. Examples that genuinely require
   authentication remain in `\dontrun{}`.
-
-- `lists_popular()` / `lists_trending()` gain a `type` argument (`"personal"`
-  or `"official"`, default `"personal"`) and now send it as a required path
-  segment. The trakt.tv API changed: the bare `lists/popular` / `lists/trending`
-  endpoints now return an empty HTTP 204 response, and the list `type` must be
-  specified explicitly (`lists/popular/:type`). Previously these functions
-  silently returned an empty tibble.
 - Tests: vcr cassettes are now replay-only. The previous `re_record_interval`
   of 30 days caused CI to make live API calls (and fail on any upstream
   hiccup or drift) once cassettes aged past the interval. Re-record cassettes
