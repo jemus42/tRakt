@@ -160,6 +160,7 @@ Other movie data:
 \code{\link[=people_media]{people_media()}},
 \code{\link{popular_media}},
 \code{\link{trending_media}},
+\code{\link{updated_media}},
 \code{\link{watched_media}}
 
 Other dynamic lists:
@@ -169,6 +170,7 @@ Other dynamic lists:
 \code{\link[=lists_popular]{lists_popular()}},
 \code{\link{popular_media}},
 \code{\link{trending_media}},
+\code{\link{updated_media}},
 \code{\link{watched_media}}
 
 Other show data:
@@ -184,7 +186,8 @@ Other show data:
 \code{\link[=people_media]{people_media()}},
 \code{\link[=shows_next_episode]{shows_next_episode()}},
 \code{\link[=shows_related]{shows_related()}},
-\code{\link[=shows_summary]{shows_summary()}}
+\code{\link[=shows_summary]{shows_summary()}},
+\code{\link{updated_media}}
 }
 \concept{dynamic lists}
 \concept{movie data}

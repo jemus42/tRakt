@@ -190,7 +190,7 @@ unpack_people <- function(response) {
 		response$crew <- map_df(trakt_people_crew_sections, function(section) {
 			response$crew[[section]]$person[["images"]] <- NULL
 
-			if (!has_name(response$crew, section) | is_empty(response$crew[[section]])) {
+			if (!has_name(response$crew, section) || is_empty(response$crew[[section]])) {
 				return(tibble())
 			}
 

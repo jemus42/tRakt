@@ -59,6 +59,7 @@ Other show data:
 \code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
 \code{\link[=shows_next_episode]{shows_next_episode()}},
-\code{\link[=shows_summary]{shows_summary()}}
+\code{\link[=shows_summary]{shows_summary()}},
+\code{\link{updated_media}}
 }
 \concept{show data}

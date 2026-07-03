@@ -161,6 +161,7 @@ Other movie data:
 \code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
 \code{\link{trending_media}},
+\code{\link{updated_media}},
 \code{\link{watched_media}}
 
 Other dynamic lists:
@@ -170,6 +171,7 @@ Other dynamic lists:
 \code{\link[=lists_popular]{lists_popular()}},
 \code{\link{played_media}},
 \code{\link{trending_media}},
+\code{\link{updated_media}},
 \code{\link{watched_media}}
 
 Other shows data:

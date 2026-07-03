@@ -117,6 +117,13 @@ trakt_auto_lists <- function(
 	fix_tibble_response(response, keep_images = extended$keep_images)
 }
 
+# NOTE: The public wrappers below still expose the individual filter arguments
+# (`query`, `years`, `genres`, ...) for backwards compatibility. These are
+# soft-deprecated in favour of the `filters` argument (see `filters_shows()` et
+# al.). Once they are removed, each wrapper collapses to just `limit`,
+# `extended`, `filters` (and `period` for the watched/collected/played family),
+# so this whole section can be simplified substantially at that point.
+
 # Popular ----
 
 #' Popular media
@@ -645,39 +652,75 @@ shows_collected <- function(
 
 # Updates ----
 
-# #' Recently updated media
-# #'
-# #' These functions return recently updated movies/shows on trakt.tv.
-# #' @name updated_media
-# #' @inheritParams trakt_api_common_parameters
-# #' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
-# #' @inherit trakt_api_common_parameters return
-# #' @export
-# #' @eval apiurl("movies", "updates")
-# #' @family movie data
-# #' @note `shows_updates()` and `movies_updates()` do not support filters.
-# movies_updates <- function(limit = 10, extended = c("min", "full"),
-#                            start_date = Sys.Date() - 1) {
-#   start_date <- as.character(as.Date(start_date))
-#
-#   trakt_auto_lists(
-#     list_type = "updates", type = "movies",
-#     limit = limit,
-#     extended = extended, start_date = start_date
-#   )
-# }
-#
-# #' @rdname updated_media
-# #' @eval apiurl("shows", "updates")
-# #' @family show data
-# #' @export
-# shows_updates <- function(limit = 10, extended = c("min", "full"),
-#                           start_date = Sys.Date() - 1) {
-#   start_date <- as.character(as.Date(start_date))
-#
-#   trakt_auto_lists(
-#     list_type = "updates", type = "shows",
-#     limit = limit,
-#     extended = extended, start_date = start_date
-#   )
-# }
+# Recently updated ----
+
+#' Recently updated media
+#'
+#' Return movies or shows that were updated on trakt.tv since `start_date`.
+#' Handy for keeping a local cache in sync: store the most recent `updated_at`
+#' you have seen and poll for anything newer.
+#'
+#' @inheritParams trakt_api_common_parameters
+#' @inheritSection dynamic_lists The Dynamic Lists on trakt.tv
+#' @inherit trakt_api_common_parameters return
+#' @param start_date `Date | character(1)`: Return items updated since this
+#'   date. Defaults to yesterday. The trakt.tv API only accepts dates up to
+#'   **30 days** in the past; older dates return no results (a warning is
+#'   emitted).
+#' @name updated_media
+#' @note Unlike the other dynamic lists, the updates endpoints do not support
+#'   the `filters` argument.
+#' @examplesIf trakt_api_available()
+#' movies_updates()
+#' shows_updates(start_date = Sys.Date() - 7)
+NULL
+
+#' @rdname updated_media
+#' @eval apiurl("movies", "updates")
+#' @family movie data
+#' @family dynamic lists
+#' @export
+movies_updates <- function(limit = 10, extended = "min", start_date = Sys.Date() - 1) {
+	trakt_auto_lists(
+		list_type = "updates",
+		type = "movies",
+		limit = limit,
+		extended = extended,
+		start_date = check_update_start_date(start_date)
+	)
+}
+
+#' @rdname updated_media
+#' @eval apiurl("shows", "updates")
+#' @family show data
+#' @family dynamic lists
+#' @export
+shows_updates <- function(limit = 10, extended = "min", start_date = Sys.Date() - 1) {
+	trakt_auto_lists(
+		list_type = "updates",
+		type = "shows",
+		limit = limit,
+		extended = extended,
+		start_date = check_update_start_date(start_date)
+	)
+}
+
+# Coerce and validate the updates `start_date` (max 30 days in the past).
+#' @keywords internal
+#' @noRd
+check_update_start_date <- function(start_date, call = rlang::caller_env()) {
+	date <- tryCatch(as.Date(start_date), error = function(e) as.Date(NA))
+	if (length(date) != 1 || is.na(date)) {
+		cli::cli_abort(
+			"{.arg start_date} must be a single date or {.val YYYY-MM-DD} string.",
+			call = call
+		)
+	}
+	if (date < Sys.Date() - 30) {
+		cli::cli_warn(c(
+			"{.arg start_date} ({.val {as.character(date)}}) is more than 30 days in the past.",
+			"i" = "The trakt.tv API only returns updates from the last 30 days; older dates yield no results."
+		))
+	}
+	as.character(date)
+}

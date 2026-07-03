@@ -93,11 +93,8 @@ check_filter_arg_fixed <- function(filter, filter_type, filter_ok) {
 				cli::cli_warn("{.arg {filter_type}} includes unknown value, ignoring: {.val {x}}.")
 				""
 			} else {
-				# A value can match several reference entries that differ only in
-				# case or are outright duplicated in the API-provided lookup data
-				# (e.g. "Netflix" / "NETFLIX"). Collapse to a single canonical
-				# spelling so this always returns length 1 (map_chr requires it).
-				unique(filter_ok[x == clean_filter_ok])[[1]]
+				filter_ok[x == clean_filter_ok] |>
+					unique()
 			}
 		}
 	)

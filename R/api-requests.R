@@ -83,7 +83,7 @@ trakt_get <- function(url) {
 	resp <- httr2::resp_body_json(resp, simplifyVector = TRUE, check_type = FALSE)
 
 	# Kept from previous version, should be refactored at some point
-	if (identical(resp, "") | length(resp) == 0) {
+	if (identical(resp, "") || length(resp) == 0) {
 		return(tibble())
 	}
 	# Do it in every other function or do it here once

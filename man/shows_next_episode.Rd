@@ -62,7 +62,8 @@ Other show data:
 \code{\link[=people_media]{people_media()}},
 \code{\link{played_media}},
 \code{\link[=shows_related]{shows_related()}},
-\code{\link[=shows_summary]{shows_summary()}}
+\code{\link[=shows_summary]{shows_summary()}},
+\code{\link{updated_media}}
 
 Other episode data:
 \code{\link[=episodes_summary]{episodes_summary()}},
