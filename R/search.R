@@ -102,7 +102,7 @@ search_query <- function(
 	type <- check_types(type, several.ok = TRUE, possible_types = ok_types)
 
 	extended <- validate_extended(extended)
-	query <- check_filter_arg(query, "query")
+	query <- validate_filter("query", query)
 
 	# Construct URL, make API call. Filter query parameters are spliced in from
 	# the validated `filters` object.

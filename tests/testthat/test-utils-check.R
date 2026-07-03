@@ -13,59 +13,29 @@ test_that("check_user throws errors when it should", {
 	))
 })
 
-test_that("check_filter_arg fails how it should", {
-	expect_null(check_filter_arg(NULL))
+test_that("validate_filter validates and normalizes filter values", {
+	expect_null(validate_filter("genres", NULL))
 
-	expect_warning(check_filter_arg(10239, "years"))
-	expect_warning(check_filter_arg(119, "ratings"))
-	expect_warning(check_filter_arg(1:5, "runtimes"))
-	expect_warning(check_filter_arg("five", "genres"))
-	expect_warning(check_filter_arg("asfehf", "networks"))
-	expect_warning(check_filter_arg("five", "languages"))
-	expect_warning(check_filter_arg("five", "certifications"))
-	expect_warning(check_filter_arg("five", "countries"))
-	expect_warning(check_filter_arg("five", "status"))
+	expect_warning(validate_filter("years", 10239))
+	expect_warning(validate_filter("ratings", 119))
+	expect_warning(validate_filter("runtimes", 1:5))
+	expect_warning(validate_filter("genres", "five"))
+	expect_warning(validate_filter("networks", "asfehf"))
+	expect_warning(validate_filter("languages", "five"))
+	expect_warning(validate_filter("certifications", "five"))
+	expect_warning(validate_filter("countries", "five"))
+	expect_warning(validate_filter("status", "five"))
 
-	expect_equal(
-		check_filter_arg(c("action", "drama"), filter_type = "genres"),
-		"action,drama"
-	)
-	expect_equal(
-		check_filter_arg(c("HBO", "TNT"), filter_type = "networks"),
-		"HBO,TNT"
-	)
-	expect_equal(
-		check_filter_arg(c("hbo", "tnt"), filter_type = "networks"),
-		"HBO,TNT"
-	)
-	expect_equal(
-		check_filter_arg(c("en", "de"), filter_type = "languages"),
-		"en,de"
-	)
-	expect_equal(
-		check_filter_arg("EN", filter_type = "languages"),
-		"en"
-	)
-	expect_equal(
-		check_filter_arg(c("pg-13", "r"), filter_type = "certifications"),
-		"pg-13,r"
-	)
-	expect_equal(
-		check_filter_arg(c("ar", "am"), filter_type = "countries"),
-		"ar,am"
-	)
-	expect_equal(
-		check_filter_arg(c("ended", "canceled"), filter_type = "status"),
-		"ended,canceled"
-	)
-	expect_equal(
-		check_filter_arg(c("ENDED", "canceled"), filter_type = "status"),
-		"ended,canceled"
-	)
-	expect_equal(
-		check_filter_arg("Ended", filter_type = "status"),
-		"ended"
-	)
+	expect_equal(validate_filter("genres", c("action", "drama")), "action,drama")
+	expect_equal(validate_filter("networks", c("HBO", "TNT")), "HBO,TNT")
+	expect_equal(validate_filter("networks", c("hbo", "tnt")), "HBO,TNT")
+	expect_equal(validate_filter("languages", c("en", "de")), "en,de")
+	expect_equal(validate_filter("languages", "EN"), "en")
+	expect_equal(validate_filter("certifications", c("pg-13", "r")), "pg-13,r")
+	expect_equal(validate_filter("countries", c("ar", "am")), "ar,am")
+	expect_equal(validate_filter("status", c("ended", "canceled")), "ended,canceled")
+	expect_equal(validate_filter("status", c("ENDED", "canceled")), "ended,canceled")
+	expect_equal(validate_filter("status", "Ended"), "ended")
 })
 
 

@@ -167,7 +167,7 @@ validate_filter <- function(name, value, spec = trakt_filter_registry()[[name]])
 	out <- switch(
 		spec$kind,
 		free = as.character(value)[[1]],
-		year = check_filter_arg(value, "years"),
+		year = filter_validate_year(value, name),
 		range = filter_validate_range(value, name, spec$min, spec$max, spec$decimals),
 		vocab = check_filter_arg_fixed(value, name, spec$vocab()),
 		networks = check_filter_arg_fixed(value, name, spec$vocab()),
@@ -177,6 +177,29 @@ validate_filter <- function(name, value, spec = trakt_filter_registry()[[name]])
 	)
 
 	if (is.null(out) || identical(out, "")) NULL else out
+}
+
+# Year filter: a single 4-digit year or a length-2 range, rendered as "yyyy" or
+# "yyyy-yyyy".
+filter_validate_year <- function(x, name = "years") {
+	if (!(length(x) %in% c(1L, 2L))) {
+		cli::cli_warn(
+			"{.arg {name}} must be a 4-digit year or a length-2 range; keeping the first two values."
+		)
+		x <- x[1:2]
+	}
+	if (length(x) == 2) {
+		x <- paste0(sort(x), collapse = "-")
+	}
+	x <- as.character(x)
+	if (grepl("(^\\d{4}-\\d{4}$)|(^\\d{4}$)", x)) {
+		x
+	} else {
+		cli::cli_warn(
+			"{.arg {name}} must be interpretable as a 4-digit year or range of 4-digit years."
+		)
+		NULL
+	}
 }
 
 # Numeric range filter: accepts a single value, a length-2 numeric, or an

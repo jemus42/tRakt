@@ -17,7 +17,7 @@ movies_releases <- function(id, country = NULL) {
 		return(map_rbind(id, \(x) movies_releases(id = x, country = country)))
 	}
 
-	country <- check_filter_arg(country, filter_type = "countries")
+	country <- validate_filter("countries", country)
 
 	# Construct URL, make API call
 	url <- build_trakt_url("movies", id, "releases", country = country)
