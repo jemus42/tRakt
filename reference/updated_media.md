@@ -1,50 +1,24 @@
-# Most played media
+# Recently updated media
 
-These functions return the most played movies/shows on trakt.tv.
+Return movies or shows that were updated on trakt.tv since `start_date`.
+Handy for keeping a local cache in sync: store the most recent
+`updated_at` you have seen and poll for anything newer.
 
 ## Usage
 
 ``` r
-movies_played(
-  limit = 10,
-  extended = "min",
-  period = c("weekly", "monthly", "yearly", "all"),
-  filters = NULL,
-  query = NULL,
-  years = NULL,
-  genres = NULL,
-  languages = NULL,
-  countries = NULL,
-  runtimes = NULL,
-  ratings = NULL,
-  certifications = NULL
-)
+movies_updates(limit = 10, extended = "min", start_date = Sys.Date() - 1)
 
-shows_played(
-  limit = 10,
-  extended = "min",
-  period = c("weekly", "monthly", "yearly", "all"),
-  filters = NULL,
-  query = NULL,
-  years = NULL,
-  genres = NULL,
-  languages = NULL,
-  countries = NULL,
-  runtimes = NULL,
-  ratings = NULL,
-  certifications = NULL,
-  networks = NULL,
-  status = NULL
-)
+shows_updates(limit = 10, extended = "min", start_date = Sys.Date() - 1)
 ```
 
 ## Source
 
-`movies_played()` wraps endpoint
-[/movies/played/:period](https://trakt.docs.apiary.io/#reference/movies/played/get-the-most-played-movies).
+`movies_updates()` wraps endpoint
+[/movies/updates/:start_date](https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies).
 
-`shows_played()` wraps endpoint
-[/shows/played/:period](https://trakt.docs.apiary.io/#reference/shows/played/get-the-most-played-shows).
+`shows_updates()` wraps endpoint
+[/shows/updates/:start_date](https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows).
 
 ## Arguments
 
@@ -73,92 +47,11 @@ shows_played(
   Multiple values can be combined as a comma-separated string (e.g.
   `"full,images"`) or a character vector (e.g. `c("full", "images")`).
 
-- period:
+- start_date:
 
-  `character(1) ["weekly"]`: Which period to filter by. Possible values
-  are `"weekly"`, `"monthly"`, `"yearly"`, `"all"`.
-
-- filters:
-
-  A
-  [`trakt_filters`](https://jemus42.github.io/tRakt/reference/filters.md)
-  object created with
-  [`filters_movies()`](https://jemus42.github.io/tRakt/reference/filters.md),
-  [`filters_shows()`](https://jemus42.github.io/tRakt/reference/filters.md),
-  or
-  [`filters_episodes()`](https://jemus42.github.io/tRakt/reference/filters.md)
-  that refines which items are returned. See
-  [filters](https://jemus42.github.io/tRakt/reference/filters.md) for
-  the full set of supported filters. Supplying filters as individual
-  arguments (`genres`, `years`, `networks`, ...) is soft-deprecated in
-  favour of this argument; if both are given, `filters` takes
-  precedence.
-
-- query:
-
-  `character(1)`: Search string for titles and descriptions. For
-  [`search_query()`](https://jemus42.github.io/tRakt/reference/search_query.md)
-  other fields are searched depending on the `type` of media. See [the
-  API docs](https://trakt.docs.apiary.io/#reference/search/text-query)
-  for a full reference.
-
-- years:
-
-  `character | integer`: 4-digit year (`2010`) **or** range, e.g.
-  `"2010-2020"`. Can also be an integer vector of length two which will
-  be coerced appropriately, e.g. `c(2010, 2020)`.
-
-- genres:
-
-  `character(n)`: Genre slug(s). See
-  [`trakt_genres`](https://jemus42.github.io/tRakt/reference/trakt_datasets.md)
-  for a table of genres. Multiple values are allowed and will be
-  concatenated.
-
-- languages:
-
-  `character(n)`: Two-letter language code(s). Also see
-  [`trakt_languages`](https://jemus42.github.io/tRakt/reference/trakt_datasets.md)
-  for available languages (code and name).
-
-- countries:
-
-  `character(n)`: Two-letter country code(s). See
-  [`trakt_countries`](https://jemus42.github.io/tRakt/reference/trakt_datasets.md).
-
-- runtimes:
-
-  `character | integer`: Integer range in minutes, e.g. `30-90`. Can
-  also be an integer vector of length two which will be coerced
-  appropriately.
-
-- ratings:
-
-  `character | integer`: Integer range between `0` and `100`. Can also
-  be an integer vector of length two which will be coerced
-  appropriately. Note that user-supplied ratings are in the range of 1
-  to 10, yet the ratings on the site itself are scaled to the range of 1
-  to 100.
-
-- certifications:
-
-  `character(n)`: Certification(s) like `pg-13`. Multiple values are
-  allowed. Use
-  [`trakt_certifications`](https://jemus42.github.io/tRakt/reference/trakt_datasets.md)
-  for reference. Note that there are different certifications for shows
-  and movies.
-
-- networks:
-
-  `character(n)`: (Shows only) Network name like `HBO`. See
-  [`trakt_networks`](https://jemus42.github.io/tRakt/reference/trakt_datasets.md)
-  for a list of known networks.
-
-- status:
-
-  `character(n)`: (Shows only) The status of the shows. One of
-  `"returning series"`, `"in production"`, `"planned"`, `"canceled"`, or
-  `"ended"`.
+  `Date | character(1)`: Return items updated since this date. Defaults
+  to yesterday. The trakt.tv API only accepts dates up to **30 days** in
+  the past; older dates return no results (a warning is emitted).
 
 ## Value
 
@@ -169,6 +62,11 @@ be the (maximum) number of rows of the `tibble`. If there are no results
 (or the API is unreachable), an empty
 [`tibble()`](https://tibble.tidyverse.org/reference/tibble.html) is
 returned.
+
+## Note
+
+Unlike the other dynamic lists, the updates endpoints do not support the
+`filters` argument.
 
 ## The Dynamic Lists on trakt.tv
 
@@ -185,8 +83,9 @@ reference](https://trakt.docs.apiary.io/#reference/movies/popular/get-popular-mo
   Returns all movies/shows being watched right now. Movies/shows with
   the most users are returned first.
 
-- Played: Returns the most played (a single user can watch multiple
-  times) movies/shows in the specified time `period`.
+- [Played](https://jemus42.github.io/tRakt/reference/played_media.md):
+  Returns the most played (a single user can watch multiple times)
+  movies/shows in the specified time `period`.
 
 - [Watched](https://jemus42.github.io/tRakt/reference/watched_media.md):
   Returns the most watched (unique users) movies/shows in the specified
@@ -221,9 +120,9 @@ Other movie data:
 [`movies_releases()`](https://jemus42.github.io/tRakt/reference/movies_releases.md),
 [`movies_summary()`](https://jemus42.github.io/tRakt/reference/movies_summary.md),
 [`people_media()`](https://jemus42.github.io/tRakt/reference/people_media.md),
+[`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
-[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
 Other dynamic lists:
@@ -231,9 +130,9 @@ Other dynamic lists:
 [`collected_media`](https://jemus42.github.io/tRakt/reference/collected_media.md),
 [`filters`](https://jemus42.github.io/tRakt/reference/filters.md),
 [`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
+[`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
-[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
 Other show data:
@@ -247,7 +146,40 @@ Other show data:
 [`media_translations`](https://jemus42.github.io/tRakt/reference/media_translations.md),
 [`media_watching`](https://jemus42.github.io/tRakt/reference/media_watching.md),
 [`people_media()`](https://jemus42.github.io/tRakt/reference/people_media.md),
+[`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`shows_next_episode()`](https://jemus42.github.io/tRakt/reference/shows_next_episode.md),
 [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
-[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md),
-[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md)
+[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
+
+## Examples
+
+``` r
+movies_updates()
+#> # A tibble: 10 × 7
+#>    updated_at          title                      year  trakt slug  imdb    tmdb
+#>    <dttm>              <chr>                     <int>  <int> <chr> <chr>  <int>
+#>  1 2026-07-02 09:18:29 The Warminster Thing         NA 1.38e6 the-… tt71… 1.72e6
+#>  2 2026-07-02 11:33:36 The Matrix Reloaded        2003 4.82e2 the-… tt02… 6.04e2
+#>  3 2026-07-02 11:44:31 Weapons                    2025 8.67e5 weap… tt26… 1.08e6
+#>  4 2026-07-02 11:44:36 The Devil Wears Prada 2    2026 1.07e6 the-… tt33… 1.31e6
+#>  5 2026-07-02 12:32:11 Obsession                  2026 1.10e6 obse… tt37… 1.34e6
+#>  6 2026-07-02 12:32:11 Spider-Man: Brand New Day  2026 9.05e5 spid… tt22… 9.70e5
+#>  7 2026-07-02 12:32:12 The Dark Knight            2008 1.2 e2 the-… tt04… 1.55e2
+#>  8 2026-07-02 12:32:15 Static                     2012 1.06e5 stat… tt18… 1.66e5
+#>  9 2026-07-02 12:32:57 Mantra Muugdha             2026 1.31e6 mant… tt37… 1.58e6
+#> 10 2026-07-02 12:33:03 Chimera                    2026 1.38e6 chim… tt33… 1.72e6
+shows_updates(start_date = Sys.Date() - 7)
+#> # A tibble: 10 × 8
+#>    updated_at          title                  year trakt slug  tvdb  imdb  tmdb 
+#>    <dttm>              <chr>                 <int> <chr> <chr> <chr> <chr> <chr>
+#>  1 2026-06-26 02:33:36 The Golden Horde       2018 1692… the-… 3447… tt96… 78302
+#>  2 2026-06-26 02:34:02 Coachella              2010 78989 coac… 2482… NA    NA   
+#>  3 2026-06-26 02:35:26 Everything Now Show    2018 2840… ever… NA    tt25… 2901…
+#>  4 2026-06-26 02:38:00 Shopping Queen (DE)    2012 1579… shop… 2665… tt22… 93768
+#>  5 2026-06-26 02:45:34 Jornal Nacional        1969 2131… jorn… 3397… tt04… 16807
+#>  6 2026-06-26 06:12:52 Beach Boys             1997 23868 beac… 1172… tt02… 23974
+#>  7 2026-06-26 06:14:02 El-Hazard: The Wande…  1995 63735 el-h… 79241 tt01… 22098
+#>  8 2026-06-26 06:15:53 Franny's Feet          2003 9921  fran… 1289… tt03… 9970 
+#>  9 2026-06-26 06:15:56 First Australians      2008 21018 firs… 83409 tt13… 21114
+#> 10 2026-06-26 06:16:38 At Last the 1948 Show  1967 188   at-l… 70956 tt00… 189  
+```

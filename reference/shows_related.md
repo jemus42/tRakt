@@ -75,7 +75,8 @@ Other show data:
 [`people_media()`](https://jemus42.github.io/tRakt/reference/people_media.md),
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`shows_next_episode()`](https://jemus42.github.io/tRakt/reference/shows_next_episode.md),
-[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
+[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md)
 
 ## Examples
 

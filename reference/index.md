@@ -42,6 +42,8 @@ like the `slug`, which is required for use of item-specific functions.
 - [`comments_trending()`](https://jemus42.github.io/tRakt/reference/comments_trending.md)
   [`comments_recent()`](https://jemus42.github.io/tRakt/reference/comments_trending.md)
   : Get trending or recently made comments
+- [`comments_updates()`](https://jemus42.github.io/tRakt/reference/comments_updates.md)
+  : Get recently updated/edited comments
 - [`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md)
   [`lists_trending()`](https://jemus42.github.io/tRakt/reference/lists_popular.md)
   : Get popular / trending lists
@@ -59,6 +61,9 @@ like the `slug`, which is required for use of item-specific functions.
 - [`movies_trending()`](https://jemus42.github.io/tRakt/reference/trending_media.md)
   [`shows_trending()`](https://jemus42.github.io/tRakt/reference/trending_media.md)
   : Trending media
+- [`movies_updates()`](https://jemus42.github.io/tRakt/reference/updated_media.md)
+  [`shows_updates()`](https://jemus42.github.io/tRakt/reference/updated_media.md)
+  : Recently updated media
 - [`movies_watched()`](https://jemus42.github.io/tRakt/reference/watched_media.md)
   [`shows_watched()`](https://jemus42.github.io/tRakt/reference/watched_media.md)
   : Most watched media

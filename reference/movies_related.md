@@ -80,6 +80,7 @@ Other movie data:
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
 ## Examples

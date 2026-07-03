@@ -100,16 +100,16 @@ comments_recent("shouts")
 #> # A tibble: 10 × 34
 #>    type        id comment           spoiler review parent_id created_at         
 #>    <chr>    <int> <chr>             <lgl>   <lgl>      <int> <dttm>             
-#>  1 episode 969922 "Me encantó la i… FALSE   FALSE          0 2026-07-03 00:14:30
-#>  2 episode 969921 "Amé la parte cu… FALSE   FALSE          0 2026-07-03 00:13:25
-#>  3 episode 969920 "Cuando me doy c… FALSE   FALSE          0 2026-07-03 00:12:11
-#>  4 episode 969918 "Solo tenía gana… FALSE   FALSE          0 2026-07-03 00:11:19
-#>  5 episode 969917 "En serio que es… FALSE   FALSE          0 2026-07-03 00:10:28
-#>  6 episode 969916 "انا داخل الموسم… FALSE   FALSE          0 2026-07-03 00:10:13
-#>  7 episode 969914 "Todos los capít… FALSE   FALSE          0 2026-07-03 00:09:51
-#>  8 episode 969913 "Es tan triste l… FALSE   FALSE          0 2026-07-03 00:08:35
-#>  9 episode 969912 "Pues otra capít… FALSE   FALSE          0 2026-07-03 00:07:23
-#> 10 episode 969911 "omg MondPro i l… FALSE   FALSE          0 2026-07-03 00:05:58
+#>  1 show    970866 "This was outsta… FALSE   FALSE          0 2026-07-03 16:17:05
+#>  2 show    970863 "This one honest… FALSE   FALSE          0 2026-07-03 16:11:08
+#>  3 show    970857 "Foi mini série … FALSE   FALSE          0 2026-07-03 15:49:30
+#>  4 episode 970865 "Not a silo but … FALSE   FALSE          0 2026-07-03 16:16:19
+#>  5 episode 970864 "Mouth is the wo… TRUE    FALSE          0 2026-07-03 16:13:09
+#>  6 episode 970862 "I loved the fal… FALSE   FALSE          0 2026-07-03 16:10:48
+#>  7 episode 970861 "I genuinely for… FALSE   FALSE          0 2026-07-03 16:06:17
+#>  8 episode 970860 "Ai esse irmão d… FALSE   FALSE          0 2026-07-03 16:00:42
+#>  9 episode 970859 "Wow wow what a … FALSE   FALSE          0 2026-07-03 15:56:08
+#> 10 episode 970858 "I mean let’s fu… FALSE   FALSE          0 2026-07-03 15:49:45
 #> # ℹ 27 more variables: updated_at <dttm>, replies <int>, likes <int>,
 #> #   user_rating <int>, language <chr>, username <chr>, private <lgl>,
 #> #   deleted <lgl>, user_name <chr>, vip <lgl>, vip_ep <lgl>, director <lgl>,

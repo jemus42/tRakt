@@ -62,6 +62,7 @@ Other dynamic lists:
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
 ## Examples
@@ -94,13 +95,13 @@ lists_trending()
 #>  1 IMDB: To… "Top 250 m… public  ""         pers… TRUE            TRUE          
 #>  2 IMDB: To… "Top 250 T… public  ""         pers… TRUE            TRUE          
 #>  3 Best Min… "What’s a … public  ""         pers… FALSE           TRUE          
-#>  4 Trakt: P… "The Trakt… public  ""         pers… TRUE            TRUE          
-#>  5 MARVEL C… "**UPDATED… public  ""         pers… TRUE            TRUE          
-#>  6 True Cri… "This isn'… public  ""         pers… FALSE           TRUE          
-#>  7 1001 Gre… "/u/StopRe… public  ""         pers… TRUE            TRUE          
-#>  8 Sci-Fi    ""          public  ""         pers… FALSE           TRUE          
+#>  4 MARVEL C… "**UPDATED… public  ""         pers… TRUE            TRUE          
+#>  5 Trakt: P… "The Trakt… public  ""         pers… TRUE            TRUE          
+#>  6 1001 Gre… "/u/StopRe… public  ""         pers… TRUE            TRUE          
+#>  7 Sci-Fi    ""          public  ""         pers… FALSE           TRUE          
+#>  8 True Cri… "This isn'… public  ""         pers… FALSE           TRUE          
 #>  9 Popular … "This isn'… public  ""         pers… FALSE           TRUE          
-#> 10 Korean^^  "Explore t… public  ""         pers… FALSE           TRUE          
+#> 10 Studio G… "Animated … public  ""         pers… TRUE            TRUE          
 #> # ℹ 25 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
 #> #   updated_at <dttm>, item_count <int>, comment_count <int>, likes <int>,
 #> #   slug <chr>, trakt <chr>, username <chr>, private <lgl>, deleted <lgl>,

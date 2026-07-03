@@ -85,9 +85,9 @@ TV and movie certifications (e.g. "PG-13" and the likes).</p><ul><li><p>5 Variab
 <code>slug</code> ("tv-pg"), <code>description</code> ("Parental Guidance Suggested"), <code>type</code> ("shows")</p></li>
 </ul></li>
 </ul><p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 64 rows and 3 columns.</p>
-<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 297 rows and 3 columns.</p>
-<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 4526 rows and 5 columns.</p>
-<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 377 rows and 3 columns.</p>
+<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 286 rows and 3 columns.</p>
+<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 4682 rows and 5 columns.</p>
+<p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 384 rows and 3 columns.</p>
 <p>An object of class <code>tbl_df</code> (inherits from <code>tbl</code>, <code>data.frame</code>) with 12 rows and 5 columns.</p>
     </div>
     <div class="section level2">
@@ -120,18 +120,18 @@ filter arguments of the same name.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Afar      aa    shows </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Abkhazian ab    movies</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> Abkhazian ab    shows </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> Avestan   ae    movies</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> Afrikaans af    movies</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> Afrikaans af    movies</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> Afrikaans af    shows </span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">trakt_networks</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 5</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   name       name_clean country trakt  tmdb</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> <span style="color: #949494;">""</span>         <span style="color: #949494;">""</span>         <span style="color: #BB0000;">NA</span>        869  <span style="text-decoration: underline;">1</span>446</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> <span style="color: #949494;">"</span> 10 Play<span style="color: #949494;">"</span> <span style="color: #949494;">"</span>10 play<span style="color: #949494;">"</span>  au       <span style="text-decoration: underline;">1</span>287  <span style="text-decoration: underline;">3</span>466</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> <span style="color: #949494;">"</span> VTV <span style="color: #949494;">"</span>    <span style="color: #949494;">"</span>vtv<span style="color: #949494;">"</span>      vn        481  <span style="text-decoration: underline;">2</span>863</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> <span style="color: #949494;">"</span>&amp;CAST!!!<span style="color: #949494;">"</span> <span style="color: #949494;">"</span>&amp;cast!!!<span style="color: #949494;">"</span> jp       <span style="text-decoration: underline;">4</span>453  <span style="text-decoration: underline;">8</span>051</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> <span style="color: #949494;">"</span>&amp;TV<span style="color: #949494;">"</span>      <span style="color: #949494;">"</span>&amp;tv<span style="color: #949494;">"</span>      in       <span style="text-decoration: underline;">1</span>489  <span style="text-decoration: underline;">1</span>566</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> <span style="color: #949494;">"</span>#0<span style="color: #949494;">"</span>       <span style="color: #949494;">"</span>#0<span style="color: #949494;">"</span>       es         79  <span style="text-decoration: underline;">2</span>140</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> <span style="color: #949494;">"</span> 10 Play<span style="color: #949494;">"</span> 10 play    au       <span style="text-decoration: underline;">1</span>287  <span style="text-decoration: underline;">3</span>466</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> <span style="color: #949494;">"</span> VTV <span style="color: #949494;">"</span>    vtv        vn        481  <span style="text-decoration: underline;">2</span>863</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> <span style="color: #949494;">"</span>#0<span style="color: #949494;">"</span>       #0         es         79  <span style="text-decoration: underline;">2</span>140</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> <span style="color: #949494;">"</span>&amp;CAST!!!<span style="color: #949494;">"</span> &amp;cast!!!   jp       <span style="text-decoration: underline;">4</span>453  <span style="text-decoration: underline;">8</span>051</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> <span style="color: #949494;">"</span>&amp;TV<span style="color: #949494;">"</span>      &amp;tv        in       <span style="text-decoration: underline;">1</span>489  <span style="text-decoration: underline;">1</span>566</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> <span style="color: #949494;">"</span>+SBT<span style="color: #949494;">"</span>     +sbt       br       <span style="text-decoration: underline;">3</span>972  <span style="text-decoration: underline;">7</span>603</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">trakt_countries</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 6 × 3</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   name                 code  type  </span>

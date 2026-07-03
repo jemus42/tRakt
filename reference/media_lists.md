@@ -165,6 +165,7 @@ Other movie data:
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
 Other show data:
@@ -180,7 +181,8 @@ Other show data:
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`shows_next_episode()`](https://jemus42.github.io/tRakt/reference/shows_next_episode.md),
 [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
-[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
+[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md)
 
 Other season data:
 [`media_comments`](https://jemus42.github.io/tRakt/reference/media_comments.md),
@@ -218,8 +220,8 @@ movies_lists("190430", type = "personal", limit = 5)
 #> 1 Sci-Fi     ""          public  ""         pers… FALSE           TRUE          
 #> 2 Cult Clas… "Dive into… public  ""         pers… FALSE           TRUE          
 #> 3 Watching … "This is a… public  ""         pers… FALSE           FALSE         
-#> 4 Comedy ac… ""          public  ""         pers… TRUE            TRUE          
-#> 5 Trakt: Po… "The Trakt… public  ""         pers… TRUE            TRUE          
+#> 4 Trakt: Po… "The Trakt… public  ""         pers… TRUE            TRUE          
+#> 5 Comedy ac… ""          public  ""         pers… TRUE            TRUE          
 #> # ℹ 25 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
 #> #   updated_at <dttm>, item_count <int>, comment_count <int>, likes <int>,
 #> #   slug <chr>, trakt <chr>, username <chr>, private <lgl>, deleted <lgl>,
@@ -232,11 +234,11 @@ shows_lists("46241")
 #>    <chr>     <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
 #>  1 Highly r… "Shows wit… public  ""         pers… FALSE           TRUE          
 #>  2 Hidden G… ""          public  ""         pers… FALSE           TRUE          
-#>  3 British … ""          public  ""         pers… FALSE           FALSE         
+#>  3 UK and I… ""          public  ""         pers… FALSE           TRUE          
 #>  4 BBC Cult… "\"BBC Cul… public  ""         pers… TRUE            TRUE          
 #>  5 TV Shows… "A collect… public  ""         pers… FALSE           TRUE          
 #>  6 Obscure … ""          public  ""         pers… FALSE           FALSE         
-#>  7 UK and I… ""          public  ""         pers… FALSE           TRUE          
+#>  7 British … ""          public  ""         pers… FALSE           FALSE         
 #>  8 The Guar… "https://w… public  ""         pers… TRUE            TRUE          
 #>  9 BBC       ""          public  ""         pers… FALSE           FALSE         
 #> 10 BritBox   ""          public  ""         pers… FALSE           FALSE         

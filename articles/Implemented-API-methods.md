@@ -31,7 +31,7 @@ Currently **86** of **116** tracked GET endpoints are implemented.
 | Collected | [/movies/collected/:period](https://trakt.docs.apiary.io/#reference/movies/collected/get-the-most-collected-movies) | [`movies_collected()`](https://jemus42.github.io/tRakt/reference/collected_media.md) | Optional |
 | Anticipated | [/movies/anticipated](https://trakt.docs.apiary.io/#reference/movies/anticipated/get-the-most-anticipated-movies) | [`movies_anticipated()`](https://jemus42.github.io/tRakt/reference/anticipated_media.md) | Optional |
 | Box Office | [/movies/boxoffice](https://trakt.docs.apiary.io/#reference/movies/box-office/get-the-weekend-box-office) | [`movies_boxoffice()`](https://jemus42.github.io/tRakt/reference/movies_boxoffice.md) | Optional |
-| Updates | [/movies/updates/:start_date](https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies) | `movies_updates()` | Optional |
+| Updates | [/movies/updates/:start_date](https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movies) | [`movies_updates()`](https://jemus42.github.io/tRakt/reference/updated_media.md) | Optional |
 | Updates Id | [/movies/updates/id/:start_date](https://trakt.docs.apiary.io/#reference/movies/updates/get-recently-updated-movie-trakt-ids) |  | Optional |
 | Summary | [/movies/:id](https://trakt.docs.apiary.io/#reference/movies/summary/get-a-movie) | [`movies_summary()`](https://jemus42.github.io/tRakt/reference/movies_summary.md) | Optional |
 | Aliases | [/movies/:id/aliases](https://trakt.docs.apiary.io/#reference/movies/aliases/get-all-movie-aliases) | [`movies_aliases()`](https://jemus42.github.io/tRakt/reference/media_aliases.md) | Optional |
@@ -57,7 +57,7 @@ Currently **86** of **116** tracked GET endpoints are implemented.
 | Watched | [/shows/watched/:period](https://trakt.docs.apiary.io/#reference/shows/watched/get-the-most-watched-shows) | [`shows_watched()`](https://jemus42.github.io/tRakt/reference/watched_media.md) | Optional |
 | Collected | [/shows/collected/:period](https://trakt.docs.apiary.io/#reference/shows/collected/get-the-most-collected-shows) | [`shows_collected()`](https://jemus42.github.io/tRakt/reference/collected_media.md) | Optional |
 | Anticipated | [/shows/anticipated](https://trakt.docs.apiary.io/#reference/shows/anticipated/get-the-most-anticipated-shows) | [`shows_anticipated()`](https://jemus42.github.io/tRakt/reference/anticipated_media.md) | Optional |
-| Updates | [/shows/updates/:start_date](https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows) | `shows_updates()` | Optional |
+| Updates | [/shows/updates/:start_date](https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-shows) | [`shows_updates()`](https://jemus42.github.io/tRakt/reference/updated_media.md) | Optional |
 | Updates Id | [/shows/updates/id/:start_date](https://trakt.docs.apiary.io/#reference/shows/updates/get-recently-updated-show-trakt-ids) |  | Optional |
 | Summary | [/shows/:id](https://trakt.docs.apiary.io/#reference/shows/summary/get-a-single-show) | [`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md) | Optional |
 | Aliases | [/shows/:id/aliases](https://trakt.docs.apiary.io/#reference/shows/aliases/get-all-show-aliases) | [`shows_aliases()`](https://jemus42.github.io/tRakt/reference/media_aliases.md) | Optional |

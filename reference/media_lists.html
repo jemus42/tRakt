@@ -180,6 +180,7 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="played_media.html">played_media</a></code>,
 <code><a href="popular_media.html">popular_media</a></code>,
 <code><a href="trending_media.html">trending_media</a></code>,
+<code><a href="updated_media.html">updated_media</a></code>,
 <code><a href="watched_media.html">watched_media</a></code></p>
 <p>Other show data:
 <code><a href="collected_media.html">collected_media</a></code>,
@@ -194,7 +195,8 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <code><a href="played_media.html">played_media</a></code>,
 <code><a href="shows_next_episode.html">shows_next_episode()</a></code>,
 <code><a href="shows_related.html">shows_related()</a></code>,
-<code><a href="shows_summary.html">shows_summary()</a></code></p>
+<code><a href="shows_summary.html">shows_summary()</a></code>,
+<code><a href="updated_media.html">updated_media</a></code></p>
 <p>Other season data:
 <code><a href="media_comments.html">media_comments</a></code>,
 <code><a href="media_people.html">media_people</a></code>,
@@ -229,8 +231,8 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> Sci-Fi     <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> Cult Clas… <span style="color: #949494;">"</span>Dive into… public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> Watching … <span style="color: #949494;">"</span>This is a… public  <span style="color: #949494;">""</span>         pers… FALSE           FALSE         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> Comedy ac… <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> Trakt: Po… <span style="color: #949494;">"</span>The Trakt… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> Trakt: Po… <span style="color: #949494;">"</span>The Trakt… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> Comedy ac… <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 25 more variables: sort_by &lt;chr&gt;, sort_how &lt;chr&gt;, created_at &lt;dttm&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   updated_at &lt;dttm&gt;, item_count &lt;int&gt;, comment_count &lt;int&gt;, likes &lt;int&gt;,</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   slug &lt;chr&gt;, trakt &lt;chr&gt;, username &lt;chr&gt;, private &lt;lgl&gt;, deleted &lt;lgl&gt;,</span></span>
@@ -243,11 +245,11 @@ If there are no results (or the API is unreachable), an empty <code><a href="htt
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>         </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> Highly r… <span style="color: #949494;">"</span>Shows wit… public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> Hidden G… <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> British … <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… FALSE           FALSE         </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> UK and I… <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> BBC Cult… <span style="color: #949494;">"</span>\"BBC Cul… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> TV Shows… <span style="color: #949494;">"</span>A collect… public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> Obscure … <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… FALSE           FALSE         </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> UK and I… <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… FALSE           TRUE          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> British … <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… FALSE           FALSE         </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> The Guar… <span style="color: #949494;">"</span>https://w… public  <span style="color: #949494;">""</span>         pers… TRUE            TRUE          </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> BBC       <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… FALSE           FALSE         </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> BritBox   <span style="color: #949494;">""</span>          public  <span style="color: #949494;">""</span>         pers… FALSE           FALSE         </span>

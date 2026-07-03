@@ -223,7 +223,8 @@ Other movie data:
 [`people_media()`](https://jemus42.github.io/tRakt/reference/people_media.md),
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
-[`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md)
+[`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md)
 
 Other dynamic lists:
 [`anticipated_media`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
@@ -232,7 +233,8 @@ Other dynamic lists:
 [`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
-[`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md)
+[`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md)
 
 Other shows data:
 [`anticipated_media`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),

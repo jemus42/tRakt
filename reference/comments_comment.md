@@ -143,7 +143,7 @@ comments_item("236397", extended = "full")
 #> # A tibble: 1 × 28
 #>   type  title     year tagline overview released   runtime country status rating
 #>   <chr> <chr>    <int> <chr>   <chr>    <date>       <int> <chr>   <chr>   <dbl>
-#> 1 movie John Wi…  2019 If you… Super-a… 2019-05-17     131 us      relea…   7.61
+#> 1 movie John Wi…  2019 If you… Super-a… 2019-05-17     131 us      relea…   7.63
 #> # ℹ 18 more variables: votes <int>, comment_count <int>, trailer <chr>,
 #> #   homepage <chr>, updated_at <dttm>, language <chr>, languages <list>,
 #> #   available_translations <list>, genres <list>, subgenres <list>,

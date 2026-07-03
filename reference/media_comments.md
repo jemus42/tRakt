@@ -146,6 +146,7 @@ Other movie data:
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
 Other show data:
@@ -161,7 +162,8 @@ Other show data:
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`shows_next_episode()`](https://jemus42.github.io/tRakt/reference/shows_next_episode.md),
 [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
-[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
+[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md)
 
 Other season data:
 [`media_lists`](https://jemus42.github.io/tRakt/reference/media_lists.md),
@@ -187,10 +189,53 @@ Other episode data:
 ## Examples
 
 ``` r
-if (FALSE) { # trakt_api_available()
 movies_comments(193972)
+#> # A tibble: 10 × 19
+#>        id comment                   spoiler review parent_id created_at         
+#>     <int> <chr>                     <lgl>   <lgl>      <int> <dttm>             
+#>  1 967579 "This is a TV special, a… FALSE   FALSE          0 2026-06-27 17:39:21
+#>  2 965663 "I’m not crying, you are… FALSE   FALSE          0 2026-06-21 17:54:23
+#>  3 964431 "\"I'm trash!\"\n\nWhile… FALSE   TRUE           0 2026-06-17 16:11:19
+#>  4 964425 "“I’m Trash” \n\nToy Sto… FALSE   TRUE           0 2026-06-17 15:50:35
+#>  5 957349 "Watching this a lot lat… FALSE   FALSE          0 2026-05-26 09:21:07
+#>  6 954506 "Toy Story 4 is entertai… FALSE   FALSE          0 2026-05-17 19:27:46
+#>  7 927376 "Genuinely, I can't beli… FALSE   FALSE          0 2026-02-23 07:21:28
+#>  8 925920 "_Toy Story 4_ is a stra… FALSE   TRUE           0 2026-02-19 11:24:19
+#>  9 922946 "★★★½☆ (3.5/5)\nDidn’t f… FALSE   FALSE          0 2026-02-12 18:52:52
+#> 10 906143 "Toy Story 4 arrives as … FALSE   TRUE           0 2026-01-03 21:23:01
+#> # ℹ 13 more variables: updated_at <dttm>, replies <int>, likes <int>,
+#> #   user_rating <int>, language <chr>, username <chr>, private <lgl>,
+#> #   deleted <lgl>, user_name <chr>, vip <lgl>, vip_ep <lgl>, director <lgl>,
+#> #   user_slug <chr>
 shows_comments(46241, sort = "likes")
+#> # A tibble: 10 × 19
+#>        id comment                   spoiler review parent_id created_at         
+#>     <int> <chr>                     <lgl>   <lgl>      <int> <dttm>             
+#>  1   4528 "The bright colours, the… FALSE   FALSE          0 2014-12-27 21:04:43
+#>  2  11599 "Television at its very … FALSE   FALSE          0 2013-02-24 18:13:58
+#>  3  39755 "Holy hell I can't belie… FALSE   FALSE          0 2015-03-11 07:54:07
+#>  4 143277 "After marathoning this … FALSE   FALSE          0 2017-10-01 18:42:14
+#>  5 436459 "EIGHT HOUR detailed You… FALSE   FALSE          0 2022-01-15 08:59:48
+#>  6 185427 "In February 2014, HBO o… FALSE   FALSE          0 2018-08-01 12:50:58
+#>  7 483035 "I've just finished watc… FALSE   FALSE          0 2022-07-04 14:16:16
+#>  8 171295 "If you like this style … FALSE   FALSE          0 2018-04-20 01:20:40
+#>  9  42940 "Looked interesting but … FALSE   FALSE          0 2015-05-06 17:25:07
+#> 10 814556 "FUCKING AMAZING, BEST T… FALSE   FALSE          0 2025-05-20 12:03:34
+#> # ℹ 13 more variables: updated_at <dttm>, replies <int>, likes <int>,
+#> #   user_rating <int>, language <chr>, username <chr>, private <lgl>,
+#> #   deleted <lgl>, user_name <chr>, vip <lgl>, vip_ep <lgl>, director <lgl>,
+#> #   user_slug <chr>
 seasons_comments(46241, season = 1, sort = "likes")
+#> # A tibble: 3 × 19
+#>       id comment                    spoiler review parent_id created_at         
+#>    <int> <chr>                      <lgl>   <lgl>      <int> <dttm>             
+#> 1 386931 "This is the best season … FALSE   TRUE           0 2021-06-29 04:59:56
+#> 2 780275 "This reminds me of Dirk … FALSE   FALSE          0 2025-03-02 21:53:20
+#> 3 684618 "This is a hyper-stylized… TRUE    TRUE           0 2024-06-15 23:54:34
+#> # ℹ 13 more variables: updated_at <dttm>, replies <int>, likes <int>,
+#> #   user_rating <int>, language <chr>, username <chr>, private <lgl>,
+#> #   deleted <lgl>, user_name <chr>, vip <lgl>, vip_ep <lgl>, director <lgl>,
+#> #   user_slug <chr>
 episodes_comments(46241, season = 1, episode = 2, sort = "likes")
-}
+#> # A tibble: 0 × 0
 ```

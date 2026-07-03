@@ -74,7 +74,8 @@ Other show data:
 [`people_media()`](https://jemus42.github.io/tRakt/reference/people_media.md),
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
-[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
+[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md)
 
 Other episode data:
 [`episodes_summary()`](https://jemus42.github.io/tRakt/reference/episodes_summary.md),
@@ -100,7 +101,7 @@ shows_last_episode("one-piece", extended = "full")
 #> # A tibble: 1 × 19
 #>   season number title             number_abs overview rating votes comment_count
 #>    <int>  <int> <chr>                  <int> <chr>     <dbl> <int>         <int>
-#> 1     23   1168 Ancient History …       1168 Leaving…   8.74    69             0
+#> 1     23   1168 Ancient History …       1168 Leaving…   8.74    74             0
 #> # ℹ 11 more variables: first_aired <dttm>, updated_at <dttm>, runtime <int>,
 #> #   episode_type <chr>, original_title <chr>, after_credits <lgl>,
 #> #   during_credits <lgl>, trakt <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>

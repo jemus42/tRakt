@@ -72,7 +72,8 @@ Other show data:
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`shows_next_episode()`](https://jemus42.github.io/tRakt/reference/shows_next_episode.md),
 [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
-[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
+[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md)
 
 Other movie data:
 [`anticipated_media`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
@@ -92,6 +93,7 @@ Other movie data:
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
 Other season data:
@@ -123,7 +125,7 @@ movies_stats("inception-2010")
 #> # A tibble: 1 × 10
 #>   collectors comments favorited lists  plays recommended votes watchers type  
 #>        <int>    <int>     <int> <int>  <int>       <int> <int>    <int> <chr> 
-#> 1     460635      204      5386 96059 297086        5386 53093   249270 movies
+#> 1     460669      204      5521 97014 298643        5521 53977   250552 movies
 #> # ℹ 1 more variable: id <chr>
 if (FALSE) { # \dontrun{
 # Stats for multiple shows at once

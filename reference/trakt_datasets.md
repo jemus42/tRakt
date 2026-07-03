@@ -63,13 +63,13 @@ values:
 An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with 64
 rows and 3 columns.
 
-An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with 297
+An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with 286
 rows and 3 columns.
 
 An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with
-4526 rows and 5 columns.
+4682 rows and 5 columns.
 
-An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with 377
+An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with 384
 rows and 3 columns.
 
 An object of class `tbl_df` (inherits from `tbl`, `data.frame`) with 12
@@ -105,18 +105,18 @@ head(trakt_languages)
 #> 2 Afar      aa    shows 
 #> 3 Abkhazian ab    movies
 #> 4 Abkhazian ab    shows 
-#> 5 Avestan   ae    movies
-#> 6 Afrikaans af    movies
+#> 5 Afrikaans af    movies
+#> 6 Afrikaans af    shows 
 head(trakt_networks)
 #> # A tibble: 6 × 5
 #>   name       name_clean country trakt  tmdb
 #>   <chr>      <chr>      <chr>   <int> <int>
-#> 1 ""         ""         NA        869  1446
-#> 2 " 10 Play" "10 play"  au       1287  3466
-#> 3 " VTV "    "vtv"      vn        481  2863
-#> 4 "&CAST!!!" "&cast!!!" jp       4453  8051
-#> 5 "&TV"      "&tv"      in       1489  1566
-#> 6 "#0"       "#0"       es         79  2140
+#> 1 " 10 Play" 10 play    au       1287  3466
+#> 2 " VTV "    vtv        vn        481  2863
+#> 3 "#0"       #0         es         79  2140
+#> 4 "&CAST!!!" &cast!!!   jp       4453  8051
+#> 5 "&TV"      &tv        in       1489  1566
+#> 6 "+SBT"     +sbt       br       3972  7603
 head(trakt_countries)
 #> # A tibble: 6 × 3
 #>   name                 code  type  

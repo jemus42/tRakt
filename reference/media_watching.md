@@ -102,6 +102,7 @@ Other movie data:
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md),
 [`watched_media`](https://jemus42.github.io/tRakt/reference/watched_media.md)
 
 Other show data:
@@ -117,7 +118,8 @@ Other show data:
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`shows_next_episode()`](https://jemus42.github.io/tRakt/reference/shows_next_episode.md),
 [`shows_related()`](https://jemus42.github.io/tRakt/reference/shows_related.md),
-[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md)
+[`shows_summary()`](https://jemus42.github.io/tRakt/reference/shows_summary.md),
+[`updated_media`](https://jemus42.github.io/tRakt/reference/updated_media.md)
 
 Other episode data:
 [`episodes_summary()`](https://jemus42.github.io/tRakt/reference/episodes_summary.md),
@@ -134,10 +136,34 @@ Other episode data:
 ## Examples
 
 ``` r
-if (FALSE) { # trakt_api_available()
 movies_watching("deadpool-2016")
+#> # A tibble: 1 × 8
+#>   username        private deleted user_name   vip   vip_ep director user_slug   
+#>   <chr>           <lgl>   <lgl>   <chr>       <lgl> <lgl>  <lgl>    <chr>       
+#> 1 jarvis-15971410 FALSE   FALSE   Mihai Simea FALSE FALSE  FALSE    jarvis-1597…
 shows_watching("the-simpsons")
+#> # A tibble: 25 × 8
+#>    username     private deleted user_name        vip   vip_ep director user_slug
+#>    <chr>        <lgl>   <lgl>   <chr>            <lgl> <lgl>  <lgl>    <chr>    
+#>  1 mattblack_uk FALSE   FALSE   Harry Keogh      FALSE FALSE  FALSE    mattblac…
+#>  2 BriLach7!    FALSE   FALSE   Brilach          FALSE FALSE  FALSE    brilach7 
+#>  3 jdallen1226  FALSE   FALSE   James Allen II   FALSE FALSE  FALSE    jdallen1…
+#>  4 maxpower212  FALSE   FALSE   maxpower212      FALSE FALSE  FALSE    maxpower…
+#>  5 KNGRay123    FALSE   FALSE   Handsome Degaldo FALSE FALSE  FALSE    kngray123
+#>  6 ShuntTheRich FALSE   FALSE   ShuntTheRich     FALSE FALSE  FALSE    shuntthe…
+#>  7 chriswatts91 FALSE   FALSE   Chris Watts      FALSE FALSE  FALSE    chriswat…
+#>  8 slvrflme147  FALSE   FALSE   slvrflme147      FALSE FALSE  FALSE    slvrflme…
+#>  9 s9yoeK3CxgF9 FALSE   FALSE   xxx              FALSE FALSE  FALSE    s9yoek3c…
+#> 10 brianleb     FALSE   FALSE   Brian            FALSE FALSE  FALSE    brianleb 
+#> # ℹ 15 more rows
 seasons_watching("the-simpsons", season = 6)
+#> # A tibble: 1 × 16
+#>   username   private deleted joined_at           location about user_name gender
+#>   <chr>      <lgl>   <lgl>   <dttm>              <lgl>    <lgl> <chr>     <lgl> 
+#> 1 chriswatt… FALSE   FALSE   2024-08-16 21:05:42 NA       NA    Chris Wa… NA    
+#> # ℹ 8 more variables: age <lgl>, vip <lgl>, vip_ep <lgl>,
+#> #   vip_cover_image <lgl>, director <lgl>, user_slug <chr>, user_trakt <int>,
+#> #   avatar <chr>
 episodes_watching("the-simpsons", season = 6, episode = 12)
-}
+#> # A tibble: 0 × 0
 ```
