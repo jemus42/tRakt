@@ -23,7 +23,7 @@ vignettes/\.httr-oauth$
 ^tRakt.*\.tar\.gz$
 ^tRakt.*\.tgz$
 ^api-methods\.yml$
-^\.lintr$
+^jarl\.toml$
 ^\.pre-commit-config\.yaml$
 ^README_cache$
 ^README_html$

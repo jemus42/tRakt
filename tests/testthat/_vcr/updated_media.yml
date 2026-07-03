@@ -1,0 +1,77 @@
+http_interactions:
+- request:
+    method: GET
+    uri: https://api.trakt.tv/movies/updates/2026-06-25?limit=3
+  response:
+    status: 200
+    headers:
+      date: Fri, 03 Jul 2026 12:48:26 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: a156012769e457f0-AMS
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public, s-maxage=3600
+      content-encoding: gzip
+      etag: W/"409cb460e760860dd1e70d7a8b56983d"
+      expires: Fri, 03 Jul 2026 20:48:26 GMT
+      server: cloudflare
+      vary: query, accept-encoding, Origin
+      cf-placement: remote-ORD
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '87514'
+      x-pagination-limit: '3'
+      x-pagination-page: '1'
+      x-pagination-page-count: '29172'
+      x-permitted-cross-domain-policies: none
+      x-request-id: 56aa437f-fe60-4726-b65f-8b5126c821cf
+      x-runtime: '0.006925'
+      x-start-date: '2026-06-25T00:00:00Z'
+      x-xss-protection: '0'
+      speculation-rules: '"/cdn-cgi/speculation"'
+    body:
+      string: '[{"updated_at":"2026-06-25T08:16:34.000Z","movie":{"title":"Beyond
+        the Basement Door","year":2013,"ids":{"trakt":1377315,"slug":"beyond-the-basement-door-2013","imdb":"tt2783088","tmdb":1719478}}},{"updated_at":"2026-06-25T08:16:34.000Z","movie":{"title":"Watched","year":2026,"ids":{"trakt":1371189,"slug":"watched-2026","imdb":"tt42878461","tmdb":1699459}}},{"updated_at":"2026-06-25T08:16:34.000Z","movie":{"title":"Judge
+        Michael - Rise of the Law","year":2026,"ids":{"trakt":1358373,"slug":"judge-michael-rise-of-the-law-2026","imdb":"tt35684986","tmdb":1647483}}}]'
+  recorded_at: 2026-07-03 12:48:26
+- request:
+    method: GET
+    uri: https://api.trakt.tv/shows/updates/2026-06-25?limit=3
+  response:
+    status: 200
+    headers:
+      date: Fri, 03 Jul 2026 12:48:27 GMT
+      content-type: application/json; charset=utf-8
+      cf-ray: a156012a3cd357f0-AMS
+      cf-cache-status: DYNAMIC
+      access-control-allow-origin: '*'
+      cache-control: max-age=28800, public, s-maxage=3600
+      content-encoding: gzip
+      etag: W/"b061efe9c847b2505266c4723f216a67"
+      expires: Fri, 03 Jul 2026 20:48:27 GMT
+      server: cloudflare
+      vary: query, accept-encoding, Origin
+      cf-placement: remote-ORD
+      referrer-policy: strict-origin-when-cross-origin
+      x-content-type-options: nosniff
+      x-download-options: noopen
+      x-frame-options: SAMEORIGIN
+      x-pagination-item-count: '24013'
+      x-pagination-limit: '3'
+      x-pagination-page: '1'
+      x-pagination-page-count: '8005'
+      x-permitted-cross-domain-policies: none
+      x-request-id: 25c71166-cada-4f5c-aa40-d8146af04292
+      x-runtime: '0.024045'
+      x-start-date: '2026-06-25T00:00:00Z'
+      x-xss-protection: '0'
+      access-control-expose-headers: X-Pagination-Page,X-Pagination-Page-Count,X-Pagination-Limit,X-Pagination-Item-Count,X-Trending-User-Count,X-Start-Date,X-End-Date,X-Sort-By,X-Sort-How,X-Private-User,X-Ratelimit,Retry-After,X-Upgrade-URL,X-Applied-Sort-By,X-Applied-Sort-How,Cache-Control,Pragma,Expires
+      speculation-rules: '"/cdn-cgi/speculation"'
+    body:
+      string: '[{"updated_at":"2026-06-25T06:15:25.000Z","show":{"title":"City Lights","year":2007,"ids":{"trakt":5596,"slug":"city-lights","tvdb":74542,"imdb":"tt0913553","tmdb":5625,"tvrage":null}}},{"updated_at":"2026-06-25T06:16:06.000Z","show":{"title":"Comedy
+        Central Roasts","year":2003,"ids":{"trakt":240720,"slug":"comedy-central-roasts","tvdb":82186,"imdb":"tt15561558","tmdb":254916,"tvrage":null}}},{"updated_at":"2026-06-25T06:16:13.000Z","show":{"title":"FM","year":2009,"ids":{"trakt":17483,"slug":"fm","tvdb":85330,"imdb":"tt1385167","tmdb":17561,"tvrage":null}}}]'
+  recorded_at: 2026-07-03 12:48:27
+recorded_with: VCR-vcr/2.1.0

@@ -6,7 +6,7 @@ format:
 
 .PHONY: lint
 lint:
-	jarl check R tests
+	jarl check R
 
 .PHONY: doc
 doc: format

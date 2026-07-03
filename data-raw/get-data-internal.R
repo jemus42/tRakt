@@ -7,13 +7,20 @@ library(stringr)
 # These datasets are used to check optional filter parameters.
 
 # Networks ----
+# The /networks endpoint returns blank names and case-variant duplicates (e.g.
+# several regional "Netflix" entries). Drop blanks and keep one row per network
+# name (case-insensitively) so the data validates the `networks` filter directly
+# without any downstream de-duplication.
 trakt_networks <- trakt_get("networks") |>
+	tidyr::unnest("ids") |>
 	mutate(
 		name_clean = str_to_lower(name) |>
 			str_trim("both"),
 		.after = "name"
 	) |>
-	tidyr::unnest("ids")
+	filter(!is.na(name_clean), name_clean != "") |>
+	distinct(name_clean, .keep_all = TRUE) |>
+	arrange(name)
 
 use_data(trakt_networks, overwrite = TRUE, compress = "xz")
 
@@ -51,7 +58,7 @@ use_data(trakt_countries, overwrite = TRUE, compress = "xz")
 trakt_certifications <- purrr::map_df(
 	c("movies", "shows"),
 	\(x) {
-		trakt_get(build_trakt_url("certifications", .x)) |>
+		trakt_get(build_trakt_url("certifications", x)) |>
 			purrr::map_df(as_tibble, .id = "country") |>
 			mutate(type = x)
 	}

@@ -1,5 +1,14 @@
 # tRakt 0.19.0.9000 (development version)
 
+- Refreshed the bundled reference datasets (`trakt_networks`, `trakt_genres`,
+  `trakt_languages`, `trakt_countries`, `trakt_certifications`) from the API.
+  `trakt_networks` no longer contains blank or duplicate network names, so
+  looking up networks and filtering by `networks` is more reliable.
+- New `movies_updates()` and `shows_updates()` return media recently updated on
+  trakt.tv since a `start_date` (default yesterday). The trakt.tv API only
+  serves updates from the last 30 days; older `start_date`s warn. These
+  endpoints do not support filters.
+
 - New filter builders `filters_movies()`, `filters_shows()`, and
   `filters_episodes()` assemble a validated `trakt_filters` object to pass to
   the `filters` argument of the dynamic-list functions (`movies_popular()`,

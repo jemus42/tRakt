@@ -64,7 +64,7 @@ reference:
   - title: Shows and Movies
   - subtitle: Things that are popular, trending, anticipated, ...
     contents:
-      - ends_with("(popular|trending|anticipated|watched|watching|played|collected)")
+      - ends_with("(popular|trending|anticipated|watched|watching|played|collected|updates)")
       - -starts_with("user_")
   - subtitle: Filtering dynamic lists and search
     contents:
