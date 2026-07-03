@@ -8,6 +8,7 @@ These functions return the most anticipated movies/shows on trakt.tv.
 movies_anticipated(
   limit = 10,
   extended = "min",
+  filters = NULL,
   query = NULL,
   years = NULL,
   genres = NULL,
@@ -21,6 +22,7 @@ movies_anticipated(
 shows_anticipated(
   limit = 10,
   extended = "min",
+  filters = NULL,
   query = NULL,
   years = NULL,
   genres = NULL,
@@ -68,6 +70,22 @@ shows_anticipated(
 
   Multiple values can be combined as a comma-separated string (e.g.
   `"full,images"`) or a character vector (e.g. `c("full", "images")`).
+
+- filters:
+
+  A
+  [`trakt_filters`](https://jemus42.github.io/tRakt/reference/filters.md)
+  object created with
+  [`filters_movies()`](https://jemus42.github.io/tRakt/reference/filters.md),
+  [`filters_shows()`](https://jemus42.github.io/tRakt/reference/filters.md),
+  or
+  [`filters_episodes()`](https://jemus42.github.io/tRakt/reference/filters.md)
+  that refines which items are returned. See
+  [filters](https://jemus42.github.io/tRakt/reference/filters.md) for
+  the full set of supported filters. Supplying filters as individual
+  arguments (`genres`, `years`, `networks`, ...) is soft-deprecated in
+  favour of this argument; if both are given, `filters` takes
+  precedence.
 
 - query:
 
@@ -202,6 +220,7 @@ Other movie data:
 
 Other dynamic lists:
 [`collected_media`](https://jemus42.github.io/tRakt/reference/collected_media.md),
+[`filters`](https://jemus42.github.io/tRakt/reference/filters.md),
 [`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
@@ -218,7 +237,10 @@ Other shows data:
 ``` r
 # Get 15 the most anticipated upcoming shows on Netflix that air this year
 current_year <- format(Sys.Date(), "%Y")
-shows_anticipated(limit = 15, networks = "Netflix", years = current_year)
+shows_anticipated(
+  limit = 15,
+  filters = filters_shows(networks = "Netflix", years = current_year)
+)
 #> # A tibble: 15 × 11
 #>    list_count  year title aired_episodes imdb  slug  tmdb  tvdb  trakt plex_guid
 #>         <int> <int> <chr>          <int> <chr> <chr> <chr> <chr> <chr> <chr>    

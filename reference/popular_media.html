@@ -47,6 +47,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">movies_popular</span><span class="op">(</span></span>
 <span>  limit <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  extended <span class="op">=</span> <span class="st">"min"</span>,</span>
+<span>  filters <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  query <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  years <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  genres <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -60,6 +61,7 @@
 <span><span class="fu">shows_popular</span><span class="op">(</span></span>
 <span>  limit <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  extended <span class="op">=</span> <span class="st">"min"</span>,</span>
+<span>  filters <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  query <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  years <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  genres <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -95,6 +97,15 @@ than <code>0</code> and will be coerced via <code><a href="https://rdrr.io/r/bas
 <li><p><code>"metadata"</code>: Collection endpoints only; adds video/audio metadata.</p></li>
 </ul><p>Multiple values can be combined as a comma-separated string (e.g. <code>"full,images"</code>)
 or a character vector (e.g. <code>c("full", "images")</code>).</p></dd>
+
+
+<dt id="arg-filters">filters<a class="anchor" aria-label="anchor" href="#arg-filters"></a></dt>
+<dd><p>A <code><a href="filters.html">trakt_filters</a></code> object created with
+<code><a href="filters.html">filters_movies()</a></code>, <code><a href="filters.html">filters_shows()</a></code>, or <code><a href="filters.html">filters_episodes()</a></code> that refines
+which items are returned. See <a href="filters.html">filters</a> for the full set of supported
+filters. Supplying filters as individual arguments (<code>genres</code>, <code>years</code>,
+<code>networks</code>, ...) is soft-deprecated in favour of this argument; if both are
+given, <code>filters</code> takes precedence.</p></dd>
 
 
 <dt id="arg-query">query<a class="anchor" aria-label="anchor" href="#arg-query"></a></dt>
@@ -209,6 +220,7 @@ the same additional variables besides the media information: <code>watcher_count
 <p>Other dynamic lists:
 <code><a href="anticipated_media.html">anticipated_media</a></code>,
 <code><a href="collected_media.html">collected_media</a></code>,
+<code><a href="filters.html">filters</a></code>,
 <code><a href="lists_popular.html">lists_popular()</a></code>,
 <code><a href="played_media.html">played_media</a></code>,
 <code><a href="trending_media.html">trending_media</a></code>,
@@ -222,7 +234,7 @@ the same additional variables besides the media information: <code>watcher_count
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Get the most popular German-language movies between 2000 and 2010</span></span></span>
-<span class="r-in"><span><span class="fu">movies_popular</span><span class="op">(</span>languages <span class="op">=</span> <span class="st">"de"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2000</span>, <span class="fl">2010</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">movies_popular</span><span class="op">(</span>filters <span class="op">=</span> <span class="fu"><a href="filters.html">filters_movies</a></span><span class="op">(</span>languages <span class="op">=</span> <span class="st">"de"</span>, years <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">2000</span>, <span class="fl">2010</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 10 × 7</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     year title                                 imdb  plex$guid slug   tmdb trakt</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span>

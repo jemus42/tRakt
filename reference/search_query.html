@@ -58,6 +58,7 @@ as receiving a quick overview of a show/movie.</p>
 <span>  type <span class="op">=</span> <span class="st">"show"</span>,</span>
 <span>  n_results <span class="op">=</span> <span class="fl">1L</span>,</span>
 <span>  extended <span class="op">=</span> <span class="st">"min"</span>,</span>
+<span>  filters <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  years <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  genres <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  languages <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -114,6 +115,15 @@ separate function calls in that case.</p></dd>
 <li><p><code>"metadata"</code>: Collection endpoints only; adds video/audio metadata.</p></li>
 </ul><p>Multiple values can be combined as a comma-separated string (e.g. <code>"full,images"</code>)
 or a character vector (e.g. <code>c("full", "images")</code>).</p></dd>
+
+
+<dt id="arg-filters">filters<a class="anchor" aria-label="anchor" href="#arg-filters"></a></dt>
+<dd><p>A <code><a href="filters.html">trakt_filters</a></code> object created with
+<code><a href="filters.html">filters_movies()</a></code>, <code><a href="filters.html">filters_shows()</a></code>, or <code><a href="filters.html">filters_episodes()</a></code> that refines
+which items are returned. See <a href="filters.html">filters</a> for the full set of supported
+filters. Supplying filters as individual arguments (<code>genres</code>, <code>years</code>,
+<code>networks</code>, ...) is soft-deprecated in favour of this argument; if both are
+given, <code>filters</code> takes precedence.</p></dd>
 
 
 <dt id="arg-years">years<a class="anchor" aria-label="anchor" href="#arg-years"></a></dt>

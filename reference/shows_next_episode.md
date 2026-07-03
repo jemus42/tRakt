@@ -100,7 +100,7 @@ shows_last_episode("one-piece", extended = "full")
 #> # A tibble: 1 × 19
 #>   season number title             number_abs overview rating votes comment_count
 #>    <int>  <int> <chr>                  <int> <chr>     <dbl> <int>         <int>
-#> 1     23   1168 Ancient History …       1168 Leaving…   8.76    67             0
+#> 1     23   1168 Ancient History …       1168 Leaving…   8.74    69             0
 #> # ℹ 11 more variables: first_aired <dttm>, updated_at <dttm>, runtime <int>,
 #> #   episode_type <chr>, original_title <chr>, after_credits <lgl>,
 #> #   during_credits <lgl>, trakt <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>

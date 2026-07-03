@@ -47,6 +47,7 @@
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">movies_anticipated</span><span class="op">(</span></span>
 <span>  limit <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  extended <span class="op">=</span> <span class="st">"min"</span>,</span>
+<span>  filters <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  query <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  years <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  genres <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -60,6 +61,7 @@
 <span><span class="fu">shows_anticipated</span><span class="op">(</span></span>
 <span>  limit <span class="op">=</span> <span class="fl">10</span>,</span>
 <span>  extended <span class="op">=</span> <span class="st">"min"</span>,</span>
+<span>  filters <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  query <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  years <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  genres <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -95,6 +97,15 @@ than <code>0</code> and will be coerced via <code><a href="https://rdrr.io/r/bas
 <li><p><code>"metadata"</code>: Collection endpoints only; adds video/audio metadata.</p></li>
 </ul><p>Multiple values can be combined as a comma-separated string (e.g. <code>"full,images"</code>)
 or a character vector (e.g. <code>c("full", "images")</code>).</p></dd>
+
+
+<dt id="arg-filters">filters<a class="anchor" aria-label="anchor" href="#arg-filters"></a></dt>
+<dd><p>A <code><a href="filters.html">trakt_filters</a></code> object created with
+<code><a href="filters.html">filters_movies()</a></code>, <code><a href="filters.html">filters_shows()</a></code>, or <code><a href="filters.html">filters_episodes()</a></code> that refines
+which items are returned. See <a href="filters.html">filters</a> for the full set of supported
+filters. Supplying filters as individual arguments (<code>genres</code>, <code>years</code>,
+<code>networks</code>, ...) is soft-deprecated in favour of this argument; if both are
+given, <code>filters</code> takes precedence.</p></dd>
 
 
 <dt id="arg-query">query<a class="anchor" aria-label="anchor" href="#arg-query"></a></dt>
@@ -208,6 +219,7 @@ the same additional variables besides the media information: <code>watcher_count
 <code><a href="watched_media.html">watched_media</a></code></p>
 <p>Other dynamic lists:
 <code><a href="collected_media.html">collected_media</a></code>,
+<code><a href="filters.html">filters</a></code>,
 <code><a href="lists_popular.html">lists_popular()</a></code>,
 <code><a href="played_media.html">played_media</a></code>,
 <code><a href="popular_media.html">popular_media</a></code>,
@@ -223,7 +235,10 @@ the same additional variables besides the media information: <code>watcher_count
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Get 15 the most anticipated upcoming shows on Netflix that air this year</span></span></span>
 <span class="r-in"><span><span class="va">current_year</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/format.html" class="external-link">format</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.Date</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"%Y"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">shows_anticipated</span><span class="op">(</span>limit <span class="op">=</span> <span class="fl">15</span>, networks <span class="op">=</span> <span class="st">"Netflix"</span>, years <span class="op">=</span> <span class="va">current_year</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">shows_anticipated</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  limit <span class="op">=</span> <span class="fl">15</span>,</span></span>
+<span class="r-in"><span>  filters <span class="op">=</span> <span class="fu"><a href="filters.html">filters_shows</a></span><span class="op">(</span>networks <span class="op">=</span> <span class="st">"Netflix"</span>, years <span class="op">=</span> <span class="va">current_year</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 15 × 11</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    list_count  year title aired_episodes imdb  slug  tmdb  tvdb  trakt plex_guid</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span>

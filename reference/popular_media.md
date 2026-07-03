@@ -8,6 +8,7 @@ These functions return the popular movies/shows on trakt.tv.
 movies_popular(
   limit = 10,
   extended = "min",
+  filters = NULL,
   query = NULL,
   years = NULL,
   genres = NULL,
@@ -21,6 +22,7 @@ movies_popular(
 shows_popular(
   limit = 10,
   extended = "min",
+  filters = NULL,
   query = NULL,
   years = NULL,
   genres = NULL,
@@ -68,6 +70,22 @@ shows_popular(
 
   Multiple values can be combined as a comma-separated string (e.g.
   `"full,images"`) or a character vector (e.g. `c("full", "images")`).
+
+- filters:
+
+  A
+  [`trakt_filters`](https://jemus42.github.io/tRakt/reference/filters.md)
+  object created with
+  [`filters_movies()`](https://jemus42.github.io/tRakt/reference/filters.md),
+  [`filters_shows()`](https://jemus42.github.io/tRakt/reference/filters.md),
+  or
+  [`filters_episodes()`](https://jemus42.github.io/tRakt/reference/filters.md)
+  that refines which items are returned. See
+  [filters](https://jemus42.github.io/tRakt/reference/filters.md) for
+  the full set of supported filters. Supplying filters as individual
+  arguments (`genres`, `years`, `networks`, ...) is soft-deprecated in
+  favour of this argument; if both are given, `filters` takes
+  precedence.
 
 - query:
 
@@ -203,6 +221,7 @@ Other movie data:
 Other dynamic lists:
 [`anticipated_media`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
 [`collected_media`](https://jemus42.github.io/tRakt/reference/collected_media.md),
+[`filters`](https://jemus42.github.io/tRakt/reference/filters.md),
 [`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
@@ -217,7 +236,7 @@ Other shows data:
 
 ``` r
 # Get the most popular German-language movies between 2000 and 2010
-movies_popular(languages = "de", years = c(2000, 2010))
+movies_popular(filters = filters_movies(languages = "de", years = c(2000, 2010)))
 #> # A tibble: 10 × 7
 #>     year title                                 imdb  plex$guid slug   tmdb trakt
 #>    <int> <chr>                                 <chr> <chr>     <chr> <int> <int>

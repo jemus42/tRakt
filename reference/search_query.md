@@ -13,6 +13,7 @@ search_query(
   type = "show",
   n_results = 1L,
   extended = "min",
+  filters = NULL,
   years = NULL,
   genres = NULL,
   languages = NULL,
@@ -81,6 +82,22 @@ search_id(
 
   Multiple values can be combined as a comma-separated string (e.g.
   `"full,images"`) or a character vector (e.g. `c("full", "images")`).
+
+- filters:
+
+  A
+  [`trakt_filters`](https://jemus42.github.io/tRakt/reference/filters.md)
+  object created with
+  [`filters_movies()`](https://jemus42.github.io/tRakt/reference/filters.md),
+  [`filters_shows()`](https://jemus42.github.io/tRakt/reference/filters.md),
+  or
+  [`filters_episodes()`](https://jemus42.github.io/tRakt/reference/filters.md)
+  that refines which items are returned. See
+  [filters](https://jemus42.github.io/tRakt/reference/filters.md) for
+  the full set of supported filters. Supplying filters as individual
+  arguments (`genres`, `years`, `networks`, ...) is soft-deprecated in
+  favour of this argument; if both are given, `filters` takes
+  precedence.
 
 - years:
 

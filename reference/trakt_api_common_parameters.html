@@ -94,6 +94,15 @@ are <code>"weekly"</code>, <code>"monthly"</code>, <code>"yearly"</code>, <code>
 than <code>0</code> and will be coerced via <code><a href="https://rdrr.io/r/base/integer.html" class="external-link">as.integer()</a></code>.</p></dd>
 
 
+<dt id="arg-filters">filters<a class="anchor" aria-label="anchor" href="#arg-filters"></a></dt>
+<dd><p>A <code><a href="filters.html">trakt_filters</a></code> object created with
+<code><a href="filters.html">filters_movies()</a></code>, <code><a href="filters.html">filters_shows()</a></code>, or <code><a href="filters.html">filters_episodes()</a></code> that refines
+which items are returned. See <a href="filters.html">filters</a> for the full set of supported
+filters. Supplying filters as individual arguments (<code>genres</code>, <code>years</code>,
+<code>networks</code>, ...) is soft-deprecated in favour of this argument; if both are
+given, <code>filters</code> takes precedence.</p></dd>
+
+
 <dt id="arg-season-episode">season, episode<a class="anchor" aria-label="anchor" href="#arg-season-episode"></a></dt>
 <dd><p><code>integer(1) [1L]</code>: The season and episode number. If longer,
 e.g. <code>1:5</code>, the function is vectorized and the output will be

@@ -1,5 +1,34 @@
 # Changelog
 
+## tRakt 0.19.0.9000 (development version)
+
+- New filter builders
+  [`filters_movies()`](https://jemus42.github.io/tRakt/reference/filters.md),
+  [`filters_shows()`](https://jemus42.github.io/tRakt/reference/filters.md),
+  and
+  [`filters_episodes()`](https://jemus42.github.io/tRakt/reference/filters.md)
+  assemble a validated `trakt_filters` object to pass to the `filters`
+  argument of the dynamic-list functions
+  ([`movies_popular()`](https://jemus42.github.io/tRakt/reference/popular_media.md),
+  [`shows_trending()`](https://jemus42.github.io/tRakt/reference/trending_media.md),
+  …) and
+  [`search_query()`](https://jemus42.github.io/tRakt/reference/search_query.md).
+  This centralizes and documents filtering, adds the filters the
+  trakt.tv API gained over time — `subgenres`, `studio_ids`, `votes`,
+  `tmdb_ratings`/`tmdb_votes`, `imdb_ratings`/`imdb_votes`, `rt_meters`,
+  `rt_user_meters`, `metascores`, `network_ids`, `episode_types` — and
+  expands the `status` vocabulary to all eight API values. Values are
+  validated up front (unknown vocabulary warns and is dropped;
+  out-of-range numbers warn and are ignored).
+  ([\#36](http://github.com/jemus42/tRakt/issues/36))
+- Passing filters as individual arguments to the dynamic-list functions
+  and
+  [`search_query()`](https://jemus42.github.io/tRakt/reference/search_query.md)
+  (`genres`, `years`, `networks`, …) is soft-deprecated in favour of the
+  `filters` argument. The individual arguments keep working for now; if
+  both a `filters` object and individual arguments are supplied,
+  `filters` wins and a warning is emitted.
+
 ## tRakt 0.19.0
 
 - [`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md)

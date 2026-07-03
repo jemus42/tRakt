@@ -134,34 +134,10 @@ Other episode data:
 ## Examples
 
 ``` r
+if (FALSE) { # trakt_api_available()
 movies_watching("deadpool-2016")
-#> # A tibble: 1 × 8
-#>   username          private deleted user_name    vip   vip_ep director user_slug
-#>   <chr>             <lgl>   <lgl>   <chr>        <lgl> <lgl>  <lgl>    <chr>    
-#> 1 Tonymontana131313 FALSE   FALSE   Anthony Wil… FALSE FALSE  FALSE    tonymont…
 shows_watching("the-simpsons")
-#> # A tibble: 32 × 8
-#>    username        private deleted user_name     vip   vip_ep director user_slug
-#>    <chr>           <lgl>   <lgl>   <chr>         <lgl> <lgl>  <lgl>    <chr>    
-#>  1 calmcl1         FALSE   FALSE   Cal McLean    FALSE FALSE  FALSE    calmcl1  
-#>  2 paulhey80       FALSE   FALSE   Paulhey80     FALSE FALSE  FALSE    paulhey80
-#>  3 jasonsbates     FALSE   FALSE   Jason         FALSE FALSE  FALSE    jasonsba…
-#>  4 jarvis-15598715 FALSE   FALSE   Rafael Salaz… FALSE FALSE  FALSE    jarvis-1…
-#>  5 dmin4           FALSE   FALSE   Dmin4         FALSE FALSE  FALSE    dmin4    
-#>  6 Rau09           FALSE   FALSE   Rau09         FALSE FALSE  FALSE    rau09    
-#>  7 artur araujo    FALSE   FALSE   Deus Junior … FALSE FALSE  FALSE    artur-ar…
-#>  8 modemhead       TRUE    FALSE   NA            NA    NA     NA       modemhead
-#>  9 Animating3517   FALSE   FALSE   Animating3517 FALSE FALSE  FALSE    animatin…
-#> 10 paddy2019       FALSE   FALSE   Patrick Flynn FALSE FALSE  FALSE    paddy2019
-#> # ℹ 22 more rows
 seasons_watching("the-simpsons", season = 6)
-#> # A tibble: 1 × 16
-#>   username   private deleted joined_at           location about user_name gender
-#>   <chr>      <lgl>   <lgl>   <dttm>              <chr>    <lgl> <chr>     <chr> 
-#> 1 Dabomb1001 FALSE   FALSE   2023-07-12 00:52:46 Waterlo… NA    Dabomb    male  
-#> # ℹ 8 more variables: age <int>, vip <lgl>, vip_ep <lgl>,
-#> #   vip_cover_image <lgl>, director <lgl>, user_slug <chr>, user_trakt <int>,
-#> #   avatar <chr>
 episodes_watching("the-simpsons", season = 6, episode = 12)
-#> # A tibble: 0 × 0
+}
 ```

@@ -58,6 +58,7 @@ Other list methods:
 Other dynamic lists:
 [`anticipated_media`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
 [`collected_media`](https://jemus42.github.io/tRakt/reference/collected_media.md),
+[`filters`](https://jemus42.github.io/tRakt/reference/filters.md),
 [`played_media`](https://jemus42.github.io/tRakt/reference/played_media.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),
@@ -91,12 +92,12 @@ lists_trending()
 #>    name      description privacy share_link type  display_numbers allow_comments
 #>    <chr>     <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
 #>  1 IMDB: To… "Top 250 m… public  ""         pers… TRUE            TRUE          
-#>  2 Best Min… "What’s a … public  ""         pers… FALSE           TRUE          
-#>  3 IMDB: To… "Top 250 T… public  ""         pers… TRUE            TRUE          
+#>  2 IMDB: To… "Top 250 T… public  ""         pers… TRUE            TRUE          
+#>  3 Best Min… "What’s a … public  ""         pers… FALSE           TRUE          
 #>  4 Trakt: P… "The Trakt… public  ""         pers… TRUE            TRUE          
 #>  5 MARVEL C… "**UPDATED… public  ""         pers… TRUE            TRUE          
-#>  6 1001 Gre… "/u/StopRe… public  ""         pers… TRUE            TRUE          
-#>  7 True Cri… "This isn'… public  ""         pers… FALSE           TRUE          
+#>  6 True Cri… "This isn'… public  ""         pers… FALSE           TRUE          
+#>  7 1001 Gre… "/u/StopRe… public  ""         pers… TRUE            TRUE          
 #>  8 Sci-Fi    ""          public  ""         pers… FALSE           TRUE          
 #>  9 Popular … "This isn'… public  ""         pers… FALSE           TRUE          
 #> 10 Korean^^  "Explore t… public  ""         pers… FALSE           TRUE          

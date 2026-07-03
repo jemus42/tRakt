@@ -9,6 +9,7 @@ movies_played(
   limit = 10,
   extended = "min",
   period = c("weekly", "monthly", "yearly", "all"),
+  filters = NULL,
   query = NULL,
   years = NULL,
   genres = NULL,
@@ -23,6 +24,7 @@ shows_played(
   limit = 10,
   extended = "min",
   period = c("weekly", "monthly", "yearly", "all"),
+  filters = NULL,
   query = NULL,
   years = NULL,
   genres = NULL,
@@ -75,6 +77,22 @@ shows_played(
 
   `character(1) ["weekly"]`: Which period to filter by. Possible values
   are `"weekly"`, `"monthly"`, `"yearly"`, `"all"`.
+
+- filters:
+
+  A
+  [`trakt_filters`](https://jemus42.github.io/tRakt/reference/filters.md)
+  object created with
+  [`filters_movies()`](https://jemus42.github.io/tRakt/reference/filters.md),
+  [`filters_shows()`](https://jemus42.github.io/tRakt/reference/filters.md),
+  or
+  [`filters_episodes()`](https://jemus42.github.io/tRakt/reference/filters.md)
+  that refines which items are returned. See
+  [filters](https://jemus42.github.io/tRakt/reference/filters.md) for
+  the full set of supported filters. Supplying filters as individual
+  arguments (`genres`, `years`, `networks`, ...) is soft-deprecated in
+  favour of this argument; if both are given, `filters` takes
+  precedence.
 
 - query:
 
@@ -210,6 +228,7 @@ Other movie data:
 Other dynamic lists:
 [`anticipated_media`](https://jemus42.github.io/tRakt/reference/anticipated_media.md),
 [`collected_media`](https://jemus42.github.io/tRakt/reference/collected_media.md),
+[`filters`](https://jemus42.github.io/tRakt/reference/filters.md),
 [`lists_popular()`](https://jemus42.github.io/tRakt/reference/lists_popular.md),
 [`popular_media`](https://jemus42.github.io/tRakt/reference/popular_media.md),
 [`trending_media`](https://jemus42.github.io/tRakt/reference/trending_media.md),

@@ -321,6 +321,13 @@ like the `slug`, which is required for use of item-specific functions.
   [`shows_watched()`](https://jemus42.github.io/tRakt/reference/watched_media.md)
   : Most watched media
 
+### Filtering dynamic lists and search
+
+- [`filters_movies()`](https://jemus42.github.io/tRakt/reference/filters.md)
+  [`filters_shows()`](https://jemus42.github.io/tRakt/reference/filters.md)
+  [`filters_episodes()`](https://jemus42.github.io/tRakt/reference/filters.md)
+  : Build a filter set for the dynamic-list and search endpoints
+
 ### Single-item summary data
 
 - [`episodes_summary()`](https://jemus42.github.io/tRakt/reference/episodes_summary.md)

@@ -110,13 +110,13 @@ seasons_episodes("breaking-bad", 1, extended = "full")
 #> # A tibble: 7 × 23
 #>   title      votes episode rating season runtime overview released   episode_abs
 #>   <chr>      <int>   <int>  <dbl>  <int>   <int> <chr>    <date>           <int>
-#> 1 Pilot       4744       1   8.35      1      59 When an… 2008-01-21           1
-#> 2 Cat's in …  3943       2   8.10      1      49 Walt an… 2008-01-28           2
-#> 3 ...And th…  3669       3   8.03      1      49 Walter … 2008-02-11           3
-#> 4 Cancer Man  3536       4   7.93      1      49 Walter … 2008-02-18           4
-#> 5 Gray Matt…  3460       5   7.95      1      49 Walter … 2008-02-25           5
-#> 6 Crazy Han…  3496       6   8.54      1      49 The sid… 2008-03-03           6
-#> 7 A No Roug…  3403       7   8.35      1      48 Walter … 2008-03-10           7
+#> 1 Pilot       4753       1   8.35      1      59 When an… 2008-01-21           1
+#> 2 Cat's in …  3949       2   8.11      1      49 Walt an… 2008-01-28           2
+#> 3 ...And th…  3676       3   8.04      1      49 Walter … 2008-02-11           3
+#> 4 Cancer Man  3540       4   7.93      1      49 Walter … 2008-02-18           4
+#> 5 Gray Matt…  3466       5   7.95      1      49 Walter … 2008-02-25           5
+#> 6 Crazy Han…  3501       6   8.54      1      49 The sid… 2008-03-03           6
+#> 7 A No Roug…  3408       7   8.35      1      48 Walter … 2008-03-10           7
 #> # ℹ 14 more variables: updated_at <dttm>, first_aired <dttm>,
 #> #   episode_type <chr>, after_credits <lgl>, comment_count <int>,
 #> #   during_credits <lgl>, original_title <chr>, available_translations <list>,
