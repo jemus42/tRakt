@@ -1,0 +1,9 @@
+# Configuration for jarl (https://jarl.etiennebacher.com), a fast R linter.
+#
+# Code *formatting* is handled by air (see air.toml); jarl covers code-quality
+# rules (correctness, performance, robustness) that air does not. Run it with
+# `make lint` (or `jarl check R tests`).
+
+[lint]
+# Use jarl's default rule set. Rule-specific options can be added here as the
+# project grows, e.g. `[lint.assignment] operator = "<-"`.

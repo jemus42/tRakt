@@ -4,6 +4,10 @@ all: format doc README.md
 format:
 	air format .
 
+.PHONY: lint
+lint:
+	jarl check R tests
+
 .PHONY: doc
 doc: format
 	Rscript -e "usethis::use_tidy_description()"
