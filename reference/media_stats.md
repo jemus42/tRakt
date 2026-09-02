@@ -123,9 +123,9 @@ Other episode data:
 # Stats for a movie
 movies_stats("inception-2010")
 #> # A tibble: 1 × 10
-#>   collectors comments favorited lists  plays recommended votes watchers type  
-#>        <int>    <int>     <int> <int>  <int>       <int> <int>    <int> <chr> 
-#> 1     460669      204      5521 97014 298643        5521 53977   250552 movies
+#>   collectors comments favorited  lists  plays recommended votes watchers type  
+#>        <int>    <int>     <int>  <int>  <int>       <int> <int>    <int> <chr> 
+#> 1     462514      220      7288 109225 379459        7288 68085   322082 movies
 #> # ℹ 1 more variable: id <chr>
 if (FALSE) { # \dontrun{
 # Stats for multiple shows at once

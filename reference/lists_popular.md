@@ -72,16 +72,16 @@ lists_popular()
 #> # A tibble: 10 × 32
 #>    name      description privacy share_link type  display_numbers allow_comments
 #>    <chr>     <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
-#>  1 IMDB: To… "Top 250 m… public  ""         pers… TRUE            TRUE          
-#>  2 MARVEL C… "**UPDATED… public  ""         pers… TRUE            TRUE          
+#>  1 MARVEL C… "**UPDATED… public  ""         pers… TRUE            TRUE          
+#>  2 IMDB: To… "Top 250 m… public  ""         pers… TRUE            TRUE          
 #>  3 IMDB: To… "Top 250 T… public  ""         pers… TRUE            TRUE          
 #>  4 Best Min… "What’s a … public  ""         pers… FALSE           TRUE          
 #>  5 1001 Gre… "/u/StopRe… public  ""         pers… TRUE            TRUE          
 #>  6 1001 Mov… "> 1001 Mo… public  ""         pers… TRUE            TRUE          
-#>  7 Mindfuck  "The objec… public  ""         pers… FALSE           TRUE          
-#>  8 Great Mo… "Every yea… public  ""         pers… FALSE           TRUE          
-#>  9 True Cri… "This isn'… public  ""         pers… FALSE           TRUE          
-#> 10 DC Unive… ""          public  ""         pers… TRUE            TRUE          
+#>  7 True Cri… "This isn'… public  ""         pers… FALSE           TRUE          
+#>  8 Mindfuck  "The objec… public  ""         pers… FALSE           TRUE          
+#>  9 DC Unive… ""          public  ""         pers… TRUE            TRUE          
+#> 10 Great Mo… "Every yea… public  ""         pers… FALSE           TRUE          
 #> # ℹ 25 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
 #> #   updated_at <dttm>, item_count <int>, comment_count <int>, likes <int>,
 #> #   slug <chr>, trakt <chr>, username <chr>, private <lgl>, deleted <lgl>,
@@ -92,16 +92,16 @@ lists_trending()
 #> # A tibble: 10 × 32
 #>    name      description privacy share_link type  display_numbers allow_comments
 #>    <chr>     <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
-#>  1 IMDB: To… "Top 250 m… public  ""         pers… TRUE            TRUE          
-#>  2 IMDB: To… "Top 250 T… public  ""         pers… TRUE            TRUE          
-#>  3 Best Min… "What’s a … public  ""         pers… FALSE           TRUE          
-#>  4 MARVEL C… "**UPDATED… public  ""         pers… TRUE            TRUE          
-#>  5 Trakt: P… "The Trakt… public  ""         pers… TRUE            TRUE          
-#>  6 1001 Gre… "/u/StopRe… public  ""         pers… TRUE            TRUE          
-#>  7 Sci-Fi    ""          public  ""         pers… FALSE           TRUE          
-#>  8 True Cri… "This isn'… public  ""         pers… FALSE           TRUE          
-#>  9 Popular … "This isn'… public  ""         pers… FALSE           TRUE          
-#> 10 Studio G… "Animated … public  ""         pers… TRUE            TRUE          
+#>  1 MARVEL C… "**UPDATED… public  ""         pers… TRUE            TRUE          
+#>  2 IMDB: To… "Top 250 m… public  ""         pers… TRUE            TRUE          
+#>  3 IMDB: To… "Top 250 T… public  ""         pers… TRUE            TRUE          
+#>  4 Best Min… "What’s a … public  ""         pers… FALSE           TRUE          
+#>  5 1001 Gre… "/u/StopRe… public  ""         pers… TRUE            TRUE          
+#>  6 Studio G… "Animated … public  ""         pers… TRUE            TRUE          
+#>  7 Pixar Fe… "Feature f… public  ""         pers… TRUE            TRUE          
+#>  8 Marvel C… ""          public  ""         pers… TRUE            FALSE         
+#>  9 Highly r… "Shows wit… public  ""         pers… FALSE           TRUE          
+#> 10 100 Anim… "Based on … public  ""         pers… FALSE           TRUE          
 #> # ℹ 25 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
 #> #   updated_at <dttm>, item_count <int>, comment_count <int>, likes <int>,
 #> #   slug <chr>, trakt <chr>, username <chr>, private <lgl>, deleted <lgl>,

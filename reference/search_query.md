@@ -188,19 +188,18 @@ which fields of the item metadata are searched by default.
 ``` r
 # A show
 search_query("Breaking Bad", type = "show", n_results = 3)
-#> # A tibble: 3 × 36
-#>     score type  title     year tagline overview runtime country trailer homepage
-#>     <dbl> <chr> <chr>    <int> <chr>   <chr>      <int> <chr>   <chr>   <chr>   
-#> 1 1.16e18 show  Breakin…  2008 "Chang… "Walter…      50 us      https:… https:/…
-#> 2 1.16e18 show  Breakin…  2016 ""      "During…      42 cn      NA      NA      
-#> 3 1.16e18 show  Breakin…  2009 ""      "Breaki…      42 us      NA      NA      
-#> # ℹ 26 more variables: status <chr>, rating <dbl>, votes <int>,
-#> #   comment_count <int>, updated_at <dttm>, language <chr>, languages <list>,
-#> #   available_translations <list>, genres <list>, subgenres <list>,
-#> #   original_title <chr>, social_ids <df[,4]>, first_aired <dttm>,
-#> #   aired_episodes <int>, certification <chr>, network <chr>, airs_day <chr>,
-#> #   airs_time <chr>, airs_timezone <chr>, trakt <chr>, slug <chr>, imdb <chr>,
-#> #   tmdb <chr>, tvdb <chr>, plex_guid <chr>, plex_slug <chr>
+#> # A tibble: 2 × 38
+#>     score type   year title   votes genres rating status country network runtime
+#>     <dbl> <chr> <int> <chr>   <int> <list>  <dbl> <chr>  <chr>   <chr>     <int>
+#> 1 1.16e18 show   2008 Breaki… 71522 <chr>    9.31 ended  us      AMC          50
+#> 2 1.16e18 show   2025 The Ba…   116 <chr>    7.76 retur… us      Netflix      25
+#> # ℹ 27 more variables: tagline <chr>, trailer <chr>, homepage <chr>,
+#> #   language <chr>, overview <chr>, languages <list>, subgenres <list>,
+#> #   last_aired <chr>, social_ids <df[,4]>, updated_at <dttm>,
+#> #   first_aired <dttm>, certification <chr>, comment_count <int>,
+#> #   total_runtime <int>, aired_episodes <int>, original_title <chr>,
+#> #   available_translations <list>, airs_day <chr>, airs_time <chr>,
+#> #   airs_timezone <chr>, imdb <chr>, slug <chr>, tmdb <chr>, tvdb <chr>, …
 if (FALSE) { # \dontrun{
 # A show by its trakt id, and now with more information
 search_id(1388, "trakt", type = "show", extended = "full")

@@ -129,84 +129,92 @@ comments_replies("236397")
 #> #   deleted <lgl>, user_name <chr>, vip <lgl>, vip_ep <lgl>, director <lgl>,
 #> #   user_slug <chr>
 comments_likes("236397")
-#> # A tibble: 1 × 9
-#>   liked_at    username private deleted user_name vip   vip_ep director user_slug
-#>   <chr>       <chr>    <lgl>   <lgl>   <chr>     <lgl> <lgl>  <lgl>    <chr>    
-#> 1 2019-09-15… OvejaMe… FALSE   FALSE   Laura     FALSE FALSE  FALSE    ovejamec…
+#> # A tibble: 2 × 17
+#>   liked_at username private deleted joined_at           location about user_name
+#>   <chr>    <chr>    <lgl>   <lgl>   <dttm>              <chr>    <chr> <chr>    
+#> 1 2019-06… Khawlah  FALSE   FALSE   2014-12-22 16:58:37 "Saudi … ""    Khawlah  
+#> 2 2019-09… OvejaMe… FALSE   FALSE   2013-06-29 02:23:22 ""       ""    Laura    
+#> # ℹ 9 more variables: gender <chr>, age <int>, vip <lgl>, vip_ep <lgl>,
+#> #   vip_cover_image <lgl>, director <lgl>, user_slug <chr>, user_trakt <int>,
+#> #   avatar <chr>
 # A movie
 comments_item("236397")
-#> # A tibble: 1 × 7
-#>   type  title                              year trakt  slug          imdb  tmdb 
-#>   <chr> <chr>                             <int> <chr>  <chr>         <chr> <chr>
-#> 1 movie John Wick: Chapter 3 - Parabellum  2019 304278 john-wick-ch… tt61… 4581…
+#> # A tibble: 1 × 9
+#>   type   year title                  imdb  slug  tmdb  trakt plex_guid plex_slug
+#>   <chr> <int> <chr>                  <chr> <chr> <chr> <chr> <chr>     <chr>    
+#> 1 movie  2019 John Wick: Chapter 3 … tt61… john… 4581… 3042… 5d776d31… john-wic…
 comments_item("236397", extended = "full")
-#> # A tibble: 1 × 28
-#>   type  title     year tagline overview released   runtime country status rating
-#>   <chr> <chr>    <int> <chr>   <chr>    <date>       <int> <chr>   <chr>   <dbl>
-#> 1 movie John Wi…  2019 If you… Super-a… 2019-05-17     131 us      relea…   7.63
-#> # ℹ 18 more variables: votes <int>, comment_count <int>, trailer <chr>,
-#> #   homepage <chr>, updated_at <dttm>, language <chr>, languages <list>,
-#> #   available_translations <list>, genres <list>, subgenres <list>,
-#> #   certification <chr>, original_title <chr>, after_credits <lgl>,
-#> #   during_credits <lgl>, trakt <chr>, slug <chr>, imdb <chr>, tmdb <chr>
+#> # A tibble: 1 × 30
+#>   type   year title   votes genres rating status country runtime tagline trailer
+#>   <chr> <int> <chr>   <int> <list>  <dbl> <chr>  <chr>     <int> <chr>   <chr>  
+#> 1 movie  2019 John W… 33215 <chr>    7.81 relea… us          131 If you… https:…
+#> # ℹ 19 more variables: homepage <chr>, language <chr>, overview <chr>,
+#> #   released <date>, languages <list>, subgenres <list>, updated_at <dttm>,
+#> #   after_credits <lgl>, certification <chr>, comment_count <int>,
+#> #   during_credits <lgl>, original_title <chr>, available_translations <list>,
+#> #   imdb <chr>, slug <chr>, tmdb <chr>, trakt <chr>, plex_guid <chr>,
+#> #   plex_slug <chr>
 
 # A show
 comments_item("120768")
-#> # A tibble: 1 × 8
-#>   type  title           year trakt  slug           tvdb   imdb      tmdb 
-#>   <chr> <chr>          <int> <chr>  <chr>          <chr>  <chr>     <chr>
-#> 1 show  13 Reasons Why  2017 116129 13-reasons-why 323168 tt1837492 66788
+#> # A tibble: 1 × 11
+#>   type   year title       aired_episodes imdb  slug  tmdb  tvdb  trakt plex_guid
+#>   <chr> <int> <chr>                <int> <chr> <chr> <chr> <chr> <chr> <chr>    
+#> 1 show   2017 13 Reasons…             49 tt18… 13-r… 66788 3231… 1161… 5d9c07fc…
+#> # ℹ 1 more variable: plex_slug <chr>
 comments_item("120768", extended = "full")
-#> # A tibble: 1 × 33
-#>   type  title    year tagline overview first_aired         runtime total_runtime
-#>   <chr> <chr>   <int> <chr>   <chr>    <dttm>                <int>         <int>
-#> 1 show  13 Rea…  2017 If you… High sc… 2017-03-31 07:00:00      60          2868
-#> # ℹ 25 more variables: certification <chr>, country <chr>, status <chr>,
-#> #   rating <dbl>, votes <int>, comment_count <int>, trailer <chr>,
-#> #   homepage <chr>, network <chr>, updated_at <dttm>, language <chr>,
-#> #   languages <list>, available_translations <list>, genres <list>,
-#> #   subgenres <list>, aired_episodes <int>, original_title <chr>,
-#> #   airs_day <chr>, airs_time <chr>, airs_timezone <chr>, trakt <chr>,
-#> #   slug <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>
+#> # A tibble: 1 × 36
+#>   type   year title   votes genres rating status country network runtime tagline
+#>   <chr> <int> <chr>   <int> <list>  <dbl> <chr>  <chr>   <chr>     <int> <chr>  
+#> 1 show   2017 13 Rea… 12499 <chr>    6.99 ended  us      Netflix      60 If you…
+#> # ℹ 25 more variables: trailer <chr>, homepage <chr>, language <chr>,
+#> #   overview <chr>, languages <list>, subgenres <list>, last_aired <chr>,
+#> #   updated_at <dttm>, first_aired <dttm>, certification <chr>,
+#> #   comment_count <int>, total_runtime <int>, aired_episodes <int>,
+#> #   original_title <chr>, available_translations <list>, airs_day <chr>,
+#> #   airs_time <chr>, airs_timezone <chr>, imdb <chr>, slug <chr>, tmdb <chr>,
+#> #   tvdb <chr>, trakt <chr>, plex_guid <chr>, plex_slug <chr>
 
 # A season
 comments_item("140265")
-#> # A tibble: 1 × 12
-#>   type   title       year trakt slug       tvdb  imdb  tmdb  season season_trakt
-#>   <chr>  <chr>      <int> <chr> <chr>      <chr> <chr> <chr>  <int> <chr>       
-#> 1 season Twin Peaks  1990 1907  twin-peaks 70533 tt00… 1920       3 138350      
-#> # ℹ 2 more variables: season_tvdb <chr>, season_tmdb <chr>
+#> # A tibble: 1 × 16
+#>   type    year title      aired_episodes imdb  slug  tmdb  tvdb  trakt plex_guid
+#>   <chr>  <int> <chr>               <int> <chr> <chr> <chr> <chr> <chr> <chr>    
+#> 1 season  1990 Twin Peaks             48 tt00… twin… 1920  70533 1907  5d9c0871…
+#> # ℹ 6 more variables: plex_slug <chr>, season <int>, season_tmdb <chr>,
+#> #   season_tvdb <chr>, season_trakt <chr>, season_plex_guid <chr>
 comments_item("140265", extended = "full")
-#> # A tibble: 1 × 48
-#>   type   title   year tagline overview first_aired         runtime total_runtime
-#>   <chr>  <chr>  <int> <chr>   <chr>    <dttm>                <int>         <int>
-#> 1 season Twin …  1990 It is … The bod… 1990-04-08 00:00:00      42          2560
-#> # ℹ 40 more variables: certification <chr>, country <chr>, status <chr>,
-#> #   rating <dbl>, votes <int>, comment_count <int>, trailer <chr>,
-#> #   homepage <chr>, network <chr>, updated_at <dttm>, language <chr>,
-#> #   languages <list>, available_translations <list>, genres <list>,
-#> #   subgenres <list>, aired_episodes <int>, original_title <chr>,
-#> #   airs_day <chr>, airs_time <chr>, airs_timezone <chr>, trakt <chr>,
-#> #   slug <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>, season <int>, …
+#> # A tibble: 1 × 52
+#>   type    year title  votes genres rating status country network runtime tagline
+#>   <chr>  <int> <chr>  <int> <list>  <dbl> <chr>  <chr>   <chr>   <chr>   <chr>  
+#> 1 season  1990 Twin …  7107 <chr>    8.42 ended  us      Showti… NA      It is …
+#> # ℹ 41 more variables: trailer <chr>, homepage <chr>, language <chr>,
+#> #   overview <chr>, languages <list>, subgenres <list>, last_aired <chr>,
+#> #   updated_at <dttm>, first_aired <dttm>, certification <chr>,
+#> #   comment_count <int>, total_runtime <int>, aired_episodes <int>,
+#> #   original_title <chr>, available_translations <list>, airs_day <chr>,
+#> #   airs_time <chr>, airs_timezone <chr>, imdb <chr>, slug <chr>, tmdb <chr>,
+#> #   tvdb <chr>, trakt <chr>, plex_guid <chr>, plex_slug <chr>, …
 
 # An episode
 comments_item("136632")
-#> # A tibble: 1 × 15
-#>   type    title  year trakt slug  tvdb  imdb  tmdb  season episode episode_title
-#>   <chr>   <chr> <int> <chr> <chr> <chr> <chr> <chr>  <int>   <int> <chr>        
-#> 1 episode Game…  2011 1390  game… 1213… tt09… 1399       7       4 The Spoils o…
-#> # ℹ 4 more variables: episode_trakt <chr>, episode_tvdb <chr>,
-#> #   episode_imdb <chr>, episode_tmdb <chr>
+#> # A tibble: 1 × 19
+#>   type     year title     aired_episodes imdb  slug  tmdb  tvdb  trakt plex_guid
+#>   <chr>   <int> <chr>              <int> <chr> <chr> <chr> <chr> <chr> <chr>    
+#> 1 episode  2011 Game of …             73 tt09… game… 1399  1213… 1390  5d9c086c…
+#> # ℹ 9 more variables: plex_slug <chr>, episode_title <chr>, episode <int>,
+#> #   season <int>, episode_imdb <chr>, episode_tmdb <chr>, episode_tvdb <chr>,
+#> #   episode_trakt <chr>, episode_plex_guid <chr>
 comments_item("136632", extended = "full")
-#> # A tibble: 1 × 52
-#>   type    title  year tagline overview first_aired         runtime total_runtime
-#>   <chr>   <chr> <int> <chr>   <chr>    <dttm>                <int>         <int>
-#> 1 episode Game…  2011 Winter… Seven n… 2011-04-18 01:00:00      55          4232
-#> # ℹ 44 more variables: certification <chr>, country <chr>, status <chr>,
-#> #   rating <dbl>, votes <int>, comment_count <int>, trailer <chr>,
-#> #   homepage <chr>, network <chr>, updated_at <dttm>, language <chr>,
-#> #   languages <list>, available_translations <list>, genres <list>,
-#> #   subgenres <list>, aired_episodes <int>, original_title <chr>,
-#> #   airs_day <chr>, airs_time <chr>, airs_timezone <chr>, trakt <chr>,
-#> #   slug <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>, season <int>, …
+#> # A tibble: 1 × 58
+#>   type     year title votes genres rating status country network runtime tagline
+#>   <chr>   <int> <chr> <int> <list>  <dbl> <chr>  <chr>   <chr>     <int> <chr>  
+#> 1 episode  2011 Game… 73948 <chr>    8.92 ended  us      HBO          55 Winter…
+#> # ℹ 47 more variables: trailer <chr>, homepage <chr>, language <chr>,
+#> #   overview <chr>, languages <list>, subgenres <list>, last_aired <chr>,
+#> #   updated_at <dttm>, first_aired <dttm>, certification <chr>,
+#> #   comment_count <int>, total_runtime <int>, aired_episodes <int>,
+#> #   original_title <chr>, available_translations <list>, airs_day <chr>,
+#> #   airs_time <chr>, airs_timezone <chr>, imdb <chr>, slug <chr>, tmdb <chr>,
+#> #   tvdb <chr>, trakt <chr>, plex_guid <chr>, plex_slug <chr>, …
 ```

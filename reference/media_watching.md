@@ -137,31 +137,38 @@ Other episode data:
 
 ``` r
 movies_watching("deadpool-2016")
-#> # A tibble: 1 × 8
-#>   username        private deleted user_name   vip   vip_ep director user_slug   
-#>   <chr>           <lgl>   <lgl>   <chr>       <lgl> <lgl>  <lgl>    <chr>       
-#> 1 jarvis-15971410 FALSE   FALSE   Mihai Simea FALSE FALSE  FALSE    jarvis-1597…
-shows_watching("the-simpsons")
-#> # A tibble: 25 × 8
-#>    username     private deleted user_name        vip   vip_ep director user_slug
-#>    <chr>        <lgl>   <lgl>   <chr>            <lgl> <lgl>  <lgl>    <chr>    
-#>  1 mattblack_uk FALSE   FALSE   Harry Keogh      FALSE FALSE  FALSE    mattblac…
-#>  2 BriLach7!    FALSE   FALSE   Brilach          FALSE FALSE  FALSE    brilach7 
-#>  3 jdallen1226  FALSE   FALSE   James Allen II   FALSE FALSE  FALSE    jdallen1…
-#>  4 maxpower212  FALSE   FALSE   maxpower212      FALSE FALSE  FALSE    maxpower…
-#>  5 KNGRay123    FALSE   FALSE   Handsome Degaldo FALSE FALSE  FALSE    kngray123
-#>  6 ShuntTheRich FALSE   FALSE   ShuntTheRich     FALSE FALSE  FALSE    shuntthe…
-#>  7 chriswatts91 FALSE   FALSE   Chris Watts      FALSE FALSE  FALSE    chriswat…
-#>  8 slvrflme147  FALSE   FALSE   slvrflme147      FALSE FALSE  FALSE    slvrflme…
-#>  9 s9yoeK3CxgF9 FALSE   FALSE   xxx              FALSE FALSE  FALSE    s9yoek3c…
-#> 10 brianleb     FALSE   FALSE   Brian            FALSE FALSE  FALSE    brianleb 
-#> # ℹ 15 more rows
-seasons_watching("the-simpsons", season = 6)
 #> # A tibble: 1 × 16
 #>   username   private deleted joined_at           location about user_name gender
-#>   <chr>      <lgl>   <lgl>   <dttm>              <lgl>    <lgl> <chr>     <lgl> 
-#> 1 chriswatt… FALSE   FALSE   2024-08-16 21:05:42 NA       NA    Chris Wa… NA    
-#> # ℹ 8 more variables: age <lgl>, vip <lgl>, vip_ep <lgl>,
+#>   <chr>      <lgl>   <lgl>   <dttm>              <chr>    <lgl> <chr>     <chr> 
+#> 1 OlBoyBong… FALSE   FALSE   2026-01-22 10:03:24 Austral… NA    Riley Wa… male  
+#> # ℹ 8 more variables: age <int>, vip <lgl>, vip_ep <lgl>,
+#> #   vip_cover_image <lgl>, director <lgl>, user_slug <chr>, user_trakt <int>,
+#> #   avatar <chr>
+shows_watching("the-simpsons")
+#> # A tibble: 29 × 16
+#>    username  private deleted joined_at           location about user_name gender
+#>    <chr>     <lgl>   <lgl>   <dttm>              <chr>    <chr> <chr>     <chr> 
+#>  1 mattwild… FALSE   FALSE   2019-06-23 07:12:39 "London… NA    "Matt Wi… ""    
+#>  2 SuperTri… FALSE   FALSE   2025-11-06 17:06:34  NA      NA    "Tristan…  NA   
+#>  3 JudioX    FALSE   FALSE   2025-09-23 06:02:44 "Spain"  NA    "PH"      "male"
+#>  4 steph777… FALSE   FALSE   2024-07-11 19:05:16 ""       ""    ""        ""    
+#>  5 AkiraStr… FALSE   FALSE   2025-11-20 18:47:08 "United… NA    "Akira S… "male"
+#>  6 Bring_Na… FALSE   FALSE   2013-09-14 16:55:22  NA      NA    "Bring_N… "male"
+#>  7 norferat… FALSE   FALSE   2024-09-01 11:21:48 "Thessa… NA    "Juan An… "male"
+#>  8 Trakt844  TRUE    FALSE   NA                   NA      NA     NA        NA   
+#>  9 mj.lapie… FALSE   FALSE   2019-01-17 19:09:09 "Timmin… NA    "MJ Lapi… "fema…
+#> 10 jarvis-1… FALSE   FALSE   2025-08-30 16:27:55 "United… NA    "Juan Jo… ""    
+#> # ℹ 19 more rows
+#> # ℹ 8 more variables: age <int>, vip <lgl>, vip_ep <lgl>,
+#> #   vip_cover_image <lgl>, director <lgl>, user_slug <chr>, user_trakt <int>,
+#> #   avatar <chr>
+seasons_watching("the-simpsons", season = 6)
+#> # A tibble: 2 × 16
+#>   username   private deleted joined_at           location about user_name gender
+#>   <chr>      <lgl>   <lgl>   <dttm>              <chr>    <lgl> <chr>     <chr> 
+#> 1 mattwilde… FALSE   FALSE   2019-06-23 07:12:39 London,… NA    Matt Wil… ""    
+#> 2 geodade_9… FALSE   FALSE   2026-07-21 13:05:52 NA       NA    NA        NA    
+#> # ℹ 8 more variables: age <int>, vip <lgl>, vip_ep <lgl>,
 #> #   vip_cover_image <lgl>, director <lgl>, user_slug <chr>, user_trakt <int>,
 #> #   avatar <chr>
 episodes_watching("the-simpsons", season = 6, episode = 12)

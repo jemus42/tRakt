@@ -94,15 +94,16 @@ Other episode data:
 ``` r
 shows_next_episode("one-piece")
 #> # A tibble: 1 × 7
-#>   season number title        trakt    tvdb     imdb  tmdb   
-#>    <int>  <int> <chr>        <chr>    <chr>    <chr> <chr>  
-#> 1     23   1169 Episode 1169 14161429 11859547 NA    7236715
+#>   season number title                                    trakt tvdb  imdb  tmdb 
+#>    <int>  <int> <chr>                                    <chr> <chr> <chr> <chr>
+#> 1     23   1177 A Despicable Hostage Game - Sommers's B… 1432… 1195… NA    7550…
 shows_last_episode("one-piece", extended = "full")
-#> # A tibble: 1 × 19
+#> # A tibble: 1 × 20
 #>   season number title             number_abs overview rating votes comment_count
 #>    <int>  <int> <chr>                  <int> <chr>     <dbl> <int>         <int>
-#> 1     23   1168 Ancient History …       1168 Leaving…   8.74    74             0
-#> # ℹ 11 more variables: first_aired <dttm>, updated_at <dttm>, runtime <int>,
-#> #   episode_type <chr>, original_title <chr>, after_credits <lgl>,
-#> #   during_credits <lgl>, trakt <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>
+#> 1     23   1176 The Threat of th…       1176 Gunko f…   8.71   206             6
+#> # ℹ 12 more variables: first_aired <dttm>, updated_at <dttm>,
+#> #   available_translations <list>, runtime <int>, episode_type <chr>,
+#> #   original_title <chr>, after_credits <lgl>, during_credits <lgl>,
+#> #   trakt <chr>, tvdb <chr>, imdb <chr>, tmdb <chr>
 ```

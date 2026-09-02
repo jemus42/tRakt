@@ -98,7 +98,7 @@ movies_aliases(190430)
 #> 10 Deadpool 1              us     
 #> # ℹ 21 more rows
 shows_aliases(104439)
-#> # A tibble: 713 × 2
+#> # A tibble: 717 × 2
 #>    title                   country
 #>    <chr>                   <chr>  
 #>  1 Очень странные дела     us     
@@ -111,5 +111,5 @@ shows_aliases(104439)
 #>  8 Stranger Things         cn     
 #>  9 Странные вещи           ru     
 #> 10 Крайне странные события ru     
-#> # ℹ 703 more rows
+#> # ℹ 707 more rows
 ```

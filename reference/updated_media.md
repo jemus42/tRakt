@@ -155,31 +155,33 @@ Other show data:
 
 ``` r
 movies_updates()
-#> # A tibble: 10 × 7
-#>    updated_at          title                      year  trakt slug  imdb    tmdb
-#>    <dttm>              <chr>                     <int>  <int> <chr> <chr>  <int>
-#>  1 2026-07-02 09:18:29 The Warminster Thing         NA 1.38e6 the-… tt71… 1.72e6
-#>  2 2026-07-02 11:33:36 The Matrix Reloaded        2003 4.82e2 the-… tt02… 6.04e2
-#>  3 2026-07-02 11:44:31 Weapons                    2025 8.67e5 weap… tt26… 1.08e6
-#>  4 2026-07-02 11:44:36 The Devil Wears Prada 2    2026 1.07e6 the-… tt33… 1.31e6
-#>  5 2026-07-02 12:32:11 Obsession                  2026 1.10e6 obse… tt37… 1.34e6
-#>  6 2026-07-02 12:32:11 Spider-Man: Brand New Day  2026 9.05e5 spid… tt22… 9.70e5
-#>  7 2026-07-02 12:32:12 The Dark Knight            2008 1.2 e2 the-… tt04… 1.55e2
-#>  8 2026-07-02 12:32:15 Static                     2012 1.06e5 stat… tt18… 1.66e5
-#>  9 2026-07-02 12:32:57 Mantra Muugdha             2026 1.31e6 mant… tt37… 1.58e6
-#> 10 2026-07-02 12:33:03 Chimera                    2026 1.38e6 chim… tt33… 1.72e6
-shows_updates(start_date = Sys.Date() - 7)
 #> # A tibble: 10 × 8
-#>    updated_at          title                  year trakt slug  tvdb  imdb  tmdb 
-#>    <dttm>              <chr>                 <int> <chr> <chr> <chr> <chr> <chr>
-#>  1 2026-06-26 02:33:36 The Golden Horde       2018 1692… the-… 3447… tt96… 78302
-#>  2 2026-06-26 02:34:02 Coachella              2010 78989 coac… 2482… NA    NA   
-#>  3 2026-06-26 02:35:26 Everything Now Show    2018 2840… ever… NA    tt25… 2901…
-#>  4 2026-06-26 02:38:00 Shopping Queen (DE)    2012 1579… shop… 2665… tt22… 93768
-#>  5 2026-06-26 02:45:34 Jornal Nacional        1969 2131… jorn… 3397… tt04… 16807
-#>  6 2026-06-26 06:12:52 Beach Boys             1997 23868 beac… 1172… tt02… 23974
-#>  7 2026-06-26 06:14:02 El-Hazard: The Wande…  1995 63735 el-h… 79241 tt01… 22098
-#>  8 2026-06-26 06:15:53 Franny's Feet          2003 9921  fran… 1289… tt03… 9970 
-#>  9 2026-06-26 06:15:56 First Australians      2008 21018 firs… 83409 tt13… 21114
-#> 10 2026-06-26 06:16:38 At Last the 1948 Show  1967 188   at-l… 70956 tt00… 189  
+#>    updated_at           year title           imdb  plex$guid slug    tmdb  trakt
+#>    <dttm>              <int> <chr>           <chr> <chr>     <chr>  <int>  <int>
+#>  1 2026-09-01 08:05:20  2026 32 Frames: A 9… tt42… NA        32-f… 1.70e6 1.37e6
+#>  2 2026-09-01 08:05:21  1966 Texas Across t… tt00… 5d776891… texa… 5.25e4 3.70e4
+#>  3 2026-09-01 08:05:21  2026 Doutor Monstro  tt30… NA        dout… 1.23e6 9.93e5
+#>  4 2026-09-01 08:05:21  2026 La Malédiction… tt27… NA        la-m… 1.45e6 1.18e6
+#>  5 2026-09-01 08:05:21  2025 Flush           tt37… 6866b1d5… flus… 1.51e6 1.24e6
+#>  6 2026-09-01 08:05:21  2026 Meeting Marsha  tt38… NA        meet… 1.58e6 1.31e6
+#>  7 2026-09-01 08:05:21  2026 Kesong Puti     tt40… 69c45027… keso… 1.67e6 1.36e6
+#>  8 2026-09-01 08:05:21  2026 Réngonghú       tt43… 6a6edf19… reng… 1.74e6 1.39e6
+#>  9 2026-09-01 08:05:21  2026 Tysha           tt43… NA        tysh… 1.74e6 1.39e6
+#> 10 2026-09-01 08:05:21  2026 The Rootman     tt44… NA        the-… 1.76e6 1.39e6
+#> # ℹ 1 more variable: plex$slug <chr>
+shows_updates(start_date = Sys.Date() - 7)
+#> # A tibble: 10 × 11
+#>    updated_at           year title  aired_episodes imdb  slug  tmdb  tvdb  trakt
+#>    <dttm>              <int> <chr>           <int> <chr> <chr> <chr> <chr> <chr>
+#>  1 2026-08-26 06:07:48  1978 Enemy…             26 tt01… enem… 12213 73036 12160
+#>  2 2026-08-26 06:09:54  2010 Bert …             40 tt16… bert… 33052 1966… 32907
+#>  3 2026-08-26 06:10:13  1966 Cool …             60 tt00… cool… 3642  78433 3619 
+#>  4 2026-08-26 06:10:16  2012 Abyss…            162 tt21… abys… 42280 2880… 96162
+#>  5 2026-08-26 06:11:00  1986 Alice…              4 tt04… alic… 52445 2909… 94986
+#>  6 2026-08-26 06:11:01  1987 Echoe…              2 tt00… echo… 47234 NA    2349…
+#>  7 2026-08-26 06:11:02    NA Diamo…              0 tt08… diam… 6568  NA    1910…
+#>  8 2026-08-26 06:11:11  1991 The 1…             12 tt02… the-… 48455 82140 48162
+#>  9 2026-08-26 06:11:12  2001 El Ma…             95 tt02… el-m… 16703 3203… 1333…
+#> 10 2026-08-26 06:11:23  2010 Baske…            184 tt16… bask… 32789 1636… 32648
+#> # ℹ 2 more variables: plex_guid <chr>, plex_slug <chr>
 ```

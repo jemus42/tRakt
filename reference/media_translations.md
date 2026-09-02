@@ -116,7 +116,7 @@ movies_translations("193972")
 #> # A tibble: 55 × 5
 #>    title                                     overview   tagline language country
 #>    <chr>                                     <chr>      <chr>   <chr>    <chr>  
-#>  1 حكاية لعبة 4                              "لطالما ك… مغامرة… ar       sa     
+#>  1 حكاية لعبة ٤                              "كان \"وو… مغامرة… ar       sa     
 #>  2 حكاية لعبة 4                               NA        NA      ar       ae     
 #>  3 Гісторыя цацак 4                           NA        NA      be       by     
 #>  4 Играта на играчките: Пътешествието        "Уди вина… Приклю… bg       bg     

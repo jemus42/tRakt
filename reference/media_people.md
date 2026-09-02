@@ -170,7 +170,7 @@ movies_people("deadpool-2016")
 #> # A tibble: 50 × 18
 #>    character     characters images$headshot name  death gender height birthday  
 #>    <chr>         <list>     <list>          <chr> <chr> <chr>   <dbl> <date>    
-#>  1 Wade Wilson … <chr [2]>  <chr [1]>       Ryan… NA    male     188. 1976-10-23
+#>  1 Wade / Deadp… <chr [2]>  <chr [1]>       Ryan… NA    male     188. 1976-10-23
 #>  2 Vanessa       <chr [1]>  <chr [1]>       More… NA    female   171. 1979-06-02
 #>  3 Ajax          <chr [1]>  <chr [1]>       Ed S… NA    male     185  1983-03-29
 #>  4 Weasel        <chr [1]>  <chr [1]>       T.J.… NA    male     188  1981-06-04
@@ -186,7 +186,7 @@ movies_people("deadpool-2016")
 #> #   imdb <chr>, slug <chr>, tmdb <chr>, trakt <chr>
 #> 
 #> $crew
-#> # A tibble: 186 × 19
+#> # A tibble: 188 × 19
 #>    job       jobs  images$headshot name  death gender height birthday   homepage
 #>    <chr>     <lis> <list>          <chr> <chr> <chr>   <dbl> <date>     <chr>   
 #>  1 Casting   <chr> <chr [1]>       Ronn… NA    female    NA  1959-12-29 NA      
@@ -199,14 +199,14 @@ movies_people("deadpool-2016")
 #>  8 Casting   <chr> <chr [1]>       Cori… NA    female    NA  1970-09-25 NA      
 #>  9 Casting   <chr> <chr [0]>       Jenn… NA    female    NA  1972-04-07 NA      
 #> 10 Producti… <chr> <chr [1]>       Juli… NA    female    NA  NA         NA      
-#> # ℹ 176 more rows
+#> # ℹ 178 more rows
 #> # ℹ 10 more variables: biography <chr>, birthplace <chr>, social_ids <df[,4]>,
 #> #   updated_at <dttm>, known_for_department <chr>, imdb <chr>, slug <chr>,
 #> #   tmdb <chr>, trakt <chr>, crew_type <chr>
 #> 
 shows_people("breaking-bad")
 #> $cast
-#> # A tibble: 229 × 20
+#> # A tibble: 230 × 20
 #>    character   characters images$headshot episode_count order name  death gender
 #>    <chr>       <list>     <list>                  <int> <int> <chr> <chr> <chr> 
 #>  1 Walter Whi… <chr [1]>  <chr [1]>                  62     0 Brya… NA    male  
@@ -215,11 +215,11 @@ shows_people("breaking-bad")
 #>  4 Walter Whi… <chr [1]>  <chr [1]>                  62     3 RJ M… NA    male  
 #>  5 Hank Schra… <chr [1]>  <chr [1]>                  62     4 Dean… NA    male  
 #>  6 Marie Schr… <chr [1]>  <chr [1]>                  62     5 Bets… NA    female
-#>  7 Gus Fring   <chr [1]>  <chr [1]>                  28     6 Gian… NA    male  
+#>  7 Gustavo Fr… <chr [1]>  <chr [1]>                  28     6 Gian… NA    male  
 #>  8 Saul Goodm… <chr [1]>  <chr [1]>                  43     7 Bob … NA    male  
 #>  9 Steven Gom… <chr [1]>  <chr [1]>                  33     8 Stev… NA    male  
 #> 10 Mike Ehrma… <chr [1]>  <chr [1]>                  36     9 Jona… NA    male  
-#> # ℹ 219 more rows
+#> # ℹ 220 more rows
 #> # ℹ 12 more variables: height <dbl>, birthday <date>, homepage <chr>,
 #> #   biography <chr>, birthplace <chr>, social_ids <df[,4]>, updated_at <dttm>,
 #> #   known_for_department <chr>, imdb <chr>, slug <chr>, tmdb <chr>, trakt <chr>

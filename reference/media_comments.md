@@ -190,19 +190,17 @@ Other episode data:
 
 ``` r
 movies_comments(193972)
-#> # A tibble: 10 × 19
+#> # A tibble: 8 × 19
 #>        id comment                   spoiler review parent_id created_at         
 #>     <int> <chr>                     <lgl>   <lgl>      <int> <dttm>             
-#>  1 967579 "This is a TV special, a… FALSE   FALSE          0 2026-06-27 17:39:21
-#>  2 965663 "I’m not crying, you are… FALSE   FALSE          0 2026-06-21 17:54:23
-#>  3 964431 "\"I'm trash!\"\n\nWhile… FALSE   TRUE           0 2026-06-17 16:11:19
-#>  4 964425 "“I’m Trash” \n\nToy Sto… FALSE   TRUE           0 2026-06-17 15:50:35
-#>  5 957349 "Watching this a lot lat… FALSE   FALSE          0 2026-05-26 09:21:07
-#>  6 954506 "Toy Story 4 is entertai… FALSE   FALSE          0 2026-05-17 19:27:46
-#>  7 927376 "Genuinely, I can't beli… FALSE   FALSE          0 2026-02-23 07:21:28
-#>  8 925920 "_Toy Story 4_ is a stra… FALSE   TRUE           0 2026-02-19 11:24:19
-#>  9 922946 "★★★½☆ (3.5/5)\nDidn’t f… FALSE   FALSE          0 2026-02-12 18:52:52
-#> 10 906143 "Toy Story 4 arrives as … FALSE   TRUE           0 2026-01-03 21:23:01
+#> 1 1031140 "*Toy Story 4* was clear… FALSE   FALSE          0 2026-08-23 02:46:08
+#> 2 1010013 "Sigue ofreciendo un apa… FALSE   FALSE          0 2026-08-01 12:19:40
+#> 3  987101 "Ótimo filme, me deixou … FALSE   FALSE          0 2026-07-13 03:08:04
+#> 4  985863 "This film is the perfec… FALSE   TRUE           0 2026-07-12 14:21:31
+#> 5  982540 "I remember watching thi… FALSE   FALSE          0 2026-07-10 10:14:57
+#> 6  982049 "I know Bonnie is very y… FALSE   FALSE          0 2026-07-10 00:01:04
+#> 7  979529 "It wasn't like the prev… FALSE   FALSE          0 2026-07-08 03:29:34
+#> 8  978257 "Watched Toy Story 4 wit… TRUE    FALSE          0 2026-07-07 05:31:36
 #> # ℹ 13 more variables: updated_at <dttm>, replies <int>, likes <int>,
 #> #   user_rating <int>, language <chr>, username <chr>, private <lgl>,
 #> #   deleted <lgl>, user_name <chr>, vip <lgl>, vip_ep <lgl>, director <lgl>,
@@ -216,11 +214,11 @@ shows_comments(46241, sort = "likes")
 #>  3  39755 "Holy hell I can't belie… FALSE   FALSE          0 2015-03-11 07:54:07
 #>  4 143277 "After marathoning this … FALSE   FALSE          0 2017-10-01 18:42:14
 #>  5 436459 "EIGHT HOUR detailed You… FALSE   FALSE          0 2022-01-15 08:59:48
-#>  6 185427 "In February 2014, HBO o… FALSE   FALSE          0 2018-08-01 12:50:58
-#>  7 483035 "I've just finished watc… FALSE   FALSE          0 2022-07-04 14:16:16
-#>  8 171295 "If you like this style … FALSE   FALSE          0 2018-04-20 01:20:40
-#>  9  42940 "Looked interesting but … FALSE   FALSE          0 2015-05-06 17:25:07
-#> 10 814556 "FUCKING AMAZING, BEST T… FALSE   FALSE          0 2025-05-20 12:03:34
+#>  6 483035 "I've just finished watc… FALSE   FALSE          0 2022-07-04 14:16:16
+#>  7 171295 "If you like this style … FALSE   FALSE          0 2018-04-20 01:20:40
+#>  8  42940 "Looked interesting but … FALSE   FALSE          0 2015-05-06 17:25:07
+#>  9 814556 "FUCKING AMAZING, BEST T… FALSE   FALSE          0 2025-05-20 12:03:34
+#> 10 650557 "Spectacular show with s… FALSE   FALSE          0 2024-03-02 04:09:50
 #> # ℹ 13 more variables: updated_at <dttm>, replies <int>, likes <int>,
 #> #   user_rating <int>, language <chr>, username <chr>, private <lgl>,
 #> #   deleted <lgl>, user_name <chr>, vip <lgl>, vip_ep <lgl>, director <lgl>,

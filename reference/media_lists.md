@@ -218,10 +218,10 @@ movies_lists("190430", type = "personal", limit = 5)
 #>   name       description privacy share_link type  display_numbers allow_comments
 #>   <chr>      <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
 #> 1 Sci-Fi     ""          public  ""         pers… FALSE           TRUE          
-#> 2 Cult Clas… "Dive into… public  ""         pers… FALSE           TRUE          
-#> 3 Watching … "This is a… public  ""         pers… FALSE           FALSE         
-#> 4 Trakt: Po… "The Trakt… public  ""         pers… TRUE            TRUE          
-#> 5 Comedy ac… ""          public  ""         pers… TRUE            TRUE          
+#> 2 All Movie… "All movie… public  ""         pers… FALSE           TRUE          
+#> 3 Superhero… "Missing s… public  ""         pers… TRUE            TRUE          
+#> 4 Movie Box… ""          public  ""         pers… FALSE           FALSE         
+#> 5 X-Men Uni… "**Chronol… public  ""         pers… TRUE            TRUE          
 #> # ℹ 25 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
 #> #   updated_at <dttm>, item_count <int>, comment_count <int>, likes <int>,
 #> #   slug <chr>, trakt <chr>, username <chr>, private <lgl>, deleted <lgl>,
@@ -234,14 +234,14 @@ shows_lists("46241")
 #>    <chr>     <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
 #>  1 Highly r… "Shows wit… public  ""         pers… FALSE           TRUE          
 #>  2 Hidden G… ""          public  ""         pers… FALSE           TRUE          
-#>  3 UK and I… ""          public  ""         pers… FALSE           TRUE          
-#>  4 BBC Cult… "\"BBC Cul… public  ""         pers… TRUE            TRUE          
-#>  5 TV Shows… "A collect… public  ""         pers… FALSE           TRUE          
-#>  6 Obscure … ""          public  ""         pers… FALSE           FALSE         
-#>  7 British … ""          public  ""         pers… FALSE           FALSE         
-#>  8 The Guar… "https://w… public  ""         pers… TRUE            TRUE          
-#>  9 BBC       ""          public  ""         pers… FALSE           FALSE         
-#> 10 BritBox   ""          public  ""         pers… FALSE           FALSE         
+#>  3 British … ""          public  ""         pers… FALSE           FALSE         
+#>  4 The Guar… "https://w… public  ""         pers… TRUE            TRUE          
+#>  5 UK and I… ""          public  ""         pers… FALSE           TRUE          
+#>  6 TV-MA     ""          public  ""         pers… FALSE           FALSE         
+#>  7 Obscure … ""          public  ""         pers… FALSE           FALSE         
+#>  8 Mystery/… ""          public  ""         pers… TRUE            TRUE          
+#>  9 tv-shows  "Created u… public  ""         pers… FALSE           FALSE         
+#> 10 BBC's 10… ""          public  ""         pers… TRUE            TRUE          
 #> # ℹ 25 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
 #> #   updated_at <dttm>, item_count <int>, comment_count <int>, likes <int>,
 #> #   slug <chr>, trakt <chr>, username <chr>, private <lgl>, deleted <lgl>,
@@ -249,41 +249,18 @@ shows_lists("46241")
 #> #   gender <chr>, age <int>, vip <lgl>, vip_ep <lgl>, vip_cover_image <lgl>,
 #> #   director <lgl>, user_slug <chr>, user_trakt <int>, avatar <chr>
 seasons_lists("46241", season = 1)
-#> # A tibble: 10 × 24
-#>    name      description privacy share_link type  display_numbers allow_comments
-#>    <chr>     <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
-#>  1 Shows I … ""          public  https://t… pers… FALSE           TRUE          
-#>  2 OMG! YOU… "My list o… public  https://t… pers… FALSE           TRUE          
-#>  3 TV shows… ""          public  https://t… pers… TRUE            TRUE          
-#>  4 Yo        ""          public  https://t… pers… TRUE            TRUE          
-#>  5 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  6 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  7 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  8 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  9 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#> 10 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#> # ℹ 17 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
+#> # A tibble: 1 × 32
+#>   name       description privacy share_link type  display_numbers allow_comments
+#>   <chr>      <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
+#> 1 OMG! YOU … "My list o… public  ""         pers… FALSE           TRUE          
+#> # ℹ 25 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
 #> #   updated_at <dttm>, item_count <int>, comment_count <int>, likes <int>,
-#> #   trakt <chr>, slug <chr>, username <chr>, private <lgl>, deleted <lgl>,
-#> #   user_name <chr>, vip <lgl>, vip_ep <lgl>, director <lgl>, user_slug <chr>
+#> #   slug <chr>, trakt <chr>, username <chr>, private <lgl>, deleted <lgl>,
+#> #   joined_at <dttm>, location <chr>, about <chr>, user_name <chr>,
+#> #   gender <chr>, age <lgl>, vip <lgl>, vip_ep <lgl>, vip_cover_image <lgl>,
+#> #   director <lgl>, user_slug <chr>, user_trakt <int>, avatar <chr>
 episodes_lists("46241", season = 1, episode = 1)
-#> # A tibble: 10 × 24
-#>    name      description privacy share_link type  display_numbers allow_comments
-#>    <chr>     <chr>       <chr>   <chr>      <chr> <lgl>           <lgl>         
-#>  1 Watchlis… ""          public  https://t… pers… TRUE            TRUE          
-#>  2 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  3 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  4 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  5 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  6 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  7 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  8 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#>  9 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#> 10 Watchlist "Movies, s… public  https://t… watc… FALSE           FALSE         
-#> # ℹ 17 more variables: sort_by <chr>, sort_how <chr>, created_at <dttm>,
-#> #   updated_at <dttm>, item_count <int>, comment_count <int>, likes <int>,
-#> #   trakt <chr>, slug <chr>, username <chr>, private <lgl>, deleted <lgl>,
-#> #   user_name <chr>, vip <lgl>, vip_ep <lgl>, director <lgl>, user_slug <chr>
+#> # A tibble: 0 × 0
 people_lists("david-tennant")
 #> # A tibble: 1 × 32
 #>   name   description privacy share_link type     display_numbers allow_comments
